@@ -31,7 +31,7 @@ intervals \-- specifically the [**mint**](commands/mint.html) (melodic
 interval) and [**xdelta**](commands/xdelta.html) commands. Discussion of
 harmonic intervals will be delayed until [Chapter 15.](guide15.html)
 
-[]{#Types_of_Melodic_Intervals}
+<a name ="Types_of_Melodic_Intervals"></a>
 
 Types of Melodic Intervals
 --------------------------
@@ -133,7 +133,7 @@ circumstance, the user may wish to calculate diatonic intervals,
 semitones, cents, frequency differences, or even differences in cochlear
 coordinates.
 
-[]{#Melodic_Intervals_Using_the_mint_Command}
+<a name ="Melodic_Intervals_Using_the_mint_Command"></a>
 
 Melodic Intervals Using the *mint* Command
 ------------------------------------------
@@ -249,7 +249,7 @@ boundaries, and not following notes with pauses:
 
 > `mint -b '[;}]' inputfile`
 
-[]{#Unvoiced_Inner_Intervals}
+<a name ="Unvoiced_Inner_Intervals"></a>
 
 Unvoiced Inner Intervals
 ------------------------
@@ -282,7 +282,7 @@ the pitches G4 and E4.\
 With the **-i** option, the parentheses surrounding the unvoiced inner
 intervals would be omitted.
 
-[]{#Calculating_Distance_Intervals_Using_the_mint_-s_Command}
+<a name ="Calculating_Distance_Intervals_Using_the_mint_-s_Command"></a>
 
 Calculating Distance Intervals Using the *mint -s* Command
 ----------------------------------------------------------
@@ -415,7 +415,7 @@ The corresponding melodic interval output is:\
 >   `*-`
 >   ----------------------------------------------
 >
-[]{#Simple_and_Compound_Melodic_Intervals}
+<a name ="Simple_and_Compound_Melodic_Intervals"></a>
 
 Simple and Compound Melodic Intervals
 -------------------------------------
@@ -426,7 +426,7 @@ octave or greater) as non-compound equivalents. For example, the
 interval of a major tenth (`M10`) will be output as a major third
 (`M3`).
 
-[]{#Diatonic_Intervals,_Absolute_Intervals_and_Contour}
+<a name ="Diatonic_Intervals,_Absolute_Intervals_and_Contour"></a>
 
 Diatonic Intervals, Absolute Intervals and Contour
 --------------------------------------------------
@@ -444,27 +444,27 @@ indicating a falling interval, and the number zero (0) indicating no
 pitch movement (i.e., unison). In short, the **-A** option outputs only
 gross contour. The **-a** and **-A** options are complementary.
 
-[]{#Using_the_mint_Command}
+<a name ="Using_the_mint_Command"></a>
 
 Using the *mint* Command
 ------------------------
 
 Consider some of the following uses of the **mint** command.
 
-[]{#Major_or_Minor_Ninths} []{#Sinatra}
+<a name ="Sinatra"></a>
 
 Are there any major or minor ninth melodic intervals in the file
 `Sinatra`?
 
 > `mint Sinatra | grep '[Mm][9]'`
 
-[]{#Piaf} []{#Compound_Melodic_Intervals}
+<a name ="Compound_Melodic_Intervals"></a>
 
 Are there any compound melodic intervals in the file `Piaf`?
 
 > `mint Piaf | egrep '([Mm][9])|([MmPAd][1-9][0-9]''`
 
-[]{#Chevalier}
+<a name ="Chevalier"></a>
 
 Are descending seconds more common than ascending seconds in melodies by
 Maurice Chevalier?
@@ -482,7 +482,7 @@ expression to **grep** and use the **-d** (diatonic) option for
 Identify whether there are any tritone melodic intervals in any of the
 vocal parts of a score:
 
-[]{#Platters}
+<a name ="Platters"></a>
 
 > `extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'`
 
@@ -506,7 +506,7 @@ Marlene Dietrich?
 
 > `mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n`
 
-[]{#Calculating_Melodic_Intervals_Using_the_xdelta_Command}
+<a name ="Calculating_Melodic_Intervals_Using_the_xdelta_Command"></a>
 
 Calculating Melodic Intervals Using the *xdelta* Command
 --------------------------------------------------------
@@ -632,7 +632,7 @@ containing two **xdelta** commands:
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

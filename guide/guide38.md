@@ -64,7 +64,7 @@ control sample:
 -   counter-balancing
 -   autophase procedure
 
-[]{#Comparison_Repertory}
+<a name ="Comparison_Repertory"></a>
 
 Comparison Repertory
 --------------------
@@ -134,7 +134,7 @@ differences found are not related to Bach\'s development as a composer,
 but are due to different tastes in Weimar versus Leipzig. Bach was
 simply showing his ability to adapt to local tastes.
 
-[]{#Randomizing}
+<a name ="Randomizing"></a>
 
 Randomizing
 -----------
@@ -178,7 +178,7 @@ Next, we need to determine the average melodic interval size that would
 result for a random re-ordering of the pitches within each melody. We
 can do this using the Humdrum **scramble** command.
 
-[]{#Using_the_scramble_Command}
+<a name ="Using_the_scramble_Command"></a>
 
 Using the *scramble* Command
 ----------------------------
@@ -233,7 +233,7 @@ common statistical tests, it is possible to prove that this difference
 is unlikely to occur by chance and that it likely is a symptom of real
 efforts to organize melodies using relatively small melodic intervals.
 
-[]{#Haydn_V_IV}
+<a name ="Haydn_V_IV"></a>
 
 A similar approach can be used to address innumerable questions. For
 example, in Haydn\'s music, it seems that Haydn tends to avoid following
@@ -251,7 +251,7 @@ progressions:
 
 > `scramble -r haydn | extract -i '**harm' | context -n 2 -o ^= | grep -c '^V IV$'`
 
-[]{#Bach_Augmented_Eleventh}
+<a name ="Bach_Augmented_Eleventh"></a>
 
 In some cases, problems can be addressed by randomizing one part of
 voice with respect to another. For example, there is strong evidence
@@ -276,7 +276,7 @@ juxtaposition of parts.
 Note that the **scramble** command also provides a **-t** option so that
 the order of tokens within a data record can be randomly re-arranged.
 
-[]{#Retrograde_Controls_Using_the_tac_Command}
+<a name ="Retrograde_Controls_Using_the_tac_Command"></a>
 
 Retrograde Controls Using the *tac* Command
 -------------------------------------------
@@ -326,7 +326,7 @@ B-A-C-H found in retrograde versions of the works.
 Another way of testing the same hypothesis would be to search for the
 reverse pitch sequence: H-C-A-B.
 
-[]{#Autophase_Procedure}
+<a name ="Autophase_Procedure"></a>
 
 Autophase Procedure
 -------------------
@@ -342,7 +342,7 @@ One approach to answering this question is to use an *autophase
 procedure* (Huron, 1991a). The essence of this approach is to shift two
 spines with respect to each other.
 
-[]{#shift_notes}
+<a name ="shift_notes"></a>
 
 Recall that the [**reihe**](commands/reihe.html) command ([Chapter
 35](guide35.html)) provides a **-s** option that causes a shift in the
@@ -418,7 +418,7 @@ questions pertaining to how musical parts interrelate.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

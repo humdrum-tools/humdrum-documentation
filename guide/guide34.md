@@ -32,7 +32,7 @@ The chapter culminates with a script that automatically identifies
 12-tone row variants in complex orchestral scores. The general approach
 is instructive for applications beyond serial analysis.
 
-[]{#Pitch-Class_Representation}
+<a name ="Pitch-Class_Representation"></a>
 
 Pitch-Class Representation
 --------------------------
@@ -51,7 +51,7 @@ it proves to be especially convenient for searching tasks since,
 otherwise, the characters 1 and 0 do not uniquely specify a single
 pitch-class type.
 
-[]{#The_pcset_Command}
+<a name ="The_pcset_Command"></a>
 
 The *pcset* Command
 -------------------
@@ -107,7 +107,7 @@ fill-out the null tokens:
 
 > `pc opus24 | ditto -s ^= | pcset`
 
-[]{#PC_sets_beginning_slurs}
+<a name ="PC_sets_beginning_slurs"></a>
 
 If we wanted, we could assemble the resulting
 [`**pcset`](representations/pcset.rep.html) spine to the original input.
@@ -143,18 +143,18 @@ ends of slurs/phrases.
 Two pitch-class set inventories will be generated: one inventory for the
 beginnings of phrases/slurs and one for phrase/slur endings.
 
-[]{#set_complement}
+<a name ="set_complement"></a>
 
 Incidentally, the **pcset** command supports a **-c** option that can be
 used to generate the set *complement* rather than the principal set
 form.
 
-[]{#Normal_Form} []{#Prime_Form} []{#Prime_Form_and_Normal_Form}
+<a name ="Prime_Form_and_Normal_Form"></a>
 
 Prime Form and Normal Form
 --------------------------
 
-[]{#Normal_Form} []{#Prime_Form}
+<a name ="Prime_Form"></a>
 
 The 3-11 set form designates both the major and minor chords (since they
 are symmetrical). In order to distinguish symmetrical forms, it is
@@ -162,7 +162,7 @@ sometimes useful to represent pitch-class sets using either *prime form*
 (the [**pf**](commands/pf.html) command) or *normal form* (the
 [**nf**](commands/nf.html) command).
 
-[]{#Berg_phrase_endings}
+<a name ="Berg_phrase_endings"></a>
 
 Suppose we wanted to count the proportion of phrase endings in music by
 Alban Berg where the phrase ends on either a major or minor chord.
@@ -196,7 +196,7 @@ And count the number of phrases that end with a minor chord:
 
 > `grep -c '}.*\t(037)' AllBerg.all`
 
-[]{#Interval_Vectors_Using_the_iv_Command}
+<a name ="Interval_Vectors_Using_the_iv_Command"></a>
 
 Interval Vectors Using the *iv* Command
 ---------------------------------------
@@ -224,7 +224,7 @@ pitch-class sets and (right-most spine), the associated interval vector.
 >   \*-             \*-            `*-`                    `*-`
 >   ------------ -- ----------- -- -------------------- -- ------------
 >
-[]{#Schoenberg_Tritones}
+<a name ="Schoenberg_Tritones"></a>
 
 Suppose we wanted to determine whether Arnold Schoenberg tended to use
 simultaneities that have more semitone (interval-class 1) relations and
@@ -239,7 +239,7 @@ vectors without tritone relations will have a zero in the last position
 > `pc schoenberg* | ditto -s ^= | iv | grep -c '<0.....>'`\
 > `pc schoenberg* | ditto -s ^= | iv | grep -c '<.....0>'`
 
-[]{#Segmentation_Using_the_context_Command}
+<a name ="Segmentation_Using_the_context_Command"></a>
 
 Segmentation Using the *context* Command
 ----------------------------------------
@@ -251,7 +251,7 @@ In set-theory analyses, there are many other important ways of
 command provides a useful way of grouping together successive data
 tokens.
 
-[]{#Segmentation_by_slurs_or_phrases} []{#Claude_Debussy} []{#Syrinx}
+<a name ="Syrinx"></a>
 
 Suppose, for example, we wanted to analyze set forms in Claude
 Debussy\'s *Syrinx* for solo flute. The opening measures are shown in
@@ -280,7 +280,7 @@ with such a segmentation:
 >
 > > \| sort \| uniq -c
 
-[]{#Segmentation_by_rests}
+<a name ="Segmentation_by_rests"></a>
 
 Another possibility is to treat rests as segmentation boundaries.
 
@@ -292,7 +292,7 @@ using [**context**](commands/context.html) to generate
 musically-pertinent sets, and then assembling all of the
 [`**pcset`](representations/pcset.rep.html) spines into a single file.
 
-[]{#The_reihe_Command}
+<a name ="The_reihe_Command"></a>
 
 The *reihe* Command
 -------------------
@@ -318,7 +318,7 @@ follows:
 >   `*-`
 >   --------
 >
-[]{#Tone_row_transposition}
+<a name ="Tone_row_transposition"></a>
 
 The following command will generate a prime transposition of the
 tone-row so that it begins on pitch-class 6:
@@ -337,7 +337,7 @@ The result is:
 >   `*-`
 >   --------
 >
-[]{#Tone_row_inversion}
+<a name ="Tone_row_inversion"></a>
 
 Generating the inversion beginning at pitch-class 2 would be carried out
 using the following command.
@@ -367,7 +367,7 @@ end:
 >   `*-`
 >   --------
 >
-[]{#Shift_Serial_Order}
+<a name ="Shift_Serial_Order"></a>
 
 The shift option for **reihe** can be used to shift *any* type of data
 \-- not just pitches of pitch-classes. For example, one might use the
@@ -376,12 +376,12 @@ articulation marks, or any other type of Humdrum data. In [Chapter
 38](guide38.html) we will see how the shift option for **reihe** can be
 effectively used in many applications apart from serial analysis.
 
-[]{#Generating_a_Set_Matrix}
+<a name ="Generating_a_Set_Matrix"></a>
 
 Generating a Set Matrix
 -----------------------
 
-[]{#Automated_Row_Finding}
+<a name ="Automated_Row_Finding"></a>
 
 The first step in automated row-finding is to generate a set matrix of
 all the set variants. Typically, the user begins with a hypothesized
@@ -406,7 +406,7 @@ also prove useful when doing an automatic search.
 For any given input, the above script produces 48 short files named P0,
 P1, \... I0, I1 \... R0, R1 \... RI10, RI11.
 
-[]{#Locating_and_Identifying_Tone-Rows}
+<a name ="Locating_and_Identifying_Tone-Rows"></a>
 
 Locating and Identifying Tone-Rows
 ----------------------------------
@@ -505,7 +505,7 @@ very well.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

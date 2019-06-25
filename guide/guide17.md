@@ -74,7 +74,7 @@ to produce a simple distribution that indicates:
 
 > `3 occurrences of "A"  2 occurrences of "B"  1 occurrence  of "C"`
 
-[]{#Filter,_Sort,_Count}
+<a name ="Filter,_Sort,_Count"></a>
 
 Filter, Sort, Count
 -------------------
@@ -164,7 +164,7 @@ likely to be interested in them. This leads us to what is normally the
 first step in generating an inventory \-- *filtering* the input in order
 to eliminate records that we\'d prefer to omit from our final output.
 
-[]{#Filtering_Data_with_the_rid_Command}
+<a name ="Filtering_Data_with_the_rid_Command"></a>
 
 Filtering Data with the *rid* Command
 -------------------------------------
@@ -200,7 +200,7 @@ the original input. We\'ve been using the abstract data \"A\", \"B\",
 and \"C\". However, this data might represent any type of discrete data,
 such as Latin text, piano fingerings, or dance steps.
 
-[]{#Inventories_for_Multi-spine_Inputs}
+<a name ="Inventories_for_Multi-spine_Inputs"></a>
 
 Inventories for Multi-spine Inputs
 ----------------------------------
@@ -284,7 +284,7 @@ is on its own line, we can generate the appropriate inventory:
 
 > `cat justalpha justbet | rid -GLId | sort | uniq -c`
 
-[]{#Sorting_By_Frequency_of_Occurrence}
+<a name ="Sorting_By_Frequency_of_Occurrence"></a>
 
 Sorting By Frequency of Occurrence
 ----------------------------------
@@ -336,7 +336,7 @@ Humdrum input, sorted from the most common to the least common data:
 
 > `rid -GLId alpha | sort | uniq -c | sort -r > inventory.alpha`
 
-[]{#Counting_with_the_wc_Command}
+<a name ="Counting_with_the_wc_Command"></a>
 
 Counting with the *wc* Command
 ------------------------------
@@ -371,7 +371,7 @@ This will create a two-column output. The first column will indicate the
 percentage of occurrence, and the second column will identify the
 corresponding type of data.
 
-[]{#Excluding_or_Seeking_Rare_Events}
+<a name ="Excluding_or_Seeking_Rare_Events"></a>
 
 Excluding or Seeking Rare Events
 --------------------------------
@@ -391,7 +391,7 @@ looking for rare circumstances in our data.
 > `rid -GLId alpha | sort | uniq -u` (output only the rare events)\
 > `rid -GLId alpha | sort | uniq -d` (eliminate all the rare events)
 
-[]{#Transforming_and_Editing_Inventory_Data}
+<a name ="Transforming_and_Editing_Inventory_Data"></a>
 
 Transforming and Editing Inventory Data
 ---------------------------------------
@@ -478,7 +478,7 @@ pipe:
 >   `1`   F
 >   ----- ---
 >
-[]{#Further_Examples}
+<a name ="Further_Examples"></a>
 
 Further Examples
 ----------------
@@ -488,14 +488,14 @@ inventories to answer a wide variety of questions. You should now
 understand how the commands given below can be used to solve the
 question posed:
 
-[]{#Harmonic_variety}
+<a name ="Harmonic_variety"></a>
 
 *Does Liszt use a greater variety of harmonies than Chopin?*
 
 > `extract -i '**harm' liszt* | rid -GLId | sort | uniq | wc -l`\
 > `extract -i '**harm' chopin* | rid -GLId | sort | uniq | wc -l`
 
-[]{#Compare_dynamics}
+<a name ="Compare_dynamics"></a>
 
 *What is the most frequently used dynamic marking in Beethoven,* *and
 how does Beethoven\'s practice compare with that of Brahms?*
@@ -508,14 +508,14 @@ how does Beethoven\'s practice compare with that of Brahms?*
 >
 > > \| sort -r \| head -1
 
-[]{#Monteverdi}
+<a name ="Monteverdi"></a>
 
 *Are flats more common than sharps in Monteverdi?* Let\'s presume that
 the input is monophonic `**kern` data.
 
 > `humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c`
 
-[]{#Bartok_articulations}
+<a name ="Bartok_articulations"></a>
 
 *Did Bartók\'s preferred articulation marks change* *over his lifetime?*
 Assume that copies of early and late works have been concatenated to the
@@ -532,7 +532,7 @@ here eliminates all data with the exception of
 >
 > > \| rid -GLId \| sort \| uniq -c
 
-[]{#Chanson}
+<a name ="Chanson"></a>
 
 *Is there a tendency to use the subdominant pitch less often* *in pop
 melodies than in (say) French chanson?* Once again assume that the
@@ -541,7 +541,7 @@ inputs are monophonic.
 > `deg -t pop* | grep -c '4'`\
 > `deg -t chanson* | grep -c '4'`
 
-[]{#Thomas_of_Canterbury}
+<a name ="Thomas_of_Canterbury"></a>
 
 *How frequent are light-related words such as \"lumen\"* *or \"lumine\"
 in the different monastic offices for* Thomas of Canterbury? Familiarity
@@ -549,7 +549,7 @@ with regular expressions helps:
 
 > `extract -i '**text' office* | egrep -ic 'lum.+n[e]*$'`
 
-[]{#90_percent}
+<a name ="90_percent"></a>
 
 *Is it true that 90 percent of the notes in a given work by Bach* *use
 just two durations (such as eighths and sixteenths, or* *eighths and
@@ -558,7 +558,7 @@ quarters)?*
 > `humsed 's/[^0-9.]//g' bach | rid -GLId | sort | uniq -c` (Repeat the
 > above command for each work and inspect the results.)
 
-[]{#Mussorgsky}
+<a name ="Mussorgsky"></a>
 
 *What is the most common instrumental combination for sonorities* *by
 Mussorgsky?*
@@ -567,7 +567,7 @@ Mussorgsky?*
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

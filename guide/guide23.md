@@ -26,7 +26,7 @@ tasks arise from rhythm-related In this chapter, two rhythm-related
 tools are introduced: [**dur**](commands/dur.html) and
 [**metpos**](commands/metpos.html).
 
-[]{#The_**recip_Representation}
+<a name ="The_**recip_Representation"></a>
 
 The *\*\*recip* Representation
 ------------------------------
@@ -81,7 +81,7 @@ second one: `8r 16 16 8 8 4 4` and the fourth one:\
 >   1      4 4 16r 16 16 16 16 16 16 16
 >   ------ -------------------------------------------------
 >
-[]{#The_dur_Command}
+<a name ="The_dur_Command"></a>
 
 The *dur* Command
 -----------------
@@ -127,7 +127,7 @@ durations arising from multiple-stops. Note that outputs from **dur**
 will adapt to any changes of metronome marking found in the input, so if
 the work accelerates the durations will be reduced proportionally.
 
-[]{#total_duration}
+<a name ="total_duration"></a>
 
 The **-M** option will over-ride any metronome markings found in the
 input stream. For example, if we wanted to estimate the duration of a
@@ -136,7 +136,7 @@ minute we could use the command:
 
 > `dur -M 72 -d input.krn | rid -GLId | grep -v '^=' | stats`
 
-[]{#trumpet_duration}
+<a name ="trumpet_duration"></a>
 
 Of course, the duration of a passage is not the same as the length of
 time a given instrument sounds. Suppose, for example, that we wanted to
@@ -161,7 +161,7 @@ longest duration note for which Mozart had marked a staccato.
 >
 > > \| stats
 
-[]{#Longest_Staccato}
+<a name ="Longest_Staccato"></a>
 
 The **-e** option ensures that `**kern` staccato marks (\') are passed
 along to the output. The [**rid**](commands/rid.html) command eliminates
@@ -171,7 +171,7 @@ to eliminate the apostrophe, and finally the numbers are passed to the
 **stats** command. The `max` value from **stats** will identify the
 duration (in seconds) of the longest note marked staccato.
 
-[]{#Ends_of_Phrases}
+<a name ="Ends_of_Phrases"></a>
 
 This same basic pipeline can be used for a variety of similar problems.
 Suppose, for example, that we want to determine whether notes at the
@@ -188,7 +188,7 @@ phrases \-- and if so, how much longer? In this case, we want to have
 >
 > > \| stats
 
-[]{#Trill_Durations}
+<a name ="Trill_Durations"></a>
 
 Similarly, do semitone trills tend to be shorter than whole-tone trills?
 
@@ -201,7 +201,7 @@ Similarly, do semitone trills tend to be shorter than whole-tone trills?
 >
 > > \| stats
 
-[]{#Duration_of_Recapitulation}
+<a name ="Duration_of_Recapitulation"></a>
 
 Of course, we can also use [**dur**](commands/dur.html) in conjunction
 with [**yank**](commands/yank.html) in order to investigate particular
@@ -243,7 +243,7 @@ following pipeline can be used to determine the magnitude of the
 A small `mean` from **stats** will be indicative of works that tend to
 have smoother or less angular note-to-note rhythms.
 
-[]{#Classifying_Durations}
+<a name ="Classifying_Durations"></a>
 
 Classifying Durations
 ---------------------
@@ -297,7 +297,7 @@ And our processing would be:
 > > -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\\
 > > \| rid -GLId \| sort \| uniq -c \| sort -n
 
-[]{#Using_yank_with_the_timebase_Command}
+<a name ="Using_yank_with_the_timebase_Command"></a>
 
 Using *yank* with the *timebase* Command
 ----------------------------------------
@@ -347,7 +347,7 @@ notes played by the horns during beats 2 and 4 in a 4/4 meter work:
 >
 > > \| yank -m \^= -r 5-8,13-16
 
-[]{#First_Waltz_Sonority}
+<a name ="First_Waltz_Sonority"></a>
 
 In some cases, we would like to yank materials that do not themselves
 contain explicit durational information. Suppose, for example, that for
@@ -376,7 +376,7 @@ with the 5th eighth \-- hence the range `-r 5`:
 >
 > > \| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
 
-[]{#The_metpos_Command}
+<a name ="The_metpos_Command"></a>
 
 The *metpos* Command
 --------------------
@@ -496,12 +496,12 @@ The words \`strong\', \`secondary\', and \`weak\' can then be sought by
 metric stress. Since **metpos** adapts to changing meters, we can
 confidently process inputs that may contain mixtures of meters.
 
-[]{#Changes_of_Stress}
+<a name ="Changes_of_Stress"></a>
 
 Changes of Stress
 -----------------
 
-[]{#Weak_to_Strong_Approach}
+<a name ="Weak_to_Strong_Approach"></a>
 
 Once again we can make use of [**xdelta**](commands/xdelta.html) to
 identify relationships between successive metric position values.
@@ -701,7 +701,7 @@ as *ii-V* tends to fall in strong-to-weak or weak-to-strong contexts.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise} []{#Synco}
+<a name ="Synco"></a>
 
 Reprise
 -------

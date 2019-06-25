@@ -45,7 +45,7 @@ information, ](#Historical_Information) and (9) [representation
 information.](#Representation_Information) A final section discusses
 [how to cite electronic documents.](#Electronic_Citation)
 
-[]{#Language}
+<a name ="Language"></a>
 
 Accommodating Different Languages
 ---------------------------------
@@ -85,7 +85,7 @@ title can also be encoded without any language designation:
 This implies that the title is already rendered in the *primary*
 reference language.
 
-[]{#Authorship_Information} []{#composer} []{#COM}
+<a name ="COM"></a>
 
 Authorship Information
 ----------------------
@@ -106,7 +106,7 @@ colon. For example,
 
 > ` !!!COM1: Composer,  A.  !!!COM2: Composer, B.`
 
-[]{#attributed composer} []{#COA}
+<a name ="COA"></a>
 
 **!!!COA:** *Attributed composer*. This may include attributions known
 to be false. Several attributions may be combined on a single record by
@@ -114,7 +114,7 @@ separating each name by a semicolon. Note that if a document contains
 both **!!!COA:** and **!!!COM:** records,  then the attributed composer
 is explicitly assumed to be false.
 
-[]{#suspected composer} []{#COS}
+<a name ="COS"></a>
 
 **!!!COS:** *Suspected composer*. This reference code indicates the
 belief of the editor or producer of the document as to the true identity
@@ -122,19 +122,19 @@ of the composer(s). If more than one composer is suspected,  each name
 should appear on a separate **!!!COS:** record with a number designation
 prior to the colon.
 
-[]{#composer's alias} []{#stage name} []{#COL}
+<a name ="COL"></a>
 
 **!!!COL:** *Composer\'s abbreviated,  alias, or stage name*. e.g.
 Madonna.
 
-[]{#corporate name,  composer} []{#composer's corporate name} []{#COC}
+<a name ="COC"></a>
 
 **!!!COC:** *Composer(s) corporate name*. Corporate names may include
 the names of popular groups (especially when the actual composer is not
 known). Corporate names may also include business names,  e.g. Muzak.
 
-[]{#composer's dates} []{#birthdate,  composer} []{#death date, composer}
-[]{#CDT}
+<a name ="death date, composer"></a>
+<a name ="CDT"></a>
 
 **!!!CDT:** *Composer\'s dates*. The birth and death dates should be
 encoded using the [`**Zeit`](representations/Zeit.rep.html) format
@@ -143,7 +143,7 @@ provides a highly refined representation,  including methods for
 representing uncertainty,  approximation, and boundary dates (e.g. prior
 to \...,  after \...).
 
-[]{#composer nationality} []{#CNT}
+<a name ="CNT"></a>
 
 **!!!CNT:** *Nationality of the composer*. This reference information is
 encoded using the language of the nationality. Thus a German composer is
@@ -154,7 +154,7 @@ described above. (e.g.,  `!!!CNT@@FRE: Francais`). Where the composer
 changed nationality,  successive nationalities should be listed (in
 chronological order) separated by semicolons.
 
-[]{#lyricist} []{#LYR}
+<a name ="LYR"></a>
 
 **!!!LYR:** *Lyricist*. The name of the lyricist. If more than one
 lyricist was involved in the work,  then each lyricist\'s name should
@@ -163,7 +163,7 @@ to the colon. If the composer was also the lyricist,  this should be
 explicitly encoding using the independent **!!!LYR:** record \-- rather
 than implicitly assumed.
 
-[]{#librettist} []{#LIB}
+<a name ="LIB"></a>
 
 **!!!LIB:** *Librettist*. The name of the librettist. If more than one
 librettist was involved in the work,  then each librettist\'s name should
@@ -172,33 +172,33 @@ to the colon. If the composer was also the librettist,  this should be
 explicitly encoding using the independent **!!!LIB:** record \-- rather
 than implicitly assumed.
 
-[]{#arranger} []{#LAR}
+<a name ="LAR"></a>
 
 **!!!LAR:** *Arranger*. The name of the arranger. If more than one
 arranger was involved in the work,  then each arranger\'s name should
 appear on a separate **!!!LAR:** record with a number designation prior
 to the colon.
 
-[]{#orchestrator} []{#LOR}
+<a name ="LOR"></a>
 
 **!!!LOR:** *Orchestrator*. The name of the orchestrator. If more than
 one orchestrator was involved in the work,  then each orchestrator\'s
 name should appear on a separate **!!!LOR:** record with a number
 designation prior to the colon.
 
-[]{#original language} []{#TXO}
+<a name ="TXO"></a>
 
 **!!!TXO:** *Original language of vocal/choral text*. The name of the
 language should be encoded in that language. For example,  `russki`
 rather than `Russian`.
 
-[]{#encoded language} []{#TXL}
+<a name ="TXL"></a>
 
 **!!!TXL:** *Language of the **encoded** vocal/choral text*. The name of
 the language should be encoded in the language used for encoding. For
 example,  `Italiano` rather than `Italian`.
 
-[]{#translator} []{#TRN}
+<a name ="TRN"></a>
 
 **!!!TRN:** *Translator of text*. The name of the translator of any
 vocal,  choral, or dramatic text. If more than one translator was
@@ -206,7 +206,7 @@ involved in the work,  then each translator\'s name should appear on a
 separate **!!!TRN:** record with a number designation prior to the
 colon.
 
-[]{#Recording_Information}
+<a name ="Recording_Information"></a>
 
 Recording Information
 ---------------------
@@ -215,46 +215,46 @@ Humdrum representations may encode information pertaining to sound
 recordings (such as sound-based analyses). For information derived from
 sound recordings the following reference records may be pertinent.
 
-[]{#title} []{#RTL}
+<a name ="RTL"></a>
 
 **!!!RTL:** *Title of album*.
 
-[]{#manufacturer} []{#RMM}
+<a name ="RMM"></a>
 
 **!!!RMM:** *Manufacturer or sponsoring company*. The company or
 organization responsible for the release,  distribution, and/or
 manufacturing of the recording.
 
-[]{#manufacturer} []{#RC#}
+<a name =""></a>
 
 **!!!RC\#:** *Recording company\'s catalogue number*. The album\'s
 numerical designation.
 
-[]{#date of release} []{#RRD}
+<a name ="RRD"></a>
 
 **!!!RRD:** *Date of release*. The release date should be encoded using
 the [`**date`](representations/date.rep.html) format described in the
 *Humdrum Reference Manual*.
 
-[]{#place of recording} []{#RLC}
+<a name ="RLC"></a>
 
 **!!!RLC:** *Place of recording*. (Local language should be used.)
 
-[]{#producer} []{#RNP}
+<a name ="RNP"></a>
 
 **!!!RNP:** *Name of the producer*.
 
-[]{#date of recording} []{#RDT}
+<a name ="RDT"></a>
 
 **!!!RDT:** *Date of recording*. The date of recording should be encoded
 using the [`**date`](representations/date.rep.html) format described in
 the described in the *Humdrum Reference Manual*.
 
-[]{#track number} []{#RT#}
+<a name =""></a>
 
 **!!!RT\#:** *Track number*.
 
-[]{#Performance_Information}
+<a name ="Performance_Information"></a>
 
 Performance Information
 -----------------------
@@ -264,44 +264,44 @@ rather than (or in addition to) score-related information. If the
 representation encodes a given performance (such as a MIDI performance), 
 then the following reference records may be pertinent.
 
-[]{#performer} []{#MPN}
+<a name ="MPN"></a>
 
 **!!!MPN:** *Performer\'s name*. If more than one performer was involved
 in the work,  then each performer\'s name should appear on a separate
 **!!!MPN:** record with a number designation prior to the colon.
 
-[]{#suspected performer} []{#MPS}
+<a name ="MPS"></a>
 
 **!!!MPS:** *Suspected performer*. If more than one performer is
 suspected,  each name should appear on a separate **!!!MPS:** record with
 a number designation prior to the colon.
 
-[]{#date of performer} []{#MRD}
+<a name ="MRD"></a>
 
 **!!!MRD:** *Date of performance*. The performance date should be
 encoded using the [`**date`](representations/date.rep.html) format
 described in the *Humdrum Reference Manual*.
 
-[]{#place of performer} []{#MLC}
+<a name ="MLC"></a>
 
 **!!!MLC:** *Place of performance*. (Local language should be used.)
 
-[]{#conductor} []{#MCN}
+<a name ="MCN"></a>
 
 **!!!MCN:** *Name of the conductor of the performance*.
 
-[]{#date of first performance} []{#MPD}
+<a name ="MPD"></a>
 
 **!!!MPD:** *Date of first performance*. The date of first performance
 should be encoded using the [`**date`](representations/date.rep.html)
 format described in the described in the *Humdrum Reference Manual*.
 
-[]{#Identification_Information}
+<a name ="Identification_Information"></a>
 
 Work Identification Information
 -------------------------------
 
-[]{#title} []{#OTL}
+<a name ="OTL"></a>
 
 **!!!OTL:**
 [**Title.**](guide03.html#Searching_for_Reference_Information) The title
@@ -309,117 +309,117 @@ of the specific section or segment encoded in the current file. Titles
 must be rendered in the original language,  e.g. *Le sacre du printemps.*
 (Title translations are encoded using other reference records.)
 
-[]{#English translation} []{#XEN}
+<a name ="XEN"></a>
 
 **!!!XEN:** *Translated title (in English)*. (Note that reference codes
 are also available for translations to languages other than English, 
 French,  German, or Japanese.)
 
-[]{#French translation} []{#XFR}
+<a name ="XFR"></a>
 
 **!!!XFR:** *Translated title (in French)*. (Note that reference codes
 are also available for translations to languages other than English, 
 French,  German, or Japanese.)
 
-[]{#German translation} []{#XDE}
+<a name ="XDE"></a>
 
 **!!!XDE:** *Translated title (in German)*. (Note that reference codes
 are also available for translations to languages other than English, 
 French,  German, or Japanese.)
 
-[]{#Japanese translation} []{#XNI}
+<a name ="XNI"></a>
 
 **!!!XNI:** *Translated title (in Japanese)*. (Note that reference codes
 are also available for translations to languages other than English, 
 French,  German, or Japanese.)
 
-[]{#popular title} []{#OTP}
+<a name ="OTP"></a>
 
 **!!!OTP:** *Popular Title*. This reference record encodes well-known or
 alias titles such as \"Pathetique Sonata\".
 
-[]{#alternative title} []{#OTA}
+<a name ="OTA"></a>
 
 **!!!OTA:** *Alternative title*. This reference record encodes earlier
 or alternate titles.
 
-[]{#parent work} []{#OPR}
+<a name ="OPR"></a>
 
 **!!!OPR:** *Title of larger (or parent) work* from which the encoded
 piece is a part. For example,  \"Gute Nacht\" (OTL) from *Winterreise*
 (OPR).
 
-[]{#act number} []{#OAC}
+<a name ="OAC"></a>
 
 **!!!OAC:** *Act number*. For operas and musicals,  this reference record
 encodes the act number as an Arabic (rather than Roman) numeral. The
 number may be preceded by the word \"Act\" as in `Act 3`.
 
-[]{#scene number} []{#OSC}
+<a name ="OSC"></a>
 
 **!!!OSC:** *Scene number*. For operas and musicals,  this reference
 record encodes the scene number as an Arabic (rather than Roman)
 numeral. The number may be preceded by the word \"Scene\" as in
 `Scene 3`.
 
-[]{#movement number} []{#OMV}
+<a name ="OMV"></a>
 
 **!!!OMV:** *Movement number*. For multi-movement works such as sonatas
 and symphonies,  this reference record encodes the movement number as an
 Arabic (rather than Roman) numeral. The number may be preceded by the
 word \"Movement\" or \"mov.\" etc.,  as in `mov. 3`.
 
-[]{#movement name} []{#OMD}
+<a name ="OMD"></a>
 
 **!!!OMD:** *Movement designation or movement name*. Typically movements
 may be named according to the tempo (e.g. \"Allegro ma no troppo\") or
 according to a style,  genre or form (e.g. \"Fugue\"), or according to a
 programmatic title (e.g. \"In Full Flower\").
 
-[]{#opus number} []{#OPS}
+<a name ="OPS"></a>
 
 **!!!OPS:** *Opus number*. The number may be preceded by the word
 \"Opus\" as in `Opus 23`. Once again,  Arabic numerals are used.
 
-[]{#(work) number} []{#ONM}
+<a name ="ONM"></a>
 
 **!!!ONM:** *Number*. The number may be preceded by the abbreviations
 \"No.\" or \"Nr.\" as in `No. 4`.
 
-[]{#(work) volume} []{#OVM}
+<a name ="OVM"></a>
 
 **!!!OVM:** *Volume*. The volume number may be preceded by the
 abbreviation \"Vol.\" as in `Vol. 2`. Arabic numbers are used.
 
-[]{#ODE} []{#dedication}
+<a name ="dedication"></a>
 
 **!!!ODE:** *Dedication*. Name of person or organization to whom the
 work is dedicated. If the work was dedicated to more than one person, 
 then each dedicatee\'s name should appear on a separate **!!!ODE:**
 record with a number designation prior to the colon.
 
-[]{#commission} []{#OCO}
+<a name ="OCO"></a>
 
 **!!!OCO:** *Commission*. Name of person or organization that
 commissioned the work. If the work was commissioned by more than one
 person,  then each commissioner\'s name should appear on a separate
 **!!!OCO:** record with a number designation prior to the colon.
 
-[]{#collector} []{#OCL}
+<a name ="OCL"></a>
 
 **!!!OCL:** *Collector*. Name of person who collected or transcribed the
 work. If the work was collected by more than one person,  then each
 collector\'s name should appear on a separate **!!!OCL:** record with a
 number designation prior to the colon.
 
-[]{#nota bene} []{#ONB}
+<a name ="ONB"></a>
 
 **!!!ONB:** *Free format note* related to the title or identity of the
 encoded work. Nota bene. If more than one such note is encoded,  each
 should appear on a separate **!!!ONB:** record with a number designation
 prior to the colon.
 
-[]{#date of composition} []{#ODT}
+<a name ="ODT"></a>
 
 **!!!ODT:** *Date of composition*. The date (or period) of composition
 should be encoded using the [`**date`](representations/date.rep.html) or
@@ -429,28 +429,28 @@ highly refined representation,  including methods for representing
 uncertainty,  approximation, and boundary dates (e.g. prior to \...,
 after \...).
 
-[]{#OCY} []{#country of composition}
+<a name ="country of composition"></a>
 
 **!!!OCY:** *Country of composition*. Local names should be used,  such
 as \`Espana\'.
 
-[]{#OPC} []{#city of composition}
+<a name ="city of composition"></a>
 
 **!!!OPC:** *City,  town or village of composition*. Local names should
 be used,  such as \`Den Haag.\'
 
-[]{#Group_Information}
+<a name ="Group_Information"></a>
 
 Group Information
 -----------------
 
-[]{#GTL} []{#group}
+<a name ="group"></a>
 
 **!!!GTL:** *Group Title*. A logical collection of works such as the
 \"London Symphonies\" by Haydn,  or the four concertos by Vivaldi forming
 \"The Seasons\".
 
-[]{#associated work} []{#GAW}
+<a name ="GAW"></a>
 
 **!!!GAW:** *Associated Work*. Some works are associated with other
 works,  such as plays, novels, paintings, films, or other musical works.
@@ -460,104 +460,104 @@ identified by author and title. E.g.
 
 > ` !!!GAW: Stéphane Mallarmé,  L'Après-midi d'un faune; [The Afternoon of a Faun].`
 
-[]{#GCO} []{#group}
+<a name ="group"></a>
 
 **!!!GCO:** *Collection designation*. This is a free-form text record
 that can be used to identify a collection of pieces,  such as works
 appearing in a compendium or anthology. E.g. Norton Scores,  Smithsonian
 Collection,  Burkhart Anthology.
 
-[]{#Imprint_Information}
+<a name ="Imprint_Information"></a>
 
 Imprint Information
 -------------------
 
-[]{#publication status} []{#PUB}
+<a name ="PUB"></a>
 
 **!!!PUB:** *Publication status*. This reference record identifies
 whether the document has ever been \"published\". One of the following
 English terms may appear: `published` or `unpublished`.
 
-[]{#first publisher} []{#PPR}
+<a name ="PPR"></a>
 
 **!!!PPR:** *First publisher*. Name of the first publisher of the work.
 
-[]{#PDT} []{#date of first publication}
+<a name ="date of first publication"></a>
 
 **!!!PDT:** *Date first published*. The date of publication should be
 encoded using the [`**date`](representations/date.rep.html) format
 described in the *Humdrum Reference Manual*.
 
-[]{#place of first publication} []{#PPP}
+<a name ="PPP"></a>
 
 **!!!PPP:** *Place first published*. (Local language should be used.)
 
-[]{#publisher's catalogue number} []{#PC#}
+<a name =""></a>
 
 **!!!PC\#:** *Publisher\'s catalogue number*. This should not be
 confused with better known scholarly catalogues,  such as those of
 Köchel,  Hoboken, etc.
 
-[]{#SCT} []{#scholarly catalogue abbreviation and number}
+<a name ="scholarly catalogue abbreviation and number"></a>
 
 **!!!SCT:** *Scholarly catalogue abbreviation and number*. E.g. BWV 551
 
-[]{#scholarly catalogue (unabbreviated) name} []{#SCA}
+<a name ="SCA"></a>
 
 **!!!SCA:** *Scholarly catalogue (unabbreviated) name*.
 E.g.`Koechel 117`.
 
-[]{#manuscript source} []{#SMS}
+<a name ="SMS"></a>
 
 **!!!SMS:** *Manuscript source name*. For unpublished sources,  the
 manuscript source name.
 
-[]{#manuscript location} []{#SML}
+<a name ="SML"></a>
 
 **!!!SML:** *Manuscript location*. For unpublished sources,  the location
 of the manuscript source.
 
-[]{#SMA} []{#acknowledgement of manuscript access}
+<a name ="acknowledgement of manuscript access"></a>
 
 **!!!SMA:** *Acknowledgement of manuscript access*. This reference
 information may be used to encode a free format acknowledgement or note
 of thanks to a given manuscript owner for scholarly or other access.
 
-[]{#Copyright_Information}
+<a name ="Copyright_Information"></a>
 
 Copyright Information
 ---------------------
 
-[]{#YEP} []{#publisher of electronic edition}
+<a name ="publisher of electronic edition"></a>
 
 **!!!YEP:** *Publisher of electronic edition*. This reference identifies
 the publisher of the electronic document.
 
-[]{#YEC} []{#date and owner of electronic copyright}
+<a name ="date and owner of electronic copyright"></a>
 
 **!!!YEC:** *Date and owner of electronic copyright*. This reference
 identifies the year and owner of the copyright for the electronic
 document.
 
-[]{#YER} []{#date electronic edition released}
+<a name ="date electronic edition released"></a>
 
 **!!!YER:** Date electronic edition released.
 
-[]{#YEM} []{#copyright message}
+<a name ="copyright message"></a>
 
 **!!!YEM:** *Copyright message*. This record conveys any special text
 related to copyright. It might convey a simple warning (e.g. \"All
 rights reserved.\"),  convey registration or licensing information, or
 indicate that the document is shareware.
 
-[]{#YEN} []{#country of copyright}
+<a name ="country of copyright"></a>
 
 **!!!YEN:** *Country of copyright*. This reference identifies the
 country in which the electronic document was created,  or where the
 copyright was established. In effect,  it identifies the country under
 whose laws the copyright declaration is to be interpreted.
 
-[]{#YOR} []{#original document}
+<a name ="original document"></a>
 
 **!!!YOR:** *Original document*. This reference identifies any original
 source or sources from which encoded document was prepared. Note that
@@ -565,7 +565,7 @@ original documents may themselves be copyrighted,  and that permission
 may be required in order to create an electronic derivative document.
 Original documents may also have lapsed copyrights.
 
-[]{#original document owner} []{#YOO}
+<a name ="YOO"></a>
 
 **!!!YOO:** *Original document owner*. If the electronic document was
 prepared from a copyrighted original document,  this reference identifies
@@ -574,7 +574,7 @@ electronic and original documents have the same owner,  some licensing
 agreement or other legal arrangement is necessary in order to create an
 electronic derivative document.
 
-[]{#original copyright year} []{#YOY}
+<a name ="YOY"></a>
 
 **!!!YOY:** *Original copyright year*. If the electronic document was
 prepared from a copyrighted original document,  this reference identifies
@@ -582,21 +582,21 @@ the year of copyright for the original document. Note that some
 licensing agreement or other legal arrangement is necessary in order to
 create an electronic derivative document.
 
-[]{#original editor} []{#YOE}
+<a name ="YOE"></a>
 
 **!!!YOE:** *Original editor*. The editor of the original document from
 which the electronic edition was prepared. Note that some licensing
 agreement or other legal arrangement may be necessary in order to create
 an electronic derivative document.
 
-[]{#EED} []{#electronic editor}
+<a name ="electronic editor"></a>
 
 **!!!EED:** *Electronic Editor*. Name of the editor of the electronic
 document. If more than one editor was involved in the work,  then each
 editor\'s name should appear on a separate **!!!EED:** record with a
 number designation prior to the colon.
 
-[]{#ENC} []{#encoder of electronic document}
+<a name ="encoder of electronic document"></a>
 
 **!!!ENC:** *Encoder of the electronic document*. This reference
 identifies the name of the person or persons who encoded the electronic
@@ -605,7 +605,7 @@ one encoder was involved in the work,  then each encoder\'s name should
 appear on a separate **!!!ENC:** record with a number designation prior
 to the colon.
 
-[]{#document modification description} []{#EMD}
+<a name ="EMD"></a>
 
 **!!!EMD:** *Document modification description*. This record type is
 used to chronicle all modifications made to the original electronic
@@ -615,13 +615,13 @@ type of modification made. For each successive modification,  a separate
 **!!!EMD:** record should appear with a number designation prior to the
 colon.
 
-[]{#EEV} []{#electronic edition version}
+<a name ="electronic edition version"></a>
 
 **!!!EEV:** *Electronic edition version*. This reference identifies the
 specific editorial version of the work. e.g. Version 1.3g Only a single
 **!!!EEV:** record can appear in a given electronic document.
 
-[]{#EFL} []{#file number}
+<a name ="file number"></a>
 
 **!!!EFL:** *File number*. Some files are part of a series or group of
 related files. This record indicates that the current document is file
@@ -630,7 +630,7 @@ in:
 
 > ` !!!EFL: 1/4`
 
-[]{#encoding status} []{#EST}
+<a name ="EST"></a>
 
 **!!!EST:** *Encoding status*. This record indicates the current status
 of the document as it is being produced. Free-format text may indicate
@@ -638,7 +638,7 @@ that the encoding is in-progress,  list tasks remaining, or indicate that
 the encoding is complete. **!!!EST:** records are normally eliminated
 prior to distribution of the document.
 
-[]{#VTS} []{#checksum validation number}
+<a name ="checksum validation number"></a>
 
 **!!!VTS:** *Checksum validation number*. This reference encodes the
 checksum number for the file \-- excluding the **!!!VTS:** record
@@ -650,31 +650,31 @@ that this validation process is easily circumvented by malicious
 individuals. For true security,  the checksum value should be compared
 with a printed list of checksums provided by the electronic publisher.
 
-[]{#Analytic_Information}
+<a name ="Analytic_Information"></a>
 
 Analytic Information
 --------------------
 
-[]{#ACO} []{#collection}
+<a name ="collection"></a>
 
 **!!!ACO:** *Collection designation*. This is a free-form text record
 that can be used to identify a collection,  set, or group of related
 works,  such as works appearing in a compendium or anthology. E.g. Norton
 Scores,  Smithsonian Collection, Jones Anthology.
 
-[]{#AFR} []{#form designation}
+<a name ="form designation"></a>
 
 **!!!AFR:** *Form designation*. This is a free-form text record that can
 be used to identify the form (if appropriate) of the work. E.g. fuga, 
 sonata-allegro,  passacaglia, rounded binary, rondo.
 
-[]{#AGN} []{#genre designation}
+<a name ="genre designation"></a>
 
 **!!!AGN:** *Genre designation*. This is a free-form text record that
 can be used to identify the genre of the work. E.g. opera,  string
 quartet,  barbershop quartet.
 
-[]{#AST} []{#style,  period, or type of work designation}
+<a name ="style,  period, or type of work designation"></a>
 
 **!!!AST:** *Style,  period, or type of work designation*. This is a
 free-form text record that can be used to characterize the style, 
@@ -683,7 +683,7 @@ deemed appropriate by the producer of the document. Designations might
 include keywords or keyphrases such as: Baroque,  bebop, Ecole Notre
 Dame,  minimalist, serial, reggae, slendro, heterophony, etc.
 
-[]{#AMD} []{#mode classification}
+<a name ="mode classification"></a>
 
 **!!!AMD:** *Mode Classification*. A combined numerical/name system for
 mode identification \-- used especially for medieval monophonic and
@@ -710,14 +710,14 @@ names are:
 Other non-standard mode names can be used at the discretion of the
 electronic editor.
 
-[]{#AMT} []{#metric classification}
+<a name ="metric classification"></a>
 
 **!!!AMT:** *Metric Classification*. Meters for a file may be classified
 as one of the following eight categories: `simple duple`, 
 `simple triple`,  `simple quadruple`, `compound duple`,
 `compound triple`,  `compound quadruple`, `irregular`, or `various`.
 
-[]{#AIN} []{#instrumentation}
+<a name ="instrumentation"></a>
 
 **!!!AIN:** [**Instrumentation.**](guide.append2.html) This reference is
 used to list all of the instruments (including voice) used in the work.
@@ -730,7 +730,7 @@ command.) E.g.
 
 > ` !!!AIN: clars corno fagot flt oboe`
 
-[]{#ARE} []{#region designation}
+<a name ="region designation"></a>
 
 **!!!ARE:** *Geographical region of origin*. This reference identifies
 the geographical location from which the work originates. Location
@@ -741,7 +741,7 @@ district or even street address.
 
 > ` !!!ARE: Europa,  Mitteleuropa, Deutschland, Wuerttemberg, Sindelfingen  !!!ARE: America, North America, United States of America, Ohio, Columbus`
 
-[]{#ARL} []{#location designation}
+<a name ="location designation"></a>
 
 **!!!ARL:** *Geographical location of origin*. Like the ARE record,  this
 reference record identifies the geographical location from which a work
@@ -758,12 +758,12 @@ provinces,  the geographical center of the region is used.
 
 > ` !!!ARL: 51.5/10.5@`
 
-[]{#Historical_Information}
+<a name ="Historical_Information"></a>
 
 Historical and Background Information
 -------------------------------------
 
-[]{#HAO} []{#aural_history}
+<a name ="aural_history"></a>
 
 **!!!HAO:** *Aural History*. This is a free-form text record used to
 relay any story or stories about the origin,  purpose or background of
@@ -771,26 +771,26 @@ the work. This reference record is especially useful in
 ethnomusicological materials,  where a particular story accompanies a
 song. The story may be encoded using several successive HAO records.
 
-[]{#HTX} []{#text_translation}
+<a name ="text_translation"></a>
 
 **!!!HTX:** *Free-form Translation of Vocal Text*. This is a free-form
 text record used to relay a non-literal translation of a vocal text.
 This reference record is again especially useful in ethnomusicological
 materials.
 
-[]{#Representation_Information}
+<a name ="Representation_Information"></a>
 
 Representation Information
 --------------------------
 
-[]{#ASCII language setting} []{#RLN}
+<a name ="RLN"></a>
 
 **!!!RLN:** *ASCII language setting*. This reference identifies the
 \"language\" code in which the file was encoded. This is applicable only
 to computer platforms which provide \"extended ASCII\" text capabilities
 (e.g. Danish or Spanish characters).
 
-[]{#User-defined signifiers} []{#RDF}
+<a name ="RDF"></a>
 
 **!!!RDF:** *User-defined signifiers*. All Humdrum representations
 provide some signifiers (ASCII characters) that remain undefined. Users
@@ -804,24 +804,24 @@ within a hypothetical \*\*piano representation. E.g.
 
 > ` !!!RDF**piano: X=hands cross,  left over right  !!!RDF**piano: x=hands cross, right over left`
 
-[]{#date encoded} []{#RDT}
+<a name ="RDT"></a>
 
 **!!!RDT:** *Date encoded*. This reference uses the Humdrum
 [`**date`](representations/date.rep.html) format to identify the date(s)
 when the document was encoded.
 
-[]{#representaton note} []{#RNB}
+<a name ="RNB"></a>
 
 **!!!RNB:** *Representation note*. This reference provides a free-format
 text that conveys some document-specific note related to matters of
 representation.
 
-[]{#representaton warning} []{#RWG}
+<a name ="RWG"></a>
 
 **!!!RWG:** *Representation warning*. This reference may be used to
 encode explicit warnings concerning the encoded material.
 
-[]{#Electronic_Citation}
+<a name ="Electronic_Citation"></a>
 
 Electronic Citation
 -------------------
@@ -853,12 +853,12 @@ minimum. A good habit is to place the composer,  title of the work, and
 copyright records at the beginning of the file,  and to relegate all
 other reference records to the end of the file.
 
-[]{#Further_Reference_Record_Codes}
+<a name ="Further_Reference_Record_Codes"></a>
 
 ISO Language Codes
 ------------------
 
-[]{#other language translations}
+<a name ="other language translations"></a>
 
 The following table provides further language designation codes not
 identified in the preceding discussion. A [**complete

@@ -29,7 +29,7 @@ less sophisticated than the **simil** and **correl** commands, they
 nevertheless provide convenient tools for quickly determining the
 relationship between two or more inputs.
 
-[]{#Comparing_Files_Using_cmp}
+<a name ="Comparing_Files_Using_cmp"></a>
 
 Comparing Files Using *cmp*
 ---------------------------
@@ -66,7 +66,7 @@ key-independent representation such as `solfa` or `deg`:
 > `rid -GL file2 | solfa > temp2`\
 > `cmp temp1 temp2`
 
-[]{#Identical_Lyrics}
+<a name ="Identical_Lyrics"></a>
 
 Two songs might have different melodies but employ the same lyrics. We
 can test whether they are identical by extracting and comparing any
@@ -77,7 +77,7 @@ might also use **rid -d** to eliminate null data records.
 > `extract -i '**silbe' file 2 | rid -GLd > temp2`\
 > `cmp temp1 temp2`
 
-[]{#Identical_Harmonies}
+<a name ="Identical_Harmonies"></a>
 
 Similarly, two works might have identical harmonies:
 
@@ -109,7 +109,7 @@ example, we might ask whether two works have the same changes of key.
 > `grep '^*[a-gA-G][#-]*:'  file 2 > temp2`\
 > `cmp temp1 temp2`
 
-[]{#Identical_Instrumentation}
+<a name ="Identical_Instrumentation"></a>
 
 In the extreme case, we might compare just a single line of information.
 For example, we might identify whether two works have identical
@@ -119,7 +119,7 @@ instrumentation:
 > `grep '^!!!AIN:'  file 2 > temp2`\
 > `cmp temp1 temp2`
 
-[]{#Comparing_Files_Using_diff}
+<a name ="Comparing_Files_Using_diff"></a>
 
 Comparing Files Using *diff*
 ----------------------------
@@ -134,7 +134,7 @@ latin texts that differ at line 40, might generate the following output:
 
 > `40c40  < es quiambulas  ---  > es quisedes`
 
-[]{#Text_Differences}
+<a name ="Text_Differences"></a>
 
 Let\'s consider again the question of whether two works have essentially
 the same lyrics. Many otherwise similar texts might differ in trivial
@@ -214,7 +214,7 @@ apart from musical texts. For example, with suitable changes in the
 processing, one could identify works that have similar rhythms, melodic
 contours, harmonies, rhyme schemes, and so on.
 
-[]{#Comparing_Inventories--The_comm_Command}
+<a name ="Comparing_Inventories--The_comm_Command"></a>
 
 Comparing Inventories \-- The *comm* Command
 --------------------------------------------
@@ -230,7 +230,7 @@ river\"). Short texts (such as for the *Kyrie* of the Latin mass) are
 especially prone to use highly distinctive repetition. How can we tell
 whether one work has pretty much the same lyrics as another?
 
-[]{#Similar_Vocabularies}
+<a name ="Similar_Vocabularies"></a>
 
 Fortunately, most texts tend to have unique word inventories. Although
 words may be repeated or re-ordered, phrases interrupted, and verses
@@ -389,7 +389,7 @@ frequency of words within the vocabularies.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

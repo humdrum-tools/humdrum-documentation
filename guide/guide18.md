@@ -27,7 +27,7 @@ representations. Most of the chapter will deal with the
 pre-defined Humdrum representation for fretted instrument tablatures.
 However, we will begin with a grab-bag of unorthodox representations.
 
-[]{#Heart_Beats_and_Other_Esoterica}
+<a name ="Heart_Beats_and_Other_Esoterica"></a>
 
 Heart Beats and Other Esoterica
 -------------------------------
@@ -188,7 +188,7 @@ all users will be interested in the `**fret` representation, it provides
 an instructive contrast to the score- and MIDI-based representations
 that we have relied on for most of the examples in this book.
 
-[]{#The_**fret_Representation}
+<a name ="The_**fret_Representation"></a>
 
 The *\*\*fret* Representation
 -----------------------------
@@ -424,7 +424,7 @@ and barlines. Rests tokens are denoted simply by the lower-case letter
 \`r\'. Barlines are represented using the \"common system\" for barlines
 used by `**kern` and other representations.
 
-[]{#Additional_Features_of_**fret}
+<a name ="Additional_Features_of_**fret"></a>
 
 Additional Features of *\*\*fret*
 ---------------------------------
@@ -588,7 +588,7 @@ as inputs, including [**cents**,](commands/cents.html)
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

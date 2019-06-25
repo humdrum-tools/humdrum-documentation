@@ -41,7 +41,7 @@ spectral analysis tools, and general signal processing software, In
 particular, we will discuss the **kern2cs** command which generates
 score data for the popular *Csound* digital sound synthesis language.
 
-[]{#The_**spect_Representation}
+<a name ="The_**spect_Representation"></a>
 
 The *\*\*spect* Representation
 ------------------------------
@@ -86,7 +86,7 @@ passing an input through the **spect** command.
 >   `261;47 330;57 523;57 659;35 785;35 989;27`
 >   ---------------------------------------------
 >
-[]{#The_SHARC_Database_and_spect_Command}
+<a name ="The_SHARC_Database_and_spect_Command"></a>
 
 The SHARC Database and *spect* Command
 --------------------------------------
@@ -116,7 +116,7 @@ shawm. Timbres for string instruments are distinguished according to
 different playing methods including arco, vibrato, non-vibrato,
 pizzicato, mute, and martello.
 
-[]{#The_mask_Command}
+<a name ="The_mask_Command"></a>
 
 The *mask* Command
 ------------------
@@ -151,7 +151,7 @@ take into account the effects of masking, and so an input containing the
 the **mask** command itself will generate an error if the input
 sonorities have already been modified using the **mask** command.
 
-[]{#The_sdiss_Command}
+<a name ="The_sdiss_Command"></a>
 
 The *sdiss* Command
 -------------------
@@ -163,7 +163,7 @@ dissonance is known to be affected by a number of factors, including
 past musical experience and cultural milieu. Perceptions of dissonance
 are even known to be influenced by the personality of the listener.
 
-[]{#sdiss}
+<a name ="sdiss"></a>
 
 Research by Donald Greenwood, Reiner Plomp, Wim Levelt, and others has
 established that one aspect of dissonance perception is related to the
@@ -211,7 +211,7 @@ to compare sensory dissonance values for sonorities consisting of
 different numbers of complex tones. Further problems with the Kameoka
 and Kuriyagawa measurement method are described in Mashinter (1995).
 
-[]{#Connecting_Humdrum_with_Csound--the_kern2cs_Command}
+<a name ="Connecting_Humdrum_with_Csound--the_kern2cs_Command"></a>
 
 Connecting Humdrum with Csound \-- the *kern2cs* Command
 --------------------------------------------------------
@@ -283,7 +283,7 @@ can also be used to generate AIFF files (audio information file format)
 for greater portability. *Csound* provides several other utilities for
 sound analysis, including Fourier analysis and linear predictive coding.
 
-[]{#Sound_Analysis}
+<a name ="Sound_Analysis"></a>
 
 Sound Analysis
 --------------
@@ -305,7 +305,7 @@ up-to-date information.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

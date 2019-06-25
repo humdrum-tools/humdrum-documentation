@@ -30,7 +30,7 @@ sounds. This representation provides a companion to the
 [`**silbe`](representations/silbe.rep.html) representations discussed in
 [Chapter 27.](guide27.html) Various sonorous processes are illustrated.
 
-[]{#The_**IPA_Representation}
+<a name ="The_**IPA_Representation"></a>
 
 The \*\*IPA Representation
 --------------------------
@@ -117,7 +117,7 @@ Humdrum does not provide a tool for translating from
 commercial text-to-phoneme translators available for most common
 languages.
 
-[]{#Alliteration}
+<a name ="Alliteration"></a>
 
 Alliteration
 ------------
@@ -259,7 +259,7 @@ The final output is:
 >   `*-`
 >   ------------
 >
-[]{#Classifying_Phonemes}
+<a name ="Classifying_Phonemes"></a>
 
 Classifying Phonemes
 --------------------
@@ -285,7 +285,7 @@ script might contain the following assignments:
 Classifying phonemes in this way will allow us to broaden our searches
 for alliterative passages.
 
-[]{#Properties_of_Vowels}
+<a name ="Properties_of_Vowels"></a>
 
 Properties of Vowels
 --------------------
@@ -311,7 +311,7 @@ or humor. Taunting sounds made by children (\"nya, nya \...\") commonly
 use high vowels mixed with nasals. Similarly, high/nasal vocal sounds
 are often used by comedians and actors to produce a \`funny\' voice.
 
-[]{#Gilbert_and_Sullivan}
+<a name ="Gilbert_and_Sullivan"></a>
 
 Suppose we want to test the idea that a certain piece in a Gilbert and
 Sullivan operetta exhibits a preponderance of high vowels. We might
@@ -332,7 +332,7 @@ values averaged using the **stats** command:
 This procedure can be repeated for several movements or pieces to
 provide a contrast for the piece of interest.
 
-[]{#Vowel_Coloration}
+<a name ="Vowel_Coloration"></a>
 
 Vowel Coloration
 ----------------
@@ -368,7 +368,7 @@ a longer value for **timebase**. Alternatively, we might use the Humdrum
 **accent** command (described in [Chapter 25](guide25.html)) to identify
 notes have a particularly high noticeability.
 
-[]{#Rhyme_and_Rhyme_Schemes}
+<a name ="Rhyme_and_Rhyme_Schemes"></a>
 
 Rhymes and Rhyme Schemes
 ------------------------
@@ -508,7 +508,7 @@ The corresponding output would indicate the rhyme scheme for this poem:
 >
 > ------------------------------------------------------------------------
 >
-> []{#Reprise}
+> <a name ="Reprise"></a>
 >
 > Reprise
 > -------

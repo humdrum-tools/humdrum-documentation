@@ -50,7 +50,7 @@ user. Not all users will be equally adept at formulating an appropriate
 regular expression to search for a given pattern. As with the study of a
 musical instrument, practise is advised.
 
-[]{#Literals}
+<a name ="Literals"></a>
 
 Literals
 --------
@@ -76,7 +76,7 @@ identified in the input string, corresponding to the defined regular
 expression. The specific sequence of characters found in the input
 string is referred to as the *matched string* or *matched pattern.*
 
-[]{#Wild-Card}
+<a name ="Wild-Card"></a>
 
 Wild-Card
 ---------
@@ -99,7 +99,7 @@ and \"`acoustic`\" but not in \"`cuivre`\" or \"`Crumhorn`\". Any
 character can be interposed between the \``c`\' and the \``u`\' provided
 there is precisely one such character.
 
-[]{#Escape_Character}
+<a name ="Escape_Character"></a>
 
 Escape Character
 ----------------
@@ -118,7 +118,7 @@ function. For example, the regular expression
 will match the period character. The backslash itself may be escaped by
 preceding it by an additional backslash (i.e. `\\`).
 
-[]{#Repetition_Operators}
+<a name ="Repetition_Operators"></a>
 
 Repetition Operators
 --------------------
@@ -273,7 +273,7 @@ mark means \"zero or one.\" Collectively, these metacharacters are known
 as *repetition operators* since they indicate the number of times an
 expression can occur in order to match.
 
-[]{#Context_Anchors}
+<a name ="Context_Anchors"></a>
 
 Context Anchors
 ---------------
@@ -315,7 +315,7 @@ expressions we have discussed. For example, the regular expression:
 
 matches any line that begins with \``a`\' and ends with \``z`\'.
 
-[]{#OR_Logical_Operator}
+<a name ="OR_Logical_Operator"></a>
 
 OR Logical Operator
 -------------------
@@ -347,7 +347,7 @@ example, the regular expression:
 will match eight different strings, including `simple triple meter` and
 `compound quadruple meter`.
 
-[]{#Character_Classes}
+<a name ="Character_Classes"></a>
 
 Character Classes
 -----------------
@@ -430,7 +430,7 @@ character-class range is not specified in numerically ascending order or
 alphabetic order, the regular expression is considered ungrammatical and
 will result in an error.
 
-[]{#Examples_of_Regular_Expressions}
+<a name ="Examples_of_Regular_Expressions"></a>
 
 Examples of Regular Expressions
 -------------------------------
@@ -463,7 +463,7 @@ provides a summary description of the effect of each expression:\
 >
 *Examples of regular expressions.*
 
-[]{#Examples_of_Regular_Expressions_in_Humdrum}
+<a name ="Examples_of_Regular_Expressions_in_Humdrum"></a>
 
 Examples of Regular Expressions in Humdrum
 ------------------------------------------
@@ -548,7 +548,7 @@ Humdrum [**rid**](commands/rid.html) command to explicitly remove
 comments and interpretations prior to processing (see [Chapter
 13](guide13.html)).
 
-[]{#Basic,_Extended,_and_Humdrum-Extended_Regular_Expressions}
+<a name ="Basic,_Extended,_and_Humdrum-Extended_Regular_Expressions"></a>
 
 Basic, Extended, and Humdrum-Extended Regular Expressions
 ---------------------------------------------------------
@@ -582,7 +582,7 @@ discussed in [Chapter 21.](guide21.html)
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------

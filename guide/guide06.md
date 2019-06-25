@@ -127,7 +127,7 @@ that the duration of the last note in the example is indeterminate. It
 could be a sixteenth note, a quintuplet sixteenth, or some other
 duration.
 
-[]{#Grace_Notes,_Gruppetos_and_Appoggiaturas}
+<a name ="Grace_Notes,_Gruppetos_and_Appoggiaturas"></a>
 
 Grace Notes, Gruppettos and Appoggiaturas
 -----------------------------------------
@@ -173,7 +173,7 @@ itself is designated by the upper-case letter \"`P`\", whereas the
 subsequent note (whose notated duration has been shortened) is
 designated by the lower-case letter \"`p`\".
 
-[]{#Multiple_Stops}
+<a name ="Multiple_Stops"></a>
 
 Multiple Stops
 --------------
@@ -328,7 +328,7 @@ have been encoded for both notes in the double stop.\
 >   \*-
 >   --------------
 >
-[]{#Further_Examples}
+<a name ="Further_Examples"></a>
 
 Further Examples
 ----------------
@@ -467,7 +467,7 @@ that the onsets are ordered in the correct temporal sequence.\
 > >
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
