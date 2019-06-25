@@ -1,26 +1,15 @@
 ---
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-description: |
-    Bibliography for the Humdrum Toolkit User Guide: music research
-    software.
-keywords: |
-    music research,software,theory,analysis,systematic
-    musicology,computer,software
+description: Bibliography for the Humdrum Toolkit User Guide
 revision-date: 'Thu Feb 3 10:12:48 EST 2000'
-robots: all
-title: 'Humdrum Toolkit User\''s Guide \-- Bibliography'
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
 
 Bibliography
 ============
 
-\
-\
+
+
 Alphonce, B. Music analysis by computer. *Computer Music Journal,* Vol.
 4, No. 2 (1980) pp. 26-35.\
 \

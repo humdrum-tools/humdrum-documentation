@@ -1,20 +1,8 @@
 ---
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-description: |
-    Table of Contents to the User Guide for the Humdrum Toolkit music
-    research software.
-keywords: |
-    music research,software,theory,analysis,systematic
-    musicology,computer,software
 revision-date: 'Thu Feb 3 10:13:08 EST 2000'
-robots: all
-title: 'D. Huron, Music Research Using Humdrum \-- Detailed Table of Contents'
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
 
 Detailed Table of Contents
 --------------------------

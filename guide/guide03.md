@@ -1,20 +1,9 @@
 ---
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-description: |
-    Chapter 3 (Some Initial Processing) of the User Guide for the Humdrum
-    Toolkit music research software.
-keywords: |
-    music research,software,theory,analysis,systematic
-    musicology,computer,software
 revision-date: 'Thu Feb 3 10:13:33 EST 2000'
-robots: all
-title: 'Humdrum Toolkit User\''s Guide \-- Chapter 3'
+permalink:	/guide/ch03/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
 
 Chapter3
 ========

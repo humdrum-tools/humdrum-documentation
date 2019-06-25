@@ -25,7 +25,7 @@ Additionally, instead of tooltip popovers, you could also print content directly
 
 Here's a diagram showing the basic idea of the help API:
 
-<img src="images/helpapi.svg" style="width: 650px;"/>
+<img src="/images/helpapi.svg" style="width: 650px;"/>
 
 Is this really an API? Well, sort of. The help content is pushed out into a JSON file that other websites and applications can easily consume. The endpoints don't deliver different data based on parameters added to a URL. But the overall concept is similar to an API: you have a client requesting resources from a server.
 

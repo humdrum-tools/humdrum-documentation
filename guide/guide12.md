@@ -1,23 +1,10 @@
 ---
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-description: |
-    Chapter 12 (Selecting Musical Parts and Passages) of the User Guide for
-    the Humdrum Toolkit music research software.
-keywords: |
-    music research,software,theory,analysis,systematic
-    musicology,computer,software
 revision-date: 'Thu Feb 3 10:14:31 EST 2000'
-robots: all
-title: 'Humdrum Toolkit User\''s Guide \-- Chapter 12'
+permalink:	/guide/ch12/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-\
-\
 
 Chapter12
 =========

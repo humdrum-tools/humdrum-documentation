@@ -70,7 +70,7 @@ When you exclude folders, include the trailing slash at the end of the folder na
 
 ```
 exclude:
-- images/alpha/
+- /images/alpha/
 ```
 
 There isn't a way to automatically exclude anything. By default, everything is included unless you explicitly list it under the exclude section.
