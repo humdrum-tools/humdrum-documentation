@@ -1,0 +1,10 @@
+scripts/verovio-toolkit.js
+_site
+*.swp
+scripts/local
+styles/local
+.DS_Store
+Gemfile.lock
+wildwebmidi-old.data
+scripts/midiplayer/old
+.old
