@@ -8,3 +8,10 @@ Gemfile.lock
 wildwebmidi-old.data
 scripts/midiplayer/old
 .old
+.sass-cache/
+.jekyll-metadata
+_pdf
+.DS_Store
+.idea
+vendor/
+.bundle/
