@@ -404,7 +404,6 @@ arguments*, *input files* and *output redirection*.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide09.html)
 

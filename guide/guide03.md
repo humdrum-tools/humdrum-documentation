@@ -486,7 +486,6 @@ causes the output to be sorted in reverse order.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide04.html)
 

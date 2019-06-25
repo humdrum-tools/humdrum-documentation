@@ -203,7 +203,7 @@ pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
 
 ------------------------------------------------------------------------
 
-\
+
 
 [**Next Chapter**](guide36.html)
 

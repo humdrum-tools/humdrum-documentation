@@ -426,7 +426,6 @@ in another directory via *instrumentation*, in a third directory via
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide32.html)
 

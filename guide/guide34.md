@@ -535,7 +535,6 @@ expanded to look at other parameters typical of \"complete serialism\"
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide35.html)
 

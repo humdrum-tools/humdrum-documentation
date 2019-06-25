@@ -9,7 +9,6 @@ Detailed Table of Contents
 
 ------------------------------------------------------------------------
 
-\
 
 [**Regular Table of Contents**](guide.toc.html)
 

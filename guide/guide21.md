@@ -663,7 +663,6 @@ can contribute to more sophisticated pattern searches.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide22.html)
 

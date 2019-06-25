@@ -422,7 +422,6 @@ inputting MIDI data into Humdrum.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide08.html)
 

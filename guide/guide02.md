@@ -586,7 +586,6 @@ useful ways. In the next chapter we will examine some simple processes.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide03.html)
 

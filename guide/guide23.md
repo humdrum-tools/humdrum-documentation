@@ -730,7 +730,6 @@ their estimated perceptual importance. We will consider **accent** in
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide24.html)
 

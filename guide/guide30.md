@@ -165,7 +165,6 @@ tools is given in the *Humdrum Toolkit Reference Manual.*
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide31.html)
 

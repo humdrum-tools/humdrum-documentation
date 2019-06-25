@@ -524,7 +524,7 @@ The corresponding output would indicate the rhyme scheme for this poem:
 >
 > ------------------------------------------------------------------------
 >
-> \
+> 
 >
 > [**Next Chapter**](guide34.html)
 >

@@ -413,7 +413,6 @@ characterizing differences, commonalities, and similarities.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide30.html)
 

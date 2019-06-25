@@ -799,7 +799,6 @@ keyboard synthesizer
 
 ------------------------------------------------------------------------
 
-\
 
 [**Previous Appendix**](guide.append1.html)
 

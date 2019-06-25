@@ -700,7 +700,6 @@ some exclusive interpretation.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide06.html)
 

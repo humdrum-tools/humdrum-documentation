@@ -351,7 +351,6 @@ pipeline or regular expression into a single user-defined keyword.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide17.html)
 

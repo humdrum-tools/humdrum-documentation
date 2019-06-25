@@ -674,7 +674,6 @@ provided by the [**humsed**](commands/humsed.html) command.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide23.html)
 

@@ -736,7 +736,6 @@ Humdrum representation syntax.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide05.html)
 

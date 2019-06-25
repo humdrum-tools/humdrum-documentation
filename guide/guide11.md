@@ -669,7 +669,6 @@ calculating pitch distances.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide12.html)
 

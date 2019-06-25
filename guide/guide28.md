@@ -681,7 +681,6 @@ related to the dynamic organization of music.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide29.html)
 

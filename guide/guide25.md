@@ -987,7 +987,7 @@ following work by Ferdinando Carulli:\
 >
 > ------------------------------------------------------------------------
 >
-> \
+> 
 >
 > [**Next Chapter**](guide26.html)
 >

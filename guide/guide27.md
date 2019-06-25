@@ -892,7 +892,6 @@ and processes related to phonetic data.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide28.html)
 

@@ -216,7 +216,6 @@ seven questions provide useful guidelines:
 
 ------------------------------------------------------------------------
 
-\
 
 [**Previous Chapter**](guide39.html)
 

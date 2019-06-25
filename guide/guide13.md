@@ -764,7 +764,6 @@ for a variety of types of rhythmic tasks.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide14.html)
 

@@ -603,7 +603,6 @@ important Humdrum tools can still be used to manipulate your data.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide19.html)
 

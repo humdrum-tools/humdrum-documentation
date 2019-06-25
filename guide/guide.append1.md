@@ -924,7 +924,6 @@ list**](http://lcweb.loc.gov/standards/iso639-2/englangn.html) of ISO
 >
 ------------------------------------------------------------------------
 
-\
 
 [**Next Appendix**](guide.append2.html)
 

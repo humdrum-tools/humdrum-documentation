@@ -381,7 +381,6 @@ users are able to create their own specialized filters.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide33.html)
 
