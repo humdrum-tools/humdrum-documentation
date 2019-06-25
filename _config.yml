@@ -1,5 +1,8 @@
 repository: humdrum-tools/newdoc
 
+# CSS STYLINGS:
+primary_background_color: "#3d5b73"
+
 # Sets the website to use local javascript/css only.  All resource files
 # will be local if this variable is set to "yes"; otherwise internet 
 # access is required for any other string.
@@ -18,10 +21,10 @@ site_title: Humdrum
 company_name: Humdrum consortium
 # this appears in the footer
 
-github_editme_path: humdrum-tools/newdoc/blob/gh-pages/
+github_editme_path: humdrum-tools/newdoc/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-# gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
+# gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/master/
 # if you're using GitLab, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 #disqus_shortname: idratherbewriting
@@ -123,3 +126,8 @@ description: "Documentation about Humdrum tools and data for computational music
 
 
 github: [metadata]
+
+
+
+
+
