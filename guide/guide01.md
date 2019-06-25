@@ -23,7 +23,6 @@ capabilities and to help sketch some of the big picture. Don\'t worry if
 you don\'t understand everything in this chapter. All of the topics
 mentioned here will be covered more thoroughly in later chapters.
 
-[]{#What_Can_Humdrum_Do}
 
 What Can Humdrum Do?
 --------------------
@@ -53,8 +52,6 @@ for any of the above problems, only a few of these questions are *easy*
 to answer using Humdrum. The primary impediment to a quick solution is
 the user\'s skill in interconnecting the right tools for the task at
 hand. The purpose of this book is to help you develop that skill.
-
-[]{#The_Humdrum_Syntax_and_the_Humdrum_Toolkit}
 
 The Humdrum Syntax and the Humdrum Toolkit
 ------------------------------------------
@@ -198,8 +195,6 @@ problems is legion.
 Now that we\'ve sketched an overview of Humdrum, we can consider in
 greater detail the two principal components of Humdrum: the *Humdrum
 Syntax* and the *Humdrum Toolkit*.
-
-[]{#Humdrum_Syntax}
 
 Humdrum Syntax
 --------------
