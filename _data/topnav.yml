@@ -4,8 +4,8 @@
 topnav:
 - title: Topnav
   items:
-    - title: GitHub
-      external_url: https://github.com/tomjoht/documentation-theme-jekyll
+    - title: VHV
+      external_url: https://verovio.humdrum.org
     - title: News
       url: /news
 
@@ -36,7 +36,7 @@ topnav_dropdowns:
         - title: 10.
           url: /guide/ch10
 
-    - title: Products
+    - title: Manual
       folderitems:
         - title: Jekyll Documentation Theme
           url: /mydoc_introduction.html
