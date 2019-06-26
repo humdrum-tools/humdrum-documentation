@@ -2,231 +2,231 @@
 # If you are using the createtag script, don't leave an blank line at the end of this file.
 # In other words, the last line must be the last tag in the allowed-tags list.
 commands:
-	- name: assemble
-	  tags: 
-		- HT
-	- name: barks
-	  tags: 
-		- HT
-	- name: cbr
-	  tags: 
-		- HT
-	- name: census
-	  tags: 
-		- HT
-	- name: cents
-	  tags:
-		- HT
-	- name: cleave
-	  tags:
-		- HT
-	- name: cocho
-	  tags:
-		- HT
-	- name: context
-	  tags:
-		- HT
-	- name: correl
-	  tags:
-		- HT
-	- name: deg
-	  tags:
-		- HT
-	- name: degree
-	  tags:
-		- HT
-	- name: diss
-	  tags:
-		- HT
-	- name: ditto
-	  tags:
-		- HT
-	- name: dur
-	  tags:
-		- HT
-	- name: ekern
-	  tags:
-		- HT
-	- name: encode
-	  tags:
-		- HT
-	- name: extract
-	  tags:
-		- HT
-	- name: fade
-	  tags:
-		- HT
-	- name: fields
-	  tags:
-		- HT
-	- name: fin2hum
-	  tags:
-		- HT
-	- name: freq
-	  tags:
-		- HT
-	- name: hint
-	  tags:
-		- HT
-	- name: hum2fin
-	  tags:
-		- HT
-	- name: humdrum
-	  tags:
-		- HT
-	- name: humsed
-	  tags:
-		- HT
-	- name: humver
-	  tags:
-		- HT
-	- name: index
-	  tags:
-		- HT
-	- name: infot
-	  tags:
-		- HT
-	- name: iv
-	  tags:
-		- HT
-	- name: kern
-	  tags:
-		- HT
-	- name: key
-	  tags:
-		- HT
-	- name: melac
-	  tags:
-		- HT
-	- name: melvel
-	  tags:
-		- HT
-	- name: metpos
-	  tags:
-		- HT
-	- name: midi
-	  tags:
-		- HT
-	- name: midreset
-	  tags:
-		- HT
-	- name: mint
-	  tags:
-		- HT
-	- name: ms
-	  tags:
-		- HT
-	- name: nf
-	  tags:
-		- HT
-	- name: num
-	  tags:
-		- HT
-	- name: patt
-	  tags:
-		- HT
-	- name: pattern
-	  tags:
-		- HT
-	- name: pc
-	  tags:
-		- HT
-	- name: pcset
-	  tags:
-		- HT
-	- name: perform
-	  tags:
-		- HT
-	- name: pf
-	  tags:
-		- HT
-	- name: pitch
-	  tags:
-		- HT
-	- name: proof
-	  tags:
-		- HT
-	- name: recode
-	  tags:
-		- HT
-	- name: record
-	  tags:
-		- HT
-	- name: regexp
-	  tags:
-		- HT
-	- name: reihe
-	  tags:
-		- HT
-	- name: rend
-	  tags:
-		- HT
-	- name: rid
-	  tags:
-		- HT
-	- name: scramble
-	  tags:
-		- HT
-	- name: semits
-	  tags:
-		- HT
-	- name: simil
-	  tags:
-		- HT
-	- name: smf
-	  tags:
-		- HT
-	- name: solfa
-	  tags:
-		- HT
-	- name: specc
-	  tags:
-		- HT
-	- name: spect
-	  tags:
-		- HT
-	- name: strophe
-	  tags:
-		- HT
-	- name: synco
-	  tags:
-		- HT
-	- name: tacet
-	  tags:
-		- HT
-	- name: text
-	  tags:
-		- HT
-	- name: themefinder
-	  tags:
-		- HT
-	- name: thru
-	  tags:
-		- HT
-	- name: timebase
-	  tags:
-		- HT
-	- name: trans
-	  tags:
-		- HT
-	- name: urrhythm
-	  tags:
-		- HT
-	- name: veritas
-	  tags:
-		- HT
-	- name: vox
-	  tags:
-		- HT
-	- name: xdelta
-	  tags:
-		- HT
-	- name: yank
-	  tags:
-		- HT
-	- name: ydelta
-	  tags:
-		- HT
+        - name: assemble
+          tags: 
+                - HT
+        - name: barks
+          tags: 
+                - HT
+        - name: cbr
+          tags: 
+                - HT
+        - name: census
+          tags: 
+                - HT
+        - name: cents
+          tags:
+                - HT
+        - name: cleave
+          tags:
+                - HT
+        - name: cocho
+          tags:
+                - HT
+        - name: context
+          tags:
+                - HT
+        - name: correl
+          tags:
+                - HT
+        - name: deg
+          tags:
+                - HT
+        - name: degree
+          tags:
+                - HT
+        - name: diss
+          tags:
+                - HT
+        - name: ditto
+          tags:
+                - HT
+        - name: dur
+          tags:
+                - HT
+        - name: ekern
+          tags:
+                - HT
+        - name: encode
+          tags:
+                - HT
+        - name: extract
+          tags:
+                - HT
+        - name: fade
+          tags:
+                - HT
+        - name: fields
+          tags:
+                - HT
+        - name: fin2hum
+          tags:
+                - HT
+        - name: freq
+          tags:
+                - HT
+        - name: hint
+          tags:
+                - HT
+        - name: hum2fin
+          tags:
+                - HT
+        - name: humdrum
+          tags:
+                - HT
+        - name: humsed
+          tags:
+                - HT
+        - name: humver
+          tags:
+                - HT
+        - name: index
+          tags:
+                - HT
+        - name: infot
+          tags:
+                - HT
+        - name: iv
+          tags:
+                - HT
+        - name: kern
+          tags:
+                - HT
+        - name: key
+          tags:
+                - HT
+        - name: melac
+          tags:
+                - HT
+        - name: melvel
+          tags:
+                - HT
+        - name: metpos
+          tags:
+                - HT
+        - name: midi
+          tags:
+                - HT
+        - name: midreset
+          tags:
+                - HT
+        - name: mint
+          tags:
+                - HT
+        - name: ms
+          tags:
+                - HT
+        - name: nf
+          tags:
+                - HT
+        - name: num
+          tags:
+                - HT
+        - name: patt
+          tags:
+                - HT
+        - name: pattern
+          tags:
+                - HT
+        - name: pc
+          tags:
+                - HT
+        - name: pcset
+          tags:
+                - HT
+        - name: perform
+          tags:
+                - HT
+        - name: pf
+          tags:
+                - HT
+        - name: pitch
+          tags:
+                - HT
+        - name: proof
+          tags:
+                - HT
+        - name: recode
+          tags:
+                - HT
+        - name: record
+          tags:
+                - HT
+        - name: regexp
+          tags:
+                - HT
+        - name: reihe
+          tags:
+                - HT
+        - name: rend
+          tags:
+                - HT
+        - name: rid
+          tags:
+                - HT
+        - name: scramble
+          tags:
+                - HT
+        - name: semits
+          tags:
+                - HT
+        - name: simil
+          tags:
+                - HT
+        - name: smf
+          tags:
+                - HT
+        - name: solfa
+          tags:
+                - HT
+        - name: specc
+          tags:
+                - HT
+        - name: spect
+          tags:
+                - HT
+        - name: strophe
+          tags:
+                - HT
+        - name: synco
+          tags:
+                - HT
+        - name: tacet
+          tags:
+                - HT
+        - name: text
+          tags:
+                - HT
+        - name: themefinder
+          tags:
+                - HT
+        - name: thru
+          tags:
+                - HT
+        - name: timebase
+          tags:
+                - HT
+        - name: trans
+          tags:
+                - HT
+        - name: urrhythm
+          tags:
+                - HT
+        - name: veritas
+          tags:
+                - HT
+        - name: vox
+          tags:
+                - HT
+        - name: xdelta
+          tags:
+                - HT
+        - name: yank
+          tags:
+                - HT
+        - name: ydelta
+          tags:
+                - HT
 
 
 
