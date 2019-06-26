@@ -15,6 +15,7 @@ topnav_dropdowns:
   folders:
     - title: User guide
       folderitems:
+
         - title: 1.
           url: /guide/ch01
         - title: 2.
@@ -35,6 +36,69 @@ topnav_dropdowns:
           url: /guide/ch09
         - title: 10.
           url: /guide/ch10
+
+        - title: 11.
+          url: /guide/ch11
+        - title: 12.
+          url: /guide/ch12
+        - title: 13.
+          url: /guide/ch13
+        - title: 14.
+          url: /guide/ch14
+        - title: 15.
+          url: /guide/ch15
+        - title: 16.
+          url: /guide/ch16
+        - title: 17.
+          url: /guide/ch17
+        - title: 18.
+          url: /guide/ch18
+        - title: 19.
+          url: /guide/ch19
+        - title: 20.
+          url: /guide/ch20
+
+        - title: 21.
+          url: /guide/ch21
+        - title: 22.
+          url: /guide/ch22
+        - title: 23.
+          url: /guide/ch23
+        - title: 24.
+          url: /guide/ch24
+        - title: 25.
+          url: /guide/ch25
+        - title: 26.
+          url: /guide/ch26
+        - title: 27.
+          url: /guide/ch27
+        - title: 28.
+          url: /guide/ch28
+        - title: 29.
+          url: /guide/ch29
+        - title: 30.
+          url: /guide/ch30
+
+        - title: 31.
+          url: /guide/ch31
+        - title: 32.
+          url: /guide/ch32
+        - title: 33.
+          url: /guide/ch33
+        - title: 34.
+          url: /guide/ch34
+        - title: 35.
+          url: /guide/ch35
+        - title: 36.
+          url: /guide/ch36
+        - title: 37.
+          url: /guide/ch37
+        - title: 38.
+          url: /guide/ch38
+        - title: 39.
+          url: /guide/ch39
+        - title: 40.
+          url: /guide/ch40
 
     - title: Manual
       folderitems:
