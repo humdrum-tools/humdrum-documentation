@@ -108,17 +108,21 @@ commands:
           tags:
                 - HT
         - name: midreset
+          deprecated: true
           tags:
                 - HT
         - name: mint
           tags:
                 - HT
         - name: ms
+          deprecated: true
           tags:
                 - HT
         - name: nf
           tags:
                 - HT
+                - set_theory
+                - pitch
         - name: num
           tags:
                 - HT
@@ -197,9 +201,6 @@ commands:
         - name: text
           tags:
                 - HT
-        - name: themefinder
-          tags:
-                - HT
         - name: thru
           tags:
                 - HT
@@ -227,6 +228,5 @@ commands:
         - name: ydelta
           tags:
                 - HT
-
 
 

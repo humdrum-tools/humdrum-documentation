@@ -1,0 +1,115 @@
+# chapter:  chapter number
+# title:    title of chapter
+# commands: list of commands referenced in chapter
+
+        - chapter:  1
+          title:    "Humdrum: A Brief Tour"
+          commands: 
+        - chapter:  2
+          title:    "Representing Music Using **kern (I)"
+          commands: 
+        - chapter:  3
+          title:    "Some Initial Processing"
+          commands: 
+        - chapter:  4
+          title:    "Basic Pitch Translations"
+          commands: 
+        - chapter:  5
+          title:    "The Humdrum Syntax"
+          commands: 
+        - chapter:  6
+          title:    "Representing Music Using **kern (II)"
+          commands: 
+        - chapter:  7
+          title:    "MIDI Output Tools"
+          commands: 
+        - chapter:  8
+          title:    "The Shell (I)"
+          commands: 
+        - chapter:  9
+          title:    "Searching with Regular Expressions"
+          commands: 
+        - chapter:  10
+          title:    "Musical Uses of Regular Expressions"
+          commands: 
+        - chapter:  11
+          title:    "Melodic Intervals"
+          commands: 
+        - chapter:  12
+          title:    "Selecting Musical Parts and Passages"
+          commands: 
+        - chapter:  13
+          title:    "Assembling Scores"
+          commands: 
+        - chapter:  14
+          title:    "Stream Editing"
+          commands: 
+        - chapter:  15
+          title:    "Harmonic Intervals"
+          commands: 
+        - chapter:  16
+          title:    "The Shell (II)"
+          commands: 
+        - chapter:  17
+          title:    "Creating Inventories"
+          commands: 
+        - chapter:  18
+          title:    "Fingers, Footsteps and Frets"
+          commands: 
+        - chapter:  19
+          title:    "Musical Contexts"
+          commands: 
+        - chapter:  20
+          title:    "Strophes, Verses and Repeats"
+          commands: 
+        - chapter:  21
+          title:    "Searching for Patterns"
+          commands: 
+        - chapter:  22
+          title:    "Classifying"
+          commands: 
+        - chapter:  24
+          title:    "The Shell (III)"
+          commands: 
+        - chapter:  25
+          title:    "Similarity"
+          commands: 
+        - chapter:  26
+          title:    "Moving Signifiers Between Spines"
+          commands: 
+        - chapter:  27
+          title:    "Text and Lyrics"
+          commands: 
+        - chapter:  29
+          title:    "Differences and Commonalities"
+          commands: 
+        - chapter:  30
+          title:    "MIDI Input Tools"
+          commands: 
+        - chapter:  31
+          title:    "Repertories and Links"
+          commands: 
+        - chapter:  32
+          title:    "The Shell (IV)"
+          commands: 
+        - chapter:  33
+          title:    "Word Sounds"
+          commands: 
+        - chapter:  34
+          title:    "Serial Processing"
+          commands: 
+        - chapter:  36
+          title:    "Sound and Spectra"
+          commands: 
+        - chapter:  37
+          title:    "Electronic Music Editing"
+          commands: 
+        - chapter:  38
+          title:    "Systematic Musicology"
+          commands: 
+        - chapter:  39
+          title:    "Trouble-Shooting"
+          commands: 
+        - chapter:  40
+          title:    "Conclusion"
+          commands:
