@@ -33,12 +33,12 @@ estimates how salient or noticeable a given note is. The **accent**
 command can be used to pre-process musical passages so only those notes
 of greatest importance are considered when measuring musical similarity.
 
-[]{#The_correl_Command}
+<a name ="The_correl_Command"></a>
 
 The *correl* Command
 --------------------
 
-[]{#high_long_pitches}
+<a name ="high_long_pitches"></a>
 
 One way of measuring similarity is to compare the rise and fall of two
 sets of numbers. Suppose, for example, that we wanted to determine
@@ -193,7 +193,7 @@ omit the **ditto** command:
 Note that in formal statistical tests, the **-m** option should never be
 used.
 
-[]{#Using_a_Template_with_correl}
+<a name ="Using_a_Template_with_correl"></a>
 
 Using a Template with *correl*
 ------------------------------
@@ -326,7 +326,7 @@ values given in the template. Longer templates reduce the likelihood of
 spurious positive correlations. However, longer templates can also
 reduce the likelihood of discovering points of true similarity.
 
-[]{#The_simil_Command}
+<a name ="The_simil_Command"></a>
 
 The *simil* Command
 -------------------
@@ -485,7 +485,7 @@ reflect the presumed harmonic similarity:\
 >   \*-                     \*-
 >   ----------- ----------- -----------
 >
-[]{#Defining_Edit_Penalties}
+<a name ="Defining_Edit_Penalties"></a>
 
 Defining Edit Penalties
 -----------------------
@@ -621,7 +621,7 @@ following results:\
 Notice that the similarity measure for the pattern (tonic, subdom,
 subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 
-[]{#similar_fret_patterns}
+<a name ="similar_fret_patterns"></a>
 
 The [**simil**](commands/simil.html) command can be used to characterize
 innumerable types of similarity. Suppose, for example, that we wanted to
@@ -743,7 +743,7 @@ following work by Ferdinando Carulli:\
 > > >   b
 > > >   -----
 > > >
-> > []{#The_accent_Command}
+> > <a name ="The_accent_Command"></a>
 > >
 > > The *accent* Command
 > > --------------------
@@ -953,7 +953,7 @@ following work by Ferdinando Carulli:\
 >
 > ------------------------------------------------------------------------
 >
-> []{#Reprise}
+> <a name ="Reprise"></a>
 >
 > Reprise
 > -------
@@ -987,7 +987,7 @@ following work by Ferdinando Carulli:\
 >
 > ------------------------------------------------------------------------
 >
-> \
+> 
 >
 > [**Next Chapter**](guide26.html)
 >

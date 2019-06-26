@@ -33,7 +33,7 @@ of electronic documents representing musical score information. However,
 the basic procedures are applicable to any kind of data \-- from sound
 recordings to historical choreographies of ballets.
 
-[]{#The_Process_of_Electronic_Editing}
+<a name ="The_Process_of_Electronic_Editing"></a>
 
 The Process of Electronic Editing
 ---------------------------------
@@ -56,7 +56,7 @@ appropriate research notes, generating possible analytic information,
 and resolving issues related to copyright, distribution, and data
 integrity.
 
-[]{#Establishing_the_Goal}
+<a name ="Establishing_the_Goal"></a>
 
 Establishing the Goal
 ---------------------
@@ -86,7 +86,7 @@ got past the stage of inputting data. Early researchers typically ran
 out of time, money or enthusiasm before they could turn to *using* the
 materials they had input.
 
-[]{#Documenting_Encoded_Data}
+<a name ="Documenting_Encoded_Data"></a>
 
 Documenting Encoded Data
 ------------------------
@@ -111,7 +111,7 @@ Concretely, Humdrum provides several reference records that allow
 electronic editors to identify what information has been encoded and
 what information has been omitted or interpreted.
 
-[]{#Sources}
+<a name ="Sources"></a>
 
 Sources
 -------
@@ -164,7 +164,7 @@ any copyright issues that are raised. Few experiences are more
 discouraging than discovering that your work cannot be distributed
 because you failed to consider seriously the copyright issues involved.
 
-[]{#Selecting_a_Sample_from_Some_Repertory}
+<a name ="Selecting_a_Sample_from_Some_Repertory"></a>
 
 Selecting a Sample from Some Repertory
 --------------------------------------
@@ -216,7 +216,7 @@ database will be biased toward the early works of the repertory. In
 order to avoid introducing an unwanted bias, it is also prudent to
 encode the selected materials in a random order.
 
-[]{#Encoding}
+<a name ="Encoding"></a>
 
 Encoding
 --------
@@ -244,7 +244,7 @@ experience.
 Typically, it is more efficient to encode individual parts and then
 assemble all parts into a single full score.
 
-[]{#Transposing_Instruments}
+<a name ="Transposing_Instruments"></a>
 
 Transposing Instruments
 -----------------------
@@ -277,7 +277,7 @@ to:
 
 > `*ITrd-4c-7`
 
-[]{#Instrument_Identification}
+<a name ="Instrument_Identification"></a>
 
 Instrument Identification
 -------------------------
@@ -299,7 +299,7 @@ instrument class designators can also be found in Appendix II.
 In addition, the original instrument name (as found in the score) should
 also be encoded as a Humdrum local comment.
 
-[]{#Leading_Barlines}
+<a name ="Leading_Barlines"></a>
 
 Leading Barlines
 ----------------
@@ -344,7 +344,7 @@ would be encoded:
 A common encoding error is to render mid-movement double barlines as
 *functional* rather than *orthographic* double-bars.
 
-[]{#Ornamentation}
+<a name ="Ornamentation"></a>
 
 Ornamentation
 -------------
@@ -373,7 +373,7 @@ appoggiatura is marked by the upper-case letter \``P`\' and the final
 (second) note of the appoggiatura is marked by a lower-case letter
 \``p`\'.
 
-[]{#Editing_Sections}
+<a name ="Editing_Sections"></a>
 
 Editing Sections
 ----------------
@@ -423,7 +423,7 @@ expansion-list-label *ossia*):
 
 > `*>ossia[Minuet,Minuet,Trio,Trio,,Minuet,Minuet]`
 
-[]{#Editorialisms_in_the_**kern_Representation}
+<a name ="Editorialisms_in_the_**kern_Representation"></a>
 
 Editorialisms in the *\*\*kern* Representation
 ----------------------------------------------
@@ -482,7 +482,7 @@ signifies an editorial footnote where the immediately preceding data
 token has an accompanying editorial footnote (located in a comment
 record).
 
-[]{#Adding_Reference_Information}
+<a name ="Adding_Reference_Information"></a>
 
 Adding Reference Information
 ----------------------------
@@ -546,7 +546,7 @@ file.
 Refer to the *Humdrum Reference Manual* for further information about
 the types and format for different reference records.
 
-[]{#Proof-reading_Materials}
+<a name ="Proof-reading_Materials"></a>
 
 Proof-reading Materials
 -----------------------
@@ -563,7 +563,7 @@ errors in any encoded `**kern` data:
 
 > `proof -k full.krn`
 
-[]{#MIDI_display_option}
+<a name ="MIDI_display_option"></a>
 
 One of the best ways to ensure that musical data makes sense is to
 listen to it. The Humdrum [**midi**](commands/midi.html) and
@@ -581,7 +581,7 @@ enter), to increase (type \<) or decrease (type \>) the *tempo,* and to
 other functions within the **perform** command; refer to the *Humdrum
 Reference Manual* \-- section 4 for further details.
 
-[]{#Data_Integrity_Using_the_VTS_Checksum_Record}
+<a name ="Data_Integrity_Using_the_VTS_Checksum_Record"></a>
 
 Data Integrity Using the VTS Checksum Record
 --------------------------------------------
@@ -624,7 +624,7 @@ include the checksum value in an index or README file for the
 distribution. This provides a public venue for users to determine
 whether the VTS record itself has not been modified.
 
-[]{#Preparing_a_Distribution}
+<a name ="Preparing_a_Distribution"></a>
 
 Preparing a Distribution
 ------------------------
@@ -645,7 +645,7 @@ line is greater than 80-characters in length.
 It is wise to also add a `LICENSE` file that reiterates whatever
 licensing agreement is entailed for the distributed data.
 
-[]{#Electronic_Citation}
+<a name ="Electronic_Citation"></a>
 
 Electronic Citation
 -------------------
@@ -667,7 +667,7 @@ might be:
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -677,7 +677,6 @@ preparing electronic music documents in Humdrum.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide38.html)
 

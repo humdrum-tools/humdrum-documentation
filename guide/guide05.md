@@ -54,7 +54,7 @@ schematically illustrated as follows:
 >                           etc.         etc.        etc.   
 >   ----------------------- ------------ -------- -- ------ ------
 >
-[]{#Types_of_Records}
+<a name ="Types_of_Records"></a>
 
 Types of Records
 ----------------
@@ -69,7 +69,7 @@ There are three types of Humdrum records:
 These three record types are mutually exclusive, so it is not possible
 to mix comments, interpretations, or data records on the same line.
 
-[]{#Comment_Records}
+<a name ="Comment_Records"></a>
 
 Comment Records
 ---------------
@@ -90,7 +90,7 @@ the important exception of the tab character which is used to separate
 spines. Comments may be used to insert free-format commentaries in
 Humdrum encodings.
 
-[]{#Interpretation_Records}
+<a name ="Interpretation_Records"></a>
 
 Interpretation Records
 ----------------------
@@ -118,7 +118,7 @@ how a set of data is to be interpreted. Several tandem interpretations
 may pertain to a given set of data; unlike exclusive interpretations,
 tandem interpretations are not necessarily mutually exclusive.
 
-[]{#Data_Records}
+<a name ="Data_Records"></a>
 
 Data Records
 ------------
@@ -152,7 +152,7 @@ mark and the asterisk are used to identify comments and interpretations,
 respectively. The tab and carriage return characters are used to format
 the data into *spines* and *records,* respectively.
 
-[]{#Data_Tokens_and_Null_Tokens}
+<a name ="Data_Tokens_and_Null_Tokens"></a>
 
 Data Tokens and Null Tokens
 ---------------------------
@@ -248,7 +248,7 @@ addition, the exclamation mark, asterisk, and period cannot appear
 following a tab unless they are used to indicate a comment,
 interpretation, or null token, respectively.
 
-[]{#Data_Sub-Tokens}
+<a name ="Data_Sub-Tokens"></a>
 
 Data Sub-Tokens
 ---------------
@@ -276,7 +276,7 @@ use as a sub-token delimiter. Note that consecutive spaces are illegal,
 and that data tokens cannot begin or end with a space character. Of
 course spaces can be used freely in comments and in interpretations.
 
-[]{#Spine_Paths}
+<a name ="Spine_Paths"></a>
 
 Spine Paths
 -----------
@@ -503,7 +503,7 @@ examples of illegal constructions:
 >   `A`    B           C        
 >   ------ ----------- ----- -- ----------------------------------------------------------------
 >
-[]{#The_Humdrum_Syntax:_A_Formal_Definition}
+<a name ="The_Humdrum_Syntax:_A_Formal_Definition"></a>
 
 The Humdrum Syntax: A Formal Definition
 ---------------------------------------
@@ -585,7 +585,7 @@ that do *not* conform to the Humdrum syntax:
 >
 > *Some Illegal Humdrum Constructions*
 
-[]{#The_humdrum_Command}
+<a name ="The_humdrum_Command"></a>
 
 The *humdrum* Command
 ---------------------
@@ -673,7 +673,7 @@ representations:
 >
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -700,7 +700,6 @@ some exclusive interpretation.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide06.html)
 

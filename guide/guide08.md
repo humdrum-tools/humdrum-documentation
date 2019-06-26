@@ -46,7 +46,7 @@ complex control structures. When you type a command, you are already
 writing a program \-- although most of your programs are just one line
 in length.
 
-[]{#Shell_Special_Characters}
+<a name ="Shell_Special_Characters"></a>
 
 Shell Special Characters
 ------------------------
@@ -60,7 +60,7 @@ greater-than sign (\>), the less-than sign (\<), the question-mark (?),
 the double-quote (\"), and the backslash (\\). We\'ll consider the
 function of each of these characters one at a time.
 
-[]{#File_Redirection}
+<a name ="File_Redirection"></a>
 
 File Redirection (\>)
 ---------------------
@@ -88,7 +88,7 @@ sorted lines to the end of the file named `outputfile`. If the
 
 > `sort inputfile >> outputfile`
 
-[]{#Pipe_(|)}
+<a name ="Pipe_(|)"></a>
 
 Pipe (\|)
 ---------
@@ -105,7 +105,7 @@ can be used to connect successive outputs to ensuing commands:
 
 > `command1 | command2 | command3 | command4`
 
-[]{#Shell_Wildcard_(*)}
+<a name ="Shell_Wildcard_(*)"></a>
 
 Shell Wildcard (\*)
 -------------------
@@ -126,7 +126,7 @@ second time, then the file expansion would include `people` \-- even as
 the file itself is over-written to receive the output. Including the
 output file as input is never a good idea.
 
-[]{#Comment_(octothorpe)}
+<a name ="Comment_(octothorpe)"></a>
 
 Comment (\#)
 ------------
@@ -175,7 +175,7 @@ quotes:
 
 > `grep '#' filename`
 
-[]{#Lennon} []{#McCartney}
+<a name ="McCartney"></a>
 
 Single quotes are especially useful for binding spaces. For example, the
 following command searches for the phrase \"Lennon and McCartney\" in a
@@ -198,7 +198,7 @@ indicating that it is waiting for us to complete the command.
 
 > `grep '# inputfile > outputfile  >`
 
-[]{#Command_Delimiter_(;)}
+<a name ="Command_Delimiter_(;)"></a>
 
 Command Delimiter (;)
 ---------------------
@@ -220,7 +220,7 @@ completed. Although the ability to place two or more commands on a
 single line may seem redundant, there are a number of circumstances
 where this feature proves useful.
 
-[]{#Background_Command_(&)}
+<a name ="Background_Command_(&)"></a>
 
 Background Command (&)
 ----------------------
@@ -240,7 +240,7 @@ provide sophisticated mechanisms for controlling concurrent processing
 of commands. For further information concerning these features, refer to
 a UNIX reference book.
 
-[]{#Shell_Command_Syntax}
+<a name ="Shell_Command_Syntax"></a>
 
 Shell Command Syntax
 --------------------
@@ -313,7 +313,7 @@ option. In the following example, the **-3** is a parameter to the
 
 > `trans -d -3 -c 2 gambia21`
 
-[]{#Output_Redirection}
+<a name ="Output_Redirection"></a>
 
 Output Redirection
 ------------------
@@ -360,7 +360,7 @@ When two or more commands have their inputs and outputs linked together
 using the pipe operator (`|`), the entire command line is known as a
 *pipeline.* Pipelines occur frequently in Humdrum applications.
 
-[]{#Tee}
+<a name ="Tee"></a>
 
 Tee
 ---
@@ -385,7 +385,7 @@ intermediate data in the middle of a pipeline.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -404,7 +404,6 @@ arguments*, *input files* and *output redirection*.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide09.html)
 

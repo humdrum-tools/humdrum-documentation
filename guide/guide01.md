@@ -23,7 +23,6 @@ capabilities and to help sketch some of the big picture. Don\'t worry if
 you don\'t understand everything in this chapter. All of the topics
 mentioned here will be covered more thoroughly in later chapters.
 
-[]{#What_Can_Humdrum_Do}
 
 What Can Humdrum Do?
 --------------------
@@ -35,7 +34,7 @@ Humdrum allows users to pose and answer questions such as the following:
 -   In the music of Stravinsky, are dissonances more common in strong
     metric positions than in weak metric positions?
 -   In Urdu folk songs, how common is the so-called \"melodic arch\" \--
-    where phrases tend to ascend and then descend in pitch? []{#Hendrix}
+    where phrases tend to ascend and then descend in pitch? <a name ="Hendrix"></a>
 -   What are the most common fret-board patterns in guitar riffs by Jimi
     Hendrix?
 -   Which of the Brandenburg Concertos contains the B-A-C-H motif?
@@ -53,8 +52,6 @@ for any of the above problems, only a few of these questions are *easy*
 to answer using Humdrum. The primary impediment to a quick solution is
 the user\'s skill in interconnecting the right tools for the task at
 hand. The purpose of this book is to help you develop that skill.
-
-[]{#The_Humdrum_Syntax_and_the_Humdrum_Toolkit}
 
 The Humdrum Syntax and the Humdrum Toolkit
 ------------------------------------------
@@ -199,8 +196,6 @@ Now that we\'ve sketched an overview of Humdrum, we can consider in
 greater detail the two principal components of Humdrum: the *Humdrum
 Syntax* and the *Humdrum Toolkit*.
 
-[]{#Humdrum_Syntax}
-
 Humdrum Syntax
 --------------
 
@@ -312,7 +307,7 @@ representation gets its name from the German word for *core*; it is a
 scheme intended to represent the basic or core musical information of
 notes, durations, rests, barlines, and so on.
 
-[]{#Humdrum_Tools}
+<a name ="Humdrum_Tools"></a>
 
 Humdrum Tools
 -------------
@@ -335,7 +330,7 @@ and illustrate how they might be used. Once again, the goal in this
 chapter is to give you an initial taste of Humdrum. Don\'t worry if you
 don\'t understand everything at this point.
 
-[]{#Some_Sample_Commands}
+<a name ="Some_Sample_Commands"></a>
 
 Some Sample Commands
 --------------------
@@ -348,7 +343,7 @@ to isolate one or more given parts. The command
 
 > `extract -f 1 filename`
 
-[]{#Extract_tenor_part}
+<a name ="Extract_tenor_part"></a>
 
 will extract the first or left-most column or spine of data. Often it is
 useful to extract material according to the encoded content without
@@ -367,7 +362,7 @@ Any vocal text can be similarly extracted:
 
 > `extract -i '**text' filename`
 
-[]{#Extract_German_Text}
+<a name ="Extract_German_Text"></a>
 
 Or if the text is available in more than one language, a specific
 language may be isolated:
@@ -382,7 +377,7 @@ from a minuet & trio:
 
 > `yank -s Trio -r 1 filename`
 
-[]{#Extract_measures_114_to_183}
+<a name ="Extract_measures_114_to_183"></a>
 
 Or select the material in measures 114 to 183:
 
@@ -397,7 +392,7 @@ formats will be discussed fully in the ensuing chapters. For now, it is
 important only that you get a feel for some of the types of operations
 that Humdrum users might perform.
 
-[]{#Extract_bassoon} []{#Notes_in_bassoon}
+<a name ="Notes_in_bassoon"></a>
 
 Two or more commands can be connected into a *pipeline.* The following
 command will let us determine whether there are any notes in the bassoon
@@ -405,7 +400,7 @@ part:
 
 > `extract -i '*Ifagot' filename | census -k`
 
-[]{#Play_Coda_half_tempo}
+<a name ="Play_Coda_half_tempo"></a>
 
 The following pipeline connects together four commands: it will play
 (using MIDI) the first and last measures from a section marked \"Coda\"
@@ -440,7 +435,7 @@ Count the number of phrases that end on the subdominant pitch:
 
 > `deg filename | egrep -c '(}.*4)|(4.*})'`
 
-[]{#Tuba_but_not_Trumpet}
+<a name ="Tuba_but_not_Trumpet"></a>
 
 The following command identifies all scores whose instrumentation
 includes a tuba but not a trumpet:
@@ -459,7 +454,7 @@ contain 10 or more lines of commands.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -478,7 +473,6 @@ the functioning of Humdrum.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide02.html)
 

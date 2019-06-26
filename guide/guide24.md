@@ -26,7 +26,7 @@ we will learn how to use the shell to write more complex programs. Shell
 programs allow users to reduce lengthy sequences of Humdrum commands to
 a single user-defined command.
 
-[]{#Shell_Programs}
+<a name ="Shell_Programs"></a>
 
 Shell Programs
 --------------
@@ -124,7 +124,7 @@ This change means that our **Schenker** command can be applied to any
 user-specified input file \-- simply by typing the filename in the
 command.
 
-[]{#Flow_of_Control:_The_if_Statement}
+<a name ="Flow_of_Control:_The_if_Statement"></a>
 
 Flow of Control: The *if* Statement
 -----------------------------------
@@ -198,7 +198,7 @@ The **if** command provides many other ways of testing some condition.
 For example, the shell provides ways to determine whether a file exists,
 and other features.
 
-[]{#Flow_of_Control:_The_for_Statement}
+<a name ="Flow_of_Control:_The_for_Statement"></a>
 
 Flow of Control: The *for* Statement
 ------------------------------------
@@ -235,7 +235,7 @@ Incidentally, the output from a **for** construction such as above can
 be piped to further commands, so we might identify the maximum number of
 notes in a Czech melody by piping the output through **sort -n**.
 
-[]{#A_Script_for_Identifying_Transgressions_of_Voice-Leading}
+<a name ="A_Script_for_Identifying_Transgressions_of_Voice-Leading"></a>
 
 A Script for Identifying Transgressions of Voice-Leading
 --------------------------------------------------------
@@ -256,11 +256,11 @@ voice should be in the first spine. For music containing more than two
 voices, the Humdrum **extract** command should be used to select
 successive pairs of voices for processing by **leader**.
 
-`# LEADER  #  # A shell program to check for voice-leading infractions.  # This command is invoked as:  #  #   leader   #  # where  is assumed to be a file containing two voices, each  # in a separate **kern spine, where the nominally lower voice is in the  # first spine.    # Before processing, ensure that a proper input file has been specified.  if [ ! -f $1 ]  then   echo "leader: file $1 not found"         exit  fi  if [ $# -eq 0 ]  then   echo "leader: input file not specified"         exit  fi     # 1. Record the ranges for the two voices.  echo 'Range for Upper voice:'  extract -f 2 $1 | census -k | egrep 'Highest|Lowest' | sed 's/^/      /'  echo 'Range for Lower voice:'  extract -f 1 $1 | census -k | egrep 'Highest|Lowest' | sed 's/^/      /'     # 2. Check for augmented or diminished melodic intervals.  extract -f 1 $1 | mint -b r | sed '/\[[Ad][Ad]*\]/d' | egrep -n '^[^!*].*[Ad][^1]' |\      sed 's/:/ (/;s/$/)/;s/^/Augmented or diminished melodic interval at line: /'  extract -f 2 $1 | mint -b r | sed '/\[[Ad][Ad]*\]/d' | egrep -n '^[^!*].*[Ad][^1]' |\      sed 's/:/ (/;s/$/)/;s/^/Augmented or diminished melodic interval at line: /'    # 3. Check for consecutive fifths and octaves.  echo 'P5'  > $TMPDIR/template;  echo 'P5'  >> $TMPDIR/template  hint -c $1 | patt -f $TMPDIR/template -s = | \      sed 's/ of file.*/./;s/.*Pattern/Consecutive fifth/'  echo 'P1'  > $TMPDIR/template;  echo 'P1'  >> $TMPDIR/template  hint -c $1 | patt -f $TMPDIR/template -s = | \      sed 's/ of file.*/./;s/.*Pattern/Consecutive octave/'     # 4. Check for doubling of the leading-tone.  deg $1 | extract -i '**deg' | ditto -s = | sed 's/^=.*/=/' | \      egrep -n '^7.*7|^[^!*].*7.*7' | egrep -v '7[-+]' | \      sed 's/:.*/./;s/^/Leading-tone doubled at line: /'    # 5. Check for unisons.  semits -x $1 | ditto -s = | \      awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print "Unison at line: " NR}'     # 6. Check for the crossing of parts.  semits -x $1 | ditto -s = | sed 's/^=.*/=/' | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Crossed parts at line: " NR}'     # 7. Check for more than an octave between the two parts.  semits -x $1 | ditto -s = | awk '{if($0~/[^0-9\t-]/)next} \      {if($2-$1>12) print "More than an octave between parts at line: " NR}'     # 8. Check for overlapping parts.  extract -f 2 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/upper  extract -f 1 $1 | sed 's/^=.*/./' > $TMPDIR/lower  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR}'  extract -f 1 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/lower  extract -f 2 $1 | sed 's/^=.*/./' > $TMPDIR/upper  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR}'     # 9. Check for exposed octaves.  hint -c $1 > $TMPDIR/s1  extract -f 1 $1 | deg > $TMPDIR/s2  extract -f 2 $1 | deg > $TMPDIR/s3  extract -f 1 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s4  extract -f 2 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s5  assemble $TMPDIR/s1 $TMPDIR/s2 $TMPDIR/s3 $TMPDIR/s4 $TMPDIR/s5 > $TMPDIR/temp  egrep -n 'P1.*\^.*\^.*leap.*leap|P1.*v.*v.*leap.*leap' $TMPDIR/temp | \      sed 's/:.*/./;s/^/Exposed octave at line: /'    # Clean-up some temporary files.  rm $TMPDIR/template $TMPDIR/upper $TMPDIR/lower $TMPDIR/s[1-5] $TMPDIR/temp`
+`# LEADER  #  # A shell program to check for voice-leading infractions.  # This command is invoked as:  #  #   leader   #  # where  is assumed to be a file containing two voices, each  # in a separate **kern spine, where the nominally lower voice is in the  # first spine.    # Before processing, ensure that a proper input file has been specified.  if <a name =" 8. Check for overlapping parts.  extract -f 2 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/upper  extract -f 1 $1 | sed 's/^=.*/./' > $TMPDIR/lower  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR}'  extract -f 1 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/lower  extract -f 2 $1 | sed 's/^=.*/./' > $TMPDIR/upper  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR"></a>'     # 9. Check for exposed octaves.  hint -c $1 > $TMPDIR/s1  extract -f 1 $1 | deg > $TMPDIR/s2  extract -f 2 $1 | deg > $TMPDIR/s3  extract -f 1 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s4  extract -f 2 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s5  assemble $TMPDIR/s1 $TMPDIR/s2 $TMPDIR/s3 $TMPDIR/s4 $TMPDIR/s5 > $TMPDIR/temp  egrep -n 'P1.*\^.*\^.*leap.*leap|P1.*v.*v.*leap.*leap' $TMPDIR/temp | \      sed 's/:.*/./;s/^/Exposed octave at line: /'    # Clean-up some temporary files.  rm $TMPDIR/template $TMPDIR/upper $TMPDIR/lower $TMPDIR/s[1-5] $TMPDIR/temp`
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -282,7 +282,7 @@ shell programming that have not been touched-on in this chapter. Several
 books are available that provide comprehensive tutorials for shell
 programming.
 
-[]{#Locating_Violations_of_the_Rules_of_Voice-Leading}
+<a name ="Locating_Violations_of_the_Rules_of_Voice-Leading"></a>
 
 Locating Violations of the Rules of Voice-Leading
 -------------------------------------------------
@@ -297,7 +297,7 @@ legislate how to compose or arrange! We\'re simply using the traditional
 voice-leading rules as a way to introduce various pattern-searching
 techniques.
 
-[]{#Parts_Out_Of_Range}
+<a name ="Parts_Out_Of_Range"></a>
 
 (1) Parts Out Of Range
 ----------------------
@@ -336,7 +336,7 @@ permits compound strings, such as the use of the OR bar (\|):
 
 > `extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'`
 
-[]{#Augmented-Diminished_Melodic_Intervals}
+<a name ="Augmented-Diminished_Melodic_Intervals"></a>
 
 (2) Augmented/Diminished Melodic Intervals
 ------------------------------------------
@@ -430,7 +430,7 @@ intervals:
 If there is no output, then there are no augmented or diminished
 intervals present.
 
-[]{#Consecutive_Fifths_or_Octaves}
+<a name ="Consecutive_Fifths_or_Octaves"></a>
 
 (3) Consecutive Fifths or Octaves
 ---------------------------------
@@ -556,7 +556,7 @@ traditional four-part harmonization:
 (There are shorter ways of doing these permutations that involves a
 little shell programming, but we\'ll leave that for another time.)
 
-[]{#Doubled_Leading_Tone}
+<a name ="Doubled_Leading_Tone"></a>
 
 (4) Doubled Leading Tone
 ------------------------
@@ -749,7 +749,7 @@ In summary, the complete command pipeline would be:
 This may seem somewhat complicated, but the basic structure of this
 pipeline is suitable for a very wide variety of pattern searches.
 
-[]{#Avoid_Unisons}
+<a name ="Avoid_Unisons"></a>
 
 (5) Avoid Unisons
 -----------------
@@ -815,7 +815,7 @@ for identifying unisons:
 
 > `extract -f 1,2  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
 
-[]{#Crossed_Parts}
+<a name ="Crossed_Parts"></a>
 
 (6) Crossed Parts
 -----------------
@@ -879,7 +879,7 @@ Finally, the complete pipeline for identifying crossed parts:
 > extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
 > \'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
 
-[]{#Parts_Separated_by_Greater_than_an_Octave}
+<a name ="Parts_Separated_by_Greater_than_an_Octave"></a>
 
 (7) Parts Separated by Greater than an Octave
 ---------------------------------------------
@@ -899,7 +899,7 @@ other voice:
 
 > `extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'  extract -i '*alto,*tenor'    | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'`
 
-[]{#Overlapped_Parts}
+<a name ="Overlapped_Parts"></a>
 
 (8) Overlapped Parts
 --------------------
@@ -974,7 +974,7 @@ repeat the process, shifting the other voice:
 This processing needs to be applied for each pair of successive voices
 \-- soprano/alto, alto/tenor, tenor/bass.
 
-[]{#Exposed_Octaves}
+<a name ="Exposed_Octaves"></a>
 
 (9) Exposed Octaves
 -------------------

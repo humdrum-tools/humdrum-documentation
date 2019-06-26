@@ -15,7 +15,7 @@ Instrumentation Codes
 
 ------------------------------------------------------------------------
 
-[]{#Introduction}
+<a name ="Introduction"></a>
 
 Introduction
 ------------
@@ -31,7 +31,7 @@ instrumentation pertaining to a specified spine. The word \"instrument\"
 is used in a broad sense and embraces vocal qualities and vocal types as
 well as mechanical sound makers.
 
-[]{#vox} []{#Instrument_Groups}
+<a name ="Instrument_Groups"></a>
 
 Three distinctions are currently made in Humdrum: *instrument name,*
 *instrument class* and *instrument group.* The following table
@@ -63,7 +63,7 @@ instrument keyword is preceded by an asterisk and the upper-case letter
 guitar is `*Iguitr`. If the guitar appears as an instrument in a `AIN`
 Reference Record only the designation \``guitr`\' is used.
 
-> []{#Voice_Range}
+> <a name ="Voice_Range"></a>
 >
 > **Voice Range**
 
@@ -91,7 +91,7 @@ baritone
 
 bass
 
-[]{#Voice_Quality}
+<a name ="Voice_Quality"></a>
 
 **Voice Quality**
 
@@ -159,7 +159,7 @@ falsetto
 
 castrato
 
-[]{#String_Instruments}
+<a name ="String_Instruments"></a>
 
 **String Instruments**
 
@@ -350,7 +350,7 @@ tenor viola da gamba; viole (Fr.); Gambe (Ger.)
 
 zither; *Zither* (Ger.); *cithare* (Fr.); *cetra da tavola* (It.)
 
-[]{#Wind_Instruments}
+<a name ="Wind_Instruments"></a>
 
 **Wind Instruments**
 
@@ -639,7 +639,7 @@ tuba
 
 zurna
 
-[]{#Percussion_Instruments}
+<a name ="Percussion_Instruments"></a>
 
 **Percussion Instruments**
 
@@ -740,7 +740,7 @@ vibraphone
 
 xylophone; *xylophone* (Fr.); *silofono* (It.)
 
-[]{#Keyboard_Instruments}
+<a name ="Keyboard_Instruments"></a>
 
 **Keyboard Instruments**
 
@@ -799,7 +799,6 @@ keyboard synthesizer
 
 ------------------------------------------------------------------------
 
-\
 
 [**Previous Appendix**](guide.append1.html)
 

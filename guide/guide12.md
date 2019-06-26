@@ -46,7 +46,7 @@ individual spines. The **yank** command can be used to isolate passages
 or segments from an input, such as specified measures, phrases, or
 sections.
 
-[]{#Extracting_Spines:_The_extract_Command}
+<a name ="Extracting_Spines:_The_extract_Command"></a>
 
 Extracting Spines: The *extract* Command
 ----------------------------------------
@@ -152,7 +152,7 @@ Notice that the **extract** command outputs all global comments. In the
 case of local comments, **extract** outputs only those local comments
 that belong to the output spine.
 
-[]{#Extract_Cello_Oboe_Flute}
+<a name ="Extract_Cello_Oboe_Flute"></a>
 
 The oboe and flauto dolce parts are encoded in spines 8 and 9. So we
 could extract the \`cello, oboe and flauto dolce parts by submitting a
@@ -181,12 +181,12 @@ one, etc. By way of example, the command
 
 will extract the oboe part.
 
-[]{#Extraction_by_Interpretation}
+<a name ="Extraction_by_Interpretation"></a>
 
 Extraction by Interpretation
 ----------------------------
 
-[]{#Extract_Vocal_Text}
+<a name ="Extract_Vocal_Text"></a>
 
 Typically, it is inconvenient to have to determine the numerical
 position of various spines in order to extract them. With the **-i**
@@ -202,7 +202,7 @@ including vocal score, piano accompaniment and vocal text (encoded using
 being interpreted by the shell.) Several different types of data can be
 extracted simultaneously. For example:
 
-[]{#Hildegard}
+<a name ="Hildegard"></a>
 
 > `extract -i '**semits,**MIDI' hildegard`
 
@@ -222,7 +222,7 @@ limited to `**kern` data by using the **extract** command:
 
 > `extract -i '**kern' | grep  ...`
 
-[]{#Extract_Transposing_Instruments}
+<a name ="Extract_Transposing_Instruments"></a>
 
 Both exclusive interpretations and tandem interpretations can be
 specified with the **-i** option. For example, the following command
@@ -230,7 +230,7 @@ will extract any *transposing* instruments in the score `albeniz`:
 
 > `extract -i '*ITr' albeniz`
 
-[]{#Extract_Vocal_Parts} []{#Extract_Woodwinds} []{#Extract_Ripieno}
+<a name ="Extract_Ripieno"></a>
 
 Tandem interpretations are commonly used to designate instrument classes
 and groups, so different configurations of instruments are easily
@@ -248,7 +248,7 @@ extract (1) the woodwind instruments, (2) the ripieno instruments, and
 > `extract -i '*IGrip' brandenburg2`\
 > `extract -i '*ICvox' symphony9`
 
-[]{#Extract_Strings_and_Oboe}
+<a name ="Extract_Strings_and_Oboe"></a>
 
 Once again, more than one interpretation can be extracted
 simultaneously. The following command will extract the instrument-class
@@ -256,7 +256,7 @@ simultaneously. The following command will extract the instrument-class
 
 > `extract -i '*ICstr,*Ioboe' milhaud`
 
-[]{#Extract_Shamisen}
+<a name ="Extract_Shamisen"></a>
 
 Similarly, the following command will extract the shamisen and
 shakuhachi parts from a score:
@@ -359,7 +359,7 @@ resets each time a new exclusive interpretation is encountered. By
 contrast, when **extract** finds a target tandem interpretation, it
 begins outputting and doesn\'t stop until the spine is terminated.
 
-[]{#Using_extract_in_Pipelines}
+<a name ="Using_extract_in_Pipelines"></a>
 
 Using *extract* in Pipelines
 ----------------------------
@@ -377,7 +377,7 @@ this information for (1) a bassoon part, (2) all woodwind parts:
 > `extract -i '*Ifagot' ives | census -k`\
 > `extract -i '*ICww' ives | census -k`
 
-[]{#Extract_Bass_Soprano}
+<a name ="Extract_Bass_Soprano"></a>
 
 With the [**midi**](commands/midi.html) and
 [**perform**](commands/perform.html) commands, **extract** allows the
@@ -387,7 +387,7 @@ extracts the bass and soprano voices, translates them to
 
 > `extract -i '*Ibass,*Isopran' lassus | midi | perform`
 
-[]{#Transpose_Trumpet}
+<a name ="Transpose_Trumpet"></a>
 
 We might extract a particular part (such as the trumpet part) and use
 the [**trans**](commands/trans.html) command to transpose it to another
@@ -402,7 +402,7 @@ file for displaying or printing.
 
 > `extract -i '*ICstr' brahms | ms > brahms.ps`
 
-[]{#Transpose_accompaniment}
+<a name ="Transpose_accompaniment"></a>
 
 The UNIX **lpr** command can be used to print a file or input stream.
 Suppose we want to transpose the piano accompaniment for a song by Hugo
@@ -410,7 +410,7 @@ Wolf up an augmented second, and then print the transposed part:
 
 > `extract -i '*IGacmp' wolf | trans -d +1 -c +3 | ms | lpr`
 
-[]{#Extracting_Spines_that_Meander}
+<a name ="Extracting_Spines_that_Meander"></a>
 
 Extracting Spines that Meander
 ------------------------------
@@ -476,7 +476,7 @@ guarantee an output that conforms to the Humdrum syntax. When using the
 output is valid. A full discussion of the **-p** option is given in the
 *Humdrum Reference Manual.*
 
-[]{#Field-Trace_Extracting}
+<a name ="Field-Trace_Extracting"></a>
 
 Field-Trace Extracting
 ----------------------
@@ -487,7 +487,7 @@ combination of data tokens from the input stream. The field-trace option
 is rarely used when extracting spines. Refer to the *Humdrum Reference
 Manual* for further information.
 
-[]{#Extracting_Passages:_The_yank_Command}
+<a name ="Extracting_Passages:_The_yank_Command"></a>
 
 Extracting Passages: The *yank* Command
 ---------------------------------------
@@ -513,7 +513,7 @@ command selects lines, 5, 13, 23, 24, 25 and 26 from the file named
 
 > `yank -l -r 5,13,23-26 casella`
 
-[]{#Mosolov}
+<a name ="Mosolov"></a>
 
 The dollar sign (\$) can be used to refer to the last record in the
 input. For example, the following command yanks the first and last
@@ -521,7 +521,7 @@ records from the file `mosolov`.
 
 > `yank -l -r '1,$' mosolov`
 
-[]{#First_20_of_last_30} []{#Ginastera}
+<a name ="Ginastera"></a>
 
 Once again note that single quotes are needed here in order to prevent
 the shell from misinterpreting characters such as the dollar sign or the
@@ -542,7 +542,7 @@ and line 100 (containing 5 spines), **yank** will include in the output
 the appropriate spine-path interpretations that specify how 4 spines
 became 5 spines.
 
-[]{#Yanking_by_Marker}
+<a name ="Yanking_by_Marker"></a>
 
 Yanking by Marker
 -----------------
@@ -560,7 +560,7 @@ occurrence of the string \"XXX\" in the file `wieck`.
 If the value zero is specified in the range, the record containing the
 marker is itself output.
 
-[]{#Franck}
+<a name ="Franck"></a>
 
 Since markers are interpreted by **yank** as regular expressions,
 complex markers can be defined. For example, the following command yanks
@@ -579,7 +579,7 @@ output from **yank** will preserve all of the appropriate
 interpretations. In short, **yank** guarantees that the output conforms
 to the Humdrum syntax, whereas **grep** does not.
 
-[]{#Sibelius} []{#phrase_boundary_intervals}
+<a name ="phrase_boundary_intervals"></a>
 
 Suppose, for example, that we wanted to calculate the pitch intervals
 between notes that either begin or end a phrase in a monophonic input.
@@ -590,7 +590,7 @@ typically consist of just data records:
 
 > `grep [{}] sibelius`
 
-[]{#First_and_last_notes_of_phrases}
+<a name ="First_and_last_notes_of_phrases"></a>
 
 By contrast, the comparable **yank** command preserves the Humdrum
 syntax and so allows us to pipe the output to the melodic interval
@@ -598,7 +598,7 @@ command:
 
 > `yank -m [{}] -r 0 sibelius | mint`
 
-[]{#Yanking_by_Delimiters}
+<a name ="Yanking_by_Delimiters"></a>
 
 Yanking by Delimiters
 ---------------------
@@ -612,7 +612,7 @@ Thus the user might yank specific measures from a file by defining the
 appropriate barline delimiter and providing a range of (measure)
 numbers. Consider the following command:
 
-[]{#Joplin}
+<a name ="Joplin"></a>
 
 > `yank -o ^= -r 1,12-13,25 joplin`
 
@@ -629,7 +629,7 @@ logical segments (measures) are to be yanked. All records starting with
 the delimiter record are output up to, but not including, the next
 occurrence of a delimiter record.
 
-[]{#Mahler}
+<a name ="Mahler"></a>
 
 Where the input stream contains data prior to the first delimiter
 record, this data may be addressed as logical segment \"zero.\" For
@@ -643,7 +643,7 @@ barline. Notice that *actual* measure numbers are irrelevant with the
 to their *ordinal* position in the input stream rather than according to
 their *cardinal* label.
 
-[]{#First_four_phrases} []{#Tailleferre}
+<a name ="Tailleferre"></a>
 
 Not all segments are defined by a single marker. For example, unlike
 barlines, `**kern` phrases are marked by separate phrase-begin
@@ -660,7 +660,7 @@ user-specified delimiter. In this case, **yank** selects segments based
 on their numbered label rather than their ordinal position in the input.
 For example,
 
-[]{#Goldberg}
+<a name ="Goldberg"></a>
 
 > `yank -n ^= -r 12 goldberg`
 
@@ -680,13 +680,13 @@ unlike the **-m** option where zero addresses the record itself.) Like
 the **-o** option, the value zero may be reused for each specified input
 file. Thus, if `file1`, `file2` and `file3` are Humdrum files:
 
-[]{#Extract_anacrusis}
+<a name ="Extract_anacrusis"></a>
 
 > `yank -n ^= -r 0 file1 file2 file3`
 
 will yank any leading (anacrusis) material in each of the three files.
 
-[]{#Yanking_by_Section}
+<a name ="Yanking_by_Section"></a>
 
 Yanking by Section
 ------------------
@@ -699,7 +699,7 @@ tandem interpretations that conform to the syntax:
 
 > `*>label_name`
 
-[]{#Mendelssohn} []{#2nd_instance_of_1st_theme}
+<a name ="2nd_instance_of_1st_theme"></a>
 
 Label names can include any character except the tab. Labels are
 frequently used to indicate formal divisions, such as coda, exposition,
@@ -713,7 +713,7 @@ Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. Such situations
 are described in [Chapter 20.](guide20.html)
 
-[]{#Examples_Using_yank}
+<a name ="Examples_Using_yank"></a>
 
 Examples Using *yank*
 ---------------------
@@ -726,7 +726,7 @@ the output.
 Any *comments* prior to the yanked passage may be included in the output
 by specifying the **-c** option.
 
-[]{#Messiaen}
+<a name ="Messiaen"></a>
 
 The following examples illustrate how the **yank** command may be used.
 
@@ -734,20 +734,20 @@ The following examples illustrate how the **yank** command may be used.
 
 yanks line 1120 in the file `messiaen`.
 
-[]{#Extract_measure_27}
+<a name ="Extract_measure_27"></a>
 
 > `yank -n ^= -r 27 sinfonia`
 
 yanks numbered measures 27 from the `**kern` file `sinfonia`.
 
-[]{#Extract_measures_10_to_20}
+<a name ="Extract_measures_10_to_20"></a>
 
 > `yank -n ^= -r 10-20 minuet waltz`
 
 yanks numbered measures 10 to 20 from both the `**kern` files `minuet`
 and `waltz`.
 
-[]{#Extract_anacrusis_and_final_measure}
+<a name ="Extract_anacrusis_and_final_measure"></a>
 
 > `yank -o ^= -r '0,$' fugue ricercar`
 
@@ -759,7 +759,7 @@ yanks any initial anacrusis material plus the final measure of both
 yanks any initial anacrusis material from the file `fugue` followed by
 the final measure of `ricercar`.
 
-[]{#Rehearsal_Marking_5_to_7}
+<a name ="Rehearsal_Marking_5_to_7"></a>
 
 > `yank -n 'Rehearsal Marking ' -r 5-7 fugue ricercar`
 
@@ -768,14 +768,14 @@ yanks segments beginning with the labels
 `"Rehearsal Marking 7"`. Segments are deemed to end when a record is
 encountered containing the text `"Rehearsal Marking "`.
 
-[]{#Webern}
+<a name ="Webern"></a>
 
 > `yank -o { -e }  -r '1-$' webern`
 
 yanks all segments in the file `webern` beginning with a record
 containing \"{\" and ending with a record containing \"}.\" The command:
 
-[]{#Faure}
+<a name ="Faure"></a>
 
 > `yank -o { -e } -r '1-4,$-3-$' faure`
 
@@ -784,7 +784,7 @@ segments begin with an open brace ({) and end with a closed brace (}).
 In the `**kern` representation, this would extract the first four and
 last four phrases in the file.
 
-[]{#Stamitz}
+<a name ="Stamitz"></a>
 
 > `yank -s Coda -r 1 stamitz`
 
@@ -798,12 +798,12 @@ number 6 prior to outputting measure number 5. The order of output
 material can be rearranged by invoked the **yank** command more than
 once (e.g. `yank -l -r 100 ...; yank -l -r 99 ...; yank -l -r 98 ...`).
 
-[]{#Using_yank_in_Pipelines}
+<a name ="Using_yank_in_Pipelines"></a>
 
 Using *yank* in Pipelines
 -------------------------
 
-[]{#Extract_4m_Trio}
+<a name ="Extract_4m_Trio"></a>
 
 Like the other tools we have examined, **yank** can be profitably used
 in conjunction with other Humdrum tools. It is often useful to employ
@@ -814,49 +814,49 @@ Trio:
 
 > `yank -s Trio dvorak | yank -o ^= 1-4`
 
-[]{#Compare_Exposition_Recapitulation}
+<a name ="Compare_Exposition_Recapitulation"></a>
 
 Similarly, we can link two **yank** commands to extract particular
 phrases from specified sections. For example, suppose we wanted to
 compare the first phrase of the exposition with the first phrase of the
 recapitulation:
 
-[]{#Haydn}
+<a name ="Haydn"></a>
 
 > `yank -s Exposition haydn | yank -o { -e } -r 1 > Ephrase`\
 > `yank -s Recapitulation haydn | yank -o { -e } -r 1 > Rphrase`
 
-[]{#Count_Notes_8.16} []{#Borodin}
+<a name ="Borodin"></a>
 
 Suppose we want to know how many notes there are in measures 8-16 in a
 `**kern` file named `borodin`.
 
 > `yank -n = -r 8-16 borodin | census -k`
 
-[]{#Subdominant_80.86}
+<a name ="Subdominant_80.86"></a>
 
 Are there any subdominant chords between measures 80 and 86?
 
-[]{#Elgar}
+<a name ="Elgar"></a>
 
 > `yank -n = -r 80-86 elgar | solfa | grep fa | grep la | grep do`
 
-[]{#Count_horn_dominants} []{#Strauss}
+<a name ="Strauss"></a>
 
 How frequent is the dominant pitch in Strauss\' horn parts?
 
 > `extract -i '*Icor' strauss | solfa | grep -c so`
 
-[]{#Highest_Trumpet_Pitch}
+<a name ="Highest_Trumpet_Pitch"></a>
 
 Combining **yank** and **extract** can be especially useful. What is the
 highest note in the trumpet part in measure 29?
 
-[]{#Tallis}
+<a name ="Tallis"></a>
 
 > `extract -i '*Itromp' tallis | yank -n = -r 29 | census -k`
 
-[]{#Play_Trio}
+<a name ="Play_Trio"></a>
 
 Also, we can combine **yank** with the [**midi**](commands/midi.html)
 and [**perform**](commands/perform.html) commands to hear particular
@@ -864,7 +864,7 @@ sections. Play the Trio section in a Waldteufel waltz:
 
 > `yank -s 'Trio' -r 1 waldteufel | midi | perform`
 
-[]{#Play_Clarinet_Part}
+<a name ="Play_Clarinet_Part"></a>
 
 Listen to the soprano clarinet part in the fourth and eighth phrases.
 
@@ -907,7 +907,7 @@ differences. Suppose we wanted to identify the melodic intervals present
 in measures 8-32 for a work by Toru Takemitsu. The following two
 commands are likely to produce different results:
 
-[]{#Takemitsu}
+<a name ="Takemitsu"></a>
 
 > `yank -n = -r 8-32 takemitsu | mint`\
 > `mint takemitsu | yank -n = -r 8-32`
@@ -918,7 +918,7 @@ interval will be absent in the first case.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -942,7 +942,6 @@ back together again.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide13.html)
 

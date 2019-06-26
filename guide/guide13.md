@@ -27,12 +27,12 @@ Humdrum [**assemble**](commands/assemble.html),
 [**timebase**](commands/timebase.html) and [**rid**](commands/rid.html)
 commands.
 
-[]{#The_cat_Command}
+<a name ="The_cat_Command"></a>
 
 The *cat* Command
 -----------------
 
-[]{#Join_movements}
+<a name ="Join_movements"></a>
 
 The UNIX **cat** command allows two or more inputs to be concatenated
 together. If we concatenate two files, the output will consist of the
@@ -105,7 +105,7 @@ calculate intervals between pitches that are separated by a spine-path
 terminator. In other words, in the above output, **mint** will fail to
 calculate the melodic intervals between notes in successive measures.
 
-[]{#The_rid_Command}
+<a name ="The_rid_Command"></a>
 
 The *rid* Command
 -----------------
@@ -229,7 +229,7 @@ nevertheless violate conventions for a specific representation such as
 begin without ending, etc. These anomalies may cause problems with
 subsequent processing.
 
-[]{#Assembling_Parts_Using_the_assemble_Command}
+<a name ="Assembling_Parts_Using_the_assemble_Command"></a>
 
 Assembling Parts Using the *assemble* Command
 ---------------------------------------------
@@ -339,7 +339,7 @@ Note that if all of the input files conform to the Humdrum syntax, then
 [**assemble**](commands/assemble.html) guarantees that the assembled
 output will also conform to the Humdrum syntax.
 
-[]{#Aligning_Durations_Using_the_timebase_Command}
+<a name ="Aligning_Durations_Using_the_timebase_Command"></a>
 
 Aligning Durations Using the *timebase* Command
 -----------------------------------------------
@@ -510,7 +510,7 @@ This indicates that the output has been processed so that each
 non-barline data record represents an elapsed duration equivalent to a
 thirty-second note.
 
-[]{#Assembling_N-tuplets}
+<a name ="Assembling_N-tuplets"></a>
 
 Assembling N-tuplets
 --------------------
@@ -560,7 +560,7 @@ simply multiplying together the shortest notes in the files to be
 assembled. For example, 6 x 8 = 48; so a time-base of 48 will be
 guaranteed to work for both files.
 
-[]{#Checking_an_Assembled_Score_Using_proof}
+<a name ="Checking_an_Assembled_Score_Using_proof"></a>
 
 Checking an Assembled Score Using *proof*
 -----------------------------------------
@@ -588,7 +588,7 @@ unnecessary null data records usingi [**rid -d**.](commands/rid.html)
 (5) Check the assembled score for rhythmic coherence using the
 [**proof**](commands/proof.html) command.
 
-[]{#Other_Uses_for_the_timebase_Command}
+<a name ="Other_Uses_for_the_timebase_Command"></a>
 
 Other Uses for the *timebase* Command
 -------------------------------------
@@ -621,7 +621,7 @@ time-base durations are calculated from the beginning of the bar. When
 barlines are eliminated, **timebase** cannot synchronize to the
 beginning of each bar and so simply floats along at the fixed time-base.
 
-[]{#Additional_Uses_of_aassemble_and_timebase}
+<a name ="Additional_Uses_of_aassemble_and_timebase"></a>
 
 Additional Uses of *assemble* and *timebase*
 --------------------------------------------
@@ -678,7 +678,7 @@ number of occurrences:
 > `assemble temp1 temp2 | grep -c '-m2.*mi'`\
 > `assemble temp1 temp2 | grep -c '-m2.*ti'`
 
-[]{#Subdominant_Rising_Third_Sixth}
+<a name ="Subdominant_Rising_Third_Sixth"></a>
 
 This same approach can be used to address (innumerable) questions
 pertaining to concurrent patterns. For example, suppose we have a
@@ -710,7 +710,7 @@ dominant seventh chords (in the `**kern` representation: \``V7`\'):
 
 > `assemble temp1 temp2 temp3 | grep -c '^4``+[36]``V7`
 
-[]{#Secondary_dominants}
+<a name ="Secondary_dominants"></a>
 
 The **timebase** command can also be used for tasks other than
 assembling parts together. Suppose we would like to determine whether
@@ -736,7 +736,7 @@ parameter to 1 and 3 respectively.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -764,7 +764,6 @@ for a variety of types of rhythmic tasks.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide14.html)
 

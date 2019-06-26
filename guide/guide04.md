@@ -36,7 +36,7 @@ international pitch designations, frequency, semitones, cents, solfège,
 scale-degree and MIDI pitch representations. In later chapters we will
 describe additional types of translations.
 
-[]{#Pitch_Representation}
+<a name ="Pitch_Representation"></a>
 
 ISO Pitch Representation
 ------------------------
@@ -83,7 +83,7 @@ flat compared with the standard A-440, hence it is represented in
 
 > `A4-19`
 
-[]{#Translate_to_Pitch}
+<a name ="Translate_to_Pitch"></a>
 
 Other pitch representations (such as `**kern`) can be translated to the
 ISO-inspired `**pitch` representation by invoking the
@@ -124,7 +124,7 @@ representation uses the same system for representing barlines as
 this chapter make use of the so-called \`common system\' for
 representing barlines.
 
-[]{#German_Tonöhe}
+<a name ="German_Tonöhe"></a>
 
 German Tonhöhe
 --------------
@@ -154,7 +154,7 @@ translated to [`**Tonh`](representations/Tonh.rep.html) via the
 
 > `tonh filename`
 
-[]{#French_Solfège}
+<a name ="French_Solfège"></a>
 
 French Solfège
 --------------
@@ -173,7 +173,7 @@ double-sharp, \`si double-bémol\' (`si~bb`) for B double-flat, and so
 on. As with the German and ISO pitch representations, octave is
 designated by integers with `do4` representing middle C.
 
-[]{#Frequency}
+<a name ="Frequency"></a>
 
 Frequency
 ---------
@@ -186,7 +186,7 @@ where 440 Hz means 440 cycles per second. In the `**freq` representation
 frequencies may be specified as integer or real values (with a decimal
 point).
 
-[]{#Cents}
+<a name ="Cents"></a>
 
 Cents
 -----
@@ -199,7 +199,7 @@ the number 100, A4 is represented by 900, and A3 is represented by -300.
 As in the case of `**freq`, cents may be specified as integer numbers or
 as real values (with a decimal point).
 
-[]{#Semitones}
+<a name ="Semitones"></a>
 
 Semitones
 ---------
@@ -212,7 +212,7 @@ represented by the ascending integers from 0 to 12. Pitches below middle
 C are represented by negative values. Fractional values can be
 represented using decimal points.
 
-[]{#MIDI}
+<a name ="MIDI"></a>
 
 MIDI
 ----
@@ -224,7 +224,7 @@ representation closely mimics the commercial MIDI specification. The
 imported by various Humdrum tools. A complete description of `**MIDI`
 will be given in [Chapter 7.](guide07.html)
 
-[]{#Scale_Degree}
+<a name ="Scale_Degree"></a>
 
 Scale Degree \-- *\*\*solfa* and *\*\*deg*
 ------------------------------------------
@@ -319,7 +319,7 @@ Notice also the different ways of characterizing accidentals.\
 >   `*-`              \*-                \*-
 >   ----------------- ------------------ ------------------
 >
-[]{#Pitch_Translations}
+<a name ="Pitch_Translations"></a>
 
 Pitch Translations
 ------------------
@@ -332,7 +332,7 @@ representation can be accomplished with:
 
 > `solfg inputfile > outputfile`
 
-[]{#German_pitch_translation}
+<a name ="German_pitch_translation"></a>
 
 Translating to the German [`**Tonh`](representations/Tonh.rep.html)
 representation:
@@ -343,7 +343,7 @@ Translating to ISO [`**pitch`](representations/pitch.rep.html):
 
 > `pitch inputfile > outputfile`
 
-[]{#Frequency_Translation} []{#Cents_Translation}
+<a name ="Cents_Translation"></a>
 
 Similarly, the [**freq**](commands/freq.html) command translates
 pitch-related inputs to the [`**freq`](representations/freq.rep.html)
@@ -351,7 +351,7 @@ representation, the [**cents**](commands/cents.html) command translates
 appropriate inputs to the [`**cents`](representations/cents.rep.html)
 representation, and so on.
 
-[]{#Translate_to_MIDI}
+<a name ="Translate_to_MIDI"></a>
 
 In a few cases, the command names are slightly modified. All Humdrum
 command names employ lower-case letters only, so
@@ -464,12 +464,12 @@ marks, and other `**kern` signifiers are not magically generated.\
 >   tonh     ¤                     ¤          ¤          ¤          ¤           ¤            ¤           ¤           
 >   -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
 >
-[]{#Transposition_Using_the_trans_Command}
+<a name ="Transposition_Using_the_trans_Command"></a>
 
 Transposition Using the *trans* Command
 ---------------------------------------
 
-[]{#Transpose_up_a_minor_third}
+<a name ="Transpose_up_a_minor_third"></a>
 
 A common pitch-related manipulation is transposition. The
 [**trans**](commands/trans.html) command has the user specify a
@@ -492,7 +492,7 @@ letter names, and a chromatic offset of +7 semitones:
 
 > `trans -d +4 -c +7 input > output`
 
-[]{#Transpose_down_an_augmented_unison}
+<a name ="Transpose_down_an_augmented_unison"></a>
 
 We can transpose without changing the diatonic pitch names. For example,
 the following command will transpose down an augmented unison (e.g. C\#
@@ -500,7 +500,7 @@ to C):
 
 > `trans -d 0 -c -1 input > output`
 
-[]{#Transpose_Enharmonically}
+<a name ="Transpose_Enharmonically"></a>
 
 Conversely, we can respell the diatonic pitches without changing the
 overall pitch height. For example, the following transposition will
@@ -508,7 +508,7 @@ transpose \"up\" a diminished second (e.g. from F-sharp to G-flat):
 
 > `trans -d +1 -c 0 input > output`
 
-[]{#Dorian_Transposition}
+<a name ="Dorian_Transposition"></a>
 
 Modal transpositions are also possible by omitting the chromatic offset
 option. Consider, for example, the following C major scale:
@@ -572,7 +572,7 @@ The **trans** command can be used in conjunction with any of the
 appropriate pitch-related representations, such as `**pitch`, `**kern`,
 `**Tonh`, and `**solfg`.
 
-[]{#Key_Interpretations}
+<a name ="Key_Interpretations"></a>
 
 Key Interpretations
 -------------------
@@ -599,7 +599,7 @@ Key interpretations usually appear near the beginning of a
 representation, and key interpretations can be redefined at any place in
 a score.
 
-[]{#Pitch_Processing}
+<a name ="Pitch_Processing"></a>
 
 Pitch Processing
 ----------------
@@ -664,7 +664,7 @@ natural would be designated \``me`\' in both A major and A minor. The
 differences between **deg** and **solfa** allow users to distinguish
 chromatically altered scale tones in a manner appropriate to the task.
 
-[]{#Uses_for_Pitch_Translations}
+<a name ="Uses_for_Pitch_Translations"></a>
 
 Uses for Pitch Translations
 ---------------------------
@@ -715,7 +715,7 @@ output.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -736,7 +736,6 @@ Humdrum representation syntax.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide05.html)
 

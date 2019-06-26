@@ -33,7 +33,7 @@ Note that the Humdrum **record** and **encode** commands are currently
 available only for the DOS operating system. These commands can be used
 only with computers that have MIDI capable hardware.
 
-[]{#The_record_Command}
+<a name ="The_record_Command"></a>
 
 The *record* Command
 --------------------
@@ -62,7 +62,7 @@ The recorded output is normally directed to a file as in the following:
 
 > `record > filippa`
 
-[]{#The_encode_Command}
+<a name ="The_encode_Command"></a>
 
 The *encode* Command
 --------------------
@@ -152,7 +152,7 @@ suit specific needs and skills.
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -165,7 +165,6 @@ tools is given in the *Humdrum Toolkit Reference Manual.*
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide31.html)
 

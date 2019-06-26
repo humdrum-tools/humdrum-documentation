@@ -144,7 +144,7 @@ were all of the available options described for all of the tools
 discussed. Exploring the *Humdrum Reference Manual* is recommended for
 readers interested in continuing to develop facility with Humdrum.
 
-[]{#Pursuing_a_Project_with_Humdrum}
+<a name ="Pursuing_a_Project_with_Humdrum"></a>
 
 Pursuing a Project with Humdrum
 -------------------------------
@@ -216,7 +216,6 @@ seven questions provide useful guidelines:
 
 ------------------------------------------------------------------------
 
-\
 
 [**Previous Chapter**](guide39.html)
 

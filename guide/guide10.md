@@ -24,7 +24,7 @@ apply them. This chapter provides many examples of how regular
 expressions may be used to define musically useful patterns. In
 subsequent chapters, we\'ll make frequent use of regular expressions.
 
-[]{#The_grep_Command_(Again)}
+<a name ="The_grep_Command_(Again)"></a>
 
 The *grep* Command (Again)
 --------------------------
@@ -104,7 +104,7 @@ notes that have a notated accent as follows:
 
 > `grep -c '\^' danmark3.krn`
 
-[]{#9.8_Meter_Works}
+<a name ="9.8_Meter_Works"></a>
 
 In the following command we have used the backslash to escape the
 special meaning of the asterisk. The **-l** option causes **grep** to
@@ -114,7 +114,7 @@ current directory that encode music in 9/8 meter:
 
 > `grep -l '^\*M9/8' *`
 
-[]{#3.8_or_9.8_Meter_Works}
+<a name ="3.8_or_9.8_Meter_Works"></a>
 
 Recall that square brackets can be used to indicate character classes
 where any of the characters in the class can be used to match the
@@ -123,7 +123,7 @@ directory that encode music in either 3/8 or 9/8 meter:
 
 > `grep -l '\*M[39]/8' *`
 
-[]{#Trumpet_Works}
+<a name ="Trumpet_Works"></a>
 
 One of the most frequently used regular expressions consists of the
 period followed by the asterisk (`.*`). Recall that this expression will
@@ -144,7 +144,7 @@ cornet as follows:
 
 > `grep -l '!!!AIN.*cornt.*tromp' *`
 
-[]{#Drei_Koenige_Works}
+<a name ="Drei_Koenige_Works"></a>
 
 There are many variants on the use of the `.*` expression. The following
 command identifies all files that contain a record having the word
@@ -156,26 +156,26 @@ option in order to ignore the case of the letters.)
 This command will match such strings as: *Die Heiligen Drei Koenige*,
 *Drei Koenige,* *Dreikoenigslied,* etc.
 
-[]{#Ballads}
+<a name ="Ballads"></a>
 
 The \``!!!AGN`\' reference record is used to encode genre-related
 keywords. The following command lists all files that are ballads.
 
 > `grep -l '!!!AGN.*Ballad' *`
 
-[]{#Amour_Titles}
+<a name ="Amour_Titles"></a>
 
 List all files that have the word `Amour` in the title:
 
 > `grep -li '!!!OLT.*Amour' *`
 
-[]{#Dedications}
+<a name ="Dedications"></a>
 
 List any works that bear a dedication:
 
 > `grep -l '!!!ODE:' *`
 
-[]{#Irregular_meter_works}
+<a name ="Irregular_meter_works"></a>
 
 List those works that are in irregular meters:
 
@@ -187,25 +187,25 @@ identify those works that don\'t bear any dedication:
 
 > `grep -L '!!!ODE:' *`
 
-[]{#Not_Schumann_Works}
+<a name ="Not_Schumann_Works"></a>
 
 List those works *not* composed by Schumann:
 
 > `grep -L '!!!COM: Schumann' *`
 
-[]{#Works_without_double_bars}
+<a name ="Works_without_double_bars"></a>
 
 Identify any works that don\'t contain any double barlines:
 
 > `grep -L '^==' *`
 
-[]{#Simple_Triple_Works}
+<a name ="Simple_Triple_Works"></a>
 
 How many works in the current directory are in simple-triple meter?
 
 > `grep -c '!!!AMT.*simple.*triple' *`
 
-[]{#Liebe_Tod_Titles}
+<a name ="Liebe_Tod_Titles"></a>
 
 When searching for more complex patterns it may be necessary to use
 **grep** more than once. Consider, for example, the problem of
@@ -241,7 +241,7 @@ Similarly, the following command eliminates all whole-note rests:
 
 > `grep -v 1r *`
 
-[]{#Cornet_but_not_Trumpet}
+<a name ="Cornet_but_not_Trumpet"></a>
 
 The **-v** option is especially convenient in pipelines. For example,
 the following command identifies all those files whose instrumentation
@@ -249,21 +249,21 @@ includes a cornet but not a trumpet:
 
 > `grep '!!!AIN.*cornt' * | grep -v 'tromp'`
 
-[]{#Compound_Works_not_Quadruple}
+<a name ="Compound_Works_not_Quadruple"></a>
 
 The following command identifies those works in compound meters that are
 not also quadruple meters:
 
 > `grep '!!!AMT.*compound' * | grep -v 'quadruple'`
 
-[]{#Phrase_begins_not_rests}
+<a name ="Phrase_begins_not_rests"></a>
 
 Similarly, the following command identifies those notes that begin a
 phrase, but are not rests.
 
 > `grep '^{' * | grep -v r`
 
-[]{#German,_French,_Italian,_and_Neapolitan_Sixths}
+<a name ="German,_French,_Italian,_and_Neapolitan_Sixths"></a>
 
 German, French, Italian, and Neapolitan Sixths
 ----------------------------------------------
@@ -307,7 +307,7 @@ A similar approach can be used to identify Neapolitan sixth chords.
 These chords are based on the lowered supertonic with the third of the
 chord (unaltered subdominant) in the bass.
 
-[]{#Neapolitan_Sixth}
+<a name ="Neapolitan_Sixth"></a>
 
 > `solfa input | grep '4[^-+].*2-' | grep '6-'` \# Neapolitan sixth
 
@@ -317,7 +317,7 @@ enharmonically spelled Neapolitan chords:
 
 > `solfa input | grep '3+.*1+' | grep '5+'`
 
-[]{#Incomplete_Neapolitan_Sixth}
+<a name ="Incomplete_Neapolitan_Sixth"></a>
 
 Occassionally, Neapolitan chords are missing the fifth of the chord (the
 lowered sixth degree of the scale). We might search for an example of
@@ -325,7 +325,7 @@ such a chord:
 
 > `solfa input | grep '2-' | grep '4' | grep -v '6-'`
 
-[]{#AND-Searches_Using_the_xargs_Command}
+<a name ="AND-Searches_Using_the_xargs_Command"></a>
 
 AND-Searches Using the *xargs* Command
 --------------------------------------
@@ -336,7 +336,7 @@ causes **grep** to output the *filename* rather than the matching
 record. If we could pass along these file names to another **grep**
 command, we could search those same files for yet another pattern.
 
-[]{#Liebe_phrase_counts}
+<a name ="Liebe_phrase_counts"></a>
 
 The UNIX **xargs** command provides a useful way of transferring the
 output from one command to be used as final arguments for a subsequent
@@ -352,7 +352,7 @@ following **grep** command. The **grep -c** command will thus be applied
 only to those files already identified by the previous **grep** as
 containing `Liebe` in the title.
 
-[]{#Drinking_Songs_in_Triple_Meter}
+<a name ="Drinking_Songs_in_Triple_Meter"></a>
 
 A set of such pipelines can be used to answer more sophisticated
 questions. For example, are drinking songs more apt to be in triple
@@ -362,7 +362,7 @@ meter?
 > `grep -l '!!!AMT.*duple'   *   | xargs grep -l '!!!AGN.*Trinklied'`\
 > `grep -l '!!!AMT.*quadruple' * | xargs grep -l '!!!AGN.*Trinklied'`
 
-[]{#Death_in_minor_keys}
+<a name ="Death_in_minor_keys"></a>
 
 Similarly, the following commands determine whether files whose titles
 contain the word *death* are more apt to be in minor keys:
@@ -370,7 +370,7 @@ contain the word *death* are more apt to be in minor keys:
 > `grep -li '!!!OTL.*death' * | xargs grep -c '^\*[a-g][#-]*:'`\
 > `grep -li '!!!OTL.*death' * | xargs grep -c '^\*[A-G][#-]*:'`
 
-[]{#Africa_key_signatures}
+<a name ="Africa_key_signatures"></a>
 
 Note that the **xargs** command can be used again and again to continue
 propagating file names as arguments to subsequent searches. For example,
@@ -381,7 +381,7 @@ originating from Africa that are written in 3/4 meter:
 >
 > > \| xargs grep \'\^\\\*k\\\[\'
 
-[]{#17th_organ_in_6.8}
+<a name ="17th_organ_in_6.8"></a>
 
 Similarly, the following command outputs the names of all files in the
 current directory that encode 17th century organ works containing
@@ -391,7 +391,7 @@ passages in 6/8 meter:
 >
 > > \'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
 
-[]{#17th_organ_not_in_6.8}
+<a name ="17th_organ_not_in_6.8"></a>
 
 Using the **-L** option allows us to form even more complex criteria by
 excluding certain works. For example, the following variation of the
@@ -403,7 +403,7 @@ meter:
 >
 > > \'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
 
-[]{#OR-Searches_Using_the_grep_-f_Command}
+<a name ="OR-Searches_Using_the_grep_-f_Command"></a>
 
 OR-Searches Using the *grep -f* Command
 ---------------------------------------
@@ -426,7 +426,7 @@ The **-f** option tells **grep** to fetch the file `criteria` and use
 the records in this file as regular expressions. A match is made if any
 of the regular expressions is found.
 
-[]{#D_major_triads}
+<a name ="D_major_triads"></a>
 
 The output would consist of a list of all files in the current directory
 that encode works composed in the 17th century OR written for organ OR
@@ -459,7 +459,7 @@ The corresponding command would be:
 
 > `grep -L -f criteria *`
 
-[]{#Whole_Tone_Sets}
+<a name ="Whole_Tone_Sets"></a>
 
 Another way of thinking of the **-f** option is that it allows us to
 define equivalences. Consider, for example, the task of counting all of
@@ -493,7 +493,7 @@ this alternative set:
 
 ------------------------------------------------------------------------
 
-[]{#Reprise}
+<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -519,7 +519,6 @@ command.
 
 ------------------------------------------------------------------------
 
-\
 
 [**Next Chapter**](guide11.html)
 

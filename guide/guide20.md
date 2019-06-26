@@ -31,7 +31,7 @@ Humdrum *section* and *strophe*. We will encounter examples using the
 [**yank**](commands/yank.html), [**thru**](commands/thru.html), and
 [**strophe**](commands/strophe.html) commands.
 
-[]{#Section_Labels}
+<a name ="Section_Labels"></a>
 
 Section Labels
 --------------
@@ -57,7 +57,7 @@ assigned new exclusive interpretations, or all spines terminate. If
 there is more than one spine present in a passage, identical section
 labels must appear concurrently in all spines.
 
-[]{#Expansion_Lists}
+<a name ="Expansion_Lists"></a>
 
 Expansion Lists
 ---------------
@@ -79,12 +79,12 @@ sections, labelled \"`verse1`,\" \"`verse2`\" and \"`refrain`.\" When
 the file is expanded, the \"`refrain`\" section should be repeated
 following each verse.
 
-[]{#Using_yank_to_Extract_Sections}
+<a name ="Using_yank_to_Extract_Sections"></a>
 
 Using *yank* to Extract Sections
 --------------------------------
 
-[]{#Extract_Coda}
+<a name ="Extract_Coda"></a>
 
 We encountered the [**yank**](commands/yank.html) command earlier in
 [Chapter 12.](guide12.html) Recall that **yank** can be used to extract
@@ -97,7 +97,7 @@ follows:
 Recall that the **-r** option is mandatory with **yank**; in this case,
 it identifies the *first* occurrence of a section labelled `Coda`.
 
-[]{#Using_the_thru_Command_to_Expand_Encodings}
+<a name ="Using_the_thru_Command_to_Expand_Encodings"></a>
 
 Using the *thru* Command to Expand Encodings
 --------------------------------------------
@@ -114,7 +114,7 @@ encountered in the input are subsequently discarded. As a result,
 running a file through **thru** twice will not result in further changes
 to the file.
 
-[]{#Alternative_Versions}
+<a name ="Alternative_Versions"></a>
 
 Alternative Versions
 --------------------
@@ -126,7 +126,7 @@ may be avoided, passages may be added, or material eliminated
 altogether. In short, several different versions or interpretations of
 the overall organization of a work may exist.
 
-[]{#Select_Landowska_Version}
+<a name ="Select_Landowska_Version"></a>
 
 Humdrum provides a mechanism by which several alternative versions of
 the overall organization of a work may co-exist in the same file. This
@@ -136,7 +136,7 @@ distinguish different versions, each expansion list is given a unique
 
 > ` *>Gould1982[A,A,B]  *>Landowska[A,A,B,B]`
 
-[]{#Play_Binary}
+<a name ="Play_Binary"></a>
 
 Here we see two expansion lists, one carries the version label
 `Gould1982` and the other is labelled version `Landowska`. These
@@ -202,7 +202,7 @@ section B, followed by section A (again), followed by section C:
 
 > `thru file`
 
-[]{#Section_Types}
+<a name ="Section_Types"></a>
 
 Section Types
 -------------
@@ -318,7 +318,7 @@ type. Consider the following:\
 > >   `yank -t Form -s 'Exposition' -r 1`   (extracts up to `>Form>Development`)
 > >   ------------------------------------- --------------------------------------
 > >
-> []{#Extract_2nd_Theme_Recapitulation}
+> <a name ="Extract_2nd_Theme_Recapitulation"></a>
 >
 > For example, the second theme from the recapitulation can be extracted
 > as follows:
@@ -330,7 +330,7 @@ type. Consider the following:\
 > > `yank -t Form -s Recapitulation`
 > > *file*` | yank -t Form -s '2nd Theme' -r 1`
 >
-> []{#Using_the_yank_and_thru_Commands}
+> <a name ="Using_the_yank_and_thru_Commands"></a>
 >
 > Using the *yank* and *thru* Commands
 > ------------------------------------
@@ -349,25 +349,25 @@ type. Consider the following:\
 >
 > > `grep '^\*>.*\[.*\]'` *file*
 >
-> []{#Count_notes_Exposition}
+> <a name ="Count_notes_Exposition"></a>
 >
 > How many notes are there in the exposition?
 >
 > > `yank -t Form -s Exposition -r 1` *file*` | census`
 >
-> []{#Count_phrases_Development}
+> <a name ="Count_phrases_Development"></a>
 >
 > How many phrases are there in the development?
 >
 > > `yank -t Form -s Development -r 1` *file*` | grep -c '{'`
 >
-> []{#Extract_third_recitative}
+> <a name ="Extract_third_recitative"></a>
 >
 > Extract the figured bass for the third recitative:
 >
 > > `yank -s Recitativo -r 3` *file*` | extract -i '**B-num'`
 >
-> []{#Compare_keys}
+> <a name ="Compare_keys"></a>
 >
 > Compare the estimated key for the second theme in the exposition
 > versus the estimated key for the second theme in the recapitulation:
@@ -375,7 +375,7 @@ type. Consider the following:\
 > > `yank -t Form -s '2nd Theme' -r 1` *file*` | key`\
 > > `yank -t Form -s '2nd Theme' -r 2` *file*` | key`
 >
-> []{#Gould_duration}
+> <a name ="Gould_duration"></a>
 >
 > Determine the nominal (non-rubato) duration of Gould\'s performance of
 > the work:
@@ -390,7 +390,7 @@ type. Consider the following:\
 >
 > > `yank -s B` *file*` | yank -o = -r 1-3 | midi | perform`
 >
-> []{#Strophic_Representations}
+> <a name ="Strophic_Representations"></a>
 >
 > Strophic Representations
 > ------------------------
@@ -702,7 +702,7 @@ type. Consider the following:\
 > > spines rejoin, and then a strophic passage terminator (`*S-`) marks
 > > the end of the strophic passage.
 > >
-> > []{#The_strophe_Command}
+> > <a name ="The_strophe_Command"></a>
 > >
 > > The *strophe* Command
 > > ---------------------
@@ -749,7 +749,7 @@ type. Consider the following:\
 > > Notice that all of the tandem interpretations related to the strophe
 > > organization are eliminated from the output.
 > >
-> > []{#Expand_Verses}
+> > <a name ="Expand_Verses"></a>
 > >
 > > Suppose that we wanted to create a through-composed version of the
 > > entire work. We would expect as output, just two spines \-- the
@@ -777,12 +777,12 @@ type. Consider the following:\
 > > strophe \#1. The **strophe** command will adapt to the input, and
 > > use the lowest previously unencountered strophe number.
 > >
-> > []{#Using_the_strophe_and_thru_Commands}
+> > <a name ="Using_the_strophe_and_thru_Commands"></a>
 > >
 > > Using the *strophe* and *thru* Commands
 > > ---------------------------------------
 > >
-> > []{#Erk_edition}
+> > <a name ="Erk_edition"></a>
 > >
 > > As noted, the strophe technique can be used to encode different
 > > editorial interpretations of a single work. Suppose for example that
@@ -791,7 +791,7 @@ type. Consider the following:\
 > >
 > > > `strophe -x Erk chorale166`
 > >
-> > []{#Syllables_in_Verses}
+> > <a name ="Syllables_in_Verses"></a>
 > >
 > > In a strophic song, suppose we would like to compare the number of
 > > syllables in the first and second verses. We begin by selecting the
@@ -814,7 +814,7 @@ type. Consider the following:\
 > >
 > > ------------------------------------------------------------------------
 > >
-> > []{#Reprise}
+> > <a name ="Reprise"></a>
 > >
 > > Reprise
 > > -------
@@ -872,7 +872,6 @@ type. Consider the following:\
 > >
 > > ------------------------------------------------------------------------
 > >
-> > \
 > >
 > > [**Next Chapter**](guide21.html)
 > >
