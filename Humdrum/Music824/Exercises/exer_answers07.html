@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Exercise #7 - Answers</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+All of the following commands assume that you are located in the
+appropriate score directory.
+</P>
+
+<ol>
+<li>
+What are the principal differences between the
+<b>deg</b> and
+<b>solfa</b> commands?
+<blockquote>
+<A NAME="Question01">
+There are three principal differences:
+(1) <b>deg</b> represents scale degrees by numbers:
+1 for tonic, 2 for super-tonic, ... 5 for dominant, etc.
+<b>solfa</b> represents scale degrees by syllables:
+`do' for tonic, `re' for super-tonic, ... `so' for dominant, etc.
+(2) <b>deg</b> indicates how a pitch is approached:
+the caret (^) indicates a pitch was approached
+by a rising interval whereas the lower-case `v' indicates
+a pitch was approached by a descending interval.
+The <b>solfa</b> command/representation does not
+indicate how a pitch was approached.
+(3) <b>deg</b> is <i>mode-sensitive</i> and so will characterize
+pitches differently in major and minor keys.
+For example, in the key of C major, the pitch E-flat
+is represented as a lowered 3rd scale degree,
+whereas in the key of C minor, E-flat is represented as
+an unmodified 3rd scale degree.
+In the <b>solfa</b> representation, E-flat would be
+represented by `me' and E-natural would be represented
+by `mi' -- whether or not the key was major or minor.
+</blockquote>
+<br>
+<br>
+<li>
+In the Romanian folksongs,
+are tonic pitches more commonly approached from above or below?
+<blockquote>
+<A NAME="Question02">
+COMMAND: &#160 &#160 </code><big><B>deg *.krn | grep -c '^\^1'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>deg *.krn | grep -c '^v1'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>63 approached from below</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>95 approached from above</B></big></code>
+</blockquote>
+<br>
+<br>
+<li>
+Do the Hungarian folksongs differ from the Romanian
+folksongs in how the tonic is approached?
+<blockquote>
+<A NAME="Question03">
+COMMAND: &#160 &#160 </code><big><B>deg *.krn | grep -c '^\^1'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>deg *.krn | grep -c '^v1'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>116 approached from below</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>85 approached from above</B></big></code>
+</blockquote>
+<br>
+<br>
+<li>
+How many tonic pitches are there in the Italian folksong
+collection?
+How many dominant pitches are there?
+<blockquote>
+<A NAME="Question04">
+COMMAND: &#160 &#160 </code><big><B>solfa -x itali*.krn | grep -c '^do'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>solfa -x itali *.krn | grep -c '^so'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>60 tonics</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>66 dominants</B></big></code>
+</blockquote>
+<br>
+<br>
+<li>
+Create an alphabetical listing of the titles for the
+Danish folksong collection.
+<blockquote>
+<A NAME="Question05">
+COMMAND: &#160 &#160 </code><big><B>grep -h '!!!OTL:' *.krn | sort -d</B></big></code>
+</blockquote>
+<br>
+<br>
+<li>
+Ignoring mode (major/minor),
+in the Swedish folksong collection, which scale
+degrees are most frequently repeated?
+Which scale degrees are least frequently repeated?
+<blockquote>
+<A NAME="Question06">
+COMMAND: &#160 &#160 </code><big><B>deg sverig*.krn | grep -c '^1'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>deg sverig*.krn | grep -c '^2'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>deg sverig*.krn | grep -c '^3'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>deg sverig*.krn | grep -c '^4'</B></big></code> &#160 &#160 &#160 etc.
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>The tonic (31) and dominant (29) are most commonly repeated.</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>The submediant (0) and leading-tone (88) are most commonly repeated.</B></big></code>
+</blockquote>
+</ol>
+</P>
+<A HREF="music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<XXXimg src=""></img><br>
+
+</BODY>
+</HTML>
+

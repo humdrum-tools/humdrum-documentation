@@ -1,0 +1,14 @@
+!! COMMENTARY:  There are seven equal-length notes in this measure.
+!! Since the measure has a duration equivalent to a half-note,
+!! the encoded durations should be 7 x 2 = 14th notes.
+!! Note that the augmentation dots are simply irrelevant.
+**kern
+*M1/2
+14
+14
+14
+14
+14
+14
+14
+*-

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Exercise #6 - Answers</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+All of the following commands assume that you are located in the appropriate
+score directory.
+</P>
+<P>
+<ol>
+2.
+<blockquote>
+How many measures are there in Corelli's Opus 1, No. 11, first movement?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>census -k op01n11a.krn</B></big></code>
+<br>
+COMMAND: &#160 &#160 </code><big><B>grep -c ^=[^=]' op01n11a.krn</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>18</B></big></code>
+</blockquote>
+Notice that the <B>grep</B> command would fail to identify barlines
+that consist of a single equals sign on a line by itself.
+As a result, using <B>census</B> is better than using <B>grep</B>.
+<br>
+<br>
+</blockquote>
+</ol>
+</P>
+<A HREF="music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<XXXimg src=""></img><br>
+
+</BODY>
+</HTML>
+

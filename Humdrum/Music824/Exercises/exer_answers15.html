@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Exercise #15 - Answers</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+All of the following commands assume that you are located in the
+appropriate score directory.
+</P>
+<P>
+<ol>
+<A NAME="Question1">
+<li>
+In Gregorian chant, what is the most common interval following
+a rising major second?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint | context -n 2 -o ^= | grep '^+M2' | sort | uniq -c</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>708 instances of +M2 followed by -M2</B></big></code>
+</blockquote>
+<A NAME="Question2">
+<li>
+In Gregorian chant, what is the most common interval following
+a rising minor second?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint | context -n 2 -o ^= | grep '^+m2' | sort | uniq -c</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>154 instances of +m2 followed by +M2</B></big></code>
+</blockquote>
+<A NAME="Question3">
+<li>
+In French folksongs, what scale degree most commonly follows the subdominant?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>context -n 2 -o ^= france* | solfa -x | grep '^fa' | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>Twenty-four subdominant pitches are followed by the mediant.</B></big></code>
+</blockquote>
+<A NAME="Question4">
+<li>
+In French folksongs, what scale degree most commonly precedes the subdominant?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>context -n 2 -o ^= france* | solfa -x | grep 'fa$' | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>Twenty-nine subdominant pitches are preceded by the dominant.</B></big></code>
+</blockquote>
+<A NAME="Question5">
+<li>
+In French folksongs, what scale degree most commonly begins a phrase?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>yank -m '{' -r 0 france* | solfa -x | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+<br>
+Due to a bug with <B>yank</B> you might have to use the following command:
+<br>
+<br>
+COMMAND: &#160 &#160 </code><big><B>cat france* | yank -m '{' -r 0 | solfa -x | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>Twenty-seven phrases begin with the dominant (`so').</B></big></code>
+</blockquote>
+<A NAME="Question6">
+<li>
+For those French folksongs whose phrases begin with the dominant pitch,
+what is the most common ending pitch of the phrase?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>context -b '{' -e '}' -o ^= france* | solfa -x | humsed 's/ r$//; s/ .* / /' | grep '^so' | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>The majority (8) of phrases beginning on the dominant also end on the dominant.</B></big></code>
+</blockquote>
+<A NAME="Question7">
+<li>
+BONUS QUESTION:
+In Austrian folk songs, what is the most common interval formed by the
+first and last notes of each phrase?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>cat *.krn | yank -m '[{}]' -r 0 | context -b '{' | hint -v | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>There are 60 phrases that begin and end on the same note (P1 is most common).</B></big></code>
+<br>
+<br>
+A problem with the above approach is that no intervals are calculated when the phrase
+begins or ends with a rest.
+A better approach is as follows:
+<br>
+<br>
+COMMAND: &#160 &#160 </code><big><B>humsed '/r/d'  *.krn | context -b '{' -e '}' -o ^= | humsed 's/ .* / /' | hint -v | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>There are 93 phrases that begin and end on the same note (P1 is most common).</B></big></code>
+</blockquote>
+<A NAME="Question8">
+<li>
+BONUS QUESTION:
+Consider diatonic intervals only.
+In Gregorian chant, the most common sequence of intervals consists of repeated unisons.
+For example, the most common 10-note interval pattern is 9 repeated unisons.
+How many sequential notes do we have to consider before a string of unisons is no longer
+the most common diatonic interval pattern?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint -d | context -o ^= -n 10 | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint -d | context -o ^= -n 11 | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint -d | context -o ^= -n 12 | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint -d | context -o ^= -n 13 | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>etc</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -i '**kern' liber* | mint -d | context -o ^= -n 17 | rid -GLId | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>When -n is 17, a sequence of unisons is no longer the most common interval pattern.</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>This means that beyond 17 pitches, string of unisons are no longer in the majority.</B></big></code>
+</blockquote>
+<A NAME="Question9">
+<li>
+<I>BONUS QUESTION</I>:
+In the Polish folksongs (Essen/europa/polska)
+what is the average number of notes per phrase?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>context -b '{' -e '}' -o '[=r]' *.krn | rid -GLId | wc</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>wc tell us there are 117 lines (i.e. 117 phrases) and 917 words (i.e. 917 notes): 917/117 = 7.8 notes/phrase</B></big></code>
+</blockquote>
+</ol>
+</P>
+<A HREF="music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<XXXimg src=""></img><br>
+
+</BODY>
+</HTML>
+

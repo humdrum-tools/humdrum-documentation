@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Exercise #12 - Answers</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+All of the following commands assume that you are located in the
+appropriate score directory.
+</P>
+<P>
+<ol>
+<li>
+It is commonly thought that melodies are organized with a preference
+for small melodic intervals (the so-called "pitch-proximity principal").
+It is possible that small intervals arise simply because of
+limitations of range.
+Most pitches occur in the central part of an instrument's or
+voice's range, so even for random melodies most intervals ought to be small.
+Using the Humdrum
+<B>scramble</B> command compare the <I>average interval size</I>
+for an actual melody with the <I>average interval size</I>
+when the order of notes for the melody has been randomly rearranged.
+(For this exercise use the French patriotic song
+<I>Allons enfants de la patrie</I> [<code>france01.krn</code>]).
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>semits -x france01.krn | xdelta -a -s ^= | grep -v '[=r\[]' | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>The average interval size for the actual melody is 1.97 semitones.</B></big></code>
+<br>
+<br>
+COMMAND: &#160 &#160 </code><big><B>scramble -r france01.krn | semits -x | xdelta -a -s ^= | grep -v '[=r\[]' | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>The average interval size for the randomized melody is roughly between 3.7 and 4.1 semitones.</B></big></code>
+</blockquote>
+<li>
+It is commonly thought that large intervals tend to be followed
+by smaller intervals.
+If small intervals are already very common, wouldn't we
+expect to see many small intervals following large intervals by
+chance?
+For this question, use the <code>french08.krn</code> folksong
+and assume that a "large" interval is 5 semitones or larger.
+<blockquote>
+Begin by creating a "reassignment" file for the <B>recode</B> command:
+<blockquote>
+<code><big><B>>=5	large
+<br>
+>0	small
+</code></big></B>
+</blockquote>
+COMMAND: &#160 &#160 </code><big><B>semits -x france08.krn | xdelta -a -s ^= | grep -v '[r=\[]' | recode -i '**Xsemits' -f reassign > temp</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>context -n 2 temp | grep -c 'large large'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>scramble -r temp | context -n 2 | grep -c 'large large'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>For the actual melody, there is only one instance of a large interval followed by a large interval.</B></big></code>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>For the random melody, there is typically between 0 and 1 instance of two successive large intervals.</B></big></code>
+</blockquote>
+<li>
+Does Bach tend to avoid <I>V-IV</I> progressions in his
+chorale harmonizations?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -i '**harm' *.hrm | context -n 2 -o | grep -c '^V IV$'</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -i '**harm' *.hrm > temp</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>scramble -r temp | context -n 2 -o | grep -c '^V IV$'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>There are two <I>V-IV</I> progressions in the Bach chorale sample.</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>For the scrambled progressions there are roughly 14 <I>V-IV</I> progressions.</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>Bach appears to avoid <I>V-IV</I> progressions.</B></big></code>
+</blockquote>
+<li>
+In Bach's the two-part Invention No. 11, does he use more or fewer
+augmented elevenths harmonic intervals than would be expected by chance?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B> ditto -s = inven11.krn | hint | grep -c 'A11'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>There are 11 augmented elevenths in the actual music.</B></big></code>
+<br>
+<br>
+COMMAND: &#160 &#160 </code><big><B>extract -f 1 inven11.krn > temp1</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>extract -f 2 inven11.krn > temp2</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>scramble -r -s = temp1 > temp1s</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>assemble temp1s temp2 | ditto -s = | hint | grep -c 'A11'</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>There are and average of roughly 7 augmented elevenths in the randomized music.</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>Bach appears to "seek-out" augmented elevenths in Invention No. 11.</B></big></code>
+</blockquote>
+</ol>
+</P>
+<A HREF="music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<XXXimg src=""></img><br>
+
+</BODY>
+</HTML>
+

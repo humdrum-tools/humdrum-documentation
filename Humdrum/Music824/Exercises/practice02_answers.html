@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Practice Exercise #2</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+For this exercise you will need to know how to use a text
+editor like <B>pico</B>, <B>vi</B> or <B>emacs</B>.
+In addition, you will need to know the following commands:
+</P>
+<TABLE ALIGN="CENTER" BGCOLOR="C0C0C0">
+<TR>
+<TH>
+<B>UNIX Commands</B>
+</TH>
+<TH>
+<B>Humdrum Commands</B>
+</TH>
+</TR>
+
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="FFFFFF">
+<B>grep</B>
+</TD>
+<TD ALIGN="CENTER" BGCOLOR="FFFFFF">
+<B>ls</B>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="FFFFFF">
+<B>grep -h</B>
+</TD>
+<TD ALIGN="CENTER" BGCOLOR="FFFFFF">
+<B>wc</B>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="C0C0C0">
+<B>&#160</B>
+</TD>
+<TD ALIGN="CENTER" BGCOLOR="C0C0C0">
+<B>&#160</B>
+</TD>
+</TR>
+
+</TABLE>
+<P>
+Change directories <b>/var/share/Humdrum/Music824/Scores</b>
+and find the directory containing Ojibway songs.
+These songs were collected by
+Frances Densmore between 1907 and 1909.
+Answer the following questions.
+</P>
+<P>
+<ol>
+<li>
+How many Ojibway songs are present in this directory?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>ls ojib*.krn | wc</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>370 songs files</B></big></code>
+</blockquote>
+Note that the "ls" command behaves differently depending on
+whether or not its output is "piped" to another process.
+When "ls" is not piped, it formats the list of files with
+several files on each output line -- so it is easier to see all
+of the files in a directory on the computer display.
+However, when piped, "ls" generates a single column list
+of files (in alphabetical order) so each line of output
+contains a single filename.
+This allows commands like "wc" to be able to count the
+files as "the number of lines".
+In order to see the difference, compare the command "ls"
+with the command "ls | more".
+<br>
+<br>
+<li>
+What proportion of the Ojibway songs are
+sung by women?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>grep '\*Ifeme' ojib*.krn | wc</B></big></code>
+<br>
+COMMAND: &#160 &#160 </code><big><B>grep '\*Imale' ojib*.krn | wc</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B></B></big></code>
+</blockquote>
+<li>
+The names of the singers are coded in the
+"MPN" reference record.
+Who sang the most number of songs for Densmore?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>grep -h '!!MPN:' ojib*.krn | sort | uniq -c | sort -n</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>E'niwub'e</B></big></code>
+</blockquote>
+<li>
+In this encoded collection, drum patterns have been
+encoded using a simple comment "!! Drum-pattern".
+How many different drum patterns are present
+in Densmore's collection?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>grep -h '!! Drum-rhythm:' ojib*.krn | sort | uniq</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>Eleven drum patterns are present.</B></big></code>
+</blockquote>
+<li>
+Which drum pattern is the most frequently used?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>grep -h '!! Drum-rhythm:' ojib*.krn | sort | uniq -c</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>Two patterns are tied for first place.
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 (12^ 12r 12 12^ 12r 12)
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 (8 8 8 8 8 8)
+</B></big></code>
+</blockquote>
+<li>
+Most of the songs Densmore collected in Minnesota.
+What other state(s) did Densmore collect Ojibway songs?
+<br>
+<br>
+<A HREF="../music824.index2.html"><B>Return to Exercises and Assignments Index</B></A>
+<br>
+<A HREF="../music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<XXXimg src=""></img><br>
+
+</BODY>
+</HTML>
+

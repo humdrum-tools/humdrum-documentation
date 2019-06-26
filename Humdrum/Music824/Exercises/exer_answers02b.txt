@@ -1,0 +1,40 @@
+**kern	**kern
+*staff2	*staff1
+*clefF4	*clefG2
+*k[f#c#]	*k[f#c#]
+*M2/4	*M2/4
+8r	8a'
+=	=
+4D	8f#' 8dd'
+.	8f#' 8dd'
+8r	8cc#' 8ee'
+8d	8dd' 8ff#'
+=	=
+4.A	(8ff# 8aa
+.	8ee 8gg)
+.	8dd' 8ff#'
+8G	8cc#' 8ee'
+=	=
+4F#	(8gg 8bb
+.	8ff# 8aa)
+8G#'	8ee' 8gg'
+8G#'	8dd' 8ff#'
+=	=
+4A	(16cc# 16ee
+.	16dd
+.	16ee
+.	16ff#)
+4r	8cc#' 8ee'
+.	8a'
+=	=
+8F#'	8a' 8dd'
+8F#'	8a' 8dd'
+8E'	8cc#' 8ee'
+8D'	8dd' 8ff#'
+=	=
+4.AA	(8ff# 8aa
+.	8ee 8gg)
+.	8dd' 8ff#'
+8G'	8cc#' 8ee'
+=	=
+*-	*-

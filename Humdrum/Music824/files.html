@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="0000DD" alink="FF8O8O" vlink="8888FF">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Navigating the Unix System of Directories</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+Most computer systems organize files in a hierarchy of folders
+or directories.
+So, for example, a file containing an assignment (called "1st_assignment")
+might be stored in a directory called "Assignments";
+that directory might in turn be stored in a directory called "Music824",
+which is stored in "Schoolwork".
+We can represent the full location of the file as:
+<blockquote>
+/Schoolwork/Music824/Assignments/1st_assignment
+</blockquote>
+Notice the use of slashes (/) to separate each of the components
+in the location.
+Also notice that the location begins with a leading slash.
+When a location begins with a slash it is referred to as an
+<i>absolute location.</i>
+</P>
+
+<P>
+Every file in the computer system can be referred to by its absolute location.
+For example, the following are all absolute locations:
+<blockquote>
+/Universe/SolarSystem/Earth/NorthAmerica/USA/Ohio/Columbus/OSU/WeigelHall
+<br>
+/Filesystem/Username/Directory/Subdirectory/file
+<br>
+/var/opt/Humdrum/Scores/Bach/Brandenburg/bwv1047a.krn
+</blockquote>
+</P>
+
+<P>
+Files and directories can also be referred to using a
+<i>relative location.</i>
+On the OSU campus, you can say "I'm going to Hughes Hall" and
+people will understand what you mean.
+But if you were in Vienna, no one would understand where you were going.
+In order to be understood in Vienna, you would have to say,
+"I'm going to Columbus, Ohio in the United States;
+and on the Ohio State University campus there is a building called "Hughes Hall."
+That's where I'm going."
+On the Unix system,
+<i>relative locations</i>
+are evident whenever the leading slash is missing.
+For example, the following are all relative locations:
+<blockquote>
+OSU/WeigelHall
+<br>
+Username/Directory/Subdirectory/file
+<br>
+bwv1047a.krn
+</blockquote>
+</P>
+
+<P>
+Relative locations are always relative to a
+<i>working directory.</i>
+Whenever you use the Unix shell
+(the window in which you type commands),
+your window resides in a location on the system.
+For example, your shell might reside at the following working directory:
+<blockquote>
+/Universe/SolarSystem/Earth/NorthAmerica/USA/Ohio/Columbus/OSU
+<br>
+/Filesystem/Username/
+<br>
+/var/opt/Humdrum/Scores/Bach/Brandenburg/bwv1047a.krn
+</blockquote>
+</P>
+
+<P>
+</P>
+
+<P>
+The
+<B>ls</B>
+command lists all of the files and subdirectories in
+the current directory.
+</P>
+
+<TABLE ALIGN="CENTER">
+<TR>
+<TD>
+<B>Command</B></TD><TD><B>Action</B></TD></TR>
+<TR>
+	<TD><B>ls</TD>
+	<TD>list the files and subdirectories for the current directory</TD></TR>
+<TR>
+	<TD><B>ls -l</B></TD>
+	<TD>list the files and subdirectories for the current directory (long format)</TD></TR>
+<TR>
+	<TD><B>cd <i>X</i></B></TD>
+	<TD>change directory to directory named <i>X</i></TD>
+</TR><TR>
+	<TD><B>cd ..</B></TD>
+	<TD>go up one directory level</TD>
+</TR><TR>
+	<TD><B>pwd</B></TD>
+	<TD>Present Working Directory -- identify the name of the current directory</TD>
+</TR><TR>
+	<TD><B>date</B></TD>
+	<TD>display date and time</TD>
+</TR><TR>
+	<TD><B>man <i>X</i></B></TD>
+	<TD>display manual pages for command <i>X</i></TD>
+</TR><TR>
+	<TD><B>more <i>X</i></B></TD>
+	<TD>display contents of file named <i>X</i></TD>
+</TR><TR>
+	<TD><B>mv <i>X Y</i></B></TD>
+	<TD>move a file; i.e., rename the file <i>X</i> (old) to the name <i>Y</i> (new)</TD>
+</TR><TR>
+	<TD><B>cp <i>X Y</i></B></TD>
+	<TD>copy the file named <i>X</i> as the new file named <i>Y</i></TD>
+</TR><TR>
+	<TD><B>rm <i>X</i></B></TD>
+	<TD>remove a file; delete file named <i>X</i></TD>
+</TR><TR>
+	<TD><B>rmdir <i>X</i></B></TD>
+	<TD>remove a directory; delete directory named <i>X</i></TD>
+</TR><TR>
+	<TD><B>mkdir <i>X</i></B></TD>
+	<TD>make a directory; create directory named <i>X</i></TD>
+</TR><TR>
+	<TD><B>pico <i>X</i></B></TD>
+	<TD>invoke `pico' text editor for file named <i>X</i></TD>
+</TR>
+</TABLE>
+
+<P>
+Useful information regarding UNIX can be found at innumerable web sites. Some useful sources are
+</P>
+<ul>
+  <li><A HREF="http://www.mcsr.olemiss.edu/unixhelp">UNIXhelp for Users</A></li>
+  <li><a href="http://www.tuxfiles.org/linuxhelp/cli.html">An introduction to the UNIX command line</a></li>
+</ul>
+<br>
+<br>
+<FONT SIZE=-1">This document is available at
+http://csml.som.ohio-state.edu/Music824/unix.html</FONT>
+
+</BODY>
+</HTML>
+

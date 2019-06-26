@@ -1,0 +1,28 @@
+!! COMMENTARY:  The first four notes sound in the time of a half note.
+!! If this consisted of three quarter triplets, each would have a
+!! duration of 6 (2 x 3 = 6).  Hence the quarter notes here are
+!! encoded as "6".  The two eighths should also sum to a 6th:
+!! (2 x 6 = 12), hence the triplet eighths are encoded as "12".
+!!
+!! In the second half of the bar, we again have three "6" durations.
+!! Consider the inner triplet first.  Since we have 3 in the time of
+!! 6, they are encoded (3 x 6) as "18th" notes.
+!!
+!! Now consider the dotted eighth-sixteenth figures.  Once again
+!! these add up to a total of 6.  The sixteenth represents
+!! one-quarter of this total, hence the sixteenth is (6 x 4) - 24.
+!! Something three times longer than a 24th is (24 divided by 3) - 8.
+**kern
+*M2/2
+6
+12
+12
+6
+8
+24
+18
+18
+18
+24
+8
+*-

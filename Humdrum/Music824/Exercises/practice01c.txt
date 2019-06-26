@@ -1,0 +1,26 @@
+!! Example 3
+!!!COM: Anon.
+!!!OTL: Benedico te
+**kern	**silbe
+*clefF4	*LLatin
+*MX	*
+G	Be-
+G	-ne-
+D	.
+F	-di/-
+F	-co
+G	.
+G	te,
+G	pa/-
+G	-ter
+G	Do/-
+G	-mi-
+A	-ni
+c	me/-
+B	-i
+A	Je/-
+B	-su
+G	Chri/-
+G	-sti
+==|	==
+*-	*-

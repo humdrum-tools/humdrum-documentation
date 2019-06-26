@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-52162357-1', 'humdrum.org');
+  ga('send', 'pageview');
+</script>
+<TITLE>Music 824: Computer Applications in Music Research</TITLE>
+</HEAD>
+<BODY bgcolor=#FFFFFF link="FF0000" alink="FF8O8O" vlink="008DDD">
+<B>Music 824: Computer Applications in Music Research</B><br>
+<B>Ohio State University</B><br>
+<B>School of Music</B>
+<br>
+<br>
+
+<center><HR WIDTH=500></center>
+<center><H1>Humdrum Exercise #14 - Answers</H1></center>
+<center><HR WIDTH=500></center>
+
+<P>
+All of the following commands assume that you are located in the
+appropriate score directory.
+</P>
+<P>
+<ol>
+<A NAME="Question1">
+<li>
+How long (in seconds) is Bach's Invention No. 2?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -f 1 inven02.krn | dur -x | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>117 seconds</B></big></code>
+</blockquote>
+<A NAME="Question2">
+<li>
+How long (in seconds) is Bach's Invention No. 1?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -f 1 inven01.krn | dur -x | humsed 's/ .*//' | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>89 seconds [not 93 or 97 seconds]</B></big></code>
+(Notice that Invention No. 1 has multiple stops for the final chord.)
+</blockquote>
+<A NAME="Question3">
+<li>
+How long is Bach's Invention No. 2 with a metronome setting of 58 quarter-notes per minute?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>extract -f 1 inven02.krn | dur -x -M 58 | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>111.7 seconds</B></big></code>
+</blockquote>
+<A NAME="Question4">
+<li>
+Bach's Invention No. 6 is written in binary form with repeats
+indicated.
+What is the duration of Invention No. 6 without any repeats?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>thru -v norepeats inven06.krn | extract -f 1 | dur -x | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>99 seconds</B></big></code>
+</blockquote>
+How long is it with both repeats?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>thru -v allrepeats inven06.krn | extract -f 1 | dur -x | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>186 seconds</B></big></code>
+</blockquote>
+<A NAME="Question5">
+<li>
+What is the duration of Invention No. 6 when played with the first repeat only?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>yank -s A -r 1 inven06.krn > temp1</B></big></code>
+<br>
+COMMAND: &#160 &#160 </code><big><B>yank -s B -r 1 inven06.krn > temp2</B></big></code>
+<br>
+COMMAND: &#160 &#160 </code><big><B>cat temp1 temp1 temp2 | extract -f 1 | dur -x | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>131 seconds</B></big></code>
+</blockquote>
+What is the duration of Invention No. 6 (without repeats) when the
+first section is performed at 54 quarter-notes per minute and the
+second section is performed at 57 quarter-notes per minute?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>yank -s A -r 1 inven06.krn | extract -f 1 | dur -x -M 54 | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+COMMAND: &#160 &#160 </code><big><B>yank -s B -r 1 inven06.krn | extract -f 1 | dur -x -M 57 | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>33.3 + 66.3 = 99.6 seconds</B></big></code>
+</blockquote>
+<A NAME="Question6">
+<li>
+Using the Swedish folksong collection, determine the total
+duration of the rests in the first song.
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>yank -m r -r 0 sverig01.krn | dur -x | rid -GLId | grep -v = | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>3 seconds at 60 quarters/minute</B></big></code>
+</blockquote>
+<A NAME="Question7">
+<li>
+In the first Swedish folksong, what is the total duration of
+all leading-tone pitches?
+<blockquote>
+COMMAND: &#160 &#160 </code><big><B>solfa -x sverig01.krn > temp1</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>dur -x sverig01.krn > temp2</B></big></code>
+<br>
+&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 </code><big><B>assemble temp1 temp2 | yank -m ^so -r 0 | extract -f 2 | grep -v = | rid -GLId | stats</B></big></code>
+<br>
+ANSWER: &#160 &#160 &#160 &#160 </code><big><B>1.5 seconds</B></big></code>
+</blockquote>
+</ol>
+</P>
+<A HREF="music824.html"><B>Return to Music 824 Index</B></A>
+<br>
+<br>
+
+</BODY>
+</HTML>
+

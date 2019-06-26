@@ -1,0 +1,14 @@
+!! COMMENTARY:  The first three notes should have a total duration
+!! of one eighth: 8 x 3 = 24, hence three 24th notes.  The augmentation
+!! dots are irrelevant.
+**kern
+*M2/8
+24
+24
+24
+40
+40
+40
+40
+40
+*-

@@ -1,0 +1,29 @@
+!! Example 1
+!!!OTL: Chinese Folk Song
+**kern
+*clefG2
+*k[]
+*M2/4
+16ee
+=
+8dd
+8dd
+(8dd
+8ee)
+=
+16cc
+8.cc
+(8b
+8a)
+=
+8cc
+8cc
+8.b
+16a
+=
+8g
+8g
+8g
+8r
+==
+*-
