@@ -1,6 +1,5 @@
-body {
-    font-size: 2rem;
-}
+
+<style>
 
 .bs-callout {
     padding: 20px;
@@ -93,17 +92,6 @@ margin-top: -40px
 
 .post-content ol li, .post-content ul li {
     margin: 10px 0px;
-}
-
-.pageSummary {
-    font-size:13px;
-    display:block;
-    margin-bottom:15px;
-    padding-left:20px;
-}
-
-.post-summary {
-    margin-bottom:12px;
 }
 
 .bs-example{
@@ -221,11 +209,11 @@ ul#results-container a:hover {
 #search-demo-container a:hover {
     color: black;
 }
+
 #search-input {
-    padding: .5em;
     margin-left:20px;
     width:20em;
-    font-size: 0.8em;
+    font-size: 90%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -510,7 +498,7 @@ table.profile thead tr th {
 }
 
 table.request thead tr th {
-    background-color: #ED1951;
+    background-color: {{site.primary-background-color}};
 }
 
 .audienceLabel {
@@ -571,27 +559,11 @@ a[data-toggle] {
     color: #248EC2;
 }
 
-.summary {
-    font-size:120%;
-    color: #808080;
-    margin:20px 0px 20px 0px;
-    border-left: 5px solid #ED1951;
-    padding-left: 10px;
-
-}
-
-.summary:before {
-    content: "Summary: ";
-    font-weight: bold;
-}
-
 
 a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
 
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
-h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
     overflow: hidden;
@@ -1198,3 +1170,4 @@ h4.panel-title {
         display:block !important;
     }
 }
+</style>

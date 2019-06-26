@@ -154,7 +154,6 @@
                 }
 
                 function initWithURL(url) {
-console.log("URLURLURL ", url);
                     jsonLoader.load(url, function(err, json) {
                         err ? throwError("failed to get JSON (" + url + ")") : (store.put(json), registerInput())
                     })

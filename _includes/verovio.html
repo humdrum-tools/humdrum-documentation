@@ -1,0 +1,175 @@
+
+
+<!-- verovio.html
+	vim: ts=3
+
+	This include sets up a editiable humdrum text region
+	on the page plus dynamcially calculated SVG image 
+	generated from the humdrum text. If you include this file
+	on a markdown or HTML page, you must activate the inclusion
+	of the verovio javascript toolkit with the header parameter:
+		verovio :true
+
+	Input Parameters:
+		tabsize			default none (browser default)
+		humdrum-min-height: the minimum height of the humdrum text box
+		humdrum-max-height: the maximum height of the humdrum text box
+		humdrum-height:     the height of the humdrum text box
+		humdrum-max-width: the maximum width of the humdrum text box
+		humdrum-min-width: the maximum width of the humdrum text box
+		humdrum-visible: "false" will hide the humdrum text.
+		callback: callback when notation changes
+
+
+	Parameters for verovio:
+	http://www.verovio.org/command-line.xhtml
+
+		adjustPageHeight default 1
+		border           default 50
+		evenNoteSpacing  default 0
+		font             default "Leipzig"
+		inputFormat      default "auto"
+		# page             default 1
+		# header           default 0
+		# footer           default 0
+		pageHeight       default 60000
+		pageWidth        default 1350
+		scale            default 40
+		spacingLinear    default 0.25
+		spacingNonLinear default 0.6
+		spacingStaff     default 3
+		spacingSystem    default 6
+		lyricTopMinMargin default 2.0
+		minLastJustification default 0.80
+
+-->
+
+<script>
+
+// insert tab characters in Humdrum element.
+window.addEventListener("DOMContentLoaded", function () {
+	var pre = document.querySelector("pre#{{include.source}}-humdrum");
+	pre.style.display = "block";
+	pre.addEventListener("keydown", function(event) {
+		if (event.keyCode==9 || event.which==9) {
+			event.preventDefault();
+			document.execCommand("styleWithCSS", true, null);
+			document.execCommand("insertHTML", true, "\t");
+		}
+	});
+});
+</script>
+
+<style>
+#{{include.source}}-humdrum {
+	white-space: pre;
+	{% if {{include.tabsize}}  %}
+		tab-size: {{include.tabsize}};
+		-o-tab-size: {{include.tabsize}};
+		-moz-tab-size: {{include.tabsize}};
+		-webkit-tab-size: {{include.tabsize}};
+	{% endif %}
+	{% if {{include.humdrum-min-height}}  %}
+		min-height: {{include.humdrum-min-height | remove: 'px' | append: 'px'}};
+	{% endif %}
+	{% if {{include.humdrum-max-height}} %}
+		max-height: {{include.humdrum-max-height | remove: 'px' | append: 'px'}};
+	{% endif %}
+	{% if {{include.humdrum-height}} %}
+		height: {{include.humdrum-height | remove: 'px' | append: 'px'}};
+	{% endif %}
+	{% if {{include.humdrum-max-width}} %}
+		max-width: {{include.humdrum-max-width | remove: 'px' | append: 'px'}};
+	{% endif %}
+	{% if {{include.humdrum-min-width}} %}
+		min-width: {{include.humdrum-min-width | remove: 'px' | append: 'px'}};
+	{% endif %}
+}
+</style>
+
+<table class="humdrum-verovio">
+<tbody>
+<tr valign="top">
+
+{% unless {{include.humdrum-visible}} == "false" %}
+	<td
+		{% if {{include.humdrum-min-width}} %}
+			style="min-width: {{include.humdrum-min-width}};"
+		{% endif %}
+	>
+	<div>
+	<pre style="display:none;" class="humdrum" contenteditable="true" id="{{include.source}}-humdrum"></pre>
+	</div>
+	</td>
+{% else %}
+	<td style="display:none;">
+	<div>
+	<pre style="display:none;" class="humdrum" contenteditable="true" id="{{include.source}}-humdrum"></pre>
+	</div>
+	</td>
+{% endunless %}
+
+<td>
+<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg"></div>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+<script>
+
+window.addEventListener("DOMContentLoaded", function() {
+
+	// create the verovio options object:
+	var font             = "{{include.font}}" || "Leipzig";
+	var inputFormat      = "{{include.inputFormat}}" || "auto";
+	var adjustPageHeight = parseInt("{{include.adjustPageHeight}}") || 1;
+	var pageHeight       = parseInt("{{include.pageHeight}}") || 60000;
+	var pageWidth        = parseInt("{{include.pageWidth}}") || 1350;
+	var scale            = parseFloat("{{include.scale}}") || 40;
+	var border           = parseInt("{{include.border}}") || 50;
+	var minLastJustification  = parseFloat("{{include.minLastJustification}}") || 0.80;
+	var evenNoteSpacing  = parseInt("{{include.evenNoteSpacing}}") || 0;
+	//var page             = parseInt("{{include.page}}") || 1;
+	var spacingLinear    = parseFloat("{{include.spacingLinear}}") || 0.25;
+	var spacingNonLinear = parseFloat("{{include.spacingNonLinear}}") || 0.6;
+	var spacingSystem    = parseInt("{{include.spacingSystem}}") || 3;
+	var spacingStaff     = parseInt("{{include.spacingStaff}}") || 6;
+	var lyricTopMinMargin = parseFloat("{{include.lyricTopMinMargin}}") || 2.0;
+	// var noheader         = !(parseInt("{{include.header}}") || 0);
+	// var nofooter         = !(parseInt("{{include.footer}}") || 0);
+
+	var options = {
+		adjustPageHeight: adjustPageHeight,
+		font:             font,
+		inputFormat:      inputFormat,
+		//page:             page,
+		pageHeight:       pageHeight,
+		pageWidth:        pageWidth,
+		humType:          1,
+		scale:            scale,
+//		noHeader:         noheader,
+//		noFooter:         noFooter,
+		spacingStaff:     spacingStaff,
+		spacingSystem:    spacingSystem,
+		spacingNonLinear: spacingNonLinear,
+		minLastJustification: minLastJustification,
+		spacingLinear:    spacingLinear,
+		lyricTopMinMargin: lyricTopMinMargin,
+		evenNoteSpacing:  evenNoteSpacing
+	};
+
+	var id = "{{include.source}}";
+	if (!initializeHumdrumText(id, options)) {
+		return;
+	}
+	// create initial SVG image of notation:
+	updateSvgDisplay(id, options);
+});
+
+
+</script>
+
+
+

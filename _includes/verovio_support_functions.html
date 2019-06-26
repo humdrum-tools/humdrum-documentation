@@ -1,0 +1,214 @@
+
+<script>
+//
+// verovio_support_functions.html
+//	Insert shared code for doing dynamic verovio examples in the documentation.
+//	vim: ts=3
+//	
+
+
+// vrvToolkit stores the verovio toolkit interface.  When the page loads
+// set up the vrvToolkit variable.
+
+var vrvToolkit;
+document.addEventListener("DOMContentLoaded", setupVerovio);
+
+
+//////////////////////////////
+//
+// setupVerovio --  Retry every 0.25 seconds if it cannot be setup
+//    immediately.
+//
+
+function setupVerovio() {
+	if (!vrvToolkit) {
+		vrvToolkit = new verovio.toolkit();
+	}
+	if (!vrvToolkit) {
+		setTimeout(setupVerovio, 250);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// initializeHumdrumText -- Copy the Humdrum text from the hidden location 
+//    into the visible area for editing humdrum data.
+//
+//  id == the ID of the content that has the hidden Humdrum data.
+//  options = the verovio options to render the music notation with.
+//
+//  There must be an element on the page (created with liquid templates)
+//  which has the same id, but with "-humdrum" added to the end of the ID.
+//
+//  Returns true if the initialization was successful; otherwise, returns false.
+//
+
+function initializeHumdrumText(id, options) {
+	var helement = document.querySelector("#" + id);
+	if (!helement) {
+		console.log("Could not find humdrum content element with id =", id);
+		return false;
+	}
+	var newid = id + "-humdrum";
+	var target = document.querySelector("#" + newid);
+	if (!target) {
+		console.log("Error: could not find Humdrum target ID", id + "-humdrum");
+		return false;
+	}
+	// need to remove any initial blank space so that verovio can detect
+	// Humdrum in "auto" mode.
+	target.innerHTML = helement.textContent.replace(/^\s*/, "");
+	target.addEventListener("keyup", function(event) { updateSvgDisplay(id, options); });
+	target.addEventListener("keydown", function(event) { fixNewline(event, target)});
+
+	// don't allow HTML content to be pasted in the Humdrum area
+	target.addEventListener("paste", function(event) {
+    	event.preventDefault();
+    	var text = event.clipboardData.getData("text/plain");
+    	document.execCommand("insertHTML", false, text);
+	});
+
+	return true;
+}
+
+//////////////////////////////
+//
+// fixNewline --  This function is necessary because newlines are not inserted
+//    into a pre element when content
+//
+
+function fixNewline(event, target) {
+	if (event.keyCode != 13) {
+		// not the enter key, so ignore
+		return;
+	}
+	if (!window.getSelection) {
+		return;
+	}
+	var sel = window.getSelection();
+	if (!sel) {
+		return;
+	}
+	if (sel.rangeCount < 1) {
+		return;
+	}
+	var range = sel.getRangeAt(0);
+	var startNode     = range.startContainer;
+	var startOffset   = range.startOffset;
+	var boundaryRange = range.cloneRange();
+	var startTextNode = document.createTextNode("");
+	var endTextNode   = document.createTextNode("\n");
+	boundaryRange.collapse(false);
+	boundaryRange.insertNode(endTextNode);
+	boundaryRange.setStart(startNode, startOffset);
+	boundaryRange.collapse(true);
+	boundaryRange.insertNode(startTextNode);
+	// Reselect the original text
+	//range.setStartAfter(startTextNode);
+	//range.setEndBefore(endTextNode);
+	range.setStartAfter(endTextNode);
+	sel.removeAllRanges();
+	sel.addRange(range);
+	event.preventDefault();
+}
+
+
+
+//////////////////////////////
+//
+// udpateSvgDisplay --  When the Humdrum content changes, the SVG image
+//     needs to be re-drawn.
+//
+
+function updateSvgDisplay(id, options) {
+	if (!vrvToolkit) {
+		console.log("verovio not found");
+		return;
+	}
+	var targetid = id + "-svg";
+	var selement = document.querySelector("#" + targetid);
+	if (!selement) {
+		console.log("Error: could not find svg target #" + targetid);
+		return;
+	}
+	var humid = id + "-humdrum";
+	var helement = document.querySelector("#" + humid);
+	if (!helement) {
+		console.log("Error: could not find Humdrum source #" + humid);
+		return;
+	}
+	var content = helement.textContent.replace(/^\s+/, "");
+	var cleaned_options = cleanOptions(content, options);
+
+	var svg = vrvToolkit.renderData(content, cleaned_options);
+	selement.innerHTML = svg;
+	// automatically set the height of the Humdrum element to be the
+   // same size as the height of the SVG (barring limitations on the
+	// min and max height given in CSS.
+	helement.style.height = (selement.offsetHeight-40) + "px";
+}
+
+
+
+//////////////////////////////
+//
+// cleanOptions -- Remove options that will be processed interally from the data.
+//
+
+function cleanOptions(content, options) {
+	var lines = content.match(/[^\r\n]+/g);
+	var output = options;
+	var setlist = [""];
+	var optionsets = {};
+	optionsets[""] = {};
+	var i;
+	for (i=0; i<lines.length; i++) {
+		var matches = lines[i].match(/^!!!verovio([^\s]*):\s*(.*)\s*$/);
+		if (!matches) {
+			continue;
+		}
+		if (matches[1] == "-parameter-group") {
+			setlist.push(matches[2]);
+			continue;
+		}
+		var mm = matches[2].match(/^\s*([^\s]+)\s+(.*)\s*$/);
+		if (!mm) {
+			continue;
+		}
+		var m = matches[1].match(/^-([^\s]+)\s*$/);
+		var set = "";
+		if (m) {
+			set = m[1];
+		}
+		if (typeof optionsets[set] === 'undefined') {
+			optionsets[set] = {};
+		}
+		optionsets[set][mm[1]] = mm[2];
+	}
+
+	for (i=0; i<setlist.length; i++) {
+		if (!optionsets[setlist[i]]) {
+			continue;
+		}
+		var keys = Object.keys(optionsets[setlist[i]]);
+		var j;
+		var key;
+		for (j=0; j<keys.length; j++) {
+			if (typeof output[keys[j]] !== 'undefined') {
+				delete output[keys[j]];
+			}
+		}
+	}
+
+	return output;
+}
+
+
+
+
+
+</script>
+
+

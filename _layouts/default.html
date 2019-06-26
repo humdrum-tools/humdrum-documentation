@@ -73,6 +73,11 @@
 
 </head>
 <body>
+
+{% if page.verovio == "true" %}
+	{% include verovio_support_functions.html %}
+{% endif %}
+
 {% include topnav.html %}
 <!-- Page Content -->
 <div class="container">
