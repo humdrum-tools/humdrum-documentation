@@ -1,0 +1,133 @@
+# representation: name of representation
+# description:    short description of representation
+# commands: list of commands that process this representation
+
+        - representation: "barlines"
+          description:    
+          commands:       
+        - representation: "bhatk"
+          description:    
+          commands:       
+        - representation: "cents"
+          description:    
+          commands:       
+        - representation: "correl"
+          description:    
+          commands:       
+        - representation: "dB"
+          description:    
+          commands:       
+        - representation: "date"
+          description:    
+          commands:       
+        - representation: "deg"
+          description:    
+          commands:       
+        - representation: "degree"
+          description:    
+          commands:       
+        - representation: "diss"
+          description:    
+          commands:       
+        - representation: "dur"
+          description:    
+          commands:       
+        - representation: "embel"
+          description:    
+          commands:       
+        - representation: "freq"
+          description:    
+          commands:       
+        - representation: "fret"
+          description:    
+          commands:       
+        - representation: "harm"
+          description:    
+          commands:       
+        - representation: "hint"
+          description:    
+          commands:       
+        - representation: "IPA"
+          description:    
+          commands:       
+        - representation: "iv"
+          description:    
+          commands:       
+        - representation: "kern"
+          description:    
+          commands:       
+        - representation: "melac"
+          description:    
+          commands:       
+        - representation: "metpos"
+          description:    
+          commands:       
+        - representation: "MIDI"
+          description:    
+          commands:       
+        - representation: "mint"
+          description:    
+          commands:       
+        - representation: "ordo"
+          description:    
+          commands:       
+        - representation: "pc"
+          description:    
+          commands:       
+        - representation: "pcset"
+          description:    
+          commands:       
+        - representation: "pitch"
+          description:    
+          commands:       
+        - representation: "recip"
+          description:    
+          commands:       
+        - representation: "semits"
+          description:    
+          commands:       
+        - representation: "silbe"
+          description:    
+          commands:       
+        - representation: "simil"
+          description:    
+          commands:       
+        - representation: "solfa"
+          description:    
+          commands:       
+        - representation: "solfg"
+          description:    
+          commands:       
+        - representation: "specC"
+          description:    
+          commands:       
+        - representation: "spect"
+          description:    
+          commands:       
+        - representation: "synco"
+          description:    
+          commands:       
+        - representation: "takt"
+          description:    
+          commands:       
+        - representation: "text"
+          description:    
+          commands:       
+        - representation: "time"
+          description:    
+          commands:       
+        - representation: "timebase"
+          description:    
+          commands:       
+        - representation: "Tonh"
+          description:    
+          commands:       
+        - representation: "URrhythm"
+          description:    
+          commands:       
+        - representation: "vox"
+          description:    
+          commands:       
+        - representation: "Zeit"
+          description:    
+          commands:       
