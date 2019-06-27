@@ -1,4 +1,5 @@
 ---
+sidebar: representations
 vim: ts=3
 permalink: /rep/index.html
 ---

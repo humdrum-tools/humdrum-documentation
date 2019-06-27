@@ -1,5 +1,10 @@
 {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
 
+<script>
+var data = {{ sidebar | jsonify}};
+console.log("SIDEBAR DATA", data);
+</script>
+
 <ul id="mysidebar" class="nav">
   <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
   {% for entry in sidebar %}
