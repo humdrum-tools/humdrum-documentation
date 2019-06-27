@@ -7,7 +7,7 @@ robots: all
 ---
 
 
-Humdrum Representation for Solfa Syllables
+Solfa Syllables
 ==========================================
 
 ### REPRESENTATION

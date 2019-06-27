@@ -1,4 +1,5 @@
 ---
+sidebar: toc
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:53 EST 2000'
@@ -17,7 +18,7 @@ In this chapter we return to consider several more advanced topics
 related to the `**kern` representation.
 
 Tuplets
-=======
+-------
 
 As we saw in [Chapter 2](/guide/ch02), `**kern` durations are
 represented using a reciprocal number notation. With the exception of

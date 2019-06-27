@@ -6,7 +6,7 @@ revision-date: 'Fri May 6 11:25:19 EDT 2005'
 ---
 
 
-Humdrum Representation for Bhatkhande Notation
+Bhatkhande Notation
 ==============================================
 
 ### REPRESENTATION
