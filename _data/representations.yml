@@ -3,128 +3,128 @@
 # commands: list of commands that process this representation
 
         - representation: "bhatk"
-          description:    
+          description: "representation for Bhatkhande notation"   
           commands:       
         - representation: "cents"
-          description:    
+          description: "absolute pitch representation in hundredths of semitones"    
           commands:       
         - representation: "correl"
-          description:    
+          description: "statistical correlation representation"   
           commands:       
         - representation: "dB"
-          description:    
+          description: "relative amplitude representation"    
           commands:       
         - representation: "date"
-          description:    
+          description: "absolute time representation (year, month, day, hour, minute, second ...)"   
           commands:       
         - representation: "deg"
-          description:    
+          description: "relative scale degree representation"   
           commands:       
         - representation: "degree"
-          description:    
+          description: "absolute scale degree representation"   
           commands:       
         - representation: "diss"
-          description:    
+          description: "sensory dissonance representation"   
           commands:       
         - representation: "dur"
-          description:    
+          description: "duration (time-span) representation"   
           commands:       
         - representation: "embel"
-          description:    
+          description: "representation for embellishment tones"    
           commands:       
         - representation: "freq"
-          description:    
+          description: "frequency representation"   
           commands:       
         - representation: "fret"
-          description:    
+          description: "generalized fretted tablature representation"   
           commands:       
         - representation: "harm"
-          description:    
+          description: "representation for Western functional harmony"    
           commands:       
         - representation: "hint"
-          description:    
+          description: "representation for harmonic intervals"   
           commands:       
         - representation: "IPA"
-          description:    "Phonetic sounds"
+          description:    "representation for International Phonetic Alphabet"
           commands:       
         - representation: "iv"
-          description:    
+          description: "interval vector representation"   
           commands:       
         - representation: "kern"
-          description:    
+          description: "core pitch/duration representation for common practice music notation"
           commands:       
         - representation: "melac"
-          description:    
+          description: "melodic accent representation"   
           commands:       
         - representation: "metpos"
-          description:    
+          description: "position in metric hierarchy"   
           commands:       
         - representation: "MIDI"
-          description:    
+          description: "Musical Instrument Digital Interface notation" 
           commands:       
         - representation: "mint"
-          description:    
+          description: "melodic interval representation"   
           commands:       
         - representation: "ordo"
-          description:    
+          description:   "sequential order of events representation" 
           commands:       
         - representation: "pc"
-          description:    
+          description: "pitch-class representation"  
           commands:       
         - representation: "pcset"
-          description:    
+          description: "Fortean pitch-class set representation"   
           commands:       
         - representation: "pitch"
-          description:    
+          description:  "American National Standards Institute pitch notation"  
           commands:       
         - representation: "recip"
-          description:    
+          description:    "beat-proportion representation"
           commands:       
         - representation: "semits"
-          description:    
+          description:    "semitone absolute pitch representation"
           commands:       
         - representation: "silbe"
-          description:    
+          description:    "syllable-oriented text representation"
           commands:       
         - representation: "simil"
-          description:    
+          description: "similarity representation"   
           commands:       
         - representation: "solfa"
-          description:    
+          description:   "representation for tonic solfa syllables" 
           commands:       
         - representation: "solfg"
-          description:    
+          description:    "French solfège (pitch) notation"
           commands:       
         - representation: "specC"
-          description:    
+          description:    "spectral centroid representation"
           commands:       
         - representation: "spect"
-          description:    
+          description:    "discrete frequency spectrum representation"
           commands:       
         - representation: "synco"
-          description:    
+          description:    "represent degree of metric syncopation"
           commands:       
         - representation: "takt"
-          description:    
+          description:    "beat-position representation"
           commands:       
         - representation: "text"
-          description:    
+          description:    "vocal text representation"
           commands:       
         - representation: "time"
-          description:    
+          description: "relative elapsed time (in seconds)"   
           commands:       
         - representation: "timebase"
-          description:    
+          description:    "time-base representation"
           commands:       
         - representation: "Tonh"
           description:    "German pitch"
           commands:       
         - representation: "URrhythm"
-          description:    
+          description:   "represent Johnson-Laird beat prototypes for a passage" 
           commands:       
         - representation: "vox"
-          description:    
+          description: "representation of number of concurrently active voices"
           commands:       
         - representation: "Zeit"
-          description:    
+          description: "absolute period of time"   
           commands:       
