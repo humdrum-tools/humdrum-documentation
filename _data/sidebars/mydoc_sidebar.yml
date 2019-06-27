@@ -2,16 +2,15 @@
 
 entries:
 - title: sidebar
-  product: Title
-  version: 6.0
+  product: Humdrum
   folders:
 
-  - title:
+  - title: Representations
     output: pdf
     type: frontmatter
     folderitems:
-    - title:
-      url: /titlepage.html
+    - title: "**kern"
+      url: /rep/kern/index.html
       output: pdf
       type: frontmatter
     - title:
@@ -232,6 +231,11 @@ entries:
       url: /mydoc_kb_layout.html
       output: web, pdf
 
+
+    - title: Representations 
+      url: /rep/kern
+      output: web, pdf
+
     - title: Glossary layout
       url: /mydoc_glossary.html
       output: web, pdf
@@ -244,13 +248,13 @@ entries:
       url: /mydoc_shuffle.html
       output: web, pdf
 
-  - title: Troubleshooting
+  - title: Representations
     output: web, pdf
 
     folderitems:
 
-    - title: Troubleshooting
-      url: /mydoc_troubleshooting.html
+    - title: kern
+      url: /rep/kern/index.html
       output: web, pdf
 
   - title: Tag archives
