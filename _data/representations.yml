@@ -48,7 +48,7 @@
           description:    
           commands:       
         - representation: "IPA"
-          description:    
+          description:    "Phonetic sounds"
           commands:       
         - representation: "iv"
           description:    
