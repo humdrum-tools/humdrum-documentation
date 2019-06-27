@@ -33,7 +33,7 @@ function generateIndex(data, selector) {
 	output += "<ul class='index'>";
 	for (var i=0; i<data.length; i++) {
 		output += "<li>";
-		output += "<a href='" + data[i] + "/index.html'>";
+		output += "<a href='" + data[i].representation + "/index.html'>";
 		output += "<span style='font-weight:bold; display:inline-block; width:140px;'>";
 		output += "**" + data[i].representation;
 		output += " ";
