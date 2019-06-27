@@ -11,7 +11,6 @@ permalink: index.html
 <a href="http://slack.bundler.io" class="btn btn-primary btn-lg btn-responsive">Installation</a>
 <a href="/man/bundle-install.1.html" class="btn btn-primary btn-lg btn-responsive">User Guide</a>
 <a href="./news" class="btn btn-primary btn-lg btn-responsive">News</a>
-<a href="./rep" class="btn btn-primary btn-lg btn-responsive">Representations</a>
 <a href="./projects" class="btn btn-primary btn-lg btn-responsive">Projects</a>
 </p>
 
