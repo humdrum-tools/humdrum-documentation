@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- patt'
-permalink: /man/patt
+title: 'Humdrum Toolkit Command Reference -- patt'
+permalink: /man/patt/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**patt** \-- locate and output user-defined patterns in a Humdrum input
+**patt** -- locate and output user-defined patterns in a Humdrum input
 
 ------------------------------------------------------------------------
 

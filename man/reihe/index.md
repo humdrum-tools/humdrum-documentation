@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- reihe'
-permalink: /man/reihe
+title: 'Humdrum Toolkit Command Reference -- reihe'
+permalink: /man/reihe/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

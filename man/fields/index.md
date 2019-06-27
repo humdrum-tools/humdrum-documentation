@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- fields'
-permalink: /man/fields
+title: 'Humdrum Toolkit Command Reference -- fields'
+permalink: /man/fields/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

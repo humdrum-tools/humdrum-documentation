@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- solfa'
-permalink: /man/solfa
+title: 'Humdrum Toolkit Command Reference -- solfa'
+permalink: /man/solfa/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**solfa** \-- translate selected Humdrum pitch-related representations
+**solfa** -- translate selected Humdrum pitch-related representations
 to tonic solfa syllables (`**solfa`)
 
 ------------------------------------------------------------------------

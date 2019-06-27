@@ -1,11 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- cbr'
-permalink: /man/cbr
+title: 'Humdrum Toolkit Command Reference -- cbr'
+permalink: /man/cbr/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
 
 ------------------------------------------------------------------------
 

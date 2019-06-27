@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- record'
-permalink: /man/record
+title: 'Humdrum Toolkit Command Reference -- record'
+permalink: /man/record/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

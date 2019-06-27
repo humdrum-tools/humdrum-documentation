@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- smf'
-permalink: /man/smf
+title: 'Humdrum Toolkit Command Reference -- smf'
+permalink: /man/smf/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**smf** \-- generate standard MIDI file from Humdrum `**MIDI` input
+**smf** -- generate standard MIDI file from Humdrum `**MIDI` input
 
 ------------------------------------------------------------------------
 

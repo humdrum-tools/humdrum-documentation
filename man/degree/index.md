@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- degree'
-permalink: /man/degree
+title: 'Humdrum Toolkit Command Reference -- degree'
+permalink: /man/degree/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

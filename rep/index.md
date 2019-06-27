@@ -7,22 +7,29 @@ permalink: /rep/index.html
 Data Representations in Humdrum
 ===============================
 
-<div id="index"></div>
-
 <style>
 
-ul.index {
-	list-style: none;
+table.index {
+	color: {{site.primary_background_color}};
+}
+table.index tr {
+	background: transparent;
+	cursor: pointer;
+}
+table.index tr td {
+	background: transparent;
 }
 
 </style>
 
+<div id="index"></div>
+
 <script>
+
 var representations = {{ site.data.representations | jsonify }}
 console.log("REPS", representations);
 
 generateIndex(representations, "#index");
-
 
 function generateIndex(data, selector) {
 	var element = document.querySelector(selector);
@@ -31,22 +38,30 @@ function generateIndex(data, selector) {
 		return;
 	}
 	var output = "";
-	output += "<ul class='index'>";
+	output += "<table class='index'>";
 	for (var i=0; i<data.length; i++) {
-		output += "<li>";
-		output += "<a href='" + data[i].representation + "/index.html'>";
-		output += "<span style='font-weight:bold; display:inline-block; width:140px;'>";
+		output += "<tr onclick=\"";
+		var address = "'/rep/" + data[i].representation + "/index.html'";
+		output += "window.location.href=" + address;
+		output += "\"><td>";
+		output += '<span style="font-weight:bold; ';
+		output += 'display:inline-block; width:140px;">';
 		output += "**" + data[i].representation;
 		output += " ";
-		output += "</span>";
+		output += "</span></td><td>";
 		output += data[i].description;
-		output += "</a>";
-		output += "</li>";
+		output += "</td></tr>";
 	}
-	output += "<ul class='index'>";
+	output += "</table>";
+console.log("output", output);
 	element.innerHTML = output;
+
 }
 
+console.log("GOT HERE QQQ");
+
 </script>
+
+
 
 

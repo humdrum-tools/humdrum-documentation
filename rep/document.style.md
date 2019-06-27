@@ -1,22 +1,8 @@
 ---
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-description: |
-    Describes documentation style for the Humdrum computer music
-    representaton..
-keywords: |
-    music research,software,theory,analysis,systematic musicology,computer
-    representation,documentation style
 revision-date: 'Thu Feb 3 10:31:10 EST 2000'
-robots: all
-title: Humdrum Toolkit Representation Reference
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-\
 
 Humdrum Representation Reference
 ================================

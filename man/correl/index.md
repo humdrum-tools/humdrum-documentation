@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- correl'
-permalink: /man/correl
+title: 'Humdrum Toolkit Command Reference -- correl'
+permalink: /man/correl/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

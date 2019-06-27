@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- pcset'
-permalink: /man/pcset
+title: 'Humdrum Toolkit Command Reference -- pcset'
+permalink: /man/pcset/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**pcset** \-- convert Humdrum pitch and pitch-class information to
+**pcset** -- convert Humdrum pitch and pitch-class information to
 set-theoretic representations
 
 ------------------------------------------------------------------------

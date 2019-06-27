@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- synco'
-permalink: /man/synco
+title: 'Humdrum Toolkit Command Reference -- synco'
+permalink: /man/synco/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**synco** \-- measure degree of metric syncopation for Humdrum input
+**synco** -- measure degree of metric syncopation for Humdrum input
 
 ------------------------------------------------------------------------
 

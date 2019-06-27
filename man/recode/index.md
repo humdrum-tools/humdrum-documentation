@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- recode'
-permalink: /man/recode
+title: 'Humdrum Toolkit Command Reference -- recode'
+permalink: /man/recode/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**recode** \-- recode numeric tokens in selected Humdrum spines
+**recode** -- recode numeric tokens in selected Humdrum spines
 
 ------------------------------------------------------------------------
 

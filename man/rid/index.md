@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- rid'
-permalink: /man/rid
+title: 'Humdrum Toolkit Command Reference -- rid'
+permalink: /man/rid/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**rid** \-- eliminate specified Humdrum record types
+**rid** -- eliminate specified Humdrum record types
 
 ------------------------------------------------------------------------
 

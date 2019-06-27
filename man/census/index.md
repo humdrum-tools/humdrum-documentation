@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- census'
-permalink: /man/census
+title: 'Humdrum Toolkit Command Reference -- census'
+permalink: /man/census/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**census** \-- determine general properties of a Humdrum input
+**census** -- determine general properties of a Humdrum input
 
 ------------------------------------------------------------------------
 

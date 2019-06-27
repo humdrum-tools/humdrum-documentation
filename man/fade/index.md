@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- fade'
-permalink: /man/fade
+title: 'Humdrum Toolkit Command Reference -- fade'
+permalink: /man/fade/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

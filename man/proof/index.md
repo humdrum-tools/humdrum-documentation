@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- proof'
-permalink: /man/proof
+title: 'Humdrum Toolkit Command Reference -- proof'
+permalink: /man/proof/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**proof** \-- check syntax of Humdrum `**kern` file
+**proof** -- check syntax of Humdrum `**kern` file
 
 ------------------------------------------------------------------------
 

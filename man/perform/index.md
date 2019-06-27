@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- perform'
-permalink: /man/perform
+title: 'Humdrum Toolkit Command Reference -- perform'
+permalink: /man/perform/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**perform** \-- play Humdrum `**MIDI` files
+**perform** -- play Humdrum `**MIDI` files
 
 ------------------------------------------------------------------------
 

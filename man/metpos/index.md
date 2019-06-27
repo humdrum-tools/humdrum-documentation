@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- metpos'
-permalink: /man/metpos
+title: 'Humdrum Toolkit Command Reference -- metpos'
+permalink: /man/metpos/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

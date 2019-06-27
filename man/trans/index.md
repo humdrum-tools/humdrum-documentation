@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- trans'
-permalink: /man/trans
+title: 'Humdrum Toolkit Command Reference -- trans'
+permalink: /man/trans/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**trans** \-- transpose selected Humdrum pitch representations
+**trans** -- transpose selected Humdrum pitch representations
 
 ------------------------------------------------------------------------
 

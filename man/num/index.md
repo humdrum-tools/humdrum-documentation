@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- num'
-permalink: /man/num
+title: 'Humdrum Toolkit Command Reference -- num'
+permalink: /man/num/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**num** \-- number selected Humdrum records according to user-defined
+**num** -- number selected Humdrum records according to user-defined
 criteria
 
 ------------------------------------------------------------------------

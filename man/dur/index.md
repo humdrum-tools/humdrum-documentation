@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- dur'
-permalink: /man/dur
+title: 'Humdrum Toolkit Command Reference -- dur'
+permalink: /man/dur/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**dur** \-- calculate time duration (in seconds) from musical durations
+**dur** -- calculate time duration (in seconds) from musical durations
 (\*\*recip or \*\*kern)
 
 On-line documentation is not currently available for this command.

@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- humdrum'
-permalink: /man/humdrum
+title: 'Humdrum Toolkit Command Reference -- humdrum'
+permalink: /man/humdrum/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

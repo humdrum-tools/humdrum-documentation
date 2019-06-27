@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- timebase'
-permalink: /man/timebase
+title: 'Humdrum Toolkit Command Reference -- timebase'
+permalink: /man/timebase/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**timebase** \-- reformat Humdrum `**kern` or `**recip` score with
+**timebase** -- reformat Humdrum `**kern` or `**recip` score with
 constant time-base
 
 ------------------------------------------------------------------------

@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- mint'
-permalink: /man/mint
+title: 'Humdrum Toolkit Command Reference -- mint'
+permalink: /man/mint/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**mint** \-- determine melodic intervals between successive pitches for
+**mint** -- determine melodic intervals between successive pitches for
 Humdrum inputs
 
 ------------------------------------------------------------------------

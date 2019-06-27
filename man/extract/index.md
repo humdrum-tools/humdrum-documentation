@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- extract'
-permalink: /man/extract
+title: 'Humdrum Toolkit Command Reference -- extract'
+permalink: /man/extract/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

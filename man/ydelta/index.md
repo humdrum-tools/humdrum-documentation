@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- ydelta'
-permalink: /man/ydelta
+title: 'Humdrum Toolkit Command Reference -- ydelta'
+permalink: /man/ydelta/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**ydelta** \-- calculate numeric differences for concurrent Humdrum data
+**ydelta** -- calculate numeric differences for concurrent Humdrum data
 
 ------------------------------------------------------------------------
 

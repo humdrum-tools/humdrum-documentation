@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- diss'
-permalink: /man/diss
+title: 'Humdrum Toolkit Command Reference -- diss'
+permalink: /man/diss/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**diss** \-- calculate the degree of sensory dissonance for successive
+**diss** -- calculate the degree of sensory dissonance for successive
 spectra
 
 ------------------------------------------------------------------------

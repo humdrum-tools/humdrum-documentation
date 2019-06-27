@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- veritas'
-permalink: /man/veritas
+title: 'Humdrum Toolkit Command Reference -- veritas'
+permalink: /man/veritas/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**veritas** \-- validate that a Humdrum document has not been modified
+**veritas** -- validate that a Humdrum document has not been modified
 
 ------------------------------------------------------------------------
 

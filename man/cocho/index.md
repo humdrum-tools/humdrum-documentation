@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- cocho'
-permalink: /man/cocho
+title: 'Humdrum Toolkit Command Reference -- cocho'
+permalink: /man/cocho/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

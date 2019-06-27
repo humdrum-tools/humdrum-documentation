@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- pitch'
-permalink: /man/pitch
+title: 'Humdrum Toolkit Command Reference -- pitch'
+permalink: /man/pitch/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**pitch** \-- translate selected Humdrum pitch-related representations
+**pitch** -- translate selected Humdrum pitch-related representations
 to American standard pitch notation
 
 ------------------------------------------------------------------------

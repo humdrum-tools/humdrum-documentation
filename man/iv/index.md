@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- iv'
-permalink: /man/iv
+title: 'Humdrum Toolkit Command Reference -- iv'
+permalink: /man/iv/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

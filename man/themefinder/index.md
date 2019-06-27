@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- Themefinder'
-permalink: /man/
+title: 'Humdrum Toolkit Command Reference -- Themefinder'
+permalink: /man//index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 Themefinder - General Documentation
 -----------------------------------

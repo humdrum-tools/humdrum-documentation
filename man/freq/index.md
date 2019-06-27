@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- freq'
-permalink: /man/freq
+title: 'Humdrum Toolkit Command Reference -- freq'
+permalink: /man/freq/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- kern'
-permalink: /man/kern
+title: 'Humdrum Toolkit Command Reference -- kern'
+permalink: /man/kern/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

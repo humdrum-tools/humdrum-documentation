@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- context'
-permalink: /man/context
+title: 'Humdrum Toolkit Command Reference -- context'
+permalink: /man/context/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

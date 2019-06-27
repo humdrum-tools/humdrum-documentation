@@ -24,3 +24,189 @@ entries:
       url: /rep/cents/index.html
       output: web, pdf
 
+    - title: "**IPA"
+      url:   "/rep/IPA/index.html"
+      output: web, pdf
+
+    - title: "**MIDI"
+      url:   "/rep/MIDI/index.html"
+      output: web, pdf
+
+    - title: "**Tonh"
+      url:   "/rep/Tonh/index.html"
+      output: web, pdf
+
+    - title: "**URrhythm"
+      url:   "/rep/URrhythm/index.html"
+      output: web, pdf
+
+    - title: "**Zeit"
+      url:   "/rep/Zeit/index.html"
+      output: web, pdf
+
+    - title: "**barlines"
+      url:   "/rep/barlines/index.html"
+      output: web, pdf
+
+    - title: "**bhatk"
+      url:   "/rep/bhatk/index.html"
+      output: web, pdf
+
+    - title: "**cents"
+      url:   "/rep/cents/index.html"
+      output: web, pdf
+
+    - title: "**correl"
+      url:   "/rep/correl/index.html"
+      output: web, pdf
+
+    - title: "**dB"
+      url:   "/rep/dB/index.html"
+      output: web, pdf
+
+    - title: "**date"
+      url:   "/rep/date/index.html"
+      output: web, pdf
+
+    - title: "**deg"
+      url:   "/rep/deg/index.html"
+      output: web, pdf
+
+    - title: "**degree"
+      url:   "/rep/degree/index.html"
+      output: web, pdf
+
+    - title: "**diss"
+      url:   "/rep/diss/index.html"
+      output: web, pdf
+
+    - title: "**document.style.md"
+      url:   "/rep/document.style.md/index.html"
+      output: web, pdf
+
+    - title: "**dur"
+      url:   "/rep/dur/index.html"
+      output: web, pdf
+
+    - title: "**embel"
+      url:   "/rep/embel/index.html"
+      output: web, pdf
+
+    - title: "**freq"
+      url:   "/rep/freq/index.html"
+      output: web, pdf
+
+    - title: "**fret"
+      url:   "/rep/fret/index.html"
+      output: web, pdf
+
+    - title: "**harm"
+      url:   "/rep/harm/index.html"
+      output: web, pdf
+
+    - title: "**hint"
+      url:   "/rep/hint/index.html"
+      output: web, pdf
+
+    - title: "**index.md"
+      url:   "/rep/index.md/index.html"
+      output: web, pdf
+
+    - title: "**iv"
+      url:   "/rep/iv/index.html"
+      output: web, pdf
+
+    - title: "**kern"
+      url:   "/rep/kern/index.html"
+      output: web, pdf
+
+    - title: "**kern.md"
+      url:   "/rep/kern.md/index.html"
+      output: web, pdf
+
+    - title: "**melac"
+      url:   "/rep/melac/index.html"
+      output: web, pdf
+
+    - title: "**metpos"
+      url:   "/rep/metpos/index.html"
+      output: web, pdf
+
+    - title: "**mint"
+      url:   "/rep/mint/index.html"
+      output: web, pdf
+
+    - title: "**ordo"
+      url:   "/rep/ordo/index.html"
+      output: web, pdf
+
+    - title: "**pc"
+      url:   "/rep/pc/index.html"
+      output: web, pdf
+
+    - title: "**pcset"
+      url:   "/rep/pcset/index.html"
+      output: web, pdf
+
+    - title: "**pitch"
+      url:   "/rep/pitch/index.html"
+      output: web, pdf
+
+    - title: "**recip"
+      url:   "/rep/recip/index.html"
+      output: web, pdf
+
+    - title: "**semits"
+      url:   "/rep/semits/index.html"
+      output: web, pdf
+
+    - title: "**silbe"
+      url:   "/rep/silbe/index.html"
+      output: web, pdf
+
+    - title: "**simil"
+      url:   "/rep/simil/index.html"
+      output: web, pdf
+
+    - title: "**solfa"
+      url:   "/rep/solfa/index.html"
+      output: web, pdf
+
+    - title: "**solfg"
+      url:   "/rep/solfg/index.html"
+      output: web, pdf
+
+    - title: "**specC"
+      url:   "/rep/specC/index.html"
+      output: web, pdf
+
+    - title: "**spect"
+      url:   "/rep/spect/index.html"
+      output: web, pdf
+
+    - title: "**synco"
+      url:   "/rep/synco/index.html"
+      output: web, pdf
+
+    - title: "**takt"
+      url:   "/rep/takt/index.html"
+      output: web, pdf
+
+    - title: "**text"
+      url:   "/rep/text/index.html"
+      output: web, pdf
+
+    - title: "**time"
+      url:   "/rep/time/index.html"
+      output: web, pdf
+
+    - title: "**timebase"
+      url:   "/rep/timebase/index.html"
+      output: web, pdf
+
+    - title: "**vox"
+      url:   "/rep/vox/index.html"
+      output: web, pdf
+
+
+

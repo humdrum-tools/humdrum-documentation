@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- encode'
-permalink: /man/encode
+title: 'Humdrum Toolkit Command Reference -- encode'
+permalink: /man/encode/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**encode** \-- interactive Humdrum encoding from MIDI input
+**encode** -- interactive Humdrum encoding from MIDI input
 
 ------------------------------------------------------------------------
 

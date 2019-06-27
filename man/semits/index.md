@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- semits'
-permalink: /man/semits
+title: 'Humdrum Toolkit Command Reference -- semits'
+permalink: /man/semits/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**semits** \-- translate selected Humdrum pitch-related representations
+**semits** -- translate selected Humdrum pitch-related representations
 to numerical semitones
 
 ------------------------------------------------------------------------

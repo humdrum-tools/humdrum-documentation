@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- pc'
-permalink: /man/pc
+title: 'Humdrum Toolkit Command Reference -- pc'
+permalink: /man/pc/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**pc** \-- translate Humdrum semitone representation or pc to
+**pc** -- translate Humdrum semitone representation or pc to
 pitch-class
 
 ------------------------------------------------------------------------

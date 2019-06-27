@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- tacet'
-permalink: /man/tacet
+title: 'Humdrum Toolkit Command Reference -- tacet'
+permalink: /man/tacet/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- ditto'
-permalink: /man/ditto
+title: 'Humdrum Toolkit Command Reference -- ditto'
+permalink: /man/ditto/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**ditto** \-- replace Humdrum null tokens with previous data token
+**ditto** -- replace Humdrum null tokens with previous data token
 
 ------------------------------------------------------------------------
 

@@ -1,17 +1,12 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- pf'
-permalink: /man/pf
+title: 'Humdrum Toolkit Command Reference -- pf'
+permalink: /man/pf/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**pf** \-- determine prime form for successive Humdrum vertical
+**pf** -- determine prime form for successive Humdrum vertical
 sonorities
 
 ------------------------------------------------------------------------

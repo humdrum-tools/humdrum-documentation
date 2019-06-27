@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- deg'
-permalink: /man/deg
+title: 'Humdrum Toolkit Command Reference -- deg'
+permalink: /man/deg/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

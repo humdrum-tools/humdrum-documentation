@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- midi'
-permalink: /man/midi
+title: 'Humdrum Toolkit Command Reference -- midi'
+permalink: /man/midi/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- melvel'
-permalink: /man/melvel
+title: 'Humdrum Toolkit Command Reference -- melvel'
+permalink: /man/melvel/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- simil'
-permalink: /man/simil
+title: 'Humdrum Toolkit Command Reference -- simil'
+permalink: /man/simil/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**simil** \-- measure the non-numeric similarity between two
+**simil** -- measure the non-numeric similarity between two
 single-spine Humdrum inputs
 
 ------------------------------------------------------------------------

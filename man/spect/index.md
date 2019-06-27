@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- spect'
-permalink: /man/spect
+title: 'Humdrum Toolkit Command Reference -- spect'
+permalink: /man/spect/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**spect** \-- generate spectral data from note information using the
+**spect** -- generate spectral data from note information using the
 SHARC timbre database
 
 On-line documentation is not currently available for this command.

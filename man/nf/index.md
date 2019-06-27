@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- nf'
-permalink: /man/nf
+title: 'Humdrum Toolkit Command Reference -- nf'
+permalink: /man/nf/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**nf** \-- determine normal form for successive vertical sonorities in
+**nf** -- determine normal form for successive vertical sonorities in
 Humdrum inputs
 
 ------------------------------------------------------------------------

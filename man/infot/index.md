@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- infot'
-permalink: /man/infot
+title: 'Humdrum Toolkit Command Reference -- infot'
+permalink: /man/infot/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

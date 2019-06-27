@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- scramble'
-permalink: /man/scramble
+title: 'Humdrum Toolkit Command Reference -- scramble'
+permalink: /man/scramble/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**scramble** \-- randomize order of either Humdrum data records or data
+**scramble** -- randomize order of either Humdrum data records or data
 tokens
 
 ------------------------------------------------------------------------

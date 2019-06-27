@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- rend'
-permalink: /man/rend
+title: 'Humdrum Toolkit Command Reference -- rend'
+permalink: /man/rend/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**rend** \-- split data tokens from specified Humdrum spines into
+**rend** -- split data tokens from specified Humdrum spines into
 component sub-tokens
 
 ------------------------------------------------------------------------

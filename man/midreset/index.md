@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- midreset'
-permalink: /man/midireset
+title: 'Humdrum Toolkit Command Reference -- midreset'
+permalink: /man/midireset/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

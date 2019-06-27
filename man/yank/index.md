@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- yank'
-permalink: /man/yank
+title: 'Humdrum Toolkit Command Reference -- yank'
+permalink: /man/yank/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

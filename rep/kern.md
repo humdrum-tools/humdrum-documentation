@@ -1,20 +1,7 @@
 ---
-title: 'The Humdrum \*\*kern Representation'
+title: "The Humdrum kern Representation"
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-![Scarlet & Grey](../colorbar2.gif)\
-**Ohio State University**\
-**School of Music**\
-\
-\
-
-------------------------------------------------------------------------
-
-\
 
 Everything You Need to Know About
 =================================
@@ -2057,7 +2044,3 @@ There are four approaches to alleviating this problem.
 -   [**Humdrum Home Page**](../index.html)
 -   [**Humdrum Course Description**](../../Music824/descript.html)
 
-\
-\
-\
-\

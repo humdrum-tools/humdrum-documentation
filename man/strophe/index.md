@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- strophe'
-permalink: /man/strophe
+title: 'Humdrum Toolkit Command Reference -- strophe'
+permalink: /man/strophe/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**strophe** \-- selectively extract strophic data for Humdrum inputs
+**strophe** -- selectively extract strophic data for Humdrum inputs
 
 ------------------------------------------------------------------------
 

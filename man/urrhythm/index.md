@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- urrhythm'
-permalink: /man/urrhythm
+title: 'Humdrum Toolkit Command Reference -- urrhythm'
+permalink: /man/urrhythm/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

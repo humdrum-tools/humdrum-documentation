@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- vox'
-permalink: /man/vox
+title: 'Humdrum Toolkit Command Reference -- vox'
+permalink: /man/vox/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**vox** \-- determine number of simultaneously active pitches in a
+**vox** -- determine number of simultaneously active pitches in a
 Humdrum input
 
 ------------------------------------------------------------------------

@@ -1,13 +1,7 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- xdelta'
-permalink: /man/xdelta
+title: 'Humdrum Toolkit Command Reference -- xdelta'
+permalink: /man/xdelta/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

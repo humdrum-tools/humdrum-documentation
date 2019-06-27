@@ -1,17 +1,11 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- thru'
-permalink: /man/thru
+title: 'Humdrum Toolkit Command Reference -- thru'
+permalink: /man/thru/index.html
 ---
-
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
-**thru** \-- expand Humdrum abbreviated format representation to
+**thru** -- expand Humdrum abbreviated format representation to
 through-composed format
 
 ------------------------------------------------------------------------

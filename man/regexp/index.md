@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- regexp'
-permalink: /man/regexp
+title: 'Humdrum Toolkit Command Reference -- regexp'
+permalink: /man/regexp/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- hum2fin'
-permalink: /man/hum2fin
+title: 'Humdrum Toolkit Command Reference -- hum2fin'
+permalink: /man/hum2fin/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 

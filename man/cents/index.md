@@ -1,13 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference \-- cents'
-permalink: /man/cents
+title: 'Humdrum Toolkit Command Reference -- cents'
+permalink: /man/cents/index.html
 ---
 
-  -------------------------------- ----------------------------------------- ----------------------------------
-  ![ ](/Humdrum/HumdrumIcon.gif)    ![Humdrum ](/Humdrum/HumdrumHeader.gif)    ![ ](/Humdrum/HumdrumSpacer.gif)
-  -------------------------------- ----------------------------------------- ----------------------------------
-
-------------------------------------------------------------------------
 
 ### COMMAND
 
