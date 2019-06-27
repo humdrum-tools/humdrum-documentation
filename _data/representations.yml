@@ -2,9 +2,6 @@
 # description:    short description of representation
 # commands: list of commands that process this representation
 
-        - representation: "barlines"
-          description:    
-          commands:       
         - representation: "bhatk"
           description:    
           commands:       
@@ -120,7 +117,7 @@
           description:    
           commands:       
         - representation: "Tonh"
-          description:    
+          description:    "German pitch"
           commands:       
         - representation: "URrhythm"
           description:    
