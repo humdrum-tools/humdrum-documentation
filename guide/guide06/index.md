@@ -7,8 +7,8 @@ verovio: "true"
 permalink:	/guide/ch06/index.html
 ---
 
-Chapter6
-========
+Chapter 6
+=========
 
 Representing Music Using \*\*kern (II)
 =======================================
