@@ -187,7 +187,7 @@ position of various spines in order to extract them. With the **-i**
 option, **extract** outputs all spines containing a specified
 *interpretation.* Suppose we had a file containing a Schubert song,
 including vocal score, piano accompaniment and vocal text (encoded using
-[`**text`](representations/text.rep.html)). The vocal text from the file
+[`**text`](/rep/text)). The vocal text from the file
 `lieder` can be extracted as follows:
 
 > `extract -i '**text' lieder`
@@ -201,13 +201,13 @@ extracted simultaneously. For example:
 > `extract -i '**semits,**MIDI' hildegard`
 
 will extract all spines in the file `hildegard` containing
-[`**semits`](representations/semits.rep.html) or
-[`**MIDI`](representations/MIDI.rep.html) data.
+[`**semits`](/rep/semits) or
+[`**MIDI`](/rep/MIDI) data.
 
 An important use of the **-i** option for **extract** is to ensure that
 a particular input contains only a specified type of information. For
 example, the lower-case letter \``r`\' represents a rest in the
-[`**kern`](representations/kern.rep.html) representation. If we wish to
+[`**kern`](/rep/kern) representation. If we wish to
 determine which sonorities contain rests, we might want to use **grep**
 to search for this letter. However, the input might contain other
 Humdrum interpretations (such as `**text`) where the presence of the
@@ -377,7 +377,7 @@ With the [**midi**](/tool/midi) and
 [**perform**](/tool/perform) commands, **extract** allows the
 user to hear particular parts. For example, the following command
 extracts the bass and soprano voices, translates them to
-[`**MIDI`](representations/MIDI.rep.html) data, and plays the output:
+[`**MIDI`](/rep/MIDI) data, and plays the output:
 
 > `extract -i '*Ibass,*Isopran' lassus | midi | perform`
 
@@ -578,7 +578,7 @@ to the Humdrum syntax, whereas **grep** does not.
 Suppose, for example, that we wanted to calculate the pitch intervals
 between notes that either begin or end a phrase in a monophonic input.
 If we use **grep** to search for
-[`**kern`](representations/kern.rep.html) phrase indicators, we will be
+[`**kern`](/rep/kern) phrase indicators, we will be
 unable to process the resulting (non-Humdrum) output, since it will
 typically consist of just data records:
 

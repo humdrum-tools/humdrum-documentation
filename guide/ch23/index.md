@@ -27,8 +27,8 @@ The *\*\*recip* Representation
 
 For many types of processing tasks it is helpful to have a
 representation that encodes rhythmic information only. The
-[`**recip`](representations/recip.rep.html) representation is simply a
-subset of [`**kern`](representations/kern.rep.html) that excludes all
+[`**recip`](/rep/recip) representation is simply a
+subset of [`**kern`](/rep/kern) that excludes all
 information apart from the nominal note durations and common system
 barlines. In addition, `**recip` distinguishes rests from notes by
 including the \``r`\' signifier. Without an accompanying \``r`\' a
@@ -81,7 +81,7 @@ The *dur* Command
 -----------------
 
 The [**dur**](/tool/dur) command produces
-[`**dur`](representations/dur.rep.html) output from either a `**kern` or
+[`**dur`](/rep/dur) output from either a `**kern` or
 `**recip` input. The `**dur` representation scheme consists simply of
 the elapsed duration of notes and rests, expressed in seconds. The
 following example shows a simple `**dur` representation (right spine)
@@ -348,7 +348,7 @@ contain explicit durational information. Suppose, for example, that for
 a waltz repertory, we want to contrast those chord functions that tend
 to occur on the first beat with those that happen on the third beat. We
 will need to have an input that includes both a
-[`**harm`](representations/harm.rep.html) spine encoding the Roman
+[`**harm`](/rep/harm) spine encoding the Roman
 numeral harmonic analysis, as well as one or more `**kern` or `**recip`
 spines that include the durational information. We can use the
 **timebase** command to expand the output accordingly \-- cuing on the
@@ -376,7 +376,7 @@ The *metpos* Command
 --------------------
 
 The [**metpos**](/tool/metpos) command generates a
-[`**metpos`](representations/metpos.rep.html) output spine containing
+[`**metpos`](/rep/metpos) output spine containing
 numbers that indicate the metric strength of each sonority. By \"metric
 position\" we mean the position of importance in the metric hierarchy
 for a measure.
@@ -472,7 +472,7 @@ Notice that [**metpos**](/tool/metpos) adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
 
-The [`**metpos`](representations/metpos.rep.html) values provide
+The [`**metpos`](/rep/metpos) values provide
 additional ways of addressing various rhythmic questions. We might use
 [**recode**](/tool/recode) for example, to recode the numerical
 outputs from **metpos** into a smaller set of discrete categories. For
@@ -513,7 +513,7 @@ creating two spines of information \-- scale-degree and relative metric
 strength.
 
 Assuming that our Hungarian melodies encode key information, creating a
-[`**deg`](representations/deg.rep.html) spine is straightforward. Recall
+[`**deg`](/rep/deg) spine is straightforward. Recall
 that the **-a** option for [**deg**](/tool/deg) avoids
 distinguishing the direction of approach (from above or below):
 
@@ -560,7 +560,7 @@ eighth-note G and the eighth-note B is \"strong-to-weak\" and that the
 relationship between the eighth-note B and the eighth-note D is
 \"weak-to-strong.\" In order to procede we need to eliminate all of the
 data records that contain only a metpos value \-- that is, there is no
-pitch present in the [`**kern`](representations/kern.rep.html) spine. We
+pitch present in the [`**kern`](/rep/kern) spine. We
 can do this using **humsed**; we simply delete all lines that begin with
 a period character:
 
@@ -637,7 +637,7 @@ Appending the appropriate command:
 > > magyar.xmp
 
 Now we can assemble the resulting metric change spine with our original
-[`**deg`](representations/deg.rep.html) spine. Each data record will
+[`**deg`](/rep/deg) spine. Each data record will
 contain the scale degree in the first spine and the change of metric
 position data in the second spine. The final task is to create an
 inventory using [**rid**](/tool/rid), **sort** and **uniq**:

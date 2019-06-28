@@ -22,10 +22,11 @@ The **correl** command can be used to measure numerical similarity
 between two sets of numbers. The **simil** command can be used to
 measure similarity between non-numeric data.
 
-In addition, we will discuss the **accent** command \-- a tool which
-estimates how salient or noticeable a given note is. The **accent**
-command can be used to pre-process musical passages so only those notes
-of greatest importance are considered when measuring musical similarity.
+In addition, we will discuss the [**accent**](/tool/accent) command
+&ndash; a tool which estimates how salient or noticeable a given
+note is. The **accent** command can be used to pre-process musical
+passages so only those notes of greatest importance are considered
+when measuring musical similarity.
 
 <a name ="The_correl_Command"></a>
 
@@ -39,22 +40,21 @@ sets of numbers. Suppose, for example, that we wanted to determine
 whether high pitches have a general tendency to be longer in duration
 than low pitches. For each note we would establish two numerical values:
 one characterizing the pitch height and one characterizing the duration
-(say in seconds). Our data might look as follows:\
-\
+(say in seconds). Our data might look as follows:
 
->   ------------ ---------
->   `**semits`   \*\*dur
->   7            1.00
->   16           1.50
->   14           0.50
->   12           2.00
->   7            1.00
->   4            0.50
->   5            0.50
->   7            1.00
->   \*-          \*-
->   ------------ ---------
->
+```
+**semits	**dur
+7	1.00
+16	1.50
+14	0.50
+12	2.00
+7	1.00
+4	0.50
+5	0.50
+7	1.00
+*-	*-
+```
+
 This data does seem to exhibit an association between higher pitches and
 longer notes. The longest notes are fairly high (12 and 16 semits),
 whereas most of the shortest notes (4 and 5 semits) are lower. There are
@@ -77,18 +77,18 @@ coefficients range between +1 and -1. A value of +1 indicates that both
 sets of numbers rise and fall in precise synchrony \-- although the
 magnitude of the numbers may differ. For example, the following input
 exhibits a correlation of +1.0 \-- even though the two sets of numbers
-differ in overall magnitude.\
-\
+differ in overall magnitude.
 
->   --------- ---------
->   `**foo`   \*\*bar
->   1         100
->   3         300
->   2         200
->   1         100
->   \*-       \*-
->   --------- ---------
->
+
+```
+**foo	**bar
+1	100
+3	300
+2	200
+1	100
+*-	*-
+```
+
 If we multiply these numbers by a constant, or if we substract or add a
 constant value to each number in one of the spines, they would still
 exhibit a correlation of +1.0. In summary, correlations are insensitive
@@ -106,25 +106,25 @@ The **correl** command attends only to numerical input data.
 Non-numerical data is simply ignored. If a data token contains a mix of
 numeric and non-numeric characters, then only the first complete
 numerical subtoken is considered. The following examples illustrate how
-**correl** interprets mixed data tokens:\
-\
+**correl** interprets mixed data tokens:
+
 **Table 25.1**
 
->   -- ------------ -- ----------------
->      token           interpretation
->      `4gg#`          4
->      4.gg\#          4
->      -32aa           -32
->      -aa33           33
->      x7.2yz          7.2
->      a7..2bc         7
->      \[+5\]12        5
->      \$17\@2         17
->      =28b            28
->      a1b2 c.3.d      1 0.3
->   -- ------------ -- ----------------
->
 *Numerical interpretations of data tokens by **correl***.
+
+| token	    | interpretation
+|-----------|--------------
+|4gg#	    |	4
+|4.gg\#	    |	4
+|-32aa      |	-32
+|-aa33      |	33
+|x7.2yz     |	7.2
+|a7..2bc    |	7
+|\[+5\]12   |	5
+|\$17\@2    |	17
+|=28b       |	28
+|a1b2 c.3.d    |	1 0.3
+
 
 Notice in the last example that multiple-stops are treated as
 potentially independent numbers. For example, if the data token encodes
@@ -147,7 +147,9 @@ counterpoint, each pitch in the upper voice is matched with a pitch in
 the lower voice. We could measure the pitch-related correlation between
 the two parts as follows:
 
-> `semits species1.krn | correl -s ^=`
+```bash
+semits species1.krn | correl -s ^=
+```
 
 The output will consist of a single numerical value. If the value is
 positive, then it indicates that the parts tend to move up and down
@@ -172,7 +174,9 @@ of overcoming this problem. One method is to use
 [**ditto**](/tool/ditto) to repeat the sustained semitone value
 for the slower-moving part:
 
-> `semits species2.krn | ditto -s ^= | correl -s ^=`
+```bash
+semits species2.krn | ditto -s ^= | correl -s ^=
+```
 
 Another approach would be to omit from consideration those notes that
 are not concurrent with a note in the other voice. The **-m** option for
@@ -182,7 +186,9 @@ data is missing from either one of the input spines,
 record from the correlation calculation. Using this approach, we would
 omit the **ditto** command:
 
-> `semits species2.krn | correl -m -s ^=`
+```bash
+semits species2.krn | correl -m -s ^=
+```
 
 Note that in formal statistical tests, the **-m** option should never be
 used.
@@ -206,22 +212,22 @@ instances similar to the first four notes of *Frère Jacques*. Our
 template file might look as follows:
 
 > ![](guide.figures/guide25.0.gif)
->
->   ------------
->   `**semits`
->   0
->   2
->   4
->   0
->   \*-
->   ------------
->
+
+```
+**semits
+0
+2
+4
+0
+*-
+```
+
 We would like to scan an entire work looking for possible matches or
 similar passages. The following example shows a sample input and
 corresponding output \-- given the above template. The left-most spine
 is the original input represented using the French
-[`**solfg`](representations/solfg.rep.html) scheme. The middle spine is
-the input (translated to [`**semits`](representations/semits.rep.html))
+[`**solfg`](/rep/solfg) scheme. The middle spine is
+the input (translated to [`**semits`](/rep/semits))
 supplied to the **correl** command. The right-most spine was generated
 using the following command:
 
@@ -249,7 +255,7 @@ using the following command:
 >   ----------- -- ------------ -- ------------
 >
 The similarity values generated by **correl** are output as a
-[`**correl`](representations/correl.rep.html) spine. Each successive
+[`**correl`](/rep/correl) spine. Each successive
 value in the output spine is matched with a data token in the target
 input file (`**semits`). For example, the initial output value (1.000)
 indicates that an exact positive correlation occurs between the template
@@ -307,7 +313,7 @@ pitch and duration correlation coefficients and use
 correlation. Values between +0.8 and +1.0 might be recoded as
 \"similar\"; values between +0.5 and +0.8 might be recoded as \"maybe\";
 all other values might be recoded as null tokens. Assembling the recoded
-[`**correl`](representations/correl.rep.html) spines, one could use
+[`**correl`](/rep/correl) spines, one could use
 **grep** to search for moments in the score that are suitable marked as
 \"similar\" for both pitch and duration.
 
@@ -390,7 +396,7 @@ command:
 > `simil source template`
 
 generates the third column (labelled
-[`**simil`](representations/simil.rep.html)):\
+[`**simil`](/rep/simil)):\
 \
 
 >   --------- ----------- -----------
@@ -457,7 +463,7 @@ equivalent data. For example, in the follow example, the harmonic data
 given above has been reclassified (using **humsed**) so that the number
 of distinct harmonic categories has been reduced. For example, the `ii7`
 chord has been classified as a form of `subdom`inant function. Notice
-how the [`**simil`](representations/simil.rep.html) values better
+how the [`**simil`](/rep/simil) values better
 reflect the presumed harmonic similarity:\
 \
 
@@ -676,7 +682,7 @@ following work by Ferdinando Carulli:\
 >
 > In order to search for similar fingering patterns, we need to
 > eliminate all but the relevant information from our representation. In
-> the [`**fret`](representations/fret.rep.html) scheme, fret-board
+> the [`**fret`](/rep/fret) scheme, fret-board
 > fingerings are indicated by the lower-case letters *a* to *e*
 > (*a*=thumb, *b*=index finger, *c*=middle finger, etc.). The lower-case
 > *n* is used to explicitly indicate no finger (i.e. open string(s)). We
@@ -758,7 +764,7 @@ following work by Ferdinando Carulli:\
 > > The **accent** command implements a sophisticated model of the
 > > perceptual salience or noticeability for various pitches. The
 > > command accepts only monophonic
-> > [`**kern`](representations/kern.rep.html) input and outputs a spine
+> > [`**kern`](/rep/kern) input and outputs a spine
 > > containing numerical values estimating the noticeability of each
 > > note. Output accent values vary between 0 (minimum accent) and 1
 > > (maximum accent). Input is limited to only a single `**kern` data

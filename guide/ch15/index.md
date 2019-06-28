@@ -124,10 +124,10 @@ Harmonic Intervals Using the *hint* Command
 
 The Humdrum [**hint**](/tool/hint) command calculates harmonic
 intervals for pitch-related representations such as
-[`**kern`](representations/kern.rep.html),
-[`**pitch`](representations/pitch.rep.html),
-[`**solfg`](representations/solfg.rep.html), and
-[`**Tonh`](representations/Tonh.rep.html). As in the case of the
+[`**kern`](/rep/kern),
+[`**pitch`](/rep/pitch),
+[`**solfg`](/rep/solfg), and
+[`**Tonh`](/rep/Tonh). As in the case of the
 **mint** command, output intervals are expressed as a combination of
 diatonic interval size plus interval quality (such as \`perfect fourth\'
 and \`minor ninth\').
@@ -135,7 +135,7 @@ and \`minor ninth\').
 In the default operation, **hint** calculates only explicit harmonic
 intervals; for sonorities containing more than two pitches, only stacked
 harmonic intervals are calculated. The output from the **hint** command
-always consists of a single [`**hint`](representations/hint.rep.html)
+always consists of a single [`**hint`](/rep/hint)
 spine. Any number of spines may be present in the input, but only
 pitch-related spines are processed. Given the default invocation, the
 output corresponding to Example 15.1 is as follows:\
@@ -504,7 +504,7 @@ The *ydelta* Command
 Often it is useful to represent intervals by the number of semitones (or
 some other numerical value). We might begin by using the **semits**
 command to translate Example 15.1 to a
-[`**semits`](representations/semits.rep.html) representation.
+[`**semits`](/rep/semits) representation.
 
 > `semits example15.1`
 

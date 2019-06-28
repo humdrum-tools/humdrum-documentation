@@ -59,10 +59,10 @@ bring such sophistication to the task.
 
 Humdrum provides two pre-defined representations for score-related
 dynamic markings. One representation
-([`**dyn`](representations/dyn.rep.html)) attempts to represent the
+([`**dyn`](/rep/dyn)) attempts to represent the
 dynamic markings as they appear in a visual rendering of a score. That
 is, `**dyn` represents the visual or orthographic information. A second
-representation ([`**dynam`](representations/dynam.rep.html)) provides a
+representation ([`**dynam`](/rep/dynam)) provides a
 \"rationalized\" or canonical means for interpreting score-related
 dynamic indications. Users will want to choose one or the other
 representation depending on the analytic task being pursued.
@@ -101,7 +101,7 @@ the concept of pianissimo, even if the visual rendering may be *pp* or
 >   ------ -------------------------------------------------------------------------
 >
 In the case of crescendo and diminuendo markings,
-[`**dynam`](representations/dynam.rep.html) requires an explicit
+[`**dynam`](/rep/dynam) requires an explicit
 interpretation of where the dynamic marking begins and ends. The
 beginning of a crescendo is indicated by the less-than sign (`<`). The
 end of the crescendo is marked by the open square bracket (`]`). Between
@@ -128,7 +128,7 @@ introduced by the editor. In scholarly publications these editorialisms
 are indicated in parentheses or square brackets. Such interpreted
 dynamics are preceded by the lower-case letter `x`.
 
-The use of the [`**dynam`](representations/dynam.rep.html)
+The use of the [`**dynam`](/rep/dynam)
 representation is illustrated in Example 28.1.\
 \
 **Example 28.1**
@@ -202,7 +202,7 @@ or
 >
 Notice that null data records may be inserted as necessary to clarify
 the moment of dynamic change. The
-[`**dynam`](representations/dynam.rep.html) representation makes use of
+[`**dynam`](/rep/dynam) representation makes use of
 the common system for representing barlines.
 
 <a name ="The_**dyn_Representation"></a>
@@ -303,7 +303,7 @@ follows:
 >
 The `*staff1/2` tandem interpretation indicates that the dynamic
 markings pertain to both staffs 1 and 2, however all vertical
-[`**dyn`](representations/dyn.rep.html) distance measures are encoded
+[`**dyn`](/rep/dyn) distance measures are encoded
 with respect to staff 1. (Reversing the numerical order \-- `*staff2/1`
 \-- would cause all distances to be measured with respect to staff 2.)
 The token `0.8f{-4}` means that the signifier *f* is located 0.8
@@ -323,7 +323,7 @@ staff 1. Changing this value allows tilted wedges to be represented.
 The *\*\*dB* Representation
 ---------------------------
 
-The [`**dB`](representations/dB.rep.html) representation provides a way
+The [`**dB`](/rep/dB) representation provides a way
 to represent intensity in decibels. Decibels can be expressed in
 relative or absolute terms. Absolute values are represented according to
 sound pressure level (SPL). An absolute representation is indicated by
@@ -428,7 +428,7 @@ Processing Dynamic Information
 
 <a name ="Average_dynamic_level"></a>
 
-The [`**dB`](representations/dB.rep.html) representation can be used to
+The [`**dB`](/rep/dB) representation can be used to
 assist a number of tasks related to musical dynamics. Suppose, for
 example, that we want to compare the average overall dynamic levels for
 two arabesques:
@@ -472,7 +472,7 @@ dynamic levels and pitch height for Klezmer music. That is, does the
 music tend to be quieter for lower pitches and louder for higher
 pitches? A straightforward way to determine this is to compare dynamic
 level with pitch height \-- represented in semitones
-([`**semits`](representations/semits.rep.html)). The
+([`**semits`](/rep/semits)). The
 [**correl**](/tool/correl) command can then be used to measure
 Pearson\'s coefficient of correlation. If there is a relationship
 between pitch height and dynamic level then the correlation should be
@@ -522,8 +522,8 @@ or \"graduated\" dynamics. In the case of terraced dynamics, we would
 expect to see many relatively abrupt dynamic contrasts, such as
 alternations between *forte* and *piano*. There are several ways of
 approaching this question. One approach might translate
-[`**dynam`](representations/dynam.rep.html) data to
-[`**dB`](representations/dB.rep.html) data and then calculate the
+[`**dynam`](/rep/dynam) data to
+[`**dB`](/rep/dB) data and then calculate the
 average (or maximum) changes in dynamic level. If a work contains many
 crescendos and diminuendos markings, then most of the changes in `**dB`
 values will be small. Conversely, alternations between contrasting
@@ -583,12 +583,12 @@ Actual sound pressure levels will depend on the timbre of the MIDI
 sounds, the specific pitch played, and the volume on the output
 amplifier. Nevertheless, a rough estimate of sound pressure level may be
 useful for various analytic tasks. Recall that in the
-[`**MIDI`](representations/MIDI.rep.html) representation, key-velocity
+[`**MIDI`](/rep/MIDI) representation, key-velocity
 data is encoded as the final number in three-number tokens where numbers
 are separated by slashes. The first value in the triplet is elapsed
 clock ticks and the second value is the MIDI key number (positive for
 key-on events, negative for key-off events). By way of reminder, the
-following example shows three [`**kern`](representations/kern.rep.html)
+following example shows three [`**kern`](/rep/kern)
 notes with a corresponding \*\*MIDI representation.
 
 >   ---------- --------------------
@@ -658,16 +658,16 @@ Reprise
 -------
 
 In this chapter we have introduced three representations related to
-musical dynamics. The [`**dyn`](representations/dyn.rep.html)
+musical dynamics. The [`**dyn`](/rep/dyn)
 representation allows us to encode dynamic markings as they appear
 visually in a printed score. Unfortunately, traditional notated dynamic
 markings are often confusing or ambiguous. In order to facilitate some
 types of analytic processing it is useful to generate a more
 rationalized interpretation of the dynamics of a work. The
-[`**dynam`](representations/dynam.rep.html) representation provides a
+[`**dynam`](/rep/dynam) representation provides a
 canonical scheme for representing basic notated dynamic markings where
 ambiguities are resolved by explicitly interpreting the meaning of
-dynamic markings. A third scheme ([`**dB`](representations/dB.rep.html))
+dynamic markings. A third scheme ([`**dB`](/rep/dB))
 provides a scheme for representing continuous dynamic levels in
 decibels. We have seen that the **db** command (which translates from
 `**dynam` to `**dB`) allows us to pose and answer a variety of questions

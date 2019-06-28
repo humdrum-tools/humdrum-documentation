@@ -161,7 +161,7 @@ interval.
 This same basic process can be used to address a variety of similar
 problems. For example, suppose we wanted to determine the most common
 word following \"gloria\" in Gregorian chant texts. We first extract the
-[`**text`](representations/text.rep.html) spine, use **context** to
+[`**text`](/rep/text) spine, use **context** to
 create pairs of words, and search in the normal way:
 
 > `extract -i '**text' chants* | context -n 2 \ `
@@ -179,7 +179,7 @@ line by using the caret (\^).
 
 Suppose we wanted to determine what scale degree most commonly precedes
 the dominant pitch in a sample of Czech folksongs. First we translate
-the folksongs to the [`**deg`](representations/deg.rep.html)
+the folksongs to the [`**deg`](/rep/deg)
 representation using the **deg** command, and then process as above:
 
 > `deg Czech* | context -n 2 -o = | grep '5 ' | sort \ `
@@ -194,7 +194,7 @@ Harmonic Progressions
 The V-I progression is the most common chord progression in Western
 tonal music. After the V-I progression, what is the most common chord
 progression in Bach\'s chorale harmonizations? We will assume that a
-Roman numeral [`**harm`](representations/harm.rep.html) spine already
+Roman numeral [`**harm`](/rep/harm) spine already
 exists. First we extract the appropriate spine. Then we create context
 records holding pairs of harmony data (omitting barlines). Then we
 eliminate global and local comments, interpretations, and null data. We
@@ -345,7 +345,7 @@ measures contain sixty-fourth notes?
 
 <a name ="Measures_containing_trills"></a>
 
-Similarly, for [`**kern`](representations/kern.rep.html) inputs, the
+Similarly, for [`**kern`](/rep/kern) inputs, the
 following command counts the number of measures that contain at least
 one trill:
 
@@ -508,7 +508,7 @@ temporary file of scale degree information:
 
 Then we amalgamate the pitch data according the phrasing information,
 and translate the resulting data to the
-[`**deg`](representations/deg.rep.html) representation:
+[`**deg`](/rep/deg) representation:
 
 > `context -b { -e } -o ^= inputfile | deg > temp.deg`
 
@@ -753,8 +753,8 @@ precede \`e\' and the one pitch that follows it.
 By way of example, suppose we are looking for a submediant pitch that is
 approached by two melodic intervals of an ascending major third followed
 by a descending major second. First, we generate independent
-[`**mint`](representations/mint.rep.html) and
-[`**deg`](representations/deg.rep.html) outputs. Next we process the
+[`**mint`](/rep/mint) and
+[`**deg`](/rep/deg) outputs. Next we process the
 `**mint` data using **context** to create pairs of successive intervals.
 Without the **-p** option, the assembled output might look as follows:\
 \

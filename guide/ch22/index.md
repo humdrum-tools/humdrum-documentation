@@ -302,7 +302,7 @@ the soprano and tenor voices. Our reassignment file might be as follows:
 >   -------- -- -------
 >
 We will need to extract the soprano and tenor voices, translate the
-pitch representation to [`**semits`](representations/semits.rep.html)
+pitch representation to [`**semits`](/rep/semits)
 and use [**ydelta**](/tool/ydelta) to calculate the semitone
 distance between the two voices. In the following set of commands, we
 have also added the [**ditto**](/tool/ditto) command to ensure
@@ -389,7 +389,7 @@ identify specific places in the score where Baroque and modern
 fingerings differ.
 
 The **recode** command can be used for innumerable other kinds of
-classifications. For example, [`**kern`](representations/kern.rep.html)
+classifications. For example, [`**kern`](/rep/kern)
 durations might be expressed in seconds (using the
 [**dur**](/tool/dur) command), and the elapsed times then
 classified as *long*, *short* and *medium* (say). Sound pressure levels
@@ -466,7 +466,7 @@ Classifying Cadences
 
 Consider another application where we use **humsed** to classify
 cadences. Suppose we have Roman-numeral harmonic data (as provided by
-the [`**harm`](representations/harm.rep.html) representation). In the
+the [`**harm`](/rep/harm) representation). In the
 case of Bach\'s chorale harmonizations, for example, cadences are
 clearly evident by the presence of pauses (designated by the semicolon).
 We can easily create a spine that identifies only cadences. Consider a

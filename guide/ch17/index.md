@@ -515,7 +515,7 @@ the input is monophonic `**kern` data.
 Assume that copies of early and late works have been concatenated to the
 files `early` and `late`. The [**humsed**](/tool/humsed) command
 here eliminates all data with the exception of
-[`**kern`](representations/kern.rep.html) articulation marks. (See
+[`**kern`](/rep/kern) articulation marks. (See
 [Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)
 
 > `` extract -i '**kern' early | humsed 's/[^"`~^:I]//g' \ ``

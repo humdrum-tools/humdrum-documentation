@@ -48,7 +48,7 @@ a contiguous sequence of input lines.
 The operation of **patt** is easier to describe through an example.
 Consider the following input using the German *Tonhöhe* pitch
 designations described in [Chapter 4.](/guide/ch04) Recall that the
-[`**Tonh`](representations/Tonh.rep.html) system of pitch names allows
+[`**Tonh`](/rep/Tonh) system of pitch names allows
 Bach to spell his name (B=B-flat; H=B-natural). Less well-known is the
 fact that Dmitri Shostakovich also used the German pitch system to
 create motives based on his name: D-S-C-H (S=Es=E-flat). (The German
@@ -271,7 +271,7 @@ following pattern:
 
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
-[`**hint`](representations/hint.rep.html) harmonic-interval
+[`**hint`](/rep/hint) harmonic-interval
 representation. The **-c** option for [**hint**](/tool/hint)
 collapses compound intervals to their non-compound equivalents so
 consecutive twelfths, nineteenths, etc. will also be identified. In the
@@ -301,10 +301,10 @@ distinctive cadential formula.\
 
 > ![](guide.figures/guide21.4.gif)
 
-Below is a [`**kern`](representations/kern.rep.html) encoding of the
+Below is a [`**kern`](/rep/kern) encoding of the
 final two measures along with corresponding
-[`**hint`](representations/hint.rep.html) and
-[`**deg`](representations/deg.rep.html) spines. The \*\*hint spine was
+[`**hint`](/rep/hint) and
+[`**deg`](/rep/deg) spines. The \*\*hint spine was
 generated using [**hint**](/tool/hint) **-l** in order to
 generate intervals with respect to the lowest pitch.
 
@@ -406,7 +406,7 @@ spine. Consider the following example.
 
 Suppose we are interested in identifying deceptive cadences in Bach\'s
 chorale harmonizations. Imagine that we already have a
-[`**harm`](representations/harm.rep.html) spine containing a Roman
+[`**harm`](/rep/harm) spine containing a Roman
 numeral harmonic analysis. There are different ways of defining a
 deceptive cadence, but a frequent definition is that it involves a
 dominant chord followed by a submediant chord in a cadential context. In
@@ -578,7 +578,7 @@ one line containing the letter \``X`\'.
 Record-repetition operators can be used in conjunction with all of the
 other regular expression features. For example, the following regular
 expression matches one or more successive
-[`**kern`](representations/kern.rep.html) data records containing the
+[`**kern`](/rep/kern) data records containing the
 pitch \``G`\' (naturals only) followed optionally by a single \``G#`\'
 followed by one or more records containing one or more pitches from an A
 major triad \-- the last of which must end a phrase:

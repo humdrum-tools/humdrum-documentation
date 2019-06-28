@@ -18,10 +18,10 @@ distinctive sounds that can prove to be musically useful. Poets and
 composers often arrange or choose texts so that the sequence of sounds
 create alliteration, onomatopoeia, rhythm, rhyme and other sonorous
 effects. This chapter introduces the
-[`**IPA`](representations/IPA.rep.html) scheme for representing speech
+[`**IPA`](/rep/IPA) scheme for representing speech
 sounds. This representation provides a companion to the
-[`**text`](representations/text.rep.html) and
-[`**silbe`](representations/silbe.rep.html) representations discussed in
+[`**text`](/rep/text) and
+[`**silbe`](/rep/silbe) representations discussed in
 [Chapter 27.](/guide/ch27) Various sonorous processes are illustrated.
 
 <a name ="The_**IPA_Representation"></a>
@@ -29,7 +29,7 @@ sounds. This representation provides a companion to the
 The \*\*IPA Representation
 --------------------------
 
-The Humdrum [`**IPA`](representations/IPA.rep.html) scheme provides a
+The Humdrum [`**IPA`](/rep/IPA) scheme provides a
 way to represent the International Phonetic Alphabet. The `**IPA` scheme
 is based on the transliteration scheme developed by linguist Evan
 Kirshenbaum. The scheme is suitable for representing the basic phonemes
@@ -105,9 +105,9 @@ found in most of the world\'s languages. The table below summarizes the
     following or hooked beneath the consonant.
 
 Humdrum does not provide a tool for translating from
-[`**text`](representations/text.rep.html) or
-[`**silbe`](representations/silbe.rep.html) representations to
-[`**IPA`](representations/IPA.rep.html). However, there are a number of
+[`**text`](/rep/text) or
+[`**silbe`](/rep/silbe) representations to
+[`**IPA`](/rep/IPA). However, there are a number of
 commercial text-to-phoneme translators available for most common
 languages.
 
@@ -156,7 +156,7 @@ beginning of a line followed by zero or more characters. Replace this
 entire string by just the first character in the line.
 
 Let\'s now use this back-reference technique in our alliteration search.
-First we extract the [`**IPA`](representations/IPA.rep.html) spine and
+First we extract the [`**IPA`](/rep/IPA) spine and
 use **humsed** to eliminate all but the first character in each data
 record:
 
@@ -511,8 +511,8 @@ The corresponding output would indicate the rhyme scheme for this poem:
 > provides opportunities for analyzing many sonorous aspects of vocal
 > sounds \-- including alliteration, vowel coloration, rhyme, and other
 > effects. Although we did not illustrate it in this chapter, the
-> [`**IPA`](representations/IPA.rep.html) representation can be used in
-> conjunction witht the [`**silbe`](representations/silbe.rep.html)
+> [`**IPA`](/rep/IPA) representation can be used in
+> conjunction witht the [`**silbe`](/rep/silbe)
 > representation to characterize complex aspects of rhythm and rhyme in
 > vocal texts.
 >

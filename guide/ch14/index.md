@@ -99,7 +99,7 @@ rename the output.
 Suppose that you had encoded a musical work in the `**kern`
 representation. Having finished the encoding, you realize that what you
 thought were *pizzicato* marks are really *spiccato* marks. In the
-[`**kern`](representations/kern.rep.html) representation, pizzicatos are
+[`**kern`](/rep/kern) representation, pizzicatos are
 indicated by the double quote (`"`) whereas spiccatos are represented by
 the lower-case letter `s`. We can change all pizzicato marks to spiccato
 marks using the following command:
@@ -177,7 +177,7 @@ Reference Manual* for details regarding **num**.)
 > `humsed /^=/sX=[0-9]*X=Xg` *inputfile*` | num -n ^= -x == -p = -o 72`
 
 Suppose we wanted to eliminate all octave numbers from a
-[`**pitch`](representations/pitch.rep.html) representation. In this case
+[`**pitch`](/rep/pitch) representation. In this case
 we want to delete all numbers except when they occur in conjunction with
 a barline. Our substitution should occur only when the current record
 does not match a leading equals sign:
@@ -250,7 +250,7 @@ performances as follows:
 > > \| rid -GLId \| stats
 
 The **extract** command has been added to ensure that we only process
-[`**MIDI`](representations/MIDI.rep.html) data; the **grep** command
+[`**MIDI`](/rep/MIDI) data; the **grep** command
 ensures that possible barlines are eliminated, and the **rid** command
 eliminates comments and interpretations prior to passing the data to the
 **stats** command.
@@ -368,7 +368,7 @@ matched string.\" Suppose we want to add a tenuto mark to every
 quarter-note in a work. The following substitution seeks the number
 \`4\' followed by any character that is not a digit or period. This
 pattern is replaced by itself (&) followed by a tilde (\~), the
-[`**kern`](representations/kern.rep.html) signifier for a tenuto mark:
+[`**kern`](/rep/kern) signifier for a tenuto mark:
 
 > `humsed s/4[^0-9.]/&~/g` *inputfile*
 
@@ -400,7 +400,7 @@ In some situations, we will want to switch two or more signifiers \--
 make all A\'s B\'s and all B\'s A\'s. These sorts of tasks require three
 substitutions and involve creating a unique temporary string. For
 example, the following command changes all
-[`**kern`](representations/kern.rep.html) up-bows to down-bows and vice
+[`**kern`](/rep/kern) up-bows to down-bows and vice
 versa.
 
 > `humsed 's/u/ABC/g; s/v/u/g; s/ABC/v/g'` *inputfile*
@@ -443,7 +443,7 @@ A useful feature of [**humsed**](/tool/humsed) is the \"write\"
 or `w` operation. This operation causes a line to be written to the end
 of a specified file. Suppose, for example, we wanted to collect all
 seventh chords into a separate file called `sevenths`. With a
-[`**harm`](representations/harm.rep.html)-format input, the appropriate
+[`**harm`](/rep/harm)-format input, the appropriate
 command would be:
 
 > `humsed '/7/w sevenths'` *inputfile.hrm*

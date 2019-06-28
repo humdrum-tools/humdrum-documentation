@@ -153,7 +153,7 @@ before the financial and legal issues are satisfactorily addressed.
 
 In some cases, you will be translating from one electronic format to
 another \-- such as from MIDI to
-[`**kern`](representations/kern.rep.html). Once again, be conscious of
+[`**kern`](/rep/kern). Once again, be conscious of
 any copyright issues that are raised. Few experiences are more
 discouraging than discovering that your work cannot be distributed
 because you failed to consider seriously the copyright issues involved.
@@ -427,7 +427,7 @@ editorial footnotes, local comments, global comments, interpretation
 data, *sic* and *ossia* designations, version labels, sectional labels,
 and expansion lists.
 
-The [`**kern`](representations/kern.rep.html) representation provides
+The [`**kern`](/rep/kern) representation provides
 several special-purpose signifiers to help make explicit various classes
 of editorial amendments, interpretations, or commentaries. Five types of
 editorial signifiers are available: (1) *sic* (information is encoded

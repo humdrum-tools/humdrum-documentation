@@ -90,7 +90,7 @@ might result in an output such as the following:
 >   ------------- ------------ ------------ ------------
 >
 Notice that each complete measure ends with spine-path terminators and
-that the [`**kern`](representations/kern.rep.html) exclusive
+that the [`**kern`](/rep/kern) exclusive
 interpretations are repeated. This organization has a number of
 repercussions for various Humdrum tools. For example, the
 [**mint**](/tool/mint) command calculates melodic intervals
@@ -339,7 +339,7 @@ Aligning Durations Using the *timebase* Command
 -----------------------------------------------
 
 Suppose now that we wanted to join two hypothetical files containing
-[`**kern`](representations/kern.rep.html) data. The first file contains
+[`**kern`](/rep/kern) data. The first file contains
 two quarter notes, whereas the second file contains four eighth notes:
 
 >   -------------
@@ -365,8 +365,8 @@ uncoordinated result. The two quarter notes in file 1 will be
 incorrectly matched with the first two eighth notes in file 2.
 
 The Humdrum [**timebase**](/tool/timebase) command can be used
-to reformat either [`**kern`](representations/kern.rep.html) or
-[`**recip`](representations/recip.rep.html) inputs so that each output
+to reformat either [`**kern`](/rep/kern) or
+[`**recip`](/rep/recip) inputs so that each output
 data record represents an equivalent slice (elapsed duration) of time.
 (Barlines are ignored by **timebase**.) The **timebase** command
 achieves this by padding an input with null data records. In the above
@@ -570,7 +570,7 @@ for a wide variety of possible encoding errors or ambiguities:
 > `proof fullscore`
 
 By way of summary, creating a full score from a set of
-[`**kern`](representations/kern.rep.html) parts involves the following
+[`**kern`](/rep/kern) parts involves the following
 five tasks: (1) Identify a common duration factor for all the parts. Use
 [**census**](/tool/census) to determine the shortest duration;
 if any of the parts contains an N-tuplet, then the common duration
@@ -631,7 +631,7 @@ them using **timebase**.
 > `yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2`
 
 Then we assemble the two sections together, translate to the
-[`**MIDI`](representations/MIDI.rep.html) representation and use
+[`**MIDI`](/rep/MIDI) representation and use
 [**perform**](/tool/perform) to listen to both sections at the
 same time:
 
@@ -662,8 +662,8 @@ characterize scale degrees. Assume that our input is monophonic:
 
 The files `temp1` and `temp2` will have the same length, so we can
 assemble them together. This will generate an output consisting of two
-spines, [`**mint`](representations/mint.rep.html) and
-[`**solfa`](representations/solfa.rep.html). In effect, the `**mint`
+spines, [`**mint`](/rep/mint) and
+[`**solfa`](/rep/solfa). In effect, the `**mint`
 spine data will tell us the interval used to approach the scale degree
 encoded in the `**solfa` spine. We can use **grep** to search for the
 appropriate combinations of interval and scale degree and count the
@@ -676,7 +676,7 @@ number of occurrences:
 
 This same approach can be used to address (innumerable) questions
 pertaining to concurrent patterns. For example, suppose we have a
-[`**harm`](representations/harm.rep.html) spine that identifies the
+[`**harm`](/rep/harm) spine that identifies the
 \`Roman numeral\' functional harmony for some choral work. We can
 identify complex situations such as the following: for the soprano
 voice, count how many subdominant pitches are approached by an interval
@@ -741,8 +741,8 @@ redundant exclusive and tandem interpretations from concatenated outputs
 using the **-u** and **-t** options for [**rid**](/tool/rid). In
 addition, we learned how to assemble two or more spines into a single
 output file using [**assemble**](/tool/assemble). In the case of
-[`**kern`](representations/kern.rep.html) and
-[`**recip`](representations/recip.rep.html) representations, we learned
+[`**kern`](/rep/kern) and
+[`**recip`](/rep/recip) representations, we learned
 how to use the [**timebase**](/tool/timebase) command to
 preprocess each constituent file so that all data records represent
 equivalent elapsed durations. Having assembled a full score from parts,

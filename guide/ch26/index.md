@@ -32,7 +32,7 @@ The [**rend**](/tool/rend) command allows a Humdrum spine to be
 broken apart into two or more spines. Different pieces of information
 can be distributed to the individual output spines. Consider for example
 the following spine containing
-[`**pitch`](representations/pitch.rep.html) data:\
+[`**pitch`](/rep/pitch) data:\
 \
 
 >   -----------
@@ -124,7 +124,7 @@ of three types of data. The **-o** option tells
 spine. In this case, we\'ve simply called the result `**new`.
 
 Suppose that we would like to automatically add key-velocities to some
-[`**MIDI`](representations/MIDI.rep.html) data that reflect the normal
+[`**MIDI`](/rep/MIDI) data that reflect the normal
 accents arising from the meter. For example, in 4/4 meter, we would like
 the first note in each measure to be strongest, the third beat to be
 next most strongest and so on. Recall that `**MIDI` data tokens consist
@@ -349,7 +349,7 @@ signifiers as in the following `degree` file:
 We can classify the pitch ranges into high, medium, and low using the
 [**semits**](/tool/semits) command, followed by **recode**. For
 example, we could transform the
-[`**semits`](representations/semits.rep.html) data using the following
+[`**semits`](/rep/semits) data using the following
 reassignment file:
 
 >   ------ -- ---

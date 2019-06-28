@@ -92,7 +92,7 @@ an octave of middle C.
 Frequently it is necessary to turn off the special meanings for
 metacharacters such as \^, \$, and \*. Recall that this can be done by
 inserting a backslash (`\`) immediately prior to the metacharacter. In
-the [`**kern`](representations/kern.rep.html) representation the caret
+the [`**kern`](/rep/kern) representation the caret
 signifies an accent. In a monophonic input, we might count the number of
 notes that have a notated accent as follows:
 
@@ -270,7 +270,7 @@ augmented sixth interval occurring between the lowered sixth
 scale-degree and the raised fourth scale-degree. In [Chapter
 4,](/guide/ch04) we saw that the **solfa** command represents pitches
 with respect to an encoded tonic pitch. In the
-[`**solfa`](representations/solfa.rep.html) representation, the lowered
+[`**solfa`](/rep/solfa) representation, the lowered
 sixth and raised fourth degrees will be represented as `6-` and `4+`
 respectively. First we translate the input to the `**solfa`
 representation, and then we search for records matching the appropriate
@@ -427,7 +427,7 @@ that encode works composed in the 17th century OR written for organ OR
 in 6/8 meter. The **-f** option is more typically used to specify
 several variations of the same idea. For example, suppose we were
 searching for D major triads in
-[`**pitch`](representations/pitch.rep.html) data. We could use a file
+[`**pitch`](/rep/pitch) data. We could use a file
 containing the following regular expressions:
 
 > `[Dd].*[Ff]#.*[Aa]  [Dd].*[Aa].* [Ff]#  [Ff]#.*[Aa].*[Dd]  [Ff]#.*[Dd].*[Aa]  [Aa].*[Dd].*[Ff]#  [Aa].*[Ff]#.*[Dd]`

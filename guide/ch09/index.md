@@ -485,7 +485,7 @@ pertinent to Humdrum-format inputs:\
 
 By way of illustration, the next table shows examples of regular
 expressions appropriate for processing
-[`**kern`](representations/kern.rep.html) representations.\
+[`**kern`](/rep/kern) representations.\
 \
 
 >   --------------------------------------------------- -----------------------------------------------------------
@@ -525,7 +525,7 @@ given above in the expression
 > (\^\[\^\*!\].\**regexp*)\|(\^*regexp*)
 
 For example, the following regular expression can be used to match
-[`**kern`](representations/kern.rep.html) trills without possibly
+[`**kern`](/rep/kern) trills without possibly
 mistaking comments or interpretations:
 
 ``

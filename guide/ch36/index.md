@@ -17,10 +17,10 @@ Music is a sonic art and no analytic toolkit would be complete without
 considering the representation and manipulation of sound-related
 information. In this chapter we introduce some special-purpose tools
 related to sound analysis, sound synthesis, and auditory perception. We
-have already encountered the [`**freq`](representations/freq.rep.html)
-and [`**cents`](representations/cents.rep.html) representations in
+have already encountered the [`**freq`](/rep/freq)
+and [`**cents`](/rep/cents) representations in
 [Chapter 4.](/guide/ch04) Much of this chapter will center on the
-[`**spect`](representations/spect.rep.html) representation. Three tools
+[`**spect`](/rep/spect) representation. Three tools
 will be discussed in connection with `**spect`: the **spect**, **mask**
 and **sdiss** commands. **Spect** accesses a database of analyzed
 instrument tones to generate harmonic spectra for all notes for various
@@ -41,7 +41,7 @@ The *\*\*spect* Representation
 ------------------------------
 
 A useful predefined sound-related representations that in Humdrum is the
-`**spect` scheme. The [`**spect`](representations/spect.rep.html)
+`**spect` scheme. The [`**spect`](/rep/spect)
 representation is used to represent successive acoustic spectra. Each
 data record represents a complete spectrum specified as a set of
 concurrent discrete frequency components. Each frequency component in
@@ -86,8 +86,8 @@ The SHARC Database and *spect* Command
 --------------------------------------
 
 More commonly, the **spect** command is used to generate a
-[`**spect`](representations/spect.rep.html) (acoustic spectral data)
-output from a [`**semits`](representations/semits.rep.html) score input.
+[`**spect`](/rep/spect) (acoustic spectral data)
+output from a [`**semits`](/rep/semits) score input.
 The **spect** command recognizes instrument tandem interpretations
 (e.g., \*Iclarinet) and fetches a corresponding spectral data file
 (`clarinet.spe`). These files are derived from the SHARC database of
@@ -170,14 +170,14 @@ dissonance described by Kameoka and Kuriyagawa (1969a/b). (The Humdrum
 command characterizes the degree of sensory dissonance for successive
 vertical sonorities or acoustical moments. The command accepts as input
 one or more `**spect` spines and produces a single
-[`**sdiss`](representations/sdiss.rep.html) spine as output. For each
+[`**sdiss`](/rep/sdiss) spine as output. For each
 `**spect` data record, **sdiss** produces a single numerical value
 representing the aggregate sensory dissonance. The greater the output
 value, the greater the dissonance.
 
 Example 36.2 illustrates some sample inputs and outputs for **sdiss**.
 The left-most spine provides double-stops for
-[`**kern`](representations/kern.rep.html) data for violin. The middle
+[`**kern`](/rep/kern) data for violin. The middle
 spine provides corresponding `**spect` data using the **spect** command.
 The right-most spine shows the result of passing the `**spect` data
 through the **sdiss** command.

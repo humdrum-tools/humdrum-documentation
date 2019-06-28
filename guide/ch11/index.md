@@ -134,10 +134,10 @@ Melodic Intervals Using the *mint* Command
 
 The Humdrum [**mint**](/tool/mint) command calculates melodic
 intervals for pitch-related representations such as
-[`**kern`](representations/kern.rep.html),
-[`**pitch`](representations/pitch.rep.html),
-[`**solfg`](representations/solfg.rep.html) and
-[`**Tonh`](representations/Tonh.rep.html). Output intervals are
+[`**kern`](/rep/kern),
+[`**pitch`](/rep/pitch),
+[`**solfg`](/rep/solfg) and
+[`**Tonh`](/rep/Tonh). Output intervals are
 expressed using the traditional diatonic terms where both interval
 quality and interval size are specified. Interval qualities include
 perfect (`P`), major (`M`), minor (`m`), augmented (`A`) and diminished
@@ -182,7 +182,7 @@ output via the **-t** option for **mint.**
 Sometimes it is useful to maintain the initial starting pitches in the
 output. The presence of these \"offset\" pitch values can prove useful
 in later reconstructing the original pitches from the
-[`**mint`](representations/mint.rep.html) interval data. When the **-o**
+[`**mint`](/rep/mint) interval data. When the **-o**
 option is invoked, **mint** outputs the initial starting pitches (placed
 in square brackets) from which the subsequent melodic intervals have
 been calculated.
@@ -223,7 +223,7 @@ Depending on the regular expression given, the **-b** option can used
 for a variety of specialized intervals. For example, suppose that we
 wanted to avoid calculating intervals between the last note of a phrase
 and the first note of the next phrase. In the
-[`**kern`](representations/kern.rep.html) representation, the open and
+[`**kern`](/rep/kern) representation, the open and
 closed curly braces are used to indicate the beginnings and ends of
 phrases. We need to tell **mint** to break interval calculations each
 time an end-of-phrase signifier is encountered:
@@ -484,7 +484,7 @@ Here we have used the extended regular expression capabilities of
 **egrep** to specify an either/or pattern.
 
 Suppose we had a directory containing only files encoding melodies using
-the [`**mint`](representations/mint.rep.html) representation. Does any
+the [`**mint`](/rep/mint) representation. Does any
 melody in the current directory contain both an ascending major sixth
 and a descending major sixth?
 
@@ -511,7 +511,7 @@ values, such as the number semitones or the number of cents. The
 calculating numerical differences between successive values within
 individual spines. In order to use **xdelta** to calculate semitone
 differences, we first need to transform our representation to
-[`**semits`](representations/semits.rep.html) (discussed in [Chapter
+[`**semits`](/rep/semits) (discussed in [Chapter
 4](/guide/ch04)). Recall that in the `**semits` representation, middle
 C is designated by the value zero, and all other pitches are represented
 by their (positive or negative) semitone distance. A C-major scale would

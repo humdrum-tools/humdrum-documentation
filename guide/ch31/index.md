@@ -82,7 +82,7 @@ When searching through the specific *PATH*, **find** is able to carry
 out a wide variety of possible tests on each file. One simple action is
 to test whether the file-name conforms to a given regular expression.
 Consider, for example, the goal of identifying all files representing
-pitch-class ([`**pc`](representations/pc.rep.html)) information. The
+pitch-class ([`**pc`](/rep/pc)) information. The
 Humdrum convention is to identify these files by adding the `.pc`
 extension to the filename \-- such as `opus24.pc`. The following
 **find** command will traverse through the `/scores` directory (and all

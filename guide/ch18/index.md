@@ -17,7 +17,7 @@ of Humdrum representations \-- `**kern` in particular. Of course the
 Humdrum syntax provides opportunities for an unlimited number of
 representations. In this chapter, we will consider some less common
 representations. Most of the chapter will deal with the
-[`**fret`](representations/fret.rep.html) representation \-- a
+[`**fret`](/rep/fret) representation \-- a
 pre-defined Humdrum representation for fretted instrument tablatures.
 However, we will begin with a grab-bag of unorthodox representations.
 
@@ -187,7 +187,7 @@ that we have relied on for most of the examples in this book.
 The *\*\*fret* Representation
 -----------------------------
 
-The [`**fret`](representations/fret.rep.html) representation is a
+The [`**fret`](/rep/fret) representation is a
 pre-defined Humdrum scheme that provides a comprehensive system for
 representing performance aspects for fretted instruments. The `**fret`
 scheme is suitable for representing tablature information for most
@@ -218,10 +218,10 @@ so would be encoded with the following tandem interpretation:
 > `*AT:E2`
 
 The `*AT:` interpretation makes use of
-[`**pitch`](representations/pitch.rep.html)-type pitch designations and
+[`**pitch`](/rep/pitch)-type pitch designations and
 may also include cents deviation. For example, an instrument tuned 45
 cents sharp might be represented as `*AT:E2+45`. Encoding the absolute
-tuning is optional with [`**fret`](representations/fret.rep.html); when
+tuning is optional with [`**fret`](/rep/fret); when
 absent, a default tuning of E2 will be assumed by various processing
 tools.
 
@@ -279,7 +279,7 @@ non-integer semitone values for various strings, such as a string tuned
 9.91 semitones above the lowest string.
 
 In addition to the absolute and relative tunings,
-[`**fret`](representations/fret.rep.html) also allows the user to
+[`**fret`](/rep/fret) also allows the user to
 specify the tuning of successive frets using the `FT:` tandem
 interpretation. In Western instruments, frets are normally placed in
 semitone increments. For a 12-fret instrument, this semitone arrangement
@@ -303,7 +303,7 @@ identical fret distances. That is, if the first fret is positioned 1
 semitone above the open string, then this relative pitch arrangement
 must be true of all strings.
 
-The [`**fret`](representations/fret.rep.html) representation
+The [`**fret`](/rep/fret) representation
 distinguishes three types of data tokens: tablature-tokens, rests, and
 barlines. *Tablature-tokens* encode information regarding the
 fret/finger positions, the manner by which individual strings are
@@ -323,7 +323,7 @@ string/course status, (2) fret position, (3) bowing/strumming, (4)
 finger action, and (5) percussive effects. In addition, the
 tablature-token can encode bowing and strumming information.
 
-In the [`**fret`](representations/fret.rep.html) representation, the
+In the [`**fret`](/rep/fret) representation, the
 status of a string/course can occupy one of sixteen states. An
 *inactive* string is signified by th-nus sign (`-`). An ordinary
 *plucked* string is represented by the vertical line (`|`). Plucking
@@ -367,9 +367,9 @@ second fret.
 Example 18.2 shows a sample passage for guitar with a corresponding
 `**fret` representation displayed beneath. The `**fret` representation
 does not encode duration information. It is common to join the `**fret`
-spine with a [`**recip`](representations/recip.rep.html) spine
+spine with a [`**recip`](/rep/recip) spine
 representing the nominal duration data. In example 18.2 a
-[`**kern`](representations/kern.rep.html) spine is also shown indicating
+[`**kern`](/rep/kern) spine is also shown indicating
 the pitches in the `**fret` representation.\
 \
 **Example 18.2.** J.S. Bach, *Anna Magdalena Bach Notebook* Menuet II.
@@ -444,7 +444,7 @@ commonly-tuned guitar is represented as:
 Notice that there is no space between the right angle bracket and the
 first vertical bar.
 
-The [`**fret`](representations/fret.rep.html) representation also
+The [`**fret`](/rep/fret) representation also
 permits the optional encoding of *fingering* information. For the
 plucking-hand (normally right hand), traditional musical abbreviations
 are used: *P* (pollex) for the thumb, *I* (index) for the index finger,
@@ -501,7 +501,7 @@ a line by themselves. When sounded in conjunction with a plucked or
 the tablature-token.
 
 The complete system of signifiers used by
-[`**fret`](representations/fret.rep.html) is summarized in Table 18.1.
+[`**fret`](/rep/fret) is summarized in Table 18.1.
 
 **Table 18.1. Signifiers used by *\*\*fret*.**
 
@@ -588,7 +588,7 @@ Reprise
 -------
 
 In this chapter we have tried to reinforce the lesson that
-[`**kern`](representations/kern.rep.html) is only one of an unbounded
+[`**kern`](/rep/kern) is only one of an unbounded
 number of existing and possible Humdrum representations. As a Humdrum
 user, you are free to concoct your own representations to better address
 the kinds of information you are interested in manipulating. As long as

@@ -22,11 +22,11 @@ word-rhythms, and phonetic and syllabic effects such as alliteration,
 vowel-coloration.
 
 Humdrum provides three pre-defined representations pertinent to text or
-lyrics. The [`**text`](representations/text.rep.html) representation can
+lyrics. The [`**text`](/rep/text) representation can
 be used to represent *words*; the
-[`**silbe`](representations/silbe.rep.html) representation can be used
+[`**silbe`](/rep/silbe) representation can be used
 to represent *syllables*; and the
-[`**IPA`](representations/IPA.rep.html) representation can be used to
+[`**IPA`](/rep/IPA) representation can be used to
 represent *phonemes* (via the International Phonetic Alphabet).
 Discussion of the `**IPA` representation will be delayed until [Chapter
 34.](/guide/ch34) In this chapter we will look at various
@@ -120,13 +120,13 @@ pen.*
 > >
 Note that all three representations in Example 27.1 make use of the
 common system for representing barlines. In the
-[`**text`](representations/text.rep.html) representation tokens
+[`**text`](/rep/text) representation tokens
 represent individual words. In some scores, several words will be
 associated with a single moment (or pitch), as in the case of
 *recitativo* passages. Multi-word tokens are encoded as Humdrum
 multiple-stops with a space separating each word on a record.
 
-In the [`**silbe`](representations/silbe.rep.html) representation tokens
+In the [`**silbe`](/rep/silbe) representation tokens
 represent individual syllables. In `**silbe` the hyphen (-) is used
 explicitly to signify syllable boundaries and the tilde (\~) is used to
 signify boundaries between hyphenated words (necessarily also a syllable
@@ -206,14 +206,14 @@ Invoking the **text** command is straightforward:
 
 A simple text-related task might be looking for occurrences of a
 particular word, such as the German \"Liebe\" (love). If the lyrics are
-encoded in the [`**text`](representations/text.rep.html) representation,
+encoded in the [`**text`](/rep/text) representation,
 then a simple **grep** will suffice:
 
 > `grep -n 'Liebe' schubert`
 
 Recall that the **-n** option gives the line number of any occurrences
 found. If the input is encoded in the
-[`**silbe`](representations/silbe.rep.html) representation, then the
+[`**silbe`](/rep/silbe) representation, then the
 output of **text** can be piped to **grep**:
 
 > `extract -i '**silbe' schubert | text | grep -n 'Liebe'`
@@ -293,7 +293,7 @@ The corresponding output is:
 
 Yet another way of arranging the text output would be to parse the text
 according to explicit phrase marks in the
-[`**kern`](representations/kern.rep.html) data. This will require a
+[`**kern`](/rep/kern) data. This will require a
 little more work, but it\'s worth going through the steps since the same
 process can be applied to any representation. First, we will need to
 transfer the end-of-phrase signifier (\``}`\') from the `**kern` spine
@@ -658,7 +658,7 @@ repertory as a whole. Any significant difference might alert us to
 possible word painting.
 
 First we translate any pitch data to
-[`**semits`](representations/semits.rep.html) and any `**silbe` data to
+[`**semits`](/rep/semits) and any `**silbe` data to
 `**text`. We will also filter the outputs to ensure that only `**semits`
 and `**text` are present.
 
@@ -874,8 +874,8 @@ Reprise
 -------
 
 In this chapter we have introduced two text-related representations:
-[`**text`](representations/text.rep.html) and
-[`**silbe`](representations/silbe.rep.html). We have examined the
+[`**text`](/rep/text) and
+[`**silbe`](/rep/silbe). We have examined the
 **text** command (which translates from `**silbe` to `**text`). We have
 also been exposed to the UNIX **fmt** command (a simple text formatter),
 the **cut** command (similar to **extract -f**), and the **head** and

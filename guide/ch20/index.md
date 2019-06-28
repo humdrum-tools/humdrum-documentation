@@ -684,7 +684,7 @@ type. Consider the following:\
 > > that indicates section 1 is to be repeated 4 times in total.
 > >
 > > The strophic passage pertains only to the spine marked `**silbe`.
-> > The [`**silbe`](representations/silbe.rep.html) representation
+> > The [`**silbe`](/rep/silbe) representation
 > > pertains to syllabic text encoding and is a pre-defined
 > > representation in Humdrum. The `**silbe` representation is discussed
 > > in [Chapter 27.](/guide/ch27) Following the strophic passage
@@ -747,7 +747,7 @@ type. Consider the following:\
 > >
 > > Suppose that we wanted to create a through-composed version of the
 > > entire work. We would expect as output, just two spines \-- the
-> > [`**kern`](representations/kern.rep.html) spine and the `**silbe`
+> > [`**kern`](/rep/kern) spine and the `**silbe`
 > > spine. First, we need to create the full length version using the
 > > **thru** command. This will take the default expansion list, and
 > > repeat the appropriate section for each successive verse.

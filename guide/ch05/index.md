@@ -14,9 +14,9 @@ The Humdrum Syntax
 
 In the previous chapters we have seen several examples of pre-defined
 Humdrum representations, such as
-[`**kern`](representations/kern.rep.html),
-[`**solfa`](representations/solfa.rep.html) and
-[`**MIDI`](representations/MIDI.rep.html). These representations exhibit
+[`**kern`](/rep/kern),
+[`**solfa`](/rep/solfa) and
+[`**MIDI`](/rep/MIDI). These representations exhibit
 a number of common properties, including the manner in which the data
 are organized in spines. In this chapter, we provide a complete
 description of the Humdrum representation syntax. This chapter will help

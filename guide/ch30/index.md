@@ -19,7 +19,7 @@ chapter we briefly introduce the [**record**](/tool/record) and
 for capturing MIDI input and translating them to representations that
 conform to the Humdrum syntax. The **record** command translates a live
 or computer-generated MIDI performance to the
-[`**MIDI`](representations/MIDI.rep.html) representation. The **encode**
+[`**MIDI`](/rep/MIDI) representation. The **encode**
 command provides an interactive editor that translates MIDI events to
 any pre-defined or user-defined Humdrum representation.
 
@@ -65,9 +65,9 @@ The [**encode**](/tool/encode) command provides an interactive
 editor for capturing Humdrum data from a MIDI input, such as a keyboard
 synthesizer. MIDI events are mapped to user-defined signifiers so
 **encode** can be used to enter data directly into a particular
-representation such as [`**kern`](representations/kern.rep.html),
-[`**fret`](representations/fret.rep.html),
-[`**solfg`](representations/solfg.rep.html), etc. Since the mapping of
+representation such as [`**kern`](/rep/kern),
+[`**fret`](/rep/fret),
+[`**solfg`](/rep/solfg), etc. Since the mapping of
 MIDI events to Humdrum data tokens is arbitrary, users can enter data
 using a representation design by the user.
 
@@ -102,7 +102,7 @@ Such mappings can be made for each individual MIDI key. In addition, the
 user may define mappings for *key velocity*. For example, the following
 instruction in the configuration file will map any key-velocities
 between 90 and 127 MIDI units to the apostrophe character (the
-[`**kern`](representations/kern.rep.html) signifier for a staccato
+[`**kern`](/rep/kern) signifier for a staccato
 note):
 
 > `VEL 90 127 '`

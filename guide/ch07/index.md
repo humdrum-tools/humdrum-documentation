@@ -26,7 +26,7 @@ input tools are discussed in [Chapter 30.](/guide/ch30)
 The *\*\*MIDI* Representation
 -----------------------------
 
-Humdrum provides a [`**MIDI`](representations/MIDI.rep.html)
+Humdrum provides a [`**MIDI`](/rep/MIDI)
 representation that closely parallels the commercial MIDI specification
 but conforms to the Humdrum data format. This representation provides an
 intermediate format; using Humdrum commands such as
@@ -47,7 +47,7 @@ pertinent signifiers such as pitch spelling (e.g., F-sharp versus
 G-flat), stem directions, ties, slurs, phrasing, etc. In addition, MIDI
 does not represent rests.
 
-A simple [`**MIDI`](representations/MIDI.rep.html) example is given
+A simple [`**MIDI`](/rep/MIDI) example is given
 below. It consists just a single note (middle C):
 
 >   --------------------------
@@ -85,9 +85,9 @@ notes. In the case of key-off events, the key-velocity component
 represents the key-up velocity.
 
 Unlike most other Humdrum representations, the
-[`**MIDI`](representations/MIDI.rep.html) format requires two data
+[`**MIDI`](/rep/MIDI) format requires two data
 tokens for each note. The following example shows a three note C-major
-triad. The [`**kern`](representations/kern.rep.html) data is shown in
+triad. The [`**kern`](/rep/kern) data is shown in
 the left spine with the corresponding `**MIDI` data in the right spine.
 Notice that each data token consists of three subtokens, one for each
 note:
@@ -162,7 +162,7 @@ beginning of Darius Milhaud\'s *Touches Blanches*.\
 >   `*-`                 \*-           \*-                        \*-
 >   -------------------- ---------- -- -------------------- -- -- --------------------
 >
-The [`**MIDI`](representations/MIDI.rep.html) representation always
+The [`**MIDI`](/rep/MIDI) representation always
 expects a tandem interpretation indicating the MIDI channel assignment.
 In Example 7.1 both parts have been assigned to channel 1. Once again,
 simultaneous key-on and key-off events often appear as double-stops.
@@ -175,7 +175,7 @@ The *midi* Command
 ------------------
 
 The [**midi**](/tool/midi) command converts Humdrum
-[`**kern`](representations/kern.rep.html) data into Humdrum `**MIDI`
+[`**kern`](/rep/kern) data into Humdrum `**MIDI`
 data. By way of example, the above `**MIDI` data can be generated as
 follows:
 
@@ -212,7 +212,7 @@ invoked, **perform** provides a simple interactive environment suitable
 for proof-listening and other audition tasks.
 
 The **perform** command accepts any Humdrum input; however, only
-[`**MIDI`](representations/MIDI.rep.html) spines present in the input
+[`**MIDI`](/rep/MIDI) spines present in the input
 stream are performed. Non-MIDI spines are simply ignored and do not
 affect the sound output. The **perform** command generates serial MIDI
 data which are sent directly to a MIDI controller card or on-board
@@ -293,7 +293,7 @@ Since, by default, the **perform** command echoes all global comments on
 the screen during playback, this means that the Humdrum data will also
 appear on the screen as it is being played. In addition, the commented
 data records are accessible to the forward- and backward-search
-commands. For example, in the [`**kern`](representations/kern.rep.html)
+commands. For example, in the [`**kern`](/rep/kern)
 representation, pauses are indicated by a semicolon; hence the user
 might search for the next pause symbol by typing:
 
@@ -403,8 +403,8 @@ the data can still be processed with other Humdrum tools (as we will see
 in later chapters).
 
 The [**midi**](/tool/midi) command can translate
-[`**kern`](representations/kern.rep.html) data to
-[`**MIDI`](representations/MIDI.rep.html) and the
+[`**kern`](/rep/kern) data to
+[`**MIDI`](/rep/MIDI) and the
 [**perform**](/tool/perform) and [**smf**](/tool/smf)
 commands can be used to generate true MIDI data for listening. The
 **perform** command provides a simple interactive command-line sequencer

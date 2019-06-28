@@ -245,7 +245,7 @@ The program is invoked as follows:
 > `leader `
 
 The input is assumed to contain two voices, each in a separate
-[`**kern`](representations/kern.rep.html) spine. The nominally lower
+[`**kern`](/rep/kern) spine. The nominally lower
 voice should be in the first spine. For music containing more than two
 voices, the Humdrum **extract** command should be used to select
 successive pairs of voices for processing by **leader**.
@@ -339,7 +339,7 @@ permits compound strings, such as the use of the OR bar (\|):
 
 Implementing this is simple. We first translate our pitch- related data
 to the melodic interval format \--
-[`**mint`](representations/mint.rep.html). This can be done using the
+[`**mint`](/rep/mint). This can be done using the
 Humdrum **mint** command. For example, consider the following melodic
 fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:\
 \
@@ -441,7 +441,7 @@ we\'ll use **patt**.
 First, we need to reformat our input so the data represent harmonic
 intervals rather than pitches. The Humdrum **hint** command will change
 most pitch representations to the harmonic interval representation \--
-[`**hint`](representations/hint.rep.html). Consider, for example, the
+[`**hint`](/rep/hint). Consider, for example, the
 following input:\
 \
 
@@ -668,7 +668,7 @@ spines are present in the input to be searched.
 In order to do this, we can use the Humdrum **extract** command as a
 filter, and identify the types of interpretations we want to pass. In
 the following modification to our pipe, the **extract** command has been
-used to ensure that only [`**deg`](representations/deg.rep.html) spines
+used to ensure that only [`**deg`](/rep/deg) spines
 are present:
 
 > `deg  | extract -i '**deg' | egrep -n '^7.*7|^[^!*].*7.*7'`
@@ -761,7 +761,7 @@ so will facilitate comparison.
 The Humdrum **semits** command translates pitches to semitone distances
 where middle C is denoted as zero. For example, where two voices both
 play B3 at the same time, both the parts will have a
-[`**semits`](representations/semits.rep.html) value of minus one (-1).
+[`**semits`](/rep/semits) value of minus one (-1).
 
 Like the **deg** command, the **semits** command provides a **\"-x**
 option that eliminates from the output stream any characters that don\'t
@@ -827,7 +827,7 @@ the nominally lower voice is truly lower.
 
 First we need to translate the pitch representation to some sort of
 numerical form. We have several options. We could translate the pitches
-to frequency ([`**freq`](representations/freq.rep.html)), or we could
+to frequency ([`**freq`](/rep/freq)), or we could
 translate them to semitones (`**semits`), or we could translate them to
 cents (\*\*cents). Let\'s use `**semits`. Once again, in this
 representation, middle-C is represented by the number zero, and all

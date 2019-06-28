@@ -43,7 +43,7 @@ chord. The barlines provide convenient ways of parsing the harmonies.
 
 > ![](guide.figures/guide35.4.gif)
 
-A [`**kern`](representations/kern.rep.html) encoding of the passage is
+A [`**kern`](/rep/kern) encoding of the passage is
 given below:
 
 >   ---------------------------
@@ -102,7 +102,7 @@ We can collapse the arpeggiated chords using the **context** command:
 > `context -b = -o = copland`
 
 Identify the chords is facilitated by using the pitch-class
-([`**pc`](representations/pc.rep.html)) representation described in
+([`**pc`](/rep/pc)) representation described in
 [Chapter 34.](/guide/ch34)
 
 > `context -b = -o = copland | pc -a | rid -d`

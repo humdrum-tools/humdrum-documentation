@@ -41,7 +41,7 @@ International Standards Organization (ISO) format consisting of a letter
 number. According to the ISO representation middle C is designated C4.
 Octave numbers change between B and C so that the B a semitone below C4
 is B3. Humdrum provides a predefined ISO-like representation called
-[`**pitch`](representations/pitch.rep.html) illustrated below. Here we
+[`**pitch`](/rep/pitch) illustrated below. Here we
 see an ascending chromatic scale in the left spine, with a concurrent
 descending chromatic scale in the right spine:
 
@@ -112,7 +112,7 @@ using the following command:
 
 > `pitch filename`
 
-Notice that the [`**pitch`](representations/pitch.rep.html)
+Notice that the [`**pitch`](/rep/pitch)
 representation uses the same system for representing barlines as
 `**kern`. In fact, all of the pitch-related representations described in
 this chapter make use of the so-called \`common system\' for
@@ -124,7 +124,7 @@ German Tonhöhe
 --------------
 
 The German system of pitch designations (*Tonhöhe*) is available in the
-Humdrum [`**Tonh`](representations/Tonh.rep.html) representation. The
+Humdrum [`**Tonh`](/rep/Tonh) representation. The
 German system is similar to the ISO system with the following
 exceptions. The pitch letter names include A,B,C,D,E,F,G,H and S. Sharps
 and flats are indicated by suffixes: \``is`\' for sharps and \``es`\'
@@ -141,9 +141,9 @@ the traditional German system for representing pitches remains important
 in historically related studies, such as searching for \`B-A-C-H\' and
 the pitch signature used by Dmitri Shostakovich (\`D-S-C-H\').
 
-Data in the [`**pitch`](representations/pitch.rep.html) or
-[`**kern`](representations/kern.rep.html) representations can be
-translated to [`**Tonh`](representations/Tonh.rep.html) via the
+Data in the [`**pitch`](/rep/pitch) or
+[`**kern`](/rep/kern) representations can be
+translated to [`**Tonh`](/rep/Tonh) via the
 [**tonh**](/tool/tonh) command:
 
 > `tonh filename`
@@ -156,7 +156,7 @@ French Solfège
 The common French system for pitch naming uses a so-called \"fixed-do\"
 method of diatonic pitch designations: *do, ré, mi, fa, sol, la* and
 *si* (rather than *ti*), where *do* corresponds to the English/German
-\`C\'. In the Humdrum [`**solfg`](representations/solfg.rep.html)
+\`C\'. In the Humdrum [`**solfg`](/rep/solfg)
 representation, solfège pitch names are used. Flats (*bémol*) and sharps
 (*dièse*) are abbreviated *b* and *d* respectively. When accidentals are
 encoded, the tilde character (`~`) is encoded following the solfège
@@ -173,7 +173,7 @@ Frequency
 ---------
 
 For acoustic-related applications it may be helpful to translate to
-frequency. The Humdrum [`**freq`](representations/freq.rep.html)
+frequency. The Humdrum [`**freq`](/rep/freq)
 representation can be used to represent frequencies for either pure or
 complex tones. Frequencies are encoded in *hertz* (abbreviated *Hz*)
 where 440 Hz means 440 cycles per second. In the `**freq` representation
@@ -185,7 +185,7 @@ point).
 Cents
 -----
 
-The [`**cents`](representations/cents.rep.html) representation provides
+The [`**cents`](/rep/cents) representation provides
 a means for representing pitches in absolute units with respect to
 middle C (= 0 cents). In the `**cents` representation, all pitches are
 represented with respect to this reference. Thus C\#4 is represented by
@@ -199,7 +199,7 @@ Semitones
 ---------
 
 A related pitch representation is
-[`**semits`](representations/semits.rep.html). In this case, all pitches
+[`**semits`](/rep/semits). In this case, all pitches
 are represented in numerical semitones with respect to middle C (= 0
 semits). An ascending chromatic scale beginning on C4 would be
 represented by the ascending integers from 0 to 12. Pitches below middle
@@ -212,7 +212,7 @@ MIDI
 ----
 
 Another way of representing pitch is provided by the Humdrum
-[`**MIDI`](representations/MIDI.rep.html) representation. This
+[`**MIDI`](/rep/MIDI) representation. This
 representation closely mimics the commercial MIDI specification. The
 `**MIDI` representation allows MIDI inputs and outputs to be exported or
 imported by various Humdrum tools. A complete description of `**MIDI`
@@ -225,8 +225,8 @@ Scale Degree \-- *\*\*solfa* and *\*\*deg*
 
 Two different Humdrum representations are provided to describe
 scale-degree related information:
-[`**deg`](representations/deg.rep.html) and
-[`**solfa`](representations/solfa.rep.html). Both of these
+[`**deg`](/rep/deg) and
+[`**solfa`](/rep/solfa). Both of these
 representations emphasize slightly different aspects of scale-degree
 information. Both representations assume some established or pre-defined
 tonal center or tonic pitch.
@@ -250,15 +250,15 @@ following table:
 >
 > *Summary of **solfa** Signifiers*
 
-The [`**deg`](representations/deg.rep.html) representation identifies
+The [`**deg`](/rep/deg) representation identifies
 scale-degrees by the numbers 1 (tonic) to 7 (leading-tone). These values
 may be chromatically altered by raising (+) or lowering (-). The
 *amount* of chromatic alteration is not indicated; for example, both a
 raised supertonic and a doubly-raised supertonic are represented as
 `2+`. A lowered dominant is represented as `5-`.
 
-The [`**solfa`](representations/solfa.rep.html) representation differs
-from [`**deg`](representations/deg.rep.html) in that pitches are
+The [`**solfa`](/rep/solfa) representation differs
+from [`**deg`](/rep/deg) in that pitches are
 represented without regard to major or minor *mode.* For example, in the
 key of C major, `**deg` will characterize A-flat as a lowered sixth
 scale degree (`6-`), whereas the same pitch will be a normal (unaltered)
@@ -273,8 +273,8 @@ by `di` in the `**solfa` representation.
 In the case of the minor mode, `**deg` characterizes scale degrees with
 respect to the *harmonic minor* scale only.
 
-Another difference between [`**solfa`](representations/solfa.rep.html)
-and [`**deg`](representations/deg.rep.html) is that the `**deg`
+Another difference between [`**solfa`](/rep/solfa)
+and [`**deg`](/rep/deg) is that the `**deg`
 representation provides a way for encoding *melodic approach.* The caret
 (`^`) denotes an ascending melodic approach to the current note, whereas
 the lower-case letter `v` denotes a descending melodic approach.
@@ -282,7 +282,7 @@ Repeated pitches carry no melodic approach signifier.
 
 Some of the differences between the `**solfa` and `**deg`
 representations are illustrated in Example 4.1. (The corresponding
-[`**kern`](representations/kern.rep.html) representation is given in the
+[`**kern`](/rep/kern) representation is given in the
 first spine.) Notice that `**solfa` does not encode any octave
 information. The `**deg` representation does not encode the octave of
 the starting pitch, but it does indicate contour information using the
@@ -321,35 +321,35 @@ Pitch Translations
 Humdrum provides a number of commands for translating between the
 various pitch-related representations described above. Typically, the
 command name is the same as the name of the output representation. For
-example, translating to the [`**solfg`](representations/solfg.rep.html)
+example, translating to the [`**solfg`](/rep/solfg)
 representation can be accomplished with:
 
 > `solfg inputfile > outputfile`
 
 <a name ="German_pitch_translation"></a>
 
-Translating to the German [`**Tonh`](representations/Tonh.rep.html)
+Translating to the German [`**Tonh`](/rep/Tonh)
 representation:
 
 > `tonh inputfile > outputfile`
 
-Translating to ISO [`**pitch`](representations/pitch.rep.html):
+Translating to ISO [`**pitch`](/rep/pitch):
 
 > `pitch inputfile > outputfile`
 
 <a name ="Cents_Translation"></a>
 
 Similarly, the [**freq**](/tool/freq) command translates
-pitch-related inputs to the [`**freq`](representations/freq.rep.html)
+pitch-related inputs to the [`**freq`](/rep/freq)
 representation, the [**cents**](/tool/cents) command translates
-appropriate inputs to the [`**cents`](representations/cents.rep.html)
+appropriate inputs to the [`**cents`](/rep/cents)
 representation, and so on.
 
 <a name ="Translate_to_MIDI"></a>
 
 In a few cases, the command names are slightly modified. All Humdrum
 command names employ lower-case letters only, so
-[`**MIDI`](representations/MIDI.rep.html) output is generated by the
+[`**MIDI`](/rep/MIDI) output is generated by the
 [**midi**](/tool/midi) command (rather than the **MIDI**
 command), and `**Tonh` output is generated by the
 [**tonh**](/tool/tonh) command.
@@ -392,7 +392,7 @@ German use of H for B-natural.\
 >
 In Example 4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the
-[`**MIDI`](representations/MIDI.rep.html) representation uses
+[`**MIDI`](/rep/MIDI) representation uses
 key-numbers to represent pitch: key-on events are indicated by positive
 integers (between two slashes) and key-off events are indicated by
 negative integers. More detail concerning `**MIDI` is given in [Chapter
@@ -429,7 +429,7 @@ directly from one to another. Table 4.1 shows the possible translations
 supported by Humdrum Release 2.0 commands. The input representations are
 listed from right to left. Under each column, those commands that will
 translate *from* the given format are identified. For example, the
-[`**cents`](representations/cents.rep.html) representation can be
+[`**cents`](/rep/cents) representation can be
 translated to `**freq`, `**kern`, `**pitch`, `**semits`, `**solfg`, and
 `**tonh`. Notice that `**deg` data cannot be translated to any other
 format since `**deg` representations do not encode absolute pitch
@@ -623,8 +623,8 @@ comparing the resulting pattern count with the number of notes
 identified by [**census**.](/tool/census)
 
 Recall that one of the differences between the
-[`**solfa`](representations/solfa.rep.html) and
-[`**deg`](representations/deg.rep.html) representations is that the
+[`**solfa`](/rep/solfa) and
+[`**deg`](/rep/deg) representations is that the
 `**deg` output contains an indication of the direction of melodic
 approach. The caret (**\^**) indicates approach from below, whereas the
 lower-case **v** indicates approach from above. Suppose we wanted to
@@ -692,8 +692,8 @@ total number of notes.
 [A variation on this approach would entail translating to a
 representation that does not distinguish enharmonic pitches. For
 example, translating our melody to]{#Standardize_Enharmonic_Pitches}
-[`**semits`](representations/semits.rep.html) and then back to
-[`**kern`](representations/kern.rep.html) will standarize all of the
+[`**semits`](/rep/semits) and then back to
+[`**kern`](/rep/kern) will standarize all of the
 enharmonic spellings. If our melody contains a G-sharp that undergoes an
 enharmonic shift to A-flat, then the pitches will be deemed identical.
 The following command carries out the same task as above, but ignores

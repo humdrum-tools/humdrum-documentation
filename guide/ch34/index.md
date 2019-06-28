@@ -34,9 +34,9 @@ Pitch-Class Representation
 In set theoretic applications it is common to use pitch-class
 representations. The [**pc**](/tool/pc) command can be used to
 transform pitch-related representations (such as
-[`**pitch`](representations/pitch.rep.html),
-[`**freq`](representations/freq.rep.html) and
-[`**kern`](representations/kern.rep.html)) to a conventional pitch-class
+[`**pitch`](/rep/pitch),
+[`**freq`](/rep/freq) and
+[`**kern`](/rep/kern)) to a conventional pitch-class
 notation where pitch-class C is represented by the value zero. With the
 **-a** option, **pc** will generate outputs where the pc values \`10\'
 and \`11\' are rendered by the alphabetic characters \`A\' and \`B\'
@@ -64,11 +64,11 @@ Figure 34.1. Examples of PC set forms.
 > ![](guide.figures/guide34.1.gif)
 
 The [**pcset**](/tool/pcset) command identifies pitch-class sets
-from [`**pc`](representations/pc.rep.html) or
-[`**semits`](representations/semits.rep.html) input. Illustrated below
-are the corresponding [`**kern`](representations/kern.rep.html),
-[`**pc`](representations/pc.rep.html) and
-[`**pcset`](representations/pcset.rep.html) representations for Example
+from [`**pc`](/rep/pc) or
+[`**semits`](/rep/semits) input. Illustrated below
+are the corresponding [`**kern`](/rep/kern),
+[`**pc`](/rep/pc) and
+[`**pcset`](/rep/pcset) representations for Example
 34.1.
 
 >   ------------------- -- ------------- -- -----------
@@ -104,7 +104,7 @@ fill-out the null tokens:
 <a name ="PC_sets_beginning_slurs"></a>
 
 If we wanted, we could assemble the resulting
-[`**pcset`](representations/pcset.rep.html) spine to the original input.
+[`**pcset`](/rep/pcset) spine to the original input.
 This would allow us to search for particular patterns that are
 coordinated with certain pitch-class sets. For example, we might be
 interested in comparing the pitch-class sets that coincide with the
@@ -172,7 +172,7 @@ Next we generate the normal set forms:
 
 > `pc AllBerg | ditto -s ^= | nf > AllBerg.nf`
 
-Assemble the [`**nf`](representations/nf.rep.html) spine with the
+Assemble the [`**nf`](/rep/nf) spine with the
 original scores:
 
 > `assemble AllBerg AllBerg.nf > AllBerg.all`
@@ -199,11 +199,11 @@ Interval vectors identify the frequency of occurrence of various
 interval-classes for a given pitch-class set. The
 [**iv**](/tool/iv) command generates the six-element interval
 vector for any of several types of inputs \-- including semitones
-([`**semits`](representations/semits.rep.html)), pitch-class
-([`**pc`](representations/pc.rep.html)), normal form
-([`**nf`](representations/nf.rep.html)), prime form
-([`**pf`](representations/pf.rep.html)), and pitch-class set
-([`**pcset`](representations/pcset.rep.html)). The following example
+([`**semits`](/rep/semits)), pitch-class
+([`**pc`](/rep/pc)), normal form
+([`**nf`](/rep/nf)), prime form
+([`**pf`](/rep/pf)), and pitch-class set
+([`**pcset`](/rep/pcset)). The following example
 shows several different pitch-class sets, their corresponding
 pitch-class sets and (right-most spine), the associated interval vector.
 
@@ -284,7 +284,7 @@ When a work consists of more than one instrument or part, useful
 segmentations can be made by extracting each instrument individually,
 using [**context**](/tool/context) to generate
 musically-pertinent sets, and then assembling all of the
-[`**pcset`](representations/pcset.rep.html) spines into a single file.
+[`**pcset`](/rep/pcset) spines into a single file.
 
 <a name ="The_reihe_Command"></a>
 
