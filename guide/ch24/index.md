@@ -29,15 +29,11 @@ A shell program is simply a script consisting of one or more shell
 commands. Suppose we had a complex procedure consisting of a number of
 commands and pipelines:
 
-> `extract -i '**Ursatz' inputfile | humsed '/X/d' \ `
->
-> > \| context -o Y -b Z \> Ursatz
->
-> `extract -i '**Urlinie' inputfile | humsed '/X/d' \ `
->
-> > \| context -o Y -b Z \> Urlinie
->
-> assemble Ursatz Urlinie \| rid -GLId \| graph
+`extract -i '**Ursatz' inputfile | humsed '/X/d' \ `
+> \| context -o Y -b Z \> Ursatz
+`extract -i '**Urlinie' inputfile | humsed '/X/d' \ `
+> \| context -o Y -b Z \> Urlinie
+assemble Ursatz Urlinie \| rid -GLId \| graph
 
 In the above hypothetical script, we have processed an input file called
 `inputfile`. It may be that this is a procedure we would like to apply
@@ -48,27 +44,26 @@ a file. Let\'s assume that we put the above commands in a file called
 assign *execute permissions* to the file. We can do this by invoking the
 UNIX **chmod** command.
 
-> `chmod +x Schenker`
+`chmod +x Schenker`
 
 The **+x** option causes **chmod** to add execute permissions to the
 file `Schenker`. Using **chmod** we can change modes related to
 *executing* a file, *reading* a file, and *writing* to a file. Possible
 mode changes include the following:
 
->   ---- -------------------------
->   +x   add execute permission
->   -x   deny execute permission
->   +r   add read permission
->   -r   deny read permission
->   +w   add write permission
->   -w   deny write permission
->   ---- -------------------------
->
+  ---- -------------------------
+  +x   add execute permission
+  -x   deny execute permission
+  +r   add read permission
+  -r   deny read permission
+  +w   add write permission
+  -w   deny write permission
+  ---- -------------------------
 Having added execute permissions to the file, we can now execute the
 shell script or program. This is done simply by typing the name of the
 file; in effect, the filename becomes a new command:
 
-> `Schenker`
+`Schenker`
 
 Each time we type this command, our script will be executed anew. Notice
 that in our script, the final output has not been sent to a file. As a
@@ -78,7 +73,7 @@ in the script since this is often something the user would like to
 specify. When typing our new command, we can use file-redirection to
 place the output in a user-specified file:
 
-> `Schenker > outputfile`
+`Schenker > outputfile`
 
 As currently written, our program can be applied only to an input file
 whose name is literally `inputfile`. If we wanted to, we could edit our
@@ -88,7 +83,7 @@ input filename on the command line \-- as we can do for other commands.
 For example, it would be convenient to be able to type commands such as
 the following:
 
-> `Schenker opus118 > opus118.out`
+`Schenker opus118 > opus118.out`
 
 In order to allow such a possibility, we can use a predefined feature of
 the shell. Whenever the shell receives a command, each item of
@@ -104,15 +99,11 @@ These shell variables can be accessed within the shell script itself. We
 need to revise the script so that each occurrence of the input file is
 replaced by the variable \$1:
 
-> `extract -i '**Ursatz' $1 | humsed '/X/d' \ `
->
-> > \| context -o Y -b Z \> Ursatz
->
-> `extract -i '**Urlinie' $1 | humsed '/X/d' \ `
->
-> > \| context -o Y -b Z \> Urlinie
->
-> assemble Ursatz Urlinie \| rid -GLId \| graph
+`extract -i '**Ursatz' $1 | humsed '/X/d' \ `
+> \| context -o Y -b Z \> Ursatz
+`extract -i '**Urlinie' $1 | humsed '/X/d' \ `
+> \| context -o Y -b Z \> Urlinie
+assemble Ursatz Urlinie \| rid -GLId \| graph
 
 This change means that our **Schenker** command can be applied to any
 user-specified input file \-- simply by typing the filename in the
@@ -131,23 +122,21 @@ tandem interpretation specifying the key.
 Let\'s begin by using **grep** to search for a key tandem
 interpretation. An appropriate **grep** command would be:
 
-> `grep '^\*[A-Ga-g][#-]*:' $1`
+`grep '^\*[A-Ga-g][#-]*:' $1`
 
 Recall that we can assign the output of any command to a shell variable
 by placing the command within back-quotes or greves, i.e. \`\...\`.
 Let\'s assign the key interpretation to the variable KEY:
 
-> `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1` ``
+`` KEY=`grep '^\*[A-Ga-g][#-]*:' $1` ``
 
 If no key indicator is found by **grep**, then the variable KEY will be
 empty. We can test for this condition using the shell **if** statement.
 
-> `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
->
-> > echo \"Sorry, this input file has no key.\"\
-> > exit
->
-> fi
+`` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
+> echo \"Sorry, this input file has no key.\"\
+> exit
+fi
 
 Notice that we use the dollars sign prior to the variable to mean *the
 contents of variable KEY*. The double quotation marks allow a string
@@ -164,23 +153,15 @@ Of course, if there is a key designation, then it is appropriate to
 execute the rest of our **Schenker** script. The complete script would
 be as follows:
 
-> `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
->
-> > echo \"Sorry, this input file has no key.\" exit
->
-> else
->
-> > `extract -i '**Ursatz' $1 | humsed '/X/d' \ `
-> >
-> > > \| context -o Y -b Z \> Ursatz
-> >
-> > `extract -i '**Urlinie' $1 | humsed '/X/d' \ `
-> >
-> > > \| context -o Y -b Z \> Urlinie
-> >
-> > assemble Ursatz Urlinie \| rid -GLId \| graph
->
-> fi
+`` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
+> echo \"Sorry, this input file has no key.\" exit
+else
+> `extract -i '**Ursatz' $1 | humsed '/X/d' \ `
+> > \| context -o Y -b Z \> Ursatz
+> `extract -i '**Urlinie' $1 | humsed '/X/d' \ `
+> > \| context -o Y -b Z \> Urlinie
+> assemble Ursatz Urlinie \| rid -GLId \| graph
+fi
 
 Notice the addition of the **else** statement. The **else** statement
 delineates the block of commands to be executed whenever the **if**
@@ -209,7 +190,7 @@ but we\'d prefer not to type the command for each score. The **for**
 statement provides a convenient way to do this. The following commands
 might be typed directly at the shell:
 
-> `for J in czech*.krn  > do  > census -k $J | grep 'Number of notes:'  > done | sort -n`
+`for J in czech*.krn  > do  > census -k $J | grep 'Number of notes:'  > done | sort -n`
 
 The pattern `czech*.krn` will be expanded to all of the files in the
 current directory that it matches. The variable **J** will take on each
@@ -222,8 +203,8 @@ do-done block will be repeated. This will continue until the value of
 
 The output might appear as follows:
 
-> `Number of notes:           31  Number of notes:           32  Number of notes:           32  Number of notes:           34  Number of notes:           35  Number of notes:           39  Number of notes:           39  Number of notes:           40  Number of notes:           48  Number of notes:           48  Number of notes:           55  Number of notes:           78`\
-> etc.
+`Number of notes:           31  Number of notes:           32  Number of notes:           32  Number of notes:           34  Number of notes:           35  Number of notes:           39  Number of notes:           39  Number of notes:           40  Number of notes:           48  Number of notes:           48  Number of notes:           55  Number of notes:           78`\
+etc.
 
 Incidentally, the output from a **for** construction such as above can
 be piped to further commands, so we might identify the maximum number of
@@ -242,7 +223,7 @@ file checking, and formatting of the output.
 
 The program is invoked as follows:
 
-> `leader `
+`leader `
 
 The input is assumed to contain two voices, each in a separate
 [`**kern`](/rep/kern) spine. The nominally lower
@@ -303,32 +284,32 @@ features of any Humdrum input. With the **-k** option, **census**
 provides a summary of a further ten features pertaining to `**kern`
 format inputs. This includes the highest and lowest notes present.
 
-> `census -k `
+`census -k `
 
 Since we are interested in the highest and lowest notes for each
 individual part (rather than for the whole piece), we should **extract**
 each part before processing it with **census.**
 
-> `extract -i '*soprano'   > soprano.part`\
-> `census -k soprano.part`
+`extract -i '*soprano'   > soprano.part`\
+`census -k soprano.part`
 
 On UNIX, a set of commands that sequentially process a given input can
 be joined together as a \"pipeline\". A pipeline feeds the output of one
 process to the input of another process. This means that we can simplify
 the above sequence of commands into a single pipeline:
 
-> `extract -i '*soprano'  | census -k`
+`extract -i '*soprano'  | census -k`
 
 We could then repeat the pipeline for each voice present:
 
-> `extract -i '*alto'     | census -k  extract -i '*tenor'    | census -k  extract -i '*bass'     | census -k`
+`extract -i '*alto'     | census -k  extract -i '*tenor'    | census -k  extract -i '*bass'     | census -k`
 
 If we wanted to get a little fancier, we could filter the output so that
 only the highest and lowest pitch information is output. The UNIX
 **grep** command will let us define a string for searching; **egrep**
 permits compound strings, such as the use of the OR bar (\|):
 
-> `extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'`
+`extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'`
 
 <a name ="Augmented-Diminished_Melodic_Intervals"></a>
 
@@ -344,43 +325,41 @@ Humdrum **mint** command. For example, consider the following melodic
 fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:\
 \
 
->   ----------
->   `**kern`
->   8r
->   8f\#
->   8b
->   16.cc\#
->   32dd
->   8a\#
->   16.b
->   32cc\#
->   8dd
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  8r
+  8f\#
+  8b
+  16.cc\#
+  32dd
+  8a\#
+  16.b
+  32cc\#
+  8dd
+  \*-
+  ----------
 Given this input, the **mint** command will produce the following
 output. Plus signs indicate ascending intervals, while minus signs
 indicate descending intervals; \'P\' means perfect, \'M\' means major,
 \'m\' means minor, \'A\' means augmented, and \'d\' means diminished:\
 \
 
->   ----------
->   `**mint`
->   \[f\#\]
->   +P4
->   +M2
->   +m2
->   -d4
->   +m2
->   +M2
->   +m2
->   \*-
->   ----------
->
+  ----------
+  `**mint`
+  \[f\#\]
+  +P4
+  +M2
+  +m2
+  -d4
+  +m2
+  +M2
+  +m2
+  \*-
+  ----------
 Searching for diminished or augmented intervals is as simple as using
 the Unix **grep** command, with the appropriate regular expression:
 
-> `grep -n '[Ad]' `
+`grep -n '[Ad]' `
 
 The **-n** option will cause **grep** to prepend the line number of any
 matching patterns, so we can refer back to the original input file.
@@ -388,7 +367,7 @@ matching patterns, so we can refer back to the original input file.
 In order to avoid the letters \`A\' or \`d\' found in comments or
 interpretations, we might consider using the Humdrum **rid** command:
 
-> `rid -GLI  | grep -n '[Ad]'`
+`rid -GLI  | grep -n '[Ad]'`
 
 However, this will cause the line numbers output by **grep** to be
 wrong. The line numbers will correspond to the input file with the
@@ -399,7 +378,7 @@ more circumspect regular expression to eliminate comments and
 interpretations within **grep**. **egrep** allows us to define more
 complex regular expressions:
 
-> `egrep '^[^!*].*[Ad]'`
+`egrep '^[^!*].*[Ad]'`
 
 The expression \`\^\[\^!\*\]\' means \"not an exclamation mark or
 asterisk at the beginning of a line.\" The expression \`.\*\[Ad\]\'
@@ -419,7 +398,7 @@ Finally, putting all of the elements together in a Unix pipeline, we get
 the following command for identifying augmented or diminished melodic
 intervals:
 
-> `extract -i 'alto'  | mint | egrep -n '^[^!*].*[Ad]'`
+`extract -i 'alto'  | mint | egrep -n '^[^!*].*[Ad]'`
 
 If there is no output, then there are no augmented or diminished
 intervals present.
@@ -445,33 +424,31 @@ most pitch representations to the harmonic interval representation \--
 following input:\
 \
 
->   -------------------
->   `**kern   **kern`
->   =1 =1
->   4c 4e
->   4G 4d
->   =2 =2
->   2F 2c
->   \*- \*-
->   -------------------
->
+  -------------------
+  `**kern   **kern`
+  =1 =1
+  4c 4e
+  4G 4d
+  =2 =2
+  2F 2c
+  \*- \*-
+  -------------------
 Given the following command:
 
-> `hint `
+`hint `
 
 The following output will be produced:\
 \
 
->   ----------
->   `**hint`
->   =1
->   M3
->   P5
->   =2
->   P5
->   \*-
->   ----------
->
+  ----------
+  `**hint`
+  =1
+  M3
+  P5
+  =2
+  P5
+  \*-
+  ----------
 (Notice that, in this case, the consecutive fifths are separated by a
 barline.)
 
@@ -482,11 +459,10 @@ consecutive perfect fifth tokens. We might store the following pattern
 in the file \"template\":\
 \
 
->   ------
->   `P5`
->   P5
->   ------
->
+  ------
+  `P5`
+  P5
+  ------
 (Note that if we were looking for consecutive \`fifths\' that need not
 necessarily be \`perfect,\' we could simply eliminate the letter \"P\"
 in each interval given in the template.)
@@ -506,7 +482,7 @@ instances of the pattern it finds in the source document.
 
 The appropriate pipeline is:
 
-> `hint  | patt -f template -s =`
+`hint  | patt -f template -s =`
 
 There are a few refinements we ought to add to this process. Currently,
 we are searching for parallel perfect fifths only. The consecutive
@@ -519,18 +495,17 @@ represented by their non-compound equivalents. For example, major tenths
 and major seventheenths, etc. will all be represented as \"M3\", and so
 on. Hence we would modify our pipeline:
 
-> `hint -c  | patt -f template -s =`
+`hint -c  | patt -f template -s =`
 
 (Note that an alternative way of handling the compound-intervals
 question would be to define slightly more complex regular expressions in
 our template file, e.g.\
 \
 
->   --------------
->   `P5|P12|P19`
->   P5\|P12\|P19
->   --------------
->
+  --------------
+  `P5|P12|P19`
+  P5\|P12\|P19
+  --------------
 In regular expressions the vertical bar (\|) denotes the logical \`OR\'
 operation. So the above pattern says \"a perfect fifth OR a perfect
 twelfth OR a perfect nineteenth followed by a \...\")
@@ -545,7 +520,7 @@ The simplest (but more tedious) approach, is simply to execute our
 command pipeline for each pairing of voices. For example, in a
 traditional four-part harmonization:
 
-> `extract -i '*soprano,*alto'   | hint -c | patt -f template -s =  extract -i '*soprano,*tenor'  | hint -c | patt -f template -s =  extract -i '*soprano,*bass'   | hint -c | patt -f template -s =  extract -i '*alto,*tenor'     | hint -c | patt -f template -s =  extract -i '*alto,*bass'      | hint -c | patt -f template -s =  extract -i '*tenor,*bass'     | hint -c | patt -f template -s =`
+`extract -i '*soprano,*alto'   | hint -c | patt -f template -s =  extract -i '*soprano,*tenor'  | hint -c | patt -f template -s =  extract -i '*soprano,*bass'   | hint -c | patt -f template -s =  extract -i '*alto,*tenor'     | hint -c | patt -f template -s =  extract -i '*alto,*bass'      | hint -c | patt -f template -s =  extract -i '*tenor,*bass'     | hint -c | patt -f template -s =`
 
 (There are shorter ways of doing these permutations that involves a
 little shell programming, but we\'ll leave that for another time.)
@@ -568,53 +543,50 @@ G major is indicated through the presence of the following
 interpretation:\
 \
 
->   -------
->   `*G:`
->   -------
->
+  -------
+  `*G:`
+  -------
 Minor keys are indicated using lower-case characters. For example, the
 following passage is in B minor:\
 \
 
->   ----------
->   `**kern`
->   \*b:
->   8r
->   8f\#
->   8b
->   16.cc\#
->   32dd
->   8a\#
->   16.b
->   32cc\#
->   8dd
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  \*b:
+  8r
+  8f\#
+  8b
+  16.cc\#
+  32dd
+  8a\#
+  16.b
+  32cc\#
+  8dd
+  \*-
+  ----------
 The **deg** command can be used to transform this representation to
 scale degree. The passage begins on the dominant (degree \`5\'), ascends
 (\^) to the tonic (\`1\'), ascends to the supertonic (\^2), ascends to
 the median (\^3) and then descends to the leading- tone (v7), etc.:\
 \
 
->   ---------
->   `**deg`
->   \*b:
->   5
->   \^1
->   \^2
->   \^3
->   v7
->   \^1
->   \^2
->   \^3
->   \*-
->   ---------
->
+  ---------
+  `**deg`
+  \*b:
+  5
+  \^1
+  \^2
+  \^3
+  v7
+  \^1
+  \^2
+  \^3
+  \*-
+  ---------
 The following command will eliminate durations or other possible number
 representations that might conflict with scale-degree designations:
 
-> `deg `
+`deg `
 
 Having translated the representation in this way, we need to search for
 any lines which contain two instances of the number \`7\' \-- that is,
@@ -623,7 +595,7 @@ two concurrent instances of the leading-tone.
 Searching for the number \`7\' is easily done using the standard Unix
 **grep** (get regular expression) command:
 
-> `deg  | grep -n '7'`
+`deg  | grep -n '7'`
 
 This will find and output all records that contain the number 7; the
 **-n** option means that the corresponding line number will also be
@@ -633,7 +605,7 @@ However, we want to find instances where two or more 7s occur on a
 single line. For this, we can use a slightly more complex regular
 expression
 
-> `deg  | grep -n '7.*7'`
+`deg  | grep -n '7.*7'`
 
 In the construction \".\*\" the period (.) means any character, and the
 asterisk means \"zero or more instances of \...\" Hence, the regular
@@ -648,7 +620,7 @@ comment or interpretation. In order to avoid matching comments or
 interpretations, a further refinement to our regular expression is
 appropriate.
 
-> `deg  | egrep -n '^7.*7|^[^!*].*7.*7'`
+`deg  | egrep -n '^7.*7|^[^!*].*7.*7'`
 
 In this case, the regular expression says the following: \"find any
 occurrence of the number 7 at the beginning of the line followed by zero
@@ -671,7 +643,7 @@ the following modification to our pipe, the **extract** command has been
 used to ensure that only [`**deg`](/rep/deg) spines
 are present:
 
-> `deg  | extract -i '**deg' | egrep -n '^7.*7|^[^!*].*7.*7'`
+`deg  | extract -i '**deg' | egrep -n '^7.*7|^[^!*].*7.*7'`
 
 There are still some refinements that we could add to this command
 sequence, but as it stands it is guaranteed to find all doubled
@@ -679,18 +651,17 @@ leading-tones \-- provided the notes begin at the same time. Consider
 the following hypothetical passage:\
 \
 
->   --------------------
->   `**kern    **kern`
->   \*C: \*C:
->   8c 8g
->   =1 =1
->   4B 8g
->   . 16a
->   . 16b
->   4A 4cc
->   \*- \*-
->   --------------------
->
+  --------------------
+  `**kern    **kern`
+  \*C: \*C:
+  8c 8g
+  =1 =1
+  4B 8g
+  . 16a
+  . 16b
+  4A 4cc
+  \*- \*-
+  --------------------
 Given the above command sequence, no doubled leading-tones would be
 identified in this passage. However, we might wish to implement a more
 stringent criterion that would seek out any instances where the
@@ -705,40 +676,38 @@ Consider first, the output from the **deg** command for the above
 example:\
 \
 
->   -------------------
->   `**deg     **deg`
->   \*C: \*C:
->   1 5
->   =1 =1
->   v7 5
->   . \^6
->   . \^7
->   v6 \^1
->   \*- \*-
->   -------------------
->
+  -------------------
+  `**deg     **deg`
+  \*C: \*C:
+  1 5
+  =1 =1
+  v7 5
+  . \^6
+  . \^7
+  v6 \^1
+  \*- \*-
+  -------------------
 If we now invoke the **ditto** command, the modified output is:\
 \
 
->   -------------------
->   `**deg     **deg`
->   \*C: \*C:
->   1 5
->   =1 =1
->   v7 5
->   v7 \^6
->   v7 \^7
->   v6 \^1
->   \*- \*-
->   -------------------
->
+  -------------------
+  `**deg     **deg`
+  \*C: \*C:
+  1 5
+  =1 =1
+  v7 5
+  v7 \^6
+  v7 \^7
+  v6 \^1
+  \*- \*-
+  -------------------
 Notice that the two null tokens in the left-hand spine have been
 replaced by copies of the most recent data token. Now our **grep**
 command will find the two leading tones in the second last data record.
 
 In summary, the complete command pipeline would be:
 
-> `deg  | extract -i '**deg' | ditto -s = | egrep -n '^7.*7|^[^!*].*7.*7'`
+`deg  | extract -i '**deg' | ditto -s = | egrep -n '^7.*7|^[^!*].*7.*7'`
 
 This may seem somewhat complicated, but the basic structure of this
 pipeline is suitable for a very wide variety of pattern searches.
@@ -769,7 +738,7 @@ pertain to semitones. Hence the following command will eliminate
 durations or other possible numerical representations that might
 conflict with semitone designations:
 
-> `extract -i '*alto,*tenor'` ` | semits -x`
+`extract -i '*alto,*tenor'` ` | semits -x`
 
 Next we need to compare the two parts at each moment in order to
 determine whether they have the same numerical value. The Unix **awk**
@@ -783,7 +752,7 @@ current line number (record number is `` `NR' ``).
 So the following command will print the line number for any input in
 which the semitone value is the same for both the alto and tenor voices:
 
-> `extract -i '*alto,*tenor'  | semits -x | awk '{if($1==$2) print NR}'`
+`extract -i '*alto,*tenor'  | semits -x | awk '{if($1==$2) print NR}'`
 
 There is a problem with this pipeline however. The **awk** command will
 match all sorts of non-numeric inputs \-- such as where null tokens (.)
@@ -802,12 +771,12 @@ lines consisting solely of numbers, the minus sign, and tabs.
 The following **awk** script will output the line numbers for all inputs
 where the first and second spines contain identical numbers:
 
-> `awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
+`awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
 
 Adding this construction to our pipeline produces the following command
 for identifying unisons:
 
-> `extract -f 1,2  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
+`extract -f 1,2  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
 
 <a name ="Crossed_Parts"></a>
 
@@ -837,13 +806,13 @@ negative) with respect to this reference.
 We extract the two parts of interest, and then translate them to the
 semitone numerical representation:
 
-> `extract -i '*soprano,*alto'  | semits -x`
+`extract -i '*soprano,*alto'  | semits -x`
 
 Since part-crossing may occur when one voice is holding a note, we
 should use the Humdrum **ditto** command, as we did for the doubled
 leading-tone problem. Hence:
 
-> `extract -i '*alto,*tenor'  | semits -x | ditto -s =`
+`extract -i '*alto,*tenor'  | semits -x | ditto -s =`
 
 Finally, we can use the Unix **awk** command to do a little arithmetic.
 Once again, in **awk**, `` `$1' `` and `` `$2' `` refer to the first and
@@ -853,7 +822,7 @@ current record (line) number. The expression
 first input field is numerically greater than the second field for the
 current line, then print the line number\":
 
-> `extract -i '*alto,*tenor'  | semits -x | ditto -s = | awk '{if($1>$2) print NR}'`
+`extract -i '*alto,*tenor'  | semits -x | ditto -s = | awk '{if($1>$2) print NR}'`
 
 In short, if the left-most spine has a lower numerical value than the
 second spine, then tell us where that occurs.
@@ -863,15 +832,15 @@ represent a rest, we should avoid the possibility of comparing a number
 (note) with a rest. We can use a variation on the same **awk** script as
 we used when checking for unisons:
 
-> `awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
+`awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
 
 Finally, the complete pipeline for identifying crossed parts:
 
-> `extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`\
-> extract -i \'\*alto,\*tenor\' \| semits -x \| ditto -s = \| awk
-> \'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'\
-> extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
-> \'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
+`extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`\
+extract -i \'\*alto,\*tenor\' \| semits -x \| ditto -s = \| awk
+\'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'\
+extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
+\'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
 
 <a name ="Parts_Separated_by_Greater_than_an_Octave"></a>
 
@@ -891,7 +860,7 @@ The **awk** portion of our command is modified so that we are informed
 if the nominally higher voice is more than 12 semitones away from the
 other voice:
 
-> `extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'  extract -i '*alto,*tenor'    | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'`
+`extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'  extract -i '*alto,*tenor'    | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'`
 
 <a name ="Overlapped_Parts"></a>
 
@@ -904,14 +873,13 @@ The following passage illustrates a violation of the part overlapping
 rule:\
 \
 
->   ---------------------
->   `**pitch   **pitch`
->   C4 E4
->   F4 A4
->   E4 G4
->   \*- \*-
->   ---------------------
->
+  ---------------------
+  `**pitch   **pitch`
+  C4 E4
+  F4 A4
+  E4 G4
+  \*- \*-
+  ---------------------
 (In the second sonority, the lower voice (F4) moves to a pitch higher
 than the previous pitch in the higher voice (E4).)
 
@@ -928,7 +896,7 @@ check to determine whether the shifted part shows any \"crossed parts\"
 The following command pipe will shift the data tokens in a spine down
 one record. (The last data record will disappear.)
 
-> `context -n 2 -p 1 -d XXX  | humsed 's/XXX.*//'`
+`context -n 2 -p 1 -d XXX  | humsed 's/XXX.*//'`
 
 In this tutorial, we won\'t discuss how this works, since the
 **context** and **humsed** commands will be covered in a future
@@ -936,26 +904,26 @@ tutorial. For now, we can note that shifting (say) the alto part can be
 done by extracting the appropriate voice, and then using the shift
 command sequence shown above:
 
-> `extract -i '**alto'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > alto.shf`
+`extract -i '**alto'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > alto.shf`
 
 If we want to compare, say, the soprano and alto voices, we need to
 extract both parts, and shift one of them:
 
-> `extract -i '*soprano'  > soprano  extract -i '*alto'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > alto.shf`
+`extract -i '*soprano'  > soprano  extract -i '*alto'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > alto.shf`
 
 Next, we need to assemble the shifted and unshifted parts back into a
 single score:
 
-> `assemble alto.shf soprano > tempfile`
+`assemble alto.shf soprano > tempfile`
 
 Then we test this intermediate file for instances of \"part-crossing\"
 \-- using our earlier command pipeline:
 
-> `semits -x tempfile | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
+`semits -x tempfile | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
 
 Avoiding the temporary file altogether:
 
-> `assemble alto.shf soprano | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
+`assemble alto.shf soprano | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
 
 Note that this procedure has determined whether any of the notes in the
 soprano voice are lower than the previous note in the alto voice. We
@@ -963,7 +931,7 @@ also need to check whether any of the notes in the alto voice are higher
 than the previous note in the soprano voice. To do this, we simply
 repeat the process, shifting the other voice:
 
-> `extract -i '*soprano'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > soprano.shf  extract -i '*alto'  > alto  assemble alto soprano.shf | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
+`extract -i '*soprano'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > soprano.shf  extract -i '*alto'  > alto  assemble alto soprano.shf | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
 
 This processing needs to be applied for each pair of successive voices
 \-- soprano/alto, alto/tenor, tenor/bass.
@@ -1001,19 +969,18 @@ Examples of violations of the exposed octaves rule will appear as one of
 the following two situations:\
 \
 
->   --------------------------------------------------------
->   `(**hint     **updown    **updown    **size   **size)`
->   P1 \^ \^ leap leap
->   P1 v v leap leap
->   --------------------------------------------------------
->
+  --------------------------------------------------------
+  `(**hint     **updown    **updown    **size   **size)`
+  P1 \^ \^ leap leap
+  P1 v v leap leap
+  --------------------------------------------------------
 Any other situation means that the exposed octaves rule has not been
 violated.
 
 In other words, our final test can be expressed using the following
 **egrep** command:
 
-> `egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap'`
+`egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap'`
 
 Now all we need to do is generate our five spines and assemble them in
 the proper order.
@@ -1022,41 +989,28 @@ The first spine is easily generated using the **hint** command. Remember
 that the **-c** option means that all intervals an octave or greater
 will be represented by the within-octave equivalent.
 
-> `extract -i '*alto,*tenor'  | hint -c > spine1`
+`extract -i '*alto,*tenor'  | hint -c > spine1`
 
 The second and third spines can be generated using the Humdrum
 [**deg**](/tool/deg) command:
 
-> `extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3`
+`extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3`
 
 The fourth and fifth spines require a little more work. First, we
 calculate the melodic intervals for each voice using the Humdrum
 [**mint**](/tool/mint) command.
 
-> `extract -i '*alto'  | mint  ...`
+`extract -i '*alto'  | mint  ...`
 
 Secondly, we need to change all data tokens indicating intervals greater
 than a diatonic second (3 or more semitones) into the data token
 consisting of the (arbitrary) character string \"leap\". This can be
 done using the [**humsed**](/tool/humsed) stream editor.
 
-> ` ...  humsed 's/.*[3-9].*/leap/' > spine4   [spine5 for the other voice]`
+` ...  humsed 's/.*[3-9].*/leap/' > spine4   [spine5 for the other voice]`
 
 Putting it all together, the following command sequence will let us
 identify any instances of exposed octaves between two arbitrary voices:
 
-> `extract -i '*alto,*tenor'  | hint -c > spine1  extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3  extract -i '*alto'   | mint | humsed 's/.*[3-9].*/leap/' > spine4  extract -i '*tenor'  | mint | humsed 's/.*[3-9].*/leap/' > spine5  assemble spine1 spine2 spine3 spine4 spine5 > tempfile  egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap' tempfile`
+`extract -i '*alto,*tenor'  | hint -c > spine1  extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3  extract -i '*alto'   | mint | humsed 's/.*[3-9].*/leap/' > spine4  extract -i '*tenor'  | mint | humsed 's/.*[3-9].*/leap/' > spine5  assemble spine1 spine2 spine3 spine4 spine5 > tempfile  egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap' tempfile`
 
-------------------------------------------------------------------------
-
-\
-
-[**Next Chapter**](/guide/ch25)
-
-[**Previous Chapter**](/guide/ch23)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

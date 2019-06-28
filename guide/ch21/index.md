@@ -54,30 +54,28 @@ fact that Dmitri Shostakovich also used the German pitch system to
 create motives based on his name: D-S-C-H (S=Es=E-flat). (The German
 transliteration of the cyrillic is Schostakowitsch.)
 
->   ----------
->   `**Tonh`
->   `D4`
->   `Es4`
->   `C4`
->   `H3`
->   `*-`
->   ----------
->
+  ----------
+  `**Tonh`
+  `D4`
+  `Es4`
+  `C4`
+  `H3`
+  `*-`
+  ----------
 Suppose we were looking for possible instances of D-S-C-H. The **patt**
 command requires a template file that contains one or more successive
 regular expressions. A suitable template file (named `dmitri`) would be
 as follows:
 
->   ------
->   `D`
->   `Es`
->   `C`
->   `H`
->   ------
->
+  ------
+  `D`
+  `Es`
+  `C`
+  `H`
+  ------
 We would invoke the search as follows:
 
-> `patt -f dmitri` *inputfile*
+`patt -f dmitri` *inputfile*
 
 The **-f** option is mandatory: it conveys to **patt** the name of the
 template file used in the search.
@@ -87,7 +85,7 @@ identifying the location of any matching segments. One global comment is
 output for each matching pattern. In the above case, the output would be
 as follows:
 
-> `!! Pattern found at line 2 of file Tonh`
+`!! Pattern found at line 2 of file Tonh`
 
 The [**patt**](/tool/patt) command will also identify any
 overlapping patterns. For example, suppose we had an input containing an
@@ -95,67 +93,61 @@ ostinato figure in minor thirds:
 
 **Example 21.1.** \`DSCH\' Ostinato.
 
-> ![](guide.figures/guide21.1.gif)
->
-> >   ------------ -------------
-> >   `**Tonh`     \*\*Tonh
-> >   `*k[b-e-]`   \*K\[b-e-\]
-> >   `*M9/8`      \*M9/8
-> >   `=1-`        =1-
-> >   `C4`         Es4
-> >   `C4`         Es4
-> >   `H3`         D4
-> >   `C4`         Es4
-> >   `C4`         Es4
-> >   `H3`         D4
-> >   `C4`         Es4
-> >   `C4`         Es4
-> >   `H3`         D4
-> >   `=`          =
-> >   ------------ -------------
-> >
+![](guide.figures/guide21.1.gif)
+>   ------------ -------------
+>   `**Tonh`     \*\*Tonh
+>   `*k[b-e-]`   \*K\[b-e-\]
+>   `*M9/8`      \*M9/8
+>   `=1-`        =1-
+>   `C4`         Es4
+>   `C4`         Es4
+>   `H3`         D4
+>   `C4`         Es4
+>   `C4`         Es4
+>   `H3`         D4
+>   `C4`         Es4
+>   `C4`         Es4
+>   `H3`         D4
+>   `=`          =
+>   ------------ -------------
 If we applied the above **patt** command to this `ostinato` file, we
 would get the following output:
 
-> `!! Pattern found at line 8 of file ostinato`\
-> `!! Pattern found at line 11 of file ostinato`
+`!! Pattern found at line 8 of file ostinato`\
+`!! Pattern found at line 11 of file ostinato`
 
 We can instruct **patt** to output specific instances of the pattern
 using the **-e** (echo) option. Consider the following command:
 
-> `patt -f dmitri -e ostinato`
+`patt -f dmitri -e ostinato`
 
 The resulting output would be:
 
-> `!! Pattern found at line 4 of file ostinato `
->
->   ---------- ---------- -- --
->   `**Tonh`   `**Tonh`      
->   `H3`       `D4`          
->   `C4`       `Es4`         
->   `C4`       `Es4`         
->   `H3`       `D4`          
->   `*-`       `*-`          
->   ---------- ---------- -- --
->
-> `!! Pattern found at line 7 of file ostinato `
->
->   ---------- ---------- -- --
->   `**Tonh`   `**Tonh`      
->   `H3`       `D4`          
->   `C4`       `Es4`         
->   `C4`       `Es4`         
->   `H3`       `D4`          
->   `*-`       `*-`          
->   ---------- ---------- -- --
->
+`!! Pattern found at line 4 of file ostinato `
+  ---------- ---------- -- --
+  `**Tonh`   `**Tonh`      
+  `H3`       `D4`          
+  `C4`       `Es4`         
+  `C4`       `Es4`         
+  `H3`       `D4`          
+  `*-`       `*-`          
+  ---------- ---------- -- --
+`!! Pattern found at line 7 of file ostinato `
+  ---------- ---------- -- --
+  `**Tonh`   `**Tonh`      
+  `H3`       `D4`          
+  `C4`       `Es4`         
+  `C4`       `Es4`         
+  `H3`       `D4`          
+  `*-`       `*-`          
+  ---------- ---------- -- --
 Notice that each instance of the found pattern is output as a
 stand-alone humdrum \"mini-encoding,\" complete with initial exclusive
 interpretations and terminating spine-path terminators.\
 \
 **Example 21.2.** J.S. Bach, *Well-Tempered Clavier*, Vol. 1, Fugue 2.
 
-> ![](guide.figures/guide21.2.gif)
+![](guide.figures/guide21.2.gif)
 
 <a name ="Tierce_de_Picardie"></a>
 
@@ -174,7 +166,7 @@ pitch-letter name, followed by an optional accidental, followed by the
 colon character. The **-l** option will list all files that containing a
 matching record:
 
-> `grep -l '^\*[a-g][-#]*:' *`
+`grep -l '^\*[a-g][-#]*:' *`
 
 Recall that the [**deg**](/tool/deg) command is mode sensitive,
 whereas the [**solfa**](/tool/solfa) command is mode
@@ -188,7 +180,7 @@ the `**deg` representation. Specifically, we can look for a raised
 mediant pitch immediately prior to a double barline. Our template file
 (dubbed \"`picardy`\") might look as follows:
 
-> `3[+]  ==`
+`3[+]  ==`
 
 Notice that the plus sign has been placed in square brackets. The
 **patt** command accepts only *extended* regular expressions. The plus
@@ -200,7 +192,7 @@ In order to search for such picardy thirds, we should translate each
 input file to the `**deg` representation, and then search for raised
 mediants immediately prior to a double bar:
 
-> `deg inputfile.krn | patt -f picardy`
+`deg inputfile.krn | patt -f picardy`
 
 A problem with this search strategy is that it assumes that the raised
 third will occur in the final sonority prior to the double barline. One
@@ -210,46 +202,42 @@ second volume of Bach\'s *Well-Tempered Clavier*:
 
 **Example 21.3.** J.S. Bach, *Well-Tempered Clavier*, Vol. 2, Fugue 4.
 
-> ![](guide.figures/guide21.3.gif)
->
-> > `!!!COM: Bach, Johann Sebastian`
-> >
-> > `!!!XEN: The Well-Tempered Clavier, Volume 2, Fugue 4. `
-> >
-> >   ---------------- --------------------- ---------------------
-> >   `**kern`         \*\*kern              \*\*kern
-> >   `*clefF4`        \*clefG2              \*clefG2
-> >   `*M12/16`        \*M12/16              \*M12/16
-> >   `*k[f#c#g#d#]`   \*k\[f\#c\#g\#d\#\]   \*k\[f\#c\#g\#d\#\]
-> >   `*c#:`           \*c\#:                \*c\#:
-> >   `=70`            =70                   =70
-> >   `16E`            8.f\#\]               8b\#
-> >   `16D#`           .                     .
-> >   `16E`            .                     16g\#
-> >   `16FF##`         8e                    4.cc\#
-> >   `16GG#`          .                     .
-> >   `16AAn`          16d\#                 .
-> >   `4.GG#`          16e                   .
-> >   `.`              16a                   .
-> >   `.`              16g\#                 .
-> >   `.`              16f\#                 8.b\#
-> >   `.`              16e                   .
-> >   `.`              16d\#                 .
-> >   `=71`            =71                   =71
-> >   `8.CC#`          8.e\#                 8.cc\#
-> >   `8.r`            8.r                   8.r
-> >   `4.r`            4.r                   4.r
-> >   `==`             ==                    ==
-> >   `*-`             \*-                   \*-
-> >   ---------------- --------------------- ---------------------
-> >
+![](guide.figures/guide21.3.gif)
+> `!!!COM: Bach, Johann Sebastian`
+> `!!!XEN: The Well-Tempered Clavier, Volume 2, Fugue 4. `
+>   ---------------- --------------------- ---------------------
+>   `**kern`         \*\*kern              \*\*kern
+>   `*clefF4`        \*clefG2              \*clefG2
+>   `*M12/16`        \*M12/16              \*M12/16
+>   `*k[f#c#g#d#]`   \*k\[f\#c\#g\#d\#\]   \*k\[f\#c\#g\#d\#\]
+>   `*c#:`           \*c\#:                \*c\#:
+>   `=70`            =70                   =70
+>   `16E`            8.f\#\]               8b\#
+>   `16D#`           .                     .
+>   `16E`            .                     16g\#
+>   `16FF##`         8e                    4.cc\#
+>   `16GG#`          .                     .
+>   `16AAn`          16d\#                 .
+>   `4.GG#`          16e                   .
+>   `.`              16a                   .
+>   `.`              16g\#                 .
+>   `.`              16f\#                 8.b\#
+>   `.`              16e                   .
+>   `.`              16d\#                 .
+>   `=71`            =71                   =71
+>   `8.CC#`          8.e\#                 8.cc\#
+>   `8.r`            8.r                   8.r
+>   `4.r`            4.r                   4.r
+>   `==`             ==                    ==
+>   `*-`             \*-                   \*-
+>   ---------------- --------------------- ---------------------
 The **patt** command provides a **-s** option that allows the user to
 skip or ignore certain records in the input. Any regular expression can
 be given as a parameter for the **-s** option. In the following
 pipeline, we have instruction **patt** to skip over any records matching
 the lower-case letter \``r`\' (the `**kern` rest signifier):
 
-> `deg `*inputfile.krn*` | patt -s r -f picardy`
+`deg `*inputfile.krn*` | patt -s r -f picardy`
 
 Even ignoring rests may not be sufficient to identify the raised third
 near the double barline. For example, if any other note from the tonic
@@ -259,7 +247,7 @@ the [**ditto**](/tool/ditto) command discussed in [Chapter
 15;](/guide/ch15) **ditto** can be used to propagate the raised third
 through the sustained final chord. Our revised pipeline is:
 
-> `deg bach.krn | ditto -s = | patt -s r -f picardy`
+`deg bach.krn | ditto -s = | patt -s r -f picardy`
 
 <a name ="Consecutive_Fifths"></a>
 
@@ -267,7 +255,7 @@ A similar approach can be used to identify consecutive fifths or octaves
 between two voices. A template file (dubbed `5ths`) might consist of the
 following pattern:
 
-> `P5  P5`
+`P5  P5`
 
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
@@ -280,7 +268,7 @@ following command pipeline, notice the use of the **-s** option for
 that crossing a barline does not result in a failure to identify a
 consecutive fifth.
 
-> `extract -i '*Ibass,*Itenor' Fux | hint -c | patt -s = -f 5ths`
+`extract -i '*Ibass,*Itenor' Fux | hint -c | patt -s = -f 5ths`
 
 <a name ="Landini_cadences"></a>
 
@@ -299,7 +287,7 @@ distinctive cadential formula.\
 \
 **Example 21.4.** Francesco Landini, Excerpt from *Non avrà ma\' pietà*.
 
-> ![](guide.figures/guide21.4.gif)
+![](guide.figures/guide21.4.gif)
 
 Below is a [`**kern`](/rep/kern) encoding of the
 final two measures along with corresponding
@@ -308,63 +296,58 @@ final two measures along with corresponding
 generated using [**hint**](/tool/hint) **-l** in order to
 generate intervals with respect to the lowest pitch.
 
-> `!!!COM: Landini, Francesco `
->
->   ----------- ----------- ----------- ---------- --------- --------- ---------
->   `**kern`    `**kern`    `**kern`    `**hint`   `**deg`   \*\*deg   \*\*deg
->   `*clefF4`   `*clefG2`   `*clefG2`   `*`        `*`       `*`       `*`
->   `*M3/4`     `*M3/4`     `*M3/4`     `*M3/4`    `*M3/4`   `*M3/4`   `*M3/4`
->   `=`         `=`         `=`         `=`        `=`       `=`       `=`
->   `4A`        `4e`        `8e`        `P5 P5`    `v2`      `v6`      `^6`
->   `.`         `.`         `8f`        `-`        .         .         `^7-`
->   `4B-`       `4d`        `8g`        `M3 M6`    `^3-`     `v5`      \^1
->   `.`         `.`         `4f#`       `-`        .         .         `v7`
->   `4A`        `4c#`       `.`         `M3`       `v2`      `v4+`     .
->   `.`         `.`         `8e`        `-`        .         .         `v6`
->   `=`         `=`         `=`         `=`        `=`       `=`       `=`
->   `2.G`       `2.d`       `2.g`       `P5 P8`    `v1`      `^5`      `^1`
->   `==`        `==`        `==`        `==`       ==        ==        ==
->   `*-`        `*-`        `*-`        `*-`       \*-       \*-       \*-
->   ----------- ----------- ----------- ---------- --------- --------- ---------
->
+`!!!COM: Landini, Francesco `
+  ----------- ----------- ----------- ---------- --------- --------- ---------
+  `**kern`    `**kern`    `**kern`    `**hint`   `**deg`   \*\*deg   \*\*deg
+  `*clefF4`   `*clefG2`   `*clefG2`   `*`        `*`       `*`       `*`
+  `*M3/4`     `*M3/4`     `*M3/4`     `*M3/4`    `*M3/4`   `*M3/4`   `*M3/4`
+  `=`         `=`         `=`         `=`        `=`       `=`       `=`
+  `4A`        `4e`        `8e`        `P5 P5`    `v2`      `v6`      `^6`
+  `.`         `.`         `8f`        `-`        .         .         `^7-`
+  `4B-`       `4d`        `8g`        `M3 M6`    `^3-`     `v5`      \^1
+  `.`         `.`         `4f#`       `-`        .         .         `v7`
+  `4A`        `4c#`       `.`         `M3`       `v2`      `v4+`     .
+  `.`         `.`         `8e`        `-`        .         .         `v6`
+  `=`         `=`         `=`         `=`        `=`       `=`       `=`
+  `2.G`       `2.d`       `2.g`       `P5 P8`    `v1`      `^5`      `^1`
+  `==`        `==`        `==`        `==`       ==        ==        ==
+  `*-`        `*-`        `*-`        `*-`       \*-       \*-       \*-
+  ----------- ----------- ----------- ---------- --------- --------- ---------
 Notice that **hint** has failed to generate the passing interval forming
 the perfect fifth between the E and the A. This can be remedied by using
 **ditto** to duplicate all of the pitches. This will cause **hint** to
 generate all of the passing harmonic intervals. The revised \*\*hint
 spine is given below.
 
-> `!!!COM: Landini, Francesco `
->
->   ----------- ---------- ---------- ---------- --------- --------- ---------
->   `**kern`    \*\*kern   \*\*kern   \*\*hint   \*\*deg   \*\*deg   \*\*deg
->   `*clefF4`   \*clefG2   \*clefG2   \*         \*        \*        \*
->   `*M3/4`     \*M3/4     \*M3/4     \*M3/4     \*M3/4    \*M3/4    \*M3/4
->   `=`         =          =          =          =         =         =
->   `4A`        4e         8e         P5 P5      v2        v6        \^6
->   `.`         .          8f         P5 m6      .         .         \^7-
->   `4B-`       4d         8g         M3 M6      \^3-      v5        \^1
->   `.`         .          4f\#       M3 A5      .         .         v7
->   `4A`        4c\#       .          M3 M6      v2        v4+       .
->   `.`         .          8e         M3 P5      .         .         v6
->   `=`         =          =          =          =         =         =
->   `2.G`       2.d        2.g        P5 P8      v1        \^5       \^1
->   `==`        ==         ==         ==         ==        ==        ==
->   `*-`        \*-        \*-        \*-        \*-       \*-       \*-
->   ----------- ---------- ---------- ---------- --------- --------- ---------
->
+`!!!COM: Landini, Francesco `
+  ----------- ---------- ---------- ---------- --------- --------- ---------
+  `**kern`    \*\*kern   \*\*kern   \*\*hint   \*\*deg   \*\*deg   \*\*deg
+  `*clefF4`   \*clefG2   \*clefG2   \*         \*        \*        \*
+  `*M3/4`     \*M3/4     \*M3/4     \*M3/4     \*M3/4    \*M3/4    \*M3/4
+  `=`         =          =          =          =         =         =
+  `4A`        4e         8e         P5 P5      v2        v6        \^6
+  `.`         .          8f         P5 m6      .         .         \^7-
+  `4B-`       4d         8g         M3 M6      \^3-      v5        \^1
+  `.`         .          4f\#       M3 A5      .         .         v7
+  `4A`        4c\#       .          M3 M6      v2        v4+       .
+  `.`         .          8e         M3 P5      .         .         v6
+  `=`         =          =          =          =         =         =
+  `2.G`       2.d        2.g        P5 P8      v1        \^5       \^1
+  `==`        ==         ==         ==         ==        ==        ==
+  `*-`        \*-        \*-        \*-        \*-       \*-       \*-
+  ----------- ---------- ---------- ---------- --------- --------- ---------
 One way to identify Landini cadences is to use the following
 harmonic-interval template file (dubbed `LandCadence`):
 
->   -----
->   `6`
->   `5`
->   `8`
->   -----
->
+  -----
+  `6`
+  `5`
+  `8`
+  -----
 Using this template, we can identify Landini cadences as follows.
 (Notice the use of **-s \^=** to skip barlines.)
 
-> `ditto -s ^= input | hint -l | patt -s ^= -f LandCadence`
+`ditto -s ^= input | hint -l | patt -s ^= -f LandCadence`
 
 It is possible that the 6-5-8 figured bass might arise in non-cadential
 situations, so a more circumspect template might also include some
@@ -372,12 +355,12 @@ scale-degree movements as well. The following template file (dubbed
 `Landini-Cadence`) combines both the harmonic-interval and scale-degree
 data:
 
-> `[Mm]6  P5.*v6  P8.*\^1`
+`[Mm]6  P5.*v6  P8.*\^1`
 
 Using this more sophisticated pattern template, a suitable sequence of
 commands would be the following:
 
-> `ditto -s ^= inputfile | hint -l > temp1  deg inputfile > temp2  assemble temp1 temp2 | patt -s ^= -f Landini-Cadence`
+`ditto -s ^= inputfile | hint -l > temp1  deg inputfile > temp2  assemble temp1 temp2 | patt -s ^= -f Landini-Cadence`
 
 In general, **patt** templates can be used to specify both concurrent
 conditions as well as dynamic or temporal conditions. This allows users
@@ -414,7 +397,7 @@ the case of Bach\'s chorale harmonizations, cadences are readily
 identified by the pause symbol. Our search template might look as
 follows:
 
-> `^V([^I]|$)  (vi)|(VI);`
+`^V([^I]|$)  (vi)|(VI);`
 
 This template means: \"look for an upper-case letter `V` appearing at
 the beginning of a line that is followed by either the end of the line
@@ -425,24 +408,23 @@ followed by a semicolon.\"
 When invoking the **patt** command, we can specify our preferred output
 tag along with the **-t** option as follows:
 
-> `extract -i '**harm' bwv269.krn | patt -f template -t deceptive`
+`extract -i '**harm' bwv269.krn | patt -f template -t deceptive`
 
->   ---------- -----------
->   `**harm`   \*\*patt
->   `I`        .
->   `I`        .
->   `ii7`      .
->   `V`        deceptive
->   `vi;`      .
->   `V`        .
->   `I`        .
->   `IV`       .
->   `IV`       .
->   `I`        .
->   `V;`       .
->   etc.       
->   ---------- -----------
->
+  ---------- -----------
+  `**harm`   \*\*patt
+  `I`        .
+  `I`        .
+  `ii7`      .
+  `V`        deceptive
+  `vi;`      .
+  `V`        .
+  `I`        .
+  `IV`       .
+  `IV`       .
+  `I`        .
+  `V;`       .
+  etc.       
+  ---------- -----------
 In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
 from several \"passes\" using **patt** \-- one pass for each type of
@@ -450,22 +432,21 @@ cadence. For example, we could collapse several tagged outputs to
 produce a single spine that identifies all of the various types of
 cadences:
 
->   ---------- --------------
->   `**harm`   \*\*cadences
->   I          .
->   I          .
->   ii7        .
->   V          deceptive
->   vi;        .
->   V          .
->   I          .
->   IV         .
->   IV         .
->   I          half
->   V;         .
->   etc.       
->   ---------- --------------
->
+  ---------- --------------
+  `**harm`   \*\*cadences
+  I          .
+  I          .
+  ii7        .
+  V          deceptive
+  vi;        .
+  V          .
+  I          .
+  IV         .
+  IV         .
+  I          half
+  V;         .
+  etc.       
+  ---------- --------------
 There are no restrictions as to the types of tags that can be generated
 by **patt**. A user might tag the beginning of motivic or thematic
 statements, various harmonic progressions, variation techniques,
@@ -490,45 +471,43 @@ B-flat, A-flat, E, G.\
 **Example 21.5.** Ernst Krenek, Opus 84 *Suite for Violoncello*; mov. 1,
 measures 28-30.
 
-> ![](guide.figures/guide21.5.gif)
+![](guide.figures/guide21.5.gif)
 
 Using a pitch-class representation we would search for the sequence:
 
->   -----
->   `2`
->   6
->   5
->   1
->   0
->   11
->   3
->   9
->   10
->   8
->   4
->   7
->   -----
->
+  -----
+  `2`
+  6
+  5
+  1
+  0
+  11
+  3
+  9
+  10
+  8
+  4
+  7
+  -----
 Due to the diads, however, the corresponding pitch-class representation
 for the above Krenek passage would be:
 
->   --------
->   `**pc`
->   2
->   6
->   5 1
->   0
->   =
->   3 11
->   9
->   10
->   10 8
->   =
->   7 4
->   etc.
->   `*-`
->   --------
->
+  --------
+  `**pc`
+  2
+  6
+  5 1
+  0
+  =
+  3 11
+  9
+  10
+  10 8
+  =
+  7 4
+  etc.
+  `*-`
+  --------
 The **-m** option for [**patt**](/tool/patt) invokes a
 \"multi-record matching\" mode. In this mode, **patt** attempts to match
 as many successive regular expressions in the template file as possible
@@ -538,7 +517,7 @@ possibly match a single input record. In the above case, the tone-row
 template will be matched and the \`P0\' tag issued if the following
 command is issued:
 
-> `patt -f tonerow -t P0 -m Krenek`
+`patt -f tonerow -t P0 -m Krenek`
 
 <a name ="The_pattern_Command"></a>
 
@@ -554,12 +533,11 @@ specified by following the regular expression with a tab \-- followed by
 either `+`, `*`, or `?`. For example, consider the following
 Humdrum-extension regular expression:
 
->   ----- -- -- ----
->   `X`         \+
->   Y           \*
->   Z           ?
->   ----- -- -- ----
->
+  ----- -- -- ----
+  `X`         \+
+  Y           \*
+  Z           ?
+  ----- -- -- ----
 When the metacharacters `+`, `*`, or `?` appear at the end of a record,
 preceded by a tab character, they pertain to the number of records,
 rather than the number of repetitions of the expression within a record.
@@ -585,10 +563,10 @@ major triad \-- the last of which must end a phrase:
 
 ``
 
-> \[Gg\]+\[\^\#-\] +\
-> \[Gg\]+\#\[\^\#\] ?\
-> (\[Aa\]+\|(\[Cc\]+\#)\|\[Ee\]+)\[\^\#-\] \*\
-> (}.\*(\<a name ="-\].\*"></a>)
+\[Gg\]+\[\^\#-\] +\
+\[Gg\]+\#\[\^\#\] ?\
+(\[Aa\]+\|(\[Cc\]+\#)\|\[Ee\]+)\[\^\#-\] \*\
+(}.\*(\<a name ="-\].\*"></a>)
 
 <a name ="Patterns_of_Patterns"></a>
 
@@ -617,13 +595,12 @@ patterns.
 Consider, for example, the following template for the
 [**pattern**](/tool/pattern) command:
 
->   ------------------- -- -- ----
->   `Theme 1 (tonic)`         \+
->   Bridge                    \*
->   Theme 2 (tonic)           \+
->   Coda                      ?
->   ------------------- -- -- ----
->
+  ------------------- -- -- ----
+  `Theme 1 (tonic)`         \+
+  Bridge                    \*
+  Theme 2 (tonic)           \+
+  Coda                      ?
+  ------------------- -- -- ----
 <a name ="Sonata_search"></a>
 
 The template reads \"one or more instances of `Theme 1 (tonic)`,
@@ -655,15 +632,3 @@ will consider how \"similarity\" tools such as
 [**correl**](/tool/correl) and [**simil**](/tool/simil)
 can contribute to more sophisticated pattern searches.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch22)
-
-[**Previous Chapter**](/guide/ch20)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

@@ -449,15 +449,3 @@ We have also reviewed the syntax for UNIX commands. Commands can include
 components such as the *command name*, *options*, *parameters*, *command
 arguments*, *input files* and *output redirection*.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch09)
-
-[**Previous Chapter**](/guide/ch07)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

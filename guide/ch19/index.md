@@ -35,39 +35,37 @@ contains the numbers 1 through 6 on successive lines. A null token is
 interposed between the numbers 2 and 3:\
 \
 
->   -------------
->   ``
->   \*\*numbers
->   1
->   2
->   .
->   3
->   4
->   5
->   6
->   \*-
->   -------------
->
+  -------------
+  ``
+  \*\*numbers
+  1
+  2
+  .
+  3
+  4
+  5
+  6
+  \*-
+  -------------
 The command
 
-> `context -n 3 input`
+`context -n 3 input`
 
 will produce the following output:\
 \
 
->   -------------
->   ``
->   \*\*numbers
->   1 2 3
->   2 3 4
->   .
->   3 4 5
->   4 5 6
->   .
->   .
->   \*-
->   -------------
->
+  -------------
+  ``
+  \*\*numbers
+  1 2 3
+  2 3 4
+  .
+  3 4 5
+  4 5 6
+  .
+  .
+  \*-
+  -------------
 In effect, **context** amalgamates data tokens from successive records
 and assembles them as multiple-stops on a single record. Notice that the
 number of data records in the output is the same as in the input:
@@ -92,38 +90,37 @@ to generate the harmonic intervals for each successive sonority. To
 calculate all *passing intervals*, we will preprocess using
 [**ditto**](/tool/ditto):
 
-> `ditto inventions* | hint`
+`ditto inventions* | hint`
 
 Typical outputs might look like this:
 
->   ------
->   `M3`
->   M6
->   A4
->   =12
->   M6
->   m7
->   M3
->   A4
->   M6
->   A4
->   M6
->   P4
->   M6
->   M7
->   m9
->   m10
->   d12
->   m10
->   P11
->   M9
->   =13
->   m10
->   P4
->   M9
->   M10
->   ------
->
+  ------
+  `M3`
+  M6
+  A4
+  =12
+  M6
+  m7
+  M3
+  A4
+  M6
+  A4
+  M6
+  P4
+  M6
+  M7
+  m9
+  m10
+  d12
+  m10
+  P11
+  M9
+  =13
+  m10
+  P4
+  M9
+  M10
+  ------
 Using **context** with the **-n 2** option will cause pairs of
 successive intervals to appear in the data records. Each data record
 will consist of a double-stop containing two harmonic intervals. We
@@ -132,7 +129,7 @@ token of the double-stop. In short, we are interested in data records
 that end with `P8`. The dollars-sign can be used in a regular expression
 to anchor the pattern to the end of the line. Hence:
 
-> `ditto inventions* | hint | context -n 2 -o = | grep ' P8$'`
+`ditto inventions* | hint | context -n 2 -o = | grep ' P8$'`
 
 The **-o =** option tells **context** to omit any data tokens matching
 the equals-sign \-- that is, to omit barlines from the amalgamated
@@ -142,15 +139,14 @@ than simply specifying an equals-sign.) The **grep** command grabs all
 of the lines ending with `P8`. We can now create an inventory of
 harmonic interval pairs and order them from least common to most common:
 
-> `ditto inventions* | hint | context -n 2 -o = \ `
->
-> > \| grep \' P8\$\' \| sort \| uniq -c \| sort -rn
+`ditto inventions* | hint | context -n 2 -o = \ `
+> \| grep \' P8\$\' \| sort \| uniq -c \| sort -rn
 
 In the case of Bach\'s fifteen two-part *Inventions* the results look as
 follows:
 
-> \
-> `24  m10 P8  24  M10 P8  23  m7 P8  21  M6 P8  19  M9 P8  12  P5 P8  11  m6 P8   9  P12 P8   8  m13 P8   8  - P8`
+\
+`24  m10 P8  24  M10 P8  23  m7 P8  21  M6 P8  19  M9 P8  12  P5 P8  11  m6 P8   9  P12 P8   8  m13 P8   8  - P8`
 
 In other words, the octave is most commonly approached by contracting
 from minor and major tenths rather than expanding from a major sixth
@@ -164,27 +160,24 @@ word following \"gloria\" in Gregorian chant texts. We first extract the
 [`**text`](/rep/text) spine, use **context** to
 create pairs of words, and search in the normal way:
 
-> `extract -i '**text' chants* | context -n 2 \ `
->
-> > \| grep -i \' gloria\$\' \| sort \| uniq -c \| sort -nr
+`extract -i '**text' chants* | context -n 2 \ `
+> \| grep -i \' gloria\$\' \| sort \| uniq -c \| sort -nr
 
 A slight change to the regular expression for **grep** will allow us to
 determine what word typically *follows* after the word \"gloria.\" In
 this case, we need to anchor the word \"gloria\" to the beginning of the
 line by using the caret (\^).
 
-> `extract -i '**text' chants* | context -n 2 \ `
->
-> > \| grep -i \'\^gloria \' \| sort \| uniq -c \| sort -nr
+`extract -i '**text' chants* | context -n 2 \ `
+> \| grep -i \'\^gloria \' \| sort \| uniq -c \| sort -nr
 
 Suppose we wanted to determine what scale degree most commonly precedes
 the dominant pitch in a sample of Czech folksongs. First we translate
 the folksongs to the [`**deg`](/rep/deg)
 representation using the **deg** command, and then process as above:
 
-> `deg Czech* | context -n 2 -o = | grep '5 ' | sort \ `
->
-> > \| uniq -c \| sort -nr
+`deg Czech* | context -n 2 -o = | grep '5 ' | sort \ `
+> \| uniq -c \| sort -nr
 
 <a name ="Harmonic_Progressions"></a>
 
@@ -201,18 +194,16 @@ eliminate global and local comments, interpretations, and null data. We
 then sort the data records, eliminate duplicates while counting, and
 then sort by numerical count in reverse order.
 
-> `extract -i '**harm' chorales* | context -n 2 -o = \ `
->
-> > \| rid -GLId \| sort \| uniq -c \| sort -nr
+`extract -i '**harm' chorales* | context -n 2 -o = \ `
+> \| rid -GLId \| sort \| uniq -c \| sort -nr
 
 Of course, there is no need to restrict ourselves to pairs of successive
 data tokens (i.e. **-n 2**) as we have done in the above example. Given
 a database of melodies, we can determine the most common sequence of
 five melodic intervals as follows:
 
-> `mint melodies* | context -n 5 -o = | rid -GLId | sort \ `
->
-> > \| uniq -c \| sort -nr
+`mint melodies* | context -n 5 -o = | rid -GLId | sort \ `
+> \| uniq -c \| sort -nr
 
 <a name ="Using_context_with_the_-b_and_-e_Options"></a>
 
@@ -225,7 +216,7 @@ chord progression that is realized as a series of arpeggiation figures.\
 \
 **Example 19.1 Joachim Anderson, Opus 30, No. 24.**
 
-> ![](guide.figures/guide19.1.gif)
+![](guide.figures/guide19.1.gif)
 
 The harmonic structure can be made more explicit by amalgamating all of
 the notes in each arpeggio. There are several possible ways of doing
@@ -234,35 +225,34 @@ option for [**context**](/tool/context) allows the user to
 specify a regular expression that marks the *beginning* of each
 collection of data tokens. Consider the following command:
 
-> `context -b '(' Anderson`
+`context -b '(' Anderson`
 
 Whenever a data record contains an open parenthesis a new amalgamation
 begins. The appropriate output for measure 1 of Example 19.1 would be:\
 \
 
->   -----------------------
->   `**kern`
->   \*clefG2
->   \*k\[b-\]
->   \*d:
->   \*M4/4
->   =1-
->   (16dd 16ff 16dd 16a)
->   .
->   .
->   .
->   (16dd 16gg 16dd 16b-)
->   .
->   .
->   .
->   (16dd 16ff 16dd 16a)
->   .
->   .
->   .
->   (16f 16a 16f 16e) =2
->   etc.
->   -----------------------
->
+  -----------------------
+  `**kern`
+  \*clefG2
+  \*k\[b-\]
+  \*d:
+  \*M4/4
+  =1-
+  (16dd 16ff 16dd 16a)
+  .
+  .
+  .
+  (16dd 16gg 16dd 16b-)
+  .
+  .
+  .
+  (16dd 16ff 16dd 16a)
+  .
+  .
+  .
+  (16f 16a 16f 16e) =2
+  etc.
+  -----------------------
 Notice how the barline for measure 2 has been included in the fourth
 group. (Groups continue until the next open parenthesis is encountered.)
 Once again we might eliminate barlines by using the **-o** option.
@@ -275,48 +265,47 @@ defining the grouping boundaries by also including the **-e** option for
 specify a regular expression that marks the *end* of each collection of
 data tokens. A suitably revised command would be:
 
-> `context -b '(' -e ')' Anderson`
+`context -b '(' -e ')' Anderson`
 
 The resulting output would begin as follows:\
 \
 
->   -----------------------
->   `**kern`
->   \*clefG2
->   \*k\[b-\]
->   \*d:
->   \*M4/4
->   =1-
->   (16dd 16ff 16dd 16a)
->   .
->   .
->   .
->   (16dd 16gg 16dd 16b-)
->   .
->   .
->   .
->   (16dd 16ff 16dd 16a)
->   .
->   .
->   .
->   (16f 16a 16f 16e)
->   .
->   .
->   .
->   =2
->   (16d 16ff 16dd 16a)
->   etc.
->   -----------------------
->
+  -----------------------
+  `**kern`
+  \*clefG2
+  \*k\[b-\]
+  \*d:
+  \*M4/4
+  =1-
+  (16dd 16ff 16dd 16a)
+  .
+  .
+  .
+  (16dd 16gg 16dd 16b-)
+  .
+  .
+  .
+  (16dd 16ff 16dd 16a)
+  .
+  .
+  .
+  (16f 16a 16f 16e)
+  .
+  .
+  .
+  =2
+  (16d 16ff 16dd 16a)
+  etc.
+  -----------------------
 We could pipe this output to the **ms** command in order to display the
 re-arranged passage. We place the output in a postscript file and use a
 display tool such as **ghostview** to display the output:
 
-> `context -b '(' -e ')' Anderson | ms > output.ps`
+`context -b '(' -e ')' Anderson | ms > output.ps`
 
 **Example 19.2 Arpeggio Amalgamation.**
 
-> ![](guide.figures/guide19.2.gif)
+![](guide.figures/guide19.2.gif)
 
 Notice that the resulting notation is \"ungrammatical\" because the
 meter signature disagrees with the total duration for each measure.
@@ -329,9 +318,8 @@ use the [**deg**](/tool/deg) command to reformulate each pitch
 group as scale degrees. This might allow us to search for particular
 harmonic patterns such as (say) an augmented sixth chord:
 
-> `context -b '(' -e ')' Anderson | deg | grep '6-' | grep '4+' \`
->
-> > \| grep \'1\'
+`context -b '(' -e ')' Anderson | deg | grep '6-' | grep '4+' \`
+> \| grep \'1\'
 
 Any regular expression can be used to identify the beginning and/or
 ending of an amalgamated group. For example, tokens might be grouped by
@@ -341,7 +329,7 @@ know whether the sixty-fourth notes all tend to happen in one or two
 measures, or whether they occur throughout the work. Just how many
 measures contain sixty-fourth notes?
 
-> `context -b = inputfile | rid -GLId | grep -c '64'`
+`context -b = inputfile | rid -GLId | grep -c '64'`
 
 <a name ="Measures_containing_trills"></a>
 
@@ -349,7 +337,7 @@ Similarly, for [`**kern`](/rep/kern) inputs, the
 following command counts the number of measures that contain at least
 one trill:
 
-> `context -b = inputfile | grep -c '^=.*[Tt]'`
+`context -b = inputfile | grep -c '^=.*[Tt]'`
 
 <a name ="Group_by_beams"></a>
 
@@ -357,14 +345,14 @@ In `**kern` representations, the beginnings and endings of beams are
 indicated by the letters \``L`\' and \``J`\' respectively. We might
 group notes according to the beaming:
 
-> `context -b L -e J inputfile`
+`context -b L -e J inputfile`
 
 <a name ="Beams_across_Phrases"></a>
 
 For example, the following command determines the location of any beams
 that cross over phrase boundaries:
 
-> `context -b L -e J inputfile | grep -n '}.*{'`
+`context -b L -e J inputfile | grep -n '}.*{'`
 
 As in the case of the **-b** option, the **-e** option can be used by
 itself. This option might prove useful, for example, when collecting all
@@ -373,14 +361,14 @@ for example, cadences are conveniently marked by a pause. In the
 `**harm` representation, pauses are indicated by the semicolon (`;`). We
 can create phrase related harmonic sequences as follows:
 
-> `context -o = -e ';' input`
+`context -o = -e ';' input`
 
 <a name ="Count_harmonies_phrase"></a>
 
 For example, we might count the number of harmonic functions in each
 phrase as follows:
 
-> `context -o = -e ';' input | rid -GLId | awk '{print $NF}'`
+`context -o = -e ';' input | rid -GLId | awk '{print $NF}'`
 
 In [Chapter 22](/guide/ch22) we will learn how to classify data into
 discrete categories. Using the [**recode**](/tool/recode)
@@ -399,7 +387,7 @@ number those measures that contain a *iii-V* progression. Given a
 `**harm` input, we would first amalgamate all harmony tokens for each
 measure.
 
-> `context -b ^= inputfile | grep 'iii V' | sed 's/ .*//; s/=//'`
+`context -b ^= inputfile | grep 'iii V' | sed 's/ .*//; s/=//'`
 
 Here we have used **grep** to isolate all those records that contain the
 character sequence `iii V`. We have then used **sed** to eliminate all
@@ -414,17 +402,15 @@ create \"grep-like\" output that still conforms to the Humdrum syntax.
 If we wanted to maintain the Humdrum syntax, an equivalent to the above
 command would be:
 
-> `context -b ^= inputfile | yank -m 'iii V' -r 0 \`
->
-> > \| humsed \'s/ .\*//; s/=//\'
+`context -b ^= inputfile | yank -m 'iii V' -r 0 \`
+> \| humsed \'s/ .\*//; s/=//\'
 
 The range option (**-r**) specifies that we grab the current record (0)
 that matches the marker (`iii V`). However, we are free to specify any
 other range. Consider the following command variation:
 
-> `context -b ^= inputfile | rid -d | yank -m 'iii V' -r 1 \`
->
-> > \| grep \'ii IV\' \| humsed \'s/ .\*//; s/=//\'
+`context -b ^= inputfile | rid -d | yank -m 'iii V' -r 1 \`
+> \| grep \'ii IV\' \| humsed \'s/ .\*//; s/=//\'
 
 This command identifies all those measures containing a *ii IV*
 progression that have been preceded by a *iii V* progression in the
@@ -442,14 +428,14 @@ consisting of double-stops. The first note of the double-stop will be
 the first note of the phrase, and the second note of the double-stop
 will be the last note of the same phrase:
 
-> `context -b { -e } file | humsed 's/ .* / /'`
+`context -b { -e } file | humsed 's/ .* / /'`
 
 We can continue processing by piping the output to the
 [**semits**](/tool/semits) command. This will leave pairs of
 numbers representing the semitone distances from middle C. We might then
 isolate the data records by using [**rid**](/tool/rid).
 
-> ` . . . | semits | rid -GLId | awk '{print $2-$1}'`
+` . . . | semits | rid -GLId | awk '{print $2-$1}'`
 
 Finally, we have used the UNIX **awk** utility to carry out some simple
 numerical processing: in this case, substracting the first semitone
@@ -463,9 +449,8 @@ we need only to reverse the begin (**-b**) and end (**-e**) criteria.
 That is, we will amalgamate the last note of one phrase with the first
 note in the subsequent phrase. The full pipeline would be as follows:
 
-> `context -b { -e } file | humsed 's/ .* / /' | semits \`
->
-> > \| rid -GLId \| awk \'{print \$2-\$1}\'
+`context -b { -e } file | humsed 's/ .* / /' | semits \`
+> \| rid -GLId \| awk \'{print \$2-\$1}\'
 
 <a name ="Linking_context_Outputs_with_Inputs"></a>
 
@@ -482,64 +467,62 @@ typically involves linking different types of data together using the
 in our input begins as follows:\
 \
 
->   ----------
->   `**kern`
->   \*F:
->   \*M3/4
->   {8Bn
->   8c
->   =1
->   4.a
->   8g
->   4f
->   =2
->   4g
->   4d
->   4e
->   =3
->   2c}
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  \*F:
+  \*M3/4
+  {8Bn
+  8c
+  =1
+  4.a
+  8g
+  4f
+  =2
+  4g
+  4d
+  4e
+  =3
+  2c}
+  \*-
+  ----------
 We need to pursue two independent lines of processing. First we creat a
 temporary file of scale degree information:
 
-> `mint inputfile > temp.mnt`
+`mint inputfile > temp.mnt`
 
 Then we amalgamate the pitch data according the phrasing information,
 and translate the resulting data to the
 [`**deg`](/rep/deg) representation:
 
-> `context -b { -e } -o ^= inputfile | deg > temp.deg`
+`context -b { -e } -o ^= inputfile | deg > temp.deg`
 
 Next we assemble the two temporary files together to form a single
 document.
 
-> `assemble temp.mnt temp.deg`
+`assemble temp.mnt temp.deg`
 
 The first phrase output will appear as follows:\
 \
 
->   ---------- --------------------------------
->   `**mint`   \*\*deg
->   \*F:       \*F:
->   \*M3/4     \*M3/4
->   \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   +m2        .
->   =1         .
->   +M6        .
->   -M2        .
->   -M2        .
->   =2         .
->   +M2        .
->   -P4        .
->   +M2        .
->   =3         .
->   -M3        .
->              
->   etc.       
->   ---------- --------------------------------
->
+  ---------- --------------------------------
+  `**mint`   \*\*deg
+  \*F:       \*F:
+  \*M3/4     \*M3/4
+  \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  +m2        .
+  =1         .
+  +M6        .
+  -M2        .
+  -M2        .
+  =2         .
+  +M2        .
+  -P4        .
+  +M2        .
+  =3         .
+  -M3        .
+             
+  etc.       
+  ---------- --------------------------------
 We need to search for the interval of an ascending major sixth (`+M6`)
 associated with a phrase ending on the dominant (`5$`). Before using the
 approprate **grep** command, we need to use
@@ -548,29 +531,28 @@ the null data tokens in the `**deg` spine; **ditto** will generate the
 following output:\
 \
 
->   ---------- --------------------------------
->   `**mint`   \*\*deg
->   \*F:       \*F:
->   \*M3/4     \*M3/4
->   \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   +m2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   =1         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   +M6        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   =2         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   -P4        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   =3         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->   -M3        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
->              
->   etc.       
->   ---------- --------------------------------
->
+  ---------- --------------------------------
+  `**mint`   \*\*deg
+  \*F:       \*F:
+  \*M3/4     \*M3/4
+  \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  +m2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  =1         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  +M6        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  =2         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  -P4        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  =3         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+  -M3        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
+             
+  etc.       
+  ---------- --------------------------------
 Finally, we use **grep** to search for the composite data:
 
-> `assemble temp.mnt temp.deg | ditto | grep '^+M6.*5$'`
+`assemble temp.mnt temp.deg | ditto | grep '^+M6.*5$'`
 
 In addition to linking together different types of data, sometimes we
 may also need to use a stream editor to modify the data in some way.
@@ -586,28 +568,24 @@ approach the tonic, and one for intervals that follow the tonic. We
 already know how to create an inventory of intervals approaching a
 particular scale-degree:
 
-> `deg -a inputfile > temp1`\
-> `mint inputfile > temp2`\
-> `assemble temp1 temp2 | grep '^[v^]*1 ' | sort | uniq -c \`
->
-> > \| sort -rn \> inventory.pre
+`deg -a inputfile > temp1`\
+`mint inputfile > temp2`\
+`assemble temp1 temp2 | grep '^[v^]*1 ' | sort | uniq -c \`
+> \| sort -rn \> inventory.pre
 
 For the intervals following the tonic, we need to use
 [**context**](/tool/context) -n 2. This will create pairs of
 intervals: the first interval will indicate the approach, and the second
 interval in each pair will indicate the continuation.
 
-> `deg -a inputfile > temp1`\
-> `mint inputfile | context -n 2 -o ^= > temp2`\
-> `humsed 's/ .*//' temp2 > intervals.pre`\
-> `humsed 's/.* //' temp2 > intervals.post`\
-> `assemble temp1 intervals.pre | grep '^1  ' | sort | uniq -c \`
->
-> > \| sort -rn \> inventory.pre
->
-> `assemble temp1 intervals.post | grep '^1 ' | sort | uniq -c \`
->
-> > \| sort -rn \> inventory.post
+`deg -a inputfile > temp1`\
+`mint inputfile | context -n 2 -o ^= > temp2`\
+`humsed 's/ .*//' temp2 > intervals.pre`\
+`humsed 's/.* //' temp2 > intervals.post`\
+`assemble temp1 intervals.pre | grep '^1  ' | sort | uniq -c \`
+> \| sort -rn \> inventory.pre
+`assemble temp1 intervals.post | grep '^1 ' | sort | uniq -c \`
+> \| sort -rn \> inventory.post
 
 In some tasks, it may be necessary to generate more than one **context**
 output. For example, suppose we wanted to identify possible \"cross
@@ -616,41 +594,39 @@ accidental occurs in one voice but not in another voice within a brief
 period of time. One approach is to extract each voice, translate to
 scale-degree and create brief contexts of (say) 2 or 3 notes. E.g.
 
-> `extract -f 1 inputfile | deg | context -n 3 -o ^= > lower.tmp`\
-> `extract -f 2 inputfile | deg | context -n 3 -o ^= > upper.tmp`
+`extract -f 1 inputfile | deg | context -n 3 -o ^= > lower.tmp`\
+`extract -f 2 inputfile | deg | context -n 3 -o ^= > upper.tmp`
 
 We can then assemble the two contexts together:
 
-> `assemble lower.tmp upper.tmp`
+`assemble lower.tmp upper.tmp`
 
 Suppose our inputs consisted of an ascending C major scale played in the
 lower voice concurrent with an E major scale in the upper voice. Our
 output would look as follows:\
 \
 
->   ------------- -- -- ---------------
->   `**deg`             \*\*deg
->   \*C:                \*C:
->   1 \^2 \^3           3 \^4+ \^5+
->   \^2 \^3 \^4         \^4+ \^5+ \^6
->   \^3 \^4 \^5         \^5+ \^6 \^7
->   \^4 \^5 \^6         \^6 \^7 \^1+
->   \^5 \^6 \^7         \^7 \^1+ \^2+
->   \^6 \^7 \^1         \^1+ \^2+ \^3
->   .                   .
->   .                   .
->   \*-                 \*-
->   ------------- -- -- ---------------
->
+  ------------- -- -- ---------------
+  `**deg`             \*\*deg
+  \*C:                \*C:
+  1 \^2 \^3           3 \^4+ \^5+
+  \^2 \^3 \^4         \^4+ \^5+ \^6
+  \^3 \^4 \^5         \^5+ \^6 \^7
+  \^4 \^5 \^6         \^6 \^7 \^1+
+  \^5 \^6 \^7         \^7 \^1+ \^2+
+  \^6 \^7 \^1         \^1+ \^2+ \^3
+  .                   .
+  .                   .
+  \*-                 \*-
+  ------------- -- -- ---------------
 In effect, each data record contains an agglomeration of three
 successive notes from both voices. Seaching for cross-relations would
 entail looking for scale degrees that are both modified and unmodified
 concurrently. For example, in the case of the subdominant pitch, we
 could search for such instances as follows:
 
-> `assemble lower.tmp upper.tmp | rid -GLId \`
->
-> > \| egrep \'4\[+-\].\* .\*4(\[\^+-\])\|\$\'
+`assemble lower.tmp upper.tmp | rid -GLId \`
+> \| egrep \'4\[+-\].\* .\*4(\[\^+-\])\|\$\'
 
 The regular expression given to **egrep** searches for a subdominant
 pitch in the lower voice that is either raised or lowered \-- concurrent
@@ -659,9 +635,8 @@ Notice the use of the tab character in the regular expressions to
 specify the precise voice being searched. We would also need to test for
 the reverse situation, where the modified pitch is in the upper voice:
 
-> `assemble lower.tmp upper.tmp | rid -GLId \`
->
-> > \| egrep \'4\[\^+-\].\* .\*4\[+-\]\'
+`assemble lower.tmp upper.tmp | rid -GLId \`
+> \| egrep \'4\[\^+-\].\* .\*4\[+-\]\'
 
 In a similar fashion, the user can mix together spines representing
 highly diverse types of contextual information to carry out searches for
@@ -681,65 +656,62 @@ below. The left-hand spine represents the input and the right-hand spine
 represents the output where the option **-n 2** has been specified.\
 \
 
->   ---------- ----------
->   `**kern`   \*\*kern
->   \*C:       \*C:
->   c          c d
->   d          d e
->   e          e f
->   f          f g
->   g          g a
->   a          a b
->   b          b cc
->   cc         .
->   \*-        \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**kern`   \*\*kern
+  \*C:       \*C:
+  c          c d
+  d          d e
+  e          e f
+  f          f g
+  g          g a
+  a          a b
+  b          b cc
+  cc         .
+  \*-        \*-
+  ---------- ----------
 Now consider the effect of adding the **-p** option. In this case, the
 complete command is:
 
-> `context -n 2 -p 1`
+`context -n 2 -p 1`
 
 The corresponding result is:\
 \
 
->   ---------- ----------
->   `**kern`   \*\*kern
->   \*C:       \*C:
->   c          .
->   d          c d
->   e          d e
->   f          e f
->   g          f g
->   a          g a
->   b          a b
->   cc         b cc
->   \*-        \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**kern`   \*\*kern
+  \*C:       \*C:
+  c          .
+  d          c d
+  e          d e
+  f          e f
+  g          f g
+  a          g a
+  b          a b
+  cc         b cc
+  \*-        \*-
+  ---------- ----------
 The data records have been pushed forward by one line: a null token now
 appears at the beginning of the output spine rather than at the end.
 Similarly, consider the effect of the following command:
 
-> `context -n 4 -p 2`
+`context -n 4 -p 2`
 
 The corresponding result is:\
 \
 
->   ---------- ----------
->   `**kern`   \*\*kern
->   \*C:       \*C:
->   c          .
->   d          .
->   e          c d e f
->   f          d e f g
->   g          e f g a
->   a          f g a b
->   b          g a b cc
->   cc         .
->   \*-        \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**kern`   \*\*kern
+  \*C:       \*C:
+  c          .
+  d          .
+  e          c d e f
+  f          d e f g
+  g          e f g a
+  a          f g a b
+  b          g a b cc
+  cc         .
+  \*-        \*-
+  ---------- ----------
 The output is now padded with two preceding null tokens with a trailing
 null token at the end of the spine. In summary, the **-p** option pushes
 the context records by a specified number of lines. This allows us to
@@ -759,38 +731,36 @@ by a descending major second. First, we generate independent
 Without the **-p** option, the assembled output might look as follows:\
 \
 
->   --------- -----------
->   `**deg`   \*\*mint
->   \*C:      \*C:
->   3         \[e\] +m2
->   \^4       +m2 +M2
->   \^5       +M2 +M3
->   \^7       +M3 -M2
->   v6        -M2 +m3
->   \^1       +m3 -P4
->   v5        .
->   \*-       \*-
->   --------- -----------
->
+  --------- -----------
+  `**deg`   \*\*mint
+  \*C:      \*C:
+  3         \[e\] +m2
+  \^4       +m2 +M2
+  \^5       +M2 +M3
+  \^7       +M3 -M2
+  v6        -M2 +m3
+  \^1       +m3 -P4
+  v5        .
+  \*-       \*-
+  --------- -----------
 With **-p 1** the output becomes:\
 \
 
->   --------- -----------
->   `**deg`   \*\*mint
->   \*C:      \*C:
->   3         .
->   \^4       \[e\] +m2
->   \^5       +m2 +M2
->   \^7       +M2 +M3
->   v6        +M3 -M2
->   \^1       -M2 +m3
->   v5        +m3 -P4
->   \*-       \*-
->   --------- -----------
->
+  --------- -----------
+  `**deg`   \*\*mint
+  \*C:      \*C:
+  3         .
+  \^4       \[e\] +m2
+  \^5       +m2 +M2
+  \^7       +M2 +M3
+  v6        +M3 -M2
+  \^1       -M2 +m3
+  v5        +m3 -P4
+  \*-       \*-
+  --------- -----------
 Now we can search directly for the situation of interest:
 
-> `grep '6  +M3 -M2$'`
+`grep '6  +M3 -M2$'`
 
 ------------------------------------------------------------------------
 
@@ -819,15 +789,3 @@ how the [**patt**](/tool/patt) command can be used to establish
 other kinds of contexts and how both of these commands can be used
 together.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch20)
-
-[**Previous Chapter**](/guide/ch18)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

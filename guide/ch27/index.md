@@ -50,74 +50,71 @@ representation.\
 **Example 27.1.** From William Byrd, *Why Do I use my paper ink and
 pen.*
 
-> ![](guide.figures/guide27.1.gif)
->
-> >   --------------------------------------------
-> >   `!!!COM: Byrd, William`
-> >   !!!OTL: Why do I use my paper ink and pen.
-> >   --------------------------------------------
-> >
-> >   ------------ ------------ ----------
-> >   \*\*text     \*\*silbe    \*\*kern
-> >   \*LEnglish   \*LEnglish   \*
-> >   =11          =11          =11
-> >   `.`          .            2r
-> >   Why          Why          2g
-> >   =12          =12          =12
-> >   do           do           2b-
-> >   I            I            2a
-> >   =13          =13          =13
-> >   use          use          4g
-> >   my           my           4g
-> >   paper        pa-          \[2dd
-> >   =14          =14          =14
-> >   `.`          \|           2dd\]
-> >   `.`          -per         2cc
-> >   =15          =15          =15
-> >   ink          ink          2.ff
-> >   and          and          (4ee
-> >   =16          =16          =16
-> >   `.`          \|           4dd
-> >   `.`          \|           4cc
-> >   `.`          \|           4b-
-> >   `.`          \|           4cc
-> >   =17          =17          =17
-> >   pen,         pen,         1dd
-> >   =18          =18          =18
-> >   and          and          1dd
-> >   =19          =19          =19
-> >   pen,         pen,         1dd
-> >   =20          =20          =20
-> >   `.`          .            2r
-> >   and          and          2ff
-> >   =21          =21          =21
-> >   call         call         2.ee
-> >   my           my           4dd
-> >   =22          =22          =22
-> >   wits         wits         1cc\#
-> >   =23          =23          =23
-> >   to           to           2ee
-> >   counsel      coun-        \[2aa
-> >   =24          =24          =24
-> >   `.`          -sel         4aa\]
-> >   what         what         4ff
-> >   to           to           (8ee
-> >   `.`          \|           8dd
-> >   =25          =25          =25
-> >   `.`          \|           4cc
-> >   `.`          \|           4dd
-> >   `.`          \|           4.ee
-> >   `.`          \|           8dd
-> >   =26          =26          =26
-> >   `.`          \|           4ee
-> >   `.`          \|           4ee
-> >   `.`          \|           2dd)
-> >   =27          =27          =27
-> >   say,         say,         1cc\#
-> >   =28          =28          =28
-> >   \*-          \*-          \*-
-> >   ------------ ------------ ----------
-> >
+![](guide.figures/guide27.1.gif)
+>   --------------------------------------------
+>   `!!!COM: Byrd, William`
+>   !!!OTL: Why do I use my paper ink and pen.
+>   --------------------------------------------
+>   ------------ ------------ ----------
+>   \*\*text     \*\*silbe    \*\*kern
+>   \*LEnglish   \*LEnglish   \*
+>   =11          =11          =11
+>   `.`          .            2r
+>   Why          Why          2g
+>   =12          =12          =12
+>   do           do           2b-
+>   I            I            2a
+>   =13          =13          =13
+>   use          use          4g
+>   my           my           4g
+>   paper        pa-          \[2dd
+>   =14          =14          =14
+>   `.`          \|           2dd\]
+>   `.`          -per         2cc
+>   =15          =15          =15
+>   ink          ink          2.ff
+>   and          and          (4ee
+>   =16          =16          =16
+>   `.`          \|           4dd
+>   `.`          \|           4cc
+>   `.`          \|           4b-
+>   `.`          \|           4cc
+>   =17          =17          =17
+>   pen,         pen,         1dd
+>   =18          =18          =18
+>   and          and          1dd
+>   =19          =19          =19
+>   pen,         pen,         1dd
+>   =20          =20          =20
+>   `.`          .            2r
+>   and          and          2ff
+>   =21          =21          =21
+>   call         call         2.ee
+>   my           my           4dd
+>   =22          =22          =22
+>   wits         wits         1cc\#
+>   =23          =23          =23
+>   to           to           2ee
+>   counsel      coun-        \[2aa
+>   =24          =24          =24
+>   `.`          -sel         4aa\]
+>   what         what         4ff
+>   to           to           (8ee
+>   `.`          \|           8dd
+>   =25          =25          =25
+>   `.`          \|           4cc
+>   `.`          \|           4dd
+>   `.`          \|           4.ee
+>   `.`          \|           8dd
+>   =26          =26          =26
+>   `.`          \|           4ee
+>   `.`          \|           4ee
+>   `.`          \|           2dd)
+>   =27          =27          =27
+>   say,         say,         1cc\#
+>   =28          =28          =28
+>   \*-          \*-          \*-
+>   ------------ ------------ ----------
 Note that all three representations in Example 27.1 make use of the
 common system for representing barlines. In the
 [`**text`](/rep/text) representation tokens
@@ -137,18 +134,17 @@ following table illustrates how these signifiers are used:\
 \
 **Table 26.1.**
 
->   ---------- ----------------------------------------------------------------
->   text       a single-syllable word
->   text-      a word-initiating syllable
->   -text      a word-completing syllable
->   -text-     a mid-word syllable
->   text\~     a single-syllable word beginning a hyphenated multi-word
->   \~text     a single-syllable word completing a hyphenated multi-word
->   \~text\~   a single-syllabe word continuing a hyphenated multi-word
->   \~text-    a word-initating syllable continuing a hyphenated multi-word
->   -text\~    a word-completing syllable \-- part of a hyphenated multi-word
->   ---------- ----------------------------------------------------------------
->
+  ---------- ----------------------------------------------------------------
+  text       a single-syllable word
+  text-      a word-initiating syllable
+  -text      a word-completing syllable
+  -text-     a mid-word syllable
+  text\~     a single-syllable word beginning a hyphenated multi-word
+  \~text     a single-syllable word completing a hyphenated multi-word
+  \~text\~   a single-syllabe word continuing a hyphenated multi-word
+  \~text-    a word-initating syllable continuing a hyphenated multi-word
+  -text\~    a word-completing syllable \-- part of a hyphenated multi-word
+  ---------- ----------------------------------------------------------------
 Both the `**text` and `**silbe` representations are able to distinguish
 different tones of voice such as spoken voice, whispered voice, laughing
 voice, emotional voice, *Sprechstimme* and humming. In addition, there
@@ -157,30 +153,29 @@ crys. Some sample signifiers are shown in Table 26.2\
 \
 **Table 26.2.**
 
->   ------- -------------------------------------------------------------------
->   `A-Z`   upper-case letters A to Z
->   `a-z`   lower-case letters a-z
->   `(`     open parenthesis
->   `)`     closed parenthesis
->   `{`     beginning of phrase
->   `}`     end of phrase
->   `%`     silence (rest) token (character by itself)
->   `M`     humming voice (character by itself)
->   `[`     beginning of spoken voice
->   `[[`    beginning of whisper
->   `]`     end of spoken voice
->   `]]`    end of whisper
->   `<`     beginning of *Sprechstimme*
->   `>`     *end of Sprechstimme*
->   `#`     beginning of laughing voice
->   `##`    end of laughing voice
->   `@`     laughter (no text)
->   `&`     sob or cry (no text)
->   `$`     beginning of emotional voice
->   `$$`    end of emotional voice
->   `*`     follows stressed word (`**test`) or stressed syllable (`**silbe`)
->   ------- -------------------------------------------------------------------
->
+  ------- -------------------------------------------------------------------
+  `A-Z`   upper-case letters A to Z
+  `a-z`   lower-case letters a-z
+  `(`     open parenthesis
+  `)`     closed parenthesis
+  `{`     beginning of phrase
+  `}`     end of phrase
+  `%`     silence (rest) token (character by itself)
+  `M`     humming voice (character by itself)
+  `[`     beginning of spoken voice
+  `[[`    beginning of whisper
+  `]`     end of spoken voice
+  `]]`    end of whisper
+  `<`     beginning of *Sprechstimme*
+  `>`     *end of Sprechstimme*
+  `#`     beginning of laughing voice
+  `##`    end of laughing voice
+  `@`     laughter (no text)
+  `&`     sob or cry (no text)
+  `$`     beginning of emotional voice
+  `$$`    end of emotional voice
+  `*`     follows stressed word (`**test`) or stressed syllable (`**silbe`)
+  ------- -------------------------------------------------------------------
 *Signifiers common to **\*\*text** and **\*\*silbe***
 
 <a name ="The_text_Command"></a>
@@ -200,7 +195,7 @@ related to semantics, metaphor, word-painting, etc.
 
 Invoking the **text** command is straightforward:
 
-> `text inputfile > outputfile`
+`text inputfile > outputfile`
 
 <a name ="Find_Liebe"></a>
 
@@ -209,21 +204,21 @@ particular word, such as the German \"Liebe\" (love). If the lyrics are
 encoded in the [`**text`](/rep/text) representation,
 then a simple **grep** will suffice:
 
-> `grep -n 'Liebe' schubert`
+`grep -n 'Liebe' schubert`
 
 Recall that the **-n** option gives the line number of any occurrences
 found. If the input is encoded in the
 [`**silbe`](/rep/silbe) representation, then the
 output of **text** can be piped to **grep**:
 
-> `extract -i '**silbe' schubert | text | grep -n 'Liebe'`
+`extract -i '**silbe' schubert | text | grep -n 'Liebe'`
 
 <a name ="word_inventory"></a>
 
 Given a `**silbe` input, a inventory of words can be generated using
 **sort** and **uniq** in the usual way:
 
-> `extract -i '**silbe' song | text | rid -GLId | sort | uniq`
+`extract -i '**silbe' song | text | rid -GLId | sort | uniq`
 
 Frequently, it is useful to search for a group of words rather than
 individual words. Suppose we are looking for the phrase \"white
@@ -232,7 +227,7 @@ to amalgamate words as multiple stops. If we are looking for a phrase
 consisting of just two words, we might use the **-n 2** option for
 **context**:
 
-> `text barber | context -n 2 | grep -i 'white Pangur'`
+`text barber | context -n 2 | grep -i 'white Pangur'`
 
 <a name ="Punctuation"></a>
 
@@ -244,7 +239,7 @@ containing all of the puntuation marks. The output from this command
 will display all punctuated phrases (one per line) that contain the
 phrase \"white Pangur.\"
 
-> `text | context -e '[.,;?!]' | grep -i 'white Pangur'`
+`text | context -e '[.,;?!]' | grep -i 'white Pangur'`
 
 <a name ="The_fmt_Command"></a>
 
@@ -263,18 +258,18 @@ roughly the same width. <a name ="Gregorian_Chant"></a>
 \
 **Example 27.2.** Beginning of chant *A Solis Ortus*.]{#Liber_Usualis}
 
-> ![](guide.figures/guide27.2.gif)
+![](guide.figures/guide27.2.gif)
 
 The Latin text for this chant can be formatted as follows:
 
-> `extract -i '**silbe' chant12 | text | rid -GLId | fmt -50`
+`extract -i '**silbe' chant12 | text | rid -GLId | fmt -50`
 
 The **-50** option tells **fmt** to place no more than 50 characters per
 line. The default line-length is 72 characters. The above pipeline
 produces the following output:
 
-> \
-> `A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natum Maria Virgine.  Beatus auctor saeculi servile corpus induit: ut  carne carnem liberans, ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta, quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum, concepit alvo filium.`
+\
+`A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natum Maria Virgine.  Beatus auctor saeculi servile corpus induit: ut  carne carnem liberans, ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta, quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum, concepit alvo filium.`
 
 Another useful output would have the text arranged with one sentence or
 phrase on each line. As before we can use the
@@ -282,14 +277,13 @@ phrase on each line. As before we can use the
 amalgamate words, where each amalgamated line ends with a punctuation
 mark:
 
-> `extract -i '**silbe' chant12 | text | context -e '[.,;:?!]' \`
->
-> > \| rid -GLId
+`extract -i '**silbe' chant12 | text | context -e '[.,;:?!]' \`
+> \| rid -GLId
 
 The corresponding output is:
 
-> \
-> `A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  natum Maria Virgine.  Beatus auctor saeculi servile corpus induit:  ut carne carnem liberans,  ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta,  quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum,  concepit alvo filium.`
+\
+`A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  natum Maria Virgine.  Beatus auctor saeculi servile corpus induit:  ut carne carnem liberans,  ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta,  quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum,  concepit alvo filium.`
 
 Yet another way of arranging the text output would be to parse the text
 according to explicit phrase marks in the
@@ -301,9 +295,8 @@ to the `**silbe` spine. This transfer entails four steps. (1) Extract
 the monophonic `**kern` spine and eliminate all data signifiers except
 closing curly braces (\``}`\'). Store the result in a temporary file:
 
-> `extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
->
-> > \> temp1
+`extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
+> \> temp1
 
 Notice that [**humsed**](/tool/humsed) has been given two
 substitution commands. The first eliminates all data signifiers except
@@ -313,31 +306,30 @@ lines to null data records by adding a single period.
 \(2) Extract the `**silbe` spine, translate it to `**text` and store the
 result in another temporary file:
 
-> `extract -i '**silbe' chant12 | text > temp2`
+`extract -i '**silbe' chant12 | text > temp2`
 
 \(3) Assemble the two temporary files together and use the
 [**cleave**](/tool/cleave) command to join the end-of-phrase
 marker to the syllable representation.
 
-> `assemble temp1 temp2 | cleave -i '**kern,**text' \`
->
-> > -o \'\*\*text\' \> temp3
+`assemble temp1 temp2 | cleave -i '**kern,**text' \`
+> -o \'\*\*text\' \> temp3
 
 With this cleaved data we can now use the **context** command to
 amalgamate phrase-related text. Finally, **rid** is used to eliminate
 everything but non-null data records.
 
-> `context -o = -e } temp3 | rid -GLId`
+`context -o = -e } temp3 | rid -GLId`
 
 The result is as follows:
 
-> `A solis ortus cardine }  ad usque terrae limitem, }  Christum canamus principem, }  natum Maria Virgine. }  Beatus auctor saeculi }  servile corpus induit: }  ut carne carnem liberans, }  ne perderet quos condidit. }  Castae parentis viscera }  cae lestis intratgratia: }  venter puellae bajulat }  secreta, quae non noverat. }  Domus pudici pectoris }  tem plum repente fit Dei: }  intacta nesciens virum, }  concepit alvo filium. }`
+`A solis ortus cardine }  ad usque terrae limitem, }  Christum canamus principem, }  natum Maria Virgine. }  Beatus auctor saeculi }  servile corpus induit: }  ut carne carnem liberans, }  ne perderet quos condidit. }  Castae parentis viscera }  cae lestis intratgratia: }  venter puellae bajulat }  secreta, quae non noverat. }  Domus pudici pectoris }  tem plum repente fit Dei: }  intacta nesciens virum, }  concepit alvo filium. }`
 
 We could clean up the output by using the **sed** command to remove the
 trailing closed curly brace. We simple add the following to the
 pipeline:
 
-> ` . . . | sed 's/}//'`
+` . . . | sed 's/}//'`
 
 You might have noticed that each of the above phrases seems to consist
 of eight syllables. We can confirm this by returning to the syllabic
@@ -345,21 +337,17 @@ rather than word-oriented output. For the above command sequence, simply
 omit the **text** command and replace `**text` with `**silbe`. The
 revised script becomes:
 
-> `extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
->
-> > \> temp1
->
-> \
-> `extract -i '**silbe' chant12 > temp2`\
-> `assemble temp1 temp2 | cleave -i '**kern,**silbe' \`
->
-> > -o \'\*\*silbe\' \> temp3
->
-> `context -o = -e } temp3 | rid -GLId | sed 's/}//'`
+`extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
+> \> temp1
+\
+`extract -i '**silbe' chant12 > temp2`\
+`assemble temp1 temp2 | cleave -i '**kern,**silbe' \`
+> -o \'\*\*silbe\' \> temp3
+`context -o = -e } temp3 | rid -GLId | sed 's/}//'`
 
 The corresponding output is:
 
-> `A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Chri/- -stum ca- -na/- -mus prin/- -ci- -pem,   na/- -tum Ma- -ri/- -a Vir/- -gi- -ne.  Be- -a/- -tus au/- -ctor sae/- -cu- -li  ser- -vi/- -le cor/- -pus in/- -du- -it:  ut car/- -ne car/- -nem li/- -be- -rans,   ne per/- -de- -ret quos con/- -di- -dit.  Ca/- -stae pa- -ren/- -tis vis/- -ce- -ra  cae/ le/- -stis in/- -trat- -gra/- -ti- -a:  ven/- -ter pu- -el/- -lae ba/- -ju- -lat   se- -cre/- -ta, quae non no/- -ve- -rat.  Do/- -mus pu- -di- -ci pe/- -cto- -ris  tem/ plum re- -pen/- -te fit De/- -i:  in- -ta/- -cta ne/- -sci- -ens vi/- -rum,   con- -ce/- -pit al/- -vo fi/- -li- -um.`
+`A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Chri/- -stum ca- -na/- -mus prin/- -ci- -pem,   na/- -tum Ma- -ri/- -a Vir/- -gi- -ne.  Be- -a/- -tus au/- -ctor sae/- -cu- -li  ser- -vi/- -le cor/- -pus in/- -du- -it:  ut car/- -ne car/- -nem li/- -be- -rans,   ne per/- -de- -ret quos con/- -di- -dit.  Ca/- -stae pa- -ren/- -tis vis/- -ce- -ra  cae/ le/- -stis in/- -trat- -gra/- -ti- -a:  ven/- -ter pu- -el/- -lae ba/- -ju- -lat   se- -cre/- -ta, quae non no/- -ve- -rat.  Do/- -mus pu- -di- -ci pe/- -cto- -ris  tem/ plum re- -pen/- -te fit De/- -i:  in- -ta/- -cta ne/- -sci- -ens vi/- -rum,   con- -ce/- -pit al/- -vo fi/- -li- -um.`
 
 <a name ="syllables_per_phrase"></a>
 
@@ -371,7 +359,7 @@ us to write simple in-line programs. The following **awk** script simply
 outputs the number of fields (white-space separated text) in each input
 line:
 
-> `awk '{print NF}'`
+`awk '{print NF}'`
 
 If we add this to the end of our command sequence, then the output would
 simply be a sequence of numbers \-- where each number indicates the
@@ -384,23 +372,20 @@ syllable/phrase schemes can be generated for any syllable-related input.
 The following script counts the number of syllables in successive
 phrases for a single input file.
 
+\
+`# SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ `
 > \
-> `# SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ `
->
-> > \
-> > \| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
-> > NF}\'\
->
-> \
-> rm temp\[12\]
+> \| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
+> NF}\'\
+\
+rm temp\[12\]
 
 Variations on this theme abound. For example, if we wish to determine
 the number of syllables between successive punctuation marks, the
 following pipeline could be used:
 
-> `extract -i '**silbe' | context -o = -e '[.,;:?!]' \`
->
-> > \| rid -GLId \| awk \'{print NF}\'
+`extract -i '**silbe' | context -o = -e '[.,;:?!]' \`
+> \| rid -GLId \| awk \'{print NF}\'
 
 <a name ="Rhythmic_Feet_in_Text"></a>
 
@@ -412,24 +397,24 @@ Once again, we might look at the chant *O Solis Ortus.* Below we have
 recoded the syllables in each phrase, where the value `0` indicates an
 unstressed syllable and `1` indicates a stressed syllable:
 
-> \
-> `0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0`
+\
+`0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0`
 
 The above output was generated using the
 [**humsed**](/tool/humsed) command. Any syllable containing a
 trailing asterisk (`*`) is re-written as a \`1\', otherwise as a \`0\'.
 
-> ` . . . | humsed 's/[^ ][^ ]*\*/1/g; s/[^1][^1]*$/0/g'`
+` . . . | humsed 's/[^ ][^ ]*\*/1/g; s/[^1][^1]*$/0/g'`
 
 With the above output, we can generate an inventory of phrase-related
 text-rhythms.
 
-> ` . . . | sort | uniq -c | sort`
+` . . . | sort | uniq -c | sort`
 
 With the following results:
 
-> \
-> `5    0 1 0 1 0 1 0 0  4   1 0 0 1 0 1 0 0  2   0 1 0 0 0 1 0 0  1   0 1 0 1 0 0 1 0  1   1 1 0 1 0 1 0 0  1   1 0 0 0 0 1 0 0  1   1 0 0 1 0 0 1 0  1   0 0 0 1 0 1 0 0`
+\
+`5    0 1 0 1 0 1 0 0  4   1 0 0 1 0 1 0 0  2   0 1 0 0 0 1 0 0  1   0 1 0 1 0 0 1 0  1   1 1 0 1 0 1 0 0  1   1 0 0 0 0 1 0 0  1   1 0 0 1 0 0 1 0  1   0 0 0 1 0 1 0 0`
 
 We can create a summary rhythmic pattern by adding together the values
 in each column \-- that is, counting the number of accented syllables
@@ -441,14 +426,14 @@ will isolate the first column of numbers. We can then pipe the results
 to the **stats** utility in order to calculate the numerical total. For
 example,
 
-> ` . . . | cut -f 1 | stats | grep 'total'`\
-> ` . . . | cut -f 2 | stats | grep 'total'`\
-> ` . . . | cut -f 3 | stats | grep 'total'`\
-> etc
+` . . . | cut -f 1 | stats | grep 'total'`\
+` . . . | cut -f 2 | stats | grep 'total'`\
+` . . . | cut -f 3 | stats | grep 'total'`\
+etc
 
 For the chant *O Solis Ortus* the results are as follows:
 
-> `7 9 0 13 0 14 2 0`
+`7 9 0 13 0 14 2 0`
 
 This means that there are seven stressed syllables in the first syllable
 position of the phrase, nine stressed syllables in the second syllable
@@ -475,27 +460,25 @@ identifies the filename. The second column identifies the bar number in
 which the keyword occurs. The third column gives a five-word context
 where the middle word (in bold) identifies the keyword.]{#Samuel_Barber}
 
-> **Table 26.3.**
->
-> >   ----------- ---- -------------------------------------------
-> >   `chant29`   4    `ut possim cantare, Alleluia: gaudebunt`
-> >   `chant29`   7    `mea, dum cantavero tibi: Alleluia,`
-> >   `chant27`   1    `Cantate Domino canticum novum Alleluia:`
-> >   `chant54`   4    `Cantate Domino canticum novum, quia`
-> >   `chant24`   10   `Cantate Domino canticum novum: quia`
-> >   `chant42`   14   `totus non capit orbis, in`
-> >   `chant47`   5    `et exaltavit caput ejus; et`
-> >   `chant12`   1    `solis ortus cardine ad usque`
-> >   `chant14`   4    `arrisit orto caritas: Maria, dives`
-> >   `chant12`   7    `induit: ut carne carnem liberans,`
-> >   `chant58`   5    `et in carne mea videbo`
-> >   `chant12`   7    `ut carne carnem liberans, ne`
-> >   `chant14`   6    `sola quae casto potes fovere`
-> >   `chant17`   3    `et discerne causam meam de`
-> >   `chant21`   2    `Dominus a cena, misit aquam`
-> >   etc.             
-> >   ----------- ---- -------------------------------------------
-> >
+**Table 26.3.**
+>   ----------- ---- -------------------------------------------
+>   `chant29`   4    `ut possim cantare, Alleluia: gaudebunt`
+>   `chant29`   7    `mea, dum cantavero tibi: Alleluia,`
+>   `chant27`   1    `Cantate Domino canticum novum Alleluia:`
+>   `chant54`   4    `Cantate Domino canticum novum, quia`
+>   `chant24`   10   `Cantate Domino canticum novum: quia`
+>   `chant42`   14   `totus non capit orbis, in`
+>   `chant47`   5    `et exaltavit caput ejus; et`
+>   `chant12`   1    `solis ortus cardine ad usque`
+>   `chant14`   4    `arrisit orto caritas: Maria, dives`
+>   `chant12`   7    `induit: ut carne carnem liberans,`
+>   `chant58`   5    `et in carne mea videbo`
+>   `chant12`   7    `ut carne carnem liberans, ne`
+>   `chant14`   6    `sola quae casto potes fovere`
+>   `chant17`   3    `et discerne causam meam de`
+>   `chant21`   2    `Dominus a cena, misit aquam`
+>   etc.             
+>   ----------- ---- -------------------------------------------
 We would also like to provide a **grep**-like search tool so users can
 search for particular keywords.
 
@@ -518,25 +501,21 @@ don\'t contain any text. All of this processing is carried out in a
 while-loop that cycles through all of the files provided when the
 command is invoked.
 
+\
+`while [ $# -ne 0 ]  do `
 > \
-> `while [ $# -ne 0 ]  do `
->
+> extract -i \'\*\*silbe\' \$1 \> temp1\
+> text temp1 \| context -o = -n 5 -p 3 \> temp2\
+> num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\\
 > > \
-> > extract -i \'\*\*silbe\' \$1 \> temp1\
-> > text temp1 \| context -o = -n 5 -p 3 \> temp2\
-> > num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\\
-> >
-> > > \
-> > > \| ditto \| humsed \'s/\\./0/\' \> temp3\
-> >
-> > \
-> > humsed \"s/.\*/\$1/\" temp1 \> temp4\
-> > assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'\
-> > shift;\
->
+> > \| ditto \| humsed \'s/\\./0/\' \> temp3\
 > \
-> done\
-> rm temp\[1-4\]
+> humsed \"s/.\*/\$1/\" temp1 \> temp4\
+> assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'\
+> shift;\
+\
+done\
+rm temp\[1-4\]
 
 Having generated our concordance file, we can now create a simple tool
 that allows us to search for keywords. Suppose we kept our concordance
@@ -560,8 +539,8 @@ context. Note that since we\'ve used the extended regular expression
 character \`+\' \-- we must invoke **egrep** rather than **grep** in our
 script:
 
-> \
-> `# KEYWORD - A script for searching a master concordance file  #  # Usage:  keyword   #  egrep "^.*  [^ ]+ [^ ]+ $1" ~/home/concord/master`
+\
+`# KEYWORD - A script for searching a master concordance file  #  # Usage:  keyword   #  egrep "^.*  [^ ]+ [^ ]+ $1" ~/home/concord/master`
 
 Concordances can be used for a number of applications. One might use a
 concordance to help identify metaphor or image related words (such as
@@ -585,7 +564,7 @@ the preceding and following four words.
 First we transform and isolate the text data using the **text** and
 [**extract**](/tool/extract) commands:
 
-> `text inputfile | extract -i '**text' `
+`text inputfile | extract -i '**text' `
 
 Since the input may contain multiple-stops, we might consider the
 precaution of ensuring no more than one word per data record. For this
@@ -598,9 +577,8 @@ ways. One way is to precede the carriage return by control-V (meaning
 return. In the following command we have used the backslash to escape a
 control-M character:
 
-> `text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
->
-> > \| egrep -4 \'\^\|(like)\|(as)\$\'
+`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+> \| egrep -4 \'\^\|(like)\|(as)\$\'
 
 Having ensured that there is no more than one word per line we can now
 search for a line contain *just* \"like\" or \"as.\" The **-4** option
@@ -626,19 +604,17 @@ terminator (`*-`). If the input contains tabs, then appropriate spines
 will be added. If the input contains empty lines, then they will be
 changed to null data records.
 
-> `text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
->
-> > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
+`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
 
 Now we can make use of the **context** command. Each context ends with
 the double-dash delimiters generated by **egrep**. The
 [**rid**](/tool/rid) command can be used to eliminate the
 interpretations added by **hum**.
 
-> `text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
->
-> > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\\
-> > \| rid -Id
+`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\\
+> \| rid -Id
 
 <a name ="Word_Painting"></a>
 
@@ -662,20 +638,19 @@ First we translate any pitch data to
 `**text`. We will also filter the outputs to ensure that only `**semits`
 and `**text` are present.
 
-> `semits * | text | extract -i '**semits,**text'`
+`semits * | text | extract -i '**semits,**text'`
 
 Since a word may be sustained through more than one pitch, and a pitch
 may be intoned for more than one word, we should use the
 [**ditto**](/tool/ditto) command to ensure that null tokens are
 filled-in.
 
-> `semits * | text | extract -i '**semits,**text' | ditto -s =`
+`semits * | text | extract -i '**semits,**text' | ditto -s =`
 
 Next, we can use **egrep** to search for the words of interest:
 
-> `semits * | text | extract -i '**semits,**text' | ditto -s = \`
->
-> > \| egrep -i \'\^\\\*\|high\|hoch\|haut\'
+`semits * | text | extract -i '**semits,**text' | ditto -s = \`
+> \| egrep -i \'\^\\\*\|high\|hoch\|haut\'
 
 Notice the addition of the expression `^\*` in the search pattern. This
 expression will match any Humdrum interpretation records and so ensures
@@ -684,16 +659,14 @@ that the output conforms to the Humdrum syntax. We can now isolate the
 the average pitch for the words coinciding with the words
 high/hoch/haut:
 
-> `semits * | text | extract -i '**semits,**text' | ditto -s = \`
->
-> > \| egrep -i \'\^\\\*\|high\|hoch\|haut\' \| extract -i
-> > \'\*\*semits\' \| stats
+`semits * | text | extract -i '**semits,**text' | ditto -s = \`
+> \| egrep -i \'\^\\\*\|high\|hoch\|haut\' \| extract -i
+> \'\*\*semits\' \| stats
 
 The average pitch for the entire work can be determined as follows:
 
-> `semits * | extract -i '**semits' | ditto -s = | rid -GLI \`
->
-> > \| stats
+`semits * | extract -i '**semits' | ditto -s = | rid -GLI \`
+> \| stats
 
 <a name ="Emotionality"></a>
 
@@ -717,15 +690,14 @@ rating for all 10 participants.\
 \
 **Table 26.4. Average Emotionality Ratings for English Words.**
 
->   -------- ------
->   begin    +3.8
->   river    +4.2
->   friend   +5.2
->   love     +8.6
->   hate     -9.7
->   detest   -9.8
->   -------- ------
->
+  -------- ------
+  begin    +3.8
+  river    +4.2
+  friend   +5.2
+  love     +8.6
+  hate     -9.7
+  detest   -9.8
+  -------- ------
 Clearly, such a rating system might allow us to create a tool that would
 automatically search a large database and identify those vocal works
 whose lyrics are most emotionally charged. One way to generate a crude
@@ -740,18 +712,17 @@ would have the following form. Notice that the first substitution is
 used to eliminate punctuation marks.\
 \
 
->   -----------------------
->   ``
->   s/\[.,;:\'\`\"!?\]//g
->   s/begin/+3.8/
->   s/river/+4.2/
->   s/friend/+5.2/
->   s/love/+8.6/
->   s/hate/-9.7/
->   s/detest/-9.8/
->   /\[\^0-9+-\]/s/.\*/./
->   -----------------------
->
+  -----------------------
+  ``
+  s/\[.,;:\'\`\"!?\]//g
+  s/begin/+3.8/
+  s/river/+4.2/
+  s/friend/+5.2/
+  s/love/+8.6/
+  s/hate/-9.7/
+  s/detest/-9.8/
+  /\[\^0-9+-\]/s/.\*/./
+  -----------------------
 Also notice that the final command transforms any data records that
 contains anything other than a number to a null data token. In other
 words, words that are not present in the emotionality list are not
@@ -761,15 +732,14 @@ In order to process our input, any syllabic text would first be
 translated to the `**text` representation, and all other spines
 discarded using **extract -i**.
 
-> `text` *inputfile*` | extract -i '**text' ...`
+`text` *inputfile*` | extract -i '**text' ...`
 
 Then we would translate the words using our \"emotionality\" script,
 eliminate everything other than data records, and calculate the
 numerical statistics:
 
-> `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
->
-> > \| rid -GLId \| stats
+`text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
+> \| rid -GLId \| stats
 
 In general, works whose lyrics express predominantly positive emotions
 ought to exhibit positive emotionality estimates. Similarly, works
@@ -790,13 +760,11 @@ option **-5** specifies the first five lines. Similarly, the UNIX
 end of a file. The ten highest and lowest values are then concatenated
 together and piped to the **stats** command:
 
-> `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
->
-> > \| rid -GLId \| sort -n \> temp
->
-> head -5 temp \> lowest\
-> tail -5 temp \> highest\
-> cat highest lowest \| stats
+`text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
+> \| rid -GLId \| sort -n \> temp
+head -5 temp \> lowest\
+tail -5 temp \> highest\
+cat highest lowest \| stats
 
 A second problem with averaging together emotion rating values is that
 an emotionally-charged work might include a rough balance of passionate
@@ -812,7 +780,7 @@ emotionally charged words.
 The plus and minus signs can be eliminated using a simple **humsed**
 substitution prior to numerical sorting:
 
-> `humsed 's/[+-]//g'`
+`humsed 's/[+-]//g'`
 
 Once again, we could use the **head** command to isolate the 10 or 20
 most emotionally charged words.
@@ -824,20 +792,19 @@ the location of the most emotionally charged word. A combination of
 spine containing the emotional-charge values taking care to eliminate
 the signs:
 
-> `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
->
-> > \| humsed \'s/\[+-\]//g\' \> charges
+`text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
+> \| humsed \'s/\[+-\]//g\' \> charges
 
 Next we assemble this new spine with the original input:
 
-> `assemble charges` *inputfile*
+`assemble charges` *inputfile*
 
 We can isolate data records using **rid** and then use **sort -n** to
 sort according to the numbers present in the first column. The most
 emotional charged word will be at the end of the file (largest number)
 so we can use **tail -1** to identify the word:
 
-> `assemble charges` *inputfile*` | rid -GLId | sort -n | tail -1`
+`assemble charges` *inputfile*` | rid -GLId | sort -n | tail -1`
 
 Having established what word has been estimated as having the highest
 emotional-charge, we can then use **grep -n** to establish the
@@ -884,15 +851,3 @@ the **cut** command (similar to **extract -f**), and the **head** and
 In [Chapter 34](/guide/ch34) we will examine further representations
 and processes related to phonetic data.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch28)
-
-[**Previous Chapter**](/guide/ch26)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

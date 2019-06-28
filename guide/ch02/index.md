@@ -27,29 +27,27 @@ notation.\
 \
 **Example 2.1.** J.S. Bach *Die Kunst der Fuge*
 
-> ![](guide.figures/guide02.1.gif)
->
-> >   -----------
-> >   `**kern`
-> >   `*clefG2`
-> >   `*k[b-]`
-> >   `*M2/2`
-> >   `=-`
-> >   `2d/`
-> >   `2a/`
-> >   `=`
-> >   `2f/`
-> >   `2d/`
-> >   `=`
-> >   `2c#/`
-> >   `4d/`
-> >   `4e/`
-> >   `=`
-> >   `2f/`
-> >   `2r`
-> >   `*-`
-> >   -----------
-> >
+![](guide.figures/guide02.1.gif)
+>   -----------
+>   `**kern`
+>   `*clefG2`
+>   `*k[b-]`
+>   `*M2/2`
+>   `=-`
+>   `2d/`
+>   `2a/`
+>   `=`
+>   `2f/`
+>   `2d/`
+>   `=`
+>   `2c#/`
+>   `4d/`
+>   `4e/`
+>   `=`
+>   `2f/`
+>   `2r`
+>   `*-`
+>   -----------
 In general, `**kern` is intended to represent the underlying
 *functional* information conveyed by a musical score rather than the
 visual or *orthographic* information found in a given printed rendition.
@@ -118,46 +116,44 @@ layout is exactly as though the musical score were turned sideways.\
 \
 **Example 2.2.** J.S. Bach, *Praeambulum* BWV 390.
 
-> ![](guide.figures/guide02.2.gif)
->
-> >   ----------- -----------
-> >   `**kern`    \*\*kern
-> >   `*staff2`   \*staff1
-> >   `*clefF4`   \*clefG2
-> >   `*k[b-]`    \*k\[b-\]
-> >   `*M3/4`     \*M3/4
-> >   `=1-`       =1-
-> >   `2.rr`      8r
-> >   `.`         8d/L
-> >   `.`         8g/
-> >   `.`         8b-/
-> >   `.`         8g/
-> >   `.`         8d/J
-> >   `=2`        =2
-> >   `8r`        4dd\\
-> >   `8GG/L`     .
-> >   `8BB-/`     4r
-> >   `8D/`       .
-> >   `8BB-/`     4r
-> >   `8GG/J`     .
-> >   `=3`        =3
-> >   `4GWw\`     8r
-> >   `.`         8dd\\L
-> >   `8GG/L`     8b-\\
-> >   `8BB-/`     8g\\
-> >   `8D/`       8gg\\
-> >   `8G/J`      8b-\\J
-> >   `=4`        =4
-> >   `4D\`       8a/L
-> >   `.`         8gg/
-> >   `4d\`       8ff/
-> >   `.`         8ee/
-> >   `4D\`       8ff/
-> >   `.`         8a-/J
-> >   `=5`        =5
-> >   `*-`        \*-
-> >   ----------- -----------
-> >
+![](guide.figures/guide02.2.gif)
+>   ----------- -----------
+>   `**kern`    \*\*kern
+>   `*staff2`   \*staff1
+>   `*clefF4`   \*clefG2
+>   `*k[b-]`    \*k\[b-\]
+>   `*M3/4`     \*M3/4
+>   `=1-`       =1-
+>   `2.rr`      8r
+>   `.`         8d/L
+>   `.`         8g/
+>   `.`         8b-/
+>   `.`         8g/
+>   `.`         8d/J
+>   `=2`        =2
+>   `8r`        4dd\\
+>   `8GG/L`     .
+>   `8BB-/`     4r
+>   `8D/`       .
+>   `8BB-/`     4r
+>   `8GG/J`     .
+>   `=3`        =3
+>   `4GWw\`     8r
+>   `.`         8dd\\L
+>   `8GG/L`     8b-\\
+>   `8BB-/`     8g\\
+>   `8D/`       8gg\\
+>   `8G/J`      8b-\\J
+>   `=4`        =4
+>   `4D\`       8a/L
+>   `.`         8gg/
+>   `4d\`       8ff/
+>   `.`         8ee/
+>   `4D\`       8ff/
+>   `.`         8a-/J
+>   `=5`        =5
+>   `*-`        \*-
+>   ----------- -----------
 Each column contains its own separate information. Both columns have
 been labelled `**kern` and are terminated (`*-`). The columns are
 separated by a single tab. Barline information is also encoded in each
@@ -221,46 +217,44 @@ but links the appropriate parts using the `*staff` indicators.\
 \
 **Example 2.3.** *Nun danket alle Gott*, arr. J.S. Bach.
 
-> ![](guide.figures/guide02.3.gif)
->
-> >   -------------- ------------------ ------------------ ------------------
-> >   `**kern`       \*\*kern           \*\*kern           \*\*kern
-> >   `*staff2`      \*staff2           \*staff1           \*staff1
-> >   `*clefF4`      \*clefF4           \*clefG2           \*clefG2
-> >   `*k[f#c#g#]`   \*k\[f\#c\#g\#\]   \*k\[f\#c\#g\#\]   \*k\[f\#c\#g\#\]
-> >   `*M4/4`        \*M4/4             \*M4/4             \*M4/4
-> >   `4AA`          4c\#               4a                 4ee
-> >   `=1`           =1                 =1                 =1
-> >   `8A`           4c\#               4a                 4ee
-> >   `8B`           .                  .                  .
-> >   `8c#`          4c\#               4a                 4ee
-> >   `8A`           .                  .                  .
-> >   `8D`           4d                 4a                 4ff\#
-> >   `8E`           .                  .                  .
-> >   `8F#`          4d                 4a                 4ff\#
-> >   `8D`           .                  .                  .
-> >   `=2`           =2                 =2                 =2
-> >   `2A;`          2c\#;              2a;                2ee;
-> >   `4r`           4r                 4r                 4r
-> >   `4A`           4e                 4a                 4cc\#
-> >   `=3`           =3                 =3                 =3
-> >   `4G#`          4e                 4b                 4dd
-> >   `4A`           4e                 4a                 4cc\#
-> >   `8E`           4e                 4g\#               4b
-> >   `8D`           .                  .                  .
-> >   `8C#`          4e                 \[4a               8.cc\#
-> >   `8AA`          .                  .                  .
-> >   `.`            .                  .                  16dd
-> >   `=4`           =4                 =4                 =4
-> >   `2E`           8e                 8a\]               2b
-> >   `.`            16d                8f\#               .
-> >   `.`            16c\#              .                  .
-> >   `.`            4d                 4g\#               .
-> >   `4AA;`         4c\#;              4e;                4a;
-> >   `=:|!`         =:\|!              =:\|!              =:\|!
-> >   `*-`           \*-                \*-                \*-
-> >   -------------- ------------------ ------------------ ------------------
-> >
+![](guide.figures/guide02.3.gif)
+>   -------------- ------------------ ------------------ ------------------
+>   `**kern`       \*\*kern           \*\*kern           \*\*kern
+>   `*staff2`      \*staff2           \*staff1           \*staff1
+>   `*clefF4`      \*clefF4           \*clefG2           \*clefG2
+>   `*k[f#c#g#]`   \*k\[f\#c\#g\#\]   \*k\[f\#c\#g\#\]   \*k\[f\#c\#g\#\]
+>   `*M4/4`        \*M4/4             \*M4/4             \*M4/4
+>   `4AA`          4c\#               4a                 4ee
+>   `=1`           =1                 =1                 =1
+>   `8A`           4c\#               4a                 4ee
+>   `8B`           .                  .                  .
+>   `8c#`          4c\#               4a                 4ee
+>   `8A`           .                  .                  .
+>   `8D`           4d                 4a                 4ff\#
+>   `8E`           .                  .                  .
+>   `8F#`          4d                 4a                 4ff\#
+>   `8D`           .                  .                  .
+>   `=2`           =2                 =2                 =2
+>   `2A;`          2c\#;              2a;                2ee;
+>   `4r`           4r                 4r                 4r
+>   `4A`           4e                 4a                 4cc\#
+>   `=3`           =3                 =3                 =3
+>   `4G#`          4e                 4b                 4dd
+>   `4A`           4e                 4a                 4cc\#
+>   `8E`           4e                 4g\#               4b
+>   `8D`           .                  .                  .
+>   `8C#`          4e                 \[4a               8.cc\#
+>   `8AA`          .                  .                  .
+>   `.`            .                  .                  16dd
+>   `=4`           =4                 =4                 =4
+>   `2E`           8e                 8a\]               2b
+>   `.`            16d                8f\#               .
+>   `.`            16c\#              .                  .
+>   `.`            4d                 4g\#               .
+>   `4AA;`         4c\#;              4e;                4a;
+>   `=:|!`         =:\|!              =:\|!              =:\|!
+>   `*-`           \*-                \*-                \*-
+>   -------------- ------------------ ------------------ ------------------
 Once again, clefs, key signatures and meter signatures are encoded
 separately for each part. Notice how the meter signature has been
 encoded as 4/4 rather than \`common time\'. This again reflects
@@ -329,63 +323,61 @@ and end with \``JJ`\'.\
 \
 **Example 2.4.** Franz Joseph Haydn, *Sonata in C major, Hob. XVI: 35*.
 
-> ![](guide.figures/guide02.4.gif)
->
-> >   ----------- ---------- ------------
-> >   `**kern`    \*\*kern   \*\*kern
-> >   `*staff2`   \*staff2   \*staff1
-> >   `*clefG2`   \*clefG2   \*clefG2
-> >   `*k[]`      \*k\[\]    \*k\[\]
-> >   `*M3/4`     \*M3/4     \*M3/4
-> >   `=1-`       =1-        =1-
-> >   `4r`        4r         \[4ee\\
-> >   `4c/`       4g/        8.ee\]\\L
-> >   `.`         .          16ff\\Jk
-> >   `4f/`       4g         8.dd\\L
-> >   `.`         .          16ee\\Jk
-> >   `=2`        =2         =2
-> >   `4e/`       4g/        4cc\\
-> >   `4r`        4r         4gg/
-> >   `4r`        4r         4gg/
-> >   `=3`        =3         =3
-> >   `(2B\`      (\[2.g/    (8gg\\L
-> >   `.`         .          8ff)\\J
-> >   `.`         .          (8ff\\L
-> >   `.`         .          8ee)\\J
-> >   `4c\`       .          (8ee\\L
-> >   `.`         .          8dd)\\J
-> >   `=4`        =4         =4
-> >   `4G\)`      4g\])/     4dd\\
-> >   `4r`        4r         4b\\
-> >   `4r`        4r         4g/
-> >   `=5`        =5         =5
-> >   `4r`        4r         \[4ee\\
-> >   `4c/`       4g/        8.ee\]\\L
-> >   `.`         .          16ff\\Jk
-> >   `4f/`       4g/        8.dd\\L
-> >   `.`         .          16ee\\Jk
-> >   `=6`        =6         =6
-> >   `4e/`       4g/        4cc\\
-> >   `4r`        4r         4ccc\\
-> >   `4E\`       4c\\       4ccc\\
-> >   `=7`        =7         =7
-> >   `4f\`       4c\\       16gg\#\\LL
-> >   `.`         .          16aa\\JJ
-> >   `.`         .          8r
-> >   `4r`        4r         16ee\\LL
-> >   `.`         .          16ff\\JJ
-> >   `.`         .          8r
-> >   `4Gn\`      4f\\       16dd\\LL
-> >   `.`         .          16b\\JJ
-> >   `.`         .          8r
-> >   `=8`        =8         =8
-> >   `4c\`       4e\\       4cc\\
-> >   `4r`        4r         4r
-> >   `4r`        4r         4r
-> >   `=:|!`      =:\|!      =:\|!
-> >   `*-`        \*-        \*-
-> >   ----------- ---------- ------------
-> >
+![](guide.figures/guide02.4.gif)
+>   ----------- ---------- ------------
+>   `**kern`    \*\*kern   \*\*kern
+>   `*staff2`   \*staff2   \*staff1
+>   `*clefG2`   \*clefG2   \*clefG2
+>   `*k[]`      \*k\[\]    \*k\[\]
+>   `*M3/4`     \*M3/4     \*M3/4
+>   `=1-`       =1-        =1-
+>   `4r`        4r         \[4ee\\
+>   `4c/`       4g/        8.ee\]\\L
+>   `.`         .          16ff\\Jk
+>   `4f/`       4g         8.dd\\L
+>   `.`         .          16ee\\Jk
+>   `=2`        =2         =2
+>   `4e/`       4g/        4cc\\
+>   `4r`        4r         4gg/
+>   `4r`        4r         4gg/
+>   `=3`        =3         =3
+>   `(2B\`      (\[2.g/    (8gg\\L
+>   `.`         .          8ff)\\J
+>   `.`         .          (8ff\\L
+>   `.`         .          8ee)\\J
+>   `4c\`       .          (8ee\\L
+>   `.`         .          8dd)\\J
+>   `=4`        =4         =4
+>   `4G\)`      4g\])/     4dd\\
+>   `4r`        4r         4b\\
+>   `4r`        4r         4g/
+>   `=5`        =5         =5
+>   `4r`        4r         \[4ee\\
+>   `4c/`       4g/        8.ee\]\\L
+>   `.`         .          16ff\\Jk
+>   `4f/`       4g/        8.dd\\L
+>   `.`         .          16ee\\Jk
+>   `=6`        =6         =6
+>   `4e/`       4g/        4cc\\
+>   `4r`        4r         4ccc\\
+>   `4E\`       4c\\       4ccc\\
+>   `=7`        =7         =7
+>   `4f\`       4c\\       16gg\#\\LL
+>   `.`         .          16aa\\JJ
+>   `.`         .          8r
+>   `4r`        4r         16ee\\LL
+>   `.`         .          16ff\\JJ
+>   `.`         .          8r
+>   `4Gn\`      4f\\       16dd\\LL
+>   `.`         .          16b\\JJ
+>   `.`         .          8r
+>   `=8`        =8         =8
+>   `4c\`       4e\\       4cc\\
+>   `4r`        4r         4r
+>   `4r`        4r         4r
+>   `=:|!`      =:\|!      =:\|!
+>   `*-`        \*-        \*-
+>   ----------- ---------- ------------
 Slurs are evident in the third measure. Open and closed slurs are
 represented by open (`(`) and closed (`)`) parentheses respectively.
 Notice that the middle part in the third measure contains a tied note.
@@ -425,31 +417,27 @@ the spines.\
 
 ``
 
-> `!! Ojibway Indian Song`
->
-> `!! Transcribed by Frances Densmore`
->
-> `!! No. 84 "The Sioux Follow Me" `
->
->   ------------------ -- --------------
->   `**kern`              \*\*lyrics
->   `!`                   ! In Ojibway
->   `*clefF4`             \*
->   `*M3/4`               \*
->   `*k[b-e-a-d-g-]`      \*
->   `8.d-`                Ma-
->   `16d-`                -gi-
->   `=1`                  =1
->   `8d-`                 -ja-
->   `16A-`                -go
->   `16A-`                ic-
->   `4d-`                 -kew-
->   `4d-`                 -yan
->   `=2`                  =2
->   `etc.`                etc.
->   `*-`                  \*-
->   ------------------ -- --------------
->
+`!! Ojibway Indian Song`
+`!! Transcribed by Frances Densmore`
+`!! No. 84 "The Sioux Follow Me" `
+  ------------------ -- --------------
+  `**kern`              \*\*lyrics
+  `!`                   ! In Ojibway
+  `*clefF4`             \*
+  `*M3/4`               \*
+  `*k[b-e-a-d-g-]`      \*
+  `8.d-`                Ma-
+  `16d-`                -gi-
+  `=1`                  =1
+  `8d-`                 -ja-
+  `16A-`                -go
+  `16A-`                ic-
+  `4d-`                 -kew-
+  `4d-`                 -yan
+  `=2`                  =2
+  `etc.`                etc.
+  `*-`                  \*-
+  ------------------ -- --------------
 <a name ="Reference_Records"></a>
 
 Reference Records
@@ -468,22 +456,21 @@ following example provides a set of reference records related to the
 \"Augurs of Spring\" section from Stravinsky\'s *Rite of Spring.*
 Example 2.6.
 
->   ----------------------------------------
->   `!!!COM: Stravinsky, Igor Fyodorovich`
->   `!!!CDT: 1882/6/17/-1971/4/6`
->   `!!!ODT: 1911//-1913//; 1947//`
->   `!!!OPT@@RUS: Vesna svyashchennaya`
->   `!!!OPT@FRE: Le sacre du printemps`
->   `!!!OPT@ENG: Rite of Spring`
->   `!!!OTL@FRE: Les augures printaniers`
->   `!!!PUB: Boosey & Hawkes`
->   `!!!YEC: 1945 Boosey & Hawkes`
->   `!!!AGN: ballet`
->   `!!!AST: neo-classical`
->   `!!!AMT: irregular`
->   `!!!AIN: clars corno fagot flt oboe`
->   ----------------------------------------
->
+  ----------------------------------------
+  `!!!COM: Stravinsky, Igor Fyodorovich`
+  `!!!CDT: 1882/6/17/-1971/4/6`
+  `!!!ODT: 1911//-1913//; 1947//`
+  `!!!OPT@@RUS: Vesna svyashchennaya`
+  `!!!OPT@FRE: Le sacre du printemps`
+  `!!!OPT@ENG: Rite of Spring`
+  `!!!OTL@FRE: Les augures printaniers`
+  `!!!PUB: Boosey & Hawkes`
+  `!!!YEC: 1945 Boosey & Hawkes`
+  `!!!AGN: ballet`
+  `!!!AST: neo-classical`
+  `!!!AMT: irregular`
+  `!!!AIN: clars corno fagot flt oboe`
+  ----------------------------------------
 Reference records need not be in any particular order. The most
 important reference records (composer, title, etc.) are typically placed
 at the very beginning of a file since this makes inspecting the file
@@ -550,7 +537,7 @@ instrumentation in alphabetical order by instrument abbrevation
 separated by a single space. For example, the instrumentation for a
 woodwind quintet is given as:
 
-> `!!!AIN: clars corno fagot flt oboe`
+`!!!AIN: clars corno fagot flt oboe`
 
 In our discussion here we have only identified some of the more common
 types of reference records. A complete description of reference records
@@ -578,15 +565,3 @@ Although we have only demonstrated the encoding of fairly simple
 information, we can already begin processing such data in musically
 useful ways. In the next chapter we will examine some simple processes.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch03)
-
-[**Previous Chapter**](/guide/ch01)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

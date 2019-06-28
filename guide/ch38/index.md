@@ -101,9 +101,8 @@ works that match particular controlled characteristics (see [Chapter
 files that contain scores in triple meter. The results are placed in a
 file called `control`:
 
-> `find /scores -type f -exec grep -l '!!!AMT.*triple' "{}" ";" \`
->
-> > \> control
+`find /scores -type f -exec grep -l '!!!AMT.*triple' "{}" ";" \`
+> \> control
 
 In some cases, the number of possible control works is excessively
 large. In this case one can make a random selection from the control
@@ -166,7 +165,7 @@ barlines and rests. We can then calculate the average interval size by
 piping the output to the **stats** command. For typical folk melodies,
 the average interval size is roughly two semitones.
 
-> `semits melody | xdelta -a | rid -GLId | grep -v '[=r]' | stats`
+`semits melody | xdelta -a | rid -GLId | grep -v '[=r]' | stats`
 
 Next, we need to determine the average melodic interval size that would
 result for a random re-ordering of the pitches within each melody. We
@@ -181,33 +180,31 @@ The [**scramble**](/tool/scramble) command is useful for
 randomizing the arrangement of Humdrum data. Suppose we had the
 following Humdrum input:
 
->   -------------
->   `**numbers`
->   `1`
->   `2`
->   `3`
->   `4`
->   `5`
->   `*-`
->   -------------
->
+  -------------
+  `**numbers`
+  `1`
+  `2`
+  `3`
+  `4`
+  `5`
+  `*-`
+  -------------
 We can scramble the order of data records using the following command:
 
-> `scramble -r numbers`
+`scramble -r numbers`
 
 The **-r** option indicates that it is the order of records which should
 be randomized. A possible output might look like this:
 
->   -------------
->   `**numbers`
->   `3`
->   `2`
->   `5`
->   `1`
->   `4`
->   `*-`
->   -------------
->
+  -------------
+  `**numbers`
+  `3`
+  `2`
+  `5`
+  `1`
+  `4`
+  `*-`
+  -------------
 Notice that only data records are scrambled: comments and
 interpretations stay put. Each time
 [**scramble**](/tool/scramble) is invoked, it produces a
@@ -217,9 +214,8 @@ Returning to our melodic interval problem, we can now generate an
 inventory of melodic intervals for our original repertory, where the
 order of the notes has been randomly ordered:
 
-> `scramble -r melody | semits | xdelta -a | rid -GLId \`
->
-> > \| grep -v \'\[=r\]\' \| stats
+`scramble -r melody | semits | xdelta -a | rid -GLId \`
+> \| grep -v \'\[=r\]\' \| stats
 
 For a typical folksong repertory, the average melodic interval size for
 a randomly re-ordered melody is roughly 3 semitones in size. Using
@@ -238,12 +234,12 @@ relative scarcity of subdominant chords. We can address this question by
 comparing Haydn\'s actual harmonic progressions with randomly generated
 progressions. First we count the total number of *V-IV* progressions:
 
-> `extract -i '**harm' haydn  | context -n 2 -o ^= | grep -c '^V IV$'`
+`extract -i '**harm' haydn  | context -n 2 -o ^= | grep -c '^V IV$'`
 
 Next we randomly re-order his harmonies and count the number of *V-IV*
 progressions:
 
-> `scramble -r haydn | extract -i '**harm' | context -n 2 -o ^= | grep -c '^V IV$'`
+`scramble -r haydn | extract -i '**harm' | context -n 2 -o ^= | grep -c '^V IV$'`
 
 <a name ="Bach_Augmented_Eleventh"></a>
 
@@ -255,17 +251,17 @@ occur by chance. That is, the tritone is \"sought-out\" rather than
 invention. We begin by counting the number of augmented elevenths in his
 actual writing:
 
-> `ditto -s = bach | hint | grep -c 'A11'`
+`ditto -s = bach | hint | grep -c 'A11'`
 
 We can create a random comparison by extracting one of the parts,
 scrambling the order of notes, and then re-assembling the scrambled part
 with the original. The resulting harmonic intervals arise from a random
 juxtaposition of parts.
 
-> `extract -f 1 bach > temp1`\
-> `extract -f 2 bach > temp2`\
-> `scramble -r temp1 > temp1.scr`\
-> `assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'`
+`extract -f 1 bach > temp1`\
+`extract -f 2 bach > temp2`\
+`scramble -r temp1 > temp1.scr`\
+`assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'`
 
 Note that the **scramble** command also provides a **-t** option so that
 the order of tokens within a data record can be randomly re-arranged.
@@ -343,39 +339,38 @@ Recall that the [**reihe**](/tool/reihe) command ([Chapter
 serial position of data tokens. For example, suppose we had an input
 consisting of the numbers 1 through 5. The following command:
 
-> `reihe -s +1 file`
+`reihe -s +1 file`
 
 Will cause all data tokens to be moved forward one position, and the
 last data token to be moved to the beginning:
 
->   -------------
->   `**numbers`
->   `5`
->   `1`
->   `2`
->   `3`
->   `4`
->   `*-`
->   -------------
->
+  -------------
+  `**numbers`
+  `5`
+  `1`
+  `2`
+  `3`
+  `4`
+  `*-`
+  -------------
 Let\'s apply this technique to our problem of whether a given composer
 tends to avoid octaves between the soprano and bass voices. First, we
 extract each of the voices. Let\'s also eliminate barlines and use
 [**ditto**](/tool/ditto) to replicate the pitch values through
 null tokens.
 
-> `extract -i '*sopran' composition | grep -v = | ditto > voice1`\
-> `extract -i '*bass' composition | grep -v = | ditto > voice2`
+`extract -i '*sopran' composition | grep -v = | ditto > voice1`\
+`extract -i '*bass' composition | grep -v = | ditto > voice2`
 
 Now let\'s shift one part with respect to the other using
 [**reihe**](/tool/scramble) **-s**.
 
-> `reihe -s voice1 > voice1.shifted`
+`reihe -s voice1 > voice1.shifted`
 
 Now we reassemble the parts, determine the harmonic intervals present,
 and count the number of octave intervals:
 
-> `assemble voice2 voice1.shifted | hint | grep -c 'P8'`
+`assemble voice2 voice1.shifted | hint | grep -c 'P8'`
 
 In effect, we have concocted a control group, by shifting the parts with
 respect to each other. Of course we have utterly destroyed the
@@ -398,14 +393,12 @@ the possible shifts between the first and second spines in the file
 the `LENGTH` variable. A `while` loop is used to calculate the number of
 octave intervals for each of the possible shifts between the parts:
 
-> `` extract -f 1 composition | grep -v = | ditto > spine1  extract -f 2 composition | grep -v = | ditto > spine2  LENGTH=`rid -GLId spine1 | wc -l | sed 's/ //g'`  X=0  while [ $X -ne $LENGTH ]  do ``
->
-> > reihe -s \$X spine1 \> temp\
-> > assemble temp spine2 \| hint \| grep -c \'P8\'\
-> > let X=\$X+1
->
-> done\
-> rm spine\[12\] temp\
+`` extract -f 1 composition | grep -v = | ditto > spine1  extract -f 2 composition | grep -v = | ditto > spine2  LENGTH=`rid -GLId spine1 | wc -l | sed 's/ //g'`  X=0  while [ $X -ne $LENGTH ]  do ``
+> reihe -s \$X spine1 \> temp\
+> assemble temp spine2 \| hint \| grep -c \'P8\'\
+> let X=\$X+1
+done\
+rm spine\[12\] temp\
 
 This *autophase* procedure has been used to address many differ kinds of
 questions pertaining to how musical parts interrelate.
@@ -433,15 +426,3 @@ organized. In certain cases, such contrasts allow us to infer aspects of
 musical organization that would otherwise be difficult or impossible to
 decipher.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch39)
-
-[**Previous Chapter**](/guide/ch37)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

@@ -358,7 +358,6 @@ have been encoded for both notes in the double stop.
 
 
 
->
 <a name ="Further_Examples"></a>
 
 Further Examples

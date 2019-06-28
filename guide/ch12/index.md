@@ -59,89 +59,80 @@ Concerto shown in Example 12.1.\
 \
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
 
-> `!!!COM: Bach, Johann Sebastian`
->
-> `!!!OPR: Six Concerts Avec plusieurs ... le prince regnant d'Anhalt-Coethen`
->
-> `!!!OTL: Brandenburgische Konzerte F`
->
-> `!!!XEN: Brandenburg Concerto No. 2 in F major.`
->
-> `!!!OMV: Movement 1.`
->
-> `!!!SCT: BWV 1047`
->
-> `!! [Allegro] `
->
->   ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
->   `**kern`    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern
->   `*ICklav`   \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICww      \*ICww      \*ICbras
->   `*Icemba`   \*Icello    \*Icbass    \*Iviola    \*Ivioln    \*Ivioln    \*Ivioln    \*Ioboe     \*Ifltds    \*Itromp
->   `*IGcont`   \*IGcont    \*          \*          \*          \*          \*          \*          \*          \*
->   `*IGripn`   \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGconc    \*IGconc    \*IGconc    \*IGconc
->   `!cembal`   !\'cello    !Bd\'rip    !Vd\'rip    !v\'lin2    !v\'lin1    !v\'lino    !oboe       !flauto     !tromba
->   `*k[b-]`    \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[\]
->   `*F:`       \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:
->   `*M2/2`     \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2
->   `*MM54`     \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54
->   `*clefF4`   \*clefF4    \*clefF4    \*clefC3    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2
->   `8FF/`      8FF/        8FFF/       8a\\        8cc\\       8ff\\       8ff\\       8ff\\       8ff\\       8f/
->   `=1`        =1          =1          =1          =1          =1          =1          =1          =1          =1
->   `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
->   `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
->   `16A\`      16A\\       16AA\\      8c\\        16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8cc/
->   `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
->   `16F\LL`    16F\\LL     16FF\\LL    8f\\        8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/
->   `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
->   `16A\`      16A\\       16AA\\      8c\\J       16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8f/J
->   `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
->   `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
->   `16E\`      16E\\       16EE\\      .           .           .           .           .           .           .
->   `16F\`      16F\\       16FF\\      8a\\        8cc/        8ff\\       8ff\\       8ff\\       8ff\\       8cc/
->   `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
->   `16A\LL`    16A\\LL     16AA\\LL    8cc\\       8f/         8cc\\       8cc\\       8cc\\       8cc\\       8ff/
->   `16B-\`     16B-\\      16BB-\\     .           .           .           .           .           .           .
->   `16A\`      16A\\       16AA\\      8c\\J       8cc/J       8ff\\J      8ff\\J      8ff\\J      8ff\\J      8cc/J
->   `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
->   `=2`        =2          =2          =2          =2          =2          =2          =2          =2          =2
->   `*-`        \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-
->   ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
->
+`!!!COM: Bach, Johann Sebastian`
+`!!!OPR: Six Concerts Avec plusieurs ... le prince regnant d'Anhalt-Coethen`
+`!!!OTL: Brandenburgische Konzerte F`
+`!!!XEN: Brandenburg Concerto No. 2 in F major.`
+`!!!OMV: Movement 1.`
+`!!!SCT: BWV 1047`
+`!! [Allegro] `
+  ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
+  `**kern`    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern
+  `*ICklav`   \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICww      \*ICww      \*ICbras
+  `*Icemba`   \*Icello    \*Icbass    \*Iviola    \*Ivioln    \*Ivioln    \*Ivioln    \*Ioboe     \*Ifltds    \*Itromp
+  `*IGcont`   \*IGcont    \*          \*          \*          \*          \*          \*          \*          \*
+  `*IGripn`   \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGconc    \*IGconc    \*IGconc    \*IGconc
+  `!cembal`   !\'cello    !Bd\'rip    !Vd\'rip    !v\'lin2    !v\'lin1    !v\'lino    !oboe       !flauto     !tromba
+  `*k[b-]`    \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[\]
+  `*F:`       \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:
+  `*M2/2`     \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2
+  `*MM54`     \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54
+  `*clefF4`   \*clefF4    \*clefF4    \*clefC3    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2
+  `8FF/`      8FF/        8FFF/       8a\\        8cc\\       8ff\\       8ff\\       8ff\\       8ff\\       8f/
+  `=1`        =1          =1          =1          =1          =1          =1          =1          =1          =1
+  `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
+  `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
+  `16A\`      16A\\       16AA\\      8c\\        16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8cc/
+  `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
+  `16F\LL`    16F\\LL     16FF\\LL    8f\\        8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/
+  `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
+  `16A\`      16A\\       16AA\\      8c\\J       16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8f/J
+  `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
+  `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
+  `16E\`      16E\\       16EE\\      .           .           .           .           .           .           .
+  `16F\`      16F\\       16FF\\      8a\\        8cc/        8ff\\       8ff\\       8ff\\       8ff\\       8cc/
+  `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
+  `16A\LL`    16A\\LL     16AA\\LL    8cc\\       8f/         8cc\\       8cc\\       8cc\\       8cc\\       8ff/
+  `16B-\`     16B-\\      16BB-\\     .           .           .           .           .           .           .
+  `16A\`      16A\\       16AA\\      8c\\J       8cc/J       8ff\\J      8ff\\J      8ff\\J      8ff\\J      8cc/J
+  `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
+  `=2`        =2          =2          =2          =2          =2          =2          =2          =2          =2
+  `*-`        \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-
+  ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
 Suppose we wanted to extract the \'cello part. In the above encoding,
 the \'cello occupies the second spine (second field) from the left,
 hence:
 
-> `extract -f 2 brandenburg2.krn`
+`extract -f 2 brandenburg2.krn`
 
 The resulting output would begin as follows:\
 \
 
->   ------------------------------------------------------------------------------
->   `!!!COM: Bach, Johann Sebastian`
->   !!!OPR: Six Concerts Avec plusieurs \... le prince regnant d\'Anhalt-Coethen
->   !!!OTL: Brandenburgische Konzerte F
->   !!!XEN: Brandenburg Concerto No. 2 in F major.
->   !!!OMV: Movement 1.
->   !!!SCT: BWV 1047
->   !! \[Allegro\]
->   \*\*kern
->   \*ICstr
->   \*Icello
->   \*IGcont
->   \*IGripn
->   !\'cello
->   \*k\[b-\]
->   \*F:
->   \*M2/2
->   \*MM54
->   \*clefF4
->   8FF/
->   =1
->   16F\\LL
->   16G\\
->   etc.
->   ------------------------------------------------------------------------------
->
+  ------------------------------------------------------------------------------
+  `!!!COM: Bach, Johann Sebastian`
+  !!!OPR: Six Concerts Avec plusieurs \... le prince regnant d\'Anhalt-Coethen
+  !!!OTL: Brandenburgische Konzerte F
+  !!!XEN: Brandenburg Concerto No. 2 in F major.
+  !!!OMV: Movement 1.
+  !!!SCT: BWV 1047
+  !! \[Allegro\]
+  \*\*kern
+  \*ICstr
+  \*Icello
+  \*IGcont
+  \*IGripn
+  !\'cello
+  \*k\[b-\]
+  \*F:
+  \*M2/2
+  \*MM54
+  \*clefF4
+  8FF/
+  =1
+  16F\\LL
+  16G\\
+  etc.
+  ------------------------------------------------------------------------------
 Notice that the **extract** command outputs all global comments. In the
 case of local comments, **extract** outputs only those local comments
 that belong to the output spine.
@@ -152,26 +143,26 @@ The oboe and flauto dolce parts are encoded in spines 8 and 9. So we
 could extract the \`cello, oboe and flauto dolce parts by submitting a
 list of the corresponding fields. Spine numbers are separated by commas:
 
-> `extract -f 2,8,9 brandenburg2.krn`
+`extract -f 2,8,9 brandenburg2.krn`
 
 Numerical **ranges** can be specified using the dash. For example, if we
 wanted to extract all of the string parts (spines 2 through 7):
 
-> `extract -f 2-7 brandenburg2.krn`
+`extract -f 2-7 brandenburg2.krn`
 
 With the **-f** option, field specifications may also be made with
 respect to the right-most field. The dollars-sign character (`$`) refers
 to the right-most field in the input. The trumpet part can be extracted
 as follows:
 
-> `extract -f '$' brandenburg2.krn`
+`extract -f '$' brandenburg2.krn`
 
 (Notice the use of the single quotes to ensure that the shell doesn\'t
 misinterpret the dollar sign.) Simple arithmetic expressions are also
 permitted; for example \``$-1`\' refers to the right-most field minus
 one, etc. By way of example, the command
 
-> `extract -f '$-2' brandenburg2.krn`
+`extract -f '$-2' brandenburg2.krn`
 
 will extract the oboe part.
 
@@ -190,7 +181,7 @@ including vocal score, piano accompaniment and vocal text (encoded using
 [`**text`](/rep/text)). The vocal text from the file
 `lieder` can be extracted as follows:
 
-> `extract -i '**text' lieder`
+`extract -i '**text' lieder`
 
 (Notice again the need for single quotes in order to avoid the asterisk
 being interpreted by the shell.) Several different types of data can be
@@ -198,7 +189,7 @@ extracted simultaneously. For example:
 
 <a name ="Hildegard"></a>
 
-> `extract -i '**semits,**MIDI' hildegard`
+`extract -i '**semits,**MIDI' hildegard`
 
 will extract all spines in the file `hildegard` containing
 [`**semits`](/rep/semits) or
@@ -214,7 +205,7 @@ Humdrum interpretations (such as `**text`) where the presence of the
 letter \``r`\' does not signify a rest. We can ensure that our search is
 limited to `**kern` data by using the **extract** command:
 
-> `extract -i '**kern' | grep  ...`
+`extract -i '**kern' | grep  ...`
 
 <a name ="Extract_Transposing_Instruments"></a>
 
@@ -222,7 +213,7 @@ Both exclusive interpretations and tandem interpretations can be
 specified with the **-i** option. For example, the following command
 will extract any *transposing* instruments in the score `albeniz`:
 
-> `extract -i '*ITr' albeniz`
+`extract -i '*ITr' albeniz`
 
 <a name ="Extract_Ripieno"></a>
 
@@ -238,9 +229,9 @@ identifies \"concertino\" instruments. The following three commands
 extract (1) the woodwind instruments, (2) the ripieno instruments, and
 (3) any vocal parts, respectively.
 
-> `extract -i '*ICww' concerto4`\
-> `extract -i '*IGrip' brandenburg2`\
-> `extract -i '*ICvox' symphony9`
+`extract -i '*ICww' concerto4`\
+`extract -i '*IGrip' brandenburg2`\
+`extract -i '*ICvox' symphony9`
 
 <a name ="Extract_Strings_and_Oboe"></a>
 
@@ -248,106 +239,100 @@ Once again, more than one interpretation can be extracted
 simultaneously. The following command will extract the instrument-class
 \"strings\" and the instrument \"oboe\" from the file `milhaud`.
 
-> `extract -i '*ICstr,*Ioboe' milhaud`
+`extract -i '*ICstr,*Ioboe' milhaud`
 
 <a name ="Extract_Shamisen"></a>
 
 Similarly, the following command will extract the shamisen and
 shakuhachi parts from a score:
 
-> `extract -i '*Ishami,*Ishaku' hito.uta`
+`extract -i '*Ishami,*Ishaku' hito.uta`
 
 The behavior of **extract** is subtly different for tandem
 interpretations versus exclusive interpretations. Remember that
 exclusive interpretations are mutually exclusive, whereas tandem
 interpretations are not. Consider the following Humdrum representation:
 
->   ---------
->   `**foo`
->   a
->   b
->   \*\*bar
->   x
->   y
->   z
->   \*-
->   ---------
->
+  ---------
+  `**foo`
+  a
+  b
+  \*\*bar
+  x
+  y
+  z
+  \*-
+  ---------
 The command
 
-> `extract -i '**foo'`
+`extract -i '**foo'`
 
 will result in the output:
 
->   ---------
->   `**foo`
->   a
->   b
->   \*-
->   ---------
->
+  ---------
+  `**foo`
+  a
+  b
+  \*-
+  ---------
 Whereas the command
 
-> `extract -i '**bar'`
+`extract -i '**bar'`
 
 will result in the output:
 
->   ---------
->   `**bar`
->   x
->   y
->   z
->   \*-
->   ---------
->
+  ---------
+  `**bar`
+  x
+  y
+  z
+  \*-
+  ---------
 The `**foo` and `**bar` data are mutually exclusive. Now consider an
 input file where `foo` and `bar` are tandem interpretations:
 
->   ------------
->   `**foobar`
->   \*foo
->   a
->   b
->   \*bar
->   x
->   y
->   z
->   \*-
->   ------------
->
+  ------------
+  `**foobar`
+  \*foo
+  a
+  b
+  \*bar
+  x
+  y
+  z
+  \*-
+  ------------
 The command
 
-> `extract -i '*foo'`
+`extract -i '*foo'`
 
 will result in the output:
 
->   ------------
->   `**foobar`
->   \*foo
->   a
->   b
->   \*bar
->   x
->   y
->   \*-
->   ------------
->
+  ------------
+  `**foobar`
+  \*foo
+  a
+  b
+  \*bar
+  x
+  y
+  \*-
+  ------------
 Whereas the command
 
-> `extract -i '*bar'`
+`extract -i '*bar'`
 
 will result in the output:
 
->   ------------
->   `**foobar`
->   \*foo
->   \*bar
->   x
->   y
->   z
->   \*-
->   ------------
->
+  ------------
+  `**foobar`
+  \*foo
+  \*bar
+  x
+  y
+  z
+  \*-
+  ------------
 When searching for a particular exclusive interpretation, **extract**
 resets each time a new exclusive interpretation is encountered. By
 contrast, when **extract** finds a target tandem interpretation, it
@@ -368,8 +353,8 @@ notes, the highest and lowest notes, and the longest and shortest notes
 for a \*\*kern input. The following commands can be used to determine
 this information for (1) a bassoon part, (2) all woodwind parts:
 
-> `extract -i '*Ifagot' ives | census -k`\
-> `extract -i '*ICww' ives | census -k`
+`extract -i '*Ifagot' ives | census -k`\
+`extract -i '*ICww' ives | census -k`
 
 <a name ="Extract_Bass_Soprano"></a>
 
@@ -379,7 +364,7 @@ user to hear particular parts. For example, the following command
 extracts the bass and soprano voices, translates them to
 [`**MIDI`](/rep/MIDI) data, and plays the output:
 
-> `extract -i '*Ibass,*Isopran' lassus | midi | perform`
+`extract -i '*Ibass,*Isopran' lassus | midi | perform`
 
 <a name ="Transpose_Trumpet"></a>
 
@@ -387,14 +372,14 @@ We might extract a particular part (such as the trumpet part) and use
 the [**trans**](/tool/trans) command to transpose it to another
 key:
 
-> `extract -i '*Itromp' purcell | trans -d +1 -c +2`
+`extract -i '*Itromp' purcell | trans -d +1 -c +2`
 
 In addition, we might extract a particular instrument or group of
 instruments for notational display using the **ms** command. The
 following command will extract the string parts and create a postscript
 file for displaying or printing.
 
-> `extract -i '*ICstr' brahms | ms > brahms.ps`
+`extract -i '*ICstr' brahms | ms > brahms.ps`
 
 <a name ="Transpose_accompaniment"></a>
 
@@ -402,7 +387,7 @@ The UNIX **lpr** command can be used to print a file or input stream.
 Suppose we want to transpose the piano accompaniment for a song by Hugo
 Wolf up an augmented second, and then print the transposed part:
 
-> `extract -i '*IGacmp' wolf | trans -d +1 -c +3 | ms | lpr`
+`extract -i '*IGacmp' wolf | trans -d +1 -c +3 | ms | lpr`
 
 <a name ="Extracting_Spines_that_Meander"></a>
 
@@ -417,17 +402,16 @@ generate an error message and terminate. With the **-i** option,
 
 Consider the following input:
 
->   --------- --------- --------- ---------- -----
->   `**mip`   \*\*dip   \*\*dip   \*\*blip   
->   A         a         b         x          
->   A         a         b         x          
->   \*        \*\^      \*        \*         
->   A         a1        a2        b          x
->   A         a1        a2        b          x
->   A         a1        a2        b          x
->   \*-       \*-       \*-       \*-        \*-
->   --------- --------- --------- ---------- -----
->
+  --------- --------- --------- ---------- -----
+  `**mip`   \*\*dip   \*\*dip   \*\*blip   
+  A         a         b         x          
+  A         a         b         x          
+  \*        \*\^      \*        \*         
+  A         a1        a2        b          x
+  A         a1        a2        b          x
+  A         a1        a2        b          x
+  \*-       \*-       \*-       \*-        \*-
+  --------- --------- --------- ---------- -----
 Suppose we want to extract the second spine (the first `**dip`) spine.
 Using the field option (**-f**) will generate an error message since
 this spine splits. Similarly, using the interpretation (**-i**) option
@@ -438,21 +422,20 @@ specific spine *paths.* Like the **-f** option, the **-p** option
 requires one or more numbers indicating the *beginning* field position
 for the spine. The command
 
-> `extract -p 2 `\...
+`extract -p 2 `\...
 
 will generate the following output:
 
->   --------- -----
->   `**dip`   
->   a         
->   a         
->   \*\^      
->   a1        a2
->   a1        a2
->   a1        a2
->   \*-       \*-
->   --------- -----
->
+  --------- -----
+  `**dip`   
+  a         
+  a         
+  \*\^      
+  a1        a2
+  a1        a2
+  a1        a2
+  \*-       \*-
+  --------- -----
 In *spine-path mode,* the **extract\"** command follows a given spine
 starting at the beginning of the file, and traces the course of that
 spine throughout the input stream. If spine-path changes are encountered
@@ -505,7 +488,7 @@ indicating a range of consecutive values. For example, the following
 command selects lines, 5, 13, 23, 24, 25 and 26 from the file named
 `casella`:
 
-> `yank -l -r 5,13,23-26 casella`
+`yank -l -r 5,13,23-26 casella`
 
 <a name ="Mosolov"></a>
 
@@ -513,7 +496,7 @@ The dollar sign (\$) can be used to refer to the last record in the
 input. For example, the following command yanks the first and last
 records from the file `mosolov`.
 
-> `yank -l -r '1,$' mosolov`
+`yank -l -r '1,$' mosolov`
 
 <a name ="Ginastera"></a>
 
@@ -525,7 +508,7 @@ the first 20 records from the last 30 records contained in the file
 `ginastera`. Notice that the dash/minus sign is used both to convey a
 range and as an arithmetic operator.
 
-> `yank -l -r '$-30-$-10' ginastera`
+`yank -l -r '$-30-$-10' ginastera`
 
 If **yank** is given a Humdrum input, it always produces a syntactically
 correct Humdrum output. All interpretations prior to and within the
@@ -549,7 +532,7 @@ output whenever a marker is encountered. For example, the following
 command outputs the first and third data records following each
 occurrence of the string \"XXX\" in the file `wieck`.
 
-> `yank -m XXX -r 1,3 wieck`
+`yank -m XXX -r 1,3 wieck`
 
 If the value zero is specified in the range, the record containing the
 marker is itself output.
@@ -561,12 +544,12 @@ complex markers can be defined. For example, the following command yanks
 the first data record following any record in the file `franck`
 beginning with a letter and ending with a number:
 
-> `yank -m '^[a-zA-Z].*[0-9]$' -r 1 franck`
+`yank -m '^[a-zA-Z].*[0-9]$' -r 1 franck`
 
 Using **yank -m** with a range defined as zero is an especially useful
 construction:
 
-> `yank -m regexp -r 0`
+`yank -m regexp -r 0`
 
 This command is analogous to the familiar **grep** command. However, the
 output from **yank** will preserve all of the appropriate
@@ -582,7 +565,7 @@ If we use **grep** to search for
 unable to process the resulting (non-Humdrum) output, since it will
 typically consist of just data records:
 
-> `grep [{}] sibelius`
+`grep [{}] sibelius`
 
 <a name ="First_and_last_notes_of_phrases"></a>
 
@@ -590,7 +573,7 @@ By contrast, the comparable **yank** command preserves the Humdrum
 syntax and so allows us to pipe the output to the melodic interval
 command:
 
-> `yank -m [{}] -r 0 sibelius | mint`
+`yank -m [{}] -r 0 sibelius | mint`
 
 <a name ="Yanking_by_Delimiters"></a>
 
@@ -608,7 +591,7 @@ numbers. Consider the following command:
 
 <a name ="Joplin"></a>
 
-> `yank -o ^= -r 1,12-13,25 joplin`
+`yank -o ^= -r 1,12-13,25 joplin`
 
 This command will extract the first, twelfth, thirteenth and
 twenty-fifth measures from the file `joplin`. Unlike the **-m** option,
@@ -629,7 +612,7 @@ Where the input stream contains data prior to the first delimiter
 record, this data may be addressed as logical segment \"zero.\" For
 example,
 
-> `yank -o ^= -r 0 mahler`
+`yank -o ^= -r 0 mahler`
 
 can be used to yank all records prior to the first common system
 barline. Notice that *actual* measure numbers are irrelevant with the
@@ -646,7 +629,7 @@ for **yank** can be used to explicitly identify markers that *end* a
 segment. For example, the following command extracts the first four
 phrases in the file `tailleferre`:
 
-> `yank -o { -e } -r '1-4' tailleferre`
+`yank -o { -e } -r '1-4' tailleferre`
 
 When the **-n** option is invoked, however, **yank** expects a numerical
 value to be present in the input immediately following the
@@ -656,7 +639,7 @@ For example,
 
 <a name ="Goldberg"></a>
 
-> `yank -n ^= -r 12 goldberg`
+`yank -n ^= -r 12 goldberg`
 
 will yank all segments beginning with the label `=12` in the input file
 `goldberg`. If more than one segment carries the specified segment
@@ -676,7 +659,7 @@ file. Thus, if `file1`, `file2` and `file3` are Humdrum files:
 
 <a name ="Extract_anacrusis"></a>
 
-> `yank -n ^= -r 0 file1 file2 file3`
+`yank -n ^= -r 0 file1 file2 file3`
 
 will yank any leading (anacrusis) material in each of the three files.
 
@@ -691,7 +674,7 @@ input. Humdrum section labels will be described fully in [Chapter
 20.](/guide/ch20) For now, we can simply note that section labels are
 tandem interpretations that conform to the syntax:
 
-> `*>label_name`
+`*>label_name`
 
 <a name ="2nd_instance_of_1st_theme"></a>
 
@@ -701,7 +684,7 @@ bridge, second ending, trio, minuet, etc. The following command yanks
 the second instance of a section labelled `First Theme` in the file
 `mendelssohn`:
 
-> `yank -s 'First Theme' -r 2 mendelssohn`
+`yank -s 'First Theme' -r 2 mendelssohn`
 
 Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. Such situations
@@ -724,38 +707,38 @@ by specifying the **-c** option.
 
 The following examples illustrate how the **yank** command may be used.
 
-> `yank -l -r 1120 messiaen`
+`yank -l -r 1120 messiaen`
 
 yanks line 1120 in the file `messiaen`.
 
 <a name ="Extract_measure_27"></a>
 
-> `yank -n ^= -r 27 sinfonia`
+`yank -n ^= -r 27 sinfonia`
 
 yanks numbered measures 27 from the `**kern` file `sinfonia`.
 
 <a name ="Extract_measures_10_to_20"></a>
 
-> `yank -n ^= -r 10-20 minuet waltz`
+`yank -n ^= -r 10-20 minuet waltz`
 
 yanks numbered measures 10 to 20 from both the `**kern` files `minuet`
 and `waltz`.
 
 <a name ="Extract_anacrusis_and_final_measure"></a>
 
-> `yank -o ^= -r '0,$' fugue ricercar`
+`yank -o ^= -r '0,$' fugue ricercar`
 
 yanks any initial anacrusis material plus the final measure of both
 `fugue` and `ricercar`.
 
-> `cat fugue ricercar | yank -o ^= -r '0,$'`
+`cat fugue ricercar | yank -o ^= -r '0,$'`
 
 yanks any initial anacrusis material from the file `fugue` followed by
 the final measure of `ricercar`.
 
 <a name ="Rehearsal_Marking_5_to_7"></a>
 
-> `yank -n 'Rehearsal Marking ' -r 5-7 fugue ricercar`
+`yank -n 'Rehearsal Marking ' -r 5-7 fugue ricercar`
 
 yanks segments beginning with the labels
 `"Rehearsal Marking 5", "Rehearsal Marking 6"`, and
@@ -764,14 +747,14 @@ encountered containing the text `"Rehearsal Marking "`.
 
 <a name ="Webern"></a>
 
-> `yank -o { -e }  -r '1-$' webern`
+`yank -o { -e }  -r '1-$' webern`
 
 yanks all segments in the file `webern` beginning with a record
 containing \"{\" and ending with a record containing \"}.\" The command:
 
 <a name ="Faure"></a>
 
-> `yank -o { -e } -r '1-4,$-3-$' faure`
+`yank -o { -e } -r '1-4,$-3-$' faure`
 
 yanks the first four and last four segments in the file `faure`, where
 segments begin with an open brace ({) and end with a closed brace (}).
@@ -780,7 +763,7 @@ last four phrases in the file.
 
 <a name ="Stamitz"></a>
 
-> `yank -s Coda -r 1 stamitz`
+`yank -s Coda -r 1 stamitz`
 
 will yank the first occurrence of a section labelled `Coda` in the file
 `stamitz`.
@@ -806,7 +789,7 @@ first **yank** isolates the \`Trio\' section from the input file, and
 the second **yank** isolates the first four measures of the extracted
 Trio:
 
-> `yank -s Trio dvorak | yank -o ^= 1-4`
+`yank -s Trio dvorak | yank -o ^= 1-4`
 
 <a name ="Compare_Exposition_Recapitulation"></a>
 
@@ -817,15 +800,15 @@ recapitulation:
 
 <a name ="Haydn"></a>
 
-> `yank -s Exposition haydn | yank -o { -e } -r 1 > Ephrase`\
-> `yank -s Recapitulation haydn | yank -o { -e } -r 1 > Rphrase`
+`yank -s Exposition haydn | yank -o { -e } -r 1 > Ephrase`\
+`yank -s Recapitulation haydn | yank -o { -e } -r 1 > Rphrase`
 
 <a name ="Borodin"></a>
 
 Suppose we want to know how many notes there are in measures 8-16 in a
 `**kern` file named `borodin`.
 
-> `yank -n = -r 8-16 borodin | census -k`
+`yank -n = -r 8-16 borodin | census -k`
 
 <a name ="Subdominant_80.86"></a>
 
@@ -833,13 +816,13 @@ Are there any subdominant chords between measures 80 and 86?
 
 <a name ="Elgar"></a>
 
-> `yank -n = -r 80-86 elgar | solfa | grep fa | grep la | grep do`
+`yank -n = -r 80-86 elgar | solfa | grep fa | grep la | grep do`
 
 <a name ="Strauss"></a>
 
 How frequent is the dominant pitch in Strauss\' horn parts?
 
-> `extract -i '*Icor' strauss | solfa | grep -c so`
+`extract -i '*Icor' strauss | solfa | grep -c so`
 
 <a name ="Highest_Trumpet_Pitch"></a>
 
@@ -848,7 +831,7 @@ highest note in the trumpet part in measure 29?
 
 <a name ="Tallis"></a>
 
-> `extract -i '*Itromp' tallis | yank -n = -r 29 | census -k`
+`extract -i '*Itromp' tallis | yank -n = -r 29 | census -k`
 
 <a name ="Play_Trio"></a>
 
@@ -856,15 +839,14 @@ Also, we can combine **yank** with the [**midi**](/tool/midi)
 and [**perform**](/tool/perform) commands to hear particular
 sections. Play the Trio section in a Waldteufel waltz:
 
-> `yank -s 'Trio' -r 1 waldteufel | midi | perform`
+`yank -s 'Trio' -r 1 waldteufel | midi | perform`
 
 <a name ="Play_Clarinet_Part"></a>
 
 Listen to the soprano clarinet part in the fourth and eighth phrases.
 
-> `extract -i '*Iclars' quintet | yank -o { -e } -r 4,8 \`
->
-> > \| midi \| perform
+`extract -i '*Iclars' quintet | yank -o { -e } -r 4,8 \`
+> \| midi \| perform
 
 Note that when using **yank** to retrieve passages by markers (such as
 phrase marks), care must be taken since markers may be miscoordinated
@@ -876,26 +858,25 @@ whether the **yank** command is invoked *before* or *after* the
 
 **Example 12.2.** A Passage Containing Unsynchronized Phrases.
 
->   ---------- ----------
->   `**kern`   \*\*kern
->   =1-        =1-
->   2r         8r
->   `.`        {8g
->   `.`        8a
->   `.`        8b
->   =2         =2
->   8r         4cc
->   {8e        .
->   8f         4dd}
->   8a         .
->   =3         =3
->   8g         {4ee
->   8e         .
->   4d}        4ff
->   =4         =4
->   \*-        \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**kern`   \*\*kern
+  =1-        =1-
+  2r         8r
+  `.`        {8g
+  `.`        8a
+  `.`        8b
+  =2         =2
+  8r         4cc
+  {8e        .
+  8f         4dd}
+  8a         .
+  =3         =3
+  8g         {4ee
+  8e         .
+  4d}        4ff
+  =4         =4
+  \*-        \*-
+  ---------- ----------
 The order of execution for some commands may cause some subtle
 differences. Suppose we wanted to identify the melodic intervals present
 in measures 8-32 for a work by Toru Takemitsu. The following two
@@ -903,8 +884,8 @@ commands are likely to produce different results:
 
 <a name ="Takemitsu"></a>
 
-> `yank -n = -r 8-32 takemitsu | mint`\
-> `mint takemitsu | yank -n = -r 8-32`
+`yank -n = -r 8-32 takemitsu | mint`\
+`mint takemitsu | yank -n = -r 8-32`
 
 In the second case, an interval will probably be calculated between
 between the last note of measure 7 and the first note of measure 8. This
@@ -934,15 +915,3 @@ output will conform to the Humdrum syntax.
 In the next chapter we will discuss how segments of music can be put
 back together again.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch13)
-
-[**Previous Chapter**](/guide/ch11)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

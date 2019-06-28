@@ -75,31 +75,30 @@ the concept of pianissimo, even if the visual rendering may be *pp* or
 
 **Table 28.1.**
 
->   ------ -------------------------------------------------------------------------
->   p      piano
->   pp     pianissimo
->   ppp    triple piano
->   pppp   quadruple piano, \[etc\]
->   f      forte
->   ff     fortissimo
->   fff    triple forte
->   ffff   quadruple forte, \[etc\]
->   mp     mezzo-piano
->   mf     mezzo-forte
->   s      subito (suddenly), e.g. spp (*subito pianissimo*), sf (*subito forte*)
->   z      sforzando = fp (forte-piano)
->   \<     begin crescendo
->   \>     begin diminuendo
->   (      continuing crescendo
->   )      continuing diminuendo
->   \[     end crescendo
->   \]     end diminuendo
->   X      explicit interpretation (not indicated in the score)
->   x      published interpretation (indicated in the score, often in parentheses)
->   r      rest (silence)
->   v      notated accent or stress
->   ------ -------------------------------------------------------------------------
->
+  ------ -------------------------------------------------------------------------
+  p      piano
+  pp     pianissimo
+  ppp    triple piano
+  pppp   quadruple piano, \[etc\]
+  f      forte
+  ff     fortissimo
+  fff    triple forte
+  ffff   quadruple forte, \[etc\]
+  mp     mezzo-piano
+  mf     mezzo-forte
+  s      subito (suddenly), e.g. spp (*subito pianissimo*), sf (*subito forte*)
+  z      sforzando = fp (forte-piano)
+  \<     begin crescendo
+  \>     begin diminuendo
+  (      continuing crescendo
+  )      continuing diminuendo
+  \[     end crescendo
+  \]     end diminuendo
+  X      explicit interpretation (not indicated in the score)
+  x      published interpretation (indicated in the score, often in parentheses)
+  r      rest (silence)
+  v      notated accent or stress
+  ------ -------------------------------------------------------------------------
 In the case of crescendo and diminuendo markings,
 [`**dynam`](/rep/dynam) requires an explicit
 interpretation of where the dynamic marking begins and ends. The
@@ -133,25 +132,24 @@ representation is illustrated in Example 28.1.\
 \
 **Example 28.1**
 
-> ![](guide.figures/guide28.1.gif)
+![](guide.figures/guide28.1.gif)
 
 This example might be encoded as follows:
 
->   ----------- --------------
->   `**dynam`   \*\*kern
->   \*staff1    \*staff1
->   =           =
->   p           2c 2e 2g 2cc
->   \<          .
->   (           2G 2d 2g 2b
->   =           =
->   (           2A 2c 2e 2a
->   \[          .
->   pp          2E 2B 2e 2g
->   =           =
->   \*-         \*-
->   ----------- --------------
->
+  ----------- --------------
+  `**dynam`   \*\*kern
+  \*staff1    \*staff1
+  =           =
+  p           2c 2e 2g 2cc
+  \<          .
+  (           2G 2d 2g 2b
+  =           =
+  (           2A 2c 2e 2a
+  \[          .
+  pp          2E 2B 2e 2g
+  =           =
+  \*-         \*-
+  ----------- --------------
 The `**dynam` encoding is interpreted as follows: the level begins
 *piano* with a crescendo beginning prior to the second chord; the
 crescendo continues until after the third chord and then the level
@@ -168,38 +166,36 @@ indication.
 If appropriate, a user can render implicit dynamic shading explicitly.
 For example, a user might choose to re-code Example 28.1 as either
 
->   ----------- --------------
->   `**dynam`   \*\*kern
->   \*staff1    \*staff1
->   =           =
->   p           2c 2e 2g 2cc
->   \<          2G 2d 2g 2b
->   =           =
->   \[          2A 2c 2e 2a
->   X\>         .
->   X\]         .
->   pp          2E 2B 2e 2g
->   =           =
->   \*-         \*-
->   ----------- --------------
->
+  ----------- --------------
+  `**dynam`   \*\*kern
+  \*staff1    \*staff1
+  =           =
+  p           2c 2e 2g 2cc
+  \<          2G 2d 2g 2b
+  =           =
+  \[          2A 2c 2e 2a
+  X\>         .
+  X\]         .
+  pp          2E 2B 2e 2g
+  =           =
+  \*-         \*-
+  ----------- --------------
 or
 
->   ----------- --------------
->   `**dynam`   \*\*kern
->   \*staff1    \*staff1
->   =           =
->   p           2c 2e 2g 2cc
->   Xppp        .
->   \<          2G 2d 2g 2b
->   =           =
->   (           2A 2c 2e 2a
->   \[          .
->   pp          2E 2B 2e 2g
->   =           =
->   \*-         \*-
->   ----------- --------------
->
+  ----------- --------------
+  `**dynam`   \*\*kern
+  \*staff1    \*staff1
+  =           =
+  p           2c 2e 2g 2cc
+  Xppp        .
+  \<          2G 2d 2g 2b
+  =           =
+  (           2A 2c 2e 2a
+  \[          .
+  pp          2E 2B 2e 2g
+  =           =
+  \*-         \*-
+  ----------- --------------
 Notice that null data records may be inserted as necessary to clarify
 the moment of dynamic change. The
 [`**dynam`](/rep/dynam) representation makes use of
@@ -232,75 +228,73 @@ position of the fourth quarter in the measure. The vertical position of
 dynamic markings is indicated with respect to the middle line of a
 corresponding staff; this number appears in curly braces.
 
->   ---------- ---------------------------------------------------------
->   \<         begin wedge-graphic crescendo marking
->   \>         begin wedge-graphic diminuendo marking
->   \[         terminate wedge-graphic crescendo marking
->   \]         terminate wedge-graphic diminuendo marking
->   (          continuing wedge-graphic crescendo
->   )          continuing wedge-graphic diminuendo
->   {\...}     vertical position (in staff-line steps from mid-line)
->   \#\...     size of marking (in staff-line steps)
->   :number:   density of dashed lines in strokes per quarter-duration
->   /\.../     wedge opening size (in staff-line steps)
->   r          rest (silence)
->   H          marking appears in square brackets
->   ---------- ---------------------------------------------------------
->
+  ---------- ---------------------------------------------------------
+  \<         begin wedge-graphic crescendo marking
+  \>         begin wedge-graphic diminuendo marking
+  \[         terminate wedge-graphic crescendo marking
+  \]         terminate wedge-graphic diminuendo marking
+  (          continuing wedge-graphic crescendo
+  )          continuing wedge-graphic diminuendo
+  {\...}     vertical position (in staff-line steps from mid-line)
+  \#\...     size of marking (in staff-line steps)
+  :number:   density of dashed lines in strokes per quarter-duration
+  /\.../     wedge opening size (in staff-line steps)
+  r          rest (silence)
+  H          marking appears in square brackets
+  ---------- ---------------------------------------------------------
 By way of illustration, consider Example 28.2.\
 \
 **Example 28.2:** Arnold Schoenberg, *Three Piano Pieces, Op. 11, No.
 2*, excerpt.
 
-> ![](guide.figures/guide28.2.gif)
+![](guide.figures/guide28.2.gif)
 
 Using the `**dyn` representation, Example 28.2 might be encoded as
 follows:
 
->   ------------------ -- ------------ -- ---------------- -- ----------
->   `**dyn`               \*\*kern        \*\*kern            \*\*kern
->   \*staff1/2            \*staff2        \*staff1            \*staff1
->   \*                    \*clefF4        \*clefG2            \*clefG2
->   \*                    \*M12/8         \*M12/8             \*M12/8
->   =                     =               =                   =
->   0.8f{-4}              8F\# 8en        8r                  2.ffn
->   `.`                   8A\#            8r                  .
->   `.`                   8Dn 8cn         \[8cc\#             .
->   `.`                   8F\#            8cc\#\]             .
->   `.`                   8AAn 8Gn        8ccn                .
->   `.`                   8C\#            8bn                 .
->   `.`                   8FFn 8E-        8b-                 \[4.aan
->   `.`                   8AAn            8ddn                .
->   `.`                   8DD- 8C-        8b-                 .
->   `.`                   8FFn            4.dd                8aa\]
->   `.`                   8BBB- 8AA-      .                   4ff\#
->   `.`                   8DDn            .                   .
->   \*                    \*              \*v                 \*v
->   =                     =               =                   
->   `.`                   8r              8r                  
->   1.4fp{-4.5}           {8d-            {8gn 8ccn 8ffn      
->   1.6\>{-4.3}/1.5/      .               .                   
->   )                     8fn             8bn 8een            
->   2.4\]{-4.3}           .               .                   
->   2.5pp{-5}             24A-            4.cn 4.fn 4.b}      
->   `.`                   24d-            .                   
->   2.8\>/1.4/            24Dn            .                   
->   )                     8.GG            .                   
->   4.2\]                 16BB-}          .                   
->   `.`                   8r              8r                  
->   4.4fp{-4.5}           {8An            {8e- 8a- 8dd-       
->   4.6\>/1.5/            .               .                   
->   )                     8d-             8gn 8ccn            
->   5.2\]                 .               .                   
->   5.4pp{-4.5}           24F\#           4.B- 4.en 4.a}      
->   5.7\>/1.4/            24Bn            .                   
->   )                     24BB-           .                   
->   )                     8.DD            .                   
->   6.8\]                 16GG}           .                   
->   =                     =               =                   
->   \*-                   \*-             \*-                 
->   ------------------ -- ------------ -- ---------------- -- ----------
->
+  ------------------ -- ------------ -- ---------------- -- ----------
+  `**dyn`               \*\*kern        \*\*kern            \*\*kern
+  \*staff1/2            \*staff2        \*staff1            \*staff1
+  \*                    \*clefF4        \*clefG2            \*clefG2
+  \*                    \*M12/8         \*M12/8             \*M12/8
+  =                     =               =                   =
+  0.8f{-4}              8F\# 8en        8r                  2.ffn
+  `.`                   8A\#            8r                  .
+  `.`                   8Dn 8cn         \[8cc\#             .
+  `.`                   8F\#            8cc\#\]             .
+  `.`                   8AAn 8Gn        8ccn                .
+  `.`                   8C\#            8bn                 .
+  `.`                   8FFn 8E-        8b-                 \[4.aan
+  `.`                   8AAn            8ddn                .
+  `.`                   8DD- 8C-        8b-                 .
+  `.`                   8FFn            4.dd                8aa\]
+  `.`                   8BBB- 8AA-      .                   4ff\#
+  `.`                   8DDn            .                   .
+  \*                    \*              \*v                 \*v
+  =                     =               =                   
+  `.`                   8r              8r                  
+  1.4fp{-4.5}           {8d-            {8gn 8ccn 8ffn      
+  1.6\>{-4.3}/1.5/      .               .                   
+  )                     8fn             8bn 8een            
+  2.4\]{-4.3}           .               .                   
+  2.5pp{-5}             24A-            4.cn 4.fn 4.b}      
+  `.`                   24d-            .                   
+  2.8\>/1.4/            24Dn            .                   
+  )                     8.GG            .                   
+  4.2\]                 16BB-}          .                   
+  `.`                   8r              8r                  
+  4.4fp{-4.5}           {8An            {8e- 8a- 8dd-       
+  4.6\>/1.5/            .               .                   
+  )                     8d-             8gn 8ccn            
+  5.2\]                 .               .                   
+  5.4pp{-4.5}           24F\#           4.B- 4.en 4.a}      
+  5.7\>/1.4/            24Bn            .                   
+  )                     24BB-           .                   
+  )                     8.DD            .                   
+  6.8\]                 16GG}           .                   
+  =                     =               =                   
+  \*-                   \*-             \*-                 
+  ------------------ -- ------------ -- ---------------- -- ----------
 The `*staff1/2` tandem interpretation indicates that the dynamic
 markings pertain to both staffs 1 and 2, however all vertical
 [`**dyn`](/rep/dyn) distance measures are encoded
@@ -348,28 +342,27 @@ expressed in decibels; specifically, **db** translates from the
 `**dynam` representation to `**dB` representation. By default, **db**
 uses the following mapping:
 
->   --------------- --------
->   dynamic level   dB SPL
->                   
->   fffffff         115
->   ffffff          110
->   fffff           105
->   ffff            100
->   fff             90
->   ff              80
->   f               75
->   mf              70
->   mp              65
->   p               60
->   pp              55
->   ppp             50
->   pppp            45
->   ppppp           40
->   pppppp          35
->   ppppppp         30
->   v               +5
->   --------------- --------
->
+  --------------- --------
+  dynamic level   dB SPL
+                  
+  fffffff         115
+  ffffff          110
+  fffff           105
+  ffff            100
+  fff             90
+  ff              80
+  f               75
+  mf              70
+  mp              65
+  p               60
+  pp              55
+  ppp             50
+  pppp            45
+  ppppp           40
+  pppppp          35
+  ppppppp         30
+  v               +5
+  --------------- --------
 Notice the presence of the *accent* signifier (`v`); the assigned value
 (`+5`) means that any encoded accents will receive a decibel level 5 dB
 higher than the basic sound pressure level at that point in the score.
@@ -390,26 +383,25 @@ measure 6, and a mezzo-forte marking appears in measure 7. The
 right-most spine shows the corresponding output generated by the **db**
 command. It shows an interpolation between the two dynamic levels.
 
->   ----------- --------
->   `**dynam`   \*\*dB
->   \*SPL       \*
->   =5          =5
->   pp          55
->   .           .
->   .           .
->   .           .
->   =6          =6
->   \<          58
->   (           61
->   .           .
->   (           64
->   \]          67
->   =7          =7
->   .           .
->   mf          70
->   .           .
->   ----------- --------
->
+  ----------- --------
+  `**dynam`   \*\*dB
+  \*SPL       \*
+  =5          =5
+  pp          55
+  .           .
+  .           .
+  .           .
+  =6          =6
+  \<          58
+  (           61
+  .           .
+  (           64
+  \]          67
+  =7          =7
+  .           .
+  mf          70
+  .           .
+  ----------- --------
 The interpolation begins with the crescendo indicator and increments for
 each continuation signifier (i.e., the open parentheses). Interpolations
 are linear and continue up to the crescendo termination signifier. The
@@ -433,8 +425,8 @@ assist a number of tasks related to musical dynamics. Suppose, for
 example, that we want to compare the average overall dynamic levels for
 two arabesques:
 
-> `extract -i '**dynam' arabesque1 | db | rid -GLId | stats`\
-> `extract -i '**dynam' arabesque2 | db | rid -GLId | stats`
+`extract -i '**dynam' arabesque1 | db | rid -GLId | stats`\
+`extract -i '**dynam' arabesque2 | db | rid -GLId | stats`
 
 <a name ="Exposition_and_Development_Loudness"></a>
 
@@ -442,13 +434,10 @@ Similarly, we might compare the overall dynamic levels between two
 sections of a single work. Perhaps we wish to know whether the
 exposition is on average louder than the development section:
 
-> `yank -s Exposition -r 1 symphony3 | extract -i '**dynam' \`
->
-> > \| db \| rid -GLId \| stats
->
-> `yank -s Development -r 1 symphony3 | extract -i '**dynam' \`
->
-> > \| db \| rid -GLId \| stats
+`yank -s Exposition -r 1 symphony3 | extract -i '**dynam' \`
+> \| db \| rid -GLId \| stats
+`yank -s Development -r 1 symphony3 | extract -i '**dynam' \`
+> \| db \| rid -GLId \| stats
 
 <a name ="Begin_Quiet_End_Loud"></a>
 
@@ -457,13 +446,10 @@ might compare the first 10 measures with the final 10 measures. Notice
 the use of [**ditto**](/tool/ditto) to increase the number of
 values participating in the calculation of the average dynamic level:
 
-> `yank -n = -r 1-10 janacek | extract -i '**dynam' \`
->
-> > \| ditto -s = \| db \| rid -GLId \| stats
->
-> `yank -n = -r '$-10-$' janacek | extract -i '**dynam' \`
->
-> > \| ditto -s = \| db \| rid -GLId \| stats
+`yank -n = -r 1-10 janacek | extract -i '**dynam' \`
+> \| ditto -s = \| db \| rid -GLId \| stats
+`yank -n = -r '$-10-$' janacek | extract -i '**dynam' \`
+> \| ditto -s = \| db \| rid -GLId \| stats
 
 <a name ="Higher_Louder_Lower_Quieter"></a>
 
@@ -480,7 +466,7 @@ positive.
 
 <a name ="Klezmer"></a>
 
-> `semits klezmer | correl -s ^= -m`
+`semits klezmer | correl -s ^= -m`
 
 This command assumes an input consisting of two spines \-- one
 pitch-related and a `**dB` spine. The **-s** option for **correl** is
@@ -495,7 +481,7 @@ Similarly, we could use this same approach to determine whether there is
 a relationship between duration and dynamic level. Are longer notes more
 likely to be louder in Klezmer music?
 
-> `dur klezmer | correl -s ^= -m`
+`dur klezmer | correl -s ^= -m`
 
 <a name ="Louder_Above_G4"></a>
 
@@ -510,7 +496,7 @@ height and dynamic level. We might recode all values lower than 7 to a
 unique string (such as \`XXX\') and then use **grep -v** to eliminate
 these notes from a subsequent correlation:
 
-> `extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer > temp2  assemble temp1 temp2 | grep -v 'XXX' | correl -s ^= -m`
+`extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer > temp2  assemble temp1 temp2 | grep -v 'XXX' | correl -s ^= -m`
 
 <a name ="Terraced_Dynamics"></a>
 
@@ -533,9 +519,8 @@ the changes in dynamic level. Notice that it is important to avoid using
 the [**ditto**](/tool/ditto) command since repeated dynamic
 level values will cause the average dynamic difference to approach zero.
 
-> `extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \`
->
-> > \| stats
+`extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \`
+> \| stats
 
 Another approach to this problem might be to count the number of dynamic
 contrasts, avoiding the use of the **db** command. In the following
@@ -543,14 +528,11 @@ pipeline, we use [**context**](/tool/context) to generate pairs
 of dynamic markings, and then use **grep** to count the number of
 alternations between *f* and *p*.
 
-> `extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
->
-> > \| context -n 2 \| grep -c \'f p\'
->
-> \
-> `extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
->
-> > \| context -n 2 \| grep -c \'p f\'
+`extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
+> \| context -n 2 \| grep -c \'f p\'
+\
+`extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
+> \| context -n 2 \| grep -c \'p f\'
 
 <a name ="Dynamic_Swells"></a>
 
@@ -564,13 +546,10 @@ a diminuendo followed by a crescendo. Musical intuition would suggest
 that swell gestures are more common than dip gestures. We could test
 this view as follows:
 
-> `extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
->
-> > \| context -n 2 \| grep -c \'\< \>\'
->
-> `extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
->
-> > \| context -n 2 \| grep -c \'\> \<\'
+`extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
+> \| context -n 2 \| grep -c \'\< \>\'
+`extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
+> \| context -n 2 \| grep -c \'\> \<\'
 
 <a name ="MIDI_Dynamics"></a>
 
@@ -591,61 +570,57 @@ key-on events, negative for key-off events). By way of reminder, the
 following example shows three [`**kern`](/rep/kern)
 notes with a corresponding \*\*MIDI representation.
 
->   ---------- --------------------
->   `**kern`   \*\*MIDI
->   \*         \*Ch1
->   4c         72/60/64
->   4d         72/-60/64 72/62/64
->   4e         72/-62/64 72/64/64
->   .          72/-64/64
->   \*-        \*-
->   ---------- --------------------
->
+  ---------- --------------------
+  `**kern`   \*\*MIDI
+  \*         \*Ch1
+  4c         72/60/64
+  4d         72/-60/64 72/62/64
+  4e         72/-62/64 72/64/64
+  .          72/-64/64
+  \*-        \*-
+  ---------- --------------------
 In order to translate to a \*\*dB representation, we must first isolate
 the key velocity values for key-on events. The following
 [**humsed**](/tool/humsed) command simply eliminates all data up
 to (and including) the last slash character:
 
-> `extract -i '**MIDI' mono_input | humsed 's/.*\///'`
+`extract -i '**MIDI' mono_input | humsed 's/.*\///'`
 
 This will leave us with just the key-down velocity data. Let\'s suppose
 that the following rough decibel equivalents are established:
 
->   -------------- --------------------
->   key velocity   approximate dB SPL
->   127            85
->   100            80
->   90             77
->   80             74
->   70             70
->   60             65
->   50             60
->   40             53
->   30             44
->   20             32
->   10             21
->   1              10
->   0              0
->   -------------- --------------------
->
+  -------------- --------------------
+  key velocity   approximate dB SPL
+  127            85
+  100            80
+  90             77
+  80             74
+  70             70
+  60             65
+  50             60
+  40             53
+  30             44
+  20             32
+  10             21
+  1              10
+  0              0
+  -------------- --------------------
 An appropriate reassignment file for [**recode**](/tool/recode)
 would begin as follows:
 
->   --------- ----
->   `>=127`   85
->   \>=100    80
->   \>=90     77
->   \>=80     74
->   \>=70     70
->   etc.      
->   --------- ----
->
+  --------- ----
+  `>=127`   85
+  \>=100    80
+  \>=90     77
+  \>=80     74
+  \>=70     70
+  etc.      
+  --------- ----
 The completed translation would be accomplished by the following
 pipeline:
 
-> `extract -i '**MIDI' mono_input | humsed 's/.*\///' \`
->
-> > \| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
+`extract -i '**MIDI' mono_input | humsed 's/.*\///' \`
+> \| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
 
 Notice the use of the **sed** command to replace the \*\*MIDI
 interpretation by a \*\*dB interpretation.
@@ -673,15 +648,3 @@ decibels. We have seen that the **db** command (which translates from
 `**dynam` to `**dB`) allows us to pose and answer a variety of questions
 related to the dynamic organization of music.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch29)
-
-[**Previous Chapter**](/guide/ch27)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

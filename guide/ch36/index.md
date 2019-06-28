@@ -70,16 +70,15 @@ passing an input through the **spect** command.
 
 **Example 36.1**
 
->   ---------------------------------------------
->   `**spect`
->   `A`
->   `261;47 523;57 785;35`
->   `330;57 659;35 989;27`
->   `=1`
->   `261;47 523;57 785;35 330;57 659;35 989;27`
->   `261;47 330;57 523;57 659;35 785;35 989;27`
->   ---------------------------------------------
->
+  ---------------------------------------------
+  `**spect`
+  `A`
+  `261;47 523;57 785;35`
+  `330;57 659;35 989;27`
+  `=1`
+  `261;47 523;57 785;35 330;57 659;35 989;27`
+  `261;47 330;57 523;57 659;35 785;35 989;27`
+  ---------------------------------------------
 <a name ="The_SHARC_Database_and_spect_Command"></a>
 
 The SHARC Database and *spect* Command
@@ -134,7 +133,7 @@ So-called \"forward\" and \"backward\" masking are not taken into
 account in this utlity. No options are provided, and the command is
 invoked as follows:
 
-> `mask` *inputfile*` > `*outputfile*
+`mask` *inputfile*` > `*outputfile*
 
 Both the output and input to the **mask** command are `**spect`
 representations. A tandem interpretation (`*masked`) is added to the
@@ -184,16 +183,15 @@ through the **sdiss** command.
 
 **Example 36.2**
 
->   ----------- ----------- -----------
->   `**kern`    \*\*spect   \*\*sdiss
->   `*Ivioln`   \*Ivioln    \*Ivioln
->   `4c 4e`     .           .
->   `4G 4d`     .           .
->   `4f 4g`     .           .
->   `4e 4g`     .           .
->   `*-`        \*-         \*-
->   ----------- ----------- -----------
->
+  ----------- ----------- -----------
+  `**kern`    \*\*spect   \*\*sdiss
+  `*Ivioln`   \*Ivioln    \*Ivioln
+  `4c 4e`     .           .
+  `4G 4d`     .           .
+  `4f 4g`     .           .
+  `4e 4g`     .           .
+  `*-`        \*-         \*-
+  ----------- ----------- -----------
 Note that sensory dissonance is known to be influenced by the number of
 complex tones in the sonority. That is, three-note sonorities are
 virtually always more dissonant than three-note sonorities, etc.
@@ -231,45 +229,41 @@ score corresponding to the opening measures of a Mozart clarinet trio.
 
 **Example 36.3** W.A. Mozart *Clarinet Quintet*.
 
-> ![](guide.figures/guide36.3.gif)
+![](guide.figures/guide36.3.gif)
 
-> `; W.A. Mozart, Second trio from Clarinet Quintet`
->
-> `f1 0 512 10 5 3 1 ; three harmonics in waveform table`
->
-> `t0 96; tempo of 96 beats per minute `
->
->   ------------------- ------- ---------- ------ ------- ----- ------ -------------
->                                                                      
->   `; Instrument #1`                                                  
->   `; inst`            time    duration   slur   pitch   vol   stac   
->   `i1.01`             0.000   0.500      1      9.00    0.2   1.0    ; measure 1
->   `i1.01`             0.500   0.500      3      9.04    0.2   1.0    
->   `i1.01`             1.000   0.500      3      9.07    0.2   1.0    
->   `i1.01`             1.500   0.500      3      9.04    0.2   1.0    
->   `i1.01`             2.000   1.000      3      10.00   0.2   1.0    
->   `i1.01`             3.000   0.500      3      9.07    0.2   1.0    ; measure 2
->   `i1.01`             3.500   0.500      3      9.04    0.2   1.0    
->   `i1.01`             4.000   0.500      3      9.02    0.2   1.0    
->   `i1.01`             4.500   0.500      3      9.05    0.2   1.0    
->   `i1.01`             5.000   1.000      2      9.09    0.2   1.0    
->                                                                      
->   `; Instrument #2`                                                  
->   `i2.01`             2.000   1.000      0      8.09    0.2   1.0    
->   `i2.01`             3.000   1.000      0      8.09    0.2   1.0    ; measure 2
->   `i2.01`             5.000   1.000      0      8.09    0.2   1.0    
->                                                                      
->   `; Instrument #3`                                                  
->   `i3.01`             2.000   1.000      0      8.04    0.2   1.0    
->   `i3.01`             3.000   1.000      0      8.04    0.2   1.0    ; measure 2
->   `i3.01`             5.000   1.000      0      8.06    0.2   1.0    
->                                                                      
->   `; Instrument #4`                                                  
->   `i4.01`             2.000   1.000      0      8.01    0.2   1.0    
->   `i4.01`             3.000   1.000      0      8.01    0.2   1.0    ; measure 2
->   `i4.01`             5.000   1.000      0      7.11    0.2   1.0§   
->   ------------------- ------- ---------- ------ ------- ----- ------ -------------
->
+`; W.A. Mozart, Second trio from Clarinet Quintet`
+`f1 0 512 10 5 3 1 ; three harmonics in waveform table`
+`t0 96; tempo of 96 beats per minute `
+  ------------------- ------- ---------- ------ ------- ----- ------ -------------
+                                                                     
+  `; Instrument #1`                                                  
+  `; inst`            time    duration   slur   pitch   vol   stac   
+  `i1.01`             0.000   0.500      1      9.00    0.2   1.0    ; measure 1
+  `i1.01`             0.500   0.500      3      9.04    0.2   1.0    
+  `i1.01`             1.000   0.500      3      9.07    0.2   1.0    
+  `i1.01`             1.500   0.500      3      9.04    0.2   1.0    
+  `i1.01`             2.000   1.000      3      10.00   0.2   1.0    
+  `i1.01`             3.000   0.500      3      9.07    0.2   1.0    ; measure 2
+  `i1.01`             3.500   0.500      3      9.04    0.2   1.0    
+  `i1.01`             4.000   0.500      3      9.02    0.2   1.0    
+  `i1.01`             4.500   0.500      3      9.05    0.2   1.0    
+  `i1.01`             5.000   1.000      2      9.09    0.2   1.0    
+                                                                     
+  `; Instrument #2`                                                  
+  `i2.01`             2.000   1.000      0      8.09    0.2   1.0    
+  `i2.01`             3.000   1.000      0      8.09    0.2   1.0    ; measure 2
+  `i2.01`             5.000   1.000      0      8.09    0.2   1.0    
+                                                                     
+  `; Instrument #3`                                                  
+  `i3.01`             2.000   1.000      0      8.04    0.2   1.0    
+  `i3.01`             3.000   1.000      0      8.04    0.2   1.0    ; measure 2
+  `i3.01`             5.000   1.000      0      8.06    0.2   1.0    
+                                                                     
+  `; Instrument #4`                                                  
+  `i4.01`             2.000   1.000      0      8.01    0.2   1.0    
+  `i4.01`             3.000   1.000      0      8.01    0.2   1.0    ; measure 2
+  `i4.01`             5.000   1.000      0      7.11    0.2   1.0§   
+  ------------------- ------- ---------- ------ ------- ----- ------ -------------
 § Example is modified from David Bainb§e (1997).
 
 *Csound* is able to generate traditional 16-bit digital audio output. It
@@ -319,15 +313,3 @@ simple ASCII text, it is generally easy to write filters that allow the
 data to be imported to a wide variety of existing sound analysis and
 synthesis software.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch37)
-
-[**Previous Chapter**](/guide/ch35)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

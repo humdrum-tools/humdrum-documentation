@@ -31,12 +31,12 @@ Comparing Files Using *cmp*
 The **cmp** command does a character-by-character comparison and
 indicates whether or not two files are identical.
 
-> `cmp file1 file2`
+`cmp file1 file2`
 
 If the two files differ, **cmp** generates a message indicating the
 first point where the two files differ. E.g.,
 
-> `file1 file2 differ: char 4, line 10`
+`file1 file2 differ: char 4, line 10`
 
 If the two files are identical, **cmp** simply outputs nothing
 (\"silence is golden\").
@@ -48,17 +48,17 @@ reference records are different. We can pre-process the files using
 [**rid**](/tool/rid) in order to determine whether the scores
 are otherwise identical.
 
-> `rid -G file1 > temp1`\
-> `rid -G file2 > temp2`\
-> `cmp temp1 temp2`
+`rid -G file1 > temp1`\
+`rid -G file2 > temp2`\
+`cmp temp1 temp2`
 
 Of course one of the works might be transposed with respect to the
 other. We can circumvent this problem by translating the data to some
 key-independent representation such as `solfa` or `deg`:
 
-> `rid -GL file1 | solfa > temp1`\
-> `rid -GL file2 | solfa > temp2`\
-> `cmp temp1 temp2`
+`rid -GL file1 | solfa > temp1`\
+`rid -GL file2 | solfa > temp2`\
+`cmp temp1 temp2`
 
 <a name ="Identical_Lyrics"></a>
 
@@ -67,41 +67,37 @@ can test whether they are identical by extracting and comparing any
 text-related spines. Since there may be differences due to melismas, we
 might also use **rid -d** to eliminate null data records.
 
-> `extract -i '**silbe' file 1 | rid -GLd > temp1`\
-> `extract -i '**silbe' file 2 | rid -GLd > temp2`\
-> `cmp temp1 temp2`
+`extract -i '**silbe' file 1 | rid -GLd > temp1`\
+`extract -i '**silbe' file 2 | rid -GLd > temp2`\
+`cmp temp1 temp2`
 
 <a name ="Identical_Harmonies"></a>
 
 Similarly, two works might have identical harmonies:
 
-> `extract -i '**harm' file 1 | rid -GLd > temp1`\
-> `extract -i '**harm' file 2 | rid -GLd > temp2`\
-> `cmp temp1 temp2`
+`extract -i '**harm' file 1 | rid -GLd > temp1`\
+`extract -i '**harm' file 2 | rid -GLd > temp2`\
+`cmp temp1 temp2`
 
 By further reducing the inputs, we can focus on quite specific elements,
 such as whether two songs have the same rhythm. In the following script,
 we first eliminate bar numbers, and then eliminate all data except for
 durations and barlines.
 
-> `extract -i '**kern' file 1 | humsed '/=/s/[0-9]//; \`
->
-> > s/\[\^0-9.=\]//g\' \| rid -GLd \> temp1
->
-> \
-> `extract -i '**kern' file 1 | humsed '/=/s/[0-9]//; \`
->
-> > s/\[\^0-9.=\]//g\' \| rid -GLd \> temp2
->
-> \
-> `cmp temp1 temp2`
+`extract -i '**kern' file 1 | humsed '/=/s/[0-9]//; \`
+> s/\[\^0-9.=\]//g\' \| rid -GLd \> temp1
+\
+`extract -i '**kern' file 1 | humsed '/=/s/[0-9]//; \`
+> s/\[\^0-9.=\]//g\' \| rid -GLd \> temp2
+\
+`cmp temp1 temp2`
 
 For some tasks, we might focus on just a handful of records. For
 example, we might ask whether two works have the same changes of key.
 
-> `grep '^*[a-gA-G][#-]*:'  file 1 > temp1`\
-> `grep '^*[a-gA-G][#-]*:'  file 2 > temp2`\
-> `cmp temp1 temp2`
+`grep '^*[a-gA-G][#-]*:'  file 1 > temp1`\
+`grep '^*[a-gA-G][#-]*:'  file 2 > temp2`\
+`cmp temp1 temp2`
 
 <a name ="Identical_Instrumentation"></a>
 
@@ -109,9 +105,9 @@ In the extreme case, we might compare just a single line of information.
 For example, we might identify whether two works have identical
 instrumentation:
 
-> `grep '^!!!AIN:'  file 1 > temp1`\
-> `grep '^!!!AIN:'  file 2 > temp2`\
-> `cmp temp1 temp2`
+`grep '^!!!AIN:'  file 1 > temp1`\
+`grep '^!!!AIN:'  file 2 > temp2`\
+`cmp temp1 temp2`
 
 <a name ="Comparing_Files_Using_diff"></a>
 
@@ -126,7 +122,7 @@ to convert one file to another file. The output from **diff** entails
 editing commands reminiscent of the **ed** text editor. For example, two
 latin texts that differ at line 40, might generate the following output:
 
-> `40c40  < es quiambulas  ---  > es quisedes`
+`40c40  < es quiambulas  ---  > es quisedes`
 
 <a name ="Text_Differences"></a>
 
@@ -138,16 +134,12 @@ option that ignores distinctions between upper- and lower-case
 characters. Punctuation marks can be eliminated by adding a suitable
 [**humsed**](/tool/humsed) filter.
 
-> `extract -i '**silbe' file1 | text | humsed 's/[^a-zA-Z ]//g' \`
->
-> > \| rid -GLId \> temp1
->
-> extract -i \'\*\*silbe\' file2 \| text \| humsed \'s/\[\^a-zA-Z
-> \]//g\' \\
->
-> > \| rid -GLId \> temp2
->
-> diff -i file1 file2
+`extract -i '**silbe' file1 | text | humsed 's/[^a-zA-Z ]//g' \`
+> \| rid -GLId \> temp1
+extract -i \'\*\*silbe\' file2 \| text \| humsed \'s/\[\^a-zA-Z
+\]//g\' \\
+> \| rid -GLId \> temp2
+diff -i file1 file2
 
 Every time **diff** encounters a difference between the two files, it
 will output several lines identify the location of the difference and
@@ -163,7 +155,7 @@ input, the number of output lines can provide a rough estimate of the
 magnitude of the differences between the two files. A suitable revision
 to the last line of the above script would be:
 
-> `diff -i file1 file2 | wc -l`
+`diff -i file1 file2 | wc -l`
 
 One problem with this approach is that it assumes that we know which two
 files we want to compare. A more common problem is looking for *any*
@@ -176,32 +168,26 @@ reading. The **echo** command in our script outputs each filename in
 turn with the a count of the number of output lines generated by
 **diff**.
 
+\
+`extract -i '**silbe' $1 | text | humsed 's/[^a-zA-Z ]//g' \ `
 > \
-> `extract -i '**silbe' $1 | text | humsed 's/[^a-zA-Z ]//g' \ `
->
+> \| rid -GLId \> temp1\
+\
+shift\
+while \[ \$\# -ne 0 \]\
+do\
+> \
+> extract -i \'\*\*silbe\' \$1 \| text \| humsed \'s/\[\^a-zA-Z
+> \]//g\' \\\
 > > \
-> > \| rid -GLId \> temp1\
->
+> > \| rid -GLId \> temp2\
 > \
+> CHANGES=\`diff -i temp1 temp2 \| wc -l\`\
+> echo \$1 \": \" \$CHANGES\
 > shift\
-> while \[ \$\# -ne 0 \]\
-> do\
->
-> > \
-> > extract -i \'\*\*silbe\' \$1 \| text \| humsed \'s/\[\^a-zA-Z
-> > \]//g\' \\\
-> >
-> > > \
-> > > \| rid -GLId \> temp2\
-> >
-> > \
-> > CHANGES=\`diff -i temp1 temp2 \| wc -l\`\
-> > echo \$1 \": \" \$CHANGES\
-> > shift\
->
-> \
-> done\
-> rm temp\[12\]
+\
+done\
+rm temp\[12\]
 
 Of course this same approach may be applied to other musical aspects
 apart from musical texts. For example, with suitable changes in the
@@ -233,36 +219,32 @@ same. A useful technique is to focus on the similarity of the word
 inventories. In the following script, we simply create a list of words
 used in both the original and comparison files.
 
-> `extract -i '**silbe' file1 | text | humsed 's/[.,;:!?]//g' \`
->
-> > \| rid -GLId \| tr A-Z a-z \| sort -d \> inventory1
->
-> `extract -i '**silbe' file2 | humsed 's/[.,;:!?]//g' | tr A-Z a-z | text \`
->
-> > \| rid -GLId \| sort \| uniq -c \| sort -nr \> inventory2
+`extract -i '**silbe' file1 | text | humsed 's/[.,;:!?]//g' \`
+> \| rid -GLId \| tr A-Z a-z \| sort -d \> inventory1
+`extract -i '**silbe' file2 | humsed 's/[.,;:!?]//g' | tr A-Z a-z | text \`
+> \| rid -GLId \| sort \| uniq -c \| sort -nr \> inventory2
 
 Suppose that our two vocabulary inventories appear as follows:
 
->   ------------------ ------------------
->   **Inventory 1:**   **Inventory 2:**
->                      
->   domine             a
->   et                 coronasti
->   eum                domine
->   filio              et
->   gloria             eum
->   in                 filio
->   jerusalem          gloria
->   orietur            honore
->   patri              manuum
->   sancto             oper
->   spiritui           patri
->   super              sancto
->   te                 spiritui
->   videbitur          super
->                      tuarum
->   ------------------ ------------------
->
+  ------------------ ------------------
+  **Inventory 1:**   **Inventory 2:**
+                     
+  domine             a
+  et                 coronasti
+  eum                domine
+  filio              et
+  gloria             eum
+  in                 filio
+  jerusalem          gloria
+  orietur            honore
+  patri              manuum
+  sancto             oper
+  spiritui           patri
+  super              sancto
+  te                 spiritui
+  videbitur          super
+                     tuarum
+  ------------------ ------------------
 Notice that a number of words are present in both texts, such as
 *domine*, *et*, *eum*, *filio*, and so on. Identifying the common
 vocabulary items is easily done by the UNIX **comm** command; **comm**
@@ -275,35 +257,34 @@ identifies only those lines that are present in the second file, and the
 third column identifies those lines that are present in both files. In
 the case of our two Latin texts, the command:
 
-> `comm inventory1 inventory2`
+`comm inventory1 inventory2`
 
 will produce the following output. The first and second columns identify
 words unique to `inventory1` and `inventory1`, respectively. The third
 column identifies the common lines:
 
->   ----------- -- -- ----------- -- -- ----------
->                     `a`               
->                     coronasti         
->                                       domine
->                                       et
->                                       eum
->                                       filio
->                                       gloria
->                     honore            
->   in                                  
->   jerusalem                           
->                     manuum            
->                     oper              
->   orietur                             
->                                       patri
->                                       sancto
->                                       spiritui
->                                       super
->   te                                  
->                     tuarum            
->   videbitur                           
->   ----------- -- -- ----------- -- -- ----------
->
+  ----------- -- -- ----------- -- -- ----------
+                    `a`               
+                    coronasti         
+                                      domine
+                                      et
+                                      eum
+                                      filio
+                                      gloria
+                    honore            
+  in                                  
+  jerusalem                           
+                    manuum            
+                    oper              
+  orietur                             
+                                      patri
+                                      sancto
+                                      spiritui
+                                      super
+  te                                  
+                    tuarum            
+  videbitur                           
+  ----------- -- -- ----------- -- -- ----------
 In the above case, five words are unique to `inventory1`, six words are
 unique to `inventory2` and nine words are common to both.
 
@@ -316,8 +297,8 @@ vocabularies. We can do this using the word-count command, **wc**. The
 first command counts the total number of words and the second command
 counts the total number of shared words:
 
-> `comm inventory1 inventory2 | wc -l`\
-> `comm -3 inventory1 inventory2 | wc -l`
+`comm inventory1 inventory2 | wc -l`\
+`comm -3 inventory1 inventory2 | wc -l`
 
 An important point about **comm** is that the order of materials is
 important in the input files. If the word *filio* occurs near the
@@ -333,45 +314,41 @@ is, suppose we use **uniq -c \| sort -nr** to generate a vocabulary list
 ordered by how common each word is. Our inventory files might now appear
 as follows:
 
-> **Inventory 1:**
->
-> >   ----- -----------
-> >   `3`   et
-> >   2     te
-> >   2     gloria
-> >   1     videbitur
-> >   1     super
-> >   1     spiritui
-> >   1     sancto
-> >   1     patri
-> >   1     orietur
-> >   1     jerusalem
-> >   1     in
-> >   1     filio
-> >   1     eum
-> >   1     domine
-> >   ----- -----------
-> >
-> **Inventory 2:**
->
-> >   ----- -----------
-> >   `4`   et
-> >   2     gloria
-> >   2     eum
-> >   1     tuarum
-> >   1     super
-> >   1     spiritui
-> >   1     sancto
-> >   1     patri
-> >   1     oper
-> >   1     manuum
-> >   1     honore
-> >   1     filio
-> >   1     domine
-> >   1     coronasti
-> >   1     a
-> >   ----- -----------
-> >
+**Inventory 1:**
+>   ----- -----------
+>   `3`   et
+>   2     te
+>   2     gloria
+>   1     videbitur
+>   1     super
+>   1     spiritui
+>   1     sancto
+>   1     patri
+>   1     orietur
+>   1     jerusalem
+>   1     in
+>   1     filio
+>   1     eum
+>   1     domine
+>   ----- -----------
+**Inventory 2:**
+>   ----- -----------
+>   `4`   et
+>   2     gloria
+>   2     eum
+>   1     tuarum
+>   1     super
+>   1     spiritui
+>   1     sancto
+>   1     patri
+>   1     oper
+>   1     manuum
+>   1     honore
+>   1     filio
+>   1     domine
+>   1     coronasti
+>   1     a
+>   ----- -----------
 Comparing these two inventories will produce little in common due to the
 presence of the numbers. For example, the records \"`3    et`\" and
 \"`4    et`\" will be deemed entirely different. However, we can
@@ -405,15 +382,3 @@ Together with the [**simil**](/tool/simil) and
 25,](/guide/ch25) these five tools provide a variety of means for
 characterizing differences, commonalities, and similarities.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch30)
-
-[**Previous Chapter**](/guide/ch28)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

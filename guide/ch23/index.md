@@ -38,9 +38,8 @@ Generating `**recip` data from `**kern` is straightforward using
 [**humsed**](/tool/humsed). For a single-spine input, the
 following command will make the translation:
 
-> `humsed '/^[^=]/s/[^0-9.r ]//g; s/^$/./' input.krn \`
->
-> > \| sed \'s/\\\*\\\*kern/\*\*recip/\'
+`humsed '/^[^=]/s/[^0-9.r ]//g; s/^$/./' input.krn \`
+> \| sed \'s/\\\*\\\*kern/\*\*recip/\'
 
 The first **humsed** substitution eliminates all data other than the
 numbers 0 to 9, the period, the lower-case `r`, and the space (for
@@ -56,25 +55,23 @@ rhythmic pattern spanning a measure. Using a monophonic `**recip` input,
 we could use [**context**](/tool/context) to amalgamate the
 appropriate data tokens:
 
-> `context -b ^= -o ^= input.recip | rid -GLId | sort \`
->
-> > \| uniq -c \| sort -nr
+`context -b ^= -o ^= input.recip | rid -GLId | sort \`
+> \| uniq -c \| sort -nr
 
 The output for the combined voices of Bach\'s two-part Invention No. 5
 shows just seven patterns. The most characteristic patterns are the
 second one: `8r 16 16 8 8 4 4` and the fourth one:\
 `8 16 16 8 8 4 4`.
 
->   ------ -------------------------------------------------
->   `30`   16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16
->   12     8r 16 16 8 8 4 4
->   11     8 8 8 8 16 16 16 16 8 8
->   8      8 16 16 8 8 4 4
->   1      8 8 8 8 2
->   1      8 32 32 32 32 4 2
->   1      4 4 16r 16 16 16 16 16 16 16
->   ------ -------------------------------------------------
->
+  ------ -------------------------------------------------
+  `30`   16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16
+  12     8r 16 16 8 8 4 4
+  11     8 8 8 8 16 16 16 16 8 8
+  8      8 16 16 8 8 4 4
+  1      8 8 8 8 2
+  1      8 32 32 32 32 4 2
+  1      4 4 16r 16 16 16 16 16 16 16
+  ------ -------------------------------------------------
 <a name ="The_dur_Command"></a>
 
 The *dur* Command
@@ -88,22 +85,21 @@ following example shows a simple `**dur` representation (right spine)
 with a corresponding `**kern` input:\
 \
 
->   ---------- ---------
->   `**kern`   \*\*dur
->   \*         \*MM60
->   =1         =1
->   12g        0.3333
->   12g        0.3333
->   12g        0.3333
->   4g         1.0000
->   4r         1.0000r
->   8g         0.5000
->   8g         0.5000
->   4g         1.0000
->   =2         =2
->   \*-        \*-
->   ---------- ---------
->
+  ---------- ---------
+  `**kern`   \*\*dur
+  \*         \*MM60
+  =1         =1
+  12g        0.3333
+  12g        0.3333
+  12g        0.3333
+  4g         1.0000
+  4r         1.0000r
+  8g         0.5000
+  8g         0.5000
+  4g         1.0000
+  =2         =2
+  \*-        \*-
+  ---------- ---------
 As in the case of `**recip`, the `**dur` representation designates rests
 via the lower-case `r` and uses the common system for barlines. Notice
 that `**dur` assumes a metronome indication of quarter-note equals 60
@@ -114,7 +110,7 @@ passage (ignoring rubato). We can do this by translating the score to
 `**dur`, eliminating everything but notes and rests, and sending the
 output to the **stats** command:
 
-> `dur -d inputfile.krn | rid -GLId | grep -v '^=' | stats`
+`dur -d inputfile.krn | rid -GLId | grep -v '^=' | stats`
 
 The **-d** option for **dur** suppresses the outputting of duplicate
 durations arising from multiple-stops. Note that outputs from **dur**
@@ -128,7 +124,7 @@ input stream. For example, if we wanted to estimate the duration of a
 monophonic passage for a metronome marking of 72 quarter-notes per
 minute we could use the command:
 
-> `dur -M 72 -d input.krn | rid -GLId | grep -v '^=' | stats`
+`dur -M 72 -d input.krn | rid -GLId | grep -v '^=' | stats`
 
 <a name ="trumpet_duration"></a>
 
@@ -140,9 +136,8 @@ duration of notes and the duration of rests. Since the duration values
 for rests are distinguished by the trailing letter \`r\', we can use
 **grep -v** to eliminate all rest tokens.
 
-> `extract -i '*Itromp' inputfile.krn | dur -d | rid -GLId \`
->
-> > \| grep -v \'\^=\' \| grep -v r \| stats
+`extract -i '*Itromp' inputfile.krn | dur -d | rid -GLId \`
+> \| grep -v \'\^=\' \| grep -v r \| stats
 
 The [**dur**](/tool/dur) command provides a **-e** option that
 allows the user to echo specified signifiers in the output. The **-e**
@@ -151,9 +146,8 @@ to be passed to the output. This option allows us to \"mark\" notes of
 special interest. For example, suppose we wanted to determine the
 longest duration note for which Mozart had marked a staccato.
 
-> `dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \`
->
-> > \| stats
+`dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \`
+> \| stats
 
 <a name ="Longest_Staccato"></a>
 
@@ -173,27 +167,21 @@ ends of phrases tend to be longer than notes at the beginnings of
 phrases \-- and if so, how much longer? In this case, we want to have
 **dur** echo phrase-related signifiers:
 
-> `dur -e '{' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
->
-> > \| stats
->
-> \
-> `dur -e '}' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
->
-> > \| stats
+`dur -e '{' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
+> \| stats
+\
+`dur -e '}' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
+> \| stats
 
 <a name ="Trill_Durations"></a>
 
 Similarly, do semitone trills tend to be shorter than whole-tone trills?
 
-> `dur -e 't' inputfile | rid -GLId | grep 't' | sed 's/{//' \`
->
-> > \| stats
->
-> \
-> `dur -e 'T' inputfile | rid -GLId | grep 'T' | sed 's/{//' \`
->
-> > \| stats
+`dur -e 't' inputfile | rid -GLId | grep 't' | sed 's/{//' \`
+> \| stats
+\
+`dur -e 'T' inputfile | rid -GLId | grep 'T' | sed 's/{//' \`
+> \| stats
 
 <a name ="Duration_of_Recapitulation"></a>
 
@@ -202,24 +190,21 @@ with [**yank**](/tool/yank) in order to investigate particular
 musical segments or passages. How much shorter is the recapitulation
 compared with the original exposition?
 
-> `yank -s 'Exposition' -r 1 inputfile | dur | rid -GLId \`
->
-> > \| grep -v \'=\' \| stats
->
-> \
-> `yank -s 'Recapituation' -r 1 inputfile | dur | rid -GLId \`
->
-> > \| grep -v \'=\' \| stats
+`yank -s 'Exposition' -r 1 inputfile | dur | rid -GLId \`
+> \| grep -v \'=\' \| stats
+\
+`yank -s 'Recapituation' -r 1 inputfile | dur | rid -GLId \`
+> \| grep -v \'=\' \| stats
 
 Do initial phrases in Schubert\'s vocal works tend to be shorter than
 final phrases?
 
-> `yank -m { -r 1 lied | dur | rid -GLId | grep -v ^= | stats`\
-> `yank -m { -r $ lied | dur | rid -GLId | grep -v ^= | stats`
+`yank -m { -r 1 lied | dur | rid -GLId | grep -v ^= | stats`\
+`yank -m { -r $ lied | dur | rid -GLId | grep -v ^= | stats`
 
 How much longer is a passage if all the repeats are played?
 
-> `thru inputfile | dur | rid -GLID | stats -o ^=`
+`thru inputfile | dur | rid -GLID | stats -o ^=`
 
 Recall that the [**xdelta**](/tool/xdelta) command can be used
 to calculate numerical differences between successive values. If the
@@ -232,7 +217,7 @@ we can identify such large changes of duration. For example, the
 following pipeline can be used to determine the magnitude of the
 *differences* between successive notes.
 
-> `dur inputfile | xdelta -s ^= | rid -GLId | stats -o ^=`
+`dur inputfile | xdelta -s ^= | rid -GLId | stats -o ^=`
 
 A small `mean` from **stats** will be indicative of works that tend to
 have smoother or less angular note-to-note rhythms.
@@ -247,49 +232,44 @@ durations into a finite set of categories. Suppose, for example, we wish
 to create a inventory of long/short rhythmic patterns. We might use
 **recode** with reassignments such as the following:
 
->   --------- -------
->   `>=0.4`   long
->   else      short
->   --------- -------
->
+  --------- -------
+  `>=0.4`   long
+  else      short
+  --------- -------
 For a monophonic input, we can create an inventory of (say) 3-note
 long/short rhythmic patterns as follows:
 
-> `dur inputfile | recode -f reassign -i '**dur' -s ^= | \`
->
-> > context -n 3 -o = \| rid -GLId \| sort \| uniq -c \| sort -n
+`dur inputfile | recode -f reassign -i '**dur' -s ^= | \`
+> context -n 3 -o = \| rid -GLId \| sort \| uniq -c \| sort -n
 
 A typical output might appears as follows:
 
->   ------- -------------------
->   `230`   long long long
->   3422    short short short
->   114     long long short
->   202     short short long
->   38      long short long
->   117     short long long
->   194     long short short
->   114     short long short
->   ------- -------------------
->
+  ------- -------------------
+  `230`   long long long
+  3422    short short short
+  114     long long short
+  202     short short long
+  38      long short long
+  117     short long long
+  194     long short short
+  114     short long short
+  ------- -------------------
 Notice that we might do a similar inventory based on durational
 *differences* rather than on durations. For example, the
 [**xdelta**](/tool/xdelta) command will allow us to distinguish
 short*er* note relationships from long*er* relationships. Our
 reassignment file would be as follows:
 
->   ------- ---------
->   `==0`   equal
->   \>0     shorter
->   \<0     longer
->   ------- ---------
->
+  ------- ---------
+  `==0`   equal
+  \>0     shorter
+  \<0     longer
+  ------- ---------
 And our processing would be:
 
-> `dur inputfile | xdelta -s ^= | recode -f reassign \`
->
-> > -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\\
-> > \| rid -GLId \| sort \| uniq -c \| sort -n
+`dur inputfile | xdelta -s ^= | recode -f reassign \`
+> -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\\
+> \| rid -GLId \| sort \| uniq -c \| sort -n
 
 <a name ="Using_yank_with_the_timebase_Command"></a>
 
@@ -302,7 +282,7 @@ equivalent elapsed duration. For example, in a 4/4 meter, the following
 command will format the output so that each full measure consists of
 precisely 16 data records (not including the barline itself):
 
-> `timebase -t 16 input.krn`
+`timebase -t 16 input.krn`
 
 Suppose we wanted to isolate all sonorities in a 4/4 work that occur
 only on the fourth beat of a measure. If we use **timebase**, we can
@@ -311,13 +291,13 @@ records following the barline. For example, with the following command,
 the onset of the fourth beat will always occur 4 records follow the
 barline:
 
-> `timebase -t 4 input.krn`
+`timebase -t 4 input.krn`
 
 We can now use **yank -m** to extract all appropriate sonorities. The
 \"marker\" is the barline and the \"range\" is 4 records following the
 marker, hence:
 
-> `timebase -t 4 input.krn | yank -m ^= -r 4`
+`timebase -t 4 input.krn | yank -m ^= -r 4`
 
 Note that this process will extract only those notes that begin sounding
 with the onset of the fourth beat. Some notes may have begun prior to
@@ -329,7 +309,7 @@ shortest note is a 32nd note, we can use an appropriately small timebase
 value. Then use the **ditto** command to propagate all sustained notes
 forward through the successive sonorities:
 
-> `timebase -t 32 input.krn | ditto -s ^=`
+`timebase -t 32 input.krn | ditto -s ^=`
 
 Now we can yank the data records that are of interest. Notice that the
 **-r** (range) option for **yank -m** allows us to select more than one
@@ -337,9 +317,8 @@ record. This might allow us, say, to extract only those sonorities that
 occur on off-beats. For example, the following command extracts all
 notes played by the horns during beats 2 and 4 in a 4/4 meter work:
 
-> `extract -i '*Icor' input.krn | timebase -t 16 \`
->
-> > \| yank -m \^= -r 5-8,13-16
+`extract -i '*Icor' input.krn | timebase -t 16 \`
+> \| yank -m \^= -r 5-8,13-16
 
 <a name ="First_Waltz_Sonority"></a>
 
@@ -357,18 +336,16 @@ expanded the input, we can dispense with everything but the `**harm`
 spine. For works in 3/4 meter, the following pipeline would provide an
 inventory of chords occurring on the first beat of each bar:
 
-> `timebase -t 8 input | extract -i '**harm' \`
->
-> > \| yank -m \^= -r 1 \| rid -GLId \| sort \| uniq -c \| sort -n
+`timebase -t 8 input | extract -i '**harm' \`
+> \| yank -m \^= -r 1 \| rid -GLId \| sort \| uniq -c \| sort -n
 
 And the following variation would provide an inventory of chords
 occurring on the third beat of each bar. (There are 6 eighth durations
 in a bar of 3/4, therefore the beginning of the third beat will coincide
 with the 5th eighth \-- hence the range `-r 5`:
 
-> `timebase -t 8 input | extract -i '**harm' \`
->
-> > \| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
+`timebase -t 8 input | extract -i '**harm' \`
+> \| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
 
 <a name ="The_metpos_Command"></a>
 
@@ -414,60 +391,59 @@ The following extract from Bartók\'s \"Two-Part Study\" No. 121 from
 left-most columns show the original input; all three columns show the
 corresponding output from **metpos**:
 
->   ---------- ---------- ------------
->   `**kern`   \*\*kern   \*\*metpos
->   \*tb8      \*tb8      \*tb8
->   =16        =16        =16
->   \*M6/4     \*M6/4     \*M6/4
->   8Gn        8b-        1
->   8A         8ccn       4
->   8B-        8cc\#}     3
->   8cn        {8f\#      4
->   8c\#}      8gn        3
->   {8F\#      8a         4
->   8G         8b-        2
->   8A         8ccn       4
->   8B-        4b-        3
->   8cn        .          4
->   8c\#}      8fn}       3
->   8r         8r         4
->   =17        =17        =17
->   \*M4/4     \*M4/4     \*M4/4
->   8d         2r         1
->   4.d        .          4
->   .          .          3
->   .          .          4
->   {2d\_      8dd        2
->   .          4.dd       4
->   .          .          3
->   .          .          4
->   =18        =18        =18
->   8d         {1dd\_     1
->   8A         .          4
->   8F\#       .          3
->   8E         .          4
->   8D         .          2
->   8BB        .          4
->   8D         .          3
->   8E}        .          4
->   =19        =19        =19
->   \*M3/2     \*M3/2     \*M3/2
->   {8F\#      8dd        1
->   8A         8ffn       4
->   8c\#       8aa        3
->   8A         8ff        4
->   8F\#       8dd        2
->   8A         8ff        4
->   8F\#       8dd        3
->   8E         8ccn       4
->   8D         8b-        2
->   8BBn       8gn        4
->   8D         8b-        3
->   8E}        8cc        4
->   =20        =20        =20
->   \*-        \*-        \*-
->   ---------- ---------- ------------
->
+  ---------- ---------- ------------
+  `**kern`   \*\*kern   \*\*metpos
+  \*tb8      \*tb8      \*tb8
+  =16        =16        =16
+  \*M6/4     \*M6/4     \*M6/4
+  8Gn        8b-        1
+  8A         8ccn       4
+  8B-        8cc\#}     3
+  8cn        {8f\#      4
+  8c\#}      8gn        3
+  {8F\#      8a         4
+  8G         8b-        2
+  8A         8ccn       4
+  8B-        4b-        3
+  8cn        .          4
+  8c\#}      8fn}       3
+  8r         8r         4
+  =17        =17        =17
+  \*M4/4     \*M4/4     \*M4/4
+  8d         2r         1
+  4.d        .          4
+  .          .          3
+  .          .          4
+  {2d\_      8dd        2
+  .          4.dd       4
+  .          .          3
+  .          .          4
+  =18        =18        =18
+  8d         {1dd\_     1
+  8A         .          4
+  8F\#       .          3
+  8E         .          4
+  8D         .          2
+  8BB        .          4
+  8D         .          3
+  8E}        .          4
+  =19        =19        =19
+  \*M3/2     \*M3/2     \*M3/2
+  {8F\#      8dd        1
+  8A         8ffn       4
+  8c\#       8aa        3
+  8A         8ff        4
+  8F\#       8dd        2
+  8A         8ff        4
+  8F\#       8dd        3
+  8E         8ccn       4
+  8D         8b-        2
+  8BBn       8gn        4
+  8D         8b-        3
+  8E}        8cc        4
+  =20        =20        =20
+  \*-        \*-        \*-
+  ---------- ---------- ------------
 Notice that [**metpos**](/tool/metpos) adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
@@ -479,12 +455,11 @@ outputs from **metpos** into a smaller set of discrete categories. For
 example, we might classify metric positions using the following
 reassignment file:
 
->   ------- -----------
->   `==1`   strong
->   \>=3    secondary
->   else    weak
->   ------- -----------
->
+  ------- -----------
+  `==1`   strong
+  \>=3    secondary
+  else    weak
+  ------- -----------
 The words \`strong\', \`secondary\', and \`weak\' can then be sought by
 **grep** or **yank -m**, allowing us to isolate points of particular
 metric stress. Since **metpos** adapts to changing meters, we can
@@ -517,44 +492,42 @@ Assuming that our Hungarian melodies encode key information, creating a
 that the **-a** option for [**deg**](/tool/deg) avoids
 distinguishing the direction of approach (from above or below):
 
-> `deg -a magyar*.krn > magyar.deg`
+`deg -a magyar*.krn > magyar.deg`
 
 Creating a spine encoding relative metric strength will be more
 involved. First we need to expand our input according to the shortest
 note. We use [**census -k**](/tool/census) to determine the
 shortest duration, and then expand our input using **timebase**.
 
-> `census -k magyar*.krn`\
-> `timebase -t 16 magyar*.krn > magyar.tb`
+`census -k magyar*.krn`\
+`timebase -t 16 magyar*.krn > magyar.tb`
 
 Using **metpos** will allow us to create a spine with the metric
 position data.
 
-> `metpos magyar.tb > magyar.mp`
+`metpos magyar.tb > magyar.mp`
 
 Note that **metpos** automatically echoes the input along with the new
 `**metpos` spine. At this point, the result might look as follows:
 
-> `!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge `
->
->   ---------- ------------
->   `**kern`   `**metpos`
->   `*ICvox`   `*`
->   `*Ivox`    `*`
->   `*M3/4`    `*M3/4`
->   `*k[f#]`   `*`
->   `*G:`      `*`
->   `*tb16`    `*tb16`
->   `{8g`      `2`
->   `.`        `4`
->   `8b`       `3`
->   `.`        `4`
->   `=1`       `=1`
->   `8dd`      `1`
->   `.`        `4`
->   etc.       
->   ---------- ------------
->
+`!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge `
+  ---------- ------------
+  `**kern`   `**metpos`
+  `*ICvox`   `*`
+  `*Ivox`    `*`
+  `*M3/4`    `*M3/4`
+  `*k[f#]`   `*`
+  `*G:`      `*`
+  `*tb16`    `*tb16`
+  `{8g`      `2`
+  `.`        `4`
+  `8b`       `3`
+  `.`        `4`
+  `=1`       `=1`
+  `8dd`      `1`
+  `.`        `4`
+  etc.       
+  ---------- ------------
 We want to be able to say that the relationship between the first
 eighth-note G and the eighth-note B is \"strong-to-weak\" and that the
 relationship between the eighth-note B and the eighth-note D is
@@ -564,27 +537,25 @@ pitch present in the [`**kern`](/rep/kern) spine. We
 can do this using **humsed**; we simply delete all lines that begin with
 a period character:
 
-> `humsed '/^\./d' magyar.mp`
+`humsed '/^\./d' magyar.mp`
 
 The result is as follows:
 
-> `!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge `
->
->   ---------- ------------
->   `**kern`   `**metpos`
->   `*ICvox`   `*`
->   `*Ivox`    `*`
->   `*M3/4`    `*M3/4`
->   `*k[f#]`   `*`
->   `*G:`      `*`
->   `*tb16`    `*tb16`
->   `{8g`      `2`
->   `8b`       `3`
->   `=1`       `=1`
->   `8dd`      `1`
->   etc.       
->   ---------- ------------
->
+`!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge `
+  ---------- ------------
+  `**kern`   `**metpos`
+  `*ICvox`   `*`
+  `*Ivox`    `*`
+  `*M3/4`    `*M3/4`
+  `*k[f#]`   `*`
+  `*G:`      `*`
+  `*tb16`    `*tb16`
+  `{8g`      `2`
+  `8b`       `3`
+  `=1`       `=1`
+  `8dd`      `1`
+  etc.       
+  ---------- ------------
 Notice that the successive `**metpos` values will now allow us to
 characterize the changes in stress between successive notes: 2 followed
 by 3 indicates a strong-to-weak change of metric position, 3 followed by
@@ -597,44 +568,40 @@ value, then the successive notes hold equal positions in the metric
 hierarchy. Before using **xdelta** we need to isolate the `**metpos`
 spine using **extract**:
 
-> `humsed '/^\./d' magyar.mp | extract -i '**metpos' \`
->
-> > \| xdelta -s \^=
+`humsed '/^\./d' magyar.mp | extract -i '**metpos' \`
+> \| xdelta -s \^=
 
 The result is:
 
->   -----------------------------------------------------------------
->   `!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge`
->   `**Xmetpos`
->   `*`
->   `*`
->   `*M3/4`
->   `*`
->   `*`
->   `*tb16`
->   `.`
->   `1`
->   `=1`
->   `-2`
->   etc.
->   -----------------------------------------------------------------
->
+  -----------------------------------------------------------------
+  `!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge`
+  `**Xmetpos`
+  `*`
+  `*`
+  `*M3/4`
+  `*`
+  `*`
+  `*tb16`
+  `.`
+  `1`
+  `=1`
+  `-2`
+  etc.
+  -----------------------------------------------------------------
 Now we can use [**recode**](/tool/recode) to classify the
 changes of metric position according. Our reassignment file (named
 `reassign`):
 
->   ------ ----------------
->   `>0`   strong-to-weak
->   \<0    weak-to-strong
->   ==0    equal
->   ------ ----------------
->
+  ------ ----------------
+  `>0`   strong-to-weak
+  \<0    weak-to-strong
+  ==0    equal
+  ------ ----------------
 Appending the appropriate command:
 
-> `humsed '/^\./d' magyar.mp | extract -i '**metpos' \`
->
-> > \| xdelta -s \^= \| recode -f reassign -i \'\*\*Xmetpos\' -s \^= \>
-> > magyar.xmp
+`humsed '/^\./d' magyar.mp | extract -i '**metpos' \`
+> \| xdelta -s \^= \| recode -f reassign -i \'\*\*Xmetpos\' -s \^= \>
+> magyar.xmp
 
 Now we can assemble the resulting metric change spine with our original
 [`**deg`](/rep/deg) spine. Each data record will
@@ -642,9 +609,8 @@ contain the scale degree in the first spine and the change of metric
 position data in the second spine. The final task is to create an
 inventory using [**rid**](/tool/rid), **sort** and **uniq**:
 
-> `assemble magyar.deg magyar.xmp | rid -GLId | grep -v ^= \`
->
-> > \| sort \| uniq -c
+`assemble magyar.deg magyar.xmp | rid -GLId | grep -v ^= \`
+> \| sort \| uniq -c
 
 The final result will appear as below. The first output line indicates
 that there were three instances of a tonic pitch approached by a note of
@@ -652,32 +618,31 @@ equivalent position in the metric hierarchy. The second line indicates
 that there were twenty-five instances of a tonic pitch approached by a
 note having a stronger metric position:
 
->   ----- ---- ----------------
->   `3`   1    equal
->   25    1    strong-to-weak
->   30    1    weak-to-strong
->   3     2    equal
->   14    2    strong-to-weak
->   13    2    weak-to-strong
->   1     3    equal
->   39    3    strong-to-weak
->   34    3    weak-to-strong
->   3     4    equal
->   26    4    strong-to-weak
->   17    4    weak-to-strong
->   13    5    equal
->   49    5    strong-to-weak
->   42    5    weak-to-strong
->   1     6    equal
->   13    6    strong-to-weak
->   14    6    weak-to-strong
->   3     7    strong-to-weak
->   6     7    weak-to-strong
->   1     7-   weak-to-strong
->   3     r    equal
->   10    r    strong-to-weak
->   ----- ---- ----------------
->
+  ----- ---- ----------------
+  `3`   1    equal
+  25    1    strong-to-weak
+  30    1    weak-to-strong
+  3     2    equal
+  14    2    strong-to-weak
+  13    2    weak-to-strong
+  1     3    equal
+  39    3    strong-to-weak
+  34    3    weak-to-strong
+  3     4    equal
+  26    4    strong-to-weak
+  17    4    weak-to-strong
+  13    5    equal
+  49    5    strong-to-weak
+  42    5    weak-to-strong
+  1     6    equal
+  13    6    strong-to-weak
+  14    6    weak-to-strong
+  3     7    strong-to-weak
+  6     7    weak-to-strong
+  1     7-   weak-to-strong
+  3     r    equal
+  10    r    strong-to-weak
+  ----- ---- ----------------
 Instead of scale degree, any other Humdrum spine might be used. For
 example, if the input contained functional harmony data (\*\*harm) then
 the output inventory would identify how particular chord functions tend
@@ -722,15 +687,3 @@ One further topic related to rhythm remains to be discussed. The
 their estimated perceptual importance. We will consider **accent** in
 [Chapter 31.](/guide/ch31)
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch24)
-
-[**Previous Chapter**](/guide/ch22)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

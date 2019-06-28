@@ -194,7 +194,6 @@ inaccurate or inappropriate search templates.**
     >         `grep [^A]`
     >   and   `grep -v A`
     >   ----- -------------
-    >
     are *not* the same.
 
 -   Compare outputs from a search that you know ought to increase the
@@ -305,15 +304,3 @@ tasks, always use two or more independent methods to ensure that the
 results agree. In general, cultivate a skeptical attitude; wise users
 are wary users.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch40)
-
-[**Previous Chapter**](/guide/ch38)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

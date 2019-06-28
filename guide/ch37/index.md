@@ -250,11 +250,11 @@ then transpose the result using the Humdrum
 B-flat trumpet or B-flat clarinet can be transposed using the following
 command:
 
-> `trans -d -1 -c -2`
+`trans -d -1 -c -2`
 
 In the case of clarinet in A, a suitable transposition would be:
 
-> `trans -d -2 -c -3`
+`trans -d -2 -c -3`
 
 The **trans** command adds a transposition interpretation to the output
 in order to identify that the material has been shifted. In the `**kern`
@@ -265,11 +265,11 @@ can be created by adding the upper-case letter \`I\' prior to the \`T\'
 in the appropriate tandem interpretation. In the case of a horn in F for
 example, the transpostion interpretation would be modified from
 
-> `*Trd-4c-7`
+`*Trd-4c-7`
 
 to:
 
-> `*ITrd-4c-7`
+`*ITrd-4c-7`
 
 <a name ="Instrument_Identification"></a>
 
@@ -305,10 +305,9 @@ first barline. For a hypothetical file containing five spines, we would
 need to insert the following line just before the first note(s) in the
 work:
 
->   ------- ----- ----- ----- -----
->   `=1-`   =1-   =1-   =1-   =1-
->   ------- ----- ----- ----- -----
->
+  ------- ----- ----- ----- -----
+  `=1-`   =1-   =1-   =1-   =1-
+  ------- ----- ----- ----- -----
 Recall that the common system for representing barlines makes a
 distinction between the logical *function* of a barline and it\'s visual
 or *orthographic* appearance. For example, the common system for
@@ -328,12 +327,12 @@ sign(s). The vertical line (\|) represents a \`thin\' line and the
 exclamation mark (!) represents a \`thick\' line. A typical final double
 bar would be encoded:
 
-> `==|!`
+`==|!`
 
 Most mid-movement double bars are encoded with two thin lines and so
 would be encoded:
 
-> `=||`
+`=||`
 
 A common encoding error is to render mid-movement double barlines as
 *functional* rather than *orthographic* double-bars.
@@ -386,7 +385,7 @@ Where appropriate, suitable section labels should be created and encoded
 using the Humdrum Section Label designator. Remember that section labels
 can include the space character:
 
-> `*>1st Theme`
+`*>1st Theme`
 
 If you include section labels, you must also include a Humdrum
 \"Expansion List\" to indicate how the sections are connected. The
@@ -394,7 +393,7 @@ Humdrum [**thru**](/tool/thru) command causes a through-composed
 version of a file to be generated according to the expansion list. For
 example, an expansion list for a simple binary work may be encoded as:
 
-> `*>[A,B]`
+`*>[A,B]`
 
 Remember that expansion lists ought to be encoded prior to the first
 section label.
@@ -410,12 +409,12 @@ repeating all sections of both the minuet and trio, but then avoiding
 the repeats in the minuet following the Da Capo. A suitable expansion
 list might be:
 
-> `*>[Minuet,Minuet,Trio,Trio,,Minuet]`
+`*>[Minuet,Minuet,Trio,Trio,,Minuet]`
 
 An alternative expansion list might be encoded as follows (notice the
 expansion-list-label *ossia*):
 
-> `*>ossia[Minuet,Minuet,Trio,Trio,,Minuet,Minuet]`
+`*>ossia[Minuet,Minuet,Trio,Trio,,Minuet,Minuet]`
 
 <a name ="Editorialisms_in_the_**kern_Representation"></a>
 
@@ -489,47 +488,45 @@ As many reference records should be added as possible since these are
 immensely useful to Humdrum users. Essential reference records include
 the following:
 
->   ----------- ------------------------------------------------------------------
->   `!!!COM:`   [composer\'s name](guide.append1.html#Authorship_Information)
->   `!!!CDT:`   [composer\'s dates](guide.append1.html#CDT)
->   `!!!OTL:`   [title (in original language)](guide.append1.html#OTL)
->   `!!!OMV:`   [movement number (if appropriate)](guide.append1.html#OMV)
->   `!!!OPS:`   [opus number (if appropriate)](guide.append1.html#OPS)
->   `!!!ODT:`   [date of composition](guide.append1.html#ODT)
->   `!!!OPC:`   [place of composition](guide.append1.html#OPC)
->   `!!!YEP:`   [publisher of electronic edition](guide.append1.html#YEP)
->   `!!!YEC:`   [date & owner of electronic copyright](guide.append1.html#YEC)
->   `!!!YER:`   [date electronic edition released](guide.append1.html#YER)
->   `!!!YEM:`   [copyright message](guide.append1.html#YEM)
->   `!!!YEN:`   [country of copyright](guide.append1.html#YEN)
->   `!!!EED:`   [electronic editor](guide.append1.html#EED)
->   `!!!ENC:`   [encoder of document](guide.append1.html#ENC)
->   `!!!EEV:`   [electronic edition version](guide.append1.html#EEV)
->   `!!!EFL:`   [file number, e.g. 1 or 4 (1/4)](guide.append1.html#EFL)
->   `!!!VTS:`   [checksum validation number (see below)](guide.append1.html#VTS)
->   `!!!AMT:`   [metric classification](guide.append1.html#AMT)
->   `!!!AIN:`   [instrumentation](guide.append1.html#AIN)
->   ----------- ------------------------------------------------------------------
->
+  ----------- ------------------------------------------------------------------
+  `!!!COM:`   [composer\'s name](guide.append1.html#Authorship_Information)
+  `!!!CDT:`   [composer\'s dates](guide.append1.html#CDT)
+  `!!!OTL:`   [title (in original language)](guide.append1.html#OTL)
+  `!!!OMV:`   [movement number (if appropriate)](guide.append1.html#OMV)
+  `!!!OPS:`   [opus number (if appropriate)](guide.append1.html#OPS)
+  `!!!ODT:`   [date of composition](guide.append1.html#ODT)
+  `!!!OPC:`   [place of composition](guide.append1.html#OPC)
+  `!!!YEP:`   [publisher of electronic edition](guide.append1.html#YEP)
+  `!!!YEC:`   [date & owner of electronic copyright](guide.append1.html#YEC)
+  `!!!YER:`   [date electronic edition released](guide.append1.html#YER)
+  `!!!YEM:`   [copyright message](guide.append1.html#YEM)
+  `!!!YEN:`   [country of copyright](guide.append1.html#YEN)
+  `!!!EED:`   [electronic editor](guide.append1.html#EED)
+  `!!!ENC:`   [encoder of document](guide.append1.html#ENC)
+  `!!!EEV:`   [electronic edition version](guide.append1.html#EEV)
+  `!!!EFL:`   [file number, e.g. 1 or 4 (1/4)](guide.append1.html#EFL)
+  `!!!VTS:`   [checksum validation number (see below)](guide.append1.html#VTS)
+  `!!!AMT:`   [metric classification](guide.append1.html#AMT)
+  `!!!AIN:`   [instrumentation](guide.append1.html#AIN)
+  ----------- ------------------------------------------------------------------
 Where appropriate, the following reference records should also be
 included:
 
->   ----------- -------------------------------------------------------------
->   `!!!CNT:`   [composer\'s nationality](guide.append1.html#CNT)
->   `!!!XEN:`   [title (English translation)](guide.append1.html#XEN)
->   `!!!OPR:`   [title of larger (or parent) work](guide.append1.html#OPR)
->   `!!!ODE:`   [dedication](guide.append1.html#ODE)
->   `!!!OCY:`   [country of composition](guide.append1.html#OCY)
->   `!!!PPR:`   [first publisher](guide.append1.html#PPR)
->   `!!!PDT:`   [date first published](guide.append1.html#PDT)
->   `!!!PPP:`   [place first published](guide.append1.html#PPP)
->   `!!!SCT:`   [scholarly catalogue name & number](guide.append1.html#SCT)
->   `!!!SMA:`   [manuscript acknowledgement](guide.append1.html#SMA)
->   `!!!AFR:`   [form of work](guide.append1.html#AFR)
->   `!!!AGN:`   [genre of work](guide.append1.html#AGN)
->   `!!!AST:`   [style of period](guide.append1.html#AST)
->   ----------- -------------------------------------------------------------
->
+  ----------- -------------------------------------------------------------
+  `!!!CNT:`   [composer\'s nationality](guide.append1.html#CNT)
+  `!!!XEN:`   [title (English translation)](guide.append1.html#XEN)
+  `!!!OPR:`   [title of larger (or parent) work](guide.append1.html#OPR)
+  `!!!ODE:`   [dedication](guide.append1.html#ODE)
+  `!!!OCY:`   [country of composition](guide.append1.html#OCY)
+  `!!!PPR:`   [first publisher](guide.append1.html#PPR)
+  `!!!PDT:`   [date first published](guide.append1.html#PDT)
+  `!!!PPP:`   [place first published](guide.append1.html#PPP)
+  `!!!SCT:`   [scholarly catalogue name & number](guide.append1.html#SCT)
+  `!!!SMA:`   [manuscript acknowledgement](guide.append1.html#SMA)
+  `!!!AFR:`   [form of work](guide.append1.html#AFR)
+  `!!!AGN:`   [genre of work](guide.append1.html#AGN)
+  `!!!AST:`   [style of period](guide.append1.html#AST)
+  ----------- -------------------------------------------------------------
 In general, place essential reference records at the beginning of a
 document. These will include the composer, title of the work, etc. Less
 important reference records should be placed at the end of the file.
@@ -550,12 +547,12 @@ strategy. The Humdrum [**humdrum**](/tool/humdrum) command can
 be used to identify whether the final encoded output conforms to the
 Humdrum syntax:
 
-> `humdrum full.krn`
+`humdrum full.krn`
 
 Use the Humdrum **proof** **-k** command to identify any syntactical
 errors in any encoded `**kern` data:
 
-> `proof -k full.krn`
+`proof -k full.krn`
 
 <a name ="MIDI_display_option"></a>
 
@@ -566,7 +563,7 @@ your data. The **-c** option for **midi** causes the Humdrum data to be
 displayed while the MIDI data is performed. This can further help in
 locating errors.
 
-> `midi -c full.krn | perform`
+`midi -c full.krn | perform`
 
 The **perform** command allows you to *pause* (press the space bar), to
 *move* to a particular measure (type a measure number followed by
@@ -655,9 +652,9 @@ will allow others to verify that a particular electronic document is
 precisely the one cited. A sample citation to an electronic document
 might be:
 
-> Franz Liszt, Hungarian Rhapsody No. 8 in F-sharp minor (solo piano).
-> Amsterdam: Rijkaard Software Publishers, 1994; H. Vorisek (Ed.),
-> Electronic edition version 2.1, checksum 891678772.
+Franz Liszt, Hungarian Rhapsody No. 8 in F-sharp minor (solo piano).
+Amsterdam: Rijkaard Software Publishers, 1994; H. Vorisek (Ed.),
+Electronic edition version 2.1, checksum 891678772.
 
 ------------------------------------------------------------------------
 
@@ -669,15 +666,3 @@ Reprise
 In this chapter we have reviewed the principal issues involved in
 preparing electronic music documents in Humdrum.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch38)
-
-[**Previous Chapter**](/guide/ch36)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

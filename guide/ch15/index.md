@@ -33,24 +33,23 @@ interval is the perfect octave in the first sonority of Example 15.1\
 \
 **Example 15.1** Types of harmonic intervals.
 
-> ![](guide.figures/guide15.1.gif)
+![](guide.figures/guide15.1.gif)
 
->   ----------- ----------
->   `**kern`    \*\*kern
->   `*M4/4`     \*M4/4
->   `=1-`       =1-
->   `8c`        2cc
->   `8d`        .
->   `4e`        .
->   `8f`        8r
->   `8r`        8a
->   `8d`        8r
->   `8r`        8b
->   `=2`        =2
->   `2.c 2.e`   2.g 2.cc
->   `*-`        \*-
->   ----------- ----------
->
+  ----------- ----------
+  `**kern`    \*\*kern
+  `*M4/4`     \*M4/4
+  `=1-`       =1-
+  `8c`        2cc
+  `8d`        .
+  `4e`        .
+  `8f`        8r
+  `8r`        8a
+  `8d`        8r
+  `8r`        8b
+  `=2`        =2
+  `2.c 2.e`   2.g 2.cc
+  `*-`        \*-
+  ----------- ----------
 Less obvious harmonic intervals arise when tone onsets are not
 synchronous \-- yet both pitches are sustained simultaneously for a
 period of time. We might call these *passing harmonic intervals.* Two
@@ -94,10 +93,9 @@ notes of a sonority. Four pitches leads to six intervals.
 **Example 15.2** Interpreting Interval Content in Chords\
 ![](guide.figures/guide15.2.gif)\
 
->   ------------------- -- -- ------------------------ -- -- --------------------
->   Stacked Intervals         Bass-related Intervals         Permuted Intervals
->   ------------------- -- -- ------------------------ -- -- --------------------
->
+  ------------------- -- -- ------------------------ -- -- --------------------
+  Stacked Intervals         Bass-related Intervals         Permuted Intervals
+  ------------------- -- -- ------------------------ -- -- --------------------
 A final issue in characterizing harmonic intervals is whether or not the
 presence of unisons is important. In most applications (such as figured
 bass) the presence of unisons is unimportant. In other applications
@@ -141,22 +139,21 @@ pitch-related spines are processed. Given the default invocation, the
 output corresponding to Example 15.1 is as follows:\
 \
 
->   ------------
->   `**hint`
->   `*M4/4`
->   `=1-`
->   `P8`
->   `-`
->   `-`
->   `-`
->   `-`
->   `-`
->   `-`
->   `=2`
->   `M3 m3 P4`
->   `*-`
->   ------------
->
+  ------------
+  `**hint`
+  `*M4/4`
+  `=1-`
+  `P8`
+  `-`
+  `-`
+  `-`
+  `-`
+  `-`
+  `-`
+  `=2`
+  `M3 m3 P4`
+  `*-`
+  ------------
 Notice that sonorities that contain only a single pitch result in the
 outputting of a hyphen (`-`). The hyphen indicates that pitched material
 is present, but there are no explicit harmonic intervals. Input records
@@ -173,13 +170,12 @@ intervals). For example, with the **-a** option, the final chord in
 Example 15.1 would produce the following output:\
 \
 
->   ---------------------
->   `**hint`
->   `*all`
->   `M3 P5 P8 m3 m6 P4`
->   `*-`
->   ---------------------
->
+  ---------------------
+  `**hint`
+  `*all`
+  `M3 P5 P8 m3 m6 P4`
+  `*-`
+  ---------------------
 Notice the presence of the `*all` tandem interpretation in the above
 output. This interpretation is added to the output in order to warn
 users that the representation should not be interpreted as stacked
@@ -191,7 +187,7 @@ the lowest pitch in the sonority. This option is helpful in determining
 figured bass. For the final chord in Example 12.1 the corresponding
 output would be
 
-> `**hint  M3 P5 P8  *-`
+`**hint  M3 P5 P8  *-`
 
 Two further options for **hint** allow the user to tailor how the
 intervals are represented. The **-c** option causes compound intervals
@@ -201,12 +197,12 @@ a unison (P1). The **-d** option suppresses the outputting of interval
 qualities and results in only diatonic interval sizes being output.
 Again, this option is helpful in determining figured bass. The command:
 
-> `hint -clud`
+`hint -clud`
 
 will produce the following output for the final major chord in Example
 12.1:
 
-> `**hint  3 5  *-`
+`**hint  3 5  *-`
 
 <a name ="Propagating_Data_Using_the_ditto_Command"></a>
 
@@ -223,59 +219,56 @@ null tokens with the previous non-null data token in the same spine.
 Suppose we had an arbitrary input such as the following:\
 \
 
->   ---------- ----------
->   `**flip`   \*\*flop
->   `A`        xyz
->   `.`        jkl
->   `.`        .
->   `B`        abc
->   `.`        .
->   `C`        .
->   `.`        .
->   `*-`       \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**flip`   \*\*flop
+  `A`        xyz
+  `.`        jkl
+  `.`        .
+  `B`        abc
+  `.`        .
+  `C`        .
+  `.`        .
+  `*-`       \*-
+  ---------- ----------
 The effect of **ditto** would be the following:\
 \
 
->   ---------- ----------
->   `**flip`   \*\*flop
->   `A`        xyz
->   `A`        jkl
->   `A`        jkl
->   `B`        abc
->   `B`        abc
->   `C`        abc
->   `C`        abc
->   `*-`       \*-
->   ---------- ----------
->
+  ---------- ----------
+  `**flip`   \*\*flop
+  `A`        xyz
+  `A`        jkl
+  `A`        jkl
+  `B`        abc
+  `B`        abc
+  `C`        abc
+  `C`        abc
+  `*-`       \*-
+  ---------- ----------
 Each null token has been replaced by the preceding data token within the
 spine.
 
 Consider the effect of **ditto** on the `**kern` data in Example 15.1:
 
-> `ditto -p example15.1`
+`ditto -p example15.1`
 
 The following output results:\
 \
 
->   ----------- ----------
->   `**kern`    \*\*kern
->   `*M4/4`     \*M4/4
->   `=1-`       =1-
->   `8c`        2cc
->   `8d`        (2cc)
->   `4e`        (2cc)
->   `8f`        8r
->   `8r`        8a
->   `8d`        8r
->   `8r`        8b
->   `=2`        =2
->   `2.c 2.e`   2.g 2.cc
->   `*-`        \*-
->   ----------- ----------
->
+  ----------- ----------
+  `**kern`    \*\*kern
+  `*M4/4`     \*M4/4
+  `=1-`       =1-
+  `8c`        2cc
+  `8d`        (2cc)
+  `4e`        (2cc)
+  `8f`        8r
+  `8r`        8a
+  `8d`        8r
+  `8r`        8b
+  `=2`        =2
+  `2.c 2.e`   2.g 2.cc
+  `*-`        \*-
+  ----------- ----------
 Notice that the half-note C5 has been repeated. The **-p** option has
 caused each repetition of the data token to be placed in parentheses so
 they can be easily recognized. By using **ditto,** we have transformed
@@ -283,28 +276,27 @@ previously passing intervals into explicit sonorities whose intervals
 can now be identified by **hint.** We can combine the two commands in a
 single pipeline:
 
-> `ditto example15.1 | hint`
+`ditto example15.1 | hint`
 
 The resulting output for Example 15.1 includes the two passing intervals
 (m7 and m6) in the first measure:\
 \
 
->   ------------
->   `**hint`
->   `*M4/4`
->   `=1-`
->   `P8`
->   `m7`
->   `m6`
->   `-`
->   `-`
->   `-`
->   `-`
->   `=2`
->   `M3 m3 P4`
->   `*-`
->   ------------
->
+  ------------
+  `**hint`
+  `*M4/4`
+  `=1-`
+  `P8`
+  `m7`
+  `m6`
+  `-`
+  `-`
+  `-`
+  `-`
+  `=2`
+  `M3 m3 P4`
+  `*-`
+  ------------
 The [**ditto**,](/tool/ditto) command provides two additional
 options that are worthy of note: the **-s** and **-c** options. The
 **-s** option allows **ditto** to skip or ignore the presence of certain
@@ -312,28 +304,26 @@ data records. Suppose, for example, that we had a barline in the midst
 of some null tokens:\
 \
 
->   ---
->   A
->   .
->   =
->   .
->   ---
->
+  ---
+  A
+  .
+  =
+  .
+  ---
 Often, we would like to propagate certain data tokens *around* some
 other types of data tokens, so the result might be:\
 \
 
->   ---
->   A
->   A
->   =
->   A
->   ---
->
+  ---
+  A
+  A
+  =
+  A
+  ---
 By providing **ditto** with a suitable regular expression, we can have
 the data token \`A\' skip over the barline:
 
-> `ditto -s ^=`
+`ditto -s ^=`
 
 Without this option, the final data token in the above example would be
 an equals-sign rather than the token \`A\'.
@@ -342,7 +332,7 @@ The **-c** option for **ditto** allows the user to selectively identify
 which characters are propagated. For example, the following command will
 cause only the lower-case letters \`a\' and \`b\' to be propagated:
 
-> `ditto -c ab`
+`ditto -c ab`
 
 This feature allows users to replicate only certain kinds of data \--
 such as pitches, durations, dynamic marks, etc.
@@ -364,15 +354,15 @@ two-part inventions? The following commands look for explicit and
 passing sixths respectively. Notice the use of the **-c** option so
 octave equivalents will also be identified:
 
-> `hint -c inventio* | grep A6`\
-> `ditto -s ^= inventio* | hint -c | grep A6`
+`hint -c inventio* | grep A6`\
+`ditto -s ^= inventio* | hint -c | grep A6`
 
 <a name ="Diminished_Octaves"></a>
 
 Are there any diminished octave intervals between any two concurrent
 notes in any of Beethoven\'s piano sonatas?
 
-> `ditto -s ^= sonatas* | hint -a | grep d8`
+`ditto -s ^= sonatas* | hint -a | grep d8`
 
 In orchestral works, some pairs of instruments are more likely than
 others to double each other at the unison or octave. What proportion of
@@ -382,14 +372,11 @@ number of (explicit) intervals formed by the oboe and flute, and the
 number of those intervals that are octave equivalents. (We will assume
 that there is only one oboe and one flute part in the file `Rimsky-K`:)
 
-> `extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
->
-> > \| grep -c P1
->
-> \
-> `extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
->
-> > \| grep -c \[MmPAd\]
+`extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
+> \| grep -c P1
+\
+`extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
+> \| grep -c \[MmPAd\]
 
 The second **grep** counts the total number of intervals by looking for
 all of the interval qualities (major, minor, perfect, etc.)
@@ -398,10 +385,10 @@ Suppose we have extracted two horn parts from an orchestral score. Are
 octave intervals between the horns more likely to occur on the dominant
 pitch or the tonic pitch?
 
-> `solfa horns > temp1`\
-> `hint horns > temp2`\
-> `assemble temp1 temp2 | grep -c ^do.*P8`\
-> `assemble temp1 temp2 | grep -c ^so.*P8`
+`solfa horns > temp1`\
+`hint horns > temp2`\
+`assemble temp1 temp2 | grep -c ^do.*P8`\
+`assemble temp1 temp2 | grep -c ^so.*P8`
 
 <a name ="Determining_Implicit_Harmonic_Intervals"></a>
 
@@ -420,7 +407,7 @@ The [**humsed**](/tool/humsed) command (described in [Chapter
 data token containing the letter \`r\' to a null token. Consider the
 following substitution:
 
-> `humsed 's/.*r.*/.    ./' example15.1`
+`humsed 's/.*r.*/.    ./' example15.1`
 
 Unfortunately, this isn\'t quite right. The above substitution will find
 any data record containing the letter \`r\' and transform the entire
@@ -430,7 +417,7 @@ the first token in the record or the last token in the record. We need
 two different regular expressions to address each of these conditions.
 First, a regular expression to identify rests in the first token:
 
-> `/^[^   ]*r[^   ]*   /`
+`/^[^   ]*r[^   ]*   /`
 
 (That is, the beginning of the record (\^), followed by zero or more
 instances of any character other than a tab (\[\^ \]\*), followed by the
@@ -440,60 +427,57 @@ than a tab (\[\^ \]\*), followed by a tab.)
 Similarly, our second regular expression identifies rests in the last
 token:
 
-> `/   [^   ]*r[^   ]*$/`
+`/   [^   ]*r[^   ]*$/`
 
 Now we can eliminate rest tokens using the following two substitution
 commands within a single invocation of **humsed**:
 
-> `humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1`
+`humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1`
 
 The following output results:\
 \
 
->   ----------- ----------
->   `**kern`    \*\*kern
->   `*M4/4`     \*M4/4
->   `=1-`       =1-
->   `8c`        2cc
->   `8d`        .
->   `4e`        .
->   `8f`        .
->   `.`         8a
->   `8d`        .
->   `.`         8b
->   `=2`        =2
->   `2.c 2.e`   2.g 2.cc
->   `*-`        \*-
->   ----------- ----------
->
+  ----------- ----------
+  `**kern`    \*\*kern
+  `*M4/4`     \*M4/4
+  `=1-`       =1-
+  `8c`        2cc
+  `8d`        .
+  `4e`        .
+  `8f`        .
+  `.`         8a
+  `8d`        .
+  `.`         8b
+  `=2`        =2
+  `2.c 2.e`   2.g 2.cc
+  `*-`        \*-
+  ----------- ----------
 If we now apply [**ditto**](/tool/ditto) and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
 
-> `humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \`
->
-> > \| ditto -p
+`humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \`
+> \| ditto -p
 
 Below we see the output assembled with the output from the corresponding
 [**hint**](/tool/hint) command:\
 \
 
->   ----------- ---------- ----------
->   `**kern`    \*\*kern   \*\*hint
->   `*M4/4`     \*M4/4     \*M4/4
->   `=1-`       =1-        =1-
->   `8c`        2cc        P8
->   `8d`        (2cc)      m7
->   `4e`        (2cc)      m6
->   `8f`        (2cc)      P5
->   `(8f)`      8a         M3
->   `8d`        (8a)       P5
->   `(8d)`      8b         M6
->   `=2`        =2         =2
->   `2.c 2.e`   2.g 2.cc   M3 m3 P4
->   `*-`        \*-        \*-
->   ----------- ---------- ----------
->
+  ----------- ---------- ----------
+  `**kern`    \*\*kern   \*\*hint
+  `*M4/4`     \*M4/4     \*M4/4
+  `=1-`       =1-        =1-
+  `8c`        2cc        P8
+  `8d`        (2cc)      m7
+  `4e`        (2cc)      m6
+  `8f`        (2cc)      P5
+  `(8f)`      8a         M3
+  `8d`        (8a)       P5
+  `(8d)`      8b         M6
+  `=2`        =2         =2
+  `2.c 2.e`   2.g 2.cc   M3 m3 P4
+  `*-`        \*-        \*-
+  ----------- ---------- ----------
 <a name ="The_ydelta_Command"></a>
 
 The *ydelta* Command
@@ -506,27 +490,26 @@ some other numerical value). We might begin by using the **semits**
 command to translate Example 15.1 to a
 [`**semits`](/rep/semits) representation.
 
-> `semits example15.1`
+`semits example15.1`
 
 The resulting output would be as follows:\
 \
 
->   ------------ ------------
->   `**semits`   \*\*semits
->   `*M4/4`      \*M4/4
->   `=1-`        =1-
->   `0`          12
->   `2`          .
->   `4`          .
->   `5`          r
->   `r`          9
->   `2`          r
->   `r`          11
->   `=2`         =2
->   `0 4`        7 12
->   `*-`         \*-
->   ------------ ------------
->
+  ------------ ------------
+  `**semits`   \*\*semits
+  `*M4/4`      \*M4/4
+  `=1-`        =1-
+  `0`          12
+  `2`          .
+  `4`          .
+  `5`          r
+  `r`          9
+  `2`          r
+  `r`          11
+  `=2`         =2
+  `0 4`        7 12
+  `*-`         \*-
+  ------------ ------------
 Numerical differences for values on a single data record can be computed
 using the [**ydelta**](/tool/ydelta) command. The **ydelta**
 command is comparable to [**xdelta**,](/tool/xdelta) however,
@@ -539,7 +522,7 @@ outputs a single spine. The user must specify which input spines are to
 be processed using the **-i** option. In the following command, only
 \*\*semits input is to be processed:
 
-> `semits example15.1 | ydelta -s = -i '**semits'`
+`semits example15.1 | ydelta -s = -i '**semits'`
 
 The **-s** option allows the user to identify data records to be
 *skipped* while processing. In this case, the regular expression \`=\'
@@ -549,22 +532,21 @@ processing the numerical data.
 The above command yields the following output:\
 \
 
->   -------------
->   `**Ysemits`
->   `*`
->   `=1-`
->   `12`
->   `.`
->   `.`
->   `.`
->   `.`
->   `.`
->   `.`
->   `=2`
->   `4 7 12`
->   `*-`
->   -------------
->
+  -------------
+  `**Ysemits`
+  `*`
+  `=1-`
+  `12`
+  `.`
+  `.`
+  `.`
+  `.`
+  `.`
+  `.`
+  `=2`
+  `4 7 12`
+  `*-`
+  -------------
 Notice that **ydelta** prepends the upper-case letter \`Y\' to the given
 input interpretation. All output values are calculated with respect to
 the lowest value in the current data record. Hence, the \``4 7 12` in
@@ -579,27 +561,26 @@ As in the case of **hint,** we might use the **ditto** command to
 propagate pitch values \-- replacing all the null data tokens. A
 suitable command would be:
 
-> `semits example15.1 | ditto -s = | ydelta -s = -i '**semits'`
+`semits example15.1 | ditto -s = | ydelta -s = -i '**semits'`
 
 The resulting output would be:\
 \
 
->   -------------
->   `**Ysemits`
->   `*`
->   `=1-`
->   `12`
->   `10`
->   `8`
->   `.`
->   `.`
->   `.`
->   `.`
->   `=2`
->   `4 7 12`
->   `*-`
->   -------------
->
+  -------------
+  `**Ysemits`
+  `*`
+  `=1-`
+  `12`
+  `10`
+  `8`
+  `.`
+  `.`
+  `.`
+  `.`
+  `=2`
+  `4 7 12`
+  `*-`
+  -------------
 <a name ="More_Examples_Using_the_ydelta_Command"></a>
 
 More Examples Using the *ydelta* Command
@@ -609,7 +590,7 @@ What is the average semitone distance between the cantus and altus
 voices in Lassus motets? We can answer this question by first extracting
 the appropriate voices and translating to a semitone representation.
 
-> `extract -f 1,2 motet* | semits > temp1`
+`extract -f 1,2 motet* | semits > temp1`
 
 Using **ditto** we can expand the pitched material so that
 concurrently-sounding tones will generate explicit intervals. We then
@@ -619,9 +600,8 @@ records, and the **grep -v** command can be used to further eliminate
 barlines. Finally, we can calculate the mean interval distance using the
 **stats** command:
 
-> `ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \`
->
-> > \| grep -v = \| stats
+`ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \`
+> \| grep -v = \| stats
 
 Suppose we have a two-part input. Are there tritone intervals (explicit
 and passing) that are not spelled as either an augmented fourth or
@@ -630,11 +610,10 @@ diminished fifth? We can answer this question by using both **hint** and
 command is used to ensure that both explicit and passing intervals are
 generated.
 
-> `ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1`\
-> `ditto -s = 2part | hint > temp2`\
-> `assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \`
->
-> > \| grep -v d5
+`ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1`\
+`ditto -s = 2part | hint > temp2`\
+`assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \`
+> \| grep -v d5
 
 Notice the use of **grep -v** to first exclude any records that match an
 augmented fourth, and then to exclude any remaining records that match a
@@ -667,15 +646,3 @@ of intervals. We have also seen how [**ydelta**](/tool/ydelta)
 can be used to measure purely numerical distances between concurrent
 values.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch16)
-
-[**Previous Chapter**](/guide/ch14)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

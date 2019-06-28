@@ -179,7 +179,6 @@ seven questions provide useful guidelines:
     > [**humsed**](/tool/humsed) to classify data into various
     > classes \-- such as *up*, *down*, *leap*, *long*, *short*,
     > *difficult*, *easy*, *clarion register*, *dominant*, etc.
-    >
     > Use translating/transforming commands such as
     > [**mint**,](/tool/mint)
     > [**ydelta**,](/tool/ydelta)
@@ -208,13 +207,3 @@ seven questions provide useful guidelines:
     > **tac** and [**reihe**](/tool/reihe) -s to generate
     > control groups.
 
-------------------------------------------------------------------------
-
-
-[**Previous Chapter**](/guide/ch39)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

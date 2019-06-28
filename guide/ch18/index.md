@@ -38,139 +38,130 @@ In research activities, it is common to create representation schemes
 for a specific task. A user might define a spine that represents the
 heart-rate (in beats per minute) of a music listener:
 
->   ------------
->   `**cardio`
->   `76`
->   `76`
->   `74`
->   `73`
->   `73`
->   `*-`
->   ------------
->
+  ------------
+  `**cardio`
+  `76`
+  `76`
+  `74`
+  `73`
+  `73`
+  `*-`
+  ------------
 A scheme might be created to represent different types of contrapuntal
 motion:
 
->   ------------
->   `**motion`
->   `similar`
->   `contrary`
->   `parallel`
->   `oblique`
->   `*-`
->   ------------
->
+  ------------
+  `**motion`
+  `similar`
+  `contrary`
+  `parallel`
+  `oblique`
+  `*-`
+  ------------
 Chords might be classified \-- using words:
 
->   -------------
->   `**chords`
->   `minor`
->   `.`
->   `augmented`
->   `major`
->   `*-`
->   -------------
->
+  -------------
+  `**chords`
+  `minor`
+  `.`
+  `augmented`
+  `major`
+  `*-`
+  -------------
 Or using abbreviations:
 
->   ------------
->   `**chords`
->   `m`
->   `.`
->   `A`
->   `M`
->   `*-`
->   ------------
->
+  ------------
+  `**chords`
+  `m`
+  `.`
+  `A`
+  `M`
+  `*-`
+  ------------
 Fingerings might be represented. Each hand may have a separate spine:
 
->   ------------ ------------
->   `**finger`   \*\*finger
->   `*left`      \*right
->   `.`          1
->   `1 5`        2
->   `.`          3
->   `.`          5
->   `1 5`        2 5
->   `*-`         \*-
->   ------------ ------------
->
+  ------------ ------------
+  `**finger`   \*\*finger
+  `*left`      \*right
+  `.`          1
+  `1 5`        2
+  `.`          3
+  `.`          5
+  `1 5`        2 5
+  `*-`         \*-
+  ------------ ------------
 Or the hands might be combined in a single spine:
 
->   ---------------
->   `**finger`
->   `R1`
->   `L1 L5 R2`
->   `R3`
->   `5`
->   `L1 L5 R2 R5`
->   `*-`
->   ---------------
->
+  ---------------
+  `**finger`
+  `R1`
+  `L1 L5 R2`
+  `R3`
+  `5`
+  `L1 L5 R2 R5`
+  `*-`
+  ---------------
 Time-scales might be large:
 
->   ---------------
->   `**Periods`
->   `Medieval`
->   `Renaissance`
->   `Baroque`
->   `Classical`
->   `Romantic`
->   `*-`
->   ---------------
->
+  ---------------
+  `**Periods`
+  `Medieval`
+  `Renaissance`
+  `Baroque`
+  `Classical`
+  `Romantic`
+  `*-`
+  ---------------
 Or miniscule:
 
->   ------------------
->   `**milliseconds`
->   `0.03`
->   `0.8`
->   `23.2`
->   `31.6`
->   `*-`
->   ------------------
->
+  ------------------
+  `**milliseconds`
+  `0.03`
+  `0.8`
+  `23.2`
+  `31.6`
+  `*-`
+  ------------------
 A user might define a highly refined special-purpose representation. For
 example, the following scheme is fashioned after the Benesh dance
 notation:
 
->   ------------------------- ------------------------
->   `!! Kellom Tomlinson's`   `Gavot of 1720.`
->   `!! Transcribed from`     `Feuillet's notation.`
->   `**kern`                  `**Benesh`
->   `*MM120`                  `*MM120`
->   `*M2/2`                   `*M2`
->   `*e:`                     `*`
->   `!! First Couplet`        
->   `!`                       `! Half Coupee`
->   `4.gg`                    ` | |u| | |`
->   `.`                       `%|+| | | |`
->   `.`                       ` |=|v| | |`
->   `.`                       `(| | | | |`
->   `.`                       `(|-| | | |{`
->   `8ff#`                    ` |_| | | |2`
->   `=1`                      `-----------`
->   `2ee`                     `m| | | | |}`
->   `!`                       `! Bound`
->   `.`                       `_|^| | | |{`
->   `.`                       `(|+| | | |`
->   `4.b`                     `-| | | | |`
->   `.`                       `(|+| | | |}`
->   `.`                       `_| | | | |{`
->   `8a`                      `_|+|+| | |`
->   `=2`                      `-----------`
->   `!`                       `! Bouree`
->   `4g`                      ` | | | | |`
->   `.`                       ` |=| | | |`
->   `4e`                      ` |=| | | |}`
->   `.`                       `_|=| | | |`
->   `4g`                      ` |o| | | |`
->   `!`                       `! Bouree`
->   `4a`                      `_|+|+| | |`
->   `=3`                      `-----------`
->   `*-`                      `*-`
->   ------------------------- ------------------------
->
+  ------------------------- ------------------------
+  `!! Kellom Tomlinson's`   `Gavot of 1720.`
+  `!! Transcribed from`     `Feuillet's notation.`
+  `**kern`                  `**Benesh`
+  `*MM120`                  `*MM120`
+  `*M2/2`                   `*M2`
+  `*e:`                     `*`
+  `!! First Couplet`        
+  `!`                       `! Half Coupee`
+  `4.gg`                    ` | |u| | |`
+  `.`                       `%|+| | | |`
+  `.`                       ` |=|v| | |`
+  `.`                       `(| | | | |`
+  `.`                       `(|-| | | |{`
+  `8ff#`                    ` |_| | | |2`
+  `=1`                      `-----------`
+  `2ee`                     `m| | | | |}`
+  `!`                       `! Bound`
+  `.`                       `_|^| | | |{`
+  `.`                       `(|+| | | |`
+  `4.b`                     `-| | | | |`
+  `.`                       `(|+| | | |}`
+  `.`                       `_| | | | |{`
+  `8a`                      `_|+|+| | |`
+  `=2`                      `-----------`
+  `!`                       `! Bouree`
+  `4g`                      ` | | | | |`
+  `.`                       ` |=| | | |`
+  `4e`                      ` |=| | | |}`
+  `.`                       `_|=| | | |`
+  `4g`                      ` |o| | | |`
+  `!`                       `! Bouree`
+  `4a`                      `_|+|+| | |`
+  `=3`                      `-----------`
+  `*-`                      `*-`
+  ------------------------- ------------------------
 Depending on the task, user-defined schemes can be either carefully
 designed, or \"throw-away\" concoctions created for momentary purposes.
 The *Humdrum Reference Manual* provides detailed advice on how to go
@@ -215,7 +206,7 @@ of the lowest string using the `*AT:` tandem interpretation. For the
 common six-string guitar, the lowest pitch is normally tuned to E2, and
 so would be encoded with the following tandem interpretation:
 
-> `*AT:E2`
+`*AT:E2`
 
 The `*AT:` interpretation makes use of
 [`**pitch`](/rep/pitch)-type pitch designations and
@@ -245,23 +236,23 @@ tuning for the six-string guitar. Successive strings are tuned 0, 5, 10,
 
 \(a) Common 6-string guitar.
 
-> ![](guide.figures/guide18.1a.gif)\
-> \
-> `*AT:E2`\
-> `*RT:0:5:10:15:19:24`
+![](guide.figures/guide18.1a.gif)\
+\
+`*AT:E2`\
+`*RT:0:5:10:15:19:24`
 
 \(b) Common 12-string guitar.
 
-> ![](guide.figures/guide18.1b.gif)\
-> \
-> `*AT:E2`\
-> `*RT:0,12:5,17:10,22:15,27:19,19:24,24`
+![](guide.figures/guide18.1b.gif)\
+\
+`*AT:E2`\
+`*RT:0,12:5,17:10,22:15,27:19,19:24,24`
 
 \(c) Vieil accord lute.
 
-> ![](guide.figures/guide18.1c.gif)\
-> `*AT:G2`\
-> `*RT:0,12:5,17:10,22:14,14:19,19:24,24`
+![](guide.figures/guide18.1c.gif)\
+`*AT:G2`\
+`*RT:0,12:5,17:10,22:14,14:19,19:24,24`
 
 Example (b) defines the most common relative tuning for the 12-string
 guitar. The six courses are delineated by colons and the tuning of
@@ -285,7 +276,7 @@ interpretation. In Western instruments, frets are normally placed in
 semitone increments. For a 12-fret instrument, this semitone arrangement
 may be explicitly represented using the following tandem interpretation:
 
-> `*FT:1,2,3,4,5,6,7,8,9,10,11,12`
+`*FT:1,2,3,4,5,6,7,8,9,10,11,12`
 
 Each successive numerical value indicates the number of semitones above
 the open string for successive fret positions. The interpretation begins
@@ -296,7 +287,7 @@ fret. The default fret tuning is not limited to 12 frets as in the above
 example. An instrument constructed with nine 1/4-tone fret positions can
 be encoded as follows:
 
-> `*FT:.5,1,1.5,2,2.5,3,3.5,4,4.5`
+`*FT:.5,1,1.5,2,2.5,3,3.5,4,4.5`
 
 The only restriction imposed by `*FT:` is that all strings must have
 identical fret distances. That is, if the first fret is positioned 1
@@ -316,7 +307,7 @@ instrument will require six subtokens in each tablature-token. For
 example, the following tablature token encodes the plucking of the first
 and sixth string:
 
-> `| - - - - |`
+`| - - - - |`
 
 Subtokens consist of up to five component elements: (1) the
 string/course status, (2) fret position, (3) bowing/strumming, (4)
@@ -348,7 +339,7 @@ six-string or six-course instrument, where the first through sixth
 strings are respectively (1 and 2) plucked, (3) damped, (4) bowed, (5)
 plucked sul tasto, (6) inactive.
 
-> `| | x + \ -`
+`| | x + \ -`
 
 Note that the layout of the strings in a tablature-token always
 corresponds to the tuning specified in the relative-tuning
@@ -362,7 +353,7 @@ For example, the following tablature-token encodes a six-string/course
 instrument in which the second and third strings are both stopped at the
 second fret.
 
-> `| |2 |2 | | |`
+`| |2 |2 | | |`
 
 Example 18.2 shows a sample passage for guitar with a corresponding
 `**fret` representation displayed beneath. The `**fret` representation
@@ -375,34 +366,32 @@ the pitches in the `**fret` representation.\
 **Example 18.2.** J.S. Bach, *Anna Magdalena Bach Notebook* Menuet II.
 Guitar arr.
 
-> ![](guide.figures/guide18.2.gif)
->
->   ----------- ---------- -----------------------------------------
->   `**recip`   `**kern`   `**fret`
->   `*`         \*         `*AT:G2`
->   `*`         \*         `*RT:0,12:5,17:10,22:14,14:19,19:24,24`
->   `*M3/4`     `*`        `*M3/4`
->   `=1`        `=1`       `=1`
->   `4`         `E e g`    `- |4 - - - |0`
->   `8`         `c`        `- : : |3 : :`
->   `8`         `d`        `- : : : |0 x`
->   `8`         `D d e`    `- |2 : : |2 :`
->   `8`         `f`        `- : : : |3 :`
->   `=2`        `=2`       `=2`
->   `4`         `E e g`    `- |4 : : : |0`
->   `4`         `c`        `- : : |3 : :`
->   `4`         `c`        `- : : |3 : x`
->   `=3`        `=3`       `=3`
->   `4`         `F f a`    `- |5 : : : |2W`
->   `8`         `f`        `- : : : |3 :`
->   `8`         `g`        `- : : : : |0`
->   `8`         `a`        `- : : : : |2`
->   `8`         `b`        `- : : : : |4`
->   `=4`        `=4`       `=4`
->   `2`         `E e cc`   `- |4 : : : |5v`
->   `*-`        `*-`       `*-`
->   ----------- ---------- -----------------------------------------
->
+![](guide.figures/guide18.2.gif)
+  ----------- ---------- -----------------------------------------
+  `**recip`   `**kern`   `**fret`
+  `*`         \*         `*AT:G2`
+  `*`         \*         `*RT:0,12:5,17:10,22:14,14:19,19:24,24`
+  `*M3/4`     `*`        `*M3/4`
+  `=1`        `=1`       `=1`
+  `4`         `E e g`    `- |4 - - - |0`
+  `8`         `c`        `- : : |3 : :`
+  `8`         `d`        `- : : : |0 x`
+  `8`         `D d e`    `- |2 : : |2 :`
+  `8`         `f`        `- : : : |3 :`
+  `=2`        `=2`       `=2`
+  `4`         `E e g`    `- |4 : : : |0`
+  `4`         `c`        `- : : |3 : :`
+  `4`         `c`        `- : : |3 : x`
+  `=3`        `=3`       `=3`
+  `4`         `F f a`    `- |5 : : : |2W`
+  `8`         `f`        `- : : : |3 :`
+  `8`         `g`        `- : : : : |0`
+  `8`         `a`        `- : : : : |2`
+  `8`         `b`        `- : : : : |4`
+  `=4`        `=4`       `=4`
+  `2`         `E e cc`   `- |4 : : : |5v`
+  `*-`        `*-`       `*-`
+  ----------- ---------- -----------------------------------------
 The `**fret` representation also provides several short-hand
 abbreviations for common ornaments and effects. Trills are indicated by
 the letters \`t\' (one semitone) and \`T\' (two semitones). Mordents are
@@ -439,7 +428,7 @@ again these signifiers appear at the beginning of a tablature-token \--
 whenever they are encoded. Strumming all 6 open strings downward on a
 commonly-tuned guitar is represented as:
 
-> `*AT:E2  *RT:0:5:10:15:19:24  >| | | | | |`
+`*AT:E2  *RT:0:5:10:15:19:24  >| | | | | |`
 
 Notice that there is no space between the right angle bracket and the
 first vertical bar.
@@ -459,7 +448,7 @@ encoded immediately to the right of the string to which the information
 applies. By way of illustration, the finger actions used in the above
 example may be made explicit as follows:
 
-> `>|P |2bP |2cP |P |P |P`
+`>|P |2bP |2cP |P |P |P`
 
 The strum is carried out by the thumb, while the index and middle
 fingers of the fret-hand stop the second and third courses/strings at
@@ -468,7 +457,7 @@ the first course/string is replucked by the thumb. With the exception of
 the second and third courses/strings, the other strings are allows to
 ring.
 
-> `>|P |2bP |2cP |P |P |P  >|P xIM xIM : : :`
+`>|P |2bP |2cP |P |P |P  >|P xIM xIM : : :`
 
 Notice that in damping the vibrations of the second and third strings,
 both the index and middle fingers of the \`pluck\' hand are used on both
@@ -479,7 +468,7 @@ while a string remains sounding. The following example illustrates such
 a finger-substitution where the middle finger is replaced by the ring
 finger:
 
-> `| |2b |2c | | |  : :2b :2d : : :`
+`| |2b |2c | | |  : :2b :2d : : :`
 
 Note that in the `**fret` representation, no special signifiers are
 provided for so-called \`hammer-on\' or (ascending-slur), nor for the
@@ -505,73 +494,72 @@ The complete system of signifiers used by
 
 **Table 18.1. Signifiers used by *\*\*fret*.**
 
->   ---------------------------- -------------------------------------------------
->   **Fret-board (left) Hand**   
->   1                            first fret position
->   2                            second fret position, \...
->   11                           eleventh fret position, etc.
->   0                            open string (not necessarily sounded)
->   \~                           bend up in pitch
->   v                            vibrato (transverse)
->   V                            vibrato (lateral)
->                                
->   t                            trill (1 fret distance)
->   T                            trill (2 frets distance)
->   m                            mordent (1 fret distance)
->   D                            mordent (2 frets distance)
->   w                            inverted mordent (1 fret distance)
->   W                            inverted mordent (2 frets distance)
->   S                            turn
->   \$                           inverted (Wagnerian) turn
->                                
->   a                            thumb (of fret hand)
->   b                            index finger (of fret hand)
->   c                            middle finger (of fret hand)
->   d                            ring finger (of fret hand)
->   e                            little finger (of fret hand)
->   n                            no finger (of fret hand)
->                                
->   **Pluck (right) Hand**       
->   \-                           unplucked or unactivated string
->   \|                           plucked string (normal)
->   /                            plucked string \-- near bridge (ponticello)
->   \\                           plucked string \-- near tone-hole (sul tasto)
->   \#                           tremolo (plucked, ala mandoline)
->   z                            pizzicato
->   :                            let string ring
->   x                            damp string
->   o                            natural harmonic
->   O                            artificial harmonic
->                                
->   \+                           bow (normal)
->   (                            bow \-- near bridge (ponticello)
->   )                            bow \-- toward fret-board (sul tasto)
->   {                            spiccato
->   }                            col legno (with wood of the bow)
->   &                            tremolo (bowed)
->                                
->   \>                           strum from low notes to high notes (= down-bow)
->   \<                           strum from high notes to low notes (= up-bow)
->   \>\>                         slower down-strum; slower down-bow
->   \>\>                         slower up-strum; slower up-bow
->   \>\>\>                       very slow down-strum; very slow down-bow
->   \<\<\<                       very slow up-strum; very slow up-bow
->   \%                           rasgueado (Spanish strum)
->                                
->   P                            pollex: thumb (of pluck hand)
->   I                            index: index finger (of pluck hand)
->   M                            medius: middle finger (of pluck hand)
->   A                            annularis: ring finger (of pluck hand)
->   Q                            quintus: little finger (of pluck hand)
->   p                            palm (of pluck hand)
->   N                            no finger (of pluck hand)
->                                
->   u                            tambour (tap on bridge)
->   U                            tambour (tap on strings near bridge)
->   y                            \`tap\' on top-plate
->   Y                            \`thump\' on top-plate
->   ---------------------------- -------------------------------------------------
->
+  ---------------------------- -------------------------------------------------
+  **Fret-board (left) Hand**   
+  1                            first fret position
+  2                            second fret position, \...
+  11                           eleventh fret position, etc.
+  0                            open string (not necessarily sounded)
+  \~                           bend up in pitch
+  v                            vibrato (transverse)
+  V                            vibrato (lateral)
+                               
+  t                            trill (1 fret distance)
+  T                            trill (2 frets distance)
+  m                            mordent (1 fret distance)
+  D                            mordent (2 frets distance)
+  w                            inverted mordent (1 fret distance)
+  W                            inverted mordent (2 frets distance)
+  S                            turn
+  \$                           inverted (Wagnerian) turn
+                               
+  a                            thumb (of fret hand)
+  b                            index finger (of fret hand)
+  c                            middle finger (of fret hand)
+  d                            ring finger (of fret hand)
+  e                            little finger (of fret hand)
+  n                            no finger (of fret hand)
+                               
+  **Pluck (right) Hand**       
+  \-                           unplucked or unactivated string
+  \|                           plucked string (normal)
+  /                            plucked string \-- near bridge (ponticello)
+  \\                           plucked string \-- near tone-hole (sul tasto)
+  \#                           tremolo (plucked, ala mandoline)
+  z                            pizzicato
+  :                            let string ring
+  x                            damp string
+  o                            natural harmonic
+  O                            artificial harmonic
+                               
+  \+                           bow (normal)
+  (                            bow \-- near bridge (ponticello)
+  )                            bow \-- toward fret-board (sul tasto)
+  {                            spiccato
+  }                            col legno (with wood of the bow)
+  &                            tremolo (bowed)
+                               
+  \>                           strum from low notes to high notes (= down-bow)
+  \<                           strum from high notes to low notes (= up-bow)
+  \>\>                         slower down-strum; slower down-bow
+  \>\>                         slower up-strum; slower up-bow
+  \>\>\>                       very slow down-strum; very slow down-bow
+  \<\<\<                       very slow up-strum; very slow up-bow
+  \%                           rasgueado (Spanish strum)
+                               
+  P                            pollex: thumb (of pluck hand)
+  I                            index: index finger (of pluck hand)
+  M                            medius: middle finger (of pluck hand)
+  A                            annularis: ring finger (of pluck hand)
+  Q                            quintus: little finger (of pluck hand)
+  p                            palm (of pluck hand)
+  N                            no finger (of pluck hand)
+                               
+  u                            tambour (tap on bridge)
+  U                            tambour (tap on strings near bridge)
+  y                            \`tap\' on top-plate
+  Y                            \`thump\' on top-plate
+  ---------------------------- -------------------------------------------------
 *Summary of *\*\*fret* Signifiers*
 
 A number of pitch-related Humdrum commands accept `**fret` encoded data
@@ -595,15 +583,3 @@ the kinds of information you are interested in manipulating. As long as
 the resulting representation conforms to the Humdrum syntax, the most
 important Humdrum tools can still be used to manipulate your data.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch19)
-
-[**Previous Chapter**](/guide/ch17)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

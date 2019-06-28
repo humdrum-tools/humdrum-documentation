@@ -38,7 +38,7 @@ The UNIX **find** command traverses through a file hierarchy, and finds
 all files that match certain conditions. The **find** command takes the
 following syntax:
 
-> `find`
+`find`
 
 The *PATH* is a directory from which the search *commences.* All files
 in the specified directory are examined including all files in the
@@ -46,7 +46,7 @@ subdirectories, sub-subdirectories, and so on.
 
 The path
 
-> `/`
+`/`
 
 means the \"root\" directory containing all files on a computer system.
 Even single-user systems are apt to have several thousand files subsumed
@@ -54,15 +54,15 @@ under the root directory.
 
 The path
 
-> `/scores`
+`/scores`
 
 means all files under the `scores` directory, whereas
 
-> `/scores/bach`
+`/scores/bach`
 
 means all files under the `scores/bach` directory. The period character:
 
-> ` .`
+` .`
 
 tells **find** to commence searching from the current directory.
 
@@ -89,7 +89,7 @@ extension to the filename \-- such as `opus24.pc`. The following
 sub-directories) searching for files that contain the `pc` file
 extension:
 
-> `find /scores -name *.pc`
+`find /scores -name *.pc`
 
 The above command uses the **-name** option followed by the appropriate
 regular expression. This command is unusual in that it has no explicit
@@ -100,14 +100,14 @@ Note that regular expressions may be literal strings. This means we can
 locate a specific named file. For example, the following command will
 locate all files named `findme`:
 
-> `find / -name findme`
+`find / -name findme`
 
 An example of an explicit *ACTION* might be to delete files conforming
 to a particular criterion. For example, the following command searches
 the `/scores` path for files whose names contain the `.tmp` extension.
 Any matching file is then deleted using the UNIX **rm** command:
 
-> `find /scores -name *.tmp -exec rm "{}" ";"`
+`find /scores -name *.tmp -exec rm "{}" ";"`
 
 This command illustrates a number of features of the **find** command.
 The search begins from the *path* `/scores`. The *option* `-name *.tmp`
@@ -128,14 +128,14 @@ Note that the **-name** option defaults to filenames only; it does not
 apply to directory names. The above command is equivalent to the more
 explicit form:
 
-> `find /scores -type f -name *.tmp -exec rm "{}" ";"`
+`find /scores -type f -name *.tmp -exec rm "{}" ";"`
 
 The **-type** option can be used to match regular files (**f**),
 directories (**d**), or network files (**n**). By way of example, the
 following command deletes all directories whose names have the `.tmp`
 extension.
 
-> `find /scores -type d -name *.tmp -exec rmdir "{}" ";"`
+`find /scores -type d -name *.tmp -exec rmdir "{}" ";"`
 
 <a name ="Content_Searching"></a>
 
@@ -153,7 +153,7 @@ items of information are present in a file. For example, the following
 command identifies all files in the path `/scores` that contain passages
 in 7/8 meter:
 
-> `find /scores -type f -exec grep -l '\*M7/8' "{}" ";"`
+`find /scores -type f -exec grep -l '\*M7/8' "{}" ";"`
 
 Recall that the **-l** option for **grep** causes the output to consist
 only of names of files that contain the sought regular expression. Note
@@ -169,21 +169,21 @@ strings, voice, percussion, etc. The following command searches all
 files in the path `scores` and generates a list of those files that
 encode scores containing one or more brass instruments:
 
-> `find scores -type f -exec grep -l '\*ICbras' "{}" ";"`
+`find scores -type f -exec grep -l '\*ICbras' "{}" ";"`
 
 <a name ="Works_in_C_Major"></a>
 
 The following command identifies all files in the path `/scores`, that
 contain passages in the key of C major:
 
-> `find /scores -type f -exec grep -l '\*C:' "{}" ";"`
+`find /scores -type f -exec grep -l '\*C:' "{}" ";"`
 
 <a name ="Works_in_Minor_Keys"></a>
 
 The following command identifies all files in the path `/scores`, that
 contain passages in any minor key:
 
-> `find /scores -type f -exec grep -l '\*<a name ="-]*:' "{"></a>" ";"`
+`find /scores -type f -exec grep -l '\*<a name ="-]*:' "{"></a>" ";"`
 
 <a name ="Generate_Franck_List"></a>
 
@@ -194,21 +194,21 @@ instrumentation, meter classification, and so on. For example, the
 following command identifies all files in the path `/scores` that are
 composed by Franck:
 
-> `find /scores -type f -exec grep -l '!!!COM.*Franck' "{}" ";"`
+`find /scores -type f -exec grep -l '!!!COM.*Franck' "{}" ";"`
 
 <a name ="Works_in_compound_meters"></a>
 
 The following command identifies all files in the path `/scores` that
 are written in compound meters:
 
-> `find /scores -type f -exec grep -l '!!!AMT.*compound' "{}" ";"`
+`find /scores -type f -exec grep -l '!!!AMT.*compound' "{}" ";"`
 
 <a name ="Rondo_Works"></a>
 
 The following command identifies all files beginning from the current
 directory that are rondos:
 
-> `find . -exec grep -il '!!!AFR.*rondo' "{}" ";"`
+`find . -exec grep -il '!!!AFR.*rondo' "{}" ";"`
 
 Recall that the **-i** option for **grep** makes the pattern-match
 insensitive to upper- or lower-case.
@@ -218,21 +218,21 @@ insensitive to upper- or lower-case.
 The following command identifies all files in the path `non-western`
 that have been designated as having heterophonic textures:
 
-> `find non-western -exec grep -il '!!!AST.*heterophony' "{}" ";"`
+`find non-western -exec grep -il '!!!AST.*heterophony' "{}" ";"`
 
 <a name ="Bebop"></a>
 
 In the path `/scores/jazz`, we might want to identify all files that
 contain the style-designation \"bebop:\"
 
-> `find /scores/jazz -exec grep -il '!!!AST.*bebop' "{}" ";"`
+`find /scores/jazz -exec grep -il '!!!AST.*bebop' "{}" ";"`
 
 <a name ="18thC_Works_with_Horns_and_Oboes"></a>
 
 The following command identifies all files in the path `18th-century`,
 that include French horns and oboes:
 
-> `find 18th-century -exec grep -il '!!!AIN.*cor.*oboe' "{}" ";"`
+`find 18th-century -exec grep -il '!!!AIN.*cor.*oboe' "{}" ";"`
 
 <a name ="1805_to_1809"></a>
 
@@ -240,14 +240,13 @@ Of course, more complex regular expressions can be also be defined. For
 example, the following command identifies all works composed between
 1805 and 1809:
 
-> `find / -exec grep -l '!!!ODT.*180[5-9]' "{}" ";"`
+`find / -exec grep -l '!!!ODT.*180[5-9]' "{}" ";"`
 
 There is no restriction on the complexity of the regular expression. The
 following command identifies all works composed between 1812 and 1840:
 
-> `find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \`
->
-> > \"{}\" \";\"
+`find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \`
+> \"{}\" \";\"
 
 Often the **find** command can be used to answer research questions more
 directly. Suppose we wanted to determine whether German drinking songs
@@ -261,13 +260,12 @@ In order to answer our question, we need to search the file system for
 all works that have the \"Trinklied\" designation, and then generate an
 inventory of meter classifications (available in \"AMT\" records).
 
-> `find /scores -type f -exec grep -l '!!AGN.*Trinklied' "{}" \`
->
-> > \";\" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
+`find /scores -type f -exec grep -l '!!AGN.*Trinklied' "{}" \`
+> \";\" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
 
 For the entire database, the output is as follows:
 
-> ` 1 !!!AMT: compound duple   4 !!!AMT: irregular  14 !!!AMT: simple quadruple   5 !!!AMT: simple triple`
+` 1 !!!AMT: compound duple   4 !!!AMT: irregular  14 !!!AMT: simple quadruple   5 !!!AMT: simple triple`
 
 There are just 24 drinking songs in the Essen collection and only five
 are in triple meters. The proportion of drinking songs in triple meters
@@ -290,9 +288,8 @@ for finding works that conform to highly complex criteria. For example,
 the following command identifies all files in the path `/corelli` that
 contain a change of meter signature:
 
-> `find /corelli -type f -name '*' | xargs grep -c '^\*M[0-9]' \`
->
-> > \| grep -v \':\[01\]\$\'
+`find /corelli -type f -name '*' | xargs grep -c '^\*M[0-9]' \`
+> \| grep -v \':\[01\]\$\'
 
 The output specifies each filename followed by a colon, followed by the
 number of meter signatures in the corresponding file. For example, in
@@ -300,16 +297,15 @@ the following output, the third movement from Opus 1, No. 5 by Corelli
 is identified as containing 6 meter signatures at different points in
 the score:
 
-> `/corelli/opus1n5c.krn:6  /corelli/opus1n9a.krn:3  /corelli/opus1n9b.krn:2  /corelli/opus1n9d.krn:2`
+`/corelli/opus1n5c.krn:6  /corelli/opus1n9a.krn:3  /corelli/opus1n9b.krn:2  /corelli/opus1n9d.krn:2`
 
 <a name ="Works_with_Change_of_Key"></a>
 
 Similarly, the following command identifies all works that contain a
 change of key signature:
 
-> `find /scores -type f -name '*' | xargs grep -c '^\*k\[' \`
->
-> > \| grep -v \':\[01\]\$\'
+`find /scores -type f -name '*' | xargs grep -c '^\*k\[' \`
+> \| grep -v \':\[01\]\$\'
 
 <a name ="Change_of_Key_and_Change_of_Meter"></a>
 
@@ -321,10 +317,9 @@ filenames. The ensuing **grep -c** counts the number of meter signatures
 in each file. The final **grep -v** passes only those filenames
 containing 2 or more meter signatures.
 
-> `find / -type f -name '*' | xargs grep -c '^\*k\[' | \`
->
-> > grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\\
-> > xargs grep -c \'\^\\\*M\[0-9\]\' \| grep -v \':\[01\]\$\'
+`find / -type f -name '*' | xargs grep -c '^\*k\[' | \`
+> grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\\
+> xargs grep -c \'\^\\\*M\[0-9\]\' \| grep -v \':\[01\]\$\'
 
 In summary, the above pipeline identifies all scores that contain both a
 change of key signature as well as a change of meter signature.
@@ -336,15 +331,14 @@ where the list has been stored in a file. For example, suppose we used
 the **find** command to locate all scores in compound meters written for
 woodwind quintet:
 
-> `find . -name '*' | xargs grep -l '!!!AMT:.*compound' \`
->
-> \| xargs grep -l \'!!!AIN: clars cor fagot flt oboe\' \> scorelist
+`find . -name '*' | xargs grep -l '!!!AMT:.*compound' \`
+\| xargs grep -l \'!!!AIN: clars cor fagot flt oboe\' \> scorelist
 
 The resulting list of files can be used for further processing. For
 example, we might search these files for any scores containing changes
 of key:
 
-> `cat scorelist | xargs grep -c '^\*[A-Ga-g][#-]*:' | grep -v ':[01]$'`
+`cat scorelist | xargs grep -c '^\*[A-Ga-g][#-]*:' | grep -v ':[01]$'`
 
 The output identifies all scores in compound meters written for woodwind
 quintet that contain changes of key.
@@ -367,23 +361,23 @@ Suppose you wanted to make a directory of all scores containing vocal
 parts. The following command creates a file (`vocalfiles`) listing all
 files in the path `/scores` that contain one or more vocal parts:
 
-> `find /scores -exec grep -l '!!!AIN.*vox' "{}" ";" > vocalfiles`
+`find /scores -exec grep -l '!!!AIN.*vox' "{}" ";" > vocalfiles`
 
 The contents of `vocalfiles` might look like the following:
 
-> `/scores/bach/cantatas/cant140.krn  /scores/bach/chorales/chor217.krn  /scores/bach/chorales/midi/chor368.hmd`\
-> etc.
+`/scores/bach/cantatas/cant140.krn  /scores/bach/chorales/chor217.krn  /scores/bach/chorales/midi/chor368.hmd`\
+etc.
 
 We can create an appropriate new directory using the **mkdir** command.
 
-> `mkdir vocal`
+`mkdir vocal`
 
 Next, edit the file containing the list of filenames as follows. Insert
 **ln -s** prior to each filename, and append the directory name `vocal`
 at the end of each line.
 
-> `ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor217.krn vocal  ln -s /scores/bach/chorales/midi/chor368.hmd vocal`\
-> etc.
+`ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor217.krn vocal  ln -s /scores/bach/chorales/midi/chor368.hmd vocal`\
+etc.
 
 (The **-s** option for **ln** is used to create a so-called \"symbolic\"
 link.)
@@ -391,7 +385,7 @@ link.)
 Using the **chmod** command, we can make this file executable, and then
 we can execute it:
 
-> `chmod +x vocalfiles  ./vocalfiles`
+`chmod +x vocalfiles  ./vocalfiles`
 
 We now have a new directory whose files contain scores with vocal parts.
 
@@ -418,15 +412,3 @@ given score may be accessed in one directory structure via *composer*,
 in another directory via *instrumentation*, in a third directory via
 *genre*, and so on.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch32)
-
-[**Previous Chapter**](/guide/ch30)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

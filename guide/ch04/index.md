@@ -45,24 +45,23 @@ is B3. Humdrum provides a predefined ISO-like representation called
 see an ascending chromatic scale in the left spine, with a concurrent
 descending chromatic scale in the right spine:
 
->   ----------- -----------
->   `**pitch`   \*\*pitch
->   C4          C5
->   C\#4        B4
->   D4          Bb4
->   D\#4        A4
->   E4          Ab4
->   F4          G4
->   F\#4        Gb4
->   G4          F4
->   G\#4        E4
->   A4          Eb4
->   A\#4        D4
->   B4          Db4
->   C5          C4
->   \*-         \*-
->   ----------- -----------
->
+  ----------- -----------
+  `**pitch`   \*\*pitch
+  C4          C5
+  C\#4        B4
+  D4          Bb4
+  D\#4        A4
+  E4          Ab4
+  F4          G4
+  F\#4        Gb4
+  G4          F4
+  G\#4        E4
+  A4          Eb4
+  A\#4        D4
+  B4          Db4
+  C5          C4
+  \*-         \*-
+  ----------- -----------
 Notice that only upper-case letters are used for pitch-name and that the
 flat is represented by the lower-case letter \``b`\'. The small letter
 \``x`\' can be used to indicate double-sharps and the double-flat is
@@ -75,7 +74,7 @@ example, the pitch corresponding to a tuning of A-435 Hz is 19 cents
 flat compared with the standard A-440, hence it is represented in
 `**pitch` as:
 
-> `A4-19`
+`A4-19`
 
 <a name ="Translate_to_Pitch"></a>
 
@@ -84,33 +83,31 @@ ISO-inspired `**pitch` representation by invoking the
 [**pitch**](/tool/pitch) command. For example, consider the
 following `**kern` input:
 
->   ----------
->   `**kern`
->   =1
->   4g
->   4g\#
->   4a
->   4cc
->   =2
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  =1
+  4g
+  4g\#
+  4a
+  4cc
+  =2
+  \*-
+  ----------
 It can be translated to this `**pitch` output:
 
->   -----------
->   `**pitch`
->   =1
->   G4
->   G\#4
->   A4
->   C5
->   =2
->   \*-
->   -----------
->
+  -----------
+  `**pitch`
+  =1
+  G4
+  G\#4
+  A4
+  C5
+  =2
+  \*-
+  -----------
 using the following command:
 
-> `pitch filename`
+`pitch filename`
 
 Notice that the [`**pitch`](/rep/pitch)
 representation uses the same system for representing barlines as
@@ -146,7 +143,7 @@ Data in the [`**pitch`](/rep/pitch) or
 translated to [`**Tonh`](/rep/Tonh) via the
 [**tonh**](/tool/tonh) command:
 
-> `tonh filename`
+`tonh filename`
 
 <a name ="French_Solfège"></a>
 
@@ -236,19 +233,18 @@ syllables. Pitches are designated by the syllables *do, re, mi, fa, so,
 la* and *ti* or their chromatic alterations as indicated in the
 following table:
 
->   ------------ ------------ ------------
->   basic        raised       lowered
->                             
->   do (*doe*)   di (*dee*)   de (*day*)
->   re (*ray*)   ri (*ree*)   ra (*raw*)
->   mi (*me*)    my (*my*)    me (*may*)
->   fa (*fah*)   fi (*fee*)   fe (*fay*)
->   so (*so*)    si (*see*)   se (*say*)
->   la (*la*)    li (*lee*)   le (*lay*)
->   ti (*tee*)   ty (*tie*)   te (*tay*)
->   ------------ ------------ ------------
->
-> *Summary of **solfa** Signifiers*
+  ------------ ------------ ------------
+  basic        raised       lowered
+                            
+  do (*doe*)   di (*dee*)   de (*day*)
+  re (*ray*)   ri (*ree*)   ra (*raw*)
+  mi (*me*)    my (*my*)    me (*may*)
+  fa (*fah*)   fi (*fee*)   fe (*fay*)
+  so (*so*)    si (*see*)   se (*say*)
+  la (*la*)    li (*lee*)   le (*lay*)
+  ti (*tee*)   ty (*tie*)   te (*tay*)
+  ------------ ------------ ------------
+*Summary of **solfa** Signifiers*
 
 The [`**deg`](/rep/deg) representation identifies
 scale-degrees by the numbers 1 (tonic) to 7 (leading-tone). These values
@@ -291,28 +287,27 @@ Notice also the different ways of characterizing accidentals.\
 \
 **Example 4.1**
 
->   ----------------- ------------------ ------------------
->   `!! Comparison`   of pitch-related   representations.
->   `**kern`          \*\*solfa          \*\*deg
->   `*M2/4`           \*M2/4             \*M2/4
->   `*c:`             \*c:               \*c:
->   `8.cc`            do                 1
->   `16dd`            re                 \^2
->   `=1`              =1                 =1
->   `8.ee-`           me                 \^3
->   `16dd`            re                 v2
->   `4een`            mi                 \^3+
->   `=2`              =2                 =2
->   `8r`              r                  r
->   `8b-`             te                 v7-
->   `8an`             la                 v6+
->   `8cc`             do                 \^1
->   `=3`              =3                 =3
->   `2bn`             ti                 v7
->   `==`              ==                 ==
->   `*-`              \*-                \*-
->   ----------------- ------------------ ------------------
->
+  ----------------- ------------------ ------------------
+  `!! Comparison`   of pitch-related   representations.
+  `**kern`          \*\*solfa          \*\*deg
+  `*M2/4`           \*M2/4             \*M2/4
+  `*c:`             \*c:               \*c:
+  `8.cc`            do                 1
+  `16dd`            re                 \^2
+  `=1`              =1                 =1
+  `8.ee-`           me                 \^3
+  `16dd`            re                 v2
+  `4een`            mi                 \^3+
+  `=2`              =2                 =2
+  `8r`              r                  r
+  `8b-`             te                 v7-
+  `8an`             la                 v6+
+  `8cc`             do                 \^1
+  `=3`              =3                 =3
+  `2bn`             ti                 v7
+  `==`              ==                 ==
+  `*-`              \*-                \*-
+  ----------------- ------------------ ------------------
 <a name ="Pitch_Translations"></a>
 
 Pitch Translations
@@ -324,18 +319,18 @@ command name is the same as the name of the output representation. For
 example, translating to the [`**solfg`](/rep/solfg)
 representation can be accomplished with:
 
-> `solfg inputfile > outputfile`
+`solfg inputfile > outputfile`
 
 <a name ="German_pitch_translation"></a>
 
 Translating to the German [`**Tonh`](/rep/Tonh)
 representation:
 
-> `tonh inputfile > outputfile`
+`tonh inputfile > outputfile`
 
 Translating to ISO [`**pitch`](/rep/pitch):
 
-> `pitch inputfile > outputfile`
+`pitch inputfile > outputfile`
 
 <a name ="Cents_Translation"></a>
 
@@ -368,28 +363,27 @@ German use of H for B-natural.\
 \
 **Example 4.2**
 
->   ----------------- ------------------ ------------------ -----------
->   `!! Comparison`   of pitch-related   representations.   
->   `**kern`          \*\*pitch          \*\*Tonh           \*\*solfg
->   `*M2/4`           \*M2/4             \*M2/4             \*M2/4
->   `*C:`             \*C:               \*C:               \*C:
->   `8.cc`            C5                 C5                 do5
->   `16dd`            D5                 D5                 re5
->   `=1`              =1                 =1                 =1
->   `8.ee`            E5                 E5                 mi5
->   `16dd#`           D\#5               Dis5               re\~d5
->   `4ee`             E5                 E5                 mi5
->   `=2`              =2                 =2                 =2
->   `8r`              r                  r                  r
->   `8b-`             Bb4                B4                 si\~b4
->   `8a`              A4                 A4                 la4
->   `8c`              C4                 C4                 do4
->   `=3`              =3                 =3                 =3
->   `2bn`             B4                 H4                 si4
->   `==`              ==                 ==                 ==
->   `*-`              \*-                \*-                \*-
->   ----------------- ------------------ ------------------ -----------
->
+  ----------------- ------------------ ------------------ -----------
+  `!! Comparison`   of pitch-related   representations.   
+  `**kern`          \*\*pitch          \*\*Tonh           \*\*solfg
+  `*M2/4`           \*M2/4             \*M2/4             \*M2/4
+  `*C:`             \*C:               \*C:               \*C:
+  `8.cc`            C5                 C5                 do5
+  `16dd`            D5                 D5                 re5
+  `=1`              =1                 =1                 =1
+  `8.ee`            E5                 E5                 mi5
+  `16dd#`           D\#5               Dis5               re\~d5
+  `4ee`             E5                 E5                 mi5
+  `=2`              =2                 =2                 =2
+  `8r`              r                  r                  r
+  `8b-`             Bb4                B4                 si\~b4
+  `8a`              A4                 A4                 la4
+  `8c`              C4                 C4                 do4
+  `=3`              =3                 =3                 =3
+  `2bn`             B4                 H4                 si4
+  `==`              ==                 ==                 ==
+  `*-`              \*-                \*-                \*-
+  ----------------- ------------------ ------------------ -----------
 In Example 4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the
 [`**MIDI`](/rep/MIDI) representation uses
@@ -400,30 +394,29 @@ negative integers. More detail concerning `**MIDI` is given in [Chapter
 \
 **Example 4.3**
 
->   ----------------- ------------------ ----------------- -------------- ----------
->   `!! Comparison`   of pitch-related   representations   (continued).   
->   `**kern`          \*\*semits         \*\*cents         \*\*MIDI       \*\*freq
->   `*M2/4`           \*M2/4             \*M2/4            \*Ch1          \*M2/4
->   `*C:`             \*C:               \*C:              \*M2/4         \*C:
->   `*`               \*                 \*                \*C:           \*
->   `8.cc`            12                 1200              /72/           523.25
->   `16dd`            14                 1400              /-72/ /74/     587.33
->   `=1`              =1                 =1                =1             =1
->   `8.ee`            16                 1600              /-74/ /76/     659.26
->   `16dd#`           15                 1500              /-76/ /75/     622.25
->   `4ee`             16                 1600              /-75/ /76/     659.26
->   `=2`              =2                 =2                =2             =2
->   `8r`              r                  r                 /-76/          r
->   `8b-`             10                 1000              /70/           466.16
->   `8a`              9                  900               /-70/ /69/     440.00
->   `8c`              0                  0                 /-69/ /60/     261.63
->   `=3`              =3                 =3                =3             =3
->   `2bn`             11                 1100              /-60/ /71/     493.88
->   `==`              ==                 ==                ==             ==
->   `.`               .                  .                 /-71/          .
->   `*-`              \*-                \*-               \*-            \*-
->   ----------------- ------------------ ----------------- -------------- ----------
->
+  ----------------- ------------------ ----------------- -------------- ----------
+  `!! Comparison`   of pitch-related   representations   (continued).   
+  `**kern`          \*\*semits         \*\*cents         \*\*MIDI       \*\*freq
+  `*M2/4`           \*M2/4             \*M2/4            \*Ch1          \*M2/4
+  `*C:`             \*C:               \*C:              \*M2/4         \*C:
+  `*`               \*                 \*                \*C:           \*
+  `8.cc`            12                 1200              /72/           523.25
+  `16dd`            14                 1400              /-72/ /74/     587.33
+  `=1`              =1                 =1                =1             =1
+  `8.ee`            16                 1600              /-74/ /76/     659.26
+  `16dd#`           15                 1500              /-76/ /75/     622.25
+  `4ee`             16                 1600              /-75/ /76/     659.26
+  `=2`              =2                 =2                =2             =2
+  `8r`              r                  r                 /-76/          r
+  `8b-`             10                 1000              /70/           466.16
+  `8a`              9                  900               /-70/ /69/     440.00
+  `8c`              0                  0                 /-69/ /60/     261.63
+  `=3`              =3                 =3                =3             =3
+  `2bn`             11                 1100              /-60/ /71/     493.88
+  `==`              ==                 ==                ==             ==
+  `.`               .                  .                 /-71/          .
+  `*-`              \*-                \*-               \*-            \*-
+  ----------------- ------------------ ----------------- -------------- ----------
 Not all of the above pitch-related representations can be translated
 directly from one to another. Table 4.1 shows the possible translations
 supported by Humdrum Release 2.0 commands. The input representations are
@@ -442,22 +435,21 @@ marks, and other `**kern` signifiers are not magically generated.\
 
 **Input Representation**
 
->   -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
->            \*\*cents   \*\*deg   \*\*freq   \*\*kern   \*\*MIDI   \*\*pitch   \*\*semits   \*\*solfa   \*\*solfg   \*\*Tonh
->                                                                                                                    
->   cents                          ¤          ¤                     ¤           ¤                        ¤           ¤
->   cocho                          ¤                                                                                 
->   deg                                       ¤                     ¤                                    ¤           ¤
->   freq     ¤                                ¤          ¤          ¤           ¤                        ¤           ¤
->   kern     ¤                     ¤                     ¤          ¤           ¤            ¤           ¤           ¤
->   midi                                      ¤                                                                      
->   pitch    ¤                     ¤          ¤          ¤                      ¤            ¤           ¤           ¤
->   semits   ¤                     ¤          ¤          ¤          ¤                                    ¤           ¤
->   solfa                                     ¤                     ¤                                    ¤           ¤
->   solfg    ¤                     ¤          ¤          ¤          ¤           ¤                        ¤           
->   tonh     ¤                     ¤          ¤          ¤          ¤           ¤            ¤           ¤           
->   -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
->
+  -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
+           \*\*cents   \*\*deg   \*\*freq   \*\*kern   \*\*MIDI   \*\*pitch   \*\*semits   \*\*solfa   \*\*solfg   \*\*Tonh
+                                                                                                                   
+  cents                          ¤          ¤                     ¤           ¤                        ¤           ¤
+  cocho                          ¤                                                                                 
+  deg                                       ¤                     ¤                                    ¤           ¤
+  freq     ¤                                ¤          ¤          ¤           ¤                        ¤           ¤
+  kern     ¤                     ¤                     ¤          ¤           ¤            ¤           ¤           ¤
+  midi                                      ¤                                                                      
+  pitch    ¤                     ¤          ¤          ¤                      ¤            ¤           ¤           ¤
+  semits   ¤                     ¤          ¤          ¤          ¤                                    ¤           ¤
+  solfa                                     ¤                     ¤                                    ¤           ¤
+  solfg    ¤                     ¤          ¤          ¤          ¤           ¤                        ¤           
+  tonh     ¤                     ¤          ¤          ¤          ¤           ¤            ¤           ¤           
+  -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
 <a name ="Transposition_Using_the_trans_Command"></a>
 
 Transposition Using the *trans* Command
@@ -477,14 +469,14 @@ E-flat), the diatonic offset is \`up two pitch-letter names,\' and the
 chromatic offset is \`up three semitones.\' The appropriate command
 invocation is:
 
-> `trans -d +2 -c +3 input > output`
+`trans -d +2 -c +3 input > output`
 
 The diatonic offset can be a little confusing because traditional
 terminology labels perfect unisons by the number 1 (e.g. P1) rather than
 zero. So transposing up a perfect fifth involves a diatonic offset of +4
 letter names, and a chromatic offset of +7 semitones:
 
-> `trans -d +4 -c +7 input > output`
+`trans -d +4 -c +7 input > output`
 
 <a name ="Transpose_down_an_augmented_unison"></a>
 
@@ -492,7 +484,7 @@ We can transpose without changing the diatonic pitch names. For example,
 the following command will transpose down an augmented unison (e.g. C\#
 to C):
 
-> `trans -d 0 -c -1 input > output`
+`trans -d 0 -c -1 input > output`
 
 <a name ="Transpose_Enharmonically"></a>
 
@@ -500,52 +492,50 @@ Conversely, we can respell the diatonic pitches without changing the
 overall pitch height. For example, the following transposition will
 transpose \"up\" a diminished second (e.g. from F-sharp to G-flat):
 
-> `trans -d +1 -c 0 input > output`
+`trans -d +1 -c 0 input > output`
 
 <a name ="Dorian_Transposition"></a>
 
 Modal transpositions are also possible by omitting the chromatic offset
 option. Consider, for example, the following C major scale:
 
->   ----------
->   `**kern`
->   d
->   e
->   f
->   g
->   a
->   b
->   cc
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  d
+  e
+  f
+  g
+  a
+  b
+  cc
+  \*-
+  ----------
 We can transform this using the following diatonic transposition:
 
-> `trans -d +1`
+`trans -d +1`
 
 The resulting output is the Dorian mode:
 
->   ----------
->   `**kern`
->   \*Trd1
->   d
->   e
->   f
->   g
->   a
->   b
->   cc
->   dd
->   \*-
->   ----------
->
+  ----------
+  `**kern`
+  \*Trd1
+  d
+  e
+  f
+  g
+  a
+  b
+  cc
+  dd
+  \*-
+  ----------
 When using the **-d** option alone, **trans** eliminates all accidentals
 in the input. This can be potentially confusing, but it is often useful.
 Suppose you have a passage in the key of E major which you would like to
 translate to E Dorian. First transpose so the tonic is D using only the
 **-d** option; then transpose exactly so the tonic is E again:
 
-> `trans -d -1 Emajor | trans -d +1 -c +2 > Edorian`
+`trans -d -1 Emajor | trans -d +1 -c +2 > Edorian`
 
 For some changes of mode (such as melodic to harmonic minor), you may
 need to use the [**humsed**](/tool/humsed) command described in
@@ -582,13 +572,12 @@ Upper-case letters indicate major keys; lower-case letters indicate
 minor keys. By way of illustration, the following key interpretations
 indicate the keys of C major, C minor, B-flat major, and F-sharp minor:
 
->   --------
->   `*C:`
->   \*c:
->   \*B-:
->   \*f\#:
->   --------
->
+  --------
+  `*C:`
+  \*c:
+  \*B-:
+  \*f\#:
+  --------
 Key interpretations usually appear near the beginning of a
 representation, and key interpretations can be redefined at any place in
 a score.
@@ -609,14 +598,14 @@ that appropriate interpretations are provided indicating the key of each
 work.) First we need to count the total number of notes in each
 repertory.
 
-> `census -k repertory1.krn`\
-> `census -k repertory2.krn`
+`census -k repertory1.krn`\
+`census -k repertory2.krn`
 
 Next we translate the scores to the **solfa** representation and use
 **grep -c** to count the number of occurrences of the number \`fa\':
 
-> `solfa repertory1.krn | grep -c fa`\
-> `solfa repertory2.krn | grep -c fa`
+`solfa repertory1.krn | grep -c fa`\
+`solfa repertory2.krn | grep -c fa`
 
 The proportion of subdominant pitches can be calculated by simply
 comparing the resulting pattern count with the number of notes
@@ -633,14 +622,14 @@ above or from below. Assuming a monophonic input, we can once again use
 **grep** to answer this question. First let\'s count how many dominant
 pitches (\`5\') are approached from above (\`v\'):
 
-> `deg repertory.krn | grep -c v5`
+`deg repertory.krn | grep -c v5`
 
 The caret has a special meaning for **grep** which will be discussed in
 [Chapter 9.](/guide/ch09) We can escape the special meaning by
 preceding the caret by a backslash. In order to count the number of
 dominant pitches approached from below we can use the following:
 
-> `deg repertory.krn | grep -c \^5`
+`deg repertory.krn | grep -c \^5`
 
 Recall that some scale tones are spelled differently depending on
 whether the mode is major or minor. For example, in A major the mediant
@@ -675,7 +664,7 @@ followed immediately by the same pitch? We might begin by first
 determining the total number of notes in the melody using **census**
 with the **-k** option.
 
-> ` census -k melody.krn`
+` census -k melody.krn`
 
 We can use the **uniq** command to eliminate successive repeated pitches
 \-- but only if the note tokens are identical. First we can use [**kern
@@ -687,7 +676,7 @@ duplicated records, so a sequence of six G\'s will be reduced to a
 single G. Finally, we pipe the output to **census -k** to count the
 total number of notes.
 
-> `kern -x melody.krn | uniq | census -k`
+`kern -x melody.krn | uniq | census -k`
 
 [A variation on this approach would entail translating to a
 representation that does not distinguish enharmonic pitches. For
@@ -699,7 +688,7 @@ enharmonic shift to A-flat, then the pitches will be deemed identical.
 The following command carries out the same task as above, but ignores
 possible enharmonic spellings:
 
-> `semits melody.krn | kern | uniq | census -k`
+`semits melody.krn | kern | uniq | census -k`
 
 Incidentally, given `**semits` input, the **kern** command will spell
 pitches according to any key or key signatures it encounters. For
@@ -728,15 +717,3 @@ However, before we continue discussing further representations, this is
 an appropriate point to present a more formal description of the general
 Humdrum representation syntax.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch05)
-
-[**Previous Chapter**](/guide/ch03)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

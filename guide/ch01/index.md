@@ -213,40 +213,38 @@ successive sixteenth notes are sounded for each pitch:\
 \
 **Table 1.1**
 
->   ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
->                      C4    D4    E4    F4    G4    A4    B4    C5
->          1st 16th    ON    off   off   off   off   off   off   off
->          2nd 16th    ON    off   off   off   off   off   off   off
->          3rd 16th    off   ON    off   off   off   off   off   off
->          4th 16th    off   ON    off   off   off   off   off   off
->   time   5th 16th    off   off   ON    off   off   off   off   off
->          6th 16th    off   off   ON    off   off   off   off   off
->          7th 16th    off   off   off   ON    off   off   off   off
->          8th 16th    off   off   off   ON    off   off   off   off
->          9th 16th    off   off   off   off   ON    off   off   off
->          10th 16th   off   off   off   off   ON    off   off   off
->          11th 16th   off   off   off   off   off   ON    off   off
->          etc.                                                  
->   ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
->
+  ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
+                     C4    D4    E4    F4    G4    A4    B4    C5
+         1st 16th    ON    off   off   off   off   off   off   off
+         2nd 16th    ON    off   off   off   off   off   off   off
+         3rd 16th    off   ON    off   off   off   off   off   off
+         4th 16th    off   ON    off   off   off   off   off   off
+  time   5th 16th    off   off   ON    off   off   off   off   off
+         6th 16th    off   off   ON    off   off   off   off   off
+         7th 16th    off   off   off   ON    off   off   off   off
+         8th 16th    off   off   off   ON    off   off   off   off
+         9th 16th    off   off   off   off   ON    off   off   off
+         10th 16th   off   off   off   off   ON    off   off   off
+         11th 16th   off   off   off   off   off   ON    off   off
+         etc.                                                  
+  ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
 Table 1.2 shows another example where different kinds of information are
 combined in the same table. Here the last column represents a
 combination of trumpet valves:\
 \
 **Table 1.2**
 
->   ---------- ------- ---------- -----------------------
->              Pitch   Duration   **Valve Combination**
->   1st note   C4      quarter    0
->   2nd note   B3      eighth     2
->   3rd note   G4      eighth     0
->   4th note   F4      eighth     1
->   5th note   G4      eighth     0
->   6th note   A4      quarter    1-2
->   7th note   G4      eighth     0
->   8th note   Ab4     quarter    2-3
->   ---------- ------- ---------- -----------------------
->
+  ---------- ------- ---------- -----------------------
+             Pitch   Duration   **Valve Combination**
+  1st note   C4      quarter    0
+  2nd note   B3      eighth     2
+  3rd note   G4      eighth     0
+  4th note   F4      eighth     1
+  5th note   G4      eighth     0
+  6th note   A4      quarter    1-2
+  7th note   G4      eighth     0
+  8th note   Ab4     quarter    2-3
+  ---------- ------- ---------- -----------------------
 Humdrum representations can be very similar to the data shown in Tables
 1.1 and 1.2. With just a few formatting changes, either table can be
 transformed so that it conforms to the Humdrum syntax. For example,
@@ -260,19 +258,18 @@ hyphen.\
 \
 **Table 1.3** A Humdrum Equivalent to Table 1.2
 
->   ---------- -- ----------- -- -------------- -- -----------------------
->   `**Note`      \*\*Pitch      \*\*Duration      \*\*Valve Combination
->   1st note      C4             quarter           0
->   2nd note      B3             eighth            2
->   3rd note      G4             eighth            0
->   4th note      F4             eighth            1
->   5th note      G4             eighth            0
->   6th note      A4             quarter           1-2
->   7th note      G4             eighth            0
->   8th note      Ab4            quarter           2-3
->   \*-           \*-            \*-               \*-
->   ---------- -- ----------- -- -------------- -- -----------------------
->
+  ---------- -- ----------- -- -------------- -- -----------------------
+  `**Note`      \*\*Pitch      \*\*Duration      \*\*Valve Combination
+  1st note      C4             quarter           0
+  2nd note      B3             eighth            2
+  3rd note      G4             eighth            0
+  4th note      F4             eighth            1
+  5th note      G4             eighth            0
+  6th note      A4             quarter           1-2
+  7th note      G4             eighth            0
+  8th note      Ab4            quarter           2-3
+  \*-           \*-            \*-               \*-
+  ---------- -- ----------- -- -------------- -- -----------------------
 It does not matter what characters appear in the table \-- numbers,
 letters, symbols, etc. (although there are some restrictions concerning
 the use of spaces and tabs). The table can have as many columns as you
@@ -338,7 +335,7 @@ Vertical spines of data can be extracted from a Humdrum file using the
 encodes four musical parts, then the **extract** command might be used
 to isolate one or more given parts. The command
 
-> `extract -f 1 filename`
+`extract -f 1 filename`
 
 <a name ="Extract_tenor_part"></a>
 
@@ -347,24 +344,24 @@ useful to extract material according to the encoded content without
 regard to the position of the spine. For example, the following command
 will extract all spines containing a label indicating the tenor part(s).
 
-> `extract -i '*Itenor' filename`
+`extract -i '*Itenor' filename`
 
 Instruments can be labelled by \"instrument class\" and so can be
 extracted accordingly. The following command extracts all of the
 woodwind parts:
 
-> `extract -i '*ICww' filename`
+`extract -i '*ICww' filename`
 
 Any vocal text can be similarly extracted:
 
-> `extract -i '**text' filename`
+`extract -i '**text' filename`
 
 <a name ="Extract_German_Text"></a>
 
 Or if the text is available in more than one language, a specific
 language may be isolated:
 
-> `extract -i '*LDeutsch' filename`
+`extract -i '*LDeutsch' filename`
 
 Segments or passages of music can be extracted using the
 [**yank**](/tool/yank) command. Segments can be defined by
@@ -372,17 +369,17 @@ sections, phrases, measures, or other any user-specified marker. For
 example, the following command extracts the section labelled \"Trio\"
 from a minuet & trio:
 
-> `yank -s Trio -r 1 filename`
+`yank -s Trio -r 1 filename`
 
 <a name ="Extract_measures_114_to_183"></a>
 
 Or select the material in measures 114 to 183:
 
-> `yank -n = -r 114-183 filename`
+`yank -n = -r 114-183 filename`
 
 Or select the second-last phrase in the work:
 
-> `yank -o { -e } -r '$-1' filename`
+`yank -o { -e } -r '$-1' filename`
 
 Don\'t worry about the complex syntax for these commands; the command
 formats will be discussed fully in the ensuing chapters. For now, it is
@@ -395,7 +392,7 @@ Two or more commands can be connected into a *pipeline.* The following
 command will let us determine whether there are any notes in the bassoon
 part:
 
-> `extract -i '*Ifagot' filename | census -k`
+`extract -i '*Ifagot' filename | census -k`
 
 <a name ="Play_Coda_half_tempo"></a>
 
@@ -403,14 +400,14 @@ The following pipeline connects together four commands: it will play
 (using MIDI) the first and last measures from a section marked \"Coda\"
 at half the notated tempo from a file named `Cui`:
 
-> `yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5`
+`yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5`
 
 Some tools translate from one representation to another. For example,
 the [**mint**](/tool/mint) command generates melodic interval
 information. The following command locates all tritones \-- including
 compound (octave) equivalents:
 
-> `mint -c filename | egrep -n '((d5)|(A4))'`
+`mint -c filename | egrep -n '((d5)|(A4))'`
 
 Incidentally, Humdrum data can be processed by many common commands that
 are not part of the Humdrum Toolkit. The **egrep** command in the above
@@ -421,29 +418,29 @@ Depending on the type of translation, the resulting data can be searched
 for different things. The following command identifies French sixth
 chords:
 
-> `solfa file | extract -i '**solfa' | ditto | grep '6-.*4+' | grep 2`
+`solfa file | extract -i '**solfa' | ditto | grep '6-.*4+' | grep 2`
 
 Locate all sonorities in the music of Machaut where the seventh scale
 degree has been doubled:
 
-> `deg -t machaut* | grep -n '7[^-+].*7'`
+`deg -t machaut* | grep -n '7[^-+].*7'`
 
 Count the number of phrases that end on the subdominant pitch:
 
-> `deg filename | egrep -c '(}.*4)|(4.*})'`
+`deg filename | egrep -c '(}.*4)|(4.*})'`
 
 <a name ="Tuba_but_not_Trumpet"></a>
 
 The following command identifies all scores whose instrumentation
 includes a tuba but not a trumpet:
 
-> `grep -sl '!!!AIN.*tuba' * | grep -v 'tromp'`
+`grep -sl '!!!AIN.*tuba' * | grep -v 'tromp'`
 
 Some tasks may require more than one command line. For example, the
 following three-line script locates any parallel fifths between the bass
 and alto voices of any input file:
 
-> `echo P5 > P5  echo '= *' >> P5; echo P5 >> P5  extract -i '*Ibass,*Ialto' file | hint -c | pattern -s = P5`
+`echo P5 > P5  echo '= *' >> P5; echo P5 >> P5  extract -i '*Ibass,*Ialto' file | hint -c | pattern -s = P5`
 
 More complicated scripts can be written to carry out more sophisticated
 musical processes. In later chapters we\'ll encounter some scripts that
@@ -468,13 +465,3 @@ be used to write programs of some complexity. Users can write their own
 programs using the Humdrum tools, or they can add new tools that augment
 the functioning of Humdrum.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch02)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

@@ -50,15 +50,14 @@ does not represent rests.
 A simple [`**MIDI`](/rep/MIDI) example is given
 below. It consists just a single note (middle C):
 
->   --------------------------
->   `!! A single MIDI note.`
->   `**MIDI`
->   `*Ch1`
->   `54/60/64`
->   `80/-60/64`
->   `*-`
->   --------------------------
->
+  --------------------------
+  `!! A single MIDI note.`
+  `**MIDI`
+  `*Ch1`
+  `54/60/64`
+  `80/-60/64`
+  `*-`
+  --------------------------
 Notice that there are two `**MIDI` data tokens: one to specify note-on
 and one to specify note-off events. Each `**MIDI` data token consists of
 three elements or components, delimited by a slash character (/). The
@@ -92,15 +91,14 @@ the left spine with the corresponding `**MIDI` data in the right spine.
 Notice that each data token consists of three subtokens, one for each
 note:
 
->   ---------------- ----------------------------------
->   `!! A C-major`   triad.
->   `**kern`         \*\*MIDI
->   `*`              \*Ch1
->   `2c 2e 2g`       72/60/64 72/64/64 72/67/64
->   `.`              144/-60/64 144/-64/64 144/-67/64
->   `*-`             \*-
->   ---------------- ----------------------------------
->
+  ---------------- ----------------------------------
+  `!! A C-major`   triad.
+  `**kern`         \*\*MIDI
+  `*`              \*Ch1
+  `2c 2e 2g`       72/60/64 72/64/64 72/67/64
+  `.`              144/-60/64 144/-64/64 144/-67/64
+  `*-`             \*-
+  ---------------- ----------------------------------
 Middle C corresponds to MIDI key 60; The pitches E4 and G4 correspond to
 MIDI keys 64 and 67 respectively. The half-note durations result in a
 delay of 144 clock ticks before the key-off commands are executed.
@@ -111,16 +109,15 @@ begins at the same time that the C major triad ends. This results in
 five subtokens in the corresponding `**MIDI` data record. Three key-off
 events are synchronous with two key-on events:
 
->   ------------------ -- ------------------------------------------------------
->   `!! Two chords.`      
->   `**kern`              \*\*MIDI
->   `*`                   \*Ch1
->   `2c 2e 2g`            72/60/64 72/64/64 72/67/64
->   `4d 4f`               144/-60/64 144/-64/64 144/-67/64 144/62/64 144/65/64
->   `.`                   72/-62/64 72/-65/64
->   `*-`                  \*-
->   ------------------ -- ------------------------------------------------------
->
+  ------------------ -- ------------------------------------------------------
+  `!! Two chords.`      
+  `**kern`              \*\*MIDI
+  `*`                   \*Ch1
+  `2c 2e 2g`            72/60/64 72/64/64 72/67/64
+  `4d 4f`               144/-60/64 144/-64/64 144/-67/64 144/62/64 144/65/64
+  `.`                   72/-62/64 72/-65/64
+  `*-`                  \*-
+  ------------------ -- ------------------------------------------------------
 Notice that the difference in duration between the half-notes and
 quarter-notes is reflected when the notes are turned *off* rather than
 when the notes are turned *on*.
@@ -130,38 +127,37 @@ beginning of Darius Milhaud\'s *Touches Blanches*.\
 \
 **Example 7.1** Excerpt from Darius Milhaud\'s *Touches Blanches*
 
-> ![](guide.figures/guide07.1.gif)
+![](guide.figures/guide07.1.gif)
 
->   -------------------- ---------- -- -------------------- -- -- --------------------
->   `!!!: Milhaud, D.`                                            
->   `!!!OTL: Touches`    Blanches                                 
->   `**kern`             \*\*kern      \*\*MIDI                   \*\*MIDI
->   `*staff2`            \*staff1      \*Ch1                      \*Ch1
->   `*clefF4`            \*clefG2      \*clefF4                   \*clefG2
->   `*k[]`               \*k\[\]       \*k\[\]                    \*k\[\]
->   `*M3/4`              \*M3/4        \*M3/4                     \*M3/4
->   `=1-`                =1-           =1-                        =1-
->   `4e`                 (4g           72/64/64                   72/67/64
->   `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
->   `4F`                 .             72/-60/64 72/53/64         .
->   `=2`                 =2            =2                         =2
->   `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
->   `.`                  8b            .                          36/-69/64 36/71/64
->   `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
->   `4G`                 .             72/-62/64 72/55/64         .
->   `=3`                 =3            =3                         =3
->   `4e`                 (4g           72/-55/64 72/64/64         72/-67/64 72/67/64
->   `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
->   `4F`                 .             72/-60/64 72/53/64         .
->   `=4`                 =4            =4                         =4
->   `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
->   `.`                  8b            .                          36/-69/64 36/71/64
->   `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
->   `4G`                 .             72/-62/64 72/55/64         .
->   `.`                  .             72/-55/64                  72/-67/64
->   `*-`                 \*-           \*-                        \*-
->   -------------------- ---------- -- -------------------- -- -- --------------------
->
+  -------------------- ---------- -- -------------------- -- -- --------------------
+  `!!!: Milhaud, D.`                                            
+  `!!!OTL: Touches`    Blanches                                 
+  `**kern`             \*\*kern      \*\*MIDI                   \*\*MIDI
+  `*staff2`            \*staff1      \*Ch1                      \*Ch1
+  `*clefF4`            \*clefG2      \*clefF4                   \*clefG2
+  `*k[]`               \*k\[\]       \*k\[\]                    \*k\[\]
+  `*M3/4`              \*M3/4        \*M3/4                     \*M3/4
+  `=1-`                =1-           =1-                        =1-
+  `4e`                 (4g           72/64/64                   72/67/64
+  `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
+  `4F`                 .             72/-60/64 72/53/64         .
+  `=2`                 =2            =2                         =2
+  `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
+  `.`                  8b            .                          36/-69/64 36/71/64
+  `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
+  `4G`                 .             72/-62/64 72/55/64         .
+  `=3`                 =3            =3                         =3
+  `4e`                 (4g           72/-55/64 72/64/64         72/-67/64 72/67/64
+  `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
+  `4F`                 .             72/-60/64 72/53/64         .
+  `=4`                 =4            =4                         =4
+  `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
+  `.`                  8b            .                          36/-69/64 36/71/64
+  `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
+  `4G`                 .             72/-62/64 72/55/64         .
+  `.`                  .             72/-55/64                  72/-67/64
+  `*-`                 \*-           \*-                        \*-
+  -------------------- ---------- -- -------------------- -- -- --------------------
 The [`**MIDI`](/rep/MIDI) representation always
 expects a tandem interpretation indicating the MIDI channel assignment.
 In Example 7.1 both parts have been assigned to channel 1. Once again,
@@ -179,7 +175,7 @@ The [**midi**](/tool/midi) command converts Humdrum
 data. By way of example, the above `**MIDI` data can be generated as
 follows:
 
-> `midi inven05.krn > inven05.hmd`
+`midi inven05.krn > inven05.hmd`
 
 The `.hmd` filename extension is a common way of designating Humdrum
 `MIDI` data.
@@ -194,7 +190,7 @@ durations. The following command takes a file containing a 12-tone row
 (pitch information only) and produces a `**MIDI` output where all notes
 assigned to a quarter duration:
 
-> `midi -d 4 tonerow > tonerow.hmd`
+`midi -d 4 tonerow > tonerow.hmd`
 
 The most common use of `**MIDI` data is to create a standard MIDI file
 using the **smf** command, or to listen to the output using the
@@ -222,7 +218,7 @@ The **perform** command is typically the last command in a pipe preceded
 by the **midi** command. For example, a `**kern`-format score can be
 heard using the following command:
 
-> `midi clara.krn | perform`
+`midi clara.krn | perform`
 
 When invoked, the **perform** command reads in the entire input into
 memory. This allows the user to move freely both forward and backward
@@ -255,7 +251,7 @@ comment containing the character string \"`Second theme`,\" then the
 user can move immediately to this position in the input by entering the
 following command:
 
-> `/Second theme`
+`/Second theme`
 
 Similarly, backward searches can be carried out by typing the question
 mark (`?`) rather than the slash. If the search is successful, playback
@@ -270,23 +266,21 @@ The **midi** command provides a useful **-c** option that causes each
 data record to be repeated as a comment. For example, when the **-c**
 option is used a sequence of data records such as the following:
 
->   ------- ---- ---- ----
->   `4C`    4E   4G   4c
->   `4D`    4F   4G   4B
->   `4AA`   4E   4A   4c
->   ------- ---- ---- ----
->
+  ------- ---- ---- ----
+  `4C`    4E   4G   4c
+  `4D`    4F   4G   4B
+  `4AA`   4E   4A   4c
+  ------- ---- ---- ----
 is transformed to:
 
->   --------- ---- ---- ----
->   `4C`      4E   4G   4c
->   `!!4C`    4E   4G   4c
->   `4D`      4F   4G   4B
->   `!!4D`    4F   4G   4B
->   `4AA`     4E   4A   4c
->   `!!4AA`   4E   4A   4c
->   --------- ---- ---- ----
->
+  --------- ---- ---- ----
+  `4C`      4E   4G   4c
+  `!!4C`    4E   4G   4c
+  `4D`      4F   4G   4B
+  `!!4D`    4F   4G   4B
+  `4AA`     4E   4A   4c
+  `!!4AA`   4E   4A   4c
+  --------- ---- ---- ----
 <a name ="Play_from_Pause"></a>
 
 Since, by default, the **perform** command echoes all global comments on
@@ -297,13 +291,13 @@ commands. For example, in the [`**kern`](/rep/kern)
 representation, pauses are indicated by a semicolon; hence the user
 might search for the next pause symbol by typing:
 
-> `/;`
+`/;`
 
 <a name ="Play_from_G_sharp"></a>
 
 Similarly, the user could search for a particular pitch, e.g.
 
-> `/gg#`
+`/gg#`
 
 <a name ="Diminished_Octave"></a>
 
@@ -313,7 +307,7 @@ contain melodic interval data (see [Chapter 11](/guide/ch11)), allowing
 the user to search for a particular interval such as a diminished
 octave:
 
-> `/d8`
+`/d8`
 
 If the string pattern is found in the input, **perform** will move
 immediately forward (or backward) to the next occurrence and begin
@@ -334,7 +328,7 @@ input Humdrum representation. The tempo may be specified on the command
 line by using the **-t** option. For example, the following command
 causes the file `Andean` to be performed at half tempo:
 
-> `midi Andean | perform -t 0.5`
+`midi Andean | perform -t 0.5`
 
 Performing at fast speeds can often be useful when scanning for a
 particular passage.
@@ -382,7 +376,7 @@ non-`**MIDI` spines are simply ignored. Suppose we begin with a
 `**kern`-format file named `joplin`. We can create a standard MIDI file
 as follows:
 
-> `midi joplin | smf > joplin.smf`
+`midi joplin | smf > joplin.smf`
 
 The **smf** command provides two options. The **-t** option allows the
 user to set the tempo, whereas the **-v** option allows the user to
@@ -414,15 +408,3 @@ array of commercial and non-commerical applications software. In
 [Chapter 30](/guide/ch30) we will explore some of the Humdrum tools for
 inputting MIDI data into Humdrum.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch08)
-
-[**Previous Chapter**](/guide/ch06)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

@@ -55,23 +55,22 @@ fourth in the upper voice between the last note of the first measure
 \
 **Example 11.1 continued.**
 
->   ------------ -- ----------
->   `**kern`        \*\*kern
->   `*staff1`       \*staff1
->   `*M4/4`         \*M4/4
->   `=1-`           =1-
->   `4.e`           2cc
->   `8f`            .
->   `4.e`           4g
->   `.`             8a
->   `[8f`           8r
->   `=2`            =2
->   `2f]`           2dd
->   `4d 4g`         4b 4ff
->   `4c 4e 4g`      4cc 4ee
->   `*-`            \*-
->   ------------ -- ----------
->
+  ------------ -- ----------
+  `**kern`        \*\*kern
+  `*staff1`       \*staff1
+  `*M4/4`         \*M4/4
+  `=1-`           =1-
+  `4.e`           2cc
+  `8f`            .
+  `4.e`           4g
+  `.`             8a
+  `[8f`           8r
+  `=2`            =2
+  `2f]`           2dd
+  `4d 4g`         4b 4ff
+  `4c 4e 4g`      4cc 4ee
+  `*-`            \*-
+  ------------ -- ----------
 In some cases, implied melodic intervals may arise by the interaction of
 two or more parts. For example, Example 11.2 shows a plausible
 reinterpretation of the voicings for the first measure. Here the
@@ -83,7 +82,7 @@ melodic intervals.*
 **Example 11.2** Possible re-interpretation of opening measure for
 Example 11.1.
 
-> ![](guide.figures/guide11.2.gif)
+![](guide.figures/guide11.2.gif)
 
 In the second measure, both parts are encoded using multiple stops. In
 the upper part, two successive double stops are encoded. In the case of
@@ -156,22 +155,21 @@ shown in Example 11.1.
 **Example 11.3** Default interval outputs from the **mint** command
 corresponding to Example 11.1.
 
->   ----------- -- -- ----------
->   `**mint`          \*\*mint
->   `*M4/4`           \*M4/4
->   `=1-`             =1-
->   `.`               .
->   `+m2`             .
->   `-m2`             -P4
->   `.`               +M2
->   `+m2`             r
->   `=2`              =2
->   `.`               +P4
->   `-m3 +M2`         -m3 +m3
->   `-M2 P1`          +m2 -m2
->   `*-`              \*-
->   ----------- -- -- ----------
->
+  ----------- -- -- ----------
+  `**mint`          \*\*mint
+  `*M4/4`           \*M4/4
+  `=1-`             =1-
+  `.`               .
+  `+m2`             .
+  `-m2`             -P4
+  `.`               +M2
+  `+m2`             r
+  `=2`              =2
+  `.`               +P4
+  `-m3 +M2`         -m3 +m3
+  `-M2 P1`          +m2 -m2
+  `*-`              \*-
+  ----------- -- -- ----------
 Notice that the *interrupted interval* (spanning the rest) has been
 calculated, and that no unison has appeared for the tied note in the
 lower voice.
@@ -194,27 +192,26 @@ suspended and restarted. A common invocation would identify `**kern`
 rests (`r`) as a suitable place to break melodic interval calculations.
 For example,
 
-> ` mint -b r inputfile`
+` mint -b r inputfile`
 
 would produce the following output when applied to Example 11.1:\
 \
 
->   ----------- -- -- ----------
->   `**mint`          \*\*mint
->   `*M4/4`           \*M4/4
->   `=1-`             =1-
->   `.`               .
->   `+m2`             .
->   `-m2`             -P4
->   `.`               +M2
->   `+m2`             r
->   `=2`              =2
->   `P1`              .
->   `-m3 +M2`         -m3 +m3
->   `-M2 P1`          +m2 -m2
->   `*-`              \*-
->   ----------- -- -- ----------
->
+  ----------- -- -- ----------
+  `**mint`          \*\*mint
+  `*M4/4`           \*M4/4
+  `=1-`             =1-
+  `.`               .
+  `+m2`             .
+  `-m2`             -P4
+  `.`               +M2
+  `+m2`             r
+  `=2`              =2
+  `P1`              .
+  `-m3 +M2`         -m3 +m3
+  `-M2 P1`          +m2 -m2
+  `*-`              \*-
+  ----------- -- -- ----------
 Notice that the perfect fourth (+P4) has been replaced by a null token
 at the beginning of measure 2. In addition, the rest token \``r`\' has
 been echoed just prior to the barline.
@@ -228,20 +225,20 @@ closed curly braces are used to indicate the beginnings and ends of
 phrases. We need to tell **mint** to break interval calculations each
 time an end-of-phrase signifier is encountered:
 
-> `mint -b '}' inputfile`
+`mint -b '}' inputfile`
 
 Similarly, the `**kern` representation uses the semicolon (`;`) to
 represent pauses. We might instruct **mint** to avoid calculating
 intervals between notes having pauses and the subsequent note:
 
-> `mint -b ';' inputfile`
+`mint -b ';' inputfile`
 
 Since the **-b** option accepts regular expressions, we can combine
 patterns. For example, the following command instructs **mint** to
 calculate melodic intervals, not including intervals spanning phrase
 boundaries, and not following notes with pauses:
 
-> `mint -b '[;}]' inputfile`
+`mint -b '[;}]' inputfile`
 
 <a name ="Unvoiced_Inner_Intervals"></a>
 
@@ -257,22 +254,21 @@ arises from the pitches D4 and E4; the falling minor third arises from
 the pitches G4 and E4.\
 \
 
->   ---------------------- -- -- ----------
->   `**mint`                     \*\*mint
->   `*M4/4`                      \*M4/4
->   `=1-`                        =1-
->   `.`                          .
->   `+m2`                        .
->   `-m2`                        -P4
->   `.`                          +M2
->   `+m2`                        r
->   `=2`                         =2
->   `P1`                         .
->   `-m3 +M2`                    -m3 +m3
->   `-M2 (+M2) (-m3) P1`         +m2 -m2
->   `*-`                         \*-
->   ---------------------- -- -- ----------
->
+  ---------------------- -- -- ----------
+  `**mint`                     \*\*mint
+  `*M4/4`                      \*M4/4
+  `=1-`                        =1-
+  `.`                          .
+  `+m2`                        .
+  `-m2`                        -P4
+  `.`                          +M2
+  `+m2`                        r
+  `=2`                         =2
+  `P1`                         .
+  `-m3 +M2`                    -m3 +m3
+  `-M2 (+M2) (-m3) P1`         +m2 -m2
+  `*-`                         \*-
+  ---------------------- -- -- ----------
 With the **-i** option, the parentheses surrounding the unvoiced inner
 intervals would be omitted.
 
@@ -293,57 +289,55 @@ between the eighth notes.\
 
 **Example 11.4**
 
-> ![](guide.figures/guide11.4a.gif)
+![](guide.figures/guide11.4a.gif)
 
->   ----------
->   `**kern`
->   `*M4/4`
->   `=1-`
->   `8cc`
->   `16b`
->   `16cc`
->   `8g`
->   `16f#`
->   `16g`
->   `=2`
->   `8e`
->   `16d#`
->   `16e`
->   `8c`
->   `8r`
->   `*-`
->   ----------
->
+  ----------
+  `**kern`
+  `*M4/4`
+  `=1-`
+  `8cc`
+  `16b`
+  `16cc`
+  `8g`
+  `16f#`
+  `16g`
+  `=2`
+  `8e`
+  `16d#`
+  `16e`
+  `8c`
+  `8r`
+  `*-`
+  ----------
 We can use the skip option to instruct **mint** to ignore any note token
 matching the string \``16`\':
 
-> ` mint -s 16 inputfile`
+` mint -s 16 inputfile`
 
 This command would produce an output that highlights the descending
 arpeggiated major chord \-- from C5 to G4 (down a P4), to E4 (down a m3)
 to C4 (down a M3).\
 \
 
-> ![](guide.figures/guide11.4b.gif)
+![](guide.figures/guide11.4b.gif)
 
->   ----------
->   `**mint`
->   `*M4/4`
->   `=1-`
->   `.`
->   `.`
->   `.`
->   `-P4`
->   `.`
->   `.`
->   `=2`
->   `-m3`
->   `.`
->   `.`
->   `-M3`
->   `*-`
->   ----------
->
+  ----------
+  `**mint`
+  `*M4/4`
+  `=1-`
+  `.`
+  `.`
+  `.`
+  `-P4`
+  `.`
+  `.`
+  `=2`
+  `-m3`
+  `.`
+  `.`
+  `-M3`
+  `*-`
+  ----------
 Using duration information is a somewhat limited technique for
 calculating distance intervals. Typically, users will want to define
 much more refined ways of identifying structural tones. More
@@ -355,28 +349,27 @@ spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
 more about the [**cleave**](/tool/cleave) command. But here is a
 typical use:
 
-> `cleave -d ' ' -i '**kern' -o '**kern' example11a`
+`cleave -d ' ' -i '**kern' -o '**kern' example11a`
 
 With the `**kern` encoding for Example 11.1 as input, the corresponding
 output would be:\
 \
 
->   --------------------
->   `**kern`
->   `*M4/4`
->   `=1- =1-`
->   `4.e 2cc`
->   `8f`
->   `4.e 4g`
->   `8a`
->   `[8f 8r`
->   `=2 =2`
->   `2f] 2dd`
->   `4d 4g 4b 4ff`
->   `4c 4e 4g 4cc 4ee`
->   `*-`
->   --------------------
->
+  --------------------
+  `**kern`
+  `*M4/4`
+  `=1- =1-`
+  `4.e 2cc`
+  `8f`
+  `4.e 4g`
+  `8a`
+  `[8f 8r`
+  `=2 =2`
+  `2f] 2dd`
+  `4d 4g 4b 4ff`
+  `4c 4e 4g 4cc 4ee`
+  `*-`
+  --------------------
 Note that this output doesn\'t quite conform to the `**kern` syntax: the
 barlines have been duplicated as double-stops, and the durations aren\'t
 right for multiple-stops. We can clean up the output using
@@ -386,29 +379,27 @@ cause problems if our intention is to calculate pitch intervals.
 If we pipe the above output through the **mint** command, the
 appropriate command pipeline becomes:
 
-> `cleave -d ' ' -i '**kern' -o '**kern' example11a \`
->
-> > \| humsed \'s/ =.\*//\' \| mint -I
+`cleave -d ' ' -i '**kern' -o '**kern' example11a \`
+> \| humsed \'s/ =.\*//\' \| mint -I
 
 The corresponding melodic interval output is:\
 \
 
->   ----------------------------------------------
->   `**mint`
->   `*M4/4`
->   `=1-`
->   `.`
->   `+m2 -P5`
->   `-m2 +M2`
->   `+P4 +M2`
->   `-M3 r`
->   `=2`
->   `+P4`
->   `-m3 (+M2) (-P5) (+A4) (-m3) +m3`
->   `-M2 (-m3) (-P5) (P1) (-M3) (+P4) (+m2) -m2`
->   `*-`
->   ----------------------------------------------
->
+  ----------------------------------------------
+  `**mint`
+  `*M4/4`
+  `=1-`
+  `.`
+  `+m2 -P5`
+  `-m2 +M2`
+  `+P4 +M2`
+  `-M3 r`
+  `=2`
+  `+P4`
+  `-m3 (+M2) (-P5) (+A4) (-m3) +m3`
+  `-M2 (-m3) (-P5) (P1) (-M3) (+P4) (+m2) -m2`
+  `*-`
+  ----------------------------------------------
 <a name ="Simple_and_Compound_Melodic_Intervals"></a>
 
 Simple and Compound Melodic Intervals
@@ -450,35 +441,35 @@ Consider some of the following uses of the **mint** command.
 Are there any major or minor ninth melodic intervals in the file
 `Sinatra`?
 
-> `mint Sinatra | grep '[Mm][9]'`
+`mint Sinatra | grep '[Mm][9]'`
 
 <a name ="Compound_Melodic_Intervals"></a>
 
 Are there any compound melodic intervals in the file `Piaf`?
 
-> `mint Piaf | egrep '([Mm][9])|([MmPAd][1-9][0-9]''`
+`mint Piaf | egrep '([Mm][9])|([MmPAd][1-9][0-9]''`
 
 <a name ="Chevalier"></a>
 
 Are descending seconds more common than ascending seconds in melodies by
 Maurice Chevalier?
 
-> `mint Chevalier* | grep -c '+[Mm]2'`\
-> `mint Chevalier* | grep -c '-[Mm]2'`
+`mint Chevalier* | grep -c '+[Mm]2'`\
+`mint Chevalier* | grep -c '-[Mm]2'`
 
 An alternative way of achieving the same goal might simplify the regular
 expression to **grep** and use the **-d** (diatonic) option for
 **mint**:
 
-> `mint -d Chevalier* | grep -c '+2'`\
-> `mint -d Chevalier* | grep -c '-2'`
+`mint -d Chevalier* | grep -c '+2'`\
+`mint -d Chevalier* | grep -c '-2'`
 
 Identify whether there are any tritone melodic intervals in any of the
 vocal parts of a score:
 
 <a name ="Platters"></a>
 
-> `extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'`
+`extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'`
 
 Here we have used the extended regular expression capabilities of
 **egrep** to specify an either/or pattern.
@@ -488,17 +479,17 @@ the [`**mint`](/rep/mint) representation. Does any
 melody in the current directory contain both an ascending major sixth
 and a descending major sixth?
 
-> `grep -l '+M6' * | xargs grep '-M6'`
+`grep -l '+M6' * | xargs grep '-M6'`
 
 Do the vocal lines of Louis Jourdain contain successive ascending major
 thirds (such as forming an augmented triad)?
 
-> `mint Jourdain | grep -v = | uniq -d | grep '+M3'`
+`mint Jourdain | grep -v = | uniq -d | grep '+M3'`
 
 What is the longest run of rising intervals in the vocal lines of
 Marlene Dietrich?
 
-> `mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n`
+`mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n`
 
 <a name ="Calculating_Melodic_Intervals_Using_the_xdelta_Command"></a>
 
@@ -517,38 +508,36 @@ C is designated by the value zero, and all other pitches are represented
 by their (positive or negative) semitone distance. A C-major scale would
 appear as follows:
 
->   ------------
->   `**semits`
->   `0`
->   `2`
->   `4`
->   `5`
->   `7`
->   `9`
->   `11`
->   `12`
->   `*-`
->   ------------
->
+  ------------
+  `**semits`
+  `0`
+  `2`
+  `4`
+  `5`
+  `7`
+  `9`
+  `11`
+  `12`
+  `*-`
+  ------------
 We can transform this representation to semitone intervals as follows:
 
-> `xdelta` *inputfile*
+`xdelta` *inputfile*
 
 For the above scale, the output would be:
 
->   -------------
->   `**Xsemits`
->   `.`
->   `2`
->   `2`
->   `1`
->   `2`
->   `2`
->   `2`
->   `1`
->   `*-`
->   -------------
->
+  -------------
+  `**Xsemits`
+  `.`
+  `2`
+  `2`
+  `1`
+  `2`
+  `2`
+  `2`
+  `1`
+  `*-`
+  -------------
 Notice that the initial numerical value has been replaced by a null
 token, and all subsequent values represent the numerical *difference*
 between successive values. If the scale had been descending in pitch,
@@ -565,26 +554,24 @@ When **xdelta** encounters multiple-stops, it behaves in a manner
 similar to the **mint** command by calculating the numerical equivalent
 of unvoiced inner intervals. Consider the following example:
 
->   ------------
->   `**semits`
->   `3`
->   `2 5`
->   `-1 7 14`
->   `12`
->   `*-`
->   ------------
->
+  ------------
+  `**semits`
+  `3`
+  `2 5`
+  `-1 7 14`
+  `12`
+  `*-`
+  ------------
 The **xdelta** command produces the following output:
 
->   ----------------
->   `**Xsemits`
->   `.`
->   `-1 2`
->   `-3 (5) (2) 9`
->   `13 5 -2`
->   `*-`
->   ----------------
->
+  ----------------
+  `**Xsemits`
+  `.`
+  `-1 2`
+  `-3 (5) (2) 9`
+  `13 5 -2`
+  `*-`
+  ----------------
 Once again, the interpretation has been modified to `**Xsemits` and the
 leading value has been changed to a null token. In going from the value
 3 to the values 2 and 5, the output differences are -1 and +2
@@ -599,20 +586,19 @@ completely ignore certain data tokens when processing. An important use
 of the **-s** option is to ignore barlines. Consider the following
 example:
 
->   -----------
->   `**cents`
->   `100`
->   `400`
->   `800`
->   `=2`
->   `600`
->   `*-`
->   -----------
->
+  -----------
+  `**cents`
+  `100`
+  `400`
+  `800`
+  `=2`
+  `600`
+  `*-`
+  -----------
 The proper way to calculate differences in cents is to ensure that
 measure numbers are ignored:
 
-> `xdelta -s ^= inputfile`
+`xdelta -s ^= inputfile`
 
 Failure to skip the barline will cause a difference to be calculated
 between 800 and =2 (i.e., -798) and between =2 and 600 (i.e., 598).
@@ -622,7 +608,7 @@ to calculate the differences of the differences. For example, we can
 calculate the second derivative of successive cents by using a pipeline
 containing two **xdelta** commands:
 
-> `xdelta -s ^= inputfile` `| xdelta -s ^= `
+`xdelta -s ^= inputfile` `| xdelta -s ^= `
 
 ------------------------------------------------------------------------
 
@@ -661,15 +647,3 @@ measure purely numerical distances between successive values. As we will
 see, **xdelta** will prove useful in many other applications apart from
 calculating pitch distances.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch12)
-
-[**Previous Chapter**](/guide/ch10)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

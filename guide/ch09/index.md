@@ -54,7 +54,7 @@ characters forming a character **string,** as in the pattern:
 
 ``
 
-> car
+car
 
 This pattern will match any data string containing the sequence of
 letters c-a-r. The letters must be contiguous, so no character
@@ -84,7 +84,7 @@ characters. For example, the pattern:
 
 ``
 
-> c.u
+c.u
 
 will match any input string containing three characters, the first of
 which is the lower-case \``c`\' and the third of which is the lower-case
@@ -107,7 +107,7 @@ function. For example, the regular expression
 
 ``
 
-> \\.
+\\.
 
 will match the period character. The backslash itself may be escaped by
 preceding it by an additional backslash (i.e. `\\`).
@@ -122,7 +122,7 @@ or more consecutive instances of the previous expression.\" For example,
 
 ``
 
-> fo+
+fo+
 
 specifies any character string beginning with a lower-case \``f`\'
 followed by one or more consecutive instances of the small letter
@@ -142,7 +142,7 @@ way of example, the following regular expression:
 
 ``
 
-> (fo)+
+(fo)+
 
 The parentheses now bind the letters \``f`\' and \``o`\' into a single
 two-character expression, and it is this expression that is now modified
@@ -155,7 +155,7 @@ Of course we can mix metacharacters together. The expression:
 
 ``
 
-> (.o)+
+(.o)+
 
 will match strings such as \"`polo`\" and the first four letters of
 \"`tomorrow`.\"
@@ -167,7 +167,7 @@ the string \``go`\'.\"
 
 ``
 
-> (a)+(go)+
+(a)+(go)+
 
 This would match character strings in inputs such as \"`ago`\" and
 \"`agogic`,\" but not in \"`largo`\" (intervening \`r\') or \"`gogo`\"
@@ -178,7 +178,7 @@ wild-card (`.`):
 
 ``
 
-> c+.m+
+c+.m+
 
 This pattern is present in strings such as \"`accompany`,\"
 \"`accommodate`,\" and \"`cymbal`.\" This pattern will also match
@@ -191,7 +191,7 @@ example,
 
 ``
 
-> Do\*r
+Do\*r
 
 specifies any character string beginning with an upper-case \``D`\'
 followed by zero or more instances of the letter \``o`\' followed by the
@@ -204,7 +204,7 @@ in parentheses. Thus, the regular expression:
 
 ``
 
-> ba(na)\*
+ba(na)\*
 
 will match strings such as \"`ba`,\" \"`bana`,\" \"`banana`,\"
 \"`bananana`,\" etc.
@@ -220,7 +220,7 @@ expression:
 
 ``
 
-> .\*
+.\*
 
 means \"zero or more instances of any characters.\" (Notice the plural
 \"characters;\" this means the repetition need not be of one specific
@@ -231,7 +231,7 @@ expressions. For example, the expression:
 
 ``
 
-> {.\*}
+{.\*}
 
 will match any string beginning with a left curly brace and ending with
 a right curly brace. If we replaced the curly braces by the space
@@ -245,7 +245,7 @@ a single expression. For example, the pattern:
 
 ``
 
-> Ch?o
+Ch?o
 
 is present in such strings as \"`Chopin`\" and \"`Corelli`\" but not
 \"`Chinese`\" or \"`cornet`.\"
@@ -255,7 +255,7 @@ The pattern:
 
 ``
 
-> Ch?(o)+
+Ch?(o)+
 
 is present in such strings as \"`Chorale`,\" \"`Couperin`,\" and
 \"`Cooper`,\" but not in \"`Chloe`\" or \"`Chant`.\"
@@ -282,14 +282,14 @@ example,
 
 ``
 
-> \^A
+\^A
 
 matches the upper-case letter \``A`\' only if it occurs at the beginning
 of a line. Conversely,
 
 ``
 
-> A\$
+A\$
 
 will match the upper-case letter \``A`\' only if it is the last
 character in a line. Both anchors may be used together, hence the
@@ -298,14 +298,14 @@ the letter \``A`\':
 
 ``
 
-> \^A\$
+\^A\$
 
 Of course anchors can be used in conjunction with the other regular
 expressions we have discussed. For example, the regular expression:
 
 ``
 
-> \^a.\*z\$
+\^a.\*z\$
 
 matches any line that begins with \``a`\' and ends with \``z`\'.
 
@@ -321,7 +321,7 @@ letter \``y`\' or the letter \``z`\':
 
 ``
 
-> x\|y\|z
+x\|y\|z
 
 Expressions may consist of multiple characters, as in the following
 expression which matches the string \``sharp`\' or \``flat`\' or
@@ -329,14 +329,14 @@ expression which matches the string \``sharp`\' or \``flat`\' or
 
 ``
 
-> sharp\|flat\|natural
+sharp\|flat\|natural
 
 More complicated expressions may be created by using parentheses. For
 example, the regular expression:
 
 ``
 
-> (simple\|compound) (duple\|triple\|quadruple\|irregular) meter
+(simple\|compound) (duple\|triple\|quadruple\|irregular) meter
 
 will match eight different strings, including `simple triple meter` and
 `compound quadruple meter`.
@@ -352,13 +352,13 @@ example, rather than writing the expression:
 
 ``
 
-> a\|b\|c\|d\|e\|f\|g
+a\|b\|c\|d\|e\|f\|g
 
 the expression may be simplified to:
 
 ``
 
-> \[abcdefg\]
+\[abcdefg\]
 
 Any character within the square brackets (a \"character class\") will
 match. Spaces, tabs, and other characters can be included within the
@@ -369,7 +369,7 @@ the regular expression:
 
 ``
 
-> \[xyz.+\*\$\]
+\[xyz.+\*\$\]
 
 matches any one of the characters \``x`,\' \``y`,\' \``z`,\' the period,
 plus sign, asterisk, or the dollar sign.
@@ -380,13 +380,13 @@ example,
 
 ``
 
-> \[A-Z\]
+\[A-Z\]
 
 represents the class of all upper-case letters from A to Z. Similarly,
 
 ``
 
-> \[0-9\]
+\[0-9\]
 
 represents the class of digits from zero to nine. The expression given
 earlier \-- `[abcdefg]` \-- can be simplified further to: `[a-g]`.
@@ -394,7 +394,7 @@ Several ranges can be mixed within a single character class:
 
 ``
 
-> \[a-gA-G0-9\#\]
+\[a-gA-G0-9\#\]
 
 This regular expression matches any one of the lower- or upper-case
 characters from A to G, or any digit, or the octothorpe (`#`). If the
@@ -403,7 +403,7 @@ its special meaning and becomes a literal dash, as in:
 
 ``
 
-> \[a-gA-G0-9\#-\]
+\[a-gA-G0-9\#-\]
 
 This regular expression adds the dash character to the list of possible
 matching characters.
@@ -415,7 +415,7 @@ those characters *not* in the list are matched. For example,
 
 ``
 
-> \[\^0-9\]
+\[\^0-9\]
 
 matches any character other than a digit. If the caret appears in any
 position other than at the beginning of the character class, it loses
@@ -433,28 +433,27 @@ The following table lists some examples of regular expressions and
 provides a summary description of the effect of each expression:\
 \
 
->   ------------------ ------------------------------------------------------------------------
->   A                  match letter \`A\'
->   \^A                match letter \`A\' at the beginning of a line
->   A\$                match letter \`A\' at the end of a line
->   .                  match any character (including space or tab)
->   A+                 match one or more instances of letter \`A\'
->   A?                 match a single instance of \`A\' or the null string
->   A\*                match one or more instances of \`A\' or the null string
->   .\*                match any string, including the null string
->   A.\*B              match any string starting with \`A\' up to and including \`B\'
->   A\|B               match \`A\' or \`B\'
->   (A)\|(B)           match \`A\' or \`B\'
->   \[AB\]             match \`A\' or \`B\'
->   \[\^AB\]           match any character other than \`A\' or \`B\'
->   AB                 match \`A\' followed by \`B\'
->   AB+                match \`A\' followed by one or more \`B\'s
->   (AB)+              match one or more instances of \`AB\', e.g. ABAB
->   (AB)\|(BA)         match \`AB\' or \`BA\'
->   \[\^A\]AA\[\^A\]   match two \`A\'s preceded and followed by characters other than \`A\'s
->   \^\[\^\^\]         match any character at the beginning of a record except the caret
->   ------------------ ------------------------------------------------------------------------
->
+  ------------------ ------------------------------------------------------------------------
+  A                  match letter \`A\'
+  \^A                match letter \`A\' at the beginning of a line
+  A\$                match letter \`A\' at the end of a line
+  .                  match any character (including space or tab)
+  A+                 match one or more instances of letter \`A\'
+  A?                 match a single instance of \`A\' or the null string
+  A\*                match one or more instances of \`A\' or the null string
+  .\*                match any string, including the null string
+  A.\*B              match any string starting with \`A\' up to and including \`B\'
+  A\|B               match \`A\' or \`B\'
+  (A)\|(B)           match \`A\' or \`B\'
+  \[AB\]             match \`A\' or \`B\'
+  \[\^AB\]           match any character other than \`A\' or \`B\'
+  AB                 match \`A\' followed by \`B\'
+  AB+                match \`A\' followed by one or more \`B\'s
+  (AB)+              match one or more instances of \`AB\', e.g. ABAB
+  (AB)\|(BA)         match \`AB\' or \`BA\'
+  \[\^A\]AA\[\^A\]   match two \`A\'s preceded and followed by characters other than \`A\'s
+  \^\[\^\^\]         match any character at the beginning of a record except the caret
+  ------------------ ------------------------------------------------------------------------
 *Examples of regular expressions.*
 
 <a name ="Examples_of_Regular_Expressions_in_Humdrum"></a>
@@ -466,21 +465,20 @@ The following table provides some examples of regular expressions
 pertinent to Humdrum-format inputs:\
 \
 
->   ---------------------------- ----------------------------------------------------------
->   \^!!                         match any global comment
->   \^!!.\*Beethoven             match any global comment containing \`Beethoven\'
->   \^!!.\*\[Rr\]ecapitulation   match any global comment containing the word
->                                \`Recapitulation\' or \`recapitulation\'
->   \^!(\$\|\[\^!\])             match only local comments
->   \^\\\*\\\*                   match any exclusive interpretation
->   \^\\\*\[\^\*\]               match only tandem interpretations
->   \^\\\*\[-+vx\^\]\$           match spine-path indicators
->   \^\[\^\*!\]                  match only data records
->   \^\[\^\*!\].\*\$             match entire data records
->   \^(\\.\<*tab\>*)\*/.\$       match records containing only null tokens ( means a tab)
->   \^\\\*f\#:                   match key interpretation indicating F\# minor
->   ---------------------------- ----------------------------------------------------------
->
+  ---------------------------- ----------------------------------------------------------
+  \^!!                         match any global comment
+  \^!!.\*Beethoven             match any global comment containing \`Beethoven\'
+  \^!!.\*\[Rr\]ecapitulation   match any global comment containing the word
+                               \`Recapitulation\' or \`recapitulation\'
+  \^!(\$\|\[\^!\])             match only local comments
+  \^\\\*\\\*                   match any exclusive interpretation
+  \^\\\*\[\^\*\]               match only tandem interpretations
+  \^\\\*\[-+vx\^\]\$           match spine-path indicators
+  \^\[\^\*!\]                  match only data records
+  \^\[\^\*!\].\*\$             match entire data records
+  \^(\\.\<*tab\>*)\*/.\$       match records containing only null tokens ( means a tab)
+  \^\\\*f\#:                   match key interpretation indicating F\# minor
+  ---------------------------- ----------------------------------------------------------
 *Regular expressions suitable for all Humdrum inputs.*
 
 By way of illustration, the next table shows examples of regular
@@ -488,31 +486,30 @@ expressions appropriate for processing
 [`**kern`](/rep/kern) representations.\
 \
 
->   --------------------------------------------------- -----------------------------------------------------------
->   \^=                                                 match any `**kern` barline or double barline
->   \^=\[\^=\]                                          match `**kern` single barlines but not double barlines
->   \^\[\^=\]                                           match any token other than a barline or double barline
->   ;                                                   match any `**kern` note or barline containing a pause
->   T                                                   match any `**kern` note containing a whole-tone trill
->   \[Tt\]                                              match any `**kern` note containing a whole-tone or
->                                                       half-tone trill
->   \-                                                  match any `**kern` note containing at least one flat
->   \[\#\]                                              match any `**kern` note containing a sharp, double-
->                                                       sharp, etc.
->   \[\#n-;\]                                           match any `**kern` note containing an accidental,
->                                                       including a natural
->   \[A-Ga-g\]+                                         match any diatonic pitch letter-name
->   \[0-9\]+/.                                          match `**kern` dotted durations
->   \[0-9\]+/./.\[\^.\]                                 match only doubly-dotted durations
->   \[Gg\]+\[\^\#-\]                                    match any `**kern` pitch \`G\' that does not have a sharp
->                                                       or flat
->   (\^\|\[\^g\])gg(\$\|\[\^g\#-\])                     match only the pitch \`gg\' (G5)
->   {.\*r\|r.\*{                                        match all phrases that start with a rest
->   \^4\[\^0-9.\]\|\[\^0-9\]4(\[\^0-9.\]\|\$)           match `**kern` quarter durations
->   \^(8\|16)\[\^0-9.\]\|\[\^0-9\](8\|16)\[\^0-9.\]     match eighth and sixteenth durations only
->   ((\[Ee\]+-)\|(\[Gg\]+-)\|(\[Bb\]+-))(\$\|\[\^-\])   match any note from E-flat minor chord
->   --------------------------------------------------- -----------------------------------------------------------
->
+  --------------------------------------------------- -----------------------------------------------------------
+  \^=                                                 match any `**kern` barline or double barline
+  \^=\[\^=\]                                          match `**kern` single barlines but not double barlines
+  \^\[\^=\]                                           match any token other than a barline or double barline
+  ;                                                   match any `**kern` note or barline containing a pause
+  T                                                   match any `**kern` note containing a whole-tone trill
+  \[Tt\]                                              match any `**kern` note containing a whole-tone or
+                                                      half-tone trill
+  \-                                                  match any `**kern` note containing at least one flat
+  \[\#\]                                              match any `**kern` note containing a sharp, double-
+                                                      sharp, etc.
+  \[\#n-;\]                                           match any `**kern` note containing an accidental,
+                                                      including a natural
+  \[A-Ga-g\]+                                         match any diatonic pitch letter-name
+  \[0-9\]+/.                                          match `**kern` dotted durations
+  \[0-9\]+/./.\[\^.\]                                 match only doubly-dotted durations
+  \[Gg\]+\[\^\#-\]                                    match any `**kern` pitch \`G\' that does not have a sharp
+                                                      or flat
+  (\^\|\[\^g\])gg(\$\|\[\^g\#-\])                     match only the pitch \`gg\' (G5)
+  {.\*r\|r.\*{                                        match all phrases that start with a rest
+  \^4\[\^0-9.\]\|\[\^0-9\]4(\[\^0-9.\]\|\$)           match `**kern` quarter durations
+  \^(8\|16)\[\^0-9.\]\|\[\^0-9\](8\|16)\[\^0-9.\]     match eighth and sixteenth durations only
+  ((\[Ee\]+-)\|(\[Gg\]+-)\|(\[Bb\]+-))(\$\|\[\^-\])   match any note from E-flat minor chord
+  --------------------------------------------------- -----------------------------------------------------------
 *Regular expressions suitable for \*\*kern data records.*
 
 Note that the above regular expressions assume that comments and
@@ -522,7 +519,7 @@ given above in the expression
 
 ``
 
-> (\^\[\^\*!\].\**regexp*)\|(\^*regexp*)
+(\^\[\^\*!\].\**regexp*)\|(\^*regexp*)
 
 For example, the following regular expression can be used to match
 [`**kern`](/rep/kern) trills without possibly
@@ -530,7 +527,7 @@ mistaking comments or interpretations:
 
 ``
 
-> (\^\[\^\*!\].\*\[Tt\])\|(\^\[Tt\])
+(\^\[\^\*!\].\*\[Tt\])\|(\^\[Tt\])
 
 For Humdrum commands such as [**humsed**,](/tool/humsed)
 [**rend**,](/tool/rend) [**yank**,](/tool/yank)
@@ -599,15 +596,3 @@ expressions.
 In the next chapter we will explore how regular expressions may be used
 in musical applications.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch10)
-
-[**Previous Chapter**](/guide/ch08)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

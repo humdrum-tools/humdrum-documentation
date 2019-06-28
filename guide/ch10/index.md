@@ -34,17 +34,16 @@ are identified in Table 10.1.\
 \
 **Table 10.1**
 
->   ----------- -----------------------------------------------------------------------------------
->   -c          count the number of lines matching the regular expression
->   -f *file*   search for patterns that are specified in *file*
->   -i          ignore differences of upper- and lower-case
->   -l          just list the names of files containing a matching line
->   -n          prefix each output line with its line number
->   -h          suppress file-name prefixes (headers) in output when searching more than one file
->   -v          display all lines *not* matching the regular expression
->   -L          list names of files *not* containing the regular expression
->   ----------- -----------------------------------------------------------------------------------
->
+  ----------- -----------------------------------------------------------------------------------
+  -c          count the number of lines matching the regular expression
+  -f *file*   search for patterns that are specified in *file*
+  -i          ignore differences of upper- and lower-case
+  -l          just list the names of files containing a matching line
+  -n          prefix each output line with its line number
+  -h          suppress file-name prefixes (headers) in output when searching more than one file
+  -v          display all lines *not* matching the regular expression
+  -L          list names of files *not* containing the regular expression
+  ----------- -----------------------------------------------------------------------------------
 *Common options for the **grep** command.*
 
 Many of the predefined Humdrum representations make use of the \"common
@@ -53,25 +52,25 @@ number of barlines in the file `czech37.krn`. Note that the caret anchor
 (`^`) is used to avoid inadvertent matches of the equals sign that might
 appear in Humdrum comments or interpretations.
 
-> `grep -c ^= czech37.krn`
+`grep -c ^= czech37.krn`
 
 Recall that the dollar sign (`$`) can be used to anchor an expression to
 the end of the line. The following command determines whether numbered
 measure 9 is present in the file `france12.krn`; the dollar sign ensures
 that measure 9 is not mistaken for measure 90, 930, etc.
 
-> `grep ^=9$ france12.krn`
+`grep ^=9$ france12.krn`
 
 The asterisk means \"zero or more\" instances of the preceding
 expression. For example, the following regular expression will match any
 reference record or global comment in the file `clara29`:
 
-> `grep '^!!!*' clara29`
+`grep '^!!!*' clara29`
 
 Suppose we want to list all of the global comments for all files in the
 current directory:
 
-> `grep '^!!!*' *`
+`grep '^!!!*' *`
 
 Notice that the two asterisks serve different functions in the above
 command. The first asterisk means \"zero or more instances\" and is part
@@ -87,7 +86,7 @@ as \``AXB`\' and \``AAB`\' etc. The following command identifies all
 eighth-notes containing at least one flat, and whose pitch lies within
 an octave of middle C.
 
-> `grep 8.- *.krn`
+`grep 8.- *.krn`
 
 Frequently it is necessary to turn off the special meanings for
 metacharacters such as \^, \$, and \*. Recall that this can be done by
@@ -96,7 +95,7 @@ the [`**kern`](/rep/kern) representation the caret
 signifies an accent. In a monophonic input, we might count the number of
 notes that have a notated accent as follows:
 
-> `grep -c '\^' danmark3.krn`
+`grep -c '\^' danmark3.krn`
 
 <a name ="9.8_Meter_Works"></a>
 
@@ -106,7 +105,7 @@ output only the names of any files that contain a line matching the
 pattern. Hence, the following command identifies those files in the
 current directory that encode music in 9/8 meter:
 
-> `grep -l '^\*M9/8' *`
+`grep -l '^\*M9/8' *`
 
 <a name ="3.8_or_9.8_Meter_Works"></a>
 
@@ -115,7 +114,7 @@ where any of the characters in the class can be used to match the
 expression. The following command identifies those files in the current
 directory that encode music in either 3/8 or 9/8 meter:
 
-> `grep -l '\*M[39]/8' *`
+`grep -l '\*M[39]/8' *`
 
 <a name ="Trumpet_Works"></a>
 
@@ -126,7 +125,7 @@ expression commonly appears between two other character strings. For
 example, we can identify all files in the current directory whose
 instrumentation includes a trumpet:
 
-> `grep -l '!!!AIN.*tromp' *`
+`grep -l '!!!AIN.*tromp' *`
 
 The `.*` expression is needed since we don\'t know what other
 instruments might be listed following `AIN` and before `tromp`.
@@ -136,7 +135,7 @@ combinations of instruments. For example, we can identify all scores in
 the current directory whose instrumentation includes both trumpet and
 cornet as follows:
 
-> `grep -l '!!!AIN.*cornt.*tromp' *`
+`grep -l '!!!AIN.*cornt.*tromp' *`
 
 <a name ="Drei_Koenige_Works"></a>
 
@@ -145,7 +144,7 @@ command identifies all files that contain a record having the word
 `Drei` followed by the word \"`Koenige`\". (Notice the use of the **-i**
 option in order to ignore the case of the letters.)
 
-> `grep -li 'Drei.*Koenige' *`
+`grep -li 'Drei.*Koenige' *`
 
 This command will match such strings as: *Die Heiligen Drei Koenige*,
 *Drei Koenige,* *Dreikoenigslied,* etc.
@@ -155,49 +154,49 @@ This command will match such strings as: *Die Heiligen Drei Koenige*,
 The \``!!!AGN`\' reference record is used to encode genre-related
 keywords. The following command lists all files that are ballads.
 
-> `grep -l '!!!AGN.*Ballad' *`
+`grep -l '!!!AGN.*Ballad' *`
 
 <a name ="Amour_Titles"></a>
 
 List all files that have the word `Amour` in the title:
 
-> `grep -li '!!!OLT.*Amour' *`
+`grep -li '!!!OLT.*Amour' *`
 
 <a name ="Dedications"></a>
 
 List any works that bear a dedication:
 
-> `grep -l '!!!ODE:' *`
+`grep -l '!!!ODE:' *`
 
 <a name ="Irregular_meter_works"></a>
 
 List those works that are in irregular meters:
 
-> `grep -l '!!!AMT.*irregular' *`
+`grep -l '!!!AMT.*irregular' *`
 
 The **-L** option for **grep** causes the output to contain a list of
 files *not* containing the regular expression. For example, we could
 identify those works that don\'t bear any dedication:
 
-> `grep -L '!!!ODE:' *`
+`grep -L '!!!ODE:' *`
 
 <a name ="Not_Schumann_Works"></a>
 
 List those works *not* composed by Schumann:
 
-> `grep -L '!!!COM: Schumann' *`
+`grep -L '!!!COM: Schumann' *`
 
 <a name ="Works_without_double_bars"></a>
 
 Identify any works that don\'t contain any double barlines:
 
-> `grep -L '^==' *`
+`grep -L '^==' *`
 
 <a name ="Simple_Triple_Works"></a>
 
 How many works in the current directory are in simple-triple meter?
 
-> `grep -c '!!!AMT.*simple.*triple' *`
+`grep -c '!!!AMT.*simple.*triple' *`
 
 <a name ="Liebe_Tod_Titles"></a>
 
@@ -208,8 +207,8 @@ The first of the following commands will identify only those titles that
 contain `Liebe` followed by `Tod`, whereas the second command will
 identify only those titles that contain `Tod` followed by `Liebe`:
 
-> `grep '!!!OTL.*Liebe.*Tod' *`\
-> `grep '!!!OTL.*Tod.*Liebe' *`
+`grep '!!!OTL.*Liebe.*Tod' *`\
+`grep '!!!OTL.*Tod.*Liebe' *`
 
 A better solution is to pipe the output between two **grep** commands.
 Recall that the vertical bar (\`\|\') conveyes or \"pipes\" the output
@@ -220,7 +219,7 @@ containing the word `Tod`. Since both **grep** commands process the
 entire input line, it does not matter whether the word `Tod` precedes or
 follows the word `Liebe`:
 
-> `grep '!!!OTL.*Liebe' * | grep 'Tod'`
+`grep '!!!OTL.*Liebe' * | grep 'Tod'`
 
 The **-v** option for **grep** causes a \"reverse\" or \"negative\"
 output. Instead of outputting all records that *match* the specified
@@ -229,11 +228,11 @@ output that do *not* match the given regular expression. For example,
 the following command eliminates all comments from the file
 `polska24.krn`:
 
-> `grep -v '^!' polska24.krn`
+`grep -v '^!' polska24.krn`
 
 Similarly, the following command eliminates all whole-note rests:
 
-> `grep -v 1r *`
+`grep -v 1r *`
 
 <a name ="Cornet_but_not_Trumpet"></a>
 
@@ -241,21 +240,21 @@ The **-v** option is especially convenient in pipelines. For example,
 the following command identifies all those files whose instrumentation
 includes a cornet but not a trumpet:
 
-> `grep '!!!AIN.*cornt' * | grep -v 'tromp'`
+`grep '!!!AIN.*cornt' * | grep -v 'tromp'`
 
 <a name ="Compound_Works_not_Quadruple"></a>
 
 The following command identifies those works in compound meters that are
 not also quadruple meters:
 
-> `grep '!!!AMT.*compound' * | grep -v 'quadruple'`
+`grep '!!!AMT.*compound' * | grep -v 'quadruple'`
 
 <a name ="Phrase_begins_not_rests"></a>
 
 Similarly, the following command identifies those notes that begin a
 phrase, but are not rests.
 
-> `grep '^{' * | grep -v r`
+`grep '^{' * | grep -v r`
 
 <a name ="German,_French,_Italian,_and_Neapolitan_Sixths"></a>
 
@@ -276,7 +275,7 @@ respectively. First we translate the input to the `**solfa`
 representation, and then we search for records matching the appropriate
 regular expression:
 
-> `solfa input | grep '6-.*4+'`
+`solfa input | grep '6-.*4+'`
 
 Notice that the expression \``6-.*4+`\' presumes that the lowered sixth
 degree is lower in pitch than the raised fourth degree. For augmented
@@ -286,16 +285,16 @@ lowered sixth degree, we would need to also search for the expression
 \``4+.*6-`\'. Alternatively, we could use two separate **grep**
 commands, eliminating the constraint of order:
 
-> `solfa input | grep '6-' | grep '4+'`
+`solfa input | grep '6-' | grep '4+'`
 
 Augmented sixth chords can be further classified as either German,
 French, or Italian sixths. The German sixth contains the lowered mediant
 whereas the French sixth contains the supertonic pitch; the Italian
 sixth contains neither:
 
-> `solfa input | grep '6-.*4+' | grep '3-'` \# German sixth\
-> `solfa input | grep '6-.*4+' | grep '2'` \# French sixth\
-> `solfa input | grep '6-.*4+' | grep -v '[23]'` \# Italian sixth
+`solfa input | grep '6-.*4+' | grep '3-'` \# German sixth\
+`solfa input | grep '6-.*4+' | grep '2'` \# French sixth\
+`solfa input | grep '6-.*4+' | grep -v '[23]'` \# Italian sixth
 
 A similar approach can be used to identify Neapolitan sixth chords.
 These chords are based on the lowered supertonic with the third of the
@@ -303,13 +302,13 @@ chord (unaltered subdominant) in the bass.
 
 <a name ="Neapolitan_Sixth"></a>
 
-> `solfa input | grep '4[^-+].*2-' | grep '6-'` \# Neapolitan sixth
+`solfa input | grep '4[^-+].*2-' | grep '6-'` \# Neapolitan sixth
 
 Depending on the key, Neapolitan chords are sometimes notated
 enharmonically as a raised tonic chord. Suppose we were looking for such
 enharmonically spelled Neapolitan chords:
 
-> `solfa input | grep '3+.*1+' | grep '5+'`
+`solfa input | grep '3+.*1+' | grep '5+'`
 
 <a name ="Incomplete_Neapolitan_Sixth"></a>
 
@@ -317,7 +316,7 @@ Occassionally, Neapolitan chords are missing the fifth of the chord (the
 lowered sixth degree of the scale). We might search for an example of
 such a chord:
 
-> `solfa input | grep '2-' | grep '4' | grep -v '6-'`
+`solfa input | grep '2-' | grep '4' | grep -v '6-'`
 
 <a name ="AND-Searches_Using_the_xargs_Command"></a>
 
@@ -337,7 +336,7 @@ output from one command to be used as final arguments for a subsequent
 command. For example, the following command takes each file whose opus
 title contains the word `Liebe` and counts the number of phrases.
 
-> `grep -l '!!!OTL:.*Liebe' * | xargs grep -c '^{'`
+`grep -l '!!!OTL:.*Liebe' * | xargs grep -c '^{'`
 
 In this case the **grep -l** command outputs a list of names of files
 containing the string `Liebe` in an OTL reference record. The **xargs**
@@ -352,17 +351,17 @@ A set of such pipelines can be used to answer more sophisticated
 questions. For example, are drinking songs more apt to be in triple
 meter?
 
-> `grep -l '!!!AMT.*triple'  *   | xargs grep -l '!!!AGN.*Trinklied'`\
-> `grep -l '!!!AMT.*duple'   *   | xargs grep -l '!!!AGN.*Trinklied'`\
-> `grep -l '!!!AMT.*quadruple' * | xargs grep -l '!!!AGN.*Trinklied'`
+`grep -l '!!!AMT.*triple'  *   | xargs grep -l '!!!AGN.*Trinklied'`\
+`grep -l '!!!AMT.*duple'   *   | xargs grep -l '!!!AGN.*Trinklied'`\
+`grep -l '!!!AMT.*quadruple' * | xargs grep -l '!!!AGN.*Trinklied'`
 
 <a name ="Death_in_minor_keys"></a>
 
 Similarly, the following commands determine whether files whose titles
 contain the word *death* are more apt to be in minor keys:
 
-> `grep -li '!!!OTL.*death' * | xargs grep -c '^\*[a-g][#-]*:'`\
-> `grep -li '!!!OTL.*death' * | xargs grep -c '^\*[A-G][#-]*:'`
+`grep -li '!!!OTL.*death' * | xargs grep -c '^\*[a-g][#-]*:'`\
+`grep -li '!!!OTL.*death' * | xargs grep -c '^\*[A-G][#-]*:'`
 
 <a name ="Africa_key_signatures"></a>
 
@@ -371,9 +370,8 @@ propagating file names as arguments to subsequent searches. For example,
 the following command outputs the key signatures for all works
 originating from Africa that are written in 3/4 meter:
 
-> `grep -l '!!!ARE.*Africa' * | xargs grep -l '^\*M3/4' \`
->
-> > \| xargs grep \'\^\\\*k\\\[\'
+`grep -l '!!!ARE.*Africa' * | xargs grep -l '^\*M3/4' \`
+> \| xargs grep \'\^\\\*k\\\[\'
 
 <a name ="17th_organ_in_6.8"></a>
 
@@ -381,9 +379,8 @@ Similarly, the following command outputs the names of all files in the
 current directory that encode 17th century organ works containing
 passages in 6/8 meter:
 
-> `grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \`
->
-> > \'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
+`grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \`
+> \'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
 
 <a name ="17th_organ_not_in_6.8"></a>
 
@@ -393,9 +390,8 @@ above command outputs the names of all files in the current directory
 that encode 17th century organ works that do not contain passages in 6/8
 meter:
 
-> `grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \`
->
-> > \'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
+`grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \`
+> \'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
 
 <a name ="OR-Searches_Using_the_grep_-f_Command"></a>
 
@@ -410,11 +406,11 @@ option, we specify a file containing the patterns being sought. For
 example, we might create a file called `criteria` containing the
 following three regular expressions:
 
-> `!!!ODT.*16[0-9][0-9]/  !!!AIN.*organ  \*M6/8`
+`!!!ODT.*16[0-9][0-9]/  !!!AIN.*organ  \*M6/8`
 
 We would invoke **grep** as follows:
 
-> `grep -l -f criteria *`
+`grep -l -f criteria *`
 
 The **-f** option tells **grep** to fetch the file `criteria` and use
 the records in this file as regular expressions. A match is made if any
@@ -430,28 +426,28 @@ searching for D major triads in
 [`**pitch`](/rep/pitch) data. We could use a file
 containing the following regular expressions:
 
-> `[Dd].*[Ff]#.*[Aa]  [Dd].*[Aa].* [Ff]#  [Ff]#.*[Aa].*[Dd]  [Ff]#.*[Dd].*[Aa]  [Aa].*[Dd].*[Ff]#  [Aa].*[Ff]#.*[Dd]`
+`[Dd].*[Ff]#.*[Aa]  [Dd].*[Aa].* [Ff]#  [Ff]#.*[Aa].*[Dd]  [Ff]#.*[Dd].*[Aa]  [Aa].*[Dd].*[Ff]#  [Aa].*[Ff]#.*[Dd]`
 
 Depending on the application, it may be easier to construct such pattern
 files than to use a lengthy pipeline. That is:
 
-> `grep -f Dmajor *`
+`grep -f Dmajor *`
 
 may be less cumbersome than:
 
-> `grep [Dd] * | grep [Ff]# | grep [Aa]`
+`grep [Dd] * | grep [Ff]# | grep [Aa]`
 
 The **-f** option can be combined with **-L**. For example, suppose we
 wanted to identify all works in the current directory that are not in
 the keys of C major, G major, B-flat major or D minor. Our regular
 expression file would contain the following regular expressions:
 
-> `^\*[CGd]:`\
-> `^\*B-:`
+`^\*[CGd]:`\
+`^\*B-:`
 
 The corresponding command would be:
 
-> `grep -L -f criteria *`
+`grep -L -f criteria *`
 
 <a name ="Whole_Tone_Sets"></a>
 
@@ -462,8 +458,8 @@ pitch set. Let\'s create two files, one called `whole1` and the other
 called `whole2`. The file `whole1` might contain the following regular
 expressions:
 
-> \
-> `[Cc]([^-#Cc]|$)  [Dd]([^-#Dd]|$)  [Ee]([^-#Ee]|$)  [Ff]#([^#]|$)  [Gg]-([^-]|$)  [Gg]#([^#]|$)  [Aa]-([^-]|$)  [Aa]#([^#]|$)  [Bb]-([^-]|$)`
+\
+`[Cc]([^-#Cc]|$)  [Dd]([^-#Dd]|$)  [Ee]([^-#Ee]|$)  [Ff]#([^#]|$)  [Gg]-([^-]|$)  [Gg]#([^#]|$)  [Aa]-([^-]|$)  [Aa]#([^#]|$)  [Bb]-([^-]|$)`
 
 Notice that the regular expressions have been carefully defined. The
 first regular expression defines a pattern consisting of either an
@@ -477,13 +473,13 @@ than the **grep** command with the above expressions. We can count the
 number of notes in a monophonic `**kern` input that belong to this
 whole-tone set:
 
-> `egrep -c -f whole1 debussy`
+`egrep -c -f whole1 debussy`
 
 If the file `whole2` contains regular expressions for the complementary
 pitch set, we could similarly count the number of pitches that belong to
 this alternative set:
 
-> `egrep -c -f whole2 debussy`
+`egrep -c -f whole2 debussy`
 
 ------------------------------------------------------------------------
 
@@ -511,15 +507,3 @@ wide variety of commands. In [Chapter 33,](/guide/ch33) many more
 powerful examples will be discussed in conjunction with the **find**
 command.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch11)
-
-[**Previous Chapter**](/guide/ch09)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

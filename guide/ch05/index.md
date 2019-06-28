@@ -38,16 +38,15 @@ signifiers that occupy the same horizontal line represent concurrent (or
 overlapping) events. The basic organization of Humdrum files may be
 schematically illustrated as follows:
 
->   ----------------------- ------------ -------- -- ------ ------
->                           successive   events             
->                                                           
->   concurrent events -\>   A            J           V      etc.
->                           B            K           W      etc.
->                           C            L           X      etc.
->                           D            M           Y      etc.
->                           etc.         etc.        etc.   
->   ----------------------- ------------ -------- -- ------ ------
->
+  ----------------------- ------------ -------- -- ------ ------
+                          successive   events             
+                                                          
+  concurrent events -\>   A            J           V      etc.
+                          B            K           W      etc.
+                          C            L           X      etc.
+                          D            M           Y      etc.
+                          etc.         etc.        etc.   
+  ----------------------- ------------ -------- -- ------ ------
 <a name ="Types_of_Records"></a>
 
 Types of Records
@@ -159,29 +158,27 @@ into tokens. In Humdrum, there are two possible types of tokens:
 
 Consider, for example, the following file: ``
 
->   --- -- -- --- -- -- ---
->   X         .         X
->   X         X         X
->   .         X         X
->   X         .         X
->   --- -- -- --- -- -- ---
->
+  --- -- -- --- -- -- ---
+  X         .         X
+  X         X         X
+  .         X         X
+  X         .         X
+  --- -- -- --- -- -- ---
 This file consists of three vertical spines and four horizontal records.
 The first and third spines begin with data tokens, while the second
 spine begins with a null token. Without the presence of interpretations,
 the meaning of this file is indeterminate. The file below contains two
 spines that have been labelled using Humdrum interpretations: ``
 
->   ---------- -----------
->   \*\*left   \*\*right
->   X          .
->   .          X
->   X          .
->   .          X
->   X          .
->   \*-        \*-
->   ---------- -----------
->
+  ---------- -----------
+  \*\*left   \*\*right
+  X          .
+  .          X
+  X          .
+  .          X
+  X          .
+  \*-        \*-
+  ---------- -----------
 The user has defined two interpretations: \"left\" and \"right.\" The
 intention is to represent the footfalls of a person\'s left and right
 feet. The representation simply encodes that the left and right feet
@@ -203,17 +200,16 @@ Interpretations can be cascaded so that a single spine has more than one
 interpretation associated with it. This is done through the addition of
 tandem interpretations. Consider the following example: ``
 
->   ---------- ---------- --------- ---------
->   \*\*foot   \*\*foot   \*\*arm   \*\*arm
->   \*left     \*right    \*left    \*right
->   X          .          .         X
->   .          X          X         .
->   X          .          .         X
->   .          X          X         .
->   X          .          .         X
->   \*-        \*-        \*-       \*-
->   ---------- ---------- --------- ---------
->
+  ---------- ---------- --------- ---------
+  \*\*foot   \*\*foot   \*\*arm   \*\*arm
+  \*left     \*right    \*left    \*right
+  X          .          .         X
+  .          X          X         .
+  X          .          .         X
+  .          X          X         .
+  X          .          .         X
+  \*-        \*-        \*-       \*-
+  ---------- ---------- --------- ---------
 In this case the categories \"left\" and \"right\" have been transformed
 to tandem interpretations. The first spine is interpreted both as
 \"left\" and as \"foot.\" The exclusive interpretation (double
@@ -253,14 +249,13 @@ sub-tokens whereas the third spine contains three sub-tokens. Sub-tokens
 do not have their own spine organization and can appear and disappear as
 necessary:
 
->   ------------ ------------ ------------
->   `**spine1`   \*\*spine2   \*\*spine3
->   A B          J            X Y Z
->   AB           J            XYZ
->   A B C        .            X Z
->   \*-          \*-          \*-
->   ------------ ------------ ------------
->
+  ------------ ------------ ------------
+  `**spine1`   \*\*spine2   \*\*spine3
+  A B          J            X Y Z
+  AB           J            XYZ
+  A B C        .            X Z
+  \*-          \*-          \*-
+  ------------ ------------ ------------
 Data sub-tokens are useful in a variety of circumstances. An appropriate
 use of sub-tokens might be to encode double- and triple-stops in string
 parts.
@@ -286,15 +281,14 @@ to vary the number of spines. However, files with varying numbers of
 spines can pose significant questions of interpretation. Consider, for
 example, the following sequence of Humdrum-like data records: ``
 
->   --- -- -- --- -- -- ---
->   1         2         3
->   1         2         3
->   1         2         3
->   A         B         
->   A         B         
->   A         B         
->   --- -- -- --- -- -- ---
->
+  --- -- -- --- -- -- ---
+  1         2         3
+  1         2         3
+  1         2         3
+  A         B         
+  A         B         
+  A         B         
+  --- -- -- --- -- -- ---
 At the point where three spines are reduced to two spines the continuity
 is ambiguous: Has spine \`3\' been discontinued? Or is spine \`B\' a
 continuation of spine \`3\' with spine \`A\' a continuation of spine
@@ -325,16 +319,15 @@ the lower-case letter \`v\' (join spines), and the lower-case letter
 exists whose purpose is merely to act as a place-holder in
 interpretation records:
 
->   ------ -----------------------------------------------------
->   `*+`   add a new spine (to the right of the current spine)
->   `*-`   terminate a current spine
->   `*^`   split a spine (into two)
->   `*v`   join (two or more) spines into one
->   `*x`   exchange the position of two spines
->          
->   `*`    null interpretation (place holder)
->   ------ -----------------------------------------------------
->
+  ------ -----------------------------------------------------
+  `*+`   add a new spine (to the right of the current spine)
+  `*-`   terminate a current spine
+  `*^`   split a spine (into two)
+  `*v`   join (two or more) spines into one
+  `*x`   exchange the position of two spines
+         
+  `*`    null interpretation (place holder)
+  ------ -----------------------------------------------------
 *Spine Path Interpretations* Spine paths are types of interpretations,
 so the spine path indicators are encoded as Humdrum interpretations,
 using the asterisk signifier (\*). The following examples illustrate a
@@ -342,46 +335,43 @@ few possible path changes:
 
 ``
 
->   ---- ------ ----- --- ----------------------------------------
->   1    2      3         
->   \*   \*-    \*        (elimination of spine \#2)``
->   1    3                
->                         
->   1    2      3         
->   \*   \*x    \*x       (exchange spines \#2 and \#3)``
->   1    3      2         
->                         
->   1    2      3         
->   \*   \*\^   \*        (splitting of spine \#2)``
->   1    2a     2b    3   
->                         
->   1    2      3         
->   \*   \*v    \*v       (amalgamation of spines \#2 and \#3)``
->   1    2&3              
->   ---- ------ ----- --- ----------------------------------------
->
+  ---- ------ ----- --- ----------------------------------------
+  1    2      3         
+  \*   \*-    \*        (elimination of spine \#2)``
+  1    3                
+                        
+  1    2      3         
+  \*   \*x    \*x       (exchange spines \#2 and \#3)``
+  1    3      2         
+                        
+  1    2      3         
+  \*   \*\^   \*        (splitting of spine \#2)``
+  1    2a     2b    3   
+                        
+  1    2      3         
+  \*   \*v    \*v       (amalgamation of spines \#2 and \#3)``
+  1    2&3              
+  ---- ------ ----- --- ----------------------------------------
 Notice that in cases where two or more spines are amalgamated, the
 spines must be adjacent neighbors. For example, the arrangement below is
 forbidden by the Humdrum syntax since it is not clear whether spines \#1
 and \#3 amalgamate into spine \`A\' or spine \`B\'. ``
 
->   ----- ---- ----- -- ---------------------------
->   1     2    3        
->   \*v   \*   \*v      (syntactically illegal)``
->   A     B             
->   ----- ---- ----- -- ---------------------------
->
+  ----- ---- ----- -- ---------------------------
+  1     2    3        
+  \*v   \*   \*v      (syntactically illegal)``
+  A     B             
+  ----- ---- ----- -- ---------------------------
 In such cases, amalgamating the two outer spines can be accomplished by
 first using the exchange path signifier. Here we exchange spines \#2 and
 \#3 before amalgamating the original first and third spines: ``
 
->   ----- ----- -----
->   1     2     3
->   \*    \*x   \*x
->   \*v   \*v   \*
->   1&3   2     
->   ----- ----- -----
->
+  ----- ----- -----
+  1     2     3
+  \*    \*x   \*x
+  \*v   \*v   \*
+  1&3   2     
+  ----- ----- -----
 In cases where the user wishes to amalgamate several spines, a number of
 interpretation records may be necessary. In the following example,
 spines \#1 and \#2 are first joined together (momentarily defining three
@@ -389,114 +379,106 @@ spines: 1&2, 3, 4). In the subsequent interpretation record, spine \#2
 (previous spine \#3) and spine \#3 (previous spine \#4) are then joined:
 ``
 
->   ----- ----- ----- ----
->   1     2     3     4
->   \*v   \*v   \*    \*
->   \*    \*v   \*v   
->   1&2   3&4         
->   ----- ----- ----- ----
->
+  ----- ----- ----- ----
+  1     2     3     4
+  \*v   \*v   \*    \*
+  \*    \*v   \*v   
+  1&2   3&4         
+  ----- ----- ----- ----
 In addition, it is possible to join more than two spines at the same
 time: ``
 
->   --------- -- ----- -- ----- -- -----
->   1            2        3        4
->   \*v          \*v      \*v      \*v
->   1&2&3&4                        
->   --------- -- ----- -- ----- -- -----
->
+  --------- -- ----- -- ----- -- -----
+  1            2        3        4
+  \*v          \*v      \*v      \*v
+  1&2&3&4                        
+  --------- -- ----- -- ----- -- -----
 In cases where a new spine is introduced, it is essential to indicate
 the exclusive interpretation that applies to the new data. Thus an \`add
 spine\' indication must be followed by a second interpretation record:
 
->   ----- ----- ----------- ---- -------------------------------------------------------
->   `1`   2     3                
->   \*    \*+   \*               (add a new spine.)``
->   \*    \*    \*\*inter   \*   (define exclusive interpretation for the new spine)``
->   1     2     new         3    
->   ----- ----- ----------- ---- -------------------------------------------------------
->
+  ----- ----- ----------- ---- -------------------------------------------------------
+  `1`   2     3                
+  \*    \*+   \*               (add a new spine.)``
+  \*    \*    \*\*inter   \*   (define exclusive interpretation for the new spine)``
+  1     2     new         3    
+  ----- ----- ----------- ---- -------------------------------------------------------
 Failing to follow the introduction of a new spine by a subsequent
 exclusive interpretation is illegal.
 
 The following examples illustrate a variety of more complex path
 redefinitions: ``
 
->   ----- ----- ------ ------ ----
->   1     2     3      4      
->   \*v   \*v   \*\^   \*\^   
->   1&2   3a    3b     4a     4b
->   ----- ----- ------ ------ ----
->
+  ----- ----- ------ ------ ----
+  1     2     3      4      
+  \*v   \*v   \*\^   \*\^   
+  1&2   3a    3b     4a     4b
+  ----- ----- ------ ------ ----
 ``
 
->   ------- ----- ----- ----- ----
->   1       2     3     4     5
->   \*      \*-   \*    \*-   \*
->   \*v     \*v   \*v         
->   1&3&5                     
->   ------- ----- ----- ----- ----
->
+  ------- ----- ----- ----- ----
+  1       2     3     4     5
+  \*      \*-   \*    \*-   \*
+  \*v     \*v   \*v         
+  1&3&5                     
+  ------- ----- ----- ----- ----
 ``
 
->   ----- ----- ---- ------ ----- ---------
->   1     2     3    4      5     
->   \*    \*-   \*   \*\^   \*+   
->   \*    \*    \*   \*     \*    \*\*new
->   \*v   \*v   \*   \*     \*    \*
->   1&3   4a    4b   5      new   
->   ----- ----- ---- ------ ----- ---------
->
+  ----- ----- ---- ------ ----- ---------
+  1     2     3    4      5     
+  \*    \*-   \*   \*\^   \*+   
+  \*    \*    \*   \*     \*    \*\*new
+  \*v   \*v   \*   \*     \*    \*
+  1&3   4a    4b   5      new   
+  ----- ----- ---- ------ ----- ---------
 ``
 
->   ----- ----- ----- -----
->   1     2     3     4
->   \*x   \*x   \*    \*
->   \*    \*x   \*x   \*
->   \*    \*    \*x   \*x
->   2     3     4     1
->   ----- ----- ----- -----
->
+  ----- ----- ----- -----
+  1     2     3     4
+  \*x   \*x   \*    \*
+  \*    \*x   \*x   \*
+  \*    \*    \*x   \*x
+  2     3     4     1
+  ----- ----- ----- -----
 Note that with judicious planning, the user can completely reconfigure
 all spines within a Humdrum file.
 
 Syntactically, some path constructions are illegal; here are some
 examples of illegal constructions:
 
->   ------ ----------- ----- -- ----------------------------------------------------------------
->   `1`    2           3        
->   `*v`   \*          \*v      (The join-spine indication in spine \#1 does not adjoin
->                               spine \#3.)
->   `1`    2           3        
->   `*x`   \*x         \*x      (No more than two exchange interpretations at a time.)
->                               
->   `1`    2           3        
->   `*x`   \*          \*       (Must have two exchange interpretations together.)
->                               
->   `1`    2           3        
->   `*v`   \*          \*       (Must have two or more join interpretations at a time.)
->                               
->   `1`    2           3        
->   `*`    \*                   (Spine eliminated without using a termination interpretation.)
->   `1`    2                    
->                               
->   `1`    2           3        
->   `*`    \*          \*+      (Adding a new spine should result in 4 interpretations.)
->   `1`    2           3        
->                               
->   `1`    2                    
->   `*`    \*          \*-      (Cannot eliminate non-existent spine.)
->                               
->   `1`    2                    
->   `*+`   \*                   
->   `1`    new         2        (New spine started without specifying new interpretation.)
->                               
->   `1`    2                    
->   `*`    \*+                  
->   `*`    \*\*inter   \*       (Interpretation labels the wrong spine.)
->   `A`    B           C        
->   ------ ----------- ----- -- ----------------------------------------------------------------
->
+  ------ ----------- ----- -- ----------------------------------------------------------------
+  `1`    2           3        
+  `*v`   \*          \*v      (The join-spine indication in spine \#1 does not adjoin
+                              spine \#3.)
+  `1`    2           3        
+  `*x`   \*x         \*x      (No more than two exchange interpretations at a time.)
+                              
+  `1`    2           3        
+  `*x`   \*          \*       (Must have two exchange interpretations together.)
+                              
+  `1`    2           3        
+  `*v`   \*          \*       (Must have two or more join interpretations at a time.)
+                              
+  `1`    2           3        
+  `*`    \*                   (Spine eliminated without using a termination interpretation.)
+  `1`    2                    
+                              
+  `1`    2           3        
+  `*`    \*          \*+      (Adding a new spine should result in 4 interpretations.)
+  `1`    2           3        
+                              
+  `1`    2                    
+  `*`    \*          \*-      (Cannot eliminate non-existent spine.)
+                              
+  `1`    2                    
+  `*+`   \*                   
+  `1`    new         2        (New spine started without specifying new interpretation.)
+                              
+  `1`    2                    
+  `*`    \*+                  
+  `*`    \*\*inter   \*       (Interpretation labels the wrong spine.)
+  `A`    B           C        
+  ------ ----------- ----- -- ----------------------------------------------------------------
 <a name ="The_Humdrum_Syntax:_A_Formal_Definition"></a>
 
 The Humdrum Syntax: A Formal Definition
@@ -532,52 +514,50 @@ first interpretation record, and (2) The number of sub-comments in a
 local comment record must be equivalent to the number of currently
 active spines.
 
->   -------------------------- ----------------------------------------------------------------------------
->   Comment                    Either a global or local comment. Any record beginning
->                              with an exclamation mark.
->   Global comment             Any record beginning with two exclamation marks (!!).
->   Local comment              Any record beginning with one and only one exclamation mark (!).
->                              Every spine in that record must also begin with an exclamation
->                              mark.
->   Null comment               A comment record containing no commentary; only the
->                              appropriate exclamation mark(s) are present.
->   Interpretation             Either an exclusive or tandem interpretation. Any record
->                              beginning with an asterisk (\*).
->   Exclusive interpretation   Any record beginning with one or more asterisks (\*), where at
->                              least one spine begins with two asterisks.
->   Tandem interpretation      Any record beginning with a single asterisk (\*) where none of the
->                              spines begin with two asterisks.
->   Path indicator             One of five special tandem interpretations \*+ \*- \*v \*\^ \*x found only
->                              in tandem interpretation records.
->   Null interpretation        An interpretation for a given spine or spines consisting of just the
->                              interpretation signifier (i.e., a single asterisk).
->   Data record                Any record that is not a comment or interpretation. Must contain
->                              the same number of tokens as the number of current spines.
->   Null token                 The period (.) either alone on a single record or separated from
->                              other characters by a tab. Appears only in data records.
->   Null data record           A data record consisting only of null tokens.
->   Spine                      A column-like \"path\" of information \-- including data records,
->                              local comments, and interpretations.
->   -------------------------- ----------------------------------------------------------------------------
->
+  -------------------------- ----------------------------------------------------------------------------
+  Comment                    Either a global or local comment. Any record beginning
+                             with an exclamation mark.
+  Global comment             Any record beginning with two exclamation marks (!!).
+  Local comment              Any record beginning with one and only one exclamation mark (!).
+                             Every spine in that record must also begin with an exclamation
+                             mark.
+  Null comment               A comment record containing no commentary; only the
+                             appropriate exclamation mark(s) are present.
+  Interpretation             Either an exclusive or tandem interpretation. Any record
+                             beginning with an asterisk (\*).
+  Exclusive interpretation   Any record beginning with one or more asterisks (\*), where at
+                             least one spine begins with two asterisks.
+  Tandem interpretation      Any record beginning with a single asterisk (\*) where none of the
+                             spines begin with two asterisks.
+  Path indicator             One of five special tandem interpretations \*+ \*- \*v \*\^ \*x found only
+                             in tandem interpretation records.
+  Null interpretation        An interpretation for a given spine or spines consisting of just the
+                             interpretation signifier (i.e., a single asterisk).
+  Data record                Any record that is not a comment or interpretation. Must contain
+                             the same number of tokens as the number of current spines.
+  Null token                 The period (.) either alone on a single record or separated from
+                             other characters by a tab. Appears only in data records.
+  Null data record           A data record consisting only of null tokens.
+  Spine                      A column-like \"path\" of information \-- including data records,
+                             local comments, and interpretations.
+  -------------------------- ----------------------------------------------------------------------------
 *Humdrum Terminology* As a supplement to the above \"positive\"
 definition of the Humdrum syntax, we can also describe various inputs
 that do *not* conform to the Humdrum syntax:
 
->   ------------------------------------------------------------------
->   An empty record.
->   A record containing only tabs.
->   A record beginning with a tab.
->   A record ending with a tab.
->   Any record containing two successive tab characters.
->   Any data record having fewer or more spines than the immediately
->   preceding data record.
->   A record having only one join-spine indication.
->   A record having only one exchange-spine indication.
->   A record having more than two exchange-spine indications.
->   ------------------------------------------------------------------
->
-> *Some Illegal Humdrum Constructions*
+  ------------------------------------------------------------------
+  An empty record.
+  A record containing only tabs.
+  A record beginning with a tab.
+  A record ending with a tab.
+  Any record containing two successive tab characters.
+  Any data record having fewer or more spines than the immediately
+  preceding data record.
+  A record having only one join-spine indication.
+  A record having only one exchange-spine indication.
+  A record having more than two exchange-spine indications.
+  ------------------------------------------------------------------
+*Some Illegal Humdrum Constructions*
 
 <a name ="The_humdrum_Command"></a>
 
@@ -599,72 +579,66 @@ format.
 The examples given below provide further illustrations of Humdrum
 representations:
 
->   ----------------
->   `**form`
->   Introduction
->   Exposition
->   Development
->   Recapitulation
->   Coda
->   \*-
->   ----------------
->
->   -------------- --------------
->   `**American`   \*\*British
->   quarter        crotchet
->   eighth         quaver
->   dotted half    dotted minim
->   \*-            \*-
->   -------------- --------------
->
->   ------------- ----------
->   `**Opus/No`   \*\*Year
->   23/1          1821
->   23/2          1821
->   23/3          1822?
->   24            1822
->   \*-           \*-
->   ------------- ----------
->
->   ----------- ------------ ---------------- -------------- ----------
->   `**recip`   \*\*diaton   \*\*accidental   \*\*stem-dir   \*\*kern
->   4           c            \#               /              4c\#/
->   8           d            .                /              8d/
->   8           e            .                /              8e/
->   2           f            \#               /              8f\#/
->   \*-         \*-          \*-              \*-            \*-
->   ----------- ------------ ---------------- -------------- ----------
->
->   ----------------
->   `**heart-rate`
->   74
->   73
->   74
->   77
->   78
->   \*-
->   ----------------
->
->   ---------------- --------- --------- ----------
->   `**foreground`                       
->   flute                                
->   \*\^                                 
->   flute            violin1             
->   \*-              \*                  
->   violin1                              
->   \*\^                                 
->   violin1          bassoon             
->   \*               \*\^                
->   violin1          bassoon   \'cello   
->   \*               \*        \*\^      
->   violin1          bassoon   \'cello   trombone
->   \*-              \*-       \*-       \*
->   trombone                             
->   \*\^                                 
->   trombone         trumpet             
->   \*-              \*-                 
->   ---------------- --------- --------- ----------
->
+  ----------------
+  `**form`
+  Introduction
+  Exposition
+  Development
+  Recapitulation
+  Coda
+  \*-
+  ----------------
+  -------------- --------------
+  `**American`   \*\*British
+  quarter        crotchet
+  eighth         quaver
+  dotted half    dotted minim
+  \*-            \*-
+  -------------- --------------
+  ------------- ----------
+  `**Opus/No`   \*\*Year
+  23/1          1821
+  23/2          1821
+  23/3          1822?
+  24            1822
+  \*-           \*-
+  ------------- ----------
+  ----------- ------------ ---------------- -------------- ----------
+  `**recip`   \*\*diaton   \*\*accidental   \*\*stem-dir   \*\*kern
+  4           c            \#               /              4c\#/
+  8           d            .                /              8d/
+  8           e            .                /              8e/
+  2           f            \#               /              8f\#/
+  \*-         \*-          \*-              \*-            \*-
+  ----------- ------------ ---------------- -------------- ----------
+  ----------------
+  `**heart-rate`
+  74
+  73
+  74
+  77
+  78
+  \*-
+  ----------------
+  ---------------- --------- --------- ----------
+  `**foreground`                       
+  flute                                
+  \*\^                                 
+  flute            violin1             
+  \*-              \*                  
+  violin1                              
+  \*\^                                 
+  violin1          bassoon             
+  \*               \*\^                
+  violin1          bassoon   \'cello   
+  \*               \*        \*\^      
+  violin1          bassoon   \'cello   trombone
+  \*-              \*-       \*-       \*
+  trombone                             
+  \*\^                                 
+  trombone         trumpet             
+  \*-              \*-                 
+  ---------------- --------- --------- ----------
 ------------------------------------------------------------------------
 
 <a name ="Reprise"></a>
@@ -692,15 +666,3 @@ using tandem interpretations. Both local comments and tandem
 interpretations may occur anywhere, but must be preceded in the spine by
 some exclusive interpretation.
 
-------------------------------------------------------------------------
-
-
-[**Next Chapter**](/guide/ch06)
-
-[**Previous Chapter**](/guide/ch04)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron
