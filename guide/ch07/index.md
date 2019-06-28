@@ -17,8 +17,8 @@ MIDI is a standard method for exchanging information between sound
 synthesizers and controlling computers. Humdrum provides a number of
 MIDI-related tools that allow MIDI data to be input and output. In this
 chapter we will discuss the output-related tools:
-[**midi**](commands/midi.html), [**perform**](commands/perform.html),
-[**smf**](commands/smf.html) and [**tacet**](commands/tacet.html). MIDI
+[**midi**](/tool/midi), [**perform**](/tool/perform),
+[**smf**](/tool/smf) and [**tacet**](/tool/tacet). MIDI
 input tools are discussed in [Chapter 30.](/guide/ch30)
 
 <a name ="The_**MIDI_Representation"></a>
@@ -30,8 +30,8 @@ Humdrum provides a [`**MIDI`](representations/MIDI.rep.html)
 representation that closely parallels the commercial MIDI specification
 but conforms to the Humdrum data format. This representation provides an
 intermediate format; using Humdrum commands such as
-[**perform**](commands/perform.html) and
-[**smf**,](commands/perform.html) true MIDI data can be generated.
+[**perform**](/tool/perform) and
+[**smf**,](/tool/perform) true MIDI data can be generated.
 However, since the `**MIDI` representation conforms to the Humdrum
 syntax, the data can be manipulated, modified and searched in the same
 way as other Humdrum data. For example, we can use **grep** to search
@@ -174,7 +174,7 @@ passage in order to turn off the final notes.
 The *midi* Command
 ------------------
 
-The [**midi**](commands/midi.html) command converts Humdrum
+The [**midi**](/tool/midi) command converts Humdrum
 [`**kern`](representations/kern.rep.html) data into Humdrum `**MIDI`
 data. By way of example, the above `**MIDI` data can be generated as
 follows:
@@ -206,7 +206,7 @@ of `**MIDI` data itself.
 The *perform* Command
 ---------------------
 
-The [**perform**](commands/perform.html) command allows the user to
+The [**perform**](/tool/perform) command allows the user to
 listen to synthesized performances of `**MIDI`-format input. When
 invoked, **perform** provides a simple interactive environment suitable
 for proof-listening and other audition tasks.
@@ -354,15 +354,15 @@ performances; for instance, an intermittently functioning MIDI cable may
 fail to convey a \"note-off\" instruction to an active synthesizer. The
 **p** command (\"panic\") turns off all active notes. Should a cipher
 remain after terminating the **perform** command, the Humdrum
-[**tacet**](commands/tacet.html) command can be used to send
+[**tacet**](/tool/tacet) command can be used to send
 \"all-notoff\" commands on all MIDI channels.
 
 In [Chapter 12,](/guide/ch12) we will see how **perform** can be used
 in conjunction with other commands (such as
-[**extract**](commands/extract.html) and [**yank**](commands/yank.html))
+[**extract**](/tool/extract) and [**yank**](/tool/yank))
 to listen selectively to specific parts or passages. In [Chapter
 21](/guide/ch21) we will use **perform** in conjunction with the
-[**patt**](commands/patt.html) command to listen to patterns (such as
+[**patt**](/tool/patt) command to listen to patterns (such as
 harmonic, rhythmic and melodic patterns) found in some repertory.
 
 <a name ="The_smf_Command"></a>
@@ -370,7 +370,7 @@ harmonic, rhythmic and melodic patterns) found in some repertory.
 The *smf* Command
 -----------------
 
-Another MIDI-related tool is the [**smf**](commands/smf.html) command.
+Another MIDI-related tool is the [**smf**](/tool/smf) command.
 This command allows the user to create \"standard MIDI files\" from
 Humdrum `**MIDI`-format files. Standard MIDI files are industry-standard
 binary files that can be imported by a variety of MIDI applications
@@ -402,10 +402,10 @@ MIDI but remains in conformity with the Humdrum syntax. This means that
 the data can still be processed with other Humdrum tools (as we will see
 in later chapters).
 
-The [**midi**](commands/midi.html) command can translate
+The [**midi**](/tool/midi) command can translate
 [`**kern`](representations/kern.rep.html) data to
 [`**MIDI`](representations/MIDI.rep.html) and the
-[**perform**](commands/perform.html) and [**smf**](commands/smf.html)
+[**perform**](/tool/perform) and [**smf**](/tool/smf)
 commands can be used to generate true MIDI data for listening. The
 **perform** command provides a simple interactive command-line sequencer
 for playing whatever input is provided. The **smf** command generates

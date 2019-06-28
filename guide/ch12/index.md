@@ -26,8 +26,8 @@ information, such as the figured bass, melodic interval information, or
 vocal text.
 
 In this chapter we will explore two Humdrum tools for extracting
-material: [**extract**](commands/extract.html) and
-[**yank**](commands/yank.html).
+material: [**extract**](/tool/extract) and
+[**yank**](/tool/yank).
 
 We know that Humdrum representations are structured like a grid with
 horizontal data (\"records\") representing concurrent information, and
@@ -45,7 +45,7 @@ sections.
 Extracting Spines: The *extract* Command
 ----------------------------------------
 
-The [**extract**](commands/extract.html) command allows the user to
+The [**extract**](/tool/extract) command allows the user to
 select one or more spines from a Humdrum input. The command is typically
 used to extract parts (such as a tuba part) from some multi-part score.
 However, **extract** can also be used to isolate dynamic markings,
@@ -361,7 +361,7 @@ Using *extract* in Pipelines
 Of course the output from **extract** can be used to generate inputs for
 other Humdrum tools. Here are a few examples.
 
-Recall that the [**census**](commands/census.html) command tells us
+Recall that the [**census**](/tool/census) command tells us
 basic information about a file. With the **-k** option, **census** will
 tell us the number of barlines, the number of rests, the number of
 notes, the highest and lowest notes, and the longest and shortest notes
@@ -373,8 +373,8 @@ this information for (1) a bassoon part, (2) all woodwind parts:
 
 <a name ="Extract_Bass_Soprano"></a>
 
-With the [**midi**](commands/midi.html) and
-[**perform**](commands/perform.html) commands, **extract** allows the
+With the [**midi**](/tool/midi) and
+[**perform**](/tool/perform) commands, **extract** allows the
 user to hear particular parts. For example, the following command
 extracts the bass and soprano voices, translates them to
 [`**MIDI`](representations/MIDI.rep.html) data, and plays the output:
@@ -384,7 +384,7 @@ extracts the bass and soprano voices, translates them to
 <a name ="Transpose_Trumpet"></a>
 
 We might extract a particular part (such as the trumpet part) and use
-the [**trans**](commands/trans.html) command to transpose it to another
+the [**trans**](/tool/trans) command to transpose it to another
 key:
 
 > `extract -i '*Itromp' purcell | trans -d +1 -c +2`
@@ -466,7 +466,7 @@ column (or columns) in the input.
 There are complex circumstances where the **-p** option will not
 guarantee an output that conforms to the Humdrum syntax. When using the
 **-p** option it is prudent to check the output using the
-[**humdrum**](commands/humdrum.html) command in order to ensure that the
+[**humdrum**](/tool/humdrum) command in order to ensure that the
 output is valid. A full discussion of the **-p** option is given in the
 *Humdrum Reference Manual.*
 
@@ -487,7 +487,7 @@ Extracting Passages: The *yank* Command
 ---------------------------------------
 
 A useful companion to the **extract** command is the Humdrum
-[**yank**](commands/yank.html) command. The **yank** command can be used
+[**yank**](/tool/yank) command. The **yank** command can be used
 to selectively extract segments or passages from a Humdrum input. The
 yanked material can be identified by absolute line numbers, or relative
 to some marker. In addition, **yank** is able to output logical
@@ -541,7 +541,7 @@ became 5 spines.
 Yanking by Marker
 -----------------
 
-Alternatively, [**yank**](commands/yank.html) can output lines relative
+Alternatively, [**yank**](/tool/yank) can output lines relative
 to some user-defined *marker.* This mode of operation can be invoked
 using the **-m** option. Markers are specified using regular
 expressions. The range option (**-r**) specifies which lines are to be
@@ -633,7 +633,7 @@ example,
 
 can be used to yank all records prior to the first common system
 barline. Notice that *actual* measure numbers are irrelevant with the
-**-o** option: [**yank**](commands/yank.html) selects segments according
+**-o** option: [**yank**](/tool/yank) selects segments according
 to their *ordinal* position in the input stream rather than according to
 their *cardinal* label.
 
@@ -685,7 +685,7 @@ will yank any leading (anacrusis) material in each of the three files.
 Yanking by Section
 ------------------
 
-When the **-s** option is invoked, [**yank**](commands/yank.html)
+When the **-s** option is invoked, [**yank**](/tool/yank)
 extracts passages according to Humdrum section labels encoded in the
 input. Humdrum section labels will be described fully in [Chapter
 20.](/guide/ch20) For now, we can simply note that section labels are
@@ -852,8 +852,8 @@ highest note in the trumpet part in measure 29?
 
 <a name ="Play_Trio"></a>
 
-Also, we can combine **yank** with the [**midi**](commands/midi.html)
-and [**perform**](commands/perform.html) commands to hear particular
+Also, we can combine **yank** with the [**midi**](/tool/midi)
+and [**perform**](/tool/perform) commands to hear particular
 sections. Play the Trio section in a Waldteufel waltz:
 
 > `yank -s 'Trio' -r 1 waldteufel | midi | perform`
@@ -919,8 +919,8 @@ Reprise
 
 In this chapter we have learned how to extract musical parts using
 **extract** and how to grab musical passages using
-[**yank**](commands/yank.html). We saw that the
-[**extract**](commands/extract.html) command is also useful for
+[**yank**](/tool/yank). We saw that the
+[**extract**](/tool/extract) command is also useful for
 isolating specific types of information, such as the lyrics, or ensuring
 that no other type of information is present in a data stream. In the
 case of **yank** we saw that passages can be extracted by defining

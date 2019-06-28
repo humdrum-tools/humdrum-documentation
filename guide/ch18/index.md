@@ -575,10 +575,10 @@ The complete system of signifiers used by
 *Summary of *\*\*fret* Signifiers*
 
 A number of pitch-related Humdrum commands accept `**fret` encoded data
-as inputs, including [**cents**,](commands/cents.html)
-[**freq**,](commands/freq.html) [**kern**,](commands/kern.html)
-[**pitch**,](commands/pitch.html) [**semits**,](commands/semits.html)
-[**solfg**,](commands/solfg.html) and [**tonh**.](commands/tonh.html)
+as inputs, including [**cents**,](/tool/cents)
+[**freq**,](/tool/freq) [**kern**,](/tool/kern)
+[**pitch**,](/tool/pitch) [**semits**,](/tool/semits)
+[**solfg**,](/tool/solfg) and [**tonh**.](/tool/tonh)
 
 ------------------------------------------------------------------------
 

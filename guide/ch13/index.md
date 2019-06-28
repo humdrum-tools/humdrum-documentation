@@ -17,8 +17,8 @@ In the previous chapter we learned how to extract parts and passages
 from Humdrum files. In this chapter we discuss the reverse procedures:
 how to assemble and coordinate larger documents from individual segments
 and parts. We will discuss four tools: the UNIX **cat** command, and the
-Humdrum [**assemble**](commands/assemble.html),
-[**timebase**](commands/timebase.html) and [**rid**](commands/rid.html)
+Humdrum [**assemble**](/tool/assemble),
+[**timebase**](/tool/timebase) and [**rid**](/tool/rid)
 commands.
 
 <a name ="The_cat_Command"></a>
@@ -93,7 +93,7 @@ Notice that each complete measure ends with spine-path terminators and
 that the [`**kern`](representations/kern.rep.html) exclusive
 interpretations are repeated. This organization has a number of
 repercussions for various Humdrum tools. For example, the
-[**mint**](commands/mint.html) command calculates melodic intervals
+[**mint**](/tool/mint) command calculates melodic intervals
 between successive notes within a spine. However, **mint** will not
 calculate intervals between pitches that are separated by a spine-path
 terminator. In other words, in the above output, **mint** will fail to
@@ -105,7 +105,7 @@ The *rid* Command
 -----------------
 
 This problem can be resolved by using the Humdrum
-[**rid**](commands/rid.html) command. The **rid** command can be used to
+[**rid**](/tool/rid) command. The **rid** command can be used to
 eliminate various kinds of records. Each option for **rid** eliminates a
 different class of records. Here are the record classes with their
 associated options:
@@ -230,7 +230,7 @@ Assembling Parts Using the *assemble* Command
 
 Assembling parts into a full score is slightly more challenging than
 concatenating together musical segments. The principle tool for joining
-spines together is the [**assemble**](commands/assemble.html) command.
+spines together is the [**assemble**](/tool/assemble) command.
 Consider the following two files:
 
 >   -----------------------
@@ -330,7 +330,7 @@ an output with the appropriate spine-path changes:
 >   ----------------------- -------------
 >
 Note that if all of the input files conform to the Humdrum syntax, then
-[**assemble**](commands/assemble.html) guarantees that the assembled
+[**assemble**](/tool/assemble) guarantees that the assembled
 output will also conform to the Humdrum syntax.
 
 <a name ="Aligning_Durations_Using_the_timebase_Command"></a>
@@ -364,7 +364,7 @@ Using **assemble** to paste them together will clearly lead to an
 uncoordinated result. The two quarter notes in file 1 will be
 incorrectly matched with the first two eighth notes in file 2.
 
-The Humdrum [**timebase**](commands/timebase.html) command can be used
+The Humdrum [**timebase**](/tool/timebase) command can be used
 to reformat either [`**kern`](representations/kern.rep.html) or
 [`**recip`](representations/recip.rep.html) inputs so that each output
 data record represents an equivalent slice (elapsed duration) of time.
@@ -455,7 +455,7 @@ would result in the following output:
 >   `*-`          \*-
 >   ------------- ----------
 >
-The [**timebase**](commands/timebase.html) command can be applied to
+The [**timebase**](/tool/timebase) command can be applied to
 multi-spine inputs as well as single-spine inputs. Consider, the
 following input:\
 \
@@ -511,7 +511,7 @@ Assembling N-tuplets
 
 Typically, one can simply use the shortest duration present as a guide
 for a suitable time-base value. The shortest duration can be determined
-using the [**census**](commands/census.html) -k command described in
+using the [**census**](/tool/census) -k command described in
 [Chapter 4.](/guide/ch04) However, tuplets require a little more
 sophistication. Suppose we wanted to assemble two parts, one containing
 just eighth-notes and the other containing just quarter-note triplets.
@@ -563,7 +563,7 @@ In assembling any score from a set of parts, there is always the danger
 of using the wrong time-base value. When parts are miscoordinated, it is
 typically the consequence of one or more notes being discarded by
 **timebase**. Fortunately, such miscoordinations are easily detected by
-applying the [**proof**](commands/proof.html) command to any assembled
+applying the [**proof**](/tool/proof) command to any assembled
 `**kern` output. The **proof** utility checks `**kern` representations
 for a wide variety of possible encoding errors or ambiguities:
 
@@ -572,15 +572,15 @@ for a wide variety of possible encoding errors or ambiguities:
 By way of summary, creating a full score from a set of
 [`**kern`](representations/kern.rep.html) parts involves the following
 five tasks: (1) Identify a common duration factor for all the parts. Use
-[**census**](commands/census.html) to determine the shortest duration;
+[**census**](/tool/census) to determine the shortest duration;
 if any of the parts contains an N-tuplet, then the common duration
 factor may be smaller than the shortest note. (2) Use the
-[**timebase**](commands/timebase.html) command to expand each input file
+[**timebase**](/tool/timebase) command to expand each input file
 separately using the common duration factor. (3) Assemble the parts
-using [**assemble**.](commands/assemble.html) (4) If desired, eliminate
-unnecessary null data records usingi [**rid -d**.](commands/rid.html)
+using [**assemble**.](/tool/assemble) (4) If desired, eliminate
+unnecessary null data records usingi [**rid -d**.](/tool/rid)
 (5) Check the assembled score for rhythmic coherence using the
-[**proof**](commands/proof.html) command.
+[**proof**](/tool/proof) command.
 
 <a name ="Other_Uses_for_the_timebase_Command"></a>
 
@@ -623,7 +623,7 @@ Additional Uses of *assemble* and *timebase*
 Although we normally assemble parts together, sometimes it is useful to
 assemble entire scores together. Suppose we wanted to listen to a theme
 at the same time as one of its variations. We might first use
-[**yank**](commands/yank.html) to extract the appropriate sections. At
+[**yank**](/tool/yank) to extract the appropriate sections. At
 the same time we might determine a common duration factor and expand
 them using **timebase**.
 
@@ -632,7 +632,7 @@ them using **timebase**.
 
 Then we assemble the two sections together, translate to the
 [`**MIDI`](representations/MIDI.rep.html) representation and use
-[**perform**](commands/perform.html) to listen to both sections at the
+[**perform**](/tool/perform) to listen to both sections at the
 same time:
 
 > `assemble temp1 temp2 | midi | perform`
@@ -653,8 +653,8 @@ The most common use of **assemble** is not to assemble parts, but to
 assemble different types of concurrent information. Suppose we would
 like to determine whether descending minor seconds are more likely to be
 *fa-mi* rather than *do-ti*. We can use the
-[**mint**](commands/mint.html) command to characterize melodic
-intervals, and the [**solfa**](commands/solfa.html) command to
+[**mint**](/tool/mint) command to characterize melodic
+intervals, and the [**solfa**](/tool/solfa) command to
 characterize scale degrees. Assume that our input is monophonic:
 
 > `mint melodies > temp1`\
@@ -738,16 +738,16 @@ Reprise
 In this chapter we have learned how to concatenate musical passages
 together using the **cat** command. We also learned how to eliminate
 redundant exclusive and tandem interpretations from concatenated outputs
-using the **-u** and **-t** options for [**rid**](commands/rid.html). In
+using the **-u** and **-t** options for [**rid**](/tool/rid). In
 addition, we learned how to assemble two or more spines into a single
-output file using [**assemble**](commands/assemble.html). In the case of
+output file using [**assemble**](/tool/assemble). In the case of
 [`**kern`](representations/kern.rep.html) and
 [`**recip`](representations/recip.rep.html) representations, we learned
-how to use the [**timebase**](commands/timebase.html) command to
+how to use the [**timebase**](/tool/timebase) command to
 preprocess each constituent file so that all data records represent
 equivalent elapsed durations. Having assembled a full score from parts,
 **rid** **-d** can be used to eliminate any residual or unnecessary null
-data records. The [**proof**](commands/proof.html) command can be used
+data records. The [**proof**](/tool/proof) command can be used
 to ensure that any assembled `**kern` data is correctly aligned.
 
 Finally, we learned that the **timebase** command can be used for other

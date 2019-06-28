@@ -532,13 +532,13 @@ mistaking comments or interpretations:
 
 > (\^\[\^\*!\].\*\[Tt\])\|(\^\[Tt\])
 
-For Humdrum commands such as [**humsed**,](commands/humsed.html)
-[**rend**,](commands/rend.html) [**yank**,](commands/yank.html)
-[**xdelta**,](commands/xdelta.html) and
-[**ydelta**,](commands/ydelta.html) regular expressions are applied only
+For Humdrum commands such as [**humsed**,](/tool/humsed)
+[**rend**,](/tool/rend) [**yank**,](/tool/yank)
+[**xdelta**,](/tool/xdelta) and
+[**ydelta**,](/tool/ydelta) regular expressions are applied only
 to data records so there is no need to use the more complex expressions.
 In many circumstances, we will see that it is convenient to use the
-Humdrum [**rid**](commands/rid.html) command to explicitly remove
+Humdrum [**rid**](/tool/rid) command to explicitly remove
 comments and interpretations prior to processing (see [Chapter
 13](/guide/ch13)).
 

@@ -14,8 +14,8 @@ MIDI Input Tools
 ================
 
 The Humdrum Toolkit provides two tools for inputting MIDI data. In this
-chapter we briefly introduce the [**record**](commands/record.html) and
-[**encode**](commands/encode.html) commands. These tools provide ways
+chapter we briefly introduce the [**record**](/tool/record) and
+[**encode**](/tool/encode) commands. These tools provide ways
 for capturing MIDI input and translating them to representations that
 conform to the Humdrum syntax. The **record** command translates a live
 or computer-generated MIDI performance to the
@@ -32,7 +32,7 @@ only with computers that have MIDI capable hardware.
 The *record* Command
 --------------------
 
-The [**record**](commands/record.html) command captures a stream of
+The [**record**](/tool/record) command captures a stream of
 input MIDI data and translates this data into the Humdrum `**MIDI`
 representation described in [Chapter 7.](/guide/ch07) The input data is
 obtained from a MIDI instrument such as a keyboard synthesizer.
@@ -61,7 +61,7 @@ The recorded output is normally directed to a file as in the following:
 The *encode* Command
 --------------------
 
-The [**encode**](commands/encode.html) command provides an interactive
+The [**encode**](/tool/encode) command provides an interactive
 editor for capturing Humdrum data from a MIDI input, such as a keyboard
 synthesizer. MIDI events are mapped to user-defined signifiers so
 **encode** can be used to enter data directly into a particular
@@ -75,8 +75,8 @@ The **encode** command is limited to encoding information one spine at a
 time. A typical use of **encode** is to encode individual musical parts
 or voices using a representation like \*\*kern. A full score is
 generated from the individual parts using the
-[**timebase**](commands/timebase.html) and
-[**assemble**](commands/assemble.html) commands.
+[**timebase**](/tool/timebase) and
+[**assemble**](/tool/assemble) commands.
 
 The **encode** command implements a full-screen interactive editor
 similar to the **vi** text editor. When invoked, the screen is divided
@@ -152,8 +152,8 @@ Reprise
 -------
 
 In this chapter we have briefly identified two tools for capturing
-MIDI-related input: [**encode**](commands/encode.html) and
-[**record**](commands/record.html). These tools allow MIDI data to be
+MIDI-related input: [**encode**](/tool/encode) and
+[**record**](/tool/record). These tools allow MIDI data to be
 translated to a Humdrum format. Further information regarding these
 tools is given in the *Humdrum Toolkit Reference Manual.*
 

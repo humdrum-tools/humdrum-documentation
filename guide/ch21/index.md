@@ -15,7 +15,7 @@ Searching for Patterns
 
 The **grep** and **egrep** commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the
-[**context**](commands/context.html) command can be used to amalgamate
+[**context**](/tool/context) command can be used to amalgamate
 groups of successive data tokens on a single line \-- and so facilitate
 searching for sequential patterns using **grep** or **egrep**. For many
 tasks, the combination of **context** and **grep** provides the most
@@ -30,7 +30,7 @@ search directly for sequential patterns without having to use
 The *patt* Command
 ------------------
 
-The [**patt**](commands/patt.html) command may be regarded as a
+The [**patt**](/tool/patt) command may be regarded as a
 two-dimensional version of **grep**. Like **grep**, **patt** searches
 for lines that match user-specified regular expressions. However, unlike
 **grep**, **patt** can search for a sequence of records that match a
@@ -89,7 +89,7 @@ as follows:
 
 > `!! Pattern found at line 2 of file Tonh`
 
-The [**patt**](commands/patt.html) command will also identify any
+The [**patt**](/tool/patt) command will also identify any
 overlapping patterns. For example, suppose we had an input containing an
 ostinato figure in minor thirds:
 
@@ -176,8 +176,8 @@ matching record:
 
 > `grep -l '^\*[a-g][-#]*:' *`
 
-Recall that the [**deg**](commands/deg.html) command is mode sensitive,
-whereas the [**solfa**](commands/solfa.html) command is mode
+Recall that the [**deg**](/tool/deg) command is mode sensitive,
+whereas the [**solfa**](/tool/solfa) command is mode
 insensitive. That is, in the key of C major, **deg** will represent the
 pitch E as `3` and in C minor **deg** will represent the pitch E
 (natural) as `3+`. By contrast, the **solfa** command will represent E
@@ -255,7 +255,7 @@ Even ignoring rests may not be sufficient to identify the raised third
 near the double barline. For example, if any other note from the tonic
 chord follows after the raised third, then the third will appear several
 records prior to the double barline. We can solve this problem by using
-the [**ditto**](commands/ditto.html) command discussed in [Chapter
+the [**ditto**](/tool/ditto) command discussed in [Chapter
 15;](/guide/ch15) **ditto** can be used to propagate the raised third
 through the sustained final chord. Our revised pipeline is:
 
@@ -272,11 +272,11 @@ following pattern:
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
 [`**hint`](representations/hint.rep.html) harmonic-interval
-representation. The **-c** option for [**hint**](commands/hint.html)
+representation. The **-c** option for [**hint**](/tool/hint)
 collapses compound intervals to their non-compound equivalents so
 consecutive twelfths, nineteenths, etc. will also be identified. In the
 following command pipeline, notice the use of the **-s** option for
-[**patt**](commands/patt.html) in order to skip barlines. This ensures
+[**patt**](/tool/patt) in order to skip barlines. This ensures
 that crossing a barline does not result in a failure to identify a
 consecutive fifth.
 
@@ -305,7 +305,7 @@ Below is a [`**kern`](representations/kern.rep.html) encoding of the
 final two measures along with corresponding
 [`**hint`](representations/hint.rep.html) and
 [`**deg`](representations/deg.rep.html) spines. The \*\*hint spine was
-generated using [**hint**](commands/hint.html) **-l** in order to
+generated using [**hint**](/tool/hint) **-l** in order to
 generate intervals with respect to the lowest pitch.
 
 > `!!!COM: Landini, Francesco `
@@ -389,7 +389,7 @@ different types of data.
 Using *patt*\'s Tag Option
 --------------------------
 
-So far, we have seen that [**patt**](commands/patt.html) provides two
+So far, we have seen that [**patt**](/tool/patt) provides two
 kinds of output. In the default operation, **patt** outputs a simple
 global comment each time it finds a matching segment in the input. With
 the **-e** option, **patt** will also echo the specific passage(s)
@@ -529,7 +529,7 @@ for the above Krenek passage would be:
 >   `*-`
 >   --------
 >
-The **-m** option for [**patt**](commands/patt.html) invokes a
+The **-m** option for [**patt**](/tool/patt) invokes a
 \"multi-record matching\" mode. In this mode, **patt** attempts to match
 as many successive regular expressions in the template file as possible
 for a given input record, before continuing with the next input and
@@ -546,7 +546,7 @@ The *pattern* Command
 ---------------------
 
 Not all patterns can be identified using **patt**. The Humdrum
-[**pattern**](commands/pattern.html) command permits an additional
+[**pattern**](/tool/pattern) command permits an additional
 regular expression feature that is especially useful in musical
 applications. Specifically, **pattern** permits the defining of patterns
 spanning more than one line or record. Record-repetition operators are
@@ -615,7 +615,7 @@ providing unbounded possibilities for searching for patterns of
 patterns.
 
 Consider, for example, the following template for the
-[**pattern**](commands/pattern.html) command:
+[**pattern**](/tool/pattern) command:
 
 >   ------------------- -- -- ----
 >   `Theme 1 (tonic)`         \+
@@ -644,15 +644,15 @@ Reprise
 
 In this chapter and previous chapters we have identified several
 search-related tools, including the UNIX **grep** and **egrep** commands
-as well as the Humdrum [**patt**](commands/patt.html) and
-[**pattern**](commands/pattern.html) commands. Each of these tools has
+as well as the Humdrum [**patt**](/tool/patt) and
+[**pattern**](/tool/pattern) commands. Each of these tools has
 different strengths and weaknesses and it is not always clear which tool
 is best for a given task. When searching, don\'t forget to consider how
-[**context**](commands/context.html),
-[**humsed**](commands/humsed.html), [**rid**](commands/rid.html) and
+[**context**](/tool/context),
+[**humsed**](/tool/humsed), [**rid**](/tool/rid) and
 other tools might facilitate the searching task. In future chapters will
 will consider how \"similarity\" tools such as
-[**correl**](commands/correl.html) and [**simil**](commands/simil.html)
+[**correl**](/tool/correl) and [**simil**](/tool/simil)
 can contribute to more sophisticated pattern searches.
 
 ------------------------------------------------------------------------

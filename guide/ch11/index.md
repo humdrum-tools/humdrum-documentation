@@ -21,8 +21,8 @@ when the pitches are concurrent the distance is referred to as a
 The simplicity of these definitions is deceptive. In real music, the
 determination of pitch intervals can be surprisingly complicated. In
 this chapter we will discuss Humdrum tools related to melodic pitch
-intervals \-- specifically the [**mint**](commands/mint.html) (melodic
-interval) and [**xdelta**](commands/xdelta.html) commands. Discussion of
+intervals \-- specifically the [**mint**](/tool/mint) (melodic
+interval) and [**xdelta**](/tool/xdelta) commands. Discussion of
 harmonic intervals will be delayed until [Chapter 15.](/guide/ch15)
 
 <a name ="Types_of_Melodic_Intervals"></a>
@@ -132,7 +132,7 @@ coordinates.
 Melodic Intervals Using the *mint* Command
 ------------------------------------------
 
-The Humdrum [**mint**](commands/mint.html) command calculates melodic
+The Humdrum [**mint**](/tool/mint) command calculates melodic
 intervals for pitch-related representations such as
 [`**kern`](representations/kern.rep.html),
 [`**pitch`](representations/pitch.rep.html),
@@ -281,7 +281,7 @@ intervals would be omitted.
 Calculating Distance Intervals Using the *mint -s* Command
 ----------------------------------------------------------
 
-Another option provided by [**mint**](commands/mint.html) is the **-s**
+Another option provided by [**mint**](/tool/mint) is the **-s**
 or skip option. Like the **-b** option, this option requires a
 subsequent regular expression. Any token matching this expression is
 transformed to a null data token and is ignored when processing. One
@@ -352,7 +352,7 @@ in [Chapter 35](/guide/ch35) on \"Layers.\"
 
 Cross-voice melodic intervals can be calculated by amalgamating several
 spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
-more about the [**cleave**](commands/cleave.html) command. But here is a
+more about the [**cleave**](/tool/cleave) command. But here is a
 typical use:
 
 > `cleave -d ' ' -i '**kern' -o '**kern' example11a`
@@ -380,7 +380,7 @@ output would be:\
 Note that this output doesn\'t quite conform to the `**kern` syntax: the
 barlines have been duplicated as double-stops, and the durations aren\'t
 right for multiple-stops. We can clean up the output using
-[**humsed,**](commands/humsed.html) but the incoherent durations won\'t
+[**humsed,**](/tool/humsed) but the incoherent durations won\'t
 cause problems if our intention is to calculate pitch intervals.
 
 If we pipe the above output through the **mint** command, the
@@ -425,7 +425,7 @@ interval of a major tenth (`M10`) will be output as a major third
 Diatonic Intervals, Absolute Intervals and Contour
 --------------------------------------------------
 
-The [**mint**](commands/mint.html) command provides three further
+The [**mint**](/tool/mint) command provides three further
 options of interest. The **-d** option causes **mint** to output only
 the diatonic interval size without the interval quality information. The
 **-a** option causes **mint** to output absolute pitch intervals without
@@ -507,7 +507,7 @@ Calculating Melodic Intervals Using the *xdelta* Command
 
 Often it is useful to calculate melodic intervals in purely numerical
 values, such as the number semitones or the number of cents. The
-[**xdelta**](commands/xdelta.html) command provides a general tool for
+[**xdelta**](/tool/xdelta) command provides a general tool for
 calculating numerical differences between successive values within
 individual spines. In order to use **xdelta** to calculate semitone
 differences, we first need to transform our representation to
@@ -649,14 +649,14 @@ pitches. We defined seven different types of melodic intervals including
 inner intervals*, *distance intervals*, and *tied note intervals*.
 
 In this chapter we have seen how to use the
-[**mint**](commands/mint.html) command to calculate these various kinds
+[**mint**](/tool/mint) command to calculate these various kinds
 of intervals. Specifically, we have illustrated how to calculate voiced
 intervals, interrupted intervals, unvoiced outer intervals and unvoiced
 inner intervals. In [Chapter 26](/guide/ch26) we will show how to
 calculate cross-voice intervals, and in [Chapter 35](/guide/ch35)
 (\"Layers\") we will consider how to calculate distance intervals.
 
-We have also seen how [**xdelta**](commands/xdelta.html) can be used to
+We have also seen how [**xdelta**](/tool/xdelta) can be used to
 measure purely numerical distances between successive values. As we will
 see, **xdelta** will prove useful in many other applications apart from
 calculating pitch distances.

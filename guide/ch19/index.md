@@ -17,8 +17,8 @@ Much of what makes an event of interest is the context of the event. We
 may be interested in what precedes or follows a note or chord. We have
 already seen how the **-A** and **-B** options for **grep** can be used
 to output \`before\' and \`after\' contexts. In [Chapter
-21](/guide/ch21) we will see how the [**patt**](commands/patt.html) and
-[**pattern**](commands/pattern.html) commands can provide further
+21](/guide/ch21) we will see how the [**patt**](/tool/patt) and
+[**pattern**](/tool/pattern) commands can provide further
 flexibility for searching.
 
 However, in this chapter we introduce the deceptively simple **context**
@@ -29,7 +29,7 @@ command.
 The *context* Command
 ---------------------
 
-The effect of the [**context**](commands/context.html) command is easier
+The effect of the [**context**](/tool/context) command is easier
 to illustrate than describe. Consider a file (named `input`) that
 contains the numbers 1 through 6 on successive lines. A null token is
 interposed between the numbers 2 and 3:\
@@ -84,13 +84,13 @@ The **-n 3** option tells **context** how many data tokens to amalgamate
 on each output line. With the specification **-n 2**, just two data
 tokens would be amalgamated on each output line.
 
-How might [**context**](commands/context.html) be useful? Suppose we
+How might [**context**](/tool/context) be useful? Suppose we
 wanted to determine how harmonic octave intervals are approached in
 Bach\'s two-part keyboard *Inventions*. What harmonic interval tends to
-precede an octave? We can use the [**hint**](commands/hint.html) command
+precede an octave? We can use the [**hint**](/tool/hint) command
 to generate the harmonic intervals for each successive sonority. To
 calculate all *passing intervals*, we will preprocess using
-[**ditto**](commands/ditto.html):
+[**ditto**](/tool/ditto):
 
 > `ditto inventions* | hint`
 
@@ -230,7 +230,7 @@ chord progression that is realized as a series of arpeggiation figures.\
 The harmonic structure can be made more explicit by amalgamating all of
 the notes in each arpeggio. There are several possible ways of doing
 this, but the slurs are particularly useful delineators. The **-b**
-option for [**context**](commands/context.html) allows the user to
+option for [**context**](/tool/context) allows the user to
 specify a regular expression that marks the *beginning* of each
 collection of data tokens. Consider the following command:
 
@@ -271,7 +271,7 @@ However, sometimes the barlines prove useful in further processing.
 In the above passage by Anderson, the close of each slur provides a
 convenient marker for ending each chord. We can be more explicit in
 defining the grouping boundaries by also including the **-e** option for
-[**context**](commands/context.html). This option allows the user to
+[**context**](/tool/context). This option allows the user to
 specify a regular expression that marks the *end* of each collection of
 data tokens. A suitably revised command would be:
 
@@ -325,7 +325,7 @@ meter signature disagrees with the total duration for each measure.
 
 Having reformatted our input data using **context**, we can continue by
 translating the data to another representation. For example, we might
-use the [**deg**](commands/deg.html) command to reformulate each pitch
+use the [**deg**](/tool/deg) command to reformulate each pitch
 group as scale degrees. This might allow us to search for particular
 harmonic patterns such as (say) an augmented sixth chord:
 
@@ -335,7 +335,7 @@ harmonic patterns such as (say) an augmented sixth chord:
 
 Any regular expression can be used to identify the beginning and/or
 ending of an amalgamated group. For example, tokens might be grouped by
-barlines. Suppose the [**census**](commands/census.html) command tells
+barlines. Suppose the [**census**](/tool/census) command tells
 us that a monophonic work contains sixty-fourth notes. We might want to
 know whether the sixty-fourth notes all tend to happen in one or two
 measures, or whether they occur throughout the work. Just how many
@@ -383,7 +383,7 @@ phrase as follows:
 > `context -o = -e ';' input | rid -GLId | awk '{print $NF}'`
 
 In [Chapter 22](/guide/ch22) we will learn how to classify data into
-discrete categories. Using the [**recode**](commands/recode.html)
+discrete categories. Using the [**recode**](/tool/recode)
 command described in that chapter, we might group notes together
 according to changes of melodic direction. That is, each group of would
 consist of notes that are all ascending or all descending in pitch.
@@ -408,8 +408,8 @@ barline token \-- including the measure number.
 
 When using **grep** it is common for the output to no longer conform to
 the Humdrum syntax. This is the reason why we used **sed** rather than
-[**humsed**](commands/humsed.html) in the above example.) Remember that
-we can always use the [**yank**](commands/yank.html) -m command to
+[**humsed**](/tool/humsed) in the above example.) Remember that
+we can always use the [**yank**](/tool/yank) -m command to
 create \"grep-like\" output that still conforms to the Humdrum syntax.
 If we wanted to maintain the Humdrum syntax, an equivalent to the above
 command would be:
@@ -434,7 +434,7 @@ Consider another example. Suppose we wanted to determine whether the
 first pitch in a phrase tends to be lower than the last pitch in a
 phrase. As before, we might first amalgamate all notes in each phrase
 onto individual data records. We can use
-[**humsed**](commands/humsed.html) to eliminate all notes other than the
+[**humsed**](/tool/humsed) to eliminate all notes other than the
 first and last. The regular expression `/ .* /` specifies any sequence
 of characters preceded by a space and followed by a space. Replacing
 matching strings with a single space will leave output data records
@@ -445,9 +445,9 @@ will be the last note of the same phrase:
 > `context -b { -e } file | humsed 's/ .* / /'`
 
 We can continue processing by piping the output to the
-[**semits**](commands/semits.html) command. This will leave pairs of
+[**semits**](/tool/semits) command. This will leave pairs of
 numbers representing the semitone distances from middle C. We might then
-isolate the data records by using [**rid**](commands/rid.html).
+isolate the data records by using [**rid**](/tool/rid).
 
 > ` . . . | semits | rid -GLId | awk '{print $2-$1}'`
 
@@ -478,7 +478,7 @@ sixth intervals occur in phrases that end on the dominant? For this
 question, we need concurrent access to both melodic interval data as
 well as scale degree information. The solution to such questions
 typically involves linking different types of data together using the
-[**assemble**](commands/assemble.html) command. Suppose the first phrase
+[**assemble**](/tool/assemble) command. Suppose the first phrase
 in our input begins as follows:\
 \
 
@@ -543,7 +543,7 @@ The first phrase output will appear as follows:\
 We need to search for the interval of an ascending major sixth (`+M6`)
 associated with a phrase ending on the dominant (`5$`). Before using the
 approprate **grep** command, we need to use
-[**ditto**](commands/ditto.html) to propagate the scale degree data over
+[**ditto**](/tool/ditto) to propagate the scale degree data over
 the null data tokens in the `**deg` spine; **ditto** will generate the
 following output:\
 \
@@ -593,7 +593,7 @@ particular scale-degree:
 > > \| sort -rn \> inventory.pre
 
 For the intervals following the tonic, we need to use
-[**context**](commands/context.html) -n 2. This will create pairs of
+[**context**](/tool/context) -n 2. This will create pairs of
 intervals: the first interval will indicate the approach, and the second
 interval in each pair will indicate the continuation.
 
@@ -674,7 +674,7 @@ interval-transitions and harmonic contexts.
 Using *context* with the *-p* Option
 ------------------------------------
 
-The **-p** option for [**context**](commands/context.html) allows the
+The **-p** option for [**context**](/tool/context) allows the
 output data records to be \"pushed\" forward by a specified number of
 lines. Consider the normal operation of **context** as illustrated
 below. The left-hand spine represents the input and the right-hand spine
@@ -803,7 +803,7 @@ The **context** command essentially transforms sequences of events into
 collections of pseudo-concurrent events. This pseudo-concurrent
 arrangement enables processing using line-oriented or record-oriented
 tools \-- most notably **grep**, **sed**,
-[**humsed**](commands/humsed.html) and **awk**. For example, it
+[**humsed**](/tool/humsed) and **awk**. For example, it
 facilitates pattern searching using **grep** and also allows useful
 manipulations via tools such as **humsed**. The manner by which data
 tokens are collected together can be defined by a starting marker or an
@@ -813,9 +813,9 @@ collections can be transported or pushed forward through the spine using
 the **-p** option.
 
 We\'ve seen a number of ways by which
-[**context**](commands/context.html) can be used to establish a
+[**context**](/tool/context) can be used to establish a
 particular context for data. In [Chapter 21](/guide/ch21) we will see
-how the [**patt**](commands/patt.html) command can be used to establish
+how the [**patt**](/tool/patt) command can be used to establish
 other kinds of contexts and how both of these commands can be used
 together.
 

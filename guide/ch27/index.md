@@ -227,7 +227,7 @@ Given a `**silbe` input, a inventory of words can be generated using
 
 Frequently, it is useful to search for a group of words rather than
 individual words. Suppose we are looking for the phrase \"white
-Pangur.\" The [**context**](commands/context.html) command can be used
+Pangur.\" The [**context**](/tool/context) command can be used
 to amalgamate words as multiple stops. If we are looking for a phrase
 consisting of just two words, we might use the **-n 2** option for
 **context**:
@@ -253,7 +253,7 @@ The *fmt* Command
 
 Another common task is simply to provide a readable text of the text or
 lyrics of a work. Given a `**text` representation, we can use the
-[**rid**](commands/rid.html) command to eliminate all records except
+[**rid**](/tool/rid) command to eliminate all records except
 non-null data records. This will result in a list of words \-- one word
 per line. UNIX provides a simple text formatter called **fmt** that will
 assemble words or lines into a block text where all output lines are
@@ -278,7 +278,7 @@ produces the following output:
 
 Another useful output would have the text arranged with one sentence or
 phrase on each line. As before we can use the
-[**context**](commands/context.html) command with the **-e** option to
+[**context**](/tool/context) command with the **-e** option to
 amalgamate words, where each amalgamated line ends with a punctuation
 mark:
 
@@ -305,7 +305,7 @@ closing curly braces (\``}`\'). Store the result in a temporary file:
 >
 > > \> temp1
 
-Notice that [**humsed**](commands/humsed.html) has been given two
+Notice that [**humsed**](/tool/humsed) has been given two
 substitution commands. The first eliminates all data signifiers except
 the close curly brace. The second substitution transforms empty output
 lines to null data records by adding a single period.
@@ -316,7 +316,7 @@ result in another temporary file:
 > `extract -i '**silbe' chant12 | text > temp2`
 
 \(3) Assemble the two temporary files together and use the
-[**cleave**](commands/cleave.html) command to join the end-of-phrase
+[**cleave**](/tool/cleave) command to join the end-of-phrase
 marker to the syllable representation.
 
 > `assemble temp1 temp2 | cleave -i '**kern,**text' \`
@@ -416,7 +416,7 @@ unstressed syllable and `1` indicates a stressed syllable:
 > `0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0`
 
 The above output was generated using the
-[**humsed**](commands/humsed.html) command. Any syllable containing a
+[**humsed**](/tool/humsed) command. Any syllable containing a
 trailing asterisk (`*`) is re-written as a \`1\', otherwise as a \`0\'.
 
 > ` . . . | humsed 's/[^ ][^ ]*\*/1/g; s/[^1][^1]*$/0/g'`
@@ -435,7 +435,7 @@ We can create a summary rhythmic pattern by adding together the values
 in each column \-- that is, counting the number of accented syllables
 that occur in each syllable position within the phrase. We can isolate
 each column using the UNIX **cut** command; **cut** is analogous to the
-Humdrum [**extract**](commands/extract.html) command. Fields are
+Humdrum [**extract**](/tool/extract) command. Fields are
 delineated by white space (tabs or spaces). For example, **cut -f 1**
 will isolate the first column of numbers. We can then pipe the results
 to the **stats** utility in order to calculate the numerical total. For
@@ -507,10 +507,10 @@ generate a context of 5 words (**-n 5**) making sure to omit barlines
 (**-o =**). We also pad the amalgamated line with three null tokens
 (**-p 3**) so the context is centered near the third word in the
 sequence. In the second pass, we generate a new spine (`**nums`) that
-contains only bar numbers. The [**ditto**](commands/ditto.html) command
+contains only bar numbers. The [**ditto**](/tool/ditto) command
 is used to ensure that every data record contains a bar number. To
 ensure that pick-up bars are numbered with the value 0, we\'ve used
-[**humsed**](commands/humsed.html) to replace any leading null-tokens
+[**humsed**](/tool/humsed) to replace any leading null-tokens
 with the number 0. In the third pass, we replace every data token with
 the name of the file. Finally, we assemble all three of these spines,
 eliminate everything but data records, and also eliminate lines that
@@ -583,7 +583,7 @@ like to output a line that places the word in context \-- specifically
 the preceding and following four words.
 
 First we transform and isolate the text data using the **text** and
-[**extract**](commands/extract.html) commands:
+[**extract**](/tool/extract) commands:
 
 > `text inputfile | extract -i '**text' `
 
@@ -612,7 +612,7 @@ generate our final output, we need to transform the linear list of words
 into a horizontal list where each line represents a single match for
 \"like\" or \"as.\"
 
-The [**context**](commands/context.html) command would enable us to do
+The [**context**](/tool/context) command would enable us to do
 this. Unfortunately, however, the output from **egrep** fails to conform
 to the Humdrum syntax. In particular, adding `^\*` to the regular
 expression will fail to ensure a proper Humdrum output since preceding
@@ -632,7 +632,7 @@ changed to null data records.
 
 Now we can make use of the **context** command. Each context ends with
 the double-dash delimiters generated by **egrep**. The
-[**rid**](commands/rid.html) command can be used to eliminate the
+[**rid**](/tool/rid) command can be used to eliminate the
 interpretations added by **hum**.
 
 > `text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
@@ -666,7 +666,7 @@ and `**text` are present.
 
 Since a word may be sustained through more than one pitch, and a pitch
 may be intoned for more than one word, we should use the
-[**ditto**](commands/ditto.html) command to ensure that null tokens are
+[**ditto**](/tool/ditto) command to ensure that null tokens are
 filled-in.
 
 > `semits * | text | extract -i '**semits,**text' | ditto -s =`
@@ -732,7 +732,7 @@ whose lyrics are most emotionally charged. One way to generate a crude
 index of emotionality is to measure the average ratings for the ten most
 emotion-laden words in a given input.
 
-The [**humsed**](commands/humsed.html) command provides an appropriate
+The [**humsed**](/tool/humsed) command provides an appropriate
 place to start. In effect, we would take a table (such as Table 26.4)
 and use it to create a series of substitutions. Emotionally-charged
 words would be replaced by a numerical rating. Our **humsed** script

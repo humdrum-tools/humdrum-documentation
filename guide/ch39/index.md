@@ -105,18 +105,18 @@ manner.
 
 **Tips:**
 
--   Use the [**humdrum**](commands/humsed.html) command to ensure that
+-   Use the [**humdrum**](/tool/humsed) command to ensure that
     the input data conforms to the Humdrum syntax.
--   Use the [**humdrum**](commands/humdrum.html) **-v** command to
+-   Use the [**humdrum**](/tool/humdrum) **-v** command to
     determine whether the kind of data (signifiers) you are interested
     in are truly present in all of the files to be searched.
--   Use the [**proof**](commands/proof.html) command to ensure that any
+-   Use the [**proof**](/tool/proof) command to ensure that any
     [`**kern`](representations/kern.rep.html) data is properly encoded.
 -   Visually inspect sample passages from the input data. Do not rely
     solely on the **ms** command; instead, look at the actual ASCII text
     data using the **more** command.
--   Use the [**midi**](commands/midi.html) and
-    [**perform**](commands/perform.html) commands to listen to sample
+-   Use the [**midi**](/tool/midi) and
+    [**perform**](/tool/perform) commands to listen to sample
     passages; ensure that the data makes sense.
 -   If you are uncertain of the quality of the data, try encoding a
     randomly selected subset and then use the UNIX **diff** command to
@@ -128,7 +128,7 @@ manner.
     records (`!!!RWG:` and `!!!ONB:`). These records may contain
     important editorial notes or warnings.
 -   Where appropriate, expand files to through-composed versions (using
-    [**thru**](commands/thru.html)) before searching. If more than one
+    [**thru**](/tool/thru)) before searching. If more than one
     editorial version is present in a document, select the most
     appropriate edition before processing.
 -   Create an inventory of all the types of data tokens present in an
@@ -136,9 +136,9 @@ manner.
     unexpected data are present.
 -   If necessary, eliminate certain types of data that might confound or
     interfere with your search in some way. Use
-    [**rid**](commands/rid.html), **grep -v**,
-    [**extract**](commands/extract.html) **-i**, **sed** and/or
-    [**humsed**](commands/humsed.html) to restrict the data.
+    [**rid**](/tool/rid), **grep -v**,
+    [**extract**](/tool/extract) **-i**, **sed** and/or
+    [**humsed**](/tool/humsed) to restrict the data.
 
 **(2) Ensure that you are searching all of the intended data:**
 
@@ -209,8 +209,8 @@ inaccurate or inappropriate search templates.**
     correct. Remember that visual inspection will only help you identify
     *false hits.* Visual inspection of the output will not help you
     identify *misses.*
--   Use the [**midi**](commands/midi.html) and
-    [**perform**](commands/perform.html) commands to proof-listen to
+-   Use the [**midi**](/tool/midi) and
+    [**perform**](/tool/perform) commands to proof-listen to
     your output. Again remember that aural inspection will only help you
     identify *false hits.*
 -   Ask whether the output makes sense. Given the amount of music
@@ -221,7 +221,7 @@ inaccurate or inappropriate search templates.**
 -   Look for converging evidence. Try two or three contrasting
     approaches to ensure that the same answer arises for each approach.
     For example, try searching each part individually using the
-    [**extract**](commands/extract.html) command.
+    [**extract**](/tool/extract) command.
 
 **(4) Ensure that you understand how a given search tool or option**
 **operates.**
@@ -236,7 +236,7 @@ inaccurate or inappropriate search templates.**
     order to ensure that you understand what a given option does.
 -   Compare outputs using different options. Ensure that your selected
     option(s) is matching the correct pattern.
--   Use the [**humver**](commands/humver.html) command to determine
+-   Use the [**humver**](/tool/humver) command to determine
     which version of the Humdrum Toolkit you are using. Ensure that the
     documentation pertains to the correct version.
 -   Read the \"Release Notes\" for the software you use. Known software
@@ -283,7 +283,7 @@ processing errors.
     at each stage.
 -   Use the UNIX **tee** command to generate files at intermediate
     points in the processing. Use the
-    [**assemble**](commands/assemble.html) command to align inputs and
+    [**assemble**](/tool/assemble) command to align inputs and
     outputs at various stages in the processing.
 -   Execute your finalized pipeline from a shell script in order to
     avoid undetected typing errors.

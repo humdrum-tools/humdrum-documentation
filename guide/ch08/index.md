@@ -284,7 +284,7 @@ components to a common command:
 
 Each of these components is separated by \`blank space\' (tabs or
 spaces). A command begins with the command name \-- such as **uniq**,
-**sort**, or [**pitch**.](commands/pitch.html) A command argument is a
+**sort**, or [**pitch**.](/tool/pitch) A command argument is a
 special requirement of only some commands. A good example of a command
 argument is the search pattern given to the **grep** command. In the
 following command, **grep** is the command name, \"Lennon\" is the
@@ -317,7 +317,7 @@ uniq -c ghana32
 
 In many cases, the option is followed by a *parameter* that specifies
 further information pertaining to the invoked option. In the following
-command, [**recode**](commands/recode.html) is the command name, **-f**
+command, [**recode**](/tool/recode) is the command name, **-f**
 is the option, **reassign** is the parameter used by the **-f** option,
 and **gagaku** is the name of the input file:
 
@@ -335,7 +335,7 @@ option requires a parameter.
 Whenever an option requires a parameter, the option must be specified
 alone and followed immediately by the appropriate parameter. For
 example, in the following command, the command name is
-[**trans**,](commands/trans.html) the **-d** option is followed by the
+[**trans**,](/tool/trans) the **-d** option is followed by the
 numerical parameter **3**; the parameter for the **-c** option is the
 number **4** and the input file is named **gambia21**.
 

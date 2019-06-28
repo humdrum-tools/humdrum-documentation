@@ -17,7 +17,7 @@ There is no precise way to measure similarity. However, there are
 several useful techniques that can be used to estimate the degree of
 similarity between different types of information. In this chapter we
 discuss two general tools for characterizing similarity:
-[**correl**](commands/correl.html) and [**simil**](commands/simil.html).
+[**correl**](/tool/correl) and [**simil**](/tool/simil).
 The **correl** command can be used to measure numerical similarity
 between two sets of numbers. The **simil** command can be used to
 measure similarity between non-numeric data.
@@ -61,7 +61,7 @@ whereas most of the shortest notes (4 and 5 semits) are lower. There are
 some exceptions, however, such as the 0.5 sec. duration for a pitch of
 14 semits.
 
-The Humdrum [**correl**](commands/correl.html) command allows us to
+The Humdrum [**correl**](/tool/correl) command allows us to
 characterize more precisely the degree of similarity between two sets of
 numbers. The **correl** command expects precisely two input spines; it
 is easily invoked:
@@ -169,7 +169,7 @@ species counterpoint, there are two pitches in the upper voice for each
 pitch in the lower voice. Translating our pitch data to semitones will
 result in a failure of the matched-pairs criterion. There are two ways
 of overcoming this problem. One method is to use
-[**ditto**](commands/ditto.html) to repeat the sustained semitone value
+[**ditto**](/tool/ditto) to repeat the sustained semitone value
 for the slower-moving part:
 
 > `semits species2.krn | ditto -s ^= | correl -s ^=`
@@ -178,7 +178,7 @@ Another approach would be to omit from consideration those notes that
 are not concurrent with a note in the other voice. The **-m** option for
 **correl** disables the matched-pairs criterion. That is, if numerical
 data is missing from either one of the input spines,
-[**correl**](commands/correl.html) will simply discard the entire data
+[**correl**](/tool/correl) will simply discard the entire data
 record from the correlation calculation. Using this approach, we would
 omit the **ditto** command:
 
@@ -199,7 +199,7 @@ are similar to a brief excerpt or template. In this mode of operation,
 the input consists of a single input spine plus a separate template that
 represents a pattern being sought.
 
-The **-f** option for [**correl**](commands/correl.html) allows the user
+The **-f** option for [**correl**](/tool/correl) allows the user
 to specify a file that acts as a template which is then scanned across
 some input. By way of example, suppose we are looking for motivic
 instances similar to the first four notes of *Frère Jacques*. Our
@@ -303,7 +303,7 @@ together the correlations on each line: passages that exhibit high
 pitch/duration similarity will tend to have a large positive summed
 score. Alternatively, one might set a threshold for both each of the
 pitch and duration correlation coefficients and use
-[**recode**](commands/recode.html) to mark promising points of high
+[**recode**](/tool/recode) to mark promising points of high
 correlation. Values between +0.8 and +1.0 might be recoded as
 \"similar\"; values between +0.5 and +0.8 might be recoded as \"maybe\";
 all other values might be recoded as null tokens. Assembling the recoded
@@ -337,7 +337,7 @@ objects? How *much* is the difference in pitch range between a \'cello
 and a bassoon? How *much* is the difference in spelling between
 \"bassoon\" and \"baboon\"?
 
-In the [**correl**](commands/correl.html) command, the criterion of
+In the [**correl**](/tool/correl) command, the criterion of
 similarity arises from the user\'s choice of input representations. If
 the input represents duration, then the results pertain to durational
 similarity. If the input represents frequency, then the results pertain
@@ -348,7 +348,7 @@ similarity. However, we know that non-numerical data can also be
 similar. An \"apple\" is more similar to an \"orange\" than it is to a
 \"bassoon.\"
 
-The [**simil**](commands/simil.html) command is a \"non-parametric\"
+The [**simil**](/tool/simil) command is a \"non-parametric\"
 tool for characterizing similarity. Like **correl,** the criterion of
 similarity depends on the user\'s choice of input representations. If
 the input represents metric position, then the results pertain to
@@ -374,7 +374,7 @@ of data; multi-column inputs are forbidden. The *source* input must
 conform to the Humdrum syntax, however the *template* should contain
 only data records.
 
-Depending on the mode of operation, [**simil**](commands/simil.html)
+Depending on the mode of operation, [**simil**](/tool/simil)
 outputs either one or two spines of continuous information regarding the
 similarity of the two inputs. The length of **simil**\'s output matches
 that of the *source* file.
@@ -484,7 +484,7 @@ reflect the presumed harmonic similarity:\
 Defining Edit Penalties
 -----------------------
 
-Technically, the [**simil**](commands/simil.html) command implements a
+Technically, the [**simil**](/tool/simil) command implements a
 Damerau-Levenshtein metric for edit distance (see Orpen & Huron, 1992).
 Permissible edit operations include substitutions and deletions. Each
 edit action incurs a penalty, and the cumulative edit-distance
@@ -545,7 +545,7 @@ Some user-defined weightings may give rise to peculiar results \-- such
 as negative costs \-- but **simil** does not forbid this. **Simil**
 generates warning messages if the weightings seem illogical; for
 example, if the cost of R1 is more than that of D1. In addition,
-[**simil**](commands/simil.html) will abort operation if the defined
+[**simil**](/tool/simil) will abort operation if the defined
 edit penalties transgress the triangular inequality rule (see Orpen &
 Huron, 1992). The default weighting for all operations is +1.0.
 
@@ -572,7 +572,7 @@ similarity, unless the length of the template is considered. For
 example, 3 editing operations constitutes a rather modest change for a
 template consisting of 20 elements. However, 3 edit operations is
 significant for a template consisting of only 5 elements. As a result,
-in the default operation, [**simil**](commands/simil.html) scales the
+in the default operation, [**simil**](/tool/simil) scales the
 edit-distance scores according to the length of the comparison template.
 This ensures that all similarity values remain between 0 and 1.
 
@@ -617,7 +617,7 @@ subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 
 <a name ="similar_fret_patterns"></a>
 
-The [**simil**](commands/simil.html) command can be used to characterize
+The [**simil**](/tool/simil) command can be used to characterize
 innumerable types of similarity. Suppose, for example, that we wanted to
 identify similar fingering patterns in music for guitar. Consider the
 following work by Ferdinando Carulli:\
@@ -681,7 +681,7 @@ following work by Ferdinando Carulli:\
 > (*a*=thumb, *b*=index finger, *c*=middle finger, etc.). The lower-case
 > *n* is used to explicitly indicate no finger (i.e. open string(s)). We
 > can prepare our input using the following
-> [**humsed**](commands/humsed.html) command. We delete all barlines,
+> [**humsed**](/tool/humsed) command. We delete all barlines,
 > and then eliminate all characters other than the letters *a* to *e*.
 > Any resulting empty lines we replace by the letter *n*.
 >
@@ -742,8 +742,8 @@ following work by Ferdinando Carulli:\
 > > The *accent* Command
 > > --------------------
 > >
-> > Both the [**correl**](commands/correl.html) and
-> > [**simil**](commands/simil.html) tools presume that all data tokens
+> > Both the [**correl**](/tool/correl) and
+> > [**simil**](/tool/simil) tools presume that all data tokens
 > > are equally important. In the case of **correl**, each number is
 > > weighted equally in calculating the coefficient of correlation. In
 > > the case of **simil**, each data token has the same potential for
@@ -926,7 +926,7 @@ following work by Ferdinando Carulli:\
 > notes whose accent value exceeds some threshold. In the above
 > examples, a threshold of 0.6 might be appropriate (marked with an
 > asterisk). We can isolate these tones by using the
-> [**recode**](commands/recode.html) and [**yank**](commands/yank.html)
+> [**recode**](/tool/recode) and [**yank**](/tool/yank)
 > commands. First, we create an appropriate reassignment file for
 > **recode**. In this case we have classified all notes as either
 > primary, secondary, or tertiary:
@@ -953,8 +953,8 @@ following work by Ferdinando Carulli:\
 > -------
 >
 > In this chapter we have introduced two types of similarity tools:
-> [**correl**](commands/correl.html) and
-> [**simil**](commands/simil.html). For both tools, the criterion of
+> [**correl**](/tool/correl) and
+> [**simil**](/tool/simil). For both tools, the criterion of
 > similarity depends on the user\'s choice of input representation. For
 > example, if the input represents fret-board finger patterns, then the
 > similarity measures will reflect fret-board fingering similarity.
@@ -976,8 +976,8 @@ following work by Ferdinando Carulli:\
 > type of data being considered.
 >
 > The tools described in this chapter complement the pattern searching
-> tools (such as [**patt**](commands/patt.html),
-> [**pattern**](commands/pattern.html) and **grep**) described earlier.
+> tools (such as [**patt**](/tool/patt),
+> [**pattern**](/tool/pattern) and **grep**) described earlier.
 >
 > ------------------------------------------------------------------------
 >

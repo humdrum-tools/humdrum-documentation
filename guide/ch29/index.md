@@ -14,8 +14,8 @@ Differences and Commonalities
 =============================
 
 In [Chapter 25](/guide/ch25) we introduced the problem of similarity
-via the Humdrum [**simil**](commands/simil.html) and
-[**correl**](commands/correl.html) commands. This chapter revisits the
+via the Humdrum [**simil**](/tool/simil) and
+[**correl**](/tool/correl) commands. This chapter revisits the
 problem of similarity by focussing on differences and commonalities.
 Specifically, this chapter introduces three additional tools, the UNIX
 **cmp**, **diff** and **comm** commands. Although these commands are
@@ -45,7 +45,7 @@ Sometimes files differ in ways that may be uninteresting. For example,
 we may suspect that a single work has been attributed to two different
 composers. The encoded files may differ only in that the `!!!COM:`
 reference records are different. We can pre-process the files using
-[**rid**](commands/rid.html) in order to determine whether the scores
+[**rid**](/tool/rid) in order to determine whether the scores
 are otherwise identical.
 
 > `rid -G file1 > temp1`\
@@ -136,7 +136,7 @@ ways. For example, texts may differ in punctuation or in the use of
 upper- and lower-case characters. The **diff** command provides a **-i**
 option that ignores distinctions between upper- and lower-case
 characters. Punctuation marks can be eliminated by adding a suitable
-[**humsed**](commands/humsed.html) filter.
+[**humsed**](/tool/humsed) filter.
 
 > `extract -i '**silbe' file1 | text | humsed 's/[^a-zA-Z ]//g' \`
 >
@@ -400,8 +400,8 @@ to eliminate unwanted or distracting data, and when post-processing is
 done (using **wc**) to estimate the magnitude of the differences or
 commonalities.
 
-Together with the [**simil**](commands/simil.html) and
-[**correl**](commands/correl.html) commands discussed in [Chapter
+Together with the [**simil**](/tool/simil) and
+[**correl**](/tool/correl) commands discussed in [Chapter
 25,](/guide/ch25) these five tools provide a variety of means for
 characterizing differences, commonalities, and similarities.
 

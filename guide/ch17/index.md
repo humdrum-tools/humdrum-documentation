@@ -164,7 +164,7 @@ Filtering Data with the *rid* Command
 -------------------------------------
 
 As we saw in [Chapter 13,](/guide/ch13) the
-[**rid**](commands/rid.html) command can be used to eliminate various
+[**rid**](/tool/rid) command can be used to eliminate various
 classes of Humdrum records. For example, **rid -G** eliminates all
 global comments; **rid -D** eliminates all data records, etc. The option
 combination **-GLId** is very common with **rid** since only data
@@ -415,14 +415,14 @@ data.
 *Translating* data involves changing from one type of information to
 another \-- that is, changing the exclusive interpretations. For
 example, if we want to produce an inventory of melodic intervals, then
-we might use the [**mint**](commands/mint.html) or
-[**xdelta**](commands/xdelta.html) commands to generate a suitable
+we might use the [**mint**](/tool/mint) or
+[**xdelta**](/tool/xdelta) commands to generate a suitable
 representation. Alternatively, we might want to generate an inventory of
-scale degrees using the [**deg**](commands/deg.html) or
-[**solfa**](commands/solfa.html) commands.
+scale degrees using the [**deg**](/tool/deg) or
+[**solfa**](/tool/solfa) commands.
 
 Instead of translating our data, we might wish to edit the data using
-the **sed** or [**humsed**](commands/humsed.html) stream editors.
+the **sed** or [**humsed**](/tool/humsed) stream editors.
 Suppose we had a file (named \"notes\") consisting of pitch information,
 and we wanted to create an inventory of the diatonic pitch-letter names.
 Our input might look like this:\
@@ -456,7 +456,7 @@ But this inventory distinguishes D-sharp from D-natural \-- which is not
 what we want. The answer is to filter our input so that the sharps are
 removed.
 
-Adding the appropriate [**humsed**](commands/humsed.html) command to our
+Adding the appropriate [**humsed**](/tool/humsed) command to our
 pipe:
 
 > `humsed 's/#//' notes | rid -GLId | sort | uniq -c`
@@ -513,7 +513,7 @@ the input is monophonic `**kern` data.
 
 *Did Bartók\'s preferred articulation marks change* *over his lifetime?*
 Assume that copies of early and late works have been concatenated to the
-files `early` and `late`. The [**humsed**](commands/humsed.html) command
+files `early` and `late`. The [**humsed**](/tool/humsed) command
 here eliminates all data with the exception of
 [`**kern`](representations/kern.rep.html) articulation marks. (See
 [Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)

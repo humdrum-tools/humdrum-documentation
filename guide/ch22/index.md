@@ -17,7 +17,7 @@ categorizing various things. In this chapter we will discuss two general
 approaches to classifying: *parametric* classifying and *non-parametric*
 classifying. In the first instance, we will see how numerical data can
 be categorized according to arithmetic ranges. We will then revisit the
-[**humsed**](commands/humsed.html) command and learn how it can be used
+[**humsed**](/tool/humsed) command and learn how it can be used
 to classify different types of non-numeric data tokens.
 
 <a name ="The_recode_Command"></a>
@@ -30,7 +30,7 @@ representing the moment-to-moment heart-rate of a listener. Heart rate
 is related to arousal level and so we might use our data to identify
 passages that tend to arouse listeners. Since the average heart-rate of
 listeners differs, we are interested primarily in the rate-of-change. We
-can use the [**xdelta**](commands/xdelta.html) command to calculate the
+can use the [**xdelta**](/tool/xdelta) command to calculate the
 differences in heart-rate between successive values.
 
 > `xdelta -s = heart.dat > changes`
@@ -68,7 +68,7 @@ output (right) spine for the above command:
 A certain amount of heart-rate variation is to be expected because of
 monitoring equipment and other variables. So we are primarily interested
 in large changes of heart-rate, such as the change occurring in measure
-136. The [**recode**](commands/recode.html) command allows us to
+136. The [**recode**](/tool/recode) command allows us to
 classify numerical data according to value or range. In the above case,
 we may be interested in identifying acceleration or decelerations that
 exceed some threshold. The **recode** command requires that the user
@@ -138,7 +138,7 @@ located any points in the score where a heart-rate related event has
 occurred.
 
 Permissible relational operators used by
-[**recode**](commands/recode.html) include the following:
+[**recode**](/tool/recode) include the following:
 
 >   ------ -----------------------
 >   ==     equals
@@ -172,7 +172,7 @@ reassignment.
 Classifying Intervals
 ---------------------
 
-The [**recode**](commands/recode.html) command has innumerable
+The [**recode**](/tool/recode) command has innumerable
 applications. Suppose we wanted to determine how frequently ascending
 melodic leaps are followed by a descending step. Let\'s consider two
 different ways of distinguishing steps and leaps: a \"semitone\" method
@@ -190,11 +190,11 @@ interval as either one or two semitones. Our reassignment file (dubbed
 >
 Given this reassignment file, we can now begin our processing. In the
 first method, we translate to semitone data using
-[**semits**](commands/semits.html), translate to semitone-differences
-using [**xdelta**](commands/xdelta.html), and then classify into five
-interval types using [**recode**](commands/recode.html). The
-[**context**](commands/context.html) **-n 2** command will create pairs
-of interval types, then [**rid**](commands/rid.html), **sort** and
+[**semits**](/tool/semits), translate to semitone-differences
+using [**xdelta**](/tool/xdelta), and then classify into five
+interval types using [**recode**](/tool/recode). The
+[**context**](/tool/context) **-n 2** command will create pairs
+of interval types, then [**rid**](/tool/rid), **sort** and
 **uniq -c** are used to generate an inventory. Finally, we use **grep**
 to identify what happens following ascending leaps:
 
@@ -206,7 +206,7 @@ to identify what happens following ascending leaps:
 An alternative way of distinguishing steps from leaps is by diatonic
 interval. For example, we might consider a diminished third to be a
 leap, while an augmented second may be considered a step. In this case,
-we can use the [**mint**](commands/mint.html) command to determine the
+we can use the [**mint**](/tool/mint) command to determine the
 melodic interval size; the **-d** option limits the output to diatonic
 intervals and excludes the interval quality (perfect, major, minor,
 etc.). The appropriate reassignment file would be:
@@ -231,7 +231,7 @@ The appropriate command pipe would be:
 Clarinet Registers
 ------------------
 
-Consider another use of the [**recode**](commands/recode.html) command.
+Consider another use of the [**recode**](/tool/recode) command.
 <a name ="Claude_Debussy"></a> [Imagine that we wanted to arrange Claude Debussy\'s
 *Syrinx* for soprano clarinet instead of flute. Our principle concern as
 arranger is determining what key would be especially well suited to the
@@ -282,7 +282,7 @@ Open and Close Position Chords
 
 <a name ="Closed_and_Open_Position_Chords"></a>
 
-Inputs to the [**recode**](commands/recode.html) command can be quite
+Inputs to the [**recode**](/tool/recode) command can be quite
 sophisticated. Consider, for example, the task of classifying chords as
 \"open\" or \"close\" position. According to one definition, a chord is
 said to be in \"open\" position when the the interval separating the
@@ -303,9 +303,9 @@ the soprano and tenor voices. Our reassignment file might be as follows:
 >
 We will need to extract the soprano and tenor voices, translate the
 pitch representation to [`**semits`](representations/semits.rep.html)
-and use [**ydelta**](commands/ydelta.html) to calculate the semitone
+and use [**ydelta**](/tool/ydelta) to calculate the semitone
 distance between the two voices. In the following set of commands, we
-have also added the [**ditto**](commands/ditto.html) command to ensure
+have also added the [**ditto**](/tool/ditto) command to ensure
 that there are semitone values for each sonority.
 
 > `extract -i '*Itenor,*Isopran'` *inputfile*` | semits -x | ditto \`
@@ -360,7 +360,7 @@ Suppose we wanted to determine what kinds of fingering *transitions*
 occur in Joachim Quantz\'s flute concertos. Since instrument fingerings
 are insensitive to enharmonic spelling, an appropriate input
 representation would be `**semits`. Having used
-[**recode**](commands/recode.html) to translate the pitches to
+[**recode**](/tool/recode) to translate the pitches to
 fingerings, we can then use **context -n 2** to generate diads of
 successive finger combinations.
 
@@ -391,7 +391,7 @@ fingerings differ.
 The **recode** command can be used for innumerable other kinds of
 classifications. For example, [`**kern`](representations/kern.rep.html)
 durations might be expressed in seconds (using the
-[**dur**](commands/dur.html) command), and the elapsed times then
+[**dur**](/tool/dur) command), and the elapsed times then
 classified as *long*, *short* and *medium* (say). Sound pressure levels
 (in decibels) might be classified as dynamic markings (*ff*, *mf*, *mp*,
 *pp*, etc.), and so on.
@@ -401,11 +401,11 @@ classified as *long*, *short* and *medium* (say). Sound pressure levels
 Classifying with *humsed*
 -------------------------
 
-The [**recode**](commands/recode.html) command is restricted to
+The [**recode**](/tool/recode) command is restricted to
 classifying numerical data only. For many applications, it is useful to
 be able to classify data according to non-numerical criteria. As we saw
 in [Chapter 14,](/guide/ch14) stream editors such as **sed** and
-[**humsed**](commands/humsed.html) provide automated substitution
+[**humsed**](/tool/humsed) provide automated substitution
 operations. Such string substitutions can be used for non-parametric
 classifying. We can illustrate this with **humsed.**
 
@@ -416,7 +416,7 @@ Suppose we wanted to classify various flute finger-transitions as either
 fingering, E5 to A5 is a moderate fingering, whereas C5 to D5 is
 difficult. As before, it is best to use a semitone representation so we
 don\'t need to consider differences in enharmonic pitch spelling. We can
-use the [**semits**](commands/semits.html) command to transform all
+use the [**semits**](/tool/semits) command to transform all
 pitches. Then we can use **context -n 2** to generate pairs of
 successive pitches as double-stops. We can then create a **humsed**
 script file (let\'s call it `difficulty`) containing substitutions such
@@ -662,9 +662,9 @@ ranges of numerical values into a finite set of classes or categories;
 into a second (usually smaller) set of words (used to label various
 classes or categories). In this chapter, we have seen that, for any
 Humdrum representation, parametric classification can be done using the
-[**recode**](commands/recode.html) command and non-parametric
+[**recode**](/tool/recode) command and non-parametric
 classification can be achieved using the *substitution* operation
-provided by the [**humsed**](commands/humsed.html) command.
+provided by the [**humsed**](/tool/humsed) command.
 
 ------------------------------------------------------------------------
 

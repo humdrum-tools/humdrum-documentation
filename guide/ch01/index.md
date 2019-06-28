@@ -141,7 +141,7 @@ operations.
 
 If the above functions sound vague, that\'s because the corresponding
 Humdrum tools are similarly broad in their function. For example, the
-Humdrum [**patt**](commands/patt.html) tool can be used to locate
+Humdrum [**patt**](/tool/patt) tool can be used to locate
 Landini cadences, label statements of 12-tone rows, or search for piano
 fingering patterns in Liszt. All three tasks involve searching for a
 sequential pattern that might have concurrent features as well.
@@ -159,24 +159,24 @@ Although computers are typically not good at interpreting data,
 interpretive software will become increasingly important as
 computational musicology continues to develop. Humdrum provides a
 handful of tools that *interpret* data in various ways. For example, the
-[**key**](commands/key.html) command implements the Krumhansl and
+[**key**](/tool/key) command implements the Krumhansl and
 Kessler method for estimating the key of a music passage. The
-[**melac**](commands/melac.html) command implements Joseph Thomassen\'s
+[**melac**](/tool/melac) command implements Joseph Thomassen\'s
 model of melodic accent. Other interpretive tools characterize
 syncopation or implement Johnson-Laird\'s model of rhythmic prototypes.
 
 The names of some of the Humdrum tools will be readily recognizable by
-musicians. Humdrum tools such as [**key,**](commands/key.html)
-[**pitch,**](commands/pitch.html) [**record,**](commands/record.html)
-[**tacet,**](commands/tacet.html) [**trans**](commands/trans.html) and
-[**reihe**](commands/reihe.html) may evoke fairly accurate ideas about
+musicians. Humdrum tools such as [**key,**](/tool/key)
+[**pitch,**](/tool/pitch) [**record,**](/tool/record)
+[**tacet,**](/tool/tacet) [**trans**](/tool/trans) and
+[**reihe**](/tool/reihe) may evoke fairly accurate ideas about
 what they do. Ironically, the most recognizable tools are typically the
 least useful tools in the toolkit \-- because they are so specialized.
 The most powerful Humdrum tools have names such as
-[**cleave,**](commands/cleave.html) [**humsed,**](commands/humsed.html)
-[**simil,**](commands/simil.html) [**recode,**](commands/recode.html)
-[**context,**](commands/context.html) [**patt**](commands/patt.html) and
-[**yank.**](commands/yank.html)
+[**cleave,**](/tool/cleave) [**humsed,**](/tool/humsed)
+[**simil,**](/tool/simil) [**recode,**](/tool/recode)
+[**context,**](/tool/context) [**patt**](/tool/patt) and
+[**yank.**](/tool/yank)
 
 By itself, each individual tool in the Humdrum Toolkit is quite modest
 in its effect. However, the tools are not intended to be
@@ -334,7 +334,7 @@ Some Sample Commands
 
 One group of tools is used to extract or select sections of data.
 Vertical spines of data can be extracted from a Humdrum file using the
-[**extract**](commands/extract.html) command. For example, if a file
+[**extract**](/tool/extract) command. For example, if a file
 encodes four musical parts, then the **extract** command might be used
 to isolate one or more given parts. The command
 
@@ -367,7 +367,7 @@ language may be isolated:
 > `extract -i '*LDeutsch' filename`
 
 Segments or passages of music can be extracted using the
-[**yank**](commands/yank.html) command. Segments can be defined by
+[**yank**](/tool/yank) command. Segments can be defined by
 sections, phrases, measures, or other any user-specified marker. For
 example, the following command extracts the section labelled \"Trio\"
 from a minuet & trio:
@@ -406,7 +406,7 @@ at half the notated tempo from a file named `Cui`:
 > `yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5`
 
 Some tools translate from one representation to another. For example,
-the [**mint**](commands/mint.html) command generates melodic interval
+the [**mint**](/tool/mint) command generates melodic interval
 information. The following command locates all tritones \-- including
 compound (octave) equivalents:
 

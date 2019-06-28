@@ -454,7 +454,7 @@ exposition is on average louder than the development section:
 
 Does a work tend to begin quietly and end loudly, or vice versa? Here we
 might compare the first 10 measures with the final 10 measures. Notice
-the use of [**ditto**](commands/ditto.html) to increase the number of
+the use of [**ditto**](/tool/ditto) to increase the number of
 values participating in the calculation of the average dynamic level:
 
 > `yank -n = -r 1-10 janacek | extract -i '**dynam' \`
@@ -473,7 +473,7 @@ music tend to be quieter for lower pitches and louder for higher
 pitches? A straightforward way to determine this is to compare dynamic
 level with pitch height \-- represented in semitones
 ([`**semits`](representations/semits.rep.html)). The
-[**correl**](commands/correl.html) command can then be used to measure
+[**correl**](/tool/correl) command can then be used to measure
 Pearson\'s coefficient of correlation. If there is a relationship
 between pitch height and dynamic level then the correlation should be
 positive.
@@ -503,7 +503,7 @@ A variation on this procedure might be to restrict the comparison over a
 specified pitch range. For example, one might think that higher pitches
 tend to be louder but that lower pitches are neither softer nor louder
 than usual. In order to test this view we can use the
-[**recode**](commands/recode.html) command to reassign \"low\" pitches
+[**recode**](/tool/recode) command to reassign \"low\" pitches
 to a single value. By way of illustration, the reassignment might
 presume that below G4 (semits=7) there is no relationship between pitch
 height and dynamic level. We might recode all values lower than 7 to a
@@ -528,9 +528,9 @@ average (or maximum) changes in dynamic level. If a work contains many
 crescendos and diminuendos markings, then most of the changes in `**dB`
 values will be small. Conversely, alternations between contrasting
 dynamic levels will cause the average decibel differences to be larger.
-The [**xdelta**](commands/xdelta.html) command can be used to calculate
+The [**xdelta**](/tool/xdelta) command can be used to calculate
 the changes in dynamic level. Notice that it is important to avoid using
-the [**ditto**](commands/ditto.html) command since repeated dynamic
+the [**ditto**](/tool/ditto) command since repeated dynamic
 level values will cause the average dynamic difference to approach zero.
 
 > `extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \`
@@ -539,7 +539,7 @@ level values will cause the average dynamic difference to approach zero.
 
 Another approach to this problem might be to count the number of dynamic
 contrasts, avoiding the use of the **db** command. In the following
-pipeline, we use [**context**](commands/context.html) to generate pairs
+pipeline, we use [**context**](/tool/context) to generate pairs
 of dynamic markings, and then use **grep** to count the number of
 alternations between *f* and *p*.
 
@@ -603,7 +603,7 @@ notes with a corresponding \*\*MIDI representation.
 >
 In order to translate to a \*\*dB representation, we must first isolate
 the key velocity values for key-on events. The following
-[**humsed**](commands/humsed.html) command simply eliminates all data up
+[**humsed**](/tool/humsed) command simply eliminates all data up
 to (and including) the last slash character:
 
 > `extract -i '**MIDI' mono_input | humsed 's/.*\///'`
@@ -628,7 +628,7 @@ that the following rough decibel equivalents are established:
 >   0              0
 >   -------------- --------------------
 >
-An appropriate reassignment file for [**recode**](commands/recode.html)
+An appropriate reassignment file for [**recode**](/tool/recode)
 would begin as follows:
 
 >   --------- ----

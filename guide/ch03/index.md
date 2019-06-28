@@ -21,7 +21,7 @@ processing tasks.
 The *census* Command
 --------------------
 
-The Humdrum [**census**](commands/census.html) command provides basic
+The Humdrum [**census**](/tool/census) command provides basic
 information about an input stream or file. We can invoke the command by
 typing the command name followed by the name of a file. The command
 

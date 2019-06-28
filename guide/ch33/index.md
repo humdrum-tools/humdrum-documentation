@@ -135,7 +135,7 @@ alliteration is found at the beginning of William Shakespeare\'s
 Given an `**IPA` input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using **humsed**. This
 task requires some additional knowledge about using
-[**humsed**](commands/humsed.html). Both **sed** and **humsed** provide
+[**humsed**](/tool/humsed). Both **sed** and **humsed** provide
 a \"back reference\" construction that allows users to manipulate a
 matched expression without knowing the precise matched sequence of
 characters. The expression to be matched is indicated via parentheses
@@ -175,7 +175,7 @@ The result is:
 >   ---------
 >
 We can now amalgamate successive initial phonemes by using the
-[**context**](commands/context.html) command. Suppose we are interested
+[**context**](/tool/context) command. Suppose we are interested
 in identifying alliterations where three or more words begin with the
 same initial phoneme. For this, we would use the **-n 3** option for
 **context**. Having amalgamated three phonemes on each data record we
@@ -268,7 +268,7 @@ classes. For example, in our example from Shakespeare\'s *Tempest*, the
 \`th\' in \`thy\' is part of the fricative alliteration.
 
 In [Chapter 22](/guide/ch22) we saw how
-[**humsed**](commands/humsed.html) can be used to classify things. A
+[**humsed**](/tool/humsed) can be used to classify things. A
 simple reassignment script can be defined which collapses the various
 phonemes into a smaller set of phonetic classes. For example, a suitable
 script might contain the following assignments:
@@ -315,7 +315,7 @@ estimate the overall average vowel height for a piece by averaging these
 values together. The basic pipeline will extract the pertinent `**IPA`
 spine, eliminate all non-vowel phonemes, add spaces between each vowel,
 and then assign estimated heights to each vowel. Finally, non-data
-records are eliminated using [**rid**](commands/rid.html) and the data
+records are eliminated using [**rid**](/tool/rid) and the data
 values averaged using the **stats** command:
 
 > `extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\`
@@ -345,9 +345,9 @@ the original Schubert song with each of the translations. However, not
 all notes are equally important. In the first instance, the vowels on
 longer sustained notes will be more noticeable than the vowels attending
 shorter notes. A simple remedy is to use the
-[**timebase**](commands/timebase.html) command to expand the input so
+[**timebase**](/tool/timebase) command to expand the input so
 that longer notes are proportionally more influential in our measure of
-overall vowel height. We can use [**ditto**](commands/ditto.html) to
+overall vowel height. We can use [**ditto**](/tool/ditto) to
 repeat sustained vowels:
 
 > `timebase -t 16 Schubert | extract -i '**IPA' \`
@@ -399,7 +399,7 @@ indicators (via curly braces {}). Our input might begin as follows:
 >   etc.       
 >   ---------- ---------
 >
-Using [**extract**](commands/extract.html), **context** and **rid** we
+Using [**extract**](/tool/extract), **context** and **rid** we
 can isolate each poetic phrase:
 
 > `extract -i '**IPA poem | context -b { -e } | rid -GLId`

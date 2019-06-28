@@ -71,8 +71,8 @@ underlay, and even pitch information.
 
 Note that it is always possible to incorporate additional information at
 a later date. Additional information can be inserted into a Humdrum
-encoding by using the [**assemble**](commands/assemble.html) and
-[**cleave**](commands/cleave.html) commands. In general, it is important
+encoding by using the [**assemble**](/tool/assemble) and
+[**cleave**](/tool/cleave) commands. In general, it is important
 that the encoding of electronic documents not consume all of a
 researcher\'s efforts and resources. The most common problem that beset
 early projects in computational musicology was that researchers rarely
@@ -219,7 +219,7 @@ Once you have established your materials and have decided on the type of
 encoding, you can go ahead and begin encoding the documents in random
 order. Use whatever resources are available to you. These might include
 scanning software, MIDI performance capture, or the Humdrum
-[**encode**](commands/encode.html) command. Begin by encoding a sample
+[**encode**](/tool/encode) command. Begin by encoding a sample
 section or sections. Spend some time determining ways to increase your
 productivity.
 
@@ -246,7 +246,7 @@ Transposing Instruments
 In the case of the `**kern` representation, all parts are represented at
 concert pitch. It is typically easier to encode the parts as written and
 then transpose the result using the Humdrum
-[**trans**](commands/trans.html) command. For example, material for
+[**trans**](/tool/trans) command. For example, material for
 B-flat trumpet or B-flat clarinet can be transposed using the following
 command:
 
@@ -390,7 +390,7 @@ can include the space character:
 
 If you include section labels, you must also include a Humdrum
 \"Expansion List\" to indicate how the sections are connected. The
-Humdrum [**thru**](commands/thru.html) command causes a through-composed
+Humdrum [**thru**](/tool/thru) command causes a through-composed
 version of a file to be generated according to the expansion list. For
 example, an expansion list for a simple binary work may be encoded as:
 
@@ -546,7 +546,7 @@ Proof-reading Materials
 -----------------------
 
 Once you have encoded your document, you should create a error-checking
-strategy. The Humdrum [**humdrum**](commands/humdrum.html) command can
+strategy. The Humdrum [**humdrum**](/tool/humdrum) command can
 be used to identify whether the final encoded output conforms to the
 Humdrum syntax:
 
@@ -560,8 +560,8 @@ errors in any encoded `**kern` data:
 <a name ="MIDI_display_option"></a>
 
 One of the best ways to ensure that musical data makes sense is to
-listen to it. The Humdrum [**midi**](commands/midi.html) and
-[**perform**](commands/perform.html) commands can be used to listen to
+listen to it. The Humdrum [**midi**](/tool/midi) and
+[**perform**](/tool/perform) commands can be used to listen to
 your data. The **-c** option for **midi** causes the Humdrum data to be
 displayed while the MIDI data is performed. This can further help in
 locating errors.
@@ -587,7 +587,7 @@ Did I make some modification to this file that I\'ve forgotten about?
 Has someone tampered with this data?
 
 Humdrum provides a means for ensuring that a particular file is what it
-purports to be. The [**veritas**](commands/veritas.html) command
+purports to be. The [**veritas**](/tool/veritas) command
 provides a formal means for verifying that a given Humdrum file is
 identical to the original distribution file and has not been modified in
 some way.

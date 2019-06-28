@@ -15,12 +15,12 @@ Serial Processing
 
 Humdrum provides a handful of specialized tools for serial and
 serial-inspired analytic processing. In this chapter we introduce the
-[**reihe**](commands/reihe.html), [**pcset**](commands/pcset.html),
-[**iv**](commands/iv.html), [**pf**](commands/pf.html) and
-[**nf**](commands/nf.html) commands These commands reveal their greatest
+[**reihe**](/tool/reihe), [**pcset**](/tool/pcset),
+[**iv**](/tool/iv), [**pf**](/tool/pf) and
+[**nf**](/tool/nf) commands These commands reveal their greatest
 power when used in conjunction with Humdrum tools we have already
-encountered \-- such as [**context**](commands/context.html),
-[**humsed**](commands/humsed.html) and [**patt**](commands/patt.html).
+encountered \-- such as [**context**](/tool/context),
+[**humsed**](/tool/humsed) and [**patt**](/tool/patt).
 
 The chapter culminates with a script that automatically identifies
 12-tone row variants in complex orchestral scores. The general approach
@@ -32,7 +32,7 @@ Pitch-Class Representation
 --------------------------
 
 In set theoretic applications it is common to use pitch-class
-representations. The [**pc**](commands/pc.html) command can be used to
+representations. The [**pc**](/tool/pc) command can be used to
 transform pitch-related representations (such as
 [`**pitch`](representations/pitch.rep.html),
 [`**freq`](representations/freq.rep.html) and
@@ -63,7 +63,7 @@ Figure 34.1. Examples of PC set forms.
 
 > ![](guide.figures/guide34.1.gif)
 
-The [**pcset**](commands/pcset.html) command identifies pitch-class sets
+The [**pcset**](/tool/pcset) command identifies pitch-class sets
 from [`**pc`](representations/pc.rep.html) or
 [`**semits`](representations/semits.rep.html) input. Illustrated below
 are the corresponding [`**kern`](representations/kern.rep.html),
@@ -94,9 +94,9 @@ apply the **pcset** command:
 
 Of course this command will only identify the set forms for pitches that
 have concurrent attacks. If any pitch is sustained,
-[**pcset**](commands/pcset.html) won\'t know that some null tokens
+[**pcset**](/tool/pcset) won\'t know that some null tokens
 indicate sustained pitch activity. We can rectify this by using the
-[**ditto**](commands/ditto.html) command ([Chapter 15](/guide/ch15)) to
+[**ditto**](/tool/ditto) command ([Chapter 15](/guide/ch15)) to
 fill-out the null tokens:
 
 > `pc opus24 | ditto -s ^= | pcset`
@@ -118,10 +118,10 @@ Then we assemble this spine to the original input score:
 > `assemble opus24 opus24.pcs > opus24.all`
 
 Now we can search for data records containing phrase (\`{}\') or slur
-(\'()\') markers. Using [**yank**](commands/yank.html) **-m \... -r 0**
+(\'()\') markers. Using [**yank**](/tool/yank) **-m \... -r 0**
 rather than **grep** assures that the output retains the Humdrum syntax
 (see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
-allow us to use [**extract**](commands/extract.html) to isolate just the
+allow us to use [**extract**](/tool/extract) to isolate just the
 `**pcset` data. Finally, we create an inventory of the pc sets. The
 process is repeated \-- once for beginning slurs/phrases, and once for
 ends of slurs/phrases.
@@ -153,8 +153,8 @@ Prime Form and Normal Form
 The 3-11 set form designates both the major and minor chords (since they
 are symmetrical). In order to distinguish symmetrical forms, it is
 sometimes useful to represent pitch-class sets using either *prime form*
-(the [**pf**](commands/pf.html) command) or *normal form* (the
-[**nf**](commands/nf.html) command).
+(the [**pf**](/tool/pf) command) or *normal form* (the
+[**nf**](/tool/nf) command).
 
 <a name ="Berg_phrase_endings"></a>
 
@@ -197,7 +197,7 @@ Interval Vectors Using the *iv* Command
 
 Interval vectors identify the frequency of occurrence of various
 interval-classes for a given pitch-class set. The
-[**iv**](commands/iv.html) command generates the six-element interval
+[**iv**](/tool/iv) command generates the six-element interval
 vector for any of several types of inputs \-- including semitones
 ([`**semits`](representations/semits.rep.html)), pitch-class
 ([`**pc`](representations/pc.rep.html)), normal form
@@ -241,7 +241,7 @@ Segmentation Using the *context* Command
 So far, we have processed only \"vertical\" sets of concurrent pitches.
 In set-theory analyses, there are many other important ways of
 \"segmenting\" the musical pitches into pitch-class sets. As we saw in
-[Chapter 19,](/guide/ch19) the [**context**](commands/context.html)
+[Chapter 19,](/guide/ch19) the [**context**](/tool/context)
 command provides a useful way of grouping together successive data
 tokens.
 
@@ -258,11 +258,11 @@ Example 34.1.\
 There are a number of ways we might want to try segmenting the melodic
 line. One possibility is to regard slurs or phrases as indicating
 appropriate groups. Recall that the **-b** and **-e** options for
-[**context**](commands/context.html) are used to specify regular
+[**context**](/tool/context) are used to specify regular
 expressions that match the beginning and end (respectively) of the
 context group: We can invoke an appropriate **context** command,
 translate the output to a pitch-class representation, and then use the
-[**pcset**](commands/pcset.html) command to identify the set names:
+[**pcset**](/tool/pcset) command to identify the set names:
 
 > `context -b '[{(]' -e '[})]' syrinx | pc | pcset`
 
@@ -282,7 +282,7 @@ Another possibility is to treat rests as segmentation boundaries.
 
 When a work consists of more than one instrument or part, useful
 segmentations can be made by extracting each instrument individually,
-using [**context**](commands/context.html) to generate
+using [**context**](/tool/context) to generate
 musically-pertinent sets, and then assembling all of the
 [`**pcset`](representations/pcset.rep.html) spines into a single file.
 
@@ -292,7 +292,7 @@ The *reihe* Command
 -------------------
 
 Twelve-tone music raises additional analysis issues. Variants of a
-tone-row can be generated using the [**reihe**](commands/reihe.html)
+tone-row can be generated using the [**reihe**](/tool/reihe)
 command. Given some input, **reihe** will output a user-specified
 transformation. Options are provided for prime transpositions (**-P**
 option), for inversions (**-I** option), for retrogrades (**-R** option)
@@ -341,7 +341,7 @@ using the following command.
 The **-a** option causes the values \`10\' and \`11\' to be rendered
 alphabetically as \`A\' and \`B\'.
 
-The [**reihe**](commands/reihe.html) command also provides a *shift*
+The [**reihe**](/tool/reihe) command also provides a *shift*
 operation (**-S**) that is useful for shifting the serial order of data
 tokens forward or backward. Consider the following command:
 
@@ -384,7 +384,7 @@ From this we can generate the entire set matrix. There is a Humdrum
 **matrix** command that automatically generates a set matrix, but let\'s
 create our own script to see how this can be done.
 
-The following script uses the [**reihe**](commands/reihe.html) command
+The following script uses the [**reihe**](/tool/reihe) command
 to generate each set form. Each form is stored in a separate file with
 names such as `I8` and `RI3`. There are two noteworthy features to this
 script. Notice that the alphanumeric system (**-a** option) is used \--
@@ -406,7 +406,7 @@ Locating and Identifying Tone-Rows
 ----------------------------------
 
 Each of the row variant files can be used as a template for the
-[**patt**](commands/patt.html) command (see [Chapter 21](/guide/ch21)).
+[**patt**](/tool/patt) command (see [Chapter 21](/guide/ch21)).
 The following \"rowfind\" script shows how the Humdrum tools can be
 coordinated to carry out an automatic search and identification of tone
 row variants for some score.
@@ -420,14 +420,14 @@ variant files are present:
 The following two lines of the script prepare the input score for
 searching. Specifically, the score is transformed to pitch-class
 notation (using **pc**) and then all rests are changed to null tokens
-using the [**humsed**](commands/humsed.html) command. Notice the use of
-the **-a** option for [**pc**](commands/pc.html) in order to use the
+using the [**humsed**](/tool/humsed) command. Notice the use of
+the **-a** option for [**pc**](/tool/pc) in order to use the
 alpha-numeric pitch-class representation.
 
 > `pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp`
 
 The main searching task is done by **patt**. The
-[**patt**](commands/patt.html) command is executed 48 times \-- once for
+[**patt**](/tool/patt) command is executed 48 times \-- once for
 each row variant. The **-t** (tag) option is used so that a `**patt`
 output is generated. Each time a match is made the appropriate name
 (e.g. P4) is output in the spine. The **-s** option is used to skip
@@ -471,8 +471,8 @@ collapsed into a vertical chord:
 Each of the above 48 **patt** searches resulted in a separate temporary
 output file. It would be convenient to reduce all 48 `**patt` spines
 into a single aggregate spine. This can be done using the
-[**assemble**](commands/assemble.html) and
-[**cleave**](commands/cleave.html) commands:
+[**assemble**](/tool/assemble) and
+[**cleave**](/tool/cleave) commands:
 
 > `# Now we have a lot of files to assemble:  assemble P*.pat > prime.pat  cleave -d ' ' -i '**patt' -o '**rows' prime.pat > analysis.1    assemble I*.pat > inversion.pat  cleave -d ' ' -i '**patt' -o '**rows' inversion.pat > analysis.2    assemble R*.pat > retro.pat  cleave -d ' ' -i '**patt' -o '**rows' retro.pat > analysis.3    assemble RI*.pat > retroinv.pat  cleave -d ' ' -i '**patt' -o '**rows' retroinv.pat > analysis.4    assemble analysis.[1-4] > temp  cleave -d ' ' -i '**rows' -o '**rows' temp > analysis.out    # Finally, clean up some temporary files:    rm [PRI][0-9].pat [PRI]1[01].pat RI[0-9]*.pat temp.pat  rm analysis.[1-4] temp temp.pc score.tmp`
 
@@ -505,14 +505,14 @@ Reprise
 -------
 
 In this chapter we have discussed several tools related to set theory
-analysis. These include the [**pc**](commands/pc.html) (pitch-class)
-command, the [**pcset**](commands/pcset.html) command (for identifying
-set-forms), and the [**reihe**](commands/reihe.html) command (for
+analysis. These include the [**pc**](/tool/pc) (pitch-class)
+command, the [**pcset**](/tool/pcset) command (for identifying
+set-forms), and the [**reihe**](/tool/reihe) command (for
 generating set variants).
 
-We have seen how general tools like [**context**](commands/context.html)
+We have seen how general tools like [**context**](/tool/context)
 can be used to carry out segmentation of some score. Similarly, we have
-seen how the [**patt**](commands/patt.html) command can be used to
+seen how the [**patt**](/tool/patt) command can be used to
 identify tone-row statements.
 
 Two scripts were described in this chapter: **matrix** and **rowfind.**

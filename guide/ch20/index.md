@@ -22,8 +22,8 @@ renditions, divergent sources, and competing editions or versions.
 This chapter describes the basic Humdrum mechanisms for representing
 non-linear musical structures. The two critical mechanisms are the
 Humdrum *section* and *strophe*. We will encounter examples using the
-[**yank**](commands/yank.html), [**thru**](commands/thru.html), and
-[**strophe**](commands/strophe.html) commands.
+[**yank**](/tool/yank), [**thru**](/tool/thru), and
+[**strophe**](/tool/strophe) commands.
 
 <a name ="Section_Labels"></a>
 
@@ -80,7 +80,7 @@ Using *yank* to Extract Sections
 
 <a name ="Extract_Coda"></a>
 
-We encountered the [**yank**](commands/yank.html) command earlier in
+We encountered the [**yank**](/tool/yank) command earlier in
 [Chapter 12.](/guide/ch12) Recall that **yank** can be used to extract
 material by *section* using the **-s** option. For example, if the
 appropriate section is labelled, we might extract the coda of a work as
@@ -96,7 +96,7 @@ it identifies the *first* occurrence of a section labelled `Coda`.
 Using the *thru* Command to Expand Encodings
 --------------------------------------------
 
-The Humdrum [**thru**](commands/thru.html) command expands *abbreviated
+The Humdrum [**thru**](/tool/thru) command expands *abbreviated
 format* representations to a so-called *through-composed format* in
 which repeated passages are expanded according to an expansion list.
 When the **thru** command is invoked, it eliminates any expansion lists

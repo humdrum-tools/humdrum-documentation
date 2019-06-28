@@ -585,7 +585,7 @@ The *humdrum* Command
 ---------------------
 
 One of the most important commands in the Humdrum Toolkit is the
-[**humdrum**](commands/humdrum.html) command itself. This command is
+[**humdrum**](/tool/humdrum) command itself. This command is
 used to identify whether a file or other input stream conforms to the
 above Humdrum syntax. Where appropriate, the **humdrum** command issues
 error messages identifying the type and location of any syntactic

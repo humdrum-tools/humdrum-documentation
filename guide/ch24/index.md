@@ -1025,20 +1025,20 @@ will be represented by the within-octave equivalent.
 > `extract -i '*alto,*tenor'  | hint -c > spine1`
 
 The second and third spines can be generated using the Humdrum
-[**deg**](commands/deg.html) command:
+[**deg**](/tool/deg) command:
 
 > `extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3`
 
 The fourth and fifth spines require a little more work. First, we
 calculate the melodic intervals for each voice using the Humdrum
-[**mint**](commands/mint.html) command.
+[**mint**](/tool/mint) command.
 
 > `extract -i '*alto'  | mint  ...`
 
 Secondly, we need to change all data tokens indicating intervals greater
 than a diatonic second (3 or more semitones) into the data token
 consisting of the (arbitrary) character string \"leap\". This can be
-done using the [**humsed**](commands/humsed.html) stream editor.
+done using the [**humsed**](/tool/humsed) stream editor.
 
 > ` ...  humsed 's/.*[3-9].*/leap/' > spine4   [spine5 for the other voice]`
 

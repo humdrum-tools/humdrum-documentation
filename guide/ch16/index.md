@@ -219,7 +219,7 @@ measure 38 (i.e. beginning of measure 39). In the following script,
 > `` A=`grep -n ^=34` ``\
 > `` B=`grep -n ^=39` ``
 
-Now we can construct an appropriate [**humsed**](commands/humsed.html)
+Now we can construct an appropriate [**humsed**](/tool/humsed)
 command. Recall that each substitute (`s`) command in **humsed** can be
 preceded by a range indication. In the following command, the `$A` and
 `$B` variables convey the appropriate range to each substitution. This

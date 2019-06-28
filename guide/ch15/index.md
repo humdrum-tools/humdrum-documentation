@@ -16,8 +16,8 @@ Harmonic Intervals
 In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of
 intervals by focussing on two tools pertaining to characterizing
-harmonic intervals: the [**hint**](commands/hint.html) and
-[**ydelta**](commands/ydelta.html) commands.
+harmonic intervals: the [**hint**](/tool/hint) and
+[**ydelta**](/tool/ydelta) commands.
 
 <a name ="Types_of_Harmonic_Intervals"></a>
 
@@ -122,7 +122,7 @@ We will consider just two tools for calculating harmonic intervals:
 Harmonic Intervals Using the *hint* Command
 -------------------------------------------
 
-The Humdrum [**hint**](commands/hint.html) command calculates harmonic
+The Humdrum [**hint**](/tool/hint) command calculates harmonic
 intervals for pitch-related representations such as
 [`**kern`](representations/kern.rep.html),
 [`**pitch`](representations/pitch.rep.html),
@@ -218,7 +218,7 @@ pitches that are explicitly present in an input data record. This means
 that passing intervals are not calculated.
 
 In order to generate passing intervals, we will make use of the Humdrum
-[**ditto**](commands/ditto.html) command. The **ditto** command replaces
+[**ditto**](/tool/ditto) command. The **ditto** command replaces
 null tokens with the previous non-null data token in the same spine.
 Suppose we had an arbitrary input such as the following:\
 \
@@ -305,7 +305,7 @@ The resulting output for Example 15.1 includes the two passing intervals
 >   `*-`
 >   ------------
 >
-The [**ditto**,](commands/ditto.html) command provides two additional
+The [**ditto**,](/tool/ditto) command provides two additional
 options that are worthy of note: the **-s** and **-c** options. The
 **-s** option allows **ditto** to skip or ignore the presence of certain
 data records. Suppose, for example, that we had a barline in the midst
@@ -415,7 +415,7 @@ eliminate rest tokens, then we could use **ditto** to repeat previous
 pitch tokens in place of the rests and so generate implicit harmonic
 intervals.
 
-The [**humsed**](commands/humsed.html) command (described in [Chapter
+The [**humsed**](/tool/humsed) command (described in [Chapter
 14](/guide/ch14)) is well suited to this task. We want to transform any
 data token containing the letter \`r\' to a null token. Consider the
 following substitution:
@@ -466,7 +466,7 @@ The following output results:\
 >   `*-`        \*-
 >   ----------- ----------
 >
-If we now apply [**ditto**](commands/ditto.html) and recalculate the
+If we now apply [**ditto**](/tool/ditto) and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
 
@@ -475,7 +475,7 @@ well:
 > > \| ditto -p
 
 Below we see the output assembled with the output from the corresponding
-[**hint**](commands/hint.html) command:\
+[**hint**](/tool/hint) command:\
 \
 
 >   ----------- ---------- ----------
@@ -528,13 +528,13 @@ The resulting output would be as follows:\
 >   ------------ ------------
 >
 Numerical differences for values on a single data record can be computed
-using the [**ydelta**](commands/ydelta.html) command. The **ydelta**
-command is comparable to [**xdelta**,](commands/xdelta.html) however,
+using the [**ydelta**](/tool/ydelta) command. The **ydelta**
+command is comparable to [**xdelta**,](/tool/xdelta) however,
 numerical differences are calculated between simultaneous numerical
 values (delta-*y*) rather than between successive numerical values
 (delta-*x*).
 
-Like the [**hint**](commands/hint.html) command, **ydelta** always
+Like the [**hint**](/tool/hint) command, **ydelta** always
 outputs a single spine. The user must specify which input spines are to
 be processed using the **-i** option. In the following command, only
 \*\*semits input is to be processed:
@@ -614,7 +614,7 @@ the appropriate voices and translating to a semitone representation.
 Using **ditto** we can expand the pitched material so that
 concurrently-sounding tones will generate explicit intervals. We then
 use **ydelta** to calculate the actual semitone interval distances. The
-[**rid**](commands/rid.html) command can be used to eliminate non-data
+[**rid**](/tool/rid) command can be used to eliminate non-data
 records, and the **grep -v** command can be used to further eliminate
 barlines. Finally, we can calculate the mean interval distance using the
 **stats** command:
@@ -662,8 +662,8 @@ of characterizing harmonic intervals: *stacked harmonic intervals*,
 *bass-related harmonic intervals* and *permuted harmonic intervals*.
 
 In this chapter we have seen how to use the
-[**hint**](commands/hint.html) command to calculate these various kinds
-of intervals. We have also seen how [**ydelta**](commands/ydelta.html)
+[**hint**](/tool/hint) command to calculate these various kinds
+of intervals. We have also seen how [**ydelta**](/tool/ydelta)
 can be used to measure purely numerical distances between concurrent
 values.
 

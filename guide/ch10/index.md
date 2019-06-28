@@ -262,7 +262,7 @@ phrase, but are not rests.
 German, French, Italian, and Neapolitan Sixths
 ----------------------------------------------
 
-In conjunction with the [**solfa**](commands/solfa.html) command,
+In conjunction with the [**solfa**](/tool/solfa) command,
 **grep** can be used to search for various types of special chords.
 Suppose, for example, that we wanted to identify occurrences of
 augmented sixth chords. An augmented sixth chord is characterized by an

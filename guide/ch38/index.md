@@ -107,7 +107,7 @@ file called `control`:
 
 In some cases, the number of possible control works is excessively
 large. In this case one can make a random selection from the control
-list using the [**scramble**](commands/scramble.html) command described
+list using the [**scramble**](/tool/scramble) command described
 later.
 
 Note that in many instances it is difficult to establish a good
@@ -156,11 +156,11 @@ melodic intervals.
 
 We begin by measuring the average melodic interval size in semitones for
 a sample of actual melodies. We can use the
-[**semits**](commands/semits.html) command to translate data to semitone
-representations and then use the [**xdelta**](commands/xdelta.html)
+[**semits**](/tool/semits) command to translate data to semitone
+representations and then use the [**xdelta**](/tool/xdelta)
 command to calculate numerical differences. The **-a** option for
 **xdelta** causes only absolute (unsigned) values to be calculated. The
-[**rid**](commands/rid.html) command can be used to eliminate everything
+[**rid**](/tool/rid) command can be used to eliminate everything
 but data records and the **grep** command can be used to eliminate
 barlines and rests. We can then calculate the average interval size by
 piping the output to the **stats** command. For typical folk melodies,
@@ -177,7 +177,7 @@ can do this using the Humdrum **scramble** command.
 Using the *scramble* Command
 ----------------------------
 
-The [**scramble**](commands/scramble.html) command is useful for
+The [**scramble**](/tool/scramble) command is useful for
 randomizing the arrangement of Humdrum data. Suppose we had the
 following Humdrum input:
 
@@ -210,7 +210,7 @@ be randomized. A possible output might look like this:
 >
 Notice that only data records are scrambled: comments and
 interpretations stay put. Each time
-[**scramble**](commands/scramble.html) is invoked, it produces a
+[**scramble**](/tool/scramble) is invoked, it produces a
 different random ordering.
 
 Returning to our melodic interval problem, we can now generate an
@@ -282,8 +282,8 @@ patterns to occur simply by chance?
 
 One way of determining the chance frequency of B-A-C-H might be to
 randomize the order of pitches using the
-[**scramble**](commands/scramble.html) command, and then use
-[**patt**](commands/patt.html) to count the number of occurrences in the
+[**scramble**](/tool/scramble) command, and then use
+[**patt**](/tool/patt) to count the number of occurrences in the
 reordered melodies. Unfortunately, we already know that musical lines
 tend to be constructed using small intervals, and the pitches B-A-C-H
 are very close together. Since random reordering of the pitches will
@@ -338,7 +338,7 @@ spines with respect to each other.
 
 <a name ="shift_notes"></a>
 
-Recall that the [**reihe**](commands/reihe.html) command ([Chapter
+Recall that the [**reihe**](/tool/reihe) command ([Chapter
 35](/guide/ch35)) provides a **-s** option that causes a shift in the
 serial position of data tokens. For example, suppose we had an input
 consisting of the numbers 1 through 5. The following command:
@@ -361,14 +361,14 @@ last data token to be moved to the beginning:
 Let\'s apply this technique to our problem of whether a given composer
 tends to avoid octaves between the soprano and bass voices. First, we
 extract each of the voices. Let\'s also eliminate barlines and use
-[**ditto**](commands/ditto.html) to replicate the pitch values through
+[**ditto**](/tool/ditto) to replicate the pitch values through
 null tokens.
 
 > `extract -i '*sopran' composition | grep -v = | ditto > voice1`\
 > `extract -i '*bass' composition | grep -v = | ditto > voice2`
 
 Now let\'s shift one part with respect to the other using
-[**reihe**](commands/scramble.html) **-s**.
+[**reihe**](/tool/scramble) **-s**.
 
 > `reihe -s voice1 > voice1.shifted`
 
