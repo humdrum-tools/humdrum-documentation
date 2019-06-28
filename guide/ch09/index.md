@@ -1,5 +1,6 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:11 EST 2000'
@@ -7,7 +8,7 @@ permalink:	/guide/ch09/index.html
 ---
 
 
-Chapter 9
+Humdrum Toolkit User Guide, Chapter 9
 ========
 
 Searching with Regular Expressions

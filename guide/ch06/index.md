@@ -1,5 +1,6 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:53 EST 2000'
@@ -7,7 +8,7 @@ verovio: "true"
 permalink:	/guide/ch06/index.html
 ---
 
-Chapter 6
+Humdrum Toolkit User Guide, Chapter 6
 =========
 
 Representing Music Using \*\*kern (II)

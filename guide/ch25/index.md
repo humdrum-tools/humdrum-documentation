@@ -1,12 +1,13 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:50 EST 2000'
 permalink:	/guide/ch25/index.html
 ---
 
-Chapter 25
+Humdrum Toolkit User Guide, Chapter 25
 =========
 
 Similarity

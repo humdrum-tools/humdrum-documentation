@@ -1,10 +1,6 @@
 <style>
 
 
-#toc ul:before {
-	font-size: 80% !important;
-}
-
 #toc ul, #toc ul li, #toc .nav ul li a {
 	background: transparent !important;
 }
@@ -17,6 +13,41 @@
 #toc .nav a {
 	color: {{site.primary_background_color}};
 	display: inline !important;
+}
+
+#toc .nav ul li a {
+	border: 0 !important;
+	font-size: 65% !important;
+}
+
+#toc ul:before {
+	font-size: 75%;
+}
+
+#chapternav {
+	font-size: 65%;
+	background: hotpink;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#chapternav td {
+	cursor: pointer;
+}
+
+#chapternav td:nth-child(1) {
+	text-align: left;
+	width: 40%;
+}
+
+#chapternav td:nth-child(2) {
+	text-align: center;
+	width: 20%;
+}
+
+#chapternav td:nth-child(3) {
+	text-align: right;
+	width: 40%;
 }
 
 </style>

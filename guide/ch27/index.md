@@ -1,5 +1,6 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:03 EST 2000'
@@ -7,7 +8,7 @@ permalink:	/guide/ch27/index.html
 ---
 
 
-Chapter 27
+Humdrum Toolkit User Guide, Chapter 27
 =========
 
 Text and Lyrics

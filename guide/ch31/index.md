@@ -1,12 +1,13 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:26 EST 2000'
 permalink:	/guide/ch31/index.html
 ---
 
-Chapter 31
+Humdrum Toolkit User Guide, Chapter 31
 =========
 
 Repertories and Links

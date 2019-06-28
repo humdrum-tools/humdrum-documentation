@@ -1,5 +1,6 @@
 ---
 sidebar: toc
+chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:48 EST 2000'
@@ -7,7 +8,7 @@ permalink:	/guide/ch15/index.html
 ---
 
 
-Chapter 15
+Humdrum Toolkit User Guide, Chapter 15
 =========
 
 Harmonic Intervals

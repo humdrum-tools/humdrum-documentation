@@ -3,7 +3,7 @@ vim: ts=3
 permalink: /guide/index.html
 ---
 
-Humdrum Toolkit User's Guide
+Humdrum Toolkit User Guide
 ============================
 
 <div id="index"></div>

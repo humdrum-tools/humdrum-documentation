@@ -18,4 +18,12 @@ $('#toc').on('click', 'a', function() {
 });
 </script>
 
-<div id="toc"></div>
+<div id="chapternav"></div>
+<div id="toc">
+
+{% if page.chapternav == "guide" %}
+{% include chapternav-guide.html %}
+{% endif %}
+
+
+</div>
