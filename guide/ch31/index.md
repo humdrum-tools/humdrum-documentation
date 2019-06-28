@@ -301,7 +301,7 @@ in each file. The final **grep -v** passes only those filenames
 containing 2 or more meter signatures.
 
 `find / -type f -name '*' | xargs grep -c '^\*k\[' | \`
-> grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\\
+> grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\
 > xargs grep -c \'\^\\\*M\[0-9\]\' \| grep -v \':\[01\]\$\'
 
 In summary, the above pipeline identifies all scores that contain both a
@@ -346,7 +346,7 @@ files in the path `/scores` that contain one or more vocal parts:
 
 The contents of `vocalfiles` might look like the following:
 
-`/scores/bach/cantatas/cant140.krn  /scores/bach/chorales/chor217.krn  /scores/bach/chorales/midi/chor368.hmd`\
+`/scores/bach/cantatas/cant140.krn  /scores/bach/chorales/chor217.krn  /scores/bach/chorales/midi/chor368.hmd`
 etc.
 
 We can create an appropriate new directory using the **mkdir** command.
@@ -357,7 +357,7 @@ Next, edit the file containing the list of filenames as follows. Insert
 **ln -s** prior to each filename, and append the directory name `vocal`
 at the end of each line.
 
-`ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor217.krn vocal  ln -s /scores/bach/chorales/midi/chor368.hmd vocal`\
+`ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor217.krn vocal  ln -s /scores/bach/chorales/midi/chor368.hmd vocal`
 etc.
 
 (The **-s** option for **ln** is used to create a so-called "symbolic"

@@ -149,7 +149,7 @@ review some general principles and specific tips for making effective
 use of Humdrum when pursuing some musicological project. The following
 seven questions provide useful guidelines:
 
--   *What do I want my final output to look like?*\
+-   *What do I want my final output to look like?*
     Do I want a count or inventory?
 
     > `115 instances of ...  28 instances of ...`

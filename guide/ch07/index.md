@@ -123,8 +123,8 @@ quarter-notes is reflected when the notes are turned *off* rather than
 when the notes are turned *on*.
 
 Example 7.1 illustrates a slightly more complex excerpt from the
-beginning of Darius Milhaud\'s *Touches Blanches*.\
-\
+beginning of Darius Milhaud\'s *Touches Blanches*.
+
 **Example 7.1** Excerpt from Darius Milhaud\'s *Touches Blanches*
 
 ![](guide.figures/guide07.1.gif)

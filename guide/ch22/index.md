@@ -192,7 +192,7 @@ of interval types, then [**rid**](/tool/rid), **sort** and
 to identify what happens following ascending leaps:
 
 `semits melody | xdelta -s = | recode -f reassign \`
-> -i \'\*\*Xsemits\' -s = \| context -n 2 \| rid -GLId \| sort \\\
+> -i \'\*\*Xsemits\' -s = \| context -n 2 \| rid -GLId \| sort \\
 > \| uniq -c \| grep \'up-leap .\*\$\'
 
 An alternative way of distinguishing steps from leaps is by diatonic
@@ -213,7 +213,7 @@ etc.). The appropriate reassignment file would be:
 The appropriate command pipe would be:
 
 `mint melody | xdelta -s = | recode -f reassign -i '**mint' \`
-> -s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\\
+> -s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\
 > \| grep \'up-leap .\*\$\'
 
 
@@ -228,8 +228,8 @@ clarinet. Tone color is particularly important for this piece. The
 clarinet has four fairly distinctive tessituras as shown in Example
 22.1. These are the *chalemeau* register (dark and rich), the *clarion*
 register (bright and clear), the *altissimo* register (very high and
-piercing), and the *throat* register (weak and breathy).\
-\
+piercing), and the *throat* register (weak and breathy).
+
 **Example 22.1.** Clarinet registers (notated at concert
 pitch).]{#Syrinx}
 
@@ -290,9 +290,9 @@ have also added the [**ditto**](/tool/ditto) command to ensure
 that there are semitone values for each sonority.
 
 `extract -i '*Itenor,*Isopran'` *inputfile*` | semits -x | ditto \`
-> \| ydelta -s = -i \'\*\*semits\' \| recode -f reassign \\\
+> \| ydelta -s = -i \'\*\*semits\' \| recode -f reassign \\
 > -i \'\*\*Ysemits\' -s = \> tempfile
-grep -c \'open\' tempfile\
+grep -c \'open\' tempfile
 grep -c \'close\' tempfile
 
 The **grep -c** commands tell us whether open position sonorities are
@@ -412,8 +412,8 @@ a high likelihood of having identical fingerings on the modern flute. A
 more succinct **humsed** script would deal with fingering transitions
 rather than pitch transitions.
 
-\
-`s/X-XXXO-XOOX X-XXXO-OOOX/easy/  s/X-XXXO-XXOX X-XXOO-OOOX/moderate/  s/O-XOOO-OOOX X-OXXO-XXXO/difficult/`\
+
+`s/X-XXXO-XOOX X-XXXO-OOOX/easy/  s/X-XXXO-XXOX X-XXOO-OOOX/moderate/  s/O-XOOO-OOOX X-OXXO-XXXO/difficult/`
 etc.
 
 The three substitutions shown above apply to many more pitch transitions
@@ -443,11 +443,11 @@ clearly evident by the presence of pauses (designated by the semicolon).
 We can easily create a spine that identifies only cadences. Consider a
 suitable reassignment file (dubbed `cadences`):
 
-\
-`s/V I;/authentic/  s/V7 I;/authentic/  s/V i;/authentic/  s/V7 i;/authentic/  s/IV I;/plagal/  s/iv i;/plagal/  s/iv I;/plagal/  s/V vi;/deceptive/  s/V VI;/deceptive/`\
-\
-etc.\
-\
+
+`s/V I;/authentic/  s/V7 I;/authentic/  s/V i;/authentic/  s/V7 i;/authentic/  s/IV I;/plagal/  s/iv i;/plagal/  s/iv I;/plagal/  s/V vi;/deceptive/  s/V VI;/deceptive/`
+
+etc.
+
 `s/^[IiVv].*$/./`
 
 (The precise file will depend on your preferred way of labeling
@@ -568,19 +568,19 @@ How often are the oboe and bassoon resting at the same time?
 Excluding *tutti* sections, do the trumpet and flute tend to "repell"
 each others\' presence?
 
-`grep '\-' orchestra | grep -c '+tromp.*-flt' orchestra`\
-`grep '\-' orchestra | grep -c '+tromp.*+flt' orchestra`\
-`grep '\-' orchestra | grep -c '-tromp.*-flt' orchestra`\
+`grep '\-' orchestra | grep -c '+tromp.*-flt' orchestra`
+`grep '\-' orchestra | grep -c '+tromp.*+flt' orchestra`
+`grep '\-' orchestra | grep -c '-tromp.*-flt' orchestra`
 `grep '\-' orchestra | grep -c '-tromp.*+flt' orchestra`
 
 
 When all of the woodwinds are playing, which of the remaining
 instruments is Beethoven most likely to omit from the texture?
 
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cbass'`\
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cello'`\
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-viola'`\
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-violn'`\
+`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cbass'`
+`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cello'`
+`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-viola'`
+`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-violn'`
 etc.
 
 

@@ -32,8 +32,8 @@ The [**rend**](/tool/rend) command allows a Humdrum spine to be
 broken apart into two or more spines. Different pieces of information
 can be distributed to the individual output spines. Consider for example
 the following spine containing
-[`**pitch`](/rep/pitch) data:\
-\
+[`**pitch`](/rep/pitch) data:
+
 
   -----------
   `**pitch`
@@ -43,8 +43,8 @@ the following spine containing
   \*-
   -----------
 The **rend** command might be used to structure this as three
-independent spines:\
-\
+independent spines:
+
 
   ------------ -- -- ---------- -- -- ----------------
   `**octave`         \*\*note         \*\*accidental
@@ -309,8 +309,8 @@ model of melodic organization that reduced melodies to three types of
 information: relative-duration context, gross pitch height, and scale
 step. Sample data tokens for our representation and their meanings are
 given in the following table. Notice that the order of signifiers is
-important:\
-\
+important:
+
 
   ---------- ------------------------------------------------------
   token      **meaning**

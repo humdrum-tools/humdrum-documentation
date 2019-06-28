@@ -24,8 +24,8 @@ introduction.
 
 Consider the opening motive from J.S. Bach\'s *Art of Fugue* shown in
 Example 2.1. A corresponding `**kern` representation is given below the
-notation.\
-\
+notation.
+
 **Example 2.1.** J.S. Bach *Die Kunst der Fuge*
 
 ![](guide.figures/guide02.1.gif)
@@ -113,8 +113,8 @@ In Example 2.2, two musical parts are encoded. In the corresponding
 `**kern` encoding, each musical part or voice has been assigned to a
 different musical staff \-- labelled `*staff1` and `*staff2`. Notice
 that the upper part has been encoded in the right-most column. The
-layout is exactly as though the musical score were turned sideways.\
-\
+layout is exactly as though the musical score were turned sideways.
+
 **Example 2.2.** J.S. Bach, *Praeambulum* BWV 390.
 
 ![](guide.figures/guide02.2.gif)
@@ -132,7 +132,7 @@ layout is exactly as though the musical score were turned sideways.\
 >   `.`         8g/
 >   `.`         8d/J
 >   `=2`        =2
->   `8r`        4dd\\
+>   `8r`        4dd\
 >   `8GG/L`     .
 >   `8BB-/`     4r
 >   `8D/`       .
@@ -141,9 +141,9 @@ layout is exactly as though the musical score were turned sideways.\
 >   `=3`        =3
 >   `4GWw\`     8r
 >   `.`         8dd\\L
->   `8GG/L`     8b-\\
->   `8BB-/`     8g\\
->   `8D/`       8gg\\
+>   `8GG/L`     8b-\
+>   `8BB-/`     8g\
+>   `8D/`       8gg\
 >   `8G/J`      8b-\\J
 >   `=4`        =4
 >   `4D\`       8a/L
@@ -214,8 +214,8 @@ angles). Multiple beams and partial beams are discussed in Example 2.4.
 Example 2.3 shows a four-part chorale harmonization by Bach. In this
 example, two musical parts share each of the two staves. Notice how the
 corresponding `**kern` encoding assigns each part to a separate column,
-but links the appropriate parts using the `*staff` indicators.\
-\
+but links the appropriate parts using the `*staff` indicators.
+
 **Example 2.3.** *Nun danket alle Gott*, arr. J.S. Bach.
 
 ![](guide.figures/guide02.3.gif)
@@ -320,8 +320,8 @@ single \``k`\' is encoded. Notice that the signifiers \``L`\' and
 
 In the second-last measure, double beams are used to join the
 sixteenth-note pairs. As a result, the beams are started with \``LL`\'
-and end with \``JJ`\'.\
-\
+and end with \``JJ`\'.
+
 **Example 2.4.** Franz Joseph Haydn, *Sonata in C major, Hob. XVI: 35*.
 
 ![](guide.figures/guide02.4.gif)
@@ -332,13 +332,13 @@ and end with \``JJ`\'.\
 >   `*k[]`      \*k\[\]    \*k\[\]
 >   `*M3/4`     \*M3/4     \*M3/4
 >   `=1-`       =1-        =1-
->   `4r`        4r         \[4ee\\
+>   `4r`        4r         \[4ee\
 >   `4c/`       4g/        8.ee\]\\L
 >   `.`         .          16ff\\Jk
 >   `4f/`       4g         8.dd\\L
 >   `.`         .          16ee\\Jk
 >   `=2`        =2         =2
->   `4e/`       4g/        4cc\\
+>   `4e/`       4g/        4cc\
 >   `4r`        4r         4gg/
 >   `4r`        4r         4gg/
 >   `=3`        =3         =3
@@ -349,19 +349,19 @@ and end with \``JJ`\'.\
 >   `4c\`       .          (8ee\\L
 >   `.`         .          8dd)\\J
 >   `=4`        =4         =4
->   `4G\)`      4g\])/     4dd\\
->   `4r`        4r         4b\\
+>   `4G\)`      4g\])/     4dd\
+>   `4r`        4r         4b\
 >   `4r`        4r         4g/
 >   `=5`        =5         =5
->   `4r`        4r         \[4ee\\
+>   `4r`        4r         \[4ee\
 >   `4c/`       4g/        8.ee\]\\L
 >   `.`         .          16ff\\Jk
 >   `4f/`       4g/        8.dd\\L
 >   `.`         .          16ee\\Jk
 >   `=6`        =6         =6
->   `4e/`       4g/        4cc\\
->   `4r`        4r         4ccc\\
->   `4E\`       4c\\       4ccc\\
+>   `4e/`       4g/        4cc\
+>   `4r`        4r         4ccc\
+>   `4E\`       4c\\       4ccc\
 >   `=7`        =7         =7
 >   `4f\`       4c\\       16gg\#\\LL
 >   `.`         .          16aa\\JJ
@@ -373,7 +373,7 @@ and end with \``JJ`\'.\
 >   `.`         .          16b\\JJ
 >   `.`         .          8r
 >   `=8`        =8         =8
->   `4c\`       4e\\       4cc\\
+>   `4c\`       4e\\       4cc\
 >   `4r`        4r         4r
 >   `4r`        4r         4r
 >   `=:|!`      =:\|!      =:\|!
@@ -411,8 +411,8 @@ marks are referred to as *null local comments.*
 Notice that *local comments* conform to the prevailing spine structure.
 Each spine begins with an exclamation mark and tabs continue to
 demarcate each spine. *Global comments* by contrast completely ignore
-the spines.\
-\
+the spines.
+
 **Example 2.5.** Ojibway Song.
 
 ``

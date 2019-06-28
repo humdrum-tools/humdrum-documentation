@@ -55,8 +55,8 @@ as a separate Humdrum spine.
 The **extract"** command has several modes of operation. With the
 **-f** option, the user may specify a given data column (spine) or
 "field" to extract. Consider the opening of Bach\'s second Brandenburg
-Concerto shown in Example 12.1.\
-\
+Concerto shown in Example 12.1.
+
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
 
 `!!!COM: Bach, Johann Sebastian`
@@ -105,8 +105,8 @@ hence:
 
 `extract -f 2 brandenburg2.krn`
 
-The resulting output would begin as follows:\
-\
+The resulting output would begin as follows:
+
 
   ------------------------------------------------------------------------------
   `!!!COM: Bach, Johann Sebastian`
@@ -130,7 +130,7 @@ The resulting output would begin as follows:\
   8FF/
   =1
   16F\\LL
-  16G\\
+  16G\
   etc.
   ------------------------------------------------------------------------------
 Notice that the **extract** command outputs all global comments. In the
@@ -223,8 +223,8 @@ identifies "concertino" instruments. The following three commands
 extract (1) the woodwind instruments, (2) the ripieno instruments, and
 (3) any vocal parts, respectively.
 
-`extract -i '*ICww' concerto4`\
-`extract -i '*IGrip' brandenburg2`\
+`extract -i '*ICww' concerto4`
+`extract -i '*IGrip' brandenburg2`
 `extract -i '*ICvox' symphony9`
 
 
@@ -344,7 +344,7 @@ notes, the highest and lowest notes, and the longest and shortest notes
 for a \*\*kern input. The following commands can be used to determine
 this information for (1) a bassoon part, (2) all woodwind parts:
 
-`extract -i '*Ifagot' ives | census -k`\
+`extract -i '*Ifagot' ives | census -k`
 `extract -i '*ICww' ives | census -k`
 
 
@@ -758,7 +758,7 @@ compare the first phrase of the exposition with the first phrase of the
 recapitulation:
 
 
-`yank -s Exposition haydn | yank -o { -e } -r 1 > Ephrase`\
+`yank -s Exposition haydn | yank -o { -e } -r 1 > Ephrase`
 `yank -s Recapitulation haydn | yank -o { -e } -r 1 > Rphrase`
 
 
@@ -833,7 +833,7 @@ in measures 8-32 for a work by Toru Takemitsu. The following two
 commands are likely to produce different results:
 
 
-`yank -n = -r 8-32 takemitsu | mint`\
+`yank -n = -r 8-32 takemitsu | mint`
 `mint takemitsu | yank -n = -r 8-32`
 
 In the second case, an interval will probably be calculated between

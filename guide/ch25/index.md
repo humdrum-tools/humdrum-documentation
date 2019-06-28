@@ -397,8 +397,8 @@ command:
 `simil source template`
 
 generates the third column (labelled
-[`**simil`](/rep/simil)):\
-\
+[`**simil`](/rep/simil)):
+
 
   --------- ----------- -----------
   (source   (template   (simil
@@ -434,8 +434,8 @@ lowest value (0.37) corresponds to an input pattern (beginning D,D,A)
 that bears little resemblance to the template.
 
 A musically more pertinent example is given below. Here our template
-consists of a harmonic pattern: *I-IV-V-I*.\
-\
+consists of a harmonic pattern: *I-IV-V-I*.
+
 
   ---------- ----------- -----------
   (source    (template   (simil
@@ -463,8 +463,8 @@ given above has been reclassified (using **humsed**) so that the number
 of distinct harmonic categories has been reduced. For example, the `ii7`
 chord has been classified as a form of `subdom`inant function. Notice
 how the [`**simil`](/rep/simil) values better
-reflect the presumed harmonic similarity:\
-\
+reflect the presumed harmonic similarity:
+
 
   ----------- ----------- -----------
   (source     (template   (simil
@@ -498,8 +498,8 @@ In the default operation, **simil** assigns equivalent edit penalties
 define these penalties via an initialization file. The initialization
 file must be named `simil.rc` and be located in the current directory or
 the user\'s home directory. Arbitrary costs may be assigned to any of
-eight edit operations shown in Table 25.2.\
-\
+eight edit operations shown in Table 25.2.
+
 **Table 25.2**
 
   ---------- ----------------------------------------------------------------------
@@ -582,8 +582,8 @@ our analysis of the harmonic data illustrated above. It might be argued
 that *changing* a chord function is more dissimilar than *repeating* a
 chord function. In the following `simil.rc` file, an increased penalty
 has been assigned for dissimilar substitution, and decreased penalties
-have been assigned for repetition.\
-\
+have been assigned for repetition.
+
 
   ------ -----
   `S0`   1.6
@@ -591,8 +591,8 @@ have been assigned for repetition.\
   S3     0.7
   ------ -----
 Repeating the above command with this new `simil.rc` file produces the
-following results:\
-\
+following results:
+
 
   ----------- ----------- -----------
   (source     (template   (simil
@@ -618,8 +618,8 @@ subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 The [**simil**](/tool/simil) command can be used to characterize
 innumerable types of similarity. Suppose, for example, that we wanted to
 identify similar fingering patterns in music for guitar. Consider the
-following work by Ferdinando Carulli:\
-\
+following work by Ferdinando Carulli:
+
 
 `!!!COM: Carulli, Ferdinando`
 `!!!OTL: Larghetto, Opus 124, No. 23 `
@@ -644,9 +644,9 @@ following work by Ferdinando Carulli:\
 `: : : |4dI : |4eA`
 `: : : |2bI : |2bA`
 `=3  We might be interested in a fret-board fingering pattern that consists of the following successive finger combinations: `
-index finger\
-index finger\
-ring and little fingers\
+index finger
+index finger
+ring and little fingers
 index finger
 In order to search for similar fingering patterns, we need to
 eliminate all but the relevant information from our representation. In
@@ -659,8 +659,8 @@ can prepare our input using the following
 and then eliminate all characters other than the letters *a* to *e*.
 Any resulting empty lines we replace by the letter *n*.
 `grep -v ^= carulli | humsed 's/[^a-e]//g; s/^$/n/' carulli`
-The corresponding output would be as follows:\
-\
+The corresponding output would be as follows:
+
 `!!!COM: Carulli, Ferdinando`
 `!!!OTL: Larghetto, Opus 124, No. 23`
 `!! For guitar.`
@@ -720,11 +720,11 @@ By way of illustration, consider the two passages shown in Example
 25.1: from Wagner\'s *Rienzi* opera, and the Scottish folksong **My
 Bonnie**. Two sample outputs from **accent** are given below. In
 both examples the left-most spine shows the input, and the
-right-most spine shows the corresponding output:\
-\
+right-most spine shows the corresponding output:
+
 **Example 25.1.** Richard Wagner, *Rienzi* Theme. Anon. *My Bonnie
 Lies Over the Ocean*.
-> ![](guide.figures/guide25.1a.gif)\
+> ![](guide.figures/guide25.1a.gif)
 > ![](guide.figures/guide25.1b.gif)
 > > `!!!COM: Wagner, Richard`
 > >

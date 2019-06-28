@@ -32,8 +32,8 @@ The *context* Command
 The effect of the [**context**](/tool/context) command is easier
 to illustrate than describe. Consider a file (named `input`) that
 contains the numbers 1 through 6 on successive lines. A null token is
-interposed between the numbers 2 and 3:\
-\
+interposed between the numbers 2 and 3:
+
 
   -------------
   ``
@@ -51,8 +51,8 @@ The command
 
 `context -n 3 input`
 
-will produce the following output:\
-\
+will produce the following output:
+
 
   -------------
   ``
@@ -145,7 +145,7 @@ harmonic interval pairs and order them from least common to most common:
 In the case of Bach\'s fifteen two-part *Inventions* the results look as
 follows:
 
-\
+
 `24  m10 P8  24  M10 P8  23  m7 P8  21  M6 P8  19  M9 P8  12  P5 P8  11  m6 P8   9  P12 P8   8  m13 P8   8  - P8`
 
 In other words, the octave is most commonly approached by contracting
@@ -209,8 +209,8 @@ Using *context* with the *-b* and *-e* Options
 
 Example 19.1 shows an excerpt from a flute study by Anderson. Although
 the work is monophonic, the work\'s structure is based on an underlying
-chord progression that is realized as a series of arpeggiation figures.\
-\
+chord progression that is realized as a series of arpeggiation figures.
+
 **Example 19.1 Joachim Anderson, Opus 30, No. 24.**
 
 ![](guide.figures/guide19.1.gif)
@@ -225,8 +225,8 @@ collection of data tokens. Consider the following command:
 `context -b '(' Anderson`
 
 Whenever a data record contains an open parenthesis a new amalgamation
-begins. The appropriate output for measure 1 of Example 19.1 would be:\
-\
+begins. The appropriate output for measure 1 of Example 19.1 would be:
+
 
   -----------------------
   `**kern`
@@ -264,8 +264,8 @@ data tokens. A suitably revised command would be:
 
 `context -b '(' -e ')' Anderson`
 
-The resulting output would begin as follows:\
-\
+The resulting output would begin as follows:
+
 
   -----------------------
   `**kern`
@@ -454,8 +454,8 @@ question, we need concurrent access to both melodic interval data as
 well as scale degree information. The solution to such questions
 typically involves linking different types of data together using the
 [**assemble**](/tool/assemble) command. Suppose the first phrase
-in our input begins as follows:\
-\
+in our input begins as follows:
+
 
   ----------
   `**kern`
@@ -491,8 +491,8 @@ document.
 
 `assemble temp.mnt temp.deg`
 
-The first phrase output will appear as follows:\
-\
+The first phrase output will appear as follows:
+
 
   ---------- --------------------------------
   `**mint`   \*\*deg
@@ -518,8 +518,8 @@ associated with a phrase ending on the dominant (`5$`). Before using the
 approprate **grep** command, we need to use
 [**ditto**](/tool/ditto) to propagate the scale degree data over
 the null data tokens in the `**deg` spine; **ditto** will generate the
-following output:\
-\
+following output:
+
 
   ---------- --------------------------------
   `**mint`   \*\*deg
@@ -558,8 +558,8 @@ approach the tonic, and one for intervals that follow the tonic. We
 already know how to create an inventory of intervals approaching a
 particular scale-degree:
 
-`deg -a inputfile > temp1`\
-`mint inputfile > temp2`\
+`deg -a inputfile > temp1`
+`mint inputfile > temp2`
 `assemble temp1 temp2 | grep '^[v^]*1 ' | sort | uniq -c \`
 > \| sort -rn \> inventory.pre
 
@@ -568,10 +568,10 @@ For the intervals following the tonic, we need to use
 intervals: the first interval will indicate the approach, and the second
 interval in each pair will indicate the continuation.
 
-`deg -a inputfile > temp1`\
-`mint inputfile | context -n 2 -o ^= > temp2`\
-`humsed 's/ .*//' temp2 > intervals.pre`\
-`humsed 's/.* //' temp2 > intervals.post`\
+`deg -a inputfile > temp1`
+`mint inputfile | context -n 2 -o ^= > temp2`
+`humsed 's/ .*//' temp2 > intervals.pre`
+`humsed 's/.* //' temp2 > intervals.post`
 `assemble temp1 intervals.pre | grep '^1  ' | sort | uniq -c \`
 > \| sort -rn \> inventory.pre
 `assemble temp1 intervals.post | grep '^1 ' | sort | uniq -c \`
@@ -584,7 +584,7 @@ accidental occurs in one voice but not in another voice within a brief
 period of time. One approach is to extract each voice, translate to
 scale-degree and create brief contexts of (say) 2 or 3 notes. E.g.
 
-`extract -f 1 inputfile | deg | context -n 3 -o ^= > lower.tmp`\
+`extract -f 1 inputfile | deg | context -n 3 -o ^= > lower.tmp`
 `extract -f 2 inputfile | deg | context -n 3 -o ^= > upper.tmp`
 
 We can then assemble the two contexts together:
@@ -593,8 +593,8 @@ We can then assemble the two contexts together:
 
 Suppose our inputs consisted of an ascending C major scale played in the
 lower voice concurrent with an E major scale in the upper voice. Our
-output would look as follows:\
-\
+output would look as follows:
+
 
   ------------- -- -- ---------------
   `**deg`             \*\*deg
@@ -642,8 +642,8 @@ The **-p** option for [**context**](/tool/context) allows the
 output data records to be "pushed" forward by a specified number of
 lines. Consider the normal operation of **context** as illustrated
 below. The left-hand spine represents the input and the right-hand spine
-represents the output where the option **-n 2** has been specified.\
-\
+represents the output where the option **-n 2** has been specified.
+
 
   ---------- ----------
   `**kern`   \*\*kern
@@ -663,8 +663,8 @@ complete command is:
 
 `context -n 2 -p 1`
 
-The corresponding result is:\
-\
+The corresponding result is:
+
 
   ---------- ----------
   `**kern`   \*\*kern
@@ -685,8 +685,8 @@ Similarly, consider the effect of the following command:
 
 `context -n 4 -p 2`
 
-The corresponding result is:\
-\
+The corresponding result is:
+
 
   ---------- ----------
   `**kern`   \*\*kern
@@ -716,8 +716,8 @@ by a descending major second. First, we generate independent
 [`**mint`](/rep/mint) and
 [`**deg`](/rep/deg) outputs. Next we process the
 `**mint` data using **context** to create pairs of successive intervals.
-Without the **-p** option, the assembled output might look as follows:\
-\
+Without the **-p** option, the assembled output might look as follows:
+
 
   --------- -----------
   `**deg`   \*\*mint
@@ -731,8 +731,8 @@ Without the **-p** option, the assembled output might look as follows:\
   v5        .
   \*-       \*-
   --------- -----------
-With **-p 1** the output becomes:\
-\
+With **-p 1** the output becomes:
+
 
   --------- -----------
   `**deg`   \*\*mint

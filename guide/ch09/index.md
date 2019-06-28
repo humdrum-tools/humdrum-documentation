@@ -423,8 +423,8 @@ Examples of Regular Expressions
 -------------------------------
 
 The following table lists some examples of regular expressions and
-provides a summary description of the effect of each expression:\
-\
+provides a summary description of the effect of each expression:
+
 
   ------------------ ------------------------------------------------------------------------
   A                  match letter \`A\'
@@ -454,8 +454,8 @@ Examples of Regular Expressions in Humdrum
 ------------------------------------------
 
 The following table provides some examples of regular expressions
-pertinent to Humdrum-format inputs:\
-\
+pertinent to Humdrum-format inputs:
+
 
   ---------------------------- ----------------------------------------------------------
   \^!!                         match any global comment
@@ -475,8 +475,8 @@ pertinent to Humdrum-format inputs:\
 
 By way of illustration, the next table shows examples of regular
 expressions appropriate for processing
-[`**kern`](/rep/kern) representations.\
-\
+[`**kern`](/rep/kern) representations.
+
 
   --------------------------------------------------- -----------------------------------------------------------
   \^=                                                 match any `**kern` barline or double barline

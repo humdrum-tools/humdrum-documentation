@@ -231,7 +231,7 @@ command1 ; command2
 is logically identical to:
 
 ```bash
-command1 \
+command1 
 command2
 ```
 
@@ -367,9 +367,9 @@ example, the input to **command2** comes from the output of
 **command1**.
 
 ```bash
-command \
-command < input \
-command input \
+command 
+command < input 
+command input 
 command1 | command2
 ```
 

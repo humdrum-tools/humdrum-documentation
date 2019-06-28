@@ -39,11 +39,11 @@ intervals are the descending perfect fourth between the first two notes
 of the upper part, and the rising semitone at the beginning of the lower
 part.
 
-\
-\
-**Example 11.1** Types of melodic intervals.\
-\
-![](guide.figures/guide11.1.gif)\
+
+
+**Example 11.1** Types of melodic intervals.
+
+![](guide.figures/guide11.1.gif)
 
 Even within a monophonic score, successive pitches may have one or more
 rests interposed between them. Depending on the research task, the
@@ -51,8 +51,8 @@ interval spanning across the rest(s) may or may not be considered
 important. We might call such intervals *interrupted melodic intervals.*
 An example of an interrupted melodic interval is the ascending perfect
 fourth in the upper voice between the last note of the first measure
-(A4) and the first note of the last measure (D5).\
-\
+(A4) and the first note of the last measure (D5).
+
 **Example 11.1 continued.**
 
   ------------ -- ----------
@@ -193,8 +193,8 @@ For example,
 
 ` mint -b r inputfile`
 
-would produce the following output when applied to Example 11.1:\
-\
+would produce the following output when applied to Example 11.1:
+
 
   ----------- -- -- ----------
   `**mint`          \*\*mint
@@ -249,8 +249,8 @@ intervals appear in the output in parentheses. For example, the
 following output is generated for Example 1.1 with the **-I** option.
 Notice the addition of `(+M2)` and `(-2)`. The rising major second
 arises from the pitches D4 and E4; the falling minor third arises from
-the pitches G4 and E4.\
-\
+the pitches G4 and E4.
+
 
   ---------------------- -- -- ----------
   `**mint`                     \*\*mint
@@ -281,8 +281,8 @@ transformed to a null data token and is ignored when processing. One
 possible use for this option is to help calculate *distance intervals.*
 Consider Example 11.4 where all of the durations are either sixteenth
 notes or eighth notes. Suppose we wanted to calculate the intervals only
-between the eighth notes.\
-\
+between the eighth notes.
+
 
 **Example 11.4**
 
@@ -313,8 +313,8 @@ matching the string \``16`\':
 
 This command would produce an output that highlights the descending
 arpeggiated major chord \-- from C5 to G4 (down a P4), to E4 (down a m3)
-to C4 (down a M3).\
-\
+to C4 (down a M3).
+
 
 ![](guide.figures/guide11.4b.gif)
 
@@ -349,8 +349,8 @@ typical use:
 `cleave -d ' ' -i '**kern' -o '**kern' example11a`
 
 With the `**kern` encoding for Example 11.1 as input, the corresponding
-output would be:\
-\
+output would be:
+
 
   --------------------
   `**kern`
@@ -379,8 +379,8 @@ appropriate command pipeline becomes:
 `cleave -d ' ' -i '**kern' -o '**kern' example11a \`
 > \| humsed \'s/ =.\*//\' \| mint -I
 
-The corresponding melodic interval output is:\
-\
+The corresponding melodic interval output is:
+
 
   ----------------------------------------------
   `**mint`
@@ -445,14 +445,14 @@ Are there any compound melodic intervals in the file `Piaf`?
 Are descending seconds more common than ascending seconds in melodies by
 Maurice Chevalier?
 
-`mint Chevalier* | grep -c '+[Mm]2'`\
+`mint Chevalier* | grep -c '+[Mm]2'`
 `mint Chevalier* | grep -c '-[Mm]2'`
 
 An alternative way of achieving the same goal might simplify the regular
 expression to **grep** and use the **-d** (diatonic) option for
 **mint**:
 
-`mint -d Chevalier* | grep -c '+2'`\
+`mint -d Chevalier* | grep -c '+2'`
 `mint -d Chevalier* | grep -c '-2'`
 
 Identify whether there are any tritone melodic intervals in any of the

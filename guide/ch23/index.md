@@ -60,7 +60,7 @@ appropriate data tokens:
 
 The output for the combined voices of Bach\'s two-part Invention No. 5
 shows just seven patterns. The most characteristic patterns are the
-second one: `8r 16 16 8 8 4 4` and the fourth one:\
+second one: `8r 16 16 8 8 4 4` and the fourth one:
 `8 16 16 8 8 4 4`.
 
   ------ -------------------------------------------------
@@ -81,8 +81,8 @@ The [**dur**](/tool/dur) command produces
 `**recip` input. The `**dur` representation scheme consists simply of
 the elapsed duration of notes and rests, expressed in seconds. The
 following example shows a simple `**dur` representation (right spine)
-with a corresponding `**kern` input:\
-\
+with a corresponding `**kern` input:
+
 
   ---------- ---------
   `**kern`   \*\*dur
@@ -164,7 +164,7 @@ phrases \-- and if so, how much longer? In this case, we want to have
 
 `dur -e '{' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
 > \| stats
-\
+
 `dur -e '}' inputfile | rid -GLId | grep '{' | sed 's/{//' \`
 > \| stats
 
@@ -173,7 +173,7 @@ Similarly, do semitone trills tend to be shorter than whole-tone trills?
 
 `dur -e 't' inputfile | rid -GLId | grep 't' | sed 's/{//' \`
 > \| stats
-\
+
 `dur -e 'T' inputfile | rid -GLId | grep 'T' | sed 's/{//' \`
 > \| stats
 
@@ -185,14 +185,14 @@ compared with the original exposition?
 
 `yank -s 'Exposition' -r 1 inputfile | dur | rid -GLId \`
 > \| grep -v \'=\' \| stats
-\
+
 `yank -s 'Recapituation' -r 1 inputfile | dur | rid -GLId \`
 > \| grep -v \'=\' \| stats
 
 Do initial phrases in Schubert\'s vocal works tend to be shorter than
 final phrases?
 
-`yank -m { -r 1 lied | dur | rid -GLId | grep -v ^= | stats`\
+`yank -m { -r 1 lied | dur | rid -GLId | grep -v ^= | stats`
 `yank -m { -r $ lied | dur | rid -GLId | grep -v ^= | stats`
 
 How much longer is a passage if all the repeats are played?
@@ -260,7 +260,7 @@ reassignment file would be as follows:
 And our processing would be:
 
 `dur inputfile | xdelta -s ^= | recode -f reassign \`
-> -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\\
+> -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\
 > \| rid -GLId \| sort \| uniq -c \| sort -n
 
 
@@ -486,7 +486,7 @@ involved. First we need to expand our input according to the shortest
 note. We use [**census -k**](/tool/census) to determine the
 shortest duration, and then expand our input using **timebase**.
 
-`census -k magyar*.krn`\
+`census -k magyar*.krn`
 `timebase -t 16 magyar*.krn > magyar.tb`
 
 Using **metpos** will allow us to create a spine with the metric

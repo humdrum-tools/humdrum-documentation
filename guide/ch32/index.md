@@ -145,7 +145,7 @@ print the value of the first token minus the value of the second token
 Awk also provide an **else** condition. The syntax is:
 
 if (condition)
-> \[then\] {do something}\
+> \[then\] {do something}
 > else {do something else instead}
 
 For Humdrum inputs, we may want to avoid processing comments and
@@ -221,12 +221,12 @@ remaining numeric value, and (4) output the new number preceded by the
 equal sign:
 
 `awk '{`
-> if (\$0 !\~/\^=/) {print \$0}\
+> if (\$0 !\~/\^=/) {print \$0}
 > else {
-> > barline = \$1\
-> > gsub("\[\^0-9\]","",barline)\
-> > barline = barline + 1\
-> > print "=" barline\
+> > barline = \$1
+> > gsub("\[\^0-9\]","",barline)
+> > barline = barline + 1
+> > print "=" barline
 > > }
 > }\'
 
@@ -251,7 +251,7 @@ In the case of counting the number of leading-tones for each of four
 spines, our program would be as follows:
 
 `awk '{`
-> count = 0\
+> count = 0
 > for (i=1; i\<=4; i++)
 > > {if (\$i \~/ti/) count++}
 > print count
@@ -275,8 +275,8 @@ code. Like the shell, awk comments consist of material following the
 octothorpe character (\#):
 
 `awk '{`
-> \# A program to count occurrences of the leading-tone.\
-> count = 0\
+> \# A program to count occurrences of the leading-tone.
+> count = 0
 > for (i=1; i\<=NF; i++)
 > > {if (\$i \~/ti/) count++}
 > print count
@@ -291,9 +291,9 @@ immediately moves on to the next input line and begins processing again
 from the start of the program.
 
 `awk '{`
-> \# A program to count occurrences of the leading-tone.\
-> count = 0\
-> if (\$0 \~/\^\[!\*=\]/) {print \$0; next}\
+> \# A program to count occurrences of the leading-tone.
+> count = 0
+> if (\$0 \~/\^\[!\*=\]/) {print \$0; next}
 > for (i=1; i\<=NF; i++)
 > > {if (\$i \~/ti/) count++}
 > print count
@@ -314,14 +314,14 @@ vigilant for spine-path terminators (`*-`) and ensure that our output is
 similarly properly terminated. The revised program is as follows:
 
 `awk '{`
-> \# A program to count occurrences of the leading-tone.\
-> count = 0\
-> if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}\
-> if (\$0 \~/\^\*-/) {print "\*-"; next}\
-> if (\$0 \~/\^\*\[\^\*\]/) {print "\*"; next}\
-> if (\$0 \~/\^!!/) {print \$0; next}\
-> if (\$0 \~/\^=/) {print \$1; next}\
-> {\
+> \# A program to count occurrences of the leading-tone.
+> count = 0
+> if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}
+> if (\$0 \~/\^\*-/) {print "\*-"; next}
+> if (\$0 \~/\^\*\[\^\*\]/) {print "\*"; next}
+> if (\$0 \~/\^!!/) {print \$0; next}
+> if (\$0 \~/\^=/) {print \$1; next}
+> {
 > for (i=1; i\<=NF; i++)
 > > {if (\$i \~/ti/) count++}
 > print count

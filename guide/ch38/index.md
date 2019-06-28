@@ -254,9 +254,9 @@ scrambling the order of notes, and then re-assembling the scrambled part
 with the original. The resulting harmonic intervals arise from a random
 juxtaposition of parts.
 
-`extract -f 1 bach > temp1`\
-`extract -f 2 bach > temp2`\
-`scramble -r temp1 > temp1.scr`\
+`extract -f 1 bach > temp1`
+`extract -f 2 bach > temp2`
+`scramble -r temp1 > temp1.scr`
 `assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'`
 
 Note that the **scramble** command also provides a **-t** option so that
@@ -352,7 +352,7 @@ extract each of the voices. Let\'s also eliminate barlines and use
 [**ditto**](/tool/ditto) to replicate the pitch values through
 null tokens.
 
-`extract -i '*sopran' composition | grep -v = | ditto > voice1`\
+`extract -i '*sopran' composition | grep -v = | ditto > voice1`
 `extract -i '*bass' composition | grep -v = | ditto > voice2`
 
 Now let\'s shift one part with respect to the other using
@@ -387,11 +387,11 @@ the `LENGTH` variable. A `while` loop is used to calculate the number of
 octave intervals for each of the possible shifts between the parts:
 
 `` extract -f 1 composition | grep -v = | ditto > spine1  extract -f 2 composition | grep -v = | ditto > spine2  LENGTH=`rid -GLId spine1 | wc -l | sed 's/ //g'`  X=0  while [ $X -ne $LENGTH ]  do ``
-> reihe -s \$X spine1 \> temp\
-> assemble temp spine2 \| hint \| grep -c \'P8\'\
+> reihe -s \$X spine1 \> temp
+> assemble temp spine2 \| hint \| grep -c \'P8\'
 > let X=\$X+1
-done\
-rm spine\[12\] temp\
+done
+rm spine\[12\] temp
 
 This *autophase* procedure has been used to address many differ kinds of
 questions pertaining to how musical parts interrelate.

@@ -39,16 +39,16 @@ answer each of the above questions.
 
 The above questions are all variations of one of the following forms:
 
-How many different types of \_\_\_\_\_ are there?\
-What is the most/least common \_\_\_\_\_?\
+How many different types of \_\_\_\_\_ are there?
+What is the most/least common \_\_\_\_\_?
 What is the frequency of occurrence for various \_\_\_\_\_s?
 
 In some cases, we\'re asked to compare two or more repertories when
 answering one of these basic questions.
 
 For illustration purposes, consider the case of a Humdrum file named
-`alpha` containing the following simple input:\
-\
+`alpha` containing the following simple input:
+
 
   -----------
   `**alpha`
@@ -85,8 +85,8 @@ command:
 `sort alpha > sorted.alpha`
 
 will sort the file `alpha` and place the results in a file named
-`sorted.alpha`. The file `sorted.alpha` will contain the following:\
-\
+`sorted.alpha`. The file `sorted.alpha` will contain the following:
+
 
   -----------
   `**alpha`
@@ -112,8 +112,8 @@ example, if we type:
 
 `uniq sorted.alpha`
 
-The output will be as follows:\
-\
+The output will be as follows:
+
 
   -----------
   `**alpha`
@@ -133,8 +133,8 @@ prepended to each output line. The command:
 
 `uniq -c sorted.alpha > unique.alpha`
 
-will produce the following output:\
-\
+will produce the following output:
+
 
   ----- -----------
   `1`   \*\*alpha
@@ -200,8 +200,8 @@ different types of data. For example, the following file (named
 `alphabet`) contains two spines, one with "alpha" data, and the second
 with "bet" data. These data types might represent melodic intervals
 and fingering information, or dynamic markings and stem-directions, or
-whatever.\
-\
+whatever.
+
 
   ----------- ---------
   `**alpha`   \*\*bet
@@ -214,8 +214,8 @@ whatever.\
   `*-`        \*-
   ----------- ---------
 If we apply our above inventory-generating commands for the file
-"alphabet," the result will be as follows:\
-\
+"alphabet," the result will be as follows:
+
 
   ----- --- -------
   `1`   A   \$200
@@ -245,8 +245,8 @@ For example, we can create an inventory of just the `**bet` data:
 `extract -i '**bet' alphabet | rid -GLId | sort | uniq -c \`
 > \> inventory.bet
 
-The resulting `inventory.bet` file will contain:\
-\
+The resulting `inventory.bet` file will contain:
+
 
   ----- -------
   `1`   \$200
@@ -259,7 +259,7 @@ Sometimes it is useful to create an aggregate inventory of the data in
 each separate spine. In such cases, we will need to use **extract**
 several times so that each spine is placed in a separate file:
 
-`extract -i '**alpha' alphabet > justalpha`\
+`extract -i '**alpha' alphabet > justalpha`
 `extract -i '**bet' alphabet > justbet`
 
 The **cat** command can then be used to concatenate the files end-to-end
@@ -287,8 +287,8 @@ If we type
 
 `sort inventory.alpha`
 
-The output will be as follows:\
-\
+The output will be as follows:
+
 
   ----- ---
   `1`   C
@@ -303,8 +303,8 @@ most common occurrences will be placed at the beginning of the output:
 
 `sort -r inventory.alpha`
 
-produces the following output:\
-\
+produces the following output:
+
 
   ----- ---
   `3`   A
@@ -367,7 +367,7 @@ By contrast, the **uniq -u** option causes *only* those records that are
 unique (occur only once) to be output. This option can be useful when
 looking for rare circumstances in our data.
 
-`rid -GLId alpha | sort | uniq -u` (output only the rare events)\
+`rid -GLId alpha | sort | uniq -u` (output only the rare events)
 `rid -GLId alpha | sort | uniq -d` (eliminate all the rare events)
 
 
@@ -376,8 +376,8 @@ Transforming and Editing Inventory Data
 
 Notice that two data records must be identical in order for them to be
 considered "the same" by **sort** and **uniq**. This means that
-records such as the following are considered entirely different:\
-\
+records such as the following are considered entirely different:
+
 
   ---------
   `ABC`
@@ -408,8 +408,8 @@ Instead of translating our data, we might wish to edit the data using
 the **sed** or [**humsed**](/tool/humsed) stream editors.
 Suppose we had a file (named "notes") consisting of pitch information,
 and we wanted to create an inventory of the diatonic pitch-letter names.
-Our input might look like this:\
-\
+Our input might look like this:
+
 
   -----------
   `**notes`
@@ -422,8 +422,8 @@ Our input might look like this:\
   `E`
   `*-`
   -----------
-Without modification, our inventory would appear as follows:\
-\
+Without modification, our inventory would appear as follows:
+
 
   ----- -----
   `1`   A
@@ -442,8 +442,8 @@ pipe:
 
 `humsed 's/#//' notes | rid -GLId | sort | uniq -c`
 
-\-- will produce the following output:\
-\
+\-- will produce the following output:
+
 
   ----- ---
   `1`   A
@@ -464,7 +464,7 @@ question posed:
 
 *Does Liszt use a greater variety of harmonies than Chopin?*
 
-`extract -i '**harm' liszt* | rid -GLId | sort | uniq | wc -l`\
+`extract -i '**harm' liszt* | rid -GLId | sort | uniq | wc -l`
 `extract -i '**harm' chopin* | rid -GLId | sort | uniq | wc -l`
 
 
@@ -500,7 +500,7 @@ here eliminates all data with the exception of
 melodies than in (say) French chanson?* Once again assume that the
 inputs are monophonic.
 
-`deg -t pop* | grep -c '4'`\
+`deg -t pop* | grep -c '4'`
 `deg -t chanson* | grep -c '4'`
 
 

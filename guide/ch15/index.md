@@ -29,8 +29,8 @@ concurrently-sounding notes. Example 15.1 illustrates five types of
 harmonic intervals. The most obvious harmonic intervals are those that
 occur between pitches that have concurrent onsets. We might call these
 *explicit harmonic intervals.* An example of an explicit harmonic
-interval is the perfect octave in the first sonority of Example 15.1\
-\
+interval is the perfect octave in the first sonority of Example 15.1
+
 **Example 15.1** Types of harmonic intervals.
 
 ![](guide.figures/guide15.1.gif)
@@ -87,10 +87,10 @@ is the most similar to figured bass notation. *Permuted harmonic
 intervals* include all intervals that can be calculated between all
 notes of a sonority. Four pitches leads to six intervals.
 
-\
-\
-**Example 15.2** Interpreting Interval Content in Chords\
-![](guide.figures/guide15.2.gif)\
+
+
+**Example 15.2** Interpreting Interval Content in Chords
+![](guide.figures/guide15.2.gif)
 
   ------------------- -- -- ------------------------ -- -- --------------------
   Stacked Intervals         Bass-related Intervals         Permuted Intervals
@@ -134,8 +134,8 @@ harmonic intervals are calculated. The output from the **hint** command
 always consists of a single [`**hint`](/rep/hint)
 spine. Any number of spines may be present in the input, but only
 pitch-related spines are processed. Given the default invocation, the
-output corresponding to Example 15.1 is as follows:\
-\
+output corresponding to Example 15.1 is as follows:
+
 
   ------------
   `**hint`
@@ -164,8 +164,8 @@ output via the **-u** option for **hint**.
 When more than two pitches are present in a sonority, *permuted harmonic
 intervals* can be calculated by invoking the **-a** option (i.e. *all*
 intervals). For example, with the **-a** option, the final chord in
-Example 15.1 would produce the following output:\
-\
+Example 15.1 would produce the following output:
+
 
   ---------------------
   `**hint`
@@ -212,8 +212,8 @@ that passing intervals are not calculated.
 In order to generate passing intervals, we will make use of the Humdrum
 [**ditto**](/tool/ditto) command. The **ditto** command replaces
 null tokens with the previous non-null data token in the same spine.
-Suppose we had an arbitrary input such as the following:\
-\
+Suppose we had an arbitrary input such as the following:
+
 
   ---------- ----------
   `**flip`   \*\*flop
@@ -226,8 +226,8 @@ Suppose we had an arbitrary input such as the following:\
   `.`        .
   `*-`       \*-
   ---------- ----------
-The effect of **ditto** would be the following:\
-\
+The effect of **ditto** would be the following:
+
 
   ---------- ----------
   `**flip`   \*\*flop
@@ -247,8 +247,8 @@ Consider the effect of **ditto** on the `**kern` data in Example 15.1:
 
 `ditto -p example15.1`
 
-The following output results:\
-\
+The following output results:
+
 
   ----------- ----------
   `**kern`    \*\*kern
@@ -275,8 +275,8 @@ single pipeline:
 `ditto example15.1 | hint`
 
 The resulting output for Example 15.1 includes the two passing intervals
-(m7 and m6) in the first measure:\
-\
+(m7 and m6) in the first measure:
+
 
   ------------
   `**hint`
@@ -297,8 +297,8 @@ The [**ditto**,](/tool/ditto) command provides two additional
 options that are worthy of note: the **-s** and **-c** options. The
 **-s** option allows **ditto** to skip or ignore the presence of certain
 data records. Suppose, for example, that we had a barline in the midst
-of some null tokens:\
-\
+of some null tokens:
+
 
   ---
   A
@@ -307,8 +307,8 @@ of some null tokens:\
   .
   ---
 Often, we would like to propagate certain data tokens *around* some
-other types of data tokens, so the result might be:\
-\
+other types of data tokens, so the result might be:
+
 
   ---
   A
@@ -348,7 +348,7 @@ two-part inventions? The following commands look for explicit and
 passing sixths respectively. Notice the use of the **-c** option so
 octave equivalents will also be identified:
 
-`hint -c inventio* | grep A6`\
+`hint -c inventio* | grep A6`
 `ditto -s ^= inventio* | hint -c | grep A6`
 
 
@@ -367,7 +367,7 @@ that there is only one oboe and one flute part in the file `Rimsky-K`:)
 
 `extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
 > \| grep -c P1
-\
+
 `extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
 > \| grep -c \[MmPAd\]
 
@@ -378,9 +378,9 @@ Suppose we have extracted two horn parts from an orchestral score. Are
 octave intervals between the horns more likely to occur on the dominant
 pitch or the tonic pitch?
 
-`solfa horns > temp1`\
-`hint horns > temp2`\
-`assemble temp1 temp2 | grep -c ^do.*P8`\
+`solfa horns > temp1`
+`hint horns > temp2`
+`assemble temp1 temp2 | grep -c ^do.*P8`
 `assemble temp1 temp2 | grep -c ^so.*P8`
 
 
@@ -426,8 +426,8 @@ commands within a single invocation of **humsed**:
 
 `humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1`
 
-The following output results:\
-\
+The following output results:
+
 
   ----------- ----------
   `**kern`    \*\*kern
@@ -452,8 +452,8 @@ well:
 > \| ditto -p
 
 Below we see the output assembled with the output from the corresponding
-[**hint**](/tool/hint) command:\
-\
+[**hint**](/tool/hint) command:
+
 
   ----------- ---------- ----------
   `**kern`    \*\*kern   \*\*hint
@@ -482,8 +482,8 @@ command to translate Example 15.1 to a
 
 `semits example15.1`
 
-The resulting output would be as follows:\
-\
+The resulting output would be as follows:
+
 
   ------------ ------------
   `**semits`   \*\*semits
@@ -519,8 +519,8 @@ The **-s** option allows the user to identify data records to be
 is used to identify barlines, so measure numbers will be excluded when
 processing the numerical data.
 
-The above command yields the following output:\
-\
+The above command yields the following output:
+
 
   -------------
   `**Ysemits`
@@ -553,8 +553,8 @@ suitable command would be:
 
 `semits example15.1 | ditto -s = | ydelta -s = -i '**semits'`
 
-The resulting output would be:\
-\
+The resulting output would be:
+
 
   -------------
   `**Ysemits`
@@ -599,8 +599,8 @@ diminished fifth? We can answer this question by using both **hint** and
 command is used to ensure that both explicit and passing intervals are
 generated.
 
-`ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1`\
-`ditto -s = 2part | hint > temp2`\
+`ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1`
+`ditto -s = 2part | hint > temp2`
 `assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \`
 > \| grep -v d5
 

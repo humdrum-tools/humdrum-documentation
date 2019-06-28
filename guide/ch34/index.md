@@ -56,8 +56,8 @@ numerical designations (see Forte, 1973; Rahn, 1980). Set forms are
 insensitive to transposition, pitch-inversion, and pitch spelling so all
 major and minor triads are identified as pitch-class set 3-11.
 Similarly, the dominant seventh chord and \`Tristan\' chord are
-similarly related by inversion so both are identified as pc set 4-27.\
-\
+similarly related by inversion so both are identified as pc set 4-27.
+
 Figure 34.1. Examples of PC set forms.
 
 ![](guide.figures/guide34.1.gif)
@@ -217,7 +217,7 @@ zero in the first vector position (i.e., \<0\.....\>) whereas interval
 vectors without tritone relations will have a zero in the last position
 (i.e., \<\.....0\>).
 
-`pc schoenberg* | ditto -s ^= | iv | grep -c '<0.....>'`\
+`pc schoenberg* | ditto -s ^= | iv | grep -c '<0.....>'`
 `pc schoenberg* | ditto -s ^= | iv | grep -c '<.....0>'`
 
 
@@ -234,8 +234,8 @@ tokens.
 
 Suppose, for example, we wanted to analyze set forms in Claude
 Debussy\'s *Syrinx* for solo flute. The opening measures are shown in
-Example 34.1.\
-\
+Example 34.1.
+
 **Example 34.1.** From Claude Debussy, *Syrinx* for flute.
 
 ![](guide.figures/guide34.2.gif)
@@ -368,7 +368,7 @@ option that allows us to specify *partial* rows: that is, we can store
 (say) only the first 5 notes in each tone row file. This feature will
 also prove useful when doing an automatic search.
 
-\
+
 `###################################################################  #                              MATRIX  # This script generates a tone-row matrix for a specified prime row.  # The -n option is used to specify the number of pitches to be out-  # put in each row-file (e.g. the first 7 pitches of a 12-tone row).  #  # Usage: matrix -n N primerowfile  #  if [ "x$1" != "x-n" ]  then      echo "-n option must be specified."      echo "USAGE:   matrix -n number primerowfile"      exit  fi  if [ ! -f $3 ]  then      echo "File $3 not found."      echo "USAGE:   matrix -n number row-file"      exit  fi  # Generate the primes, inversions, retrograde, etc:    X=0  while [ $X -ne 12 ]  do      reihe -a -P $X $3 | rid -GLId | head -$2 > P$X      reihe -a -I $X $3 | rid -GLId | head -$2 > I$X      reihe -a -R $X $3 | rid -GLId | head -$2 > R$X      reihe -a -RI $X $3 | rid -GLId | head -$2 > RI$X      let X=$X+1  done`
 
 For any given input, the above script produces 48 short files named P0,
@@ -387,7 +387,7 @@ row variants for some score.
 The first part of the script simply checks to ensure that all of the row
 variant files are present:
 
-\
+
 `###################################################################  #                              ROWFIND  #                         # This script carries a preliminary tone-row search in a specified  # score.  It assumes that a complete set of set-variant files exists  # in the current directory, named P0-P11, I0-I11, R0-R11, and RI0-RI11.  #  # This script puts a file named "analysis" which may be assembled  # with the original input file.  #  # Invoke:  #       rowfind scorefile  #  # Check that the specified input file exists:  if [ ! -f $1 ]  then      echo "rowfind: ERROR: Input score file $1 not found."      exit  fi  # Also check that the row-variant files exist:  X=11  while [ $X -ne -1 ]  do      if [ ! -f P$X ]       then          echo "rowfind: ERROR: Row file P$X not found."          exit      fi      if [ ! -f I$X ]       then          echo "rowfind: ERROR: Row file I$X not found."          exit      fi      if [ ! -f R$X ]       then          echo "rowfind: ERROR: Row file R$X not found."          exit      fi      if [ ! -f RI$X ]       then          echo "rowfind: ERROR: Row file RI$X not found."          exit      fi      let X=$X-1  done`
 
 The following two lines of the script prepare the input score for
@@ -410,25 +410,25 @@ recognize row statements where several nominally successive pitches are
 collapsed into a vertical chord:
 
 `# Search for instances of each tone-row variant.  X=0  while [ $X -ne 12 ]  do `
-> \
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f P\$X -m score.tmp -t P\$X \\\
-> > \
-> > \| extract -i \'\*\*patt\' \> P\$X.pat\
-> \
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f I\$X -m score.tmp -t I\$X \\\
-> > \
-> > \| extract -i \'\*\*patt\' \> I\$X.pat\
-> \
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f R\$X -m score.tmp -t R\$X \\\
-> > \
-> > \| extract -i \'\*\*patt\' \> R\$X.pat\
-> \
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f RI\$X -m score.tmp -t RI\$X \\\
-> > \
-> > \| extract -i \'\*\*patt\' \> RI\$X.pat\
-> \
-> let X=\$X+1\
-\
+> 
+> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f P\$X -m score.tmp -t P\$X \\
+> > 
+> > \| extract -i \'\*\*patt\' \> P\$X.pat
+> 
+> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f I\$X -m score.tmp -t I\$X \\
+> > 
+> > \| extract -i \'\*\*patt\' \> I\$X.pat
+> 
+> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f R\$X -m score.tmp -t R\$X \\
+> > 
+> > \| extract -i \'\*\*patt\' \> R\$X.pat
+> 
+> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f RI\$X -m score.tmp -t RI\$X \\
+> > 
+> > \| extract -i \'\*\*patt\' \> RI\$X.pat
+> 
+> let X=\$X+1
+
 done
 
 Each of the above 48 **patt** searches resulted in a separate temporary

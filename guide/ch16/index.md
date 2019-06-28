@@ -124,7 +124,7 @@ filenames produced by the **grep** command are assigned to a shell
 variable named `FILES`. In the subsequent command a dollars sign
 instructs the shell to retrieve the contents of this variable:
 
-`` FILES=`grep -l zebra *` ``\
+`` FILES=`grep -l zebra *` ``
 `sort $FILES`
 
 Alternatively, we can avoid the `FILES` variable altogether, and execute
@@ -185,8 +185,8 @@ Consider the following three commands:
 
 ``
 
-echo \$A\
-echo "\$A"\
+echo \$A
+echo "\$A"
 echo \'\$A\'
 
 In the first and second commands, the shell looks for a variable named
@@ -211,7 +211,7 @@ measure 38 (i.e. beginning of measure 39). In the following script,
 **grep** is used to assign these line numbers to the shell variables
 `$A` and `$B`.
 
-`` A=`grep -n ^=34` ``\
+`` A=`grep -n ^=34` ``
 `` B=`grep -n ^=39` ``
 
 Now we can construct an appropriate [**humsed**](/tool/humsed)

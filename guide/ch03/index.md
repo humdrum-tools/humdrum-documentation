@@ -302,7 +302,7 @@ Even if the current directory contains hundreds of works by one composer
 of the odd score will be obvious without having to look through long
 lists:
 
-`!!!COM: Beethoven, Ludwig van`\
+`!!!COM: Beethoven, Ludwig van`
 `!!!COM: Stamitz, Carl Philipp`
 
 
@@ -346,8 +346,8 @@ output will identify the appropriate filenames. For example:
 
 might produce the following output:
 
-`bwv270.krn:!!!OTL: Befiehl du deine Wege`\
-`bwv271.krn:!!!OTL: Befiehl du deine Wege`\
+`bwv270.krn:!!!OTL: Befiehl du deine Wege`
+`bwv271.krn:!!!OTL: Befiehl du deine Wege`
 `bwv272.krn:!!!OTL: Befiehl du deine Wege`
 
 Sometimes we would like to have an output that contains *only* the
@@ -359,8 +359,8 @@ the sought pattern:
 
 The output would appear as follows:
 
-`bwv270.krn`\
-`bwv271.krn`\
+`bwv270.krn`
+`bwv271.krn`
 `bwv272.krn`
 
 As we\'ve already notes, the **-u** option for **uniq** causes only
@@ -385,7 +385,7 @@ directory:
 The output might appear as follows:
 
 
-` 9 !!!COM: Berardi, Angelo   2 !!!COM: Caldara, Antonio  12 !!!COM: Zarlino, Gioseffo   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres`\
+` 9 !!!COM: Berardi, Angelo   2 !!!COM: Caldara, Antonio  12 !!!COM: Zarlino, Gioseffo   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres`
 
 Notice that the number of instances is prepended to the reference
 records.
@@ -399,7 +399,7 @@ according to the numerical values at the extreme left. The command
 
 will rearrange the above output as follows:
 
-` 2 !!!COM: Caldara, Antonio   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres   9 !!!COM: Berardi, Angelo  12 !!!COM: Zarlino, Gioseffo`\
+` 2 !!!COM: Caldara, Antonio   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres   9 !!!COM: Berardi, Angelo  12 !!!COM: Zarlino, Gioseffo`
 
 It is important to understand that the two **sort** commands in our
 pipeline achieve different goals but use the same process. The first

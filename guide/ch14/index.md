@@ -233,7 +233,7 @@ performances as follows:
 
 `extract -i '**MIDI' perform1 | grep -v ^= | humsed -r revise \`
 > \| rid -GLId \| stats
-\
+
 `extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \`
 > \| rid -GLId \| stats
 
@@ -314,14 +314,14 @@ key perception even if we eliminate all the tonic pitches. First we
 translate the representation to scale degree and assemble this file with
 the original `**kern` representation for the melody.
 
-`deg` *input*` > temp`\
+`deg` *input*` > temp`
 `assemble` *input*` temp | humsed '/1$/d' | midi | perform`
 
 
 Of course deleting all of the tonic notes will disrupt the original
 rhythm. An alternative is to replace all tonic pitches by rests:
 
-`deg `*input*` > temp`\
+`deg `*input*` > temp`
 `assemble` *input*` temp | humsed '/1$/s%[A-Ga-g#-]*%r%' | midi \`
 > \| perform
 
@@ -456,14 +456,14 @@ from a `**kern` quarter-note (\`4\'). The problem is resolved by first
 eliminating all of the duration information (numbers) from the original
 input:
 
-`humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'`\
+`humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'`
 `humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'`
 
 
 In texts for vocal works, identify the number of notes per syllable.
 
-`extract -i '**kern'` *input*` | humsed 's/X//g' > tune`\
-`extract -i '**silbe'` *input*` | humsed 's/[a-zA-Z]*/X/' > lyrics`\
+`extract -i '**kern'` *input*` | humsed 's/X//g' > tune`
+`extract -i '**silbe'` *input*` | humsed 's/[a-zA-Z]*/X/' > lyrics`
 `assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \`
 > \> combined
 `context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'`
@@ -471,9 +471,9 @@ In texts for vocal works, identify the number of notes per syllable.
 
 Identify the number of notes per word rather than per syllable.
 
-`extract -i '**kern'` *input*` > tune`\
+`extract -i '**kern'` *input*` > tune`
 `extract -i '**silbe'`
-*input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`\
+*input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
 `assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \`
 > \> combined
 `context -b BEGIN -e END -o '[r=]' combined | rid -GLId \`
@@ -497,15 +497,15 @@ be described in [Chapter 21](/guide/ch21)), as follows:
 
 File `template`:
 
-`  .*`\
-`Ic`\
-`^\.  *`\
-`=    *`\
+`  .*`
+`Ic`
+`^\.  *`
+`=    *`
 `V[^I]`
 
 Command:
 
-`pattern -f template` *inputfile*` > output`\
+`pattern -f template` *inputfile*` > output`
 `humsed 'cadential-64/r comment.6-4' output > commented.output`
 
 ------------------------------------------------------------------------

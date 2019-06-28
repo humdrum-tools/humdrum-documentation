@@ -228,7 +228,7 @@ final revised pipeline transforms non-alliteration data to null tokens:
 
 `extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \`
 > \| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/;
-> \\\
+> \\
 > /allit/!s/.\*/./\'
 
 The final output is:
@@ -262,7 +262,7 @@ simple reassignment script can be defined which collapses the various
 phonemes into a smaller set of phonetic classes. For example, a suitable
 script might contain the following assignments:
 
-`s/[bdtk]//g  s/[mn]//g  s/[fsSTDv]//g`\
+`s/[bdtk]//g  s/[mn]//g  s/[fsSTDv]//g`
 etc.
 
 Classifying phonemes in this way will allow us to broaden our searches
@@ -306,7 +306,7 @@ records are eliminated using [**rid**](/tool/rid) and the data
 values averaged using the **stats** command:
 
 `extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\`
-> \| humsed \'s/./& /g; s/ / /; s/ \$//\' \| humsed -f vowel.map\\\
+> \| humsed \'s/./& /g; s/ / /; s/ \$//\' \| humsed -f vowel.map\\
 > \| rid -GLId \| stats
 
 This procedure can be repeated for several movements or pieces to
@@ -336,7 +336,7 @@ overall vowel height. We can use [**ditto**](/tool/ditto) to
 repeat sustained vowels:
 
 `timebase -t 16 Schubert | extract -i '**IPA' \`
-> \| humsed \'s/\[\^\@VR&AaEiIoOWuUy\]//\' \| humsed \'s/./& /g; \\\
+> \| humsed \'s/\[\^\@VR&AaEiIoOWuUy\]//\' \| humsed \'s/./& /g; \\
 > s/ / /; s/ \$//\' \| humsed -f vowel.map \| rid -GLId \| stats
 
 Since translators have plenty of other issues to consider when
@@ -357,11 +357,11 @@ words, but rhymes commonly occur in mid-phrase and other positions in
 poetry from various cultures. Consider the rhymes in the following
 traditional nonsense verse:
 
-We\'re all in the dumps,\
-For diamonds are trumps,\
-The kittens are gone to St. Paul\'s\
-The babies are bit,\
-The moon\'s in a fit\
+We\'re all in the dumps,
+For diamonds are trumps,
+The kittens are gone to St. Paul\'s
+The babies are bit,
+The moon\'s in a fit
 And the houses are built without walls.
 
 -Anon. "We\'re All in the Dumps" From The Faber Book of Nonsense
@@ -437,34 +437,34 @@ Note that the entire analytic procedure can be placed in a shell
 script and applied to any input containing `**IPA` text. The following
 script adds a number of refinements.
 `# RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ `
-> \
+> 
 > \| sed
 > \'s/.\*\\(\[\@VR&AaEiIoOWuUy\]\[\^\@VR&AaEiIoOWuUy\]\*}\$\\)/\\1/\'
-> \\\
-> \| sort \| uniq \| sed \'s/\^/s\\/.\*/; s/\$/\\/XXX\\//\' \\\
+> \\
+> \| sort \| uniq \| sed \'s/\^/s\\/.\*/; s/\$/\\/XXX\\//\' \\
 > \| awk \'BEGIN {alphabet\[1\]="A"; alphabet\[2\]="B";
-> alphabet\[3\]="C";\
-> > \
-> > alphabet\[4\]="D"; alphabet\[5\]="E"; alphabet\[6\]="F";\
-> > alphabet\[7\]="G"; alphabet\[8\]="H"; alphabet\[9\]="I";\
-> > alphabet\[10\]="J"; alphabet\[11\]="K"; alphabet\[12\]="L";\
-> > alphabet\[13\]="M"; alphabet\[14\]="N"; alphabet\[15\]="O";\
-> > alphabet\[16\]="P"; alphabet\[17\]="Q"; alphabet\[18\]="R";\
-> > alphabet\[19\]="S"; alphabet\[20\]="T"; alphabet\[21\]="U";\
-> > alphabet\[22\]="V"; alphabet\[23\]="W"; alphabet\[24\]="X";\
+> alphabet\[3\]="C";
+> > 
+> > alphabet\[4\]="D"; alphabet\[5\]="E"; alphabet\[6\]="F";
+> > alphabet\[7\]="G"; alphabet\[8\]="H"; alphabet\[9\]="I";
+> > alphabet\[10\]="J"; alphabet\[11\]="K"; alphabet\[12\]="L";
+> > alphabet\[13\]="M"; alphabet\[14\]="N"; alphabet\[15\]="O";
+> > alphabet\[16\]="P"; alphabet\[17\]="Q"; alphabet\[18\]="R";
+> > alphabet\[19\]="S"; alphabet\[20\]="T"; alphabet\[21\]="U";
+> > alphabet\[22\]="V"; alphabet\[23\]="W"; alphabet\[24\]="X";
 > > alphabet\[25\]="Y"; alphabet\[26\]="Z";
-> > alphabet\[27\]="ERROR"}\
-> > {temp=\$0\
-> > gsub("XXX",alphabet\[NR\],temp)\
-> > print temp\
-> > }\' \> rhyme.sed.\$\$\
-> \
-\
+> > alphabet\[27\]="ERROR"}
+> > {temp=\$0
+> > gsub("XXX",alphabet\[NR\],temp)
+> > print temp
+> > }\' \> rhyme.sed.\$\$
+> 
+
 extract -i \'\*\*IPA\' \$1 \| extract -f 1 \| context -b { -e } \| rid
--GLId \\\
-> \
-> \| sed -f rhyme.sed.\$\$\
-\
+-GLId \\
+> 
+> \| sed -f rhyme.sed.\$\$
+
 rm rhyme.sed.\$\$
 ------------------------------------------------------------------------
 Reprise

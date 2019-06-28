@@ -129,19 +129,19 @@ tokens within a record: (huniq: We might call this script **huniq**
 since it acts like a horizontal version of the **uniq** command:
 
 `awk '{`
-> \# A script to eliminate repeated tokens within a record.\
-> if (\$0 \~ /\^\[!\*\]/) {print \$0; next}\
+> \# A script to eliminate repeated tokens within a record.
+> if (\$0 \~ /\^\[!\*\]/) {print \$0; next}
 > else
-> > { array\[\$1\] = line = \$1\
+> > { array\[\$1\] = line = \$1
 > > for (i=2; i\<=NF; i++)
 > >
-> > > {\
+> > > {
 > > > if (array\[\$i\] == "") {array\[\$i\]=\$i; line = line " "
-> > > \$i}\
+> > > \$i}
 > > > }
 > >
-> > print line\
-> > for (i in array) delete array\[i\]\
+> > print line
+> > for (i in array) delete array\[i\]
 > > }
 > }\' \$1
 
@@ -150,8 +150,8 @@ Mexico \*\*pc \*Itromp \*clefG2 \*k\[\] \*M4/4 r 2 7 B 2 B 7 0 9 2 6 0 9
 6 2 6 r \*- Identifying implicit harmonic intervals can be a little more
 taxing. Let\'s begin by considering a monophonic passage that exhibits a
 pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
-"Gigue" from the solo \'cello *Suite No. 3* is shown in Example 35.1.\
-\
+"Gigue" from the solo \'cello *Suite No. 3* is shown in Example 35.1.
+
 **Example 35.1 J.S. Bach, "Gigue" from *Suite No. 3* for solo \'cello
 (excerpt).**
 

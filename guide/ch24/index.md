@@ -133,7 +133,7 @@ If no key indicator is found by **grep**, then the variable KEY will be
 empty. We can test for this condition using the shell **if** statement.
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
-> echo "Sorry, this input file has no key."\
+> echo "Sorry, this input file has no key."
 > exit
 fi
 
@@ -201,7 +201,7 @@ do-done block will be repeated. This will continue until the value of
 
 The output might appear as follows:
 
-`Number of notes:           31  Number of notes:           32  Number of notes:           32  Number of notes:           34  Number of notes:           35  Number of notes:           39  Number of notes:           39  Number of notes:           40  Number of notes:           48  Number of notes:           48  Number of notes:           55  Number of notes:           78`\
+`Number of notes:           31  Number of notes:           32  Number of notes:           32  Number of notes:           34  Number of notes:           35  Number of notes:           39  Number of notes:           39  Number of notes:           40  Number of notes:           48  Number of notes:           48  Number of notes:           55  Number of notes:           78`
 etc.
 
 Incidentally, the output from a **for** construction such as above can
@@ -284,7 +284,7 @@ Since we are interested in the highest and lowest notes for each
 individual part (rather than for the whole piece), we should **extract**
 each part before processing it with **census.**
 
-`extract -i '*soprano'   > soprano.part`\
+`extract -i '*soprano'   > soprano.part`
 `census -k soprano.part`
 
 On UNIX, a set of commands that sequentially process a given input can
@@ -315,8 +315,8 @@ Implementing this is simple. We first translate our pitch- related data
 to the melodic interval format \--
 [`**mint`](/rep/mint). This can be done using the
 Humdrum **mint** command. For example, consider the following melodic
-fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:\
-\
+fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:
+
 
   ----------
   `**kern`
@@ -334,8 +334,8 @@ fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:\
 Given this input, the **mint** command will produce the following
 output. Plus signs indicate ascending intervals, while minus signs
 indicate descending intervals; \'P\' means perfect, \'M\' means major,
-\'m\' means minor, \'A\' means augmented, and \'d\' means diminished:\
-\
+\'m\' means minor, \'A\' means augmented, and \'d\' means diminished:
+
 
   ----------
   `**mint`
@@ -413,8 +413,8 @@ First, we need to reformat our input so the data represent harmonic
 intervals rather than pitches. The Humdrum **hint** command will change
 most pitch representations to the harmonic interval representation \--
 [`**hint`](/rep/hint). Consider, for example, the
-following input:\
-\
+following input:
+
 
   -------------------
   `**kern   **kern`
@@ -429,8 +429,8 @@ Given the following command:
 
 `hint `
 
-The following output will be produced:\
-\
+The following output will be produced:
+
 
   ----------
   `**hint`
@@ -448,8 +448,8 @@ Second, we need to define a pattern template for the **patt** command.
 The template is a series of one or more regular expressions that are
 stored in a separate file. In this case the pattern is trivial: just two
 consecutive perfect fifth tokens. We might store the following pattern
-in the file "template":\
-\
+in the file "template":
+
 
   ------
   `P5`
@@ -491,8 +491,8 @@ on. Hence we would modify our pipeline:
 
 (Note that an alternative way of handling the compound-intervals
 question would be to define slightly more complex regular expressions in
-our template file, e.g.\
-\
+our template file, e.g.
+
 
   --------------
   `P5|P12|P19`
@@ -531,15 +531,15 @@ the numbers 1 to 7 represent tonic to leading-tone designations.
 Notice that the score input must contain an explicit key indication (a
 special type of Humdrum tandem interpretation). For example, the key of
 G major is indicated through the presence of the following
-interpretation:\
-\
+interpretation:
+
 
   -------
   `*G:`
   -------
 Minor keys are indicated using lower-case characters. For example, the
-following passage is in B minor:\
-\
+following passage is in B minor:
+
 
   ----------
   `**kern`
@@ -558,8 +558,8 @@ following passage is in B minor:\
 The **deg** command can be used to transform this representation to
 scale degree. The passage begins on the dominant (degree \`5\'), ascends
 (\^) to the tonic (\`1\'), ascends to the supertonic (\^2), ascends to
-the median (\^3) and then descends to the leading- tone (v7), etc.:\
-\
+the median (\^3) and then descends to the leading- tone (v7), etc.:
+
 
   ---------
   `**deg`
@@ -639,8 +639,8 @@ are present:
 There are still some refinements that we could add to this command
 sequence, but as it stands it is guaranteed to find all doubled
 leading-tones \-- provided the notes begin at the same time. Consider
-the following hypothetical passage:\
-\
+the following hypothetical passage:
+
 
   --------------------
   `**kern    **kern`
@@ -664,8 +664,8 @@ This criterion can be accommodated by a further refinement to our
 command pipeline. The Humdrum **ditto** command is used to replace null
 data tokens by the immediately preceding data token in the same spine.
 Consider first, the output from the **deg** command for the above
-example:\
-\
+example:
+
 
   -------------------
   `**deg     **deg`
@@ -678,8 +678,8 @@ example:\
   v6 \^1
   \*- \*-
   -------------------
-If we now invoke the **ditto** command, the modified output is:\
-\
+If we now invoke the **ditto** command, the modified output is:
+
 
   -------------------
   `**deg     **deg`
@@ -825,9 +825,9 @@ we used when checking for unisons:
 
 Finally, the complete pipeline for identifying crossed parts:
 
-`extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`\
+`extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
 extract -i \'\*alto,\*tenor\' \| semits -x \| ditto -s = \| awk
-\'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'\
+\'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
 extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
 \'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
 
@@ -857,8 +857,8 @@ other voice:
 #### RULE: "Avoid the overlapping of parts, where the pitch in an ostensibly lower voice moves to a pitch higher than the previous pitch in an ostensibly higher voice; or where the pitch in an ostensibly higher voice moves to a pitch lower than the previous pitch in an ostensibly lower voice."
 
 The following passage illustrates a violation of the part overlapping
-rule:\
-\
+rule:
+
 
   ---------------------
   `**pitch   **pitch`
@@ -952,8 +952,8 @@ voice is by leap ("leap"), and the fifth spine will indicate whether
 the melodic motion for the upper voice is by leap.
 
 Examples of violations of the exposed octaves rule will appear as one of
-the following two situations:\
-\
+the following two situations:
+
 
   --------------------------------------------------------
   `(**hint     **updown    **updown    **size   **size)`

@@ -128,8 +128,8 @@ are indicated in parentheses or square brackets. Such interpreted
 dynamics are preceded by the lower-case letter `x`.
 
 The use of the [`**dynam`](/rep/dynam)
-representation is illustrated in Example 28.1.\
-\
+representation is illustrated in Example 28.1.
+
 **Example 28.1**
 
 ![](guide.figures/guide28.1.gif)
@@ -241,8 +241,8 @@ corresponding staff; this number appears in curly braces.
   r          rest (silence)
   H          marking appears in square brackets
   ---------- ---------------------------------------------------------
-By way of illustration, consider Example 28.2.\
-\
+By way of illustration, consider Example 28.2.
+
 **Example 28.2:** Arnold Schoenberg, *Three Piano Pieces, Op. 11, No.
 2*, excerpt.
 
@@ -420,7 +420,7 @@ assist a number of tasks related to musical dynamics. Suppose, for
 example, that we want to compare the average overall dynamic levels for
 two arabesques:
 
-`extract -i '**dynam' arabesque1 | db | rid -GLId | stats`\
+`extract -i '**dynam' arabesque1 | db | rid -GLId | stats`
 `extract -i '**dynam' arabesque2 | db | rid -GLId | stats`
 
 
@@ -519,7 +519,7 @@ alternations between *f* and *p*.
 
 `extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
 > \| context -n 2 \| grep -c \'f p\'
-\
+
 `extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
 > \| context -n 2 \| grep -c \'p f\'
 

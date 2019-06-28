@@ -112,7 +112,7 @@ ostinato figure in minor thirds:
 If we applied the above **patt** command to this `ostinato` file, we
 would get the following output:
 
-`!! Pattern found at line 8 of file ostinato`\
+`!! Pattern found at line 8 of file ostinato`
 `!! Pattern found at line 11 of file ostinato`
 
 We can instruct **patt** to output specific instances of the pattern
@@ -142,8 +142,8 @@ The resulting output would be:
   ---------- ---------- -- --
 Notice that each instance of the found pattern is output as a
 stand-alone humdrum "mini-encoding," complete with initial exclusive
-interpretations and terminating spine-path terminators.\
-\
+interpretations and terminating spine-path terminators.
+
 **Example 21.2.** J.S. Bach, *Well-Tempered Clavier*, Vol. 1, Fugue 2.
 
 ![](guide.figures/guide21.2.gif)
@@ -279,8 +279,8 @@ leading-tone and the tonic. A second characteristic of the Landini
 cadence is the harmonic relationship between the highest and lowest
 voices. Three intervals are formed: *sixth -\> fifth -\> octave*. Either
 one or both of these characteristics might be used to help identify this
-distinctive cadential formula.\
-\
+distinctive cadential formula.
+
 **Example 21.4.** Francesco Landini, Excerpt from *Non avrà ma\' pietà*.
 
 ![](guide.figures/guide21.4.gif)
@@ -459,8 +459,8 @@ matching. For example, it is common in serial music to collapse segments
 of a tone-row in order to create vertical chords. Consider the following
 excerpt from Ernst Krenek\'s suite for solo \'cello. The tone row
 consists of the ordered pitches: D, G-flat, F, D-flat, C, B, E-flat, A,
-B-flat, A-flat, E, G.\
-\
+B-flat, A-flat, E, G.
+
 **Example 21.5.** Ernst Krenek, Opus 84 *Suite for Violoncello*; mov. 1,
 measures 28-30.
 
@@ -555,9 +555,9 @@ major triad \-- the last of which must end a phrase:
 
 ``
 
-\[Gg\]+\[\^\#-\] +\
-\[Gg\]+\#\[\^\#\] ?\
-(\[Aa\]+\|(\[Cc\]+\#)\|\[Ee\]+)\[\^\#-\] \*\
+\[Gg\]+\[\^\#-\] +
+\[Gg\]+\#\[\^\#\] ?
+(\[Aa\]+\|(\[Cc\]+\#)\|\[Ee\]+)\[\^\#-\] \*
 (}.\*(\<a name ="-\].\*"></a>)
 
 

@@ -437,8 +437,8 @@ would result in the following output:
   ------------- ----------
 The [**timebase**](/tool/timebase) command can be applied to
 multi-spine inputs as well as single-spine inputs. Consider, the
-following input:\
-\
+following input:
+
 
   ---------- ---------- ---------- ---------- ----------------
   `**kern`   \*\*kern   \*\*kern   \*\*kern   \*\*commentary
@@ -457,8 +457,8 @@ so that synchronous data is maintained.
 
 `timebase -t 32 Corelli`
 
-The corresponding output is as follows.\
-\
+The corresponding output is as follows.
+
 
   ---------- ---------- ---------- ---------- ----------------
   `**kern`   \*\*kern   \*\*kern   \*\*kern   \*\*commentary
@@ -494,8 +494,8 @@ sophistication. Suppose we wanted to assemble two parts, one containing
 just eighth-notes and the other containing just quarter-note triplets.
 (The quarter-note triplets will be encoded as three notes in the time of
 a half-note, or "6th" notes.) We need to create an output whose
-rhythmic structure will appear as follows:\
-\
+rhythmic structure will appear as follows:
+
 
   ---------- ----------
   `**kern`   \*\*kern
@@ -600,7 +600,7 @@ at the same time as one of its variations. We might first use
 the same time we might determine a common duration factor and expand
 them using **timebase**.
 
-`yank -s Theme -r 1 blacksmith | timebase -t 32 > temp1`\
+`yank -s Theme -r 1 blacksmith | timebase -t 32 > temp1`
 `yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2`
 
 Then we assemble the two sections together, translate to the
@@ -616,10 +616,10 @@ them into a single score, and then use the **ms** and **ghostview**
 commands to allow us to see all of the bass lines for all of the
 variations concurrently.
 
-`yank -s 'Variation 1' -r 1 goldberg | timebase -t 16 > temp1`\
-`yank -s 'Variation 2' -r 1 goldberg | timebase -t 16 > temp2`\
-etc. \...\
-`assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps`\
+`yank -s 'Variation 1' -r 1 goldberg | timebase -t 16 > temp1`
+`yank -s 'Variation 2' -r 1 goldberg | timebase -t 16 > temp2`
+etc. \...
+`assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps`
 `ghostview basslines.ps`
 
 The most common use of **assemble** is not to assemble parts, but to
@@ -630,7 +630,7 @@ like to determine whether descending minor seconds are more likely to be
 intervals, and the [**solfa**](/tool/solfa) command to
 characterize scale degrees. Assume that our input is monophonic:
 
-`mint melodies > temp1`\
+`mint melodies > temp1`
 `solfa melodies > temp2`
 
 The files `temp1` and `temp2` will have the same length, so we can
@@ -642,7 +642,7 @@ encoded in the `**solfa` spine. We can use **grep** to search for the
 appropriate combinations of interval and scale degree and count the
 number of occurrences:
 
-`assemble temp1 temp2 | grep -c '-m2.*mi'`\
+`assemble temp1 temp2 | grep -c '-m2.*mi'`
 `assemble temp1 temp2 | grep -c '-m2.*ti'`
 
 
@@ -664,7 +664,7 @@ melodic interval representation using **mint**. Since we are not
 interested in interval qualities we can invoke the **-d** option to
 output only diatonic interval sizes.
 
-`extract -i '*Isopran' howells | mint -d > temp2`\
+`extract -i '*Isopran' howells | mint -d > temp2`
 `extract -i '**harm' howells > temp3`
 
 We have also extracted the `**harm` spine and placed it in the file

@@ -30,8 +30,8 @@ tool that is available from a number of manufacturers and sources. Many
 versions of **grep** differ in the options provided. For example, the
 version of **grep** distributed by the GNU Software Foundation provides
 no fewer than 19 options. Some of the most common options for **grep**
-are identified in Table 10.1.\
-\
+are identified in Table 10.1.
+
 **Table 10.1**
 
   ----------- -----------------------------------------------------------------------------------
@@ -195,7 +195,7 @@ The first of the following commands will identify only those titles that
 contain `Liebe` followed by `Tod`, whereas the second command will
 identify only those titles that contain `Tod` followed by `Liebe`:
 
-`grep '!!!OTL.*Liebe.*Tod' *`\
+`grep '!!!OTL.*Liebe.*Tod' *`
 `grep '!!!OTL.*Tod.*Liebe' *`
 
 A better solution is to pipe the output between two **grep** commands.
@@ -276,8 +276,8 @@ French, or Italian sixths. The German sixth contains the lowered mediant
 whereas the French sixth contains the supertonic pitch; the Italian
 sixth contains neither:
 
-`solfa input | grep '6-.*4+' | grep '3-'` \# German sixth\
-`solfa input | grep '6-.*4+' | grep '2'` \# French sixth\
+`solfa input | grep '6-.*4+' | grep '3-'` \# German sixth
+`solfa input | grep '6-.*4+' | grep '2'` \# French sixth
 `solfa input | grep '6-.*4+' | grep -v '[23]'` \# Italian sixth
 
 A similar approach can be used to identify Neapolitan sixth chords.
@@ -330,15 +330,15 @@ A set of such pipelines can be used to answer more sophisticated
 questions. For example, are drinking songs more apt to be in triple
 meter?
 
-`grep -l '!!!AMT.*triple'  *   | xargs grep -l '!!!AGN.*Trinklied'`\
-`grep -l '!!!AMT.*duple'   *   | xargs grep -l '!!!AGN.*Trinklied'`\
+`grep -l '!!!AMT.*triple'  *   | xargs grep -l '!!!AGN.*Trinklied'`
+`grep -l '!!!AMT.*duple'   *   | xargs grep -l '!!!AGN.*Trinklied'`
 `grep -l '!!!AMT.*quadruple' * | xargs grep -l '!!!AGN.*Trinklied'`
 
 
 Similarly, the following commands determine whether files whose titles
 contain the word *death* are more apt to be in minor keys:
 
-`grep -li '!!!OTL.*death' * | xargs grep -c '^\*[a-g][#-]*:'`\
+`grep -li '!!!OTL.*death' * | xargs grep -c '^\*[a-g][#-]*:'`
 `grep -li '!!!OTL.*death' * | xargs grep -c '^\*[A-G][#-]*:'`
 
 
@@ -415,7 +415,7 @@ wanted to identify all works in the current directory that are not in
 the keys of C major, G major, B-flat major or D minor. Our regular
 expression file would contain the following regular expressions:
 
-`^\*[CGd]:`\
+`^\*[CGd]:`
 `^\*B-:`
 
 The corresponding command would be:
@@ -430,7 +430,7 @@ pitch set. Let\'s create two files, one called `whole1` and the other
 called `whole2`. The file `whole1` might contain the following regular
 expressions:
 
-\
+
 `[Cc]([^-#Cc]|$)  [Dd]([^-#Dd]|$)  [Ee]([^-#Ee]|$)  [Ff]#([^#]|$)  [Gg]-([^-]|$)  [Gg]#([^#]|$)  [Aa]-([^-]|$)  [Aa]#([^#]|$)  [Bb]-([^-]|$)`
 
 Notice that the regular expressions have been carefully defined. The

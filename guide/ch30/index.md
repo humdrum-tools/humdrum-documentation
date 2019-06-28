@@ -110,10 +110,10 @@ A third class of mapping instructions relates to the elapsed time
 between MIDI key onsets \-- "delta time" or DEL. Consider, for
 example, the following configuration instructions:
 
-`DEL 48 80 8`\
-`DEL 81 112 8.`\
-`DEL 113 160 4`\
-`DEL 161 224 4.`\
+`DEL 48 80 8`
+`DEL 81 112 8.`
+`DEL 113 160 4`
+`DEL 161 224 4.`
 `DEL 225 320 2`
 
 These instructions divide the elapsed time between key onsets into five

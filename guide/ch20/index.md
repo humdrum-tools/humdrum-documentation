@@ -138,8 +138,8 @@ selecting particular versions of data in a file. Three sections are
 encoded in the file \-- labelled A, B and C. Each section in this
 example contains just a single data record. Three expansion lists are
 encoded: one is unlabelled, a second is labelled `long` and a third is
-labelled `weird`.\
-\
+labelled `weird`.
+
 
   --------------------- ---------------------
   `**example`           `**example`
@@ -158,8 +158,8 @@ Consider the following command:
 
 `thru -v weird file`
 
-The corresponding "through-composed" output would be as follows:\
-\
+The corresponding "through-composed" output would be as follows:
+
 
   ------------- -------------
   `**example`   `**example`
@@ -198,8 +198,8 @@ three sections. Humdrum permits alternative schemes of section labels to
 coexist in a file by allowing the user to designate section *types*. A
 section label is considered to have a "type" when more than one
 greater-than sign (`>`) is present in the label. Consider the following
-example of sections defined by Smith and Jones:\
-\
+example of sections defined by Smith and Jones:
+
 
 `**Example`
 `*>Smith>A`
@@ -222,8 +222,8 @@ extraction to "Smith"-type section labels:
 
 `yank -t Smith -s B`
 
-This command would produce the following output:\
-\
+This command would produce the following output:
+
 
 `**Example`
 `*>Smith>B`
@@ -240,8 +240,8 @@ For many applications, it is useful to define "nested" structures
 where two or more sections form part of a larger section. Humdrum
 section labels allow users to distinguish hierarchical *levels*. Levels
 are indicated by the number of greater-than signs following the section
-type. Consider the following:\
-\
+type. Consider the following:
+
 
 `**Example`
 `*>Form>Exposition`
@@ -297,7 +297,7 @@ Extract the figured bass for the third recitative:
 `yank -s Recitativo -r 3` *file*` | extract -i '**B-num'`
 Compare the estimated key for the second theme in the exposition
 versus the estimated key for the second theme in the recapitulation:
-`yank -t Form -s '2nd Theme' -r 1` *file*` | key`\
+`yank -t Form -s '2nd Theme' -r 1` *file*` | key`
 `yank -t Form -s '2nd Theme' -r 2` *file*` | key`
 Determine the nominal (non-rubato) duration of Gould\'s performance of
 the work:
@@ -338,8 +338,8 @@ labels should be used when the strophic data imply some sort of order,
 such as verses in a song. Alphanumeric labels are convenient for
 distinguishing different editions or *ossia* passages. The following
 example encodes a melodic phrase containing four numbered verses from
-"Das Wandern" from *Die Schoene Muellerin* by Schubert:\
-\
+"Das Wandern" from *Die Schoene Muellerin* by Schubert:
+
 ``
 `!! Franz`
 `Schubert,`
@@ -490,8 +490,8 @@ selective strophic data. The **-x** option for **strophe** allows
 the user to extract a particular labelled strophe. Consider, for
 example the effect of the following command:
 `strophe -x 3 schubert`
-Using the above data, the result is:\
-\
+Using the above data, the result is:
+
 `` !! Franz Schubert, `Das Wandern' from "Die Schoene Muellerin"  ``
 >
   ----------------- -----------------
@@ -580,8 +580,8 @@ Several different *types* of section labels can coexist in the same
 document and the **yank** command can be instructed to ignore all
 sections other than a certain type via the **-t** option.
 The basic ideas introduced in this chapter are summarized in the
-following table.\
-\
+following table.
+
   ----------------------------- --------------------------------------------------------------------------
   section                       passage defined by a section label, ends with occurrence of
                                 section label of identical or higher level

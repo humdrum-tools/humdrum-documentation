@@ -275,8 +275,8 @@ first spine.) Notice that `**solfa` does not encode any octave
 information. The `**deg` representation does not encode the octave of
 the starting pitch, but it does indicate contour information using the
 caret (`^`) for ascending and the lower-case `v` for descending pitches.
-Notice also the different ways of characterizing accidentals.\
-\
+Notice also the different ways of characterizing accidentals.
+
 **Example 4.1**
 
   ----------------- ------------------ ------------------
@@ -347,8 +347,8 @@ used throughout.
 Example 4.2 shows four pitch naming systems: ISO pitch, German Tonhöhe,
 French solfège, as well as `**kern`. Notice the different ways of
 treating accidentals such as the D-sharp and B-flat. Also note the
-German use of H for B-natural.\
-\
+German use of H for B-natural.
+
 **Example 4.2**
 
   ----------------- ------------------ ------------------ -----------
@@ -378,8 +378,8 @@ illustrated, including frequency and cents. Notice that the
 key-numbers to represent pitch: key-on events are indicated by positive
 integers (between two slashes) and key-off events are indicated by
 negative integers. More detail concerning `**MIDI` is given in [Chapter
-7.](/guide/ch07)\
-\
+7.](/guide/ch07)
+
 **Example 4.3**
 
   ----------------- ------------------ ----------------- -------------- ----------
@@ -416,10 +416,10 @@ translated to `**freq`, `**kern`, `**pitch`, `**semits`, `**solfg`, and
 format since `**deg` representations do not encode absolute pitch
 height. Note also that when translating to the `**kern` representation,
 only pitch-related information is translated: duration, articulation
-marks, and other `**kern` signifiers are not magically generated.\
-\
-**Table 4.1**\
-\
+marks, and other `**kern` signifiers are not magically generated.
+
+**Table 4.1**
+
 
 **Input Representation**
 
@@ -579,13 +579,13 @@ that appropriate interpretations are provided indicating the key of each
 work.) First we need to count the total number of notes in each
 repertory.
 
-`census -k repertory1.krn`\
+`census -k repertory1.krn`
 `census -k repertory2.krn`
 
 Next we translate the scores to the **solfa** representation and use
 **grep -c** to count the number of occurrences of the number \`fa\':
 
-`solfa repertory1.krn | grep -c fa`\
+`solfa repertory1.krn | grep -c fa`
 `solfa repertory2.krn | grep -c fa`
 
 The proportion of subdominant pitches can be calculated by simply

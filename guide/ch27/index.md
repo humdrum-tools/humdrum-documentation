@@ -44,8 +44,8 @@ following excerpt from a motet by Byrd (Example 27.1). The encoded
 Humdrum data includes three spines: `**text`, `**silbe` and `**kern`.
 Normally, only the `**silbe` and `**kern` data would be encoded \--
 since the `**text` spine can be generated from the `**silbe`
-representation.\
-\
+representation.
+
 **Example 27.1.** From William Byrd, *Why Do I use my paper ink and
 pen.*
 
@@ -129,8 +129,8 @@ signify boundaries between hyphenated words (necessarily also a syllable
 boundary). In other words, four types of syllables are distinguished by
 `**silbe`: (1) a single-syllable word, (2) a word-initiating syllable,
 (3) a word-completing syllable, and (4) a mid-word syllable. The
-following table illustrates how these signifiers are used:\
-\
+following table illustrates how these signifiers are used:
+
 **Table 26.1.**
 
   ---------- ----------------------------------------------------------------
@@ -148,8 +148,8 @@ Both the `**text` and `**silbe` representations are able to distinguish
 different tones of voice such as spoken voice, whispered voice, laughing
 voice, emotional voice, *Sprechstimme* and humming. In addition, there
 are signifiers for indicating untexted laughter and untexted sobs or
-crys. Some sample signifiers are shown in Table 26.2\
-\
+crys. Some sample signifiers are shown in Table 26.2
+
 **Table 26.2.**
 
   ------- -------------------------------------------------------------------
@@ -248,8 +248,8 @@ per line. UNIX provides a simple text formatter called **fmt** that will
 assemble words or lines into a block text where all output lines are
 roughly the same width. <a name ="Gregorian_Chant"></a>
 [Consider the Gregorian chant *A Solis Ortus* from the *Liber Usualis*
-(shown in Example 27.2.)\
-\
+(shown in Example 27.2.)
+
 **Example 27.2.** Beginning of chant *A Solis Ortus*.]{#Liber_Usualis}
 
 ![](guide.figures/guide27.2.gif)
@@ -262,7 +262,7 @@ The **-50** option tells **fmt** to place no more than 50 characters per
 line. The default line-length is 72 characters. The above pipeline
 produces the following output:
 
-\
+
 `A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natum Maria Virgine.  Beatus auctor saeculi servile corpus induit: ut  carne carnem liberans, ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta, quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum, concepit alvo filium.`
 
 Another useful output would have the text arranged with one sentence or
@@ -276,7 +276,7 @@ mark:
 
 The corresponding output is:
 
-\
+
 `A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  natum Maria Virgine.  Beatus auctor saeculi servile corpus induit:  ut carne carnem liberans,  ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta,  quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum,  concepit alvo filium.`
 
 Yet another way of arranging the text output would be to parse the text
@@ -333,8 +333,8 @@ revised script becomes:
 
 `extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
 > \> temp1
-\
-`extract -i '**silbe' chant12 > temp2`\
+
+`extract -i '**silbe' chant12 > temp2`
 `assemble temp1 temp2 | cleave -i '**kern,**silbe' \`
 > -o \'\*\*silbe\' \> temp3
 `context -o = -e } temp3 | rid -GLId | sed 's/}//'`
@@ -365,12 +365,12 @@ syllable/phrase schemes can be generated for any syllable-related input.
 The following script counts the number of syllables in successive
 phrases for a single input file.
 
-\
+
 `# SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ `
-> \
+> 
 > \| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
-> NF}\'\
-\
+> NF}\'
+
 rm temp\[12\]
 
 Variations on this theme abound. For example, if we wish to determine
@@ -389,7 +389,7 @@ Once again, we might look at the chant *O Solis Ortus.* Below we have
 recoded the syllables in each phrase, where the value `0` indicates an
 unstressed syllable and `1` indicates a stressed syllable:
 
-\
+
 `0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0`
 
 The above output was generated using the
@@ -405,7 +405,7 @@ text-rhythms.
 
 With the following results:
 
-\
+
 `5    0 1 0 1 0 1 0 0  4   1 0 0 1 0 1 0 0  2   0 1 0 0 0 1 0 0  1   0 1 0 1 0 0 1 0  1   1 1 0 1 0 1 0 0  1   1 0 0 0 0 1 0 0  1   1 0 0 1 0 0 1 0  1   0 0 0 1 0 1 0 0`
 
 We can create a summary rhythmic pattern by adding together the values
@@ -418,9 +418,9 @@ will isolate the first column of numbers. We can then pipe the results
 to the **stats** utility in order to calculate the numerical total. For
 example,
 
-` . . . | cut -f 1 | stats | grep 'total'`\
-` . . . | cut -f 2 | stats | grep 'total'`\
-` . . . | cut -f 3 | stats | grep 'total'`\
+` . . . | cut -f 1 | stats | grep 'total'`
+` . . . | cut -f 2 | stats | grep 'total'`
+` . . . | cut -f 3 | stats | grep 'total'`
 etc
 
 For the chant *O Solis Ortus* the results are as follows:
@@ -492,20 +492,20 @@ don\'t contain any text. All of this processing is carried out in a
 while-loop that cycles through all of the files provided when the
 command is invoked.
 
-\
+
 `while [ $# -ne 0 ]  do `
-> \
-> extract -i \'\*\*silbe\' \$1 \> temp1\
-> text temp1 \| context -o = -n 5 -p 3 \> temp2\
-> num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\\
-> > \
-> > \| ditto \| humsed \'s/\\./0/\' \> temp3\
-> \
-> humsed "s/.\*/\$1/" temp1 \> temp4\
-> assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'\
-> shift;\
-\
-done\
+> 
+> extract -i \'\*\*silbe\' \$1 \> temp1
+> text temp1 \| context -o = -n 5 -p 3 \> temp2
+> num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\
+> > 
+> > \| ditto \| humsed \'s/\\./0/\' \> temp3
+> 
+> humsed "s/.\*/\$1/" temp1 \> temp4
+> assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'
+> shift;
+
+done
 rm temp\[1-4\]
 
 Having generated our concordance file, we can now create a simple tool
@@ -530,7 +530,7 @@ context. Note that since we\'ve used the extended regular expression
 character \`+\' \-- we must invoke **egrep** rather than **grep** in our
 script:
 
-\
+
 `# KEYWORD - A script for searching a master concordance file  #  # Usage:  keyword   #  egrep "^.*  [^ ]+ [^ ]+ $1" ~/home/concord/master`
 
 Concordances can be used for a number of applications. One might use a
@@ -603,7 +603,7 @@ the double-dash delimiters generated by **egrep**. The
 interpretations added by **hum**.
 
 `text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
-> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\\
+> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\
 > \| rid -Id
 
 
@@ -674,8 +674,8 @@ asked to rate the degree of emotionality associated with 100 English
 words. Participants rated each word on a scale from -10 to +10 where -10
 indicates a maximum negative emotional rating and +10 indicates a
 maximum positive emotional rating. The values shown identify the average
-rating for all 10 participants.\
-\
+rating for all 10 participants.
+
 **Table 26.4. Average Emotionality Ratings for English Words.**
 
   -------- ------
@@ -697,8 +697,8 @@ place to start. In effect, we would take a table (such as Table 26.4)
 and use it to create a series of substitutions. Emotionally-charged
 words would be replaced by a numerical rating. Our **humsed** script
 would have the following form. Notice that the first substitution is
-used to eliminate punctuation marks.\
-\
+used to eliminate punctuation marks.
+
 
   -----------------------
   ``
@@ -750,8 +750,8 @@ together and piped to the **stats** command:
 
 `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
 > \| rid -GLId \| sort -n \> temp
-head -5 temp \> lowest\
-tail -5 temp \> highest\
+head -5 temp \> lowest
+tail -5 temp \> highest
 cat highest lowest \| stats
 
 A second problem with averaging together emotion rating values is that

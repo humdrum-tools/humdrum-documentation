@@ -210,8 +210,8 @@ to a piano-roll. The diatonic pitches are labelled in columns from C4
 duration. The table entries indicate whether the note is *on* or *off*.
 The table encodes an ascending scale. As the table stands, it\'s not
 clear whether each note has a duration of an eighth note or whether two
-successive sixteenth notes are sounded for each pitch:\
-\
+successive sixteenth notes are sounded for each pitch:
+
 **Table 1.1**
 
   ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
@@ -231,8 +231,8 @@ successive sixteenth notes are sounded for each pitch:\
   ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
 Table 1.2 shows another example where different kinds of information are
 combined in the same table. Here the last column represents a
-combination of trumpet valves:\
-\
+combination of trumpet valves:
+
 **Table 1.2**
 
   ---------- ------- ---------- -----------------------
@@ -255,8 +255,8 @@ given a heading name so that *every* column has a label, (2) each column
 heading is preceded by two asterisks, (3) the columns have been
 left-justified so successive columns are separated by a tab, and (4)
 each column has been terminated with the combination of an asterisk and
-hyphen.\
-\
+hyphen.
+
 **Table 1.3** A Humdrum Equivalent to Table 1.2
 
   ---------- -- ----------- -- -------------- -- -----------------------

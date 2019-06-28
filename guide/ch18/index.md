@@ -229,28 +229,28 @@ string by specifying the number of semitones above the lowest string \--
 where each course is delineated by a colon (:). In Example 18.1 three
 sample tunings are shown. Example (a) defines the most common relative
 tuning for the six-string guitar. Successive strings are tuned 0, 5, 10,
-15, 19, and 24 semitones above the lowest string.\
-\
+15, 19, and 24 semitones above the lowest string.
+
 **Example 18.1. Sample Tunings for Fretted Instruments.**
 
 \(a) Common 6-string guitar.
 
-![](guide.figures/guide18.1a.gif)\
-\
-`*AT:E2`\
+![](guide.figures/guide18.1a.gif)
+
+`*AT:E2`
 `*RT:0:5:10:15:19:24`
 
 \(b) Common 12-string guitar.
 
-![](guide.figures/guide18.1b.gif)\
-\
-`*AT:E2`\
+![](guide.figures/guide18.1b.gif)
+
+`*AT:E2`
 `*RT:0,12:5,17:10,22:15,27:19,19:24,24`
 
 \(c) Vieil accord lute.
 
-![](guide.figures/guide18.1c.gif)\
-`*AT:G2`\
+![](guide.figures/guide18.1c.gif)
+`*AT:G2`
 `*RT:0,12:5,17:10,22:14,14:19,19:24,24`
 
 Example (b) defines the most common relative tuning for the 12-string
@@ -360,8 +360,8 @@ does not encode duration information. It is common to join the `**fret`
 spine with a [`**recip`](/rep/recip) spine
 representing the nominal duration data. In example 18.2 a
 [`**kern`](/rep/kern) spine is also shown indicating
-the pitches in the `**fret` representation.\
-\
+the pitches in the `**fret` representation.
+
 **Example 18.2.** J.S. Bach, *Anna Magdalena Bach Notebook* Menuet II.
 Guitar arr.
 
