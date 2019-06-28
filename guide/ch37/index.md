@@ -672,9 +672,9 @@ preparing electronic music documents in Humdrum.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide38.html)
+[**Next Chapter**](/guide/ch38)
 
-[**Previous Chapter**](guide36.html)
+[**Previous Chapter**](/guide/ch36)
 
 [**Table of Contents**](guide.toc.html)
 

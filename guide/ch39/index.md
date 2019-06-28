@@ -308,9 +308,9 @@ are wary users.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide40.html)
+[**Next Chapter**](/guide/ch40)
 
-[**Previous Chapter**](guide38.html)
+[**Previous Chapter**](/guide/ch38)
 
 [**Table of Contents**](guide.toc.html)
 

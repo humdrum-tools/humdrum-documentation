@@ -17,7 +17,7 @@ Much of what makes an event of interest is the context of the event. We
 may be interested in what precedes or follows a note or chord. We have
 already seen how the **-A** and **-B** options for **grep** can be used
 to output \`before\' and \`after\' contexts. In [Chapter
-21](guide21.html) we will see how the [**patt**](commands/patt.html) and
+21](/guide/ch21) we will see how the [**patt**](commands/patt.html) and
 [**pattern**](commands/pattern.html) commands can provide further
 flexibility for searching.
 
@@ -382,7 +382,7 @@ phrase as follows:
 
 > `context -o = -e ';' input | rid -GLId | awk '{print $NF}'`
 
-In [Chapter 22](guide22.html) we will learn how to classify data into
+In [Chapter 22](/guide/ch22) we will learn how to classify data into
 discrete categories. Using the [**recode**](commands/recode.html)
 command described in that chapter, we might group notes together
 according to changes of melodic direction. That is, each group of would
@@ -814,7 +814,7 @@ the **-p** option.
 
 We\'ve seen a number of ways by which
 [**context**](commands/context.html) can be used to establish a
-particular context for data. In [Chapter 21](guide21.html) we will see
+particular context for data. In [Chapter 21](/guide/ch21) we will see
 how the [**patt**](commands/patt.html) command can be used to establish
 other kinds of contexts and how both of these commands can be used
 together.
@@ -822,9 +822,9 @@ together.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide20.html)
+[**Next Chapter**](/guide/ch20)
 
-[**Previous Chapter**](guide18.html)
+[**Previous Chapter**](/guide/ch18)
 
 [**Table of Contents**](guide.toc.html)
 

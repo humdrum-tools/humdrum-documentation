@@ -23,7 +23,7 @@ determination of pitch intervals can be surprisingly complicated. In
 this chapter we will discuss Humdrum tools related to melodic pitch
 intervals \-- specifically the [**mint**](commands/mint.html) (melodic
 interval) and [**xdelta**](commands/xdelta.html) commands. Discussion of
-harmonic intervals will be delayed until [Chapter 15.](guide15.html)
+harmonic intervals will be delayed until [Chapter 15.](/guide/ch15)
 
 <a name ="Types_of_Melodic_Intervals"></a>
 
@@ -348,10 +348,10 @@ Using duration information is a somewhat limited technique for
 calculating distance intervals. Typically, users will want to define
 much more refined ways of identifying structural tones. More
 sophisticated methods for calculating distance intervals are discussed
-in [Chapter 35](guide35.html) on \"Layers.\"
+in [Chapter 35](/guide/ch35) on \"Layers.\"
 
 Cross-voice melodic intervals can be calculated by amalgamating several
-spines into a single spine. In [Chapter 26](guide26.html) we will learn
+spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
 more about the [**cleave**](commands/cleave.html) command. But here is a
 typical use:
 
@@ -512,7 +512,7 @@ calculating numerical differences between successive values within
 individual spines. In order to use **xdelta** to calculate semitone
 differences, we first need to transform our representation to
 [`**semits`](representations/semits.rep.html) (discussed in [Chapter
-4](guide04.html)). Recall that in the `**semits` representation, middle
+4](/guide/ch04)). Recall that in the `**semits` representation, middle
 C is designated by the value zero, and all other pitches are represented
 by their (positive or negative) semitone distance. A C-major scale would
 appear as follows:
@@ -652,8 +652,8 @@ In this chapter we have seen how to use the
 [**mint**](commands/mint.html) command to calculate these various kinds
 of intervals. Specifically, we have illustrated how to calculate voiced
 intervals, interrupted intervals, unvoiced outer intervals and unvoiced
-inner intervals. In [Chapter 26](guide26.html) we will show how to
-calculate cross-voice intervals, and in [Chapter 35](guide35.html)
+inner intervals. In [Chapter 26](/guide/ch26) we will show how to
+calculate cross-voice intervals, and in [Chapter 35](/guide/ch35)
 (\"Layers\") we will consider how to calculate distance intervals.
 
 We have also seen how [**xdelta**](commands/xdelta.html) can be used to
@@ -664,9 +664,9 @@ calculating pitch distances.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide12.html)
+[**Next Chapter**](/guide/ch12)
 
-[**Previous Chapter**](guide10.html)
+[**Previous Chapter**](/guide/ch10)
 
 [**Table of Contents**](guide.toc.html)
 

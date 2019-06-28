@@ -96,7 +96,7 @@ Of course this command will only identify the set forms for pitches that
 have concurrent attacks. If any pitch is sustained,
 [**pcset**](commands/pcset.html) won\'t know that some null tokens
 indicate sustained pitch activity. We can rectify this by using the
-[**ditto**](commands/ditto.html) command ([Chapter 15](guide15.html)) to
+[**ditto**](commands/ditto.html) command ([Chapter 15](/guide/ch15)) to
 fill-out the null tokens:
 
 > `pc opus24 | ditto -s ^= | pcset`
@@ -120,7 +120,7 @@ Then we assemble this spine to the original input score:
 Now we can search for data records containing phrase (\`{}\') or slur
 (\'()\') markers. Using [**yank**](commands/yank.html) **-m \... -r 0**
 rather than **grep** assures that the output retains the Humdrum syntax
-(see [Chapter 12](guide12.html)). Maintaining the Humdrum syntax will
+(see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
 allow us to use [**extract**](commands/extract.html) to isolate just the
 `**pcset` data. Finally, we create an inventory of the pc sets. The
 process is repeated \-- once for beginning slurs/phrases, and once for
@@ -241,7 +241,7 @@ Segmentation Using the *context* Command
 So far, we have processed only \"vertical\" sets of concurrent pitches.
 In set-theory analyses, there are many other important ways of
 \"segmenting\" the musical pitches into pitch-class sets. As we saw in
-[Chapter 19,](guide19.html) the [**context**](commands/context.html)
+[Chapter 19,](/guide/ch19) the [**context**](commands/context.html)
 command provides a useful way of grouping together successive data
 tokens.
 
@@ -367,7 +367,7 @@ The shift option for **reihe** can be used to shift *any* type of data
 \-- not just pitches of pitch-classes. For example, one might use the
 shift option to rotationally permute dynamic markings, text, durations,
 articulation marks, or any other type of Humdrum data. In [Chapter
-38](guide38.html) we will see how the shift option for **reihe** can be
+38](/guide/ch38) we will see how the shift option for **reihe** can be
 effectively used in many applications apart from serial analysis.
 
 <a name ="Generating_a_Set_Matrix"></a>
@@ -406,7 +406,7 @@ Locating and Identifying Tone-Rows
 ----------------------------------
 
 Each of the row variant files can be used as a template for the
-[**patt**](commands/patt.html) command (see [Chapter 21](guide21.html)).
+[**patt**](commands/patt.html) command (see [Chapter 21](/guide/ch21)).
 The following \"rowfind\" script shows how the Humdrum tools can be
 coordinated to carry out an automatic search and identification of tone
 row variants for some score.
@@ -523,16 +523,16 @@ This chapter has only scratched the surface regarding the types of
 pertinent serial-related manipulations that might be pursued. For
 example, much more sophisticated approaches to segmentation can be
 created by using some of the layer techniques described in the [next
-Chapter.](guide35.html) Similarly, the pattern searches could easily be
+Chapter.](/guide/ch35) Similarly, the pattern searches could easily be
 expanded to look at other parameters typical of \"complete serialism\"
 \-- such as durations, dynamics, articulation marks, and so on.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide35.html)
+[**Next Chapter**](/guide/ch35)
 
-[**Previous Chapter**](guide33.html)
+[**Previous Chapter**](/guide/ch33)
 
 [**Table of Contents**](guide.toc.html)
 

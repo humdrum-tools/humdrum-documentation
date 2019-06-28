@@ -399,9 +399,9 @@ arguments*, *input files* and *output redirection*.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide09.html)
+[**Next Chapter**](/guide/ch09)
 
-[**Previous Chapter**](guide07.html)
+[**Previous Chapter**](/guide/ch07)
 
 [**Table of Contents**](guide.toc.html)
 

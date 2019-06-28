@@ -720,14 +720,14 @@ in processing.
 One further topic related to rhythm remains to be discussed. The
 **accent** command allows the user to distinguish notes according to
 their estimated perceptual importance. We will consider **accent** in
-[Chapter 31.](guide31.html)
+[Chapter 31.](/guide/ch31)
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide24.html)
+[**Next Chapter**](/guide/ch24)
 
-[**Previous Chapter**](guide22.html)
+[**Previous Chapter**](/guide/ch22)
 
 [**Table of Contents**](guide.toc.html)
 

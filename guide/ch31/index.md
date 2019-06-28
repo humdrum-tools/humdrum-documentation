@@ -283,7 +283,7 @@ Using *find* with the *xargs* Command
 
 <a name ="Corelli_Change_of_Meters"></a>
 
-As we saw in [Chapter 10,](guide10.html) the **xargs** command can be
+As we saw in [Chapter 10,](/guide/ch10) the **xargs** command can be
 used to propagate file names from command to command within a pipeline.
 Using **xargs** in conjunction with **find** provides a powerful means
 for finding works that conform to highly complex criteria. For example,
@@ -421,9 +421,9 @@ in another directory via *instrumentation*, in a third directory via
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide32.html)
+[**Next Chapter**](/guide/ch32)
 
-[**Previous Chapter**](guide30.html)
+[**Previous Chapter**](/guide/ch30)
 
 [**Table of Contents**](guide.toc.html)
 

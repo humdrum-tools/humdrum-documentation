@@ -216,7 +216,7 @@ Another way of representing pitch is provided by the Humdrum
 representation closely mimics the commercial MIDI specification. The
 `**MIDI` representation allows MIDI inputs and outputs to be exported or
 imported by various Humdrum tools. A complete description of `**MIDI`
-will be given in [Chapter 7.](guide07.html)
+will be given in [Chapter 7.](/guide/ch07)
 
 <a name ="Scale_Degree"></a>
 
@@ -396,7 +396,7 @@ illustrated, including frequency and cents. Notice that the
 key-numbers to represent pitch: key-on events are indicated by positive
 integers (between two slashes) and key-off events are indicated by
 negative integers. More detail concerning `**MIDI` is given in [Chapter
-7.](guide07.html)\
+7.](/guide/ch07)\
 \
 **Example 4.3**
 
@@ -549,7 +549,7 @@ translate to E Dorian. First transpose so the tonic is D using only the
 
 For some changes of mode (such as melodic to harmonic minor), you may
 need to use the [**humsed**](commands/humsed.html) command described in
-[Chapter 14](guide14.html) to modify accidentals for specific scale
+[Chapter 14](/guide/ch14) to modify accidentals for specific scale
 degrees.
 
 Notice the addition of a \"tandem interpretation\" to the above example
@@ -636,7 +636,7 @@ pitches (\`5\') are approached from above (\`v\'):
 > `deg repertory.krn | grep -c v5`
 
 The caret has a special meaning for **grep** which will be discussed in
-[Chapter 9.](guide09.html) We can escape the special meaning by
+[Chapter 9.](/guide/ch09) We can escape the special meaning by
 preceding the caret by a backslash. In order to count the number of
 dominant pitches approached from below we can use the following:
 
@@ -731,9 +731,9 @@ Humdrum representation syntax.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide05.html)
+[**Next Chapter**](/guide/ch05)
 
-[**Previous Chapter**](guide03.html)
+[**Previous Chapter**](/guide/ch03)
 
 [**Table of Contents**](guide.toc.html)
 

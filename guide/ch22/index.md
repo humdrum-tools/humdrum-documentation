@@ -383,7 +383,7 @@ We could create a similar reassignment file containing fingers
 pertaining to the pre-Boehm flute. Suppose the revised reassignment file
 was called `premodern`. We could determine how the finger transitions
 differ between the pre-Boehm traverse flute and the modern flute. In
-[Chapter 29](guide29.html) we will see how the **diff** command can be
+[Chapter 29](/guide/ch29) we will see how the **diff** command can be
 used to identify differences between two spines. This will allow us to
 identify specific places in the score where Baroque and modern
 fingerings differ.
@@ -404,7 +404,7 @@ Classifying with *humsed*
 The [**recode**](commands/recode.html) command is restricted to
 classifying numerical data only. For many applications, it is useful to
 be able to classify data according to non-numerical criteria. As we saw
-in [Chapter 14,](guide14.html) stream editors such as **sed** and
+in [Chapter 14,](/guide/ch14) stream editors such as **sed** and
 [**humsed**](commands/humsed.html) provide automated substitution
 operations. Such string substitutions can be used for non-parametric
 classifying. We can illustrate this with **humsed.**
@@ -669,9 +669,9 @@ provided by the [**humsed**](commands/humsed.html) command.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide23.html)
+[**Next Chapter**](/guide/ch23)
 
-[**Previous Chapter**](guide21.html)
+[**Previous Chapter**](/guide/ch21)
 
 [**Table of Contents**](guide.toc.html)
 

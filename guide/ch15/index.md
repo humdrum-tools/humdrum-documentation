@@ -13,7 +13,7 @@ Chapter 15
 Harmonic Intervals
 ==================
 
-In [Chapter 11](guide11.html) we examined Humdrum tools related to
+In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of
 intervals by focussing on two tools pertaining to characterizing
 harmonic intervals: the [**hint**](commands/hint.html) and
@@ -416,7 +416,7 @@ pitch tokens in place of the rests and so generate implicit harmonic
 intervals.
 
 The [**humsed**](commands/humsed.html) command (described in [Chapter
-14](guide14.html)) is well suited to this task. We want to transform any
+14](/guide/ch14)) is well suited to this task. We want to transform any
 data token containing the letter \`r\' to a null token. Consider the
 following substitution:
 
@@ -670,9 +670,9 @@ values.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide16.html)
+[**Next Chapter**](/guide/ch16)
 
-[**Previous Chapter**](guide14.html)
+[**Previous Chapter**](/guide/ch14)
 
 [**Table of Contents**](guide.toc.html)
 

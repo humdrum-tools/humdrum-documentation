@@ -376,9 +376,9 @@ users are able to create their own specialized filters.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide33.html)
+[**Next Chapter**](/guide/ch33)
 
-[**Previous Chapter**](guide31.html)
+[**Previous Chapter**](/guide/ch31)
 
 [**Table of Contents**](guide.toc.html)
 

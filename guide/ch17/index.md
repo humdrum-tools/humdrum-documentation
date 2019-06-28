@@ -79,7 +79,7 @@ the input so only the data of interest is present. Second we need to
 occurrences of each type of data token.
 
 Let\'s begin by discussing the second process. In [Chapter
-3](guide03.html) we saw how the UNIX **sort** command will rearrange
+3](/guide/ch03) we saw how the UNIX **sort** command will rearrange
 lines of data so that they are in alphabetical/numerical order. The
 command:
 
@@ -109,7 +109,7 @@ lines.
 
 The third step in generating an inventory is to count the number of
 occurrences of each unique data token. The **uniq** command described in
-[Chapter 3](guide03.html) will eliminate successive duplicate lines. For
+[Chapter 3](/guide/ch03) will eliminate successive duplicate lines. For
 example, if we type:
 
 > `uniq sorted.alpha`
@@ -163,7 +163,7 @@ to eliminate records that we\'d prefer to omit from our final output.
 Filtering Data with the *rid* Command
 -------------------------------------
 
-As we saw in [Chapter 13,](guide13.html) the
+As we saw in [Chapter 13,](/guide/ch13) the
 [**rid**](commands/rid.html) command can be used to eliminate various
 classes of Humdrum records. For example, **rid -G** eliminates all
 global comments; **rid -D** eliminates all data records, etc. The option
@@ -370,7 +370,7 @@ corresponding type of data.
 Excluding or Seeking Rare Events
 --------------------------------
 
-Recall from [Chapter 3](guide03.html) that the **uniq** command provides
+Recall from [Chapter 3](/guide/ch03) that the **uniq** command provides
 other options (besides the **-c** option). The **-d** option causes
 **uniq** to output *only* those records that are duplicated. In other
 words, records that occur only once are eliminated from the input. This
@@ -516,7 +516,7 @@ Assume that copies of early and late works have been concatenated to the
 files `early` and `late`. The [**humsed**](commands/humsed.html) command
 here eliminates all data with the exception of
 [`**kern`](representations/kern.rep.html) articulation marks. (See
-[Chapter 6](guide06.html) for details on \*\*kern articulation marks.)
+[Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)
 
 > `` extract -i '**kern' early | humsed 's/[^"`~^:I]//g' \ ``
 >
@@ -557,7 +557,7 @@ quarters)?*
 *What is the most common instrumental combination for sonorities* *by
 Mussorgsky?*
 
-> This problem is addressed in [Chapter 36.](guide36.html)
+> This problem is addressed in [Chapter 36.](/guide/ch36)
 
 ------------------------------------------------------------------------
 
@@ -580,9 +580,9 @@ chapter.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide18.html)
+[**Next Chapter**](/guide/ch18)
 
-[**Previous Chapter**](guide16.html)
+[**Previous Chapter**](/guide/ch16)
 
 [**Table of Contents**](guide.toc.html)
 

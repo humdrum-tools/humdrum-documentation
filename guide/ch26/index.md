@@ -335,7 +335,7 @@ important:\
 >   `r`        rest
 >   ---------- ------------------------------------------------------
 >
-In [Chapter 22](guide22.html) we learned how to use
+In [Chapter 22](/guide/ch22) we learned how to use
 [**recode**](commands/recode.html) to classify various numerical ranges
 and [**humsed**](commands/humsed.html) to classify non-numeric data. We
 already know how to create the elements of our new representation.
@@ -438,9 +438,9 @@ something.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide27.html)
+[**Next Chapter**](/guide/ch27)
 
-[**Previous Chapter**](guide25.html)
+[**Previous Chapter**](/guide/ch25)
 
 [**Table of Contents**](guide.toc.html)
 

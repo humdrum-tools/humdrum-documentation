@@ -20,7 +20,7 @@ counted, deleted, replaced, isolated, modified, or expanded. A
 successful pattern match might even be used to initiate further pattern
 searches.
 
-In [Chapter 3](guide03.html) we introduced simple searching using the
+In [Chapter 3](/guide/ch03) we introduced simple searching using the
 **grep** command. We used **grep** to search for strings of characters
 that match a particular pre-defined string. This chapter describes the
 full power of *regular expressions* for defining complex patterns of
@@ -540,7 +540,7 @@ to data records so there is no need to use the more complex expressions.
 In many circumstances, we will see that it is convenient to use the
 Humdrum [**rid**](commands/rid.html) command to explicitly remove
 comments and interpretations prior to processing (see [Chapter
-13](guide13.html)).
+13](/guide/ch13)).
 
 <a name ="Basic,_Extended,_and_Humdrum-Extended_Regular_Expressions"></a>
 
@@ -557,7 +557,7 @@ anchors (`^`) and (`$`), character classes (`[...]`), or complementary
 character classes (`[^...]`). Parenthesis grouping is supported in basic
 regular expressions, but the parentheses must be used in conjunction
 with the backslash to *enable* this function (i.e.` \(  \)  `). In
-[Chapter 3](guide03.html) we introduced the **grep** command; **grep**
+[Chapter 3](/guide/ch03) we introduced the **grep** command; **grep**
 supports only basic regular expressions.
 
 \"Extended\" regular expressions include the following: the
@@ -572,7 +572,7 @@ to extended regular expression syntax.
 The Humdrum **pattern** command further extends regular expression
 syntax by providing multi-record repetition operators that prove very
 useful in musical applications. These Humdrum extensions will be
-discussed in [Chapter 21.](guide21.html)
+discussed in [Chapter 21.](/guide/ch21)
 
 ------------------------------------------------------------------------
 
@@ -602,9 +602,9 @@ in musical applications.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide10.html)
+[**Next Chapter**](/guide/ch10)
 
-[**Previous Chapter**](guide08.html)
+[**Previous Chapter**](/guide/ch08)
 
 [**Table of Contents**](guide.toc.html)
 

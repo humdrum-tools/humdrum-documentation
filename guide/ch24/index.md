@@ -13,7 +13,7 @@ Chapter 24
 The Shell (III)
 ===============
 
-In [Chapter 16](guide16.html) we learned about the **alias** feature of
+In [Chapter 16](/guide/ch16) we learned about the **alias** feature of
 the shell. The **alias** command allowed us to create new commands by
 assigning a complex pipeline to a single-word command. In this chapter
 we will learn how to use the shell to write more complex programs. Shell
@@ -1051,9 +1051,9 @@ identify any instances of exposed octaves between two arbitrary voices:
 
 \
 
-[**Next Chapter**](guide25.html)
+[**Next Chapter**](/guide/ch25)
 
-[**Previous Chapter**](guide23.html)
+[**Previous Chapter**](/guide/ch23)
 
 [**Table of Contents**](guide.toc.html)
 

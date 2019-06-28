@@ -29,7 +29,7 @@ to represent *syllables*; and the
 [`**IPA`](representations/IPA.rep.html) representation can be used to
 represent *phonemes* (via the International Phonetic Alphabet).
 Discussion of the `**IPA` representation will be delayed until [Chapter
-34.](guide34.html) In this chapter we will look at various
+34.](/guide/ch34) In this chapter we will look at various
 representational and processing issues related to the manipulation of
 words and syllables.
 
@@ -881,15 +881,15 @@ also been exposed to the UNIX **fmt** command (a simple text formatter),
 the **cut** command (similar to **extract -f**), and the **head** and
 **tail** commands.
 
-In [Chapter 34](guide34.html) we will examine further representations
+In [Chapter 34](/guide/ch34) we will examine further representations
 and processes related to phonetic data.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide28.html)
+[**Next Chapter**](/guide/ch28)
 
-[**Previous Chapter**](guide26.html)
+[**Previous Chapter**](/guide/ch26)
 
 [**Table of Contents**](guide.toc.html)
 

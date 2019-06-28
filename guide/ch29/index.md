@@ -13,7 +13,7 @@ Chapter 29
 Differences and Commonalities
 =============================
 
-In [Chapter 25](guide25.html) we introduced the problem of similarity
+In [Chapter 25](/guide/ch25) we introduced the problem of similarity
 via the Humdrum [**simil**](commands/simil.html) and
 [**correl**](commands/correl.html) commands. This chapter revisits the
 problem of similarity by focussing on differences and commonalities.
@@ -402,15 +402,15 @@ commonalities.
 
 Together with the [**simil**](commands/simil.html) and
 [**correl**](commands/correl.html) commands discussed in [Chapter
-25,](guide25.html) these five tools provide a variety of means for
+25,](/guide/ch25) these five tools provide a variety of means for
 characterizing differences, commonalities, and similarities.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide30.html)
+[**Next Chapter**](/guide/ch30)
 
-[**Previous Chapter**](guide28.html)
+[**Previous Chapter**](/guide/ch28)
 
 [**Table of Contents**](guide.toc.html)
 

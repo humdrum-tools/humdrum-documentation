@@ -19,7 +19,7 @@ MIDI-related tools that allow MIDI data to be input and output. In this
 chapter we will discuss the output-related tools:
 [**midi**](commands/midi.html), [**perform**](commands/perform.html),
 [**smf**](commands/smf.html) and [**tacet**](commands/tacet.html). MIDI
-input tools are discussed in [Chapter 30.](guide30.html)
+input tools are discussed in [Chapter 30.](/guide/ch30)
 
 <a name ="The_**MIDI_Representation"></a>
 
@@ -309,7 +309,7 @@ Similarly, the user could search for a particular pitch, e.g.
 
 Since the **perform** command accepts any Humdrum input, other Humdrum
 data may be used for searching. For example, the input data might
-contain melodic interval data (see [Chapter 11](guide11.html)), allowing
+contain melodic interval data (see [Chapter 11](/guide/ch11)), allowing
 the user to search for a particular interval such as a diminished
 octave:
 
@@ -357,11 +357,11 @@ remain after terminating the **perform** command, the Humdrum
 [**tacet**](commands/tacet.html) command can be used to send
 \"all-notoff\" commands on all MIDI channels.
 
-In [Chapter 12,](guide12.html) we will see how **perform** can be used
+In [Chapter 12,](/guide/ch12) we will see how **perform** can be used
 in conjunction with other commands (such as
 [**extract**](commands/extract.html) and [**yank**](commands/yank.html))
 to listen selectively to specific parts or passages. In [Chapter
-21](guide21.html) we will use **perform** in conjunction with the
+21](/guide/ch21) we will use **perform** in conjunction with the
 [**patt**](commands/patt.html) command to listen to patterns (such as
 harmonic, rhythmic and melodic patterns) found in some repertory.
 
@@ -411,15 +411,15 @@ commands can be used to generate true MIDI data for listening. The
 for playing whatever input is provided. The **smf** command generates
 standard MIDI files that can be used to transport MIDI data to a vast
 array of commercial and non-commerical applications software. In
-[Chapter 30](guide30.html) we will explore some of the Humdrum tools for
+[Chapter 30](/guide/ch30) we will explore some of the Humdrum tools for
 inputting MIDI data into Humdrum.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide08.html)
+[**Next Chapter**](/guide/ch08)
 
-[**Previous Chapter**](guide06.html)
+[**Previous Chapter**](/guide/ch06)
 
 [**Table of Contents**](guide.toc.html)
 

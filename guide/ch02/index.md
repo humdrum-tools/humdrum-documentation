@@ -18,7 +18,7 @@ information for common Western music. The `**kern` scheme can be used to
 encode pitch and duration, plus other common score-related information.
 In this chapter, we will introduce `**kern` through a series of tutorial
 examples. A more comprehensive description of `**kern` will be given in
-[Chapter 6.](guide06.html) Our intention here is to provide a quick
+[Chapter 6.](/guide/ch06) Our intention here is to provide a quick
 introduction.
 
 Consider the opening motive from J.S. Bach\'s *Art of Fugue* shown in
@@ -302,7 +302,7 @@ Example 2.3 ends with a repeat sign. The `**kern` representation makes a
 distinction between repeat signs that appear in the score and repeat
 signs that are obeyed in performance. In this example, only the visual
 or orthographic rendering of the barline has been encoded. Later, in
-[Chapter 20,](guide20.html) we will see how sectional repeats are
+[Chapter 20,](/guide/ch20) we will see how sectional repeats are
 functionally represented. The visual appearance of the final barline is
 encoded as follows: `=:|!`. The equals-sign indicates the logical
 presence of a barline. The colon indicates the repeat sign, followed by
@@ -567,7 +567,7 @@ In this chapter we have introduced the Humdrum `**kern` representation
 and a few of the more important reference records. As we have seen,
 `**kern` can be used to encode core information for common musical
 scores; `**kern` is used to represent *functional* information rather
-than *orthographic* (visual) information. In [Chapter 6](guide06.html)
+than *orthographic* (visual) information. In [Chapter 6](/guide/ch06)
 an expanded description of `**kern` will be given that includes a much
 wider variety of concepts and situations than we have encountered in
 this chapter. [**Appendices I**](guide.append1.html) and
@@ -581,9 +581,9 @@ useful ways. In the next chapter we will examine some simple processes.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide03.html)
+[**Next Chapter**](/guide/ch03)
 
-[**Previous Chapter**](guide01.html)
+[**Previous Chapter**](/guide/ch01)
 
 [**Table of Contents**](guide.toc.html)
 

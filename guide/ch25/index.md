@@ -983,9 +983,9 @@ following work by Ferdinando Carulli:\
 >
 > 
 >
-> [**Next Chapter**](guide26.html)
+> [**Next Chapter**](/guide/ch26)
 >
-> [**Previous Chapter**](guide24.html)
+> [**Previous Chapter**](/guide/ch24)
 >
 > [**Table of Contents**](guide.toc.html)
 >

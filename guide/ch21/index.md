@@ -14,7 +14,7 @@ Searching for Patterns
 ======================
 
 The **grep** and **egrep** commands are useful for identifying patterns
-that occur on single lines. As we saw in [Chapter 19,](guide19.html) the
+that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the
 [**context**](commands/context.html) command can be used to amalgamate
 groups of successive data tokens on a single line \-- and so facilitate
 searching for sequential patterns using **grep** or **egrep**. For many
@@ -47,7 +47,7 @@ a contiguous sequence of input lines.
 
 The operation of **patt** is easier to describe through an example.
 Consider the following input using the German *Tonhöhe* pitch
-designations described in [Chapter 4.](guide04.html) Recall that the
+designations described in [Chapter 4.](/guide/ch04) Recall that the
 [`**Tonh`](representations/Tonh.rep.html) system of pitch names allows
 Bach to spell his name (B=B-flat; H=B-natural). Less well-known is the
 fact that Dmitri Shostakovich also used the German pitch system to
@@ -256,7 +256,7 @@ near the double barline. For example, if any other note from the tonic
 chord follows after the raised third, then the third will appear several
 records prior to the double barline. We can solve this problem by using
 the [**ditto**](commands/ditto.html) command discussed in [Chapter
-15;](guide15.html) **ditto** can be used to propagate the raised third
+15;](/guide/ch15) **ditto** can be used to propagate the raised third
 through the sustained final chord. Our revised pipeline is:
 
 > `deg bach.krn | ditto -s = | patt -s r -f picardy`
@@ -443,7 +443,7 @@ tag along with the **-t** option as follows:
 >   etc.       
 >   ---------- -----------
 >
-In [Chapter 26](guide26.html) we will learn how to collapse several
+In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
 from several \"passes\" using **patt** \-- one pass for each type of
 cadence. For example, we could collapse several tagged outputs to
@@ -470,7 +470,7 @@ There are no restrictions as to the types of tags that can be generated
 by **patt**. A user might tag the beginning of motivic or thematic
 statements, various harmonic progressions, variation techniques,
 fingering patterns, quotations or allusions, stylistic clichés, etc. In
-[Chapter 35](guide35.html) we will use the **-t** option to label
+[Chapter 35](/guide/ch35) we will use the **-t** option to label
 different set forms for statements of a twelve-tone row, such as primes,
 inversions, retrogrades, and retrograde inversions. We will use suitable
 tags to identify the specific transpositions: P0, I7, R11, RI8, etc.
@@ -604,7 +604,7 @@ of each found pattern. The labels can contain any user-defined text
 string such as `authentic cadence`, `episode`, `Motive 3b`,
 `augmentation`, `triplet figuration`, or `prolongation`.
 
-As we will see in [Chapter 26,](guide26.html) the contents of several
+As we will see in [Chapter 26,](/guide/ch26) the contents of several
 spines can be amalgamated to form a single spine. This means that the
 results for several independent pattern searches can be assembled into a
 single \"pattern\" spine. Several pattern spines may be created that
@@ -658,9 +658,9 @@ can contribute to more sophisticated pattern searches.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide22.html)
+[**Next Chapter**](/guide/ch22)
 
-[**Previous Chapter**](guide20.html)
+[**Previous Chapter**](/guide/ch20)
 
 [**Table of Contents**](guide.toc.html)
 

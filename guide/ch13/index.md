@@ -512,7 +512,7 @@ Assembling N-tuplets
 Typically, one can simply use the shortest duration present as a guide
 for a suitable time-base value. The shortest duration can be determined
 using the [**census**](commands/census.html) -k command described in
-[Chapter 4.](guide04.html) However, tuplets require a little more
+[Chapter 4.](/guide/ch04) However, tuplets require a little more
 sophistication. Suppose we wanted to assemble two parts, one containing
 just eighth-notes and the other containing just quarter-note triplets.
 (The quarter-note triplets will be encoded as three notes in the time of
@@ -714,7 +714,7 @@ used to reformat a score so that each measure occupies the same number
 of data records. For example, in a 3/4 meter, an eighth-note time-base
 will mean that each measure will contain six data records, and the fifth
 data record will correspond to the onset of the third beat. Recall from
-[Chapter 12](guide12.html) that the **yank -m** command allows us to
+[Chapter 12](/guide/ch12) that the **yank -m** command allows us to
 extract particular data records following a specified marker. In the
 following command, we have defined the marker as a barline (`-m ^=`) and
 instructed **yank** to fetch the fifth line following each occurrence of
@@ -753,15 +753,15 @@ to ensure that any assembled `**kern` data is correctly aligned.
 Finally, we learned that the **timebase** command can be used for other
 analytic purposes. Specifically, it can be used to reduce a score
 rhythmically so only particular onset points or beats are retained. In
-[Chapter 23](guide23.html) we will see additional uses of **timebase**
+[Chapter 23](/guide/ch23) we will see additional uses of **timebase**
 for a variety of types of rhythmic tasks.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide14.html)
+[**Next Chapter**](/guide/ch14)
 
-[**Previous Chapter**](guide12.html)
+[**Previous Chapter**](/guide/ch12)
 
 [**Table of Contents**](guide.toc.html)
 

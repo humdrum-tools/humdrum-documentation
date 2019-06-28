@@ -13,11 +13,11 @@ Chapter 35
 Layers
 ======
 
-In [Chapters 11](guide11.html) and [15](guide15.html) we examined
+In [Chapters 11](/guide/ch11) and [15](/guide/ch15) we examined
 different kinds of intervals, including both harmonic and melodic
 intervals. A number of different types of intervals were distinguished
 and we learned how to calculate such intervals. One type of melodic
-interval mentioned in [Chapter 11](guide11.html) is the *distance
+interval mentioned in [Chapter 11](/guide/ch11) is the *distance
 interval* \-- an interval between pitches which are separated by
 intervening musical materials. In this chapter we consider more
 sophisticated ways of determining distance intervals. These types of
@@ -103,7 +103,7 @@ We can collapse the arpeggiated chords using the **context** command:
 
 Identify the chords is facilitated by using the pitch-class
 ([`**pc`](representations/pc.rep.html)) representation described in
-[Chapter 34.](guide34.html)
+[Chapter 34.](/guide/ch34)
 
 > `context -b = -o = copland | pc -a | rid -d`
 
@@ -199,9 +199,9 @@ pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
 
 
 
-[**Next Chapter**](guide36.html)
+[**Next Chapter**](/guide/ch36)
 
-[**Previous Chapter**](guide34.html)
+[**Previous Chapter**](/guide/ch34)
 
 [**Table of Contents**](guide.toc.html)
 

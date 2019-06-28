@@ -87,7 +87,7 @@ The UNIX **grep** command is a popular tool for searching for lines that
 match some specified pattern. Patterns may be simple strings of
 characters, or may be more complicated constructions defined using the
 UNIX *regular expression* syntax. Regular expressions will be described
-in detail in [Chapter 9.](guide09.html) The command name \"`grep`\" is
+in detail in [Chapter 9.](/guide/ch09) The command name \"`grep`\" is
 an acronym for \"get regular expression.\"
 
 <a name ="Andante_Search"></a>
@@ -175,14 +175,14 @@ comments) for matching instances of the specified pattern. If a curly
 brace were to appear in a comment or other non-data record, then our
 phrase-count would be incorrect. More carefully constructed patterns
 require a better knowledge of *regular expressions.* Regular expressions
-are discussed in [Chapter 9.](guide09.html)
+are discussed in [Chapter 9.](/guide/ch09)
 
 <a name ="Searching_for_Reference_Information"></a>
 
 Searching for Reference Information
 -----------------------------------
 
-As we saw in [Chapter 2,](guide02.html) Humdrum files typically encode
+As we saw in [Chapter 2,](/guide/ch02) Humdrum files typically encode
 library-type information using reference records. For example, the
 [**composer\'s name**](guide.append1.html#Authorship_Information) is
 encoded in a `!!!COM:` record, and the
@@ -225,7 +225,7 @@ eliminated by selecting the **-h** option for **grep**:
 
 (N.B. Some older versions of **grep** do not support all of the options
 described here. Filename headers can be stripped from the output by
-using the UNIX **sed** command described in [Chapter 14.](guide14.html))
+using the UNIX **sed** command described in [Chapter 14.](/guide/ch14))
 
 We might place the resulting list of titles in a separate file using the
 UNIX *file redirection* construction. The output of a command can be
@@ -346,7 +346,7 @@ which are *duplicated* (i.e. two or more instances). Conversely, the
 Suppose, for example, that we want to know which of the Bach chorales
 are harmonizations of the same tunes \-- that is, have the same titles.
 (Of course the same chorale might be known by two or more titles, but
-let\'s defer this problem until [Chapter 25.](guide25.html)) The **-d**
+let\'s defer this problem until [Chapter 25.](/guide/ch25)) The **-d**
 option will only output the duplicate records:
 
 > `grep -h '!!!OTL:' * | sort | uniq -d`
@@ -481,9 +481,9 @@ causes the output to be sorted in reverse order.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide04.html)
+[**Next Chapter**](/guide/ch04)
 
-[**Previous Chapter**](guide02.html)
+[**Previous Chapter**](/guide/ch02)
 
 [**Table of Contents**](guide.toc.html)
 

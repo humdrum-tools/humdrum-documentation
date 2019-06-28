@@ -409,7 +409,7 @@ Wolf up an augmented second, and then print the transposed part:
 Extracting Spines that Meander
 ------------------------------
 
-As we saw in [Chapter 5,](guide05.html) spines can move around via
+As we saw in [Chapter 5,](/guide/ch05) spines can move around via
 various spine-path interpretations. Changes of spine position will cause
 havoc when extracting by fields (the **-f** option); **extract** will
 generate an error message and terminate. With the **-i** option,
@@ -688,7 +688,7 @@ Yanking by Section
 When the **-s** option is invoked, [**yank**](commands/yank.html)
 extracts passages according to Humdrum section labels encoded in the
 input. Humdrum section labels will be described fully in [Chapter
-20.](guide20.html) For now, we can simply note that section labels are
+20.](/guide/ch20) For now, we can simply note that section labels are
 tandem interpretations that conform to the syntax:
 
 > `*>label_name`
@@ -705,7 +705,7 @@ the second instance of a section labelled `First Theme` in the file
 
 Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. Such situations
-are described in [Chapter 20.](guide20.html)
+are described in [Chapter 20.](/guide/ch20)
 
 <a name ="Examples_Using_yank"></a>
 
@@ -937,9 +937,9 @@ back together again.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide13.html)
+[**Next Chapter**](/guide/ch13)
 
-[**Previous Chapter**](guide11.html)
+[**Previous Chapter**](/guide/ch11)
 
 [**Table of Contents**](guide.toc.html)
 

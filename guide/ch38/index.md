@@ -97,7 +97,7 @@ duration of work, tempi, and so on.
 
 Humdrum users can use the **find** and **grep** commands to identify
 works that match particular controlled characteristics (see [Chapter
-33](guide33.html)). For example, the following command might locate all
+33](/guide/ch33)). For example, the following command might locate all
 files that contain scores in triple meter. The results are placed in a
 file called `control`:
 
@@ -339,7 +339,7 @@ spines with respect to each other.
 <a name ="shift_notes"></a>
 
 Recall that the [**reihe**](commands/reihe.html) command ([Chapter
-35](guide35.html)) provides a **-s** option that causes a shift in the
+35](/guide/ch35)) provides a **-s** option that causes a shift in the
 serial position of data tokens. For example, suppose we had an input
 consisting of the numbers 1 through 5. The following command:
 
@@ -436,9 +436,9 @@ decipher.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide39.html)
+[**Next Chapter**](/guide/ch39)
 
-[**Previous Chapter**](guide37.html)
+[**Previous Chapter**](/guide/ch37)
 
 [**Table of Contents**](guide.toc.html)
 

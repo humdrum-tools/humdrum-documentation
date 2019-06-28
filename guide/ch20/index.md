@@ -81,7 +81,7 @@ Using *yank* to Extract Sections
 <a name ="Extract_Coda"></a>
 
 We encountered the [**yank**](commands/yank.html) command earlier in
-[Chapter 12.](guide12.html) Recall that **yank** can be used to extract
+[Chapter 12.](/guide/ch12) Recall that **yank** can be used to extract
 material by *section* using the **-s** option. For example, if the
 appropriate section is labelled, we might extract the coda of a work as
 follows:
@@ -687,7 +687,7 @@ type. Consider the following:\
 > > The [`**silbe`](representations/silbe.rep.html) representation
 > > pertains to syllabic text encoding and is a pre-defined
 > > representation in Humdrum. The `**silbe` representation is discussed
-> > in [Chapter 27.](guide27.html) Following the strophic passage
+> > in [Chapter 27.](/guide/ch27) Following the strophic passage
 > > indicator (`*strophe`), the spine is split apart until the required
 > > number of verses are generated. Then each spine is labelled with its
 > > own strophe label. Since the verses have an order, it is appropriate
@@ -860,16 +860,16 @@ type. Consider the following:\
 > > >
 > > *Summary of terms related to sections and strophes*
 > >
-> > In [Chapter 37](guide37.html) we will see further examples of how
+> > In [Chapter 37](/guide/ch37) we will see further examples of how
 > > sections and strophes are especially useful when producing
 > > electronic editions.
 > >
 > > ------------------------------------------------------------------------
 > >
 > >
-> > [**Next Chapter**](guide21.html)
+> > [**Next Chapter**](/guide/ch21)
 > >
-> > [**Previous Chapter**](guide19.html)
+> > [**Previous Chapter**](/guide/ch19)
 > >
 > > [**Table of Contents**](guide.toc.html)
 > >

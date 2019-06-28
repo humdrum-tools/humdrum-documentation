@@ -598,9 +598,9 @@ important Humdrum tools can still be used to manipulate your data.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide19.html)
+[**Next Chapter**](/guide/ch19)
 
-[**Previous Chapter**](guide17.html)
+[**Previous Chapter**](/guide/ch17)
 
 [**Table of Contents**](guide.toc.html)
 

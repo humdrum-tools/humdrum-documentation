@@ -34,7 +34,7 @@ The *record* Command
 
 The [**record**](commands/record.html) command captures a stream of
 input MIDI data and translates this data into the Humdrum `**MIDI`
-representation described in [Chapter 7.](guide07.html) The input data is
+representation described in [Chapter 7.](/guide/ch07) The input data is
 obtained from a MIDI instrument such as a keyboard synthesizer.
 
 Recording commences as soon as the command is invoked and recording
@@ -160,9 +160,9 @@ tools is given in the *Humdrum Toolkit Reference Manual.*
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide31.html)
+[**Next Chapter**](/guide/ch31)
 
-[**Previous Chapter**](guide29.html)
+[**Previous Chapter**](/guide/ch29)
 
 [**Table of Contents**](guide.toc.html)
 

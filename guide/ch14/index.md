@@ -189,7 +189,7 @@ does not match a leading equals sign:
 Suppose we wanted to determine which of two MIDI performances exhibits
 more dynamic range \-- that is, which performance has a greater
 variability in key-down velocities. Recall from [Chapter
-7](guide07.html) that MIDI data tokens consist of three elements
+7](/guide/ch07) that MIDI data tokens consist of three elements
 separated by slashes (/). The third element is the key velocity. First,
 we want to eliminate key-up data tokens. These tokens can be
 distinguished by the minus sign associated with the second data element.
@@ -525,7 +525,7 @@ of cadential 6-4 chords. First, we might create a file \-- `comment.6-4`
 > `!! A likely cadential 6-4 progression.`
 
 We can use the Humdrum [**pattern**](commands/pattern.html) command (to
-be described in [Chapter 21](guide21.html)), as follows:
+be described in [Chapter 21](/guide/ch21)), as follows:
 
 File `template`:
 
@@ -567,9 +567,9 @@ bibliography).
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide15.html)
+[**Next Chapter**](/guide/ch15)
 
-[**Previous Chapter**](guide13.html)
+[**Previous Chapter**](/guide/ch13)
 
 [**Table of Contents**](guide.toc.html)
 

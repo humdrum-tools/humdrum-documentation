@@ -22,7 +22,7 @@ effects. This chapter introduces the
 sounds. This representation provides a companion to the
 [`**text`](representations/text.rep.html) and
 [`**silbe`](representations/silbe.rep.html) representations discussed in
-[Chapter 27.](guide27.html) Various sonorous processes are illustrated.
+[Chapter 27.](/guide/ch27) Various sonorous processes are illustrated.
 
 <a name ="The_**IPA_Representation"></a>
 
@@ -267,7 +267,7 @@ For some tasks, it is often useful to reduce the phonemes to phonetic
 classes. For example, in our example from Shakespeare\'s *Tempest*, the
 \`th\' in \`thy\' is part of the fricative alliteration.
 
-In [Chapter 22](guide22.html) we saw how
+In [Chapter 22](/guide/ch22) we saw how
 [**humsed**](commands/humsed.html) can be used to classify things. A
 simple reassignment script can be defined which collapses the various
 phonemes into a smaller set of phonetic classes. For example, a suitable
@@ -359,7 +359,7 @@ Since translators have plenty of other issues to consider when
 translating a vocal text, we might focus our comparisons solely on a
 small collection of especially important notes. We might for example use
 a longer value for **timebase**. Alternatively, we might use the Humdrum
-**accent** command (described in [Chapter 25](guide25.html)) to identify
+**accent** command (described in [Chapter 25](/guide/ch25)) to identify
 notes have a particularly high noticeability.
 
 <a name ="Rhyme_and_Rhyme_Schemes"></a>
@@ -520,9 +520,9 @@ The corresponding output would indicate the rhyme scheme for this poem:
 >
 > 
 >
-> [**Next Chapter**](guide34.html)
+> [**Next Chapter**](/guide/ch34)
 >
-> [**Previous Chapter**](guide32.html)
+> [**Previous Chapter**](/guide/ch32)
 >
 > [**Table of Contents**](guide.toc.html)
 >

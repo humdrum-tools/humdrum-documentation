@@ -471,7 +471,7 @@ the functioning of Humdrum.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide02.html)
+[**Next Chapter**](/guide/ch02)
 
 [**Table of Contents**](guide.toc.html)
 

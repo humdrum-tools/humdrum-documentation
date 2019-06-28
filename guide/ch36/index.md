@@ -19,7 +19,7 @@ information. In this chapter we introduce some special-purpose tools
 related to sound analysis, sound synthesis, and auditory perception. We
 have already encountered the [`**freq`](representations/freq.rep.html)
 and [`**cents`](representations/cents.rep.html) representations in
-[Chapter 4.](guide04.html) Much of this chapter will center on the
+[Chapter 4.](/guide/ch04) Much of this chapter will center on the
 [`**spect`](representations/spect.rep.html) representation. Three tools
 will be discussed in connection with `**spect`: the **spect**, **mask**
 and **sdiss** commands. **Spect** accesses a database of analyzed
@@ -322,9 +322,9 @@ synthesis software.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide37.html)
+[**Next Chapter**](/guide/ch37)
 
-[**Previous Chapter**](guide35.html)
+[**Previous Chapter**](/guide/ch35)
 
 [**Table of Contents**](guide.toc.html)
 

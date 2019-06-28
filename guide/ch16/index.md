@@ -13,7 +13,7 @@ Chapter 16
 The Shell (II)
 ==============
 
-In [Chapter 8](guide08.html) we introduced some of the shell special
+In [Chapter 8](/guide/ch08) we introduced some of the shell special
 characters. By way of review, we learned that the shell interprets the
 octothorpe (\#) as the beginning of a comment. By itself, the asterisk
 (\*) is \"expanded\" by the shell to the names of all files in the
@@ -178,7 +178,7 @@ rather than the files to be searched.
 Single Quotes, Double Quotes
 ----------------------------
 
-In [Chapter 8](guide08.html) we learned that single quotation marks can
+In [Chapter 8](/guide/ch08) we learned that single quotation marks can
 be used to escape the special meanings of reserved shell characters \--
 such as \* and \$. Double quotation marks (`"`) have a similar effect
 with one important exception. The dollars sign continues to retain its
@@ -246,7 +246,7 @@ Consider, by way of example, the following common pipeline:
 
 > `sort inputfile | uniq -c | sort -n`
 
-In [Chapter 17](guide17.html) we will see that this is a useful way for
+In [Chapter 17](/guide/ch17) we will see that this is a useful way for
 generating inventories. Typically, this sequence occurs at the end of a
 pipeline where some preliminary processing has taken place, such as:
 
@@ -346,9 +346,9 @@ pipeline or regular expression into a single user-defined keyword.
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide17.html)
+[**Next Chapter**](/guide/ch17)
 
-[**Previous Chapter**](guide15.html)
+[**Previous Chapter**](/guide/ch15)
 
 [**Table of Contents**](guide.toc.html)
 

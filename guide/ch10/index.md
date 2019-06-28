@@ -25,7 +25,7 @@ The *grep* Command (Again)
 
 Although regular expressions are used in a number of Humdrum commands,
 they are most frequently used in conjunction with the **grep** command
-encountered in [Chapter 3.](guide03.html) **grep** is a popular software
+encountered in [Chapter 3.](/guide/ch03) **grep** is a popular software
 tool that is available from a number of manufacturers and sources. Many
 versions of **grep** differ in the options provided. For example, the
 version of **grep** distributed by the GNU Software Foundation provides
@@ -268,7 +268,7 @@ Suppose, for example, that we wanted to identify occurrences of
 augmented sixth chords. An augmented sixth chord is characterized by an
 augmented sixth interval occurring between the lowered sixth
 scale-degree and the raised fourth scale-degree. In [Chapter
-4,](guide04.html) we saw that the **solfa** command represents pitches
+4,](/guide/ch04) we saw that the **solfa** command represents pitches
 with respect to an encoded tonic pitch. In the
 [`**solfa`](representations/solfa.rep.html) representation, the lowered
 sixth and raised fourth degrees will be represented as `6-` and `4+`
@@ -507,16 +507,16 @@ possible criteria.
 
 Although this chapter has focussed principally on the **grep** command,
 the ensuing chapters will show that regular expressions are used by a
-wide variety of commands. In [Chapter 33,](guide33.html) many more
+wide variety of commands. In [Chapter 33,](/guide/ch33) many more
 powerful examples will be discussed in conjunction with the **find**
 command.
 
 ------------------------------------------------------------------------
 
 
-[**Next Chapter**](guide11.html)
+[**Next Chapter**](/guide/ch11)
 
-[**Previous Chapter**](guide09.html)
+[**Previous Chapter**](/guide/ch09)
 
 [**Table of Contents**](guide.toc.html)
 
