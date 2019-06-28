@@ -58,9 +58,9 @@ car
 This pattern will match any data string containing the sequence of
 letters c-a-r. The letters must be contiguous, so no character
 (including spaces) can be interposed between any of the letters. The
-above pattern is present in strings such as \"`carillon`\" and
-\"`ricercare`\" but not in strings such as \"`Caruso`\" or
-\"`clarinet`\". The above pattern is called a *literal* since the
+above pattern is present in strings such as "`carillon`" and
+"`ricercare`" but not in strings such as "`Caruso`" or
+"`clarinet`". The above pattern is called a *literal* since the
 matching pattern must be literally identical to the regular expression
 (including the correct use of upper- or lower-case).
 
@@ -86,8 +86,8 @@ c.u
 
 will match any input string containing three characters, the first of
 which is the lower-case \``c`\' and the third of which is the lower-case
-\``u`\'. The pattern is present in strings such as \"`counterpoint`\"
-and \"`acoustic`\" but not in \"`cuivre`\" or \"`Crumhorn`\". Any
+\``u`\'. The pattern is present in strings such as "`counterpoint`"
+and "`acoustic`" but not in "`cuivre`" or "`Crumhorn`". Any
 character can be interposed between the \``c`\' and the \``u`\' provided
 there is precisely one such character.
 
@@ -97,7 +97,7 @@ Escape Character
 
 A problem with metacharacters such as the period is that sometimes the
 user wants to use them as literals. The special meaning of
-metacharacters can be \"turned-off\" by preceding the metacharacter with
+metacharacters can be "turned-off" by preceding the metacharacter with
 the backslash character (\\). The backslash is said to be an *escape*
 character since it is used to release the metacharacter from its special
 function. For example, the regular expression
@@ -113,8 +113,8 @@ preceding it by an additional backslash (i.e. `\\`).
 Repetition Operators
 --------------------
 
-Another metacharacter is the plus sign (`+`). The plus sign means \"one
-or more consecutive instances of the previous expression.\" For example,
+Another metacharacter is the plus sign (`+`). The plus sign means "one
+or more consecutive instances of the previous expression." For example,
 
 ``
 
@@ -122,10 +122,10 @@ fo+
 
 specifies any character string beginning with a lower-case \``f`\'
 followed by one or more consecutive instances of the small letter
-\``o`\'. This pattern is present in such strings as \"`food`\" and
-\"`folly`,\" but not in \"`front`\" or \"`flood`.\" The length of the
-matched string is variable. In the case of \"`food`\" the matched string
-consists of three characters, whereas in \"`folly`\" the matched string
+\``o`\'. This pattern is present in such strings as "`food`" and
+"`folly`," but not in "`front`" or "`flood`." The length of the
+matched string is variable. In the case of "`food`" the matched string
+consists of three characters, whereas in "`folly`" the matched string
 consists of just two characters.
 
 The plus sign in our example modifies only the preceding letter \``o`\'
@@ -142,9 +142,9 @@ way of example, the following regular expression:
 
 The parentheses now bind the letters \``f`\' and \``o`\' into a single
 two-character expression, and it is this expression that is now modified
-by the plus sign. The regular expression may be read as \"one or more
-consecutive instances of the string \``fo`\'.\" This pattern is present
-in strings like \"`food`\" (one instance) and \"`fofoe`\" (two
+by the plus sign. The regular expression may be read as "one or more
+consecutive instances of the string \``fo`\'." This pattern is present
+in strings like "`food`" (one instance) and "`fofoe`" (two
 instances).
 
 Of course we can mix metacharacters together. The expression:
@@ -153,20 +153,20 @@ Of course we can mix metacharacters together. The expression:
 
 (.o)+
 
-will match strings such as \"`polo`\" and the first four letters of
-\"`tomorrow`.\"
+will match strings such as "`polo`" and the first four letters of
+"`tomorrow`."
 
 Several sub-expressions may occur within a single regular expression.
-For example, the following regular expression means \"one or more
+For example, the following regular expression means "one or more
 instances of the letter \``a`\', followed by one or more instances of
-the string \``go`\'.\"
+the string \``go`\'."
 
 ``
 
 (a)+(go)+
 
-This would match character strings in inputs such as \"`ago`\" and
-\"`agogic`,\" but not in \"`largo`\" (intervening \`r\') or \"`gogo`\"
+This would match character strings in inputs such as "`ago`" and
+"`agogic`," but not in "`largo`" (intervening \`r\') or "`gogo`"
 (no leading \``a`\'). Note that the parentheses around the letter
 \``a`\' can be omitted without changing the sense of the expression. The
 following expression mixes the `+` repetition operator with the
@@ -176,13 +176,13 @@ wild-card (`.`):
 
 c+.m+
 
-This pattern is present in strings such as \"`accompany`,\"
-\"`accommodate`,\" and \"`cymbal`.\" This pattern will also match
-strings such as \"`ccm`\" since the second \``c`\' can be understood to
+This pattern is present in strings such as "`accompany`,"
+"`accommodate`," and "`cymbal`." This pattern will also match
+strings such as "`ccm`" since the second \``c`\' can be understood to
 match the period metacharacter.
 
 A second repetition operator is the asterisk (`*`). The asterisk means
-\"zero or more consecutive instances of the previous expression.\" For
+"zero or more consecutive instances of the previous expression." For
 example,
 
 ``
@@ -191,8 +191,8 @@ Do\*r
 
 specifies any character string beginning with an upper-case \``D`\'
 followed by zero or more instances of the letter \``o`\' followed by the
-letter \``r`\'. This pattern is present in such strings as \"`Dorian`,\"
-\"`Doors`\" as well as \"`Drum`,\" and \"`Drone`.\" As in the case of
+letter \``r`\'. This pattern is present in such strings as "`Dorian`,"
+"`Doors`" as well as "`Drum`," and "`Drone`." As in the case of
 the plus sign, the asterisk modifies only the preceding expression \--
 in this case the letter \``o`\'. Multi-character expressions may be
 modified by the asterisk repetition operator by placing the expression
@@ -202,8 +202,8 @@ in parentheses. Thus, the regular expression:
 
 ba(na)\*
 
-will match strings such as \"`ba`,\" \"`bana`,\" \"`banana`,\"
-\"`bananana`,\" etc.
+will match strings such as "`ba`," "`bana`," "`banana`,"
+"`bananana`," etc.
 
 Incidentally, notice that the asterisk metacharacter can be used to
 replace the plus sign (`+`) metacharacter. For example, the regular
@@ -218,8 +218,8 @@ expression:
 
 .\*
 
-means \"zero or more instances of any characters.\" (Notice the plural
-\"characters;\" this means the repetition need not be of one specific
+means "zero or more instances of any characters." (Notice the plural
+"characters;" this means the repetition need not be of one specific
 character.) This expression will match *any string*, including nothing
 at all (the *null string*). By itself, this expression is not very
 useful. However it proves invaluable in combination with other
@@ -235,7 +235,7 @@ character, then the resulting regular expression would match any string
 of characters separated by spaces \-- such as printed words.
 
 A third repetition operator is the question mark (`?`), which means
-\"zero or one instance of the preceding expression.\" This metacharacter
+"zero or one instance of the preceding expression." This metacharacter
 is frequently useful when you want to specify the presence or absence of
 a single expression. For example, the pattern:
 
@@ -243,8 +243,8 @@ a single expression. For example, the pattern:
 
 Ch?o
 
-is present in such strings as \"`Chopin`\" and \"`Corelli`\" but not
-\"`Chinese`\" or \"`cornet`.\"
+is present in such strings as "`Chopin`" and "`Corelli`" but not
+"`Chinese`" or "`cornet`."
 
 Once again, parentheses can be used to specify more complex expressions.
 The pattern:
@@ -253,13 +253,13 @@ The pattern:
 
 Ch?(o)+
 
-is present in such strings as \"`Chorale`,\" \"`Couperin`,\" and
-\"`Cooper`,\" but not in \"`Chloe`\" or \"`Chant`.\"
+is present in such strings as "`Chorale`," "`Couperin`," and
+"`Cooper`," but not in "`Chloe`" or "`Chant`."
 
 In summary, we\'ve identified three metacharacters pertaining to the
 number of occurrences of some character or string. The plus sign means
-\"one or more,\" the asterisk means \"zero or more,\" and the question
-mark means \"zero or one.\" Collectively, these metacharacters are known
+"one or more," the asterisk means "zero or more," and the question
+mark means "zero or one." Collectively, these metacharacters are known
 as *repetition operators* since they indicate the number of times an
 expression can occur in order to match.
 
@@ -353,7 +353,7 @@ the expression may be simplified to:
 
 \[abcdefg\]
 
-Any character within the square brackets (a \"character class\") will
+Any character within the square brackets (a "character class") will
 match. Spaces, tabs, and other characters can be included within the
 class. When metacharacters like the period (`.`), the asterisk (`*`),
 the plus sign (`+`), and the dollar sign (`$`) appear within a character
@@ -537,7 +537,7 @@ Basic, Extended, and Humdrum-Extended Regular Expressions
 Over the years, new features have been added to regular expression
 syntax. Some of the early software tools that make use of regular
 expressions do not support the extended features provided by more
-recently developed tools. So-called \"basic\" regular expressions
+recently developed tools. So-called "basic" regular expressions
 include the following features: the single-character wild-card (`.`),
 the repetition operators (`*`) and (`?`) but not (`+`), the context
 anchors (`^`) and (`$`), character classes (`[...]`), or complementary
@@ -547,7 +547,7 @@ with the backslash to *enable* this function (i.e.` \(  \)  `). In
 [Chapter 3](/guide/ch03) we introduced the **grep** command; **grep**
 supports only basic regular expressions.
 
-\"Extended\" regular expressions include the following: the
+"Extended" regular expressions include the following: the
 single-character wild-card (`.`), the repetition operators (`*), (?)`
 and `(+)`, the context anchors (`^`) and (`$`), character classes
 (`[...]`), complementary character classes (`[^...]`), the logical OR
@@ -569,8 +569,8 @@ Reprise
 
 Regular expressions provide a powerful method for defining abstract
 patterns of alphanumeric characters. The wild card (.) matches any
-character. Repetition operators include \"one or more\" (+), \"zero or
-more\" (\*), and \"zero or one\" (?). Context anchors define the
+character. Repetition operators include "one or more" (+), "zero or
+more" (\*), and "zero or one" (?). Context anchors define the
 beginning of the line (\^) or the end of the line (\$). Character
 classes (\[ \]) specify a choice of possible characters. Ranges can be
 specified within character classes (\[ - \]) and complementary classes
@@ -578,8 +578,8 @@ may be defined (\[\^ \]). The logical OR (\|) may be used in conjunction
 with parentheses to define more complex expressions.
 
 There are many software tools that make use of regular expressions. The
-UNIX **grep** command supports standard or \"basic\" regular
-expressions. The UNIX **egrep** command supports \"extended\" regular
+UNIX **grep** command supports standard or "basic" regular
+expressions. The UNIX **egrep** command supports "extended" regular
 expressions.
 
 In the next chapter we will explore how regular expressions may be used

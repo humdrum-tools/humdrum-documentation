@@ -85,7 +85,7 @@ Documenting Encoded Data
 More important than generating a complete and accurate database is
 generating complete and accurate documentation so that future users of
 the information understand the limitations of the materials. Whether or
-not the electronic edition is \"complete,\" the materials are almost
+not the electronic edition is "complete," the materials are almost
 useless without proper documentation about what information is present,
 what information has been omitted, what sources were used, and what
 interpretations have been made. As long as the electronic materials are
@@ -122,9 +122,9 @@ to approach the problem of variant sources? One approach is to select a
 single source and remain true to it. A second approach is to identify
 the principal variant sources and encode each independently. A third
 approach is to encode several variants within a single document and
-provide Humdrum \"versions\" that allow users to select particular
-\"readings\" from a single file. A fourth approach is to create your own
-\"critical\" edition \-- based on a close re-examination of the original
+provide Humdrum "versions" that allow users to select particular
+"readings" from a single file. A fourth approach is to create your own
+"critical" edition \-- based on a close re-examination of the original
 materials.
 
 An important consideration will be the copyright status of the materials
@@ -176,7 +176,7 @@ Suppose, for example, that there are 2,000 items in a particular
 repertory, but you are able to encode just 100 items. You might be
 tempted to select the first 100 items, or to select a subset of items
 that share some common feature that makes the collection seem
-\"coherent.\"
+"coherent."
 
 However, picking and choosing what to encode will prevent researchers
 from being able to draw general conclusions about the repertory as a
@@ -193,7 +193,7 @@ arguments. Simply take my word for it: if you can\'t encode a complete
 corpus, the very best solution is to select a random sample.
 
 In making such a random sample, it is essential to resist the temptation
-to select a \"random\" sample \"by eye.\" Establish a truly random
+to select a "random" sample "by eye." Establish a truly random
 procedure (such as flipping coins or using a random number table) and
 methodically follow the procedure.
 
@@ -252,7 +252,7 @@ In the case of clarinet in A, a suitable transposition would be:
 The **trans** command adds a transposition interpretation to the output
 in order to identify that the material has been shifted. In the `**kern`
 representation, transposed instruments must be explicitly identified
-using a special \"transposing-instrument interpretation\" (see *Humdrum
+using a special "transposing-instrument interpretation" (see *Humdrum
 Reference Manual* \-- Section 3 for details). A suitable interpretation
 can be created by adding the upper-case letter \`I\' prior to the \`T\'
 in the appropriate tandem interpretation. In the case of a horn in F for
@@ -273,7 +273,7 @@ different types of indication are appropriate: (1) the instrument name
 as indicated in the source, (2) standardized instrument name, and (3)
 instrument class. Standardized instrument names can be found in
 [**Appendix II**](guide.append2.html). For example, the standard
-indicator for \"harpsichord\" is
+indicator for "harpsichord" is
 [`*Icemba`](guide.append2.html#String_Instruments).
 
 Standardized instrument class designators include `*ICklav` for keyboard
@@ -291,7 +291,7 @@ Leading Barlines
 
 Humdrum tools prefer to have explicit information indicating the
 beginning of the first measure. If a file does not begin with an
-anacrusis (\"pickup\") then it is appropriate to encode an \"invisible\"
+anacrusis ("pickup") then it is appropriate to encode an "invisible"
 first barline. For a hypothetical file containing five spines, we would
 need to insert the following line just before the first note(s) in the
 work:
@@ -305,7 +305,7 @@ or *orthographic* appearance. For example, the common system for
 barlines distinguishes between double barlines whose function is to
 indicate the end of a work or movement, and double barlines that simply
 delineate sections within the course of a work or movement. It is
-possible for a barline at the end of the work to be \"functionally\" a
+possible for a barline at the end of the work to be "functionally" a
 double barline, yet appear visually as a single barline.
 
 *Functional double barlines* are encoded with a double equals sign (==)
@@ -339,7 +339,7 @@ manually and the correct code selected.
 In some cases, the size of the trill or mordent will be ambiguous and so
 some sort of editorial decision will be necessary. One possibility is to
 add the kern \`x\' signifier immediately following the \`T\' or \`t\'.
-This indicates that the trill size is an \"editorial interpretation.\"
+This indicates that the trill size is an "editorial interpretation."
 
 The `**kern` representation treats appoggiaturas in a special way. In
 general, `**kern` is oriented to representing things in a manner closer
@@ -365,7 +365,7 @@ that can be labelled. In a binary work, for example, it may be useful to
 label the \`A\' and \`B\' sections. In a sonata-allegro work, it may be
 useful to label the introduction, exposition, development,
 recapitulation, etc. Some works include explicitly notated labels. These
-labels may be traditional, e.g. \"Coda,\" or they may reflect
+labels may be traditional, e.g. "Coda," or they may reflect
 programatic descriptions, such as the section entitled *Il canto
 degl\'uccelli* \[The song of the birds\] in Vivaldi\'s *The Four
 Seasons.*
@@ -377,7 +377,7 @@ can include the space character:
 `*>1st Theme`
 
 If you include section labels, you must also include a Humdrum
-\"Expansion List\" to indicate how the sections are connected. The
+"Expansion List" to indicate how the sections are connected. The
 Humdrum [**thru**](/tool/thru) command causes a through-composed
 version of a file to be generated according to the expansion list. For
 example, an expansion list for a simple binary work may be encoded as:
@@ -390,7 +390,7 @@ section label.
 Whenever a work/movement includes repeats or Da Capos, section labels
 and expansion lists must be encoded. In some cases, there is more than
 one way of interpreting how to realize the repeats. The most
-\"conventional\" realization should be encoded with the *unnamed
+"conventional" realization should be encoded with the *unnamed
 expansion list.* This will specify the default expansion using the
 Humdrum **thru** command. Suppose for example, that you are encoding a
 typical minuet and trio. The conventional performance practice involves
@@ -421,9 +421,9 @@ editorial signifiers are available: (1) *sic* (information is encoded
 literally, but is questionable) signified by the `Y` character; (2)
 *invisible symbol* (Unprinted note, rest or barline, but logically
 implied) signified by the `y` character; (3) *editorial interpretation*,
-(a \"modest\" editorial act of interpretation \-- such as the
+(a "modest" editorial act of interpretation \-- such as the
 interpretation of accidentals in *musica ficta*) signified by the `x`
-character; (4) *editorial intervention* (a \"significant\" editorial
+character; (4) *editorial intervention* (a "significant" editorial
 intervention) signified by the `X` character; (5) *footnote*
 (accompanying local or global comment provides a text commentary
 pertaining to specified data token) signified by `?`.
@@ -438,7 +438,7 @@ information, users would be unable to calculate melodic intervals, for
 example. Without melodic intervals, it may be impossible to search for
 themes, motives, and other patterns. Editorial interpretations are not
 simply unwarranted obfuscations. This does not mean that interpretations
-are \"correct\" and so it may be necessary to provide several
+are "correct" and so it may be necessary to provide several
 alternative or plausible interpretations of an artifact.
 
 One of the advantages of computers is that it is possible for documents
@@ -446,11 +446,11 @@ to undergo continuous revision. In research, it is common for documents
 to be reinterpreted, annotated, or recast in light of newly found
 documents.
 
-The kern \``x`\' signifies an \"editorial interpretation\" \-- that the
+The kern \``x`\' signifies an "editorial interpretation" \-- that the
 immediately preceding signifier is interpreted. The kern \``xx`\' also
 signifies an editorial interpretation where the immediately preceding
-data token is interpreted. The kern \``X`\' signifies an \"editorial
-intervention\" \-- that the immediately preceding signifier is an
+data token is interpreted. The kern \``X`\' signifies an "editorial
+intervention" \-- that the immediately preceding signifier is an
 editorial addition. The kern \``XX`\' also signifies an editorial
 intervention where the immediately preceding data token is an editorial
 addition. The kern \``y`\' designates a invisible symbol \-- such as an
@@ -468,7 +468,7 @@ Adding Reference Information
 ----------------------------
 
 Reference information must be added to each file. This information
-provides \"library-type\" information about the composer, date of
+provides "library-type" information about the composer, date of
 composition, place of composition, copyright notice, etc.
 
 As many reference records should be added as possible since these are
@@ -574,14 +574,14 @@ identical to the original distribution file and has not been modified in
 some way.
 
 The **veritas** command works by looking for a VTS reference record in
-the file. It then calculates a \"checksum\" for the file (excluding the
+the file. It then calculates a "checksum" for the file (excluding the
 VTS record itself) and compares this value with the encoded VTS value.
 If these values differ, a warning is issued that the file has been
 modified in some way.
 
 Once you are certain that an encoded Humdrum file is completely
-finished, you should calculate a \"checksum\" value to be encoded in a
-Humdrum \"VTS\" reference record.
+finished, you should calculate a "checksum" value to be encoded in a
+Humdrum "VTS" reference record.
 
 In order to calculate the checksum value for a given file, use the
 following command:
@@ -624,8 +624,8 @@ Electronic Citation
 -------------------
 
 Electronic editions of music might be cited in printed or other
-documents by including the following information. The \"author\" (e.g.
-**!!!COM:**), the \"title\" \-- either original title (**!!!OTL:**) or
+documents by including the following information. The "author" (e.g.
+**!!!COM:**), the "title" \-- either original title (**!!!OTL:**) or
 translated title (**!!!XEN:**). The editor (**!!!EED:**), published
 (**!!!YEP:**), date of publication and copyright owner (**!!!YED:**),
 and electronic version (**EEV:**). In addition, a full citation ought to

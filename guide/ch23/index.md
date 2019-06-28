@@ -138,7 +138,7 @@ for rests are distinguished by the trailing letter \`r\', we can use
 The [**dur**](/tool/dur) command provides a **-e** option that
 allows the user to echo specified signifiers in the output. The **-e**
 option is followed by a regular expression indicating what patterns are
-to be passed to the output. This option allows us to \"mark\" notes of
+to be passed to the output. This option allows us to "mark" notes of
 special interest. For example, suppose we wanted to determine the
 longest duration note for which Mozart had marked a staccato.
 
@@ -284,7 +284,7 @@ barline:
 `timebase -t 4 input.krn`
 
 We can now use **yank -m** to extract all appropriate sonorities. The
-\"marker\" is the barline and the \"range\" is 4 records following the
+"marker" is the barline and the "range" is 4 records following the
 marker, hence:
 
 `timebase -t 4 input.krn | yank -m ^= -r 4`
@@ -342,8 +342,8 @@ The *metpos* Command
 
 The [**metpos**](/tool/metpos) command generates a
 [`**metpos`](/rep/metpos) output spine containing
-numbers that indicate the metric strength of each sonority. By \"metric
-position\" we mean the position of importance in the metric hierarchy
+numbers that indicate the metric strength of each sonority. By "metric
+position" we mean the position of importance in the metric hierarchy
 for a measure.
 
 The highest position in any given metric hierarchy is given by the value
@@ -374,7 +374,7 @@ signature* and the *timebase* for the given input passage. This
 information can be specified via the command line, however it is usually
 available in the input stream via appropriate tandem interpretations.
 
-The following extract from Bartók\'s \"Two-Part Study\" No. 121 from
+The following extract from Bartók\'s "Two-Part Study" No. 121 from
 *Mikrokosmos* demonstrates the effect of the **metpos** command. The two
 left-most columns show the original input; all three columns show the
 corresponding output from **metpos**:
@@ -515,9 +515,9 @@ Note that **metpos** automatically echoes the input along with the new
   etc.       
   ---------- ------------
 We want to be able to say that the relationship between the first
-eighth-note G and the eighth-note B is \"strong-to-weak\" and that the
+eighth-note G and the eighth-note B is "strong-to-weak" and that the
 relationship between the eighth-note B and the eighth-note D is
-\"weak-to-strong.\" In order to procede we need to eliminate all of the
+"weak-to-strong." In order to procede we need to eliminate all of the
 data records that contain only a metpos value \-- that is, there is no
 pitch present in the [`**kern`](/rep/kern) spine. We
 can do this using **humsed**; we simply delete all lines that begin with

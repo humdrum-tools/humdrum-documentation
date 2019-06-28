@@ -89,10 +89,10 @@ the shell. Whenever the shell receives a command, each item of
 information on the command line is assigned to a shell variable. The
 first item on the command line is assigned to the variable \$0
 (normally, this is the command name). For example, in the above example,
-\$0 is assigned the string value \"`Schenker`.\" The variables \$1, \$2,
+\$0 is assigned the string value "`Schenker`." The variables \$1, \$2,
 \$3, etc. are assigned to each successive item of information on the
 command line. So in the above example, \$1 is assigned the string value
-\"`opus118`.\"
+"`opus118`."
 
 These shell variables can be accessed within the shell script itself. We
 need to revise the script so that each occurrence of the input file is
@@ -132,14 +132,14 @@ If no key indicator is found by **grep**, then the variable KEY will be
 empty. We can test for this condition using the shell **if** statement.
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
-> echo \"Sorry, this input file has no key.\"\
+> echo "Sorry, this input file has no key."\
 > exit
 fi
 
 Notice that we use the dollars sign prior to the variable to mean *the
 contents of variable KEY*. The double quotation marks allow a string
 comparison. Our test is whether the variable \$KEY is equivalent to the
-empty or null string \"\". If the test is true, then the commands
+empty or null string "". If the test is true, then the commands
 following the `then` statement are executed. By convention, these
 commands are indented for clarity. In the above case, two commands are
 executed if the \$KEY variable is empty. The **echo** command causes the
@@ -152,7 +152,7 @@ execute the rest of our **Schenker** script. The complete script would
 be as follows:
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
-> echo \"Sorry, this input file has no key.\" exit
+> echo "Sorry, this input file has no key." exit
 else
 > `extract -i '**Ursatz' $1 | humsed '/X/d' \ `
 > > \| context -o Y -b Z \> Ursatz
@@ -270,7 +270,7 @@ techniques.
 (1) Parts Out Of Range
 ----------------------
 
-#### RULE: \"Avoid parts that are out of range.\"
+#### RULE: "Avoid parts that are out of range."
 
 The Humdrum **census** command provides a summary of various elementary
 features of any Humdrum input. With the **-k** option, **census**
@@ -287,7 +287,7 @@ each part before processing it with **census.**
 `census -k soprano.part`
 
 On UNIX, a set of commands that sequentially process a given input can
-be joined together as a \"pipeline\". A pipeline feeds the output of one
+be joined together as a "pipeline". A pipeline feeds the output of one
 process to the input of another process. This means that we can simplify
 the above sequence of commands into a single pipeline:
 
@@ -308,7 +308,7 @@ permits compound strings, such as the use of the OR bar (\|):
 (2) Augmented/Diminished Melodic Intervals
 ------------------------------------------
 
-#### RULE: \"Avoid parts that move by augmented or diminished intervals.
+#### RULE: "Avoid parts that move by augmented or diminished intervals.
 
 Implementing this is simple. We first translate our pitch- related data
 to the melodic interval format \--
@@ -372,9 +372,9 @@ complex regular expressions:
 
 `egrep '^[^!*].*[Ad]'`
 
-The expression \`\^\[\^!\*\]\' means \"not an exclamation mark or
-asterisk at the beginning of a line.\" The expression \`.\*\[Ad\]\'
-means \"zero or more instances of any character followed by either an
+The expression \`\^\[\^!\*\]\' means "not an exclamation mark or
+asterisk at the beginning of a line." The expression \`.\*\[Ad\]\'
+means "zero or more instances of any character followed by either an
 upper-case letter \`A\' or a lower-case letter \`d\'.
 
 In other words, the complete regular expression matches any line that
@@ -399,7 +399,7 @@ intervals present.
 (3) Consecutive Fifths or Octaves
 ---------------------------------
 
-#### RULE: \"Avoid consecutive fifths and octaves between any two parts.
+#### RULE: "Avoid consecutive fifths and octaves between any two parts.
 
 Let\'s focus on identifying consecutive fifths \-- since the process is
 the same for octaves.
@@ -447,7 +447,7 @@ Second, we need to define a pattern template for the **patt** command.
 The template is a series of one or more regular expressions that are
 stored in a separate file. In this case the pattern is trivial: just two
 consecutive perfect fifth tokens. We might store the following pattern
-in the file \"template\":\
+in the file "template":\
 \
 
   ------
@@ -455,7 +455,7 @@ in the file \"template\":\
   P5
   ------
 (Note that if we were looking for consecutive \`fifths\' that need not
-necessarily be \`perfect,\' we could simply eliminate the letter \"P\"
+necessarily be \`perfect,\' we could simply eliminate the letter "P"
 in each interval given in the template.)
 
 Given the above output from the **hint** command, we could search for
@@ -483,7 +483,7 @@ perfect fifths (such as perfect twelfths, etc.).
 This additional criteria is easily handled. The **hint** command
 provides a **-c** option that causes all compound intervals to be
 represented by their non-compound equivalents. For example, major tenths
-and major seventheenths, etc. will all be represented as \"M3\", and so
+and major seventheenths, etc. will all be represented as "M3", and so
 on. Hence we would modify our pipeline:
 
 `hint -c  | patt -f template -s =`
@@ -498,8 +498,8 @@ our template file, e.g.\
   P5\|P12\|P19
   --------------
 In regular expressions the vertical bar (\|) denotes the logical \`OR\'
-operation. So the above pattern says \"a perfect fifth OR a perfect
-twelfth OR a perfect nineteenth followed by a \...\")
+operation. So the above pattern says "a perfect fifth OR a perfect
+twelfth OR a perfect nineteenth followed by a \...")
 
 Another refinement relates to the selection of voices. So far, we have
 presumed that the input consists of just two Humdrum spines containing
@@ -520,9 +520,9 @@ little shell programming, but we\'ll leave that for another time.)
 (4) Doubled Leading Tone
 ------------------------
 
-#### RULE: \"Avoid doubling the leading-tone.\"
+#### RULE: "Avoid doubling the leading-tone."
 
-Pitches can be identified as \"leading-tones\" only when we have some
+Pitches can be identified as "leading-tones" only when we have some
 idea of their key-related scale-degree. The Humdrum **deg** command
 translates pitch representations to a scale-degree representation where
 the numbers 1 to 7 represent tonic to leading-tone designations.
@@ -597,10 +597,10 @@ expression
 
 `deg  | grep -n '7.*7'`
 
-In the construction \".\*\" the period (.) means any character, and the
-asterisk means \"zero or more instances of \...\" Hence, the regular
-expression means \"the number 7 followed by zero or more instances of
-any character, followed by the number 7\". In short, this expression
+In the construction ".\*" the period (.) means any character, and the
+asterisk means "zero or more instances of \..." Hence, the regular
+expression means "the number 7 followed by zero or more instances of
+any character, followed by the number 7". In short, this expression
 will match any record in which the number 7 occurs at least twice.
 
 As in the case of our earlier search for augmented and diminished
@@ -612,7 +612,7 @@ appropriate.
 
 `deg  | egrep -n '^7.*7|^[^!*].*7.*7'`
 
-In this case, the regular expression says the following: \"find any
+In this case, the regular expression says the following: "find any
 occurrence of the number 7 at the beginning of the line followed by zero
 or more characters followed by the number 7; or match any character at
 the beginning of the line \-- other than an exclamation mark or an
@@ -706,7 +706,7 @@ pipeline is suitable for a very wide variety of pattern searches.
 (5) Avoid Unisons
 -----------------
 
-#### RULE: \"Avoid the sharing of pitches by two parts.\"
+#### RULE: "Avoid the sharing of pitches by two parts."
 
 For this rule, let\'s assume that we also want to identify unisons that
 are spelled enharmonically (such as F-sharp and G-flat).
@@ -721,7 +721,7 @@ where middle C is denoted as zero. For example, where two voices both
 play B3 at the same time, both the parts will have a
 [`**semits`](/rep/semits) value of minus one (-1).
 
-Like the **deg** command, the **semits** command provides a **\"-x**
+Like the **deg** command, the **semits** command provides a **"-x**
 option that eliminates from the output stream any characters that don\'t
 pertain to semitones. Hence the following command will eliminate
 durations or other possible numerical representations that might
@@ -771,12 +771,12 @@ for identifying unisons:
 (6) Crossed Parts
 -----------------
 
-#### RULE: \"Avoid the crossing of parts.\"
+#### RULE: "Avoid the crossing of parts."
 
 Part-crossing occurs when a nominally higher voice uses a pitch that is
 lower than a nominally lower voice.
 
-The relations \"higher\" and \"lower\" suggest the use of an arithmetic
+The relations "higher" and "lower" suggest the use of an arithmetic
 operator such as greater-than (\>) or less-than (\<). In brief, we will
 approach this question by translating the pitches to a numerical scale,
 and then use the general-purpose Unix **awk** command to test whether
@@ -806,9 +806,9 @@ Finally, we can use the Unix **awk** command to do a little arithmetic.
 Once again, in **awk**, `` `$1' `` and `` `$2' `` refer to the first and
 second input fields, and the built-in variable `` `NR' `` refers to the
 current record (line) number. The expression
-`` `{if($1>$2) print NR}' `` is a miniature program that says: \"if the
+`` `{if($1>$2) print NR}' `` is a miniature program that says: "if the
 first input field is numerically greater than the second field for the
-current line, then print the line number\":
+current line, then print the line number":
 
 `extract -i '*alto,*tenor'  | semits -x | ditto -s = | awk '{if($1>$2) print NR}'`
 
@@ -834,7 +834,7 @@ extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
 (7) Parts Separated by Greater than an Octave
 ---------------------------------------------
 
-#### RULE: \"Avoid intervals greater than an octave between the soprano and alto voices. Also avoid intervals greater than an octave between the alto and tenor voices.\"
+#### RULE: "Avoid intervals greater than an octave between the soprano and alto voices. Also avoid intervals greater than an octave between the alto and tenor voices."
 
 Finding infringements of this voice-leading rule requires just a slight
 modification to our method for identifying the crossing of parts.
@@ -853,7 +853,7 @@ other voice:
 (8) Overlapped Parts
 --------------------
 
-#### RULE: \"Avoid the overlapping of parts, where the pitch in an ostensibly lower voice moves to a pitch higher than the previous pitch in an ostensibly higher voice; or where the pitch in an ostensibly higher voice moves to a pitch lower than the previous pitch in an ostensibly lower voice.\"
+#### RULE: "Avoid the overlapping of parts, where the pitch in an ostensibly lower voice moves to a pitch higher than the previous pitch in an ostensibly higher voice; or where the pitch in an ostensibly higher voice moves to a pitch lower than the previous pitch in an ostensibly lower voice."
 
 The following passage illustrates a violation of the part overlapping
 rule:\
@@ -876,7 +876,7 @@ Rather than making a direct comparison, for the purpose of this
 tutorial, we will make a modification to our earlier part-crossing
 detector. In brief, we will extract one of the parts, shift the data
 tokens within that part, paste the two parts back together, and then
-check to determine whether the shifted part shows any \"crossed parts\"
+check to determine whether the shifted part shows any "crossed parts"
 \-- using our earlier command pipeline.
 
 The following command pipe will shift the data tokens in a spine down
@@ -902,7 +902,7 @@ single score:
 
 `assemble alto.shf soprano > tempfile`
 
-Then we test this intermediate file for instances of \"part-crossing\"
+Then we test this intermediate file for instances of "part-crossing"
 \-- using our earlier command pipeline:
 
 `semits -x tempfile | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'`
@@ -926,7 +926,7 @@ This processing needs to be applied for each pair of successive voices
 (9) Exposed Octaves
 -------------------
 
-#### RULE: \"When approaching an octave by similar motion, ensure that at least one of the parts moves by step.\"
+#### RULE: "When approaching an octave by similar motion, ensure that at least one of the parts moves by step."
 
 Violations of the exposed octaves rules must meet three conditions.
 First, the two voices must be separated by an octave (or two octaves, or
@@ -935,19 +935,19 @@ the **-c** option in order to reduce compound intervals to their
 non-compound equivalents.) Second, the voices must be moving in the same
 direction. (The `**deg` representation may be suitable here, since it
 distinguishes notes according to whether they are approached from below
-(\"\^\") or above (\"v\").) Third, both voices must be moving by leap
+("\^") or above ("v").) Third, both voices must be moving by leap
 (e.g. more than two semitones).
 
 To address this problem, let\'s plan to create five different spines.
 The first spine will encode harmonic interval size so that all compound
-equivalents to a unison are represented by the string \"P1\".
+equivalents to a unison are represented by the string "P1".
 
 The second spine will indicate whether the lower voice is ascending or
-descending (\"\^\" or \"v\"). Similarly, the third spine will indicate
+descending ("\^" or "v"). Similarly, the third spine will indicate
 whether the upper voices is ascending or descending.
 
 The fourth spine will indicate whether the melodic motion for the lower
-voice is by leap (\"leap\"), and the fifth spine will indicate whether
+voice is by leap ("leap"), and the fifth spine will indicate whether
 the melodic motion for the upper voice is by leap.
 
 Examples of violations of the exposed octaves rule will appear as one of
@@ -989,7 +989,7 @@ calculate the melodic intervals for each voice using the Humdrum
 
 Secondly, we need to change all data tokens indicating intervals greater
 than a diatonic second (3 or more semitones) into the data token
-consisting of the (arbitrary) character string \"leap\". This can be
+consisting of the (arbitrary) character string "leap". This can be
 done using the [**humsed**](/tool/humsed) stream editor.
 
 ` ...  humsed 's/.*[3-9].*/leap/' > spine4   [spine5 for the other voice]`

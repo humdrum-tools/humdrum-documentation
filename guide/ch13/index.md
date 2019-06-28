@@ -148,7 +148,7 @@ local comments, interpretations, and null data records:
 The option combination **-GLId** is very common with **rid** since only
 non-null data records are retained in the output.
 
-With the **-u** option, **rid** will remove \"unnecessary\" exclusive
+With the **-u** option, **rid** will remove "unnecessary" exclusive
 interpretations. Exclusive interpretations are deemed unnecessary if
 they don\'t change the current status of the data. In the following
 example, the second `**psaltery` interpretation is redundant. The **rid
@@ -166,7 +166,7 @@ exclusive interpretation \-- leaving a continuous data spine.
   `*-`
   --------------
 In addition, **rid** provides a **-t** option which removes
-\"duplicate\" or repeated tandem interpretations. In the above example
+"duplicate" or repeated tandem interpretations. In the above example
 there is no need to repeat the meter signature and key signature in each
 measure. The following command will concatenate each of the three
 measures together, and then eliminate the unwanted interpretations:
@@ -369,7 +369,7 @@ The new file would look like this:
   `.`
   `*-`
   -------------
-The **-t** option is used to indicate the \"time base\" \-- in this
+The **-t** option is used to indicate the "time base" \-- in this
 case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
 using the **assemble** command as before. The command:
@@ -401,7 +401,7 @@ consider a revised `file2`:
   -------------
 Before assembling the two parts, we would need to apply the **timebase**
 command to this file (using the same 8th-note time-base value).
-Assembling the two \"time-based\" files would produce the following
+Assembling the two "time-based" files would produce the following
 result:
 
   ------------- ----------
@@ -492,7 +492,7 @@ using the [**census**](/tool/census) -k command described in
 sophistication. Suppose we wanted to assemble two parts, one containing
 just eighth-notes and the other containing just quarter-note triplets.
 (The quarter-note triplets will be encoded as three notes in the time of
-a half-note, or \"6th\" notes.) We need to create an output whose
+a half-note, or "6th" notes.) We need to create an output whose
 rhythmic structure will appear as follows:\
 \
 

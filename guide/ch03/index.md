@@ -67,11 +67,11 @@ might produce the following *additional* output:
   Number of double barlines: 1
   -------------------------------
 Notice that a distinction is made between the number of notes and the
-number of noteheads. A tied note is considered to be a single \"note,\"
+number of noteheads. A tied note is considered to be a single "note,"
 although it may be notated using two or more noteheads.
 
 The output from **census** can be restricted to a particular item of
-information by \"piping\" the output to the UNIX **grep** command.
+information by "piping" the output to the UNIX **grep** command.
 
 
 Simple Searches using the *grep* Command
@@ -81,13 +81,13 @@ The UNIX **grep** command is a popular tool for searching for lines that
 match some specified pattern. Patterns may be simple strings of
 characters, or may be more complicated constructions defined using the
 UNIX *regular expression* syntax. Regular expressions will be described
-in detail in [Chapter 9.](/guide/ch09) The command name \"`grep`\" is
-an acronym for \"get regular expression.\"
+in detail in [Chapter 9.](/guide/ch09) The command name "`grep`" is
+an acronym for "get regular expression."
 
 
 Useful patterns are often literal character strings, such as keywords.
 For example, the following command identifies whether the file
-`opus28.krn` contains the word \"`Andante`\":
+`opus28.krn` contains the word "`Andante`":
 
 `grep 'Andante' opus28.krn`
 
@@ -98,20 +98,20 @@ is found, no output is given.
 Using a single command, all files in the current directory can be
 searched by substituting the asterisk (shell *wildcard*) in place of a
 filename. The following command identifies all instances where the word
-\"`Andante`\" occurs; all files in the current directory are searched:
+"`Andante`" occurs; all files in the current directory are searched:
 
 `grep 'Andante' *`
 
 Once again, every line containing the sought pattern is echoed in the
 output. If more than one pattern is found, each instance of the pattern
-will be output on a separate line. Whenever an asterisk or \"wildcard\"
+will be output on a separate line. Whenever an asterisk or "wildcard"
 is used as part of the filename, **grep** causes the *name* of each file
 to be prepended to the output for all patterns that are found:
 
 `opus28:!! Andante  opus29:!! Andante  opus46:!! Andante  opus91:!! Andante  opus98:!! Andante`
 
 By default, **grep** distinguishes upper- and lower-case characters, so
-the above command will not match strings such as \"`ANDANTE`\". However,
+the above command will not match strings such as "`ANDANTE`". However,
 the **-i** option tells **grep** to ignore the case when searching.
 E.g.,
 
@@ -237,7 +237,7 @@ alphabetical order:
 `sort titles`
 
 Rather than using an intermediate file, we can directly connect the
-**grep** and **sort** commands using a UNIX \"pipe.\" The vertical bar
+**grep** and **sort** commands using a UNIX "pipe." The vertical bar
 (`|`) creates a connection between the output of one command and the
 input of the next command. We can combine the above two commands to
 create an alphabetical listing of all titles in the current directory:
@@ -284,7 +284,7 @@ pipeline.
 
 `grep -h '!!!OTL:' * | sort | uniq`
 
-Note that our \"pipeline\" consists of three successive commands with
+Note that our "pipeline" consists of three successive commands with
 the outputs connected to the inputs using the UNIX pipe symbol (`|`).
 The **sort** command is essential in order to collect identical titles
 as successive lines before passing the list to **uniq**.

@@ -45,8 +45,8 @@ are identified in Table 10.1.\
   ----------- -----------------------------------------------------------------------------------
 *Common options for the **grep** command.*
 
-Many of the predefined Humdrum representations make use of the \"common
-system\" for representing barlines. The following command counts the
+Many of the predefined Humdrum representations make use of the "common
+system" for representing barlines. The following command counts the
 number of barlines in the file `czech37.krn`. Note that the caret anchor
 (`^`) is used to avoid inadvertent matches of the equals sign that might
 appear in Humdrum comments or interpretations.
@@ -60,7 +60,7 @@ that measure 9 is not mistaken for measure 90, 930, etc.
 
 `grep ^=9$ france12.krn`
 
-The asterisk means \"zero or more\" instances of the preceding
+The asterisk means "zero or more" instances of the preceding
 expression. For example, the following regular expression will match any
 reference record or global comment in the file `clara29`:
 
@@ -72,9 +72,9 @@ current directory:
 `grep '^!!!*' *`
 
 Notice that the two asterisks serve different functions in the above
-command. The first asterisk means \"zero or more instances\" and is part
+command. The first asterisk means "zero or more instances" and is part
 of the regular expression passed to **grep**. The second asterisk means
-\"all files in the current directory\" and is expanded by the shell. The
+"all files in the current directory" and is expanded by the shell. The
 first asterisk is \`protected\' from the shell by the single quotes.
 Otherwise, the first asterisk might be expanded by the shell to a list
 of all files in the current directory.
@@ -136,7 +136,7 @@ cornet as follows:
 
 There are many variants on the use of the `.*` expression. The following
 command identifies all files that contain a record having the word
-`Drei` followed by the word \"`Koenige`\". (Notice the use of the **-i**
+`Drei` followed by the word "`Koenige`". (Notice the use of the **-i**
 option in order to ignore the case of the letters.)
 
 `grep -li 'Drei.*Koenige' *`
@@ -198,7 +198,7 @@ identify only those titles that contain `Tod` followed by `Liebe`:
 `grep '!!!OTL.*Tod.*Liebe' *`
 
 A better solution is to pipe the output between two **grep** commands.
-Recall that the vertical bar (\`\|\') conveyes or \"pipes\" the output
+Recall that the vertical bar (\`\|\') conveyes or "pipes" the output
 from one command to the input of a subsequent command. The following
 command passes all opus-title records (`OTL`) containing the word
 `Liebe` to a second **grep**, which passes only those records also
@@ -208,7 +208,7 @@ follows the word `Liebe`:
 
 `grep '!!!OTL.*Liebe' * | grep 'Tod'`
 
-The **-v** option for **grep** causes a \"reverse\" or \"negative\"
+The **-v** option for **grep** causes a "reverse" or "negative"
 output. Instead of outputting all records that *match* the specified
 regular expression, the **-v** option causes only those records to be
 output that do *not* match the given regular expression. For example,

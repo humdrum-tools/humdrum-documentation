@@ -82,9 +82,9 @@ followed by a single tab, followed by a *reassignment string.*
   else      .
   ------ -- --------
 The above reassignment file may be interpreted as follows: if the
-numerical value is greater than 3, then output the string \"`+event`\";
+numerical value is greater than 3, then output the string "`+event`";
 if the numerical value is less than -3, then output the string
-\"`-event`\"; otherwise output a string consisting of an isolated period
+"`-event`"; otherwise output a string consisting of an isolated period
 (`.`). We can invoke an appropriate command as follows:
 
 `recode -f reassign -i '**Xheart' -s ^= changes`
@@ -94,7 +94,7 @@ containing the reassignment information. The **-i** option is also
 required, and is used to identify the exclusive interpretation for the
 data to be processed. The **-s** option tells **recode** to skip records
 matching some specified regular expression \-- in this case, to skip
-barlines. Finally, \"`changes`\" is the name of our input file.
+barlines. Finally, "`changes`" is the name of our input file.
 
 The result of applying this process to the right-most spine in the above
 example is given below:
@@ -168,10 +168,10 @@ Classifying Intervals
 The [**recode**](/tool/recode) command has innumerable
 applications. Suppose we wanted to determine how frequently ascending
 melodic leaps are followed by a descending step. Let\'s consider two
-different ways of distinguishing steps and leaps: a \"semitone\" method
-and a \"diatonic\" method. In the first method, we might define a step
+different ways of distinguishing steps and leaps: a "semitone" method
+and a "diatonic" method. In the first method, we might define a step
 interval as either one or two semitones. Our reassignment file (dubbed
-\"`reassign`\") might appear as follows:
+"`reassign`") might appear as follows:
 
   ------- -- -----------
   `>=3`      up-leap
@@ -265,15 +265,15 @@ Open and Close Position Chords
 
 Inputs to the [**recode**](/tool/recode) command can be quite
 sophisticated. Consider, for example, the task of classifying chords as
-\"open\" or \"close\" position. According to one definition, a chord is
-said to be in \"open\" position when the the interval separating the
+"open" or "close" position. According to one definition, a chord is
+said to be in "open" position when the the interval separating the
 soprano and tenor voices is an octave or greater. One music theorist has
 claimed that close position chords are more common than open position.
 How might we test this?
 
 In determining an appropriate sequence of Humdrum commands, it is often
 helpful to work backwards from our goal. We\'d like to end up with a
-spine that simply encodes the words \"open\" or \"close\" for each
+spine that simply encodes the words "open" or "close" for each
 sonority. This classification will be based on the distance separating
 the soprano and tenor voices. Our reassignment file might be as follows:
 
@@ -420,8 +420,8 @@ than the original transitions F4-G4, E5-A5, and C5-D5. The above three
 substitutions apply also to F5-G5, F5-G4, F4-G5, E4-A4, E4-A5, and
 E5-A4.
 
-Having created a file classifying all fingering transitions as \"easy,\"
-\"moderate\" or \"difficult,\" we can characterize our Quantz flute
+Having created a file classifying all fingering transitions as "easy,"
+"moderate" or "difficult," we can characterize our Quantz flute
 concertos using the following pipeline:
 
 `semits Quantz* | recode -f map -s = | context -n 2 -o = \`
@@ -471,7 +471,7 @@ something more suitable \-- `**cadences`.
 
 Many more sophisticated variants of this sort of procedure may be used.
 For example, one could first classify harmonies more broadly. In
-so-called \"functional\" harmony, for example, supertonic chords in
+so-called "functional" harmony, for example, supertonic chords in
 first inversion are normally considered to be subdominant functions. One
 could construct a whole series of re-write rules that classify harmonies
 in a variety of ways.
@@ -564,7 +564,7 @@ How often are the oboe and bassoon resting at the same time?
 `grep -c '-fagot.*-oboe' orchestra`
 
 
-Excluding *tutti* sections, do the trumpet and flute tend to \"repell\"
+Excluding *tutti* sections, do the trumpet and flute tend to "repell"
 each others\' presence?
 
 `grep '\-' orchestra | grep -c '+tromp.*-flt' orchestra`\
@@ -584,8 +584,8 @@ etc.
 
 
 Many refinements can be added to this basic approach. For example,
-instead of classifying instruments as simply being \"present\" or
-\"absent,\" we might distinguish various registers for each instrument
+instead of classifying instruments as simply being "present" or
+"absent," we might distinguish various registers for each instrument
 \-- as we did with the clarinet when describing **recode**. We could
 then determine whether Beethoven tends to link, say, activity in the
 chalemeau register of the clarinet with low register activity in the

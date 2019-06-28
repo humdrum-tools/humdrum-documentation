@@ -53,7 +53,7 @@ found in most of the world\'s languages. The table below summarizes the
   U              **u\\(de\'** (IPA symbol: \\(\*u or U or \\(\*w); as in *pull, wood, book*
   y              **ue**; as in the German *füllen*, *hübsch*, or French *rue*
   *vowel*\~      following a vowel\* indicates a vowel or diphthong pronounced with open
-                 nasal passages; as in the French \"un bon vin blanc\" (`W~ bo~ va~ blA~`)
+                 nasal passages; as in the French "un bon vin blanc" (`W~ bo~ va~ blA~`)
                  
   b              **b** (IPA symbol: b or c\\(hc\'); as in *beam, cabin, rob*
   d              **d**; as in *deed, dulcimer, adder*
@@ -69,15 +69,15 @@ found in most of the world\'s languages. The table below summarizes the
   p              **p**; as in *piano, beeper, lip*
   r              **r**; as in *reed, organ, car*
   s              **s**; as in *soprano, cymbal, source, bass*
-  S              **sh** \[\"esh\"\] (IPA symbol: \\(It\\(Im\\(Ib\'); as in *sharp, crescendo, special, percussion*
+  S              **sh** \["esh"\] (IPA symbol: \\(It\\(Im\\(Ib\'); as in *sharp, crescendo, special, percussion*
   t              **t**; as in *tempo, tie, attacca, minuet*
-  T              **th** \[\"thorn\"\] (IPA symbol: \\(\*h); as in *thin, path, ether*
-  D              **th** \[\"eth\"\] (IPA symbol: d\~) as in *then, rhythm, smooth*
+  T              **th** \["thorn"\] (IPA symbol: \\(\*h); as in *thin, path, ether*
+  D              **th** \["eth"\] (IPA symbol: d\~) as in *then, rhythm, smooth*
   v              **v**; as in *voice, vivace, live*
   w              **w**; as in *we, away*
   j              **j**; as in *yes, Johann, cue, onion*
   z              **z**; as in *zone, raise, xylophone, jazz*
-  Z              **zh** \[\"yogh\"\\(sc\]; as in *measure, vision, azure*
+  Z              **zh** \["yogh"\\(sc\]; as in *measure, vision, azure*
   *consonant*-   following a consonant (l-, n-, m-, or N-)\*\* indicates a consonant preceded
                  by a *schwa* that is pronounced as an independent syllable; as in battle,
                  mitten, eaten
@@ -132,13 +132,13 @@ Given an `**IPA` input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using **humsed**. This
 task requires some additional knowledge about using
 [**humsed**](/tool/humsed). Both **sed** and **humsed** provide
-a \"back reference\" construction that allows users to manipulate a
+a "back reference" construction that allows users to manipulate a
 matched expression without knowing the precise matched sequence of
 characters. The expression to be matched is indicated via parentheses
 preceded by back-slash characters, i.e., `\(` and `\)`. Several such
 expressions can be defined and each successive expression is internally
 labelled with an integer beginning with 1. The marked expression can
-then be \"back-referenced\" by using the integer label preceded by a
+then be "back-referenced" by using the integer label preceded by a
 back-slash. Hence, `\1` refers to the first referenced expression.
 Consider, by way of illustration, the following command:
 
@@ -288,7 +288,7 @@ distinction. The vowel \`ee\' is a high vowel whereas the vowel \`oh\'
 is a low vowel.
 
 A preponderance of high vowels is often associated with sarcasm, irony
-or humor. Taunting sounds made by children (\"nya, nya \...\") commonly
+or humor. Taunting sounds made by children ("nya, nya \...") commonly
 use high vowels mixed with nasals. Similarly, high/nasal vocal sounds
 are often used by comedians and actors to produce a \`funny\' voice.
 
@@ -363,7 +363,7 @@ The babies are bit,\
 The moon\'s in a fit\
 And the houses are built without walls.
 
--Anon. \"We\'re All in the Dumps\" From The Faber Book of Nonsense
+-Anon. "We\'re All in the Dumps" From The Faber Book of Nonsense
 Verse, Geoffrey Grigson (ed.) 1979; p.65
 
 Suppose we want to automatically identify the rhyme scheme for this (or
@@ -416,8 +416,8 @@ substitutions:
 
 `s/.*@mps$/A/  s/.*It$/B/  s/.*Uls$/C/  s/.*/./`
 
-This script will label all words ending with \"umps\" to \`A\'. Word
-ending with \"its\" will be labelled \`B\', and so on. All other words
+This script will label all words ending with "umps" to \`A\'. Word
+ending with "its" will be labelled \`B\', and so on. All other words
 will be output as null tokens. Using this script, a suitable pipeline
 for processing our original file would be as follows:
 
@@ -441,20 +441,20 @@ script adds a number of refinements.
 > \'s/.\*\\(\[\@VR&AaEiIoOWuUy\]\[\^\@VR&AaEiIoOWuUy\]\*}\$\\)/\\1/\'
 > \\\
 > \| sort \| uniq \| sed \'s/\^/s\\/.\*/; s/\$/\\/XXX\\//\' \\\
-> \| awk \'BEGIN {alphabet\[1\]=\"A\"; alphabet\[2\]=\"B\";
-> alphabet\[3\]=\"C\";\
+> \| awk \'BEGIN {alphabet\[1\]="A"; alphabet\[2\]="B";
+> alphabet\[3\]="C";\
 > > \
-> > alphabet\[4\]=\"D\"; alphabet\[5\]=\"E\"; alphabet\[6\]=\"F\";\
-> > alphabet\[7\]=\"G\"; alphabet\[8\]=\"H\"; alphabet\[9\]=\"I\";\
-> > alphabet\[10\]=\"J\"; alphabet\[11\]=\"K\"; alphabet\[12\]=\"L\";\
-> > alphabet\[13\]=\"M\"; alphabet\[14\]=\"N\"; alphabet\[15\]=\"O\";\
-> > alphabet\[16\]=\"P\"; alphabet\[17\]=\"Q\"; alphabet\[18\]=\"R\";\
-> > alphabet\[19\]=\"S\"; alphabet\[20\]=\"T\"; alphabet\[21\]=\"U\";\
-> > alphabet\[22\]=\"V\"; alphabet\[23\]=\"W\"; alphabet\[24\]=\"X\";\
-> > alphabet\[25\]=\"Y\"; alphabet\[26\]=\"Z\";
-> > alphabet\[27\]=\"ERROR\"}\
+> > alphabet\[4\]="D"; alphabet\[5\]="E"; alphabet\[6\]="F";\
+> > alphabet\[7\]="G"; alphabet\[8\]="H"; alphabet\[9\]="I";\
+> > alphabet\[10\]="J"; alphabet\[11\]="K"; alphabet\[12\]="L";\
+> > alphabet\[13\]="M"; alphabet\[14\]="N"; alphabet\[15\]="O";\
+> > alphabet\[16\]="P"; alphabet\[17\]="Q"; alphabet\[18\]="R";\
+> > alphabet\[19\]="S"; alphabet\[20\]="T"; alphabet\[21\]="U";\
+> > alphabet\[22\]="V"; alphabet\[23\]="W"; alphabet\[24\]="X";\
+> > alphabet\[25\]="Y"; alphabet\[26\]="Z";
+> > alphabet\[27\]="ERROR"}\
 > > {temp=\$0\
-> > gsub(\"XXX\",alphabet\[NR\],temp)\
+> > gsub("XXX",alphabet\[NR\],temp)\
 > > print temp\
 > > }\' \> rhyme.sed.\$\$\
 > \

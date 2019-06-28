@@ -50,7 +50,7 @@ characters as having a special meaning: the octothorpe (\#), the
 dollar-sign (\$), the semicolon (;), the ampersand (&), the verticule
 (\|), the asterisk (\*), the apostrophe (\'), the greve (\`), the
 greater-than sign (\>), the less-than sign (\<), the question-mark (?),
-the double-quote (\"), and the backslash (\\). We\'ll consider the
+the double-quote ("), and the backslash (\\). We\'ll consider the
 function of each of these characters one at a time.
 
 
@@ -108,7 +108,7 @@ command1 | command2 | command3 | command4
 Shell Wildcard (\*)
 -------------------
 
-The asterisk is interpreted by the shell as a \"filename wildcard.\"
+The asterisk is interpreted by the shell as a "filename wildcard."
 When it appears by itself, the asterisk is \`expanded\' by the shell to
 a list of all files in the current directory (in alphabetical order).
 For example, if the current directory contained just three files:
@@ -158,7 +158,7 @@ octothorpe as beginning a comment:
 grep # filename
 ```
 
-There are several ways to \"turn off\" the special meaning of a
+There are several ways to "turn off" the special meaning of a
 character. The simplest way is to precede the character by a backslash
 (\\) as in the following command:
 
@@ -189,7 +189,7 @@ grep '#' filename
 
 
 Single quotes are especially useful for binding spaces. For example, the
-following command searches for the phrase \"Lennon and McCartney\" in a
+following command searches for the phrase "Lennon and McCartney" in a
 file named `beatles`:
 
 ```bash
@@ -197,7 +197,7 @@ grep 'Lennon and McCartney' beatles
 ```
 
 If the single quotes are omitted, the command means something completely
-different. The following command searches for the string \"Lennon\" in
+different. The following command searches for the string "Lennon" in
 three files named `and`, `McCartney` and `beatles`:
 
 ```bash
@@ -245,7 +245,7 @@ Background Command (&)
 ----------------------
 
 After typing a command, the command begins executing as soon as you type
-the carriage return or \"enter\" key. When the command has finished
+the carriage return or "enter" key. When the command has finished
 executing, the shell will display a new command prompt. Sometimes a
 command can take a long time to execute so it will be awhile before the
 prompt is displayed again. Unfortunately, you must wait for the prompt
@@ -278,7 +278,7 @@ spaces). A command begins with the command name \-- such as **uniq**,
 **sort**, or [**pitch**.](/tool/pitch) A command argument is a
 special requirement of only some commands. A good example of a command
 argument is the search pattern given to the **grep** command. In the
-following command, **grep** is the command name, \"Lennon\" is the
+following command, **grep** is the command name, "Lennon" is the
 command argument and `beatles` is the input file name:
 
 ```bash
@@ -287,7 +287,7 @@ grep Lennon beatles
 
 For most commands, it is possible to process more than one input file.
 These files are simply listed at the end of the command. For example,
-the following **grep** command searches for the string \"McCartney\" in
+the following **grep** command searches for the string "McCartney" in
 the file `beatles` and in the file `wings`:
 
 ```bash
@@ -297,7 +297,7 @@ grep McCartney beatles wings
 Most commands provide *options* that modify the behavior of the command
 in some way. Command options are designated by a leading dash character.
 The specific option is usually indicated by a single alphabetic letter,
-such as the **-b** option (spoken: \"dash-B\" option). In the **uniq**
+such as the **-b** option (spoken: "dash-B" option). In the **uniq**
 command, the **-c** option causes a count to be prepended to each output
 line. In the following command, **uniq** is the command name, **-c** is
 the option, and `ghana32` is the name of the input file:
@@ -431,7 +431,7 @@ ampersand (&), the verticule (\|), the asterisk (\*), the apostrophe
 (\'), the greater-than sign (\>), the semicolon (;), and the backslash
 (\\). In a later chapter we\'ll discuss the remaining special
 characters: the dollar-sign (\$), the apostrophe (\'), the less-than
-sign (\<), the question-mark (?), and the double-quote (\"),
+sign (\<), the question-mark (?), and the double-quote ("),
 
 We have also reviewed the syntax for UNIX commands. Commands can include
 components such as the *command name*, *options*, *parameters*, *command

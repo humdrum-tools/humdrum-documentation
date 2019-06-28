@@ -111,7 +111,7 @@ option at the end of the string. Permissible options include any
 positive integer or the letter `g`. Without any option, the **sed** and
 **humsed** substitute (s) operation will replace only the *first*
 occurrence of the string in each data record. The `g` option specifies a
-\"global\" substitution, in that all occurrences on a given data record
+"global" substitution, in that all occurrences on a given data record
 are replaced. If the option consisted of the number \`3\', then only the
 third instance of the target string would be replaced on each line.
 
@@ -343,8 +343,8 @@ breath-mark (`,`) to the end of each phrase in a `**kern`-format input:
 `humsed s/}/},/g` *inputfile*
 
 Any occurrence of the ampersand (`&`) in the replacement string of a
-substitution is a standard stream-editing convention which means \"the
-matched string.\" Suppose we want to add a tenuto mark to every
+substitution is a standard stream-editing convention which means "the
+matched string." Suppose we want to add a tenuto mark to every
 quarter-note in a work. The following substitution seeks the number
 \`4\' followed by any character that is not a digit or period. This
 pattern is replaced by itself (&) followed by a tilde (\~), the
@@ -415,7 +415,7 @@ appropriate diminution values. We can execute these commands as follows:
 Writing to a File
 -----------------
 
-A useful feature of [**humsed**](/tool/humsed) is the \"write\"
+A useful feature of [**humsed**](/tool/humsed) is the "write"
 or `w` operation. This operation causes a line to be written to the end
 of a specified file. Suppose, for example, we wanted to collect all
 seventh chords into a separate file called `sevenths`. With a
@@ -483,7 +483,7 @@ Reading a File as Input
 -----------------------
 
 Another useful feature is the [**humsed**](/tool/humsed)
-\"read\" or `r` operation. Whenever a leading regular expression is
+"read" or `r` operation. Whenever a leading regular expression is
 matched, a file is read in at that point. Suppose, for example, that we
 want to annotate a file with Humdrum comments identifying the presence
 of cadential 6-4 chords. First, we might create a file \-- `comment.6-4`

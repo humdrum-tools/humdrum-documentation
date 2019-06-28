@@ -617,7 +617,7 @@ Harmonic intervals can be measured in a variety of ways. They can be
 characterized as diatonic qualities such as minor sevenths or augmented
 sixths. They can be measured in terms of semitone distance \-- or even
 in cents or hertz (frequency difference). Only the diatonic size may be
-of interest (e.g., \"a fifth\"), and compound intervals (e.g., major
+of interest (e.g., "a fifth"), and compound intervals (e.g., major
 tenth) can be expressed by their non-compound equivalents (major third).
 
 At least five types of harmonic intervals can be distinguished including

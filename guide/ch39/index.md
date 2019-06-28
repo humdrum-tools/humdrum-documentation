@@ -181,10 +181,10 @@ inaccurate or inappropriate search templates.**
 
 -   Create a test file containing different patterns, and test the
     ability of your regular expressions to catch all cases. Included
-    \"lures\" in your test \-- i.e., patterns that are close to what you
+    "lures" in your test \-- i.e., patterns that are close to what you
     want, but should be rejected.
--   Use extra caution when using \"not\" logic. For example, the
-    **grep** expression \"not-A\" (i.e. `[^A]`) will still match records
+-   Use extra caution when using "not" logic. For example, the
+    **grep** expression "not-A" (i.e. `[^A]`) will still match records
     containing the letter `A` as long as one non-A letter is present.
     The commands
 
@@ -236,7 +236,7 @@ inaccurate or inappropriate search templates.**
 -   Use the [**humver**](/tool/humver) command to determine
     which version of the Humdrum Toolkit you are using. Ensure that the
     documentation pertains to the correct version.
--   Read the \"Release Notes\" for the software you use. Known software
+-   Read the "Release Notes" for the software you use. Known software
     bugs are often reported in such notes or in the documentation.
 -   Report discovered bugs to the software\'s author. Even if the
     software is not revised, other users should be informed of the

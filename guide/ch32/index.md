@@ -34,7 +34,7 @@ data. The **perl** programming language provides even more extensive
 capabilities, but requires a somewhat greater effort to learn. For
 research-oriented programming, **perl** is the programming language of
 choice. However, for this brief introduction we will describe features
-of the **awk** programming language. Awk is a so-called \"scripted\"
+of the **awk** programming language. Awk is a so-called "scripted"
 language. It is easy to learn but nevertheless quite powerful.
 
 
@@ -53,8 +53,8 @@ or ENTER key. To stop the program, simply type control-D (on UNIX
 systems) or control-Z (on DOS systems).
 
 In the default configuration, an awk program will be executed once for
-each line of input. If no input file is specified, then \"standard
-input\" is assumed. That is, input will come from either data arriving
+each line of input. If no input file is specified, then "standard
+input" is assumed. That is, input will come from either data arriving
 through a pipeline, or data typed at the keyboard.
 
 
@@ -135,7 +135,7 @@ following awk program:
 The **if** condition is given in parentheses. The string given between
 the slashes (`/^=/`) is a regular expression: in this case, it
 identifies any equals sign that occurs at the beginning of an input
-line. The tilde means \"match\" and the exclamation mark means \"not\".
+line. The tilde means "match" and the exclamation mark means "not".
 Hence the program means: if the entire line (`$0`) does not match (`!~`)
 an equals sign occuring at the beginning of the line (`/^=/`), then
 print the value of the first token minus the value of the second token
@@ -161,7 +161,7 @@ comment or interpretation:
 Recall that input tokens in awk are separated by any blank space such as
 spaces or tabs. This means that a Humdrum multiple-stop will be treated
 as containing two or more tokens. We can avoid this situation by
-explicitly telling awk to assign the \"field separate\" (FS) to the tab
+explicitly telling awk to assign the "field separate" (FS) to the tab
 character. For example, the following program prints the value in the
 third spine of a Humdrum input. Without reassigning the field separator,
 the third token might be the third element of a multiple-stop in the
@@ -180,7 +180,7 @@ Within an awk program, the user can assign and manipulate variables that
 store particular values. Variables may hold numerical values or they may
 hold character strings. In the following examples, the value 178 is
 assigned to the variable \``A`\'; the value 2.2 is assigned to the
-variable \``number`\'; and the character string \"`Dear Gail`\" is
+variable \``number`\'; and the character string "`Dear Gail`" is
 assigned to the variable \``salutation`\':
 
 `A=178  number = 2.2  salutation = "Dear Gail"`
@@ -196,7 +196,7 @@ Manipulating Character Strings
 
 Variables holding character strings can be concatenated together. In the
 following example, after the first three assignments, the variable
-`saluation` will contain the character string \"`Dear Craig`\":
+`saluation` will contain the character string "`Dear Craig`":
 
 `opening = "Dear"  space = " "  name = "Craig"  salutation = opening space name`
 
@@ -223,9 +223,9 @@ equal sign:
 > if (\$0 !\~/\^=/) {print \$0}\
 > else {
 > > barline = \$1\
-> > gsub(\"\[\^0-9\]\",\"\",barline)\
+> > gsub("\[\^0-9\]","",barline)\
 > > barline = barline + 1\
-> > print \"=\" barline\
+> > print "=" barline\
 > > }
 > }\'
 
@@ -315,9 +315,9 @@ similarly properly terminated. The revised program is as follows:
 `awk '{`
 > \# A program to count occurrences of the leading-tone.\
 > count = 0\
-> if (\$0 \~/\^\*\*/) {print \"\*\*leading-tones\"; next}\
-> if (\$0 \~/\^\*-/) {print \"\*-\"; next}\
-> if (\$0 \~/\^\*\[\^\*\]/) {print \"\*\"; next}\
+> if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}\
+> if (\$0 \~/\^\*-/) {print "\*-"; next}\
+> if (\$0 \~/\^\*\[\^\*\]/) {print "\*"; next}\
 > if (\$0 \~/\^!!/) {print \$0; next}\
 > if (\$0 \~/\^=/) {print \$1; next}\
 > {\

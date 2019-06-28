@@ -67,8 +67,8 @@ the following expansion list:
 ` *>[verse1,refrain,verse2,refrain]`
 
 This list indicates that the abbreviated file contains (at least) three
-sections, labelled \"`verse1`,\" \"`verse2`\" and \"`refrain`.\" When
-the file is expanded, the \"`refrain`\" section should be repeated
+sections, labelled "`verse1`," "`verse2`" and "`refrain`." When
+the file is expanded, the "`refrain`" section should be repeated
 following each verse.
 
 
@@ -157,7 +157,7 @@ Consider the following command:
 
 `thru -v weird file`
 
-The corresponding \"through-composed\" output would be as follows:\
+The corresponding "through-composed" output would be as follows:\
 \
 
   ------------- -------------
@@ -195,7 +195,7 @@ analyzed the same work differently. Smith thinks there are basically two
 sections in the work, whereas Jones argues that there are essentially
 three sections. Humdrum permits alternative schemes of section labels to
 coexist in a file by allowing the user to designate section *types*. A
-section label is considered to have a \"type\" when more than one
+section label is considered to have a "type" when more than one
 greater-than sign (`>`) is present in the label. Consider the following
 example of sections defined by Smith and Jones:\
 \
@@ -217,7 +217,7 @@ Normally, the **yank** command extracts a labelled section up to the
 next occurrence of a section label. However, the **-t** option causes
 **yank** to ignore all section labels except for a specified type. We
 could extract Smith\'s \`B\' section by using the **-t** option to limit
-extraction to \"Smith\"-type section labels:
+extraction to "Smith"-type section labels:
 
 `yank -t Smith -s B`
 
@@ -235,7 +235,7 @@ This command would produce the following output:\
 Hierarchical Sections
 ---------------------
 
-For many applications, it is useful to define \"nested\" structures
+For many applications, it is useful to define "nested" structures
 where two or more sections form part of a larger section. Humdrum
 section labels allow users to distinguish hierarchical *levels*. Levels
 are indicated by the number of greater-than signs following the section
@@ -312,7 +312,7 @@ Section labels and versions allow Humdrum users to select alternative
 groups of (horizontal) records within a Humdrum file or document. In
 other circumstances it is useful to be able to select alternative
 (vertical) paths within a file. Strophic representations may be
-conceived as \"alternative concurrent paths\" through a Humdrum
+conceived as "alternative concurrent paths" through a Humdrum
 document. Examples of alternative concurrent representation paths
 might include (1) texts for different verses of a song, (2)
 alternative renditions of the same passage (such as *ossia* passages),
@@ -327,7 +327,7 @@ in the strophic passage \-- provided all strophic spines end up
 sharing the same data type just prior to being rejoined.
 The beginning of a strophic passage is signalled by the presence of a
 *strophic passage initiator* \-- a single asterisk followed by the
-keyword \"strophe\" (`*strophe`). The end of a strophic passage is
+keyword "strophe" (`*strophe`). The end of a strophic passage is
 signalled by the *strophic passage terminator* \-- a single asterisk
 followed by the upper-case letter \`S\' followed by a minus sign
 (`*S-`). Each spine within the strophic passage begins with a *strophe
@@ -337,7 +337,7 @@ labels should be used when the strophic data imply some sort of order,
 such as verses in a song. Alphanumeric labels are convenient for
 distinguishing different editions or *ossia* passages. The following
 example encodes a melodic phrase containing four numbered verses from
-\"Das Wandern\" from *Die Schoene Muellerin* by Schubert:\
+"Das Wandern" from *Die Schoene Muellerin* by Schubert:\
 \
 ``
 `!! Franz`
@@ -571,7 +571,7 @@ Reprise
 -------
 Between stophes and sections, highly non-linear musical documents
 can be constructed. We have seen how section labels can be defined,
-how lists of sections (\"expansion lists\") can be constructed and
+how lists of sections ("expansion lists") can be constructed and
 expanded to through-composed formats using the **thru** command. An
 unlabelled expansion list is the default version. Other versions
 have labelled expansion lists.

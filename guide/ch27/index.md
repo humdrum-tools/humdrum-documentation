@@ -196,7 +196,7 @@ Invoking the **text** command is straightforward:
 
 
 A simple text-related task might be looking for occurrences of a
-particular word, such as the German \"Liebe\" (love). If the lyrics are
+particular word, such as the German "Liebe" (love). If the lyrics are
 encoded in the [`**text`](/rep/text) representation,
 then a simple **grep** will suffice:
 
@@ -216,8 +216,8 @@ Given a `**silbe` input, a inventory of words can be generated using
 `extract -i '**silbe' song | text | rid -GLId | sort | uniq`
 
 Frequently, it is useful to search for a group of words rather than
-individual words. Suppose we are looking for the phrase \"white
-Pangur.\" The [**context**](/tool/context) command can be used
+individual words. Suppose we are looking for the phrase "white
+Pangur." The [**context**](/tool/context) command can be used
 to amalgamate words as multiple stops. If we are looking for a phrase
 consisting of just two words, we might use the **-n 2** option for
 **context**:
@@ -231,7 +231,7 @@ the amalgamation process carried out by **context**. In the following
 command, we have defined a regular expression with a character-class
 containing all of the puntuation marks. The output from this command
 will display all punctuated phrases (one per line) that contain the
-phrase \"white Pangur.\"
+phrase "white Pangur."
 
 `text | context -e '[.,;?!]' | grep -i 'white Pangur'`
 
@@ -500,7 +500,7 @@ command is invoked.
 > > \
 > > \| ditto \| humsed \'s/\\./0/\' \> temp3\
 > \
-> humsed \"s/.\*/\$1/\" temp1 \> temp4\
+> humsed "s/.\*/\$1/" temp1 \> temp4\
 > assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'\
 > shift;\
 \
@@ -518,7 +518,7 @@ ignore all other data. The filename, bar number, and context fields are
 separated by tabs. We can ignore the first two fields by eliminating
 everything up to the last tab in the line. Since words are separated by
 blank space, the expression `[^ ]+` will match a word not containing
-spaces. In short, the regular expression \"`^.*tab[^ ]+ [^ ]+ `\" will
+spaces. In short, the regular expression "`^.*tab[^ ]+ [^ ]+ `" will
 match everything up to the first tab, followed by two additional words.
 All we need to do is paste our keyword to the end of this expression.
 
@@ -534,16 +534,16 @@ script:
 
 Concordances can be used for a number of applications. One might use a
 concordance to help identify metaphor or image related words (such as
-\"light,\" \"darkness,\" etc.)
+"light," "darkness," etc.)
 
 
 Simile
 ------
 
 One of the most important poetic devices is the *simile* \-- where an
-analogy or metaphorical link is created between two things (\"My love is
-like a red red rose.\") In English, similes are often (though not
-always) signalled by the presence of the words \"like\" or \"as.\"
+analogy or metaphorical link is created between two things ("My love is
+like a red red rose.") In English, similes are often (though not
+always) signalled by the presence of the words "like" or "as."
 
 A simple task involves searching for \`like\' or \`as\' in the lyrics of
 some input. For each occurrence of these words, suppose that we would
@@ -562,7 +562,7 @@ carriage return. Since the carriage return is interpreted by the shell
 as the instruction to begin executing a command, we need to escape it.
 Depending on the shell, the carriage return can be escaped in various
 ways. One way is to precede the carriage return by control-V (meaning
-\"verbatim\"). Another way is to type control-M rather than a carriage
+"verbatim"). Another way is to type control-M rather than a carriage
 return. In the following command we have used the backslash to escape a
 control-M character:
 
@@ -570,14 +570,14 @@ control-M character:
 > \| egrep -4 \'\^\|(like)\|(as)\$\'
 
 Having ensured that there is no more than one word per line we can now
-search for a line contain *just* \"like\" or \"as.\" The **-4** option
+search for a line contain *just* "like" or "as." The **-4** option
 for **egrep** causes any matched lines to be output with four preceding
 and four following lines of context. In addition, an extra line is added
 consisting of two dashes (`--`) to segregate each pattern output. That
 is, for each match, ten lines of output are typically given. In order to
 generate our final output, we need to transform the linear list of words
 into a horizontal list where each line represents a single match for
-\"like\" or \"as.\"
+"like" or "as."
 
 The [**context**](/tool/context) command would enable us to do
 this. Unfortunately, however, the output from **egrep** fails to conform
@@ -612,7 +612,7 @@ Word Painting
 Word painting has a long history in music. There are innumerable
 examples where the music has somehow reflected the meaning of the vocal
 text. Suppose we wanted to determine whether words designating height
-(e.g., English \"high,\" German \"hoch,\" French \"haute/haut\") tend to
+(e.g., English "high," German "hoch," French "haute/haut") tend to
 coincide with high pitches.
 
 A simple approach would be to extract those sonorities that coincide
@@ -664,7 +664,7 @@ Musical texts often convey or portray a wide range of emotions. Some
 texts celebrate the ecstacy of love or lament the sorrow of loss. Yet
 other texts exhibit little emotional content. Suppose that we wanted to
 create a tool that would allow us to estimate the degree of emotional
-\"charge\" in the lyrics of any given vocal work. A simple approach
+"charge" in the lyrics of any given vocal work. A simple approach
 might be to look for words that are commonly associated with high
 emotional content.
 
@@ -701,7 +701,7 @@ used to eliminate punctuation marks.\
 
   -----------------------
   ``
-  s/\[.,;:\'\`\"!?\]//g
+  s/\[.,;:\'\`"!?\]//g
   s/begin/+3.8/
   s/river/+4.2/
   s/friend/+5.2/
@@ -721,7 +721,7 @@ discarded using **extract -i**.
 
 `text` *inputfile*` | extract -i '**text' ...`
 
-Then we would translate the words using our \"emotionality\" script,
+Then we would translate the words using our "emotionality" script,
 eliminate everything other than data records, and calculate the
 numerical statistics:
 
@@ -806,7 +806,7 @@ different musical genres. The contrast between *aria* and *recitative*
 provides a classic example. The aria is intended to be a poetic
 reflection of a certain emotional state or reaction whereas the
 recitative moves the action along by focusing on concrete circumstances.
-Any number of variants on our \"emotionality\" processing can be
+Any number of variants on our "emotionality" processing can be
 conceived. For example, we might create another language index related
 to the degree of abstraction/concreteness for words. Words such as
 Verona, knife and Montague are comparatively concrete, whereas words

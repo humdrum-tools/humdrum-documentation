@@ -176,7 +176,7 @@ If desired, the unison intervals between successive tied notes can be
 output via the **-t** option for **mint.**
 
 Sometimes it is useful to maintain the initial starting pitches in the
-output. The presence of these \"offset\" pitch values can prove useful
+output. The presence of these "offset" pitch values can prove useful
 in later reconstructing the original pitches from the
 [`**mint`](/rep/mint) interval data. When the **-o**
 option is invoked, **mint** outputs the initial starting pitches (placed
@@ -338,7 +338,7 @@ Using duration information is a somewhat limited technique for
 calculating distance intervals. Typically, users will want to define
 much more refined ways of identifying structural tones. More
 sophisticated methods for calculating distance intervals are discussed
-in [Chapter 35](/guide/ch35) on \"Layers.\"
+in [Chapter 35](/guide/ch35) on "Layers."
 
 Cross-voice melodic intervals can be calculated by amalgamating several
 spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
@@ -609,7 +609,7 @@ sizes can be measured in a variety of ways. They can be characterized as
 diatonic qualities such as minor sevenths or augmented sixths. They can
 be measured in terms of semitone distance \-- or even in cents or hertz
 (frequency difference). Only the diatonic size may be of interest (e.g.,
-\"a fifth\"), and compound intervals (e.g., major tenth) can be
+"a fifth"), and compound intervals (e.g., major tenth) can be
 expressed by their non-compound equivalents (major third).
 
 Melodic intervals can be described as ascending or descending, or as
@@ -627,7 +627,7 @@ of intervals. Specifically, we have illustrated how to calculate voiced
 intervals, interrupted intervals, unvoiced outer intervals and unvoiced
 inner intervals. In [Chapter 26](/guide/ch26) we will show how to
 calculate cross-voice intervals, and in [Chapter 35](/guide/ch35)
-(\"Layers\") we will consider how to calculate distance intervals.
+("Layers") we will consider how to calculate distance intervals.
 
 We have also seen how [**xdelta**](/tool/xdelta) can be used to
 measure purely numerical distances between successive values. As we will

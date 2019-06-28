@@ -74,10 +74,10 @@ measure. In the `**kern` representation, the beginning of the first
 measure is explicitly indicated. In Example 2.1, the encoding for the
 first barline (`=-`) is a functional encoding that doesn\'t correspond
 to anything in the printed score. The minus sign following the
-equals-sign indicates that the barline is \"invisible.\" The presence of
+equals-sign indicates that the barline is "invisible." The presence of
 this logical barline allows various Humdrum tools to recognize that the
 initial notes start at the beginning of the first measure, and are not
-\"pick-up\" notes prior to the first measure.
+"pick-up" notes prior to the first measure.
 
 The durations of the notes are indicated by reciprocal numbers: 1 for
 whole-note, 2 for half-note, 4 for quarter-note, etc. The *breve* or
@@ -89,24 +89,24 @@ back-slash (\\) for down-stems.
 
 Pitches are represented through a scheme of upper- and lower-case
 letters. Middle C (C4) is represented using the single lower-case letter
-\"`c`\". Successive octaves are designated by letter repetition, thus C5
-is represented by \"`cc`\", C6 by \"`ccc`\" and so on. The higher the
+"`c`". Successive octaves are designated by letter repetition, thus C5
+is represented by "`cc`", C6 by "`ccc`" and so on. The higher the
 octave, the more repeated letters.
 
-For pitches below C4, upper-case letters are used: \"`C`\" designates
-C3, \"`CC`\" designates C2, and so on. Changes of octave occur between B
-and C. Thus the B below middle C is represented as \"`B`\"; the B below
-\"`CC`\" is represented as \"`BBB`\", and so on. The lower the octave,
+For pitches below C4, upper-case letters are used: "`C`" designates
+C3, "`CC`" designates C2, and so on. Changes of octave occur between B
+and C. Thus the B below middle C is represented as "`B`"; the B below
+"`CC`" is represented as "`BBB`", and so on. The lower the octave,
 the greater the number of repeated letters.
 
 Accidentals are encoded using the octothorpe (`#`) for sharps, the minus
-sign (`-`) for flats, and the lower-case letter \"`n`\" for naturals.
+sign (`-`) for flats, and the lower-case letter "`n`" for naturals.
 Accidentals are encoded immediately following the pitch letter name.
 Double-sharps and double-flats have no special representations in
 `**kern` and are simply denoted by repetition: (`##`) and (`--`)
 respectively. Triple and quadruple accidentals are similarly encoded by
 repetition. Sharps, flats, and naturals are mutually exclusive in
-`**kern`, so tokens such as \"`cc#n`\" and \"`GG-#`\" are illegal.
+`**kern`, so tokens such as "`cc#n`" and "`GG-#`" are illegal.
 
 In Example 2.2, two musical parts are encoded. In the corresponding
 `**kern` encoding, each musical part or voice has been assigned to a
@@ -190,7 +190,7 @@ pitch. A special *transposition interpretation* is provided to indicate
 the nature of any transposing instrument \-- but the encoded pitches \--
 selves appear only at concert pitch.
 
-Finally, pitches in `**kern` are encoded as \"nominally\"
+Finally, pitches in `**kern` are encoded as "nominally"
 equally-tempered values. A special *temperament interpretation* is
 provided to indicate if the tuning system is other than equal
 temperament.
@@ -267,8 +267,8 @@ though only two pause symbols appear in the printed notation.
 
 In the third measure, the last note of the alto part has been tied into
 the fourth measure. The `**kern` representation provides no generic
-means for representing \"curved lines\" found in printed scores. Since
-`**kern` is a \"functional\" rather than an \"orthographic\"
+means for representing "curved lines" found in printed scores. Since
+`**kern` is a "functional" rather than an "orthographic"
 representation, all lines are explicitly interpreted as either *ties,
 slurs* or *phrases.*
 
@@ -443,7 +443,7 @@ Reference Records
 
 A particularly important type of global comment is the [*reference
 record.*](guide.append1.html) Reference records are formal ways of
-encoding \"library-type\" information pertaining to a Humdrum document.
+encoding "library-type" information pertaining to a Humdrum document.
 Reference records provide standardized ways of encoding bibliographic
 information \-- suitable for computer-based access.
 
@@ -451,7 +451,7 @@ Humdrum reference records are designated by three exclamation marks at
 the beginning of a line, followed by a letter code, followed by an
 optional number, followed by a colon, followed by some text. The
 following example provides a set of reference records related to the
-\"Augurs of Spring\" section from Stravinsky\'s *Rite of Spring.*
+"Augurs of Spring" section from Stravinsky\'s *Rite of Spring.*
 Example 2.6.
 
   ----------------------------------------
@@ -492,10 +492,10 @@ the work was dedicated. All three of these records (`OTL`, `OPT` and
 `ODE`) are encoded using the original language.
 
 Language designations are explicitly indicated by following a reference
-code with one or two \"at\" signs (@) followed by a three letter
+code with one or two "at" signs (@) followed by a three letter
 language code. The \``OPT@ENG`\' code is used to provide an English
 translation. In this case, the Russian title (*Vesna svyashchennaya*) is
-translated as *Rite of Spring*. The double \"at\" sign (@@) is used to
+translated as *Rite of Spring*. The double "at" sign (@@) is used to
 designate the original, primary, or preferred language.
 
 Reference codes beginning with \``P`\' pertain to publishing and imprint

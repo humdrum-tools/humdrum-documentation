@@ -16,7 +16,7 @@ The Shell (II)
 In [Chapter 8](/guide/ch08) we introduced some of the shell special
 characters. By way of review, we learned that the shell interprets the
 octothorpe (\#) as the beginning of a comment. By itself, the asterisk
-(\*) is \"expanded\" by the shell to the names of all files in the
+(\*) is "expanded" by the shell to the names of all files in the
 current directory. When linked with other characters, such as `A*` or
 `*B`, the shell expands the expression to the names of all files
 beginning with A or ending with B. The greather-than sign (\>) directs
@@ -42,7 +42,7 @@ Shell Special Characters
 
 The remaining special shell characters include the following: the
 dollars sign (\$), the greve (\`), the less-than sign (\<), the question
-mark (?), and the double quote (\"). We\'ll consider the function of
+mark (?), and the double quote ("). We\'ll consider the function of
 each of these characters in turn.
 
 
@@ -54,7 +54,7 @@ and retrieved through shell *variables*. Variables can be given all
 sorts of names, such as `value`, `Meter`, `A34x` and `BARLINE3`. In
 order to retrieve information from a variable, the variable name is
 preceded by a dollars sign. For example, the string `$VARIABLE` means
-\"the current value of the variable named `VARIABLE`. Suppose you had a
+"the current value of the variable named `VARIABLE`. Suppose you had a
 file named \$FILE in the current directory (\$FILE is a legitimate
 filename on UNIX systems). If you type:
 
@@ -78,7 +78,7 @@ example, the integer 7 can be assigned to the variable X as follows:
 
 `X=7`
 
-Or the string \"hello\" can be assigned to a variable by placing the
+Or the string "hello" can be assigned to a variable by placing the
 string in quotation marks:
 
 `X="hello"`
@@ -105,13 +105,13 @@ First we would search for any file(s) containing the word:
 
 `grep -l zebra *`
 
-We might find that the word \"zebra\" appears in the files `animals` and
+We might find that the word "zebra" appears in the files `animals` and
 `mammals`. Having determine what files to sort, now we would actually
 carry out the appropriate sort command:
 
 `sort animals mammals`
 
-If we found that word \"zebra\" occurred in 50 files, then typing the
+If we found that word "zebra" occurred in 50 files, then typing the
 appropriate sort command would require a lot of typing. Alternatively,
 we could use a shell variable to store the results of the first command,
 and then retrieve the filenames in the second command. For this, we must
@@ -144,13 +144,13 @@ composed by Josquin and are also in triple meter:
 
 `` grep -l '!!!COM: Josquin' `grep -l '!!!AMT:.*triple' *` ``
 
-Here we have imbedded one **grep** \"inside\" another. Remember that the
+Here we have imbedded one **grep** "inside" another. Remember that the
 command delineated by the greve is executed first. In this case, we
 begin by searching all of the files in the current directory for an
-`AMT` reference record containing the keyword \"`triple`.\" The **-l**
+`AMT` reference record containing the keyword "`triple`." The **-l**
 option causes the output to consist of only filenames. Then the second
 **grep** is executed. It looks for files that contain a `COM` reference
-record containing the keyword \"`Josquin`.\" But this second **grep**
+record containing the keyword "`Josquin`." But this second **grep**
 only searches those filenames passed to it by the first **grep**. In
 other words, the composer search is restricted to only those files that
 have a triple meter designation.
@@ -185,7 +185,7 @@ Consider the following three commands:
 ``
 
 echo \$A\
-echo \"\$A\"\
+echo "\$A"\
 echo \'\$A\'
 
 In the first and second commands, the shell looks for a variable named
@@ -222,7 +222,7 @@ between `$A` and `$B`.
 
 `humsed "$A,$Bs/\/XXX/g; $A,$Bs///\/g; $A,$Bs/XXX/\//g"` *inputfile*
 
-Notice that we have used double quotes (\") rather than single quotes.
+Notice that we have used double quotes (") rather than single quotes.
 The quotation marks are necessary to pass all three substitutions as an
 argument to **humsed**. Using singe quotes, however, would have caused
 `$A` and `$B` to be treated as literal strings rather than shell
@@ -255,7 +255,7 @@ want to define an alias for it. To do so, we simply execute the
 
 Having defined this alias, we can now make use of it. Any time we type
 the word `inventory`, the shell will expand it to
-\"`sort | uniq -c | sort -n`\". The above command can be shortened as
+"`sort | uniq -c | sort -n`". The above command can be shortened as
 follows:
 
 `timebase -t 8 input | ditto | hint | rid -GLI | inventory`
@@ -318,7 +318,7 @@ Reprise
 -------
 
 In this chapter we have discussed how the shell interprets the dollars
-sign (\$), the greve (\`), and the double quote (\"). When followed by
+sign (\$), the greve (\`), and the double quote ("). When followed by
 printable characters, the dollars sign is interpreted as designating the
 value of a shell variable. Any command enclosed between two greve
 characters is executed by the shell first, and the returned output of

@@ -53,7 +53,7 @@ of more than one pure tone component, so `**spect` data records
 typically encode a number of multiple stops.
 
 Example 36.1 shows a sample document containing five spectra and a
-barline. The first data record encodes an ambient spectrum (\"silence\")
+barline. The first data record encodes an ambient spectrum ("silence")
 represented by the upper-case letter \``A`\'. Following this are two
 spectra, each consisting of three spectral components: the first
 spectrum consists of a 261 Hz tone at 47 dB SPL, as well as frequencies
@@ -126,7 +126,7 @@ masked.
 The Humdrum **mask** command implements a common masking algorithm. It
 accepts as input any `**spect` data, and for each sonority modifies the
 spectrum so that masked frequencies are attenuated accordingly.
-So-called \"forward\" and \"backward\" masking are not taken into
+So-called "forward" and "backward" masking are not taken into
 account in this utlity. No options are provided, and the command is
 invoked as follows:
 
@@ -214,7 +214,7 @@ Barry Vercoe (1993). Most of these languages are inspired by the *Music
 Typically, these languages divide the task of sound synthesis into two
 representations called the *score* and the *orchestra*. The *orchestra*
 is an executable program, whereas the *score* is a set of note- or
-event-related data that is \"performed\" by the orchestra. Typically,
+event-related data that is "performed" by the orchestra. Typically,
 the *score* consists of a series of note-records where each data record
 defines several attributes for a single note. Common attributes include
 the frequency (or pitch), amplitude, duration, onset time, attack/decay

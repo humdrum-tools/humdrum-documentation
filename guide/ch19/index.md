@@ -154,7 +154,7 @@ interval.
 
 This same basic process can be used to address a variety of similar
 problems. For example, suppose we wanted to determine the most common
-word following \"gloria\" in Gregorian chant texts. We first extract the
+word following "gloria" in Gregorian chant texts. We first extract the
 [`**text`](/rep/text) spine, use **context** to
 create pairs of words, and search in the normal way:
 
@@ -162,8 +162,8 @@ create pairs of words, and search in the normal way:
 > \| grep -i \' gloria\$\' \| sort \| uniq -c \| sort -nr
 
 A slight change to the regular expression for **grep** will allow us to
-determine what word typically *follows* after the word \"gloria.\" In
-this case, we need to anchor the word \"gloria\" to the beginning of the
+determine what word typically *follows* after the word "gloria." In
+this case, we need to anchor the word "gloria" to the beginning of the
 line by using the caret (\^).
 
 `extract -i '**text' chants* | context -n 2 \ `
@@ -303,7 +303,7 @@ display tool such as **ghostview** to display the output:
 
 ![](guide.figures/guide19.2.gif)
 
-Notice that the resulting notation is \"ungrammatical\" because the
+Notice that the resulting notation is "ungrammatical" because the
 meter signature disagrees with the total duration for each measure.
 
 
@@ -388,7 +388,7 @@ When using **grep** it is common for the output to no longer conform to
 the Humdrum syntax. This is the reason why we used **sed** rather than
 [**humsed**](/tool/humsed) in the above example.) Remember that
 we can always use the [**yank**](/tool/yank) -m command to
-create \"grep-like\" output that still conforms to the Humdrum syntax.
+create "grep-like" output that still conforms to the Humdrum syntax.
 If we wanted to maintain the Humdrum syntax, an equivalent to the above
 command would be:
 
@@ -577,8 +577,8 @@ interval in each pair will indicate the continuation.
 > \| sort -rn \> inventory.post
 
 In some tasks, it may be necessary to generate more than one **context**
-output. For example, suppose we wanted to identify possible \"cross
-relations\" between two voices. A cross relation occurs when an
+output. For example, suppose we wanted to identify possible "cross
+relations" between two voices. A cross relation occurs when an
 accidental occurs in one voice but not in another voice within a brief
 period of time. One approach is to extract each voice, translate to
 scale-degree and create brief contexts of (say) 2 or 3 notes. E.g.
@@ -638,7 +638,7 @@ Using *context* with the *-p* Option
 ------------------------------------
 
 The **-p** option for [**context**](/tool/context) allows the
-output data records to be \"pushed\" forward by a specified number of
+output data records to be "pushed" forward by a specified number of
 lines. Consider the normal operation of **context** as illustrated
 below. The left-hand spine represents the input and the right-hand spine
 represents the output where the option **-n 2** has been specified.\

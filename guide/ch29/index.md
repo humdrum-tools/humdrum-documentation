@@ -38,7 +38,7 @@ first point where the two files differ. E.g.,
 `file1 file2 differ: char 4, line 10`
 
 If the two files are identical, **cmp** simply outputs nothing
-(\"silence is golden\").
+("silence is golden").
 
 Sometimes files differ in ways that may be uninteresting. For example,
 we may suspect that a single work has been attributed to two different
@@ -177,7 +177,7 @@ do\
 > > \| rid -GLId \> temp2\
 > \
 > CHANGES=\`diff -i temp1 temp2 \| wc -l\`\
-> echo \$1 \": \" \$CHANGES\
+> echo \$1 ": " \$CHANGES\
 > shift\
 \
 done\
@@ -194,12 +194,12 @@ Comparing Inventories \-- The *comm* Command
 
 The **diff** command is sensitive to the order of data. Suppose that
 texts for two songs differ only in that one song reverses the order of
-verses 3 and 4. Comparing the \"wrong\" verses will tend to exaggerate
+verses 3 and 4. Comparing the "wrong" verses will tend to exaggerate
 what are really minor differences between the two songs. In addition,
 the above approach is too sensitive to word or phrase repetition. Many
 works \-- especially polyphonic vocal works \-- use extensive
-repetitions (e.g., \"on the bank, on the bank, on the bank of the
-river\"). Short texts (such as for the *Kyrie* of the Latin mass) are
+repetitions (e.g., "on the bank, on the bank, on the bank of the
+river"). Short texts (such as for the *Kyrie* of the Latin mass) are
 especially prone to use highly distinctive repetition. How can we tell
 whether one work has pretty much the same lyrics as another?
 
@@ -342,8 +342,8 @@ as follows:
 >   1     a
 >   ----- -----------
 Comparing these two inventories will produce little in common due to the
-presence of the numbers. For example, the records \"`3    et`\" and
-\"`4    et`\" will be deemed entirely different. However, we can
+presence of the numbers. For example, the records "`3    et`" and
+"`4    et`" will be deemed entirely different. However, we can
 eliminate the numbers using an appropriate **sed** command leaving us
 with vocabulary lists that are ordered according to the frequency of
 occurrence of the words. If we apply the **comm** command to these lists

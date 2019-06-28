@@ -14,10 +14,10 @@ Systematic Musicology
 =====================
 
 Much of music research centers on the task of describing things. A
-researcher might offer a description of \"House\" style, or Wagner\'s
+researcher might offer a description of "House" style, or Wagner\'s
 orchestration, commonalities in themes by Respighi, or a Balinese
 variation technique. Good descriptions are based on the identification
-of *features*. A \"feature\" is a notable or characteristic part of
+of *features*. A "feature" is a notable or characteristic part of
 something \-- something that helps to distinguish one thing from another
 thing (or one group of things from another group of things).
 
@@ -40,8 +40,8 @@ describing something that is commonplace.
 
 In this chapter, we will describe several methods to help researchers
 determine whether a presumed feature is distinctive. In essence, we will
-ask the following question: \"How likely is it that this is a feature of
-some larger class of objects \-- like the class of all musical works?\"
+ask the following question: "How likely is it that this is a feature of
+some larger class of objects \-- like the class of all musical works?"
 If the feature is commonly found in many situations, then we are not
 justified in claiming that the feature is unique to a particular
 situation.
@@ -62,7 +62,7 @@ control sample:
 Comparison Repertory
 --------------------
 
-By a \"comparison repertory\" we mean a group of works, that we
+By a "comparison repertory" we mean a group of works, that we
 hypothesize do not show the same distinctive feature \-- although in
 other respects the works are similar.
 
@@ -241,8 +241,8 @@ progressions:
 In some cases, problems can be addressed by randomizing one part of
 voice with respect to another. For example, there is strong evidence
 that Bach uses more augmented eleventh harmonic intervals than would
-occur by chance. That is, the tritone is \"sought-out\" rather than
-\"avoided\" in his writing. Suppose we are looking at a two-part
+occur by chance. That is, the tritone is "sought-out" rather than
+"avoided" in his writing. Suppose we are looking at a two-part
 invention. We begin by counting the number of augmented elevenths in his
 actual writing:
 
@@ -299,7 +299,7 @@ at the beginning of the file and the exclusive interpretations will
 appear at the end of the file. If we use **tac** we could simply restore
 the correct syntax by hand-editing the file and moving the exclusive
 interpretations and the spine-path terminators to their proper
-locations. We now have a \"retrograde\" passage.
+locations. We now have a "retrograde" passage.
 
 Such a retrograde passage will provide a useful control repertory to
 test our B-A-C-H hypothesis. If a composer is intentionally composing

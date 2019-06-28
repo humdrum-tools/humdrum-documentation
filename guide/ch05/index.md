@@ -174,7 +174,7 @@ spines that have been labelled using Humdrum interpretations: ``
   X          .
   \*-        \*-
   ---------- -----------
-The user has defined two interpretations: \"left\" and \"right.\" The
+The user has defined two interpretations: "left" and "right." The
 intention is to represent the footfalls of a person\'s left and right
 feet. The representation simply encodes that the left and right feet
 have alternating events, such as might be produced by walking or
@@ -205,15 +205,15 @@ tandem interpretations. Consider the following example: ``
   X          .          .         X
   \*-        \*-        \*-       \*-
   ---------- ---------- --------- ---------
-In this case the categories \"left\" and \"right\" have been transformed
+In this case the categories "left" and "right" have been transformed
 to tandem interpretations. The first spine is interpreted both as
-\"left\" and as \"foot.\" The exclusive interpretation (double
+"left" and as "foot." The exclusive interpretation (double
 asterisks) takes conceptual precedence over the tandem interpretation
 (single asterisk). That is, tandem interpretations merely modify or
 supplement the exclusive interpretation. Hence, given the above
-representation, we could say that \"left\" is an attribute of \"foot\"
-or \"arm,\" but we could not say that \"foot\" is an attribute of
-\"left.\"
+representation, we could say that "left" is an attribute of "foot"
+or "arm," but we could not say that "foot" is an attribute of
+"left."
 
 Users are free to define as many different exclusive and tandem
 interpretations as they wish. For example, a user might define the
@@ -530,10 +530,10 @@ active spines.
   Null token                 The period (.) either alone on a single record or separated from
                              other characters by a tab. Appears only in data records.
   Null data record           A data record consisting only of null tokens.
-  Spine                      A column-like \"path\" of information \-- including data records,
+  Spine                      A column-like "path" of information \-- including data records,
                              local comments, and interpretations.
   -------------------------- ----------------------------------------------------------------------------
-*Humdrum Terminology* As a supplement to the above \"positive\"
+*Humdrum Terminology* As a supplement to the above "positive"
 definition of the Humdrum syntax, we can also describe various inputs
 that do *not* conform to the Humdrum syntax:
 
@@ -561,7 +561,7 @@ used to identify whether a file or other input stream conforms to the
 above Humdrum syntax. Where appropriate, the **humdrum** command issues
 error messages identifying the type and location of any syntactic
 transgressions. If no infractions are found, **humdrum** produces no
-output (i.e., in UNIX parlance \"silence is golden\"). All of the
+output (i.e., in UNIX parlance "silence is golden"). All of the
 commands in the Humdrum toolkit assume that the inputs given to them
 conform to the Humdrum syntax. Whenever you encounter a problem, you
 should always test the input to assure that it is in the proper Humdrum

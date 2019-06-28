@@ -223,9 +223,9 @@ vectors without tritone relations will have a zero in the last position
 Segmentation Using the *context* Command
 ----------------------------------------
 
-So far, we have processed only \"vertical\" sets of concurrent pitches.
+So far, we have processed only "vertical" sets of concurrent pitches.
 In set-theory analyses, there are many other important ways of
-\"segmenting\" the musical pitches into pitch-class sets. As we saw in
+"segmenting" the musical pitches into pitch-class sets. As we saw in
 [Chapter 19,](/guide/ch19) the [**context**](/tool/context)
 command provides a useful way of grouping together successive data
 tokens.
@@ -280,7 +280,7 @@ option), for inversions (**-I** option), for retrogrades (**-R** option)
 and for retrograde-inversions (**-RI** option).
 
 Inputs do not have to be 12-tone rows. The 5-tone row used in Igor
-Stravinsky\'s \"Dirge-Canons\" from *In Memoriam Dylan Thomas* is as
+Stravinsky\'s "Dirge-Canons" from *In Memoriam Dylan Thomas* is as
 follows:
 
   --------
@@ -379,7 +379,7 @@ Locating and Identifying Tone-Rows
 
 Each of the row variant files can be used as a template for the
 [**patt**](/tool/patt) command (see [Chapter 21](/guide/ch21)).
-The following \"rowfind\" script shows how the Humdrum tools can be
+The following "rowfind" script shows how the Humdrum tools can be
 coordinated to carry out an automatic search and identification of tone
 row variants for some score.
 
@@ -442,8 +442,8 @@ There are a few subtleties and problems that deserve mention about our
 **rowfind** script. In general, shorter patterns are easier to find than
 longer patterns. Since row statements tend to be unique after the first
 4 or 5 notes, it is preferable to clip the row patterns used as
-templates. Reducing the length of the templates can lead to \"false
-hits\" \-- but these tend to be infrequent and are easily recognized.
+templates. Reducing the length of the templates can lead to "false
+hits" \-- but these tend to be infrequent and are easily recognized.
 
 Applied to an entire multi-part score, **rowfind** may miss concurrent
 row statements due to interposed notes appearing in an irrelevant
@@ -485,6 +485,6 @@ pertinent serial-related manipulations that might be pursued. For
 example, much more sophisticated approaches to segmentation can be
 created by using some of the layer techniques described in the [next
 Chapter.](/guide/ch35) Similarly, the pattern searches could easily be
-expanded to look at other parameters typical of \"complete serialism\"
+expanded to look at other parameters typical of "complete serialism"
 \-- such as durations, dynamics, articulation marks, and so on.
 

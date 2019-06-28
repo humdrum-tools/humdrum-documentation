@@ -25,7 +25,7 @@ The *\*\*dynam* and *\*\*dyn* Representations
 ---------------------------------------------
 
 Musical scores commonly contain dynamic markings that include both
-written text (such as \"*subito forte*\" and \"*dimin.*\") and graphic
+written text (such as "*subito forte*" and "*dimin.*") and graphic
 representations (such as hairpin or wedge-shaped crescendo markings).
 Unfortunately, traditional dynamic markings are often confusing or
 ambiguous. Consider, for example, the following sequence of dynamic
@@ -46,7 +46,7 @@ cresc.
 What are we to make of these markings? Does the music gradually
 *crescendo* from *pianissimo* to *piano*? Does this initial *crescendo*
 occur in two distinct phases or does the repetition of the term
-\"*cresc.*\" merely indicate a continuation of a single *crescendo*?
+"*cresc.*" merely indicate a continuation of a single *crescendo*?
 Does this *crescendo* move to a dynamic level above *piano* and abruptly
 reduce to *piano*? Does the final *crescendo* begin at a *piano* level
 and get louder \-- followed by a relatively abrupt reduction to
@@ -62,7 +62,7 @@ dynamic markings. One representation
 dynamic markings as they appear in a visual rendering of a score. That
 is, `**dyn` represents the visual or orthographic information. A second
 representation ([`**dynam`](/rep/dynam)) provides a
-\"rationalized\" or canonical means for interpreting score-related
+"rationalized" or canonical means for interpreting score-related
 dynamic indications. Users will want to choose one or the other
 representation depending on the analytic task being pursued.
 
@@ -153,7 +153,7 @@ The `**dynam` encoding is interpreted as follows: the level begins
 *piano* with a crescendo beginning prior to the second chord; the
 crescendo continues until after the third chord and then the level
 abruptly drops to *pianissimo* with the onset of the fourth chord.
-Notice that dynamic markings are \"read from left-to-right\"; that is,
+Notice that dynamic markings are "read from left-to-right"; that is,
 we presume that the crescendo begins *piano* and that the *pianissimo*
 is an abrupt reduction in level, rather than presuming that the
 crescendo builds to the *pianissimo* level and so there is an abrupt
@@ -461,8 +461,8 @@ positive.
 This command assumes an input consisting of two spines \-- one
 pitch-related and a `**dB` spine. The **-s** option for **correl** is
 used to skip barlines so bar numbers aren\'t included in the
-calculation. The **-m** option for **correl** disables the \"matched
-pairs\" criterion. Normally, if a number is found in one spine but not
+calculation. The **-m** option for **correl** disables the "matched
+pairs" criterion. Normally, if a number is found in one spine but not
 the other then **correl** will complain and terminate. With the **-m**
 option, each encoded pitch need not have a corresponding dynamic level
 indication and vice versa.
@@ -478,7 +478,7 @@ A variation on this procedure might be to restrict the comparison over a
 specified pitch range. For example, one might think that higher pitches
 tend to be louder but that lower pitches are neither softer nor louder
 than usual. In order to test this view we can use the
-[**recode**](/tool/recode) command to reassign \"low\" pitches
+[**recode**](/tool/recode) command to reassign "low" pitches
 to a single value. By way of illustration, the reassignment might
 presume that below G4 (semits=7) there is no relationship between pitch
 height and dynamic level. We might recode all values lower than 7 to a
@@ -491,8 +491,8 @@ these notes from a subsequent correlation:
 Terraced Dynamics
 -----------------
 
-Suppose we want to identify whether various works exhibit \"terraced\"
-or \"graduated\" dynamics. In the case of terraced dynamics, we would
+Suppose we want to identify whether various works exhibit "terraced"
+or "graduated" dynamics. In the case of terraced dynamics, we would
 expect to see many relatively abrupt dynamic contrasts, such as
 alternations between *forte* and *piano*. There are several ways of
 approaching this question. One approach might translate
@@ -527,8 +527,8 @@ Dynamic Swells
 --------------
 
 Conceptually, crescendos and diminuendos can be paired to form one of
-two dynamic gestures. A \"swell\" gesture consists of a crescendo
-followed by a diminuendo. Conversely, a \"dip\" gesture would consist of
+two dynamic gestures. A "swell" gesture consists of a crescendo
+followed by a diminuendo. Conversely, a "dip" gesture would consist of
 a diminuendo followed by a crescendo. Musical intuition would suggest
 that swell gestures are more common than dip gestures. We could test
 this view as follows:

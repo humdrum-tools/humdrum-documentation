@@ -42,7 +42,7 @@ Pressing the space bar causes a `**MIDI` barline token to be output.
 Measure numbers are incremented automatically beginning with measure 1.
 
 Only MIDI key-press activity (including after-touch) information is
-recorded. MIDI \"system-exclusive\" instructions and other non-key-press
+recorded. MIDI "system-exclusive" instructions and other non-key-press
 data are not recorded.
 
 Each MIDI channel is represented using a separate Humdrum spine. New
@@ -106,7 +106,7 @@ note):
 `VEL 90 127 '`
 
 A third class of mapping instructions relates to the elapsed time
-between MIDI key onsets \-- \"delta time\" or DEL. Consider, for
+between MIDI key onsets \-- "delta time" or DEL. Consider, for
 example, the following configuration instructions:
 
 `DEL 48 80 8`\
@@ -117,8 +117,8 @@ example, the following configuration instructions:
 
 These instructions divide the elapsed time between key onsets into five
 ranges. When the elapsed time lies between 48 and 80 clock ticks, the
-string \"`8`\" is output. When the elapsed time lies between 81 and 112
-clock ticks, the string \"`8.`\" is output. And so on. This allows the
+string "`8`" is output. When the elapsed time lies between 81 and 112
+clock ticks, the string "`8.`" is output. And so on. This allows the
 durations to be classified as either an eighth note, a dotted eighth
 note, a quarter note, a dotted quarter note, or a half note. Once again,
 the user is free to map events to any arbitrary output string and to

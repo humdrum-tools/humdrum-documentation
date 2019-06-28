@@ -47,7 +47,7 @@ The path
 
 `/`
 
-means the \"root\" directory containing all files on a computer system.
+means the "root" directory containing all files on a computer system.
 Even single-user systems are apt to have several thousand files subsumed
 under the root directory.
 
@@ -72,7 +72,7 @@ example, specifying the path `/scores/bach/chorales` may save a great
 deal of time compared with the path `/scores`. Although we won\'t
 discuss them in this book, the **find** command provides a number of
 options that help to restrict the depth of searches or otherwise
-\"prune\" the search. When first trying **find** it\'s a good idea to
+"prune" the search. When first trying **find** it\'s a good idea to
 limit the searches to small segments of the file system.
 
 
@@ -211,7 +211,7 @@ that have been designated as having heterophonic textures:
 
 
 In the path `/scores/jazz`, we might want to identify all files that
-contain the style-designation \"bebop:\"
+contain the style-designation "bebop:"
 
 `find /scores/jazz -exec grep -il '!!!AST.*bebop' "{}" ";"`
 
@@ -232,22 +232,22 @@ There is no restriction on the complexity of the regular expression. The
 following command identifies all works composed between 1812 and 1840:
 
 `find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \`
-> \"{}\" \";\"
+> "{}" ";"
 
 Often the **find** command can be used to answer research questions more
 directly. Suppose we wanted to determine whether German drinking songs
 more likely to be in triple meter. There are over four thousand German
 folksongs encoded in Helmut Schaffrath\'s *Essen Folksong Collection*.
-These works contain genre-related tags encoded as \"`AGN`\" reference
-records. One of the genres distinguished is \"Trinklied\" (drinking
+These works contain genre-related tags encoded as "`AGN`" reference
+records. One of the genres distinguished is "Trinklied" (drinking
 song).
 
 In order to answer our question, we need to search the file system for
-all works that have the \"Trinklied\" designation, and then generate an
-inventory of meter classifications (available in \"AMT\" records).
+all works that have the "Trinklied" designation, and then generate an
+inventory of meter classifications (available in "AMT" records).
 
 `find /scores -type f -exec grep -l '!!AGN.*Trinklied' "{}" \`
-> \";\" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
+> ";" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
 
 For the entire database, the output is as follows:
 
@@ -334,7 +334,7 @@ might create a directory containing only those score-files that meet our
 selection criteria. it is often helpful to have all of the files
 accessible in one location. We might simply make copies of the files in
 a special directory. However, UNIX systems make it possible to create
-\"links\" to files in other directories without having to make duplicate
+"links" to files in other directories without having to make duplicate
 copies of already existing files.
 
 Suppose you wanted to make a directory of all scores containing vocal
@@ -359,7 +359,7 @@ at the end of each line.
 `ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor217.krn vocal  ln -s /scores/bach/chorales/midi/chor368.hmd vocal`\
 etc.
 
-(The **-s** option for **ln** is used to create a so-called \"symbolic\"
+(The **-s** option for **ln** is used to create a so-called "symbolic"
 link.)
 
 Using the **chmod** command, we can make this file executable, and then
@@ -384,7 +384,7 @@ one or more pipes in conjunction with the **grep** command.
 
 For convenience, it is often helpful to create a new directory that
 holds all of works selected for a study repertory. On UNIX systems, file
-\"links\" can be created, so that there is no need to make multiple
+"links" can be created, so that there is no need to make multiple
 copies of the same score. This means that several concurrent directory
 structures can be created without duplicating files. For example, a
 given score may be accessed in one directory structure via *composer*,

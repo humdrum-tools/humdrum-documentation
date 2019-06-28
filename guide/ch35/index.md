@@ -22,7 +22,7 @@ interval* \-- an interval between pitches which are separated by
 intervening musical materials. In this chapter we consider more
 sophisticated ways of determining distance intervals. These types of
 intervals are the foundation of various notions of hierarchies or
-\"layers\" of pitch analysis.
+"layers" of pitch analysis.
 
 This chapter also visits a related issue of implied harmony. Many
 melodic passages outline clear harmonic progressions which are also
@@ -135,7 +135,7 @@ since it acts like a horizontal version of the **uniq** command:
 > > for (i=2; i\<=NF; i++)
 > >
 > > > {\
-> > > if (array\[\$i\] == \"\") {array\[\$i\]=\$i; line = line \" \"
+> > > if (array\[\$i\] == "") {array\[\$i\]=\$i; line = line " "
 > > > \$i}\
 > > > }
 > >
@@ -149,9 +149,9 @@ Mexico \*\*pc \*Itromp \*clefG2 \*k\[\] \*M4/4 r 2 7 B 2 B 7 0 9 2 6 0 9
 6 2 6 r \*- Identifying implicit harmonic intervals can be a little more
 taxing. Let\'s begin by considering a monophonic passage that exhibits a
 pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
-\"Gigue\" from the solo \'cello *Suite No. 3* is shown in Example 35.1.\
+"Gigue" from the solo \'cello *Suite No. 3* is shown in Example 35.1.\
 \
-**Example 35.1 J.S. Bach, \"Gigue\" from *Suite No. 3* for solo \'cello
+**Example 35.1 J.S. Bach, "Gigue" from *Suite No. 3* for solo \'cello
 (excerpt).**
 
 ![](guide.figures/guide35.1.gif)

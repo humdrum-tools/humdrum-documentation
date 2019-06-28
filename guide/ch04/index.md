@@ -15,10 +15,10 @@ Basic Pitch Translations
 Many musical processes entail some sort of data translation in which one
 form of representation is transformed into another form of
 representation. There are innumerable examples of such musical
-\"translations.\" For example, we might rewrite guitar tablatures as
+"translations." For example, we might rewrite guitar tablatures as
 notated pitches. Pitches might be translated to tonic-solfa syllables.
 Scale-degrees might be analyzed as Roman-numeral harmonies. Figured bass
-notations might be \"realized\" as pitches. Successive pitches might be
+notations might be "realized" as pitches. Successive pitches might be
 characterized as melodic intervals. Intervals might be rewritten as
 semitone distances. Pitch-class sets might be transformed to
 interval-class vectors.
@@ -146,7 +146,7 @@ translated to [`**Tonh`](/rep/Tonh) via the
 French Solfège
 --------------
 
-The common French system for pitch naming uses a so-called \"fixed-do\"
+The common French system for pitch naming uses a so-called "fixed-do"
 method of diatonic pitch designations: *do, ré, mi, fa, sol, la* and
 *si* (rather than *ti*), where *do* corresponds to the English/German
 \`C\'. In the Humdrum [`**solfg`](/rep/solfg)
@@ -473,7 +473,7 @@ to C):
 
 Conversely, we can respell the diatonic pitches without changing the
 overall pitch height. For example, the following transposition will
-transpose \"up\" a diminished second (e.g. from F-sharp to G-flat):
+transpose "up" a diminished second (e.g. from F-sharp to G-flat):
 
 `trans -d +1 -c 0 input > output`
 
@@ -524,7 +524,7 @@ need to use the [**humsed**](/tool/humsed) command described in
 [Chapter 14](/guide/ch14) to modify accidentals for specific scale
 degrees.
 
-Notice the addition of a \"tandem interpretation\" to the above example
+Notice the addition of a "tandem interpretation" to the above example
 (`*Trd1`). Whenever **trans** is invoked, it adds a record indicating
 that the encoding is no longer at the original pitch. *Transposition
 tandem interpretations* are similar in syntax to the **trans** command
@@ -647,7 +647,7 @@ with the **-k** option.
 
 We can use the **uniq** command to eliminate successive repeated pitches
 \-- but only if the note tokens are identical. First we can use [**kern
--x**](/tool/kern) to translate \"from `**kern` to `**kern`\"
+-x**](/tool/kern) to translate "from `**kern` to `**kern`"
 while eliminating non-pitch-related data. Then we need to remove
 barlines so they don\'t interfere with pitches that are repeated across
 the measure. Using **uniq** will then eliminate all of the successively

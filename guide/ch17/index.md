@@ -25,7 +25,7 @@ inventories:
 -   Did Bartók\'s preferred articulation marks change over his lifetime?
 -   Is there a tendency to use the subdominant pitch less often in pop
     melodies than in (say) French chanson?
--   How frequent are light-related words such as \"lumen\" or \"lumine\"
+-   How frequent are light-related words such as "lumen" or "lumine"
     in the different monastic offices for Thomas of Canterbury?
 -   Is it true that 90 percent of the notes in a given work by Bach use
     just two durations (such as eighths and sixteenths, or eighths and
@@ -59,8 +59,8 @@ For illustration purposes, consider the case of a Humdrum file named
   `B`
   `*-`
   -----------
-It doesn\'t matter what the data represent. The \"`A`\", \"`B`\", and
-\"`C`\" might signify different articulation marks, chords, harmonic
+It doesn\'t matter what the data represent. The "`A`", "`B`", and
+"`C`" might signify different articulation marks, chords, harmonic
 intervals, or instrumental configurations. Whatever is represented, the
 process of generating an inventory is the same. Ultimately, we\'d like
 to produce a simple distribution that indicates:
@@ -121,7 +121,7 @@ The output will be as follows:\
   `B`
   `C`
   -----------
-Notice that repetitions of the data \"A\" and \"B\" have disappeared.
+Notice that repetitions of the data "A" and "B" have disappeared.
 The simple **uniq** command is useful for telling us *how many different
 things* there are in an input. For example, the above output identifies
 just five different records \-- and three different types of data
@@ -184,8 +184,8 @@ steps can be amalgamated into a single pipeline:
 `rid -GLId alpha | sort | uniq -c > inventory.alpha`
 
 Notice that the inventory will pertain to whatever data was provided in
-the original input. We\'ve been using the abstract data \"A\", \"B\",
-and \"C\". However, this data might represent any type of discrete data,
+the original input. We\'ve been using the abstract data "A", "B",
+and "C". However, this data might represent any type of discrete data,
 such as Latin text, piano fingerings, or dance steps.
 
 
@@ -196,8 +196,8 @@ In the above example, we assumed that the input consists of a single
 Humdrum spine (i.e. a single column of data). However, Humdrum files can
 have any number of spines, and each spine might represent radically
 different types of data. For example, the following file (named
-`alphabet`) contains two spines, one with \"alpha\" data, and the second
-with \"bet\" data. These data types might represent melodic intervals
+`alphabet`) contains two spines, one with "alpha" data, and the second
+with "bet" data. These data types might represent melodic intervals
 and fingering information, or dynamic markings and stem-directions, or
 whatever.\
 \
@@ -213,7 +213,7 @@ whatever.\
   `*-`        \*-
   ----------- ---------
 If we apply our above inventory-generating commands for the file
-\"alphabet,\" the result will be as follows:\
+"alphabet," the result will be as follows:\
 \
 
   ----- --- -------
@@ -223,9 +223,9 @@ If we apply our above inventory-generating commands for the file
   `1`   C   \$50
   ----- --- -------
 Notice that the inventory is based on *entire records* containing both
-\"alpha\" and \"bet\" data. This is the reason why the alpha-bet
-data-pair \"`A   $50`\" is considered different from alpha-bet data
-\"`A   $200`\". Depending on the user\'s goal, this may or may not be
+"alpha" and "bet" data. This is the reason why the alpha-bet
+data-pair "`A   $50`" is considered different from alpha-bet data
+"`A   $200`". Depending on the user\'s goal, this may or may not be
 the most appropriate output.
 
 A situation where this approach might be desired arises when we are
@@ -251,8 +251,8 @@ The resulting `inventory.bet` file will contain:\
   `1`   \$200
   `5`   \$50
   ----- -------
-\-- meaning 5 occurrences of the data \"\$50\" and 1 occurrence of
-\"\$200\".
+\-- meaning 5 occurrences of the data "\$50" and 1 occurrence of
+"\$200".
 
 Sometimes it is useful to create an aggregate inventory of the data in
 each separate spine. In such cases, we will need to use **extract**
@@ -327,7 +327,7 @@ number of data records processed. A convenient way to count records is
 via the UNIX **wc** (word count) command. The **wc** command provides
 three options. With the **-c** option, **wc** counts the number of
 characters in an input. With the **-w** option, **wc** counts the number
-of words in an input. A \"word\" is defined as any sequence of
+of words in an input. A "word" is defined as any sequence of
 characters delineated by white space, such as spaces, tabs or new lines.
 With the **-l** option, **wc** counts the nmber of lines or records in
 the input.
@@ -374,7 +374,7 @@ Transforming and Editing Inventory Data
 ---------------------------------------
 
 Notice that two data records must be identical in order for them to be
-considered \"the same\" by **sort** and **uniq**. This means that
+considered "the same" by **sort** and **uniq**. This means that
 records such as the following are considered entirely different:\
 \
 
@@ -405,7 +405,7 @@ scale degrees using the [**deg**](/tool/deg) or
 
 Instead of translating our data, we might wish to edit the data using
 the **sed** or [**humsed**](/tool/humsed) stream editors.
-Suppose we had a file (named \"notes\") consisting of pitch information,
+Suppose we had a file (named "notes") consisting of pitch information,
 and we wanted to create an inventory of the diatonic pitch-letter names.
 Our input might look like this:\
 \
@@ -503,7 +503,7 @@ inputs are monophonic.
 `deg -t chanson* | grep -c '4'`
 
 
-*How frequent are light-related words such as \"lumen\"* *or \"lumine\"
+*How frequent are light-related words such as "lumen"* *or "lumine"
 in the different monastic offices for* Thomas of Canterbury? Familiarity
 with regular expressions helps:
 

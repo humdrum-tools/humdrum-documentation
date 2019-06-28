@@ -104,7 +104,7 @@ into:
   ABC
   \*-
   ---------
-Specifically, the above \"cleaving\" would be done using the following
+Specifically, the above "cleaving" would be done using the following
 command:
 
 `cleave -i '**A,**B,**C' -o '**new'` *inputfile*
@@ -388,7 +388,7 @@ single final spine.
 
 Having created our new representation, we can continue to process this
 new data with the various Humdrum tools. For example, we could generate
-inventories that answer questions such as \"How often does a high
+inventories that answer questions such as "How often does a high
 subdominant note in a long-short-long rhythmic follow a low submediant
 in a long-long-short context?
 

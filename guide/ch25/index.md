@@ -13,11 +13,11 @@ Similarity
 ==========
 
 There is no precise way to measure similarity. However, there are
-several useful techniques that can be used to estimate the degree of
-similarity between different types of information. In this chapter we
-discuss two general tools for characterizing similarity:
-[**correl**](/tool/correl) and [**simil**](/tool/simil).
-The **correl** command can be used to measure numerical similarity
+several useful techniques that can be used to estimate the degree
+of similarity between different types of information. In this chapter
+we discuss two general tools for characterizing similarity:
+[**correl**](/tool/correl) and [**simil**](/tool/simil).  The
+**correl** command can be used to measure numerical similarity
 between two sets of numbers. The **simil** command can be used to
 measure similarity between non-numeric data.
 
@@ -30,7 +30,6 @@ when measuring musical similarity.
 
 The *correl* Command
 --------------------
-
 
 One way of measuring similarity is to compare the rise and fall of two
 sets of numbers. Suppose, for example, that we wanted to determine
@@ -52,18 +51,20 @@ one characterizing the pitch height and one characterizing the duration
 *-	*-
 ```
 
-This data does seem to exhibit an association between higher pitches and
-longer notes. The longest notes are fairly high (12 and 16 semits),
-whereas most of the shortest notes (4 and 5 semits) are lower. There are
-some exceptions, however, such as the 0.5 sec. duration for a pitch of
-14 semits.
+This data does seem to exhibit an association between higher pitches
+and longer notes. The longest notes are fairly high (12 and 16
+semits), whereas most of the shortest notes (4 and 5 semits) are
+lower. There are some exceptions, however, such as the 0.5 sec.
+duration for a pitch of 14 semits.
 
 The Humdrum [**correl**](/tool/correl) command allows us to
-characterize more precisely the degree of similarity between two sets of
-numbers. The **correl** command expects precisely two input spines; it
-is easily invoked:
+characterize more precisely the degree of similarity between two
+sets of numbers. The **correl** command expects precisely two input
+spines; it is easily invoked:
 
-`correl inputfile`
+```bash
+correl inputfile
+```
 
 For the above semitone/duration data, **correl** will output the value
 +0.515.
@@ -76,7 +77,6 @@ magnitude of the numbers may differ. For example, the following input
 exhibits a correlation of +1.0 \-- even though the two sets of numbers
 differ in overall magnitude.
 
-
 ```
 **foo	**bar
 1	100
@@ -86,28 +86,27 @@ differ in overall magnitude.
 *-	*-
 ```
 
-If we multiply these numbers by a constant, or if we substract or add a
-constant value to each number in one of the spines, they would still
-exhibit a correlation of +1.0. In summary, correlations are insensitive
-to the absolute magnitude and offsets for different sets of numbers.
+If we multiply these numbers by a constant, or if we substract or
+add a constant value to each number in one of the spines, they would
+still exhibit a correlation of +1.0. In summary, correlations are
+insensitive to the absolute magnitude and offsets for different
+sets of numbers.
 
 A correlation coefficient of -1 means that the rise and fall of
 numerical values are exactly reversed. When one set of numbers is
-rising, the other set is falling \-- and vice versa. By contrast, a
-correlation coefficient of zero means that the two sets of numbers are
-statistically independent of each other. For example, comparing two
-large sets of random numbers will result in a correlation coefficient
-near zero.
+rising, the other set is falling \-- and vice versa. By contrast,
+a correlation coefficient of zero means that the two sets of numbers
+are statistically independent of each other. For example, comparing
+two large sets of random numbers will result in a correlation
+coefficient near zero.
 
 The **correl** command attends only to numerical input data.
-Non-numerical data is simply ignored. If a data token contains a mix of
-numeric and non-numeric characters, then only the first complete
-numerical subtoken is considered. The following examples illustrate how
-**correl** interprets mixed data tokens:
+Non-numerical data is simply ignored. If a data token contains a
+mix of numeric and non-numeric characters, then only the first
+complete numerical subtoken is considered. The following examples
+illustrate how **correl** interprets mixed data tokens:
 
-**Table 25.1**
-
-*Numerical interpretations of data tokens by **correl***.
+**Table 25.1** Numerical interpretations of data tokens by **correl**.
 
 | token	    | interpretation
 |-----------|--------------
@@ -148,40 +147,40 @@ the two parts as follows:
 semits species1.krn | correl -s ^=
 ```
 
-The output will consist of a single numerical value. If the value is
-positive, then it indicates that the parts tend to move up and down
-together in pitch. That is, a positive correlation indicates a
-preponderance of parallel and similar contrapuntal motion. Conversely, a
-negative correlation would indicate a preponderance of contrary and
-oblique motion.
+The output will consist of a single numerical value. If the value
+is positive, then it indicates that the parts tend to move up and
+down together in pitch. That is, a positive correlation indicates
+a preponderance of parallel and similar contrapuntal motion.
+Conversely, a negative correlation would indicate a preponderance
+of contrary and oblique motion.
 
-Notice the use of the **-s** option in the above command. Since common
-system barlines often contain measure numbers (e.g. `=28`), they are
-interpretable as numeric data. For most inputs, the user will not want
-to have measure numbers participate in the similarity calculation. The
-**-s** option allows the user to specify a regular expression indicating
-data records to skip.
+Notice the use of the **-s** option in the above command. Since
+common system barlines often contain measure numbers (e.g. `=28`),
+they are interpretable as numeric data. For most inputs, the user
+will not want to have measure numbers participate in the similarity
+calculation. The **-s** option allows the user to specify a regular
+expression indicating data records to skip.
 
 Now suppose that we wanted to measure a similar pitch-related
 correlation for a passage of second species counterpoint. In second
-species counterpoint, there are two pitches in the upper voice for each
-pitch in the lower voice. Translating our pitch data to semitones will
-result in a failure of the matched-pairs criterion. There are two ways
-of overcoming this problem. One method is to use
-[**ditto**](/tool/ditto) to repeat the sustained semitone value
-for the slower-moving part:
+species counterpoint, there are two pitches in the upper voice for
+each pitch in the lower voice. Translating our pitch data to semitones
+will result in a failure of the matched-pairs criterion. There are
+two ways of overcoming this problem. One method is to use
+[**ditto**](/tool/ditto) to repeat the sustained semitone value for
+the slower-moving part:
 
 ```bash
 semits species2.krn | ditto -s ^= | correl -s ^=
 ```
 
-Another approach would be to omit from consideration those notes that
-are not concurrent with a note in the other voice. The **-m** option for
-**correl** disables the matched-pairs criterion. That is, if numerical
-data is missing from either one of the input spines,
+Another approach would be to omit from consideration those notes
+that are not concurrent with a note in the other voice. The **-m**
+option for **correl** disables the matched-pairs criterion. That
+is, if numerical data is missing from either one of the input spines,
 [**correl**](/tool/correl) will simply discard the entire data
-record from the correlation calculation. Using this approach, we would
-omit the **ditto** command:
+record from the correlation calculation. Using this approach, we
+would omit the **ditto** command:
 
 ```bash
 semits species2.krn | correl -m -s ^=
@@ -195,17 +194,17 @@ Using a Template with *correl*
 ------------------------------
 
 In the above examples, **correl** generates a single output value
-indicating the degree of numerical similarity between two spines. A more
-valuable use of **correl** involves scanning a spine for portions that
-are similar to a brief excerpt or template. In this mode of operation,
-the input consists of a single input spine plus a separate template that
-represents a pattern being sought.
+indicating the degree of numerical similarity between two spines.
+A more valuable use of **correl** involves scanning a spine for
+portions that are similar to a brief excerpt or template. In this
+mode of operation, the input consists of a single input spine plus
+a separate template that represents a pattern being sought.
 
 The **-f** option for [**correl**](/tool/correl) allows the user
-to specify a file that acts as a template which is then scanned across
-some input. By way of example, suppose we are looking for motivic
-instances similar to the first four notes of *Frère Jacques*. Our
-template file might look as follows:
+to specify a file that acts as a template which is then scanned
+across some input. By way of example, suppose we are looking for
+motivic instances similar to the first four notes of *Frère Jacques*.
+Our template file might look as follows:
 
 ![](guide.figures/guide25.0.gif)
 
@@ -218,37 +217,40 @@ template file might look as follows:
 *-
 ```
 
-We would like to scan an entire work looking for possible matches or
-similar passages. The following example shows a sample input and
-corresponding output \-- given the above template. The left-most spine
-is the original input represented using the French
-[`**solfg`](/rep/solfg) scheme. The middle spine is
-the input (translated to [`**semits`](/rep/semits))
-supplied to the **correl** command. The right-most spine was generated
-using the following command:
+We would like to scan an entire work looking for possible matches
+or similar passages. The following example shows a sample input and
+corresponding output \-- given the above template. The left-most
+spine is the original input represented using the French
+[`**solfg`](/rep/solfg) scheme. The middle spine is the input
+(translated to [`**semits`](/rep/semits)) supplied to the **correl**
+command. The right-most spine was generated using the following
+command:
 
-  ----------- -- ------------ -- ------------
-  `**solfg`      \*\*semits      \*\*correl
-  =1             =1              =1
-  do             0               1.000
-  re             2               -0.500
-  mi             4               -0.866
-  do             0               0.866
-  =2             =2              =2
-  do             0               1.000
-  re             2               -0.500
-  mi             4               0.000
-  do             0               0.945
-  =3             =3              =3
-  mi             4               0.982
-  fa             5               -0.327
-  so             7               -0.655
-  =4             =4              =4
-  mi             4               0.982
-  fa             5               .
-  so             7               .
-  \*-            \*-             \*-
-  ----------- -- ------------ -- ------------
+
+```
+**solfg	**semits	**correl
+=1	=1	=1
+do	0	1.000
+re	2	-0.500
+mi	4	-0.866
+do	0	0.866
+=2	=2	=2
+do	0	1.000
+re	2	-0.500
+mi	4	0.000
+do	0	0.945
+=3	=3	=3
+mi	4	0.982
+fa	5	-0.327
+so	7	-0.655
+=4	=4	=4
+mi	4	0.982
+fa	5	.
+so	7	.
+*-	*-	*-
+```
+
+
 The similarity values generated by **correl** are output as a
 [`**correl`](/rep/correl) spine. Each successive
 value in the output spine is matched with a data token in the target
@@ -264,52 +266,57 @@ flexibility when searching for melodic similarity.
 
 For more sophisticated melodic similarity searches, both pitch and
 rhythm might be considered. Two different correlations can be calculated
-\-- one for semitone contour similarity and one for durational
+-- one for semitone contour similarity and one for durational
 similarity. We can generate two `**correl` spines as follows. First
 generate `**semits` and `**dur` data so our inputs to **correl** are
 numerical.
 
-`semits inputfile > temp.sem`\
-`dur inputfile > temp.dur`
+```bash
+semits inputfile > temp.sem
+dur inputfile > temp.dur
+```
 
 Generate independent `**correl` spines for the semitone pitch and
 duration data, and assemble the two spines together:
 
-`correl -s ^= -f template.sem temp.sem > correl.sem`\
-`correl -s ^= -f template.dur temp.dur > correl.dur`\
-`assemble correl.sem correl.dur`
+```bash
+correl -s ^= -f template.sem temp.sem > correl.sem
+correl -s ^= -f template.dur temp.dur > correl.dur
+assemble correl.sem correl.dur
+```
 
 The resulting output consists of two `**correl` spines: one tracing the
 moment-by-moment pitch similarity, and the other tracing the
 moment-by-moment duration similarity. The output might appear as
-follows:\
-\
+follows:
 
-  ------------ ------------
-  `**correl`   \*\*correl
-  0.438        0.284
-  -0.118       0.226
-  0.487        -0.008
-  0.606        0.377
-  0.733        0.648
-  0.514        0.400
-  0.555        0.013
-  0.320        -0.158
-  -0.145       -0.160
-  ------------ ------------
+```
+**correl 	**correl
+0.438 	0.284
+-0.118 	0.226
+0.487 	-0.008
+0.606 	0.377
+0.733 	0.648
+0.514 	0.400
+0.555 	0.013
+0.320 	-0.158
+-0.145 	-0.160
+*-	*-
+```
+
 There are various ways of combining the pitch and duration data to
 create a composite similarity measure. For example, one might sum
 together the correlations on each line: passages that exhibit high
 pitch/duration similarity will tend to have a large positive summed
-score. Alternatively, one might set a threshold for both each of the
-pitch and duration correlation coefficients and use
+score. Alternatively, one might set a threshold for both each of
+the pitch and duration correlation coefficients and use
 [**recode**](/tool/recode) to mark promising points of high
 correlation. Values between +0.8 and +1.0 might be recoded as
-\"similar\"; values between +0.5 and +0.8 might be recoded as \"maybe\";
-all other values might be recoded as null tokens. Assembling the recoded
-[`**correl`](/rep/correl) spines, one could use
-**grep** to search for moments in the score that are suitable marked as
-\"similar\" for both pitch and duration.
+"similar"; values between +0.5 and +0.8 might be recoded as
+"maybe"; all other values might be recoded as null tokens.
+Assembling the recoded [`**correl`](/rep/correl) spines, one could
+use **grep** to search for moments in the score that are suitable
+marked as "similar" for both pitch and duration.
 
 Finally, a word of caution is in order regarding the use of the
 **correl** command. Correlation coefficients indicate only the magnitude
@@ -329,12 +336,12 @@ The problem of measuring similarity entails two questions: the
 
 First, what is the criterion of similarity? A bassoon is similar to a
 *cor anglais* in tone color, however a bassoon is more similar to a
-\'cello in pitch range. Moreover, the word \"bassoon\" is more similar
-in spelling to \"baboon\" than either \"\'cello\" or \"cor anglais.\"
-The second question is how do we characterize the \"distance\" between
+\'cello in pitch range. Moreover, the word "bassoon" is more similar
+in spelling to "baboon" than either "\'cello" or "cor anglais."
+The second question is how do we characterize the "distance" between
 objects? How *much* is the difference in pitch range between a \'cello
 and a bassoon? How *much* is the difference in spelling between
-\"bassoon\" and \"baboon\"?
+"bassoon" and "baboon"?
 
 In the [**correl**](/tool/correl) command, the criterion of
 similarity arises from the user\'s choice of input representations. If
@@ -342,29 +349,29 @@ the input represents duration, then the results pertain to durational
 similarity. If the input represents frequency, then the results pertain
 to frequency similarity. The *metric* used by **correl** is a linear
 numerical correlation. Since **correl** can deal only with numerical
-data, it is referred to as \"parametric\" method for measuring
+data, it is referred to as "parametric" method for measuring
 similarity. However, we know that non-numerical data can also be
-similar. An \"apple\" is more similar to an \"orange\" than it is to a
-\"bassoon.\"
+similar. An "apple" is more similar to an "orange" than it is to a
+"bassoon."
 
-The [**simil**](/tool/simil) command is a \"non-parametric\"
+The [**simil**](/tool/simil) command is a "non-parametric"
 tool for characterizing similarity. Like **correl,** the criterion of
 similarity depends on the user\'s choice of input representations. If
 the input represents metric position, then the results pertain to
 metric-position similarity. If the input represents phonetic text, then
 the results pertain to phonetic similarity, etc.
 
-The *metric* used by **simil** is a so-called \"edit distance\" metric.
+The *metric* used by **simil** is a so-called "edit distance" metric.
 The degree of similarity is characterized by how much modification would
 be required to transform one representation to another. By way of
-example, consider the spelling of the words \"bassoon\" and \"baboon.\"
+example, consider the spelling of the words "bassoon" and "baboon."
 Suppose we are allowed the following operations: (1) insertion of a
 character, (2) deletion of a character, and (3) substitution of a
-character. We can transform \"bassoon\" to \"baboon\" by deleting a
+character. We can transform "bassoon" to "baboon" by deleting a
 letter \`s\' and substituting the letter \`b\' for the remaining letter
-\`s\'. If each edit operation was assigned a \"penalty\" value of 1.0,
-then we would say that the edit-distance between \"bassoon\" and
-\"baboon\" is 2.0.
+\`s\'. If each edit operation was assigned a "penalty" value of 1.0,
+then we would say that the edit-distance between "bassoon" and
+"baboon" is 2.0.
 
 Before we describe **simil** in detail, let\'s examine some sample
 inputs and outputs. Two inputs are required by **simil** \-- the
@@ -690,7 +697,7 @@ disrupting the similarity measure.
 In musical circumstances, we are aware that not all notes are
 equally important. Some notes are more perceptually more noticeable.
 The effectiveness of both **correl** and **simil** can be increased
-significantly if we first \"filter\" our data \-- selecting only the
+significantly if we first "filter" our data \-- selecting only the
 most important \-- s of data for consideration.
 The **accent** command implements a sophisticated model of the
 perceptual salience or noticeability for various pitches. The

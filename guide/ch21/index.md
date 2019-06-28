@@ -140,7 +140,7 @@ The resulting output would be:
   `*-`       `*-`          
   ---------- ---------- -- --
 Notice that each instance of the found pattern is output as a
-stand-alone humdrum \"mini-encoding,\" complete with initial exclusive
+stand-alone humdrum "mini-encoding," complete with initial exclusive
 interpretations and terminating spine-path terminators.\
 \
 **Example 21.2.** J.S. Bach, *Well-Tempered Clavier*, Vol. 1, Fugue 2.
@@ -175,14 +175,14 @@ as \``mi`\' whether the mode is major or minor.
 In order to locate picardy thirds, we can look for raised mediants in
 the `**deg` representation. Specifically, we can look for a raised
 mediant pitch immediately prior to a double barline. Our template file
-(dubbed \"`picardy`\") might look as follows:
+(dubbed "`picardy`") might look as follows:
 
 `3[+]  ==`
 
 Notice that the plus sign has been placed in square brackets. The
 **patt** command accepts only *extended* regular expressions. The plus
-sign is a metacharacter that normally indicates \"one or more
-instances.\" So placing it in square brackets causes the special meaning
+sign is a metacharacter that normally indicates "one or more
+instances." So placing it in square brackets causes the special meaning
 to be escaped.
 
 In order to search for such picardy thirds, we should translate each
@@ -376,7 +376,7 @@ found. In addition, **patt** provides a third type of output using the
 When the **-t** option is invoked, **patt** will output the original
 input, plus an addition `**patt` spine. The `**patt` spine typically
 consists of mostly null tokens. However, each time the input matches the
-sought pattern, a user-defined \"tag\" will appear in the `**patt`
+sought pattern, a user-defined "tag" will appear in the `**patt`
 spine. Consider the following example.
 
 
@@ -392,11 +392,11 @@ follows:
 
 `^V([^I]|$)  (vi)|(VI);`
 
-This template means: \"look for an upper-case letter `V` appearing at
+This template means: "look for an upper-case letter `V` appearing at
 the beginning of a line that is followed by either the end of the line
 (`$`) or by a character other than the upper-case letter `I`. This
 record will be followed by a record containing either `vi` or `VI`
-followed by a semicolon.\"
+followed by a semicolon."
 
 When invoking the **patt** command, we can specify our preferred output
 tag along with the **-t** option as follows:
@@ -420,7 +420,7 @@ tag along with the **-t** option as follows:
   ---------- -----------
 In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
-from several \"passes\" using **patt** \-- one pass for each type of
+from several "passes" using **patt** \-- one pass for each type of
 cadence. For example, we could collapse several tagged outputs to
 produce a single spine that identifies all of the various types of
 cadences:
@@ -501,7 +501,7 @@ for the above Krenek passage would be:
   `*-`
   --------
 The **-m** option for [**patt**](/tool/patt) invokes a
-\"multi-record matching\" mode. In this mode, **patt** attempts to match
+"multi-record matching" mode. In this mode, **patt** attempts to match
 as many successive regular expressions in the template file as possible
 for a given input record, before continuing with the next input and
 template records. In this way, several records in the template file may
@@ -575,7 +575,7 @@ string such as `authentic cadence`, `episode`, `Motive 3b`,
 As we will see in [Chapter 26,](/guide/ch26) the contents of several
 spines can be amalgamated to form a single spine. This means that the
 results for several independent pattern searches can be assembled into a
-single \"pattern\" spine. Several pattern spines may be created that
+single "pattern" spine. Several pattern spines may be created that
 related to patterns found at different hierarchical levels, or patterns
 found using different search methods. Of course, these pattern-spines
 themselves can be used as input to further pattern searches thus
@@ -592,10 +592,10 @@ Consider, for example, the following template for the
   Coda                      ?
   ------------------- -- -- ----
 
-The template reads \"one or more instances of `Theme 1 (tonic)`,
+The template reads "one or more instances of `Theme 1 (tonic)`,
 followed by zero or more instances of `Bridge`, followed by one or more
 instances of `Theme 2 (tonic)`, followed by zero or one instance of
-`Coda`.\" This template might be used by **pattern** to identify a
+`Coda`." This template might be used by **pattern** to identify a
 Recapitulation. Together with outputs from parallel searches for
 \`Exposition\' and \`Development\' the results of a \`Recapitulation\'
 search might similarly be amalgamated and used as an input for a higher
@@ -616,7 +616,7 @@ is best for a given task. When searching, don\'t forget to consider how
 [**context**](/tool/context),
 [**humsed**](/tool/humsed), [**rid**](/tool/rid) and
 other tools might facilitate the searching task. In future chapters will
-will consider how \"similarity\" tools such as
+will consider how "similarity" tools such as
 [**correl**](/tool/correl) and [**simil**](/tool/simil)
 can contribute to more sophisticated pattern searches.
 

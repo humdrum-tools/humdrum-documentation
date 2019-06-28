@@ -30,8 +30,8 @@ material: [**extract**](/tool/extract) and
 [**yank**](/tool/yank).
 
 We know that Humdrum representations are structured like a grid with
-horizontal data (\"records\") representing concurrent information, and
-vertical data (\"spines\") representing sequentially occuring
+horizontal data ("records") representing concurrent information, and
+vertical data ("spines") representing sequentially occuring
 information. The Humdrum **extract** command can be used to isolate
 columns or spines of information. The **yank** command can be used to
 isolate rows or records. The **extract** command can be used to extract
@@ -51,9 +51,9 @@ However, **extract** can also be used to isolate dynamic markings,
 musical lyrics, or any other stream of information that has been encoded
 as a separate Humdrum spine.
 
-The **extract\"** command has several modes of operation. With the
+The **extract"** command has several modes of operation. With the
 **-f** option, the user may specify a given data column (spine) or
-\"field\" to extract. Consider the opening of Bach\'s second Brandenburg
+"field" to extract. Consider the opening of Bach\'s second Brandenburg
 Concerto shown in Example 12.1.\
 \
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
@@ -216,9 +216,9 @@ extracted. The Brandenburg Concerto shown in Example 12.1 illustrates a
 number of tandem interpretations related to instrumentation classes and
 groups. For example, the interpretation `*ICww` identifies woodwind
 instruments; `*ICbras` identifies brass instruments; `*ICstr` identifies
-string instruments. In addition, `*IGcont` identifies \"continuo\"
-instruments; `*IGripn` identifies \"ripieno\" instruments; and `*IGconc`
-identifies \"concertino\" instruments. The following three commands
+string instruments. In addition, `*IGcont` identifies "continuo"
+instruments; `*IGripn` identifies "ripieno" instruments; and `*IGconc`
+identifies "concertino" instruments. The following three commands
 extract (1) the woodwind instruments, (2) the ripieno instruments, and
 (3) any vocal parts, respectively.
 
@@ -229,7 +229,7 @@ extract (1) the woodwind instruments, (2) the ripieno instruments, and
 
 Once again, more than one interpretation can be extracted
 simultaneously. The following command will extract the instrument-class
-\"strings\" and the instrument \"oboe\" from the file `milhaud`.
+"strings" and the instrument "oboe" from the file `milhaud`.
 
 `extract -i '*ICstr,*Ioboe' milhaud`
 
@@ -422,11 +422,11 @@ will generate the following output:
   a1        a2
   \*-       \*-
   --------- -----
-In *spine-path mode,* the **extract\"** command follows a given spine
+In *spine-path mode,* the **extract"** command follows a given spine
 starting at the beginning of the file, and traces the course of that
 spine throughout the input stream. If spine-path changes are encountered
 in the input (such as spine exchanges, spine merges, or spine splits)
-the output adapts accordingly. If the \"nth\" spine is selected, the
+the output adapts accordingly. If the "nth" spine is selected, the
 output consists of the nth spine and follows the path of that spine
 throughout the input until it is terminated or the end-of-file is
 encountered. What begins as the nth column, may end up as some other
@@ -511,7 +511,7 @@ using the **-m** option. Markers are specified using regular
 expressions. The range option (**-r**) specifies which lines are to be
 output whenever a marker is encountered. For example, the following
 command outputs the first and third data records following each
-occurrence of the string \"XXX\" in the file `wieck`.
+occurrence of the string "XXX" in the file `wieck`.
 
 `yank -m XXX -r 1,3 wieck`
 
@@ -584,7 +584,7 @@ occurrence of a delimiter record.
 
 
 Where the input stream contains data prior to the first delimiter
-record, this data may be addressed as logical segment \"zero.\" For
+record, this data may be addressed as logical segment "zero." For
 example,
 
 `yank -o ^= -r 0 mahler`
@@ -617,7 +617,7 @@ For example,
 will yank all segments beginning with the label `=12` in the input file
 `goldberg`. If more than one segment carries the specified segment
 number(s), all such segments are output. That is, if there are five
-measures labelled \"measure 12\", all five measures will be output. Note
+measures labelled "measure 12", all five measures will be output. Note
 that the dollar sign anchor cannot be used in the range expression for
 the **-n** option. Note also that input tokens containing non-numeric
 characters appended to the number will have no effect on the pattern
@@ -656,7 +656,7 @@ the second instance of a section labelled `First Theme` in the file
 
 `yank -s 'First Theme' -r 2 mendelssohn`
 
-Note that with \"through-composed\" Humdrum files it is possible to have
+Note that with "through-composed" Humdrum files it is possible to have
 more than one section containing the same section-label. Such situations
 are described in [Chapter 20.](/guide/ch20)
 
@@ -713,7 +713,7 @@ encountered containing the text `"Rehearsal Marking "`.
 `yank -o { -e }  -r '1-$' webern`
 
 yanks all segments in the file `webern` beginning with a record
-containing \"{\" and ending with a record containing \"}.\" The command:
+containing "{" and ending with a record containing "}." The command:
 
 
 `yank -o { -e } -r '1-4,$-3-$' faure`

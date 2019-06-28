@@ -30,7 +30,7 @@ Humdrum allows users to pose and answer questions such as the following:
 
 -   In the music of Stravinsky, are dissonances more common in strong
     metric positions than in weak metric positions?
--   In Urdu folk songs, how common is the so-called \"melodic arch\" \--
+-   In Urdu folk songs, how common is the so-called "melodic arch" \--
     where phrases tend to ascend and then descend in pitch? <a name ="Hendrix"></a>
 -   What are the most common fret-board patterns in guitar riffs by Jimi
     Hendrix?
@@ -72,7 +72,7 @@ necessary. For example, if you are interested in Telugu notation or
 Dagomba dance, you can design your own pertinent representation scheme
 within the Humdrum syntax. Humdrum representations may be meticulously
 crafted, or they may be invented in a matter of seconds. It is common to
-generate intermediate or \"throw-away\" representations that are used
+generate intermediate or "throw-away" representations that are used
 only for a single research task.
 
 The *Humdrum Toolkit* is a set of more than 70 inter-related software
@@ -120,13 +120,13 @@ operations.
 -   **Generating inventories.** E.g., list all the types of
     embellishment (non-chordal) tones from the most common to the least
     common; what chord functions are absent from a work?
--   **Classifying.** E.g., classify all chords as \"open\" or \"closed\"
+-   **Classifying.** E.g., classify all chords as "open" or "closed"
     position; identify all secondary dominants; classify all intervals
     as either unisons, steps or leaps; classify various piano fingerings
     as either easy, moderate, difficult, or impossible.
 -   **Labelling.** E.g., mark musical sections; label themes; identify
     French, Italian and German sixth chords; mark appropriate words in a
-    vocal text as either \"passionate,\" \"apathetic,\" or \"neutral.\"
+    vocal text as either "passionate," "apathetic," or "neutral."
     Mark sonorities as falling on either strong or weak metric
     positions.
 -   **Comparison.** E.g., determine whether the Amsterdam and Manchester
@@ -274,7 +274,7 @@ It does not matter what characters appear in the table \-- numbers,
 letters, symbols, etc. (although there are some restrictions concerning
 the use of spaces and tabs). The table can have as many columns as you
 like, and can be as long as you like. Unlike spreadsheet columns,
-Humdrum \"columns\" can exhibit complicated \"paths\" through the
+Humdrum "columns" can exhibit complicated "paths" through the
 document; columns can join together, split apart, exchange positions,
 stop in mid-table, or be introduced in mid-table. Humdrum also allows
 subsidiary column headings that can clarify the state of the data.
@@ -343,7 +343,7 @@ will extract all spines containing a label indicating the tenor part(s).
 
 `extract -i '*Itenor' filename`
 
-Instruments can be labelled by \"instrument class\" and so can be
+Instruments can be labelled by "instrument class" and so can be
 extracted accordingly. The following command extracts all of the
 woodwind parts:
 
@@ -362,7 +362,7 @@ language may be isolated:
 Segments or passages of music can be extracted using the
 [**yank**](/tool/yank) command. Segments can be defined by
 sections, phrases, measures, or other any user-specified marker. For
-example, the following command extracts the section labelled \"Trio\"
+example, the following command extracts the section labelled "Trio"
 from a minuet & trio:
 
 `yank -s Trio -r 1 filename`
@@ -390,7 +390,7 @@ part:
 
 
 The following pipeline connects together four commands: it will play
-(using MIDI) the first and last measures from a section marked \"Coda\"
+(using MIDI) the first and last measures from a section marked "Coda"
 at half the notated tempo from a file named `Cui`:
 
 `yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5`

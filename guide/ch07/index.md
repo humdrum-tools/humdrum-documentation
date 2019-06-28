@@ -36,10 +36,10 @@ syntax, the data can be manipulated, modified and searched in the same
 way as other Humdrum data. For example, we can use **grep** to search
 MIDI data, etc.
 
-MIDI is a type of \"tablature\" notation. It describes a set of
+MIDI is a type of "tablature" notation. It describes a set of
 performance actions rather than specifying either the sounded result or
 the analytic notation. MIDI represents note-related events for various
-\"channels.\" MIDI events include note-on, note-off, key-velocity,
+"channels." MIDI events include note-on, note-off, key-velocity,
 after-touch, control codes, and system-exclusive codes. The original
 commercial MIDI standard is unable to represent many other musically
 pertinent signifiers such as pitch spelling (e.g., F-sharp versus
@@ -67,7 +67,7 @@ In our example, 54 clock ticks elapse before the note is turned on, and
 another 80 clock ticks elapse before the note is turned off. The initial
 pause before the first note begins is not necessary; however, many MIDI
 cards introduce a brief delay before beginning to send the first data in
-a stream. The leading pause prevents a \"rushed\" burst of initial
+a stream. The leading pause prevents a "rushed" burst of initial
 notes.
 
 The second element in a data token represents the `**MIDI` key number.
@@ -244,7 +244,7 @@ output. Whether or not global comments are echoed on the standard
 output, users can use the **perform** forward-search (`/`) or
 backward-search (`?`) commands to move directly to a particular
 commented point in the score. For example, if an input contains a global
-comment containing the character string \"`Second theme`,\" then the
+comment containing the character string "`Second theme`," then the
 user can move immediately to this position in the input by entering the
 following command:
 
@@ -335,11 +335,11 @@ The *tacet* Command
 
 In rare circumstances, ciphers (stuck notes) can occur during MIDI
 performances; for instance, an intermittently functioning MIDI cable may
-fail to convey a \"note-off\" instruction to an active synthesizer. The
-**p** command (\"panic\") turns off all active notes. Should a cipher
+fail to convey a "note-off" instruction to an active synthesizer. The
+**p** command ("panic") turns off all active notes. Should a cipher
 remain after terminating the **perform** command, the Humdrum
 [**tacet**](/tool/tacet) command can be used to send
-\"all-notoff\" commands on all MIDI channels.
+"all-notoff" commands on all MIDI channels.
 
 In [Chapter 12,](/guide/ch12) we will see how **perform** can be used
 in conjunction with other commands (such as
@@ -354,7 +354,7 @@ The *smf* Command
 -----------------
 
 Another MIDI-related tool is the [**smf**](/tool/smf) command.
-This command allows the user to create \"standard MIDI files\" from
+This command allows the user to create "standard MIDI files" from
 Humdrum `**MIDI`-format files. Standard MIDI files are industry-standard
 binary files that can be imported by a variety of MIDI applications
 software packages on many different platforms, including sequencer

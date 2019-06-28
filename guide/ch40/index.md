@@ -70,7 +70,7 @@ classes of tasks:
     [**extract**,](/tool/extract) **grep -v**, **sed** and
     [**humsed**.](/tool/humsed)
 -   ***Editing things.*** Manual editing may be done using any text
-    editor, such as **emacs** or **vi**. Automated (or \"stream\")
+    editor, such as **emacs** or **vi**. Automated (or "stream")
     editing may be done using **sed** and
     [**humsed**.](/tool/humsed)
 -   ***Editorializing.*** E.g., add an editorial footnote to a specified

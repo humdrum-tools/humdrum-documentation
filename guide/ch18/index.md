@@ -162,7 +162,7 @@ notation:
   `*-`                      `*-`
   ------------------------- ------------------------
 Depending on the task, user-defined schemes can be either carefully
-designed, or \"throw-away\" concoctions created for momentary purposes.
+designed, or "throw-away" concoctions created for momentary purposes.
 The *Humdrum Reference Manual* provides detailed advice on how to go
 about designing special-purpose Humdrum representations.
 
@@ -217,7 +217,7 @@ tools.
 A second tandem interpretation (`*RT:`) specifies the relative tuning as
 well as the number and arrangement of strings. Some instruments pair
 strings together in close physical proximity so that two strings are
-treated by the performer as a single virtual \"string.\" Such paired
+treated by the performer as a single virtual "string." Such paired
 strings are referred to as *courses.* For example, the 12-string guitar
 is constructed using 6 courses, and is played much like a 6-string
 guitar \-- except that two strings sound together, rather than a single
@@ -396,13 +396,13 @@ the letters \`t\' (one semitone) and \`T\' (two semitones). Mordents are
 indicated by the letters \`m\' (one semitone) and \`D\' (two semitones).
 Inverted mordents are indicated by the letters \`w\' (one semitone) and
 \`W\' (two semitones). Turns are indicated by the letters \`S\' and
-\`\$\' (for the inverted \"Wagnerian\" turn). Two types of vibrato are
+\`\$\' (for the inverted "Wagnerian" turn). Two types of vibrato are
 distinguished: \`v\' for transverse vibrato and \`V\' for lateral
 vibrato. Pitch bending is signified by the tilde (\~).
 
 Apart from tablature-tokens, `**fret` also permits the encoding of rests
 and barlines. Rests tokens are denoted simply by the lower-case letter
-\`r\'. Barlines are represented using the \"common system\" for barlines
+\`r\'. Barlines are represented using the "common system" for barlines
 used by `**kern` and other representations.
 
 
@@ -414,12 +414,12 @@ beginning of the tablature-token. The direction of bowing/strumming is
 encoded using the left and right angle brackets: `>` means to bow/strum
 from the strings on the left side of the representation toward the
 strings on the right side of the representation. (On most instruments
-this means strumming \"downward\" \-- from the lowest- to the
+this means strumming "downward" \-- from the lowest- to the
 highest-pitched strings.) The left angle bracket: `<` means to strum in
 the opposite direction. A rough indication of the speed of
 bowing/strumming can be represented by duplicating these signifiers. For
-example, `>>` means a slower \"downward\" bow/strum, and `<<<` means an
-especially slow \"upward\" bow/strum. The percent sign (%) is used to
+example, `>>` means a slower "downward" bow/strum, and `<<<` means an
+especially slow "upward" bow/strum. The percent sign (%) is used to
 signify the so-called *rasgueado* \-- or flamboyant Spanish strum. Once
 again these signifiers appear at the beginning of a tablature-token \--
 whenever they are encoded. Strumming all 6 open strings downward on a
@@ -471,11 +471,11 @@ Note that in the `**fret` representation, no special signifiers are
 provided for so-called \`hammer-on\' or (ascending-slur), nor for the
 so-called \`pull-off\' or (descending-slur). During the ascending-slur,
 the sound is produced simply by engaging the next fret. This can be
-represented in `**fret` by using the \"let ring\" signifier (:) in
+represented in `**fret` by using the "let ring" signifier (:) in
 conjunction with the appropriate fret notation. The descending-slur can
 be similarly notated.
 
-Four types of \"percussion effects\" can be represented using `**fret`.
+Four types of "percussion effects" can be represented using `**fret`.
 The two most common *tambours* involve tapping on the bridge
 (represented by the lower-case letter \`u\') and tapping on the strings
 near the bridge (represented by the upper-case letter \`U\'). A simple
