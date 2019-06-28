@@ -20,7 +20,6 @@ be categorized according to arithmetic ranges. We will then revisit the
 [**humsed**](/tool/humsed) command and learn how it can be used
 to classify different types of non-numeric data tokens.
 
-<a name ="The_recode_Command"></a>
 
 The *recode* Command
 --------------------
@@ -162,7 +161,6 @@ Only a single **else** condition is allowed in a reassignment file; when
 it is present, the else statement should appear as the last
 reassignment.
 
-<a name ="Classifying_Intervals"></a>
 
 Classifying Intervals
 ---------------------
@@ -217,13 +215,12 @@ The appropriate command pipe would be:
 > -s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\\
 > \| grep \'up-leap .\*\$\'
 
-<a name ="Clarinet_Registers"></a>
 
 Clarinet Registers
 ------------------
 
 Consider another use of the [**recode**](/tool/recode) command.
-<a name ="Claude_Debussy"></a> [Imagine that we wanted to arrange Claude Debussy\'s
+[Imagine that we wanted to arrange Claude Debussy\'s
 *Syrinx* for soprano clarinet instead of flute. Our principle concern as
 arranger is determining what key would be especially well suited to the
 clarinet. Tone color is particularly important for this piece. The
@@ -239,7 +236,6 @@ pitch).]{#Syrinx}
 >   ----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
 >   chalemeau                              *throat*                                    *clarion*                              *altissimo*
 >   ----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
-<a name ="Minimize_Throat_Tones"></a>
 
 Suppose we wanted to pick a key that satisfies two conditions: (1) it is
 not out of range for the clarinet, and (2) it minimizes the number of
@@ -262,12 +258,10 @@ transpose down a major sixth:
 `trans -d -5 -c -9 syrinx | semits | recode -f reassign \`
 > -i \'\*\*semits\' -s = \| rid -GLId \| sort \| uniq -c
 
-<a name ="Open_and_Close_Position_Chords"></a>
 
 Open and Close Position Chords
 ------------------------------
 
-<a name ="Closed_and_Open_Position_Chords"></a>
 
 Inputs to the [**recode**](/tool/recode) command can be quite
 sophisticated. Consider, for example, the task of classifying chords as
@@ -303,7 +297,6 @@ grep -c \'close\' tempfile
 The **grep -c** commands tell us whether open position sonorities are
 more common than close position sonorities.
 
-<a name ="Flute_Fingering_Transitions"></a>
 
 Flute Fingering Transitions
 ---------------------------
@@ -360,7 +353,6 @@ processing:
 
 `rid -GLI fingers | sort | uniq -c | sort -n`
 
-<a name ="Pre_Boehm_Fingering"></a>
 
 We could create a similar reassignment file containing fingers
 pertaining to the pre-Boehm flute. Suppose the revised reassignment file
@@ -379,7 +371,6 @@ classified as *long*, *short* and *medium* (say). Sound pressure levels
 (in decibels) might be classified as dynamic markings (*ff*, *mf*, *mp*,
 *pp*, etc.), and so on.
 
-<a name ="Classifying_with_humsed"></a>
 
 Classifying with *humsed*
 -------------------------
@@ -392,7 +383,6 @@ in [Chapter 14,](/guide/ch14) stream editors such as **sed** and
 operations. Such string substitutions can be used for non-parametric
 classifying. We can illustrate this with **humsed.**
 
-<a name ="Flute_Fingering_Difficulty"></a>
 
 Suppose we wanted to classify various flute finger-transitions as either
 *easy*, *moderate* or *difficult*. For example, F4 to G4 is an easy
@@ -440,7 +430,6 @@ concertos using the following pipeline:
 The output will be a single spine that classifies the difficulty of all
 fingering transitions.
 
-<a name ="Classifying_Cadences"></a>
 
 Classifying Cadences
 --------------------
@@ -487,7 +476,6 @@ first inversion are normally considered to be subdominant functions. One
 could construct a whole series of re-write rules that classify harmonies
 in a variety of ways.
 
-<a name ="Orchestration"></a>
 
 Orchestration
 -------------
@@ -556,7 +544,6 @@ The first sonority indicates that all of the string instruments are
 playing, that the brass are inactive, and that all of the woodwinds are
 sounding with the exception of the clarinet.
 
-<a name ="Count_Oboe_and_Bassoon"></a>
 
 A representation such as the above provides an opportunity to study
 instrumental combinations in Beethoven\'s orchestration. For example,
@@ -571,13 +558,11 @@ leading plus or minus sign:
 
 `grep -c 'fagot.*oboe' orchestra`
 
-<a name ="Oboe_and_Bassoon_Inactive"></a>
 
 How often are the oboe and bassoon resting at the same time?
 
 `grep -c '-fagot.*-oboe' orchestra`
 
-<a name ="Trumpet_Flute_Repell"></a>
 
 Excluding *tutti* sections, do the trumpet and flute tend to \"repell\"
 each others\' presence?
@@ -587,7 +572,6 @@ each others\' presence?
 `grep '\-' orchestra | grep -c '-tromp.*-flt' orchestra`\
 `grep '\-' orchestra | grep -c '-tromp.*+flt' orchestra`
 
-<a name ="Instruments_Omitted"></a>
 
 When all of the woodwinds are playing, which of the remaining
 instruments is Beethoven most likely to omit from the texture?
@@ -598,7 +582,6 @@ instruments is Beethoven most likely to omit from the texture?
 `grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-violn'`\
 etc.
 
-<a name ="Beethoven_chalemeau_link"></a>
 
 Many refinements can be added to this basic approach. For example,
 instead of classifying instruments as simply being \"present\" or
@@ -618,7 +601,6 @@ related.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

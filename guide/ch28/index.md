@@ -20,7 +20,6 @@ representation (\*\*dynam) represents a rationalized interpretation of
 the notated dynamic markings in a score. A third scheme (\*\*dB)
 represents continuous dynamic levels in decibels.
 
-<a name ="The_**dynam_and_**dyn_Representations"></a>
 
 The *\*\*dynam* and *\*\*dyn* Representations
 ---------------------------------------------
@@ -201,7 +200,6 @@ the moment of dynamic change. The
 [`**dynam`](/rep/dynam) representation makes use of
 the common system for representing barlines.
 
-<a name ="The_**dyn_Representation"></a>
 
 The *\*\*dyn* Representation
 ----------------------------
@@ -312,7 +310,6 @@ quarter-durations from the beginning of the bar; the tip of the wedge
 converges at a point 4.3 staff-line steps below the center line for
 staff 1. Changing this value allows tilted wedges to be represented.
 
-<a name ="The_**dB_Representation"></a>
 
 The *\*\*dB* Representation
 ---------------------------
@@ -332,7 +329,6 @@ The `**dB` representation provides a convenient way to represent sound
 intensity in a numerical form. A numerical representation allows us to
 carry out a variety of calculations and comparisons.
 
-<a name ="The_db_Command"></a>
 
 The *db* Command
 ----------------
@@ -413,12 +409,10 @@ incremented by 3 decibels. Where necessary, decimal values are output.
 Notice that null tokens (such as those in the middle of measure 6) are
 ignored in the calculation.
 
-<a name ="Processing_Dynamic_Information"></a>
 
 Processing Dynamic Information
 ------------------------------
 
-<a name ="Average_dynamic_level"></a>
 
 The [`**dB`](/rep/dB) representation can be used to
 assist a number of tasks related to musical dynamics. Suppose, for
@@ -428,7 +422,6 @@ two arabesques:
 `extract -i '**dynam' arabesque1 | db | rid -GLId | stats`\
 `extract -i '**dynam' arabesque2 | db | rid -GLId | stats`
 
-<a name ="Exposition_and_Development_Loudness"></a>
 
 Similarly, we might compare the overall dynamic levels between two
 sections of a single work. Perhaps we wish to know whether the
@@ -439,7 +432,6 @@ exposition is on average louder than the development section:
 `yank -s Development -r 1 symphony3 | extract -i '**dynam' \`
 > \| db \| rid -GLId \| stats
 
-<a name ="Begin_Quiet_End_Loud"></a>
 
 Does a work tend to begin quietly and end loudly, or vice versa? Here we
 might compare the first 10 measures with the final 10 measures. Notice
@@ -451,7 +443,6 @@ values participating in the calculation of the average dynamic level:
 `yank -n = -r '$-10-$' janacek | extract -i '**dynam' \`
 > \| ditto -s = \| db \| rid -GLId \| stats
 
-<a name ="Higher_Louder_Lower_Quieter"></a>
 
 Suppose we want to determine whether there is an association between
 dynamic levels and pitch height for Klezmer music. That is, does the
@@ -464,7 +455,6 @@ Pearson\'s coefficient of correlation. If there is a relationship
 between pitch height and dynamic level then the correlation should be
 positive.
 
-<a name ="Klezmer"></a>
 
 `semits klezmer | correl -s ^= -m`
 
@@ -483,7 +473,6 @@ likely to be louder in Klezmer music?
 
 `dur klezmer | correl -s ^= -m`
 
-<a name ="Louder_Above_G4"></a>
 
 A variation on this procedure might be to restrict the comparison over a
 specified pitch range. For example, one might think that higher pitches
@@ -498,7 +487,6 @@ these notes from a subsequent correlation:
 
 `extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer > temp2  assemble temp1 temp2 | grep -v 'XXX' | correl -s ^= -m`
 
-<a name ="Terraced_Dynamics"></a>
 
 Terraced Dynamics
 -----------------
@@ -534,7 +522,6 @@ alternations between *f* and *p*.
 `extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
 > \| context -n 2 \| grep -c \'p f\'
 
-<a name ="Dynamic_Swells"></a>
 
 Dynamic Swells
 --------------
@@ -551,7 +538,6 @@ this view as follows:
 `extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
 > \| context -n 2 \| grep -c \'\> \<\'
 
-<a name ="MIDI_Dynamics"></a>
 
 MIDI Dynamics
 -------------
@@ -627,7 +613,6 @@ interpretation by a \*\*dB interpretation.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

@@ -37,7 +37,6 @@ choice. However, for this brief introduction we will describe features
 of the **awk** programming language. Awk is a so-called \"scripted\"
 language. It is easy to learn but nevertheless quite powerful.
 
-<a name ="The_awk_Programming_Language"></a>
 
 The *awk* Programming Language
 ------------------------------
@@ -58,7 +57,6 @@ each line of input. If no input file is specified, then \"standard
 input\" is assumed. That is, input will come from either data arriving
 through a pipeline, or data typed at the keyboard.
 
-<a name ="Automatic_Parsing_of_Input_Data"></a>
 
 Automatic Parsing of Input Data
 -------------------------------
@@ -94,7 +92,6 @@ Given this input, the command
 
 will print the sum of `$2` and `$3`, namely 32.
 
-<a name ="Arithemtic_Operations"></a>
 
 Arithmetic Operations
 ---------------------
@@ -124,7 +121,6 @@ input tokens separated by a tab:
 
 `awk '{print $1 "\t" $3}'`
 
-<a name ="Conditional_Statements"></a>
 
 Conditional Statements
 ----------------------
@@ -176,7 +172,6 @@ second spine.
 
 Notice the use of the semicolon to separate individual instructions.
 
-<a name ="Assigning_Variables"></a>
 
 Assigning Variables
 -------------------
@@ -195,7 +190,6 @@ example:
 
 `A=178+18  number = 2.2 + A  number_squared = number ^ 2`
 
-<a name ="Manipulating_Character_Strings"></a>
 
 Manipulating Character Strings
 ------------------------------
@@ -238,7 +232,6 @@ equal sign:
 Notice that we are at liberty to add spaces, tabs, and newlines in order
 to improve the readability of our program.
 
-<a name ="The_for_Loop"></a>
 
 The *for* Loop
 --------------
@@ -341,7 +334,6 @@ statements, and pipes and file manipulations.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

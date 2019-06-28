@@ -27,12 +27,10 @@ note is. The **accent** command can be used to pre-process musical
 passages so only those notes of greatest importance are considered
 when measuring musical similarity.
 
-<a name ="The_correl_Command"></a>
 
 The *correl* Command
 --------------------
 
-<a name ="high_long_pitches"></a>
 
 One way of measuring similarity is to compare the rise and fall of two
 sets of numbers. Suppose, for example, that we wanted to determine
@@ -192,7 +190,6 @@ semits species2.krn | correl -m -s ^=
 Note that in formal statistical tests, the **-m** option should never be
 used.
 
-<a name ="Using_a_Template_with_correl"></a>
 
 Using a Template with *correl*
 ------------------------------
@@ -323,7 +320,6 @@ values given in the template. Longer templates reduce the likelihood of
 spurious positive correlations. However, longer templates can also
 reduce the likelihood of discovering points of true similarity.
 
-<a name ="The_simil_Command"></a>
 
 The *simil* Command
 -------------------
@@ -479,7 +475,6 @@ reflect the presumed harmonic similarity:\
   mediant                 .
   \*-                     \*-
   ----------- ----------- -----------
-<a name ="Defining_Edit_Penalties"></a>
 
 Defining Edit Penalties
 -----------------------
@@ -611,7 +606,6 @@ following results:\
 Notice that the similarity measure for the pattern (tonic, subdom,
 subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 
-<a name ="similar_fret_patterns"></a>
 
 The [**simil**](/tool/simil) command can be used to characterize
 innumerable types of similarity. Suppose, for example, that we wanted to
@@ -685,7 +679,6 @@ The corresponding output would be as follows:\
 >   de
 >   b
 >   -----
-<a name ="The_accent_Command"></a>
 The *accent* Command
 --------------------
 Both the [**correl**](/tool/correl) and
@@ -848,7 +841,6 @@ estimated accent values. Using this file, we can continue processing
 using either a parametric (**correl**) or non-parametric (**simil**)
 similarity method.
 ------------------------------------------------------------------------
-<a name ="Reprise"></a>
 Reprise
 -------
 In this chapter we have introduced two types of similarity tools:

@@ -29,7 +29,6 @@ become important. As we will see, in most cases, one or two commands are
 all that is necessary to assemble a repertory list of works conforming
 to complex selection criteria.
 
-<a name ="The_find_Command"></a>
 
 The *find* Command
 ------------------
@@ -76,7 +75,6 @@ options that help to restrict the depth of searches or otherwise
 \"prune\" the search. When first trying **find** it\'s a good idea to
 limit the searches to small segments of the file system.
 
-<a name ="Scores_with_PC_data"></a>
 
 When searching through the specific *PATH*, **find** is able to carry
 out a wide variety of possible tests on each file. One simple action is
@@ -137,7 +135,6 @@ extension.
 
 `find /scores -type d -name *.tmp -exec rmdir "{}" ";"`
 
-<a name ="Content_Searching"></a>
 
 Content Searching
 -----------------
@@ -146,7 +143,6 @@ For most music research applications, we are interested in identifying
 files on the basis of their contents. That is, we\'d like to know
 what\'s inside the file before we take any action.
 
-<a name ="Works_in_7.8_Meter"></a>
 
 The **grep** command is especially useful in determining whether certain
 items of information are present in a file. For example, the following
@@ -160,7 +156,6 @@ only of names of files that contain the sought regular expression. Note
 that the **-type f** option has been specified in order to ensure that
 the **grep** command is only executed for files.
 
-<a name ="Works_with_Brass"></a>
 
 The structure of the above command can be used to search for all sorts
 of pertinent musical information. For example, recall that the `*IC`
@@ -171,21 +166,18 @@ encode scores containing one or more brass instruments:
 
 `find scores -type f -exec grep -l '\*ICbras' "{}" ";"`
 
-<a name ="Works_in_C_Major"></a>
 
 The following command identifies all files in the path `/scores`, that
 contain passages in the key of C major:
 
 `find /scores -type f -exec grep -l '\*C:' "{}" ";"`
 
-<a name ="Works_in_Minor_Keys"></a>
 
 The following command identifies all files in the path `/scores`, that
 contain passages in any minor key:
 
 `find /scores -type f -exec grep -l '\*<a name ="-]*:' "{"></a>" ";"`
 
-<a name ="Generate_Franck_List"></a>
 
 Humdrum reference records are ideal targets for such searches since
 reference records encode information such as the composer\'s name,
@@ -196,14 +188,12 @@ composed by Franck:
 
 `find /scores -type f -exec grep -l '!!!COM.*Franck' "{}" ";"`
 
-<a name ="Works_in_compound_meters"></a>
 
 The following command identifies all files in the path `/scores` that
 are written in compound meters:
 
 `find /scores -type f -exec grep -l '!!!AMT.*compound' "{}" ";"`
 
-<a name ="Rondo_Works"></a>
 
 The following command identifies all files beginning from the current
 directory that are rondos:
@@ -213,28 +203,24 @@ directory that are rondos:
 Recall that the **-i** option for **grep** makes the pattern-match
 insensitive to upper- or lower-case.
 
-<a name ="Heterophonic_Works"></a>
 
 The following command identifies all files in the path `non-western`
 that have been designated as having heterophonic textures:
 
 `find non-western -exec grep -il '!!!AST.*heterophony' "{}" ";"`
 
-<a name ="Bebop"></a>
 
 In the path `/scores/jazz`, we might want to identify all files that
 contain the style-designation \"bebop:\"
 
 `find /scores/jazz -exec grep -il '!!!AST.*bebop' "{}" ";"`
 
-<a name ="18thC_Works_with_Horns_and_Oboes"></a>
 
 The following command identifies all files in the path `18th-century`,
 that include French horns and oboes:
 
 `find 18th-century -exec grep -il '!!!AIN.*cor.*oboe' "{}" ";"`
 
-<a name ="1805_to_1809"></a>
 
 Of course, more complex regular expressions can be also be defined. For
 example, the following command identifies all works composed between
@@ -274,12 +260,10 @@ general for German folksongs. In other words, according to the *Essen
 Folksong Collection*, it is not the case that German drinking songs are
 more likely to be in triple meters.
 
-<a name ="Using_find_with_the_xargs_Command"></a>
 
 Using *find* with the *xargs* Command
 -------------------------------------
 
-<a name ="Corelli_Change_of_Meters"></a>
 
 As we saw in [Chapter 10,](/guide/ch10) the **xargs** command can be
 used to propagate file names from command to command within a pipeline.
@@ -299,7 +283,6 @@ the score:
 
 `/corelli/opus1n5c.krn:6  /corelli/opus1n9a.krn:3  /corelli/opus1n9b.krn:2  /corelli/opus1n9d.krn:2`
 
-<a name ="Works_with_Change_of_Key"></a>
 
 Similarly, the following command identifies all works that contain a
 change of key signature:
@@ -307,7 +290,6 @@ change of key signature:
 `find /scores -type f -name '*' | xargs grep -c '^\*k\[' \`
 > \| grep -v \':\[01\]\$\'
 
-<a name ="Change_of_Key_and_Change_of_Meter"></a>
 
 As a further example of the use of **xargs**, consider the following
 extension of the above pipeline. The **grep -v** command causes only
@@ -324,7 +306,6 @@ containing 2 or more meter signatures.
 In summary, the above pipeline identifies all scores that contain both a
 change of key signature as well as a change of meter signature.
 
-<a name ="Compound_Meter_Woodwind_Quintets"></a>
 
 The **xargs** command can also be used to process a list of files \--
 where the list has been stored in a file. For example, suppose we used
@@ -343,7 +324,6 @@ of key:
 The output identifies all scores in compound meters written for woodwind
 quintet that contain changes of key.
 
-<a name ="Repertoires_As_File_Links"></a>
 
 Repertories As File Links
 -------------------------
@@ -391,7 +371,6 @@ We now have a new directory whose files contain scores with vocal parts.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

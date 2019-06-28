@@ -386,7 +386,6 @@ possible that an appropriate interpretation of the score would regard
 the middle voice as also slurred. Notice that in the `**kern`
 representation, notes can be tied, slurred, and phrased concurrently.
 
-<a name ="Comment_Records"></a>
 
 Comment Records
 ---------------
@@ -438,7 +437,6 @@ the spines.\
   `etc.`                etc.
   `*-`                  \*-
   ------------------ -- --------------
-<a name ="Reference_Records"></a>
 
 Reference Records
 -----------------
@@ -545,7 +543,6 @@ is given in Appendix II.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

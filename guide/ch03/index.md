@@ -16,7 +16,6 @@ Now that we have learned some things about Humdrum representations (and
 the `**kern` representation in particular), let\'s explore some basic
 processing tasks.
 
-<a name ="The_census_Command"></a>
 
 The *census* Command
 --------------------
@@ -39,8 +38,6 @@ might produce the following output:
   Number of interpretations: 7
   Number of records: 112
   ------------------------------
-<a name ="Highest_note"></a>
-<a name ="Lowest_note"></a>
 
 Most commands provide *options* that will modify the operation of the
 command in a particular way. In UNIX-style commands, options follow
@@ -76,7 +73,6 @@ although it may be notated using two or more noteheads.
 The output from **census** can be restricted to a particular item of
 information by \"piping\" the output to the UNIX **grep** command.
 
-<a name ="Simple_Searches_using_the_grep_Command"></a>
 
 Simple Searches using the *grep* Command
 ----------------------------------------
@@ -88,7 +84,6 @@ UNIX *regular expression* syntax. Regular expressions will be described
 in detail in [Chapter 9.](/guide/ch09) The command name \"`grep`\" is
 an acronym for \"get regular expression.\"
 
-<a name ="Andante_Search"></a>
 
 Useful patterns are often literal character strings, such as keywords.
 For example, the following command identifies whether the file
@@ -99,7 +94,6 @@ For example, the following command identifies whether the file
 Every line containing the specified pattern will be output. If no match
 is found, no output is given.
 
-<a name ="Any_Andante_Search"></a>
 
 Using a single command, all files in the current directory can be
 searched by substituting the asterisk (shell *wildcard*) in place of a
@@ -123,7 +117,6 @@ E.g.,
 
 `grep -i 'Andante' *`
 
-<a name ="Double_sharp_Search"></a>
 
 Sought patterns may occur in any line, including data records and
 comments. The following command will identify the presence of any
@@ -131,7 +124,6 @@ double-sharps in the file `schumann.krn`.
 
 `grep '##' schumann.krn`
 
-<a name ="Pattern_Locations_Using_grep_-n"></a>
 
 Pattern Locations Using grep -n
 -------------------------------
@@ -151,12 +143,10 @@ The output might look like this:
 \-- meaning that double sharps were found in lines 1109, 1731, and 3002
 in the file `melody.krn`.
 
-<a name ="Counting_Pattern_Occurrences_Using_grep-c"></a>
 
 Counting Pattern Occurrences Using grep -c
 ------------------------------------------
 
-<a name ="Phrase_Count"></a>
 
 In some cases, the user is interested in counting the total number of
 instances of a found pattern. The **-c** option causes **grep** to
@@ -175,7 +165,6 @@ phrase-count would be incorrect. More carefully constructed patterns
 require a better knowledge of *regular expressions.* Regular expressions
 are discussed in [Chapter 9.](/guide/ch09)
 
-<a name ="Searching_for_Reference_Information"></a>
 
 Searching for Reference Information
 -----------------------------------
@@ -196,14 +185,12 @@ The output might look like this:
 
 `!!!COM: Boulanger, Nadia`
 
-<a name ="Generate_Composer_List"></a>
 
 Once again, a wildcard (i.e., the asterisk) can be used to address all
 of the files in the current directory. Hence the command
 
 `grep '!!!COM:' *`
 
-<a name ="Generate_Title_List"></a>
 
 will produce a list of all composers of files in the current directory.
 Similarly, the following command will generate a list of all of the
@@ -239,7 +226,6 @@ written and its previous contents lost. With the **-h** option the file
 
 `!!!OTL: Oh! Susanna  !!!OTL: Jeanie with the Light Brown Hair  !!!OTL: Beautiful Dreamer  !!!OTL: Gwine to Run All Night (or 'De Camptown Race')  !!!OTL: My Old Kentucky Home, Good-Night  !!!OTL: We are Coming, Father Abraam  !!!OTL: Don't Bet Your Money on De Shanghai  !!!OTL: Gentle Annie  !!!OTL: If You've Only Got a Moustache  !!!OTL: Maggie by my Side  !!!OTL: Old Folks at Home  !!!OTL: Better Times are Coming  !!!OTL: When this Dreadful War is Ended  !!!OTL: Hard Times Comes Again No More`
 
-<a name ="The_sort_Command"></a>
 
 The *sort* Command
 ------------------
@@ -264,7 +250,6 @@ are placed in the file `titles`:
 
 `grep '!!!OTL:' * | sort > titles`
 
-<a name ="The_uniq_Command"></a>
 
 The *uniq* Command
 ------------------
@@ -319,7 +304,6 @@ lists:
 `!!!COM: Beethoven, Ludwig van`\
 `!!!COM: Stamitz, Carl Philipp`
 
-<a name ="Generate_Instrumentation_List"></a>
 
 Of course we can make similar lists for other types of information
 available in reference records. The `AIN` reference record encodes
@@ -328,7 +312,6 @@ combinations used for scores in the current directory:
 
 `grep -h '!!!AIN:' * | sort | uniq`
 
-<a name ="Options_for_the_uniq_Command"></a>
 
 Options for the *uniq* Command
 ------------------------------
@@ -339,7 +322,6 @@ which are *duplicated* (i.e. two or more instances). Conversely, the
 **-u** option causes only those records to be output that are truly
 *unique* (i.e. only a single instance is present in the input).
 
-<a name ="Chorales_with_same_titles"></a>
 
 Suppose, for example, that we want to know which of the Bach chorales
 are harmonizations of the same tunes \-- that is, have the same titles.
@@ -391,7 +373,6 @@ only those works whose instrumentation differs from all others:
 
 `grep -h '!!!AIN:' * | sort | uniq -u`
 
-<a name ="Count_composer_works"></a>
 
 As in the case of the **grep** command, **uniq** also supports a **-c**
 option which counts the number of occurrences of a pattern. For example,
@@ -402,7 +383,6 @@ directory:
 
 The output might appear as follows:
 
-<a name ="Josquin"></a>
 
 ` 9 !!!COM: Berardi, Angelo   2 !!!COM: Caldara, Antonio  12 !!!COM: Zarlino, Gioseffo   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres`\
 
@@ -435,7 +415,6 @@ producing lists that are ordered from most common to least common.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

@@ -21,7 +21,6 @@ chapter we will discuss the output-related tools:
 [**smf**](/tool/smf) and [**tacet**](/tool/tacet). MIDI
 input tools are discussed in [Chapter 30.](/guide/ch30)
 
-<a name ="The_**MIDI_Representation"></a>
 
 The *\*\*MIDI* Representation
 -----------------------------
@@ -165,7 +164,6 @@ simultaneous key-on and key-off events often appear as double-stops.
 Also notice that an additional data record is required at the end of the
 passage in order to turn off the final notes.
 
-<a name ="The_midi_Command"></a>
 
 The *midi* Command
 ------------------
@@ -197,7 +195,6 @@ using the **smf** command, or to listen to the output using the
 **perform** command. In some cases, it is useful to carry out processing
 of `**MIDI` data itself.
 
-<a name ="The_perform_Command"></a>
 
 The *perform* Command
 ---------------------
@@ -257,7 +254,6 @@ Similarly, backward searches can be carried out by typing the question
 mark (`?`) rather than the slash. If the search is successful, playback
 continues immediately from the new score position.
 
-<a name ="Data_Scrolling_During_Playback"></a>
 
 Data Scrolling During Playback
 ------------------------------
@@ -281,7 +277,6 @@ is transformed to:
   `4AA`     4E   4A   4c
   `!!4AA`   4E   4A   4c
   --------- ---- ---- ----
-<a name ="Play_from_Pause"></a>
 
 Since, by default, the **perform** command echoes all global comments on
 the screen during playback, this means that the Humdrum data will also
@@ -293,13 +288,11 @@ might search for the next pause symbol by typing:
 
 `/;`
 
-<a name ="Play_from_G_sharp"></a>
 
 Similarly, the user could search for a particular pitch, e.g.
 
 `/gg#`
 
-<a name ="Diminished_Octave"></a>
 
 Since the **perform** command accepts any Humdrum input, other Humdrum
 data may be used for searching. For example, the input data might
@@ -313,12 +306,10 @@ If the string pattern is found in the input, **perform** will move
 immediately forward (or backward) to the next occurrence and begin
 playing from that point.
 
-<a name ="Changing_Tempo"></a>
 
 Changing Tempo
 --------------
 
-<a name ="Play_Half_Tempo"></a>
 
 During playback, the tempo can be modified by typing the greater-than
 (\>) and less-than (\<) signs to increase or decrease the tempo
@@ -338,7 +329,6 @@ interpretation for metronome marking (e.g. `*MM96`). If no tempo
 information is available, **perform** uses a default tempo of 66
 quarter-notes per minute.
 
-<a name ="The_tacet_Command"></a>
 
 The *tacet* Command
 -------------------
@@ -359,7 +349,6 @@ to listen selectively to specific parts or passages. In [Chapter
 [**patt**](/tool/patt) command to listen to patterns (such as
 harmonic, rhythmic and melodic patterns) found in some repertory.
 
-<a name ="The_smf_Command"></a>
 
 The *smf* Command
 -----------------
@@ -385,7 +374,6 @@ for details.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

@@ -24,7 +24,6 @@ a series of files encoding some musical repertory. In this chapter we
 will introduce two stream editors: **sed** and
 [**humsed**](/tool/humsed).
 
-<a name ="The_sed_and_humsed_Commands"></a>
 
 The *sed* and *humsed* Commands
 -------------------------------
@@ -39,7 +38,6 @@ editors provide operations for *substitution*, *insertion*, *deletion*,
 combination, these operations can completely transform an input stream
 or document.
 
-<a name ="Simple_Substitutions"></a>
 
 Simple Substitutions
 --------------------
@@ -94,7 +92,6 @@ that you should never redirect the output to the same file as the input
 output to a temporary file, and then use the UNIX **mv** command to
 rename the output.
 
-<a name ="Pizzicato_to_Spiccato"></a>
 
 Suppose that you had encoded a musical work in the `**kern`
 representation. Having finished the encoding, you realize that what you
@@ -118,7 +115,6 @@ occurrence of the string in each data record. The `g` option specifies a
 are replaced. If the option consisted of the number \`3\', then only the
 third instance of the target string would be replaced on each line.
 
-<a name ="Selective_Elimination_of_Data"></a>
 
 Selective Elimination of Data
 -----------------------------
@@ -137,14 +133,12 @@ the `**kern` representation, open and closed beams are represented by
 
 `humsed s/[JLkK]//g` *inputfile*
 
-<a name ="Eliminate_all_but_beaming"></a>
 
 Alternatively, we might want to eliminate all data except for the
 beaming information:
 
 `humsed s/[^JLkK]//g` *inputfile*
 
-<a name ="Eliminate_measure_numbers"></a>
 
 Sometimes we need to restrict the circumstances where the data are
 eliminated. For example, we might want to eliminate all measure numbers.
@@ -164,7 +158,6 @@ find this pattern look for zero or more instances of any number between
 zero and nine, and replace that by an empty string; do this substitution
 for all numbers on the current data record.
 
-<a name ="Renumber_barlines"></a>
 
 Incidentally, Humdrum provides a [**num**](/tool/num) command
 that can be used to insert numbers in data records. The
@@ -184,7 +177,6 @@ does not match a leading equals sign:
 
 `humsed /^[^=]/s%[0-9]%%g` *inputfile*
 
-<a name ="More_Dynamic_Range"></a>
 
 Suppose we wanted to determine which of two MIDI performances exhibits
 more dynamic range \-- that is, which performance has a greater
@@ -208,7 +200,6 @@ everything but the third data element, the MIDI key-down velocities:
 
 `s%[0-9][0-9]*/[0-9][0-9]*/%%g`
 
-<a name ="The_stats_Command"></a>
 
 The *stats* Command
 -------------------
@@ -251,7 +242,6 @@ ensures that possible barlines are eliminated, and the **rid** command
 eliminates comments and interpretations prior to passing the data to the
 **stats** command.
 
-<a name ="Eliminate_Everything_But..."></a>
 
 Eliminate Everything But \...
 -----------------------------
@@ -285,7 +275,6 @@ document. Incidentally, neither the **sed** nor the **humsed** commands
 support extended regular expressions, so we are not able to use the `+`
 metacharacter in the above substitution.
 
-<a name ="Deleting_Data_Records"></a>
 
 Deleting Data Records
 ---------------------
@@ -318,7 +307,6 @@ By contrast, the command:
 would also eliminate any comments or interpretation records containing
 the letter \`q\'.
 
-<a name ="Play_without_tonic"></a>
 
 Suppose that we wanted to know whether a melody still evokes a certain
 key perception even if we eliminate all the tonic pitches. First we
@@ -328,7 +316,6 @@ the original `**kern` representation for the melody.
 `deg` *input*` > temp`\
 `assemble` *input*` temp | humsed '/1$/d' | midi | perform`
 
-<a name ="Play_tonic_as_rests"></a>
 
 Of course deleting all of the tonic notes will disrupt the original
 rhythm. An alternative is to replace all tonic pitches by rests:
@@ -337,7 +324,6 @@ rhythm. An alternative is to replace all tonic pitches by rests:
 `assemble` *input*` temp | humsed '/1$/s%[A-Ga-g#-]*%r%' | midi \`
 > \| perform
 
-<a name ="Listen_to_rhythm"></a>
 
 Perhaps we might want to eliminate all the pitch information, and simply
 listen to the rhythmic structure of a work. That is, we might change all
@@ -346,7 +332,6 @@ middle C:
 
 `humsed 's/[A-Ga-g#-]*/c/' | midi | perform`
 
-<a name ="Adding_Information"></a>
 
 Adding Information
 ------------------
@@ -367,7 +352,6 @@ pattern is replaced by itself (&) followed by a tilde (\~), the
 
 `humsed s/4[^0-9.]/&~/g` *inputfile*
 
-<a name ="Multiple_Substitutions"></a>
 
 Multiple Substitutions
 ----------------------
@@ -386,7 +370,6 @@ change all quarter notes and rests to eighty-fourth durations. The
 ensuing substitution operation changes \`84\' to \`8\' and so completes
 the transformation.
 
-<a name ="Switching_Signifiers"></a>
 
 Switching Signifiers
 --------------------
@@ -407,7 +390,6 @@ string.) The second substitution changes up-bows (`v`) to down-bows. The
 third substitution changes occurrences of the temporary string `ABC` to
 up-bows.
 
-<a name ="Executing_from_a_File"></a>
 
 Executing from a File
 ---------------------
@@ -429,7 +411,6 @@ appropriate diminution values. We can execute these commands as follows:
 
 `humsed -f diminute` *inputfile*
 
-<a name ="Writing_to_a_File"></a>
 
 Writing to a File
 -----------------
@@ -459,7 +440,6 @@ Or even:
 
 `grep ';'` *inputfile*` | grep -v '^[!*]' > pauses`
 
-<a name ="Subdominant_ending_phrases"></a>
 
 In some cases, a stream editor can be used to eliminate or modify data
 that will confound subsequent processing. For example, suppose we wanted
@@ -478,7 +458,6 @@ input:
 `humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'`\
 `humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'`
 
-<a name ="Notes_per_Syllable"></a>
 
 In texts for vocal works, identify the number of notes per syllable.
 
@@ -488,7 +467,6 @@ In texts for vocal works, identify the number of notes per syllable.
 > \> combined
 `context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'`
 
-<a name ="Notes_per_Word"></a>
 
 Identify the number of notes per word rather than per syllable.
 
@@ -500,7 +478,6 @@ Identify the number of notes per word rather than per syllable.
 `context -b BEGIN -e END -o '[r=]' combined | rid -GLId \`
 > \| awk \'{print NF}\'
 
-<a name ="Reading_a_File_as_Input"></a>
 
 Reading a File as Input
 -----------------------
@@ -532,7 +509,6 @@ Command:
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

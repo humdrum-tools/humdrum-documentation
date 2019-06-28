@@ -23,7 +23,6 @@ be gathered into a single new spine. These two commands provide
 opportunities to create Humdrum spines that contain precisely the
 information of interest to the user.
 
-<a name ="The_rend_Command"></a>
 
 The *rend* Command
 ------------------
@@ -82,7 +81,6 @@ spine-reassignments.
 The **rend** command is typically paired with a subsequent **cleave**
 command.
 
-<a name ="The_cleave_Command"></a>
 
 The *cleave* Command
 --------------------
@@ -299,7 +297,6 @@ The final output is:
   144/-72/
   \*-
   ---------------------
-<a name ="Creating_Mixed_Representations"></a>
 
 Creating Mixed Representations
 ------------------------------
@@ -388,7 +385,6 @@ single final spine.
 `cleave -i '**rhythm,**range,**scale-step' -o '**complex' \`
 > newfile \> output
 
-<a name ="submediant_rhythms"></a>
 
 Having created our new representation, we can continue to process this
 new data with the various Humdrum tools. For example, we could generate
@@ -396,7 +392,6 @@ inventories that answer questions such as \"How often does a high
 subdominant note in a long-short-long rhythmic follow a low submediant
 in a long-long-short context?
 
-<a name ="Chromatic_Large_Leaps"></a>
 
 A similar approach can be used to address other questions, such as
 whether large leaps involving chromatically-altered tones tend to have a
@@ -404,7 +399,6 @@ longer duration on the altered tone. Etc.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

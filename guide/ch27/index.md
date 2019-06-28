@@ -33,12 +33,10 @@ Discussion of the `**IPA` representation will be delayed until [Chapter
 representational and processing issues related to the manipulation of
 words and syllables.
 
-<a name ="The_**text_and_**silbe_Representations"></a>
 
 The *\*\*text* and *\*\*silbe* Representations
 ----------------------------------------------
 
-<a name ="Byrd"></a>
 
 Syllable- and word-oriented representations are illustrated in the
 following excerpt from a motet by Byrd (Example 27.1). The encoded
@@ -178,7 +176,6 @@ crys. Some sample signifiers are shown in Table 26.2\
   ------- -------------------------------------------------------------------
 *Signifiers common to **\*\*text** and **\*\*silbe***
 
-<a name ="The_text_Command"></a>
 
 The *text* Command
 ------------------
@@ -197,7 +194,6 @@ Invoking the **text** command is straightforward:
 
 `text inputfile > outputfile`
 
-<a name ="Find_Liebe"></a>
 
 A simple text-related task might be looking for occurrences of a
 particular word, such as the German \"Liebe\" (love). If the lyrics are
@@ -213,7 +209,6 @@ output of **text** can be piped to **grep**:
 
 `extract -i '**silbe' schubert | text | grep -n 'Liebe'`
 
-<a name ="word_inventory"></a>
 
 Given a `**silbe` input, a inventory of words can be generated using
 **sort** and **uniq** in the usual way:
@@ -229,7 +224,6 @@ consisting of just two words, we might use the **-n 2** option for
 
 `text barber | context -n 2 | grep -i 'white Pangur'`
 
-<a name ="Punctuation"></a>
 
 Alternatively, we might amalgamate words so they form sentences, or at
 least phrases. Puntuation marks provide a convenient marker for ending
@@ -241,7 +235,6 @@ phrase \"white Pangur.\"
 
 `text | context -e '[.,;?!]' | grep -i 'white Pangur'`
 
-<a name ="The_fmt_Command"></a>
 
 The *fmt* Command
 -----------------
@@ -349,7 +342,6 @@ The corresponding output is:
 
 `A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Chri/- -stum ca- -na/- -mus prin/- -ci- -pem,   na/- -tum Ma- -ri/- -a Vir/- -gi- -ne.  Be- -a/- -tus au/- -ctor sae/- -cu- -li  ser- -vi/- -le cor/- -pus in/- -du- -it:  ut car/- -ne car/- -nem li/- -be- -rans,   ne per/- -de- -ret quos con/- -di- -dit.  Ca/- -stae pa- -ren/- -tis vis/- -ce- -ra  cae/ le/- -stis in/- -trat- -gra/- -ti- -a:  ven/- -ter pu- -el/- -lae ba/- -ju- -lat   se- -cre/- -ta, quae non no/- -ve- -rat.  Do/- -mus pu- -di- -ci pe/- -cto- -ris  tem/ plum re- -pen/- -te fit De/- -i:  in- -ta/- -cta ne/- -sci- -ens vi/- -rum,   con- -ce/- -pit al/- -vo fi/- -li- -um.`
 
-<a name ="syllables_per_phrase"></a>
 
 If we are looking for vocal texts that exhibit a recurring rhythm, we
 might make a simple addition to the above script. Instead of outputting
@@ -387,7 +379,6 @@ following pipeline could be used:
 `extract -i '**silbe' | context -o = -e '[.,;:?!]' \`
 > \| rid -GLId \| awk \'{print NF}\'
 
-<a name ="Rhythmic_Feet_in_Text"></a>
 
 Rhythmic Feet in Text
 ---------------------
@@ -443,7 +434,6 @@ conclusion, it appears that this work has a strongly rhythmic text
 structure \-- implying that this \`chant\' might have been sung
 rhythmically.
 
-<a name ="Concordance"></a>
 
 Concordance
 -----------
@@ -546,7 +536,6 @@ Concordances can be used for a number of applications. One might use a
 concordance to help identify metaphor or image related words (such as
 \"light,\" \"darkness,\" etc.)
 
-<a name ="Simile"></a>
 
 Simile
 ------
@@ -616,7 +605,6 @@ interpretations added by **hum**.
 > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\\
 > \| rid -Id
 
-<a name ="Word_Painting"></a>
 
 Word Painting
 -------------
@@ -668,7 +656,6 @@ The average pitch for the entire work can be determined as follows:
 `semits * | extract -i '**semits' | ditto -s = | rid -GLI \`
 > \| stats
 
-<a name ="Emotionality"></a>
 
 Emotionality
 ------------
@@ -810,7 +797,6 @@ Having established what word has been estimated as having the highest
 emotional-charge, we can then use **grep -n** to establish the
 location(s) of this word in the original input file.
 
-<a name ="Other_Types_of_Language_Use"></a>
 
 Other Types of Language Use
 ---------------------------
@@ -835,7 +821,6 @@ reference record used to identify genres.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

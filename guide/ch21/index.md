@@ -25,7 +25,6 @@ chapter we will introduce two additional tools that are intended to
 search directly for sequential patterns without having to use
 **context** to create pseudo-simultaneous collections.
 
-<a name ="The_patt_Command"></a>
 
 The *patt* Command
 ------------------
@@ -43,7 +42,6 @@ user-specified regular expressions are exhausted. A pattern match is
 deemed to occur only if all of the successive regular expressions match
 a contiguous sequence of input lines.
 
-<a name ="DSCH"></a>
 
 The operation of **patt** is easier to describe through an example.
 Consider the following input using the German *Tonhöhe* pitch
@@ -149,7 +147,6 @@ interpretations and terminating spine-path terminators.\
 
 ![](guide.figures/guide21.2.gif)
 
-<a name ="Tierce_de_Picardie"></a>
 
 Most Baroque composers were fond of ending works written in minor keys
 on the tonic major chord \-- the so-called *tierce de picardie* or
@@ -249,7 +246,6 @@ through the sustained final chord. Our revised pipeline is:
 
 `deg bach.krn | ditto -s = | patt -s r -f picardy`
 
-<a name ="Consecutive_Fifths"></a>
 
 A similar approach can be used to identify consecutive fifths or octaves
 between two voices. A template file (dubbed `5ths`) might consist of the
@@ -270,7 +266,6 @@ consecutive fifth.
 
 `extract -i '*Ibass,*Itenor' Fux | hint -c | patt -s = -f 5ths`
 
-<a name ="Landini_cadences"></a>
 
 Sometimes patterns will tend to be obscured by the presence of other
 information. For example, suppose we want to identify possible Landini
@@ -367,7 +362,6 @@ conditions as well as dynamic or temporal conditions. This allows users
 to define patterns involving a multitude of conditions involving many
 different types of data.
 
-<a name ="Using_patt's_Tag_Option"></a>
 
 Using *patt*\'s Tag Option
 --------------------------
@@ -385,7 +379,6 @@ consists of mostly null tokens. However, each time the input matches the
 sought pattern, a user-defined \"tag\" will appear in the `**patt`
 spine. Consider the following example.
 
-<a name ="Deceptive_cadences"></a>
 
 Suppose we are interested in identifying deceptive cadences in Bach\'s
 chorale harmonizations. Imagine that we already have a
@@ -456,7 +449,6 @@ different set forms for statements of a twelve-tone row, such as primes,
 inversions, retrogrades, and retrograde inversions. We will use suitable
 tags to identify the specific transpositions: P0, I7, R11, RI8, etc.
 
-<a name ="Matching_Multiple_Records_Using_the_patt_Command"></a>
 
 Matching Multiple Records Using the *patt* Command
 --------------------------------------------------
@@ -519,7 +511,6 @@ command is issued:
 
 `patt -f tonerow -t P0 -m Krenek`
 
-<a name ="The_pattern_Command"></a>
 
 The *pattern* Command
 ---------------------
@@ -568,7 +559,6 @@ major triad \-- the last of which must end a phrase:
 (\[Aa\]+\|(\[Cc\]+\#)\|\[Ee\]+)\[\^\#-\] \*\
 (}.\*(\<a name ="-\].\*"></a>)
 
-<a name ="Patterns_of_Patterns"></a>
 
 Patterns of Patterns
 --------------------
@@ -601,7 +591,6 @@ Consider, for example, the following template for the
   Theme 2 (tonic)           \+
   Coda                      ?
   ------------------- -- -- ----
-<a name ="Sonata_search"></a>
 
 The template reads \"one or more instances of `Theme 1 (tonic)`,
 followed by zero or more instances of `Bridge`, followed by one or more
@@ -614,7 +603,6 @@ level search for works exhibiting a sonata-allegro structure.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

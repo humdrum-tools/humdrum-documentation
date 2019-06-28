@@ -24,7 +24,6 @@ sounds. This representation provides a companion to the
 [`**silbe`](/rep/silbe) representations discussed in
 [Chapter 27.](/guide/ch27) Various sonorous processes are illustrated.
 
-<a name ="The_**IPA_Representation"></a>
 
 The \*\*IPA Representation
 --------------------------
@@ -110,7 +109,6 @@ Humdrum does not provide a tool for translating from
 commercial text-to-phoneme translators available for most common
 languages.
 
-<a name ="Alliteration"></a>
 
 Alliteration
 ------------
@@ -244,7 +242,6 @@ The final output is:
   `.`
   `*-`
   ------------
-<a name ="Classifying_Phonemes"></a>
 
 Classifying Phonemes
 --------------------
@@ -270,7 +267,6 @@ etc.
 Classifying phonemes in this way will allow us to broaden our searches
 for alliterative passages.
 
-<a name ="Properties_of_Vowels"></a>
 
 Properties of Vowels
 --------------------
@@ -296,7 +292,6 @@ or humor. Taunting sounds made by children (\"nya, nya \...\") commonly
 use high vowels mixed with nasals. Similarly, high/nasal vocal sounds
 are often used by comedians and actors to produce a \`funny\' voice.
 
-<a name ="Gilbert_and_Sullivan"></a>
 
 Suppose we want to test the idea that a certain piece in a Gilbert and
 Sullivan operetta exhibits a preponderance of high vowels. We might
@@ -316,7 +311,6 @@ values averaged using the **stats** command:
 This procedure can be repeated for several movements or pieces to
 provide a contrast for the piece of interest.
 
-<a name ="Vowel_Coloration"></a>
 
 Vowel Coloration
 ----------------
@@ -351,7 +345,6 @@ a longer value for **timebase**. Alternatively, we might use the Humdrum
 **accent** command (described in [Chapter 25](/guide/ch25)) to identify
 notes have a particularly high noticeability.
 
-<a name ="Rhyme_and_Rhyme_Schemes"></a>
 
 Rhymes and Rhyme Schemes
 ------------------------
@@ -473,7 +466,6 @@ extract -i \'\*\*IPA\' \$1 \| extract -f 1 \| context -b { -e } \| rid
 \
 rm rhyme.sed.\$\$
 ------------------------------------------------------------------------
-<a name ="Reprise"></a>
 Reprise
 -------
 By focusing on phonetic signifiers, the `**IPA` representation

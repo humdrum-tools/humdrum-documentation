@@ -138,7 +138,6 @@ were all of the available options described for all of the tools
 discussed. Exploring the *Humdrum Reference Manual* is recommended for
 readers interested in continuing to develop facility with Humdrum.
 
-<a name ="Pursuing_a_Project_with_Humdrum"></a>
 
 Pursuing a Project with Humdrum
 -------------------------------

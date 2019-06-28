@@ -20,7 +20,6 @@ we will learn how to use the shell to write more complex programs. Shell
 programs allow users to reduce lengthy sequences of Humdrum commands to
 a single user-defined command.
 
-<a name ="Shell_Programs"></a>
 
 Shell Programs
 --------------
@@ -109,7 +108,6 @@ This change means that our **Schenker** command can be applied to any
 user-specified input file \-- simply by typing the filename in the
 command.
 
-<a name ="Flow_of_Control:_The_if_Statement"></a>
 
 Flow of Control: The *if* Statement
 -----------------------------------
@@ -173,7 +171,6 @@ The **if** command provides many other ways of testing some condition.
 For example, the shell provides ways to determine whether a file exists,
 and other features.
 
-<a name ="Flow_of_Control:_The_for_Statement"></a>
 
 Flow of Control: The *for* Statement
 ------------------------------------
@@ -210,7 +207,6 @@ Incidentally, the output from a **for** construction such as above can
 be piped to further commands, so we might identify the maximum number of
 notes in a Czech melody by piping the output through **sort -n**.
 
-<a name ="A_Script_for_Identifying_Transgressions_of_Voice-Leading"></a>
 
 A Script for Identifying Transgressions of Voice-Leading
 --------------------------------------------------------
@@ -235,7 +231,6 @@ successive pairs of voices for processing by **leader**.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------
@@ -257,7 +252,6 @@ shell programming that have not been touched-on in this chapter. Several
 books are available that provide comprehensive tutorials for shell
 programming.
 
-<a name ="Locating_Violations_of_the_Rules_of_Voice-Leading"></a>
 
 Locating Violations of the Rules of Voice-Leading
 -------------------------------------------------
@@ -272,7 +266,6 @@ legislate how to compose or arrange! We\'re simply using the traditional
 voice-leading rules as a way to introduce various pattern-searching
 techniques.
 
-<a name ="Parts_Out_Of_Range"></a>
 
 (1) Parts Out Of Range
 ----------------------
@@ -311,7 +304,6 @@ permits compound strings, such as the use of the OR bar (\|):
 
 `extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'`
 
-<a name ="Augmented-Diminished_Melodic_Intervals"></a>
 
 (2) Augmented/Diminished Melodic Intervals
 ------------------------------------------
@@ -403,7 +395,6 @@ intervals:
 If there is no output, then there are no augmented or diminished
 intervals present.
 
-<a name ="Consecutive_Fifths_or_Octaves"></a>
 
 (3) Consecutive Fifths or Octaves
 ---------------------------------
@@ -525,7 +516,6 @@ traditional four-part harmonization:
 (There are shorter ways of doing these permutations that involves a
 little shell programming, but we\'ll leave that for another time.)
 
-<a name ="Doubled_Leading_Tone"></a>
 
 (4) Doubled Leading Tone
 ------------------------
@@ -712,7 +702,6 @@ In summary, the complete command pipeline would be:
 This may seem somewhat complicated, but the basic structure of this
 pipeline is suitable for a very wide variety of pattern searches.
 
-<a name ="Avoid_Unisons"></a>
 
 (5) Avoid Unisons
 -----------------
@@ -778,7 +767,6 @@ for identifying unisons:
 
 `extract -f 1,2  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1==$2) print NR}'`
 
-<a name ="Crossed_Parts"></a>
 
 (6) Crossed Parts
 -----------------
@@ -842,7 +830,6 @@ extract -i \'\*alto,\*tenor\' \| semits -x \| ditto -s = \| awk
 extract -i \'\*tenor,\*bass\' \| semits -x \| ditto -s = \| awk
 \'{if(\$0\~/\[\^0-9\\t-\]/)next}{if(\$1\>\$2) print NR}\'
 
-<a name ="Parts_Separated_by_Greater_than_an_Octave"></a>
 
 (7) Parts Separated by Greater than an Octave
 ---------------------------------------------
@@ -862,7 +849,6 @@ other voice:
 
 `extract -i '*soprano,*alto'  | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'  extract -i '*alto,*tenor'    | semits -x | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($2-$1>12) print NR}'`
 
-<a name ="Overlapped_Parts"></a>
 
 (8) Overlapped Parts
 --------------------
@@ -936,7 +922,6 @@ repeat the process, shifting the other voice:
 This processing needs to be applied for each pair of successive voices
 \-- soprano/alto, alto/tenor, tenor/bass.
 
-<a name ="Exposed_Octaves"></a>
 
 (9) Exposed Octaves
 -------------------

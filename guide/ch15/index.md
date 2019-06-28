@@ -19,7 +19,6 @@ intervals by focussing on two tools pertaining to characterizing
 harmonic intervals: the [**hint**](/tool/hint) and
 [**ydelta**](/tool/ydelta) commands.
 
-<a name ="Types_of_Harmonic_Intervals"></a>
 
 Types of Harmonic Intervals
 ---------------------------
@@ -62,7 +61,6 @@ the interval of the minor sixth is likely to be more perceptually
 salient than the minor seventh interval. We might call these intervals
 *strong passing intervals* and *weak passing intervals* respectively.
 
-<a name ="Implicit_Intervals"></a>
 
 Another type of harmonic interval may be deemed to occur even when there
 are no concurrently sounding pitches. In Example 15.1, the alternating
@@ -115,7 +113,6 @@ intervals, semitones, cents, frequency, and even cochlear coordinates.
 We will consider just two tools for calculating harmonic intervals:
 **hint** and **ydelta.**
 
-<a name ="Harmonic_Intervals_Using_the_hint_Command"></a>
 
 Harmonic Intervals Using the *hint* Command
 -------------------------------------------
@@ -162,7 +159,6 @@ that contain no pitch tokens result in the outputting of a null token
 indicate a perfect unison (P1). Unisons can be suppressed from the
 output via the **-u** option for **hint**.
 
-<a name ="Permuted_Harmonic_Intervals"></a>
 
 When more than two pitches are present in a sonority, *permuted harmonic
 intervals* can be calculated by invoking the **-a** option (i.e. *all*
@@ -204,7 +200,6 @@ will produce the following output for the final major chord in Example
 
 `**hint  3 5  *-`
 
-<a name ="Propagating_Data_Using_the_ditto_Command"></a>
 
 Propagating Data Using the *ditto* Command
 ------------------------------------------
@@ -340,12 +335,10 @@ such as pitches, durations, dynamic marks, etc.
 As we will see in future chapters, the **ditto** command proves useful
 in a wide variety of situations apart from calculating intervals.
 
-<a name ="Using_the_ditto_and_hint_Commands"></a>
 
 Using the *ditto* and *hint* Commands
 -------------------------------------
 
-<a name ="Find_A6_in_Bach"></a>
 
 Let\'s pause and consider some of the ways we might use the **ditto**
 and **hint** commands. First, let\'s determine if some input contains a
@@ -357,7 +350,6 @@ octave equivalents will also be identified:
 `hint -c inventio* | grep A6`\
 `ditto -s ^= inventio* | hint -c | grep A6`
 
-<a name ="Diminished_Octaves"></a>
 
 Are there any diminished octave intervals between any two concurrent
 notes in any of Beethoven\'s piano sonatas?
@@ -390,7 +382,6 @@ pitch or the tonic pitch?
 `assemble temp1 temp2 | grep -c ^do.*P8`\
 `assemble temp1 temp2 | grep -c ^so.*P8`
 
-<a name ="Determining_Implicit_Harmonic_Intervals"></a>
 
 Determining Implicit Harmonic Intervals
 ---------------------------------------
@@ -478,12 +469,10 @@ Below we see the output assembled with the output from the corresponding
   `2.c 2.e`   2.g 2.cc   M3 m3 P4
   `*-`        \*-        \*-
   ----------- ---------- ----------
-<a name ="The_ydelta_Command"></a>
 
 The *ydelta* Command
 --------------------
 
-<a name ="semits_command"></a>
 
 Often it is useful to represent intervals by the number of semitones (or
 some other numerical value). We might begin by using the **semits**
@@ -581,7 +570,6 @@ The resulting output would be:\
   `4 7 12`
   `*-`
   -------------
-<a name ="More_Examples_Using_the_ydelta_Command"></a>
 
 More Examples Using the *ydelta* Command
 ----------------------------------------
@@ -621,7 +609,6 @@ diminished fifth.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

@@ -36,7 +36,6 @@ In this chapter we will continue to describe shell special characters
 and identify their functions. In addition, we will learn about the shell
 *alias* function.
 
-<a name ="Shell_Special_Characters"></a>
 
 Shell Special Characters
 ------------------------
@@ -46,7 +45,6 @@ dollars sign (\$), the greve (\`), the less-than sign (\<), the question
 mark (?), and the double quote (\"). We\'ll consider the function of
 each of these characters in turn.
 
-<a name ="Shell_Variables"></a>
 
 Shell Variables
 ---------------
@@ -95,7 +93,6 @@ would sort this file:
 
 `sort $X`
 
-<a name ="The_Shell_Greve"></a>
 
 The Shell Greve
 ---------------
@@ -158,7 +155,6 @@ only searches those filenames passed to it by the first **grep**. In
 other words, the composer search is restricted to only those files that
 have a triple meter designation.
 
-<a name ="Find_same_instrumentation"></a>
 
 Consider another way of using the greve structure. Suppose we have a
 file named `opus16`. We would like to know what other works contain the
@@ -173,7 +169,6 @@ carried out using a single command line:
 In this example, the imbedded command provides the regular expression
 rather than the files to be searched.
 
-<a name ="Single_Quotes,_Double_Quotes"></a>
 
 Single Quotes, Double Quotes
 ----------------------------
@@ -202,7 +197,6 @@ where the double quotes are more useful, but for most casual users, the
 single quotes provide the best means for disengaging the meanings of
 special characters.
 
-<a name ="Using_Shell_Variables"></a>
 
 Using Shell Variables
 ---------------------
@@ -234,7 +228,6 @@ argument to **humsed**. Using singe quotes, however, would have caused
 `$A` and `$B` to be treated as literal strings rather than shell
 variables.
 
-<a name ="Aliases"></a>
 
 Aliases
 -------
@@ -292,7 +285,6 @@ alias it. In the following command, we have created a new command called
 
 `alias nobarlines='egrep -v '^(\. )*='`
 
-<a name ="meter_signature_search"></a>
 
 In Humdrum, a good use of aliases is to define commonly used regular
 expressions. Consider the regular expression used to define tandem
@@ -321,7 +313,6 @@ Now we can search for meter signatures as follows:
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

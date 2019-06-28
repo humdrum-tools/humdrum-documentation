@@ -24,7 +24,6 @@ flexibility for searching.
 However, in this chapter we introduce the deceptively simple **context**
 command.
 
-<a name ="The_context_Command"></a>
 
 The *context* Command
 ---------------------
@@ -152,7 +151,6 @@ In other words, the octave is most commonly approached by contracting
 from minor and major tenths rather than expanding from a major sixth
 interval.
 
-<a name ="Following_Gloria"></a>
 
 This same basic process can be used to address a variety of similar
 problems. For example, suppose we wanted to determine the most common
@@ -179,7 +177,6 @@ representation using the **deg** command, and then process as above:
 `deg Czech* | context -n 2 -o = | grep '5 ' | sort \ `
 > \| uniq -c \| sort -nr
 
-<a name ="Harmonic_Progressions"></a>
 
 Harmonic Progressions
 ---------------------
@@ -205,7 +202,6 @@ five melodic intervals as follows:
 `mint melodies* | context -n 5 -o = | rid -GLId | sort \ `
 > \| uniq -c \| sort -nr
 
-<a name ="Using_context_with_the_-b_and_-e_Options"></a>
 
 Using *context* with the *-b* and *-e* Options
 ----------------------------------------------
@@ -310,7 +306,6 @@ display tool such as **ghostview** to display the output:
 Notice that the resulting notation is \"ungrammatical\" because the
 meter signature disagrees with the total duration for each measure.
 
-<a name ="Augmented_Sixth_Arpeggios"></a>
 
 Having reformatted our input data using **context**, we can continue by
 translating the data to another representation. For example, we might
@@ -331,7 +326,6 @@ measures contain sixty-fourth notes?
 
 `context -b = inputfile | rid -GLId | grep -c '64'`
 
-<a name ="Measures_containing_trills"></a>
 
 Similarly, for [`**kern`](/rep/kern) inputs, the
 following command counts the number of measures that contain at least
@@ -339,7 +333,6 @@ one trill:
 
 `context -b = inputfile | grep -c '^=.*[Tt]'`
 
-<a name ="Group_by_beams"></a>
 
 In `**kern` representations, the beginnings and endings of beams are
 indicated by the letters \``L`\' and \``J`\' respectively. We might
@@ -347,7 +340,6 @@ group notes according to the beaming:
 
 `context -b L -e J inputfile`
 
-<a name ="Beams_across_Phrases"></a>
 
 For example, the following command determines the location of any beams
 that cross over phrase boundaries:
@@ -363,7 +355,6 @@ can create phrase related harmonic sequences as follows:
 
 `context -o = -e ';' input`
 
-<a name ="Count_harmonies_phrase"></a>
 
 For example, we might count the number of harmonic functions in each
 phrase as follows:
@@ -376,7 +367,6 @@ command described in that chapter, we might group notes together
 according to changes of melodic direction. That is, each group of would
 consist of notes that are all ascending or all descending in pitch.
 
-<a name ="Using_context_with_sed_and_humsed"></a>
 
 Using *context* with *sed* and *humsed*
 ---------------------------------------
@@ -452,7 +442,6 @@ note in the subsequent phrase. The full pipeline would be as follows:
 `context -b { -e } file | humsed 's/ .* / /' | semits \`
 > \| rid -GLId \| awk \'{print \$2-\$1}\'
 
-<a name ="Linking_context_Outputs_with_Inputs"></a>
 
 Linking *context* Outputs with Inputs
 -------------------------------------
@@ -644,7 +633,6 @@ complex patterns or conditions. For example, a user might search for a
 specific piano fingering that coincides with particular
 interval-transitions and harmonic contexts.
 
-<a name ="Using_context_with_the_-p_Option"></a>
 
 Using *context* with the *-p* Option
 ------------------------------------
@@ -720,7 +708,6 @@ possibilities for searching. In the above case, the pitch \`e\' is
 aligned with contextual information that indicates the two pitches that
 precede \`e\' and the one pitch that follows it.
 
-<a name ="Submediant_Search"></a>
 
 By way of example, suppose we are looking for a submediant pitch that is
 approached by two melodic intervals of an ascending major third followed
@@ -764,7 +751,6 @@ Now we can search directly for the situation of interest:
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

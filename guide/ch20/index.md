@@ -25,7 +25,6 @@ Humdrum *section* and *strophe*. We will encounter examples using the
 [**yank**](/tool/yank), [**thru**](/tool/thru), and
 [**strophe**](/tool/strophe) commands.
 
-<a name ="Section_Labels"></a>
 
 Section Labels
 --------------
@@ -51,7 +50,6 @@ assigned new exclusive interpretations, or all spines terminate. If
 there is more than one spine present in a passage, identical section
 labels must appear concurrently in all spines.
 
-<a name ="Expansion_Lists"></a>
 
 Expansion Lists
 ---------------
@@ -73,12 +71,10 @@ sections, labelled \"`verse1`,\" \"`verse2`\" and \"`refrain`.\" When
 the file is expanded, the \"`refrain`\" section should be repeated
 following each verse.
 
-<a name ="Using_yank_to_Extract_Sections"></a>
 
 Using *yank* to Extract Sections
 --------------------------------
 
-<a name ="Extract_Coda"></a>
 
 We encountered the [**yank**](/tool/yank) command earlier in
 [Chapter 12.](/guide/ch12) Recall that **yank** can be used to extract
@@ -91,7 +87,6 @@ follows:
 Recall that the **-r** option is mandatory with **yank**; in this case,
 it identifies the *first* occurrence of a section labelled `Coda`.
 
-<a name ="Using_the_thru_Command_to_Expand_Encodings"></a>
 
 Using the *thru* Command to Expand Encodings
 --------------------------------------------
@@ -108,7 +103,6 @@ encountered in the input are subsequently discarded. As a result,
 running a file through **thru** twice will not result in further changes
 to the file.
 
-<a name ="Alternative_Versions"></a>
 
 Alternative Versions
 --------------------
@@ -120,7 +114,6 @@ may be avoided, passages may be added, or material eliminated
 altogether. In short, several different versions or interpretations of
 the overall organization of a work may exist.
 
-<a name ="Select_Landowska_Version"></a>
 
 Humdrum provides a mechanism by which several alternative versions of
 the overall organization of a work may co-exist in the same file. This
@@ -130,7 +123,6 @@ distinguish different versions, each expansion list is given a unique
 
 ` *>Gould1982[A,A,B]  *>Landowska[A,A,B,B]`
 
-<a name ="Play_Binary"></a>
 
 Here we see two expansion lists, one carries the version label
 `Gould1982` and the other is labelled version `Landowska`. These
@@ -194,7 +186,6 @@ section B, followed by section A (again), followed by section C:
 
 `thru file`
 
-<a name ="Section_Types"></a>
 
 Section Types
 -------------
@@ -279,14 +270,12 @@ commands: indicating the first and second themes.
   `yank -t Form -s '2nd Theme' -r 1`    (extracts up to `>Form>Development`)
   `yank -t Form -s 'Exposition' -r 1`   (extracts up to `>Form>Development`)
   ------------------------------------- --------------------------------------
-<a name ="Extract_2nd_Theme_Recapitulation"></a>
 For example, the second theme from the recapitulation can be extracted
 as follows:
 `yank -t Form -s '2nd Theme' -r 2`
 Alternatively:
 `yank -t Form -s Recapitulation`
 *file*` | yank -t Form -s '2nd Theme' -r 1`
-<a name ="Using_the_yank_and_thru_Commands"></a>
 Using the *yank* and *thru* Commands
 ------------------------------------
 Section labels can be used in a wide number of applications. By way of
@@ -299,21 +288,16 @@ This command will also output any expansion-lists. If we want to
 restrict our output to identifying which *versions* are available for
 a document we would look for the presence of square brackets:
 `grep '^\*>.*\[.*\]'` *file*
-<a name ="Count_notes_Exposition"></a>
 How many notes are there in the exposition?
 `yank -t Form -s Exposition -r 1` *file*` | census`
-<a name ="Count_phrases_Development"></a>
 How many phrases are there in the development?
 `yank -t Form -s Development -r 1` *file*` | grep -c '{'`
-<a name ="Extract_third_recitative"></a>
 Extract the figured bass for the third recitative:
 `yank -s Recitativo -r 3` *file*` | extract -i '**B-num'`
-<a name ="Compare_keys"></a>
 Compare the estimated key for the second theme in the exposition
 versus the estimated key for the second theme in the recapitulation:
 `yank -t Form -s '2nd Theme' -r 1` *file*` | key`\
 `yank -t Form -s '2nd Theme' -r 2` *file*` | key`
-<a name ="Gould_duration"></a>
 Determine the nominal (non-rubato) duration of Gould\'s performance of
 the work:
 `thru -v Gould1982` *file*` | extract -i '**kern' | extract -f 1 \`
@@ -322,7 +306,6 @@ total
 Perform the first three measures from the second section of a binary
 form:
 `yank -s B` *file*` | yank -o = -r 1-3 | midi | perform`
-<a name ="Strophic_Representations"></a>
 Strophic Representations
 ------------------------
 Section labels and versions allow Humdrum users to select alternative
@@ -499,7 +482,6 @@ to label them with numbers: `*S/1, *S/2,` and so on. The individual
 verses are terminated with strophe end indicators (`*S/fin`), the
 spines rejoin, and then a strophic passage terminator (`*S-`) marks
 the end of the strophic passage.
-<a name ="The_strophe_Command"></a>
 The *strophe* Command
 ---------------------
 The Humdrum **strophe** command can be used to isolate or extract
@@ -540,7 +522,6 @@ Using the above data, the result is:\
 >
 Notice that all of the tandem interpretations related to the strophe
 organization are eliminated from the output.
-<a name ="Expand_Verses"></a>
 Suppose that we wanted to create a through-composed version of the
 entire work. We would expect as output, just two spines \-- the
 [`**kern`](/rep/kern) spine and the `**silbe`
@@ -562,16 +543,13 @@ illustrated above.
 Incidentally, the input passage need not necessary begin with
 strophe \#1. The **strophe** command will adapt to the input, and
 use the lowest previously unencountered strophe number.
-<a name ="Using_the_strophe_and_thru_Commands"></a>
 Using the *strophe* and *thru* Commands
 ---------------------------------------
-<a name ="Erk_edition"></a>
 As noted, the strophe technique can be used to encode different
 editorial interpretations of a single work. Suppose for example that
 we had two editions of the Bach chorale harmonizations: Erk and
 Reimenschneider. We could select the Erk edition as follows:
 `strophe -x Erk chorale166`
-<a name ="Syllables_in_Verses"></a>
 In a strophic song, suppose we would like to compare the number of
 syllables in the first and second verses. We begin by selecting the
 appropriate verse, extract the syllable spine, eliminate all
@@ -589,7 +567,6 @@ repeat this procedure for both verses:
 percent sign (%) have special meanings so the **grep -v** is used to
 eliminate them along with barlines.)
 ------------------------------------------------------------------------
-<a name ="Reprise"></a>
 Reprise
 -------
 Between stophes and sections, highly non-linear musical documents

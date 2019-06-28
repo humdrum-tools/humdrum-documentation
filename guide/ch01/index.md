@@ -301,7 +301,6 @@ representation gets its name from the German word for *core*; it is a
 scheme intended to represent the basic or core musical information of
 notes, durations, rests, barlines, and so on.
 
-<a name ="Humdrum_Tools"></a>
 
 Humdrum Tools
 -------------
@@ -324,7 +323,6 @@ and illustrate how they might be used. Once again, the goal in this
 chapter is to give you an initial taste of Humdrum. Don\'t worry if you
 don\'t understand everything at this point.
 
-<a name ="Some_Sample_Commands"></a>
 
 Some Sample Commands
 --------------------
@@ -337,7 +335,6 @@ to isolate one or more given parts. The command
 
 `extract -f 1 filename`
 
-<a name ="Extract_tenor_part"></a>
 
 will extract the first or left-most column or spine of data. Often it is
 useful to extract material according to the encoded content without
@@ -356,7 +353,6 @@ Any vocal text can be similarly extracted:
 
 `extract -i '**text' filename`
 
-<a name ="Extract_German_Text"></a>
 
 Or if the text is available in more than one language, a specific
 language may be isolated:
@@ -371,7 +367,6 @@ from a minuet & trio:
 
 `yank -s Trio -r 1 filename`
 
-<a name ="Extract_measures_114_to_183"></a>
 
 Or select the material in measures 114 to 183:
 
@@ -386,7 +381,6 @@ formats will be discussed fully in the ensuing chapters. For now, it is
 important only that you get a feel for some of the types of operations
 that Humdrum users might perform.
 
-<a name ="Notes_in_bassoon"></a>
 
 Two or more commands can be connected into a *pipeline.* The following
 command will let us determine whether there are any notes in the bassoon
@@ -394,7 +388,6 @@ part:
 
 `extract -i '*Ifagot' filename | census -k`
 
-<a name ="Play_Coda_half_tempo"></a>
 
 The following pipeline connects together four commands: it will play
 (using MIDI) the first and last measures from a section marked \"Coda\"
@@ -429,7 +422,6 @@ Count the number of phrases that end on the subdominant pitch:
 
 `deg filename | egrep -c '(}.*4)|(4.*})'`
 
-<a name ="Tuba_but_not_Trumpet"></a>
 
 The following command identifies all scores whose instrumentation
 includes a tuba but not a trumpet:
@@ -448,7 +440,6 @@ contain 10 or more lines of commands.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------

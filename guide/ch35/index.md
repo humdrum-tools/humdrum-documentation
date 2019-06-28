@@ -28,7 +28,6 @@ This chapter also visits a related issue of implied harmony. Many
 melodic passages outline clear harmonic progressions which are also
 implicated in layer-related analyses.
 
-<a name ="Implied_Harmony"></a>
 
 Implied Harmony
 ---------------

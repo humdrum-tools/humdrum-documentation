@@ -25,7 +25,6 @@ error-prone input data, failure to anticipate special circumstances or
 exceptions, improper processing, software bugs, and incautious
 interpretations of results.
 
-<a name ="Encoding_Errors"></a>
 
 Encoding Errors
 ---------------
@@ -76,7 +75,6 @@ identifying some pattern, the greater the likelihood that a single data
 error will cause a problem. Whenever possible try to restrict pattern
 searches to small or concise patterns.
 
-<a name ="Searching_Tips"></a>
 
 Searching Tips
 --------------
@@ -263,7 +261,6 @@ Take your time and reflect on the problem being addressed. Formulate a
 search strategy away from the computer so that you have time to consider
 possible confounds.
 
-<a name ="Pipeline_Tips"></a>
 
 Pipeline Tips
 -------------
@@ -289,7 +286,6 @@ processing errors.
 
 ------------------------------------------------------------------------
 
-<a name ="Reprise"></a>
 
 Reprise
 -------
