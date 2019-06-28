@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+
+use strict;
+
+my @files = @argv;
+
+foreach my $file (@files) {
+	processFile($file);
+}
+
+
+
+##############################
+##
+## processFile --
+##
+
+sub processFile {
+	my ($file) = @_;
+	open (FILE, $file) or die;
+	my @contents = <FILE>;
+	close FILE;
+	for (my $i=0; $i<@contents; $i++) {
+		$contents[$i] = cleanup($contents[$i]);
+	}
+	open (FILE, ">$file") or die;
+	print FILE @contents;
+	close FILE;
+}
+
+
+
+##############################
+##
+## cleanup --
+##
+## Change 
+##    [Chapter 7.](guide07.html)
+## into
+##    [Chapter 7.](/guide/07)
+##
+
+sub cleanup {
+	my ($line) = @_;
+	$line =~ s/\(guide(\d\d)\.html\)/(\/guide\/$1)/g;
+	return $line;
+}
+
+
+

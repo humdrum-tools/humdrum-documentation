@@ -17,91 +17,91 @@ topnav_dropdowns:
     - title: User guide
       folderitems:
 
-        - title: 1.
-          url: /guide/ch01
-        - title: 2.
-          url: /guide/ch02
-        - title: 3.
-          url: /guide/ch03
-        - title: 4.
-          url: /guide/ch04
-        - title: 5.
-          url: /guide/ch05
-        - title: 6.
-          url: /guide/ch06
-        - title: 7.
-          url: /guide/ch07
-        - title: 8.
-          url: /guide/ch08
-        - title: 9.
-          url: /guide/ch09
-        - title: 10.
-          url: /guide/ch10
+        - title: "1.   Humdrum: A Brief Tour"
+          url:   "/guide/ch01"
+        - title: "2.   Representing Music Using **kern (I)"
+          url:   "/guide/ch02"
+        - title: "3.   Some Initial Processing"
+          url:   "/guide/ch03"
+        - title: "4.   Basic Pitch Translations"
+          url:   "/guide/ch04"
+        - title: "5.   The Humdrum Syntax"
+          url:   "/guide/ch05"
+        - title: "6.   Representing Music Using **kern (II)"
+          url:   "/guide/ch06"
+        - title: "7.   MIDI Output Tools"
+          url:   "/guide/ch07"
+        - title: "8.   The Shell (I)"
+          url:   "/guide/ch08"
+        - title: "9.   Searching with Regular Expressions"
+          url:   "/guide/ch09"
+        - title: "10.  Musical Uses of Regular Expressions"
+          url:   "/guide/ch10"
 
-        - title: 11.
-          url: /guide/ch11
-        - title: 12.
-          url: /guide/ch12
-        - title: 13.
-          url: /guide/ch13
-        - title: 14.
-          url: /guide/ch14
-        - title: 15.
-          url: /guide/ch15
-        - title: 16.
-          url: /guide/ch16
-        - title: 17.
-          url: /guide/ch17
-        - title: 18.
-          url: /guide/ch18
-        - title: 19.
-          url: /guide/ch19
-        - title: 20.
-          url: /guide/ch20
+        - title: "11.  Melodic Intervals"
+          url:   "/guide/ch11"
+        - title: "12.  Selecting Musical Parts and Passages"
+          url:   "/guide/ch12"
+        - title: "13.  Assembling Scores"
+          url:   "/guide/ch13"
+        - title: "14.  Stream Editing"
+          url:   "/guide/ch14"
+        - title: "15.  Harmonic Intervals"
+          url:   "/guide/ch15"
+        - title: "16.  The Shell (II)"
+          url:   "/guide/ch16"
+        - title: "17.  Creating Inventories"
+          url:   "/guide/ch17"
+        - title: "18.  Fingers, Footsteps and Frets"
+          url:   "/guide/ch18"
+        - title: "19.  Musical Contexts"
+          url:   "/guide/ch19"
+        - title: "20.  Strophes, Verses and Repeats"
+          url:   "/guide/ch20"
 
-        - title: 21.
-          url: /guide/ch21
-        - title: 22.
-          url: /guide/ch22
-        - title: 23.
-          url: /guide/ch23
-        - title: 24.
-          url: /guide/ch24
-        - title: 25.
-          url: /guide/ch25
-        - title: 26.
-          url: /guide/ch26
-        - title: 27.
-          url: /guide/ch27
-        - title: 28.
-          url: /guide/ch28
-        - title: 29.
-          url: /guide/ch29
-        - title: 30.
-          url: /guide/ch30
+        - title: "21.  Searching for Patterns"
+          url:   "/guide/ch21"
+        - title: "22.  Classifying"
+          url:   "/guide/ch22"
+        - title: "23.  Rhythm"
+          url:   "/guide/ch23"
+        - title: "24.  The Shell (III)"
+          url:   "/guide/ch24"
+        - title: "25.  Similarity"
+          url:   "/guide/ch25"
+        - title: "26.  Moving Signifiers Between Spines"
+          url:   "/guide/ch26"
+        - title: "27.  Text and Lyrics"
+          url:   "/guide/ch27"
+        - title: "28.  Dynamics"
+          url:   "/guide/ch28"
+        - title: "29.  Differences and Commonalities"
+          url:   "/guide/ch29"
+        - title: "30.  MIDI Input Tools"
+          url:   "/guide/ch30"
 
-        - title: 31.
-          url: /guide/ch31
-        - title: 32.
-          url: /guide/ch32
-        - title: 33.
-          url: /guide/ch33
-        - title: 34.
-          url: /guide/ch34
-        - title: 35.
-          url: /guide/ch35
-        - title: 36.
-          url: /guide/ch36
-        - title: 37.
-          url: /guide/ch37
-        - title: 38.
-          url: /guide/ch38
-        - title: 39.
-          url: /guide/ch39
-        - title: 40.
-          url: /guide/ch40
+        - title: "31.  Repertories and Links"
+          url:   "/guide/ch31"
+        - title: "32.  The Shell (IV)"
+          url:   "/guide/ch32"
+        - title: "33.  Word Sounds"
+          url:   "/guide/ch33"
+        - title: "34.  Serial Processing"
+          url:   "/guide/ch34"
+        - title: "35.  Layers"
+          url:   "/guide/ch35"
+        - title: "36.  Sound and Spectra"
+          url:   "/guide/ch36"
+        - title: "37.  Electronic Music Editing"
+          url:   "/guide/ch37"
+        - title: "38.  Systematic Musicology"
+          url:   "/guide/ch38"
+        - title: "39.  Trouble-Shooting"
+          url:   "/guide/ch39"
+        - title: "40.  Conclusion"
+          url:   "/guide/ch40"
 
-    - title: Manual
+    - title: Tools
       folderitems:
         - title: Jekyll Documentation Theme
           url: /mydoc_introduction.html
