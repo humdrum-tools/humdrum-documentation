@@ -1,8 +1,44 @@
 <style>
 
+div#toc ul li {
+    list-style: square;
+}
 
-#toc ul, #toc ul li, #toc .nav ul li a {
+div#toc ul {
+    max-width: 300px;
+}
+
+div#toc ul li ul {
+    padding-left:8px;
+
+}
+
+div#toc ul li ul li::before {
+    content: "–  ";
+}
+
+div#toc >ul::before {
+    content: "Table of Contents";
+    font-weight: 500;
+    color: #555;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    width:70px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:10px;
+}
+
+
+#toc ul, #toc ul li, .nav #toc ul li a {
 	background: transparent !important;
+	font-size: 65% !important;
+}
+
+.nav #toc a {
+	border: 0;
+	background: red;
 }
 
 
@@ -10,14 +46,15 @@
 	display: none;
 }
 
-#toc .nav a {
+.nav #toc a {
 	color: {{site.primary_background_color}};
 	display: inline !important;
 }
 
-#toc .nav ul li a {
+#toc ul li a {
 	border: 0 !important;
 	font-size: 65% !important;
+	background: hotpink;
 }
 
 #toc ul:before {
