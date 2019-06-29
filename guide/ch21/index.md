@@ -84,7 +84,9 @@ identifying the location of any matching segments. One global comment is
 output for each matching pattern. In the above case, the output would be
 as follows:
 
-`!! Pattern found at line 2 of file Tonh`
+```bash
+!! Pattern found at line 2 of file Tonh
+```
 
 The [**patt**](/tool/patt) command will also identify any
 overlapping patterns. For example, suppose we had an input containing an
@@ -112,17 +114,25 @@ ostinato figure in minor thirds:
 If we applied the above **patt** command to this `ostinato` file, we
 would get the following output:
 
-`!! Pattern found at line 8 of file ostinato`
-`!! Pattern found at line 11 of file ostinato`
+```bash
+!! Pattern found at line 8 of file ostinato
+```
+```bash
+!! Pattern found at line 11 of file ostinato
+```
 
 We can instruct **patt** to output specific instances of the pattern
 using the **-e** (echo) option. Consider the following command:
 
-`patt -f dmitri -e ostinato`
+```bash
+patt -f dmitri -e ostinato
+```
 
 The resulting output would be:
 
-`!! Pattern found at line 4 of file ostinato `
+```bash
+!! Pattern found at line 4 of file ostinato 
+```
   ---------- ---------- -- --
   `**Tonh`   `**Tonh`      
   `H3`       `D4`          
@@ -131,7 +141,9 @@ The resulting output would be:
   `H3`       `D4`          
   `*-`       `*-`          
   ---------- ---------- -- --
-`!! Pattern found at line 7 of file ostinato `
+```bash
+!! Pattern found at line 7 of file ostinato 
+```
   ---------- ---------- -- --
   `**Tonh`   `**Tonh`      
   `H3`       `D4`          
@@ -164,7 +176,9 @@ pitch-letter name, followed by an optional accidental, followed by the
 colon character. The **-l** option will list all files that containing a
 matching record:
 
-`grep -l '^\*[a-g][-#]*:' *`
+```bash
+grep -l '^\*[a-g][-#]*:' *
+```
 
 Recall that the [**deg**](/tool/deg) command is mode sensitive,
 whereas the [**solfa**](/tool/solfa) command is mode
@@ -178,7 +192,9 @@ the `**deg` representation. Specifically, we can look for a raised
 mediant pitch immediately prior to a double barline. Our template file
 (dubbed "`picardy`") might look as follows:
 
-`3[+]  ==`
+```bash
+3[+]  ==
+```
 
 Notice that the plus sign has been placed in square brackets. The
 **patt** command accepts only *extended* regular expressions. The plus
@@ -190,7 +206,9 @@ In order to search for such picardy thirds, we should translate each
 input file to the `**deg` representation, and then search for raised
 mediants immediately prior to a double bar:
 
-`deg inputfile.krn | patt -f picardy`
+```bash
+deg inputfile.krn | patt -f picardy
+```
 
 A problem with this search strategy is that it assumes that the raised
 third will occur in the final sonority prior to the double barline. One
@@ -245,14 +263,18 @@ the [**ditto**](/tool/ditto) command discussed in [Chapter
 15;](/guide/ch15) **ditto** can be used to propagate the raised third
 through the sustained final chord. Our revised pipeline is:
 
-`deg bach.krn | ditto -s = | patt -s r -f picardy`
+```bash
+deg bach.krn | ditto -s = | patt -s r -f picardy
+```
 
 
 A similar approach can be used to identify consecutive fifths or octaves
 between two voices. A template file (dubbed `5ths`) might consist of the
 following pattern:
 
-`P5  P5`
+```bash
+P5  P5
+```
 
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
@@ -265,7 +287,9 @@ following command pipeline, notice the use of the **-s** option for
 that crossing a barline does not result in a failure to identify a
 consecutive fifth.
 
-`extract -i '*Ibass,*Itenor' Fux | hint -c | patt -s = -f 5ths`
+```bash
+extract -i '*Ibass,*Itenor' Fux | hint -c | patt -s = -f 5ths
+```
 
 
 Sometimes patterns will tend to be obscured by the presence of other
@@ -292,7 +316,9 @@ final two measures along with corresponding
 generated using [**hint**](/tool/hint) **-l** in order to
 generate intervals with respect to the lowest pitch.
 
-`!!!COM: Landini, Francesco `
+```bash
+!!!COM: Landini, Francesco 
+```
   ----------- ----------- ----------- ---------- --------- --------- ---------
   `**kern`    `**kern`    `**kern`    `**hint`   `**deg`   \*\*deg   \*\*deg
   `*clefF4`   `*clefG2`   `*clefG2`   `*`        `*`       `*`       `*`
@@ -315,7 +341,9 @@ the perfect fifth between the E and the A. This can be remedied by using
 generate all of the passing harmonic intervals. The revised \*\*hint
 spine is given below.
 
-`!!!COM: Landini, Francesco `
+```bash
+!!!COM: Landini, Francesco 
+```
   ----------- ---------- ---------- ---------- --------- --------- ---------
   `**kern`    \*\*kern   \*\*kern   \*\*hint   \*\*deg   \*\*deg   \*\*deg
   `*clefF4`   \*clefG2   \*clefG2   \*         \*        \*        \*
@@ -343,7 +371,9 @@ harmonic-interval template file (dubbed `LandCadence`):
 Using this template, we can identify Landini cadences as follows.
 (Notice the use of **-s \^=** to skip barlines.)
 
-`ditto -s ^= input | hint -l | patt -s ^= -f LandCadence`
+```bash
+ditto -s ^= input | hint -l | patt -s ^= -f LandCadence
+```
 
 It is possible that the 6-5-8 figured bass might arise in non-cadential
 situations, so a more circumspect template might also include some
@@ -351,12 +381,16 @@ scale-degree movements as well. The following template file (dubbed
 `Landini-Cadence`) combines both the harmonic-interval and scale-degree
 data:
 
-`[Mm]6  P5.*v6  P8.*\^1`
+```bash
+[Mm]6  P5.*v6  P8.*\^1
+```
 
 Using this more sophisticated pattern template, a suitable sequence of
 commands would be the following:
 
-`ditto -s ^= inputfile | hint -l > temp1  deg inputfile > temp2  assemble temp1 temp2 | patt -s ^= -f Landini-Cadence`
+```bash
+ditto -s ^= inputfile | hint -l > temp1  deg inputfile > temp2  assemble temp1 temp2 | patt -s ^= -f Landini-Cadence
+```
 
 In general, **patt** templates can be used to specify both concurrent
 conditions as well as dynamic or temporal conditions. This allows users
@@ -391,7 +425,9 @@ the case of Bach\'s chorale harmonizations, cadences are readily
 identified by the pause symbol. Our search template might look as
 follows:
 
-`^V([^I]|$)  (vi)|(VI);`
+```bash
+^V([^I]|$)  (vi)|(VI);
+```
 
 This template means: "look for an upper-case letter `V` appearing at
 the beginning of a line that is followed by either the end of the line
@@ -402,7 +438,9 @@ followed by a semicolon."
 When invoking the **patt** command, we can specify our preferred output
 tag along with the **-t** option as follows:
 
-`extract -i '**harm' bwv269.krn | patt -f template -t deceptive`
+```bash
+extract -i '**harm' bwv269.krn | patt -f template -t deceptive
+```
 
   ---------- -----------
   `**harm`   \*\*patt
@@ -510,7 +548,9 @@ possibly match a single input record. In the above case, the tone-row
 template will be matched and the \`P0\' tag issued if the following
 command is issued:
 
-`patt -f tonerow -t P0 -m Krenek`
+```bash
+patt -f tonerow -t P0 -m Krenek
+```
 
 
 The *pattern* Command

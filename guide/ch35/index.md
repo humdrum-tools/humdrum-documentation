@@ -98,13 +98,17 @@ given below:
   ---------------------------
 We can collapse the arpeggiated chords using the **context** command:
 
-`context -b = -o = copland`
+```bash
+context -b = -o = copland
+```
 
 Identify the chords is facilitated by using the pitch-class
 ([`**pc`](/rep/pc)) representation described in
 [Chapter 34.](/guide/ch34)
 
-`context -b = -o = copland | pc -a | rid -d`
+```bash
+context -b = -o = copland | pc -a | rid -d
+```
 
 The corresponding output is:
 
@@ -128,7 +132,9 @@ this task, we can use a The following awk script eliminates repeated
 tokens within a record: (huniq: We might call this script **huniq**
 since it acts like a horizontal version of the **uniq** command:
 
-`awk '{`
+```bash
+awk '{
+```
 > \# A script to eliminate repeated tokens within a record.
 > if (\$0 \~ /\^\[!\*\]/) {print \$0; next}
 > else

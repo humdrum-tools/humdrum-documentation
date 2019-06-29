@@ -151,11 +151,15 @@ however, we must use the [**timebase**](/tool/timebase) command
 to create an isorhythmic record structure. Since the shortest note is an
 eighth-note, the appropriate command is as follows.
 
-`timebase -t 8 scale > scale.tb`
+```bash
+timebase -t 8 scale > scale.tb
+```
 
 Using the timebased output, we can then invoke the **metpos** command:
 
-`metpos scale.tb > scale.met`
+```bash
+metpos scale.tb > scale.met
+```
 
 The resulting output contains both the original input (on the left) and
 the metric position spine (on the right):
@@ -184,7 +188,9 @@ Let\'s now eliminate the null data tokens introduced by **timebase**.
 Using [**humsed**](/tool/humsed), we delete each data record
 beginning with a period character:
 
-`humsed '/^\./d' scale.met > scale.tmp`
+```bash
+humsed '/^\./d' scale.met > scale.tmp
+```
 
 Next, we can use the [**recode**](/tool/recode) command to
 change the metric position values to appropriate MIDI key velocities. We
@@ -200,7 +206,9 @@ might use the following reassignment file (named `accent`):
 In applying **recode** we will take care to avoid processing measure
 numbers using the **-s** (skip) option:
 
-`recode -f accent -s ^= -i '**metpos' scale.tmp > scale.acc`
+```bash
+recode -f accent -s ^= -i '**metpos' scale.tmp > scale.acc
+```
 
 The output will now appear as follows:
 
@@ -223,7 +231,9 @@ The output will now appear as follows:
 Now we can use the [**midi**](/tool/midi) command to generate
 `**MIDI` data:
 
-`midi scale.acc > scale.mid`
+```bash
+midi scale.acc > scale.mid
+```
 
 The result is given below:
 
@@ -276,7 +286,9 @@ The modified output will now be:
 Finally, we use [**cleave**](/tool/cleave) to add the new
 key-down velocities.
 
-`cleave -i '**MIDI,**metpos' -o '**MIDI' scale.tmp > scale.mid`
+```bash
+cleave -i '**MIDI,**metpos' -o '**MIDI' scale.tmp > scale.mid
+```
 
 The final output is:
 
@@ -329,7 +341,9 @@ The scale degree information can be created by using
 [**deg**](/tool/deg) and **humsed** can be used to transform the
 signifiers as in the following `degree` file:
 
-`s/1.*/to/  s/2.*/st/  s/3.*/me/  s/4.*/sd/  s/5.*/do/  s/6.*/sm/  s/7.*/lt/`
+```bash
+s/1.*/to/  s/2.*/st/  s/3.*/me/  s/4.*/sd/  s/5.*/do/  s/6.*/sm/  s/7.*/lt/
+```
 
 We can classify the pitch ranges into high, medium, and low using the
 [**semits**](/tool/semits) command, followed by **recode**. For
@@ -373,17 +387,23 @@ We need to process the first spine with **humsed** again to eliminate
 the spaces in the multiple stops. The rhythm spine would be processed as
 follows:
 
-`humsed 's/ //g' rhythm > rhythm.new`
+```bash
+humsed 's/ //g' rhythm > rhythm.new
+```
 
 We could assemble these spines using the
 [**assemble**](/tool/assemble) command:
 
-`assemble rhythm.new range scale.step > newfile`
+```bash
+assemble rhythm.new range scale.step > newfile
+```
 
 Finally we can use **cleave** to amalgamate all of the data into a
 single final spine.
 
-`cleave -i '**rhythm,**range,**scale-step' -o '**complex' \`
+```bash
+cleave -i '**rhythm,**range,**scale-step' -o '**complex' \
+```
 > newfile \> output
 
 

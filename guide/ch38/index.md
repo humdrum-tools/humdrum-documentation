@@ -101,7 +101,9 @@ works that match particular controlled characteristics (see [Chapter
 files that contain scores in triple meter. The results are placed in a
 file called `control`:
 
-`find /scores -type f -exec grep -l '!!!AMT.*triple' "{}" ";" \`
+```bash
+find /scores -type f -exec grep -l '!!!AMT.*triple' "{}" ";" \
+```
 > \> control
 
 In some cases, the number of possible control works is excessively
@@ -164,7 +166,9 @@ barlines and rests. We can then calculate the average interval size by
 piping the output to the **stats** command. For typical folk melodies,
 the average interval size is roughly two semitones.
 
-`semits melody | xdelta -a | rid -GLId | grep -v '[=r]' | stats`
+```bash
+semits melody | xdelta -a | rid -GLId | grep -v '[=r]' | stats
+```
 
 Next, we need to determine the average melodic interval size that would
 result for a random re-ordering of the pitches within each melody. We
@@ -189,7 +193,9 @@ following Humdrum input:
   -------------
 We can scramble the order of data records using the following command:
 
-`scramble -r numbers`
+```bash
+scramble -r numbers
+```
 
 The **-r** option indicates that it is the order of records which should
 be randomized. A possible output might look like this:
@@ -212,7 +218,9 @@ Returning to our melodic interval problem, we can now generate an
 inventory of melodic intervals for our original repertory, where the
 order of the notes has been randomly ordered:
 
-`scramble -r melody | semits | xdelta -a | rid -GLId \`
+```bash
+scramble -r melody | semits | xdelta -a | rid -GLId \
+```
 > \| grep -v \'\[=r\]\' \| stats
 
 For a typical folksong repertory, the average melodic interval size for
@@ -231,12 +239,16 @@ relative scarcity of subdominant chords. We can address this question by
 comparing Haydn\'s actual harmonic progressions with randomly generated
 progressions. First we count the total number of *V-IV* progressions:
 
-`extract -i '**harm' haydn  | context -n 2 -o ^= | grep -c '^V IV$'`
+```bash
+extract -i '**harm' haydn  | context -n 2 -o ^= | grep -c '^V IV$'
+```
 
 Next we randomly re-order his harmonies and count the number of *V-IV*
 progressions:
 
-`scramble -r haydn | extract -i '**harm' | context -n 2 -o ^= | grep -c '^V IV$'`
+```bash
+scramble -r haydn | extract -i '**harm' | context -n 2 -o ^= | grep -c '^V IV$'
+```
 
 
 In some cases, problems can be addressed by randomizing one part of
@@ -247,17 +259,27 @@ occur by chance. That is, the tritone is "sought-out" rather than
 invention. We begin by counting the number of augmented elevenths in his
 actual writing:
 
-`ditto -s = bach | hint | grep -c 'A11'`
+```bash
+ditto -s = bach | hint | grep -c 'A11'
+```
 
 We can create a random comparison by extracting one of the parts,
 scrambling the order of notes, and then re-assembling the scrambled part
 with the original. The resulting harmonic intervals arise from a random
 juxtaposition of parts.
 
-`extract -f 1 bach > temp1`
-`extract -f 2 bach > temp2`
-`scramble -r temp1 > temp1.scr`
-`assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'`
+```bash
+extract -f 1 bach > temp1
+```
+```bash
+extract -f 2 bach > temp2
+```
+```bash
+scramble -r temp1 > temp1.scr
+```
+```bash
+assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'
+```
 
 Note that the **scramble** command also provides a **-t** option so that
 the order of tokens within a data record can be randomly re-arranged.
@@ -332,7 +354,9 @@ Recall that the [**reihe**](/tool/reihe) command ([Chapter
 serial position of data tokens. For example, suppose we had an input
 consisting of the numbers 1 through 5. The following command:
 
-`reihe -s +1 file`
+```bash
+reihe -s +1 file
+```
 
 Will cause all data tokens to be moved forward one position, and the
 last data token to be moved to the beginning:
@@ -352,18 +376,26 @@ extract each of the voices. Let\'s also eliminate barlines and use
 [**ditto**](/tool/ditto) to replicate the pitch values through
 null tokens.
 
-`extract -i '*sopran' composition | grep -v = | ditto > voice1`
-`extract -i '*bass' composition | grep -v = | ditto > voice2`
+```bash
+extract -i '*sopran' composition | grep -v = | ditto > voice1
+```
+```bash
+extract -i '*bass' composition | grep -v = | ditto > voice2
+```
 
 Now let\'s shift one part with respect to the other using
 [**reihe**](/tool/scramble) **-s**.
 
-`reihe -s voice1 > voice1.shifted`
+```bash
+reihe -s voice1 > voice1.shifted
+```
 
 Now we reassemble the parts, determine the harmonic intervals present,
 and count the number of octave intervals:
 
-`assemble voice2 voice1.shifted | hint | grep -c 'P8'`
+```bash
+assemble voice2 voice1.shifted | hint | grep -c 'P8'
+```
 
 In effect, we have concocted a control group, by shifting the parts with
 respect to each other. Of course we have utterly destroyed the

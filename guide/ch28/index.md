@@ -420,17 +420,25 @@ assist a number of tasks related to musical dynamics. Suppose, for
 example, that we want to compare the average overall dynamic levels for
 two arabesques:
 
-`extract -i '**dynam' arabesque1 | db | rid -GLId | stats`
-`extract -i '**dynam' arabesque2 | db | rid -GLId | stats`
+```bash
+extract -i '**dynam' arabesque1 | db | rid -GLId | stats
+```
+```bash
+extract -i '**dynam' arabesque2 | db | rid -GLId | stats
+```
 
 
 Similarly, we might compare the overall dynamic levels between two
 sections of a single work. Perhaps we wish to know whether the
 exposition is on average louder than the development section:
 
-`yank -s Exposition -r 1 symphony3 | extract -i '**dynam' \`
+```bash
+yank -s Exposition -r 1 symphony3 | extract -i '**dynam' \
+```
 > \| db \| rid -GLId \| stats
-`yank -s Development -r 1 symphony3 | extract -i '**dynam' \`
+```bash
+yank -s Development -r 1 symphony3 | extract -i '**dynam' \
+```
 > \| db \| rid -GLId \| stats
 
 
@@ -439,9 +447,13 @@ might compare the first 10 measures with the final 10 measures. Notice
 the use of [**ditto**](/tool/ditto) to increase the number of
 values participating in the calculation of the average dynamic level:
 
-`yank -n = -r 1-10 janacek | extract -i '**dynam' \`
+```bash
+yank -n = -r 1-10 janacek | extract -i '**dynam' \
+```
 > \| ditto -s = \| db \| rid -GLId \| stats
-`yank -n = -r '$-10-$' janacek | extract -i '**dynam' \`
+```bash
+yank -n = -r '$-10-$' janacek | extract -i '**dynam' \
+```
 > \| ditto -s = \| db \| rid -GLId \| stats
 
 
@@ -457,7 +469,9 @@ between pitch height and dynamic level then the correlation should be
 positive.
 
 
-`semits klezmer | correl -s ^= -m`
+```bash
+semits klezmer | correl -s ^= -m
+```
 
 This command assumes an input consisting of two spines \-- one
 pitch-related and a `**dB` spine. The **-s** option for **correl** is
@@ -472,7 +486,9 @@ Similarly, we could use this same approach to determine whether there is
 a relationship between duration and dynamic level. Are longer notes more
 likely to be louder in Klezmer music?
 
-`dur klezmer | correl -s ^= -m`
+```bash
+dur klezmer | correl -s ^= -m
+```
 
 
 A variation on this procedure might be to restrict the comparison over a
@@ -486,7 +502,9 @@ height and dynamic level. We might recode all values lower than 7 to a
 unique string (such as \`XXX\') and then use **grep -v** to eliminate
 these notes from a subsequent correlation:
 
-`extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer > temp2  assemble temp1 temp2 | grep -v 'XXX' | correl -s ^= -m`
+```bash
+extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer > temp2  assemble temp1 temp2 | grep -v 'XXX' | correl -s ^= -m
+```
 
 
 Terraced Dynamics
@@ -508,7 +526,9 @@ the changes in dynamic level. Notice that it is important to avoid using
 the [**ditto**](/tool/ditto) command since repeated dynamic
 level values will cause the average dynamic difference to approach zero.
 
-`extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \`
+```bash
+extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \
+```
 > \| stats
 
 Another approach to this problem might be to count the number of dynamic
@@ -517,10 +537,14 @@ pipeline, we use [**context**](/tool/context) to generate pairs
 of dynamic markings, and then use **grep** to count the number of
 alternations between *f* and *p*.
 
-`extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
+```bash
+extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \
+```
 > \| context -n 2 \| grep -c \'f p\'
 
-`extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \`
+```bash
+extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \
+```
 > \| context -n 2 \| grep -c \'p f\'
 
 
@@ -534,9 +558,13 @@ a diminuendo followed by a crescendo. Musical intuition would suggest
 that swell gestures are more common than dip gestures. We could test
 this view as follows:
 
-`extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
+```bash
+extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \
+```
 > \| context -n 2 \| grep -c \'\< \>\'
-`extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \`
+```bash
+extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \
+```
 > \| context -n 2 \| grep -c \'\> \<\'
 
 
@@ -571,7 +599,9 @@ the key velocity values for key-on events. The following
 [**humsed**](/tool/humsed) command simply eliminates all data up
 to (and including) the last slash character:
 
-`extract -i '**MIDI' mono_input | humsed 's/.*\///'`
+```bash
+extract -i '**MIDI' mono_input | humsed 's/.*\///'
+```
 
 This will leave us with just the key-down velocity data. Let\'s suppose
 that the following rough decibel equivalents are established:
@@ -606,7 +636,9 @@ would begin as follows:
 The completed translation would be accomplished by the following
 pipeline:
 
-`extract -i '**MIDI' mono_input | humsed 's/.*\///' \`
+```bash
+extract -i '**MIDI' mono_input | humsed 's/.*\///' \
+```
 > \| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
 
 Notice the use of the **sed** command to replace the \*\*MIDI

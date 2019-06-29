@@ -45,7 +45,9 @@ The *awk* Programming Language
 Awk programs can be executed from the shell command line. A simple
 program is the following:
 
-`awk '{print "hello"}'`
+```bash
+awk '{print "hello"}'
+```
 
 The **awk** command invokes the awk program interpreter. The material
 within the single quotes is the actual program. Once the program is
@@ -65,13 +67,17 @@ Automatic Parsing of Input Data
 Each line of input data is automatically assigned to the awk variable
 `$0`. This means that the command
 
-`awk '{print $0}'`
+```bash
+awk '{print $0}'
+```
 
 will simply echoe each line of input as the output. Similarly, the
 following command will print each line of input preceded by a colon and
 a space:
 
-`awk '{print ": " $0}'`
+```bash
+awk '{print ": " $0}'
+```
 
 For any input line, awk also automatically parses the data into
 individual tokens or fields. A token is deemed to be any sequence of
@@ -81,15 +87,21 @@ awk variable `$1`. The second data token is assigned to the variable
 `$2`, and so on. For example, suppose a program encountered the
 following input line:
 
-`243xyz 3    29   #%$ **     Ullyses 234-034`
+```bash
+243xyz 3    29   #%$ **     Ullyses 234-034
+```
 
 The variables would be automatically assigned as follows:
 
-`$1 = 234xyz  $2 = 3  $2 = 29  $4 = #%$  $5 = **  $6 = Ullyses  $7 = 234-034`
+```bash
+$1 = 234xyz  $2 = 3  $2 = 29  $4 = #%$  $5 = **  $6 = Ullyses  $7 = 234-034
+```
 
 Given this input, the command
 
-`awk '{print $2 + $3}'`
+```bash
+awk '{print $2 + $3}'
+```
 
 will print the sum of `$2` and `$3`, namely 32.
 
@@ -104,7 +116,9 @@ placed in the right-most spine, so it makes most sense to subtract \$1
 from \$2. Negative numbers mean that the nominally lower part has
 crossed above the nominally higher part:
 
-`awk '{print $1 - $2}'`
+```bash
+awk '{print $1 - $2}'
+```
 
 In addition to addition and subtraction, other possible arithemtic
 operators include the slash (/) for division, the asterisk (\*) for
@@ -114,13 +128,17 @@ of operations. For example, the following command prints the product of
 the first and second tokens (\$1 \* \$2) divided by the third token
 raised to the fourth token power:
 
-`awk '{print ($1 * $2) / ($3^$4)}'`
+```bash
+awk '{print ($1 * $2) / ($3^$4)}'
+```
 
 As we have already seen, character strings can also be included in print
 statements. For example, we might want to print the first and third
 input tokens separated by a tab:
 
-`awk '{print $1 "\t" $3}'`
+```bash
+awk '{print $1 "\t" $3}'
+```
 
 
 Conditional Statements
@@ -131,7 +149,9 @@ might wish to avoid processing barlines. The awk **if** statement can be
 used to restrict the operation to particular circumstances. Consider the
 following awk program:
 
-`awk '{if ($0 !~/^=/) print $1 - $2}'`
+```bash
+awk '{if ($0 !~/^=/) print $1 - $2}'
+```
 
 The **if** condition is given in parentheses. The string given between
 the slashes (`/^=/`) is a regular expression: in this case, it
@@ -152,12 +172,16 @@ For Humdrum inputs, we may want to avoid processing comments and
 interpretations. Whenever we encounter a comment or interpretation, we
 might simply echo the input record in the output:
 
-`awk '{if($0 ~/^[*!]/) {print $0} else {print $1 - $2}}'`
+```bash
+awk '{if($0 ~/^[*!]/) {print $0} else {print $1 - $2}}'
+```
 
 Sometimes we might simply want to do nothing at all when we encounter a
 comment or interpretation:
 
-`awk '{if($0 ~/^[*!]/) {} else {print $1 - $2}}'`
+```bash
+awk '{if($0 ~/^[*!]/) {} else {print $1 - $2}}'
+```
 
 Recall that input tokens in awk are separated by any blank space such as
 spaces or tabs. This means that a Humdrum multiple-stop will be treated
@@ -169,7 +193,9 @@ the third token might be the third element of a multiple-stop in the
 first spine, or the second element of a multiple-stop appearing in the
 second spine.
 
-`awk '{FS="\t"; print $3}'`
+```bash
+awk '{FS="\t"; print $3}'
+```
 
 Notice the use of the semicolon to separate individual instructions.
 
@@ -184,12 +210,16 @@ assigned to the variable \``A`\'; the value 2.2 is assigned to the
 variable \``number`\'; and the character string "`Dear Gail`" is
 assigned to the variable \``salutation`\':
 
-`A=178  number = 2.2  salutation = "Dear Gail"`
+```bash
+A=178  number = 2.2  salutation = "Dear Gail"
+```
 
 Named variables can be used for various arithmetic operations. For
 example:
 
-`A=178+18  number = 2.2 + A  number_squared = number ^ 2`
+```bash
+A=178+18  number = 2.2 + A  number_squared = number ^ 2
+```
 
 
 Manipulating Character Strings
@@ -199,17 +229,23 @@ Variables holding character strings can be concatenated together. In the
 following example, after the first three assignments, the variable
 `saluation` will contain the character string "`Dear Craig`":
 
-`opening = "Dear"  space = " "  name = "Craig"  salutation = opening space name`
+```bash
+opening = "Dear"  space = " "  name = "Craig"  salutation = opening space name
+```
 
 Awk provides a number of built-in functions for manipulating text. One
 function (**gsub**) carries out global substitutions. The syntax is:
 
-`gsub("target-string","replacement-string",variable)`
+```bash
+gsub("target-string","replacement-string",variable)
+```
 
 For example, the following instruction changes all occurrences of `X` to
 `Y` in a variable named `string`:
 
-`gsub("X","Y",string)`
+```bash
+gsub("X","Y",string)
+```
 
 Suppose that we wanted to increment all measure numbers by 1. Let\'s
 presume our input contains only a single spine. First we test for the
@@ -220,7 +256,9 @@ eliminate all non-numeric characters using `gsub`, (3) add one to the
 remaining numeric value, and (4) output the new number preceded by the
 equal sign:
 
-`awk '{`
+```bash
+awk '{
+```
 > if (\$0 !\~/\^=/) {print \$0}
 > else {
 > > barline = \$1
@@ -250,7 +288,9 @@ for (initial-value; condition-for-continuing; increment-action)
 In the case of counting the number of leading-tones for each of four
 spines, our program would be as follows:
 
-`awk '{`
+```bash
+awk '{
+```
 > count = 0
 > for (i=1; i\<=4; i++)
 > > {if (\$i \~/ti/) count++}
@@ -274,7 +314,9 @@ our revised program we have also added some comments to clarify our
 code. Like the shell, awk comments consist of material following the
 octothorpe character (\#):
 
-`awk '{`
+```bash
+awk '{
+```
 > \# A program to count occurrences of the leading-tone.
 > count = 0
 > for (i=1; i\<=NF; i++)
@@ -290,7 +332,9 @@ instruction. Whenever a **next** statement is encountered, the program
 immediately moves on to the next input line and begins processing again
 from the start of the program.
 
-`awk '{`
+```bash
+awk '{
+```
 > \# A program to count occurrences of the leading-tone.
 > count = 0
 > if (\$0 \~/\^\[!\*=\]/) {print \$0; next}
@@ -313,7 +357,9 @@ that only one barline token is output. Finally, we should remain
 vigilant for spine-path terminators (`*-`) and ensure that our output is
 similarly properly terminated. The revised program is as follows:
 
-`awk '{`
+```bash
+awk '{
+```
 > \# A program to count occurrences of the leading-tone.
 > count = 0
 > if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}

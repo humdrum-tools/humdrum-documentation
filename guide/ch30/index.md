@@ -54,7 +54,9 @@ recording is terminated.
 
 The recorded output is normally directed to a file as in the following:
 
-`record > filippa`
+```bash
+record > filippa
+```
 
 
 The *encode* Command
@@ -91,7 +93,9 @@ configuration file (that may be written or edited by the user). This
 configuration file contains a series of definitions that map MIDI events
 to output strings. For example, the instruction
 
-`KEY 60 middle-C`
+```bash
+KEY 60 middle-C
+```
 
 assigns the key-on event for MIDI key \#60 to the string `middle-C`.
 Each time key \#60 is depressed, the string `middle-C` will appear in
@@ -104,17 +108,29 @@ between 90 and 127 MIDI units to the apostrophe character (the
 [`**kern`](/rep/kern) signifier for a staccato
 note):
 
-`VEL 90 127 '`
+```bash
+VEL 90 127 '
+```
 
 A third class of mapping instructions relates to the elapsed time
 between MIDI key onsets \-- "delta time" or DEL. Consider, for
 example, the following configuration instructions:
 
-`DEL 48 80 8`
-`DEL 81 112 8.`
-`DEL 113 160 4`
-`DEL 161 224 4.`
-`DEL 225 320 2`
+```bash
+DEL 48 80 8
+```
+```bash
+DEL 81 112 8.
+```
+```bash
+DEL 113 160 4
+```
+```bash
+DEL 161 224 4.
+```
+```bash
+DEL 225 320 2
+```
 
 These instructions divide the elapsed time between key onsets into five
 ranges. When the elapsed time lies between 48 and 80 clock ticks, the

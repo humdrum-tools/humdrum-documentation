@@ -394,7 +394,9 @@ held in a file named `source`; the middle column consists of the letters
 A, B and C, and is held in a file named `template`. The following
 command:
 
-`simil source template`
+```bash
+simil source template
+```
 
 generates the third column (labelled
 [`**simil`](/rep/simil)):
@@ -559,7 +561,9 @@ other penalties are defined in this file, the remaining edit operations
 use the default edit penalty of +1.0. The user can effectively disable a
 given edit operation by defining an arbitrarily high edit penalty.
 
-`# This is a comment. `
+```bash
+# This is a comment. 
+```
 R1
 
 0.7
@@ -621,29 +625,75 @@ identify similar fingering patterns in music for guitar. Consider the
 following work by Ferdinando Carulli:
 
 
-`!!!COM: Carulli, Ferdinando`
-`!!!OTL: Larghetto, Opus 124, No. 23 `
-`!! For guitar.`
-`**fret`
-`*ICstr`
-`*Iguitr`
-`*AT:E2`
-`*RT:0:5:10:15:19:24`
-`*MM60`
-`: : : : |0M :`
-`=1`
-`|0P : : |1bI : |0A`
-`: : : |1bI : |0A`
-`|0P : : |2bI : |2bA`
-`: : : |4dI : |4eA`
-`: : : |2bI : |2bA`
-`=2`
-`|0P : : |1bI : |0A`
-`: : : |1bI : |0A`
-`|0 : : |2bI : |2bA`
-`: : : |4dI : |4eA`
-`: : : |2bI : |2bA`
-`=3  We might be interested in a fret-board fingering pattern that consists of the following successive finger combinations: `
+```bash
+!!!COM: Carulli, Ferdinando
+```
+```bash
+!!!OTL: Larghetto, Opus 124, No. 23 
+```
+```bash
+!! For guitar.
+```
+```bash
+**fret
+```
+```bash
+*ICstr
+```
+```bash
+*Iguitr
+```
+```bash
+*AT:E2
+```
+```bash
+*RT:0:5:10:15:19:24
+```
+```bash
+*MM60
+```
+```bash
+: : : : |0M :
+```
+```bash
+=1
+```
+```bash
+|0P : : |1bI : |0A
+```
+```bash
+: : : |1bI : |0A
+```
+```bash
+|0P : : |2bI : |2bA
+```
+```bash
+: : : |4dI : |4eA
+```
+```bash
+: : : |2bI : |2bA
+```
+```bash
+=2
+```
+```bash
+|0P : : |1bI : |0A
+```
+```bash
+: : : |1bI : |0A
+```
+```bash
+|0 : : |2bI : |2bA
+```
+```bash
+: : : |4dI : |4eA
+```
+```bash
+: : : |2bI : |2bA
+```
+```bash
+=3  We might be interested in a fret-board fingering pattern that consists of the following successive finger combinations: 
+```
 index finger
 index finger
 ring and little fingers
@@ -658,29 +708,71 @@ can prepare our input using the following
 [**humsed**](/tool/humsed) command. We delete all barlines,
 and then eliminate all characters other than the letters *a* to *e*.
 Any resulting empty lines we replace by the letter *n*.
-`grep -v ^= carulli | humsed 's/[^a-e]//g; s/^$/n/' carulli`
+```bash
+grep -v ^= carulli | humsed 's/[^a-e]//g; s/^$/n/' carulli
+```
 The corresponding output would be as follows:
 
-`!!!COM: Carulli, Ferdinando`
-`!!!OTL: Larghetto, Opus 124, No. 23`
-`!! For guitar.`
-`**fret`
-`*ICstr`
-`*Iguitr`
-`*AT:E2`
-`*RT:0:5:10:15:19:24`
-`*MM60`
-`n`
-`b`
-`b`
-`bb`
-`de`
-`bb`
-`b`
-`b`
-`bb`
-`de`
-`bb  The appropriate template file would contain the following finger successions: `
+```bash
+!!!COM: Carulli, Ferdinando
+```
+```bash
+!!!OTL: Larghetto, Opus 124, No. 23
+```
+```bash
+!! For guitar.
+```
+```bash
+**fret
+```
+```bash
+*ICstr
+```
+```bash
+*Iguitr
+```
+```bash
+*AT:E2
+```
+```bash
+*RT:0:5:10:15:19:24
+```
+```bash
+*MM60
+```
+```bash
+n
+```
+```bash
+b
+```
+```bash
+b
+```
+```bash
+bb
+```
+```bash
+de
+```
+```bash
+bb
+```
+```bash
+b
+```
+```bash
+b
+```
+```bash
+bb
+```
+```bash
+de
+```
+```bash
+bb  The appropriate template file would contain the following finger successions: 
+```
 >   -----
 >   `b`
 >   b
@@ -732,105 +824,209 @@ Lies Over the Ocean*.
 > >
 > > `**kern`
 
-`**accent`
+```bash
+**accent
+```
 
-`*M4/4`
+```bash
+*M4/4
+```
 
-`*M4/4`
+```bash
+*M4/4
+```
 
-`*D:`
+```bash
+*D:
+```
 
-`*D:`
+```bash
+*D:
+```
 
-`=1`
+```bash
+=1
+```
 
-`=1`
+```bash
+=1
+```
 
-`4.d`
+```bash
+4.d
+```
 
 `0.76 `\*``
 
-`32c#`
+```bash
+32c#
+```
 
-`0.48`
+```bash
+0.48
+```
 
-`32d`
+```bash
+32d
+```
 
-`0.46`
+```bash
+0.46
+```
 
-`32e`
+```bash
+32e
+```
 
-`0.47`
+```bash
+0.47
+```
 
-`32d`
+```bash
+32d
+```
 
-`0.46`
+```bash
+0.46
+```
 
-`4.b`
+```bash
+4.b
+```
 
 `0.63 `\*``
 
-`8a`
+```bash
+8a
+```
 
-`0.52`
+```bash
+0.52
+```
 
-`=2`
+```bash
+=2
+```
 
-`=2`
+```bash
+=2
+```
 
-`4g`
+```bash
+4g
+```
 
 `0.68 `\*``
 
-`4e`
+```bash
+4e
+```
 
 `0.62 `\*``
 
-`4d`
+```bash
+4d
+```
 
 `0.66 `\*``
 
-`4A`
+```bash
+4A
+```
 
 `0.65 `\*``
 
-`*-`
+```bash
+*-
+```
 
-`*- `
+```bash
+*- 
+```
 
-`!!!OTL: My Bonnie Lies Over the Ocean `
-`**kern`
-`**accent`
-`*M3/4`
-`*M3/4`
-`*G:`
-`*G:`
-`4d`
+```bash
+!!!OTL: My Bonnie Lies Over the Ocean 
+```
+```bash
+**kern
+```
+```bash
+**accent
+```
+```bash
+*M3/4
+```
+```bash
+*M3/4
+```
+```bash
+*G:
+```
+```bash
+*G:
+```
+```bash
+4d
+```
 `0.705 `\*``
-`=1`
-`=1`
-`4.b`
+```bash
+=1
+```
+```bash
+=1
+```
+```bash
+4.b
+```
 `0.729 `\*``
-`8a`
-`0.513`
-`4g`
+```bash
+8a
+```
+```bash
+0.513
+```
+```bash
+4g
+```
 `0.671 `\*``
-`=2`
-`=2`
-`4a`
+```bash
+=2
+```
+```bash
+=2
+```
+```bash
+4a
+```
 `0.676 `\*``
-`4g`
+```bash
+4g
+```
 `0.652 `\*``
-`4e`
+```bash
+4e
+```
 `0.633 `\*``
-`=3`
-`=3`
-`4d`
+```bash
+=3
+```
+```bash
+=3
+```
+```bash
+4d
+```
 `0.696 `\*``
-`2B`
+```bash
+2B
+```
 `0.659 `\*``
-`*-`
-`*-   The similarity between these two passages is more evident when the perceptually more salient tones are considered alone. Using the **accent`
+```bash
+*-
+```
+```bash
+*-   The similarity between these two passages is more evident when the perceptually more salient tones are considered alone. Using the **accent
+```
 data, we might simplify one or both passages by extracting only those
 notes whose accent value exceeds some threshold. In the above
 examples, a threshold of 0.6 might be appropriate (marked with an
@@ -839,10 +1035,14 @@ asterisk). We can isolate these tones by using the
 commands. First, we create an appropriate reassignment file for
 **recode**. In this case we have classified all notes as either
 primary, secondary, or tertiary:
-`>=0.6    primary  >=0.5   secondary  else    tertiary`
+```bash
+>=0.6    primary  >=0.5   secondary  else    tertiary
+```
 Assuming this file is named `reassign`, we can pre-process our passage
 as follows:
-`recode -f reassign -s ^= -i '**accent' inputfile \`
+```bash
+recode -f reassign -s ^= -i '**accent' inputfile \
+```
 > \| yank -m primary -r 0 \| extract -i \'\*\*kern\' \> primary.krn
 The file `primary.krn` contains only those notes having the highest
 estimated accent values. Using this file, we can continue processing

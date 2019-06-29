@@ -174,7 +174,9 @@ The [**midi**](/tool/midi) command converts Humdrum
 data. By way of example, the above `**MIDI` data can be generated as
 follows:
 
-`midi inven05.krn > inven05.hmd`
+```bash
+midi inven05.krn > inven05.hmd
+```
 
 The `.hmd` filename extension is a common way of designating Humdrum
 `MIDI` data.
@@ -189,7 +191,9 @@ durations. The following command takes a file containing a 12-tone row
 (pitch information only) and produces a `**MIDI` output where all notes
 assigned to a quarter duration:
 
-`midi -d 4 tonerow > tonerow.hmd`
+```bash
+midi -d 4 tonerow > tonerow.hmd
+```
 
 The most common use of `**MIDI` data is to create a standard MIDI file
 using the **smf** command, or to listen to the output using the
@@ -216,7 +220,9 @@ The **perform** command is typically the last command in a pipe preceded
 by the **midi** command. For example, a `**kern`-format score can be
 heard using the following command:
 
-`midi clara.krn | perform`
+```bash
+midi clara.krn | perform
+```
 
 When invoked, the **perform** command reads in the entire input into
 memory. This allows the user to move freely both forward and backward
@@ -249,7 +255,9 @@ comment containing the character string "`Second theme`," then the
 user can move immediately to this position in the input by entering the
 following command:
 
-`/Second theme`
+```bash
+/Second theme
+```
 
 Similarly, backward searches can be carried out by typing the question
 mark (`?`) rather than the slash. If the search is successful, playback
@@ -287,12 +295,16 @@ commands. For example, in the [`**kern`](/rep/kern)
 representation, pauses are indicated by a semicolon; hence the user
 might search for the next pause symbol by typing:
 
-`/;`
+```bash
+/;
+```
 
 
 Similarly, the user could search for a particular pitch, e.g.
 
-`/gg#`
+```bash
+/gg#
+```
 
 
 Since the **perform** command accepts any Humdrum input, other Humdrum
@@ -301,7 +313,9 @@ contain melodic interval data (see [Chapter 11](/guide/ch11)), allowing
 the user to search for a particular interval such as a diminished
 octave:
 
-`/d8`
+```bash
+/d8
+```
 
 If the string pattern is found in the input, **perform** will move
 immediately forward (or backward) to the next occurrence and begin
@@ -320,7 +334,9 @@ input Humdrum representation. The tempo may be specified on the command
 line by using the **-t** option. For example, the following command
 causes the file `Andean` to be performed at half tempo:
 
-`midi Andean | perform -t 0.5`
+```bash
+midi Andean | perform -t 0.5
+```
 
 Performing at fast speeds can often be useful when scanning for a
 particular passage.
@@ -366,7 +382,9 @@ non-`**MIDI` spines are simply ignored. Suppose we begin with a
 `**kern`-format file named `joplin`. We can create a standard MIDI file
 as follows:
 
-`midi joplin | smf > joplin.smf`
+```bash
+midi joplin | smf > joplin.smf
+```
 
 The **smf** command provides two options. The **-t** option allows the
 user to set the tempo, whereas the **-v** option allows the user to

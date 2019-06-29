@@ -59,40 +59,54 @@ preceded by a dollars sign. For example, the string `$VARIABLE` means
 file named \$FILE in the current directory (\$FILE is a legitimate
 filename on UNIX systems). If you type:
 
-`sort $FILE`
+```bash
+sort $FILE
+```
 
 The shell will assume that there is a variable named FILE, and retrieve
 its contents. Since the contents are likely to be empty, the above
 command is identical to typing:
 
-`sort`
+```bash
+sort
+```
 
 In order to sort the file named \$FILE, the dollars sign would need to
 be escaped:
 
-`sort \$FILE`
+```bash
+sort \$FILE
+```
 
 Depending on the type of shell, variables can be assigned numerical or
 string values in various ways. For most shells, variables can be
 assigned using the equals sign (with no intervening spaces). For
 example, the integer 7 can be assigned to the variable X as follows:
 
-`X=7`
+```bash
+X=7
+```
 
 Or the string "hello" can be assigned to a variable by placing the
 string in quotation marks:
 
-`X="hello"`
+```bash
+X="hello"
+```
 
 Single quotation marks can also be used:
 
-`X='hello'`
+```bash
+X='hello'
+```
 
 If you had a file named `hello` in the current directory, and if the
 variable `X` had been assigned as above, then the following command
 would sort this file:
 
-`sort $X`
+```bash
+sort $X
+```
 
 
 The Shell Greve
@@ -104,13 +118,17 @@ containing the word `zebra`. But we\'re not certain what file (or files)
 contain this word. Manually, we would need to carry out two operations.
 First we would search for any file(s) containing the word:
 
-`grep -l zebra *`
+```bash
+grep -l zebra *
+```
 
 We might find that the word "zebra" appears in the files `animals` and
 `mammals`. Having determine what files to sort, now we would actually
 carry out the appropriate sort command:
 
-`sort animals mammals`
+```bash
+sort animals mammals
+```
 
 If we found that word "zebra" occurred in 50 files, then typing the
 appropriate sort command would require a lot of typing. Alternatively,
@@ -125,7 +143,9 @@ variable named `FILES`. In the subsequent command a dollars sign
 instructs the shell to retrieve the contents of this variable:
 
 `` FILES=`grep -l zebra *` ``
-`sort $FILES`
+```bash
+sort $FILES
+```
 
 Alternatively, we can avoid the `FILES` variable altogether, and execute
 the following command:
@@ -238,13 +258,17 @@ of defining aliases, and these aliases can prove very convenient.
 
 Consider, by way of example, the following common pipeline:
 
-`sort inputfile | uniq -c | sort -n`
+```bash
+sort inputfile | uniq -c | sort -n
+```
 
 In [Chapter 17](/guide/ch17) we will see that this is a useful way for
 generating inventories. Typically, this sequence occurs at the end of a
 pipeline where some preliminary processing has taken place, such as:
 
-`timebase -t 8 input | ditto | hint | rid -GLI \`
+```bash
+timebase -t 8 input | ditto | hint | rid -GLI \
+```
 > \| sort \| uniq -c \| sort -n
 
 Since the construction `sort | uniq -c | sort -n` is so common, we might
@@ -252,19 +276,25 @@ want to define an alias for it. To do so, we simply execute the
 **alias** command. In this case, we\'ve defined a new command called
 `inventory`:
 
-`alias inventory="sort | uniq -c | sort -n"`
+```bash
+alias inventory="sort | uniq -c | sort -n"
+```
 
 Having defined this alias, we can now make use of it. Any time we type
 the word `inventory`, the shell will expand it to
 "`sort | uniq -c | sort -n`". The above command can be shortened as
 follows:
 
-`timebase -t 8 input | ditto | hint | rid -GLI | inventory`
+```bash
+timebase -t 8 input | ditto | hint | rid -GLI | inventory
+```
 
 Another common task is eliminating barlines. Frequently, we need to use
 the construction:
 
-`grep -v ^=`
+```bash
+grep -v ^=
+```
 
 Actually, this is not the most prudent construction. Depending on the
 spines present in a document, sometimes barlines will be mixed with null
@@ -276,7 +306,9 @@ tokens in other spines that do not encode explicit barlines. E.g.
 A more careful way of eliminating barlines would use the following
 regular expression:
 
-`egrep -v '^(\.   )*='`
+```bash
+egrep -v '^(\.   )*='
+```
 
 That is, eliminate all lines that either begin with an equals-sign, or
 have one or more leading null tokens followed by a token with a leading
@@ -284,7 +316,9 @@ equals-sign. Since this is somewhat complicated to remember, we might
 alias it. In the following command, we have created a new command called
 `nobarlines`:
 
-`alias nobarlines='egrep -v '^(\. )*='`
+```bash
+alias nobarlines='egrep -v '^(\. )*='
+```
 
 
 In Humdrum, a good use of aliases is to define commonly used regular
@@ -294,23 +328,31 @@ an asterisk at the beginning of a line, followed by the upper-case
 letter \`M\' followed by a digit, followed by zero or more digits,
 followed by a slash, followed by a digit:
 
-`grep '^\*M[0-9][0-9]*/[0-9]' inputfile`
+```bash
+grep '^\*M[0-9][0-9]*/[0-9]' inputfile
+```
 
 Actually, this regular expression will fail to find any meter signature
 that is not in the first spine. A more circumspect regular expression
 will include the possibility of a leading tab:
 
-`grep '   *\*M[0-9][0-9]*/[0-9]' inputfile`
+```bash
+grep '   *\*M[0-9][0-9]*/[0-9]' inputfile
+```
 
 Since this is a cumbersome regular expression, it can help to provide an
 alias. Here we have aliased the regular expression to the name
 `metersig`:
 
-`alias metersig="'    *\*M[0-9][0-9]*/[0-9]'"`
+```bash
+alias metersig="'    *\*M[0-9][0-9]*/[0-9]'"
+```
 
 Now we can search for meter signatures as follows:
 
-`grep metersig inputfile`
+```bash
+grep metersig inputfile
+```
 
 ------------------------------------------------------------------------
 

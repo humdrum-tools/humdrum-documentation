@@ -33,7 +33,9 @@ listeners differs, we are interested primarily in the rate-of-change. We
 can use the [**xdelta**](/tool/xdelta) command to calculate the
 differences in heart-rate between successive values.
 
-`xdelta -s = heart.dat > changes`
+```bash
+xdelta -s = heart.dat > changes
+```
 
 The example below displays the input (left) spine and the corresponding
 output (right) spine for the above command:
@@ -88,7 +90,9 @@ if the numerical value is less than -3, then output the string
 "`-event`"; otherwise output a string consisting of an isolated period
 (`.`). We can invoke an appropriate command as follows:
 
-`recode -f reassign -i '**Xheart' -s ^= changes`
+```bash
+recode -f reassign -i '**Xheart' -s ^= changes
+```
 
 The **-f** option is required, and is used to identify the file
 containing the reassignment information. The **-i** option is also
@@ -191,7 +195,9 @@ of interval types, then [**rid**](/tool/rid), **sort** and
 **uniq -c** are used to generate an inventory. Finally, we use **grep**
 to identify what happens following ascending leaps:
 
-`semits melody | xdelta -s = | recode -f reassign \`
+```bash
+semits melody | xdelta -s = | recode -f reassign \
+```
 > -i \'\*\*Xsemits\' -s = \| context -n 2 \| rid -GLId \| sort \\
 > \| uniq -c \| grep \'up-leap .\*\$\'
 
@@ -212,7 +218,9 @@ etc.). The appropriate reassignment file would be:
   ------- -- -----------
 The appropriate command pipe would be:
 
-`mint melody | xdelta -s = | recode -f reassign -i '**mint' \`
+```bash
+mint melody | xdelta -s = | recode -f reassign -i '**mint' \
+```
 > -s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\
 > \| grep \'up-leap .\*\$\'
 
@@ -256,7 +264,9 @@ an inventory of pitch types. For Debussy\'s *Syrinx*, the minimum number
 of throat tones (without exceeding the clarinet\'s range) occurs when we
 transpose down a major sixth:
 
-`trans -d -5 -c -9 syrinx | semits | recode -f reassign \`
+```bash
+trans -d -5 -c -9 syrinx | semits | recode -f reassign \
+```
 > -i \'\*\*semits\' -s = \| rid -GLId \| sort \| uniq -c
 
 
@@ -341,18 +351,24 @@ representation would be `**semits`. Having used
 fingerings, we can then use **context -n 2** to generate diads of
 successive finger combinations.
 
-`semits con* | recode -f map -s = | context -n 2 -o = > fingers`
+```bash
+semits con* | recode -f map -s = | context -n 2 -o = > fingers
+```
 
 For example, if our input contains the pitch G5 followed by B4, the
 appropriate data record in the `fingers` file would be the following
 Humdrum double-stop:
 
-`X-XXXO-OOOX X-XOOO-OOOX`
+```bash
+X-XXXO-OOOX X-XOOO-OOOX
+```
 
 We could create an inventory of finger transitions by continuing the
 processing:
 
-`rid -GLI fingers | sort | uniq -c | sort -n`
+```bash
+rid -GLI fingers | sort | uniq -c | sort -n
+```
 
 
 We could create a similar reassignment file containing fingers
@@ -404,7 +420,9 @@ as the following:
   ---------------------- -- -------------------
 We can apply the script as follows:
 
-`humsed -f difficulty sonata*`
+```bash
+humsed -f difficulty sonata*
+```
 
 Since there are a large number of possible pitch transitions, our script
 file is apt to be especially large. However, notes an octave apart have
@@ -413,7 +431,9 @@ more succinct **humsed** script would deal with fingering transitions
 rather than pitch transitions.
 
 
-`s/X-XXXO-XOOX X-XXXO-OOOX/easy/  s/X-XXXO-XXOX X-XXOO-OOOX/moderate/  s/O-XOOO-OOOX X-OXXO-XXXO/difficult/`
+```bash
+s/X-XXXO-XOOX X-XXXO-OOOX/easy/  s/X-XXXO-XXOX X-XXOO-OOOX/moderate/  s/O-XOOO-OOOX X-OXXO-XXXO/difficult/
+```
 etc.
 
 The three substitutions shown above apply to many more pitch transitions
@@ -425,7 +445,9 @@ Having created a file classifying all fingering transitions as "easy,"
 "moderate" or "difficult," we can characterize our Quantz flute
 concertos using the following pipeline:
 
-`semits Quantz* | recode -f map -s = | context -n 2 -o = \`
+```bash
+semits Quantz* | recode -f map -s = | context -n 2 -o = \
+```
 > \| humsed -f difficulty
 
 The output will be a single spine that classifies the difficulty of all
@@ -444,11 +466,15 @@ We can easily create a spine that identifies only cadences. Consider a
 suitable reassignment file (dubbed `cadences`):
 
 
-`s/V I;/authentic/  s/V7 I;/authentic/  s/V i;/authentic/  s/V7 i;/authentic/  s/IV I;/plagal/  s/iv i;/plagal/  s/iv I;/plagal/  s/V vi;/deceptive/  s/V VI;/deceptive/`
+```bash
+s/V I;/authentic/  s/V7 I;/authentic/  s/V i;/authentic/  s/V7 i;/authentic/  s/IV I;/plagal/  s/iv i;/plagal/  s/iv I;/plagal/  s/V vi;/deceptive/  s/V VI;/deceptive/
+```
 
 etc.
 
-`s/^[IiVv].*$/./`
+```bash
+s/^[IiVv].*$/./
+```
 
 (The precise file will depend on your preferred way of labeling
 cadences.) Remember that, unlike the **recode** command, all of the
@@ -460,7 +486,9 @@ deceptive cadence is transformed to a null data record. Using the above
 reassignment file, we could create a cadence spine using the following
 pipeline:
 
-`extract -i '**harm' chorales | context -o = -n 2 \`
+```bash
+extract -i '**harm' chorales | context -o = -n 2 \
+```
 > \| humsed -f cadences \| sed \'s/\\\*\\\*harm/\*\*cadences/\'
 
 We first extract the `**harm` spine using **extract**. We then generate
@@ -487,7 +515,9 @@ part from Beethoven\'s Symphony No. 1. We might use the **ditto**
 command to ensure that each data record encodes either a note, rest, or
 barline:
 
-`extract -i '*Iviola' symphony1 | ditto -s =`
+```bash
+extract -i '*Iviola' symphony1 | ditto -s =
+```
 
 Let\'s append to this pipeline a **humsed** command that makes two
 string substitutions. The first substitution replaces all data records
@@ -497,7 +527,9 @@ with either a minus sign or an equals sign to the string `+viola`. In
 effect, we\'ve transformed the viola part so that all data tokens encode
 either `+viola`, `-viola` or are barlines.
 
-`extract -i '*Iviola' symphony1 | ditto -s = \`
+```bash
+extract -i '*Iviola' symphony1 | ditto -s = \
+```
 > \| humsed \'s/.\*r.\*/-viola/; /s/\^\[\^-=\].\*\$/+viola/\' \> viola
 
 Now imagine that we repeat this process for every instrument in
@@ -505,20 +537,30 @@ Beethoven\'s Symphony No. 1. In each case, we substitute the name of the
 instrument (preceded by a plus-sign or minus-sign) for the various note
 or rest tokens.
 
-`extract -i '*Iflt' symphony1 | ditto -s = \`
+```bash
+extract -i '*Iflt' symphony1 | ditto -s = \
+```
 > \| humsed \'s/.\*r.\*/-flt/; /s/\^\[\^-=\].\*\$/+flt/\' \> flt
-`extract -i '*Ioboe' symphony1 | ditto -s = \`
+```bash
+extract -i '*Ioboe' symphony1 | ditto -s = \
+```
 > \| humsed \'s/.\*r.\*/-oboe/; /s/\^\[\^-=\].\*\$/+oboe/\' \> oboe
-`extract -i '*Iclars' symphony1 | ditto -s = \`
+```bash
+extract -i '*Iclars' symphony1 | ditto -s = \
+```
 > \| humsed \'s/.\*r.\*/-clars/; /s/\^\[\^-=\].\*\$/+clars/\' \> clars
-`extract -i '*Ifagot' symphony1 | ditto -s = \`
+```bash
+extract -i '*Ifagot' symphony1 | ditto -s = \
+```
 > \| humsed \'s/.\*r.\*/-fagot/; /s/\^\[\^-=\].\*\$/+fagot/\' \> fagot
 etc.
 
 When we are finished, we reassemble all of the transformed parts into a
 complete score.
 
-`assemble cbass cello viola violn2 violn1 tromb tromp fagot \`
+```bash
+assemble cbass cello viola violn2 violn1 tromb tromp fagot \
+```
 > clars oboe flt \> orchestra
 
 We now have a file that contains data records that look something like
@@ -551,36 +593,58 @@ instrumental combinations in Beethoven\'s orchestration. For example,
 the following command will count the number of sonorities where the oboe
 and bassoon sound concurrently:
 
-`grep -c '+fagot.*+oboe' orchestra`
+```bash
+grep -c '+fagot.*+oboe' orchestra
+```
 
 It is better to express this count as a proportion of the total work. We
 can count the total number of sonorities in the work by omitting any
 leading plus or minus sign:
 
-`grep -c 'fagot.*oboe' orchestra`
+```bash
+grep -c 'fagot.*oboe' orchestra
+```
 
 
 How often are the oboe and bassoon resting at the same time?
 
-`grep -c '-fagot.*-oboe' orchestra`
+```bash
+grep -c '-fagot.*-oboe' orchestra
+```
 
 
 Excluding *tutti* sections, do the trumpet and flute tend to "repell"
 each others\' presence?
 
-`grep '\-' orchestra | grep -c '+tromp.*-flt' orchestra`
-`grep '\-' orchestra | grep -c '+tromp.*+flt' orchestra`
-`grep '\-' orchestra | grep -c '-tromp.*-flt' orchestra`
-`grep '\-' orchestra | grep -c '-tromp.*+flt' orchestra`
+```bash
+grep '\-' orchestra | grep -c '+tromp.*-flt' orchestra
+```
+```bash
+grep '\-' orchestra | grep -c '+tromp.*+flt' orchestra
+```
+```bash
+grep '\-' orchestra | grep -c '-tromp.*-flt' orchestra
+```
+```bash
+grep '\-' orchestra | grep -c '-tromp.*+flt' orchestra
+```
 
 
 When all of the woodwinds are playing, which of the remaining
 instruments is Beethoven most likely to omit from the texture?
 
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cbass'`
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cello'`
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-viola'`
-`grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-violn'`
+```bash
+grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cbass'
+```
+```bash
+grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-cello'
+```
+```bash
+grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-viola'
+```
+```bash
+grep '+fagot.*+clars.*+oboe.*+flt' orchestra | grep -c '-violn'
+```
 etc.
 
 

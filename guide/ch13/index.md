@@ -35,7 +35,9 @@ together the files `mov.1`, `mov.2` and `mov.3` and place the result in
 the file `complete`. The order of concatenation is the same as the order
 of file names given on the command line:
 
-`cat mov.1 mov.2 mov.3 > complete`
+```bash
+cat mov.1 mov.2 mov.3 > complete
+```
 
 If each of the concatenated files conforms to the Humdrum syntax, then
 the resulting combined file is guaranteed to conform to the Humdrum
@@ -134,17 +136,23 @@ a certain class (lower-case).
 By way of example, the following command will eliminate all global
 comments (including reference records) from the input:
 
-`rid -G Saint-Saens`
+```bash
+rid -G Saint-Saens
+```
 
 Similarly, the following command will eliminate all tandem
 interpretations from an input:
 
-`rid -T Vaughan-Williams`
+```bash
+rid -T Vaughan-Williams
+```
 
 Options can be combined. The following command eliminates all global and
 local comments, interpretations, and null data records:
 
-`rid -GLId`
+```bash
+rid -GLId
+```
 
 The option combination **-GLId** is very common with **rid** since only
 non-null data records are retained in the output.
@@ -172,7 +180,9 @@ there is no need to repeat the meter signature and key signature in each
 measure. The following command will concatenate each of the three
 measures together, and then eliminate the unwanted interpretations:
 
-`cat bar1 bar2 bar3 | rid -ut`
+```bash
+cat bar1 bar2 bar3 | rid -ut
+```
 
 The resulting output is given below:
 
@@ -252,7 +262,9 @@ Consider the following two files:
   -----------------------
 These two files can be aligned side by side using **assemble**:
 
-`assemble letters numbers`
+```bash
+assemble letters numbers
+```
 
 The resulting output is:
 
@@ -357,7 +369,9 @@ data record represents an equivalent slice (elapsed duration) of time.
 achieves this by padding an input with null data records. In the above
 case, we would preprocess file 1 as follows:
 
-`timebase -t 8 file1 > file1.tb`
+```bash
+timebase -t 8 file1 > file1.tb
+```
 
 The new file would look like this:
 
@@ -375,7 +389,9 @@ case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
 using the **assemble** command as before. The command:
 
-`assemble file1.tb file2`
+```bash
+assemble file1.tb file2
+```
 
 will result in the following two-part score:
 
@@ -422,7 +438,9 @@ can be eliminated using the **rid** command with the **-d** option. In
 fact it is common to follow an **assemble** command with **rid -d** to
 strip away unnecessary null data records. The command:
 
-`assemble file1.tb file2.tb | rid -d`
+```bash
+assemble file1.tb file2.tb | rid -d
+```
 
 would result in the following output:
 
@@ -455,7 +473,9 @@ Incidentally, notice that any spine contain non-rhythmic data \-- such
 as the `**commentary` spine in the above example \-- is also transformed
 so that synchronous data is maintained.
 
-`timebase -t 32 Corelli`
+```bash
+timebase -t 32 Corelli
+```
 
 The corresponding output is as follows.
 
@@ -542,7 +562,9 @@ applying the [**proof**](/tool/proof) command to any assembled
 `**kern` output. The **proof** utility checks `**kern` representations
 for a wide variety of possible encoding errors or ambiguities:
 
-`proof fullscore`
+```bash
+proof fullscore
+```
 
 By way of summary, creating a full score from a set of
 [`**kern`](/rep/kern) parts involves the following
@@ -571,7 +593,9 @@ certain circumstances. For example, suppose you suspect there may be a
 hemiola tendency in a given work by Brahms, where the duration
 separating hemiola notes is a dotted-quarter. The command:
 
-`timebase -t 4. brahms`
+```bash
+timebase -t 4. brahms
+```
 
 can be used to extract only those sonorities that are separated by a
 dotted-quarter duration.
@@ -581,7 +605,9 @@ third beat of a waltz written in 3/2 meter. First we would edit the
 input file so it begins on the third beat of some measure. Then we could
 use the following command:
 
-`grep -v ^= waltz | timebase -t 1. > 3rd_beat`
+```bash
+grep -v ^= waltz | timebase -t 1. > 3rd_beat
+```
 
 Note that the use of **grep** here is essential in order to eliminate
 barlines. The **timebase** command resets itself with each barline, so
@@ -600,15 +626,21 @@ at the same time as one of its variations. We might first use
 the same time we might determine a common duration factor and expand
 them using **timebase**.
 
-`yank -s Theme -r 1 blacksmith | timebase -t 32 > temp1`
-`yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2`
+```bash
+yank -s Theme -r 1 blacksmith | timebase -t 32 > temp1
+```
+```bash
+yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2
+```
 
 Then we assemble the two sections together, translate to the
 [`**MIDI`](/rep/MIDI) representation and use
 [**perform**](/tool/perform) to listen to both sections at the
 same time:
 
-`assemble temp1 temp2 | midi | perform`
+```bash
+assemble temp1 temp2 | midi | perform
+```
 
 Similarly, suppose we would like to compare the bass lines for each
 variation in some set. We might extract each of the bass lines, assemble
@@ -616,11 +648,19 @@ them into a single score, and then use the **ms** and **ghostview**
 commands to allow us to see all of the bass lines for all of the
 variations concurrently.
 
-`yank -s 'Variation 1' -r 1 goldberg | timebase -t 16 > temp1`
-`yank -s 'Variation 2' -r 1 goldberg | timebase -t 16 > temp2`
+```bash
+yank -s 'Variation 1' -r 1 goldberg | timebase -t 16 > temp1
+```
+```bash
+yank -s 'Variation 2' -r 1 goldberg | timebase -t 16 > temp2
+```
 etc. \...
-`assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps`
-`ghostview basslines.ps`
+```bash
+assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps
+```
+```bash
+ghostview basslines.ps
+```
 
 The most common use of **assemble** is not to assemble parts, but to
 assemble different types of concurrent information. Suppose we would
@@ -630,8 +670,12 @@ like to determine whether descending minor seconds are more likely to be
 intervals, and the [**solfa**](/tool/solfa) command to
 characterize scale degrees. Assume that our input is monophonic:
 
-`mint melodies > temp1`
-`solfa melodies > temp2`
+```bash
+mint melodies > temp1
+```
+```bash
+solfa melodies > temp2
+```
 
 The files `temp1` and `temp2` will have the same length, so we can
 assemble them together. This will generate an output consisting of two
@@ -642,8 +686,12 @@ encoded in the `**solfa` spine. We can use **grep** to search for the
 appropriate combinations of interval and scale degree and count the
 number of occurrences:
 
-`assemble temp1 temp2 | grep -c '-m2.*mi'`
-`assemble temp1 temp2 | grep -c '-m2.*ti'`
+```bash
+assemble temp1 temp2 | grep -c '-m2.*mi'
+```
+```bash
+assemble temp1 temp2 | grep -c '-m2.*ti'
+```
 
 
 This same approach can be used to address (innumerable) questions
@@ -657,15 +705,21 @@ chord. First, let\'s extract the soprano line and create a corresponding
 scale degree representation using **deg**. We can use the **-a** option
 to avoid outputting the melodic direction signifiers (`^` and `v`):
 
-`extract -i '*Isopran' howells | deg -a > temp1`
+```bash
+extract -i '*Isopran' howells | deg -a > temp1
+```
 
 Next, let\'s again extract the soprano voice and create a corresponding
 melodic interval representation using **mint**. Since we are not
 interested in interval qualities we can invoke the **-d** option to
 output only diatonic interval sizes.
 
-`extract -i '*Isopran' howells | mint -d > temp2`
-`extract -i '**harm' howells > temp3`
+```bash
+extract -i '*Isopran' howells | mint -d > temp2
+```
+```bash
+extract -i '**harm' howells > temp3
+```
 
 We have also extracted the `**harm` spine and placed it in the file
 `temp3`. If we assemble together our three temporary files, the result
@@ -692,7 +746,9 @@ instructed **yank** to fetch the fifth line following each occurrence of
 the marker (`-r 5`). In our example, the **grep** command is being used
 to count V/V chords occurring on third beats:
 
-`timebase -t 8 strauss | solfa | yank -m = -r 5 | grep re \`
+```bash
+timebase -t 8 strauss | solfa | yank -m = -r 5 | grep re \
+```
 > \| grep fe \| grep -c la
 
 We can repeat this command for beats one and two by changing the **-r**

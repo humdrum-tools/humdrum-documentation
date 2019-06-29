@@ -184,7 +184,9 @@ the lowest pitch in the sonority. This option is helpful in determining
 figured bass. For the final chord in Example 12.1 the corresponding
 output would be
 
-`**hint  M3 P5 P8  *-`
+```bash
+**hint  M3 P5 P8  *-
+```
 
 Two further options for **hint** allow the user to tailor how the
 intervals are represented. The **-c** option causes compound intervals
@@ -194,12 +196,16 @@ a unison (P1). The **-d** option suppresses the outputting of interval
 qualities and results in only diatonic interval sizes being output.
 Again, this option is helpful in determining figured bass. The command:
 
-`hint -clud`
+```bash
+hint -clud
+```
 
 will produce the following output for the final major chord in Example
 12.1:
 
-`**hint  3 5  *-`
+```bash
+**hint  3 5  *-
+```
 
 
 Propagating Data Using the *ditto* Command
@@ -245,7 +251,9 @@ spine.
 
 Consider the effect of **ditto** on the `**kern` data in Example 15.1:
 
-`ditto -p example15.1`
+```bash
+ditto -p example15.1
+```
 
 The following output results:
 
@@ -272,7 +280,9 @@ previously passing intervals into explicit sonorities whose intervals
 can now be identified by **hint.** We can combine the two commands in a
 single pipeline:
 
-`ditto example15.1 | hint`
+```bash
+ditto example15.1 | hint
+```
 
 The resulting output for Example 15.1 includes the two passing intervals
 (m7 and m6) in the first measure:
@@ -319,7 +329,9 @@ other types of data tokens, so the result might be:
 By providing **ditto** with a suitable regular expression, we can have
 the data token \`A\' skip over the barline:
 
-`ditto -s ^=`
+```bash
+ditto -s ^=
+```
 
 Without this option, the final data token in the above example would be
 an equals-sign rather than the token \`A\'.
@@ -328,7 +340,9 @@ The **-c** option for **ditto** allows the user to selectively identify
 which characters are propagated. For example, the following command will
 cause only the lower-case letters \`a\' and \`b\' to be propagated:
 
-`ditto -c ab`
+```bash
+ditto -c ab
+```
 
 This feature allows users to replicate only certain kinds of data \--
 such as pitches, durations, dynamic marks, etc.
@@ -348,14 +362,20 @@ two-part inventions? The following commands look for explicit and
 passing sixths respectively. Notice the use of the **-c** option so
 octave equivalents will also be identified:
 
-`hint -c inventio* | grep A6`
-`ditto -s ^= inventio* | hint -c | grep A6`
+```bash
+hint -c inventio* | grep A6
+```
+```bash
+ditto -s ^= inventio* | hint -c | grep A6
+```
 
 
 Are there any diminished octave intervals between any two concurrent
 notes in any of Beethoven\'s piano sonatas?
 
-`ditto -s ^= sonatas* | hint -a | grep d8`
+```bash
+ditto -s ^= sonatas* | hint -a | grep d8
+```
 
 In orchestral works, some pairs of instruments are more likely than
 others to double each other at the unison or octave. What proportion of
@@ -365,10 +385,14 @@ number of (explicit) intervals formed by the oboe and flute, and the
 number of those intervals that are octave equivalents. (We will assume
 that there is only one oboe and one flute part in the file `Rimsky-K`:)
 
-`extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
+```bash
+extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \
+```
 > \| grep -c P1
 
-`extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \`
+```bash
+extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \
+```
 > \| grep -c \[MmPAd\]
 
 The second **grep** counts the total number of intervals by looking for
@@ -378,10 +402,18 @@ Suppose we have extracted two horn parts from an orchestral score. Are
 octave intervals between the horns more likely to occur on the dominant
 pitch or the tonic pitch?
 
-`solfa horns > temp1`
-`hint horns > temp2`
-`assemble temp1 temp2 | grep -c ^do.*P8`
-`assemble temp1 temp2 | grep -c ^so.*P8`
+```bash
+solfa horns > temp1
+```
+```bash
+hint horns > temp2
+```
+```bash
+assemble temp1 temp2 | grep -c ^do.*P8
+```
+```bash
+assemble temp1 temp2 | grep -c ^so.*P8
+```
 
 
 Determining Implicit Harmonic Intervals
@@ -399,7 +431,9 @@ The [**humsed**](/tool/humsed) command (described in [Chapter
 data token containing the letter \`r\' to a null token. Consider the
 following substitution:
 
-`humsed 's/.*r.*/.    ./' example15.1`
+```bash
+humsed 's/.*r.*/.    ./' example15.1
+```
 
 Unfortunately, this isn\'t quite right. The above substitution will find
 any data record containing the letter \`r\' and transform the entire
@@ -409,7 +443,9 @@ the first token in the record or the last token in the record. We need
 two different regular expressions to address each of these conditions.
 First, a regular expression to identify rests in the first token:
 
-`/^[^   ]*r[^   ]*   /`
+```bash
+/^[^   ]*r[^   ]*   /
+```
 
 (That is, the beginning of the record (\^), followed by zero or more
 instances of any character other than a tab (\[\^ \]\*), followed by the
@@ -419,12 +455,16 @@ than a tab (\[\^ \]\*), followed by a tab.)
 Similarly, our second regular expression identifies rests in the last
 token:
 
-`/   [^   ]*r[^   ]*$/`
+```bash
+/   [^   ]*r[^   ]*$/
+```
 
 Now we can eliminate rest tokens using the following two substitution
 commands within a single invocation of **humsed**:
 
-`humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1`
+```bash
+humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1
+```
 
 The following output results:
 
@@ -448,7 +488,9 @@ If we now apply [**ditto**](/tool/ditto) and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
 
-`humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \`
+```bash
+humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \
+```
 > \| ditto -p
 
 Below we see the output assembled with the output from the corresponding
@@ -480,7 +522,9 @@ some other numerical value). We might begin by using the **semits**
 command to translate Example 15.1 to a
 [`**semits`](/rep/semits) representation.
 
-`semits example15.1`
+```bash
+semits example15.1
+```
 
 The resulting output would be as follows:
 
@@ -512,7 +556,9 @@ outputs a single spine. The user must specify which input spines are to
 be processed using the **-i** option. In the following command, only
 \*\*semits input is to be processed:
 
-`semits example15.1 | ydelta -s = -i '**semits'`
+```bash
+semits example15.1 | ydelta -s = -i '**semits'
+```
 
 The **-s** option allows the user to identify data records to be
 *skipped* while processing. In this case, the regular expression \`=\'
@@ -551,7 +597,9 @@ As in the case of **hint,** we might use the **ditto** command to
 propagate pitch values \-- replacing all the null data tokens. A
 suitable command would be:
 
-`semits example15.1 | ditto -s = | ydelta -s = -i '**semits'`
+```bash
+semits example15.1 | ditto -s = | ydelta -s = -i '**semits'
+```
 
 The resulting output would be:
 
@@ -579,7 +627,9 @@ What is the average semitone distance between the cantus and altus
 voices in Lassus motets? We can answer this question by first extracting
 the appropriate voices and translating to a semitone representation.
 
-`extract -f 1,2 motet* | semits > temp1`
+```bash
+extract -f 1,2 motet* | semits > temp1
+```
 
 Using **ditto** we can expand the pitched material so that
 concurrently-sounding tones will generate explicit intervals. We then
@@ -589,7 +639,9 @@ records, and the **grep -v** command can be used to further eliminate
 barlines. Finally, we can calculate the mean interval distance using the
 **stats** command:
 
-`ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \`
+```bash
+ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \
+```
 > \| grep -v = \| stats
 
 Suppose we have a two-part input. Are there tritone intervals (explicit
@@ -599,9 +651,15 @@ diminished fifth? We can answer this question by using both **hint** and
 command is used to ensure that both explicit and passing intervals are
 generated.
 
-`ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1`
-`ditto -s = 2part | hint > temp2`
-`assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \`
+```bash
+ditto -s = 2part | semits | ydelta -s = -i '**semits' > temp1
+```
+```bash
+ditto -s = 2part | hint > temp2
+```
+```bash
+assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \
+```
 > \| grep -v d5
 
 Notice the use of **grep -v** to first exclude any records that match an

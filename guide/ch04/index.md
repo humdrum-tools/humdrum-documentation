@@ -74,7 +74,9 @@ example, the pitch corresponding to a tuning of A-435 Hz is 19 cents
 flat compared with the standard A-440, hence it is represented in
 `**pitch` as:
 
-`A4-19`
+```bash
+A4-19
+```
 
 
 Other pitch representations (such as `**kern`) can be translated to the
@@ -106,7 +108,9 @@ It can be translated to this `**pitch` output:
   -----------
 using the following command:
 
-`pitch filename`
+```bash
+pitch filename
+```
 
 Notice that the [`**pitch`](/rep/pitch)
 representation uses the same system for representing barlines as
@@ -141,7 +145,9 @@ Data in the [`**pitch`](/rep/pitch) or
 translated to [`**Tonh`](/rep/Tonh) via the
 [**tonh**](/tool/tonh) command:
 
-`tonh filename`
+```bash
+tonh filename
+```
 
 
 French Solfège
@@ -310,17 +316,23 @@ command name is the same as the name of the output representation. For
 example, translating to the [`**solfg`](/rep/solfg)
 representation can be accomplished with:
 
-`solfg inputfile > outputfile`
+```bash
+solfg inputfile > outputfile
+```
 
 
 Translating to the German [`**Tonh`](/rep/Tonh)
 representation:
 
-`tonh inputfile > outputfile`
+```bash
+tonh inputfile > outputfile
+```
 
 Translating to ISO [`**pitch`](/rep/pitch):
 
-`pitch inputfile > outputfile`
+```bash
+pitch inputfile > outputfile
+```
 
 
 Similarly, the [**freq**](/tool/freq) command translates
@@ -455,28 +467,36 @@ E-flat), the diatonic offset is \`up two pitch-letter names,\' and the
 chromatic offset is \`up three semitones.\' The appropriate command
 invocation is:
 
-`trans -d +2 -c +3 input > output`
+```bash
+trans -d +2 -c +3 input > output
+```
 
 The diatonic offset can be a little confusing because traditional
 terminology labels perfect unisons by the number 1 (e.g. P1) rather than
 zero. So transposing up a perfect fifth involves a diatonic offset of +4
 letter names, and a chromatic offset of +7 semitones:
 
-`trans -d +4 -c +7 input > output`
+```bash
+trans -d +4 -c +7 input > output
+```
 
 
 We can transpose without changing the diatonic pitch names. For example,
 the following command will transpose down an augmented unison (e.g. C\#
 to C):
 
-`trans -d 0 -c -1 input > output`
+```bash
+trans -d 0 -c -1 input > output
+```
 
 
 Conversely, we can respell the diatonic pitches without changing the
 overall pitch height. For example, the following transposition will
 transpose "up" a diminished second (e.g. from F-sharp to G-flat):
 
-`trans -d +1 -c 0 input > output`
+```bash
+trans -d +1 -c 0 input > output
+```
 
 
 Modal transpositions are also possible by omitting the chromatic offset
@@ -495,7 +515,9 @@ option. Consider, for example, the following C major scale:
   ----------
 We can transform this using the following diatonic transposition:
 
-`trans -d +1`
+```bash
+trans -d +1
+```
 
 The resulting output is the Dorian mode:
 
@@ -518,7 +540,9 @@ Suppose you have a passage in the key of E major which you would like to
 translate to E Dorian. First transpose so the tonic is D using only the
 **-d** option; then transpose exactly so the tonic is E again:
 
-`trans -d -1 Emajor | trans -d +1 -c +2 > Edorian`
+```bash
+trans -d -1 Emajor | trans -d +1 -c +2 > Edorian
+```
 
 For some changes of mode (such as melodic to harmonic minor), you may
 need to use the [**humsed**](/tool/humsed) command described in
@@ -579,14 +603,22 @@ that appropriate interpretations are provided indicating the key of each
 work.) First we need to count the total number of notes in each
 repertory.
 
-`census -k repertory1.krn`
-`census -k repertory2.krn`
+```bash
+census -k repertory1.krn
+```
+```bash
+census -k repertory2.krn
+```
 
 Next we translate the scores to the **solfa** representation and use
 **grep -c** to count the number of occurrences of the number \`fa\':
 
-`solfa repertory1.krn | grep -c fa`
-`solfa repertory2.krn | grep -c fa`
+```bash
+solfa repertory1.krn | grep -c fa
+```
+```bash
+solfa repertory2.krn | grep -c fa
+```
 
 The proportion of subdominant pitches can be calculated by simply
 comparing the resulting pattern count with the number of notes
@@ -603,14 +635,18 @@ above or from below. Assuming a monophonic input, we can once again use
 **grep** to answer this question. First let\'s count how many dominant
 pitches (\`5\') are approached from above (\`v\'):
 
-`deg repertory.krn | grep -c v5`
+```bash
+deg repertory.krn | grep -c v5
+```
 
 The caret has a special meaning for **grep** which will be discussed in
 [Chapter 9.](/guide/ch09) We can escape the special meaning by
 preceding the caret by a backslash. In order to count the number of
 dominant pitches approached from below we can use the following:
 
-`deg repertory.krn | grep -c \^5`
+```bash
+deg repertory.krn | grep -c \^5
+```
 
 Recall that some scale tones are spelled differently depending on
 whether the mode is major or minor. For example, in A major the mediant
@@ -644,7 +680,9 @@ followed immediately by the same pitch? We might begin by first
 determining the total number of notes in the melody using **census**
 with the **-k** option.
 
-` census -k melody.krn`
+```bash
+ census -k melody.krn
+```
 
 We can use the **uniq** command to eliminate successive repeated pitches
 \-- but only if the note tokens are identical. First we can use [**kern
@@ -656,7 +694,9 @@ duplicated records, so a sequence of six G\'s will be reduced to a
 single G. Finally, we pipe the output to **census -k** to count the
 total number of notes.
 
-`kern -x melody.krn | uniq | census -k`
+```bash
+kern -x melody.krn | uniq | census -k
+```
 
 [A variation on this approach would entail translating to a
 representation that does not distinguish enharmonic pitches. For
@@ -668,7 +708,9 @@ enharmonic shift to A-flat, then the pitches will be deemed identical.
 The following command carries out the same task as above, but ignores
 possible enharmonic spellings:
 
-`semits melody.krn | kern | uniq | census -k`
+```bash
+semits melody.krn | kern | uniq | census -k
+```
 
 Incidentally, given `**semits` input, the **kern** command will spell
 pitches according to any key or key signatures it encounters. For

@@ -599,7 +599,9 @@ instrumentation in alphabetical order by instrument abbrevation
 separated by a single space. For example, the instrumentation for a
 woodwind quintet is given as:
 
-`!!!AIN: clars corno fagot flt oboe`
+```bash
+!!!AIN: clars corno fagot flt oboe
+```
 
 In our discussion here we have only identified some of the more common
 types of reference records. A complete description of reference records

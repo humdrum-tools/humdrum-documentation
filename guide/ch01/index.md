@@ -334,7 +334,9 @@ Vertical spines of data can be extracted from a Humdrum file using the
 encodes four musical parts, then the **extract** command might be used
 to isolate one or more given parts. The command
 
-`extract -f 1 filename`
+```bash
+extract -f 1 filename
+```
 
 
 will extract the first or left-most column or spine of data. Often it is
@@ -342,23 +344,31 @@ useful to extract material according to the encoded content without
 regard to the position of the spine. For example, the following command
 will extract all spines containing a label indicating the tenor part(s).
 
-`extract -i '*Itenor' filename`
+```bash
+extract -i '*Itenor' filename
+```
 
 Instruments can be labelled by "instrument class" and so can be
 extracted accordingly. The following command extracts all of the
 woodwind parts:
 
-`extract -i '*ICww' filename`
+```bash
+extract -i '*ICww' filename
+```
 
 Any vocal text can be similarly extracted:
 
-`extract -i '**text' filename`
+```bash
+extract -i '**text' filename
+```
 
 
 Or if the text is available in more than one language, a specific
 language may be isolated:
 
-`extract -i '*LDeutsch' filename`
+```bash
+extract -i '*LDeutsch' filename
+```
 
 Segments or passages of music can be extracted using the
 [**yank**](/tool/yank) command. Segments can be defined by
@@ -366,16 +376,22 @@ sections, phrases, measures, or other any user-specified marker. For
 example, the following command extracts the section labelled "Trio"
 from a minuet & trio:
 
-`yank -s Trio -r 1 filename`
+```bash
+yank -s Trio -r 1 filename
+```
 
 
 Or select the material in measures 114 to 183:
 
-`yank -n = -r 114-183 filename`
+```bash
+yank -n = -r 114-183 filename
+```
 
 Or select the second-last phrase in the work:
 
-`yank -o { -e } -r '$-1' filename`
+```bash
+yank -o { -e } -r '$-1' filename
+```
 
 Don\'t worry about the complex syntax for these commands; the command
 formats will be discussed fully in the ensuing chapters. For now, it is
@@ -387,21 +403,27 @@ Two or more commands can be connected into a *pipeline.* The following
 command will let us determine whether there are any notes in the bassoon
 part:
 
-`extract -i '*Ifagot' filename | census -k`
+```bash
+extract -i '*Ifagot' filename | census -k
+```
 
 
 The following pipeline connects together four commands: it will play
 (using MIDI) the first and last measures from a section marked "Coda"
 at half the notated tempo from a file named `Cui`:
 
-`yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5`
+```bash
+yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5
+```
 
 Some tools translate from one representation to another. For example,
 the [**mint**](/tool/mint) command generates melodic interval
 information. The following command locates all tritones \-- including
 compound (octave) equivalents:
 
-`mint -c filename | egrep -n '((d5)|(A4))'`
+```bash
+mint -c filename | egrep -n '((d5)|(A4))'
+```
 
 Incidentally, Humdrum data can be processed by many common commands that
 are not part of the Humdrum Toolkit. The **egrep** command in the above
@@ -412,28 +434,38 @@ Depending on the type of translation, the resulting data can be searched
 for different things. The following command identifies French sixth
 chords:
 
-`solfa file | extract -i '**solfa' | ditto | grep '6-.*4+' | grep 2`
+```bash
+solfa file | extract -i '**solfa' | ditto | grep '6-.*4+' | grep 2
+```
 
 Locate all sonorities in the music of Machaut where the seventh scale
 degree has been doubled:
 
-`deg -t machaut* | grep -n '7[^-+].*7'`
+```bash
+deg -t machaut* | grep -n '7[^-+].*7'
+```
 
 Count the number of phrases that end on the subdominant pitch:
 
-`deg filename | egrep -c '(}.*4)|(4.*})'`
+```bash
+deg filename | egrep -c '(}.*4)|(4.*})'
+```
 
 
 The following command identifies all scores whose instrumentation
 includes a tuba but not a trumpet:
 
-`grep -sl '!!!AIN.*tuba' * | grep -v 'tromp'`
+```bash
+grep -sl '!!!AIN.*tuba' * | grep -v 'tromp'
+```
 
 Some tasks may require more than one command line. For example, the
 following three-line script locates any parallel fifths between the bass
 and alto voices of any input file:
 
-`echo P5 > P5  echo '= *' >> P5; echo P5 >> P5  extract -i '*Ibass,*Ialto' file | hint -c | pattern -s = P5`
+```bash
+echo P5 > P5  echo '= *' >> P5; echo P5 >> P5  extract -i '*Ibass,*Ialto' file | hint -c | pattern -s = P5
+```
 
 More complicated scripts can be written to carry out more sophisticated
 musical processes. In later chapters we\'ll encounter some scripts that

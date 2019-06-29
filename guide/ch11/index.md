@@ -191,7 +191,9 @@ suspended and restarted. A common invocation would identify `**kern`
 rests (`r`) as a suitable place to break melodic interval calculations.
 For example,
 
-` mint -b r inputfile`
+```bash
+ mint -b r inputfile
+```
 
 would produce the following output when applied to Example 11.1:
 
@@ -224,20 +226,26 @@ closed curly braces are used to indicate the beginnings and ends of
 phrases. We need to tell **mint** to break interval calculations each
 time an end-of-phrase signifier is encountered:
 
-`mint -b '}' inputfile`
+```bash
+mint -b '}' inputfile
+```
 
 Similarly, the `**kern` representation uses the semicolon (`;`) to
 represent pauses. We might instruct **mint** to avoid calculating
 intervals between notes having pauses and the subsequent note:
 
-`mint -b ';' inputfile`
+```bash
+mint -b ';' inputfile
+```
 
 Since the **-b** option accepts regular expressions, we can combine
 patterns. For example, the following command instructs **mint** to
 calculate melodic intervals, not including intervals spanning phrase
 boundaries, and not following notes with pauses:
 
-`mint -b '[;}]' inputfile`
+```bash
+mint -b '[;}]' inputfile
+```
 
 
 Unvoiced Inner Intervals
@@ -309,7 +317,9 @@ between the eighth notes.
 We can use the skip option to instruct **mint** to ignore any note token
 matching the string \``16`\':
 
-` mint -s 16 inputfile`
+```bash
+ mint -s 16 inputfile
+```
 
 This command would produce an output that highlights the descending
 arpeggiated major chord \-- from C5 to G4 (down a P4), to E4 (down a m3)
@@ -346,7 +356,9 @@ spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
 more about the [**cleave**](/tool/cleave) command. But here is a
 typical use:
 
-`cleave -d ' ' -i '**kern' -o '**kern' example11a`
+```bash
+cleave -d ' ' -i '**kern' -o '**kern' example11a
+```
 
 With the `**kern` encoding for Example 11.1 as input, the corresponding
 output would be:
@@ -376,7 +388,9 @@ cause problems if our intention is to calculate pitch intervals.
 If we pipe the above output through the **mint** command, the
 appropriate command pipeline becomes:
 
-`cleave -d ' ' -i '**kern' -o '**kern' example11a \`
+```bash
+cleave -d ' ' -i '**kern' -o '**kern' example11a \
+```
 > \| humsed \'s/ =.\*//\' \| mint -I
 
 The corresponding melodic interval output is:
@@ -434,32 +448,46 @@ Consider some of the following uses of the **mint** command.
 Are there any major or minor ninth melodic intervals in the file
 `Sinatra`?
 
-`mint Sinatra | grep '[Mm][9]'`
+```bash
+mint Sinatra | grep '[Mm][9]'
+```
 
 
 Are there any compound melodic intervals in the file `Piaf`?
 
-`mint Piaf | egrep '([Mm][9])|([MmPAd][1-9][0-9]''`
+```bash
+mint Piaf | egrep '([Mm][9])|([MmPAd][1-9][0-9]''
+```
 
 
 Are descending seconds more common than ascending seconds in melodies by
 Maurice Chevalier?
 
-`mint Chevalier* | grep -c '+[Mm]2'`
-`mint Chevalier* | grep -c '-[Mm]2'`
+```bash
+mint Chevalier* | grep -c '+[Mm]2'
+```
+```bash
+mint Chevalier* | grep -c '-[Mm]2'
+```
 
 An alternative way of achieving the same goal might simplify the regular
 expression to **grep** and use the **-d** (diatonic) option for
 **mint**:
 
-`mint -d Chevalier* | grep -c '+2'`
-`mint -d Chevalier* | grep -c '-2'`
+```bash
+mint -d Chevalier* | grep -c '+2'
+```
+```bash
+mint -d Chevalier* | grep -c '-2'
+```
 
 Identify whether there are any tritone melodic intervals in any of the
 vocal parts of a score:
 
 
-`extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'`
+```bash
+extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'
+```
 
 Here we have used the extended regular expression capabilities of
 **egrep** to specify an either/or pattern.
@@ -469,17 +497,23 @@ the [`**mint`](/rep/mint) representation. Does any
 melody in the current directory contain both an ascending major sixth
 and a descending major sixth?
 
-`grep -l '+M6' * | xargs grep '-M6'`
+```bash
+grep -l '+M6' * | xargs grep '-M6'
+```
 
 Do the vocal lines of Louis Jourdain contain successive ascending major
 thirds (such as forming an augmented triad)?
 
-`mint Jourdain | grep -v = | uniq -d | grep '+M3'`
+```bash
+mint Jourdain | grep -v = | uniq -d | grep '+M3'
+```
 
 What is the longest run of rising intervals in the vocal lines of
 Marlene Dietrich?
 
-`mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n`
+```bash
+mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n
+```
 
 
 Calculating Melodic Intervals Using the *xdelta* Command
@@ -587,7 +621,9 @@ example:
 The proper way to calculate differences in cents is to ensure that
 measure numbers are ignored:
 
-`xdelta -s ^= inputfile`
+```bash
+xdelta -s ^= inputfile
+```
 
 Failure to skip the barline will cause a difference to be calculated
 between 800 and =2 (i.e., -798) and between =2 and 600 (i.e., 598).

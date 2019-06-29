@@ -42,7 +42,9 @@ interpretation that consists of a single asterisk, followed by a
 greater-than sign, followed by a keyword that labels the section. The
 following are examples of section labels.
 
-` *>Coda  *>1st Ending  *>Refrain  *>Exposition>2nd Theme`
+```bash
+ *>Coda  *>1st Ending  *>Refrain  *>Exposition>2nd Theme
+```
 
 Notice that spaces can appear in section labels \-- as in `1st Ending`.
 Sections begin with a section label and generally end when another
@@ -65,7 +67,9 @@ greater-than sign. In effect, the expansion list indicates how the
 abbreviated file should be expanded to a full-length encoding. Consider
 the following expansion list:
 
-` *>[verse1,refrain,verse2,refrain]`
+```bash
+ *>[verse1,refrain,verse2,refrain]
+```
 
 This list indicates that the abbreviated file contains (at least) three
 sections, labelled "`verse1`," "`verse2`" and "`refrain`." When
@@ -122,7 +126,9 @@ is achieved simply by encoding more than one expansion list. In order to
 distinguish different versions, each expansion list is given a unique
 *version label*. Consider the following expansion lists:
 
-` *>Gould1982[A,A,B]  *>Landowska[A,A,B,B]`
+```bash
+ *>Gould1982[A,A,B]  *>Landowska[A,A,B,B]
+```
 
 
 Here we see two expansion lists, one carries the version label
@@ -156,7 +162,9 @@ labelled `weird`.
   --------------------- ---------------------
 Consider the following command:
 
-`thru -v weird file`
+```bash
+thru -v weird file
+```
 
 The corresponding "through-composed" output would be as follows:
 
@@ -185,7 +193,9 @@ according to the *unlabelled* (default) expansion list. So the following
 command would result in an output consisting of section A, followed by
 section B, followed by section A (again), followed by section C:
 
-`thru file`
+```bash
+thru file
+```
 
 
 Section Types
@@ -201,16 +211,36 @@ greater-than sign (`>`) is present in the label. Consider the following
 example of sections defined by Smith and Jones:
 
 
-`**Example`
-`*>Smith>A`
-`*>Jones>A`
-`data1`
-`*>Jones>B`
-`data2`
-`*>Smith>B`
-`data3`
-`*>Jones>C`
-`data4`
+```bash
+**Example
+```
+```bash
+*>Smith>A
+```
+```bash
+*>Jones>A
+```
+```bash
+data1
+```
+```bash
+*>Jones>B
+```
+```bash
+data2
+```
+```bash
+*>Smith>B
+```
+```bash
+data3
+```
+```bash
+*>Jones>C
+```
+```bash
+data4
+```
 
 `` *-  Both Smith and Jones label the work as beginning with section `A'. Later Jones's `B' section begins; then Smith's `B' section; then Jones's `C' section. Note that Smith's `B' section also contains the material Jones has identified as section `C'.  ``
 
@@ -220,18 +250,32 @@ next occurrence of a section label. However, the **-t** option causes
 could extract Smith\'s \`B\' section by using the **-t** option to limit
 extraction to "Smith"-type section labels:
 
-`yank -t Smith -s B`
+```bash
+yank -t Smith -s B
+```
 
 This command would produce the following output:
 
 
-`**Example`
-`*>Smith>B`
-`data3`
-`*>Jones>C`
-`data4`
+```bash
+**Example
+```
+```bash
+*>Smith>B
+```
+```bash
+data3
+```
+```bash
+*>Jones>C
+```
+```bash
+data4
+```
 
-`*-  Without the -t option, yank will simply extract material up to the occurrence of the next section label. Note that section types can be used to define innumerable alternative organizations for a single document.  `
+```bash
+*-  Without the -t option, yank will simply extract material up to the occurrence of the next section label. Note that section types can be used to define innumerable alternative organizations for a single document.  
+```
 
 Hierarchical Sections
 ---------------------
@@ -243,22 +287,54 @@ are indicated by the number of greater-than signs following the section
 type. Consider the following:
 
 
-`**Example`
-`*>Form>Exposition`
-`data1`
-`*>Form>>1st Theme`
-`data2`
-`*>Form>>2nd Theme`
-`data3`
-`*>Form>Development`
-`data4`
-`*>Form>Recapitulation`
-`*>Form>>1st Theme`
-`data5`
-`*>Form>>2nd Theme`
-`data6`
-`*>Form>Coda`
-`data7`
+```bash
+**Example
+```
+```bash
+*>Form>Exposition
+```
+```bash
+data1
+```
+```bash
+*>Form>>1st Theme
+```
+```bash
+data2
+```
+```bash
+*>Form>>2nd Theme
+```
+```bash
+data3
+```
+```bash
+*>Form>Development
+```
+```bash
+data4
+```
+```bash
+*>Form>Recapitulation
+```
+```bash
+*>Form>>1st Theme
+```
+```bash
+data5
+```
+```bash
+*>Form>>2nd Theme
+```
+```bash
+data6
+```
+```bash
+*>Form>Coda
+```
+```bash
+data7
+```
 `*-  All of the above section labels are identified as type Form`.
 However, two levels are distinguished (denoted by `>` and `>>`).
 Subsections are specified by increasing the number of greater-than
@@ -273,9 +349,13 @@ commands: indicating the first and second themes.
   ------------------------------------- --------------------------------------
 For example, the second theme from the recapitulation can be extracted
 as follows:
-`yank -t Form -s '2nd Theme' -r 2`
+```bash
+yank -t Form -s '2nd Theme' -r 2
+```
 Alternatively:
-`yank -t Form -s Recapitulation`
+```bash
+yank -t Form -s Recapitulation
+```
 *file*` | yank -t Form -s '2nd Theme' -r 1`
 Using the *yank* and *thru* Commands
 ------------------------------------
@@ -341,133 +421,385 @@ example encodes a melodic phrase containing four numbered verses from
 "Das Wandern" from *Die Schoene Muellerin* by Schubert:
 
 ``
-`!! Franz`
-`Schubert,`
+```bash
+!! Franz
+```
+```bash
+Schubert,
+```
 `` `Das Wandern' from "Die Schoene Muellerin"  ``
-`**kern`
-`**silbe`
-`*k[b-e-]`
-`*Deutsch`
-`*`
-`*solo`
-`*>[1,1,1,1]`
-`*>[1,1,1,1]`
-`*>1`
-`*>1`
-`*`
-`*strophe`
-`*`
-`*^`
-`*`
-`*^`
-`*^`
-`*`
-`*S/1`
-`*S/2`
-`*S/3`
-`*S/4`
-`8f`
-`Das`
-`Vom`
-`Das`
-`Die`
-`=5`
-`=5`
-`=5`
-`=5`
-`=5`
-`8f`
-`Wan-`
-`Was-`
-`sehn`
-`Stei-`
-`8b-`
-`-dern`
-`-ser`
-`wir`
-`-ne`
-`8a`
-`ist`
-`ha-`
-`auch`
-`selbst,`
-`8ee-`
-`des`
-`-ben`
-`den`
-`so`
-`=6`
-`=6`
-`=6`
-`=6`
-`=6`
-`(16dd`
-`Mül-`
-`wir's`
-`Rä-`
-`16ff)`
-`|`
-`|`
-`|`
-`|`
-`(16dd`
-`-lers`
-`ge-`
-`-dern`
-`sie`
-`16b-)`
-`|`
-`|`
-`|`
-`|`
-`8f`
-`Lust,`
-`-lernt,`
-`ab,`
-`sind,`
-`8dd`
-`das`
-`vom`
-`den`
-`die`
-`=7`
-`=7`
-`=7`
-`=7`
-`=7`
-`(8.cc`
-`Wan-`
-`Was-`
-`Rä-`
-`Stei-`
-`16a)`
-`|`
-`|`
-`|`
-`|`
-`8b-`
-`-dern!`
-`-ser!`
-`-dern!`
-`-ne!`
-`8r`
-`%`
-`%`
-`%`
-`%`
-`*`
-`*S/fin`
-`*S/fin`
-`*S/fin`
-`*S/fin`
-`*`
-`*v`
-`*v`
-`*v`
-`*v`
-`*`
-`*S-`
-`*-`
+```bash
+**kern
+```
+```bash
+**silbe
+```
+```bash
+*k[b-e-]
+```
+```bash
+*Deutsch
+```
+```bash
+*
+```
+```bash
+*solo
+```
+```bash
+*>[1,1,1,1]
+```
+```bash
+*>[1,1,1,1]
+```
+```bash
+*>1
+```
+```bash
+*>1
+```
+```bash
+*
+```
+```bash
+*strophe
+```
+```bash
+*
+```
+```bash
+*^
+```
+```bash
+*
+```
+```bash
+*^
+```
+```bash
+*^
+```
+```bash
+*
+```
+```bash
+*S/1
+```
+```bash
+*S/2
+```
+```bash
+*S/3
+```
+```bash
+*S/4
+```
+```bash
+8f
+```
+```bash
+Das
+```
+```bash
+Vom
+```
+```bash
+Das
+```
+```bash
+Die
+```
+```bash
+=5
+```
+```bash
+=5
+```
+```bash
+=5
+```
+```bash
+=5
+```
+```bash
+=5
+```
+```bash
+8f
+```
+```bash
+Wan-
+```
+```bash
+Was-
+```
+```bash
+sehn
+```
+```bash
+Stei-
+```
+```bash
+8b-
+```
+```bash
+-dern
+```
+```bash
+-ser
+```
+```bash
+wir
+```
+```bash
+-ne
+```
+```bash
+8a
+```
+```bash
+ist
+```
+```bash
+ha-
+```
+```bash
+auch
+```
+```bash
+selbst,
+```
+```bash
+8ee-
+```
+```bash
+des
+```
+```bash
+-ben
+```
+```bash
+den
+```
+```bash
+so
+```
+```bash
+=6
+```
+```bash
+=6
+```
+```bash
+=6
+```
+```bash
+=6
+```
+```bash
+=6
+```
+```bash
+(16dd
+```
+```bash
+Mül-
+```
+```bash
+wir's
+```
+```bash
+Rä-
+```
+```bash
+16ff)
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+(16dd
+```
+```bash
+-lers
+```
+```bash
+ge-
+```
+```bash
+-dern
+```
+```bash
+sie
+```
+```bash
+16b-)
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+8f
+```
+```bash
+Lust,
+```
+```bash
+-lernt,
+```
+```bash
+ab,
+```
+```bash
+sind,
+```
+```bash
+8dd
+```
+```bash
+das
+```
+```bash
+vom
+```
+```bash
+den
+```
+```bash
+die
+```
+```bash
+=7
+```
+```bash
+=7
+```
+```bash
+=7
+```
+```bash
+=7
+```
+```bash
+=7
+```
+```bash
+(8.cc
+```
+```bash
+Wan-
+```
+```bash
+Was-
+```
+```bash
+Rä-
+```
+```bash
+Stei-
+```
+```bash
+16a)
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+|
+```
+```bash
+8b-
+```
+```bash
+-dern!
+```
+```bash
+-ser!
+```
+```bash
+-dern!
+```
+```bash
+-ne!
+```
+```bash
+8r
+```
+```bash
+%
+```
+```bash
+%
+```
+```bash
+%
+```
+```bash
+%
+```
+```bash
+*
+```
+```bash
+*S/fin
+```
+```bash
+*S/fin
+```
+```bash
+*S/fin
+```
+```bash
+*S/fin
+```
+```bash
+*
+```
+```bash
+*v
+```
+```bash
+*v
+```
+```bash
+*v
+```
+```bash
+*v
+```
+```bash
+*
+```
+```bash
+*S-
+```
+```bash
+*-
+```
 `*- ` Notice that this file contains a single section labelled \`1\'
 and that an expansion list occurs near the beginning of the file
 that indicates section 1 is to be repeated 4 times in total.
@@ -489,7 +821,9 @@ The Humdrum **strophe** command can be used to isolate or extract
 selective strophic data. The **-x** option for **strophe** allows
 the user to extract a particular labelled strophe. Consider, for
 example the effect of the following command:
-`strophe -x 3 schubert`
+```bash
+strophe -x 3 schubert
+```
 Using the above data, the result is:
 
 `` !! Franz Schubert, `Das Wandern' from "Die Schoene Muellerin"  ``
@@ -529,7 +863,9 @@ entire work. We would expect as output, just two spines \-- the
 spine. First, we need to create the full length version using the
 **thru** command. This will take the default expansion list, and
 repeat the appropriate section for each successive verse.
-`thru schubert`
+```bash
+thru schubert
+```
 The effect of this will be to simply repeat section 1 four times.
 However, each repetition will contain all four verses. We can use
 the **strophe** command to eliminate the unwanted verse texts at
@@ -540,7 +876,9 @@ then when it encounters the next strophic section it will preserve
 strophe \#2 (`*S/2`). And so on. In summary, the follow command will
 create a proper through-composed rendition of the Schubert lieder
 illustrated above.
-`thru schubert | strophe`
+```bash
+thru schubert | strophe
+```
 Incidentally, the input passage need not necessary begin with
 strophe \#1. The **strophe** command will adapt to the input, and
 use the lowest previously unencountered strophe number.
@@ -550,7 +888,9 @@ As noted, the strophe technique can be used to encode different
 editorial interpretations of a single work. Suppose for example that
 we had two editions of the Bach chorale harmonizations: Erk and
 Reimenschneider. We could select the Erk edition as follows:
-`strophe -x Erk chorale166`
+```bash
+strophe -x Erk chorale166
+```
 In a strophic song, suppose we would like to compare the number of
 syllables in the first and second verses. We begin by selecting the
 appropriate verse, extract the syllable spine, eliminate all

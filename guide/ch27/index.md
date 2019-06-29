@@ -193,7 +193,9 @@ related to semantics, metaphor, word-painting, etc.
 
 Invoking the **text** command is straightforward:
 
-`text inputfile > outputfile`
+```bash
+text inputfile > outputfile
+```
 
 
 A simple text-related task might be looking for occurrences of a
@@ -201,20 +203,26 @@ particular word, such as the German "Liebe" (love). If the lyrics are
 encoded in the [`**text`](/rep/text) representation,
 then a simple **grep** will suffice:
 
-`grep -n 'Liebe' schubert`
+```bash
+grep -n 'Liebe' schubert
+```
 
 Recall that the **-n** option gives the line number of any occurrences
 found. If the input is encoded in the
 [`**silbe`](/rep/silbe) representation, then the
 output of **text** can be piped to **grep**:
 
-`extract -i '**silbe' schubert | text | grep -n 'Liebe'`
+```bash
+extract -i '**silbe' schubert | text | grep -n 'Liebe'
+```
 
 
 Given a `**silbe` input, a inventory of words can be generated using
 **sort** and **uniq** in the usual way:
 
-`extract -i '**silbe' song | text | rid -GLId | sort | uniq`
+```bash
+extract -i '**silbe' song | text | rid -GLId | sort | uniq
+```
 
 Frequently, it is useful to search for a group of words rather than
 individual words. Suppose we are looking for the phrase "white
@@ -223,7 +231,9 @@ to amalgamate words as multiple stops. If we are looking for a phrase
 consisting of just two words, we might use the **-n 2** option for
 **context**:
 
-`text barber | context -n 2 | grep -i 'white Pangur'`
+```bash
+text barber | context -n 2 | grep -i 'white Pangur'
+```
 
 
 Alternatively, we might amalgamate words so they form sentences, or at
@@ -234,7 +244,9 @@ containing all of the puntuation marks. The output from this command
 will display all punctuated phrases (one per line) that contain the
 phrase "white Pangur."
 
-`text | context -e '[.,;?!]' | grep -i 'white Pangur'`
+```bash
+text | context -e '[.,;?!]' | grep -i 'white Pangur'
+```
 
 
 The *fmt* Command
@@ -256,14 +268,18 @@ roughly the same width. <a name ="Gregorian_Chant"></a>
 
 The Latin text for this chant can be formatted as follows:
 
-`extract -i '**silbe' chant12 | text | rid -GLId | fmt -50`
+```bash
+extract -i '**silbe' chant12 | text | rid -GLId | fmt -50
+```
 
 The **-50** option tells **fmt** to place no more than 50 characters per
 line. The default line-length is 72 characters. The above pipeline
 produces the following output:
 
 
-`A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natum Maria Virgine.  Beatus auctor saeculi servile corpus induit: ut  carne carnem liberans, ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta, quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum, concepit alvo filium.`
+```bash
+A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natum Maria Virgine.  Beatus auctor saeculi servile corpus induit: ut  carne carnem liberans, ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta, quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum, concepit alvo filium.
+```
 
 Another useful output would have the text arranged with one sentence or
 phrase on each line. As before we can use the
@@ -271,13 +287,17 @@ phrase on each line. As before we can use the
 amalgamate words, where each amalgamated line ends with a punctuation
 mark:
 
-`extract -i '**silbe' chant12 | text | context -e '[.,;:?!]' \`
+```bash
+extract -i '**silbe' chant12 | text | context -e '[.,;:?!]' \
+```
 > \| rid -GLId
 
 The corresponding output is:
 
 
-`A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  natum Maria Virgine.  Beatus auctor saeculi servile corpus induit:  ut carne carnem liberans,  ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta,  quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum,  concepit alvo filium.`
+```bash
+A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  natum Maria Virgine.  Beatus auctor saeculi servile corpus induit:  ut carne carnem liberans,  ne perderet quos condidit.  Castae parentis viscera cae lestis intratgratia:  venter puellae bajulat secreta,  quae non noverat.  Domus pudici pectoris tem plum repente fit Dei:  intacta nesciens virum,  concepit alvo filium.
+```
 
 Yet another way of arranging the text output would be to parse the text
 according to explicit phrase marks in the
@@ -289,7 +309,9 @@ to the `**silbe` spine. This transfer entails four steps. (1) Extract
 the monophonic `**kern` spine and eliminate all data signifiers except
 closing curly braces (\``}`\'). Store the result in a temporary file:
 
-`extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
+```bash
+extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \
+```
 > \> temp1
 
 Notice that [**humsed**](/tool/humsed) has been given two
@@ -300,30 +322,40 @@ lines to null data records by adding a single period.
 \(2) Extract the `**silbe` spine, translate it to `**text` and store the
 result in another temporary file:
 
-`extract -i '**silbe' chant12 | text > temp2`
+```bash
+extract -i '**silbe' chant12 | text > temp2
+```
 
 \(3) Assemble the two temporary files together and use the
 [**cleave**](/tool/cleave) command to join the end-of-phrase
 marker to the syllable representation.
 
-`assemble temp1 temp2 | cleave -i '**kern,**text' \`
+```bash
+assemble temp1 temp2 | cleave -i '**kern,**text' \
+```
 > -o \'\*\*text\' \> temp3
 
 With this cleaved data we can now use the **context** command to
 amalgamate phrase-related text. Finally, **rid** is used to eliminate
 everything but non-null data records.
 
-`context -o = -e } temp3 | rid -GLId`
+```bash
+context -o = -e } temp3 | rid -GLId
+```
 
 The result is as follows:
 
-`A solis ortus cardine }  ad usque terrae limitem, }  Christum canamus principem, }  natum Maria Virgine. }  Beatus auctor saeculi }  servile corpus induit: }  ut carne carnem liberans, }  ne perderet quos condidit. }  Castae parentis viscera }  cae lestis intratgratia: }  venter puellae bajulat }  secreta, quae non noverat. }  Domus pudici pectoris }  tem plum repente fit Dei: }  intacta nesciens virum, }  concepit alvo filium. }`
+```bash
+A solis ortus cardine }  ad usque terrae limitem, }  Christum canamus principem, }  natum Maria Virgine. }  Beatus auctor saeculi }  servile corpus induit: }  ut carne carnem liberans, }  ne perderet quos condidit. }  Castae parentis viscera }  cae lestis intratgratia: }  venter puellae bajulat }  secreta, quae non noverat. }  Domus pudici pectoris }  tem plum repente fit Dei: }  intacta nesciens virum, }  concepit alvo filium. }
+```
 
 We could clean up the output by using the **sed** command to remove the
 trailing closed curly brace. We simple add the following to the
 pipeline:
 
-` . . . | sed 's/}//'`
+```bash
+ . . . | sed 's/}//'
+```
 
 You might have noticed that each of the above phrases seems to consist
 of eight syllables. We can confirm this by returning to the syllabic
@@ -331,17 +363,27 @@ rather than word-oriented output. For the above command sequence, simply
 omit the **text** command and replace `**text` with `**silbe`. The
 revised script becomes:
 
-`extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \`
+```bash
+extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \
+```
 > \> temp1
 
-`extract -i '**silbe' chant12 > temp2`
-`assemble temp1 temp2 | cleave -i '**kern,**silbe' \`
+```bash
+extract -i '**silbe' chant12 > temp2
+```
+```bash
+assemble temp1 temp2 | cleave -i '**kern,**silbe' \
+```
 > -o \'\*\*silbe\' \> temp3
-`context -o = -e } temp3 | rid -GLId | sed 's/}//'`
+```bash
+context -o = -e } temp3 | rid -GLId | sed 's/}//'
+```
 
 The corresponding output is:
 
-`A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Chri/- -stum ca- -na/- -mus prin/- -ci- -pem,   na/- -tum Ma- -ri/- -a Vir/- -gi- -ne.  Be- -a/- -tus au/- -ctor sae/- -cu- -li  ser- -vi/- -le cor/- -pus in/- -du- -it:  ut car/- -ne car/- -nem li/- -be- -rans,   ne per/- -de- -ret quos con/- -di- -dit.  Ca/- -stae pa- -ren/- -tis vis/- -ce- -ra  cae/ le/- -stis in/- -trat- -gra/- -ti- -a:  ven/- -ter pu- -el/- -lae ba/- -ju- -lat   se- -cre/- -ta, quae non no/- -ve- -rat.  Do/- -mus pu- -di- -ci pe/- -cto- -ris  tem/ plum re- -pen/- -te fit De/- -i:  in- -ta/- -cta ne/- -sci- -ens vi/- -rum,   con- -ce/- -pit al/- -vo fi/- -li- -um.`
+```bash
+A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Chri/- -stum ca- -na/- -mus prin/- -ci- -pem,   na/- -tum Ma- -ri/- -a Vir/- -gi- -ne.  Be- -a/- -tus au/- -ctor sae/- -cu- -li  ser- -vi/- -le cor/- -pus in/- -du- -it:  ut car/- -ne car/- -nem li/- -be- -rans,   ne per/- -de- -ret quos con/- -di- -dit.  Ca/- -stae pa- -ren/- -tis vis/- -ce- -ra  cae/ le/- -stis in/- -trat- -gra/- -ti- -a:  ven/- -ter pu- -el/- -lae ba/- -ju- -lat   se- -cre/- -ta, quae non no/- -ve- -rat.  Do/- -mus pu- -di- -ci pe/- -cto- -ris  tem/ plum re- -pen/- -te fit De/- -i:  in- -ta/- -cta ne/- -sci- -ens vi/- -rum,   con- -ce/- -pit al/- -vo fi/- -li- -um.
+```
 
 
 If we are looking for vocal texts that exhibit a recurring rhythm, we
@@ -352,7 +394,9 @@ us to write simple in-line programs. The following **awk** script simply
 outputs the number of fields (white-space separated text) in each input
 line:
 
-`awk '{print NF}'`
+```bash
+awk '{print NF}'
+```
 
 If we add this to the end of our command sequence, then the output would
 simply be a sequence of numbers \-- where each number indicates the
@@ -366,7 +410,9 @@ The following script counts the number of syllables in successive
 phrases for a single input file.
 
 
-`# SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ `
+```bash
+# SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ 
+```
 > 
 > \| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
 > NF}\'
@@ -377,7 +423,9 @@ Variations on this theme abound. For example, if we wish to determine
 the number of syllables between successive punctuation marks, the
 following pipeline could be used:
 
-`extract -i '**silbe' | context -o = -e '[.,;:?!]' \`
+```bash
+extract -i '**silbe' | context -o = -e '[.,;:?!]' \
+```
 > \| rid -GLId \| awk \'{print NF}\'
 
 
@@ -390,23 +438,31 @@ recoded the syllables in each phrase, where the value `0` indicates an
 unstressed syllable and `1` indicates a stressed syllable:
 
 
-`0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0`
+```bash
+0 1 0 1 0 1 0 0  0 0 0 1 0 1 0 0  1 0 0 1 0 1 0 0   1 0 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0  0 1 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 1 0 1 0 0  1 1 0 1 0 1 0 0  1 0 0 1 0 1 0 0   0 1 0 0 0 1 0 0  1 0 0 0 0 1 0 0  1 0 0 1 0 0 1 0  0 1 0 1 0 0 1 0   0 1 0 1 0 1 0 0
+```
 
 The above output was generated using the
 [**humsed**](/tool/humsed) command. Any syllable containing a
 trailing asterisk (`*`) is re-written as a \`1\', otherwise as a \`0\'.
 
-` . . . | humsed 's/[^ ][^ ]*\*/1/g; s/[^1][^1]*$/0/g'`
+```bash
+ . . . | humsed 's/[^ ][^ ]*\*/1/g; s/[^1][^1]*$/0/g'
+```
 
 With the above output, we can generate an inventory of phrase-related
 text-rhythms.
 
-` . . . | sort | uniq -c | sort`
+```bash
+ . . . | sort | uniq -c | sort
+```
 
 With the following results:
 
 
-`5    0 1 0 1 0 1 0 0  4   1 0 0 1 0 1 0 0  2   0 1 0 0 0 1 0 0  1   0 1 0 1 0 0 1 0  1   1 1 0 1 0 1 0 0  1   1 0 0 0 0 1 0 0  1   1 0 0 1 0 0 1 0  1   0 0 0 1 0 1 0 0`
+```bash
+5    0 1 0 1 0 1 0 0  4   1 0 0 1 0 1 0 0  2   0 1 0 0 0 1 0 0  1   0 1 0 1 0 0 1 0  1   1 1 0 1 0 1 0 0  1   1 0 0 0 0 1 0 0  1   1 0 0 1 0 0 1 0  1   0 0 0 1 0 1 0 0
+```
 
 We can create a summary rhythmic pattern by adding together the values
 in each column \-- that is, counting the number of accented syllables
@@ -418,14 +474,22 @@ will isolate the first column of numbers. We can then pipe the results
 to the **stats** utility in order to calculate the numerical total. For
 example,
 
-` . . . | cut -f 1 | stats | grep 'total'`
-` . . . | cut -f 2 | stats | grep 'total'`
-` . . . | cut -f 3 | stats | grep 'total'`
+```bash
+ . . . | cut -f 1 | stats | grep 'total'
+```
+```bash
+ . . . | cut -f 2 | stats | grep 'total'
+```
+```bash
+ . . . | cut -f 3 | stats | grep 'total'
+```
 etc
 
 For the chant *O Solis Ortus* the results are as follows:
 
-`7 9 0 13 0 14 2 0`
+```bash
+7 9 0 13 0 14 2 0
+```
 
 This means that there are seven stressed syllables in the first syllable
 position of the phrase, nine stressed syllables in the second syllable
@@ -493,7 +557,9 @@ while-loop that cycles through all of the files provided when the
 command is invoked.
 
 
-`while [ $# -ne 0 ]  do `
+```bash
+while [ $# -ne 0 ]  do 
+```
 > 
 > extract -i \'\*\*silbe\' \$1 \> temp1
 > text temp1 \| context -o = -n 5 -p 3 \> temp2
@@ -531,7 +597,9 @@ character \`+\' \-- we must invoke **egrep** rather than **grep** in our
 script:
 
 
-`# KEYWORD - A script for searching a master concordance file  #  # Usage:  keyword   #  egrep "^.*  [^ ]+ [^ ]+ $1" ~/home/concord/master`
+```bash
+# KEYWORD - A script for searching a master concordance file  #  # Usage:  keyword   #  egrep "^.*  [^ ]+ [^ ]+ $1" ~/home/concord/master
+```
 
 Concordances can be used for a number of applications. One might use a
 concordance to help identify metaphor or image related words (such as
@@ -554,7 +622,9 @@ the preceding and following four words.
 First we transform and isolate the text data using the **text** and
 [**extract**](/tool/extract) commands:
 
-`text inputfile | extract -i '**text' `
+```bash
+text inputfile | extract -i '**text' 
+```
 
 Since the input may contain multiple-stops, we might consider the
 precaution of ensuring no more than one word per data record. For this
@@ -567,7 +637,9 @@ ways. One way is to precede the carriage return by control-V (meaning
 return. In the following command we have used the backslash to escape a
 control-M character:
 
-`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+```bash
+text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
+```
 > \| egrep -4 \'\^\|(like)\|(as)\$\'
 
 Having ensured that there is no more than one word per line we can now
@@ -594,7 +666,9 @@ terminator (`*-`). If the input contains tabs, then appropriate spines
 will be added. If the input contains empty lines, then they will be
 changed to null data records.
 
-`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+```bash
+text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
+```
 > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
 
 Now we can make use of the **context** command. Each context ends with
@@ -602,7 +676,9 @@ the double-dash delimiters generated by **egrep**. The
 [**rid**](/tool/rid) command can be used to eliminate the
 interpretations added by **hum**.
 
-`text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \`
+```bash
+text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
+```
 > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\
 > \| rid -Id
 
@@ -627,18 +703,24 @@ First we translate any pitch data to
 `**text`. We will also filter the outputs to ensure that only `**semits`
 and `**text` are present.
 
-`semits * | text | extract -i '**semits,**text'`
+```bash
+semits * | text | extract -i '**semits,**text'
+```
 
 Since a word may be sustained through more than one pitch, and a pitch
 may be intoned for more than one word, we should use the
 [**ditto**](/tool/ditto) command to ensure that null tokens are
 filled-in.
 
-`semits * | text | extract -i '**semits,**text' | ditto -s =`
+```bash
+semits * | text | extract -i '**semits,**text' | ditto -s =
+```
 
 Next, we can use **egrep** to search for the words of interest:
 
-`semits * | text | extract -i '**semits,**text' | ditto -s = \`
+```bash
+semits * | text | extract -i '**semits,**text' | ditto -s = \
+```
 > \| egrep -i \'\^\\\*\|high\|hoch\|haut\'
 
 Notice the addition of the expression `^\*` in the search pattern. This
@@ -648,13 +730,17 @@ that the output conforms to the Humdrum syntax. We can now isolate the
 the average pitch for the words coinciding with the words
 high/hoch/haut:
 
-`semits * | text | extract -i '**semits,**text' | ditto -s = \`
+```bash
+semits * | text | extract -i '**semits,**text' | ditto -s = \
+```
 > \| egrep -i \'\^\\\*\|high\|hoch\|haut\' \| extract -i
 > \'\*\*semits\' \| stats
 
 The average pitch for the entire work can be determined as follows:
 
-`semits * | extract -i '**semits' | ditto -s = | rid -GLI \`
+```bash
+semits * | extract -i '**semits' | ditto -s = | rid -GLI \
+```
 > \| stats
 
 
@@ -768,7 +854,9 @@ emotionally charged words.
 The plus and minus signs can be eliminated using a simple **humsed**
 substitution prior to numerical sorting:
 
-`humsed 's/[+-]//g'`
+```bash
+humsed 's/[+-]//g'
+```
 
 Once again, we could use the **head** command to isolate the 10 or 20
 most emotionally charged words.

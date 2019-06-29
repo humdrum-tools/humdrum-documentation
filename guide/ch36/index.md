@@ -226,9 +226,15 @@ score corresponding to the opening measures of a Mozart clarinet trio.
 
 ![](guide.figures/guide36.3.gif)
 
-`; W.A. Mozart, Second trio from Clarinet Quintet`
-`f1 0 512 10 5 3 1 ; three harmonics in waveform table`
-`t0 96; tempo of 96 beats per minute `
+```bash
+; W.A. Mozart, Second trio from Clarinet Quintet
+```
+```bash
+f1 0 512 10 5 3 1 ; three harmonics in waveform table
+```
+```bash
+t0 96; tempo of 96 beats per minute 
+```
   ------------------- ------- ---------- ------ ------- ----- ------ -------------
                                                                      
   `; Instrument #1`                                                  

@@ -56,7 +56,9 @@ character; however, the same delimiter character must be used throughout
 the operation. The following substitution command causes occurrences of
 the letter \`A\' to be replaced by the letter \`B\':
 
-`s/A/B/`
+```bash
+s/A/B/
+```
 
 Since the slash character (/) appears immediately following the `s`, it
 becomes the delimiter for the rest of the operation. In this case no
@@ -64,7 +66,9 @@ option has been given at the end of the substitution. Since the
 delimiter can be any character, the above command is functionally
 identical to the following:
 
-`sxAxBx`
+```bash
+sxAxBx
+```
 
 If it is necessary to use the delimiter character (as a literal) within
 either the target string or the replacement string it can be escaped
@@ -74,12 +78,16 @@ There are two ways to execute a substition operation such as given
 above. One way is to give the substitution as a command-line argument to
 **sed** or **humsed**:
 
-`humsed s%A%B% filename`
+```bash
+humsed s%A%B% filename
+```
 
 Alternatively, the operation can be placed in a file (for example, named
 `revise`):
 
-`s%A%B%`
+```bash
+s%A%B%
+```
 
 Then the stream editor can be invoked to execute the operations
 contained in this file using the **-f** option:
@@ -188,7 +196,9 @@ we want to eliminate key-up data tokens. These tokens can be
 distinguished by the minus sign associated with the second data element.
 An appropriate substutition is:
 
-`s%[0-9][0-9]*/-[0-9][0-9]*/[0-9]* *%%g`
+```bash
+s%[0-9][0-9]*/-[0-9][0-9]*/[0-9]* *%%g
+```
 
 (That is, replace by nothing any data that matches the following: a
 numerical digit followed by zero or more digits, followed by a slash,
@@ -199,7 +209,9 @@ by zero or more spaces.)
 Having isolated only the key-down data tokens, we now need to eliminate
 everything but the third data element, the MIDI key-down velocities:
 
-`s%[0-9][0-9]*/[0-9][0-9]*/%%g`
+```bash
+s%[0-9][0-9]*/[0-9][0-9]*/%%g
+```
 
 
 The *stats* Command
@@ -231,10 +243,14 @@ Assuming that the above two stream-editing substitutions are kept in a
 file called `revise` we can compare the dynamic range for the two
 performances as follows:
 
-`extract -i '**MIDI' perform1 | grep -v ^= | humsed -r revise \`
+```bash
+extract -i '**MIDI' perform1 | grep -v ^= | humsed -r revise \
+```
 > \| rid -GLId \| stats
 
-`extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \`
+```bash
+extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \
+```
 > \| rid -GLId \| stats
 
 The **extract** command has been added to ensure that we only process
@@ -256,7 +272,9 @@ favor one accidental over the other? A simple way to determine this is
 to throw away everything but the sharps and flats. We can generate an
 inventory of just sharps and flats:
 
-`humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c`
+```bash
+humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
+```
 
 In some tasks, we might wish to transform a `**kern`-format file so that
 only pitch-related information is preserved:
@@ -331,7 +349,9 @@ listen to the rhythmic structure of a work. That is, we might change all
 of the pitches in a work to a single pitch \-- in the following case,
 middle C:
 
-`humsed 's/[A-Ga-g#-]*/c/' | midi | perform`
+```bash
+humsed 's/[A-Ga-g#-]*/c/' | midi | perform
+```
 
 
 Adding Information
@@ -403,7 +423,9 @@ execute from the file. Consider, for example, the task of rhythmic
 diminution, where the durations of notes are halved. We might create a
 file called `diminute` containing the following operations:
 
-`s/[0-9][0-9]\*/&XXX/g  s/64XXX/128/g  s/32XXX/64/g  s/16XXX/32/g  s/8XXX/16/g  s/4XXX/8/g  s/2XXX/4/g  s/1XXX/2/g  s/0XXX/1/g`
+```bash
+s/[0-9][0-9]\*/&XXX/g  s/64XXX/128/g  s/32XXX/64/g  s/16XXX/32/g  s/8XXX/16/g  s/4XXX/8/g  s/2XXX/4/g  s/1XXX/2/g  s/0XXX/1/g
+```
 
 Each substitution command is applied (in order) to every line or data
 record in the file. The first substitution adds the unique string `XXX`
@@ -456,27 +478,41 @@ from a `**kern` quarter-note (\`4\'). The problem is resolved by first
 eliminating all of the duration information (numbers) from the original
 input:
 
-`humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'`
-`humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'`
+```bash
+humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'
+```
+```bash
+humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'
+```
 
 
 In texts for vocal works, identify the number of notes per syllable.
 
 `extract -i '**kern'` *input*` | humsed 's/X//g' > tune`
 `extract -i '**silbe'` *input*` | humsed 's/[a-zA-Z]*/X/' > lyrics`
-`assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \`
+```bash
+assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
+```
 > \> combined
-`context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'`
+```bash
+context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'
+```
 
 
 Identify the number of notes per word rather than per syllable.
 
 `extract -i '**kern'` *input*` > tune`
-`extract -i '**silbe'`
+```bash
+extract -i '**silbe'
+```
 *input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
-`assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \`
+```bash
+assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
+```
 > \> combined
-`context -b BEGIN -e END -o '[r=]' combined | rid -GLId \`
+```bash
+context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
+```
 > \| awk \'{print NF}\'
 
 
@@ -490,23 +526,37 @@ want to annotate a file with Humdrum comments identifying the presence
 of cadential 6-4 chords. First, we might create a file \-- `comment.6-4`
 \-- containing the following Humdrum comment:
 
-`!! A likely cadential 6-4 progression.`
+```bash
+!! A likely cadential 6-4 progression.
+```
 
 We can use the Humdrum [**pattern**](/tool/pattern) command (to
 be described in [Chapter 21](/guide/ch21)), as follows:
 
 File `template`:
 
-`  .*`
-`Ic`
-`^\.  *`
-`=    *`
-`V[^I]`
+```bash
+  .*
+```
+```bash
+Ic
+```
+```bash
+^\.  *
+```
+```bash
+=    *
+```
+```bash
+V[^I]
+```
 
 Command:
 
 `pattern -f template` *inputfile*` > output`
-`humsed 'cadential-64/r comment.6-4' output > commented.output`
+```bash
+humsed 'cadential-64/r comment.6-4' output > commented.output
+```
 
 ------------------------------------------------------------------------
 

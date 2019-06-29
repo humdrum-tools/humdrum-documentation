@@ -244,11 +244,15 @@ then transpose the result using the Humdrum
 B-flat trumpet or B-flat clarinet can be transposed using the following
 command:
 
-`trans -d -1 -c -2`
+```bash
+trans -d -1 -c -2
+```
 
 In the case of clarinet in A, a suitable transposition would be:
 
-`trans -d -2 -c -3`
+```bash
+trans -d -2 -c -3
+```
 
 The **trans** command adds a transposition interpretation to the output
 in order to identify that the material has been shifted. In the `**kern`
@@ -259,11 +263,15 @@ can be created by adding the upper-case letter \`I\' prior to the \`T\'
 in the appropriate tandem interpretation. In the case of a horn in F for
 example, the transpostion interpretation would be modified from
 
-`*Trd-4c-7`
+```bash
+*Trd-4c-7
+```
 
 to:
 
-`*ITrd-4c-7`
+```bash
+*ITrd-4c-7
+```
 
 
 Instrument Identification
@@ -319,12 +327,16 @@ sign(s). The vertical line (\|) represents a \`thin\' line and the
 exclamation mark (!) represents a \`thick\' line. A typical final double
 bar would be encoded:
 
-`==|!`
+```bash
+==|!
+```
 
 Most mid-movement double bars are encoded with two thin lines and so
 would be encoded:
 
-`=||`
+```bash
+=||
+```
 
 A common encoding error is to render mid-movement double barlines as
 *functional* rather than *orthographic* double-bars.
@@ -375,7 +387,9 @@ Where appropriate, suitable section labels should be created and encoded
 using the Humdrum Section Label designator. Remember that section labels
 can include the space character:
 
-`*>1st Theme`
+```bash
+*>1st Theme
+```
 
 If you include section labels, you must also include a Humdrum
 "Expansion List" to indicate how the sections are connected. The
@@ -383,7 +397,9 @@ Humdrum [**thru**](/tool/thru) command causes a through-composed
 version of a file to be generated according to the expansion list. For
 example, an expansion list for a simple binary work may be encoded as:
 
-`*>[A,B]`
+```bash
+*>[A,B]
+```
 
 Remember that expansion lists ought to be encoded prior to the first
 section label.
@@ -399,12 +415,16 @@ repeating all sections of both the minuet and trio, but then avoiding
 the repeats in the minuet following the Da Capo. A suitable expansion
 list might be:
 
-`*>[Minuet,Minuet,Trio,Trio,,Minuet]`
+```bash
+*>[Minuet,Minuet,Trio,Trio,,Minuet]
+```
 
 An alternative expansion list might be encoded as follows (notice the
 expansion-list-label *ossia*):
 
-`*>ossia[Minuet,Minuet,Trio,Trio,,Minuet,Minuet]`
+```bash
+*>ossia[Minuet,Minuet,Trio,Trio,,Minuet,Minuet]
+```
 
 
 Editorialisms in the *\*\*kern* Representation
@@ -534,12 +554,16 @@ strategy. The Humdrum [**humdrum**](/tool/humdrum) command can
 be used to identify whether the final encoded output conforms to the
 Humdrum syntax:
 
-`humdrum full.krn`
+```bash
+humdrum full.krn
+```
 
 Use the Humdrum **proof** **-k** command to identify any syntactical
 errors in any encoded `**kern` data:
 
-`proof -k full.krn`
+```bash
+proof -k full.krn
+```
 
 
 One of the best ways to ensure that musical data makes sense is to
@@ -549,7 +573,9 @@ your data. The **-c** option for **midi** causes the Humdrum data to be
 displayed while the MIDI data is performed. This can further help in
 locating errors.
 
-`midi -c full.krn | perform`
+```bash
+midi -c full.krn | perform
+```
 
 The **perform** command allows you to *pause* (press the space bar), to
 *move* to a particular measure (type a measure number followed by

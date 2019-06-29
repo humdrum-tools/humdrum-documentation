@@ -143,7 +143,9 @@ then be "back-referenced" by using the integer label preceded by a
 back-slash. Hence, `\1` refers to the first referenced expression.
 Consider, by way of illustration, the following command:
 
-`sed 's/^\(.\).*/\1/'`
+```bash
+sed 's/^\(.\).*/\1/'
+```
 
 In this command, the referenced expression consists of the period (match
 any single character). Notice that this expression is back-referenced in
@@ -157,7 +159,9 @@ First we extract the [`**IPA`](/rep/IPA) spine and
 use **humsed** to eliminate all but the first character in each data
 record:
 
-`extract -i '**IPA' Tempest | humsed 's/^\(.\).*/\1/'`
+```bash
+extract -i '**IPA' Tempest | humsed 's/^\(.\).*/\1/'
+```
 
 The result is:
 
@@ -177,7 +181,9 @@ same initial phoneme. For this, we would use the **-n 3** option for
 **context**. Having amalgamated three phonemes on each data record we
 can use **humsed** to eliminate the spaces between the multiple stops:
 
-`extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \`
+```bash
+extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
+```
 > \| context -n 3 \| humsed \'s/ //g\'
 
 The revised output is:
@@ -196,7 +202,9 @@ Now we need to identify any data records that contain three identical
 sigifiers. Once again, we can use the back-reference feature for
 **humsed**.
 
-`extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \`
+```bash
+extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
+```
 > \| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/\'
 
 The resulting output is:
@@ -226,7 +234,9 @@ This feature can be usefully applied in our alliteration task to
 eliminate all other data in our spine except alliteration markers. Our
 final revised pipeline transforms non-alliteration data to null tokens:
 
-`extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \`
+```bash
+extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
+```
 > \| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/;
 > \\
 > /allit/!s/.\*/./\'
@@ -262,7 +272,9 @@ simple reassignment script can be defined which collapses the various
 phonemes into a smaller set of phonetic classes. For example, a suitable
 script might contain the following assignments:
 
-`s/[bdtk]//g  s/[mn]//g  s/[fsSTDv]//g`
+```bash
+s/[bdtk]//g  s/[mn]//g  s/[fsSTDv]//g
+```
 etc.
 
 Classifying phonemes in this way will allow us to broaden our searches
@@ -305,7 +317,9 @@ and then assign estimated heights to each vowel. Finally, non-data
 records are eliminated using [**rid**](/tool/rid) and the data
 values averaged using the **stats** command:
 
-`extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\`
+```bash
+extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\
+```
 > \| humsed \'s/./& /g; s/ / /; s/ \$//\' \| humsed -f vowel.map\\
 > \| rid -GLId \| stats
 
@@ -335,7 +349,9 @@ that longer notes are proportionally more influential in our measure of
 overall vowel height. We can use [**ditto**](/tool/ditto) to
 repeat sustained vowels:
 
-`timebase -t 16 Schubert | extract -i '**IPA' \`
+```bash
+timebase -t 16 Schubert | extract -i '**IPA' \
+```
 > \| humsed \'s/\[\^\@VR&AaEiIoOWuUy\]//\' \| humsed \'s/./& /g; \\
 > s/ / /; s/ \$//\' \| humsed -f vowel.map \| rid -GLId \| stats
 
@@ -384,17 +400,23 @@ indicators (via curly braces {}). Our input might begin as follows:
 Using [**extract**](/tool/extract), **context** and **rid** we
 can isolate each poetic phrase:
 
-`extract -i '**IPA poem | context -b { -e } | rid -GLId`
+```bash
+extract -i '**IPA poem | context -b { -e } | rid -GLId
+```
 
 The result is as follows:
 
-`{wRr Al In D@ d@mps}  {foR dAim@nds Ar tr@mps}  {D@ kIt@ns Ar gAn tu seint pAUls}  {D@ beibiz Ar bIt}  {D@ munz In @ fIt}  {&nd D@ h&uz@z Ar bIlt wITAut wAUls}`
+```bash
+{wRr Al In D@ d@mps}  {foR dAim@nds Ar tr@mps}  {D@ kIt@ns Ar gAn tu seint pAUls}  {D@ beibiz Ar bIt}  {D@ munz In @ fIt}  {&nd D@ h&uz@z Ar bIlt wITAut wAUls}
+```
 
 The rhyming portion of words typically consist of a final vowel plus any
 subsequent consonants. We can isolate these phonemes using **sed**.
 Notice our use of back reference to preserve the final phonemes:
 
-` ... | sed 's/.*\([@VR&AaEiIoOWuUy][^@VR&AaEiIoOWuUy]*}$\)/\1/'`
+```bash
+ ... | sed 's/.*\([@VR&AaEiIoOWuUy][^@VR&AaEiIoOWuUy]*}$\)/\1/'
+```
 
 The resulting output is:
 
@@ -409,34 +431,54 @@ The resulting output is:
 A little further processing can remove the closing braces using **sed**,
 and eliminate the duplicate lines using **sort** and **uniq**.
 
-` ... | humsed 's/}//' | sort | uniq`
+```bash
+ ... | humsed 's/}//' | sort | uniq
+```
 
 The output can then be changed into a set of substitutions for a
 **humsed** script. A suitable file would contain the following
 substitutions:
 
-`s/.*@mps$/A/  s/.*It$/B/  s/.*Uls$/C/  s/.*/./`
+```bash
+s/.*@mps$/A/  s/.*It$/B/  s/.*Uls$/C/  s/.*/./
+```
 
 This script will label all words ending with "umps" to \`A\'. Word
 ending with "its" will be labelled \`B\', and so on. All other words
 will be output as null tokens. Using this script, a suitable pipeline
 for processing our original file would be as follows:
 
-`extract -i '**IPA poem | context -b { -e } | humsed 's/}//' \`
+```bash
+extract -i '**IPA poem | context -b { -e } | humsed 's/}//' \
+```
 > \| humsed -f rhyme \| rid -GLId
 
 The corresponding output would indicate the rhyme scheme for this poem:
 
-`A`
-`A`
-`B`
-`C`
-`C`
-`B  `
+```bash
+A
+```
+```bash
+A
+```
+```bash
+B
+```
+```bash
+C
+```
+```bash
+C
+```
+```bash
+B  
+```
 Note that the entire analytic procedure can be placed in a shell
 script and applied to any input containing `**IPA` text. The following
 script adds a number of refinements.
-`# RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ `
+```bash
+# RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ 
+```
 > 
 > \| sed
 > \'s/.\*\\(\[\@VR&AaEiIoOWuUy\]\[\^\@VR&AaEiIoOWuUy\]\*}\$\\)/\\1/\'
