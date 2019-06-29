@@ -47,6 +47,31 @@ document.addEventListener("DOMContentLoaded", function() {
 	output += "</td></tr></table>";
 
 	element.innerHTML = output;
+
+
+	var header = document.querySelector("h1");
+	if (header) {
+		var text = header.textContent;
+		if (text.match(/Humdrum Toolkit User Guide/)) {
+			header.style.color = "black";
+		}
+	}
+
+	var original = document.querySelector("#original");
+console.log("ORIGINAL", original);
+	if (original) {
+console.log("ORIGINAL FOUND");
+		var nnumber = number;
+		if (nnumber < 10) {
+			nnumber = "0" + nnumber;
+		}
+		var output = "";
+		output += '<a target="_blank" href="';
+		output += '/Humdrum/guide' + nnumber + '.html';
+		output += '" class="btn btn-primary btn-lg btn-responsive">Original version</a>';
+		original.innerHTML = output;
+	}
+
 });
 
 

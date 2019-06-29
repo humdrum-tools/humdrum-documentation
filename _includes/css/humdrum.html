@@ -2,6 +2,8 @@
 
 body {
 	font-size: 2.5rem !important;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 .summary:before {
@@ -33,5 +35,24 @@ h2 {color: {{site.primary_background_color}}; }
 h3 {color: {{site.primary_background_color}}; }
 h4 {color: #808080; }
 
+nav.navbar-static-top {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+body > div.container {
+	margin-top: 80px;
+}
+
+#search-demo-container {
+	line-height: normal;
+}
+
+body > nav {
+	opacity: 0.95;
+
+}
 
 </style>

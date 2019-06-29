@@ -56,7 +56,7 @@ character; however, the same delimiter character must be used throughout
 the operation. The following substitution command causes occurrences of
 the letter \`A\' to be replaced by the letter \`B\':
 
-```bash
+```
 s/A/B/
 ```
 
@@ -66,7 +66,7 @@ option has been given at the end of the substitution. Since the
 delimiter can be any character, the above command is functionally
 identical to the following:
 
-```bash
+```
 sxAxBx
 ```
 
@@ -92,7 +92,9 @@ s%A%B%
 Then the stream editor can be invoked to execute the operations
 contained in this file using the **-f** option:
 
-`humsed -f revise `*inputfile*
+```bash
+humsed -f revise *inputfile*
+```
 
 By default the output will be displayed on the screen. Using
 file-redirection (\>) the output can be placed in some other file. Note
@@ -110,7 +112,9 @@ indicated by the double quote (`"`) whereas spiccatos are represented by
 the lower-case letter `s`. We can change all pizzicato marks to spiccato
 marks using the following command:
 
-`humsed 's/"/s/g'` *inputfile*
+```
+humsed 's/"/s/g' *inputfile*
+```
 
 Since the double quote is interpreted as a special character by the UNIX
 shell, we have escaped the entire substitution operation by placing it
@@ -134,19 +138,25 @@ of regular expression syntax. Frequently, it is useful to eliminate
 certain kinds of information from a file. For example, we can eliminate
 all sharps and flats from a `**kern`-format file as follows:
 
-`humsed s/[#-]//g` *inputfile*
+```bash
+humsed s/[#-]//g *inputfile*
+```
 
 Suppose we wanted to eliminate all beaming information in a score. In
 the `**kern` representation, open and closed beams are represented by
 `L` and `J` respectively; partial beams are represented by `K` and `k`.
 
-`humsed s/[JLkK]//g` *inputfile*
+```bash
+humsed s/[JLkK]//g *inputfile*
+```
 
 
 Alternatively, we might want to eliminate all data except for the
 beaming information:
 
-`humsed s/[^JLkK]//g` *inputfile*
+```bash
+humsed s/[^JLkK]//g *inputfile*
+```
 
 
 Sometimes we need to restrict the circumstances where the data are
@@ -159,7 +169,9 @@ execute this substitution only if the data record matches the leading
 regular expression. For example, the following command eliminates
 measure numbers but not note durations:
 
-`humsed /^=/sX[0-9]*XXg` *inputfile*
+```bash
+humsed /^=/sX[0-9]*XXg *inputfile*
+```
 
 The operation may be interpreted as follows: look for lines that match a
 pattern where the first character in the line is an equals sign; if you
@@ -176,7 +188,10 @@ following command renumbers all of the barlines in an input so that the
 first measure begins with the number 72. (Refer to the *Humdrum
 Reference Manual* for details regarding **num**.)
 
-`humsed /^=/sX=[0-9]*X=Xg` *inputfile*` | num -n ^= -x == -p = -o 72`
+
+```bash
+humsed /^=/sX=[0-9]*X=Xg *inputfile* | num -n ^= -x == -p = -o 72
+```
 
 Suppose we wanted to eliminate all octave numbers from a
 [`**pitch`](/rep/pitch) representation. In this case
@@ -184,7 +199,9 @@ we want to delete all numbers except when they occur in conjunction with
 a barline. Our substitution should occur only when the current record
 does not match a leading equals sign:
 
-`humsed /^[^=]/s%[0-9]%%g` *inputfile*
+```bash
+humsed /^[^=]/s%[0-9]%%g *inputfile*
+```
 
 
 Suppose we wanted to determine which of two MIDI performances exhibits
@@ -223,7 +240,7 @@ calculates basic statistical information for any input consisting of a
 column of numbers. A sample output from **stats** might appear as
 follows:
 
-```humdrum
+```
 n:	124
 total:	5700
 mean:	45.9677
@@ -246,13 +263,13 @@ performances as follows:
 
 ```bash
 extract -i '**MIDI' perform1 | grep -v ^= | humsed -r revise \
+    | rid -GLId | stats
 ```
-> \| rid -GLId \| stats
 
 ```bash
 extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \
+   | rid -GLId | stats
 ```
-> \| rid -GLId \| stats
 
 The **extract** command has been added to ensure that we only process
 [`**MIDI`](/rep/MIDI) data; the **grep** command
@@ -280,12 +297,16 @@ humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
 In some tasks, we might wish to transform a `**kern`-format file so that
 only pitch-related information is preserved:
 
-`humsed 's/[^a-gA-G#-]//g'` *inputfile*
+```bash
+humsed 's/[^a-gA-G#-]//g' *inputfile*
+```
 
 In extreme cases, we may wish to eliminate all Humdrum data from an
 input. The following command replaces all data tokens by null tokens:
 
-`humsed 's/[^     ][^     ]*/./g'` *inputfile*
+```bash
+humsed 's/[^     ][^     ]*/./g' *inputfile*
+```
 
 (That is, globally substitute all instances of the string not-a-tab
 followed by zero or more instances of not-a-tab characters, by a single
@@ -305,11 +326,15 @@ to be deleted. Normally, it is preceded by a regular expression that
 identifies which records should be eliminated. Deleting barlines can be
 done using the following command:
 
-`humsed /^=/d` *inputfile*
+```bash
+humsed /^=/d *inputfile*
+```
 
 Note that this is functionally equivalent to:
 
-`grep -v ^=` *inputfile*
+```bash
+grep -v ^= *inputfile*
+```
 
 In the general case, **humsed /\.../d** is preferable to **grep -v**.
 Remember that [**humsed**](/tool/humsed) only manipulates
@@ -318,11 +343,15 @@ Humdrum data records; it never touches comments or interpretations. The
 following command to eliminate grace notes (acciaccaturas) from a
 `**kern`-format file.
 
-`humsed '/q/d'` *inputfile*
+```bash
+humsed '/q/d' *inputfile*
+```
 
 By contrast, the command:
 
+```bash
 `grep -v q` *inputfile*
+```
 
 would also eliminate any comments or interpretation records containing
 the letter \`q\'.
@@ -333,16 +362,20 @@ key perception even if we eliminate all the tonic pitches. First we
 translate the representation to scale degree and assemble this file with
 the original `**kern` representation for the melody.
 
-`deg` *input*` > temp`
-`assemble` *input*` temp | humsed '/1$/d' | midi | perform`
+```bash
+deg` *input* > temp
+assemble *input* temp | humsed '/1$/d' | midi | perform
+```
 
 
 Of course deleting all of the tonic notes will disrupt the original
 rhythm. An alternative is to replace all tonic pitches by rests:
 
-`deg `*input*` > temp`
-`assemble` *input*` temp | humsed '/1$/s%[A-Ga-g#-]*%r%' | midi \`
-> \| perform
+```bash
+deg *input* > temp
+assemble *input* temp | humsed '/1$/s%[A-Ga-g#-]*%r%' | midi \
+   | perform
+```
 
 
 Perhaps we might want to eliminate all the pitch information, and simply
@@ -362,7 +395,9 @@ The substitute command can also be used to add information to points in
 a Humdrum input. For example, we might wish to add an explicit
 breath-mark (`,`) to the end of each phrase in a `**kern`-format input:
 
-`humsed s/}/},/g` *inputfile*
+```bash
+humsed s/}/},/g *inputfile*
+```
 
 Any occurrence of the ampersand (`&`) in the replacement string of a
 substitution is a standard stream-editing convention which means "the
@@ -372,7 +407,9 @@ quarter-note in a work. The following substitution seeks the number
 pattern is replaced by itself (&) followed by a tilde (\~), the
 [`**kern`](/rep/kern) signifier for a tenuto mark:
 
-`humsed s/4[^0-9.]/&~/g` *inputfile*
+```bash
+humsed s/4[^0-9.]/&~/g *inputfile*
+```
 
 
 Multiple Substitutions
@@ -383,7 +420,9 @@ operations can be invoked by separating each operation by a semicolon.
 In the following example, we change all `**kern` quarter-notes to
 eighth-note durations:
 
-`humsed 's/4[A-Ga-g]/8&/g; s/84/8/g'` *inputfile*
+```bash
+humsed 's/4[A-Ga-g]/8&/g; s/84/8/g' *inputfile*
+```
 
 The first substitution finds strings that match the number \`4\'
 followed by an upper- or lower-case letter from A to G. The matched
@@ -403,7 +442,9 @@ example, the following command changes all
 [`**kern`](/rep/kern) up-bows to down-bows and vice
 versa.
 
-`humsed 's/u/ABC/g; s/v/u/g; s/ABC/v/g'` *inputfile*
+```bash
+humsed 's/u/ABC/g; s/v/u/g; s/ABC/v/g' *inputfile*
+```
 
 The first substitution changes down-bows (\``u`\') to the unique
 temporary string `ABC`. (In the `**kern` representation `ABC` is an
@@ -433,7 +474,9 @@ record in the file. The first substitution adds the unique string `XXX`
 to every number. The ensuing substitutions transform these numbers to
 appropriate diminution values. We can execute these commands as follows:
 
-`humsed -f diminute` *inputfile*
+```bash
+humsed -f diminute *inputfile*
+```
 
 
 Writing to a File
@@ -446,7 +489,9 @@ seventh chords into a separate file called `sevenths`. With a
 [`**harm`](/rep/harm)-format input, the appropriate
 command would be:
 
-`humsed '/7/w sevenths'` *inputfile.hrm*
+```bash
+humsed '/7/w sevenths' *inputfile.hrm*
+```
 
 Each line containing the number 7 wll be written to a file named
 `sevenths`.
@@ -454,15 +499,21 @@ Each line containing the number 7 wll be written to a file named
 Similarly, we could copy all sonorities containing pauses to the file
 `pauses`.
 
-`humsed '/;/w pauses'` *inputfile*
+```bash
+humsed '/;/w pauses' *inputfile*
+```
 
 Of course there are other ways of achieving the same goal:
 
-`yank -m ';' 0` *inputfile*` > pauses`
+```bash
+yank -m ';' 0 *inputfile* > pauses
+```
 
 Or even:
 
-`grep ';'` *inputfile*` | grep -v '^[!*]' > pauses`
+```bash
+grep ';' *inputfile* | grep -v '^[!*]' > pauses
+```
 
 
 In some cases, a stream editor can be used to eliminate or modify data
@@ -482,6 +533,7 @@ input:
 ```bash
 humsed 's/[0-9.]//g' input.krn | deg | egrep -c '({.*4)|4.*{)'
 ```
+
 ```bash
 humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'
 ```
@@ -489,32 +541,25 @@ humsed 's/[0-9.]//g' input.krn | deg | egrep -c '(}.*4)|4.*})'
 
 In texts for vocal works, identify the number of notes per syllable.
 
-`extract -i '**kern'` *input*` | humsed 's/X//g' > tune`
-`extract -i '**silbe'` *input*` | humsed 's/[a-zA-Z]*/X/' > lyrics`
 ```bash
+extract -i '**kern' *input* | humsed 's/X//g' > tune
+extract -i '**silbe' *input* | humsed 's/[a-zA-Z]*/X/' > lyrics
 assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
-```
-> \> combined
-```bash
+   > combined
 context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'
 ```
 
 
 Identify the number of notes per word rather than per syllable.
 
-`extract -i '**kern'` *input*` > tune`
 ```bash
-extract -i '**silbe'
-```
-*input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
-```bash
+extract -i '**kern' *input* > tune
+extract -i '**silbe' *input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
 assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
-```
-> \> combined
-```bash
+   > combined
 context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
+   | awk '{print NF}'
 ```
-> \| awk \'{print NF}\'
 
 
 Reading a File as Input
@@ -538,24 +583,16 @@ File `template`:
 
 ```bash
   .*
-```
-```bash
 Ic
-```
-```bash
 ^\.  *
-```
-```bash
 =    *
-```
-```bash
 V[^I]
 ```
 
 Command:
 
-`pattern -f template` *inputfile*` > output`
 ```bash
+pattern -f template *inputfile* > output
 humsed 'cadential-64/r comment.6-4' output > commented.output
 ```
 
