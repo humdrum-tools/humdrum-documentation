@@ -124,8 +124,8 @@ extract -f 2 brandenburg2.krn
 The resulting output would begin as follows:
 
 
-  ------------------------------------------------------------------------------
-  `!!!COM: Bach, Johann Sebastian`
+```humdrum
+!!!COM: Bach, Johann Sebastian
   !!!OPR: Six Concerts Avec plusieurs \... le prince regnant d\'Anhalt-Coethen
   !!!OTL: Brandenburgische Konzerte F
   !!!XEN: Brandenburg Concerto No. 2 in F major.
@@ -287,8 +287,8 @@ interpretations versus exclusive interpretations. Remember that
 exclusive interpretations are mutually exclusive, whereas tandem
 interpretations are not. Consider the following Humdrum representation:
 
-  ---------
-  `**foo`
+```humdrum
+**foo
   a
   b
   \*\*bar
@@ -305,8 +305,8 @@ extract -i '**foo'
 
 will result in the output:
 
-  ---------
-  `**foo`
+```humdrum
+**foo
   a
   b
   \*-
@@ -319,8 +319,8 @@ extract -i '**bar'
 
 will result in the output:
 
-  ---------
-  `**bar`
+```humdrum
+**bar
   x
   y
   z
@@ -329,8 +329,8 @@ will result in the output:
 The `**foo` and `**bar` data are mutually exclusive. Now consider an
 input file where `foo` and `bar` are tandem interpretations:
 
-  ------------
-  `**foobar`
+```humdrum
+**foobar
   \*foo
   a
   b
@@ -348,8 +348,8 @@ extract -i '*foo'
 
 will result in the output:
 
-  ------------
-  `**foobar`
+```humdrum
+**foobar
   \*foo
   a
   b
@@ -366,8 +366,8 @@ extract -i '*bar'
 
 will result in the output:
 
-  ------------
-  `**foobar`
+```humdrum
+**foobar
   \*foo
   \*bar
   x

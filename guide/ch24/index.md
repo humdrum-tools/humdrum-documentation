@@ -356,8 +356,8 @@ Humdrum **mint** command. For example, consider the following melodic
 fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:
 
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   8r
   8f\#
   8b
@@ -375,8 +375,8 @@ indicate descending intervals; \'P\' means perfect, \'M\' means major,
 \'m\' means minor, \'A\' means augmented, and \'d\' means diminished:
 
 
-  ----------
-  `**mint`
+```humdrum
+**mint
   \[f\#\]
   +P4
   +M2
@@ -462,8 +462,8 @@ most pitch representations to the harmonic interval representation \--
 following input:
 
 
-  -------------------
-  `**kern   **kern`
+```humdrum
+**kern	**kern
   =1 =1
   4c 4e
   4G 4d
@@ -480,8 +480,8 @@ hint
 The following output will be produced:
 
 
-  ----------
-  `**hint`
+```humdrum
+**hint
   =1
   M3
   P5
@@ -546,8 +546,8 @@ question would be to define slightly more complex regular expressions in
 our template file, e.g.
 
 
-  --------------
-  `P5|P12|P19`
+```humdrum
+P5|P12|P19
   P5\|P12\|P19
   --------------
 In regular expressions the vertical bar (\|) denotes the logical \`OR\'
@@ -588,15 +588,16 @@ G major is indicated through the presence of the following
 interpretation:
 
 
-  -------
-  `*G:`
-  -------
+```humdrum
+*G:
+```
+
 Minor keys are indicated using lower-case characters. For example, the
 following passage is in B minor:
 
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   \*b:
   8r
   8f\#
@@ -615,8 +616,8 @@ scale degree. The passage begins on the dominant (degree \`5\'), ascends
 the median (\^3) and then descends to the leading- tone (v7), etc.:
 
 
-  ---------
-  `**deg`
+```humdrum
+**deg
   \*b:
   5
   \^1
@@ -706,8 +707,8 @@ leading-tones \-- provided the notes begin at the same time. Consider
 the following hypothetical passage:
 
 
-  --------------------
-  `**kern    **kern`
+```humdrum
+**kern	**kern
   \*C: \*C:
   8c 8g
   =1 =1
@@ -731,8 +732,8 @@ Consider first, the output from the **deg** command for the above
 example:
 
 
-  -------------------
-  `**deg     **deg`
+```humdrum
+**deg	**deg
   \*C: \*C:
   1 5
   =1 =1
@@ -745,8 +746,8 @@ example:
 If we now invoke the **ditto** command, the modified output is:
 
 
-  -------------------
-  `**deg     **deg`
+```humdrum
+**deg	**deg
   \*C: \*C:
   1 5
   =1 =1
@@ -944,8 +945,8 @@ The following passage illustrates a violation of the part overlapping
 rule:
 
 
-  ---------------------
-  `**pitch   **pitch`
+```humdrum
+**pitch	**pitch
   C4 E4
   F4 A4
   E4 G4
@@ -1053,8 +1054,8 @@ Examples of violations of the exposed octaves rule will appear as one of
 the following two situations:
 
 
-  --------------------------------------------------------
-  `(**hint     **updown    **updown    **size   **size)`
+```humdrum
+(**hint	**updown	**updown	**size	**size)
   P1 \^ \^ leap leap
   P1 v v leap leap
   --------------------------------------------------------

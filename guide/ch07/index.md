@@ -50,14 +50,15 @@ does not represent rests.
 A simple [`**MIDI`](/rep/MIDI) example is given
 below. It consists just a single note (middle C):
 
-  --------------------------
-  `!! A single MIDI note.`
-  `**MIDI`
-  `*Ch1`
-  `54/60/64`
-  `80/-60/64`
-  `*-`
-  --------------------------
+```humdrum
+!! A single MIDI note.
+**MIDI
+*Ch1
+54/60/64
+80/-60/64
+*-
+```
+
 Notice that there are two `**MIDI` data tokens: one to specify note-on
 and one to specify note-off events. Each `**MIDI` data token consists of
 three elements or components, delimited by a slash character (/). The

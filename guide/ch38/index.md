@@ -182,15 +182,16 @@ The [**scramble**](/tool/scramble) command is useful for
 randomizing the arrangement of Humdrum data. Suppose we had the
 following Humdrum input:
 
-  -------------
-  `**numbers`
-  `1`
-  `2`
-  `3`
-  `4`
-  `5`
-  `*-`
-  -------------
+```humdrum
+**numbers
+1
+2
+3
+4
+5
+*-
+```
+
 We can scramble the order of data records using the following command:
 
 ```bash
@@ -200,15 +201,16 @@ scramble -r numbers
 The **-r** option indicates that it is the order of records which should
 be randomized. A possible output might look like this:
 
-  -------------
-  `**numbers`
-  `3`
-  `2`
-  `5`
-  `1`
-  `4`
-  `*-`
-  -------------
+```humdrum
+**numbers
+3
+2
+5
+1
+4
+*-
+```
+
 Notice that only data records are scrambled: comments and
 interpretations stay put. Each time
 [**scramble**](/tool/scramble) is invoked, it produces a
@@ -361,15 +363,16 @@ reihe -s +1 file
 Will cause all data tokens to be moved forward one position, and the
 last data token to be moved to the beginning:
 
-  -------------
-  `**numbers`
-  `5`
-  `1`
-  `2`
-  `3`
-  `4`
-  `*-`
-  -------------
+```humdrum
+**numbers
+5
+1
+2
+3
+4
+*-
+```
+
 Let\'s apply this technique to our problem of whether a given composer
 tends to avoid octaves between the soprano and bass voices. First, we
 extract each of the voices. Let\'s also eliminate barlines and use

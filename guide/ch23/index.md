@@ -626,19 +626,19 @@ humsed '/^\./d' magyar.mp | extract -i '**metpos' \
 
 The result is:
 
-  -----------------------------------------------------------------
-  `!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge`
-  `**Xmetpos`
-  `*`
-  `*`
-  `*M3/4`
-  `*`
-  `*`
-  `*tb16`
-  `.`
-  `1`
-  `=1`
-  `-2`
+```humdrum
+!!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge
+**Xmetpos
+*
+*
+*M3/4
+*
+*
+*tb16
+.
+1
+=1
+-2
   etc.
   -----------------------------------------------------------------
 Now we can use [**recode**](/tool/recode) to classify the

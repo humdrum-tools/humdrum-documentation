@@ -53,14 +53,15 @@ fact that Dmitri Shostakovich also used the German pitch system to
 create motives based on his name: D-S-C-H (S=Es=E-flat). (The German
 transliteration of the cyrillic is Schostakowitsch.)
 
-  ----------
-  `**Tonh`
-  `D4`
-  `Es4`
-  `C4`
-  `H3`
-  `*-`
-  ----------
+```humdrum
+**Tonh
+D4
+Es4
+C4
+H3
+*-
+```
+
 Suppose we were looking for possible instances of D-S-C-H. The **patt**
 command requires a template file that contains one or more successive
 regular expressions. A suitable template file (named `dmitri`) would be
@@ -523,8 +524,8 @@ Using a pitch-class representation we would search for the sequence:
 Due to the diads, however, the corresponding pitch-class representation
 for the above Krenek passage would be:
 
-  --------
-  `**pc`
+```humdrum
+**pc
   2
   6
   5 1

@@ -164,16 +164,17 @@ example, the second `**psaltery` interpretation is redundant. The **rid
 -u** command would remove the first spine-path terminator and the second
 exclusive interpretation \-- leaving a continuous data spine.
 
-  --------------
-  `**psaltery`
-  `.`
-  `.`
-  `.`
-  `*-`
-  `**psaltery`
-  `.`
-  `*-`
-  --------------
+```humdrum
+**psaltery
+.
+.
+.
+*-
+**psaltery
+.
+*-
+```
+
 In addition, **rid** provides a **-t** option which removes
 "duplicate" or repeated tandem interpretations. In the above example
 there is no need to repeat the meter signature and key signature in each
@@ -236,30 +237,32 @@ concatenating together musical segments. The principle tool for joining
 spines together is the [**assemble**](/tool/assemble) command.
 Consider the following two files:
 
-  -----------------------
-  `!! Assemble example`
-  `!! File 1`
-  `**Letters`
-  `! A to E`
-  `A`
-  `B`
-  `C`
-  `D`
-  `E`
-  `*-`
-  -----------------------
-  -----------------------
-  `!! Assemble example`
-  `!! File 2`
-  `**Numbers`
-  `! 1 to 5`
-  `1`
-  `2`
-  `3`
-  `4`
-  `5`
-  `*-`
-  -----------------------
+```humdrum
+!! Assemble example
+!! File 1
+**Letters
+!	A	to	E
+A
+B
+C
+D
+E
+*-
+```
+
+```humdrum
+!! Assemble example
+!! File 2
+**Numbers
+!	1	to	5
+1
+2
+3
+4
+5
+*-
+```
+
 These two files can be aligned side by side using **assemble**:
 
 ```bash
@@ -341,22 +344,24 @@ Suppose now that we wanted to join two hypothetical files containing
 [`**kern`](/rep/kern) data. The first file contains
 two quarter notes, whereas the second file contains four eighth notes:
 
-  -------------
-  `!! File 1`
-  `**kern`
-  `4c`
-  `4d`
-  `*-`
-  -------------
-  -------------
-  `!! File 2`
-  `**kern`
-  `8e`
-  `8g`
-  `8f`
-  `8g`
-  `*-`
-  -------------
+```humdrum
+!! File 1
+**kern
+4c
+4d
+*-
+```
+
+```humdrum
+!! File 2
+**kern
+8e
+8g
+8f
+8g
+*-
+```
+
 Using **assemble** to paste them together will clearly lead to an
 uncoordinated result. The two quarter notes in file 1 will be
 incorrectly matched with the first two eighth notes in file 2.
@@ -375,15 +380,16 @@ timebase -t 8 file1 > file1.tb
 
 The new file would look like this:
 
-  -------------
-  `!! File 1`
-  `**kern`
-  `4c`
-  `.`
-  `4d`
-  `.`
-  `*-`
-  -------------
+```humdrum
+!! File 1
+**kern
+4c
+.
+4d
+.
+*-
+```
+
 The **-t** option is used to indicate the "time base" \-- in this
 case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
@@ -408,14 +414,15 @@ will result in the following two-part score:
 Suppose that `file2` also contained a quarter-note. For example,
 consider a revised `file2`:
 
-  -------------
-  `!! File 2`
-  `**kern`
-  `8e`
-  `8g`
-  `4f`
-  `*-`
-  -------------
+```humdrum
+!! File 2
+**kern
+8e
+8g
+4f
+*-
+```
+
 Before assembling the two parts, we would need to apply the **timebase**
 command to this file (using the same 8th-note time-base value).
 Assembling the two "time-based" files would produce the following

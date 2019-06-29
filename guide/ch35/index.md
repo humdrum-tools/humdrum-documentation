@@ -46,56 +46,57 @@ chord. The barlines provide convenient ways of parsing the harmonies.
 A [`**kern`](/rep/kern) encoding of the passage is
 given below:
 
-  ---------------------------
-  `!!!COM: Copland, A.`
-  `!!!OTL: El Salon Mexico`
-  `**kern`
-  `*Itromp`
-  `*clefG2`
-  `*k[]`
-  `*M4/4`
-  `=29`
-  `2r`
-  `8r`
-  `{8d`
-  `8g`
-  `8b`
-  `=30`
-  `28dd`
-  `28b`
-  `28dd`
-  `28b`
-  `28dd`
-  `28b`
-  `28dd`
-  `8b`
-  `8dd`
-  `8gg`
-  `8dd`
-  `8b`
-  `8g`
-  `=31`
-  `8cc`
-  `[4.a`
-  `8a]}`
-  `{8d`
-  `8f#`
-  `8a`
-  `=32`
-  `4cc`
-  `8a`
-  `8f#`
-  `8d`
-  `4dd`
-  `8dd`
-  `=33`
-  `8ff#}~`
-  `8r`
-  `4r`
-  `2r;`
-  `=`
-  `*-`
-  ---------------------------
+```humdrum
+!!!COM: Copland, A.
+!!!OTL: El Salon Mexico
+**kern
+*Itromp
+*clefG2
+*k[]
+*M4/4
+=29
+2r
+8r
+{8d
+8g
+8b
+=30
+28dd
+28b
+28dd
+28b
+28dd
+28b
+28dd
+8b
+8dd
+8gg
+8dd
+8b
+8g
+=31
+8cc
+[4.a
+8a]}
+{8d
+8f#
+8a
+=32
+4cc
+8a
+8f#
+8d
+4dd
+8dd
+=33
+8ff#}~
+8r
+4r
+2r;
+=
+*-
+```
+
 We can collapse the arpeggiated chords using the **context** command:
 
 ```bash
@@ -112,20 +113,21 @@ context -b = -o = copland | pc -a | rid -d
 
 The corresponding output is:
 
-  -----------------------------
-  `!!!COM: Copland, A.`
-  `!!!OTL: El Salon Mexico`
-  `**pc`
-  `*Itromp`
-  `*clefG2`
-  `*k[]`
-  `*M4/4`
-  `2 B 2 B 2 B 2 B 2 7 2 B 7`
-  `0 9 9 2 6 9`
-  `0 9 6 2 2 2`
-  `6 r r r`
-  `*-`
-  -----------------------------
+```humdrum
+!!!COM: Copland, A.
+!!!OTL: El Salon Mexico
+**pc
+*Itromp
+*clefG2
+*k[]
+*M4/4
+2	B	2	B	2	B	2	B	2	7	2	B	7
+0	9	9	2	6	9
+0	9	6	2	2	2
+6	r	r	r
+*-
+```
+
 In order to identify these as G major and D dominant chords it would be
 convenient to reduce the sets to (2,7,B) and (0,2,6,9) respectively. For
 this task, we can use a The following awk script eliminates repeated
@@ -163,34 +165,35 @@ pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
 
 ![](guide.figures/guide35.1.gif)
 
-  ----------
-  `**kern`
-  `*M3/8`
-  `=88`
-  `(16F#`
-  `16c)`
-  `(16E`
-  `16c)`
-  `(16D`
-  `16c)`
-  `=89`
-  `(16B`
-  `16D)`
-  `(16A`
-  `16D)`
-  `(16B`
-  `16D)`
-  `=90`
-  `(16c`
-  `16D)`
-  `(16B`
-  `16D)`
-  `(16A`
-  `16D)`
-  `=91`
-  `(16B`
-  `16D)`
-  ----------
+```humdrum
+**kern
+*M3/8
+=88
+(16F#
+16c)
+(16E
+16c)
+(16D
+16c)
+=89
+(16B
+16D)
+(16A
+16D)
+(16B
+16D)
+=90
+(16c
+16D)
+(16B
+16D)
+(16A
+16D)
+=91
+(16B
+16D)
+```
+
 ![](guide.figures/guide35.2.gif)
 
 ![](guide.figures/guide35.3.gif)

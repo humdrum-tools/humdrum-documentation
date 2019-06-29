@@ -35,8 +35,8 @@ the following spine containing
 [`**pitch`](/rep/pitch) data:
 
 
-  -----------
-  `**pitch`
+```humdrum
+**pitch
   Ab3
   F\#4
   C5
@@ -99,8 +99,8 @@ of example, **cleave** can be used to transform the following:
   ------- -- -- ------- -- -- -------
 into:
 
-  ---------
-  `**new`
+```humdrum
+**new
   abc
   ABC
   \*-
@@ -130,8 +130,8 @@ is 64.
 
 Consider the following hypothetical input file:
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   \*M4/4
   =1-
   4c
@@ -292,8 +292,8 @@ cleave -i '**MIDI,**metpos' -o '**MIDI' scale.tmp > scale.mid
 
 The final output is:
 
-  ---------------------
-  `**MIDI`
+```humdrum
+**MIDI
   \*
   \*M4/4
   \*tb8

@@ -571,8 +571,8 @@ format.
 The examples given below provide further illustrations of Humdrum
 representations:
 
-  ----------------
-  `**form`
+```humdrum
+**form
   Introduction
   Exposition
   Development
@@ -603,8 +603,8 @@ representations:
   2           f            \#               /              8f\#/
   \*-         \*-          \*-              \*-            \*-
   ----------- ------------ ---------------- -------------- ----------
-  ----------------
-  `**heart-rate`
+```humdrum
+**heart-rate
   74
   73
   74

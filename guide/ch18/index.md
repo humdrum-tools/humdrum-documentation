@@ -38,46 +38,50 @@ In research activities, it is common to create representation schemes
 for a specific task. A user might define a spine that represents the
 heart-rate (in beats per minute) of a music listener:
 
-  ------------
-  `**cardio`
-  `76`
-  `76`
-  `74`
-  `73`
-  `73`
-  `*-`
-  ------------
+```humdrum
+**cardio
+76
+76
+74
+73
+73
+*-
+```
+
 A scheme might be created to represent different types of contrapuntal
 motion:
 
-  ------------
-  `**motion`
-  `similar`
-  `contrary`
-  `parallel`
-  `oblique`
-  `*-`
-  ------------
+```humdrum
+**motion
+similar
+contrary
+parallel
+oblique
+*-
+```
+
 Chords might be classified \-- using words:
 
-  -------------
-  `**chords`
-  `minor`
-  `.`
-  `augmented`
-  `major`
-  `*-`
-  -------------
+```humdrum
+**chords
+minor
+.
+augmented
+major
+*-
+```
+
 Or using abbreviations:
 
-  ------------
-  `**chords`
-  `m`
-  `.`
-  `A`
-  `M`
-  `*-`
-  ------------
+```humdrum
+**chords
+m
+.
+A
+M
+*-
+```
+
 Fingerings might be represented. Each hand may have a separate spine:
 
   ------------ ------------
@@ -92,36 +96,39 @@ Fingerings might be represented. Each hand may have a separate spine:
   ------------ ------------
 Or the hands might be combined in a single spine:
 
-  ---------------
-  `**finger`
-  `R1`
-  `L1 L5 R2`
-  `R3`
-  `5`
-  `L1 L5 R2 R5`
-  `*-`
-  ---------------
+```humdrum
+**finger
+R1
+L1	L5	R2
+R3
+5
+L1	L5	R2	R5
+*-
+```
+
 Time-scales might be large:
 
-  ---------------
-  `**Periods`
-  `Medieval`
-  `Renaissance`
-  `Baroque`
-  `Classical`
-  `Romantic`
-  `*-`
-  ---------------
+```humdrum
+**Periods
+Medieval
+Renaissance
+Baroque
+Classical
+Romantic
+*-
+```
+
 Or miniscule:
 
-  ------------------
-  `**milliseconds`
-  `0.03`
-  `0.8`
-  `23.2`
-  `31.6`
-  `*-`
-  ------------------
+```humdrum
+**milliseconds
+0.03
+0.8
+23.2
+31.6
+*-
+```
+
 A user might define a highly refined special-purpose representation. For
 example, the following scheme is fashioned after the Benesh dance
 notation:

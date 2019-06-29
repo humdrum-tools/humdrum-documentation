@@ -318,15 +318,16 @@ Inputs do not have to be 12-tone rows. The 5-tone row used in Igor
 Stravinsky\'s "Dirge-Canons" from *In Memoriam Dylan Thomas* is as
 follows:
 
-  --------
-  `**pc`
-  `2`
-  `3`
-  `6`
-  `5`
-  `4`
-  `*-`
-  --------
+```humdrum
+**pc
+2
+3
+6
+5
+4
+*-
+```
+
 
 The following command will generate a prime transposition of the
 tone-row so that it begins on pitch-class 6:
@@ -337,15 +338,16 @@ reihe -P 6 memoriam
 
 The result is:
 
-  --------
-  `**pc`
-  `6`
-  `7`
-  `10`
-  `9`
-  `8`
-  `*-`
-  --------
+```humdrum
+**pc
+6
+7
+10
+9
+8
+*-
+```
+
 
 Generating the inversion beginning at pitch-class 2 would be carried out
 using the following command.
@@ -369,15 +371,16 @@ This shifts all of the data tokens back one position so the data begins
 with the second value in the input, and the first value is moved to the
 end:
 
-  --------
-  `**pc`
-  `3`
-  `6`
-  `5`
-  `4`
-  `2`
-  `*-`
-  --------
+```humdrum
+**pc
+3
+6
+5
+4
+2
+*-
+```
+
 
 The shift option for **reihe** can be used to shift *any* type of data
 \-- not just pitches of pitch-classes. For example, one might use the

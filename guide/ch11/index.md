@@ -296,24 +296,25 @@ between the eighth notes.
 
 ![](guide.figures/guide11.4a.gif)
 
-  ----------
-  `**kern`
-  `*M4/4`
-  `=1-`
-  `8cc`
-  `16b`
-  `16cc`
-  `8g`
-  `16f#`
-  `16g`
-  `=2`
-  `8e`
-  `16d#`
-  `16e`
-  `8c`
-  `8r`
-  `*-`
-  ----------
+```humdrum
+**kern
+*M4/4
+=1-
+8cc
+16b
+16cc
+8g
+16f#
+16g
+=2
+8e
+16d#
+16e
+8c
+8r
+*-
+```
+
 We can use the skip option to instruct **mint** to ignore any note token
 matching the string \``16`\':
 
@@ -328,23 +329,24 @@ to C4 (down a M3).
 
 ![](guide.figures/guide11.4b.gif)
 
-  ----------
-  `**mint`
-  `*M4/4`
-  `=1-`
-  `.`
-  `.`
-  `.`
-  `-P4`
-  `.`
-  `.`
-  `=2`
-  `-m3`
-  `.`
-  `.`
-  `-M3`
-  `*-`
-  ----------
+```humdrum
+**mint
+*M4/4
+=1-
+.
+.
+.
+-P4
+.
+.
+=2
+-m3
+.
+.
+-M3
+*-
+```
+
 Using duration information is a somewhat limited technique for
 calculating distance intervals. Typically, users will want to define
 much more refined ways of identifying structural tones. More
@@ -364,21 +366,22 @@ With the `**kern` encoding for Example 11.1 as input, the corresponding
 output would be:
 
 
-  --------------------
-  `**kern`
-  `*M4/4`
-  `=1- =1-`
-  `4.e 2cc`
-  `8f`
-  `4.e 4g`
-  `8a`
-  `[8f 8r`
-  `=2 =2`
-  `2f] 2dd`
-  `4d 4g 4b 4ff`
-  `4c 4e 4g 4cc 4ee`
-  `*-`
-  --------------------
+```humdrum
+**kern
+*M4/4
+=1-	=1-
+4.e	2cc
+8f
+4.e	4g
+8a
+[8f	8r
+=2	=2
+2f]	2dd
+4d	4g	4b	4ff
+4c	4e	4g	4cc	4ee
+*-
+```
+
 Note that this output doesn\'t quite conform to the `**kern` syntax: the
 barlines have been duplicated as double-stops, and the durations aren\'t
 right for multiple-stops. We can clean up the output using
@@ -396,21 +399,22 @@ cleave -d ' ' -i '**kern' -o '**kern' example11a \
 The corresponding melodic interval output is:
 
 
-  ----------------------------------------------
-  `**mint`
-  `*M4/4`
-  `=1-`
-  `.`
-  `+m2 -P5`
-  `-m2 +M2`
-  `+P4 +M2`
-  `-M3 r`
-  `=2`
-  `+P4`
-  `-m3 (+M2) (-P5) (+A4) (-m3) +m3`
-  `-M2 (-m3) (-P5) (P1) (-M3) (+P4) (+m2) -m2`
-  `*-`
-  ----------------------------------------------
+```humdrum
+**mint
+*M4/4
+=1-
+.
++m2	-P5
+-m2	+M2
++P4	+M2
+-M3	r
+=2
++P4
+-m3	(+M2)	(-P5)	(+A4)	(-m3)	+m3
+-M2	(-m3)	(-P5)	(P1)	(-M3)	(+P4)	(+m2)	-m2
+*-
+```
+
 
 Simple and Compound Melodic Intervals
 -------------------------------------
@@ -531,36 +535,38 @@ C is designated by the value zero, and all other pitches are represented
 by their (positive or negative) semitone distance. A C-major scale would
 appear as follows:
 
-  ------------
-  `**semits`
-  `0`
-  `2`
-  `4`
-  `5`
-  `7`
-  `9`
-  `11`
-  `12`
-  `*-`
-  ------------
+```humdrum
+**semits
+0
+2
+4
+5
+7
+9
+11
+12
+*-
+```
+
 We can transform this representation to semitone intervals as follows:
 
 `xdelta` *inputfile*
 
 For the above scale, the output would be:
 
-  -------------
-  `**Xsemits`
-  `.`
-  `2`
-  `2`
-  `1`
-  `2`
-  `2`
-  `2`
-  `1`
-  `*-`
-  -------------
+```humdrum
+**Xsemits
+.
+2
+2
+1
+2
+2
+2
+1
+*-
+```
+
 Notice that the initial numerical value has been replaced by a null
 token, and all subsequent values represent the numerical *difference*
 between successive values. If the scale had been descending in pitch,
@@ -577,24 +583,26 @@ When **xdelta** encounters multiple-stops, it behaves in a manner
 similar to the **mint** command by calculating the numerical equivalent
 of unvoiced inner intervals. Consider the following example:
 
-  ------------
-  `**semits`
-  `3`
-  `2 5`
-  `-1 7 14`
-  `12`
-  `*-`
-  ------------
+```humdrum
+**semits
+3
+2	5
+-1	7	14
+12
+*-
+```
+
 The **xdelta** command produces the following output:
 
-  ----------------
-  `**Xsemits`
-  `.`
-  `-1 2`
-  `-3 (5) (2) 9`
-  `13 5 -2`
-  `*-`
-  ----------------
+```humdrum
+**Xsemits
+.
+-1	2
+-3	(5)	(2)	9
+13	5	-2
+*-
+```
+
 Once again, the interpretation has been modified to `**Xsemits` and the
 leading value has been changed to a null token. In going from the value
 3 to the values 2 and 5, the output differences are -1 and +2
@@ -609,15 +617,16 @@ completely ignore certain data tokens when processing. An important use
 of the **-s** option is to ignore barlines. Consider the following
 example:
 
-  -----------
-  `**cents`
-  `100`
-  `400`
-  `800`
-  `=2`
-  `600`
-  `*-`
-  -----------
+```humdrum
+**cents
+100
+400
+800
+=2
+600
+*-
+```
+
 The proper way to calculate differences in cents is to ensure that
 measure numbers are ignored:
 

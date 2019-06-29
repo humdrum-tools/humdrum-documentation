@@ -165,15 +165,16 @@ extract -i '**IPA' Tempest | humsed 's/^\(.\).*/\1/'
 
 The result is:
 
-  ---------
-  `**IPA`
-  `f`
-  `f`
-  `f`
-  `D`
-  `f`
-  `*-`
-  ---------
+```humdrum
+**IPA
+f
+f
+f
+D
+f
+*-
+```
+
 We can now amalgamate successive initial phonemes by using the
 [**context**](/tool/context) command. Suppose we are interested
 in identifying alliterations where three or more words begin with the
@@ -188,16 +189,17 @@ extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 
 The revised output is:
 
-  ---------
-  `**IPA`
-  `fff`
-  `ffD`
-  `fDf`
-  `Dfl`
-  `.`
-  `.`
-  `*-`
-  ---------
+```humdrum
+**IPA
+fff
+ffD
+fDf
+Dfl
+.
+.
+*-
+```
+
 Now we need to identify any data records that contain three identical
 sigifiers. Once again, we can use the back-reference feature for
 **humsed**.
@@ -209,16 +211,17 @@ extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 
 The resulting output is:
 
-  ------------
-  `**IPA`
-  `allit: f`
-  `ffD`
-  `fDf`
-  `Dfl`
-  `.`
-  `.`
-  `*-`
-  ------------
+```humdrum
+**IPA
+allit:	f
+ffD
+fDf
+Dfl
+.
+.
+*-
+```
+
 Let\'s add one further refinement which illustrates yet another feature
 provided by **sed** and **humsed**. Recall that operations such as
 substitions (`s`) and deletions (`d`) can be preceded by a regular
@@ -243,16 +246,17 @@ extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 
 The final output is:
 
-  ------------
-  `**IPA`
-  `allit: f`
-  `.`
-  `.`
-  `.`
-  `.`
-  `.`
-  `*-`
-  ------------
+```humdrum
+**IPA
+allit:	f
+.
+.
+.
+.
+.
+*-
+```
+
 
 Classifying Phonemes
 --------------------
@@ -420,14 +424,15 @@ Notice our use of back reference to preserve the final phonemes:
 
 The resulting output is:
 
-  ---------
-  `@mps}`
-  `@mps}`
-  `Uls}`
-  `It}`
-  `It}`
-  `Uls}`
-  ---------
+```humdrum
+@mps}
+@mps}
+Uls}
+It}
+It}
+Uls}
+```
+
 A little further processing can remove the closing braces using **sed**,
 and eliminate the duplicate lines using **sort** and **uniq**.
 

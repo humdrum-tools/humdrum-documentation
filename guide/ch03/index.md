@@ -31,8 +31,8 @@ census india01.krn
 
 might produce the following output:
 
-  ------------------------------
-  `HUMDRUM DATA`
+```humdrum
+HUMDRUM	DATA
   Number of data tokens: 91
   Number of null tokens: 0
   Number of multiple-stops: 0
@@ -58,8 +58,8 @@ census -k india01.krn
 
 might produce the following *additional* output:
 
-  -------------------------------
-  `KERN DATA`
+```humdrum
+KERN	DATA
   Number of noteheads: 78
   Number of notes: 78
   Longest note: 1

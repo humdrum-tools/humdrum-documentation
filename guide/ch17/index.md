@@ -50,24 +50,27 @@ For illustration purposes, consider the case of a Humdrum file named
 `alpha` containing the following simple input:
 
 
-  -----------
-  `**alpha`
-  `A`
-  `B`
-  `A`
-  `A`
-  `C`
-  `B`
-  `*-`
-  -----------
+```humdrum
+**alpha
+A
+B
+A
+A
+C
+B
+*-
+```
+
 It doesn\'t matter what the data represent. The "`A`", "`B`", and
 "`C`" might signify different articulation marks, chords, harmonic
 intervals, or instrumental configurations. Whatever is represented, the
 process of generating an inventory is the same. Ultimately, we\'d like
 to produce a simple distribution that indicates:
 
-```bash
-3 occurrences of "A"  2 occurrences of "B"  1 occurrence  of "C"
+```
+3 occurrences of "A"
+2 occurrences of "B"
+1 occurrence  of "C"
 ```
 
 
@@ -92,16 +95,17 @@ will sort the file `alpha` and place the results in a file named
 `sorted.alpha`. The file `sorted.alpha` will contain the following:
 
 
-  -----------
-  `**alpha`
-  `*-`
-  `A`
-  `A`
-  `A`
-  `B`
-  `B`
-  `C`
-  -----------
+```humdrum
+**alpha
+*-
+A
+A
+A
+B
+B
+C
+```
+
 Notice that the asterisk is treated as alphabetically prior to the the
 letter \`A\', so all the Humdrum interpretation records have been moved
 to the beginning of the output. Notice also that all of the lines
@@ -121,13 +125,14 @@ uniq sorted.alpha
 The output will be as follows:
 
 
-  -----------
-  `**alpha`
-  `*-`
-  `A`
-  `B`
-  `C`
-  -----------
+```humdrum
+**alpha
+*-
+A
+B
+C
+```
+
 Notice that repetitions of the data "A" and "B" have disappeared.
 The simple **uniq** command is useful for telling us *how many different
 things* there are in an input. For example, the above output identifies
@@ -409,14 +414,15 @@ considered "the same" by **sort** and **uniq**. This means that
 records such as the following are considered entirely different:
 
 
-  ---------
-  `ABC`
-  `abc`
-  `Abc`
-  `"ABC"`
-  `ABC.`
-  `CBA`
-  ---------
+```humdrum
+ABC
+abc
+Abc
+"ABC"
+ABC.
+CBA
+```
+
 Remember that step \#1 in generating inventories requires that we filter
 the data so only the data of interest is passed to **sort** and
 **uniq**. This means we must be careful about the state of the input.
@@ -441,17 +447,18 @@ and we wanted to create an inventory of the diatonic pitch-letter names.
 Our input might look like this:
 
 
-  -----------
-  `**notes`
-  `A`
-  `B`
-  `B`
-  `D`
-  `F#`
-  `D#`
-  `E`
-  `*-`
-  -----------
+```humdrum
+**notes
+A
+B
+B
+D
+F#
+D#
+E
+*-
+```
+
 Without modification, our inventory would appear as follows:
 
 

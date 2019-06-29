@@ -137,21 +137,22 @@ pitch-related spines are processed. Given the default invocation, the
 output corresponding to Example 15.1 is as follows:
 
 
-  ------------
-  `**hint`
-  `*M4/4`
-  `=1-`
-  `P8`
-  `-`
-  `-`
-  `-`
-  `-`
-  `-`
-  `-`
-  `=2`
-  `M3 m3 P4`
-  `*-`
-  ------------
+```humdrum
+**hint
+*M4/4
+=1-
+P8
+-
+-
+-
+-
+-
+-
+=2
+M3	m3	P4
+*-
+```
+
 Notice that sonorities that contain only a single pitch result in the
 outputting of a hyphen (`-`). The hyphen indicates that pitched material
 is present, but there are no explicit harmonic intervals. Input records
@@ -167,12 +168,13 @@ intervals). For example, with the **-a** option, the final chord in
 Example 15.1 would produce the following output:
 
 
-  ---------------------
-  `**hint`
-  `*all`
-  `M3 P5 P8 m3 m6 P4`
-  `*-`
-  ---------------------
+```humdrum
+**hint
+*all
+M3	P5	P8	m3	m6	P4
+*-
+```
+
 Notice the presence of the `*all` tandem interpretation in the above
 output. This interpretation is added to the output in order to warn
 users that the representation should not be interpreted as stacked
@@ -288,21 +290,22 @@ The resulting output for Example 15.1 includes the two passing intervals
 (m7 and m6) in the first measure:
 
 
-  ------------
-  `**hint`
-  `*M4/4`
-  `=1-`
-  `P8`
-  `m7`
-  `m6`
-  `-`
-  `-`
-  `-`
-  `-`
-  `=2`
-  `M3 m3 P4`
-  `*-`
-  ------------
+```humdrum
+**hint
+*M4/4
+=1-
+P8
+m7
+m6
+-
+-
+-
+-
+=2
+M3	m3	P4
+*-
+```
+
 The [**ditto**,](/tool/ditto) command provides two additional
 options that are worthy of note: the **-s** and **-c** options. The
 **-s** option allows **ditto** to skip or ignore the presence of certain
@@ -568,21 +571,22 @@ processing the numerical data.
 The above command yields the following output:
 
 
-  -------------
-  `**Ysemits`
-  `*`
-  `=1-`
-  `12`
-  `.`
-  `.`
-  `.`
-  `.`
-  `.`
-  `.`
-  `=2`
-  `4 7 12`
-  `*-`
-  -------------
+```humdrum
+**Ysemits
+*
+=1-
+12
+.
+.
+.
+.
+.
+.
+=2
+4	7	12
+*-
+```
+
 Notice that **ydelta** prepends the upper-case letter \`Y\' to the given
 input interpretation. All output values are calculated with respect to
 the lowest value in the current data record. Hence, the \``4 7 12` in
@@ -604,21 +608,22 @@ semits example15.1 | ditto -s = | ydelta -s = -i '**semits'
 The resulting output would be:
 
 
-  -------------
-  `**Ysemits`
-  `*`
-  `=1-`
-  `12`
-  `10`
-  `8`
-  `.`
-  `.`
-  `.`
-  `.`
-  `=2`
-  `4 7 12`
-  `*-`
-  -------------
+```humdrum
+**Ysemits
+*
+=1-
+12
+10
+8
+.
+.
+.
+.
+=2
+4	7	12
+*-
+```
+
 
 More Examples Using the *ydelta* Command
 ----------------------------------------

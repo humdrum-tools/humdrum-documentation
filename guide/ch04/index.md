@@ -84,8 +84,8 @@ ISO-inspired `**pitch` representation by invoking the
 [**pitch**](/tool/pitch) command. For example, consider the
 following `**kern` input:
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   =1
   4g
   4g\#
@@ -96,8 +96,8 @@ following `**kern` input:
   ----------
 It can be translated to this `**pitch` output:
 
-  -----------
-  `**pitch`
+```humdrum
+**pitch
   =1
   G4
   G\#4
@@ -502,8 +502,8 @@ trans -d +1 -c 0 input > output
 Modal transpositions are also possible by omitting the chromatic offset
 option. Consider, for example, the following C major scale:
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   d
   e
   f
@@ -521,8 +521,8 @@ trans -d +1
 
 The resulting output is the Dorian mode:
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   \*Trd1
   d
   e
@@ -578,8 +578,8 @@ Upper-case letters indicate major keys; lower-case letters indicate
 minor keys. By way of illustration, the following key interpretations
 indicate the keys of C major, C minor, B-flat major, and F-sharp minor:
 
-  --------
-  `*C:`
+```humdrum
+*C:
   \*c:
   \*B-:
   \*f\#:

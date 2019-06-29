@@ -35,8 +35,8 @@ contains the numbers 1 through 6 on successive lines. A null token is
 interposed between the numbers 2 and 3:
 
 
-  -------------
-  ``
+```humdrum
+
   \*\*numbers
   1
   2
@@ -56,8 +56,8 @@ context -n 3 input
 will produce the following output:
 
 
-  -------------
-  ``
+```humdrum
+
   \*\*numbers
   1 2 3
   2 3 4
@@ -250,8 +250,8 @@ Whenever a data record contains an open parenthesis a new amalgamation
 begins. The appropriate output for measure 1 of Example 19.1 would be:
 
 
-  -----------------------
-  `**kern`
+```humdrum
+**kern
   \*clefG2
   \*k\[b-\]
   \*d:
@@ -291,8 +291,8 @@ context -b '(' -e ')' Anderson
 The resulting output would begin as follows:
 
 
-  -----------------------
-  `**kern`
+```humdrum
+**kern
   \*clefG2
   \*k\[b-\]
   \*d:
@@ -509,8 +509,8 @@ typically involves linking different types of data together using the
 in our input begins as follows:
 
 
-  ----------
-  `**kern`
+```humdrum
+**kern
   \*F:
   \*M3/4
   {8Bn

@@ -786,8 +786,8 @@ would have the following form. Notice that the first substitution is
 used to eliminate punctuation marks.
 
 
-  -----------------------
-  ``
+```humdrum
+
   s/\[.,;:\'\`"!?\]//g
   s/begin/+3.8/
   s/river/+4.2/

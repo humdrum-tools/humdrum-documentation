@@ -104,8 +104,8 @@ barlines. Finally, "`changes`" is the name of our input file.
 The result of applying this process to the right-most spine in the above
 example is given below:
 
-  -----------
-  `*Xheart`
+```humdrum
+*Xheart
   =133
   `.`
   `.`
