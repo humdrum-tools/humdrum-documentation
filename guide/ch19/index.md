@@ -570,7 +570,8 @@ The first phrase output will appear as follows:
 -M3	.
 
 etc.	
-----------	--------------------------------
+```
+
 We need to search for the interval of an ascending major sixth (`+M6`)
 associated with a phrase ending on the dominant (`5$`). Before using the
 approprate **grep** command, we need to use
@@ -597,7 +598,8 @@ following output:
 -M3	4+	^5	^3	v2	v1	^2	v6	^7	v5
 
 etc.	
-----------	--------------------------------
+```
+
 Finally, we use **grep** to search for the composite data:
 
 ```bash
@@ -692,7 +694,8 @@ output would look as follows:
 .	.
 .	.
 *-	*-
--------------	--	--	---------------
+```
+
 In effect, each data record contains an agglomeration of three
 successive notes from both voices. Seaching for cross-relations would
 entail looking for scale degrees that are both modified and unmodified
@@ -745,7 +748,8 @@ a	a	b
 b	b	cc
 cc	.
 *-	*-
-----------	----------
+```
+
 Now consider the effect of adding the **-p** option. In this case, the
 complete command is:
 
@@ -768,7 +772,8 @@ a	g	a
 b	a	b
 cc	b	cc
 *-	*-
-----------	----------
+```
+
 The data records have been pushed forward by one line: a null token now
 appears at the beginning of the output spine rather than at the end.
 Similarly, consider the effect of the following command:
@@ -792,7 +797,8 @@ a	f	g	a	b
 b	g	a	b	cc
 cc	.
 *-	*-
-----------	----------
+```
+
 The output is now padded with two preceding null tokens with a trailing
 null token at the end of the spine. In summary, the **-p** option pushes
 the context records by a specified number of lines. This allows us to
@@ -822,7 +828,8 @@ v6	-M2	+m3
 ^1	+m3	-P4
 v5	.
 *-	*-
----------	-----------
+```
+
 With **-p 1** the output becomes:
 
 
@@ -837,7 +844,8 @@ v6	+M3	-M2
 ^1	-M2	+m3
 v5	+m3	-P4
 *-	*-
----------	-----------
+```
+
 Now we can search directly for the situation of interest:
 
 ```bash

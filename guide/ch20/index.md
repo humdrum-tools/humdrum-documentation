@@ -159,7 +159,8 @@ data-B	data-B
 *>C	*>C
 data-C	data-C
 *-	*-
----------------------	---------------------
+```
+
 Consider the following command:
 
 ```bash
@@ -179,7 +180,8 @@ data-A	data-A
 *>C	*>C
 data-C	data-C
 *-	*-
--------------	-------------
+```
+
 Notice that all expansion-list records have been eliminated from the
 output. A `*thru` tandem interpretation has been added to all output
 spines immediately following the exclusive interpretation. Also notice
@@ -346,7 +348,8 @@ commands: indicating the first and second themes.
 yank	-t	Form	-s	'1st	Theme'	-r	1	(extracts	up	to	>Form>>2nd	Theme)
 yank	-t	Form	-s	'2nd	Theme'	-r	1	(extracts	up	to	>Form>Development)
 yank	-t	Form	-s	'Exposition'	-r	1	(extracts	up	to	>Form>Development)
--------------------------------------	--------------------------------------
+```
+
 For example, the second theme from the recapitulation can be extracted
 as follows:
 ```bash
@@ -853,7 +856,8 @@ Using the above data, the result is:
 8b-	-dern!
 8r	%
 *-	*-
------------------	-----------------
+```
+
 >
 Notice that all of the tandem interpretations related to the strophe
 organization are eliminated from the output.
@@ -950,7 +954,8 @@ strophe	label	tandem	interpretation	labelling	one	of	several	alternative	spine-
 paths,	begins	*S/
 strophe	end	indicator	tandem	interpretation	indicating	the	end	of	some	spine	path,
 e.g.	*S/fin
------------------------------	--------------------------------------------------------------------------
+```
+
 >
 *Summary of terms related to sections and strophes*
 In [Chapter 37](/guide/ch37) we will see further examples of how

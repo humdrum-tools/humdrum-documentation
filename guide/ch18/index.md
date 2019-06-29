@@ -93,7 +93,8 @@ Fingerings might be represented. Each hand may have a separate spine:
 .	5
 1	5	2	5
 *-	*-
-------------	------------
+```
+
 Or the hands might be combined in a single spine:
 
 ```humdrum
@@ -168,7 +169,8 @@ notation:
 4a	_|+|+|	|	|
 =3	-----------
 *-	*-
--------------------------	------------------------
+```
+
 Depending on the task, user-defined schemes can be either carefully
 designed, or "throw-away" concoctions created for momentary purposes.
 The *Humdrum Reference Manual* provides detailed advice on how to go
@@ -421,7 +423,8 @@ Guitar arr.
 =4	=4	=4
 2	E	e	cc	-	|4	:	:	:	|5v
 *-	*-	*-
------------	----------	-----------------------------------------
+```
+
 The `**fret` representation also provides several short-hand
 abbreviations for common ornaments and effects. Trills are indicated by
 the letters \`t\' (one semitone) and \`T\' (two semitones). Mordents are
@@ -596,7 +599,8 @@ u	tambour	(tap	on	bridge)
 U	tambour	(tap	on	strings	near	bridge)
 y	tap'	on	top-plate
 Y	thump'	on	top-plate
-----------------------------	-------------------------------------------------
+```
+
 *Summary of *\*\*fret* Signifiers*
 
 A number of pitch-related Humdrum commands accept `**fret` encoded data

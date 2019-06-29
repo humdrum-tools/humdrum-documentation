@@ -61,7 +61,8 @@ A#4	D4
 B4	Db4
 C5	C4
 *-	*-
------------	-----------
+```
+
 Notice that only upper-case letters are used for pitch-name and that the
 flat is represented by the lower-case letter \``b`\'. The small letter
 \``x`\' can be used to indicate double-sharps and the double-flat is
@@ -241,7 +242,8 @@ fa	(*fah*)	fi	(*fee*)	fe	(*fay*)
 so	(*so*)	si	(*see*)	se	(*say*)
 la	(*la*)	li	(*lee*)	le	(*lay*)
 ti	(*tee*)	ty	(*tie*)	te	(*tay*)
-------------	------------	------------
+```
+
 *Summary of **solfa** Signifiers*
 
 The [`**deg`](/rep/deg) representation identifies
@@ -305,7 +307,8 @@ Notice also the different ways of characterizing accidentals.
 2bn	ti	v7
 ==	==	==
 *-	*-	*-
------------------	------------------	------------------
+```
+
 
 Pitch Translations
 ------------------
@@ -383,7 +386,8 @@ German use of H for B-natural.
 2bn	B4	H4	si4
 ==	==	==	==
 *-	*-	*-	*-
------------------	------------------	------------------	-----------
+```
+
 In Example 4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the
 [`**MIDI`](/rep/MIDI) representation uses
@@ -416,7 +420,8 @@ negative integers. More detail concerning `**MIDI` is given in [Chapter
 ==	==	==	==	==
 .	.	.	/-71/	.
 *-	*-	*-	*-	*-
------------------	------------------	-----------------	--------------	----------
+```
+
 Not all of the above pitch-related representations can be translated
 directly from one to another. Table 4.1 shows the possible translations
 supported by Humdrum Release 2.0 commands. The input representations are
@@ -449,7 +454,8 @@ semits	¤	¤	¤	¤	¤	¤	¤
 solfa	¤	¤	¤	¤
 solfg	¤	¤	¤	¤	¤	¤	¤	
 tonh	¤	¤	¤	¤	¤	¤	¤	¤	
---------	-----------	---------	----------	----------	----------	-----------	------------	-----------	-----------	----------
+```
+
 
 Transposition Using the *trans* Command
 ---------------------------------------

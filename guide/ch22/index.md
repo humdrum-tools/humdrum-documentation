@@ -65,7 +65,8 @@ output (right) spine for the above command:
 59	0
 =138	=138
 *-	*-
------------	----------
+```
+
 A certain amount of heart-rate variation is to be expected because of
 monitoring equipment and other variables. So we are primarily interested
 in large changes of heart-rate, such as the change occurring in measure
@@ -83,7 +84,8 @@ followed by a single tab, followed by a *reassignment string.*
 >3	+event
 <-3	-event
 else	.
-------	--	--------
+```
+
 The above reassignment file may be interpreted as follows: if the
 numerical value is greater than 3, then output the string "`+event`";
 if the numerical value is less than -3, then output the string
@@ -149,7 +151,8 @@ Permissible relational operators used by
 >	greater	than
 >=	greater	than	or	equal
 else	default	relation
-------	-----------------------
+```
+
 Conditions are tested in the order given in the reassignment file. Thus
 if a numerical value satisfies more than one condition, only the first
 string replacement is made. Consider the following reassignment file:
@@ -158,7 +161,8 @@ string replacement is made. Consider the following reassignment file:
 <=0	LOW
 >100	HIGH
 >0	MEDIUM
--------	--	--------
+```
+
 The order of specification is important here. If the `MEDIUM` condition
 was specified prior to the `HIGH` condition, then all values greater
 than one hundred would be categorized as `MEDIUM` rather than as `HIGH`.
@@ -184,7 +188,8 @@ interval as either one or two semitones. Our reassignment file (dubbed
 ==0	unison
 >=-2	down-step
 <=-3	down-leap
--------	--	-----------
+```
+
 Given this reassignment file, we can now begin our processing. In the
 first method, we translate to semitone data using
 [**semits**](/tool/semits), translate to semitone-differences
@@ -215,7 +220,8 @@ etc.). The appropriate reassignment file would be:
 ==1	unison
 ==-2	down-step
 <=-3	down-leap
--------	--	-----------
+```
+
 The appropriate command pipe would be:
 
 ```bash
@@ -258,7 +264,8 @@ all pitches according to the following reassignments:
 >=5	throat-register
 >=-10	chalemeau
 else	too-low
---------	-----------------
+```
+
 Now we simply explore various transpositions using **trans** and create
 an inventory of pitch types. For Debussy\'s *Syrinx*, the minimum number
 of throat tones (without exceeding the clarinet\'s range) occurs when we
@@ -291,7 +298,8 @@ the soprano and tenor voices. Our reassignment file might be as follows:
 ```humdrum
 <=12	close
 >12	open
---------	--	-------
+```
+
 We will need to extract the soprano and tenor voices, translate the
 pitch representation to [`**semits`](/rep/semits)
 and use [**ydelta**](/tool/ydelta) to calculate the semitone
@@ -342,7 +350,8 @@ first octave (from C4 to C5):
 etc.	
 
 else	rest
---------	---------------
+```
+
 Suppose we wanted to determine what kinds of fingering *transitions*
 occur in Joachim Quantz\'s flute concertos. Since instrument fingerings
 are insensitive to enharmonic spelling, an appropriate input
@@ -417,7 +426,8 @@ s/5	7/easy/	[i.e.	F4	to	G4]
 s/16	21/moderate/	[i.e.	E5	to	A5]
 s/12	14/difficult/	[i.e.	C5	to	D5]
 etc.	
-----------------------	--	-------------------
+```
+
 We can apply the script as follows:
 
 ```bash
@@ -580,7 +590,8 @@ the following excerpt:
 -cbass	-cello	-viola	-violn	+violn	-tromb	-tromp	-fagot	-clars	+oboe	+flt
 +cbass	+cello	+viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
 +cbass	+cello	-viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
-----------	--------	--------	--------	--------	--------	--------	--------	--------	-------	------
+```
+
 etc.
 
 The first sonority indicates that all of the string instruments are

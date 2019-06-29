@@ -302,7 +302,8 @@ tokens in other spines that do not encode explicit barlines. E.g.
 
 ```humdrum
 .	=23	=23	.	.	=23
-------	-----	-----	---	---	-----
+```
+
 A more careful way of eliminating barlines would use the following
 regular expression:
 

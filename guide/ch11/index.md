@@ -70,7 +70,8 @@ fourth in the upper voice between the last note of the first measure
 4d	4g	4b	4ff
 4c	4e	4g	4cc	4ee
 *-	*-
-------------	--	----------
+```
+
 In some cases, implied melodic intervals may arise by the interaction of
 two or more parts. For example, Example 11.2 shows a plausible
 reinterpretation of the voicings for the first measure. Here the
@@ -168,7 +169,8 @@ corresponding to Example 11.1.
 -m3	+M2	-m3	+m3
 -M2	P1	+m2	-m2
 *-	*-
------------	--	--	----------
+```
+
 Notice that the *interrupted interval* (spanning the rest) has been
 calculated, and that no unison has appeared for the tied note in the
 lower voice.
@@ -212,7 +214,8 @@ P1	.
 -m3	+M2	-m3	+m3
 -M2	P1	+m2	-m2
 *-	*-
------------	--	--	----------
+```
+
 Notice that the perfect fourth (+P4) has been replaced by a null token
 at the beginning of measure 2. In addition, the rest token \``r`\' has
 been echoed just prior to the barline.
@@ -274,7 +277,8 @@ P1	.
 -m3	+M2	-m3	+m3
 -M2	(+M2)	(-m3)	P1	+m2	-m2
 *-	*-
-----------------------	--	--	----------
+```
+
 With the **-i** option, the parentheses surrounding the unvoiced inner
 intervals would be omitted.
 

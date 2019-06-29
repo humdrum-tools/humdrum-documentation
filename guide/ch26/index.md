@@ -52,7 +52,8 @@ independent spines:
 4	F#	#
 5	C	.
 *-	*-	*-
-------------	--	--	----------	--	--	----------------
+```
+
 The operation of [**rend**](/tool/rend) requires a reassignment
 file where each line contains an output exclusive interpretation,
 followed by a tab, followed by a regular expression. In the above case,
@@ -62,7 +63,8 @@ the reassignment file (`reassign`) contained the following:
 **octave	[0-9]
 **note	[A-Gb#x]
 **accidental	[b#x]
-----------------	--	--	-------------
+```
+
 The first line tells **rend** that any signifiers matching the
 character-class 0-9 should be output in a spine labelled `**octave`. The
 second line causes signifiers matching the upper-case letters A to G and
@@ -96,7 +98,8 @@ of example, **cleave** can be used to transform the following:
 a	b	c
 A	B	C
 *-	*-	*-
--------	--	--	-------	--	--	-------
+```
+
 into:
 
 ```humdrum
@@ -183,7 +186,8 @@ the metric position spine (on the right):
 .	3
 .	4
 *-	*-
-----------	------------
+```
+
 Let\'s now eliminate the null data tokens introduced by **timebase**.
 Using [**humsed**](/tool/humsed), we delete each data record
 beginning with a period character:
@@ -202,7 +206,8 @@ might use the following reassignment file (named `accent`):
 ==3	60
 ==4	40
 else	error
-------	--	-------
+```
+
 In applying **recode** we will take care to avoid processing measure
 numbers using the **-s** (skip) option:
 
@@ -227,7 +232,8 @@ The output will now appear as follows:
 =2	=2
 2cc	100
 *-	*-
-----------	------------
+```
+
 Now we can use the [**midi**](/tool/midi) command to generate
 `**MIDI` data:
 
@@ -254,7 +260,8 @@ The result is given below:
 36/-71/64	36/72/64	100
 144/-72/64	.
 *-	*-
---------------------	--	--	------------
+```
+
 Before using [**cleave**](/tool/cleave) to join the new key
 velocity values to the `**MIDI` data we need to delete the current
 key-down velocities. These are the values \`64\' preceding the tab
@@ -282,7 +289,8 @@ The modified output will now be:
 36/-71/64	36/72/	100
 144/-72/	.
 *-	*-
-------------------	--	--	------------
+```
+
 Finally, we use [**cleave**](/tool/cleave) to add the new
 key-down velocities.
 
@@ -331,7 +339,8 @@ LSLHto	long-short-long	rhythm,	high	pitch,	tonic
 LLSLsd	long-long-short	rhythm,	low	pitch,	subdominant
 MLSMlt	medium-long-short	rhythm,	medium	pitch,	leading	tone
 r	rest
-----------	------------------------------------------------------
+```
+
 In [Chapter 22](/guide/ch22) we learned how to use
 [**recode**](/tool/recode) to classify various numerical ranges
 and [**humsed**](/tool/humsed) to classify non-numeric data. We
@@ -356,7 +365,8 @@ reassignment file:
 >16	H
 >=0	M
 else	r
-------	--	---
+```
+
 Durations can be similarly classified into long (L), medium (M), and
 short (S) using the [**dur**](/tool/dur) command, followed by
 *recode*.
@@ -365,7 +375,8 @@ short (S) using the [**dur**](/tool/dur) command, followed by
 >1.0	L
 >0.5	M
 >0	S
---------	--	---
+```
+
 Using [**context**](/tool/context) **-n 3** we could then create
 contextual \`triples\' so that data records contain three durations.
 Suppose also that we have used **sed** to change the names of the
@@ -382,7 +393,8 @@ L	L	S	L	sd
 M	L	S	M	lt
 r	r	r
 *-	*-	*-
-------------	--	-----------	--	----------------
+```
+
 We need to process the first spine with **humsed** again to eliminate
 the spaces in the multiple stops. The rhythm spine would be processed as
 follows:

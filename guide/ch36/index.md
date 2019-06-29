@@ -188,7 +188,8 @@ through the **sdiss** command.
 4f	4g	.	.
 4e	4g	.	.
 *-	*-	*-
------------	-----------	-----------
+```
+
 Note that sensory dissonance is known to be influenced by the number of
 complex tones in the sonority. That is, three-note sonorities are
 virtually always more dissonant than three-note sonorities, etc.
@@ -265,7 +266,8 @@ i3.01	5.000	1.000	0	8.06	0.2	1.0
 i4.01	2.000	1.000	0	8.01	0.2	1.0	
 i4.01	3.000	1.000	0	8.01	0.2	1.0	;	measure	2
 i4.01	5.000	1.000	0	7.11	0.2	1.0§	
--------------------	-------	----------	------	-------	-----	------	-------------
+```
+
 § Example is modified from David Bainb§e (1997).
 
 *Csound* is able to generate traditional 16-bit digital audio output. It

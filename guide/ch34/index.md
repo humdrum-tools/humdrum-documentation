@@ -82,7 +82,8 @@ are the corresponding [`**kern`](/rep/kern),
 4c#	4e#	4g#	4b	1	5	8	11	4-27
 4f	4b	4dd#	4gg#	5	11	3	8	4-27
 *-	*-	*-
--------------------	--	-------------	--	-----------
+```
+
 Suppose we wanted to identify the pc sets for successive vertical
 sonorities in the first movement of Webern\'s Opus 24 concerto. First,
 we translate the input to a pitch-class representation, and then we
@@ -229,7 +230,8 @@ pitch-class sets and (right-most spine), the associated interval vector.
 0	4	7	10	4-27	dominant	seventh	<012111>
 1	5	8	11	4-27	dominant	seventh	<012111>
 *-	*-	*-	*-
-------------	--	-----------	--	--------------------	--	------------
+```
+
 
 Suppose we wanted to determine whether Arnold Schoenberg tended to use
 simultaneities that have more semitone (interval-class 1) relations and

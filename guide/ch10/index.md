@@ -43,7 +43,8 @@ are identified in Table 10.1.
 -h	suppress	file-name	prefixes	(headers)	in	output	when	searching	more	than	one	file
 -v	display	all	lines	*not*	matching	the	regular	expression
 -L	list	names	of	files	*not*	containing	the	regular	expression
------------	-----------------------------------------------------------------------------------
+```
+
 *Common options for the **grep** command.*
 
 Many of the predefined Humdrum representations make use of the "common

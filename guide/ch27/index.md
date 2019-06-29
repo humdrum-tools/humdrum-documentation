@@ -143,7 +143,8 @@ text~	a	single-syllable	word	beginning	a	hyphenated	multi-word
 ~text~	a	single-syllabe	word	continuing	a	hyphenated	multi-word
 ~text-	a	word-initating	syllable	continuing	a	hyphenated	multi-word
 -text~	a	word-completing	syllable	--	part	of	a	hyphenated	multi-word
-----------	----------------------------------------------------------------
+```
+
 Both the `**text` and `**silbe` representations are able to distinguish
 different tones of voice such as spoken voice, whispered voice, laughing
 voice, emotional voice, *Sprechstimme* and humming. In addition, there
@@ -174,7 +175,8 @@ M	humming	voice	(character	by	itself)
 $	beginning	of	emotional	voice
 $$	end	of	emotional	voice
 *	follows	stressed	word	(**test)	or	stressed	syllable	(**silbe)
--------	-------------------------------------------------------------------
+```
+
 *Signifiers common to **\*\*text** and **\*\*silbe***
 
 
@@ -771,7 +773,8 @@ friend	+5.2
 love	+8.6
 hate	-9.7
 detest	-9.8
---------	------
+```
+
 Clearly, such a rating system might allow us to create a tool that would
 automatically search a large database and identify those vocal works
 whose lyrics are most emotionally charged. One way to generate a crude

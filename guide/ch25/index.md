@@ -418,7 +418,8 @@ C	0.51
 B	.
 A	.
 *-	*-
----------	-----------	-----------
+```
+
 Each succesive value in the output spine is matched with a data token in
 the source input file. For example, the second value (1.00) in the
 `**simil` spine arises from an exact match of the (A,B,C) pattern
@@ -455,7 +456,8 @@ V	.
 iii	.
 iiib	.
 *-	*-
-----------	-----------	-----------
+```
+
 It is important to understand that **simil** operates by comparing
 entire data tokens, so the token `V7` differs as much from `V` as the
 token `vi`. It is the user\'s responsibility to choose an input
@@ -484,7 +486,8 @@ dom	.
 mediant	.
 mediant	.
 *-	*-
------------	-----------	-----------
+```
+
 
 Defining Edit Penalties
 -----------------------
@@ -514,7 +517,8 @@ S0	Substitute	a	token	that	is	repeated	in	neither	String	1	nor	String	2
 S1	Substitute	a	token	that	is	repeated	in	String	1	only
 S2	Substitute	a	token	that	is	repeated	in	String	2	only
 S3	Substitute	a	token	that	is	repeated	in	String	1	and	String	2
-----------	----------------------------------------------------------------------
+```
+
 *Edit operations used by **simil***.
 
 In describing the edit operations, String 1 is the source string and
@@ -593,7 +597,8 @@ have been assigned for repetition.
 S0	1.6
 S1	0.7
 S3	0.7
-------	-----
+```
+
 Repeating the above command with this new `simil.rc` file produces the
 following results:
 
@@ -614,7 +619,8 @@ dom	.
 mediant	.
 mediant	.
 *-	*-
------------	-----------	-----------
+```
+
 Notice that the similarity measure for the pattern (tonic, subdom,
 subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 

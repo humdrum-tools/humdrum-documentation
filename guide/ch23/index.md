@@ -75,7 +75,8 @@ second one: `8r 16 16 8 8 4 4` and the fourth one:
 1	8	8	8	8	2
 1	8	32	32	32	32	4	2
 1	4	4	16r	16	16	16	16	16	16	16
-------	-------------------------------------------------
+```
+
 
 The *dur* Command
 -----------------
@@ -102,7 +103,8 @@ with a corresponding `**kern` input:
 4g	1.0000
 =2	=2
 *-	*-
-----------	---------
+```
+
 As in the case of `**recip`, the `**dur` representation designates rests
 via the lower-case `r` and uses the common system for barlines. Notice
 that `**dur` assumes a metronome indication of quarter-note equals 60
@@ -259,7 +261,8 @@ to create a inventory of long/short rhythmic patterns. We might use
 ```humdrum
 >=0.4	long
 else	short
----------	-------
+```
+
 For a monophonic input, we can create an inventory of (say) 3-note
 long/short rhythmic patterns as follows:
 
@@ -279,7 +282,8 @@ A typical output might appears as follows:
 117	short	long	long
 194	long	short	short
 114	short	long	short
--------	-------------------
+```
+
 Notice that we might do a similar inventory based on durational
 *differences* rather than on durations. For example, the
 [**xdelta**](/tool/xdelta) command will allow us to distinguish
@@ -290,7 +294,8 @@ reassignment file would be as follows:
 ==0	equal
 >0	shorter
 <0	longer
--------	---------
+```
+
 And our processing would be:
 
 ```bash
@@ -482,7 +487,8 @@ corresponding output from **metpos**:
 8E}	8cc	4
 =20	=20	=20
 *-	*-	*-
-----------	----------	------------
+```
+
 Notice that [**metpos**](/tool/metpos) adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
@@ -498,7 +504,8 @@ reassignment file:
 ==1	strong
 >=3	secondary
 else	weak
--------	-----------
+```
+
 The words \`strong\', \`secondary\', and \`weak\' can then be sought by
 **grep** or **yank -m**, allowing us to isolate points of particular
 metric stress. Since **metpos** adapts to changing meters, we can
@@ -574,7 +581,8 @@ Note that **metpos** automatically echoes the input along with the new
 8dd	1
 .	4
 etc.	
-----------	------------
+```
+
 We want to be able to say that the relationship between the first
 eighth-note G and the eighth-note B is "strong-to-weak" and that the
 relationship between the eighth-note B and the eighth-note D is
@@ -606,7 +614,8 @@ The result is as follows:
 =1	=1
 8dd	1
 etc.	
-----------	------------
+```
+
 Notice that the successive `**metpos` values will now allow us to
 characterize the changes in stress between successive notes: 2 followed
 by 3 indicates a strong-to-weak change of metric position, 3 followed by
@@ -649,7 +658,8 @@ changes of metric position according. Our reassignment file (named
 >0	strong-to-weak
 <0	weak-to-strong
 ==0	equal
-------	----------------
+```
+
 Appending the appropriate command:
 
 ```bash
@@ -699,7 +709,8 @@ note having a stronger metric position:
 1	7-	weak-to-strong
 3	r	equal
 10	r	strong-to-weak
------	----	----------------
+```
+
 Instead of scale degree, any other Humdrum spine might be used. For
 example, if the input contained functional harmony data (\*\*harm) then
 the output inventory would identify how particular chord functions tend

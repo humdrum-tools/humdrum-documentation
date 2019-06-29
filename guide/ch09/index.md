@@ -446,7 +446,8 @@ AB+	match	A'	followed	by	one	or	more	B's
 (AB)|(BA)	match	AB'	or	BA'
 [^A]AA[^A]	match	two	A's	preceded	and	followed	by	characters	other	than	A's
 ^[^^]	match	any	character	at	the	beginning	of	a	record	except	the	caret
-------------------	------------------------------------------------------------------------
+```
+
 *Examples of regular expressions.*
 
 
@@ -470,7 +471,8 @@ Recapitulation'	or	recapitulation'
 ^[^*!].*$	match	entire	data	records
 ^(.<*tab>*)*/.$	match	records	containing	only	null	tokens	(	means	a	tab)
 ^*f#:	match	key	interpretation	indicating	F#	minor
-----------------------------	----------------------------------------------------------
+```
+
 *Regular expressions suitable for all Humdrum inputs.*
 
 By way of illustration, the next table shows examples of regular
@@ -501,7 +503,8 @@ or	flat
 ^4[^0-9.]|[^0-9]4([^0-9.]|$)	match	**kern	quarter	durations
 ^(8|16)[^0-9.]|[^0-9](8|16)[^0-9.]	match	eighth	and	sixteenth	durations	only
 (([Ee]+-)|([Gg]+-)|([Bb]+-))($|[^-])	match	any	note	from	E-flat	minor	chord
----------------------------------------------------	-----------------------------------------------------------
+```
+
 *Regular expressions suitable for \*\*kern data records.*
 
 Note that the above regular expressions assume that comments and

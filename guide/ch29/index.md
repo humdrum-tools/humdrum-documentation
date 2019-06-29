@@ -295,7 +295,8 @@ super	sancto
 te	spiritui
 videbitur	super
 tuarum
-------------------	------------------
+```
+
 Notice that a number of words are present in both texts, such as
 *domine*, *et*, *eum*, *filio*, and so on. Identifying the common
 vocabulary items is easily done by the UNIX **comm** command; **comm**
@@ -337,7 +338,8 @@ super
 te	
 tuarum	
 videbitur	
------------	--	--	-----------	--	--	----------
+```
+
 In the above case, five words are unique to `inventory1`, six words are
 unique to `inventory2` and nine words are common to both.
 

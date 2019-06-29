@@ -98,7 +98,8 @@ X	explicit	interpretation	(not	indicated	in	the	score)
 x	published	interpretation	(indicated	in	the	score,	often	in	parentheses)
 r	rest	(silence)
 v	notated	accent	or	stress
-------	-------------------------------------------------------------------------
+```
+
 In the case of crescendo and diminuendo markings,
 [`**dynam`](/rep/dynam) requires an explicit
 interpretation of where the dynamic marking begins and ends. The
@@ -149,7 +150,8 @@ p	2c	2e	2g	2cc
 pp	2E	2B	2e	2g
 =	=
 *-	*-
------------	--------------
+```
+
 The `**dynam` encoding is interpreted as follows: the level begins
 *piano* with a crescendo beginning prior to the second chord; the
 crescendo continues until after the third chord and then the level
@@ -179,7 +181,8 @@ X]	.
 pp	2E	2B	2e	2g
 =	=
 *-	*-
------------	--------------
+```
+
 or
 
 ```humdrum
@@ -195,7 +198,8 @@ Xppp	.
 pp	2E	2B	2e	2g
 =	=
 *-	*-
------------	--------------
+```
+
 Notice that null data records may be inserted as necessary to clarify
 the moment of dynamic change. The
 [`**dynam`](/rep/dynam) representation makes use of
@@ -240,7 +244,8 @@ corresponding staff; this number appears in curly braces.
 /.../	wedge	opening	size	(in	staff-line	steps)
 r	rest	(silence)
 H	marking	appears	in	square	brackets
-----------	---------------------------------------------------------
+```
+
 By way of illustration, consider Example 28.2.
 
 **Example 28.2:** Arnold Schoenberg, *Three Piano Pieces, Op. 11, No.
@@ -293,7 +298,8 @@ follows:
 6.8]	16GG}	.	
 =	=	=	
 *-	*-	*-	
-------------------	--	------------	--	----------------	--	----------
+```
+
 The `*staff1/2` tandem interpretation indicates that the dynamic
 markings pertain to both staffs 1 and 2, however all vertical
 [`**dyn`](/rep/dyn) distance measures are encoded
@@ -359,7 +365,8 @@ ppppp	40
 pppppp	35
 ppppppp	30
 v	+5
----------------	--------
+```
+
 Notice the presence of the *accent* signifier (`v`); the assigned value
 (`+5`) means that any encoded accents will receive a decibel level 5 dB
 higher than the basic sound pressure level at that point in the score.
@@ -398,7 +405,8 @@ pp	55
 .	.
 mf	70
 .	.
------------	--------
+```
+
 The interpolation begins with the crescendo indicator and increments for
 each continuation signifier (i.e., the open parentheses). Interpolations
 are linear and continue up to the crescendo termination signifier. The
@@ -593,7 +601,8 @@ notes with a corresponding \*\*MIDI representation.
 4e	72/-62/64	72/64/64
 .	72/-64/64
 *-	*-
-----------	--------------------
+```
+
 In order to translate to a \*\*dB representation, we must first isolate
 the key velocity values for key-on events. The following
 [**humsed**](/tool/humsed) command simply eliminates all data up
@@ -621,7 +630,8 @@ key	velocity	approximate	dB	SPL
 10	21
 1	10
 0	0
---------------	--------------------
+```
+
 An appropriate reassignment file for [**recode**](/tool/recode)
 would begin as follows:
 
@@ -632,7 +642,8 @@ would begin as follows:
 >=80	74
 >=70	70
 etc.	
----------	----
+```
+
 The completed translation would be accomplished by the following
 pipeline:
 

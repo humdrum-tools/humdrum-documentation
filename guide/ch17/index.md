@@ -155,7 +155,8 @@ will produce the following output:
 3	A
 2	B
 1	C
------	-----------
+```
+
 The prepended counts tell us that \`A\' occurs three times, \`B\' occurs
 twice, and all other records occur just once.
 
@@ -229,7 +230,8 @@ A	$200
 C	$50
 B	$50
 *-	*-
------------	---------
+```
+
 If we apply our above inventory-generating commands for the file
 "alphabet," the result will be as follows:
 
@@ -239,7 +241,8 @@ If we apply our above inventory-generating commands for the file
 2	A	$50
 2	B	$50
 1	C	$50
------	---	-------
+```
+
 Notice that the inventory is based on *entire records* containing both
 "alpha" and "bet" data. This is the reason why the alpha-bet
 data-pair "`A   $50`" is considered different from alpha-bet data
@@ -270,7 +273,8 @@ The resulting `inventory.bet` file will contain:
 ```humdrum
 1	$200
 5	$50
------	-------
+```
+
 \-- meaning 5 occurrences of the data "\$50" and 1 occurrence of
 "\$200".
 
@@ -321,7 +325,8 @@ The output will be as follows:
 1	C
 2	B
 3	A
------	---
+```
+
 Now the output is sorted so that the least frequent occurrences are at
 the beginning, and the most frequent occurrences are at the end of the
 output. Incidentally, **sort** has a **-r** option that causes the
@@ -339,7 +344,8 @@ produces the following output:
 3	A
 2	B
 1	C
------	---
+```
+
 Once again, we can amalgamate all of the required commands into a single
 pipeline. The following pipeline produces an inventory for any type of
 Humdrum input, sorted from the most common to the least common data:
@@ -469,7 +475,8 @@ Without modification, our inventory would appear as follows:
 1	D#
 1	E
 1	F#
------	-----
+```
+
 But this inventory distinguishes D-sharp from D-natural \-- which is not
 what we want. The answer is to filter our input so that the sharps are
 removed.
@@ -490,7 +497,8 @@ humsed 's/#//' notes | rid -GLId | sort | uniq -c
 2	D
 1	E
 1	F
------	---
+```
+
 
 Further Examples
 ----------------

@@ -228,7 +228,8 @@ time	5th	16th	off	off	ON	off	off	off	off	off
 10th	16th	off	off	off	off	ON	off	off	off
 11th	16th	off	off	off	off	off	ON	off	off
 etc.	
-------	-----------	-----	-----	-----	-----	-----	-----	-----	-----
+```
+
 Table 1.2 shows another example where different kinds of information are
 combined in the same table. Here the last column represents a
 combination of trumpet valves:
@@ -245,7 +246,8 @@ Pitch	Duration	**Valve	Combination**
 6th	note	A4	quarter	1-2
 7th	note	G4	eighth	0
 8th	note	Ab4	quarter	2-3
-----------	-------	----------	-----------------------
+```
+
 Humdrum representations can be very similar to the data shown in Tables
 1.1 and 1.2. With just a few formatting changes, either table can be
 transformed so that it conforms to the Humdrum syntax. For example,
@@ -270,7 +272,8 @@ hyphen.
 7th	note	G4	eighth	0
 8th	note	Ab4	quarter	2-3
 *-	*-	*-	*-
-----------	--	-----------	--	--------------	--	-----------------------
+```
+
 It does not matter what characters appear in the table \-- numbers,
 letters, symbols, etc. (although there are some restrictions concerning
 the use of spaces and tabs). The table can have as many columns as you

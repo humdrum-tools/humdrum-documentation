@@ -230,7 +230,8 @@ mean:	45.9677
 min:	9
 max:	102
 S.D.:	232.37
---------	---------
+```
+
 The value `n` indicates the total number of numerical values found in
 the input; the `total` specifies the sum of these numbers; the `mean`
 identifies the average; the `min` and `max` report the minimum and

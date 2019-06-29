@@ -99,7 +99,8 @@ note:
 2c	2e	2g	72/60/64	72/64/64	72/67/64
 .	144/-60/64	144/-64/64	144/-67/64
 *-	*-
-----------------	----------------------------------
+```
+
 Middle C corresponds to MIDI key 60; The pitches E4 and G4 correspond to
 MIDI keys 64 and 67 respectively. The half-note durations result in a
 delay of 144 clock ticks before the key-off commands are executed.
@@ -118,7 +119,8 @@ events are synchronous with two key-on events:
 4d	4f	144/-60/64	144/-64/64	144/-67/64	144/62/64	144/65/64
 .	72/-62/64	72/-65/64
 *-	*-
-------------------	--	------------------------------------------------------
+```
+
 Notice that the difference in duration between the half-notes and
 quarter-notes is reflected when the notes are turned *off* rather than
 when the notes are turned *on*.
@@ -158,7 +160,8 @@ beginning of Darius Milhaud\'s *Touches Blanches*.
 4G	.	72/-62/64	72/55/64	.
 .	.	72/-55/64	72/-67/64
 *-	*-	*-	*-
---------------------	----------	--	--------------------	--	--	--------------------
+```
+
 The [`**MIDI`](/rep/MIDI) representation always
 expects a tandem interpretation indicating the MIDI channel assignment.
 In Example 7.1 both parts have been assigned to channel 1. Once again,
@@ -276,7 +279,8 @@ option is used a sequence of data records such as the following:
 4C	4E	4G	4c
 4D	4F	4G	4B
 4AA	4E	4A	4c
--------	----	----	----
+```
+
 is transformed to:
 
 ```humdrum
@@ -286,7 +290,8 @@ is transformed to:
 !!4D	4F	4G	4B
 4AA	4E	4A	4c
 !!4AA	4E	4A	4c
----------	----	----	----
+```
+
 
 Since, by default, the **perform** command echoes all global comments on
 the screen during playback, this means that the Humdrum data will also

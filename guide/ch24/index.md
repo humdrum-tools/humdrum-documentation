@@ -64,7 +64,8 @@ mode changes include the following:
 -r	deny	read	permission
 +w	add	write	permission
 -w	deny	write	permission
-----	-------------------------
+```
+
 Having added execute permissions to the file, we can now execute the
 shell script or program. This is done simply by typing the name of the
 file; in effect, the filename becomes a new command:

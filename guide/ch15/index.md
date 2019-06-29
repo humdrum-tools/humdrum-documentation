@@ -49,7 +49,8 @@ interval is the perfect octave in the first sonority of Example 15.1
 =2	=2
 2.c	2.e	2.g	2.cc
 *-	*-
------------	----------
+```
+
 Less obvious harmonic intervals arise when tone onsets are not
 synchronous \-- yet both pitches are sustained simultaneously for a
 period of time. We might call these *passing harmonic intervals.* Two
@@ -94,7 +95,8 @@ notes of a sonority. Four pitches leads to six intervals.
 
 ```humdrum
 Stacked	Intervals	Bass-related	Intervals	Permuted	Intervals
--------------------	--	--	------------------------	--	--	--------------------
+```
+
 A final issue in characterizing harmonic intervals is whether or not the
 presence of unisons is important. In most applications (such as figured
 bass) the presence of unisons is unimportant. In other applications
@@ -233,7 +235,8 @@ B	abc
 C	.
 .	.
 *-	*-
-----------	----------
+```
+
 The effect of **ditto** would be the following:
 
 
@@ -247,7 +250,8 @@ B	abc
 C	abc
 C	abc
 *-	*-
-----------	----------
+```
+
 Each null token has been replaced by the preceding data token within the
 spine.
 
@@ -274,7 +278,8 @@ The following output results:
 =2	=2
 2.c	2.e	2.g	2.cc
 *-	*-
------------	----------
+```
+
 Notice that the half-note C5 has been repeated. The **-p** option has
 caused each repetition of the data token to be placed in parentheses so
 they can be easily recognized. By using **ditto,** we have transformed
@@ -486,7 +491,8 @@ The following output results:
 =2	=2
 2.c	2.e	2.g	2.cc
 *-	*-
------------	----------
+```
+
 If we now apply [**ditto**](/tool/ditto) and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
@@ -514,7 +520,8 @@ Below we see the output assembled with the output from the corresponding
 =2	=2	=2
 2.c	2.e	2.g	2.cc	M3	m3	P4
 *-	*-	*-
------------	----------	----------
+```
+
 
 The *ydelta* Command
 --------------------
@@ -546,7 +553,8 @@ r	11
 =2	=2
 0	4	7	12
 *-	*-
-------------	------------
+```
+
 Numerical differences for values on a single data record can be computed
 using the [**ydelta**](/tool/ydelta) command. The **ydelta**
 command is comparable to [**xdelta**,](/tool/xdelta) however,

@@ -112,7 +112,8 @@ Concerto shown in Example 12.1.
 16GJJ	16GJJ	16GGJJ	.	.	.	.	.	.	.
 =2	=2	=2	=2	=2	=2	=2	=2	=2	=2
 *-	*-	*-	*-	*-	*-	*-	*-	*-	*-
------------	-----------	-----------	-----------	-----------	-----------	-----------	-----------	-----------	----------
+```
+
 Suppose we wanted to extract the \'cello part. In the above encoding,
 the \'cello occupies the second spine (second field) from the left,
 hence:
@@ -460,7 +461,8 @@ A	a1	a2	b	x
 A	a1	a2	b	x
 A	a1	a2	b	x
 *-	*-	*-	*-	*-
----------	---------	---------	----------	-----
+```
+
 Suppose we want to extract the second spine (the first `**dip`) spine.
 Using the field option (**-f**) will generate an error message since
 this spine splits. Similarly, using the interpretation (**-i**) option
@@ -484,7 +486,8 @@ a1	a2
 a1	a2
 a1	a2
 *-	*-
----------	-----
+```
+
 In *spine-path mode,* the **extract"** command follows a given spine
 starting at the beginning of the file, and traces the course of that
 spine throughout the input stream. If spine-path changes are encountered
@@ -954,7 +957,8 @@ whether the **yank** command is invoked *before* or *after* the
 4d}	4ff
 =4	=4
 *-	*-
-----------	----------
+```
+
 The order of execution for some commands may cause some subtle
 differences. Suppose we wanted to identify the melodic intervals present
 in measures 8-32 for a work by Toru Takemitsu. The following two

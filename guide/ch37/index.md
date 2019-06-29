@@ -307,7 +307,8 @@ work:
 
 ```humdrum
 =1-	=1-	=1-	=1-	=1-
--------	-----	-----	-----	-----
+```
+
 Recall that the common system for representing barlines makes a
 distinction between the logical *function* of a barline and it\'s visual
 or *orthographic* appearance. For example, the common system for
@@ -516,7 +517,8 @@ the following:
 !!!VTS:	[checksum	validation	number	(see	below)](guide.append1.html#VTS)
 !!!AMT:	[metric	classification](guide.append1.html#AMT)
 !!!AIN:	[instrumentation](guide.append1.html#AIN)
------------	------------------------------------------------------------------
+```
+
 Where appropriate, the following reference records should also be
 included:
 
@@ -534,7 +536,8 @@ included:
 !!!AFR:	[form	of	work](guide.append1.html#AFR)
 !!!AGN:	[genre	of	work](guide.append1.html#AGN)
 !!!AST:	[style	of	period](guide.append1.html#AST)
------------	-------------------------------------------------------------
+```
+
 In general, place essential reference records at the beginning of a
 document. These will include the composer, title of the work, etc. Less
 important reference records should be placed at the end of the file.

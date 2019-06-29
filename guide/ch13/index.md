@@ -88,7 +88,8 @@ might result in an output such as the following:
 8E	.	8e	8g
 8F#	8A	8d	8a
 *-	*-	*-	*-
--------------	------------	------------	------------
+```
+
 Notice that each complete measure ends with spine-path terminators and
 that the [`**kern`](/rep/kern) exclusive
 interpretations are repeated. This organization has a number of
@@ -122,7 +123,8 @@ associated options:
 -t	eliminate	duplicate	(repeated)	tandem	interpretations
 -U	eliminate	unnecessary	exclusive	interpretations	(see	below)
 -u	same	as	-U
-----	-------------------------------------------------------------
+```
+
 Null records are devoid of content. For example, null interpretations
 consist of a single asterisk in each spine; null data record consists of
 just null data tokens (.) in each spine; null local comments consist of
@@ -219,7 +221,8 @@ The resulting output is given below:
 8E	.	8e	8g
 8F#	8A	8d	8a
 *-	*-	*-	*-
--------------	------------	------------	------------
+```
+
 Of course care should be exercised when concatenating inputs together.
 Although an output may conform to the Humdrum syntax, the result can
 nevertheless violate conventions for a specific representation such as
@@ -283,7 +286,8 @@ C	3
 D	4
 E	5
 *-	*-
------------------------	-------------
+```
+
 Note the following: (1) The spines are joined side by side from left to
 right in the same order as specified on the command line. (2) Local
 comments are preserved in their appropriate spines. (3) When identical
@@ -314,7 +318,8 @@ C	3
 D	
 E	
 *-	
------------------------	-------------
+```
+
 If the order of the input files was reversed, **assemble** would produce
 an output with the appropriate spine-path changes:
 
@@ -331,7 +336,8 @@ an output with the appropriate spine-path changes:
 D	
 E	
 *-	
------------------------	-------------
+```
+
 Note that if all of the input files conform to the Humdrum syntax, then
 [**assemble**](/tool/assemble) guarantees that the assembled
 output will also conform to the Humdrum syntax.
@@ -410,7 +416,8 @@ will result in the following two-part score:
 4d	8f
 .	8g
 *-	*-
--------------	----------
+```
+
 Suppose that `file2` also contained a quarter-note. For example,
 consider a revised `file2`:
 
@@ -437,7 +444,8 @@ result:
 4d	4f
 .	.
 *-	*-
--------------	----------
+```
+
 Notice that we have a spurious null data record in the last line; both
 parts encode null tokens. For most processing, the presence of null data
 records is inconsequential. However, if we wish, these null data records
@@ -459,7 +467,8 @@ would result in the following output:
 .	8g
 4d	4f
 *-	*-
--------------	----------
+```
+
 The [**timebase**](/tool/timebase) command can be applied to
 multi-spine inputs as well as single-spine inputs. Consider, the
 following input:
@@ -473,7 +482,8 @@ following input:
 .	32a	.	.	.
 8f	8cc	8dd	8ff	suspension
 *-	*-	*-	*-	*-
-----------	----------	----------	----------	----------------
+```
+
 The following command will cause the addition of null data records so
 that each data record represents an elapsed time of a 32nd duration.
 Incidentally, notice that any spine contain non-rhythmic data \-- such
@@ -503,7 +513,8 @@ The corresponding output is as follows.
 .	.	.	.	.
 .	.	.	.	.
 *-	*-	*-	*-	*-
-----------	----------	----------	----------	----------------
+```
+
 Notice that **timebase** has added a tandem interpretation (`*tb32`).
 This indicates that the output has been processed so that each
 non-barline data record represents an elapsed duration equivalent to a
@@ -543,7 +554,8 @@ rhythmic structure will appear as follows:
 .	8
 =3	=3
 *-	*-
-----------	----------
+```
+
 In this case, choosing a time-base according to the shortest duration
 (8th) will not work since a 6th note is not an integral multiple of the
 eighth duration. We need to find a *common duration factor* for both

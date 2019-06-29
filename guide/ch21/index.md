@@ -141,7 +141,8 @@ C4	Es4
 C4	Es4	
 H3	D4	
 *-	*-	
-----------	----------	--	--
+```
+
 ```bash
 !! Pattern found at line 7 of file ostinato 
 ```
@@ -152,7 +153,8 @@ C4	Es4
 C4	Es4	
 H3	D4	
 *-	*-	
-----------	----------	--	--
+```
+
 Notice that each instance of the found pattern is output as a
 stand-alone humdrum "mini-encoding," complete with initial exclusive
 interpretations and terminating spine-path terminators.
@@ -335,7 +337,8 @@ generate intervals with respect to the lowest pitch.
 2.G	2.d	2.g	P5	P8	v1	^5	^1
 ==	==	==	==	==	==	==
 *-	*-	*-	*-	*-	*-	*-
------------	-----------	-----------	----------	---------	---------	---------
+```
+
 Notice that **hint** has failed to generate the passing interval forming
 the perfect fifth between the E and the A. This can be remedied by using
 **ditto** to duplicate all of the pitches. This will cause **hint** to
@@ -360,7 +363,8 @@ spine is given below.
 2.G	2.d	2.g	P5	P8	v1	^5	^1
 ==	==	==	==	==	==	==
 *-	*-	*-	*-	*-	*-	*-
------------	----------	----------	----------	---------	---------	---------
+```
+
 One way to identify Landini cadences is to use the following
 harmonic-interval template file (dubbed `LandCadence`):
 
@@ -457,7 +461,8 @@ IV	.
 I	.
 V;	.
 etc.	
-----------	-----------
+```
+
 In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
 from several "passes" using **patt** \-- one pass for each type of
@@ -479,7 +484,8 @@ IV	.
 I	half
 V;	.
 etc.	
-----------	--------------
+```
+
 There are no restrictions as to the types of tags that can be generated
 by **patt**. A user might tag the beginning of motivic or thematic
 statements, various harmonic progressions, variation techniques,
@@ -570,7 +576,8 @@ Humdrum-extension regular expression:
 X	+
 Y	*
 Z	?
------	--	--	----
+```
+
 When the metacharacters `+`, `*`, or `?` appear at the end of a record,
 preceded by a tab character, they pertain to the number of records,
 rather than the number of repetitions of the expression within a record.
@@ -632,7 +639,8 @@ Theme	1	(tonic)	+
 Bridge	*
 Theme	2	(tonic)	+
 Coda	?
--------------------	--	--	----
+```
+
 
 The template reads "one or more instances of `Theme 1 (tonic)`,
 followed by zero or more instances of `Bridge`, followed by one or more

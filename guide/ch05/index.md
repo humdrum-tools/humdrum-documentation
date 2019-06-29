@@ -47,7 +47,8 @@ B	K	W	etc.
 C	L	X	etc.
 D	M	Y	etc.
 etc.	etc.	etc.	
------------------------	------------	--------	--	------	------
+```
+
 
 Types of Records
 ----------------
@@ -159,7 +160,8 @@ X	.	X
 X	X	X
 .	X	X
 X	.	X
----	--	--	---	--	--	---
+```
+
 This file consists of three vertical spines and four horizontal records.
 The first and third spines begin with data tokens, while the second
 spine begins with a null token. Without the presence of interpretations,
@@ -174,7 +176,8 @@ X	.
 .	X
 X	.
 *-	*-
-----------	-----------
+```
+
 The user has defined two interpretations: "left" and "right." The
 intention is to represent the footfalls of a person\'s left and right
 feet. The representation simply encodes that the left and right feet
@@ -205,7 +208,8 @@ X	.	.	X
 .	X	X	.
 X	.	.	X
 *-	*-	*-	*-
-----------	----------	---------	---------
+```
+
 In this case the categories "left" and "right" have been transformed
 to tandem interpretations. The first spine is interpreted both as
 "left" and as "foot." The exclusive interpretation (double
@@ -250,7 +254,8 @@ A	B	J	X	Y	Z
 AB	J	XYZ
 A	B	C	.	X	Z
 *-	*-	*-
-------------	------------	------------
+```
+
 Data sub-tokens are useful in a variety of circumstances. An appropriate
 use of sub-tokens might be to encode double- and triple-stops in string
 parts.
@@ -282,7 +287,8 @@ example, the following sequence of Humdrum-like data records: ``
 A	B	
 A	B	
 A	B	
----	--	--	---	--	--	---
+```
+
 At the point where three spines are reduced to two spines the continuity
 is ambiguous: Has spine \`3\' been discontinued? Or is spine \`B\' a
 continuation of spine \`3\' with spine \`A\' a continuation of spine
@@ -321,7 +327,8 @@ interpretation records:
 *x	exchange	the	position	of	two	spines
 
 *	null	interpretation	(place	holder)
-------	-----------------------------------------------------
+```
+
 *Spine Path Interpretations* Spine paths are types of interpretations,
 so the spine path indicators are encoded as Humdrum interpretations,
 using the asterisk signifier (\*). The following examples illustrate a
@@ -345,7 +352,8 @@ few possible path changes:
 1	2	3	
 *	*v	*v	(amalgamation	of	spines	#2	and	#3)
 1	2&3	
-----	------	-----	---	----------------------------------------
+```
+
 Notice that in cases where two or more spines are amalgamated, the
 spines must be adjacent neighbors. For example, the arrangement below is
 forbidden by the Humdrum syntax since it is not clear whether spines \#1
@@ -355,7 +363,8 @@ and \#3 amalgamate into spine \`A\' or spine \`B\'. ``
 1	2	3	
 *v	*	*v	(syntactically	illegal)
 A	B	
------	----	-----	--	---------------------------
+```
+
 In such cases, amalgamating the two outer spines can be accomplished by
 first using the exchange path signifier. Here we exchange spines \#2 and
 \#3 before amalgamating the original first and third spines: ``
@@ -365,7 +374,8 @@ first using the exchange path signifier. Here we exchange spines \#2 and
 *	*x	*x
 *v	*v	*
 1&3	2	
------	-----	-----
+```
+
 In cases where the user wishes to amalgamate several spines, a number of
 interpretation records may be necessary. In the following example,
 spines \#1 and \#2 are first joined together (momentarily defining three
@@ -378,7 +388,8 @@ spines: 1&2, 3, 4). In the subsequent interpretation record, spine \#2
 *v	*v	*	*
 *	*v	*v	
 1&2	3&4	
------	-----	-----	----
+```
+
 In addition, it is possible to join more than two spines at the same
 time: ``
 
@@ -386,7 +397,8 @@ time: ``
 1	2	3	4
 *v	*v	*v	*v
 1&2&3&4	
----------	--	-----	--	-----	--	-----
+```
+
 In cases where a new spine is introduced, it is essential to indicate
 the exclusive interpretation that applies to the new data. Thus an \`add
 spine\' indication must be followed by a second interpretation record:
@@ -396,7 +408,8 @@ spine\' indication must be followed by a second interpretation record:
 *	*+	*	(add	a	new	spine.)
 *	*	**inter	*	(define	exclusive	interpretation	for	the	new	spine)
 1	2	new	3	
------	-----	-----------	----	-------------------------------------------------------
+```
+
 Failing to follow the introduction of a new spine by a subsequent
 exclusive interpretation is illegal.
 
@@ -407,7 +420,8 @@ redefinitions: ``
 1	2	3	4	
 *v	*v	*^	*^	
 1&2	3a	3b	4a	4b
------	-----	------	------	----
+```
+
 ``
 
 ```humdrum
@@ -415,7 +429,8 @@ redefinitions: ``
 *	*-	*	*-	*
 *v	*v	*v	
 1&3&5	
--------	-----	-----	-----	----
+```
+
 ``
 
 ```humdrum
@@ -424,7 +439,8 @@ redefinitions: ``
 *	*	*	*	*	**new
 *v	*v	*	*	*	*
 1&3	4a	4b	5	new	
------	-----	----	------	-----	---------
+```
+
 ``
 
 ```humdrum
@@ -433,7 +449,8 @@ redefinitions: ``
 *	*x	*x	*
 *	*	*x	*x
 2	3	4	1
------	-----	-----	-----
+```
+
 Note that with judicious planning, the user can completely reconfigure
 all spines within a Humdrum file.
 
@@ -472,7 +489,8 @@ spine	#3.)
 *	*+	
 *	**inter	*	(Interpretation	labels	the	wrong	spine.)
 A	B	C	
-------	-----------	-----	--	----------------------------------------------------------------
+```
+
 
 The Humdrum Syntax: A Formal Definition
 ---------------------------------------
@@ -533,7 +551,8 @@ other	characters	by	a	tab.	Appears	only	in	data	records.
 Null	data	record	A	data	record	consisting	only	of	null	tokens.
 Spine	A	column-like	"path"	of	information	--	including	data	records,
 local	comments,	and	interpretations.
---------------------------	----------------------------------------------------------------------------
+```
+
 *Humdrum Terminology* As a supplement to the above "positive"
 definition of the Humdrum syntax, we can also describe various inputs
 that do *not* conform to the Humdrum syntax:
@@ -580,29 +599,35 @@ representations:
   Coda
   \*-
 ```humdrum
---------------	--------------
+```
+
 **American	**British
 quarter	crotchet
 eighth	quaver
 dotted	half	dotted	minim
 *-	*-
---------------	--------------
--------------	----------
+```
+
+```
+
 **Opus/No	**Year
 23/1	1821
 23/2	1821
 23/3	1822?
 24	1822
 *-	*-
--------------	----------
------------	------------	----------------	--------------	----------
+```
+
+```
+
 **recip	**diaton	**accidental	**stem-dir	**kern
 4	c	#	/	4c#/
 8	d	.	/	8d/
 8	e	.	/	8e/
 2	f	#	/	8f#/
 *-	*-	*-	*-	*-
------------	------------	----------------	--------------	----------
+```
+
 ```humdrum
 **heart-rate
   74
@@ -612,7 +637,8 @@ dotted	half	dotted	minim
   78
   \*-
 ```humdrum
-----------------	---------	---------	----------
+```
+
 **foreground	
 flute	
 *^	
@@ -630,7 +656,8 @@ trombone
 *^	
 trombone	trumpet	
 *-	*-	
-----------------	---------	---------	----------
+```
+
 ------------------------------------------------------------------------
 
 

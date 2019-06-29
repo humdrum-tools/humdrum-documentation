@@ -89,7 +89,8 @@ positioned	as	in	the	beginning	of	the	word	yard'
 '	primary	stress	(should	precede	stressed	sound)
 ,	secondary	stress	(should	precede	stressed	sound)
 %	silence	signifier
---------------	---------------------------------------------------------------------------------------------------
+```
+
 *Summary of *\*\*IPA* Signifiers*
 
 -   The IPA *schwa* is notated as an upside-down \`e\'.
@@ -128,7 +129,8 @@ thy	DAi
 father	fADR
 lies	lAiz
 *-	*-
-----------	---------
+```
+
 Given an `**IPA` input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using **humsed**. This
 task requires some additional knowledge about using
@@ -400,7 +402,8 @@ in	In
 the	D@
 dumps,	d@mps}
 etc.	
-----------	---------
+```
+
 Using [**extract**](/tool/extract), **context** and **rid** we
 can isolate each poetic phrase:
 
