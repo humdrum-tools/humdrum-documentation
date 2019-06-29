@@ -2,6 +2,7 @@
 sidebar: toc
 chapternav: guide
 author: David Huron
+verovio: "true"
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:48 EST 2000'
 permalink:	/guide/ch35/index.html
@@ -41,12 +42,14 @@ chord. The barlines provide convenient ways of parsing the harmonies.
 
 **Example 35.1** Aaron Copland, *El Salon Mexico*.
 
-![](guide.figures/guide35.4.gif)
+{% include verovio.html
+	source="guide-35-1"
+	scale="45"
+	pageWidth="1200"
+	humdrum-min-height="875px"
+%}
 
-A [`**kern`](/rep/kern) encoding of the passage is
-given below:
-
-```humdrum
+<script type="application/x-humdrum" id="guide-35-1">
 !!!COM: Copland, A.
 !!!OTL: El Salon Mexico
 **kern
@@ -58,33 +61,33 @@ given below:
 2r
 8r
 {8d
-8g
-8b
+8gL
+8bJ
 =30
-28dd
+28ddL
 28b
 28dd
 28b
 28dd
 28b
-28dd
-8b
-8dd
-8gg
-8dd
-8b
-8g
+28ddJ
+8bL
+8ddJ
+8ggL
+8ddJ
+8bL
+8gJ
 =31
 8cc
 [4.a
-8a]}
-{8d
-8f#
-8a
+8a]}L
+{8dJ
+8f#L
+8aJ
 =32
 4cc
-8a
-8f#
+8aL
+8f#J
 8d
 4dd
 8dd
@@ -95,7 +98,10 @@ given below:
 2r;
 =
 *-
-```
+
+</script>
+
+
 
 We can collapse the arpeggiated chords using the **context** command:
 
@@ -134,67 +140,70 @@ this task, we can use a The following awk script eliminates repeated
 tokens within a record: (huniq: We might call this script **huniq**
 since it acts like a horizontal version of the **uniq** command:
 
-```bash
+```awk
 awk '{
+# A script to eliminate repeated tokens within a record.
+if (\$0 \~ /\^\[!\*\]/) {print \$0; next}
+else
+    { array\[\$1\] = line = \$1
+    for (i=2; i\<=NF; i++)
+       {
+          if (array\[\$i\] == "") {array\[\$i\]=\$i; line = line " " $i}
+       }
+    print line
+    for (i in array) delete array\[i\]
+    }
+}\' \$1
 ```
-> \# A script to eliminate repeated tokens within a record.
-> if (\$0 \~ /\^\[!\*\]/) {print \$0; next}
-> else
-> > { array\[\$1\] = line = \$1
-> > for (i=2; i\<=NF; i++)
-> >
-> > > {
-> > > if (array\[\$i\] == "") {array\[\$i\]=\$i; line = line " "
-> > > \$i}
-> > > }
-> >
-> > print line
-> > for (i in array) delete array\[i\]
-> > }
-> }\' \$1
 
 Applying this script to our output !!!COM: Copland, A. !!!OTL: El Salon
 Mexico \*\*pc \*Itromp \*clefG2 \*k\[\] \*M4/4 r 2 7 B 2 B 7 0 9 2 6 0 9
 6 2 6 r \*- Identifying implicit harmonic intervals can be a little more
 taxing. Let\'s begin by considering a monophonic passage that exhibits a
 pseudo-polyphonic or compound melodic tendency. A passage from Bach\'s
-"Gigue" from the solo \'cello *Suite No. 3* is shown in Example 35.1.
+"Gigue" from the solo \'cello *Suite No. 3* is shown in Example 35.2.
 
-**Example 35.1 J.S. Bach, "Gigue" from *Suite No. 3* for solo \'cello
+**Example 35.2 J.S. Bach, "Gigue" from *Suite No. 3* for solo \'cello
 (excerpt).**
 
-![](guide.figures/guide35.1.gif)
+{% include verovio.html
+	source="guide-35-2"
+	scale="65"
+	pageWidth="1200"
+	humdrum-min-height="550px"
+%}
 
-```humdrum
+<script type="application/x-humdrum" id="guide-35-2">
 **kern
 *M3/8
 =88
-(16F#
-16c)
-(16E
-16c)
-(16D
-16c)
+(16F#L
+16c)J
+(16EL
+16c)J
+(16DL
+16c)J
 =89
-(16B
-16D)
-(16A
-16D)
-(16B
-16D)
+(16BL
+16D)J
+(16AL
+16D)J
+(16BL
+16D)J
 =90
-(16c
-16D)
-(16B
-16D)
-(16A
-16D)
+(16cL
+16D)J
+(16BL
+16D)J
+(16AL
+16D)J
 =91
-(16B
-16D)
-```
+(16BL
+16D)J
+=-
+*-
+</script>
 
-![](guide.figures/guide35.2.gif)
 
-![](guide.figures/guide35.3.gif)
+
 
