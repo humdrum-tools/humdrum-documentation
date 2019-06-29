@@ -67,15 +67,15 @@ shows just seven patterns. The most characteristic patterns are the
 second one: `8r 16 16 8 8 4 4` and the fourth one:
 `8 16 16 8 8 4 4`.
 
-  ------ -------------------------------------------------
-  `30`   16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16
-  12     8r 16 16 8 8 4 4
-  11     8 8 8 8 16 16 16 16 8 8
-  8      8 16 16 8 8 4 4
-  1      8 8 8 8 2
-  1      8 32 32 32 32 4 2
-  1      4 4 16r 16 16 16 16 16 16 16
-  ------ -------------------------------------------------
+```humdrum
+30	16	16	16	16	16	16	16	16	16	16	16	16	16	16	16	16
+12	8r	16	16	8	8	4	4
+11	8	8	8	8	16	16	16	16	8	8
+8	8	16	16	8	8	4	4
+1	8	8	8	8	2
+1	8	32	32	32	32	4	2
+1	4	4	16r	16	16	16	16	16	16	16
+------	-------------------------------------------------
 
 The *dur* Command
 -----------------
@@ -88,21 +88,21 @@ following example shows a simple `**dur` representation (right spine)
 with a corresponding `**kern` input:
 
 
-  ---------- ---------
-  `**kern`   \*\*dur
-  \*         \*MM60
-  =1         =1
-  12g        0.3333
-  12g        0.3333
-  12g        0.3333
-  4g         1.0000
-  4r         1.0000r
-  8g         0.5000
-  8g         0.5000
-  4g         1.0000
-  =2         =2
-  \*-        \*-
-  ---------- ---------
+```humdrum
+**kern	**dur
+*	*MM60
+=1	=1
+12g	0.3333
+12g	0.3333
+12g	0.3333
+4g	1.0000
+4r	1.0000r
+8g	0.5000
+8g	0.5000
+4g	1.0000
+=2	=2
+*-	*-
+----------	---------
 As in the case of `**recip`, the `**dur` representation designates rests
 via the lower-case `r` and uses the common system for barlines. Notice
 that `**dur` assumes a metronome indication of quarter-note equals 60
@@ -256,10 +256,10 @@ durations into a finite set of categories. Suppose, for example, we wish
 to create a inventory of long/short rhythmic patterns. We might use
 **recode** with reassignments such as the following:
 
-  --------- -------
-  `>=0.4`   long
-  else      short
-  --------- -------
+```humdrum
+>=0.4	long
+else	short
+---------	-------
 For a monophonic input, we can create an inventory of (say) 3-note
 long/short rhythmic patterns as follows:
 
@@ -270,27 +270,27 @@ dur inputfile | recode -f reassign -i '**dur' -s ^= | \
 
 A typical output might appears as follows:
 
-  ------- -------------------
-  `230`   long long long
-  3422    short short short
-  114     long long short
-  202     short short long
-  38      long short long
-  117     short long long
-  194     long short short
-  114     short long short
-  ------- -------------------
+```humdrum
+230	long	long	long
+3422	short	short	short
+114	long	long	short
+202	short	short	long
+38	long	short	long
+117	short	long	long
+194	long	short	short
+114	short	long	short
+-------	-------------------
 Notice that we might do a similar inventory based on durational
 *differences* rather than on durations. For example, the
 [**xdelta**](/tool/xdelta) command will allow us to distinguish
 short*er* note relationships from long*er* relationships. Our
 reassignment file would be as follows:
 
-  ------- ---------
-  `==0`   equal
-  \>0     shorter
-  \<0     longer
-  ------- ---------
+```humdrum
+==0	equal
+>0	shorter
+<0	longer
+-------	---------
 And our processing would be:
 
 ```bash
@@ -430,59 +430,59 @@ The following extract from Bartók\'s "Two-Part Study" No. 121 from
 left-most columns show the original input; all three columns show the
 corresponding output from **metpos**:
 
-  ---------- ---------- ------------
-  `**kern`   \*\*kern   \*\*metpos
-  \*tb8      \*tb8      \*tb8
-  =16        =16        =16
-  \*M6/4     \*M6/4     \*M6/4
-  8Gn        8b-        1
-  8A         8ccn       4
-  8B-        8cc\#}     3
-  8cn        {8f\#      4
-  8c\#}      8gn        3
-  {8F\#      8a         4
-  8G         8b-        2
-  8A         8ccn       4
-  8B-        4b-        3
-  8cn        .          4
-  8c\#}      8fn}       3
-  8r         8r         4
-  =17        =17        =17
-  \*M4/4     \*M4/4     \*M4/4
-  8d         2r         1
-  4.d        .          4
-  .          .          3
-  .          .          4
-  {2d\_      8dd        2
-  .          4.dd       4
-  .          .          3
-  .          .          4
-  =18        =18        =18
-  8d         {1dd\_     1
-  8A         .          4
-  8F\#       .          3
-  8E         .          4
-  8D         .          2
-  8BB        .          4
-  8D         .          3
-  8E}        .          4
-  =19        =19        =19
-  \*M3/2     \*M3/2     \*M3/2
-  {8F\#      8dd        1
-  8A         8ffn       4
-  8c\#       8aa        3
-  8A         8ff        4
-  8F\#       8dd        2
-  8A         8ff        4
-  8F\#       8dd        3
-  8E         8ccn       4
-  8D         8b-        2
-  8BBn       8gn        4
-  8D         8b-        3
-  8E}        8cc        4
-  =20        =20        =20
-  \*-        \*-        \*-
-  ---------- ---------- ------------
+```humdrum
+**kern	**kern	**metpos
+*tb8	*tb8	*tb8
+=16	=16	=16
+*M6/4	*M6/4	*M6/4
+8Gn	8b-	1
+8A	8ccn	4
+8B-	8cc#}	3
+8cn	{8f#	4
+8c#}	8gn	3
+{8F#	8a	4
+8G	8b-	2
+8A	8ccn	4
+8B-	4b-	3
+8cn	.	4
+8c#}	8fn}	3
+8r	8r	4
+=17	=17	=17
+*M4/4	*M4/4	*M4/4
+8d	2r	1
+4.d	.	4
+.	.	3
+.	.	4
+{2d_	8dd	2
+.	4.dd	4
+.	.	3
+.	.	4
+=18	=18	=18
+8d	{1dd_	1
+8A	.	4
+8F#	.	3
+8E	.	4
+8D	.	2
+8BB	.	4
+8D	.	3
+8E}	.	4
+=19	=19	=19
+*M3/2	*M3/2	*M3/2
+{8F#	8dd	1
+8A	8ffn	4
+8c#	8aa	3
+8A	8ff	4
+8F#	8dd	2
+8A	8ff	4
+8F#	8dd	3
+8E	8ccn	4
+8D	8b-	2
+8BBn	8gn	4
+8D	8b-	3
+8E}	8cc	4
+=20	=20	=20
+*-	*-	*-
+----------	----------	------------
 Notice that [**metpos**](/tool/metpos) adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
@@ -494,11 +494,11 @@ outputs from **metpos** into a smaller set of discrete categories. For
 example, we might classify metric positions using the following
 reassignment file:
 
-  ------- -----------
-  `==1`   strong
-  \>=3    secondary
-  else    weak
-  ------- -----------
+```humdrum
+==1	strong
+>=3	secondary
+else	weak
+-------	-----------
 The words \`strong\', \`secondary\', and \`weak\' can then be sought by
 **grep** or **yank -m**, allowing us to isolate points of particular
 metric stress. Since **metpos** adapts to changing meters, we can
@@ -558,23 +558,23 @@ Note that **metpos** automatically echoes the input along with the new
 ```bash
 !!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge 
 ```
-  ---------- ------------
-  `**kern`   `**metpos`
-  `*ICvox`   `*`
-  `*Ivox`    `*`
-  `*M3/4`    `*M3/4`
-  `*k[f#]`   `*`
-  `*G:`      `*`
-  `*tb16`    `*tb16`
-  `{8g`      `2`
-  `.`        `4`
-  `8b`       `3`
-  `.`        `4`
-  `=1`       `=1`
-  `8dd`      `1`
-  `.`        `4`
-  etc.       
-  ---------- ------------
+```humdrum
+**kern	**metpos
+*ICvox	*
+*Ivox	*
+*M3/4	*M3/4
+*k[f#]	*
+*G:	*
+*tb16	*tb16
+{8g	2
+.	4
+8b	3
+.	4
+=1	=1
+8dd	1
+.	4
+etc.	
+----------	------------
 We want to be able to say that the relationship between the first
 eighth-note G and the eighth-note B is "strong-to-weak" and that the
 relationship between the eighth-note B and the eighth-note D is
@@ -593,20 +593,20 @@ The result is as follows:
 ```bash
 !!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge 
 ```
-  ---------- ------------
-  `**kern`   `**metpos`
-  `*ICvox`   `*`
-  `*Ivox`    `*`
-  `*M3/4`    `*M3/4`
-  `*k[f#]`   `*`
-  `*G:`      `*`
-  `*tb16`    `*tb16`
-  `{8g`      `2`
-  `8b`       `3`
-  `=1`       `=1`
-  `8dd`      `1`
-  etc.       
-  ---------- ------------
+```humdrum
+**kern	**metpos
+*ICvox	*
+*Ivox	*
+*M3/4	*M3/4
+*k[f#]	*
+*G:	*
+*tb16	*tb16
+{8g	2
+8b	3
+=1	=1
+8dd	1
+etc.	
+----------	------------
 Notice that the successive `**metpos` values will now allow us to
 characterize the changes in stress between successive notes: 2 followed
 by 3 indicates a strong-to-weak change of metric position, 3 followed by
@@ -645,11 +645,11 @@ Now we can use [**recode**](/tool/recode) to classify the
 changes of metric position according. Our reassignment file (named
 `reassign`):
 
-  ------ ----------------
-  `>0`   strong-to-weak
-  \<0    weak-to-strong
-  ==0    equal
-  ------ ----------------
+```humdrum
+>0	strong-to-weak
+<0	weak-to-strong
+==0	equal
+------	----------------
 Appending the appropriate command:
 
 ```bash
@@ -675,31 +675,31 @@ equivalent position in the metric hierarchy. The second line indicates
 that there were twenty-five instances of a tonic pitch approached by a
 note having a stronger metric position:
 
-  ----- ---- ----------------
-  `3`   1    equal
-  25    1    strong-to-weak
-  30    1    weak-to-strong
-  3     2    equal
-  14    2    strong-to-weak
-  13    2    weak-to-strong
-  1     3    equal
-  39    3    strong-to-weak
-  34    3    weak-to-strong
-  3     4    equal
-  26    4    strong-to-weak
-  17    4    weak-to-strong
-  13    5    equal
-  49    5    strong-to-weak
-  42    5    weak-to-strong
-  1     6    equal
-  13    6    strong-to-weak
-  14    6    weak-to-strong
-  3     7    strong-to-weak
-  6     7    weak-to-strong
-  1     7-   weak-to-strong
-  3     r    equal
-  10    r    strong-to-weak
-  ----- ---- ----------------
+```humdrum
+3	1	equal
+25	1	strong-to-weak
+30	1	weak-to-strong
+3	2	equal
+14	2	strong-to-weak
+13	2	weak-to-strong
+1	3	equal
+39	3	strong-to-weak
+34	3	weak-to-strong
+3	4	equal
+26	4	strong-to-weak
+17	4	weak-to-strong
+13	5	equal
+49	5	strong-to-weak
+42	5	weak-to-strong
+1	6	equal
+13	6	strong-to-weak
+14	6	weak-to-strong
+3	7	strong-to-weak
+6	7	weak-to-strong
+1	7-	weak-to-strong
+3	r	equal
+10	r	strong-to-weak
+-----	----	----------------
 Instead of scale degree, any other Humdrum spine might be used. For
 example, if the input contained functional harmony data (\*\*harm) then
 the output inventory would identify how particular chord functions tend

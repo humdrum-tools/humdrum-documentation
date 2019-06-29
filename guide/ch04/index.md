@@ -45,23 +45,23 @@ is B3. Humdrum provides a predefined ISO-like representation called
 see an ascending chromatic scale in the left spine, with a concurrent
 descending chromatic scale in the right spine:
 
-  ----------- -----------
-  `**pitch`   \*\*pitch
-  C4          C5
-  C\#4        B4
-  D4          Bb4
-  D\#4        A4
-  E4          Ab4
-  F4          G4
-  F\#4        Gb4
-  G4          F4
-  G\#4        E4
-  A4          Eb4
-  A\#4        D4
-  B4          Db4
-  C5          C4
-  \*-         \*-
-  ----------- -----------
+```humdrum
+**pitch	**pitch
+C4	C5
+C#4	B4
+D4	Bb4
+D#4	A4
+E4	Ab4
+F4	G4
+F#4	Gb4
+G4	F4
+G#4	E4
+A4	Eb4
+A#4	D4
+B4	Db4
+C5	C4
+*-	*-
+-----------	-----------
 Notice that only upper-case letters are used for pitch-name and that the
 flat is represented by the lower-case letter \``b`\'. The small letter
 \``x`\' can be used to indicate double-sharps and the double-flat is
@@ -231,17 +231,17 @@ syllables. Pitches are designated by the syllables *do, re, mi, fa, so,
 la* and *ti* or their chromatic alterations as indicated in the
 following table:
 
-  ------------ ------------ ------------
-  basic        raised       lowered
-                            
-  do (*doe*)   di (*dee*)   de (*day*)
-  re (*ray*)   ri (*ree*)   ra (*raw*)
-  mi (*me*)    my (*my*)    me (*may*)
-  fa (*fah*)   fi (*fee*)   fe (*fay*)
-  so (*so*)    si (*see*)   se (*say*)
-  la (*la*)    li (*lee*)   le (*lay*)
-  ti (*tee*)   ty (*tie*)   te (*tay*)
-  ------------ ------------ ------------
+```humdrum
+basic	raised	lowered
+
+do	(*doe*)	di	(*dee*)	de	(*day*)
+re	(*ray*)	ri	(*ree*)	ra	(*raw*)
+mi	(*me*)	my	(*my*)	me	(*may*)
+fa	(*fah*)	fi	(*fee*)	fe	(*fay*)
+so	(*so*)	si	(*see*)	se	(*say*)
+la	(*la*)	li	(*lee*)	le	(*lay*)
+ti	(*tee*)	ty	(*tie*)	te	(*tay*)
+------------	------------	------------
 *Summary of **solfa** Signifiers*
 
 The [`**deg`](/rep/deg) representation identifies
@@ -285,27 +285,27 @@ Notice also the different ways of characterizing accidentals.
 
 **Example 4.1**
 
-  ----------------- ------------------ ------------------
-  `!! Comparison`   of pitch-related   representations.
-  `**kern`          \*\*solfa          \*\*deg
-  `*M2/4`           \*M2/4             \*M2/4
-  `*c:`             \*c:               \*c:
-  `8.cc`            do                 1
-  `16dd`            re                 \^2
-  `=1`              =1                 =1
-  `8.ee-`           me                 \^3
-  `16dd`            re                 v2
-  `4een`            mi                 \^3+
-  `=2`              =2                 =2
-  `8r`              r                  r
-  `8b-`             te                 v7-
-  `8an`             la                 v6+
-  `8cc`             do                 \^1
-  `=3`              =3                 =3
-  `2bn`             ti                 v7
-  `==`              ==                 ==
-  `*-`              \*-                \*-
-  ----------------- ------------------ ------------------
+```humdrum
+!!	Comparison	of	pitch-related	representations.
+**kern	**solfa	**deg
+*M2/4	*M2/4	*M2/4
+*c:	*c:	*c:
+8.cc	do	1
+16dd	re	^2
+=1	=1	=1
+8.ee-	me	^3
+16dd	re	v2
+4een	mi	^3+
+=2	=2	=2
+8r	r	r
+8b-	te	v7-
+8an	la	v6+
+8cc	do	^1
+=3	=3	=3
+2bn	ti	v7
+==	==	==
+*-	*-	*-
+-----------------	------------------	------------------
 
 Pitch Translations
 ------------------
@@ -363,27 +363,27 @@ German use of H for B-natural.
 
 **Example 4.2**
 
-  ----------------- ------------------ ------------------ -----------
-  `!! Comparison`   of pitch-related   representations.   
-  `**kern`          \*\*pitch          \*\*Tonh           \*\*solfg
-  `*M2/4`           \*M2/4             \*M2/4             \*M2/4
-  `*C:`             \*C:               \*C:               \*C:
-  `8.cc`            C5                 C5                 do5
-  `16dd`            D5                 D5                 re5
-  `=1`              =1                 =1                 =1
-  `8.ee`            E5                 E5                 mi5
-  `16dd#`           D\#5               Dis5               re\~d5
-  `4ee`             E5                 E5                 mi5
-  `=2`              =2                 =2                 =2
-  `8r`              r                  r                  r
-  `8b-`             Bb4                B4                 si\~b4
-  `8a`              A4                 A4                 la4
-  `8c`              C4                 C4                 do4
-  `=3`              =3                 =3                 =3
-  `2bn`             B4                 H4                 si4
-  `==`              ==                 ==                 ==
-  `*-`              \*-                \*-                \*-
-  ----------------- ------------------ ------------------ -----------
+```humdrum
+!!	Comparison	of	pitch-related	representations.	
+**kern	**pitch	**Tonh	**solfg
+*M2/4	*M2/4	*M2/4	*M2/4
+*C:	*C:	*C:	*C:
+8.cc	C5	C5	do5
+16dd	D5	D5	re5
+=1	=1	=1	=1
+8.ee	E5	E5	mi5
+16dd#	D#5	Dis5	re~d5
+4ee	E5	E5	mi5
+=2	=2	=2	=2
+8r	r	r	r
+8b-	Bb4	B4	si~b4
+8a	A4	A4	la4
+8c	C4	C4	do4
+=3	=3	=3	=3
+2bn	B4	H4	si4
+==	==	==	==
+*-	*-	*-	*-
+-----------------	------------------	------------------	-----------
 In Example 4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the
 [`**MIDI`](/rep/MIDI) representation uses
@@ -394,29 +394,29 @@ negative integers. More detail concerning `**MIDI` is given in [Chapter
 
 **Example 4.3**
 
-  ----------------- ------------------ ----------------- -------------- ----------
-  `!! Comparison`   of pitch-related   representations   (continued).   
-  `**kern`          \*\*semits         \*\*cents         \*\*MIDI       \*\*freq
-  `*M2/4`           \*M2/4             \*M2/4            \*Ch1          \*M2/4
-  `*C:`             \*C:               \*C:              \*M2/4         \*C:
-  `*`               \*                 \*                \*C:           \*
-  `8.cc`            12                 1200              /72/           523.25
-  `16dd`            14                 1400              /-72/ /74/     587.33
-  `=1`              =1                 =1                =1             =1
-  `8.ee`            16                 1600              /-74/ /76/     659.26
-  `16dd#`           15                 1500              /-76/ /75/     622.25
-  `4ee`             16                 1600              /-75/ /76/     659.26
-  `=2`              =2                 =2                =2             =2
-  `8r`              r                  r                 /-76/          r
-  `8b-`             10                 1000              /70/           466.16
-  `8a`              9                  900               /-70/ /69/     440.00
-  `8c`              0                  0                 /-69/ /60/     261.63
-  `=3`              =3                 =3                =3             =3
-  `2bn`             11                 1100              /-60/ /71/     493.88
-  `==`              ==                 ==                ==             ==
-  `.`               .                  .                 /-71/          .
-  `*-`              \*-                \*-               \*-            \*-
-  ----------------- ------------------ ----------------- -------------- ----------
+```humdrum
+!!	Comparison	of	pitch-related	representations	(continued).	
+**kern	**semits	**cents	**MIDI	**freq
+*M2/4	*M2/4	*M2/4	*Ch1	*M2/4
+*C:	*C:	*C:	*M2/4	*C:
+*	*	*	*C:	*
+8.cc	12	1200	/72/	523.25
+16dd	14	1400	/-72/	/74/	587.33
+=1	=1	=1	=1	=1
+8.ee	16	1600	/-74/	/76/	659.26
+16dd#	15	1500	/-76/	/75/	622.25
+4ee	16	1600	/-75/	/76/	659.26
+=2	=2	=2	=2	=2
+8r	r	r	/-76/	r
+8b-	10	1000	/70/	466.16
+8a	9	900	/-70/	/69/	440.00
+8c	0	0	/-69/	/60/	261.63
+=3	=3	=3	=3	=3
+2bn	11	1100	/-60/	/71/	493.88
+==	==	==	==	==
+.	.	.	/-71/	.
+*-	*-	*-	*-	*-
+-----------------	------------------	-----------------	--------------	----------
 Not all of the above pitch-related representations can be translated
 directly from one to another. Table 4.1 shows the possible translations
 supported by Humdrum Release 2.0 commands. The input representations are
@@ -435,21 +435,21 @@ marks, and other `**kern` signifiers are not magically generated.
 
 **Input Representation**
 
-  -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
-           \*\*cents   \*\*deg   \*\*freq   \*\*kern   \*\*MIDI   \*\*pitch   \*\*semits   \*\*solfa   \*\*solfg   \*\*Tonh
-                                                                                                                   
-  cents                          ¤          ¤                     ¤           ¤                        ¤           ¤
-  cocho                          ¤                                                                                 
-  deg                                       ¤                     ¤                                    ¤           ¤
-  freq     ¤                                ¤          ¤          ¤           ¤                        ¤           ¤
-  kern     ¤                     ¤                     ¤          ¤           ¤            ¤           ¤           ¤
-  midi                                      ¤                                                                      
-  pitch    ¤                     ¤          ¤          ¤                      ¤            ¤           ¤           ¤
-  semits   ¤                     ¤          ¤          ¤          ¤                                    ¤           ¤
-  solfa                                     ¤                     ¤                                    ¤           ¤
-  solfg    ¤                     ¤          ¤          ¤          ¤           ¤                        ¤           
-  tonh     ¤                     ¤          ¤          ¤          ¤           ¤            ¤           ¤           
-  -------- ----------- --------- ---------- ---------- ---------- ----------- ------------ ----------- ----------- ----------
+```humdrum
+**cents	**deg	**freq	**kern	**MIDI	**pitch	**semits	**solfa	**solfg	**Tonh
+
+cents	¤	¤	¤	¤	¤	¤
+cocho	¤	
+deg	¤	¤	¤	¤
+freq	¤	¤	¤	¤	¤	¤	¤
+kern	¤	¤	¤	¤	¤	¤	¤	¤
+midi	¤	
+pitch	¤	¤	¤	¤	¤	¤	¤	¤
+semits	¤	¤	¤	¤	¤	¤	¤
+solfa	¤	¤	¤	¤
+solfg	¤	¤	¤	¤	¤	¤	¤	
+tonh	¤	¤	¤	¤	¤	¤	¤	¤	
+--------	-----------	---------	----------	----------	----------	-----------	------------	-----------	-----------	----------
 
 Transposition Using the *trans* Command
 ---------------------------------------

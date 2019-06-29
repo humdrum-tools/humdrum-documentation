@@ -98,33 +98,33 @@ ditto inventions* | hint
 
 Typical outputs might look like this:
 
-  ------
-  `M3`
-  M6
-  A4
-  =12
-  M6
-  m7
-  M3
-  A4
-  M6
-  A4
-  M6
-  P4
-  M6
-  M7
-  m9
-  m10
-  d12
-  m10
-  P11
-  M9
-  =13
-  m10
-  P4
-  M9
-  M10
-  ------
+```humdrum
+M3
+M6
+A4
+=12
+M6
+m7
+M3
+A4
+M6
+A4
+M6
+P4
+M6
+M7
+m9
+m10
+d12
+m10
+P11
+M9
+=13
+m10
+P4
+M9
+M10
+------
 Using **context** with the **-n 2** option will cause pairs of
 successive intervals to appear in the data records. Each data record
 will consist of a double-stop containing two harmonic intervals. We
@@ -552,25 +552,25 @@ assemble temp.mnt temp.deg
 The first phrase output will appear as follows:
 
 
-  ---------- --------------------------------
-  `**mint`   \*\*deg
-  \*F:       \*F:
-  \*M3/4     \*M3/4
-  \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  +m2        .
-  =1         .
-  +M6        .
-  -M2        .
-  -M2        .
-  =2         .
-  +M2        .
-  -P4        .
-  +M2        .
-  =3         .
-  -M3        .
-             
-  etc.       
-  ---------- --------------------------------
+```humdrum
+**mint	**deg
+*F:	*F:
+*M3/4	*M3/4
+[B]	4+	^5	^3	v2	v1	^2	v6	^7	v5
++m2	.
+=1	.
++M6	.
+-M2	.
+-M2	.
+=2	.
++M2	.
+-P4	.
++M2	.
+=3	.
+-M3	.
+
+etc.	
+----------	--------------------------------
 We need to search for the interval of an ascending major sixth (`+M6`)
 associated with a phrase ending on the dominant (`5$`). Before using the
 approprate **grep** command, we need to use
@@ -579,25 +579,25 @@ the null data tokens in the `**deg` spine; **ditto** will generate the
 following output:
 
 
-  ---------- --------------------------------
-  `**mint`   \*\*deg
-  \*F:       \*F:
-  \*M3/4     \*M3/4
-  \[B\]      4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  +m2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  =1         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  +M6        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  -M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  =2         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  -P4        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  +M2        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  =3         4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-  -M3        4+ \^5 \^3 v2 v1 \^2 v6 \^7 v5
-             
-  etc.       
-  ---------- --------------------------------
+```humdrum
+**mint	**deg
+*F:	*F:
+*M3/4	*M3/4
+[B]	4+	^5	^3	v2	v1	^2	v6	^7	v5
++m2	4+	^5	^3	v2	v1	^2	v6	^7	v5
+=1	4+	^5	^3	v2	v1	^2	v6	^7	v5
++M6	4+	^5	^3	v2	v1	^2	v6	^7	v5
+-M2	4+	^5	^3	v2	v1	^2	v6	^7	v5
+-M2	4+	^5	^3	v2	v1	^2	v6	^7	v5
+=2	4+	^5	^3	v2	v1	^2	v6	^7	v5
++M2	4+	^5	^3	v2	v1	^2	v6	^7	v5
+-P4	4+	^5	^3	v2	v1	^2	v6	^7	v5
++M2	4+	^5	^3	v2	v1	^2	v6	^7	v5
+=3	4+	^5	^3	v2	v1	^2	v6	^7	v5
+-M3	4+	^5	^3	v2	v1	^2	v6	^7	v5
+
+etc.	
+----------	--------------------------------
 Finally, we use **grep** to search for the composite data:
 
 ```bash
@@ -680,19 +680,19 @@ lower voice concurrent with an E major scale in the upper voice. Our
 output would look as follows:
 
 
-  ------------- -- -- ---------------
-  `**deg`             \*\*deg
-  \*C:                \*C:
-  1 \^2 \^3           3 \^4+ \^5+
-  \^2 \^3 \^4         \^4+ \^5+ \^6
-  \^3 \^4 \^5         \^5+ \^6 \^7
-  \^4 \^5 \^6         \^6 \^7 \^1+
-  \^5 \^6 \^7         \^7 \^1+ \^2+
-  \^6 \^7 \^1         \^1+ \^2+ \^3
-  .                   .
-  .                   .
-  \*-                 \*-
-  ------------- -- -- ---------------
+```humdrum
+**deg	**deg
+*C:	*C:
+1	^2	^3	3	^4+	^5+
+^2	^3	^4	^4+	^5+	^6
+^3	^4	^5	^5+	^6	^7
+^4	^5	^6	^6	^7	^1+
+^5	^6	^7	^7	^1+	^2+
+^6	^7	^1	^1+	^2+	^3
+.	.
+.	.
+*-	*-
+-------------	--	--	---------------
 In effect, each data record contains an agglomeration of three
 successive notes from both voices. Seaching for cross-relations would
 entail looking for scale degrees that are both modified and unmodified
@@ -733,19 +733,19 @@ below. The left-hand spine represents the input and the right-hand spine
 represents the output where the option **-n 2** has been specified.
 
 
-  ---------- ----------
-  `**kern`   \*\*kern
-  \*C:       \*C:
-  c          c d
-  d          d e
-  e          e f
-  f          f g
-  g          g a
-  a          a b
-  b          b cc
-  cc         .
-  \*-        \*-
-  ---------- ----------
+```humdrum
+**kern	**kern
+*C:	*C:
+c	c	d
+d	d	e
+e	e	f
+f	f	g
+g	g	a
+a	a	b
+b	b	cc
+cc	.
+*-	*-
+----------	----------
 Now consider the effect of adding the **-p** option. In this case, the
 complete command is:
 
@@ -756,19 +756,19 @@ context -n 2 -p 1
 The corresponding result is:
 
 
-  ---------- ----------
-  `**kern`   \*\*kern
-  \*C:       \*C:
-  c          .
-  d          c d
-  e          d e
-  f          e f
-  g          f g
-  a          g a
-  b          a b
-  cc         b cc
-  \*-        \*-
-  ---------- ----------
+```humdrum
+**kern	**kern
+*C:	*C:
+c	.
+d	c	d
+e	d	e
+f	e	f
+g	f	g
+a	g	a
+b	a	b
+cc	b	cc
+*-	*-
+----------	----------
 The data records have been pushed forward by one line: a null token now
 appears at the beginning of the output spine rather than at the end.
 Similarly, consider the effect of the following command:
@@ -780,19 +780,19 @@ context -n 4 -p 2
 The corresponding result is:
 
 
-  ---------- ----------
-  `**kern`   \*\*kern
-  \*C:       \*C:
-  c          .
-  d          .
-  e          c d e f
-  f          d e f g
-  g          e f g a
-  a          f g a b
-  b          g a b cc
-  cc         .
-  \*-        \*-
-  ---------- ----------
+```humdrum
+**kern	**kern
+*C:	*C:
+c	.
+d	.
+e	c	d	e	f
+f	d	e	f	g
+g	e	f	g	a
+a	f	g	a	b
+b	g	a	b	cc
+cc	.
+*-	*-
+----------	----------
 The output is now padded with two preceding null tokens with a trailing
 null token at the end of the spine. In summary, the **-p** option pushes
 the context records by a specified number of lines. This allows us to
@@ -811,33 +811,33 @@ by a descending major second. First, we generate independent
 Without the **-p** option, the assembled output might look as follows:
 
 
-  --------- -----------
-  `**deg`   \*\*mint
-  \*C:      \*C:
-  3         \[e\] +m2
-  \^4       +m2 +M2
-  \^5       +M2 +M3
-  \^7       +M3 -M2
-  v6        -M2 +m3
-  \^1       +m3 -P4
-  v5        .
-  \*-       \*-
-  --------- -----------
+```humdrum
+**deg	**mint
+*C:	*C:
+3	[e]	+m2
+^4	+m2	+M2
+^5	+M2	+M3
+^7	+M3	-M2
+v6	-M2	+m3
+^1	+m3	-P4
+v5	.
+*-	*-
+---------	-----------
 With **-p 1** the output becomes:
 
 
-  --------- -----------
-  `**deg`   \*\*mint
-  \*C:      \*C:
-  3         .
-  \^4       \[e\] +m2
-  \^5       +m2 +M2
-  \^7       +M2 +M3
-  v6        +M3 -M2
-  \^1       -M2 +m3
-  v5        +m3 -P4
-  \*-       \*-
-  --------- -----------
+```humdrum
+**deg	**mint
+*C:	*C:
+3	.
+^4	[e]	+m2
+^5	+m2	+M2
+^7	+M2	+M3
+v6	+M3	-M2
+^1	-M2	+m3
+v5	+m3	-P4
+*-	*-
+---------	-----------
 Now we can search directly for the situation of interest:
 
 ```bash

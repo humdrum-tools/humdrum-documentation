@@ -35,21 +35,21 @@ interval is the perfect octave in the first sonority of Example 15.1
 
 ![](guide.figures/guide15.1.gif)
 
-  ----------- ----------
-  `**kern`    \*\*kern
-  `*M4/4`     \*M4/4
-  `=1-`       =1-
-  `8c`        2cc
-  `8d`        .
-  `4e`        .
-  `8f`        8r
-  `8r`        8a
-  `8d`        8r
-  `8r`        8b
-  `=2`        =2
-  `2.c 2.e`   2.g 2.cc
-  `*-`        \*-
-  ----------- ----------
+```humdrum
+**kern	**kern
+*M4/4	*M4/4
+=1-	=1-
+8c	2cc
+8d	.
+4e	.
+8f	8r
+8r	8a
+8d	8r
+8r	8b
+=2	=2
+2.c	2.e	2.g	2.cc
+*-	*-
+-----------	----------
 Less obvious harmonic intervals arise when tone onsets are not
 synchronous \-- yet both pitches are sustained simultaneously for a
 period of time. We might call these *passing harmonic intervals.* Two
@@ -92,9 +92,9 @@ notes of a sonority. Four pitches leads to six intervals.
 **Example 15.2** Interpreting Interval Content in Chords
 ![](guide.figures/guide15.2.gif)
 
-  ------------------- -- -- ------------------------ -- -- --------------------
-  Stacked Intervals         Bass-related Intervals         Permuted Intervals
-  ------------------- -- -- ------------------------ -- -- --------------------
+```humdrum
+Stacked	Intervals	Bass-related	Intervals	Permuted	Intervals
+-------------------	--	--	------------------------	--	--	--------------------
 A final issue in characterizing harmonic intervals is whether or not the
 presence of unisons is important. In most applications (such as figured
 bass) the presence of unisons is unimportant. In other applications
@@ -223,31 +223,31 @@ null tokens with the previous non-null data token in the same spine.
 Suppose we had an arbitrary input such as the following:
 
 
-  ---------- ----------
-  `**flip`   \*\*flop
-  `A`        xyz
-  `.`        jkl
-  `.`        .
-  `B`        abc
-  `.`        .
-  `C`        .
-  `.`        .
-  `*-`       \*-
-  ---------- ----------
+```humdrum
+**flip	**flop
+A	xyz
+.	jkl
+.	.
+B	abc
+.	.
+C	.
+.	.
+*-	*-
+----------	----------
 The effect of **ditto** would be the following:
 
 
-  ---------- ----------
-  `**flip`   \*\*flop
-  `A`        xyz
-  `A`        jkl
-  `A`        jkl
-  `B`        abc
-  `B`        abc
-  `C`        abc
-  `C`        abc
-  `*-`       \*-
-  ---------- ----------
+```humdrum
+**flip	**flop
+A	xyz
+A	jkl
+A	jkl
+B	abc
+B	abc
+C	abc
+C	abc
+*-	*-
+----------	----------
 Each null token has been replaced by the preceding data token within the
 spine.
 
@@ -260,21 +260,21 @@ ditto -p example15.1
 The following output results:
 
 
-  ----------- ----------
-  `**kern`    \*\*kern
-  `*M4/4`     \*M4/4
-  `=1-`       =1-
-  `8c`        2cc
-  `8d`        (2cc)
-  `4e`        (2cc)
-  `8f`        8r
-  `8r`        8a
-  `8d`        8r
-  `8r`        8b
-  `=2`        =2
-  `2.c 2.e`   2.g 2.cc
-  `*-`        \*-
-  ----------- ----------
+```humdrum
+**kern	**kern
+*M4/4	*M4/4
+=1-	=1-
+8c	2cc
+8d	(2cc)
+4e	(2cc)
+8f	8r
+8r	8a
+8d	8r
+8r	8b
+=2	=2
+2.c	2.e	2.g	2.cc
+*-	*-
+-----------	----------
 Notice that the half-note C5 has been repeated. The **-p** option has
 caused each repetition of the data token to be placed in parentheses so
 they can be easily recognized. By using **ditto,** we have transformed
@@ -472,21 +472,21 @@ humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1
 The following output results:
 
 
-  ----------- ----------
-  `**kern`    \*\*kern
-  `*M4/4`     \*M4/4
-  `=1-`       =1-
-  `8c`        2cc
-  `8d`        .
-  `4e`        .
-  `8f`        .
-  `.`         8a
-  `8d`        .
-  `.`         8b
-  `=2`        =2
-  `2.c 2.e`   2.g 2.cc
-  `*-`        \*-
-  ----------- ----------
+```humdrum
+**kern	**kern
+*M4/4	*M4/4
+=1-	=1-
+8c	2cc
+8d	.
+4e	.
+8f	.
+.	8a
+8d	.
+.	8b
+=2	=2
+2.c	2.e	2.g	2.cc
+*-	*-
+-----------	----------
 If we now apply [**ditto**](/tool/ditto) and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
@@ -500,21 +500,21 @@ Below we see the output assembled with the output from the corresponding
 [**hint**](/tool/hint) command:
 
 
-  ----------- ---------- ----------
-  `**kern`    \*\*kern   \*\*hint
-  `*M4/4`     \*M4/4     \*M4/4
-  `=1-`       =1-        =1-
-  `8c`        2cc        P8
-  `8d`        (2cc)      m7
-  `4e`        (2cc)      m6
-  `8f`        (2cc)      P5
-  `(8f)`      8a         M3
-  `8d`        (8a)       P5
-  `(8d)`      8b         M6
-  `=2`        =2         =2
-  `2.c 2.e`   2.g 2.cc   M3 m3 P4
-  `*-`        \*-        \*-
-  ----------- ---------- ----------
+```humdrum
+**kern	**kern	**hint
+*M4/4	*M4/4	*M4/4
+=1-	=1-	=1-
+8c	2cc	P8
+8d	(2cc)	m7
+4e	(2cc)	m6
+8f	(2cc)	P5
+(8f)	8a	M3
+8d	(8a)	P5
+(8d)	8b	M6
+=2	=2	=2
+2.c	2.e	2.g	2.cc	M3	m3	P4
+*-	*-	*-
+-----------	----------	----------
 
 The *ydelta* Command
 --------------------
@@ -532,21 +532,21 @@ semits example15.1
 The resulting output would be as follows:
 
 
-  ------------ ------------
-  `**semits`   \*\*semits
-  `*M4/4`      \*M4/4
-  `=1-`        =1-
-  `0`          12
-  `2`          .
-  `4`          .
-  `5`          r
-  `r`          9
-  `2`          r
-  `r`          11
-  `=2`         =2
-  `0 4`        7 12
-  `*-`         \*-
-  ------------ ------------
+```humdrum
+**semits	**semits
+*M4/4	*M4/4
+=1-	=1-
+0	12
+2	.
+4	.
+5	r
+r	9
+2	r
+r	11
+=2	=2
+0	4	7	12
+*-	*-
+------------	------------
 Numerical differences for values on a single data record can be computed
 using the [**ydelta**](/tool/ydelta) command. The **ydelta**
 command is comparable to [**xdelta**,](/tool/xdelta) however,

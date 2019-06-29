@@ -70,19 +70,19 @@ are the corresponding [`**kern`](/rep/kern),
 [`**pcset`](/rep/pcset) representations for Example
 34.1.
 
-  ------------------- -- ------------- -- -----------
-  `**kern`               `**pc`           `**pcset`
-  `4c`                   `0`              `1-1`
-  `4c 4d`                `0 2`            `2-2`
-  `4c 4e 4g`             `0 4 7`          `3-11`
-  `4e 4g 4cc`            `4 7 0`          `3-11`
-  `4g 4cc 4ee`           `7 0 4`          `3-11`
-  `4c 4e- 4g`            `0 3 7`          `3-11`
-  `4c 4e 4g 4b-`         `0 4 7 10`       `4-27`
-  `4c# 4e# 4g# 4b`       `1 5 8 11`       `4-27`
-  `4f 4b 4dd# 4gg#`      `5 11 3 8 `      `4-27`
-  `*-`                   `*-`             `*-`
-  ------------------- -- ------------- -- -----------
+```humdrum
+**kern	**pc	**pcset
+4c	0	1-1
+4c	4d	0	2	2-2
+4c	4e	4g	0	4	7	3-11
+4e	4g	4cc	4	7	0	3-11
+4g	4cc	4ee	7	0	4	3-11
+4c	4e-	4g	0	3	7	3-11
+4c	4e	4g	4b-	0	4	7	10	4-27
+4c#	4e#	4g#	4b	1	5	8	11	4-27
+4f	4b	4dd#	4gg#	5	11	3	8	4-27
+*-	*-	*-
+-------------------	--	-------------	--	-----------
 Suppose we wanted to identify the pc sets for successive vertical
 sonorities in the first movement of Webern\'s Opus 24 concerto. First,
 we translate the input to a pitch-class representation, and then we
@@ -220,16 +220,16 @@ vector for any of several types of inputs \-- including semitones
 shows several different pitch-class sets, their corresponding
 pitch-class sets and (right-most spine), the associated interval vector.
 
-  ------------ -- ----------- -- -------------------- -- ------------
-  `**pc`          `**pcset`      `**name`                \*\*iv
-  `0`             `1-1`          `tone`                  `<000000>`
-  `0 2`           `2-2`          `major second`          \<010000\>
-  `0 3 7`         `3-11`         `minor triad`           \<001110\>
-  `0 4 7`         `3-11`         `major triad`           \<001110\>
-  `0 4 7 10`      `4-27`         `dominant seventh`      \<012111\>
-  `1 5 8 11`      `4-27`         `dominant seventh`      \<012111\>
-  \*-             \*-            `*-`                    `*-`
-  ------------ -- ----------- -- -------------------- -- ------------
+```humdrum
+**pc	**pcset	**name	**iv
+0	1-1	tone	<000000>
+0	2	2-2	major	second	<010000>
+0	3	7	3-11	minor	triad	<001110>
+0	4	7	3-11	major	triad	<001110>
+0	4	7	10	4-27	dominant	seventh	<012111>
+1	5	8	11	4-27	dominant	seventh	<012111>
+*-	*-	*-	*-
+------------	--	-----------	--	--------------------	--	------------
 
 Suppose we wanted to determine whether Arnold Schoenberg tended to use
 simultaneities that have more semitone (interval-class 1) relations and

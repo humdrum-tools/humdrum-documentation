@@ -55,22 +55,22 @@ fourth in the upper voice between the last note of the first measure
 
 **Example 11.1 continued.**
 
-  ------------ -- ----------
-  `**kern`        \*\*kern
-  `*staff1`       \*staff1
-  `*M4/4`         \*M4/4
-  `=1-`           =1-
-  `4.e`           2cc
-  `8f`            .
-  `4.e`           4g
-  `.`             8a
-  `[8f`           8r
-  `=2`            =2
-  `2f]`           2dd
-  `4d 4g`         4b 4ff
-  `4c 4e 4g`      4cc 4ee
-  `*-`            \*-
-  ------------ -- ----------
+```humdrum
+**kern	**kern
+*staff1	*staff1
+*M4/4	*M4/4
+=1-	=1-
+4.e	2cc
+8f	.
+4.e	4g
+.	8a
+[8f	8r
+=2	=2
+2f]	2dd
+4d	4g	4b	4ff
+4c	4e	4g	4cc	4ee
+*-	*-
+------------	--	----------
 In some cases, implied melodic intervals may arise by the interaction of
 two or more parts. For example, Example 11.2 shows a plausible
 reinterpretation of the voicings for the first measure. Here the
@@ -154,21 +154,21 @@ shown in Example 11.1.
 **Example 11.3** Default interval outputs from the **mint** command
 corresponding to Example 11.1.
 
-  ----------- -- -- ----------
-  `**mint`          \*\*mint
-  `*M4/4`           \*M4/4
-  `=1-`             =1-
-  `.`               .
-  `+m2`             .
-  `-m2`             -P4
-  `.`               +M2
-  `+m2`             r
-  `=2`              =2
-  `.`               +P4
-  `-m3 +M2`         -m3 +m3
-  `-M2 P1`          +m2 -m2
-  `*-`              \*-
-  ----------- -- -- ----------
+```humdrum
+**mint	**mint
+*M4/4	*M4/4
+=1-	=1-
+.	.
++m2	.
+-m2	-P4
+.	+M2
++m2	r
+=2	=2
+.	+P4
+-m3	+M2	-m3	+m3
+-M2	P1	+m2	-m2
+*-	*-
+-----------	--	--	----------
 Notice that the *interrupted interval* (spanning the rest) has been
 calculated, and that no unison has appeared for the tied note in the
 lower voice.
@@ -198,21 +198,21 @@ For example,
 would produce the following output when applied to Example 11.1:
 
 
-  ----------- -- -- ----------
-  `**mint`          \*\*mint
-  `*M4/4`           \*M4/4
-  `=1-`             =1-
-  `.`               .
-  `+m2`             .
-  `-m2`             -P4
-  `.`               +M2
-  `+m2`             r
-  `=2`              =2
-  `P1`              .
-  `-m3 +M2`         -m3 +m3
-  `-M2 P1`          +m2 -m2
-  `*-`              \*-
-  ----------- -- -- ----------
+```humdrum
+**mint	**mint
+*M4/4	*M4/4
+=1-	=1-
+.	.
++m2	.
+-m2	-P4
+.	+M2
++m2	r
+=2	=2
+P1	.
+-m3	+M2	-m3	+m3
+-M2	P1	+m2	-m2
+*-	*-
+-----------	--	--	----------
 Notice that the perfect fourth (+P4) has been replaced by a null token
 at the beginning of measure 2. In addition, the rest token \``r`\' has
 been echoed just prior to the barline.
@@ -260,21 +260,21 @@ arises from the pitches D4 and E4; the falling minor third arises from
 the pitches G4 and E4.
 
 
-  ---------------------- -- -- ----------
-  `**mint`                     \*\*mint
-  `*M4/4`                      \*M4/4
-  `=1-`                        =1-
-  `.`                          .
-  `+m2`                        .
-  `-m2`                        -P4
-  `.`                          +M2
-  `+m2`                        r
-  `=2`                         =2
-  `P1`                         .
-  `-m3 +M2`                    -m3 +m3
-  `-M2 (+M2) (-m3) P1`         +m2 -m2
-  `*-`                         \*-
-  ---------------------- -- -- ----------
+```humdrum
+**mint	**mint
+*M4/4	*M4/4
+=1-	=1-
+.	.
++m2	.
+-m2	-P4
+.	+M2
++m2	r
+=2	=2
+P1	.
+-m3	+M2	-m3	+m3
+-M2	(+M2)	(-m3)	P1	+m2	-m2
+*-	*-
+----------------------	--	--	----------
 With the **-i** option, the parentheses surrounding the unvoiced inner
 intervals would be omitted.
 

@@ -300,9 +300,9 @@ Actually, this is not the most prudent construction. Depending on the
 spines present in a document, sometimes barlines will be mixed with null
 tokens in other spines that do not encode explicit barlines. E.g.
 
-  ------ ----- ----- --- --- -----
-  `\.`   =23   =23   .   .   =23
-  ------ ----- ----- --- --- -----
+```humdrum
+.	=23	=23	.	.	=23
+------	-----	-----	---	---	-----
 A more careful way of eliminating barlines would use the following
 regular expression:
 

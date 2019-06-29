@@ -305,9 +305,9 @@ first barline. For a hypothetical file containing five spines, we would
 need to insert the following line just before the first note(s) in the
 work:
 
-  ------- ----- ----- ----- -----
-  `=1-`   =1-   =1-   =1-   =1-
-  ------- ----- ----- ----- -----
+```humdrum
+=1-	=1-	=1-	=1-	=1-
+-------	-----	-----	-----	-----
 Recall that the common system for representing barlines makes a
 distinction between the logical *function* of a barline and it\'s visual
 or *orthographic* appearance. For example, the common system for
@@ -496,45 +496,45 @@ As many reference records should be added as possible since these are
 immensely useful to Humdrum users. Essential reference records include
 the following:
 
-  ----------- ------------------------------------------------------------------
-  `!!!COM:`   [composer\'s name](guide.append1.html#Authorship_Information)
-  `!!!CDT:`   [composer\'s dates](guide.append1.html#CDT)
-  `!!!OTL:`   [title (in original language)](guide.append1.html#OTL)
-  `!!!OMV:`   [movement number (if appropriate)](guide.append1.html#OMV)
-  `!!!OPS:`   [opus number (if appropriate)](guide.append1.html#OPS)
-  `!!!ODT:`   [date of composition](guide.append1.html#ODT)
-  `!!!OPC:`   [place of composition](guide.append1.html#OPC)
-  `!!!YEP:`   [publisher of electronic edition](guide.append1.html#YEP)
-  `!!!YEC:`   [date & owner of electronic copyright](guide.append1.html#YEC)
-  `!!!YER:`   [date electronic edition released](guide.append1.html#YER)
-  `!!!YEM:`   [copyright message](guide.append1.html#YEM)
-  `!!!YEN:`   [country of copyright](guide.append1.html#YEN)
-  `!!!EED:`   [electronic editor](guide.append1.html#EED)
-  `!!!ENC:`   [encoder of document](guide.append1.html#ENC)
-  `!!!EEV:`   [electronic edition version](guide.append1.html#EEV)
-  `!!!EFL:`   [file number, e.g. 1 or 4 (1/4)](guide.append1.html#EFL)
-  `!!!VTS:`   [checksum validation number (see below)](guide.append1.html#VTS)
-  `!!!AMT:`   [metric classification](guide.append1.html#AMT)
-  `!!!AIN:`   [instrumentation](guide.append1.html#AIN)
-  ----------- ------------------------------------------------------------------
+```humdrum
+!!!COM:	[composer's	name](guide.append1.html#Authorship_Information)
+!!!CDT:	[composer's	dates](guide.append1.html#CDT)
+!!!OTL:	[title	(in	original	language)](guide.append1.html#OTL)
+!!!OMV:	[movement	number	(if	appropriate)](guide.append1.html#OMV)
+!!!OPS:	[opus	number	(if	appropriate)](guide.append1.html#OPS)
+!!!ODT:	[date	of	composition](guide.append1.html#ODT)
+!!!OPC:	[place	of	composition](guide.append1.html#OPC)
+!!!YEP:	[publisher	of	electronic	edition](guide.append1.html#YEP)
+!!!YEC:	[date	&	owner	of	electronic	copyright](guide.append1.html#YEC)
+!!!YER:	[date	electronic	edition	released](guide.append1.html#YER)
+!!!YEM:	[copyright	message](guide.append1.html#YEM)
+!!!YEN:	[country	of	copyright](guide.append1.html#YEN)
+!!!EED:	[electronic	editor](guide.append1.html#EED)
+!!!ENC:	[encoder	of	document](guide.append1.html#ENC)
+!!!EEV:	[electronic	edition	version](guide.append1.html#EEV)
+!!!EFL:	[file	number,	e.g.	1	or	4	(1/4)](guide.append1.html#EFL)
+!!!VTS:	[checksum	validation	number	(see	below)](guide.append1.html#VTS)
+!!!AMT:	[metric	classification](guide.append1.html#AMT)
+!!!AIN:	[instrumentation](guide.append1.html#AIN)
+-----------	------------------------------------------------------------------
 Where appropriate, the following reference records should also be
 included:
 
-  ----------- -------------------------------------------------------------
-  `!!!CNT:`   [composer\'s nationality](guide.append1.html#CNT)
-  `!!!XEN:`   [title (English translation)](guide.append1.html#XEN)
-  `!!!OPR:`   [title of larger (or parent) work](guide.append1.html#OPR)
-  `!!!ODE:`   [dedication](guide.append1.html#ODE)
-  `!!!OCY:`   [country of composition](guide.append1.html#OCY)
-  `!!!PPR:`   [first publisher](guide.append1.html#PPR)
-  `!!!PDT:`   [date first published](guide.append1.html#PDT)
-  `!!!PPP:`   [place first published](guide.append1.html#PPP)
-  `!!!SCT:`   [scholarly catalogue name & number](guide.append1.html#SCT)
-  `!!!SMA:`   [manuscript acknowledgement](guide.append1.html#SMA)
-  `!!!AFR:`   [form of work](guide.append1.html#AFR)
-  `!!!AGN:`   [genre of work](guide.append1.html#AGN)
-  `!!!AST:`   [style of period](guide.append1.html#AST)
-  ----------- -------------------------------------------------------------
+```humdrum
+!!!CNT:	[composer's	nationality](guide.append1.html#CNT)
+!!!XEN:	[title	(English	translation)](guide.append1.html#XEN)
+!!!OPR:	[title	of	larger	(or	parent)	work](guide.append1.html#OPR)
+!!!ODE:	[dedication](guide.append1.html#ODE)
+!!!OCY:	[country	of	composition](guide.append1.html#OCY)
+!!!PPR:	[first	publisher](guide.append1.html#PPR)
+!!!PDT:	[date	first	published](guide.append1.html#PDT)
+!!!PPP:	[place	first	published](guide.append1.html#PPP)
+!!!SCT:	[scholarly	catalogue	name	&	number](guide.append1.html#SCT)
+!!!SMA:	[manuscript	acknowledgement](guide.append1.html#SMA)
+!!!AFR:	[form	of	work](guide.append1.html#AFR)
+!!!AGN:	[genre	of	work](guide.append1.html#AGN)
+!!!AST:	[style	of	period](guide.append1.html#AST)
+-----------	-------------------------------------------------------------
 In general, place essential reference records at the beginning of a
 document. These will include the composer, title of the work, etc. Less
 important reference records should be placed at the end of the file.

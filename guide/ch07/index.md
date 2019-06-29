@@ -92,14 +92,14 @@ the left spine with the corresponding `**MIDI` data in the right spine.
 Notice that each data token consists of three subtokens, one for each
 note:
 
-  ---------------- ----------------------------------
-  `!! A C-major`   triad.
-  `**kern`         \*\*MIDI
-  `*`              \*Ch1
-  `2c 2e 2g`       72/60/64 72/64/64 72/67/64
-  `.`              144/-60/64 144/-64/64 144/-67/64
-  `*-`             \*-
-  ---------------- ----------------------------------
+```humdrum
+!!	A	C-major	triad.
+**kern	**MIDI
+*	*Ch1
+2c	2e	2g	72/60/64	72/64/64	72/67/64
+.	144/-60/64	144/-64/64	144/-67/64
+*-	*-
+----------------	----------------------------------
 Middle C corresponds to MIDI key 60; The pitches E4 and G4 correspond to
 MIDI keys 64 and 67 respectively. The half-note durations result in a
 delay of 144 clock ticks before the key-off commands are executed.
@@ -110,15 +110,15 @@ begins at the same time that the C major triad ends. This results in
 five subtokens in the corresponding `**MIDI` data record. Three key-off
 events are synchronous with two key-on events:
 
-  ------------------ -- ------------------------------------------------------
-  `!! Two chords.`      
-  `**kern`              \*\*MIDI
-  `*`                   \*Ch1
-  `2c 2e 2g`            72/60/64 72/64/64 72/67/64
-  `4d 4f`               144/-60/64 144/-64/64 144/-67/64 144/62/64 144/65/64
-  `.`                   72/-62/64 72/-65/64
-  `*-`                  \*-
-  ------------------ -- ------------------------------------------------------
+```humdrum
+!!	Two	chords.	
+**kern	**MIDI
+*	*Ch1
+2c	2e	2g	72/60/64	72/64/64	72/67/64
+4d	4f	144/-60/64	144/-64/64	144/-67/64	144/62/64	144/65/64
+.	72/-62/64	72/-65/64
+*-	*-
+------------------	--	------------------------------------------------------
 Notice that the difference in duration between the half-notes and
 quarter-notes is reflected when the notes are turned *off* rather than
 when the notes are turned *on*.
@@ -130,35 +130,35 @@ beginning of Darius Milhaud\'s *Touches Blanches*.
 
 ![](guide.figures/guide07.1.gif)
 
-  -------------------- ---------- -- -------------------- -- -- --------------------
-  `!!!: Milhaud, D.`                                            
-  `!!!OTL: Touches`    Blanches                                 
-  `**kern`             \*\*kern      \*\*MIDI                   \*\*MIDI
-  `*staff2`            \*staff1      \*Ch1                      \*Ch1
-  `*clefF4`            \*clefG2      \*clefF4                   \*clefG2
-  `*k[]`               \*k\[\]       \*k\[\]                    \*k\[\]
-  `*M3/4`              \*M3/4        \*M3/4                     \*M3/4
-  `=1-`                =1-           =1-                        =1-
-  `4e`                 (4g           72/64/64                   72/67/64
-  `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
-  `4F`                 .             72/-60/64 72/53/64         .
-  `=2`                 =2            =2                         =2
-  `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
-  `.`                  8b            .                          36/-69/64 36/71/64
-  `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
-  `4G`                 .             72/-62/64 72/55/64         .
-  `=3`                 =3            =3                         =3
-  `4e`                 (4g           72/-55/64 72/64/64         72/-67/64 72/67/64
-  `4c`                 2a)           72/-64/64 72/60/64         72/-67/64 72/69/64
-  `4F`                 .             72/-60/64 72/53/64         .
-  `=4`                 =4            =4                         =4
-  `4f`                 (8a           72/-53/64 72/65/64         72/-69/64 72/69/64
-  `.`                  8b            .                          36/-69/64 36/71/64
-  `4d`                 2g)           36/-65/64 36/62/64         36/-71/64 36/67/64
-  `4G`                 .             72/-62/64 72/55/64         .
-  `.`                  .             72/-55/64                  72/-67/64
-  `*-`                 \*-           \*-                        \*-
-  -------------------- ---------- -- -------------------- -- -- --------------------
+```humdrum
+!!!:	Milhaud,	D.	
+!!!OTL:	Touches	Blanches	
+**kern	**kern	**MIDI	**MIDI
+*staff2	*staff1	*Ch1	*Ch1
+*clefF4	*clefG2	*clefF4	*clefG2
+*k[]	*k[]	*k[]	*k[]
+*M3/4	*M3/4	*M3/4	*M3/4
+=1-	=1-	=1-	=1-
+4e	(4g	72/64/64	72/67/64
+4c	2a)	72/-64/64	72/60/64	72/-67/64	72/69/64
+4F	.	72/-60/64	72/53/64	.
+=2	=2	=2	=2
+4f	(8a	72/-53/64	72/65/64	72/-69/64	72/69/64
+.	8b	.	36/-69/64	36/71/64
+4d	2g)	36/-65/64	36/62/64	36/-71/64	36/67/64
+4G	.	72/-62/64	72/55/64	.
+=3	=3	=3	=3
+4e	(4g	72/-55/64	72/64/64	72/-67/64	72/67/64
+4c	2a)	72/-64/64	72/60/64	72/-67/64	72/69/64
+4F	.	72/-60/64	72/53/64	.
+=4	=4	=4	=4
+4f	(8a	72/-53/64	72/65/64	72/-69/64	72/69/64
+.	8b	.	36/-69/64	36/71/64
+4d	2g)	36/-65/64	36/62/64	36/-71/64	36/67/64
+4G	.	72/-62/64	72/55/64	.
+.	.	72/-55/64	72/-67/64
+*-	*-	*-	*-
+--------------------	----------	--	--------------------	--	--	--------------------
 The [`**MIDI`](/rep/MIDI) representation always
 expects a tandem interpretation indicating the MIDI channel assignment.
 In Example 7.1 both parts have been assigned to channel 1. Once again,
@@ -272,21 +272,21 @@ The **midi** command provides a useful **-c** option that causes each
 data record to be repeated as a comment. For example, when the **-c**
 option is used a sequence of data records such as the following:
 
-  ------- ---- ---- ----
-  `4C`    4E   4G   4c
-  `4D`    4F   4G   4B
-  `4AA`   4E   4A   4c
-  ------- ---- ---- ----
+```humdrum
+4C	4E	4G	4c
+4D	4F	4G	4B
+4AA	4E	4A	4c
+-------	----	----	----
 is transformed to:
 
-  --------- ---- ---- ----
-  `4C`      4E   4G   4c
-  `!!4C`    4E   4G   4c
-  `4D`      4F   4G   4B
-  `!!4D`    4F   4G   4B
-  `4AA`     4E   4A   4c
-  `!!4AA`   4E   4A   4c
-  --------- ---- ---- ----
+```humdrum
+4C	4E	4G	4c
+!!4C	4E	4G	4c
+4D	4F	4G	4B
+!!4D	4F	4G	4B
+4AA	4E	4A	4c
+!!4AA	4E	4A	4c
+---------	----	----	----
 
 Since, by default, the **perform** command echoes all global comments on
 the screen during playback, this means that the Humdrum data will also

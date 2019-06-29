@@ -214,38 +214,38 @@ successive sixteenth notes are sounded for each pitch:
 
 **Table 1.1**
 
-  ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
-                     C4    D4    E4    F4    G4    A4    B4    C5
-         1st 16th    ON    off   off   off   off   off   off   off
-         2nd 16th    ON    off   off   off   off   off   off   off
-         3rd 16th    off   ON    off   off   off   off   off   off
-         4th 16th    off   ON    off   off   off   off   off   off
-  time   5th 16th    off   off   ON    off   off   off   off   off
-         6th 16th    off   off   ON    off   off   off   off   off
-         7th 16th    off   off   off   ON    off   off   off   off
-         8th 16th    off   off   off   ON    off   off   off   off
-         9th 16th    off   off   off   off   ON    off   off   off
-         10th 16th   off   off   off   off   ON    off   off   off
-         11th 16th   off   off   off   off   off   ON    off   off
-         etc.                                                  
-  ------ ----------- ----- ----- ----- ----- ----- ----- ----- -----
+```humdrum
+C4	D4	E4	F4	G4	A4	B4	C5
+1st	16th	ON	off	off	off	off	off	off	off
+2nd	16th	ON	off	off	off	off	off	off	off
+3rd	16th	off	ON	off	off	off	off	off	off
+4th	16th	off	ON	off	off	off	off	off	off
+time	5th	16th	off	off	ON	off	off	off	off	off
+6th	16th	off	off	ON	off	off	off	off	off
+7th	16th	off	off	off	ON	off	off	off	off
+8th	16th	off	off	off	ON	off	off	off	off
+9th	16th	off	off	off	off	ON	off	off	off
+10th	16th	off	off	off	off	ON	off	off	off
+11th	16th	off	off	off	off	off	ON	off	off
+etc.	
+------	-----------	-----	-----	-----	-----	-----	-----	-----	-----
 Table 1.2 shows another example where different kinds of information are
 combined in the same table. Here the last column represents a
 combination of trumpet valves:
 
 **Table 1.2**
 
-  ---------- ------- ---------- -----------------------
-             Pitch   Duration   **Valve Combination**
-  1st note   C4      quarter    0
-  2nd note   B3      eighth     2
-  3rd note   G4      eighth     0
-  4th note   F4      eighth     1
-  5th note   G4      eighth     0
-  6th note   A4      quarter    1-2
-  7th note   G4      eighth     0
-  8th note   Ab4     quarter    2-3
-  ---------- ------- ---------- -----------------------
+```humdrum
+Pitch	Duration	**Valve	Combination**
+1st	note	C4	quarter	0
+2nd	note	B3	eighth	2
+3rd	note	G4	eighth	0
+4th	note	F4	eighth	1
+5th	note	G4	eighth	0
+6th	note	A4	quarter	1-2
+7th	note	G4	eighth	0
+8th	note	Ab4	quarter	2-3
+----------	-------	----------	-----------------------
 Humdrum representations can be very similar to the data shown in Tables
 1.1 and 1.2. With just a few formatting changes, either table can be
 transformed so that it conforms to the Humdrum syntax. For example,
@@ -259,18 +259,18 @@ hyphen.
 
 **Table 1.3** A Humdrum Equivalent to Table 1.2
 
-  ---------- -- ----------- -- -------------- -- -----------------------
-  `**Note`      \*\*Pitch      \*\*Duration      \*\*Valve Combination
-  1st note      C4             quarter           0
-  2nd note      B3             eighth            2
-  3rd note      G4             eighth            0
-  4th note      F4             eighth            1
-  5th note      G4             eighth            0
-  6th note      A4             quarter           1-2
-  7th note      G4             eighth            0
-  8th note      Ab4            quarter           2-3
-  \*-           \*-            \*-               \*-
-  ---------- -- ----------- -- -------------- -- -----------------------
+```humdrum
+**Note	**Pitch	**Duration	**Valve	Combination
+1st	note	C4	quarter	0
+2nd	note	B3	eighth	2
+3rd	note	G4	eighth	0
+4th	note	F4	eighth	1
+5th	note	G4	eighth	0
+6th	note	A4	quarter	1-2
+7th	note	G4	eighth	0
+8th	note	Ab4	quarter	2-3
+*-	*-	*-	*-
+----------	--	-----------	--	--------------	--	-----------------------
 It does not matter what characters appear in the table \-- numbers,
 letters, symbols, etc. (although there are some restrictions concerning
 the use of spaces and tabs). The table can have as many columns as you

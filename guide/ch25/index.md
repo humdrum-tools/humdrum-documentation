@@ -402,23 +402,23 @@ generates the third column (labelled
 [`**simil`](/rep/simil)):
 
 
-  --------- ----------- -----------
-  (source   (template   (simil
-  input     input)      output)
-  `**foo`   A           \*\*simil
-  X         B           0.51
-  A         C           1.00
-  B                     0.51
-  C                     0.37
-  D                     0.51
-  A                     0.72
-  B                     0.72
-  B                     0.51
-  C                     0.51
-  B                     .
-  A                     .
-  \*-                   \*-
-  --------- ----------- -----------
+```humdrum
+(source	(template	(simil
+input	input)	output)
+**foo	A	**simil
+X	B	0.51
+A	C	1.00
+B	0.51
+C	0.37
+D	0.51
+A	0.72
+B	0.72
+B	0.51
+C	0.51
+B	.
+A	.
+*-	*-
+---------	-----------	-----------
 Each succesive value in the output spine is matched with a data token in
 the source input file. For example, the second value (1.00) in the
 `**simil` spine arises from an exact match of the (A,B,C) pattern
@@ -439,23 +439,23 @@ A musically more pertinent example is given below. Here our template
 consists of a harmonic pattern: *I-IV-V-I*.
 
 
-  ---------- ----------- -----------
-  (source    (template   (simil
-  input      input)      output)
-  `**harm`   I           \*\*simil
-  I          IV          0.87
-  vi         V           0.87
-  ii7        I           0.51
-  V                      0.38
-  V7                     0.41
-  I                      0.82
-  r                      0.41
-  V/V                    0.38
-  V                      .
-  iii                    .
-  iiib                   .
-  \*-                    \*-
-  ---------- ----------- -----------
+```humdrum
+(source	(template	(simil
+input	input)	output)
+**harm	I	**simil
+I	IV	0.87
+vi	V	0.87
+ii7	I	0.51
+V	0.38
+V7	0.41
+I	0.82
+r	0.41
+V/V	0.38
+V	.
+iii	.
+iiib	.
+*-	*-
+----------	-----------	-----------
 It is important to understand that **simil** operates by comparing
 entire data tokens, so the token `V7` differs as much from `V` as the
 token `vi`. It is the user\'s responsibility to choose an input
@@ -468,23 +468,23 @@ how the [`**simil`](/rep/simil) values better
 reflect the presumed harmonic similarity:
 
 
-  ----------- ----------- -----------
-  (source     (template   (simil
-  input       input)      output)
-  `**Harm`    tonic       \*\*simil
-  tonic       subdom      0.92
-  subdom      dom         0.90
-  subdom      tonic       0.87
-  dom                     0.44
-  dom                     0.41
-  tonic                   0.83
-  r                       0.66
-  secondary               0.41
-  dom                     .
-  mediant                 .
-  mediant                 .
-  \*-                     \*-
-  ----------- ----------- -----------
+```humdrum
+(source	(template	(simil
+input	input)	output)
+**Harm	tonic	**simil
+tonic	subdom	0.92
+subdom	dom	0.90
+subdom	tonic	0.87
+dom	0.44
+dom	0.41
+tonic	0.83
+r	0.66
+secondary	0.41
+dom	.
+mediant	.
+mediant	.
+*-	*-
+-----------	-----------	-----------
 
 Defining Edit Penalties
 -----------------------
@@ -504,17 +504,17 @@ eight edit operations shown in Table 25.2.
 
 **Table 25.2**
 
-  ---------- ----------------------------------------------------------------------
-  Name Tag   Edit Operation
-  D1         Delete a non-repeated token in String 1
-  D2         Delete a non-repeated token in String 2
-  R1         Delete a repeated token in String 1
-  R2         Delete a repeated token in String 2
-  S0         Substitute a token that is repeated in neither String 1 nor String 2
-  S1         Substitute a token that is repeated in String 1 only
-  S2         Substitute a token that is repeated in String 2 only
-  S3         Substitute a token that is repeated in String 1 and String 2
-  ---------- ----------------------------------------------------------------------
+```humdrum
+Name	Tag	Edit	Operation
+D1	Delete	a	non-repeated	token	in	String	1
+D2	Delete	a	non-repeated	token	in	String	2
+R1	Delete	a	repeated	token	in	String	1
+R2	Delete	a	repeated	token	in	String	2
+S0	Substitute	a	token	that	is	repeated	in	neither	String	1	nor	String	2
+S1	Substitute	a	token	that	is	repeated	in	String	1	only
+S2	Substitute	a	token	that	is	repeated	in	String	2	only
+S3	Substitute	a	token	that	is	repeated	in	String	1	and	String	2
+----------	----------------------------------------------------------------------
 *Edit operations used by **simil***.
 
 In describing the edit operations, String 1 is the source string and
@@ -589,32 +589,32 @@ has been assigned for dissimilar substitution, and decreased penalties
 have been assigned for repetition.
 
 
-  ------ -----
-  `S0`   1.6
-  S1     0.7
-  S3     0.7
-  ------ -----
+```humdrum
+S0	1.6
+S1	0.7
+S3	0.7
+------	-----
 Repeating the above command with this new `simil.rc` file produces the
 following results:
 
 
-  ----------- ----------- -----------
-  (source     (template   (simil
-  input       input)      output)
-  `**Harm`    tonic       \*\*simil
-  tonic       subdom      0.94
-  subdom      dom         0.91
-  subdom      tonic       0.87
-  dom                     0.45
-  dom                     0.41
-  tonic                   0.84
-  r                       0.68
-  secondary               0.42
-  dom                     .
-  mediant                 .
-  mediant                 .
-  \*-                     \*-
-  ----------- ----------- -----------
+```humdrum
+(source	(template	(simil
+input	input)	output)
+**Harm	tonic	**simil
+tonic	subdom	0.94
+subdom	dom	0.91
+subdom	tonic	0.87
+dom	0.45
+dom	0.41
+tonic	0.84
+r	0.68
+secondary	0.42
+dom	.
+mediant	.
+mediant	.
+*-	*-
+-----------	-----------	-----------
 Notice that the similarity measure for the pattern (tonic, subdom,
 subdom, dom, dom, tonic) has increased from 0.91 to 0.94.
 

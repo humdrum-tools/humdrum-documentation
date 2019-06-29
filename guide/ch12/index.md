@@ -80,39 +80,39 @@ Concerto shown in Example 12.1.
 ```bash
 !! [Allegro] 
 ```
-  ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
-  `**kern`    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern    \*\*kern
-  `*ICklav`   \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICstr     \*ICww      \*ICww      \*ICbras
-  `*Icemba`   \*Icello    \*Icbass    \*Iviola    \*Ivioln    \*Ivioln    \*Ivioln    \*Ioboe     \*Ifltds    \*Itromp
-  `*IGcont`   \*IGcont    \*          \*          \*          \*          \*          \*          \*          \*
-  `*IGripn`   \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGripn    \*IGconc    \*IGconc    \*IGconc    \*IGconc
-  `!cembal`   !\'cello    !Bd\'rip    !Vd\'rip    !v\'lin2    !v\'lin1    !v\'lino    !oboe       !flauto     !tromba
-  `*k[b-]`    \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[b-\]   \*k\[\]
-  `*F:`       \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:        \*F:
-  `*M2/2`     \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2      \*M2/2
-  `*MM54`     \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54      \*MM54
-  `*clefF4`   \*clefF4    \*clefF4    \*clefC3    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2    \*clefG2
-  `8FF/`      8FF/        8FFF/       8a\\        8cc\\       8ff\\       8ff\\       8ff\\       8ff\\       8f/
-  `=1`        =1          =1          =1          =1          =1          =1          =1          =1          =1
-  `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
-  `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
-  `16A\`      16A\\       16AA\\      8c\\        16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8cc/
-  `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
-  `16F\LL`    16F\\LL     16FF\\LL    8f\\        8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/
-  `16G\`      16G\\       16GG\\      .           .           .           .           .           .           .
-  `16A\`      16A\\       16AA\\      8c\\J       16f/LL      16a\\LL     16a\\LL     16a\\LL     16a\\LL     8f/J
-  `16G\JJ`    16G\\JJ     16GG\\JJ    .           16g/JJ      16b-\\JJ    16b-\\JJ    16b-\\JJ    16b-\\JJ    .
-  `16F\LL`    16F\\LL     16FF\\LL    8f\\L       8a/L        8cc\\L      8cc\\L      8cc\\L      8cc\\L      8a/L
-  `16E\`      16E\\       16EE\\      .           .           .           .           .           .           .
-  `16F\`      16F\\       16FF\\      8a\\        8cc/        8ff\\       8ff\\       8ff\\       8ff\\       8cc/
-  `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
-  `16A\LL`    16A\\LL     16AA\\LL    8cc\\       8f/         8cc\\       8cc\\       8cc\\       8cc\\       8ff/
-  `16B-\`     16B-\\      16BB-\\     .           .           .           .           .           .           .
-  `16A\`      16A\\       16AA\\      8c\\J       8cc/J       8ff\\J      8ff\\J      8ff\\J      8ff\\J      8cc/J
-  `16G\JJ`    16G\\JJ     16GG\\JJ    .           .           .           .           .           .           .
-  `=2`        =2          =2          =2          =2          =2          =2          =2          =2          =2
-  `*-`        \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-         \*-
-  ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------- ----------
+```humdrum
+**kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern
+*ICklav	*ICstr	*ICstr	*ICstr	*ICstr	*ICstr	*ICstr	*ICww	*ICww	*ICbras
+*Icemba	*Icello	*Icbass	*Iviola	*Ivioln	*Ivioln	*Ivioln	*Ioboe	*Ifltds	*Itromp
+*IGcont	*IGcont	*	*	*	*	*	*	*	*
+*IGripn	*IGripn	*IGripn	*IGripn	*IGripn	*IGripn	*IGconc	*IGconc	*IGconc	*IGconc
+!cembal	!'cello	!Bd'rip	!Vd'rip	!v'lin2	!v'lin1	!v'lino	!oboe	!flauto	!tromba
+*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[b-]	*k[]
+*F:	*F:	*F:	*F:	*F:	*F:	*F:	*F:	*F:	*F:
+*M2/2	*M2/2	*M2/2	*M2/2	*M2/2	*M2/2	*M2/2	*M2/2	*M2/2	*M2/2
+*MM54	*MM54	*MM54	*MM54	*MM54	*MM54	*MM54	*MM54	*MM54	*MM54
+*clefF4	*clefF4	*clefF4	*clefC3	*clefG2	*clefG2	*clefG2	*clefG2	*clefG2	*clefG2
+8FF/	8FF/	8FFF/	8a	8cc	8ff	8ff	8ff	8ff	8f/
+=1	=1	=1	=1	=1	=1	=1	=1	=1	=1
+16FLL	16FLL	16FFLL	8fL	8a/L	8ccL	8ccL	8ccL	8ccL	8a/L
+16G	16G	16GG	.	.	.	.	.	.	.
+16A	16A	16AA	8c	16f/LL	16aLL	16aLL	16aLL	16aLL	8cc/
+16GJJ	16GJJ	16GGJJ	.	16g/JJ	16b-JJ	16b-JJ	16b-JJ	16b-JJ	.
+16FLL	16FLL	16FFLL	8f	8a/L	8ccL	8ccL	8ccL	8ccL	8a/
+16G	16G	16GG	.	.	.	.	.	.	.
+16A	16A	16AA	8cJ	16f/LL	16aLL	16aLL	16aLL	16aLL	8f/J
+16GJJ	16GJJ	16GGJJ	.	16g/JJ	16b-JJ	16b-JJ	16b-JJ	16b-JJ	.
+16FLL	16FLL	16FFLL	8fL	8a/L	8ccL	8ccL	8ccL	8ccL	8a/L
+16E	16E	16EE	.	.	.	.	.	.	.
+16F	16F	16FF	8a	8cc/	8ff	8ff	8ff	8ff	8cc/
+16GJJ	16GJJ	16GGJJ	.	.	.	.	.	.	.
+16ALL	16ALL	16AALL	8cc	8f/	8cc	8cc	8cc	8cc	8ff/
+16B-	16B-	16BB-	.	.	.	.	.	.	.
+16A	16A	16AA	8cJ	8cc/J	8ffJ	8ffJ	8ffJ	8ffJ	8cc/J
+16GJJ	16GJJ	16GGJJ	.	.	.	.	.	.	.
+=2	=2	=2	=2	=2	=2	=2	=2	=2	=2
+*-	*-	*-	*-	*-	*-	*-	*-	*-	*-
+-----------	-----------	-----------	-----------	-----------	-----------	-----------	-----------	-----------	----------
 Suppose we wanted to extract the \'cello part. In the above encoding,
 the \'cello occupies the second spine (second field) from the left,
 hence:
@@ -451,16 +451,16 @@ generate an error message and terminate. With the **-i** option,
 
 Consider the following input:
 
-  --------- --------- --------- ---------- -----
-  `**mip`   \*\*dip   \*\*dip   \*\*blip   
-  A         a         b         x          
-  A         a         b         x          
-  \*        \*\^      \*        \*         
-  A         a1        a2        b          x
-  A         a1        a2        b          x
-  A         a1        a2        b          x
-  \*-       \*-       \*-       \*-        \*-
-  --------- --------- --------- ---------- -----
+```humdrum
+**mip	**dip	**dip	**blip	
+A	a	b	x	
+A	a	b	x	
+*	*^	*	*	
+A	a1	a2	b	x
+A	a1	a2	b	x
+A	a1	a2	b	x
+*-	*-	*-	*-	*-
+---------	---------	---------	----------	-----
 Suppose we want to extract the second spine (the first `**dip`) spine.
 Using the field option (**-f**) will generate an error message since
 this spine splits. Similarly, using the interpretation (**-i**) option
@@ -475,16 +475,16 @@ for the spine. The command
 
 will generate the following output:
 
-  --------- -----
-  `**dip`   
-  a         
-  a         
-  \*\^      
-  a1        a2
-  a1        a2
-  a1        a2
-  \*-       \*-
-  --------- -----
+```humdrum
+**dip	
+a	
+a	
+*^	
+a1	a2
+a1	a2
+a1	a2
+*-	*-
+---------	-----
 In *spine-path mode,* the **extract"** command follows a given spine
 starting at the beginning of the file, and traces the course of that
 spine throughout the input stream. If spine-path changes are encountered
@@ -936,25 +936,25 @@ whether the **yank** command is invoked *before* or *after* the
 
 **Example 12.2.** A Passage Containing Unsynchronized Phrases.
 
-  ---------- ----------
-  `**kern`   \*\*kern
-  =1-        =1-
-  2r         8r
-  `.`        {8g
-  `.`        8a
-  `.`        8b
-  =2         =2
-  8r         4cc
-  {8e        .
-  8f         4dd}
-  8a         .
-  =3         =3
-  8g         {4ee
-  8e         .
-  4d}        4ff
-  =4         =4
-  \*-        \*-
-  ---------- ----------
+```humdrum
+**kern	**kern
+=1-	=1-
+2r	8r
+.	{8g
+.	8a
+.	8b
+=2	=2
+8r	4cc
+{8e	.
+8f	4dd}
+8a	.
+=3	=3
+8g	{4ee
+8e	.
+4d}	4ff
+=4	=4
+*-	*-
+----------	----------
 The order of execution for some commands may cause some subtle
 differences. Suppose we wanted to identify the melodic intervals present
 in measures 8-32 for a work by Toru Takemitsu. The following two

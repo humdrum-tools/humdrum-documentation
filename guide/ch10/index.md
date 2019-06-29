@@ -34,16 +34,16 @@ are identified in Table 10.1.
 
 **Table 10.1**
 
-  ----------- -----------------------------------------------------------------------------------
-  -c          count the number of lines matching the regular expression
-  -f *file*   search for patterns that are specified in *file*
-  -i          ignore differences of upper- and lower-case
-  -l          just list the names of files containing a matching line
-  -n          prefix each output line with its line number
-  -h          suppress file-name prefixes (headers) in output when searching more than one file
-  -v          display all lines *not* matching the regular expression
-  -L          list names of files *not* containing the regular expression
-  ----------- -----------------------------------------------------------------------------------
+```humdrum
+-c	count	the	number	of	lines	matching	the	regular	expression
+-f	*file*	search	for	patterns	that	are	specified	in	*file*
+-i	ignore	differences	of	upper-	and	lower-case
+-l	just	list	the	names	of	files	containing	a	matching	line
+-n	prefix	each	output	line	with	its	line	number
+-h	suppress	file-name	prefixes	(headers)	in	output	when	searching	more	than	one	file
+-v	display	all	lines	*not*	matching	the	regular	expression
+-L	list	names	of	files	*not*	containing	the	regular	expression
+-----------	-----------------------------------------------------------------------------------
 *Common options for the **grep** command.*
 
 Many of the predefined Humdrum representations make use of the "common

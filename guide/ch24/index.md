@@ -57,14 +57,14 @@ file `Schenker`. Using **chmod** we can change modes related to
 *executing* a file, *reading* a file, and *writing* to a file. Possible
 mode changes include the following:
 
-  ---- -------------------------
-  +x   add execute permission
-  -x   deny execute permission
-  +r   add read permission
-  -r   deny read permission
-  +w   add write permission
-  -w   deny write permission
-  ---- -------------------------
+```humdrum
++x	add	execute	permission
+-x	deny	execute	permission
++r	add	read	permission
+-r	deny	read	permission
++w	add	write	permission
+-w	deny	write	permission
+----	-------------------------
 Having added execute permissions to the file, we can now execute the
 shell script or program. This is done simply by typing the name of the
 file; in effect, the filename becomes a new command:
@@ -499,10 +499,10 @@ consecutive perfect fifth tokens. We might store the following pattern
 in the file "template":
 
 
-  ------
-  `P5`
-  P5
-  ------
+```humdrum
+P5
+P5
+------
 (Note that if we were looking for consecutive \`fifths\' that need not
 necessarily be \`perfect,\' we could simply eliminate the letter "P"
 in each interval given in the template.)

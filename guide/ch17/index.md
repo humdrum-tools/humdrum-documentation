@@ -149,13 +149,13 @@ uniq -c sorted.alpha > unique.alpha
 will produce the following output:
 
 
-  ----- -----------
-  `1`   \*\*alpha
-  `1`   \*-
-  `3`   A
-  `2`   B
-  `1`   C
-  ----- -----------
+```humdrum
+1	**alpha
+1	*-
+3	A
+2	B
+1	C
+-----	-----------
 The prepended counts tell us that \`A\' occurs three times, \`B\' occurs
 twice, and all other records occur just once.
 
@@ -220,26 +220,26 @@ and fingering information, or dynamic markings and stem-directions, or
 whatever.
 
 
-  ----------- ---------
-  `**alpha`   \*\*bet
-  `A`         \$50
-  `B`         \$50
-  `A`         \$50
-  `A`         \$200
-  `C`         \$50
-  `B`         \$50
-  `*-`        \*-
-  ----------- ---------
+```humdrum
+**alpha	**bet
+A	$50
+B	$50
+A	$50
+A	$200
+C	$50
+B	$50
+*-	*-
+-----------	---------
 If we apply our above inventory-generating commands for the file
 "alphabet," the result will be as follows:
 
 
-  ----- --- -------
-  `1`   A   \$200
-  `2`   A   \$50
-  `2`   B   \$50
-  `1`   C   \$50
-  ----- --- -------
+```humdrum
+1	A	$200
+2	A	$50
+2	B	$50
+1	C	$50
+-----	---	-------
 Notice that the inventory is based on *entire records* containing both
 "alpha" and "bet" data. This is the reason why the alpha-bet
 data-pair "`A   $50`" is considered different from alpha-bet data
@@ -267,10 +267,10 @@ extract -i '**bet' alphabet | rid -GLId | sort | uniq -c \
 The resulting `inventory.bet` file will contain:
 
 
-  ----- -------
-  `1`   \$200
-  `5`   \$50
-  ----- -------
+```humdrum
+1	$200
+5	$50
+-----	-------
 \-- meaning 5 occurrences of the data "\$50" and 1 occurrence of
 "\$200".
 
@@ -317,11 +317,11 @@ sort inventory.alpha
 The output will be as follows:
 
 
-  ----- ---
-  `1`   C
-  `2`   B
-  `3`   A
-  ----- ---
+```humdrum
+1	C
+2	B
+3	A
+-----	---
 Now the output is sorted so that the least frequent occurrences are at
 the beginning, and the most frequent occurrences are at the end of the
 output. Incidentally, **sort** has a **-r** option that causes the
@@ -335,11 +335,11 @@ sort -r inventory.alpha
 produces the following output:
 
 
-  ----- ---
-  `3`   A
-  `2`   B
-  `1`   C
-  ----- ---
+```humdrum
+3	A
+2	B
+1	C
+-----	---
 Once again, we can amalgamate all of the required commands into a single
 pipeline. The following pipeline produces an inventory for any type of
 Humdrum input, sorted from the most common to the least common data:
@@ -462,14 +462,14 @@ E
 Without modification, our inventory would appear as follows:
 
 
-  ----- -----
-  `1`   A
-  `2`   B
-  `1`   D
-  `1`   D\#
-  `1`   E
-  `1`   F\#
-  ----- -----
+```humdrum
+1	A
+2	B
+1	D
+1	D#
+1	E
+1	F#
+-----	-----
 But this inventory distinguishes D-sharp from D-natural \-- which is not
 what we want. The answer is to filter our input so that the sharps are
 removed.
@@ -484,13 +484,13 @@ humsed 's/#//' notes | rid -GLId | sort | uniq -c
 \-- will produce the following output:
 
 
-  ----- ---
-  `1`   A
-  `2`   B
-  `2`   D
-  `1`   E
-  `1`   F
-  ----- ---
+```humdrum
+1	A
+2	B
+2	D
+1	E
+1	F
+-----	---
 
 Further Examples
 ----------------

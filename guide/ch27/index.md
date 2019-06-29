@@ -133,17 +133,17 @@ following table illustrates how these signifiers are used:
 
 **Table 26.1.**
 
-  ---------- ----------------------------------------------------------------
-  text       a single-syllable word
-  text-      a word-initiating syllable
-  -text      a word-completing syllable
-  -text-     a mid-word syllable
-  text\~     a single-syllable word beginning a hyphenated multi-word
-  \~text     a single-syllable word completing a hyphenated multi-word
-  \~text\~   a single-syllabe word continuing a hyphenated multi-word
-  \~text-    a word-initating syllable continuing a hyphenated multi-word
-  -text\~    a word-completing syllable \-- part of a hyphenated multi-word
-  ---------- ----------------------------------------------------------------
+```humdrum
+text	a	single-syllable	word
+text-	a	word-initiating	syllable
+-text	a	word-completing	syllable
+-text-	a	mid-word	syllable
+text~	a	single-syllable	word	beginning	a	hyphenated	multi-word
+~text	a	single-syllable	word	completing	a	hyphenated	multi-word
+~text~	a	single-syllabe	word	continuing	a	hyphenated	multi-word
+~text-	a	word-initating	syllable	continuing	a	hyphenated	multi-word
+-text~	a	word-completing	syllable	--	part	of	a	hyphenated	multi-word
+----------	----------------------------------------------------------------
 Both the `**text` and `**silbe` representations are able to distinguish
 different tones of voice such as spoken voice, whispered voice, laughing
 voice, emotional voice, *Sprechstimme* and humming. In addition, there
@@ -152,29 +152,29 @@ crys. Some sample signifiers are shown in Table 26.2
 
 **Table 26.2.**
 
-  ------- -------------------------------------------------------------------
-  `A-Z`   upper-case letters A to Z
-  `a-z`   lower-case letters a-z
-  `(`     open parenthesis
-  `)`     closed parenthesis
-  `{`     beginning of phrase
-  `}`     end of phrase
-  `%`     silence (rest) token (character by itself)
-  `M`     humming voice (character by itself)
-  `[`     beginning of spoken voice
-  `[[`    beginning of whisper
-  `]`     end of spoken voice
-  `]]`    end of whisper
-  `<`     beginning of *Sprechstimme*
-  `>`     *end of Sprechstimme*
-  `#`     beginning of laughing voice
-  `##`    end of laughing voice
-  `@`     laughter (no text)
-  `&`     sob or cry (no text)
-  `$`     beginning of emotional voice
-  `$$`    end of emotional voice
-  `*`     follows stressed word (`**test`) or stressed syllable (`**silbe`)
-  ------- -------------------------------------------------------------------
+```humdrum
+A-Z	upper-case	letters	A	to	Z
+a-z	lower-case	letters	a-z
+(	open	parenthesis
+)	closed	parenthesis
+{	beginning	of	phrase
+}	end	of	phrase
+%	silence	(rest)	token	(character	by	itself)
+M	humming	voice	(character	by	itself)
+[	beginning	of	spoken	voice
+[[	beginning	of	whisper
+]	end	of	spoken	voice
+]]	end	of	whisper
+<	beginning	of	*Sprechstimme*
+>	*end	of	Sprechstimme*
+#	beginning	of	laughing	voice
+##	end	of	laughing	voice
+@	laughter	(no	text)
+&	sob	or	cry	(no	text)
+$	beginning	of	emotional	voice
+$$	end	of	emotional	voice
+*	follows	stressed	word	(**test)	or	stressed	syllable	(**silbe)
+-------	-------------------------------------------------------------------
 *Signifiers common to **\*\*text** and **\*\*silbe***
 
 
@@ -764,14 +764,14 @@ rating for all 10 participants.
 
 **Table 26.4. Average Emotionality Ratings for English Words.**
 
-  -------- ------
-  begin    +3.8
-  river    +4.2
-  friend   +5.2
-  love     +8.6
-  hate     -9.7
-  detest   -9.8
-  -------- ------
+```humdrum
+begin	+3.8
+river	+4.2
+friend	+5.2
+love	+8.6
+hate	-9.7
+detest	-9.8
+--------	------
 Clearly, such a rating system might allow us to create a tool that would
 automatically search a large database and identify those vocal works
 whose lyrics are most emotionally charged. One way to generate a crude

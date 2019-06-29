@@ -147,19 +147,19 @@ encoded: one is unlabelled, a second is labelled `long` and a third is
 labelled `weird`.
 
 
-  --------------------- ---------------------
-  `**example`           `**example`
-  `*>[A,B,A,C]`         `*>[A,B,A,C]`
-  `*>long[A,A,B,A,C]`   `*>long[A,A,B,A,C]`
-  `*>weird[C,A,C]`      `*>weird[C,A,C]`
-  `*>A`                 `*>A`
-  `data-A`              `data-A`
-  `*>B`                 `*>B`
-  `data-B`              `data-B`
-  `*>C`                 `*>C`
-  `data-C`              `data-C`
-  `*-`                  `*-`
-  --------------------- ---------------------
+```humdrum
+**example	**example
+*>[A,B,A,C]	*>[A,B,A,C]
+*>long[A,A,B,A,C]	*>long[A,A,B,A,C]
+*>weird[C,A,C]	*>weird[C,A,C]
+*>A	*>A
+data-A	data-A
+*>B	*>B
+data-B	data-B
+*>C	*>C
+data-C	data-C
+*-	*-
+---------------------	---------------------
 Consider the following command:
 
 ```bash
@@ -169,17 +169,17 @@ thru -v weird file
 The corresponding "through-composed" output would be as follows:
 
 
-  ------------- -------------
-  `**example`   `**example`
-  `*thru`       `*thru`
-  `*>C`         `*>C`
-  `data-C`      `data-C`
-  `*>A`         `*>A`
-  `data-A`      `data-A`
-  `*>C`         `*>C`
-  `data-C`      `data-C`
-  `*-`          `*-`
-  ------------- -------------
+```humdrum
+**example	**example
+*thru	*thru
+*>C	*>C
+data-C	data-C
+*>A	*>A
+data-A	data-A
+*>C	*>C
+data-C	data-C
+*-	*-
+-------------	-------------
 Notice that all expansion-list records have been eliminated from the
 output. A `*thru` tandem interpretation has been added to all output
 spines immediately following the exclusive interpretation. Also notice
@@ -342,11 +342,11 @@ signs, hence `2nd Theme` is a subsection. When **yank** is invoked, it
 will extract the identified section up to the next section of
 comparable level. The operation is illustrated in the following sample
 commands: indicating the first and second themes.
-  ------------------------------------- --------------------------------------
-  `yank -t Form -s '1st Theme' -r 1`    (extracts up to `>Form>>2nd Theme`)
-  `yank -t Form -s '2nd Theme' -r 1`    (extracts up to `>Form>Development`)
-  `yank -t Form -s 'Exposition' -r 1`   (extracts up to `>Form>Development`)
-  ------------------------------------- --------------------------------------
+```humdrum
+yank	-t	Form	-s	'1st	Theme'	-r	1	(extracts	up	to	>Form>>2nd	Theme)
+yank	-t	Form	-s	'2nd	Theme'	-r	1	(extracts	up	to	>Form>Development)
+yank	-t	Form	-s	'Exposition'	-r	1	(extracts	up	to	>Form>Development)
+-------------------------------------	--------------------------------------
 For example, the second theme from the recapitulation can be extracted
 as follows:
 ```bash
@@ -828,32 +828,32 @@ Using the above data, the result is:
 
 `` !! Franz Schubert, `Das Wandern' from "Die Schoene Muellerin"  ``
 >
-  ----------------- -----------------
-  \*\*kern          \*\*silbe
-  \*k\[b-e-\]       \*Deutsch
-  \*\>\[1,1,1,1\]   \*\>\[1,1,1,1\]
-  \*                \*solo
-  \*\>1             \*\>1
-  8f                Das
-  =5                =5
-  8f                sehn
-  8b-               wir
-  8a                auch
-  8ee-              den
-  =6                =6
-  (16dd             Rä-
-  16ff)             \|
-  (16dd             -dern
-  16b-)             \|
-  8f                ab,
-  8dd               den
-  =7                =7
-  (8.cc             Rä-
-  16a)              \|
-  8b-               -dern!
-  8r                \%
-  \*-               \*-
-  ----------------- -----------------
+```humdrum
+**kern	**silbe
+*k[b-e-]	*Deutsch
+*>[1,1,1,1]	*>[1,1,1,1]
+*	*solo
+*>1	*>1
+8f	Das
+=5	=5
+8f	sehn
+8b-	wir
+8a	auch
+8ee-	den
+=6	=6
+(16dd	Rä-
+16ff)	|
+(16dd	-dern
+16b-)	|
+8f	ab,
+8dd	den
+=7	=7
+(8.cc	Rä-
+16a)	|
+8b-	-dern!
+8r	%
+*-	*-
+-----------------	-----------------
 >
 Notice that all of the tandem interpretations related to the strophe
 organization are eliminated from the output.
@@ -922,35 +922,35 @@ sections other than a certain type via the **-t** option.
 The basic ideas introduced in this chapter are summarized in the
 following table.
 
-  ----------------------------- --------------------------------------------------------------------------
-  section                       passage defined by a section label, ends with occurrence of
-                                section label of identical or higher level
-  section label                 tandem interpretation beginning: `*>` and not containing
-                                square brackets
-  section type                  first part of section label: `*>type>`
-  expansion list                tandem interpretation beginning `*>` and containing a list of
-                                section labels in square brackets, e.g. `*>[A,B,A]`
-  version                       a labelled expansion list, e.g. `*>ternary[A,B,A]`
-  level                         hierarchical level of a section, designed by the number of \`\>\'
-                                following the section type, e.g. `*>type>>>name` is lower
-                                than `*>type>name`
-  abbreviated format            Humdrum document encoded using expansion lists
-  through-composed              Humdrum document encoded without expansion lists
-  `thru`                        command to create a through-composed document from an
-                                abbrevatiated format
-  `thru -v`                     command to create a particular version of a through-composed
-                                document
-  `yank -s`                     command to extract sections
-  `yank -t -s`                  command to extract sections limited to sections of a particular type
-  strophe                       1\. alternative spine path, 2. command for extracting a particular
-                                strophe
-  strophic passage initiator    tandem interpretation indicating the beginning of a strophe (`*strophe`)
-  strophic passage terminator   tandem interpretation indicating the end of a strophe (`*S-`)
-  strophe label                 tandem interpretation labelling one of several alternative spine-
-                                paths, begins `*S/`
-  strophe end indicator         tandem interpretation indicating the end of some spine path,
-                                e.g. `*S/fin`
-  ----------------------------- --------------------------------------------------------------------------
+```humdrum
+section	passage	defined	by	a	section	label,	ends	with	occurrence	of
+section	label	of	identical	or	higher	level
+section	label	tandem	interpretation	beginning:	*>	and	not	containing
+square	brackets
+section	type	first	part	of	section	label:	*>type>
+expansion	list	tandem	interpretation	beginning	*>	and	containing	a	list	of
+section	labels	in	square	brackets,	e.g.	*>[A,B,A]
+version	a	labelled	expansion	list,	e.g.	*>ternary[A,B,A]
+level	hierarchical	level	of	a	section,	designed	by	the	number	of	>'
+following	the	section	type,	e.g.	*>type>>>name	is	lower
+than	*>type>name
+abbreviated	format	Humdrum	document	encoded	using	expansion	lists
+through-composed	Humdrum	document	encoded	without	expansion	lists
+thru	command	to	create	a	through-composed	document	from	an
+abbrevatiated	format
+thru	-v	command	to	create	a	particular	version	of	a	through-composed
+document
+yank	-s	command	to	extract	sections
+yank	-t	-s	command	to	extract	sections	limited	to	sections	of	a	particular	type
+strophe	1.	alternative	spine	path,	2.	command	for	extracting	a	particular
+strophe
+strophic	passage	initiator	tandem	interpretation	indicating	the	beginning	of	a	strophe	(*strophe)
+strophic	passage	terminator	tandem	interpretation	indicating	the	end	of	a	strophe	(*S-)
+strophe	label	tandem	interpretation	labelling	one	of	several	alternative	spine-
+paths,	begins	*S/
+strophe	end	indicator	tandem	interpretation	indicating	the	end	of	some	spine	path,
+e.g.	*S/fin
+-----------------------------	--------------------------------------------------------------------------
 >
 *Summary of terms related to sections and strophes*
 In [Chapter 37](/guide/ch37) we will see further examples of how

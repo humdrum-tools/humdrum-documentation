@@ -40,7 +40,7 @@ HUMDRUM	DATA
   Number of comments: 14
   Number of interpretations: 7
   Number of records: 112
-  ------------------------------
+```humdrum
 
 Most commands provide *options* that will modify the operation of the
 command in a particular way. In UNIX-style commands, options follow

@@ -277,25 +277,25 @@ extract -i '**silbe' file2 | humsed 's/[.,;:!?]//g' | tr A-Z a-z | text \
 
 Suppose that our two vocabulary inventories appear as follows:
 
-  ------------------ ------------------
-  **Inventory 1:**   **Inventory 2:**
-                     
-  domine             a
-  et                 coronasti
-  eum                domine
-  filio              et
-  gloria             eum
-  in                 filio
-  jerusalem          gloria
-  orietur            honore
-  patri              manuum
-  sancto             oper
-  spiritui           patri
-  super              sancto
-  te                 spiritui
-  videbitur          super
-                     tuarum
-  ------------------ ------------------
+```humdrum
+**Inventory	1:**	**Inventory	2:**
+
+domine	a
+et	coronasti
+eum	domine
+filio	et
+gloria	eum
+in	filio
+jerusalem	gloria
+orietur	honore
+patri	manuum
+sancto	oper
+spiritui	patri
+super	sancto
+te	spiritui
+videbitur	super
+tuarum
+------------------	------------------
 Notice that a number of words are present in both texts, such as
 *domine*, *et*, *eum*, *filio*, and so on. Identifying the common
 vocabulary items is easily done by the UNIX **comm** command; **comm**
@@ -316,28 +316,28 @@ will produce the following output. The first and second columns identify
 words unique to `inventory1` and `inventory1`, respectively. The third
 column identifies the common lines:
 
-  ----------- -- -- ----------- -- -- ----------
-                    `a`               
-                    coronasti         
-                                      domine
-                                      et
-                                      eum
-                                      filio
-                                      gloria
-                    honore            
-  in                                  
-  jerusalem                           
-                    manuum            
-                    oper              
-  orietur                             
-                                      patri
-                                      sancto
-                                      spiritui
-                                      super
-  te                                  
-                    tuarum            
-  videbitur                           
-  ----------- -- -- ----------- -- -- ----------
+```humdrum
+a	
+coronasti	
+domine
+et
+eum
+filio
+gloria
+honore	
+in	
+jerusalem	
+manuum	
+oper	
+orietur	
+patri
+sancto
+spiritui
+super
+te	
+tuarum	
+videbitur	
+-----------	--	--	-----------	--	--	----------
 In the above case, five words are unique to `inventory1`, six words are
 unique to `inventory2` and nine words are common to both.
 

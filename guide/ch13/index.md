@@ -46,49 +46,49 @@ present in the concatenated output. Suppose we had three files, each of
 which encoded a single measure of music. Concatenating them together
 might result in an output such as the following:
 
-  ------------- ------------ ------------ ------------
-  `!! File 1`                             
-  `**kern`      \*\*kern     \*\*kern     \*\*kern
-  `*M4/4`       \*M4/4       \*M4/4       \*M4/4
-  `*G:`         \*G:         \*G:         \*G:
-  `*k[f#]`      \*k\[f\#\]   \*k\[f\#\]   \*k\[f\#\]
-  `4GG`         4B           4d           4g
-  `=1`          =1           =1           =1
-  `4GG`         4d           4g           4b
-  `4FF#`        4d           \[4a         4dd
-  `8GG`         4d           8a\]         4b
-  `8BB`         .            \[8g         .
-  `4D`          4d           8g\]         4a
-  `.`           .            8f\#         .
-  `*-`          \*-          \*-          \*-
-  `!! File 2`                             
-  `**kern`      \*\*kern     \*\*kern     \*\*kern
-  `*M4/4`       \*M4/4       \*M4/4       \*M4/4
-  `*k[f#]`      \*k\[f\#\]   \*k\[f\#\]   \*k\[f\#\]
-  `=2`          =2           =2           =2
-  `8G`          4d           4g           4b
-  `8F#`         .            .            .
-  `4E`          4e           4g           4cc\#
-  `4D;`         4A;          4f\#;        4dd;
-  `8A`          4cn          4a           4ee
-  `8G`          .            .            .
-  `*-`          \*-          \*-          \*-
-  `!! File 3`                             
-  `**kern`      \*\*kern     \*\*kern     \*\*kern
-  `*M4/4`       \*M4/4       \*M4/4       \*M4/4
-  `*k[f#]`      \*k\[f\#\]   \*k\[f\#\]   \*k\[f\#\]
-  `*k[f#]`      \*k\[f\#\]   \*k\[f\#\]   \*k\[f\#\]
-  `=3`          =3           =3           =3
-  `4F#`         4d           \[4a         8dd
-  `.`           .            .            8cc
-  `4G`          4d           8a\]         4b
-  `.`           .            \[8g         .
-  `8C#`         8e           8g\]         4a
-  `8D#`         4B           8f\#         .
-  `8E`          .            8e           8g
-  `8F#`         8A           8d           8a
-  `*-`          \*-          \*-          \*-
-  ------------- ------------ ------------ ------------
+```humdrum
+!!	File	1	
+**kern	**kern	**kern	**kern
+*M4/4	*M4/4	*M4/4	*M4/4
+*G:	*G:	*G:	*G:
+*k[f#]	*k[f#]	*k[f#]	*k[f#]
+4GG	4B	4d	4g
+=1	=1	=1	=1
+4GG	4d	4g	4b
+4FF#	4d	[4a	4dd
+8GG	4d	8a]	4b
+8BB	.	[8g	.
+4D	4d	8g]	4a
+.	.	8f#	.
+*-	*-	*-	*-
+!!	File	2	
+**kern	**kern	**kern	**kern
+*M4/4	*M4/4	*M4/4	*M4/4
+*k[f#]	*k[f#]	*k[f#]	*k[f#]
+=2	=2	=2	=2
+8G	4d	4g	4b
+8F#	.	.	.
+4E	4e	4g	4cc#
+4D;	4A;	4f#;	4dd;
+8A	4cn	4a	4ee
+8G	.	.	.
+*-	*-	*-	*-
+!!	File	3	
+**kern	**kern	**kern	**kern
+*M4/4	*M4/4	*M4/4	*M4/4
+*k[f#]	*k[f#]	*k[f#]	*k[f#]
+*k[f#]	*k[f#]	*k[f#]	*k[f#]
+=3	=3	=3	=3
+4F#	4d	[4a	8dd
+.	.	.	8cc
+4G	4d	8a]	4b
+.	.	[8g	.
+8C#	8e	8g]	4a
+8D#	4B	8f#	.
+8E	.	8e	8g
+8F#	8A	8d	8a
+*-	*-	*-	*-
+-------------	------------	------------	------------
 Notice that each complete measure ends with spine-path terminators and
 that the [`**kern`](/rep/kern) exclusive
 interpretations are repeated. This organization has a number of
@@ -109,20 +109,20 @@ eliminate various kinds of records. Each option for **rid** eliminates a
 different class of records. Here are the record classes with their
 associated options:
 
-  ---- -------------------------------------------------------------
-  -G   eliminate all global comments
-  -g   eliminate only global comments that are empty
-  -L   eliminate all local comments
-  -l   eliminate only local comments that are empty
-  -I   eliminate all interpretations
-  -i   eliminate only null interpretations
-  -D   eliminate all data records
-  -d   eliminate only null data records
-  -T   eliminate all tandem interpretations
-  -t   eliminate duplicate (repeated) tandem interpretations
-  -U   eliminate unnecessary exclusive interpretations (see below)
-  -u   same as -U
-  ---- -------------------------------------------------------------
+```humdrum
+-G	eliminate	all	global	comments
+-g	eliminate	only	global	comments	that	are	empty
+-L	eliminate	all	local	comments
+-l	eliminate	only	local	comments	that	are	empty
+-I	eliminate	all	interpretations
+-i	eliminate	only	null	interpretations
+-D	eliminate	all	data	records
+-d	eliminate	only	null	data	records
+-T	eliminate	all	tandem	interpretations
+-t	eliminate	duplicate	(repeated)	tandem	interpretations
+-U	eliminate	unnecessary	exclusive	interpretations	(see	below)
+-u	same	as	-U
+----	-------------------------------------------------------------
 Null records are devoid of content. For example, null interpretations
 consist of a single asterisk in each spine; null data record consists of
 just null data tokens (.) in each spine; null local comments consist of
@@ -187,39 +187,39 @@ cat bar1 bar2 bar3 | rid -ut
 
 The resulting output is given below:
 
-  ------------- ------------ ------------ ------------
-  `!! File 1`                             
-  `**kern`      \*\*kern     \*\*kern     \*\*kern
-  `*M4/4`       \*M4/4       \*M4/4       \*M4/4
-  `*k[f#]`      \*k\[f\#\]   \*k\[f\#\]   \*k\[f\#\]
-  `4GG`         4B           4d           4g
-  `=1`          =1           =1           =1
-  `4GG`         4d           4g           4b
-  `4FF#`        4d           \[4a         4dd
-  `8GG`         4d           8a\]         4b
-  `8BB`         .            \[8g         .
-  `4D`          4d           8g\]         4a
-  `.`           .            8f\#         .
-  `!! File 2`                             
-  `=2`          =2           =2           =2
-  `8G`          4d           4g           4b
-  `8F#`         .            .            .
-  `4E`          4e           4g           4cc\#
-  `4D;`         4A;          4f\#;        4dd;
-  `8A`          4cn          4a           4ee
-  `8G`          .            .            .
-  `!! File 3`                             
-  `=3`          =3           =3           =3
-  `4F#`         4d           \[4a         8dd
-  `.`           .            .            8cc
-  `4G`          4d           8a\]         4b
-  `.`           .            \[8g         .
-  `8C#`         8e           8g\]         4a
-  `8D#`         4B           8f\#         .
-  `8E`          .            8e           8g
-  `8F#`         8A           8d           8a
-  `*-`          \*-          \*-          \*-
-  ------------- ------------ ------------ ------------
+```humdrum
+!!	File	1	
+**kern	**kern	**kern	**kern
+*M4/4	*M4/4	*M4/4	*M4/4
+*k[f#]	*k[f#]	*k[f#]	*k[f#]
+4GG	4B	4d	4g
+=1	=1	=1	=1
+4GG	4d	4g	4b
+4FF#	4d	[4a	4dd
+8GG	4d	8a]	4b
+8BB	.	[8g	.
+4D	4d	8g]	4a
+.	.	8f#	.
+!!	File	2	
+=2	=2	=2	=2
+8G	4d	4g	4b
+8F#	.	.	.
+4E	4e	4g	4cc#
+4D;	4A;	4f#;	4dd;
+8A	4cn	4a	4ee
+8G	.	.	.
+!!	File	3	
+=3	=3	=3	=3
+4F#	4d	[4a	8dd
+.	.	.	8cc
+4G	4d	8a]	4b
+.	.	[8g	.
+8C#	8e	8g]	4a
+8D#	4B	8f#	.
+8E	.	8e	8g
+8F#	8A	8d	8a
+*-	*-	*-	*-
+-------------	------------	------------	------------
 Of course care should be exercised when concatenating inputs together.
 Although an output may conform to the Humdrum syntax, the result can
 nevertheless violate conventions for a specific representation such as
@@ -271,19 +271,19 @@ assemble letters numbers
 
 The resulting output is:
 
-  ----------------------- -------------
-  `!! Assemble example`   
-  `!! File 1`             
-  `!! File 2`             
-  `**Letters`             \*\*Numbers
-  `! A to E`              ! 1 to 5
-  `A`                     1
-  `B`                     2
-  `C`                     3
-  `D`                     4
-  `E`                     5
-  `*-`                    \*-
-  ----------------------- -------------
+```humdrum
+!!	Assemble	example	
+!!	File	1	
+!!	File	2	
+**Letters	**Numbers
+!	A	to	E	!	1	to	5
+A	1
+B	2
+C	3
+D	4
+E	5
+*-	*-
+-----------------------	-------------
 Note the following: (1) The spines are joined side by side from left to
 right in the same order as specified on the command line. (2) Local
 comments are preserved in their appropriate spines. (3) When identical
@@ -301,37 +301,37 @@ In many cases, the input files will have dissimilar lengths. The
 For example, in the above case, if the `numbers` file contained only the
 numbers 1 to 3, the assembled output would appear as follows:
 
-  ----------------------- -------------
-  `!! Assemble example`   
-  `!! File 1`             
-  `!! File 2`             
-  `**Letters`             \*\*Numbers
-  `! A to E`              ! 1 to 3
-  `A`                     1
-  `B`                     2
-  `C`                     3
-  `*`                     \*-
-  `D`                     
-  `E`                     
-  `*-`                    
-  ----------------------- -------------
+```humdrum
+!!	Assemble	example	
+!!	File	1	
+!!	File	2	
+**Letters	**Numbers
+!	A	to	E	!	1	to	3
+A	1
+B	2
+C	3
+*	*-
+D	
+E	
+*-	
+-----------------------	-------------
 If the order of the input files was reversed, **assemble** would produce
 an output with the appropriate spine-path changes:
 
-  ----------------------- -------------
-  `!! Assemble example`   
-  `!! File 2`             
-  `!! File 1`             
-  `**Numbers`             \*\*Letters
-  `! 1 to 3`              ! A to E
-  `1`                     A
-  `2`                     B
-  `3`                     C
-  `*-`                    \*
-  `D`                     
-  `E`                     
-  `*-`                    
-  ----------------------- -------------
+```humdrum
+!!	Assemble	example	
+!!	File	2	
+!!	File	1	
+**Numbers	**Letters
+!	1	to	3	!	A	to	E
+1	A
+2	B
+3	C
+*-	*
+D	
+E	
+*-	
+-----------------------	-------------
 Note that if all of the input files conform to the Humdrum syntax, then
 [**assemble**](/tool/assemble) guarantees that the assembled
 output will also conform to the Humdrum syntax.
@@ -401,16 +401,16 @@ assemble file1.tb file2
 
 will result in the following two-part score:
 
-  ------------- ----------
-  `!! File 1`   
-  `!! File 2`   
-  `**kern`      \*\*kern
-  `4c`          8e
-  `.`           8g
-  `4d`          8f
-  `.`           8g
-  `*-`          \*-
-  ------------- ----------
+```humdrum
+!!	File	1	
+!!	File	2	
+**kern	**kern
+4c	8e
+.	8g
+4d	8f
+.	8g
+*-	*-
+-------------	----------
 Suppose that `file2` also contained a quarter-note. For example,
 consider a revised `file2`:
 
@@ -428,16 +428,16 @@ command to this file (using the same 8th-note time-base value).
 Assembling the two "time-based" files would produce the following
 result:
 
-  ------------- ----------
-  `!! File 1`   
-  `!! File 2`   
-  `**kern`      \*\*kern
-  `4c`          8e
-  `.`           8g
-  `4d`          4f
-  `.`           .
-  `*-`          \*-
-  ------------- ----------
+```humdrum
+!!	File	1	
+!!	File	2	
+**kern	**kern
+4c	8e
+.	8g
+4d	4f
+.	.
+*-	*-
+-------------	----------
 Notice that we have a spurious null data record in the last line; both
 parts encode null tokens. For most processing, the presence of null data
 records is inconsequential. However, if we wish, these null data records
@@ -451,29 +451,29 @@ assemble file1.tb file2.tb | rid -d
 
 would result in the following output:
 
-  ------------- ----------
-  `!! File 1`   
-  `!! File 2`   
-  `**kern`      \*\*kern
-  `4c`          8e
-  `.`           8g
-  `4d`          4f
-  `*-`          \*-
-  ------------- ----------
+```humdrum
+!!	File	1	
+!!	File	2	
+**kern	**kern
+4c	8e
+.	8g
+4d	4f
+*-	*-
+-------------	----------
 The [**timebase**](/tool/timebase) command can be applied to
 multi-spine inputs as well as single-spine inputs. Consider, the
 following input:
 
 
-  ---------- ---------- ---------- ---------- ----------------
-  `**kern`   \*\*kern   \*\*kern   \*\*kern   \*\*commentary
-  `4g`       8.r        8.cc       16ee       2nd inversion
-  `.`        .          .          8ff        .
-  `.`        32b        16cc       16gg       clash
-  `.`        32a        .          .          .
-  `8f`       8cc        8dd        8ff        suspension
-  `*-`       \*-        \*-        \*-        \*-
-  ---------- ---------- ---------- ---------- ----------------
+```humdrum
+**kern	**kern	**kern	**kern	**commentary
+4g	8.r	8.cc	16ee	2nd	inversion
+.	.	.	8ff	.
+.	32b	16cc	16gg	clash
+.	32a	.	.	.
+8f	8cc	8dd	8ff	suspension
+*-	*-	*-	*-	*-
+----------	----------	----------	----------	----------------
 The following command will cause the addition of null data records so
 that each data record represents an elapsed time of a 32nd duration.
 Incidentally, notice that any spine contain non-rhythmic data \-- such
@@ -487,23 +487,23 @@ timebase -t 32 Corelli
 The corresponding output is as follows.
 
 
-  ---------- ---------- ---------- ---------- ----------------
-  `**kern`   \*\*kern   \*\*kern   \*\*kern   \*\*commentary
-  `*tb32`    \*tb32     \*tb32     \*tb32     \*tb32
-  `4g`       8.r        8.cc       16ee       2nd inversion
-  `.`        .          .          .          .
-  `.`        .          .          8ff        .
-  `.`        .          .          .          .
-  `.`        .          .          .          .
-  `.`        .          .          .          .
-  `.`        32b        16cc       16gg       clash
-  `.`        32a        .          .          .
-  `8f`       8cc        8dd        8ff        suspension
-  `.`        .          .          .          .
-  `.`        .          .          .          .
-  `.`        .          .          .          .
-  `*-`       \*-        \*-        \*-        \*-
-  ---------- ---------- ---------- ---------- ----------------
+```humdrum
+**kern	**kern	**kern	**kern	**commentary
+*tb32	*tb32	*tb32	*tb32	*tb32
+4g	8.r	8.cc	16ee	2nd	inversion
+.	.	.	.	.
+.	.	.	8ff	.
+.	.	.	.	.
+.	.	.	.	.
+.	.	.	.	.
+.	32b	16cc	16gg	clash
+.	32a	.	.	.
+8f	8cc	8dd	8ff	suspension
+.	.	.	.	.
+.	.	.	.	.
+.	.	.	.	.
+*-	*-	*-	*-	*-
+----------	----------	----------	----------	----------------
 Notice that **timebase** has added a tandem interpretation (`*tb32`).
 This indicates that the output has been processed so that each
 non-barline data record represents an elapsed duration equivalent to a
@@ -524,26 +524,26 @@ a half-note, or "6th" notes.) We need to create an output whose
 rhythmic structure will appear as follows:
 
 
-  ---------- ----------
-  `**kern`   \*\*kern
-  `*M2/4`    \*M2/4
-  `=1`       =1
-  `6`        8
-  `.`        8
-  `6`        .
-  `.`        8
-  `6`        .
-  `.`        8
-  `=2`       =2
-  `6`        8
-  `.`        8
-  `6`        .
-  `.`        8
-  `6`        .
-  `.`        8
-  `=3`       =3
-  `*-`       \*-
-  ---------- ----------
+```humdrum
+**kern	**kern
+*M2/4	*M2/4
+=1	=1
+6	8
+.	8
+6	.
+.	8
+6	.
+.	8
+=2	=2
+6	8
+.	8
+6	.
+.	8
+6	.
+.	8
+=3	=3
+*-	*-
+----------	----------
 In this case, choosing a time-base according to the shortest duration
 (8th) will not work since a 6th note is not an integral multiple of the
 eighth duration. We need to find a *common duration factor* for both

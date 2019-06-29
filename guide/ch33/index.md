@@ -36,60 +36,60 @@ Kirshenbaum. The scheme is suitable for representing the basic phonemes
 found in most of the world\'s languages. The table below summarizes the
 `**IPA` mappings for various phonemes.
 
-  -------------- ---------------------------------------------------------------------------------------------------
-  @              **schwa**§ as in (unaccented) *banana, collide, alone* or (accented) *humdrum*
-  V              **schwa** (IPA symbol: \\(an); as in the British pronunciation of *hut*
-  R              **R**\\(dd; as in *burn, operation, dirt, urgent*
-  &              short **a** (IPA symbol: \\(ae); as in *mat, map, mad, gag, snap, patch*
-  A              **ä** (IPA symbol: *a*); as in *bother, cot*, and, with most American speakers,
-                 *father, cart*
-  a              **a\\(de**; *father* as pronounced by speakers who do not rhyme it with *bother*.
-  E              short **e** (IPA symbol: \\(\*e or E); as in *get, bed, peck, edge*
-  i              long **e** (IPA symbol: e\\(ma); as in *beat, greed, evenly, easy*
-  I              short **i** (IPA symbol: I or \\(\*i); as in *tip, banish, active*
-  o              **o** as in *oboe, trombone, banjo*
-  O              o\\(de (IPA symbol: o or upside-down \`c\'); as in *law, all, shawm*
-  W              **oe** digraph (IPA symbol: \\(oe); as in the French *boeuf*, German *Hölle*
-  u              **ü**; as in *rule, youth, few, ooze*
-  U              **u\\(de\'** (IPA symbol: \\(\*u or U or \\(\*w); as in *pull, wood, book*
-  y              **ue**; as in the German *füllen*, *hübsch*, or French *rue*
-  *vowel*\~      following a vowel\* indicates a vowel or diphthong pronounced with open
-                 nasal passages; as in the French "un bon vin blanc" (`W~ bo~ va~ blA~`)
-                 
-  b              **b** (IPA symbol: b or c\\(hc\'); as in *beam, cabin, rob*
-  d              **d**; as in *deed, dulcimer, adder*
-  f              **f**; as in *fugue, staff*, *forte*
-  g              **g**; as in *guitar, fagot, gig*
-  h              **h**; as in *hear, ahead, horn*
-  k              **k**; as in *cook, take, score, ache*
-  x              **K** (IPA symbol: k); as in the German *ich, Buch*
-  l              **l**; as in *libretto, Lully, pool*
-  m              **m**; as in *music, limb, hymn*
-  n              **n**; as in *no, instrument, blown*
-  N              **eng** (IPA symbol: \`n\' with a tail); as in *sing, fingering, ink*
-  p              **p**; as in *piano, beeper, lip*
-  r              **r**; as in *reed, organ, car*
-  s              **s**; as in *soprano, cymbal, source, bass*
-  S              **sh** \["esh"\] (IPA symbol: \\(It\\(Im\\(Ib\'); as in *sharp, crescendo, special, percussion*
-  t              **t**; as in *tempo, tie, attacca, minuet*
-  T              **th** \["thorn"\] (IPA symbol: \\(\*h); as in *thin, path, ether*
-  D              **th** \["eth"\] (IPA symbol: d\~) as in *then, rhythm, smooth*
-  v              **v**; as in *voice, vivace, live*
-  w              **w**; as in *we, away*
-  j              **j**; as in *yes, Johann, cue, onion*
-  z              **z**; as in *zone, raise, xylophone, jazz*
-  Z              **zh** \["yogh"\\(sc\]; as in *measure, vision, azure*
-  *consonant*-   following a consonant (l-, n-, m-, or N-)\*\* indicates a consonant preceded
-                 by a *schwa* that is pronounced as an independent syllable; as in battle,
-                 mitten, eaten
-  *consonant*;   following a consonant,§§ indicates that the front of the tongue is
-                 positioned as in the beginning of the word \`yard\'
-                 
-  \^             preceding phoneme is palatalized
-  \\\'           primary stress (should precede stressed sound)
-  ,              secondary stress (should precede stressed sound)
-  \%             silence signifier
-  -------------- ---------------------------------------------------------------------------------------------------
+```humdrum
+@	**schwa**§	as	in	(unaccented)	*banana,	collide,	alone*	or	(accented)	*humdrum*
+V	**schwa**	(IPA	symbol:	(an);	as	in	the	British	pronunciation	of	*hut*
+R	**R**(dd;	as	in	*burn,	operation,	dirt,	urgent*
+&	short	**a**	(IPA	symbol:	(ae);	as	in	*mat,	map,	mad,	gag,	snap,	patch*
+A	**ä**	(IPA	symbol:	*a*);	as	in	*bother,	cot*,	and,	with	most	American	speakers,
+*father,	cart*
+a	**a(de**;	*father*	as	pronounced	by	speakers	who	do	not	rhyme	it	with	*bother*.
+E	short	**e**	(IPA	symbol:	(*e	or	E);	as	in	*get,	bed,	peck,	edge*
+i	long	**e**	(IPA	symbol:	e(ma);	as	in	*beat,	greed,	evenly,	easy*
+I	short	**i**	(IPA	symbol:	I	or	(*i);	as	in	*tip,	banish,	active*
+o	**o**	as	in	*oboe,	trombone,	banjo*
+O	o(de	(IPA	symbol:	o	or	upside-down	c');	as	in	*law,	all,	shawm*
+W	**oe**	digraph	(IPA	symbol:	(oe);	as	in	the	French	*boeuf*,	German	*Hölle*
+u	**ü**;	as	in	*rule,	youth,	few,	ooze*
+U	**u(de'**	(IPA	symbol:	(*u	or	U	or	(*w);	as	in	*pull,	wood,	book*
+y	**ue**;	as	in	the	German	*füllen*,	*hübsch*,	or	French	*rue*
+*vowel*~	following	a	vowel*	indicates	a	vowel	or	diphthong	pronounced	with	open
+nasal	passages;	as	in	the	French	"un	bon	vin	blanc"	(W~	bo~	va~	blA~)
+
+b	**b**	(IPA	symbol:	b	or	c(hc');	as	in	*beam,	cabin,	rob*
+d	**d**;	as	in	*deed,	dulcimer,	adder*
+f	**f**;	as	in	*fugue,	staff*,	*forte*
+g	**g**;	as	in	*guitar,	fagot,	gig*
+h	**h**;	as	in	*hear,	ahead,	horn*
+k	**k**;	as	in	*cook,	take,	score,	ache*
+x	**K**	(IPA	symbol:	k);	as	in	the	German	*ich,	Buch*
+l	**l**;	as	in	*libretto,	Lully,	pool*
+m	**m**;	as	in	*music,	limb,	hymn*
+n	**n**;	as	in	*no,	instrument,	blown*
+N	**eng**	(IPA	symbol:	n'	with	a	tail);	as	in	*sing,	fingering,	ink*
+p	**p**;	as	in	*piano,	beeper,	lip*
+r	**r**;	as	in	*reed,	organ,	car*
+s	**s**;	as	in	*soprano,	cymbal,	source,	bass*
+S	**sh**	["esh"]	(IPA	symbol:	(It(Im(Ib');	as	in	*sharp,	crescendo,	special,	percussion*
+t	**t**;	as	in	*tempo,	tie,	attacca,	minuet*
+T	**th**	["thorn"]	(IPA	symbol:	(*h);	as	in	*thin,	path,	ether*
+D	**th**	["eth"]	(IPA	symbol:	d~)	as	in	*then,	rhythm,	smooth*
+v	**v**;	as	in	*voice,	vivace,	live*
+w	**w**;	as	in	*we,	away*
+j	**j**;	as	in	*yes,	Johann,	cue,	onion*
+z	**z**;	as	in	*zone,	raise,	xylophone,	jazz*
+Z	**zh**	["yogh"(sc];	as	in	*measure,	vision,	azure*
+*consonant*-	following	a	consonant	(l-,	n-,	m-,	or	N-)**	indicates	a	consonant	preceded
+by	a	*schwa*	that	is	pronounced	as	an	independent	syllable;	as	in	battle,
+mitten,	eaten
+*consonant*;	following	a	consonant,§§	indicates	that	the	front	of	the	tongue	is
+positioned	as	in	the	beginning	of	the	word	yard'
+
+^	preceding	phoneme	is	palatalized
+'	primary	stress	(should	precede	stressed	sound)
+,	secondary	stress	(should	precede	stressed	sound)
+%	silence	signifier
+--------------	---------------------------------------------------------------------------------------------------
 *Summary of *\*\*IPA* Signifiers*
 
 -   The IPA *schwa* is notated as an upside-down \`e\'.
@@ -119,16 +119,16 @@ successive words commence with the same sound. A famous example of
 alliteration is found at the beginning of William Shakespeare\'s
 *Tempest*:
 
-  ---------- ---------
-  `**text`   \*\*IPA
-  `Full`     ful
-  `fathom`   f&D\@m
-  `five`     fAiv
-  `thy`      DAi
-  `father`   fADR
-  `lies`     lAiz
-  `*-`       \*-
-  ---------- ---------
+```humdrum
+**text	**IPA
+Full	ful
+fathom	f&D@m
+five	fAiv
+thy	DAi
+father	fADR
+lies	lAiz
+*-	*-
+----------	---------
 Given an `**IPA` input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using **humsed**. This
 task requires some additional knowledge about using
@@ -392,15 +392,15 @@ some other) text. Our first order of business is to identify
 phrase-terminating points. Let\'s assume we already have some phrase
 indicators (via curly braces {}). Our input might begin as follows:
 
-  ---------- ---------
-  `**text`   \*\*IPA
-  `We're`    {wRr
-  `all`      Al
-  `in`       In
-  `the`      D@
-  `dumps,`   d\@mps}
-  etc.       
-  ---------- ---------
+```humdrum
+**text	**IPA
+We're	{wRr
+all	Al
+in	In
+the	D@
+dumps,	d@mps}
+etc.	
+----------	---------
 Using [**extract**](/tool/extract), **context** and **rid** we
 can isolate each poetic phrase:
 

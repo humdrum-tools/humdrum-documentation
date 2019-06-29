@@ -40,32 +40,32 @@ xdelta -s = heart.dat > changes
 The example below displays the input (left) spine and the corresponding
 output (right) spine for the above command:
 
-  ----------- ----------
-  `**heart`   \*Xheart
-  =133        =133
-  55          0
-  56          1
-  55          -1
-  =134        =134
-  58          3
-  56          -2
-  55          -1
-  =135        =135
-  57          2
-  55          -2
-  56          1
-              
-  =136        =136
-  55          -1
-  60          5
-  62          2
-  =137        =137
-  61          -1
-  59          -2
-  59          0
-  =138        =138
-  \*-         \*-
-  ----------- ----------
+```humdrum
+**heart	*Xheart
+=133	=133
+55	0
+56	1
+55	-1
+=134	=134
+58	3
+56	-2
+55	-1
+=135	=135
+57	2
+55	-2
+56	1
+
+=136	=136
+55	-1
+60	5
+62	2
+=137	=137
+61	-1
+59	-2
+59	0
+=138	=138
+*-	*-
+-----------	----------
 A certain amount of heart-rate variation is to be expected because of
 monitoring equipment and other variables. So we are primarily interested
 in large changes of heart-rate, such as the change occurring in measure
@@ -79,11 +79,11 @@ following reassignment file, named `reassign`. Reassignment files obey
 the following syntax: for each line, *conditions* are given on the left
 followed by a single tab, followed by a *reassignment string.*
 
-  ------ -- --------
-  `>3`      +event
-  \<-3      -event
-  else      .
-  ------ -- --------
+```humdrum
+>3	+event
+<-3	-event
+else	.
+------	--	--------
 The above reassignment file may be interpreted as follows: if the
 numerical value is greater than 3, then output the string "`+event`";
 if the numerical value is less than -3, then output the string
@@ -141,24 +141,24 @@ occurred.
 Permissible relational operators used by
 [**recode**](/tool/recode) include the following:
 
-  ------ -----------------------
-  ==     equals
-  !=     not equal
-  \<     less than
-  \<=    less than or equal
-  \>     greater than
-  \>=    greater than or equal
-  else   default relation
-  ------ -----------------------
+```humdrum
+==	equals
+!=	not	equal
+<	less	than
+<=	less	than	or	equal
+>	greater	than
+>=	greater	than	or	equal
+else	default	relation
+------	-----------------------
 Conditions are tested in the order given in the reassignment file. Thus
 if a numerical value satisfies more than one condition, only the first
 string replacement is made. Consider the following reassignment file:
 
-  ------- -- --------
-  `<=0`      LOW
-  \>100      HIGH
-  \>0        MEDIUM
-  ------- -- --------
+```humdrum
+<=0	LOW
+>100	HIGH
+>0	MEDIUM
+-------	--	--------
 The order of specification is important here. If the `MEDIUM` condition
 was specified prior to the `HIGH` condition, then all values greater
 than one hundred would be categorized as `MEDIUM` rather than as `HIGH`.
@@ -178,13 +178,13 @@ and a "diatonic" method. In the first method, we might define a step
 interval as either one or two semitones. Our reassignment file (dubbed
 "`reassign`") might appear as follows:
 
-  ------- -- -----------
-  `>=3`      up-leap
-  \>0        up-step
-  ==0        unison
-  \>=-2      down-step
-  \<=-3      down-leap
-  ------- -- -----------
+```humdrum
+>=3	up-leap
+>0	up-step
+==0	unison
+>=-2	down-step
+<=-3	down-leap
+-------	--	-----------
 Given this reassignment file, we can now begin our processing. In the
 first method, we translate to semitone data using
 [**semits**](/tool/semits), translate to semitone-differences
@@ -209,13 +209,13 @@ melodic interval size; the **-d** option limits the output to diatonic
 intervals and excludes the interval quality (perfect, major, minor,
 etc.). The appropriate reassignment file would be:
 
-  ------- -- -----------
-  `>=3`      up-leap
-  ==2        up-step
-  ==1        unison
-  ==-2       down-step
-  \<=-3      down-leap
-  ------- -- -----------
+```humdrum
+>=3	up-leap
+==2	up-step
+==1	unison
+==-2	down-step
+<=-3	down-leap
+-------	--	-----------
 The appropriate command pipe would be:
 
 ```bash
@@ -251,14 +251,14 @@ not out of range for the clarinet, and (2) it minimizes the number of
 notes played in the throat register. We can use **recode** to classify
 all pitches according to the following reassignments:
 
-  -------- -----------------
-  `>=30`   too-high
-  \>=23    altissimo
-  \>=8     clarion
-  \>=5     throat-register
-  \>=-10   chalemeau
-  else     too-low
-  -------- -----------------
+```humdrum
+>=30	too-high
+>=23	altissimo
+>=8	clarion
+>=5	throat-register
+>=-10	chalemeau
+else	too-low
+--------	-----------------
 Now we simply explore various transpositions using **trans** and create
 an inventory of pitch types. For Debussy\'s *Syrinx*, the minimum number
 of throat tones (without exceeding the clarinet\'s range) occurs when we
@@ -288,10 +288,10 @@ spine that simply encodes the words "open" or "close" for each
 sonority. This classification will be based on the distance separating
 the soprano and tenor voices. Our reassignment file might be as follows:
 
-  -------- -- -------
-  `<=12`      close
-  `>12`       open
-  -------- -- -------
+```humdrum
+<=12	close
+>12	open
+--------	--	-------
 We will need to extract the soprano and tenor voices, translate the
 pitch representation to [`**semits`](/rep/semits)
 and use [**ydelta**](/tool/ydelta) to calculate the semitone
@@ -323,26 +323,26 @@ right-hand fingers. The little finger of the right hand is able to play
 three keys (labelled X, Y, and Z). Fingerings are shown only for the
 first octave (from C4 to C5):
 
-  -------- ---------------
-  `<0`     out-of-range
-  `==0`    `X-XXXO-XXXZ`
-  `==1`    `X-XXXO-XXXY`
-  `==2`    `X-XXXO-XXXO`
-  `==3`    `X-XXXO-XXXX`
-  `==4`    `X-XXXO-XXOX`
-  `==5`    `X-XXXO-XOOX`
-  `==6`    `X-XXXO-OOXX`
-  `==7`    `X-XXXO-OOOX`
-  `==8`    `X-XXXX-OOOX`
-  `==9`    `X-XXOO-OOOX`
-  `==10`   `X-XOOO-XOOX`
-  `==11`   `X-XOOO-OOOX`
-  `==12`   `O-XOOO-OOOX`
-           
-  etc.     
-           
-  `else`   rest
-  -------- ---------------
+```humdrum
+<0	out-of-range
+==0	X-XXXO-XXXZ
+==1	X-XXXO-XXXY
+==2	X-XXXO-XXXO
+==3	X-XXXO-XXXX
+==4	X-XXXO-XXOX
+==5	X-XXXO-XOOX
+==6	X-XXXO-OOXX
+==7	X-XXXO-OOOX
+==8	X-XXXX-OOOX
+==9	X-XXOO-OOOX
+==10	X-XOOO-XOOX
+==11	X-XOOO-OOOX
+==12	O-XOOO-OOOX
+
+etc.	
+
+else	rest
+--------	---------------
 Suppose we wanted to determine what kinds of fingering *transitions*
 occur in Joachim Quantz\'s flute concertos. Since instrument fingerings
 are insensitive to enharmonic spelling, an appropriate input
@@ -412,12 +412,12 @@ successive pitches as double-stops. We can then create a **humsed**
 script file (let\'s call it `difficulty`) containing substitutions such
 as the following:
 
-  ---------------------- -- -------------------
-  `s/5 7/easy/`             \[i.e. F4 to G4\]
-  `s/16 21/moderate/`       \[i.e. E5 to A5\]
-  `s/12 14/difficult/`      \[i.e. C5 to D5\]
-  etc.                      
-  ---------------------- -- -------------------
+```humdrum
+s/5	7/easy/	[i.e.	F4	to	G4]
+s/16	21/moderate/	[i.e.	E5	to	A5]
+s/12	14/difficult/	[i.e.	C5	to	D5]
+etc.	
+----------------------	--	-------------------
 We can apply the script as follows:
 
 ```bash
@@ -566,21 +566,21 @@ assemble cbass cello viola violn2 violn1 tromb tromp fagot \
 We now have a file that contains data records that look something like
 the following excerpt:
 
-  ---------- -------- -------- -------- -------- -------- -------- -------- -------- ------- ------
-  `+cbass`   +cello   +viola   +violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  +cbass     +cello   -viola   -violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  +cbass     +cello   +viola   +violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  +cbass     +cello   -viola   -violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  -cbass     -cello   +viola   +violn   +violn   -tromb   -tromp   -fagot   -clars   +oboe   +flt
-  -cbass     -cello   -viola   -violn   +violn   -tromb   -tromp   -fagot   -clars   +oboe   +flt
-  =131       =131     =131     =131     =131     =131     =131     =131     =131     =131    =131
-  +cbass     +cello   +viola   +violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  +cbass     +cello   -viola   -violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  -cbass     -cello   +viola   +violn   +violn   -tromb   -tromp   -fagot   -clars   +oboe   +flt
-  -cbass     -cello   -viola   -violn   +violn   -tromb   -tromp   -fagot   -clars   +oboe   +flt
-  +cbass     +cello   +viola   +violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  +cbass     +cello   -viola   +violn   +violn   -tromb   -tromp   +fagot   -clars   +oboe   +flt
-  ---------- -------- -------- -------- -------- -------- -------- -------- -------- ------- ------
+```humdrum
++cbass	+cello	+viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
++cbass	+cello	-viola	-violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
++cbass	+cello	+viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
++cbass	+cello	-viola	-violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
+-cbass	-cello	+viola	+violn	+violn	-tromb	-tromp	-fagot	-clars	+oboe	+flt
+-cbass	-cello	-viola	-violn	+violn	-tromb	-tromp	-fagot	-clars	+oboe	+flt
+=131	=131	=131	=131	=131	=131	=131	=131	=131	=131	=131
++cbass	+cello	+viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
++cbass	+cello	-viola	-violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
+-cbass	-cello	+viola	+violn	+violn	-tromb	-tromp	-fagot	-clars	+oboe	+flt
+-cbass	-cello	-viola	-violn	+violn	-tromb	-tromp	-fagot	-clars	+oboe	+flt
++cbass	+cello	+viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
++cbass	+cello	-viola	+violn	+violn	-tromb	-tromp	+fagot	-clars	+oboe	+flt
+----------	--------	--------	--------	--------	--------	--------	--------	--------	-------	------
 etc.
 
 The first sonority indicates that all of the string instruments are

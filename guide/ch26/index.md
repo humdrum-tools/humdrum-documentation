@@ -46,23 +46,23 @@ The **rend** command might be used to structure this as three
 independent spines:
 
 
-  ------------ -- -- ---------- -- -- ----------------
-  `**octave`         \*\*note         \*\*accidental
-  3                  Ab               b
-  4                  F\#              \#
-  5                  C                .
-  \*-                \*-              \*-
-  ------------ -- -- ---------- -- -- ----------------
+```humdrum
+**octave	**note	**accidental
+3	Ab	b
+4	F#	#
+5	C	.
+*-	*-	*-
+------------	--	--	----------	--	--	----------------
 The operation of [**rend**](/tool/rend) requires a reassignment
 file where each line contains an output exclusive interpretation,
 followed by a tab, followed by a regular expression. In the above case,
 the reassignment file (`reassign`) contained the following:
 
-  ---------------- -- -- -------------
-  `**octave`             \[0-9\]
-  \*\*note               \[A-Gb\#x\]
-  \*\*accidental         \[b\#x\]
-  ---------------- -- -- -------------
+```humdrum
+**octave	[0-9]
+**note	[A-Gb#x]
+**accidental	[b#x]
+----------------	--	--	-------------
 The first line tells **rend** that any signifiers matching the
 character-class 0-9 should be output in a spine labelled `**octave`. The
 second line causes signifiers matching the upper-case letters A to G and
@@ -91,12 +91,12 @@ data tokens in two or more spines into a single data spine. In effect,
 **cleave** does the opposite of [**rend**](/tool/rend). By way
 of example, **cleave** can be used to transform the following:
 
-  ------- -- -- ------- -- -- -------
-  `**A`         \*\*B         \*\*C
-  a             b             c
-  A             B             C
-  \*-           \*-           \*-
-  ------- -- -- ------- -- -- -------
+```humdrum
+**A	**B	**C
+a	b	c
+A	B	C
+*-	*-	*-
+-------	--	--	-------	--	--	-------
 into:
 
 ```humdrum
@@ -164,26 +164,26 @@ metpos scale.tb > scale.met
 The resulting output contains both the original input (on the left) and
 the metric position spine (on the right):
 
-  ---------- ------------
-  `**kern`   \*\*metpos
-  \*M4/4     \*M4/4
-  \*tb8      \*tb8
-  =1-        =1-
-  4c         1
-  .          4
-  8d         3
-  8e         4
-  8f         2
-  8g         4
-  8a         3
-  8b         4
-  =2         =2
-  2cc        1
-  .          4
-  .          3
-  .          4
-  \*-        \*-
-  ---------- ------------
+```humdrum
+**kern	**metpos
+*M4/4	*M4/4
+*tb8	*tb8
+=1-	=1-
+4c	1
+.	4
+8d	3
+8e	4
+8f	2
+8g	4
+8a	3
+8b	4
+=2	=2
+2cc	1
+.	4
+.	3
+.	4
+*-	*-
+----------	------------
 Let\'s now eliminate the null data tokens introduced by **timebase**.
 Using [**humsed**](/tool/humsed), we delete each data record
 beginning with a period character:
@@ -196,13 +196,13 @@ Next, we can use the [**recode**](/tool/recode) command to
 change the metric position values to appropriate MIDI key velocities. We
 might use the following reassignment file (named `accent`):
 
-  ------ -- -------
-  ==1       100
-  ==2       80
-  ==3       60
-  ==4       40
-  else      error
-  ------ -- -------
+```humdrum
+==1	100
+==2	80
+==3	60
+==4	40
+else	error
+------	--	-------
 In applying **recode** we will take care to avoid processing measure
 numbers using the **-s** (skip) option:
 
@@ -212,22 +212,22 @@ recode -f accent -s ^= -i '**metpos' scale.tmp > scale.acc
 
 The output will now appear as follows:
 
-  ---------- ------------
-  `**kern`   \*\*metpos
-  \*M4/4     \*M4/4
-  \*tb8      \*tb8
-  =1-        =1-
-  4c         100
-  8d         60
-  8e         40
-  8f         80
-  8g         40
-  8a         60
-  8b         40
-  =2         =2
-  2cc        100
-  \*-        \*-
-  ---------- ------------
+```humdrum
+**kern	**metpos
+*M4/4	*M4/4
+*tb8	*tb8
+=1-	=1-
+4c	100
+8d	60
+8e	40
+8f	80
+8g	40
+8a	60
+8b	40
+=2	=2
+2cc	100
+*-	*-
+----------	------------
 Now we can use the [**midi**](/tool/midi) command to generate
 `**MIDI` data:
 
@@ -237,24 +237,24 @@ midi scale.acc > scale.mid
 
 The result is given below:
 
-  -------------------- -- -- ------------
-  `**MIDI`                   \*\*metpos
-  \*Ch1                      \*
-  \*M4/4                     \*M4/4
-  \*tb8                      \*tb8
-  =1-                        =1-
-  72/60/64                   100
-  72/-60/64 72/62/64         60
-  36/-62/64 36/64/64         40
-  36/-64/64 36/65/64         80
-  36/-65/64 36/67/64         40
-  36/-67/64 36/69/64         60
-  36/-69/64 36/71/64         40
-  =2                         =2
-  36/-71/64 36/72/64         100
-  144/-72/64                 .
-  \*-                        \*-
-  -------------------- -- -- ------------
+```humdrum
+**MIDI	**metpos
+*Ch1	*
+*M4/4	*M4/4
+*tb8	*tb8
+=1-	=1-
+72/60/64	100
+72/-60/64	72/62/64	60
+36/-62/64	36/64/64	40
+36/-64/64	36/65/64	80
+36/-65/64	36/67/64	40
+36/-67/64	36/69/64	60
+36/-69/64	36/71/64	40
+=2	=2
+36/-71/64	36/72/64	100
+144/-72/64	.
+*-	*-
+--------------------	--	--	------------
 Before using [**cleave**](/tool/cleave) to join the new key
 velocity values to the `**MIDI` data we need to delete the current
 key-down velocities. These are the values \`64\' preceding the tab
@@ -265,24 +265,24 @@ follows:
 
 The modified output will now be:
 
-  ------------------ -- -- ------------
-  `**MIDI`                 \*\*metpos
-  \*Ch1                    \*
-  \*M4/4                   \*M4/4
-  \*tb8                    \*tb8
-  =1-                      =1-
-  72/60/                   100
-  72/-60/64 72/62/         60
-  36/-62/64 36/64/         40
-  36/-64/64 36/65/         80
-  36/-65/64 36/67/         40
-  36/-67/64 36/69/         60
-  36/-69/64 36/71/         40
-  =2                       =2
-  36/-71/64 36/72/         100
-  144/-72/                 .
-  \*-                      \*-
-  ------------------ -- -- ------------
+```humdrum
+**MIDI	**metpos
+*Ch1	*
+*M4/4	*M4/4
+*tb8	*tb8
+=1-	=1-
+72/60/	100
+72/-60/64	72/62/	60
+36/-62/64	36/64/	40
+36/-64/64	36/65/	80
+36/-65/64	36/67/	40
+36/-67/64	36/69/	60
+36/-69/64	36/71/	40
+=2	=2
+36/-71/64	36/72/	100
+144/-72/	.
+*-	*-
+------------------	--	--	------------
 Finally, we use [**cleave**](/tool/cleave) to add the new
 key-down velocities.
 
@@ -309,7 +309,7 @@ The final output is:
   36/-71/64 36/72/100
   144/-72/
   \*-
-  ---------------------
+```humdrum
 
 Creating Mixed Representations
 ------------------------------
@@ -324,14 +324,14 @@ given in the following table. Notice that the order of signifiers is
 important:
 
 
-  ---------- ------------------------------------------------------
-  token      **meaning**
-             
-  `LSLHto`   long-short-long rhythm, high pitch, tonic
-  `LLSLsd`   long-long-short rhythm, low pitch, subdominant
-  `MLSMlt`   medium-long-short rhythm, medium pitch, leading tone
-  `r`        rest
-  ---------- ------------------------------------------------------
+```humdrum
+token	**meaning**
+
+LSLHto	long-short-long	rhythm,	high	pitch,	tonic
+LLSLsd	long-long-short	rhythm,	low	pitch,	subdominant
+MLSMlt	medium-long-short	rhythm,	medium	pitch,	leading	tone
+r	rest
+----------	------------------------------------------------------
 In [Chapter 22](/guide/ch22) we learned how to use
 [**recode**](/tool/recode) to classify various numerical ranges
 and [**humsed**](/tool/humsed) to classify non-numeric data. We
@@ -351,21 +351,21 @@ example, we could transform the
 [`**semits`](/rep/semits) data using the following
 reassignment file:
 
-  ------ -- ---
-  `<0`      L
-  \>16      H
-  \>=0      M
-  else      r
-  ------ -- ---
+```humdrum
+<0	L
+>16	H
+>=0	M
+else	r
+------	--	---
 Durations can be similarly classified into long (L), medium (M), and
 short (S) using the [**dur**](/tool/dur) command, followed by
 *recode*.
 
-  -------- -- ---
-  `>1.0`      L
-  \>0.5       M
-  \>0         S
-  -------- -- ---
+```humdrum
+>1.0	L
+>0.5	M
+>0	S
+--------	--	---
 Using [**context**](/tool/context) **-n 3** we could then create
 contextual \`triples\' so that data records contain three durations.
 Suppose also that we have used **sed** to change the names of the
@@ -375,14 +375,14 @@ Example 26.1
 
 **Example 26.1**
 
-  ------------ -- ----------- -- ----------------
-  `**rhythm`      \*\*range      \*\*scale-step
-  L S L           H              to
-  L L S           L              sd
-  M L S           M              lt
-  r               r              r
-  \*-             \*-            \*-
-  ------------ -- ----------- -- ----------------
+```humdrum
+**rhythm	**range	**scale-step
+L	S	L	H	to
+L	L	S	L	sd
+M	L	S	M	lt
+r	r	r
+*-	*-	*-
+------------	--	-----------	--	----------------
 We need to process the first spine with **humsed** again to eliminate
 the spaces in the multiple stops. The rhythm spine would be processed as
 follows:

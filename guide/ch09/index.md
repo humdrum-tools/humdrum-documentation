@@ -426,27 +426,27 @@ The following table lists some examples of regular expressions and
 provides a summary description of the effect of each expression:
 
 
-  ------------------ ------------------------------------------------------------------------
-  A                  match letter \`A\'
-  \^A                match letter \`A\' at the beginning of a line
-  A\$                match letter \`A\' at the end of a line
-  .                  match any character (including space or tab)
-  A+                 match one or more instances of letter \`A\'
-  A?                 match a single instance of \`A\' or the null string
-  A\*                match one or more instances of \`A\' or the null string
-  .\*                match any string, including the null string
-  A.\*B              match any string starting with \`A\' up to and including \`B\'
-  A\|B               match \`A\' or \`B\'
-  (A)\|(B)           match \`A\' or \`B\'
-  \[AB\]             match \`A\' or \`B\'
-  \[\^AB\]           match any character other than \`A\' or \`B\'
-  AB                 match \`A\' followed by \`B\'
-  AB+                match \`A\' followed by one or more \`B\'s
-  (AB)+              match one or more instances of \`AB\', e.g. ABAB
-  (AB)\|(BA)         match \`AB\' or \`BA\'
-  \[\^A\]AA\[\^A\]   match two \`A\'s preceded and followed by characters other than \`A\'s
-  \^\[\^\^\]         match any character at the beginning of a record except the caret
-  ------------------ ------------------------------------------------------------------------
+```humdrum
+A	match	letter	A'
+^A	match	letter	A'	at	the	beginning	of	a	line
+A$	match	letter	A'	at	the	end	of	a	line
+.	match	any	character	(including	space	or	tab)
+A+	match	one	or	more	instances	of	letter	A'
+A?	match	a	single	instance	of	A'	or	the	null	string
+A*	match	one	or	more	instances	of	A'	or	the	null	string
+.*	match	any	string,	including	the	null	string
+A.*B	match	any	string	starting	with	A'	up	to	and	including	B'
+A|B	match	A'	or	B'
+(A)|(B)	match	A'	or	B'
+[AB]	match	A'	or	B'
+[^AB]	match	any	character	other	than	A'	or	B'
+AB	match	A'	followed	by	B'
+AB+	match	A'	followed	by	one	or	more	B's
+(AB)+	match	one	or	more	instances	of	AB',	e.g.	ABAB
+(AB)|(BA)	match	AB'	or	BA'
+[^A]AA[^A]	match	two	A's	preceded	and	followed	by	characters	other	than	A's
+^[^^]	match	any	character	at	the	beginning	of	a	record	except	the	caret
+------------------	------------------------------------------------------------------------
 *Examples of regular expressions.*
 
 
@@ -457,20 +457,20 @@ The following table provides some examples of regular expressions
 pertinent to Humdrum-format inputs:
 
 
-  ---------------------------- ----------------------------------------------------------
-  \^!!                         match any global comment
-  \^!!.\*Beethoven             match any global comment containing \`Beethoven\'
-  \^!!.\*\[Rr\]ecapitulation   match any global comment containing the word
-                               \`Recapitulation\' or \`recapitulation\'
-  \^!(\$\|\[\^!\])             match only local comments
-  \^\\\*\\\*                   match any exclusive interpretation
-  \^\\\*\[\^\*\]               match only tandem interpretations
-  \^\\\*\[-+vx\^\]\$           match spine-path indicators
-  \^\[\^\*!\]                  match only data records
-  \^\[\^\*!\].\*\$             match entire data records
-  \^(\\.\<*tab\>*)\*/.\$       match records containing only null tokens ( means a tab)
-  \^\\\*f\#:                   match key interpretation indicating F\# minor
-  ---------------------------- ----------------------------------------------------------
+```humdrum
+^!!	match	any	global	comment
+^!!.*Beethoven	match	any	global	comment	containing	Beethoven'
+^!!.*[Rr]ecapitulation	match	any	global	comment	containing	the	word
+Recapitulation'	or	recapitulation'
+^!($|[^!])	match	only	local	comments
+^**	match	any	exclusive	interpretation
+^*[^*]	match	only	tandem	interpretations
+^*[-+vx^]$	match	spine-path	indicators
+^[^*!]	match	only	data	records
+^[^*!].*$	match	entire	data	records
+^(.<*tab>*)*/.$	match	records	containing	only	null	tokens	(	means	a	tab)
+^*f#:	match	key	interpretation	indicating	F#	minor
+----------------------------	----------------------------------------------------------
 *Regular expressions suitable for all Humdrum inputs.*
 
 By way of illustration, the next table shows examples of regular
@@ -478,30 +478,30 @@ expressions appropriate for processing
 [`**kern`](/rep/kern) representations.
 
 
-  --------------------------------------------------- -----------------------------------------------------------
-  \^=                                                 match any `**kern` barline or double barline
-  \^=\[\^=\]                                          match `**kern` single barlines but not double barlines
-  \^\[\^=\]                                           match any token other than a barline or double barline
-  ;                                                   match any `**kern` note or barline containing a pause
-  T                                                   match any `**kern` note containing a whole-tone trill
-  \[Tt\]                                              match any `**kern` note containing a whole-tone or
-                                                      half-tone trill
-  \-                                                  match any `**kern` note containing at least one flat
-  \[\#\]                                              match any `**kern` note containing a sharp, double-
-                                                      sharp, etc.
-  \[\#n-;\]                                           match any `**kern` note containing an accidental,
-                                                      including a natural
-  \[A-Ga-g\]+                                         match any diatonic pitch letter-name
-  \[0-9\]+/.                                          match `**kern` dotted durations
-  \[0-9\]+/./.\[\^.\]                                 match only doubly-dotted durations
-  \[Gg\]+\[\^\#-\]                                    match any `**kern` pitch \`G\' that does not have a sharp
-                                                      or flat
-  (\^\|\[\^g\])gg(\$\|\[\^g\#-\])                     match only the pitch \`gg\' (G5)
-  {.\*r\|r.\*{                                        match all phrases that start with a rest
-  \^4\[\^0-9.\]\|\[\^0-9\]4(\[\^0-9.\]\|\$)           match `**kern` quarter durations
-  \^(8\|16)\[\^0-9.\]\|\[\^0-9\](8\|16)\[\^0-9.\]     match eighth and sixteenth durations only
-  ((\[Ee\]+-)\|(\[Gg\]+-)\|(\[Bb\]+-))(\$\|\[\^-\])   match any note from E-flat minor chord
-  --------------------------------------------------- -----------------------------------------------------------
+```humdrum
+^=	match	any	**kern	barline	or	double	barline
+^=[^=]	match	**kern	single	barlines	but	not	double	barlines
+^[^=]	match	any	token	other	than	a	barline	or	double	barline
+;	match	any	**kern	note	or	barline	containing	a	pause
+T	match	any	**kern	note	containing	a	whole-tone	trill
+[Tt]	match	any	**kern	note	containing	a	whole-tone	or
+half-tone	trill
+-	match	any	**kern	note	containing	at	least	one	flat
+[#]	match	any	**kern	note	containing	a	sharp,	double-
+sharp,	etc.
+[#n-;]	match	any	**kern	note	containing	an	accidental,
+including	a	natural
+[A-Ga-g]+	match	any	diatonic	pitch	letter-name
+[0-9]+/.	match	**kern	dotted	durations
+[0-9]+/./.[^.]	match	only	doubly-dotted	durations
+[Gg]+[^#-]	match	any	**kern	pitch	G'	that	does	not	have	a	sharp
+or	flat
+(^|[^g])gg($|[^g#-])	match	only	the	pitch	gg'	(G5)
+{.*r|r.*{	match	all	phrases	that	start	with	a	rest
+^4[^0-9.]|[^0-9]4([^0-9.]|$)	match	**kern	quarter	durations
+^(8|16)[^0-9.]|[^0-9](8|16)[^0-9.]	match	eighth	and	sixteenth	durations	only
+(([Ee]+-)|([Gg]+-)|([Bb]+-))($|[^-])	match	any	note	from	E-flat	minor	chord
+---------------------------------------------------	-----------------------------------------------------------
 *Regular expressions suitable for \*\*kern data records.*
 
 Note that the above regular expressions assume that comments and
