@@ -198,8 +198,8 @@ Humdrum Syntax
 --------------
 
 Humdrum data are organized somewhat like the tables of a spread-sheet.
-As with a spread-sheet, you can define or label your own types of data.
-As with a spread-sheet, the different *columns* can be set up to
+As with a spreadsheet, you can define or label your own types of data.
+As with a spreadsheet, the different *columns* can be set up to
 represent whatever type of data you like. The *rows* of data, however,
 have a fixed meaning \-- they represent successive moments in time; that
 is, time passes as you move down the page.
@@ -215,18 +215,18 @@ successive sixteenth notes are sounded for each pitch:
 **Table 1.1**
 
 ```humdrum
-C4	D4	E4	F4	G4	A4	B4	C5
-1st	16th	ON	off	off	off	off	off	off	off
-2nd	16th	ON	off	off	off	off	off	off	off
-3rd	16th	off	ON	off	off	off	off	off	off
-4th	16th	off	ON	off	off	off	off	off	off
-time	5th	16th	off	off	ON	off	off	off	off	off
-6th	16th	off	off	ON	off	off	off	off	off
-7th	16th	off	off	off	ON	off	off	off	off
-8th	16th	off	off	off	ON	off	off	off	off
-9th	16th	off	off	off	off	ON	off	off	off
-10th	16th	off	off	off	off	ON	off	off	off
-11th	16th	off	off	off	off	off	ON	off	off
+			C4	D4	E4	F4	G4	A4	B4	C5
+	1st 16th	ON	off	off	off	off	off	off	off
+	2nd 16th	ON	off	off	off	off	off	off	off
+	3rd 16th	off	ON	off	off	off	off	off	off
+	4th 16th	off	ON	off	off	off	off	off	off
+time	5th 16th	off	off	ON	off	off	off	off	off
+	6th 16th	off	off	ON	off	off	off	off	off
+	7th 16th	off	off	off	ON	off	off	off	off
+	8th 16th	off	off	off	ON	off	off	off	off
+	9th 16th	off	off	off	off	ON	off	off	off
+	10th 16th	off	off	off	off	ON	off	off	off
+	11th 16th	off	off	off	off	off	ON	off	off
 etc.	
 ```
 
