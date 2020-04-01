@@ -1,6 +1,6 @@
 ---
 title: 'Humdrum Toolkit Command Reference -- Themefinder'
-permalink: /tool//index.html
+permalink: /tool/themefinder/index.html
 ---
 
 Themefinder - General Documentation

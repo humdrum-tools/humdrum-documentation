@@ -1,0 +1,475 @@
+# Note:
+# If you are using the createtag script, don't leave an blank line at the end of this file.
+# In other words, the last line must be the last tag in the allowed-tags list.
+tools:
+        - name: "assemble"
+          description: "combine parts in two or more Humdrum files"
+          tags: 
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "barks"
+          description: " translate frequency data to critical bands, in Zwicker's bark unit"
+          tags: 
+                - "Humdrum Toolkit"
+                - "hearing"
+                - "spectrum"
+                - "data type transformation"
+
+        - name: "cbr"
+          description: "translate frequency data to critical band rate according to Moore & Glasberg's equation"
+          tags: 
+                - "Humdrum Toolkit"
+                - "hearing"
+                - "spectrum"
+                - "model"
+                - "data type transformation"
+
+        - name: "census"
+          description: "determine general properties of a Humdrum input"
+          tags: 
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "cents"
+          description: "translate selected Humdrum pitch-related representations to cents"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "interval"
+                - "hearing"
+
+        - name: "cleave"
+          description: "join tokens from two or more Humdrum spines into a single output spine"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "cocho"
+          description: "translate frequency data to cochlear coordinates in millimeters from the apex"
+          tags:
+                - "Humdrum Toolkit"
+                - "hearing"
+                - "spectrum"
+
+        - name: "context"
+          description: "create <i>n</i>-grams from sequential data tokens"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "correl"
+          description: "measure the numerical similarity between two Humdrum spines"
+          tags:
+                - "Humdrum Toolkit"
+                - "numeric"
+
+        - name: "deg"
+          description: "translate selected Humdrum pitch-related representations to relative scale degree"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "data type transformation"
+
+        - name: "degree"
+          description: "translate selected Humdrum pitch-related representations to absolute scale degree"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "data type transformation"
+
+        - name: "diss"
+          description: "calculate the degree of sensory dissonance for successive spectra"
+          tags:
+                - "Humdrum Toolkit"
+                - "model"
+                - "pitch"
+
+        - name: "ditto"
+          description: "replace Humdrum null tokens with previous data token"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "dur"
+          description: "calculate time duration (in seconds) from musical durations in recip or kern spines"
+          tags:
+                - "Humdrum Toolkit"
+                - "time"
+
+        - name: "ekern"
+          description: "translate ESAC music representation to the **kern format"
+          tags:
+                - "Humdrum Toolkit"
+                - "data format conversion"
+                - "deprecated"
+
+        - name: "encode"
+          description: "interactive Humdrum encoding from MIDI input"
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "extract"
+          description: "get specified spines from a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "fade"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "fields"
+          description: "list spine/field structure of a Humdrum file"
+          tags:
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "fin2hum"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "data format conversion"
+                - "deprecated"
+
+        - name: "freq"
+          description: "translate selected Humdrum pitch-related representations to frequency"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "interval"
+
+        - name: "hint"
+          description: "determine harmonic intervals between concurrent pitches for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "hum2fin"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "data format conversion"
+                - "deprecated"
+
+        - name: "humdrum"
+          description: "general syntax checker for Humdrum files"
+          tags:
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "humsed"
+          description: "stream editor for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "humver"
+          description: "display Humdrum toolkit version and copyright information"
+          tags:
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "index"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "deprecated"
+
+        - name: "infot"
+          description: "calculate information theory measures for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "numeric"
+
+        - name: "iv"
+          description: "determine interval-class vectors for successive vertical sonorities for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "set theory"
+
+        - name: "kern"
+          description: "translate selected Humdrum pitch-related representations to kern"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+                - "pitch"
+
+        - name: "key"
+          description: "estimate the key for a Humdrum passage"
+          tags:
+                - "Humdrum Toolkit"
+                - "harmony"
+
+        - name: "melac"
+          description: "calculate melodic accent values for successive pitches in a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+                - "model"
+
+        - name: "melvel" 
+          description: "generate melodic velocity (in semitones per quarter note)"
+          tags:
+                - "Humdrum Toolkit"
+                - "rhythm"
+
+        - name: "metpos"
+          description: "assign metric position indicators to Humdrum sonorities"
+          tags:
+                - "Humdrum Toolkit"
+                - "rhythm"
+
+        - name: "midi"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "midreset"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "mint"
+          description: "determine melodic intervals between successive pitches for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "interval"
+
+        - name: "ms"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "printing"
+                - "deprecated"
+
+        - name: "nf"
+          description: "determine normal form for successive vertical sonorities in Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "set theory"
+                - "pitch"
+
+        - name: "num"
+          description: "number selected Humdrum records according to user-defined criteria"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "patt"
+          description: "locate and output user-defined patterns in a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "pattern"
+          description: "exhaustively locate and count user-defined patterns in a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "pc"
+          description: "translate Humdrum semitone representation or pc to pitch-class"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "set theory"
+
+        - name: "pcset"
+          description: "convert Humdrum pitch and pitch-class information to set-theoretic representations"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "set theory"
+
+        - name: "perform"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "pf"
+          description: "determine prime form for successive Humdrum vertical sonorities"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+                - "set theory"
+
+        - name: "pitch"
+          description: "translate selected Humdrum pitch-related representations to American standard pitch notation"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+
+        - name: "proof"
+          description: "check syntax of Humdrum kern file"
+          tags:
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "recode"
+          description: "recode numeric tokens in selected Humdrum spines"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "record"
+          description: "record live MIDI input in Humdrum MIDI data format"
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "regexp"
+          description: "interactive regular-expression tester"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "reihe"
+          description: "output specified row variant for a given Humdrum prime row input"
+          tags:
+                - "Humdrum Toolkit"
+                - "set theory"
+
+        - name: "rend"
+          description: "split data tokens from specified Humdrum spines into component sub-tokens"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "rid"
+          description: "eliminate specified Humdrum line types"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "scramble"
+          description: "randomize order of either Humdrum data records or data tokens"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "semits"
+          description: "translate selected Humdrum pitch-related representations to numerical semitones"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+
+        - name: "simil"
+          description: "measure the non-numeric similarity between two single-spine Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+                - "numeric"
+
+        - name: "smf"
+          description:
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "data format conversion"
+                - "deprecated"
+
+        - name: "solfa"
+          description: "translate selected Humdrum pitch-related representations to tonic solfa syllables"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+
+        - name: "specc"
+          description: "translate spectral data to spectral centroid"
+          tags:
+                - "Humdrum Toolkit"
+                - "spectrum"
+
+        - name: "spect"
+          description: "generate spectral data from note information using the SHARC timbre database"
+          tags:
+                - "Humdrum Toolkit"
+                - "spectrum"
+
+        - name: "strophe"
+          description: "selectively extract strophic data for Humdrum inputs"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "synco"
+          description: "measure degree of metric syncopation for Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+                - "rhythm"
+
+        - name: "tacet"
+          description: "reset MIDI channels to ensure silence"
+          tags:
+                - "Humdrum Toolkit"
+                - "midi"
+                - "deprecated"
+
+        - name: "text"
+          description: "generate (word-oriented) text from (syllable-oriented) silbe input"
+          tags:
+                - "Humdrum Toolkit"
+
+        - name: "thru"
+          description: "expand Humdrum abbreviated format representation to through-composed format"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "timebase"
+          description: "reformat Humdrum kern or recip score with constant time-base"
+          tags:
+                - "Humdrum Toolkit"
+                - "rhythm"
+                - "data processing"
+
+        - name: "trans"
+          description: "transpose selected Humdrum pitch representations"
+          tags:
+                - "Humdrum Toolkit"
+                - "pitch"
+
+        - name: "urrhythm"
+          description: "characterize Johnson-Laird rhythmic prototypes in a Humdrum passage"
+          tags:
+                - "Humdrum Toolkit"
+                - "model"
+                - "rhythm"
+
+        - name: "veritas"
+          description: "validate that a Humdrum document has not been modified"
+          tags:
+                - "Humdrum Toolkit"
+                - "data management"
+
+        - name: "vox"
+          description: "determine number of simultaneously active pitches in a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+                - "texture"
+
+        - name: "xdelta"
+          description: "calculate sequential numeric differences between successive Humdrum data tokens"
+          tags:
+                - "Humdrum Toolkit"
+                - "numeric"
+
+        - name: "yank"
+          description: "extract passages from a Humdrum input"
+          tags:
+                - "Humdrum Toolkit"
+                - "data processing"
+
+        - name: "ydelta"
+          description: "calculate numeric differences for concurrent Humdrum data"
+          tags:
+                - "Humdrum Toolkit"
+                - "numeric"
