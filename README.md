@@ -167,6 +167,43 @@ need to be resolved manually, but doing `git pull` before working on the website
 will minimize that problem.
 
 
+Merging
+---------
+
+When you make changes to the website file repository at the same time as someone
+else (or technically just after someone else and/or if you forgot to `git pull`
+before starting to edit files), then git will complain:
+
+```
+$ git push
+To https://github.com/humdrum-tools/newdoc
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/humdrum-tools/newdoc'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+If this happens, then type:
+
+```bash
+git pull
+```
+
+This will cause the new online version of the repository and your local
+copy to be merged (locally).  Usually this occurs automatically.  Sometimes
+you will have to fix files if there are changes from two sources that cannot
+be resolved automatically.  If this happens, git will list the files that
+have a problem, and you have to choose which of the two versions of content
+should be kept.  See [this Github](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) page for how to do that.  Essentially,
+search the files for lines that contain the string `=======` and chose the
+version above or below that line and delete the unwanted one.
+
+
+
+
 
 Issues page
 ------------
