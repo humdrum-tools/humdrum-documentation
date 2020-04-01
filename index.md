@@ -8,10 +8,10 @@ permalink: index.html
 
 <p class="text-center">
 <a href="./about" class="btn btn-primary btn-lg btn-responsive">What Can Humdrum Do?</a>
-<a href="http://slack.bundler.io" class="btn btn-primary btn-lg btn-responsive">Installation</a>
-<a href="/man/bundle-install.1.html" class="btn btn-primary btn-lg btn-responsive">User Guide</a>
+<a href="https://github.com/humdrum-tools/humdrum-tools" class="btn btn-primary btn-lg btn-responsive">Installation</a>
+<a href="./guide" class="btn btn-primary btn-lg btn-responsive">User Guide</a>
+<a href="./tool" class="btn btn-primary btn-lg btn-responsive">Tools</a>
 <a href="./news" class="btn btn-primary btn-lg btn-responsive">News</a>
-<a href="./projects" class="btn btn-primary btn-lg btn-responsive">Projects</a>
 </p>
 
 # Welcome
@@ -19,7 +19,7 @@ permalink: index.html
 Welcome to the homepage for the Humdrum Toolkit, a set of resources
 for computational music analysis.  Here you will find instructions
 on downloading, installing, and using the Humdrum Toolkit as well
-as other resoures.
+as other resources.
 
 Humdrum was originally created by David Huron in the 1980s, and it
 has been used steadily for decades. The Humdrum "universe" might
