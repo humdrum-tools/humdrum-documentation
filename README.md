@@ -1,23 +1,51 @@
 Humdrum Documentation Website
 ==================================
 
+The development website for Humdrum documentation is: https://www2.humdrum.org
 
-Download
----------
+Changes to individual pages can be done within the Github interface: https://github.com/humdrum-tools/newdoc
+
+More efficient editing can be done locally.  The following documentation explains how to work
+locally on the website.
 
 
-```
+Installation 
+-----------
+
+You need to have `git` installed on your computer.  For MacOS, install [Homebrew](https://brew.sh), which
+will install it automatically.
+
+
+
+Downloading
+-----------
+
+
+You must first download the website files from Github using the `clone` git command:
+
+
+```bash
 git clone https://github.com/humdrum-tools/newdoc
 ```
+
+This will save the files for the repository in the `newdoc` subdirectory in the current
+working directory.
 
 
 Running locally
 ----------------
 
-```
+```bash
 cd newdoc
 ./.serve
 ```
+
+The first time you download the website repository, you will have to run the command:
+
+```bash
+bundle install
+```
+
 
 Then open a web browsers and type in the URL `http://127.0.0.1:8000`.
 
@@ -29,17 +57,17 @@ You can edit files in the local copy and then refresh the web browser
 to see the updates.  Note that it currently it takes about 4 seconds
 for updates to be prepared.
 
-In certain cases you will need to restart the local webservice by doing
+In certain cases you will need to restart the local web service by doing
 control-C in the windows that is running the `.serve` script.  And
 running `./.serve` again.  In rare cases you will need to delete the 
 compiled website before running `.serve`.  To do this, type in the 
 base directory of the repository:
 
-```
+```bash
 rm -rf _site
 ```
 
-This is the directory foro the compiled website, so removing it will
+This is the directory for the compiled website, so removing it will
 force a complete regeneration of the files.  This sort of case may happen
 when the configuration file is changed, but usually this situation will
 not occur.
@@ -50,6 +78,7 @@ Putting changes into the cloud
 
 There are a few steps to posting the changes to the website online:
 
+(0) Checking: 
 (1) Adding: Any new files need to be added to the repository
 (2) Committing: Any changes to repository needs to 
 (3) Pushing: all changes are copied from the local computer to the cloud.
@@ -60,19 +89,23 @@ to recalculate the `_site` directory from the source files, and how
 fast it does so will depend on the demand of other people's activity
 doing the same thing.
 
-### Adding files to the repository ####
+### Status and adding files to the repository ####
 
 Type `git status` to see a list of the files that have changes in them since the
-last commit.  If there are any new files in the repository directories, they
+last commit, as well as a list of files that have changed.  You can also
+type `git diff` or `git diff filename.txt` to see changes that have been
+made to all files or a specific file since the last commit.
+
+If there are any new files in the repository directories, they
 need to be added manually.  Here is the basic command for that:
 
-```
+```bash
 git add filename.txt
 ```
 
 You can add all new files at once by typing in the root directory of the repository:
 
-```
+```bash
 git add *
 ```
 
@@ -86,7 +119,7 @@ but do not want to add them to the repository, such as the `_site` directory).
 You need to save changes to the repository before putting the changes online.  This is done with the
 command:
 
-```
+```bash
 git commit -am "Reason for the changes"
 ```
 
@@ -95,16 +128,25 @@ individually with individual commit messages by removing `-a` and giving a list 
 commit.  The `-m` option followed by a string will be the commit message.  List a short reason why the
 changes are being made.
 
+To commit files individually (such as if you want to give a separate commit explanation for each file,
+commit each one individually by not using the `-a` (meaning all) option:
+
+```bash
+git commit filename.txt -m "Reason for changing filename.txt"
+```
+
 ### Pushing changes to the repository ###
 
 To finally put the changes online, type:
 
-```
+```git
 git push
 ```
 
 This will copy any new changes to the repository to the cloud.  And within a few minutes the updates
-will be visible on the website.
+will be visible on the website.  The list of commits on github should now include this one:
+
+https://github.com/humdrum-tools/newdoc/commits/master
 
 
 
@@ -126,6 +168,11 @@ will minimize that problem.
 
 
 
+Issues page
+------------
 
+To report bugs or tasks for the website, add them to the issues page:
+
+https://github.com/humdrum-tools/newdoc/issues
 
 
