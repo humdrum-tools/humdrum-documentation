@@ -22,6 +22,7 @@ ul.index {
 
 td.tool-name {
 	hyphens: none;
+	white-space: nowrap;
 }
 
 </style>
@@ -31,8 +32,15 @@ td.tool-name {
 // is found in _data/tools.yml.  They are loaded here for 
 // adding to the webpage via Javascript:
 var tools = {{ site.data.tools | jsonify }}.tools
-
-console.log("GOT HERE XXX");
+tools.sort(function(a, b) {
+	if (!a.name) {
+		reutrn -1;
+	}
+	if (!b.name) {
+		reutrn -1;
+	}
+	return a.name.localeCompare(b.name);
+});
 
 generateIndex(tools, [], "#index");
 
@@ -70,11 +78,20 @@ function generateIndex(data, categories, selector) {
 			continue;
 		}
 
+		url = null;
+		if (data[i].url) {
+			url = data[i].url;
+		}
+
 		var description = data[i].description;
 
 		output += "<tr>";
 		output += "<td class='tool-name'>";
-		output += "<a href='" + command + "'>";
+		if (url) {
+			output += "<a target='_blank' href='" + url + "'>";
+		} else {
+			output += "<a href='" + command + "'>";
+		}
 		output += command;
 		output += "</a>";
 		output += "</td>";
@@ -136,6 +153,7 @@ function generateCategoryList(tools, selector) {
 
 	var output = "";
 	output += "<select onchange='displayCategory()'>";
+	output += "<option value=''>All categories</option>\n";
 	for (i=0; i<keys.length; i++) {
 		if (nondep[keys[i]]) {
 			output += "<option value='" + keys[i] + "'>" + keys[i] + "</option>\n";

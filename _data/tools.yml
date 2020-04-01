@@ -1,29 +1,40 @@
 # Note:
 # If you are using the createtag script, don't leave an blank line at the end of this file.
 # In other words, the last line must be the last tag in the allowed-tags list.
+
 tools:
+
+##############################
+##
+## Humdrum Toolkit tool list
+##
+##############################
+
         - name: "assemble"
           description: "combine parts in two or more Humdrum files"
           tags: 
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "barks"
           description: " translate frequency data to critical bands, in Zwicker's bark unit"
           tags: 
                 - "Humdrum Toolkit"
-                - "hearing"
+                - "sound perception"
                 - "spectrum"
                 - "data type transformation"
+
 
         - name: "cbr"
           description: "translate frequency data to critical band rate according to Moore & Glasberg's equation"
           tags: 
                 - "Humdrum Toolkit"
-                - "hearing"
+                - "sound perception"
                 - "spectrum"
                 - "model"
                 - "data type transformation"
+
 
         - name: "census"
           description: "determine general properties of a Humdrum input"
@@ -31,13 +42,15 @@ tools:
                 - "Humdrum Toolkit"
                 - "data management"
 
+
         - name: "cents"
           description: "translate selected Humdrum pitch-related representations to cents"
           tags:
                 - "Humdrum Toolkit"
                 - "pitch"
                 - "interval"
-                - "hearing"
+                - "sound perception"
+
 
         - name: "cleave"
           description: "join tokens from two or more Humdrum spines into a single output spine"
@@ -45,12 +58,14 @@ tools:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "cocho"
           description: "translate frequency data to cochlear coordinates in millimeters from the apex"
           tags:
                 - "Humdrum Toolkit"
-                - "hearing"
+                - "sound perception"
                 - "spectrum"
+
 
         - name: "context"
           description: "create <i>n</i>-grams from sequential data tokens"
@@ -58,11 +73,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "correl"
           description: "measure the numerical similarity between two Humdrum spines"
           tags:
                 - "Humdrum Toolkit"
                 - "numeric"
+
 
         - name: "deg"
           description: "translate selected Humdrum pitch-related representations to relative scale degree"
@@ -71,12 +88,14 @@ tools:
                 - "pitch"
                 - "data type transformation"
 
+
         - name: "degree"
           description: "translate selected Humdrum pitch-related representations to absolute scale degree"
           tags:
                 - "Humdrum Toolkit"
                 - "pitch"
                 - "data type transformation"
+
 
         - name: "diss"
           description: "calculate the degree of sensory dissonance for successive spectra"
@@ -85,17 +104,20 @@ tools:
                 - "model"
                 - "pitch"
 
+
         - name: "ditto"
           description: "replace Humdrum null tokens with previous data token"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "dur"
           description: "calculate time duration (in seconds) from musical durations in recip or kern spines"
           tags:
                 - "Humdrum Toolkit"
                 - "time"
+
 
         - name: "ekern"
           description: "translate ESAC music representation to the **kern format"
@@ -104,6 +126,7 @@ tools:
                 - "data format conversion"
                 - "deprecated"
 
+
         - name: "encode"
           description: "interactive Humdrum encoding from MIDI input"
           tags:
@@ -111,11 +134,13 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "extract"
           description: "get specified spines from a Humdrum input"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "fade"
           description:
@@ -124,11 +149,13 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "fields"
           description: "list spine/field structure of a Humdrum file"
           tags:
                 - "Humdrum Toolkit"
                 - "data management"
+
 
         - name: "fin2hum"
           description:
@@ -137,6 +164,7 @@ tools:
                 - "data format conversion"
                 - "deprecated"
 
+
         - name: "freq"
           description: "translate selected Humdrum pitch-related representations to frequency"
           tags:
@@ -144,10 +172,12 @@ tools:
                 - "pitch"
                 - "interval"
 
+
         - name: "hint"
           description: "determine harmonic intervals between concurrent pitches for Humdrum inputs"
           tags:
                 - "Humdrum Toolkit"
+
 
         - name: "hum2fin"
           description:
@@ -156,11 +186,13 @@ tools:
                 - "data format conversion"
                 - "deprecated"
 
+
         - name: "humdrum"
           description: "general syntax checker for Humdrum files"
           tags:
                 - "Humdrum Toolkit"
                 - "data management"
+
 
         - name: "humsed"
           description: "stream editor for Humdrum inputs"
@@ -168,11 +200,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "humver"
           description: "display Humdrum toolkit version and copyright information"
           tags:
                 - "Humdrum Toolkit"
                 - "data management"
+
 
         - name: "index"
           description:
@@ -180,11 +214,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "deprecated"
 
+
         - name: "infot"
           description: "calculate information theory measures for Humdrum inputs"
           tags:
                 - "Humdrum Toolkit"
                 - "numeric"
+
 
         - name: "iv"
           description: "determine interval-class vectors for successive vertical sonorities for Humdrum inputs"
@@ -193,6 +229,7 @@ tools:
                 - "pitch"
                 - "set theory"
 
+
         - name: "kern"
           description: "translate selected Humdrum pitch-related representations to kern"
           tags:
@@ -200,11 +237,13 @@ tools:
                 - "data processing"
                 - "pitch"
 
+
         - name: "key"
           description: "estimate the key for a Humdrum passage"
           tags:
                 - "Humdrum Toolkit"
                 - "harmony"
+
 
         - name: "melac"
           description: "calculate melodic accent values for successive pitches in a Humdrum input"
@@ -212,17 +251,20 @@ tools:
                 - "Humdrum Toolkit"
                 - "model"
 
+
         - name: "melvel" 
           description: "generate melodic velocity (in semitones per quarter note)"
           tags:
                 - "Humdrum Toolkit"
                 - "rhythm"
 
+
         - name: "metpos"
           description: "assign metric position indicators to Humdrum sonorities"
           tags:
                 - "Humdrum Toolkit"
                 - "rhythm"
+
 
         - name: "midi"
           description:
@@ -231,12 +273,14 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "midreset"
           description:
           tags:
                 - "Humdrum Toolkit"
                 - "midi"
                 - "deprecated"
+
 
         - name: "mint"
           description: "determine melodic intervals between successive pitches for Humdrum inputs"
@@ -245,12 +289,14 @@ tools:
                 - "pitch"
                 - "interval"
 
+
         - name: "ms"
           description:
           tags:
                 - "Humdrum Toolkit"
                 - "printing"
                 - "deprecated"
+
 
         - name: "nf"
           description: "determine normal form for successive vertical sonorities in Humdrum inputs"
@@ -259,20 +305,24 @@ tools:
                 - "set theory"
                 - "pitch"
 
+
         - name: "num"
           description: "number selected Humdrum records according to user-defined criteria"
           tags:
                 - "Humdrum Toolkit"
+
 
         - name: "patt"
           description: "locate and output user-defined patterns in a Humdrum input"
           tags:
                 - "Humdrum Toolkit"
 
+
         - name: "pattern"
           description: "exhaustively locate and count user-defined patterns in a Humdrum input"
           tags:
                 - "Humdrum Toolkit"
+
 
         - name: "pc"
           description: "translate Humdrum semitone representation or pc to pitch-class"
@@ -281,12 +331,14 @@ tools:
                 - "pitch"
                 - "set theory"
 
+
         - name: "pcset"
           description: "convert Humdrum pitch and pitch-class information to set-theoretic representations"
           tags:
                 - "Humdrum Toolkit"
                 - "pitch"
                 - "set theory"
+
 
         - name: "perform"
           description:
@@ -295,6 +347,7 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "pf"
           description: "determine prime form for successive Humdrum vertical sonorities"
           tags:
@@ -302,11 +355,13 @@ tools:
                 - "pitch"
                 - "set theory"
 
+
         - name: "pitch"
           description: "translate selected Humdrum pitch-related representations to American standard pitch notation"
           tags:
                 - "Humdrum Toolkit"
                 - "pitch"
+
 
         - name: "proof"
           description: "check syntax of Humdrum kern file"
@@ -314,11 +369,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "data management"
 
+
         - name: "recode"
           description: "recode numeric tokens in selected Humdrum spines"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "record"
           description: "record live MIDI input in Humdrum MIDI data format"
@@ -327,11 +384,13 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "regexp"
           description: "interactive regular-expression tester"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "reihe"
           description: "output specified row variant for a given Humdrum prime row input"
@@ -339,11 +398,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "set theory"
 
+
         - name: "rend"
           description: "split data tokens from specified Humdrum spines into component sub-tokens"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "rid"
           description: "eliminate specified Humdrum line types"
@@ -351,11 +412,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "scramble"
           description: "randomize order of either Humdrum data records or data tokens"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "semits"
           description: "translate selected Humdrum pitch-related representations to numerical semitones"
@@ -363,11 +426,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "pitch"
 
+
         - name: "simil"
           description: "measure the non-numeric similarity between two single-spine Humdrum inputs"
           tags:
                 - "Humdrum Toolkit"
                 - "numeric"
+
 
         - name: "smf"
           description:
@@ -377,11 +442,13 @@ tools:
                 - "data format conversion"
                 - "deprecated"
 
+
         - name: "solfa"
           description: "translate selected Humdrum pitch-related representations to tonic solfa syllables"
           tags:
                 - "Humdrum Toolkit"
                 - "pitch"
+
 
         - name: "specc"
           description: "translate spectral data to spectral centroid"
@@ -389,22 +456,26 @@ tools:
                 - "Humdrum Toolkit"
                 - "spectrum"
 
+
         - name: "spect"
           description: "generate spectral data from note information using the SHARC timbre database"
           tags:
                 - "Humdrum Toolkit"
                 - "spectrum"
 
+
         - name: "strophe"
           description: "selectively extract strophic data for Humdrum inputs"
           tags:
                 - "Humdrum Toolkit"
+
 
         - name: "synco"
           description: "measure degree of metric syncopation for Humdrum input"
           tags:
                 - "Humdrum Toolkit"
                 - "rhythm"
+
 
         - name: "tacet"
           description: "reset MIDI channels to ensure silence"
@@ -413,16 +484,19 @@ tools:
                 - "midi"
                 - "deprecated"
 
+
         - name: "text"
           description: "generate (word-oriented) text from (syllable-oriented) silbe input"
           tags:
                 - "Humdrum Toolkit"
+
 
         - name: "thru"
           description: "expand Humdrum abbreviated format representation to through-composed format"
           tags:
                 - "Humdrum Toolkit"
                 - "data processing"
+
 
         - name: "timebase"
           description: "reformat Humdrum kern or recip score with constant time-base"
@@ -431,11 +505,14 @@ tools:
                 - "rhythm"
                 - "data processing"
 
+
         - name: "trans"
           description: "transpose selected Humdrum pitch representations"
           tags:
                 - "Humdrum Toolkit"
+                - "VHV filter"
                 - "pitch"
+
 
         - name: "urrhythm"
           description: "characterize Johnson-Laird rhythmic prototypes in a Humdrum passage"
@@ -444,11 +521,13 @@ tools:
                 - "model"
                 - "rhythm"
 
+
         - name: "veritas"
           description: "validate that a Humdrum document has not been modified"
           tags:
                 - "Humdrum Toolkit"
                 - "data management"
+
 
         - name: "vox"
           description: "determine number of simultaneously active pitches in a Humdrum input"
@@ -456,11 +535,13 @@ tools:
                 - "Humdrum Toolkit"
                 - "texture"
 
+
         - name: "xdelta"
           description: "calculate sequential numeric differences between successive Humdrum data tokens"
           tags:
                 - "Humdrum Toolkit"
                 - "numeric"
+
 
         - name: "yank"
           description: "extract passages from a Humdrum input"
@@ -468,8 +549,708 @@ tools:
                 - "Humdrum Toolkit"
                 - "data processing"
 
+
         - name: "ydelta"
           description: "calculate numeric differences for concurrent Humdrum data"
           tags:
                 - "Humdrum Toolkit"
                 - "numeric"
+
+
+
+##############################
+##
+## Humdrum Extras tool list
+##
+##############################
+
+
+        - name: "autodynam"
+          description: "terminate cresc. and decresc. wedges in **dynam spines"
+          url: "http://extras.humdrum.org/man/autodynam"
+          tags: 
+                - "Humdrum Extras"
+                - "notation processing"
+
+
+        - name: "autostem"
+          description: "add stem directions onto **kern notes"
+          url: "http://extras.humdrum.org/man/autostem"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "notation processing"
+
+
+        - name: "barnum"
+          description: "number, renumber, or remove numbers on barlines"
+          url: "http://extras.humdrum.org/man/barnum"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+                - "notation processing"
+
+
+        - name: "beat"
+          description: "extract composite rhythm information from musical scores"
+          url: "http://extras.humdrum.org/man/beat"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "blank"
+          description: "generate blank humdrum spines"
+          url: "http://extras.humdrum.org/man/blank"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "chorck"
+          description: "check for didactic errors in four-part choral textures"
+          url: "http://extras.humdrum.org/man/chorck"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "model"
+
+
+        - name: "cint"
+          description: "extract counterpoint interval modules from polyphonic music"
+          url: "http://extras.humdrum.org/man/cint"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "melody"
+                - "harmony"
+                - "interval"
+                - "pitch"
+
+
+        - name: "dittox"
+          description: "resolve null token references"
+          url: "http://extras.humdrum.org/man/dittox"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "extractx"
+          description: "select spines from Humdrum input"
+          url: "http://extras.humdrum.org/man/extractx"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "data processing"
+
+
+        - name: "gettime"
+          description: "create an absloute timing spine to indicate the playing time of **kern data"
+          url: "http://extras.humdrum.org/man/gettime"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "harm2kern"
+          description: "convert **harm data into **kern data"
+          url: "http://extras.humdrum.org/man/harm2kern"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+
+
+        - name: "hgrep"
+          description: "Humdrum-aware grep"
+          url: "http://extras.humdrum.org/man/hgrep"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "hum2abc"
+          description: "convert to ABC+ data for graphical music printing with abcm2ps"
+          url: "http://extras.humdrum.org/man/hum2abc"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "hum2enp"
+          description: "convert Humdrum files into ENP files"
+          url: "http://extras.humdrum.org/man/hum2enp"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "hum2gmn"
+          description: "convert Humdrum data into Guido Music Notation"
+          url: "http://extras.humdrum.org/man/hum2gmn"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "hum2mei"
+          description: "convert Humdrum files into MEI files"
+          url: "http://extras.humdrum.org/man/hum2mei"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+                - "deprecated"
+
+
+        - name: "hum2mid"
+          description: "convert Humdrum files into standard MIDI files"
+          url: "http://extras.humdrum.org/man/hum2mid"
+          tags:
+                - "Humdrum Extras"
+                - "midi"
+                - "data format conversion"
+
+
+        - name: "hum2muse"
+          description: "convert Humdrum files into MuseData"
+          url: "http://extras.humdrum.org/man/hum2muse"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "hum2xml"
+          description: "convert Humdrum files into MusicXML files"
+          url: "http://extras.humdrum.org/man/hum2xml"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "humcat"
+          description: "concatenate Humdrum files with similar spine structures"
+          url: "http://extras.humdrum.org/man/humcat"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "humpdf"
+          description: "embed Humdrum files into a PDF file"
+          url: "http://extras.humdrum.org/man/humpdf"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "humplay"
+          description: "play Humdrum files interactivly with MIDI"
+          url: "http://extras.humdrum.org/man/humplay"
+          tags:
+                - "Humdrum Extras"
+                - "midi"
+
+
+        - name: "humsplit"
+          description: "split multi-movement data into single movements"
+          url: "http://extras.humdrum.org/man/humsplit"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+                - "data management"
+
+
+        - name: "humtable"
+          description: "markup Humdrum files in an HTML table element"
+          url: "http://extras.humdrum.org/man/humtable"
+          tags:
+                - "Humdrum Extras"
+
+
+        - name: "kern2cmn"
+          description: "convert **kern data into CMN data"
+          url: "http://extras.humdrum.org/man/kern2cmn"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "kern2dm"
+          description: "convert **kerndata into input data for Director musices"
+          url: "http://extras.humdrum.org/man/kern2dm"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "kern2melisma"
+          description: "convert **kern data into input data for the Melisma Music Analyzer"
+          url: "http://extras.humdrum.org/man/kern2melisma"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "kern2skini"
+          description: "convert **kern data into SKINI data for STK"
+          url: "http://extras.humdrum.org/man/kern2skini"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "keycor"
+          description: "musical key identification by correlation"
+          url: "http://extras.humdrum.org/man/keycor"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+
+
+        - name: "location"
+          description: "list musical/file location of each data line"
+          url: "http://extras.humdrum.org/man/location"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "lofcog"
+          description: "line of fifths center of gravity measurements"
+          url: "http://extras.humdrum.org/man/lofcog"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "model"
+
+
+        - name: "mid2hum"
+          description: "convert MIDI files into Humdrum data"
+          url: "http://extras.humdrum.org/man/mid2hum"
+          tags:
+                - "Humdrum Extras"
+                - "midi"
+                - "data format conversion"
+
+
+        - name: "minrhy"
+          description: "find the minimum rhythmic unit in **kern data"
+          url: "http://extras.humdrum.org/man/minrhy"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+                - "data processing"
+
+
+        - name: "mkeyscape"
+          description: "generate keyscapes from MIDI files or Humdrum **kern data"
+          url: "http://extras.humdrum.org/man/mkeyscape"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "graphical"
+
+
+        - name: "mvspine"
+          description: "re-organize the spine ordering of a Humdrum file"
+          url: "http://extras.humdrum.org/man/mvspine"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "myank"
+          description: "extract selected measures from a Humdrum score"
+          url: "http://extras.humdrum.org/man/myank"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "data processing"
+
+
+        - name: "notearray"
+          description: "extract 2-D array of notes from **kern spines for numeric analysis"
+          url: "http://extras.humdrum.org/man/notearray"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "ottava"
+          description: "convert between sounding and printed ottava marks in **kern data"
+          url: "http://extras.humdrum.org/man/ottava"
+          tags:
+                - "Humdrum Extras"
+                - "notation processing"
+
+
+        - name: "pae2kern"
+          description: "convert Plaine & Easie code into **kern musical data"
+          url: "http://extras.humdrum.org/man/pae2kern"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "pitchmix"
+          description: "randomly reorder pitches in **kern spines, keeping rhythms unchanged"
+          url: "http://extras.humdrum.org/man/pitchmix"
+          tags:
+                - "Humdrum Extras"
+                - "pitch"
+                - "data processing"
+
+
+        - name: "prange"
+          description: "generate pitch histogram data from **kern input data"
+          url: "http://extras.humdrum.org/man/prange"
+          tags:
+                - "Humdrum Extras"
+                - "pitch"
+
+
+        - name: "prettystar"
+          description: "sort and organize tandem interpretations across multiple spines"
+          url: "http://extras.humdrum.org/man/prettystar"
+          tags:
+                - "Humdrum Extras"
+                - "data management"
+
+
+        - name: "proll"
+          description: "convert **kern data into graphical piano roll notation"
+          url: "http://extras.humdrum.org/man/proll"
+          tags:
+                - "Humdrum Extras"
+                - "graphical"
+
+
+        - name: "rcheck"
+          description: "print rythmic information for a Humdrum file"
+          url: "http://extras.humdrum.org/man/rcheck"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+                - "data management"
+
+
+        - name: "ridx"
+          description: "remove different categories of Humdrum line types"
+          url: "http://extras.humdrum.org/man/ridx"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "data processing"
+
+
+        - name: "rscale"
+          description: "scale the rhythms in **kern and **recip representations"
+          url: "http://extras.humdrum.org/man/rscale"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "runningkey"
+          description: "continuous measure of key analysis"
+          url: "http://extras.humdrum.org/man/runningkey"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+
+
+        - name: "sample"
+          description: "sample the musical texture with the given rhythmic cycle"
+          url: "http://extras.humdrum.org/man/sample"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "satb2gs"
+          description: "convert SATB staves into a grand-staff arrangement"
+          url: "http://extras.humdrum.org/man/satb2gs"
+          tags:
+                - "Humdrum Extras"
+                - "VHV filter"
+                - "notation processing"
+
+
+        - name: "scaletype"
+          description: "categorizes **kern data as pentatonic, hexatonic, or heptatonic"
+          url: "http://extras.humdrum.org/man/scaletype"
+          tags:
+                - "Humdrum Extras"
+                - "melody"
+                - "pitch"
+
+
+        - name: "scordur"
+          description: "measure the duration of a Humdrum file containing **kern data"
+          url: "http://extras.humdrum.org/man/scordur"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "scrmono2hum"
+          description: "convert monophonic SCORE files into Humdrum files"
+          url: "http://extras.humdrum.org/man/scrmono2num"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "serialize"
+          description: "rearrange multiple input spines into a single spine sequence"
+          url: "http://extras.humdrum.org/man/serialize"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "similx"
+          description: "edit-distance similarity measurements"
+          url: "http://extras.humdrum.org/man/similix"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "sonority"
+          description: "identify vertical chordal sonority across multiple **kern spines"
+          url: "http://extras.humdrum.org/man/sonority"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+
+
+        - name: "spinetrace"
+          description: "print spine parsing data to check for spine path errors"
+          url: "http://extras.humdrum.org/man/spinetrace"
+          tags:
+                - "Humdrum Extras"
+                - "data management"
+
+
+        - name: "swing"
+          description: "create a **time spine which swings the eighth-note rhythmic levels"
+          url: "http://extras.humdrum.org/man/swing"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "theloc"
+          description: "identify note locations within Humdrum files from themax search results"
+          url: "http://extras.humdrum.org/man/theloc"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "themax"
+          description: "search melodic index data created by tindex from **kern data"
+          url: "http://extras.humdrum.org/man/themax"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "thememakerx"
+          description: "generate incipts of music for input to thememakerx"
+          url: "http://extras.humdrum.org/man/thememakerx"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "thrux"
+          description: "expand repeated material in Humdrum files"
+          url: "http://extras.humdrum.org/man/thrux"
+          tags:
+                - "Humdrum Extras"
+                - "data processing"
+
+
+        - name: "tiefix"
+          description: "fix tied-note syntax in **kern data"
+          url: "http://extras.humdrum.org/man/tiefix"
+          tags:
+                - "Humdrum Extras"
+                - "notation processing"
+
+
+        - name: "time2matlab"
+          description: "convert a **kern score with performance timing into a matlab array"
+          url: "http://extras.humdrum.org/man/time2matlab"
+          tags:
+                - "Humdrum Extras"
+                - "data format conversion"
+
+
+        - name: "time2tempo"
+          description: "convert a **time spine into a **tempo spine"
+          url: "http://extras.humdrum.org/man/time2tempo"
+          tags:
+                - "Humdrum Extras"
+                - "rhythm"
+
+
+        - name: "tindex"
+          description: "create melodic search indexes from **kern data for use with the themax search engine"
+          url: "http://extras.humdrum.org/man/tindex"
+          tags:
+                - "Humdrum Extras"
+                - "searching"
+
+
+        - name: "tntype"
+          description: "extract set-theory Tn types from **kern sonorities in Humdrum files"
+          url: "http://extras.humdrum.org/man/tntype"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "set theory"
+
+
+        - name: "transpose"
+          description: "transpose musical pitch names in **kern data"
+          url: "http://extras.humdrum.org/man/transpose"
+          tags:
+                - "Humdrum Extras"
+                - "pitch"
+                - "notation processing"
+
+
+        - name: "tsroot"
+          description: "analyze the harmony of **kern data using the Melisma Music Analyzer"
+          url: "http://extras.humdrum.org/man/tsroot"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "model"
+
+
+        - name: "voicecount"
+          description: "calculate the number of active voices at any moment in a score"
+          url: "http://extras.humdrum.org/man/voicecount"
+          tags:
+                - "Humdrum Extras"
+                - "harmony"
+                - "texture"
+
+
+        - name: "xml2hum"
+          description: "convert MusicXML files into Humdrum files"
+          url: "http://extras.humdrum.org/man/xml2hum"
+          tags:
+                - "Humdrum Extras"
+                - "deprecated"
+                - "data format conversion"
+
+
+        - name: "zscores"
+          description: "calculate standard scores of numerical data spines"
+          url: "http://extras.humdrum.org/man/zscores"
+          tags:
+                - "Humdrum Extras"
+                - "numeric"
+
+
+
+##############################
+##
+## Verovio Humdrum Viewer filters (that are not listed above)
+##
+##############################
+
+        - name: "autobeam"
+          description: "add or remove beams"
+          url: "https://doc.verovio.humdrum.org/filter/autobeam"
+          tags:
+                - "VHV filter"
+                - "notation processing"
+
+
+        - name: "chooser"
+          description: "extract or rearrange data segments"
+          url: "https://doc.verovio.humdrum.org/filter/chooser"
+          tags:
+                - "VHV filter"
+                - "data processing"
+                - "data management"
+
+
+        - name: "composite"
+          description: "extract composite rhythm of music"
+          url: "https://doc.verovio.humdrum.org/filter/composite"
+          tags:
+                - "VHV filter"
+                - "rhythm"
+
+
+        - name: "dissonant"
+          description: "analyze dissonance functions in Renaissance music"
+          url: "https://doc.verovio.humdrum.org/filter/dissonant"
+          tags:
+                - "VHV filter"
+                - "harmony"
+                - "melody"
+                - "model"
+
+
+        - name: "humdiff"
+          description: "analyze differences in musical content between score(s)"
+          url: "https://doc.verovio.humdrum.org/filter/humdiff"
+          tags:
+                - "VHV filter"
+                - "searching"
+                - "notation processing"
+
+
+        - name: "kern2mens"
+          description: "convert from modern to mensural notation"
+          url: "https://doc.verovio.humdrum.org/filter/kern2mens"
+          tags:
+                - "VHV filter"
+                - "mensural"
+                - "data format conversion"
+
+
+        - name: "imitation"
+          description: "identify repeated melodic content"
+          url: "https://doc.verovio.humdrum.org/filter/imitation"
+          tags:
+                - "VHV filter"
+                - "melody"
+                - "search"
+
+
+        - name: "melisma"
+          description: "analyze melismatic text in vocal music"
+          url: "https://doc.verovio.humdrum.org/filter/melisma"
+          tags:
+                - "VHV filter"
+                - "melody"
+                - "text"
+
+
+        - name: "shed"
+          description: "Humdrum-like sed"
+          url: "https://doc.verovio.humdrum.org/filter/shed"
+          tags:
+                - "VHV filter"
+                - "data processing"
+
+
+        - name: "slurcheck"
+          description: "check score for balanced slur endpoints"
+          url: "https://doc.verovio.humdrum.org/filter/slurcheck"
+          tags:
+                - "VHV filter"
+                - "notation processing"
+                - "data management"
+
+
+
