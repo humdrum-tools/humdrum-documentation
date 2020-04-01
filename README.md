@@ -203,13 +203,17 @@ version above or below that line and delete the unwanted one.
 
 
 
-
-
 Issues page
 ------------
 
 To report bugs or tasks for the website, add them to the issues page:
 
 https://github.com/humdrum-tools/newdoc/issues
+
+
+Original theme
+--------------
+
+The original jekyll theme for this website is from [this repository](https://github.com/tomjoht/documentation-theme-jekyll).
 
 
