@@ -471,7 +471,7 @@ the spines.
 	scale="65"
 	pageWidth="1200"
 	humdrum-min-height="375px"
-	tabsize="14"
+	tabsize="16"
 %}
 
 <script type="application/x-humdrum" id="guide-02-5">
