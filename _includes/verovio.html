@@ -28,10 +28,10 @@
 		border           default 50
 		evenNoteSpacing  default 0
 		font             default "Leipzig"
-		format           default "auto"
-		# page           default 1
-		# header         default 0
-		# footer         default 0
+		from             default "auto"
+		# page             default 1
+		# header           default 0
+		# footer           default 0
 		pageHeight       default 60000
 		pageWidth        default 1350
 		scale            default 40
@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	// create the verovio options object:
 	var font             = "{{include.font}}" || "Leipzig";
-	var format           = "{{include.inputFormat}}" || "{{include.format}}" || "auto";
+	var from             = "{{include.inputFormat}}" || "{{include.from}}" || "{{include.format}}" || "auto";
 	var adjustPageHeight = parseInt("{{include.adjustPageHeight}}") || 1;
 	var pageHeight       = parseInt("{{include.pageHeight}}") || 60000;
 	var pageWidth        = parseInt("{{include.pageWidth}}") || 1350;
@@ -143,8 +143,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	var options = {
 		adjustPageHeight: adjustPageHeight,
 		font:             font,
-		format:           format,
-		//page:             page,
+		from:             from,
+		//page:           page,
 		pageHeight:       pageHeight,
 		pageWidth:        pageWidth,
 		humType:          1,

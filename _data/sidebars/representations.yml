@@ -11,38 +11,10 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: List of representations
-      url: /rep/index.html
+    - title: "List of representations"
+      url: "/rep/index.html"
       output: web, pdf
       type: homepage
-
-    - title: "**kern"
-      url: /rep/kern/index.html
-      output: web, pdf
-
-    - title: "**cents"
-      url: /rep/cents/index.html
-      output: web, pdf
-
-    - title: "**IPA"
-      url:   "/rep/IPA/index.html"
-      output: web, pdf
-
-    - title: "**MIDI"
-      url:   "/rep/MIDI/index.html"
-      output: web, pdf
-
-    - title: "**Tonh"
-      url:   "/rep/Tonh/index.html"
-      output: web, pdf
-
-    - title: "**URrhythm"
-      url:   "/rep/URrhythm/index.html"
-      output: web, pdf
-
-    - title: "**Zeit"
-      url:   "/rep/Zeit/index.html"
-      output: web, pdf
 
     - title: "**barlines"
       url:   "/rep/barlines/index.html"
@@ -60,12 +32,12 @@ entries:
       url:   "/rep/correl/index.html"
       output: web, pdf
 
-    - title: "**dB"
-      url:   "/rep/dB/index.html"
-      output: web, pdf
-
     - title: "**date"
       url:   "/rep/date/index.html"
+      output: web, pdf
+
+    - title: "**dB"
+      url:   "/rep/dB/index.html"
       output: web, pdf
 
     - title: "**deg"
@@ -78,10 +50,6 @@ entries:
 
     - title: "**diss"
       url:   "/rep/diss/index.html"
-      output: web, pdf
-
-    - title: "**document.style.md"
-      url:   "/rep/document.style.md/index.html"
       output: web, pdf
 
     - title: "**dur"
@@ -108,8 +76,8 @@ entries:
       url:   "/rep/hint/index.html"
       output: web, pdf
 
-    - title: "**index.md"
-      url:   "/rep/index.md/index.html"
+    - title: "**IPA"
+      url:   "/rep/IPA/index.html"
       output: web, pdf
 
     - title: "**iv"
@@ -120,16 +88,16 @@ entries:
       url:   "/rep/kern/index.html"
       output: web, pdf
 
-    - title: "**kern.md"
-      url:   "/rep/kern.md/index.html"
-      output: web, pdf
-
     - title: "**melac"
       url:   "/rep/melac/index.html"
       output: web, pdf
 
     - title: "**metpos"
       url:   "/rep/metpos/index.html"
+      output: web, pdf
+
+    - title: "**MIDI"
+      url:   "/rep/MIDI/index.html"
       output: web, pdf
 
     - title: "**mint"
@@ -204,8 +172,20 @@ entries:
       url:   "/rep/timebase/index.html"
       output: web, pdf
 
+    - title: "**Tonh"
+      url:   "/rep/Tonh/index.html"
+      output: web, pdf
+
+    - title: "**URrhythm"
+      url:   "/rep/URrhythm/index.html"
+      output: web, pdf
+
     - title: "**vox"
       url:   "/rep/vox/index.html"
+      output: web, pdf
+
+    - title: "**Zeit"
+      url:   "/rep/Zeit/index.html"
       output: web, pdf
 
 

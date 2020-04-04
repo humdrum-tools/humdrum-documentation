@@ -10,8 +10,10 @@
 // vrvToolkit stores the verovio toolkit interface.  When the page loads
 // set up the vrvToolkit variable.
 
-var vrvToolkit;
-document.addEventListener("DOMContentLoaded", setupVerovio);
+//var vrvToolkit;
+// document.addEventListener("DOMContentLoaded", setupVerovio);
+
+
 
 
 //////////////////////////////
@@ -124,7 +126,8 @@ function fixNewline(event, target) {
 
 function updateSvgDisplay(id, options) {
 	if (!vrvToolkit) {
-		console.log("verovio not found");
+		VEROVIO_QUEUE.push( { id:id, options:options });
+		// console.log("verovio not found, queuing job");
 		return;
 	}
 	var targetid = id + "-svg";
