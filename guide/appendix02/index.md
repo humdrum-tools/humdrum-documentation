@@ -2,6 +2,7 @@
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 description: "Appendix II (Instrumentation Codes)"
+sidebar: mydoc_sidebar
 revision-date: 'Thu Feb 3 10:12:40 EST 2000'
 ---
 

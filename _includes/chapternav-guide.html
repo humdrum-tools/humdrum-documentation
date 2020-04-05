@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var output = "";
 	output += "<table style='width:220px'><tr style='width:100%;'>";
-	output += "<td onclick='window.location.href=\"" + lastlink + "\"'>";
+	output += "<td title='Go to previous chapter' onclick='window.location.href=\"" + lastlink + "\"'>";
 	output += '<i class="fa fa-arrow-left"></i> ' + lastnum;
-	output += "</td><td onclick='window.location.href=\"/guide\"'>";
+	output += "</td><td title='Go to table of contents' onclick='window.location.href=\"/guide\"'>";
 	output += '<i class="fa fa-arrow-up"></i> ';
-	output += "</td><td onclick='window.location.href=\"" + nextlink + "\"'>";
+	output += "</td><td title='Go to previous chapter' onclick='window.location.href=\"" + nextlink + "\"'>";
 	output += nextnum + ' <i class="fa fa-arrow-right"></i> ';
 	output += "</td></tr></table>";
 

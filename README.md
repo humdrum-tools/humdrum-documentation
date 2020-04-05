@@ -214,6 +214,5 @@ https://github.com/humdrum-tools/newdoc/issues
 Original theme
 --------------
 
-The original jekyll theme for this website is from [this repository](https://github.com/tomjoht/documentation-theme-jekyll).
-
+The original jekyll theme for this website is from [this repository](https://github.com/tomjoht/documentation-theme-jekyll) and the [live version](https://idratherbewriting.com/documentation-theme-jekyll) which demonstrates various features.
 
