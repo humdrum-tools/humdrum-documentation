@@ -17,4 +17,4 @@ defaults:
       comments: true
       search: true
 
-pdf_sidebar: mydoc_sidebar
+pdf_sidebar: main_sidebar

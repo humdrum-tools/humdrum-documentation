@@ -1,6 +1,6 @@
 ---
 vim: ts=3
-sidebar: mydoc_sidebar
+sidebar: main_sidebar
 permalink: /tool/index.html
 ---
 

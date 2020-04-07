@@ -112,7 +112,7 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
+- main_sidebar
 - product1_sidebar
 - product2_sidebar
 - other

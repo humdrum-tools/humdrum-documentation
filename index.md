@@ -2,7 +2,7 @@
 title: "The Humdrum Toolkit for Computational Music Analysis"
 authors: Craig Sapp and Daniel Shanahan
 tags: [getting_started]
-sidebar: mydoc_sidebar
+sidebar: main_sidebar
 permalink: index.html
 ---
 

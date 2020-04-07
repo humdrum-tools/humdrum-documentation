@@ -216,3 +216,33 @@ Original theme
 
 The original jekyll theme for this website is from [this repository](https://github.com/tomjoht/documentation-theme-jekyll) and the [live version](https://idratherbewriting.com/documentation-theme-jekyll) which demonstrates various features.
 
+
+
+Markdown editing tips
+---------------------
+
+
+### Using code block in embedded HTML ###
+
+
+Normally HTML elements that are diplayed with the `block` style do not
+allow Markdown content inside of them.  To use markdown syntax 
+in these cases, add the attribute `markdown="1"` to the elemnt tag.
+
+Example:
+
+```html
+<div markdown="1"> This text **is not** processed with `Markdown` </div>
+```
+
+<div markdown="1"> This text **is** processed with `Markdown` </div>
+
+
+```html
+<div markdown="1"> This text **is** processed with `Markdown` </div>
+```
+
+<div markdown="1"> This text **is not** processed with `Markdown` </div>
+
+
+

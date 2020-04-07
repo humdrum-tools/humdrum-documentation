@@ -3,7 +3,7 @@ author: David Huron
 creation-date: "Tue Sep 1 10:17:29 EDT 1998"
 revision-date: "Thu Feb 3 10:12:21 EST 2000"
 robots: all
-sidebar: mydoc_sidebar
+sidebar: main_sidebar
 title: "Humdrum Toolkit User's Guide -- Appendix I"
 ---
 
