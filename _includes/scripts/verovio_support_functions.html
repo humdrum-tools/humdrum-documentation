@@ -18,16 +18,19 @@
 
 //////////////////////////////
 //
-// setupVerovio --  Retry every 0.25 seconds if it cannot be setup
-//    immediately.
+// setupVerovio --  Retry every waittime milliseconds if
+//    verovio is not yet ready.
 //
 
-function setupVerovio() {
+function setupVerovio(waittime) {
+	if (waittime <= 0) {
+		waittime = 150;
+	}
 	if (!vrvToolkit) {
 		vrvToolkit = new verovio.toolkit();
 	}
 	if (!vrvToolkit) {
-		setTimeout(setupVerovio, 250);
+		setTimeout(setupVerovio, waittime);
 	}
 }
 
@@ -207,8 +210,6 @@ function cleanOptions(content, options) {
 
 	return output;
 }
-
-
 
 
 

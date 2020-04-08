@@ -1,0 +1,26 @@
+
+
+<!-- ================================================================== -->
+<!-- site-wide initialization scripts loaded from _include/scripts.html -->
+<!-- ================================================================== -->
+
+
+{% include scripts/navgoco.html   %}
+
+
+{% include scripts/tooltip.html   %}
+
+
+{% include scripts/sidebar.html   %}
+
+
+{% if page.datatable == true %}
+	{% include scripts/datatable.html %}
+{% endif %}
+
+
+{% if page.verovio == "true" %}
+	{% include scripts/verovio.html %}
+{% endif %}
+
+

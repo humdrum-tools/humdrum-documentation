@@ -1,0 +1,49 @@
+
+
+{% include scripts/verovio_support_functions.html %}
+
+<script>
+// vim: ts=3
+
+# list of rendering jobs that need to be done once verovio has been loaded:
+var VEROVIO_QUEUE = [];
+
+var vrvToolkit;
+
+
+//////////////////////////////
+//
+// Module -- this variable is needed by the WASM version of verovio.
+//     The Module.onRuntimeInitialize() function will be called when
+//     the verovio script has been loaded and is ready to render notation.
+//     Once ready, the onRuntimeInitialized() function will render any
+//     requests that were made for notation before verovio was ready.
+//
+
+var Module = {
+		onRuntimeInitialized: function() {
+			vrvToolkit = new verovio.toolkit();
+			console.log(`Verovio (WASM) ${vrvToolkit.getVersion()} loaded`);
+			console.log("QUEUE", VEROVIO_QUEUE);
+			for (var z=0; z<VEROVIO_QUEUE.length; z++) {
+				updateSvgDisplay(VEROVIO_QUEUE[z].id, VEROVIO_QUEUE[z].options);
+			}
+			VEROVIO_QUEUE = [];
+		}
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+	{% if site.local == "true" %}
+		var script=document.createElement('script');
+		script.src="/js/local/verovio-toolkit-wasm.js";
+		document.body.appendChild(script);
+	{% else %}
+		var script=document.createElement('script');
+		script.src="https://verovio-script.humdrum.org/scripts/verovio-toolkit-wasm.js";
+		document.body.appendChild(script);
+	{% endif %}
+});
+
+</script>
+
+

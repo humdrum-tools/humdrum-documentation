@@ -52,3 +52,8 @@ table.footer, table.footer tr, table.footer tr td {
             </div>
 	</td></tr></table>
 </footer>
+
+{% if site.google_analytics %}
+	{% include footer/google_analytics.html %}
+{% endif %}
+
