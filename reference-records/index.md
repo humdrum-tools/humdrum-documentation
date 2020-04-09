@@ -1,213 +1,81 @@
 ---
-author: David Huron
+author: ["David Huron", "Craig Sapp"]
 creation-date: "Tue Sep 1 10:17:29 EDT 1998"
 revision-date: "Thu Feb 3 10:12:21 EST 2000"
 robots: all
 sidebar: main_sidebar
 title: "Humdrum Toolkit User's Guide -- Appendix I"
+permalink: /reference-records/index.html
 ---
-
-
-Appendix I
-==========
-
-------------------------------------------------------------------------
 
 Reference Records
 =================
 
-------------------------------------------------------------------------
+Reference records are formal ways of encoding "library-type"
+information pertaining to a Humdrum document. Reference records
+provide standardized ways of encoding bibliographic information
+that is suitable for computer-based access to metadata about the
+digital score.
 
-Reference records are formal ways of encoding \"library-type\"
-information pertaining to a Humdrum document. Reference records provide
-standardized ways of encoding bibliographic information \-- suitable for
-computer-based access.
+Humdrum reference records lines start with three exclamation marks
+(`!!!`),  followed by a multi-letter reference 
+code, then an optional number, then an optional dash and sub-key,
+then an optional `@` or `@@` and [language qualification](#languages),
+then a colon ending the reference key, and finally some textual
+content for the record:
 
-A perpetual problem with reference information pertains to the language
-in which information is represented. Humdrum provides comprehensive
-methods for dealing with multiple languages. These methods are described
-below,  and Humdrum users are encouraged to become familiar with these
-conventions.
+```
+!!!COM: The composer
+!!!OTL: The title
+!!!OTL2: The second title
+!!!OTL@DE: The title translated into German
+!!!OTL@@JP: The title in original language of Japanese.
+!!!OTL-rev: The revised title (where "rev" is an informal sub-categorization)
+!!!OTL3-sub@@HAW: The third subtitle in the original language of Hawaiian.
+```
 
-Humdrum reference records are designated by three exclamation marks at
-the beginning of a line,  followed by a multi-letter code, followed by an
-optional number,  followed by a colon, followed by some text.
+Standardized reference records use upper-case letters and the `#`
+character.  Informal or user-created reference records should
+preferably use lower-case letters, or start with a lower-case letter
+in order to avoid future conflicts with future standardized reference
+records.  Reference record keys must only use letters and the `#`
+character as well as the underscore (`_`).  Spaces are specifically
+not allowed, so use `_` as a replacement for spaces if needed when
+creating non-standardized reference records.  Dashes are also allowed,
+but note that these are typically used for sub-categorizations of a
+core reference record type.
 
-Over 80 reference codes are pre-defined in Humdrum. Each of these
-reference records is described below under nine categories: (1)
-[authorship information, ](#Authorship_Information) (2) [performance
-information, ](#Performance_Information) (3) [recording
-information, ](#Recording_Information) (4) [work identification
-information, ](#Identification_Information) (5) [imprint
-information, ](#Imprint_Information) (6) [copyright
-information, ](#Copyright_Information) (7) [analytic
-information, ](#Analytic_Information) (8) [historical
-information, ](#Historical_Information) and (9) [representation
-information.](#Representation_Information) A final section discusses
-[how to cite electronic documents.](#Electronic_Citation)
+Over 80 reference codes are pre-defined in Humdrum and are grouped
+by category below.  You can also click on a reference record name
+in the following list to jump directory to the description of a
+particular reference record, or mouseover the name to see a brief
+description of the reference record.
 
-<a name ="Language"></a>
+<div id="reference-index"></div>
 
-Accommodating Different Languages
----------------------------------
 
-Humdrum attempts to accommodate all languages. Reference information can
-be encoded using the original language of the source material or
-document. In addition,  reference information can be encoded in various
-translations that help end users. Humdrum uses the [**International
-Standards Organization ISO
-639-2**](http://lcweb.loc.gov/standards/iso639-2/englangn.html) standard
-for representing languages. This standard provides 3-letter codes for
-more than 4, 000 existing and historical languages. For example, the ISO
-standard codes for English,  French and Swahili are ` eng` ` fre` and
-` swa` respectively. (A table of 50 common languages is given at the end
-of this appendix.)
+<br/>
 
-Humdrum allows any type of reference information to be encoded in any or
-all of these languages. In general,  the *primary* reference information
-is encoded using the original language of the source material. Consider
-the case of a Friuli folksong (Friuli is a dialect of Italian). The
-title of the song should be encoded in the original language,  but it may
-also be useful to provide translations in Italian and English.
 
-The principal reference code indicating title is ` !!!OTL:` (see below).
-Following the OTL reference code,  the language of encoding can be
-indicated by appending an \"at\" sign (@),  followed by the 3-letter ISO
-language code. Here the title is rendered in three languages:
+## Authorship Information ##
 
-> ` !!!OTL@@FUR: Ai preit la biele stele  !!!OTL@ITA: Ho pregato la buona stella  !!!OTL@ENG: The Good Star`
+<table class="reference">
+{% capture my_include %}{% include_relative COM.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative COA.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative COS.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative COL.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative COC.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative CDT.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative CNT.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative LYR.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative LIB.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative LAR.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative LOR.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative TXO.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative TXL.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture my_include %}{% include_relative TRN.md %}{% endcapture %}{{ my_include | markdownify }}
+</table>
 
-Notice the use of the double \"at\" sign (i.e.,  \"@@\"). This convention
-is used to indicate that Friuli is the primary reference language. The
-title can also be encoded without any language designation:
-
-> ` !!!OTL: Ai preit la biele stele`
-
-This implies that the title is already rendered in the *primary*
-reference language.
-
-<a name ="COM"></a>
-
-Authorship Information
-----------------------
-
-**!!!COM:** [**Composer\'s
-name**](guide03.html#Searching_for_Reference_Information). In some
-cases,  opinions differ regarding the best spelling of a composer\'s
-name. If so,  all common spellings should be given \-- each alternative
-separated from the previous by a semicolon. E.g.
-
-> ` !!!COM: Chopin,  Fryderyk; Chopin, Frederick`
-
-With respect to accents,  refer to the discussion concerning the
-**!!!RLN:** reference record ([see below](#RLN)). If a work was composed
-by more than one composer,  then each composer\'s name should appear on a
-separate **!!!COM:** record with a number designation prior to the
-colon. For example, 
-
-> ` !!!COM1: Composer,  A.  !!!COM2: Composer, B.`
-
-<a name ="COA"></a>
-
-**!!!COA:** *Attributed composer*. This may include attributions known
-to be false. Several attributions may be combined on a single record by
-separating each name by a semicolon. Note that if a document contains
-both **!!!COA:** and **!!!COM:** records,  then the attributed composer
-is explicitly assumed to be false.
-
-<a name ="COS"></a>
-
-**!!!COS:** *Suspected composer*. This reference code indicates the
-belief of the editor or producer of the document as to the true identity
-of the composer(s). If more than one composer is suspected,  each name
-should appear on a separate **!!!COS:** record with a number designation
-prior to the colon.
-
-<a name ="COL"></a>
-
-**!!!COL:** *Composer\'s abbreviated,  alias, or stage name*. e.g.
-Madonna.
-
-<a name ="COC"></a>
-
-**!!!COC:** *Composer(s) corporate name*. Corporate names may include
-the names of popular groups (especially when the actual composer is not
-known). Corporate names may also include business names,  e.g. Muzak.
-
-<a name ="death date, composer"></a>
-<a name ="CDT"></a>
-
-**!!!CDT:** *Composer\'s dates*. The birth and death dates should be
-encoded using the [`**Zeit`](representations/Zeit.rep.html) format
-described in the *Humdrum Reference Manual*. The `**Zeit` format
-provides a highly refined representation,  including methods for
-representing uncertainty,  approximation, and boundary dates (e.g. prior
-to \...,  after \...).
-
-<a name ="CNT"></a>
-
-**!!!CNT:** *Nationality of the composer*. This reference information is
-encoded using the language of the nationality. Thus a German composer is
-encoded as `Deutscher` rather than \"German\",  and a French composer is
-encoded as `Francais` rather than \"French.\" Of course the specific
-language can be explicitly encoded using the 3-letter language codes
-described above. (e.g.,  `!!!CNT@@FRE: Francais`). Where the composer
-changed nationality,  successive nationalities should be listed (in
-chronological order) separated by semicolons.
-
-<a name ="LYR"></a>
-
-**!!!LYR:** *Lyricist*. The name of the lyricist. If more than one
-lyricist was involved in the work,  then each lyricist\'s name should
-appear on a separate **!!!LYR:** record with a number designation prior
-to the colon. If the composer was also the lyricist,  this should be
-explicitly encoding using the independent **!!!LYR:** record \-- rather
-than implicitly assumed.
-
-<a name ="LIB"></a>
-
-**!!!LIB:** *Librettist*. The name of the librettist. If more than one
-librettist was involved in the work,  then each librettist\'s name should
-appear on a separate **!!!LIB:** record with a number designation prior
-to the colon. If the composer was also the librettist,  this should be
-explicitly encoding using the independent **!!!LIB:** record \-- rather
-than implicitly assumed.
-
-<a name ="LAR"></a>
-
-**!!!LAR:** *Arranger*. The name of the arranger. If more than one
-arranger was involved in the work,  then each arranger\'s name should
-appear on a separate **!!!LAR:** record with a number designation prior
-to the colon.
-
-<a name ="LOR"></a>
-
-**!!!LOR:** *Orchestrator*. The name of the orchestrator. If more than
-one orchestrator was involved in the work,  then each orchestrator\'s
-name should appear on a separate **!!!LOR:** record with a number
-designation prior to the colon.
-
-<a name ="TXO"></a>
-
-**!!!TXO:** *Original language of vocal/choral text*. The name of the
-language should be encoded in that language. For example,  `russki`
-rather than `Russian`.
-
-<a name ="TXL"></a>
-
-**!!!TXL:** *Language of the **encoded** vocal/choral text*. The name of
-the language should be encoded in the language used for encoding. For
-example,  `Italiano` rather than `Italian`.
-
-<a name ="TRN"></a>
-
-**!!!TRN:** *Translator of text*. The name of the translator of any
-vocal,  choral, or dramatic text. If more than one translator was
-involved in the work,  then each translator\'s name should appear on a
-separate **!!!TRN:** record with a number designation prior to the
-colon.
-
-<a name ="Recording_Information"></a>
 
 Recording Information
 ---------------------
@@ -854,86 +722,21 @@ minimum. A good habit is to place the composer,  title of the work, and
 copyright records at the beginning of the file,  and to relegate all
 other reference records to the end of the file.
 
-<a name ="Further_Reference_Record_Codes"></a>
 
-ISO Language Codes
-------------------
+<a name="Language"></a>
+<a name="Languages"></a>
+<a name="language"></a>
+<a name="languages"></a>
 
-<a name ="other language translations"></a>
+Accommodating Different Languages
+---------------------------------
 
-The following table provides further language designation codes not
-identified in the preceding discussion. A [**complete
-list**](http://lcweb.loc.gov/standards/iso639-2/englangn.html) of ISO
-639-2 language codes is available.
-
->   ----------- -----------------------
->   Code        Language
->   **\@ALB**   in Albanian
->   **\@ARA**   in Arabic
->   **\@ARM**   in Armenian
->   **\@AZE**   in Azeri
->   **\@BEN**   in Bengali
->   **\@BUL**   in Bulgarian
->   **\@CHI**   in Chinese
->   **\@SCR**   in Croatian
->   **\@CZE**   in Czech
->   **\@DAN**   in Danish
->   **\@DUT**   in Dutch
->   **\@ENG**   in English
->   **\@EST**   in Estonian
->   **\@FIN**   in Finnish
->   **\@FRE**   in French
->   **\@GLA**   in Gaelic
->   **\@GER**   in German
->   **\@GRE**   in Greek (modern)
->   **\@HEB**   in Hebrew
->   **\@HIN**   in Hindi
->   **\@HUN**   in Hungarian
->   **\@ICE**   in Icelandic
->   **\@ITA**   in Italian
->   **\@JPN**   in Japanese
->   **\@JAV**   in Javanese
->   **\@KHM**   in Khmer
->   **\@KOR**   in Korean
->   **\@LIT**   in Lithuanian
->   **\@LAT**   in Latin
->   **\@LAV**   in Latvian
->   **\@MAL**   in Malayalam
->   **\@MON**   in Mongolian
->   **\@NOR**   in Norwegian
->   **\@POL**   in Polish
->   **\@POR**   in Portugese
->   **\@RUM**   in Romanian
->   **\@RUS**   in Russian
->   **\@SCC**   in Serbian
->   **\@SLO**   in Slovak
->   **\@SLV**   in Slovenian
->   **\@SPA**   in Spanish,  Castilian
->   **\@SWA**   in Swahili
->   **\@SWE**   in Swedish
->   **\@TAM**   in Tamil
->   **\@THA**   in Thai
->   **\@TIB**   in Tibetan
->   **\@TUR**   in Turkish
->   **\@UKR**   in Ukranian
->   **\@URD**   in Urdu
->   **\@VIE**   in Vietnamese
->   **\@WEL**   in Welsh
->   **\@XHO**   in Xhosa
->   **\@ZUL**   in Zulu
->   ----------- -----------------------
->
-------------------------------------------------------------------------
+{% capture my_include %}{% include_relative language.md %}{% endcapture %}{{ my_include | markdownify }}
 
 
-[**Next Appendix**](guide.append2.html)
 
-[**Previous Appendix**](guide.bibliog.html)
+{% include_relative styles-local.html %}
+{% include_relative scripts-local.html %}
 
-[**Table of Contents**](guide.toc.html)
 
-[**Detailed Contents**](guide.toc.detailed.html)
 
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999, 2002 David Huron

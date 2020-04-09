@@ -1,0 +1,218 @@
+
+<script>
+// vim: ft=javascript
+
+document.addEventListener("DOMContentLoaded", displayReferenceName);
+document.addEventListener("DOMContentLoaded", addRefLinkUrls);
+document.addEventListener("DOMContentLoaded", markLongDescriptions);
+document.addEventListener("DOMContentLoaded", createReferenceIndex);
+
+
+
+
+//////////////////////////////
+//
+// addRefLinkUrls --
+//
+
+function addRefLinkUrls() {
+	var elements = document.querySelectorAll("a.reflink");
+	for (var i=0; i<elements.length; i++) {
+		addRefLinkUrl(elements[i]);
+	}
+}
+
+
+
+//////////////////////////////
+//
+//  addRefLinkUrl --
+//
+
+function addRefLinkUrl(element) {
+	if (!element) {
+		return;
+	}
+	var text = element.textContent;
+	if (!text) {
+		return;
+	}
+	element.setAttribute("href", "#" + text);
+}
+
+
+
+//////////////////////////////
+//
+// displayReferenceName --
+//
+
+function displayReferenceName() {
+	var elements = document.querySelectorAll("table.reference tr td:first-child");
+	for (var i=0; i<elements.length; i++) {
+		displayLabelFromLink(elements[i]);
+	}
+
+
+}
+
+
+
+//////////////////////////////
+//
+// displayLabelFromLink --
+//
+
+function displayLabelFromLink(element) {
+	var aelem = element.querySelector("a");
+	if (!aelem) {
+		return;
+	}
+	var name = aelem.getAttribute("name");
+	if (!name) {
+		return;
+	}
+	console.log("NAME", name);
+	var text = "<span class='refname'>" + name + "</span>";
+	var span = document.createElement("SPAN");
+	var p = document.createElement("P");
+	span.className = "refname";
+	span.innerHTML  = name;
+	p.appendChild(span);
+	element.appendChild(p);
+}
+
+
+
+//////////////////////////////
+//
+// markLongDescriptions --
+//
+
+function markLongDescriptions() {
+	var entries = document.querySelectorAll("table.reference tr");
+	for (var i=0; i<entries.length; i++) {
+		markLongDescription(entries[i]);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// markLongDescription --
+//
+
+function markLongDescription(entry) {
+	var tds = entry.querySelectorAll("td");
+	if (tds.length != 2) {
+		return;
+	}
+	var td = tds[1];
+	var shorttext = td.querySelector("span.reference-summary").outerHTML;
+	var shortcontent = td.querySelector("span.reference-summary").innerHTML;
+	var longtext = td.innerHTML.replace(shorttext, "");
+	longtext = longtext.replace(/<p><\/p>/g, "");
+	longtext = longtext.replace(/^\s*<p>/, "");
+	longtext = shorttext + "<span class='reference-description'><p><i>" + shortcontent + "</i> " + longtext;
+	td.innerHTML = longtext;
+}
+
+
+
+//////////////////////////////
+//
+// createReferenceIndex --
+//
+
+function createReferenceIndex() {
+	var entries = document.querySelectorAll("table.reference tr");
+	if (entries.length == 0) {
+		return;
+	}
+	var target = document.querySelector("#reference-index");
+	if (!target) {
+		return;
+	}
+
+	var info = {};
+	var key;
+	var desc;
+	var i;
+	for (i=0; i<entries.length; i++) {
+		key = getReferenceKey(entries[i]);
+		if (!key) {
+			continue;
+		}
+		desc = getShortDescription(entries[i]);
+		info[key] = desc;
+	}
+	console.log("INFO", info);
+	var keys = Object.keys(info);
+	keys.sort();
+	console.log("KEYS", keys);
+
+	var output = "";
+	for (i=0; i<keys.length; i++) {
+		desc = info[keys[i]].replace(/"/g, "'").replace(/^\s*/, "").replace(/\s*$/, "");;
+		output += '<a href="#' + keys[i].replace(/#/g, "n"); 
+		output += '" title="' + desc + '">';
+		output += keys[i];
+		output += "</a>";
+		if (i < keys.length - 1) {
+			output += ", ";
+		}
+	}
+	target.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// getShortDescription --
+//
+
+function getShortDescription(entry) {
+	if (!entry) {
+		return "";
+	}
+	var element = entry.querySelector(".reference-summary");
+	if (!element) {
+		return "";
+	}
+	var text = element.textContent;
+	if (text) {
+		return text;
+	} else {
+		return "";
+	}
+}
+
+
+
+//////////////////////////////
+//
+// getReferenceKey --
+//
+
+function getReferenceKey(entry) {
+	if (!entry) {
+		return "";
+	}
+	var element = entry.querySelector("td a[name]");
+	if (!element) {
+		return "";
+	}
+	var value = element.getAttribute("name");
+	if (!value) {
+		return "";
+	} else {
+		return value;
+	}
+}
+
+
+
+</script>
+

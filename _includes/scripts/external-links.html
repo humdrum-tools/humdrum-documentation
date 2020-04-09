@@ -1,0 +1,46 @@
+
+
+<script>
+// vim: ts=3
+
+document.addEventListener("DOMContentLoaded", addBlankTargets);
+
+
+//////////////////////////////
+//
+// addBlankTargets -- For every hyperlink outside of the website, force it
+//    to open in a new window/tab.
+//
+
+function addBlankTargets() {
+	var i;
+
+	var list = document.querySelectorAll('a[href^="http://"]');
+	for (i=0; i<list.length; i++) {
+		addBlankTarget(list[i]);
+	}
+
+	var list = document.querySelectorAll('a[href^="https://"]');
+	for (i=0; i<list.length; i++) {
+		addBlankTarget(list[i]);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// addBlankTarget --
+//
+
+function addBlankTarget(element) {
+	if (!element) {
+		return;
+	}
+	element.setAttribute("target", "_blank");
+}
+
+
+</script>
+
+
