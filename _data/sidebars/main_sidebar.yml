@@ -23,10 +23,10 @@ entries:
         url:      "/guide/index.html"
         output:   web, pdf
       - title:    "Appendix 1: Reference records"
-        url:      "/guide/appendix01/index.html"
+        url:      "/reference-records/index.html"
         output:   web, pdf
       - title:    "Appendix 2: Instrument codes"
-        url:      "/guide/appendix02/index.html"
+        url:      "/instrument-codes/index.html"
         output:   web, pdf
       - title:    "Bibliography"
         url:      "/guide/bibliography/index.html"
@@ -37,11 +37,11 @@ entries:
     folderitems:
 
     - title: "Reference records"
-      url: "/guide/appendix01/index.html"
+      url: "/reference-records/index.html"
       output: web
 
     - title: "Instrument codes"
-      url: "/guide/appendix02/index.html"
+      url: "/instrument-codes/index.html"
       output: web
 
     - title: "List of tools"
