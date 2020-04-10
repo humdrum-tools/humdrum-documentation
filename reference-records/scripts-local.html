@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", displayReferenceName);
 document.addEventListener("DOMContentLoaded", addRefLinkUrls);
 document.addEventListener("DOMContentLoaded", markLongDescriptions);
 document.addEventListener("DOMContentLoaded", createReferenceIndex);
+document.addEventListener("click", toggleDescription);
 
 
 
@@ -214,5 +215,151 @@ function getReferenceKey(entry) {
 
 
 
+//////////////////////////////
+//
+// switchDisplayStyle --
+//
+
+function switchDisplayStyle(event) {
+	var element = document.querySelector("input#description-style");
+	if (!element) {
+		return;
+	}
+	var value = element.checked;
+	console.log("VALUE", value);
+	if (value) {
+		showShortDescriptions();
+	} else {
+		showLongDescriptions();
+	}
+}
+
+
+
+//////////////////////////////
+//
+// showShortDescriptions --
+//
+
+function showShortDescriptions(element) {
+	var starting = element;
+	var eq = 1;
+	if (!element) {
+		starting = document;
+		eq = 0;
+	}
+
+	var i;
+	var sd = starting.querySelectorAll("span.reference-summary");
+	var ld = starting.querySelectorAll("span.reference-description");
+	for (i=0; i<sd.length; i++) {
+		sd[i].style.display = "block";
+		sd[i].style["vertical-align"] = "baseline";
+	}
+	for (i=0; i<ld.length; i++) {
+		ld[i].style.display = "none";
+	}
+
+	if (!eq) {
+		var rows = document.querySelectorAll("table.reference tr");
+		for (i=0; i<rows.length; i++) {
+			rows[i].classList.add("short");
+		}
+		var tables = document.querySelectorAll("table.reference");
+		for (i=0; i<tables.length; i++) {
+			tables[i].classList.add("short");
+		}
+	}
+}
+
+
+
+//////////////////////////////
+//
+// showLongDescriptions --
+//
+
+function showLongDescriptions(element) {
+	var starting = element;
+	var eq = 1;
+	if (!element) {
+		starting = document;
+		eq = 0;
+	}
+	var sd = starting.querySelectorAll("span.reference-summary");
+	var ld = starting.querySelectorAll("span.reference-description");
+	var i;
+	for (i=0; i<sd.length; i++) {
+		sd[i].style.display = "none";
+	}
+	for (i=0; i<ld.length; i++) {
+		ld[i].style.display = "block";
+	}
+
+	if (!eq) {
+		var rows = document.querySelectorAll("table.reference tr");
+		for (i=0; i<rows.length; i++) {
+			rows[i].classList.remove("short");
+		}
+		var tables = document.querySelectorAll("table.reference");
+		for (i=0; i<tables.length; i++) {
+			tables[i].classList.remove("short");
+		}
+	}
+}
+
+
+//////////////////////////////
+//
+// toggleDescription --
+//
+
+function toggleDescription(event) {
+	if (!event) {
+		return;
+	}
+	var target = event.target;
+	var tr;
+	var table;
+	var current = target;
+	while (current) {
+		var name = current.tagName;
+		if (name === "TR") {
+			tr = current;
+		} else if (name === "TABLE") {
+			if (current.className.match(/reference/)) {
+				table = current;
+				break;
+			}
+		}
+		current = current.parentNode;
+	}
+
+	if (!tr) {
+		return;
+	}
+	if (!table) {
+		return;
+	}
+
+	if (tr.className.match(/short/)) {
+		tr.classList.remove("short");
+		showLongDescriptions(tr);
+	} else {
+		tr.classList.add("short");
+		showShortDescriptions(tr);
+	}
+
+}
+
+
 </script>
+
+
+
+
+
+
+
+
 

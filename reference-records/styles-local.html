@@ -12,18 +12,30 @@ table.reference {
 	width="100%";
 }
 
+table.reference tr.short td:first-child p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+table.reference tr.short td {
+	padding: 0;
+}
+table.reference tr.short td:first-child {
+	text-align: left;
+	padding-right: 3px;
+}
+
 table.reference tr, table.reference td {
 	background: transparent !important;
 }
 
 table.reference tr td:first-child {
-	text-align: right;
+	text-align: left;
 	padding-right: 0;
+	padding-left: 0;
 	margin-right: 0;
 }
 
 table.reference {
-	margin-left: -20px;
 	max-width: 100% !important;
 }
 
@@ -67,8 +79,12 @@ table.reference, table.reference tr, table.reference tr td {
 }
 
 #reference-index {
-	padding-left: 50px;
-	padding-right: 50px;
+	/* padding-left: 50px; */
+	/* padding-right: 50px; */
+}
+
+table.keyindex {
+	max-width: 100% !important;
 }
 
 

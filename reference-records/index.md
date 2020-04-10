@@ -1,79 +1,49 @@
 ---
 author: ["David Huron", "Craig Sapp"]
-creation-date: "Tue Sep 1 10:17:29 EDT 1998"
-revision-date: "Thu Feb 3 10:12:21 EST 2000"
+creation-date: 1 Sep 1998
+revision-date: 10 Apr 2020
 robots: all
 sidebar: main_sidebar
-title: "Humdrum Toolkit User's Guide -- Appendix I"
+title: "Humdrum reference records"
 permalink: /reference-records/index.html
 ---
 
 Reference Records
 =================
 
-Reference records are formal ways of encoding "library-type"
-information pertaining to a Humdrum document. Reference records
-provide standardized ways of encoding bibliographic information
-that is suitable for computer-based access to metadata about the
-digital score.
+{% capture x %}{% include_relative introduction.md %}{% endcapture %}{{ x | markdownify }}
 
-Humdrum reference records lines start with three exclamation marks
-(`!!!`),  followed by a multi-letter reference 
-code, then an optional number, then an optional dash and sub-key,
-then an optional `@` or `@@` and [language qualification](#languages),
-then a colon ending the reference key, and finally some textual
-content for the record:
-
-```
-!!!COM: The composer
-!!!OTL: The title
-!!!OTL2: The second title
-!!!OTL@DE: The title translated into German
-!!!OTL@@JP: The title in original language of Japanese.
-!!!OTL-rev: The revised title (where "rev" is an informal sub-categorization)
-!!!OTL3-sub@@HAW: The third subtitle in the original language of Hawaiian.
-```
-
-Standardized reference records use upper-case letters and the `#`
-character.  Informal or user-created reference records should
-preferably use lower-case letters, or start with a lower-case letter
-in order to avoid future conflicts with future standardized reference
-records.  Reference record keys must only use letters and the `#`
-character as well as the underscore (`_`).  Spaces are specifically
-not allowed, so use `_` as a replacement for spaces if needed when
-creating non-standardized reference records.  Dashes are also allowed,
-but note that these are typically used for sub-categorizations of a
-core reference record type.
-
-Over 80 reference codes are pre-defined in Humdrum and are grouped
-by category below.  You can also click on a reference record name
-in the following list to jump directory to the description of a
-particular reference record, or mouseover the name to see a brief
-description of the reference record.
-
+<table class="key-index">
+<tr>
+<td width="100%">
 <div id="reference-index"></div>
-
-
-<br/>
+</td>
+<td>
+<div style="white-space:nowrap">
+<input type="checkbox" style="display:inline-block; margin-right:10px;" id="description-style" onclick="switchDisplayStyle();"><label for="switchDisplayStyle">Short listing</label>
+</div>
+</td>
+</tr>
+</table>
 
 
 ## Authorship Information ##
 
 <table class="reference">
-{% capture my_include %}{% include_relative COM.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative COA.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative COS.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative COL.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative COC.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative CDT.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative CNT.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative LYR.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative LIB.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative LAR.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative LOR.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative TXO.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative TXL.md %}{% endcapture %}{{ my_include | markdownify }}
-{% capture my_include %}{% include_relative TRN.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture x %}{% include_relative COM.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative COA.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative COS.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative COL.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative COC.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative CDT.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative CNT.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative LYR.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative LIB.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative LAR.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative LOR.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative TXO.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative TXL.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative TRN.md %}{% endcapture %}{{ x | markdownify }}
 </table>
 
 
@@ -177,30 +147,6 @@ Work Identification Information
 of the specific section or segment encoded in the current file. Titles
 must be rendered in the original language,  e.g. *Le sacre du printemps.*
 (Title translations are encoded using other reference records.)
-
-<a name ="XEN"></a>
-
-**!!!XEN:** *Translated title (in English)*. (Note that reference codes
-are also available for translations to languages other than English, 
-French,  German, or Japanese.)
-
-<a name ="XFR"></a>
-
-**!!!XFR:** *Translated title (in French)*. (Note that reference codes
-are also available for translations to languages other than English, 
-French,  German, or Japanese.)
-
-<a name ="XDE"></a>
-
-**!!!XDE:** *Translated title (in German)*. (Note that reference codes
-are also available for translations to languages other than English, 
-French,  German, or Japanese.)
-
-<a name ="XNI"></a>
-
-**!!!XNI:** *Translated title (in Japanese)*. (Note that reference codes
-are also available for translations to languages other than English, 
-French,  German, or Japanese.)
 
 <a name ="OTP"></a>
 
@@ -731,7 +677,7 @@ other reference records to the end of the file.
 Accommodating Different Languages
 ---------------------------------
 
-{% capture my_include %}{% include_relative language.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture x %}{% include_relative language.md %}{% endcapture %}{{ x | markdownify }}
 
 
 

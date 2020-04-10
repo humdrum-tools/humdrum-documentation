@@ -13,13 +13,13 @@ The individual files are loaded onto the main page with this liquid
 code:
 
 ```
-{% capture my_include %}{% include_relative COM.md %}{% endcapture %}{{ my_include | markdownify }}
+{% capture x %}{% include_relative COM.md %}{% endcapture %}{{ x | markdownify }}
 ```
 
 This complicated structure is needed in order to process the markdown
 formatting into HTML code by the jekyll program.  The above code
 means to store the contents of the file into a liquid variable
-called `my_include`, and then process and insert the contents of
+called `x`, and then process and insert the contents of
 the variable onto the page after it has been converted to HTML by
 the markdownify filter.
 
