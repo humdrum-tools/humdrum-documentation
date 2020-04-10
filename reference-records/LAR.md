@@ -6,7 +6,7 @@
 </td>
 <td markdown="1">
 <span class="reference-summary">
-	Name of the arranger.
+	Music arranger's name.
 </span>
 
 If more than one arranger was involved in the work, then each

@@ -6,7 +6,7 @@
 </td>
 <td markdown="1">
 <span class="reference-summary">
-	Lyricist.
+	Lyricist's name.
 </span>
 
 If more than one lyricist was involved in the work, then each

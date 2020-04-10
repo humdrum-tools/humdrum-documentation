@@ -6,7 +6,7 @@
 </td>
 <td markdown="1">
 <span class="reference-summary">
-	Nationality of the composer.
+	Composer's nationality.
 </span>
 
 For clarity, a language qualifier can be used to indicate the

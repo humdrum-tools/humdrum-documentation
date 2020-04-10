@@ -6,7 +6,7 @@
 </td>
 <td markdown="1">
 <span class="reference-summary">
-	Orchestrator.
+	Orchestrator's name.
 </span>
 
 If more than one orchestrator was involved in the work,  then each

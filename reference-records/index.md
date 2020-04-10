@@ -3,6 +3,7 @@ author: ["David Huron", "Craig Sapp"]
 creation-date: 1 Sep 1998
 revision-date: 10 Apr 2020
 robots: all
+vim: ft=html
 sidebar: main_sidebar
 title: "Humdrum reference records"
 permalink: /reference-records/index.html
@@ -13,18 +14,7 @@ Reference Records
 
 {% capture x %}{% include_relative introduction.md %}{% endcapture %}{{ x | markdownify }}
 
-<table class="key-index">
-<tr>
-<td width="100%">
-<div id="reference-index"></div>
-</td>
-<td>
-<div style="white-space:nowrap">
-<input type="checkbox" style="display:inline-block; margin-right:10px;" id="description-style" onclick="switchDisplayStyle();"><label for="switchDisplayStyle">Short listing</label>
-</div>
-</td>
-</tr>
-</table>
+{% capture x %}{% include_relative refindex.md %}{% endcapture %}{{ x | markdownify }}
 
 
 ## Authorship Information ##
@@ -36,6 +26,8 @@ Reference Records
 {% capture x %}{% include_relative COL.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative COC.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative CDT.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative CBL.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative CDL.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative CNT.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative LYR.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative LIB.md %}{% endcapture %}{{ x | markdownify }}
@@ -56,42 +48,42 @@ sound recordings the following reference records may be pertinent.
 
 <a name ="RTL"></a>
 
-**!!!RTL:** *Title of album*.
+<span class="refname">RTL</span> *Title of album*.
 
 <a name ="RMM"></a>
 
-**!!!RMM:** *Manufacturer or sponsoring company*. The company or
+<span class="refname">RMM</span> *Manufacturer or sponsoring company*. The company or
 organization responsible for the release,  distribution, and/or
 manufacturing of the recording.
 
 <a name =""></a>
 
-**!!!RC\#:** *Recording company\'s catalogue number*. The album\'s
+<span class="refname">RC\#</span> *Recording company\'s catalogue number*. The album\'s
 numerical designation.
 
 <a name ="RRD"></a>
 
-**!!!RRD:** *Date of release*. The release date should be encoded using
+<span class="refname">RRD</span> *Date of release*. The release date should be encoded using
 the [`**date`](representations/date.rep.html) format described in the
 *Humdrum Reference Manual*.
 
 <a name ="RLC"></a>
 
-**!!!RLC:** *Place of recording*. (Local language should be used.)
+<span class="refname">RLC</span> *Place of recording*. (Local language should be used.)
 
 <a name ="RNP"></a>
 
-**!!!RNP:** *Name of the producer*.
+<span class="refname">RNP</span> *Name of the producer*.
 
 <a name ="RDT"></a>
 
-**!!!RDT:** *Date of recording*. The date of recording should be encoded
+<span class="refname">RDT</span> *Date of recording*. The date of recording should be encoded
 using the [`**date`](representations/date.rep.html) format described in
 the described in the *Humdrum Reference Manual*.
 
 <a name =""></a>
 
-**!!!RT\#:** *Track number*.
+<span class="refname">RT\#</span> *Track number*.
 
 <a name ="Performance_Information"></a>
 
@@ -103,35 +95,46 @@ rather than (or in addition to) score-related information. If the
 representation encodes a given performance (such as a MIDI performance), 
 then the following reference records may be pertinent.
 
+<A NAME="ensemble">
+<A NAME="MGN">
+<P>
+<b>!!!MGN:</b>
+<i>Name of the performance group (ensemble)</i>, such as the <i>Juilliard String Quartet</i>.
+</P>
+
 <a name ="MPN"></a>
 
-**!!!MPN:** *Performer\'s name*. If more than one performer was involved
+<span class="refname">MPN</span> *Performer\'s name*. If more than one performer was involved
 in the work,  then each performer\'s name should appear on a separate
-**!!!MPN:** record with a number designation prior to the colon.
+<span class="refname">MPN</span> record with a number designation prior to the colon.
+Note that this record
+can be used for soloists, and <b>!!!MGN:</b> is used for the name of 
+a group, such as the <i>Chicago Symphony Orchestra</i>, and <b>!!!MCN:</b>
+is for the conductor of the group.
 
 <a name ="MPS"></a>
 
-**!!!MPS:** *Suspected performer*. If more than one performer is
-suspected,  each name should appear on a separate **!!!MPS:** record with
+<span class="refname">MPS</span> *Suspected performer*. If more than one performer is
+suspected,  each name should appear on a separate <span class="refname">MPS</span> record with
 a number designation prior to the colon.
 
 <a name ="MRD"></a>
 
-**!!!MRD:** *Date of performance*. The performance date should be
+<span class="refname">MRD</span> *Date of performance*. The performance date should be
 encoded using the [`**date`](representations/date.rep.html) format
 described in the *Humdrum Reference Manual*.
 
 <a name ="MLC"></a>
 
-**!!!MLC:** *Place of performance*. (Local language should be used.)
+<span class="refname">MLC</span> *Place of performance*. (Local language should be used.)
 
 <a name ="MCN"></a>
 
-**!!!MCN:** *Name of the conductor of the performance*.
+<span class="refname">MCN</span> *Name of the conductor of the performance*.
 
 <a name ="MPD"></a>
 
-**!!!MPD:** *Date of first performance*. The date of first performance
+<span class="refname">MPD</span> *Date of first performance*. The date of first performance
 should be encoded using the [`**date`](representations/date.rep.html)
 format described in the described in the *Humdrum Reference Manual*.
 
@@ -142,7 +145,7 @@ Work Identification Information
 
 <a name ="OTL"></a>
 
-**!!!OTL:**
+<span class="refname">OTL</span>
 [**Title.**](guide03.html#Searching_for_Reference_Information) The title
 of the specific section or segment encoded in the current file. Titles
 must be rendered in the original language,  e.g. *Le sacre du printemps.*
@@ -150,93 +153,93 @@ must be rendered in the original language,  e.g. *Le sacre du printemps.*
 
 <a name ="OTP"></a>
 
-**!!!OTP:** *Popular Title*. This reference record encodes well-known or
+<span class="refname">OTP</span> *Popular Title*. This reference record encodes well-known or
 alias titles such as \"Pathetique Sonata\".
 
 <a name ="OTA"></a>
 
-**!!!OTA:** *Alternative title*. This reference record encodes earlier
+<span class="refname">OTA</span> *Alternative title*. This reference record encodes earlier
 or alternate titles.
 
 <a name ="OPR"></a>
 
-**!!!OPR:** *Title of larger (or parent) work* from which the encoded
+<span class="refname">OPR</span> *Title of larger (or parent) work* from which the encoded
 piece is a part. For example,  \"Gute Nacht\" (OTL) from *Winterreise*
 (OPR).
 
 <a name ="OAC"></a>
 
-**!!!OAC:** *Act number*. For operas and musicals,  this reference record
+<span class="refname">OAC</span> *Act number*. For operas and musicals,  this reference record
 encodes the act number as an Arabic (rather than Roman) numeral. The
 number may be preceded by the word \"Act\" as in `Act 3`.
 
 <a name ="OSC"></a>
 
-**!!!OSC:** *Scene number*. For operas and musicals,  this reference
+<span class="refname">OSC</span> *Scene number*. For operas and musicals,  this reference
 record encodes the scene number as an Arabic (rather than Roman)
 numeral. The number may be preceded by the word \"Scene\" as in
 `Scene 3`.
 
 <a name ="OMV"></a>
 
-**!!!OMV:** *Movement number*. For multi-movement works such as sonatas
+<span class="refname">OMV</span> *Movement number*. For multi-movement works such as sonatas
 and symphonies,  this reference record encodes the movement number as an
 Arabic (rather than Roman) numeral. The number may be preceded by the
 word \"Movement\" or \"mov.\" etc.,  as in `mov. 3`.
 
 <a name ="OMD"></a>
 
-**!!!OMD:** *Movement designation or movement name*. Typically movements
+<span class="refname">OMD</span> *Movement designation or movement name*. Typically movements
 may be named according to the tempo (e.g. \"Allegro ma no troppo\") or
 according to a style,  genre or form (e.g. \"Fugue\"), or according to a
 programmatic title (e.g. \"In Full Flower\").
 
 <a name ="OPS"></a>
 
-**!!!OPS:** *Opus number*. The number may be preceded by the word
+<span class="refname">OPS</span> *Opus number*. The number may be preceded by the word
 \"Opus\" as in `Opus 23`. Once again,  Arabic numerals are used.
 
 <a name ="ONM"></a>
 
-**!!!ONM:** *Number*. The number may be preceded by the abbreviations
+<span class="refname">ONM</span> *Number*. The number may be preceded by the abbreviations
 \"No.\" or \"Nr.\" as in `No. 4`.
 
 <a name ="OVM"></a>
 
-**!!!OVM:** *Volume*. The volume number may be preceded by the
+<span class="refname">OVM</span> *Volume*. The volume number may be preceded by the
 abbreviation \"Vol.\" as in `Vol. 2`. Arabic numbers are used.
 
 <a name ="dedication"></a>
 
-**!!!ODE:** *Dedication*. Name of person or organization to whom the
+<span class="refname">ODE</span> *Dedication*. Name of person or organization to whom the
 work is dedicated. If the work was dedicated to more than one person, 
-then each dedicatee\'s name should appear on a separate **!!!ODE:**
+then each dedicatee\'s name should appear on a separate <span class="refname">ODE</span>
 record with a number designation prior to the colon.
 
 <a name ="OCO"></a>
 
-**!!!OCO:** *Commission*. Name of person or organization that
+<span class="refname">OCO</span> *Commission*. Name of person or organization that
 commissioned the work. If the work was commissioned by more than one
 person,  then each commissioner\'s name should appear on a separate
-**!!!OCO:** record with a number designation prior to the colon.
+<span class="refname">OCO</span> record with a number designation prior to the colon.
 
 <a name ="OCL"></a>
 
-**!!!OCL:** *Collector*. Name of person who collected or transcribed the
+<span class="refname">OCL</span> *Collector*. Name of person who collected or transcribed the
 work. If the work was collected by more than one person,  then each
-collector\'s name should appear on a separate **!!!OCL:** record with a
+collector\'s name should appear on a separate <span class="refname">OCL</span> record with a
 number designation prior to the colon.
 
 <a name ="ONB"></a>
 
-**!!!ONB:** *Free format note* related to the title or identity of the
+<span class="refname">ONB</span> *Free format note* related to the title or identity of the
 encoded work. Nota bene. If more than one such note is encoded,  each
-should appear on a separate **!!!ONB:** record with a number designation
+should appear on a separate <span class="refname">ONB</span> record with a number designation
 prior to the colon.
 
 <a name ="ODT"></a>
 
-**!!!ODT:** *Date of composition*. The date (or period) of composition
+<span class="refname">ODT</span> *Date of composition*. The date (or period) of composition
 should be encoded using the [`**date`](representations/date.rep.html) or
 [`**Zeit`](representations/Zeit.rep.html) formats described in the
 *Humdrum Reference Manual*. The `**date` and `**Zeit` formats provides a
@@ -246,12 +249,12 @@ after \...).
 
 <a name ="country of composition"></a>
 
-**!!!OCY:** *Country of composition*. Local names should be used,  such
+<span class="refname">OCY</span> *Country of composition*. Local names should be used,  such
 as \`Espana\'.
 
 <a name ="city of composition"></a>
 
-**!!!OPC:** *City,  town or village of composition*. Local names should
+<span class="refname">OPC</span> *City,  town or village of composition*. Local names should
 be used,  such as \`Den Haag.\'
 
 <a name ="Group_Information"></a>
@@ -261,13 +264,13 @@ Group Information
 
 <a name ="group"></a>
 
-**!!!GTL:** *Group Title*. A logical collection of works such as the
+<span class="refname">GTL</span> *Group Title*. A logical collection of works such as the
 \"London Symphonies\" by Haydn,  or the four concertos by Vivaldi forming
 \"The Seasons\".
 
 <a name ="GAW"></a>
 
-**!!!GAW:** *Associated Work*. Some works are associated with other
+<span class="refname">GAW</span> *Associated Work*. Some works are associated with other
 works,  such as plays, novels, paintings, films, or other musical works.
 E.g. Mendelssohn\'s Overture to Shakespeare\'s *Midsummer Night\'s
 Dream*. This reference allows associated works to be explicitly
@@ -277,7 +280,7 @@ identified by author and title. E.g.
 
 <a name ="group"></a>
 
-**!!!GCO:** *Collection designation*. This is a free-form text record
+<span class="refname">GCO</span> *Collection designation*. This is a free-form text record
 that can be used to identify a collection of pieces,  such as works
 appearing in a compendium or anthology. E.g. Norton Scores,  Smithsonian
 Collection,  Burkhart Anthology.
@@ -289,52 +292,65 @@ Imprint Information
 
 <a name ="PUB"></a>
 
-**!!!PUB:** *Publication status*. This reference record identifies
+<span class="refname">PUB</span> *Publication status*. This reference record identifies
 whether the document has ever been \"published\". One of the following
 English terms may appear: `published` or `unpublished`.
 
 <a name ="PPR"></a>
 
-**!!!PPR:** *First publisher*. Name of the first publisher of the work.
+<span class="refname">PPR</span> *First publisher*. Name of the first publisher of the work,
+or the name of the publisher if a specific edition is being encoded.
 
 <a name ="date of first publication"></a>
 
-**!!!PDT:** *Date first published*. The date of publication should be
+<span class="refname">PDT</span> *Date first published*. The date of publication should be
 encoded using the [`**date`](representations/date.rep.html) format
 described in the *Humdrum Reference Manual*.
 
+<a name="publication title">
+<a name="PTL">
+<p>
+<b>!!!PTL:</b>
+<i>Publication title</i>.
+Title of the publication (volume) from which the work is encoded.  To encode
+linebreaks in the title, use the pipe character (|).
+</p>
+
+
 <a name ="PPP"></a>
 
-**!!!PPP:** *Place first published*. (Local language should be used.)
+<span class="refname">PPP</span> *Place first published*.  The location where the source edition
+for the digital encoding was first published (location of first edition).
+
 
 <a name =""></a>
 
-**!!!PC\#:** *Publisher\'s catalogue number*. This should not be
+<span class="refname">PC\#</span> *Publisher\'s catalogue number*. This should not be
 confused with better known scholarly catalogues,  such as those of
 Köchel,  Hoboken, etc.
 
 <a name ="scholarly catalogue abbreviation and number"></a>
 
-**!!!SCT:** *Scholarly catalogue abbreviation and number*. E.g. BWV 551
+<span class="refname">SCT</span> *Scholarly catalogue abbreviation and number*. E.g. BWV 551
 
 <a name ="SCA"></a>
 
-**!!!SCA:** *Scholarly catalogue (unabbreviated) name*.
+<span class="refname">SCA</span> *Scholarly catalogue (unabbreviated) name*.
 E.g.`Koechel 117`.
 
 <a name ="SMS"></a>
 
-**!!!SMS:** *Manuscript source name*. For unpublished sources,  the
+<span class="refname">SMS</span> *Manuscript source name*. For unpublished sources,  the
 manuscript source name.
 
 <a name ="SML"></a>
 
-**!!!SML:** *Manuscript location*. For unpublished sources,  the location
+<span class="refname">SML</span> *Manuscript location*. For unpublished sources,  the location
 of the manuscript source.
 
 <a name ="acknowledgement of manuscript access"></a>
 
-**!!!SMA:** *Acknowledgement of manuscript access*. This reference
+<span class="refname">SMA</span> *Acknowledgement of manuscript access*. This reference
 information may be used to encode a free format acknowledgement or note
 of thanks to a given manuscript owner for scholarly or other access.
 
@@ -345,36 +361,36 @@ Copyright Information
 
 <a name ="publisher of electronic edition"></a>
 
-**!!!YEP:** *Publisher of electronic edition*. This reference identifies
+<span class="refname">YEP</span> *Publisher of electronic edition*. This reference identifies
 the publisher of the electronic document.
 
 <a name ="date and owner of electronic copyright"></a>
 
-**!!!YEC:** *Date and owner of electronic copyright*. This reference
+<span class="refname">YEC</span> *Date and owner of electronic copyright*. This reference
 identifies the year and owner of the copyright for the electronic
 document.
 
 <a name ="date electronic edition released"></a>
 
-**!!!YER:** Date electronic edition released.
+<span class="refname">YER</span> Date electronic edition released.
 
 <a name ="copyright message"></a>
 
-**!!!YEM:** *Copyright message*. This record conveys any special text
+<span class="refname">YEM</span> *Copyright message*. This record conveys any special text
 related to copyright. It might convey a simple warning (e.g. \"All
 rights reserved.\"),  convey registration or licensing information, or
 indicate that the document is shareware.
 
 <a name ="country of copyright"></a>
 
-**!!!YEN:** *Country of copyright*. This reference identifies the
+<span class="refname">YEN</span> *Country of copyright*. This reference identifies the
 country in which the electronic document was created,  or where the
 copyright was established. In effect,  it identifies the country under
 whose laws the copyright declaration is to be interpreted.
 
 <a name ="original document"></a>
 
-**!!!YOR:** *Original document*. This reference identifies any original
+<span class="refname">YOR</span> *Original document*. This reference identifies any original
 source or sources from which encoded document was prepared. Note that
 original documents may themselves be copyrighted,  and that permission
 may be required in order to create an electronic derivative document.
@@ -382,7 +398,7 @@ Original documents may also have lapsed copyrights.
 
 <a name ="YOO"></a>
 
-**!!!YOO:** *Original document owner*. If the electronic document was
+<span class="refname">YOO</span> *Original document owner*. If the electronic document was
 prepared from a copyrighted original document,  this reference identifies
 the copyright owner of the original document. Note that unless the
 electronic and original documents have the same owner,  some licensing
@@ -391,7 +407,7 @@ electronic derivative document.
 
 <a name ="YOY"></a>
 
-**!!!YOY:** *Original copyright year*. If the electronic document was
+<span class="refname">YOY</span> *Original copyright year*. If the electronic document was
 prepared from a copyrighted original document,  this reference identifies
 the year of copyright for the original document. Note that some
 licensing agreement or other legal arrangement is necessary in order to
@@ -399,46 +415,60 @@ create an electronic derivative document.
 
 <a name ="YOE"></a>
 
-**!!!YOE:** *Original editor*. The editor of the original document from
+<span class="refname">YOE</span> *Original editor*. The editor of the original document from
 which the electronic edition was prepared. Note that some licensing
 agreement or other legal arrangement may be necessary in order to create
 an electronic derivative document.
 
 <a name ="electronic editor"></a>
 
-**!!!EED:** *Electronic Editor*. Name of the editor of the electronic
+<span class="refname">EED</span> *Electronic Editor*. Name of the editor of the electronic
 document. If more than one editor was involved in the work,  then each
-editor\'s name should appear on a separate **!!!EED:** record with a
-number designation prior to the colon.
+editor's name should appear on a separate <span class="refname">EED</span> record
+with a number designation prior to the colon, such as <b>!!!EED2:</b> for the
+second editor.
 
 <a name ="encoder of electronic document"></a>
 
-**!!!ENC:** *Encoder of the electronic document*. This reference
+<span class="refname">ENC</span> *Encoder of the electronic document*. This reference
 identifies the name of the person or persons who encoded the electronic
 document. (Not to be confused with the electronic editor.) If more than
 one encoder was involved in the work,  then each encoder\'s name should
-appear on a separate **!!!ENC:** record with a number designation prior
-to the colon.
+appear on a separate <span class="refname">ENC</span> record 
+with a number designation prior to the colon, such as <b>!!!ENC2:</b> for
+the second encoder.
+
+
+<A NAME="END">
+<A NAME="encoding date of electronic document">
+<P>
+<b>!!!END:</b>
+<i>Encoding date of the electronic document</i>.
+This reference gives the date on which the person or persons who
+encoded the electronic document (see ENC), or the date on which it was
+substantially encoded.  Similar to the EEV, but does not
+change as the document is ammended.
+</P>
 
 <a name ="EMD"></a>
 
-**!!!EMD:** *Document modification description*. This record type is
+<span class="refname">EMD</span> *Document modification description*. This record type is
 used to chronicle all modifications made to the original electronic
 document. EMD records should indicate the date of modification,  the name
 of the person making the modification,  and a brief description of the
 type of modification made. For each successive modification,  a separate
-**!!!EMD:** record should appear with a number designation prior to the
+<span class="refname">EMD</span> record should appear with a number designation prior to the
 colon.
 
 <a name ="electronic edition version"></a>
 
-**!!!EEV:** *Electronic edition version*. This reference identifies the
-specific editorial version of the work. e.g. Version 1.3g Only a single
-**!!!EEV:** record can appear in a given electronic document.
+<span class="refname">EEV</span> *Electronic edition version*. This reference identifies the
+specific editorial version of the work. e.g. Version 1.3g, or by date in **date format.
+<span class="refname">EEV</span> record can appear in a given electronic document.
 
 <a name ="file number"></a>
 
-**!!!EFL:** *File number*. Some files are part of a series or group of
+<span class="refname">EFL</span> *File number*. Some files are part of a series or group of
 related files. This record indicates that the current document is file
 *x* in a group of *y* files. The two numbers are separated by a slash as
 in:
@@ -447,16 +477,16 @@ in:
 
 <a name ="EST"></a>
 
-**!!!EST:** *Encoding status*. This record indicates the current status
+<span class="refname">EST</span> *Encoding status*. This record indicates the current status
 of the document as it is being produced. Free-format text may indicate
 that the encoding is in-progress,  list tasks remaining, or indicate that
-the encoding is complete. **!!!EST:** records are normally eliminated
+the encoding is complete. <span class="refname">EST</span> records are normally eliminated
 prior to distribution of the document.
 
 <a name ="checksum validation number"></a>
 
-**!!!VTS:** *Checksum validation number*. This reference encodes the
-checksum number for the file \-- excluding the **!!!VTS:** record
+<span class="refname">VTS</span> *Checksum validation number*. This reference encodes the
+checksum number for the file \-- excluding the <span class="refname">VTS</span> record
 itself. When this record is eliminated from the file,  any POSIX.2
 standard **cksum** command can be used to determine whether the file
 originates with the publisher,  or whether it has been modified in some
@@ -472,26 +502,26 @@ Analytic Information
 
 <a name ="collection"></a>
 
-**!!!ACO:** *Collection designation*. This is a free-form text record
+<span class="refname">ACO</span> *Collection designation*. This is a free-form text record
 that can be used to identify a collection,  set, or group of related
 works,  such as works appearing in a compendium or anthology. E.g. Norton
 Scores,  Smithsonian Collection, Jones Anthology.
 
 <a name ="form designation"></a>
 
-**!!!AFR:** *Form designation*. This is a free-form text record that can
+<span class="refname">AFR</span> *Form designation*. This is a free-form text record that can
 be used to identify the form (if appropriate) of the work. E.g. fuga, 
 sonata-allegro,  passacaglia, rounded binary, rondo.
 
 <a name ="genre designation"></a>
 
-**!!!AGN:** *Genre designation*. This is a free-form text record that
+<span class="refname">AGN</span> *Genre designation*. This is a free-form text record that
 can be used to identify the genre of the work. E.g. opera,  string
 quartet,  barbershop quartet.
 
 <a name ="style,  period, or type of work designation"></a>
 
-**!!!AST:** *Style,  period, or type of work designation*. This is a
+<span class="refname">AST</span> *Style,  period, or type of work designation*. This is a
 free-form text record that can be used to characterize the style, 
 period,  or type of work. This reference can include any term or terms
 deemed appropriate by the producer of the document. Designations might
@@ -500,7 +530,7 @@ Dame,  minimalist, serial, reggae, slendro, heterophony, etc.
 
 <a name ="mode classification"></a>
 
-**!!!AMD:** *Mode Classification*. A combined numerical/name system for
+<span class="refname">AMD</span> *Mode Classification*. A combined numerical/name system for
 mode identification \-- used especially for medieval monophonic and
 later polyphonic works. Modes are indicated by numbers from 1 to 12, 
 followed by a semicolon,  followed by the corresponding written name
@@ -527,14 +557,14 @@ electronic editor.
 
 <a name ="metric classification"></a>
 
-**!!!AMT:** *Metric Classification*. Meters for a file may be classified
+<span class="refname">AMT</span> *Metric Classification*. Meters for a file may be classified
 as one of the following eight categories: `simple duple`, 
 `simple triple`,  `simple quadruple`, `compound duple`,
 `compound triple`,  `compound quadruple`, `irregular`, or `various`.
 
 <a name ="instrumentation"></a>
 
-**!!!AIN:** [**Instrumentation.**](guide.append2.html) This reference is
+<span class="refname">AIN</span> [**Instrumentation.**](guide.append2.html) This reference is
 used to list all of the instruments (including voice) used in the work.
 Instruments should be encoded using the abbreviations specified by the
 `*I` tandem interpretation described in Appendix II. Instrument codes
@@ -547,7 +577,7 @@ command.) E.g.
 
 <a name ="region designation"></a>
 
-**!!!ARE:** *Geographical region of origin*. This reference identifies
+<span class="refname">ARE</span> *Geographical region of origin*. This reference identifies
 the geographical location from which the work originates. Location
 designations are encoded using the local language. The location begins
 with the continent designation,  and becomes successively more refined.
@@ -558,7 +588,7 @@ district or even street address.
 
 <a name ="location designation"></a>
 
-**!!!ARL:** *Geographical location of origin*. Like the ARE record,  this
+<span class="refname">ARL</span> *Geographical location of origin*. Like the ARE record,  this
 reference record identifies the geographical location from which a work
 originates. Location designations are encoded using latitude and
 longitude values \-- suitable for creating maps. The first numerical
@@ -580,7 +610,7 @@ Historical and Background Information
 
 <a name ="aural_history"></a>
 
-**!!!HAO:** *Aural History*. This is a free-form text record used to
+<span class="refname">HAO</span> *Aural History*. This is a free-form text record used to
 relay any story or stories about the origin,  purpose or background of
 the work. This reference record is especially useful in
 ethnomusicological materials,  where a particular story accompanies a
@@ -588,7 +618,7 @@ song. The story may be encoded using several successive HAO records.
 
 <a name ="text_translation"></a>
 
-**!!!HTX:** *Free-form Translation of Vocal Text*. This is a free-form
+<span class="refname">HTX</span> *Free-form Translation of Vocal Text*. This is a free-form
 text record used to relay a non-literal translation of a vocal text.
 This reference record is again especially useful in ethnomusicological
 materials.
@@ -600,18 +630,18 @@ Representation Information
 
 <a name ="RLN"></a>
 
-**!!!RLN:** *ASCII language setting*. This reference identifies the
+<span class="refname">RLN</span> *ASCII language setting*. This reference identifies the
 \"language\" code in which the file was encoded. This is applicable only
 to computer platforms which provide \"extended ASCII\" text capabilities
 (e.g. Danish or Spanish characters).
 
 <a name ="RDF"></a>
 
-**!!!RDF:** *User-defined signifiers*. All Humdrum representations
+<span class="refname">RDF</span> *User-defined signifiers*. All Humdrum representations
 provide some signifiers (ASCII characters) that remain undefined. Users
 are free to use these undefined signifiers as they choose. When
 undefined signifiers appear in a given document,  the
-**!!!RDF\*\**interp*:** code should be used to specify what the
+<span class="refname">RDF\*\**interp*</span> code should be used to specify what the
 signifiers denote. Notice that the code RDF is followed by the name of
 the interpretation to which the signifier definition applies. In the
 following example,  the letters \"X\" and \"x\" symbols that are defined
@@ -621,19 +651,19 @@ within a hypothetical \*\*piano representation. E.g.
 
 <a name ="RDT"></a>
 
-**!!!RDT:** *Date encoded*. This reference uses the Humdrum
+<span class="refname">RDT</span> *Date encoded*. This reference uses the Humdrum
 [`**date`](representations/date.rep.html) format to identify the date(s)
 when the document was encoded.
 
 <a name ="RNB"></a>
 
-**!!!RNB:** *Representation note*. This reference provides a free-format
+<span class="refname">RNB</span> *Representation note*. This reference provides a free-format
 text that conveys some document-specific note related to matters of
 representation.
 
 <a name ="RWG"></a>
 
-**!!!RWG:** *Representation warning*. This reference may be used to
+<span class="refname">RWG</span> *Representation warning*. This reference may be used to
 encode explicit warnings concerning the encoded material.
 
 <a name ="Electronic_Citation"></a>
@@ -643,15 +673,15 @@ Electronic Citation
 
 Electronic editions of music might be cited in printed or other
 documents by including the following information. The \"author\" (e.g.
-[**!!!COM:**](#composer)),  the \"title\" \-- either original title
-([**!!!OTL:**](#OTL)) or translated title (e.g. [**!!!XEN:**](#XEN)).
-The editor ([**!!!EED:**](#electronic%20editor)),  publisher
-([**!!!YEP:**](#publisher%20of%20electronic%20edition)),  date of
+[<span class="refname">COM</span>](#composer)),  the \"title\" \-- either original title
+([<span class="refname">OTL</span>](#OTL)) or translated title (e.g. [<span class="refname">XEN</span>](#XEN)).
+The editor ([<span class="refname">EED</span>](#electronic%20editor)),  publisher
+([<span class="refname">YEP</span>](#publisher%20of%20electronic%20edition)),  date of
 publication and copyright owner
-([**!!!YEC:**](#date%20and%20owner%20of%20electronic%20copyright)),  and
-electronic version ([**!!!EEV:**](#electronic%20edition%20version)),  In
+([<span class="refname">YEC</span>](#date%20and%20owner%20of%20electronic%20copyright)),  and
+electronic version ([<span class="refname">EEV</span>](#electronic%20edition%20version)),  In
 addition,  a full citation ought to include the validation checksum
-([**!!!VTS:**](#checksum%20validation%20number)). This number will allow
+([<span class="refname">VTS</span>](#checksum%20validation%20number)). This number will allow
 others to verify that a particular electronic document is precisely the
 one cited. A sample electronic citation might be:
 

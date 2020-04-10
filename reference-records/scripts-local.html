@@ -10,7 +10,6 @@ document.addEventListener("click", toggleDescription);
 
 
 
-
 //////////////////////////////
 //
 // addRefLinkUrls --
@@ -73,7 +72,6 @@ function displayLabelFromLink(element) {
 	if (!name) {
 		return;
 	}
-	console.log("NAME", name);
 	var text = "<span class='refname'>" + name + "</span>";
 	var span = document.createElement("SPAN");
 	var p = document.createElement("P");
@@ -165,6 +163,7 @@ function createReferenceIndex() {
 		}
 	}
 	target.innerHTML = output;
+	processCgiParameters();
 }
 
 
@@ -352,6 +351,55 @@ function toggleDescription(event) {
 
 }
 
+
+
+//////////////////////////////
+//
+// processCgiParameters --
+//
+
+function processCgiParameters() {
+	var cgi = getCgiParameters();
+console.log("GOT EHRE", cgi)
+	var display = cgi.display;
+	if (!display) {
+		return;
+	}
+	if (display === "short") {
+		var checkbox = document.querySelector("input#description-style");
+		if (checkbox) {
+			checkbox.click();
+		}
+	}
+}
+
+
+
+//////////////////////////////
+//
+// getCgiParameters -- Returns an associative array containing the
+//     page's URL's CGI parameters
+//
+
+function getCgiParameters() {
+   var url = window.location.search.substring(1);
+   var output = {};
+   var settings = url.split('&');
+   for (var i=0; i<settings.length; i++) {
+      var pair = settings[i].split('=');
+      pair[0] = decodeURIComponent(pair[0]);
+      pair[1] = decodeURIComponent(pair[1]);
+      if (typeof output[pair[0]] === 'undefined') {
+         output[pair[0]] = pair[1];
+      } else if (typeof output[pair[0]] === 'string') {
+         var arr = [ output[pair[0]], pair[1] ];
+         output[pair[0]] = arr;
+      } else {
+         output[pair[0]].push(pair[1]);
+      }
+   }
+   return output;
+}
 
 </script>
 
