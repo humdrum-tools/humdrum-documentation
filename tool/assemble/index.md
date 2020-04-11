@@ -1,5 +1,6 @@
 ---
 title: 'Humdrum Toolkit Command Reference -- assemble'
+sidebar: main_sidebar
 permalink: /tool/assemble/index.html
 ---
 

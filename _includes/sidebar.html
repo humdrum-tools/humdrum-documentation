@@ -13,7 +13,7 @@ var data = {{ sidebar | jsonify}};
 	{% unless page.toc == "false" %}
 		<li class="active">
 			<a title="Table of Contents" href="#">Table of contents</a>
-			<ul>
+			<ul style="line-height:18px; padding-bottom:40px;">
   				{% include toc.html %}
 			</ul>
   		</li>

@@ -1,12 +1,30 @@
 
 <script>
-	$(document).ready(function() {
+// vim: ft=javascript
+
+
+$(document).ready(function() {
 	$("#tg-sb-link").click(function() {
 		$("#tg-sb-sidebar").toggle();
+		if ($("#tg-sb-sidebar").get(0).style.display === "none") {
+			sessionStorage.SIDEBAR = 0;
+		} else {
+			sessionStorage.SIDEBAR = 1;
+		}
 		$("#tg-sb-content").toggleClass('col-md-9');
 		$("#tg-sb-content").toggleClass('col-md-12');
 		$("#tg-sb-icon").toggleClass('fa-toggle-on');
 		$("#tg-sb-icon").toggleClass('fa-toggle-off');
 	});
+
+	if (sessionStorage.SIDEBAR === "0") {
+		var navbutton = document.querySelector("#tg-sb-link");
+		if (navbutton) {
+			navbutton.click();
+		}
+	}
+
+
 });
+
 </script>

@@ -9,12 +9,12 @@ title: "Humdrum reference records"
 permalink: /reference-records/index.html
 ---
 
-Reference Records
-=================
+# Reference Records #
 
 {% capture x %}{% include_relative introduction.md %}{% endcapture %}{{ x | markdownify }}
 
 {% capture x %}{% include_relative refindex.md %}{% endcapture %}{{ x | markdownify }}
+
 
 
 ## Authorship Information ##
@@ -39,8 +39,8 @@ Reference Records
 </table>
 
 
-Recording Information
----------------------
+
+## Recording Information ##
 
 Humdrum representations may encode information pertaining to sound
 recordings (such as sound-based analyses). For information derived from
@@ -85,10 +85,9 @@ the described in the *Humdrum Reference Manual*.
 
 <span class="refname">RT\#</span> *Track number*.
 
-<a name ="Performance_Information"></a>
 
-Performance Information
------------------------
+
+## Performance Information ##
 
 Humdrum representations may encode performance-activity information
 rather than (or in addition to) score-related information. If the
@@ -140,8 +139,9 @@ format described in the described in the *Humdrum Reference Manual*.
 
 <a name ="Identification_Information"></a>
 
-Work Identification Information
--------------------------------
+
+
+## Work Identification Information ##
 
 <a name ="OTL"></a>
 
@@ -259,8 +259,9 @@ be used,  such as \`Den Haag.\'
 
 <a name ="Group_Information"></a>
 
-Group Information
------------------
+
+
+## Group Information ##
 
 <a name ="group"></a>
 
@@ -287,8 +288,9 @@ Collection,  Burkhart Anthology.
 
 <a name ="Imprint_Information"></a>
 
-Imprint Information
--------------------
+
+
+## Imprint Information ##
 
 <a name ="PUB"></a>
 
@@ -354,10 +356,10 @@ of the manuscript source.
 information may be used to encode a free format acknowledgement or note
 of thanks to a given manuscript owner for scholarly or other access.
 
-<a name ="Copyright_Information"></a>
 
-Copyright Information
----------------------
+
+
+## Copyright Information ##
 
 <a name ="publisher of electronic edition"></a>
 
@@ -495,10 +497,10 @@ that this validation process is easily circumvented by malicious
 individuals. For true security,  the checksum value should be compared
 with a printed list of checksums provided by the electronic publisher.
 
-<a name ="Analytic_Information"></a>
 
-Analytic Information
---------------------
+
+
+## Analytic Information ##
 
 <a name ="collection"></a>
 
@@ -603,10 +605,10 @@ provinces,  the geographical center of the region is used.
 
 > ` !!!ARL: 51.5/10.5@`
 
-<a name ="Historical_Information"></a>
 
-Historical and Background Information
--------------------------------------
+
+
+## Historical and Background Information ##
 
 <a name ="aural_history"></a>
 
@@ -623,10 +625,10 @@ text record used to relay a non-literal translation of a vocal text.
 This reference record is again especially useful in ethnomusicological
 materials.
 
-<a name ="Representation_Information"></a>
 
-Representation Information
---------------------------
+
+
+## Representation Information ##
 
 <a name ="RLN"></a>
 
@@ -666,10 +668,8 @@ representation.
 <span class="refname">RWG</span> *Representation warning*. This reference may be used to
 encode explicit warnings concerning the encoded material.
 
-<a name ="Electronic_Citation"></a>
+## Electronic Citation ##
 
-Electronic Citation
--------------------
 
 Electronic editions of music might be cited in printed or other
 documents by including the following information. The \"author\" (e.g.
@@ -704,8 +704,7 @@ other reference records to the end of the file.
 <a name="language"></a>
 <a name="languages"></a>
 
-Accommodating Different Languages
----------------------------------
+## Accommodating Different Languages ##
 
 {% capture x %}{% include_relative language.md %}{% endcapture %}{{ x | markdownify }}
 
@@ -713,6 +712,5 @@ Accommodating Different Languages
 
 {% include_relative styles-local.html %}
 {% include_relative scripts-local.html %}
-
 
 

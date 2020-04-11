@@ -46,3 +46,45 @@ and
 to name but a few.
 
 
+## Website resources ##
+
+Here are the main resources available on this website:
+
+<dl>
+<dt markdown="1"> [Humdrum Toolkit User Guide](/guide) </dt>
+<dd markdown="1"> 
+A step-by-step introduction to the Humdrum Toolkit and related concepts.  Quick
+access to a specific chapter in the guide can be found by clicking on the 
+"User guide" link at the top of any page on the website.
+</dd>
+
+<dt markdown="1"> [Tool documentation](/tool) </dt>
+<dd markdown="1"> 
+A list of command-line humdrum tools that are available in the Humdrum Toolkit, 
+Humdrum Extras and in [Verovio Humdrum Viewer](https://verovio.humdrum.org).
+Tools can be listed by source package or general function, such as melodic,
+harmonic and rhythmic tools.
+</dd>
+
+<dt markdown="1"> [Cookbook](/cookbook) </dt>
+<dd markdown="1"> 
+A list of how-tos and tutorials for using Humdrum tools.
+</dd>
+
+<dt markdown="1"> [Reference records](/reference-records) </dt>
+<dd> 
+A list of official metadata records for Humdrum data.
+</dd>
+
+<dt markdown="1"> [Instrument codes](/instrument-codes) </dt>
+<dd markdown="1"> 
+A list of official instrument codes for `**kern` data.
+</dd>
+
+
+</dl>
+
+
+
+
+

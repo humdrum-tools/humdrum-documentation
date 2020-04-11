@@ -38,12 +38,12 @@ entries:
       url: "/instrument-codes/index.html"
       output: web
 
-    - title: "List of tools"
+    - title: "Tools"
       url: "/tool/index.html"
       output: web
       subfolders:
 
-      - title:    "Pitch tools"
+      - title:    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pitch tools"
         output:   web, pdf
         subfolderitems:
         - title: "cents"
@@ -110,7 +110,7 @@ entries:
           url:   "/tool/transpose/index.html"
           output: web
 
-      - title: "Rhythm tools"
+      - title:    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rhythm tools"
         output: web
         subfolderitems:
         - title: "beat"
@@ -156,7 +156,7 @@ entries:
           url:   "/tool/urrhythm/index.html"
           output: web
 
-      - title: "Harmony tools"
+      - title:    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Harmony tools"
         output: web
         subfolderitems:
         - title: "chorck"

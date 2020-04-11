@@ -1,5 +1,6 @@
 ---
 vim: ts=3
+toc: "false"
 sidebar: main_sidebar
 permalink: /tool/index.html
 ---
