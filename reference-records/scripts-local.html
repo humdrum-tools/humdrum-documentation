@@ -401,12 +401,50 @@ function getCgiParameters() {
    return output;
 }
 
+
+
+//////////////////////////////
+//
+// monitorSidebar -- 
+//
+
+var SIDEBAR;
+function monitorSidebar() {
+	if (!SIDEBAR) {
+		SIDEBAR = document.querySelector("#mysidebar");
+		console.log("SETTING SIDEBAR TO", SIDEBAR);
+	} else {
+		console.log("FOUND SIDEBAR: ", SIDEBAR);
+	}
+	if (!SIDEBAR) {
+		console.log("NO SIDEBAR");
+		setTimeout(function() { monitorSidebar(); }, 1000);
+		return;
+	}
+	setInterval(function() {
+		if (!SIDEBAR) {
+			return;
+		}
+		var height = SIDEBAR.offsetHeight;
+		var headerheight = 100;
+		var wheight = window.innerHeight;
+		console.log("HEIGHT", height, "WINDOW", wheight);
+		var diff = wheight - headerheight - height;
+		if (diff < 0) {
+			SIDEBAR.classList.remove("affix");
+		} else {
+			SIDEBAR.classList.add("affix");
+		}
+		
+	}, 1000);
+}
+
+monitorSidebar();
+
+
+
+
 </script>
-
-
-
-
-
 
 
 

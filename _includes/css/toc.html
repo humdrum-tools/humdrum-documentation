@@ -1,44 +1,43 @@
 <style>
 
 div#toc ul li {
-    list-style: square;
+	/* list-style: square; */
 }
 
 div#toc ul {
-    max-width: 300px;
+	max-width: 300px;
 }
 
 div#toc ul li ul {
-    padding-left:8px;
+	padding-left:8px;
 
 }
 
 div#toc ul li ul li::before {
-    content: "–  ";
+	content: "–  ";
+	visibility: hidden;
 }
 
 div#toc >ul::before {
 /*    content: "Table of Contents"; */
-    font-weight: 500;
-    color: #555;
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-    width:70px;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left:10px;
+	font-weight: 500;
+	color: #555;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:70px;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:10px;
 }
 
 
 #toc ul, #toc ul li, .nav #toc ul li a {
 	background: transparent !important;
-	font-size: 80% !important;
 }
 
 .nav #toc a {
 	border: 0;
-	background: red;
 }
 
 
@@ -53,7 +52,6 @@ div#toc >ul::before {
 #toc ul li a {
 	border: 0 !important;
 	font-size: 65% !important;
-	background: hotpink;
 }
 
 #toc ul:before {
@@ -66,10 +64,12 @@ div#toc >ul::before {
 }
 
 #chapternav {
-	font-size: 65%;
 	background: hotpink;
-	margin-bottom: 0;
-	padding-bottom: 0;
+	width: 100% !important;
+}
+
+#chapternav table {
+	width: 100% !important;
 }
 
 #chapternav td {

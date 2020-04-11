@@ -22,17 +22,11 @@ entries:
       - title:    "Table of contents"
         url:      "/guide/index.html"
         output:   web, pdf
-      - title:    "Appendix 1: Reference records"
-        url:      "/reference-records/index.html"
-        output:   web, pdf
-      - title:    "Appendix 2: Instrument codes"
-        url:      "/instrument-codes/index.html"
-        output:   web, pdf
       - title:    "Bibliography"
         url:      "/guide/bibliography/index.html"
         output:   web, pdf
 
-  - title: "Reference manual"
+  - title: "Manual"
     output: web
     folderitems:
 
