@@ -1,0 +1,126 @@
+
+<script>
+// vim: ft=javascript
+
+document.addEventListener("DOMContentLoaded", processToolSpans);
+document.addEventListener("DOMContentLoaded", processUnixSpans);
+
+
+//////////////////////////////
+//
+// processToolSpans --
+//
+
+function processToolSpans() {
+	var list = document.querySelectorAll("span.tool");
+	var i;
+	var content;
+	for (i=0; i<list.length; i++) {
+		content = list[i].textContent;
+		content = content.replace(/^\s+/, "");
+		content = content.replace(/\s+$/, "");
+		content = content.replace(/\s.*/, "");
+		var tooltip = "Click to view manpage for " + content;
+		list[i].setAttribute("title", tooltip);
+		list[i].addEventListener("click", openToolManpage);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// openToolManpage --
+//
+
+function openToolManpage(event) {
+	if (!event) {
+		console.log("Error: no event for openToolManpage");
+		return;
+	}
+	var target = event.target;
+	if (!target) {
+		console.log("Error: Cannot find target in event", event);
+		return;
+	}
+	var tool = target.textContent;
+	tool = tool.replace(/^\s+/, "");
+	tool = tool.replace(/\s+$/, "");
+	tool = tool.replace(/\s.*/, "");
+	var url = "/tool/" + tool + "/index.html";
+	window.open(url, "tool");
+}
+
+
+
+//////////////////////////////
+//
+// processUnixSpans --
+//
+
+function processUnixSpans() {
+	var list = document.querySelectorAll("span.unix");
+	var i;
+	var content;
+	for (i=0; i<list.length; i++) {
+		content = list[i].textContent;
+		content = content.replace(/^\s+/, "");
+		content = content.replace(/\s+$/, "");
+		content = content.replace(/\s.*/, "");
+		var tooltip = "Click to view manpage for " + content;
+		list[i].setAttribute("title", tooltip);
+		list[i].addEventListener("click", openUnixManpage);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// openUnixManpage --
+// 
+// Using the form:
+//     http://man7.org/linux/man-pages/man1/grep.1.html
+//
+
+function openUnixManpage(event) {
+	if (!event) {
+		console.log("Error: no event for openUnixManpage");
+		return;
+	}
+	var target = event.target;
+	if (!target) {
+		console.log("Error: Cannot find target in event", event);
+		return;
+	}
+	var tool = target.textContent;
+	tool = tool.replace(/^\s+/, "");
+	tool = tool.replace(/\s+$/, "");
+	tool = tool.replace(/\s.*/, "");
+	var url = getUnixUrl(tool);
+	window.open(url, "tool");
+}
+
+
+
+//////////////////////////////
+//
+// getUnixUrl --
+//
+
+function getUnixUrl(tool) {
+	if (tool == "awk") {
+		return "http://www.cs.unibo.it/~renzo/doc/awk/nawkA4.pdf";
+	}
+	var url = "http://man7.org/linux/man-pages/man1/";
+	url += tool;
+	url += ".1.html";
+	return url;
+}
+
+
+
+
+</script>
+
+

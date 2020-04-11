@@ -39,7 +39,6 @@ notation.
 	pageWidth="1200"
 	humdrum-min-height="475px"
 %}
-
 <script type="application/x-humdrum" id="guide-02-1">
 **kern
 *clefG2

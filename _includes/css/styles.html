@@ -108,6 +108,15 @@ code.language-plaintext.highlighter-rouge {
 	font-variant-ligatures: none;
 }
 
+pre.humdrum, code.language-humdrum, .language-text pre {
+	font-weight: bold;
+	color: midnightblue;
+	tab-size:12;
+	font-size: 1.5rem;
+	line-height: 1.6rem;
+	background: #f5f5f5 !important;
+}
+
 pre.highlight code,
 code span,
 code span.k,
@@ -153,6 +162,35 @@ div.chapter-heading h1:first-child {
 	font-size: 150%;
 }
 
+
+span.option {
+	display: inline-block;
+	font-weight: bold;
+	font-family: "Courier Prime", Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 85%;
+	word-spacing: -0.2rem;
+}
+span.option::before {
+	content: "-";
+}
+
+span.unix {
+	display: inline-block;
+	color: forestgreen;
+	font-weight: bold;
+	font-family: "Courier Prime", Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 85%;
+	cursor: pointer;
+}
+
+span.tool {
+	display: inline-block;
+	color: indigo;
+	font-weight: bold;
+	font-family: "Courier Prime", Menlo, Monaco, Consolas, "Courier New", monospace;
+	font-size: 85%;
+	cursor: pointer;
+}
 
 </style>
 
