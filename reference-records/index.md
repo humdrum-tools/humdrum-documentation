@@ -4,7 +4,7 @@ creation-date: 1 Sep 1998
 revision-date: 10 Apr 2020
 robots: all
 vim: ft=html
-sidebar: main_sidebar
+sidebar: empty
 title: "Humdrum reference records"
 permalink: /reference-records/index.html
 ---
