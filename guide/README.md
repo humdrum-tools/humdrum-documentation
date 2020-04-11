@@ -1,5 +1,5 @@
 
-# Guidelines for editing the reference record page #
+# Guidelines for editing user guide pages #
 
 
 ## Separate files for each chapter ##
