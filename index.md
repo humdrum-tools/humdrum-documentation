@@ -7,11 +7,11 @@ permalink: index.html
 ---
 
 <p class="text-center">
-<a href="./about" class="btn btn-primary btn-lg btn-responsive">What Can Humdrum Do?</a>
+<a href="/guide/ch01/index.html#what-can-humdrum-do" class="btn btn-primary btn-lg btn-responsive">What Can Humdrum Do?</a>
 <a href="https://github.com/humdrum-tools/humdrum-tools" class="btn btn-primary btn-lg btn-responsive">Installation</a>
-<a href="./guide" class="btn btn-primary btn-lg btn-responsive">User Guide</a>
-<a href="./tool" class="btn btn-primary btn-lg btn-responsive">Tools</a>
-<a href="./news" class="btn btn-primary btn-lg btn-responsive">News</a>
+<a href="/guide" class="btn btn-primary btn-lg btn-responsive">User Guide</a>
+<a href="/tool" class="btn btn-primary btn-lg btn-responsive">Tools</a>
+<a href="/news" class="btn btn-primary btn-lg btn-responsive">News</a>
 </p>
 
 

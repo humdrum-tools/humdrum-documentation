@@ -30,14 +30,6 @@ entries:
     output: web
     folderitems:
 
-    - title: "Reference records"
-      url: "/reference-records/index.html"
-      output: web
-
-    - title: "Instrument codes"
-      url: "/instrument-codes/index.html"
-      output: web
-
     - title: "Tools"
       url: "/tool/index.html"
       output: web
@@ -198,6 +190,14 @@ entries:
         - title: "voicecount"
           url:   "/tool/voicecount/index.html"
           output: web
+
+    - title: "Reference records"
+      url: "/reference-records/index.html"
+      output: web
+
+    - title: "Instrument codes"
+      url: "/instrument-codes/index.html"
+      output: web
 
 
   - title: Data representations

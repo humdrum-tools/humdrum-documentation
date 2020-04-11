@@ -13,6 +13,8 @@ permalink:	/guide/ch33/index.html
 <h1> Word Sounds </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In addition to the meanings conveyed by words, words also provide
 distinctive sounds that can prove to be musically useful. Poets and

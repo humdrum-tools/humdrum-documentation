@@ -10,8 +10,10 @@ permalink:	/guide/ch40/index.html
 
 <div class="chapter-heading">
 <h1> Chapter 40 </h1>
-<h1> Conclusing </h1>
+<h1> Conclusion </h1>
 </div>
+
+------------------------------------------------------------------------
 
 
 In [Chapter 1,](/guide/ch01) we noted that computers are quite limited

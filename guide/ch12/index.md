@@ -13,6 +13,8 @@ permalink:	/guide/ch12/index.html
 <h1> Selecting Musical Parts and Passages </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 A Humdrum file may contain an encoding of a full score, or even of a
 large collection of scores. Often, we would like to isolate or extract

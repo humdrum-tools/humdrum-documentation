@@ -13,6 +13,8 @@ permalink:	/guide/ch20/index.html
 <h1> Strophes, Verses and Repeats </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 We often tend to think of musical information as a linear stream of
 successive events. However, there are many circumstances where musical

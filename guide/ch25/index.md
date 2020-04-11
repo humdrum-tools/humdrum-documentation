@@ -13,6 +13,8 @@ permalink:	/guide/ch25/index.html
 <h1> Similarity </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 There is no precise way to measure similarity. However, there are
 several useful techniques that can be used to estimate the degree

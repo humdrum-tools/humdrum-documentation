@@ -13,6 +13,8 @@ permalink:	/guide/ch22/index.html
 <h1> Classifying </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Many of the most important analytic tasks involve classifying or
 categorizing various things. In this chapter we will discuss two general

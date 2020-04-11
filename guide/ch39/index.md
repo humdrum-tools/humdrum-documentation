@@ -13,6 +13,8 @@ permalink:	/guide/ch39/index.html
 <h1> Trouble-Shooting </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Computers have an unbounded capacity to generate nonsense. Even when
 commands appear to execute correctly, there is no guarantee that the

@@ -14,6 +14,8 @@ permalink:	/guide/ch35/index.html
 <h1> Layers </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In [Chapters 11](/guide/ch11) and [15](/guide/ch15) we examined
 different kinds of intervals, including both harmonic and melodic

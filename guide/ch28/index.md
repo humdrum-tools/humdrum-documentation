@@ -13,6 +13,8 @@ permalink:	/guide/ch28/index.html
 <h1> Dynamics </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In this chapter we introduce three pre-defined representations
 pertaining to musical dynamics. One representation (\*\*dyn) represents

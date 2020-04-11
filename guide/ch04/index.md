@@ -13,6 +13,8 @@ permalink:	/guide/ch04/index.html
 <h1> Basic Pitch Translations </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Many musical processes entail some sort of data translation in which one
 form of representation is transformed into another form of

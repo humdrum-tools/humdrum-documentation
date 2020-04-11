@@ -13,6 +13,8 @@ permalink:	/guide/ch30/index.html
 <h1> MIDI Input Tools </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 The Humdrum Toolkit provides two tools for inputting MIDI data. In this
 chapter we briefly introduce the [**record**](/tool/record) and

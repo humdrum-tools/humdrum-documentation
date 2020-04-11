@@ -13,6 +13,8 @@ permalink:	/guide/ch18/index.html
 <h1> Fingers, Footsteps and Frets </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Throughout this book, our examples have tended to rely on just a handful
 of Humdrum representations \-- `**kern` in particular. Of course the

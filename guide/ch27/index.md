@@ -13,6 +13,8 @@ permalink:	/guide/ch27/index.html
 <h1> Text and Lyrics </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Musical texts include lyrics, librettos, stage directions, recitativo
 and other collections of words. It goes without saying that words

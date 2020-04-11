@@ -13,6 +13,8 @@ permalink:	/guide/ch17/index.html
 <h1> Creating Inventories </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Many research problems can be addressed by building an *inventory* \--
 that is, identifying the number of occurrences of various types of data.

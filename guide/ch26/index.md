@@ -13,6 +13,8 @@ permalink:	/guide/ch26/index.html
 <h1> Moving Signifiers between Spines </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In many types of tasks is it useful to be able to transfer signifiers
 from one spine to another. In this chapter we will discuss two commands.

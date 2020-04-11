@@ -13,6 +13,8 @@ permalink:	/guide/ch13/index.html
 <h1> Assembling Scores </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In the previous chapter we learned how to extract parts and passages
 from Humdrum files. In this chapter we discuss the reverse procedures:

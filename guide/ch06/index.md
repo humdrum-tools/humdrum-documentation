@@ -14,6 +14,8 @@ permalink:	/guide/ch06/index.html
 <h1> Representing Music Using **kern (II) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In this chapter we return to consider several more advanced topics
 related to the `**kern` representation.

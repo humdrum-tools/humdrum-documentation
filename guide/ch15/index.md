@@ -13,6 +13,8 @@ permalink:	/guide/ch15/index.html
 <h1> Harmonic Intervals </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of

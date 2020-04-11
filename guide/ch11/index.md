@@ -13,6 +13,8 @@ permalink:	/guide/ch11/index.html
 <h1> Melodic Intervals </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 A musical interval is the distance between two pitches. When the pitches
 are consecutive the distance is referred to as a *melodic interval;*

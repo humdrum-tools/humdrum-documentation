@@ -13,6 +13,8 @@ permalink:	/guide/ch38/index.html
 <h1> Systematic Musicology </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Much of music research centers on the task of describing things. A
 researcher might offer a description of "House" style, or Wagner\'s

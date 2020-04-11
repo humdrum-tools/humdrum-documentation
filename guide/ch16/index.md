@@ -13,6 +13,8 @@ permalink:	/guide/ch16/index.html
 <h1> The Shell (II) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In [Chapter 8](/guide/ch08) we introduced some of the shell special
 characters. By way of review, we learned that the shell interprets the

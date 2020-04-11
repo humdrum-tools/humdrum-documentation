@@ -13,6 +13,8 @@ permalink:	/guide/ch08/index.html
 <h1> The Shell (I) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 When you type commands, they are interpreted by a command *shell.* The
 shell is a program that interprets user commands before passing them

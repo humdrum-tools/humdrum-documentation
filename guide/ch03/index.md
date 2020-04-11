@@ -13,6 +13,8 @@ permalink:	/guide/ch03/index.html
 <h1> Some Initial Processing </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Now that we have learned some things about Humdrum representations (and
 the `**kern` representation in particular), let\'s explore some basic

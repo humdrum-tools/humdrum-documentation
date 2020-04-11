@@ -13,6 +13,8 @@ permalink:	/guide/ch31/index.html
 <h1> Repertories and Links </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In initiating a research project, we often begin by selecting a suitable
 repertory for study. A common approach is to focus on a particular

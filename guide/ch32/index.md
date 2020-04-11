@@ -13,6 +13,8 @@ permalink:	/guide/ch32/index.html
 <h1> The Shell (IV) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In research applications, it is impossible to anticipate all the types
 of manipulations we might want to carry out. For some tasks, we will

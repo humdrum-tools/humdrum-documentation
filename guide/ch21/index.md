@@ -13,6 +13,8 @@ permalink:	/guide/ch21/index.html
 <h1> Searching for Patterns </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 The **grep** and **egrep** commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the

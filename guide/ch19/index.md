@@ -13,6 +13,8 @@ permalink:	/guide/ch19/index.html
 <h1> Musical Contexts </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Much of what makes an event of interest is the context of the event. We
 may be interested in what precedes or follows a note or chord. We have

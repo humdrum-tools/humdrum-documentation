@@ -13,6 +13,8 @@ permalink:	/guide/ch36/index.html
 <h1> Sound and Spectra </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Music is a sonic art and no analytic toolkit would be complete without
 considering the representation and manipulation of sound-related

@@ -13,6 +13,8 @@ permalink:	/guide/ch09/index.html
 <h1> Searching with Regular Expressions </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 A common task in computing environments is searching through some set of
 data for occurrences of a given pattern. When a pattern is found,

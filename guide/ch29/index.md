@@ -13,6 +13,8 @@ permalink:	/guide/ch29/index.html
 <h1> Differences and Commonalities </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In [Chapter 25](/guide/ch25) we introduced the problem of similarity
 via the Humdrum [**simil**](/tool/simil) and

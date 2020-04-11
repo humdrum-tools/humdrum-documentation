@@ -13,6 +13,8 @@ permalink:	/guide/ch23/index.html
 <h1> Rhythm </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 The subject of rhythm touches on nearly every aspect of music. Musical
 elements such as pitch, harmony, and dynamics can all be regarded from

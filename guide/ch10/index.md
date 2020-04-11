@@ -13,6 +13,8 @@ permalink:	/guide/ch10/index.html
 <h1> Musical Uses of Regular Expressions </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Now that you have a better understanding of regular expressions, let\'s
 apply them. This chapter provides many examples of how regular

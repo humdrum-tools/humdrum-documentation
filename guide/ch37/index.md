@@ -13,6 +13,8 @@ permalink:	/guide/ch37/index.html
 <h1> Electronic Music Editing </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 The preparation of encoded musical materials for processing is an
 essential part of computer-assisted musicology. Without electronic data

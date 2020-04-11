@@ -13,6 +13,8 @@ permalink:	/guide/ch01/index.html
 <h1> Humdrum: A Brief Tour </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Humdrum is a general-purpose software system intended to assist music
 researchers. Humdrum\'s capabilities are quite broad, so it is difficult

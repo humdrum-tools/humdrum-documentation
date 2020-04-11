@@ -13,6 +13,8 @@ permalink:	/guide/ch14/index.html
 <h1> Stream Editing </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Most computer users are familiar with editing an electronic document
 using an interactive word-processor or text editor. *Stream editors* are

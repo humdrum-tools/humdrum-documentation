@@ -14,6 +14,8 @@ permalink:	/guide/ch02/index.html
 <h1> Representing Music Using **kern (I) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 The `**kern` representation can be used to represent basic or core
 information for common Western music. The `**kern` scheme can be used to

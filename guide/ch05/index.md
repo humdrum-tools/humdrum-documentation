@@ -13,6 +13,8 @@ permalink:	/guide/ch05/index.html
 <h1> The Humdrum Syntax </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In the previous chapters we have seen several examples of pre-defined
 Humdrum representations, such as

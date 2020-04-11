@@ -13,6 +13,8 @@ permalink:	/guide/ch34/index.html
 <h1> Serial Processing </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 Humdrum provides a handful of specialized tools for serial and
 serial-inspired analytic processing. In this chapter we introduce the

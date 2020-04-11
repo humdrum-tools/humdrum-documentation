@@ -13,6 +13,8 @@ permalink:	/guide/ch24/index.html
 <h1> The Shell (III) </h1>
 </div>
 
+------------------------------------------------------------------------
+
 
 In [Chapter 16](/guide/ch16) we learned about the **alias** feature of
 the shell. The **alias** command allowed us to create new commands by

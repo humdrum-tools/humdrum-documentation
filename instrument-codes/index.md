@@ -6,11 +6,6 @@ sidebar: main_sidebar
 revision-date: 'Thu Feb 3 10:12:40 EST 2000'
 ---
 
-Appendix II
-===========
-
-------------------------------------------------------------------------
-
 Instrumentation Codes
 =====================
 
@@ -38,25 +33,27 @@ Three distinctions are currently made in Humdrum: *instrument name,*
 *instrument class* and *instrument group.* The following table
 identifies six pre-defined instrument classes:
 
->   ----------- -----------------------------------
->   `*ICvox`    voice
->   `*ICstr`    string instrument
->   `*ICww`     woodwind instrument
->   `*ICbras`   brass instrument
->   `*ICklav`   keyboard instrument
->   `*ICidio`   percussion instrument (idiophone)
->   ----------- -----------------------------------
->
+| Code       | Meaning                             |
+|----------- | ----------------------------------- |
+|`*ICvox`    | voice                               |
+|`*ICstr`    | string instrument                   |
+|`*ICww`     | woodwind instrument                 |
+|`*ICbras`   | brass instrument                    |
+|`*ICklav`   | keyboard instrument                 |
+|`*ICidio`   | percussion instrument (idiophone)   |
+|----------- | ----------------------------------- |
+
 The following table identifies five pre-defined instrument groups:
 
->   ----------- ---------------------------
->   `*IGacmp`   accompaniment instrument
->   `*IGsolo`   solo instrument
->   `*IGcont`   basso-continuo instrument
->   `*IGripn`   ripieno instrument
->   `*IGconc`   concertino instrument
->   ----------- ---------------------------
->
+| Code        | Meaning                     |
+| ----------- | --------------------------- |
+| `*IGacmp`   | accompaniment instrument    |
+| `*IGsolo`   | solo instrument             |
+| `*IGcont`   | basso-continuo instrument   |
+| `*IGripn`   | ripieno instrument          |
+| `*IGconc`   | concertino instrument       |
+| ----------- | --------------------------- |
+
 The following set of tables list currently defined instrument names.
 When the name is used to form an instrument tandem interpretation the
 instrument keyword is preceded by an asterisk and the upper-case letter
@@ -64,747 +61,395 @@ instrument keyword is preceded by an asterisk and the upper-case letter
 guitar is `*Iguitr`. If the guitar appears as an instrument in a `AIN`
 Reference Record only the designation \``guitr`\' is used.
 
-> <a name ="Voice_Range"></a>
->
-> **Voice Range**
 
-`*Isoprn`
 
-soprano
+<a name="voice_range"></a>
+## Vocal Range ## 
 
-`*Imezzo`
 
-mezzo soprano
 
-`*Icalto`
+`*Isoprn`	soprano
 
-contralto
+`*Imezzo`	mezzo soprano
 
-`*Itenor`
+`*Icalto`	contralto
 
-tenor
+`*Itenor`	tenor
 
-`*Ibarit`
+`*Ibarit`	baritone
 
-baritone
+`*Ibass`	bass
 
-`*Ibass`
 
-bass
 
-<a name ="Voice_Quality"></a>
+<a name ="vocal_quality"></a>
+## Vocal Quality ##
 
-**Voice Quality**
 
-`*Ivox`
 
-generic (undesignated) voice
+`*Ivox`		generic (undesignated) voice
 
-`*Ifeme`
+`*Ifeme`	female voice
 
-female voice
+`*Imale`	male voice
 
-`*Imale`
+`*Infant`	child's voice
 
-male voice
+`*Irecit`	recitativo
 
-`*Infant`
+`*Ilyrsp`	lyric soprano
 
-child\'s voice
+`*Idrmsp`	dramatic soprano
 
-`*Irecit`
+`*Icolsp`	coloratura soprano
 
-recitativo
+`*Ialto`	alto
 
-`*Ilyrsp`
+`*Ictenor`	counter-tenor
 
-lyric soprano
+`*Iheltn`	Heldentenor, tenore robusto
 
-`*Idrmsp`
+`*Ilyrtn`	lyric tenor
 
-dramatic soprano
+`*Ibspro`	basso profondo
 
-`*Icolsp`
+`*Ibscan`	basso cantante
 
-coloratura soprano
+`*Ifalse`	falsetto
 
-`*Ialto`
+`*Icastr`	castrato
 
-alto
 
-`*Ictenor`
 
-counter-tenor
+<a name="string_instruments"></a>
+## String Instruments ##
 
-`*Iheltn`
 
-Heldentenor, tenore robusto
 
-`*Ilyrtn`
+`*Iarchl`	archlute; *archiluth* (Fr.); *liuto attiorbato/arcileuto/arciliuto* (It.)
 
-lyric tenor
+`*Iarpa`	harp; *arpa* (It.), *arpa* (Span.)
 
-`*Ibspro`
+`*Ibanjo`	banjo
 
-basso profondo
+`*Ibiwa`	biwa
 
-`*Ibscan`
+`*Ibguit`	electric bass guitar
 
-basso cantante
+`*Icbass`	contrabass
 
-`*Ifalse`
+`*Icello`	violoncello
 
-falsetto
+`*Icemba`	harpsichord; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.)
 
-`*Icastr`
+`*Icetra`	cittern; *cistre/sistre* (Fr.); *Cither/Zitter* (Ger.); *cetra/cetera* (It.)
 
-castrato
+`*Iclavi`	clavichord; *clavicordium* (Lat.); *clavicorde* (Fr.)
 
-<a name ="String_Instruments"></a>
+`*Idulc`	dulcimer or cimbalom; *Cimbal* or Hackbrett (Ger.)
 
-**String Instruments**
+`*Ieguit`	electric guitar
 
-`*Iarchl`
+`*Iforte`	fortepiano
 
-archlute; *archiluth* (Fr.); *liuto attiorbato/arcileuto/arciliuto*
-(It.)
+`*Iguitr`	guitar; *guitarra* (Span.); *guitare* (Fr.); *Gitarre* (Ger.); *chitarra* (It.)
 
-`*Iarpa`
+`*Ihurdy`	hurdy-gurdy; variously named in other languages
 
-harp; *arpa* (It.), *arpa* (Span.)
+`*Iliuto`	lute; *lauto, liuto leuto* (It.); *luth* (Fr.); *Laute* (Ger.)
 
-`*Ibanjo`
+`*Ikit`		kit; variously named in other languages
 
-banjo
+`*Ikokyu`	kokyu (Japanese spike fiddle)
 
-`*Ibiwa`
+`*Ikomun`	komun\'go (Korean long zither)
 
-biwa
+`*Ikoto`	koto (Japanese long zither)
 
-`*Ibguit`
+`*Imando`	mandolin; *mandolino* (It.); *mandoline* (Fr.); *Mandoline* (Ger.)
 
-electric bass guitar
+`*Ipiano`	 pianoforte
 
-`*Icbass`
+`*Ipipa`	 Chinese lute
 
-contrabass
+`*Ipsalt`	 psaltery (box zither)
 
-`*Icello`
+`*Iqin`		 qin, ch\'in (Chinese zither)
 
-violoncello
+`*Iquitr`	 gittern (short-necked lute); *quitarre* (Fr.); *Quinterne* (Ger.)
 
-`*Icemba`
+`*Irebec`	 rebec; *rebeca* (Lat.); *rebec* (Fr.); *Rebec* (Ger.)
 
-harpsichord; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.)
+`*Ibansu`	 bansuri
 
-`*Icetra`
+`*Isarod`	 sarod
 
-cittern; *cistre/sistre* (Fr.); *Cither/Zitter* (Ger.); *cetra/cetera*
-(It.)
+`*Ishami`	 shamisen (Japanese fretless lute)
 
-`*Iclavi`
+`*Isitar`	 sitar
 
-clavichord; *clavicordium* (Lat.); *clavicorde* (Fr.)
+`*Itambu`	 tambura, tanpura
 
-`*Idulc`
+`*Itanbr`	 tanbur
 
-dulcimer or cimbalom; *Cimbal* or Hackbrett (Ger.)
+`*Itiorb`	 theorbo; *tiorba* (It.); *tèorbe* (Fr.); *Theorb* (Ger.)
 
-`*Ieguit`
+`*Iud`		 ud
 
-electric guitar
+`*Iukule`	 ukulele
 
-`*Iforte`
+`*Ivina`	 vina
 
-fortepiano
+`*Iviola`	 viola; *alto* (Fr.); *Bratsche* (Ger.)
 
-`*Iguitr`
+`*Iviolb`	 bass viola da gamba; *viole* (Fr.); *Gambe* (Ger.)
 
-guitar; *guitarra* (Span.); *guitare* (Fr.); *Gitarre* (Ger.);
-*chitarra* (It.)
+`*Iviold`	 viola d\'amore; *viole d\'amour* (Fr.); *Liebesgeige* (Ger.)
 
-`*Ihurdy`
+`*Ivioln`	 violin; *violon* (Fr.); *Violine* or *Geige* (Ger.); *violino* (It.)
 
-hurdy-gurdy; variously named in other languages
+`*Iviolp`	 piccolo violin; *violino piccolo* (It.)
 
-`*Iliuto`
+`*Iviolp`	 piccolo violin; *violino piccolo* (It.)
 
-lute; *lauto, liuto leuto* (It.); *luth* (Fr.); *Laute* (Ger.)
+`*Iviols`	 treble viola da gamba; *viole* (Fr.); *Gambe* (Ger.)
 
-`*Ikit`
+`*Iviolt`	 tenor viola da gamba; viole (Fr.); Gambe (Ger.)
 
-kit; variously named in other languages
+`*Izithr`	 zither; *Zither* (Ger.); *cithare* (Fr.); *cetra da tavola* (It.)
 
-`*Ikokyu`
 
-kokyu (Japanese spike fiddle)
 
-`*Ikomun`
+<a name ="wind_instruments"></a>
+## Wind Instruments ##
 
-komun\'go (Korean long zither)
 
-`*Ikoto`
 
-koto (Japanese long zither)
+`*Iaccor`	 accordion; *accordéon* (Fr.); *Akkordeon* (Ger.)
 
-`*Imando`
+`*Iarmon`	 harmonica; *armonica* (It.)
 
-mandolin; *mandolino* (It.); *mandoline* (Fr.); *Mandoline* (Ger.)
+`*IbagpS`	 bagpipe (Scottish)
 
-`*Ipiano`
+`*IbagpI`	 bagpipe (Irish)
 
-pianoforte
+`*Ibaset`	 bassett horn
 
-`*Ipipa`
+`*Icalam`	 chalumeau; *calamus* (Lat.); *kalamos* (Gk.)
 
-Chinese lute
+`*Icalpe`	 calliope
 
-`*Ipsalt`
+`*Icangl`	 english horn; *cor anglais* (Fr.)
 
-psaltery (box zither)
+`*Ichlms`	 soprano shawm, chalmeye, shalme, etc.; *chalemie* (Fr.); *ciaramella* (It.)
 
-`*Iqin`
+`*Ichlma`	 alto shawm, chalmeye, shalme, etc.
 
-qin, ch\'in (Chinese zither)
+`*Ichlmt`	 tenor shawm, chalmeye, shalme, etc.
 
-`*Iquitr`
+`*Iclars`	 soprano clarinet (in either B-flat or A); *clarinetto* (It.)
 
-gittern (short-necked lute); *quitarre* (Fr.); *Quinterne* (Ger.)
+`*Iclarp`	 piccolo clarinet
 
-`*Irebec`
+`*Iclara`	 alto clarinet (in E-flat)
 
-rebec; *rebeca* (Lat.); *rebec* (Fr.); *Rebec* (Ger.)
+`*Iclarb`	 bass clarinet (in B-flat)
 
-`*Ibansu`
+`*Icor`		 horn; *cor* (Fr.); *corno* (It.); *Horn* (Ger.)
 
-bansuri
+`*Icornm`	 cornemuse; French bagpipe
 
-`*Isarod`
+`*Icorno`	 cornett (woodwind instr.); *cornetto* (It.); *cornaboux* (Fr.); *Zink* (Ger.)
 
-sarod
+`*Icornt`	 cornet (brass instr.); *cornetta* (It.); *cornet à pistons* (Fr.); *Cornett* (Ger.)
 
-`*Ishami`
+`*Ictina`	 concertina; *concertina* (Fr.); *Konzertina* (Ger.)
 
-shamisen (Japanese fretless lute)
+`*Ifagot`	 bassoon; *fagotto* (It.)
 
-`*Isitar`
+`*Ifag_c`	 contrabassoon; *contrafagotto* (It.)
 
-sitar
+`*Ifife`	 fife
 
-`*Itambu`
+`*Iflt`		 flute; *flauto* (It.); *Flöte* (Ger.); *flûte* (Fr.)
 
-tambura, tanpura
+`*Iflt_a`	 alto flute
 
-`*Itanbr`
+`*Iflt_b`	 bass flute
 
-tanbur
+`*Ifltds`	 soprano recorder; *flûte à bec, flûte douce* (Fr.); *Blockflöte* (Ger.); *flauto dolce* (It.)
 
-`*Itiorb`
+`*Ifltdn`	 sopranino recorder
 
-theorbo; *tiorba* (It.); *tèorbe* (Fr.); *Theorb* (Ger.)
+`*Ifltda`	 alto recorder
 
-`*Iud`
+`*Ifltdt`	 tenor recorder
 
-ud
+`*Ifltdb`	 bass recorder
 
-`*Iukule`
+`*Iflugh`	 flugelhorn
 
-ukulele
+`*Ihichi`	 hichiriki (Japanese double reed used in gagaku)
 
-`*Ivina`
+`*Ikrums`	 soprano crumhorn; *Krummhorn/Krumbhorn* (Ger.); *tournebout* (Fr.)
 
-vina
+`*Ikruma`	 alto crumhorn
 
-`*Iviola`
+`*Ikrumt`	 tenor crumhorn
 
-viola; *alto* (Fr.); *Bratsche* (Ger.)
+`*Ikrumb`	 bass crumhorn
 
-`*Iviolb`
+`*Inokan`	 nokan (Japanese flute for the no theatre)
 
-bass viola da gamba; *viole* (Fr.); *Gambe* (Ger.)
+`*Ioboe`	 oboe; *hautbois* (Fr.); *Hoboe, Oboe* (Ger.): *oboe* (It.)
 
-`*Iviold`
+`*IoboeD`	 oboe d\'amore
 
-viola d\'amore; *viole d\'amour* (Fr.); *Liebesgeige* (Ger.)
+`*Iocari`	 ocarina
 
-`*Ivioln`
+`*Iorgan`	 pipe organ; *organum* (Lat.); *organo* (It.); *orgue* (Fr.); *Orgel* (Ger.)
 
-violin; *violon* (Fr.); *Violine* or *Geige* (Ger.); *violino* (It.)
+`*Ipanpi`	 panpipe
 
-`*Iviolp`
+`*Ipicco`	 piccolo flute
 
-piccolo violin; *violino piccolo* (It.)
+`*Ipiri`	 Korean p\'iri
 
-`*Iviolp`
+`*Iporta`	 portative organ
 
-piccolo violin; *violino piccolo* (It.)
+`*Irackt`	 racket; *Rackett* (Ger.); *cervelas* (Fr.)
 
-`*Iviols`
+`*Ireedo`	 reed organ
 
-treble viola da gamba; *viole* (Fr.); *Gambe* (Ger.)
+`*Isarus`	 sarrusophone
 
-`*Iviolt`
+`*IsaxN`	 sopranino saxophone (in E-flat)
 
-tenor viola da gamba; viole (Fr.); Gambe (Ger.)
+`*IsaxS`	 soprano saxophone (in B-flat)
 
-`*Izithr`
+`*IsaxA`	 alto saxophone (in E-flat)
 
-zither; *Zither* (Ger.); *cithare* (Fr.); *cetra da tavola* (It.)
+`*IsaxT`	 tenor saxophone (in B-flat)
 
-<a name ="Wind_Instruments"></a>
+`*IsaxR`	 baritone saxophone (in E-flat)
 
-**Wind Instruments**
+`*IsaxB`	 bass saxophone (in B-flat)
 
-`*Iaccor`
+`*IsaxC`	 contrabass saxophone (in E-flat)
 
-accordion; *accordéon* (Fr.); *Akkordeon* (Ger.)
+`*Ishaku`	 shakuhachi
 
-`*Iarmon`
+`*Isheng`	 mouth organ (Chinese)
 
-harmonica; *armonica* (It.)
+`*Isho`		 mouth organ (Japanese)
 
-`*IbagpS`
+`*IsxhS`	 soprano saxhorn (in B-flat)
 
-bagpipe (Scottish)
+`*IsxhA`	 alto saxhorn (in E-flat)
 
-`*IbagpI`
+`*IsxhT`	 tenor saxhorn (in B-flat)
 
-bagpipe (Irish)
+`*IsxhR`	 baritone saxhorn (in E-flat)
 
-`*Ibaset`
+`*IsxhB`	 bass saxhorn (in B-flat)
 
-bassett horn
+`*IsxhC`	 contrabass saxhorn (in E-flat)
 
-`*Icalam`
+`*Itromt`	 tenor trombone; *trombone* (It.); *trombone* (Fr.); *Posaune* (Ger.)
 
-chalumeau; *calamus* (Lat.); *kalamos* (Gk.)
+`*Itromb`	 bass trombone
 
-`*Icalpe`
+`*Itromp`	 trumpet; *tromba* (It.); *trompette* (Fr.); *Trompete* (Ger.)
 
-calliope
+`*Ituba`	 tuba
 
-`*Icangl`
+`*Izurna`	 zurna
 
-english horn; *cor anglais* (Fr.)
 
-`*Ichlms`
 
-soprano shawm, chalmeye, shalme, etc.; *chalemie* (Fr.); *ciaramella*
-(It.)
+<a name="percussion_instruments"></a>
+## Percussion Instruments ##
 
-`*Ichlma`
 
-alto shawm, chalmeye, shalme, etc.
 
-`*Ichlmt`
+`*Ibdrum`	 bass drum (kit)
 
-tenor shawm, chalmeye, shalme, etc.
+`*Icampn`	 bell; *campana* (It.); *cloche* (Fr.); *campana* (Span.)
 
-`*Iclars`
+`*Icaril`	 carillon
 
-soprano clarinet (in either B-flat or A); *clarinetto* (It.)
+`*Icasts`	 castanets; *castañetas* (Span.); *castagnette* (It.)
 
-`*Iclarp`
+`*Ichime`	 chimes
 
-piccolo clarinet
+`*Iclest`	 celesta; *céleste* (Fr.)
 
-`*Iclara`
+`*Icrshc`	 crash cymbal (kit)
 
-alto clarinet (in E-flat)
+`*Ifingc`	 finger cymbal
 
-`*Iclarb`
+`*Iglock`	 glockenspiel
 
-bass clarinet (in B-flat)
+`*Igong`	 gong
 
-`*Icor`
+`*Imarac`	 maracas
 
-horn; *cor* (Fr.); *corno* (It.); *Horn* (Ger.)
+`*Imarim`	 marimba
 
-`*Icornm`
+`*Ipiatt`	 cymbals; *piatti* (It.); *cymbales* (Fr.); *Becken* (Ger.); *kymbos* (Gk.)
 
-cornemuse; French bagpipe
+`*Iridec`	 ride cymbal (kit)
 
-`*Icorno`
+`*Isdrum`	 snare drum (kit)
 
-cornett (woodwind instr.); *cornetto* (It.); *cornaboux* (Fr.); *Zink*
-(Ger.)
+`*Ispshc`	 splash cymbal (kit)
 
-`*Icornt`
+`*Isteel`	 steel-drum, tinpanny
 
-cornet (brass instr.); *cornetta* (It.); *cornet à pistons* (Fr.);
-*Cornett* (Ger.)
+`*Itabla`	 tabla
 
-`*Ictina`
+`*Itambn`	 tambourine, timbrel; *tamburino* (It.); *Tamburin* (Ger.)
 
-concertina; *concertina* (Fr.); *Konzertina* (Ger.)
+`*Itimpa`	 timpani; *timpani* (It.); *timbales* (Fr.); *Pauken* (Ger.)
 
-`*Ifagot`
+`*Itom`		 tom-tom drum
 
-bassoon; *fagotto* (It.)
+`*Itrngl`	 triangle; *triangle* (Fr.); *Triangel* (Ger.); *triangolo* (It.)
 
-`*Ifag_c`
+`*Ivibra`	 vibraphone
 
-contrabassoon; *contrafagotto* (It.)
+`*Ixylo`	 xylophone; *xylophone* (Fr.); *silofono* (It.)
 
-`*Ifife`
 
-fife
 
-`*Iflt`
+<a name ="keyboard_instruments"></a>
+## Keyboard Instruments ##
 
-flute; *flauto* (It.); *Flöte* (Ger.); *flûte* (Fr.)
+`*Iaccor`	 accordion; *accordéon* (Fr.); *Akkordeon* (Ger.)
 
-`*Iflt_a`
+`*Icaril`	 carillon
 
-alto flute
+`*Icemba`	 harpsichord; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.)
 
-`*Iflt_b`
+`*Iclavi`	 clavichord; *clavicordium* (Lat.); *clavicorde* (Fr.)
 
-bass flute
+`*Iclest`	 celesta; *céleste* (Fr.)
 
-`*Ifltds`
+`*Iforte`	 fortepiano
 
-soprano recorder; *flûte à bec, flûte douce* (Fr.); *Blockflöte* (Ger.);
-*flauto dolce* (It.)
+`*Ihammd`	 Hammond electronic organ
 
-`*Ifltdn`
+`*Iorgan`	 pipe organ; *orgue* (Fr.); *Orgel* (Ger.); *organo* (It.); *organo* (Span.); *organum* (Lat.)
 
-sopranino recorder
+`*Ipiano`	 pianoforte
 
-`*Ifltda`
+`*Iporta`	 portative organ
 
-alto recorder
+`*Ireedo`	 reed organ
 
-`*Ifltdt`
+`*Irhode`	 Fender-Rhodes electric piano
 
-tenor recorder
+`*Isynth`	 keyboard synthesizer
 
-`*Ifltdb`
 
-bass recorder
 
-`*Iflugh`
-
-flugelhorn
-
-`*Ihichi`
-
-hichiriki (Japanese double reed used in gagaku)
-
-`*Ikrums`
-
-soprano crumhorn; *Krummhorn/Krumbhorn* (Ger.); *tournebout* (Fr.)
-
-`*Ikruma`
-
-alto crumhorn
-
-`*Ikrumt`
-
-tenor crumhorn
-
-`*Ikrumb`
-
-bass crumhorn
-
-`*Inokan`
-
-nokan (Japanese flute for the no theatre)
-
-`*Ioboe`
-
-oboe; *hautbois* (Fr.); *Hoboe, Oboe* (Ger.): *oboe* (It.)
-
-`*IoboeD`
-
-oboe d\'amore
-
-`*Iocari`
-
-ocarina
-
-`*Iorgan`
-
-pipe organ; *organum* (Lat.); *organo* (It.); *orgue* (Fr.); *Orgel*
-(Ger.)
-
-`*Ipanpi`
-
-panpipe
-
-`*Ipicco`
-
-piccolo flute
-
-`*Ipiri`
-
-Korean p\'iri
-
-`*Iporta`
-
-portative organ
-
-`*Irackt`
-
-racket; *Rackett* (Ger.); *cervelas* (Fr.)
-
-`*Ireedo`
-
-reed organ
-
-`*Isarus`
-
-sarrusophone
-
-`*IsaxN`
-
-sopranino saxophone (in E-flat)
-
-`*IsaxS`
-
-soprano saxophone (in B-flat)
-
-`*IsaxA`
-
-alto saxophone (in E-flat)
-
-`*IsaxT`
-
-tenor saxophone (in B-flat)
-
-`*IsaxR`
-
-baritone saxophone (in E-flat)
-
-`*IsaxB`
-
-bass saxophone (in B-flat)
-
-`*IsaxC`
-
-contrabass saxophone (in E-flat)
-
-`*Ishaku`
-
-shakuhachi
-
-`*Isheng`
-
-mouth organ (Chinese)
-
-`*Isho`
-
-mouth organ (Japanese)
-
-`*IsxhS`
-
-soprano saxhorn (in B-flat)
-
-`*IsxhA`
-
-alto saxhorn (in E-flat)
-
-`*IsxhT`
-
-tenor saxhorn (in B-flat)
-
-`*IsxhR`
-
-baritone saxhorn (in E-flat)
-
-`*IsxhB`
-
-bass saxhorn (in B-flat)
-
-`*IsxhC`
-
-contrabass saxhorn (in E-flat)
-
-`*Itromt`
-
-tenor trombone; *trombone* (It.); *trombone* (Fr.); *Posaune* (Ger.)
-
-`*Itromb`
-
-bass trombone
-
-`*Itromp`
-
-trumpet; *tromba* (It.); *trompette* (Fr.); *Trompete* (Ger.)
-
-`*Ituba`
-
-tuba
-
-`*Izurna`
-
-zurna
-
-<a name ="Percussion_Instruments"></a>
-
-**Percussion Instruments**
-
-`*Ibdrum`
-
-bass drum (kit)
-
-`*Icampn`
-
-bell; *campana* (It.); *cloche* (Fr.); *campana* (Span.)
-
-`*Icaril`
-
-carillon
-
-`*Icasts`
-
-castanets; *castañetas* (Span.); *castagnette* (It.)
-
-`*Ichime`
-
-chimes
-
-`*Iclest`
-
-celesta; *céleste* (Fr.)
-
-`*Icrshc`
-
-crash cymbal (kit)
-
-`*Ifingc`
-
-finger cymbal
-
-`*Iglock`
-
-glockenspiel
-
-`*Igong`
-
-gong
-
-`*Imarac`
-
-maracas
-
-`*Imarim`
-
-marimba
-
-`*Ipiatt`
-
-cymbals; *piatti* (It.); *cymbales* (Fr.); *Becken* (Ger.); *kymbos*
-(Gk.)
-
-`*Iridec`
-
-ride cymbal (kit)
-
-`*Isdrum`
-
-snare drum (kit)
-
-`*Ispshc`
-
-splash cymbal (kit)
-
-`*Isteel`
-
-steel-drum, tinpanny
-
-`*Itabla`
-
-tabla
-
-`*Itambn`
-
-tambourine, timbrel; *tamburino* (It.); *Tamburin* (Ger.)
-
-`*Itimpa`
-
-timpani; *timpani* (It.); *timbales* (Fr.); *Pauken* (Ger.)
-
-`*Itom`
-
-tom-tom drum
-
-`*Itrngl`
-
-triangle; *triangle* (Fr.); *Triangel* (Ger.); *triangolo* (It.)
-
-`*Ivibra`
-
-vibraphone
-
-`*Ixylo`
-
-xylophone; *xylophone* (Fr.); *silofono* (It.)
-
-<a name ="Keyboard_Instruments"></a>
-
-**Keyboard Instruments**
-
-`*Iaccor`
-
-accordion; *accordéon* (Fr.); *Akkordeon* (Ger.)
-
-`*Icaril`
-
-carillon
-
-`*Icemba`
-
-harpsichord; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.)
-
-`*Iclavi`
-
-clavichord; *clavicordium* (Lat.); *clavicorde* (Fr.)
-
-`*Iclest`
-
-celesta; *céleste* (Fr.)
-
-`*Iforte`
-
-fortepiano
-
-`*Ihammd`
-
-Hammond electronic organ
-
-`*Iorgan`
-
-pipe organ; *orgue* (Fr.); *Orgel* (Ger.); *organo* (It.); *organo*
-(Span.); *organum* (Lat.)
-
-`*Ipiano`
-
-pianoforte
-
-`*Iporta`
-
-portative organ
-
-`*Ireedo`
-
-reed organ
-
-`*Irhode`
-
-Fender-Rhodes electric piano
-
-`*Isynth`
-
-keyboard synthesizer
-
-------------------------------------------------------------------------
-
-
-[**Previous Appendix**](guide.append1.html)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron
