@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:54 EST 2000'
+vim: ft=html
 permalink:	/guide/ch16/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 16 </h1>
+<h1> The Shell (II) </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 16
-=========
-
-The Shell (II)
-==============
 
 In [Chapter 8](/guide/ch08) we introduced some of the shell special
 characters. By way of review, we learned that the shell interprets the

@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:17:10 EST 2000'
+vim: ft=html
 permalink:	/guide/ch39/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 39 </h1>
+<h1> Trouble-Shooting </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 39
-=========
-
-Trouble-Shooting
-================
 
 Computers have an unbounded capacity to generate nonsense. Even when
 commands appear to execute correctly, there is no guarantee that the

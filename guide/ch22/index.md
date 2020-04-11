@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:29 EST 2000'
+vim: ft=html
 permalink:	/guide/ch22/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 22
-=========
+<div class="chapter-heading">
+<h1> Chapter 22 </h1>
+<h1> Classifying </h1>
+</div>
 
-Classifying
-===========
 
 Many of the most important analytic tasks involve classifying or
 categorizing various things. In this chapter we will discuss two general

@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:05 EST 2000'
+vim: ft=html
 permalink:	/guide/ch08/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 8 </h1>
+<h1> The Shell (I) </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 8
-========
-
-The Shell (I)
-=============
 
 When you type commands, they are interpreted by a command *shell.* The
 shell is a program that interprets user commands before passing them

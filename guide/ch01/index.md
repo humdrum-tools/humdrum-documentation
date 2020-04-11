@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:21 EST 2000'
+vim: ft=html
 permalink:	/guide/ch01/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 1
-========
+<div class="chapter-heading">
+<h1> Chapter 1 </h1>
+<h1> Humdrum: A Brief Tour </h1>
+</div>
 
-Humdrum: A Brief Tour
-=====================
 
 Humdrum is a general-purpose software system intended to assist music
 researchers. Humdrum\'s capabilities are quite broad, so it is difficult

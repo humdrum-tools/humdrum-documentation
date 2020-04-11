@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:19 EST 2000'
+vim: ft=html
 permalink:	/guide/ch10/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 10 </h1>
+<h1> Musical Uses of Regular Expressions </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 10
-=========
-
-Musical Uses of Regular Expressions
-===================================
 
 Now that you have a better understanding of regular expressions, let\'s
 apply them. This chapter provides many examples of how regular

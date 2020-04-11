@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:11 EST 2000'
+vim: ft=html
 permalink:	/guide/ch09/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 9 </h1>
+<h1> Searching with Regular Expressions </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 9
-========
-
-Searching with Regular Expressions
-==================================
 
 A common task in computing environments is searching through some set of
 data for occurrences of a given pattern. When a pattern is found,

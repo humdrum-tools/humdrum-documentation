@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:31 EST 2000'
+vim: ft=html
 permalink:	/guide/ch32/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 32
-=========
+<div class="chapter-heading">
+<h1> Chapter 32 </h1>
+<h1> The Shell (IV) </h1>
+</div>
 
-The Shell (IV)
-==============
 
 In research applications, it is impossible to anticipate all the types
 of manipulations we might want to carry out. For some tasks, we will

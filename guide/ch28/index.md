@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:09 EST 2000'
+vim: ft=html
 permalink:	/guide/ch28/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 28 </h1>
+<h1> Dynamics </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 28
-=========
-
-Dynamics
-========
 
 In this chapter we introduce three pre-defined representations
 pertaining to musical dynamics. One representation (\*\*dyn) represents

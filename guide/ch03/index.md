@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:33 EST 2000'
+vim: ft=html
 permalink:	/guide/ch03/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 3
-========
+<div class="chapter-heading">
+<h1> Chapter 3 </h1>
+<h1> Some Initial Processing </h1>
+</div>
 
-Some Initial Processing
-=======================
 
 Now that we have learned some things about Humdrum representations (and
 the `**kern` representation in particular), let\'s explore some basic

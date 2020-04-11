@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:34 EST 2000'
+vim: ft=html
 permalink:	/guide/ch23/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 23 </h1>
+<h1> Rhythm </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 23
-=========
-
-Rhythm
-======
 
 The subject of rhythm touches on nearly every aspect of music. Musical
 elements such as pitch, harmony, and dynamics can all be regarded from

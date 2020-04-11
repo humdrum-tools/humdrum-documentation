@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:37 EST 2000'
+vim: ft=html
 permalink:	/guide/ch33/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 33 </h1>
+<h1> Word Sounds </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 33
-=========
-
-Word Sounds
-===========
 
 In addition to the meanings conveyed by words, words also provide
 distinctive sounds that can prove to be musically useful. Poets and

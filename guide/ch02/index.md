@@ -2,17 +2,17 @@
 sidebar: toc
 chapternav: guide
 author: David Huron
-creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-revision-date: 'Thu Feb 3 10:13:27 EST 2000'
+creation-date: 1 Sep 1998
+revision-date: 3 Feb 2000
 verovio: "true"
+vim: ft=html
 permalink:	/guide/ch02/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 2
-========
-
-Representing Music Using *\*\*kern* (I)
-=======================================
+<div class="chapter-heading">
+<h1> Chapter 2 </h1>
+<h1> Representing Music Using **kern (I) </h1>
+</div>
 
 
 The `**kern` representation can be used to represent basic or core
@@ -501,7 +501,7 @@ Reference Records
 -----------------
 
 A particularly important type of global comment is the [*reference
-record.*](guide.append1.html) Reference records are formal ways of
+record.*](/reference-records). Reference records are formal ways of
 encoding "library-type" information pertaining to a Humdrum document.
 Reference records provide standardized ways of encoding bibliographic
 information \-- suitable for computer-based access.
@@ -510,17 +510,17 @@ Humdrum reference records are designated by three exclamation marks at
 the beginning of a line, followed by a letter code, followed by an
 optional number, followed by a colon, followed by some text. The
 following example provides a set of reference records related to the
-"Augurs of Spring" section from Stravinsky\'s *Rite of Spring.*
+"Augurs of Spring" section from Stravinsky's *Rite of Spring.*
 Example 2.6.
 
 ```humdrum
 !!!COM: Stravinsky, Igor Fyodorovich
 !!!CDT: 1882/6/17/-1971/4/6
 !!!ODT: 1911//-1913//; 1947//
-!!!OPT@@RUS: Vesna svyashchennaya
-!!!OPT@FRE: Le sacre du printemps
-!!!OPT@ENG: Rite of Spring
-!!!OTL@FRE: Les augures printaniers
+!!!OPT@@RU: Весна священная
+!!!OPT@FR: Le sacre du printemps
+!!!OPT@EN: Rite of Spring
+!!!OTL@FR: Les augures printaniers
 !!!PUB: Boosey & Hawkes
 !!!YEC: 1945 Boosey & Hawkes
 !!!AGN: ballet

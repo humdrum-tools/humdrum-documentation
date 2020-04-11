@@ -12,7 +12,11 @@ var data = {{ sidebar | jsonify}};
 
 	{% unless page.toc == "false" %}
 		<li class="active">
-			<a title="Table of Contents" href="#">Table of contents</a>
+			{% if page.url contains "guide" %}
+				<a class="htug" style="text-align: center; font-stretch:condensed;" title="Table of Contents" href="#">Humdrum Toolkit User Guide</a>
+			{% else %}
+				<a title="Table of Contents" href="#">Table of contents</a>
+			{% endif %}
 			<ul style="line-height:18px; padding-bottom:40px;">
   				{% include toc.html %}
 			</ul>

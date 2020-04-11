@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:11 EST 2000'
+vim: ft=html
 permalink:	/guide/ch19/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 19 </h1>
+<h1> Musical Contexts </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 19
-=========
-
-Musical Contexts
-================
 
 Much of what makes an event of interest is the context of the event. We
 may be interested in what precedes or follows a note or chord. We have
@@ -224,7 +224,7 @@ mint melodies* | context -n 5 -o = | rid -GLId | sort \
 > \| uniq -c \| sort -nr
 
 
-Using *context* with the *-b* and *-e* Options
+Using *context* with the *<nobr>-b</nobr>* and *<nobr>-e</nobr>* Options
 ----------------------------------------------
 
 Example 19.1 shows an excerpt from a flute study by Anderson. Although

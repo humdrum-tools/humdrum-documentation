@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:48 EST 2000'
+vim: ft=html
 permalink:	/guide/ch15/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 15 </h1>
+<h1> Harmonic Intervals </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 15
-=========
-
-Harmonic Intervals
-==================
 
 In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of

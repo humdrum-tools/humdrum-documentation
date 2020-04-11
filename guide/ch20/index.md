@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:16 EST 2000'
+vim: ft=html
 permalink:	/guide/ch20/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 20
-=========
+<div class="chapter-heading">
+<h1> Chapter 20 </h1>
+<h1> Strophes, Verses and Repeats </h1>
+</div>
 
-Strophes, Verses and Repeats
-============================
 
 We often tend to think of musical information as a linear stream of
 successive events. However, there are many circumstances where musical

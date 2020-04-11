@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:40 EST 2000'
+vim: ft=html
 permalink:	/guide/ch04/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 4
-========
+<div class="chapter-heading">
+<h1> Chapter 4 </h1>
+<h1> Basic Pitch Translations </h1>
+</div>
 
-Basic Pitch Translations
-========================
 
 Many musical processes entail some sort of data translation in which one
 form of representation is transformed into another form of

@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:43 EST 2000'
+vim: ft=html
 permalink:	/guide/ch34/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 34 </h1>
+<h1> Serial Processing </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 34
-=========
-
-Serial Processing
-=================
 
 Humdrum provides a handful of specialized tools for serial and
 serial-inspired analytic processing. In this chapter we introduce the

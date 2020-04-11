@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:57 EST 2000'
+vim: ft=html
 permalink:	/guide/ch26/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 26 </h1>
+<h1> Moving Signifiers between Spines </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 26
-=========
-
-Moving Signifiers Between Spines
-================================
 
 In many types of tasks is it useful to be able to transfer signifiers
 from one spine to another. In this chapter we will discuss two commands.

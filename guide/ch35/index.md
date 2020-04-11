@@ -5,15 +5,15 @@ author: David Huron
 verovio: "true"
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:48 EST 2000'
+vim: ft=html
 permalink:	/guide/ch35/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 35 </h1>
+<h1> Layers </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 35
-=========
-
-Layers
-======
 
 In [Chapters 11](/guide/ch11) and [15](/guide/ch15) we examined
 different kinds of intervals, including both harmonic and melodic

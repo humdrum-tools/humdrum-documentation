@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:22 EST 2000'
+vim: ft=html
 permalink:	/guide/ch21/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 21 </h1>
+<h1> Searching for Patterns </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 21
-=========
-
-Searching for Patterns
-======================
 
 The **grep** and **egrep** commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the

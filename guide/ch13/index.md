@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:37 EST 2000'
+vim: ft=html
 permalink:	/guide/ch13/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 13 </h1>
+<h1> Assembling Scores </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 13
-=========
-
-Assembling Scores
-=================
 
 In the previous chapter we learned how to extract parts and passages
 from Humdrum files. In this chapter we discuss the reverse procedures:

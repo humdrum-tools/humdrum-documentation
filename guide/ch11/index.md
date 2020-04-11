@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:25 EST 2000'
+vim: ft=html
 permalink:	/guide/ch11/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 11 </h1>
+<h1> Melodic Intervals </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 11
-=========
-
-Melodic Intervals
-=================
 
 A musical interval is the distance between two pitches. When the pitches
 are consecutive the distance is referred to as a *melodic interval;*

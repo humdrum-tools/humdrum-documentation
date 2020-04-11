@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:13:46 EST 2000'
+vim: ft=html
 permalink:	/guide/ch05/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 5
-========
+<div class="chapter-heading">
+<h1> Chapter 5 </h1>
+<h1> The Humdrum Syntax </h1>
+</div>
 
-The Humdrum Syntax
-==================
 
 In the previous chapters we have seen several examples of pre-defined
 Humdrum representations, such as

@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:50 EST 2000'
+vim: ft=html
 permalink:	/guide/ch25/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 25
-=========
+<div class="chapter-heading">
+<h1> Chapter 25 </h1>
+<h1> Similarity </h1>
+</div>
 
-Similarity
-==========
 
 There is no precise way to measure similarity. However, there are
 several useful techniques that can be used to estimate the degree

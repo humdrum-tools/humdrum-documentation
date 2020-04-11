@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:14:31 EST 2000'
+vim: ft=html
 permalink:	/guide/ch12/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 12 </h1>
+<h1> Selecting Musical Parts and Passages </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 12
-=========
-
-Selecting Musical Parts and Passages
-====================================
 
 A Humdrum file may contain an encoding of a full score, or even of a
 large collection of scores. Often, we would like to isolate or extract

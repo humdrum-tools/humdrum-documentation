@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:15:05 EST 2000'
+vim: ft=html
 permalink:	/guide/ch18/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 18
-=========
+<div class="chapter-heading">
+<h1> Chapter 18 </h1>
+<h1> Fingers, Footsteps and Frets </h1>
+</div>
 
-Fingers, Footsteps and Frets
-============================
 
 Throughout this book, our examples have tended to rely on just a handful
 of Humdrum representations \-- `**kern` in particular. Of course the
@@ -85,7 +86,7 @@ M
 Fingerings might be represented. Each hand may have a separate spine:
 
 ```humdrum
-**finger	**finger
+**fing	**fing
 *left	*right
 .	1
 1	5	2
@@ -98,7 +99,7 @@ Fingerings might be represented. Each hand may have a separate spine:
 Or the hands might be combined in a single spine:
 
 ```humdrum
-**finger
+**fing
 R1
 L1	L5	R2
 R3

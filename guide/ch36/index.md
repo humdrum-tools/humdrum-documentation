@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:54 EST 2000'
+vim: ft=html
 permalink:	/guide/ch36/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 36 </h1>
+<h1> Sound and Spectra </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 36
-=========
-
-Sound and Spectra
-=================
 
 Music is a sonic art and no analytic toolkit would be complete without
 considering the representation and manipulation of sound-related

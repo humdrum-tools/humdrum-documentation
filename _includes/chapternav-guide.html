@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	lastlink += lastnum;
 
 	var output = "";
-	output += "<table style='width:220px'><tr style='width:100%;'>";
+	output += "<table style='width:226px'><tr style='width:100%;'>";
 	output += "<td title='Go to previous chapter' onclick='window.location.href=\"" + lastlink + "\"'>";
 	output += '<i class="fa fa-arrow-left"></i> ' + lastnum;
 	output += "</td><td title='Go to table of contents' onclick='window.location.href=\"/guide\"'>";
@@ -58,9 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	var original = document.querySelector("#original");
-console.log("ORIGINAL", original);
 	if (original) {
-console.log("ORIGINAL FOUND");
 		var nnumber = number;
 		if (nnumber < 10) {
 			nnumber = "0" + nnumber;

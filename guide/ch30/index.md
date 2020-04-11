@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:21 EST 2000'
+vim: ft=html
 permalink:	/guide/ch30/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 30 </h1>
+<h1> MIDI Input Tools </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 30
-=========
-
-MIDI Input Tools
-================
 
 The Humdrum Toolkit provides two tools for inputting MIDI data. In this
 chapter we briefly introduce the [**record**](/tool/record) and

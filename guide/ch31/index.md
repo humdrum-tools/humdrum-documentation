@@ -4,14 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:16:26 EST 2000'
+vim: ft=html
 permalink:	/guide/ch31/index.html
 ---
 
-Humdrum Toolkit User Guide, Chapter 31
-=========
+<div class="chapter-heading">
+<h1> Chapter 31 </h1>
+<h1> Repertories and Links </h1>
+</div>
 
-Repertories and Links
-=====================
 
 In initiating a research project, we often begin by selecting a suitable
 repertory for study. A common approach is to focus on a particular

@@ -4,15 +4,15 @@ chapternav: guide
 author: David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 revision-date: 'Thu Feb 3 10:17:15 EST 2000'
+vim: ft=html
 permalink:	/guide/ch40/index.html
 ---
 
+<div class="chapter-heading">
+<h1> Chapter 40 </h1>
+<h1> Conclusing </h1>
+</div>
 
-Humdrum Toolkit User Guide, Chapter 40
-=========
-
-Conclusion
-==========
 
 In [Chapter 1,](/guide/ch01) we noted that computers are quite limited
 in what they are able to do. We noted in particular that computers are
