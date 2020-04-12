@@ -18,8 +18,7 @@ $('#toc').on('click', 'a', function() {
 });
 </script>
 
-<div id="chapternav"></div>
-<div id="toc">
+<div id="chapternav">
 
 {% if page.chapternav == "guide" %}
 	{% include chapternav-guide.html %}
@@ -27,6 +26,10 @@ $('#toc').on('click', 'a', function() {
 
 {% if page.chapternav == "tool" %}
 	{% include chapternav-tool.html %}
+{% endif %}
+
+{% if page.chapternav == "rep" %}
+	{% include chapternav-rep.html %}
 {% endif %}
 
 

@@ -1,8 +1,11 @@
 ---
-sidebar: representations
-author: Parag Chordia
-creation-date: 'Fri May 6 11:25:11 EDT 2005'
-revision-date: 'Fri May 6 11:25:19 EDT 2005'
+sidebar:	representations
+chapternav:	rep
+author:		Parag Chordia
+creation-date:	6 May 2005
+revision-date:	6 May 2005
+last-edited:	
+vim:		ft=html
 ---
 
 
