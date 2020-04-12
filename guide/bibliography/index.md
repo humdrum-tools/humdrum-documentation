@@ -1,5 +1,5 @@
 ---
-author: David Huron
+author:		David Huron
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
 description: Bibliography for the Humdrum Toolkit User Guide
 revision-date: 'Thu Feb 3 10:12:48 EST 2000'

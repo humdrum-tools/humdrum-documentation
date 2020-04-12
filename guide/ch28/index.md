@@ -1,10 +1,11 @@
 ---
-sidebar: toc
-chapternav: guide
-author: David Huron
-creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
-revision-date: 'Thu Feb 3 10:16:09 EST 2000'
-vim: ft=html
+sidebar:	toc
+chapternav:	guide
+author:		David Huron
+creation-date:	1 Sep 1998
+revision-date:	3 Feb 2000
+last-edited:
+vim:		ft=html
 permalink:	/guide/ch28/index.html
 ---
 
