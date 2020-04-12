@@ -76,8 +76,11 @@ to produce a simple distribution that indicates:
 ```
 
 
-Filter, Sort, Count
--------------------
+
+
+## Filter, Sort, Count ##
+
+
 
 Building an inventory is a three-step process. First we need to *filter*
 the input so only the data of interest is present. Second we need to
@@ -171,8 +174,11 @@ first step in generating an inventory &mdash; *filtering* the input in order
 to eliminate records that we'd prefer to omit from our final output.
 
 
-Filtering Data with the *rid* Command
--------------------------------------
+
+
+## Filtering Data with the *rid* Command ##
+
+
 
 As we saw in [Chapter 13,](/guide/ch13) the
 <span class="tool">rid</span> command can be used to eliminate various
@@ -210,8 +216,11 @@ and "C". However, this data might represent any type of discrete data,
 such as Latin text, piano fingerings, or dance steps.
 
 
-Inventories for Multi-spine Inputs
-----------------------------------
+
+
+## Inventories for Multi-spine Inputs ##
+
+
 
 In the above example, we assumed that the input consists of a single
 Humdrum spine (i.e. a single column of data). However, Humdrum files can
@@ -300,8 +309,11 @@ cat justalpha justbet | rid -GLId | sort | uniq -c
 ```
 
 
-Sorting By Frequency of Occurrence
-----------------------------------
+
+
+## Sorting By Frequency of Occurrence ##
+
+
 
 When the output inventory list is short, it is easy to identify which
 records are the most common and which records are the least common.
@@ -357,8 +369,11 @@ rid -GLId alpha | sort | uniq -c | sort -r > inventory.alpha
 ```
 
 
-Counting with the *wc* Command
-------------------------------
+
+
+## Counting with the *wc* Command ##
+
+
 
 In other circumstances, it may be helpful to determine the proportion or
 percentage values rather than the actual numerical count. This can be
@@ -395,8 +410,11 @@ percentage of occurrence, and the second column will identify the
 corresponding type of data.
 
 
-Excluding or Seeking Rare Events
---------------------------------
+
+
+## Excluding or Seeking Rare Events ##
+
+
 
 Recall from [Chapter 3](/guide/ch03) that the <span class="unix">uniq</span> command provides
 other options (besides the <span class="option">c</span> option). The <span class="option">d</span> option causes
@@ -414,8 +432,11 @@ looking for rare circumstances in our data.
 `rid -GLId alpha | sort | uniq -d` (eliminate all the rare events)
 
 
-Transforming and Editing Inventory Data
----------------------------------------
+
+
+## Transforming and Editing Inventory Data ##
+
+
 
 Notice that two data records must be identical in order for them to be
 considered "the same" by <span class="unix">sort</span> and <span class="unix">uniq</span>. This means that
@@ -502,8 +523,11 @@ humsed 's/#//' notes | rid -GLId | sort | uniq -c
 ```
 
 
-Further Examples
-----------------
+
+
+## Further Examples ##
+
+
 
 Given your current background, you should now be able to generate
 inventories to answer a wide variety of questions. You should now
@@ -590,8 +614,11 @@ Mussorgsky?*
 This problem is addressed in [Chapter 36.](/guide/ch36)
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have discussed how to answer questions that involve
 the creation of inventories. Creating an inventory typically entails

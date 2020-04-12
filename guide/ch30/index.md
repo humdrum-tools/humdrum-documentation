@@ -31,8 +31,11 @@ available only for the DOS operating system. These commands can be used
 only with computers that have MIDI capable hardware.
 
 
-The *record* Command
---------------------
+
+
+## The *record* Command ##
+
+
 
 The <span class="tool">record</span> command captures a stream of
 input MIDI data and translates this data into the Humdrum <span class="rep">MIDI</span>
@@ -61,8 +64,11 @@ record > filippa
 ```
 
 
-The *encode* Command
---------------------
+
+
+## The *encode* Command ##
+
+
 
 The <span class="tool">encode</span> command provides an interactive
 editor for capturing Humdrum data from a MIDI input, such as a keyboard
@@ -162,8 +168,11 @@ Using the configuration files, users can tailor the <span class="tool">encode</s
 suit specific needs and skills.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have briefly identified two tools for capturing
 MIDI-related input: <span class="tool">encode</span> and

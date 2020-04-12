@@ -37,8 +37,11 @@ representational and processing issues related to the manipulation of
 words and syllables.
 
 
-The *\*\*text* and *\*\*silbe* Representations
-----------------------------------------------
+
+
+## The *\*\*text* and *\*\*silbe* Representations ##
+
+
 
 
 Syllable- and word-oriented representations are illustrated in the
@@ -182,8 +185,11 @@ $$	end	of	emotional	voice
 *Signifiers common to **\*\*text** and **\*\*silbe***
 
 
-The *text* Command
-------------------
+
+
+## The *text* Command ##
+
+
 
 In most notated music, lyrics are written using a syllabic
 representation rather than a word-oriented representation. The <span class="rep">silbe</span>
@@ -253,8 +259,11 @@ text | context -e '[.,;?!]' | grep -i 'white Pangur'
 ```
 
 
-The *fmt* Command
------------------
+
+
+## The *fmt* Command ##
+
+
 
 Another common task is simply to provide a readable text of the text or
 lyrics of a work. Given a <span class="rep">text</span> representation, we can use the
@@ -433,8 +442,11 @@ extract -i '**silbe' | context -o = -e '[.,;:?!]' \
 > \| rid -GLId \| awk \'{print NF}\'
 
 
-Rhythmic Feet in Text
----------------------
+
+
+## Rhythmic Feet in Text ##
+
+
 
 Another question related to rhythm is to identify rhythmic patterns.
 Once again, we might look at the chant *O Solis Ortus.* Below we have
@@ -504,8 +516,11 @@ structure &mdash; implying that this \`chant\' might have been sung
 rhythmically.
 
 
-Concordance
------------
+
+
+## Concordance ##
+
+
 
 A traditional text-related reference tool is the *concordance.*
 Concordances allow users to look up a word, to see the word in the
@@ -610,8 +625,11 @@ concordance to help identify metaphor or image related words (such as
 "light," "darkness," etc.)
 
 
-Simile
-------
+
+
+## Simile ##
+
+
 
 One of the most important poetic devices is the *simile* &mdash; where an
 analogy or metaphorical link is created between two things ("My love is
@@ -687,8 +705,11 @@ text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 > \| rid -Id
 
 
-Word Painting
--------------
+
+
+## Word Painting ##
+
+
 
 Word painting has a long history in music. There are innumerable
 examples where the music has somehow reflected the meaning of the vocal
@@ -748,8 +769,11 @@ semits * | extract -i '**semits' | ditto -s = | rid -GLI \
 > \| stats
 
 
-Emotionality
-------------
+
+
+## Emotionality ##
+
+
 
 Musical texts often convey or portray a wide range of emotions. Some
 texts celebrate the ecstacy of love or lament the sorrow of loss. Yet
@@ -892,8 +916,11 @@ emotional-charge, we can then use **grep -n** to establish the
 location(s) of this word in the original input file.
 
 
-Other Types of Language Use
----------------------------
+
+
+## Other Types of Language Use ##
+
+
 
 Apart from emotionality, language tends to be used differently in
 different musical genres. The contrast between *aria* and *recitative*
@@ -914,8 +941,11 @@ Differences in language use may be correlated with the `!!!AGN`
 reference record used to identify genres.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced two text-related representations:
 <span class="rep">text</span> and

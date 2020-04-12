@@ -29,8 +29,11 @@ interval) and <span class="tool">xdelta</span> commands. Discussion of
 harmonic intervals will be delayed until [Chapter 15.](/guide/ch15)
 
 
-Types of Melodic Intervals
---------------------------
+
+
+## Types of Melodic Intervals ##
+
+
 
 Example 11.1 provides a contrived illustration of seven different types
 of melodic intervals. (The corresponding <span class="rep">kern</span> representation is
@@ -130,8 +133,11 @@ semitones, cents, frequency differences, or even differences in cochlear
 coordinates.
 
 
-Melodic Intervals Using the *mint* Command
-------------------------------------------
+
+
+## Melodic Intervals Using the *mint* Command ##
+
+
 
 The Humdrum <span class="tool">mint</span> command calculates melodic
 intervals for pitch-related representations such as
@@ -253,8 +259,11 @@ mint -b '[;}]' inputfile
 ```
 
 
-Unvoiced Inner Intervals
-------------------------
+
+
+## Unvoiced Inner Intervals ##
+
+
 
 Unvoiced inner intervals can be included in the output by using the
 <span class="option">i</span> or <span class="option">I</span> options. With the <span class="option">I</span> option, unvoiced inner
@@ -285,8 +294,11 @@ With the <span class="option">i</span> option, the parentheses surrounding the u
 intervals would be omitted.
 
 
-Calculating Distance Intervals Using the *mint -s* Command
-----------------------------------------------------------
+
+
+## Calculating Distance Intervals Using the *mint -s* Command ##
+
+
 
 Another option provided by <span class="tool">mint</span> is the <span class="option">s</span>
 or skip option. Like the <span class="option">b</span> option, this option requires a
@@ -422,8 +434,11 @@ The corresponding melodic interval output is:
 ```
 
 
-Simple and Compound Melodic Intervals
--------------------------------------
+
+
+## Simple and Compound Melodic Intervals ##
+
+
 
 Of course, some melodic variants alter the octave placement of pitches.
 The **mint -c** option outputs compound intervals (i.e. intervals of an
@@ -432,8 +447,11 @@ interval of a major tenth (`M10`) will be output as a major third
 (`M3`).
 
 
-Diatonic Intervals, Absolute Intervals and Contour
---------------------------------------------------
+
+
+## Diatonic Intervals, Absolute Intervals and Contour ##
+
+
 
 The <span class="tool">mint</span> command provides three further
 options of interest. The <span class="option">d</span> option causes <span class="tool">mint</span> to output only
@@ -449,8 +467,11 @@ pitch movement (i.e., unison). In short, the <span class="option">A</span> optio
 gross contour. The <span class="option">a</span> and <span class="option">A</span> options are complementary.
 
 
-Using the *mint* Command
-------------------------
+
+
+## Using the *mint* Command ##
+
+
 
 Consider some of the following uses of the <span class="tool">mint</span> command.
 
@@ -526,8 +547,11 @@ mint -A Dietrich | grep -v = | uniq -cd | grep '+' | sort -n
 ```
 
 
-Calculating Melodic Intervals Using the *xdelta* Command
---------------------------------------------------------
+
+
+## Calculating Melodic Intervals Using the *xdelta* Command ##
+
+
 
 Often it is useful to calculate melodic intervals in purely numerical
 values, such as the number semitones or the number of cents. The
@@ -651,8 +675,11 @@ containing two <span class="tool">xdelta</span> commands:
 `xdelta -s ^= inputfile` `| xdelta -s ^= `
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 Intervals come in a mind-boggling range of types and sizes. Interval
 sizes can be measured in a variety of ways. They can be characterized as

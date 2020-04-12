@@ -24,8 +24,11 @@ the notated dynamic markings in a score. A third scheme (\*\*dB)
 represents continuous dynamic levels in decibels.
 
 
-The *\*\*dynam* and *\*\*dyn* Representations
----------------------------------------------
+
+
+## The *\*\*dynam* and *\*\*dyn* Representations ##
+
+
 
 Musical scores commonly contain dynamic markings that include both
 written text (such as "*subito forte*" and "*dimin.*") and graphic
@@ -208,8 +211,11 @@ the moment of dynamic change. The
 the common system for representing barlines.
 
 
-The *\*\*dyn* Representation
-----------------------------
+
+
+## The *\*\*dyn* Representation ##
+
+
 
 The <span class="rep">dyn</span> representation provides a method for representing the
 orthographic appearance of notated dynamic markings. Unlike <span class="rep">dynam</span>,
@@ -320,8 +326,11 @@ converges at a point 4.3 staff-line steps below the center line for
 staff 1. Changing this value allows tilted wedges to be represented.
 
 
-The *\*\*dB* Representation
----------------------------
+
+
+## The *\*\*dB* Representation ##
+
+
 
 The <span class="rep">dB</span> representation provides a way
 to represent intensity in decibels. Decibels can be expressed in
@@ -339,8 +348,11 @@ intensity in a numerical form. A numerical representation allows us to
 carry out a variety of calculations and comparisons.
 
 
-The *db* Command
-----------------
+
+
+## The *db* Command ##
+
+
 
 The **db** command translates dynamic markings to dynamic level
 expressed in decibels; specifically, **db** translates from the
@@ -421,8 +433,11 @@ Notice that null tokens (such as those in the middle of measure 6) are
 ignored in the calculation.
 
 
-Processing Dynamic Information
-------------------------------
+
+
+## Processing Dynamic Information ##
+
+
 
 
 The <span class="rep">dB</span> representation can be used to
@@ -517,8 +532,11 @@ extract -i '**kern' klezmer | semits recode > temp1  extract -i '**dB' klezmer >
 ```
 
 
-Terraced Dynamics
------------------
+
+
+## Terraced Dynamics ##
+
+
 
 Suppose we want to identify whether various works exhibit "terraced"
 or "graduated" dynamics. In the case of terraced dynamics, we would
@@ -558,8 +576,11 @@ extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \
 > \| context -n 2 \| grep -c \'p f\'
 
 
-Dynamic Swells
---------------
+
+
+## Dynamic Swells ##
+
+
 
 Conceptually, crescendos and diminuendos can be paired to form one of
 two dynamic gestures. A "swell" gesture consists of a crescendo
@@ -578,8 +599,11 @@ extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \
 > \| context -n 2 \| grep -c \'\> \<\'
 
 
-MIDI Dynamics
--------------
+
+
+## MIDI Dynamics ##
+
+
 
 Dynamic level data is not always easily available. One possible source
 is to translate MIDI key-velocity data to an estimated decibel value.
@@ -658,8 +682,11 @@ Notice the use of the <span class="unix">sed</span> command to replace the \*\*M
 interpretation by a \*\*dB interpretation.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced three representations related to
 musical dynamics. The <span class="rep">dyn</span>

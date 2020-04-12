@@ -24,8 +24,11 @@ programs allow users to reduce lengthy sequences of Humdrum commands to
 a single user-defined command.
 
 
-Shell Programs
---------------
+
+
+## Shell Programs ##
+
+
 
 A shell program is simply a script consisting of one or more shell
 commands. Suppose we had a complex procedure consisting of a number of
@@ -129,8 +132,11 @@ user-specified input file &mdash; simply by typing the filename in the
 command.
 
 
-Flow of Control: The *if* Statement
------------------------------------
+
+
+## Flow of Control: The *if* Statement ##
+
+
 
 Suppose we wanted our **Schenker** command to apply only to tonal works
 &mdash; more specifically, to works with a known key. Before processing a
@@ -194,8 +200,11 @@ For example, the shell provides ways to determine whether a file exists,
 and other features.
 
 
-Flow of Control: The *for* Statement
-------------------------------------
+
+
+## Flow of Control: The *for* Statement ##
+
+
 
 In music research, a common task is to apply a particular process or
 script to a large number of score files. By way of illustration, suppose
@@ -234,8 +243,11 @@ be piped to further commands, so we might identify the maximum number of
 notes in a Czech melody by piping the output through **sort -n**.
 
 
-A Script for Identifying Transgressions of Voice-Leading
---------------------------------------------------------
+
+
+## A Script for Identifying Transgressions of Voice-Leading ##
+
+
 
 Shell programs can be of arbitrary complexity. Below is a shell program
 (dubbed **leader**) whose purpose is to identify all instances of
@@ -260,8 +272,11 @@ successive pairs of voices for processing by **leader**.
 ```
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have illustrated how to package complex Humdrum
 command scripts into shell programs. This allows us to create
@@ -281,8 +296,11 @@ books are available that provide comprehensive tutorials for shell
 programming.
 
 
-Locating Violations of the Rules of Voice-Leading
--------------------------------------------------
+
+
+## Locating Violations of the Rules of Voice-Leading ##
+
+
 
 The traditional rules of voice-leading have formed a standard component
 of conservatory training for art musicians.
@@ -502,8 +520,11 @@ in the file "template":
 
 ```humdrum
 P5
-P5
-------
+
+
+## P5 ##
+
+
 (Note that if we were looking for consecutive \`fifths\' that need not
 necessarily be \`perfect,\' we could simply eliminate the letter "P"
 in each interval given in the template.)

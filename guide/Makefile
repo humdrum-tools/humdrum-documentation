@@ -19,7 +19,6 @@ rep-span:
 misc:
 	$(BIN)/miscCleanup ch??/index.md
 
-misc:
-	$(BIN)/miscCleanup ch??/index.md
-
+headings:
+	$(BIN)/convertHeading ch??/index.md
 

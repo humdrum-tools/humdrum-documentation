@@ -28,8 +28,11 @@ will introduce two stream editors: <span class="unix">sed</span> and
 <span class="tool">humsed</span>.
 
 
-The *sed* and *humsed* Commands
--------------------------------
+
+
+## The *sed* and *humsed* Commands ##
+
+
 
 The <span class="tool">humsed</span> command is simply a Humdrum
 version of the UNIX <span class="unix">sed</span> stream editor. The syntax and operation of
@@ -42,8 +45,11 @@ combination, these operations can completely transform an input stream
 or document.
 
 
-Simple Substitutions
---------------------
+
+
+## Simple Substitutions ##
+
+
 
 The most frequently used stream-editing operation is substitution. Both
 <span class="tool">humsed</span> and <span class="unix">sed</span> designate substitutions by the lower-case letter
@@ -131,8 +137,11 @@ are replaced. If the option consisted of the number \`3\', then only the
 third instance of the target string would be replaced on each line.
 
 
-Selective Elimination of Data
------------------------------
+
+
+## Selective Elimination of Data ##
+
+
 
 The *target string* in substitution operations is actually a regular
 expression. This means that we can specify patterns using the full power
@@ -233,8 +242,11 @@ s%[0-9][0-9]*/[0-9][0-9]*/%%g
 ```
 
 
-The *stats* Command
--------------------
+
+
+## The *stats* Command ##
+
+
 
 We can determine the range or variance of these velocity values by
 piping the output to the **stats** command. The **stats** command
@@ -280,8 +292,11 @@ eliminates comments and interpretations prior to passing the data to the
 **stats** command.
 
 
-Eliminate Everything But \...
------------------------------
+
+
+## Eliminate Everything But \... ##
+
+
 
 A common use for <span class="tool">humsed</span> is to eliminate
 signifiers that are not of interest. Stream editors like <span class="unix">sed</span> and
@@ -319,8 +334,11 @@ support extended regular expressions, so we are not able to use the `+`
 metacharacter in the above substitution.
 
 
-Deleting Data Records
----------------------
+
+
+## Deleting Data Records ##
+
+
 
 Sometimes it is useful to delete entire data records rather than simply
 eliminating certain kinds of information. The `d` operation causes lines
@@ -390,8 +408,11 @@ humsed 's/[A-Ga-g#-]*/c/' | midi | perform
 ```
 
 
-Adding Information
-------------------
+
+
+## Adding Information ##
+
+
 
 The substitute command can also be used to add information to points in
 a Humdrum input. For example, we might wish to add an explicit
@@ -414,8 +435,11 @@ humsed s/4[^0-9.]/&~/g *inputfile*
 ```
 
 
-Multiple Substitutions
-----------------------
+
+
+## Multiple Substitutions ##
+
+
 
 Some tasks may require more than one substitution command. Multiple
 operations can be invoked by separating each operation by a semicolon.
@@ -434,8 +458,11 @@ ensuing substitution operation changes \`84\' to \`8\' and so completes
 the transformation.
 
 
-Switching Signifiers
---------------------
+
+
+## Switching Signifiers ##
+
+
 
 In some situations, we will want to switch two or more signifiers &mdash;
 make all A\'s B\'s and all B\'s A\'s. These sorts of tasks require three
@@ -456,8 +483,11 @@ third substitution changes occurrences of the temporary string `ABC` to
 up-bows.
 
 
-Executing from a File
----------------------
+
+
+## Executing from a File ##
+
+
 
 When several instructions are involved in stream editing, it can be
 inconvenient to type multiple operations on the command line. It is
@@ -481,8 +511,11 @@ humsed -f diminute *inputfile*
 ```
 
 
-Writing to a File
------------------
+
+
+## Writing to a File ##
+
+
 
 A useful feature of <span class="tool">humsed</span> is the "write"
 or `w` operation. This operation causes a line to be written to the end
@@ -564,8 +597,11 @@ context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
 ```
 
 
-Reading a File as Input
------------------------
+
+
+## Reading a File as Input ##
+
+
 
 Another useful feature is the <span class="tool">humsed</span>
 "read" or `r` operation. Whenever a leading regular expression is
@@ -599,8 +635,11 @@ humsed 'cadential-64/r comment.6-4' output > commented.output
 ```
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 The <span class="unix">sed</span> and <span class="tool">humsed</span> commands provide
 stream editors that can automatically edit a data stream. We've seen

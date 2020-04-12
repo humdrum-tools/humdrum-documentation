@@ -30,8 +30,11 @@ Humdrum *section* and *strophe*. We will encounter examples using the
 <span class="tool">strophe</span> commands.
 
 
-Section Labels
---------------
+
+
+## Section Labels ##
+
+
 
 Musical scores are often notated to take advantage of repetitions in the
 music. Devices such as repeat marks, *Da Capo*, *Dal Segno*, *Codas*,
@@ -57,8 +60,11 @@ there is more than one spine present in a passage, identical section
 labels must appear concurrently in all spines.
 
 
-Expansion Lists
----------------
+
+
+## Expansion Lists ##
+
+
 
 Rather than encode multiple copies of a passage, a single instance may
 be encoded and labelled as a section. The complete version of the work
@@ -80,8 +86,11 @@ the file is expanded, the "`refrain`" section should be repeated
 following each verse.
 
 
-Using *yank* to Extract Sections
---------------------------------
+
+
+## Using *yank* to Extract Sections ##
+
+
 
 
 We encountered the <span class="tool">yank</span> command earlier in
@@ -96,8 +105,11 @@ Recall that the <span class="option">r</span> option is mandatory with <span cla
 it identifies the *first* occurrence of a section labelled `Coda`.
 
 
-Using the *thru* Command to Expand Encodings
---------------------------------------------
+
+
+## Using the *thru* Command to Expand Encodings ##
+
+
 
 The Humdrum <span class="tool">thru</span> command expands *abbreviated
 format* representations to a so-called *through-composed format* in
@@ -112,8 +124,11 @@ running a file through <span class="tool">thru</span> twice will not result in f
 to the file.
 
 
-Alternative Versions
---------------------
+
+
+## Alternative Versions ##
+
+
 
 For works encoded in an abbreviated format, it is not always useful to
 expand it according to a single fixed recipe. Depending on the
@@ -203,8 +218,11 @@ thru file
 ```
 
 
-Section Types
--------------
+
+
+## Section Types ##
+
+
 
 Suppose we had two different theorists &mdash; Smith and Jones &mdash; who had
 analyzed the same work differently. Smith thinks there are basically two
@@ -282,8 +300,11 @@ data4
 *-  Without the -t option, yank will simply extract material up to the occurrence of the next section label. Note that section types can be used to define innumerable alternative organizations for a single document.  
 ```
 
-Hierarchical Sections
----------------------
+
+
+## Hierarchical Sections ##
+
+
 
 For many applications, it is useful to define "nested" structures
 where two or more sections form part of a larger section. Humdrum
@@ -363,8 +384,11 @@ Alternatively:
 yank -t Form -s Recapitulation
 ```
 *file*` | yank -t Form -s '2nd Theme' -r 1`
-Using the *yank* and *thru* Commands
-------------------------------------
+
+
+## Using the *yank* and *thru* Commands ##
+
+
 Section labels can be used in a wide number of applications. By way of
 illustration, here are a few pipeline processes involving section
 labels. First, we might ask the question &mdash; how does the user know
@@ -393,8 +417,11 @@ total
 Perform the first three measures from the second section of a binary
 form:
 `yank -s B` *file*` | yank -o = -r 1-3 | midi | perform`
-Strophic Representations
-------------------------
+
+
+## Strophic Representations ##
+
+
 Section labels and versions allow Humdrum users to select alternative
 groups of (horizontal) records within a Humdrum file or document. In
 other circumstances it is useful to be able to select alternative
@@ -821,8 +848,11 @@ to label them with numbers: `*S/1, *S/2,` and so on. The individual
 verses are terminated with strophe end indicators (`*S/fin`), the
 spines rejoin, and then a strophic passage terminator (`*S-`) marks
 the end of the strophic passage.
-The *strophe* Command
----------------------
+
+
+## The *strophe* Command ##
+
+
 The Humdrum <span class="tool">strophe</span> command can be used to isolate or extract
 selective strophic data. The <span class="option">x</span> option for <span class="tool">strophe</span> allows
 the user to extract a particular labelled strophe. Consider, for
@@ -889,8 +919,11 @@ thru schubert | strophe
 Incidentally, the input passage need not necessary begin with
 strophe \#1. The <span class="tool">strophe</span> command will adapt to the input, and
 use the lowest previously unencountered strophe number.
-Using the *strophe* and *thru* Commands
----------------------------------------
+
+
+## Using the *strophe* and *thru* Commands ##
+
+
 As noted, the strophe technique can be used to encode different
 editorial interpretations of a single work. Suppose for example that
 we had two editions of the Bach chorale harmonizations: Erk and
@@ -915,8 +948,11 @@ repeat this procedure for both verses:
 percent sign (%) have special meanings so the **grep -v** is used to
 eliminate them along with barlines.)
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 Between stophes and sections, highly non-linear musical documents
 can be constructed. We have seen how section labels can be defined,

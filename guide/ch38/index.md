@@ -62,8 +62,11 @@ control sample:
 -   autophase procedure
 
 
-Comparison Repertory
---------------------
+
+
+## Comparison Repertory ##
+
+
 
 By a "comparison repertory" we mean a group of works, that we
 hypothesize do not show the same distinctive feature &mdash; although in
@@ -132,8 +135,11 @@ but are due to different tastes in Weimar versus Leipzig. Bach was
 simply showing his ability to adapt to local tastes.
 
 
-Randomizing
------------
+
+
+## Randomizing ##
+
+
 
 Sometimes scholars formulate hypotheses that are intended to pertain to
 the whole of music &mdash; that is, the feature is thought to be a musical
@@ -177,8 +183,11 @@ result for a random re-ordering of the pitches within each melody. We
 can do this using the Humdrum <span class="tool">scramble</span> command.
 
 
-Using the *scramble* Command
-----------------------------
+
+
+## Using the *scramble* Command ##
+
+
 
 The <span class="tool">scramble</span> command is useful for
 randomizing the arrangement of Humdrum data. Suppose we had the
@@ -289,8 +298,11 @@ Note that the <span class="tool">scramble</span> command also provides a <span c
 the order of tokens within a data record can be randomly re-arranged.
 
 
-Retrograde Controls Using the *tac* Command
--------------------------------------------
+
+
+## Retrograde Controls Using the *tac* Command ##
+
+
 
 Suppose a theorist found an unusually large number of occurrences of the
 B-A-C-H pitch pattern in some repertory. Are these patterns intentional
@@ -338,8 +350,11 @@ Another way of testing the same hypothesis would be to search for the
 reverse pitch sequence: H-C-A-B.
 
 
-Autophase Procedure
--------------------
+
+
+## Autophase Procedure ##
+
+
 
 Frequently researchers are interested in the relationship between
 concurrent musical parts or voices. Suppose, for example, that we had
@@ -434,8 +449,11 @@ This *autophase* procedure has been used to address many differ kinds of
 questions pertaining to how musical parts interrelate.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 When using computers to measure or observe something it is important not
 to jump to conclusions from what we find. Just because something is

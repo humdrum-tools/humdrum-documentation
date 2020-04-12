@@ -24,8 +24,11 @@ tools are introduced: <span class="tool">dur</span> and
 <span class="tool">metpos</span>.
 
 
-The *\*\*recip* Representation
-------------------------------
+
+
+## The *\*\*recip* Representation ##
+
+
 
 For many types of processing tasks it is helpful to have a
 representation that encodes rhythmic information only. The
@@ -80,8 +83,11 @@ second one: `8r 16 16 8 8 4 4` and the fourth one:
 ```
 
 
-The *dur* Command
------------------
+
+
+## The *dur* Command ##
+
+
 
 The <span class="tool">dur</span> command produces
 <span class="rep">dur</span> output from either a <span class="rep">kern</span> or
@@ -252,8 +258,11 @@ A small `mean` from **stats** will be indicative of works that tend to
 have smoother or less angular note-to-note rhythms.
 
 
-Classifying Durations
----------------------
+
+
+## Classifying Durations ##
+
+
 
 We can use the <span class="tool">recode</span> command to classify
 durations into a finite set of categories. Suppose, for example, we wish
@@ -307,8 +316,11 @@ dur inputfile | xdelta -s ^= | recode -f reassign \
 > \| rid -GLId \| sort \| uniq -c \| sort -n
 
 
-Using *yank* with the *timebase* Command
-----------------------------------------
+
+
+## Using *yank* with the *timebase* Command ##
+
+
 
 Recall that the <span class="tool">timebase</span> command can be
 used to reformat an input so that each data record represents an
@@ -395,8 +407,11 @@ timebase -t 8 input | extract -i '**harm' \
 > \| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
 
 
-The *metpos* Command
---------------------
+
+
+## The *metpos* Command ##
+
+
 
 The <span class="tool">metpos</span> command generates a
 <span class="rep">metpos</span> output spine containing
@@ -514,8 +529,11 @@ metric stress. Since <span class="tool">metpos</span> adapts to changing meters,
 confidently process inputs that may contain mixtures of meters.
 
 
-Changes of Stress
------------------
+
+
+## Changes of Stress ##
+
+
 
 
 Once again we can make use of <span class="tool">xdelta</span> to
@@ -729,8 +747,11 @@ permit us to determine, for example, whether a specific progression such
 as *ii-V* tends to fall in strong-to-weak or weak-to-strong contexts.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 There are a vast number of issues raised in rhythm-related processing.
 In this chapter we have touched on a few of the more basic tasks. These

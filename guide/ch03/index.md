@@ -21,8 +21,11 @@ the <span class="rep">kern</span> representation in particular), let's explore s
 processing tasks.
 
 
-The *census* Command
---------------------
+
+
+## The *census* Command ##
+
+
 
 The Humdrum <span class="tool">census</span> command provides basic
 information about an input stream or file. We can invoke the command by
@@ -82,8 +85,11 @@ The output from <span class="tool">census</span> can be restricted to a particul
 information by "piping" the output to the UNIX <span class="unix">grep</span> command.
 
 
-Simple Searches using the *grep* Command
-----------------------------------------
+
+
+## Simple Searches using the *grep* Command ##
+
+
 
 The UNIX <span class="unix">grep</span> command is a popular tool for searching for lines that
 match some specified pattern. Patterns may be simple strings of
@@ -143,8 +149,11 @@ grep '##' schumann.krn
 ```
 
 
-Pattern Locations Using grep -n
--------------------------------
+
+
+## Pattern Locations Using grep -n ##
+
+
 
 If a pattern is found, it is sometimes helpful to know the precise
 location of the pattern. The <span class="option">n</span> option tells <span class="unix">grep</span> to prepend the
@@ -166,8 +175,11 @@ The output might look like this:
 in the file `melody.krn`.
 
 
-Counting Pattern Occurrences Using grep -c
-------------------------------------------
+
+
+## Counting Pattern Occurrences Using grep -c ##
+
+
 
 
 In some cases, the user is interested in counting the total number of
@@ -190,8 +202,11 @@ require a better knowledge of *regular expressions.* Regular expressions
 are discussed in [Chapter 9.](/guide/ch09)
 
 
-Searching for Reference Information
------------------------------------
+
+
+## Searching for Reference Information ##
+
+
 
 As we saw in [Chapter 2,](/guide/ch02) Humdrum files typically encode
 library-type information using reference records. For example, the
@@ -267,8 +282,11 @@ written and its previous contents lost. With the <span class="option">h</span> o
 ```
 
 
-The *sort* Command
-------------------
+
+
+## The *sort* Command ##
+
+
 
 The UNIX operating system provides a general sorting utility called
 <span class="unix">sort</span>. We might use this utility to rearrange the titles in
@@ -297,8 +315,11 @@ grep '!!!OTL:' * | sort > titles
 ```
 
 
-The *uniq* Command
-------------------
+
+
+## The *uniq* Command ##
+
+
 
 Bach often harmonized a chorale melody more than once. In the 185
 chorales in the original 1784 edition, several duplicate titles are
@@ -375,8 +396,11 @@ grep -h '!!!AIN:' * | sort | uniq
 ```
 
 
-Options for the *uniq* Command
-------------------------------
+
+
+## Options for the *uniq* Command ##
+
+
 
 Like <span class="unix">grep</span>, the <span class="unix">uniq</span> command provides several options that modify
 its behavior. The <span class="option">d</span> option causes only those records to be output
@@ -506,8 +530,11 @@ causes the output to be arranged in reverse order. This can be useful in
 producing lists that are ordered from most common to least common.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced some elementary ways of processing
 Humdrum files. We noted that the <span class="tool">census</span> command can be used to

@@ -31,8 +31,11 @@ the basic procedures are applicable to any kind of data &mdash; from sound
 recordings to historical choreographies of ballets.
 
 
-The Process of Electronic Editing
----------------------------------
+
+
+## The Process of Electronic Editing ##
+
+
 
 Electronic editing entails translating one representation into another
 representation. In many cases, an electronic edition is prepared from
@@ -53,8 +56,11 @@ and resolving issues related to copyright, distribution, and data
 integrity.
 
 
-Establishing the Goal
----------------------
+
+
+## Establishing the Goal ##
+
+
 
 Encoding and editing music is a time-consuming and labor-intensive
 process. Before starting to work on a electronic edition, it is
@@ -82,8 +88,11 @@ out of time, money or enthusiasm before they could turn to *using* the
 materials they had input.
 
 
-Documenting Encoded Data
-------------------------
+
+
+## Documenting Encoded Data ##
+
+
 
 More important than generating a complete and accurate database is
 generating complete and accurate documentation so that future users of
@@ -106,8 +115,11 @@ electronic editors to identify what information has been encoded and
 what information has been omitted or interpreted.
 
 
-Sources
--------
+
+
+## Sources ##
+
+
 
 In light of the editorial goal, you can procede to select source
 materials for encoding. In many cases, this will involve selecting
@@ -158,8 +170,11 @@ discouraging than discovering that your work cannot be distributed
 because you failed to consider seriously the copyright issues involved.
 
 
-Selecting a Sample from Some Repertory
---------------------------------------
+
+
+## Selecting a Sample from Some Repertory ##
+
+
 
 Quite often, there are insufficient resources to encode an entire
 corpus. Many repertories are simply too large to consider creating an
@@ -209,8 +224,11 @@ order to avoid introducing an unwanted bias, it is also prudent to
 encode the selected materials in a random order.
 
 
-Encoding
---------
+
+
+## Encoding ##
+
+
 
 Once you have established your materials and have decided on the type of
 encoding, you can go ahead and begin encoding the documents in random
@@ -236,8 +254,11 @@ Typically, it is more efficient to encode individual parts and then
 assemble all parts into a single full score.
 
 
-Transposing Instruments
------------------------
+
+
+## Transposing Instruments ##
+
+
 
 In the case of the <span class="rep">kern</span> representation, all parts are represented at
 concert pitch. It is typically easier to encode the parts as written and
@@ -276,8 +297,11 @@ to:
 ```
 
 
-Instrument Identification
--------------------------
+
+
+## Instrument Identification ##
+
+
 
 Humdrum provides standardized instrumentation indicators. Three
 different types of indication are appropriate: (1) the instrument name
@@ -297,8 +321,11 @@ In addition, the original instrument name (as found in the score) should
 also be encoded as a Humdrum local comment.
 
 
-Leading Barlines
-----------------
+
+
+## Leading Barlines ##
+
+
 
 Humdrum tools prefer to have explicit information indicating the
 beginning of the first measure. If a file does not begin with an
@@ -345,8 +372,11 @@ A common encoding error is to render mid-movement double barlines as
 *functional* rather than *orthographic* double-bars.
 
 
-Ornamentation
--------------
+
+
+## Ornamentation ##
+
+
 
 The <span class="rep">kern</span> representation makes a distinction between whole-tone and
 semitone trills and mordents. Typically, each ornament must be examined
@@ -373,8 +403,11 @@ appoggiatura is marked by the upper-case letter \``P`\' and the final
 \``p`\'.
 
 
-Editing Sections
-----------------
+
+
+## Editing Sections ##
+
+
 
 It is helpful to break-up large works/movements into smaller sections
 that can be labelled. In a binary work, for example, it may be useful to
@@ -430,8 +463,11 @@ expansion-list-label *ossia*):
 ```
 
 
-Editorialisms in the *\*\*kern* Representation
-----------------------------------------------
+
+
+## Editorialisms in the *\*\*kern* Representation ##
+
+
 
 Humdrum provides several ways of encoding editorialisms. These include
 editorial footnotes, local comments, global comments, interpretation
@@ -488,8 +524,11 @@ token has an accompanying editorial footnote (located in a comment
 record).
 
 
-Adding Reference Information
-----------------------------
+
+
+## Adding Reference Information ##
+
+
 
 Reference information must be added to each file. This information
 provides "library-type" information about the composer, date of
@@ -551,8 +590,11 @@ Refer to the *Humdrum Reference Manual* for further information about
 the types and format for different reference records.
 
 
-Proof-reading Materials
------------------------
+
+
+## Proof-reading Materials ##
+
+
 
 Once you have encoded your document, you should create a error-checking
 strategy. The Humdrum <span class="tool">humdrum</span> command can
@@ -590,8 +632,11 @@ other functions within the <span class="tool">perform</span> command; refer to t
 Reference Manual* &mdash; section 4 for further details.
 
 
-Data Integrity Using the VTS Checksum Record
---------------------------------------------
+
+
+## Data Integrity Using the VTS Checksum Record ##
+
+
 
 When using electronic documents, it is often useful to modify the
 document for some purpose. After a while, the user will become confused
@@ -632,8 +677,11 @@ distribution. This provides a public venue for users to determine
 whether the VTS record itself has not been modified.
 
 
-Preparing a Distribution
-------------------------
+
+
+## Preparing a Distribution ##
+
+
 
 Finally, you may want to prepare the material you have encoded for
 public distribution. Rename the score files and collect them into a
@@ -652,8 +700,11 @@ It is wise to also add a `LICENSE` file that reiterates whatever
 licensing agreement is entailed for the distributed data.
 
 
-Electronic Citation
--------------------
+
+
+## Electronic Citation ##
+
+
 
 Electronic editions of music might be cited in printed or other
 documents by including the following information. The "author" (e.g.
@@ -671,8 +722,11 @@ Amsterdam: Rijkaard Software Publishers, 1994; H. Vorisek (Ed.),
 Electronic edition version 2.1, checksum 891678772.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have reviewed the principal issues involved in
 preparing electronic music documents in Humdrum.

@@ -32,8 +32,11 @@ passages so only those notes of greatest importance are considered
 when measuring musical similarity.
 
 
-The *correl* Command
---------------------
+
+
+## The *correl* Command ##
+
+
 
 One way of measuring similarity is to compare the rise and fall of two
 sets of numbers. Suppose, for example, that we wanted to determine
@@ -194,8 +197,11 @@ Note that in formal statistical tests, the <span class="option">m</span> option 
 used.
 
 
-Using a Template with *correl*
-------------------------------
+
+
+## Using a Template with *correl* ##
+
+
 
 In the above examples, <span class="tool">correl</span> generates a single output value
 indicating the degree of numerical similarity between two spines.
@@ -332,8 +338,11 @@ spurious positive correlations. However, longer templates can also
 reduce the likelihood of discovering points of true similarity.
 
 
-The *simil* Command
--------------------
+
+
+## The *simil* Command ##
+
+
 
 The problem of measuring similarity entails two questions: the
 *criterion* of similarity and the *metric* of similarity.
@@ -492,8 +501,11 @@ mediant	.
 ```
 
 
-Defining Edit Penalties
------------------------
+
+
+## Defining Edit Penalties ##
+
+
 
 Technically, the <span class="tool">simil</span> command implements a
 Damerau-Levenshtein metric for edit distance (see Orpen & Huron, 1992).
@@ -788,8 +800,11 @@ bb  The appropriate template file would contain the following finger successions
 >   de
 >   b
 >   -----
-The *accent* Command
---------------------
+
+
+## The *accent* Command ##
+
+
 Both the <span class="tool">correl</span> and
 <span class="tool">simil</span> tools presume that all data tokens
 are equally important. In the case of <span class="tool">correl</span>, each number is
@@ -1058,8 +1073,11 @@ estimated accent values. Using this file, we can continue processing
 using either a parametric (<span class="tool">correl</span>) or non-parametric (<span class="tool">simil</span>)
 similarity method.
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced two types of similarity tools:
 <span class="tool">correl</span> and

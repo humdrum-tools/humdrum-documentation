@@ -439,8 +439,11 @@ the middle voice as also slurred. Notice that in the <span class="rep">kern</spa
 representation, notes can be tied, slurred, and phrased concurrently.
 
 
-Comment Records
----------------
+
+
+## Comment Records ##
+
+
 
 In any representation, some information may best be conveyed as an
 appended commentary, rather than as part of the encoded data. Humdrum
@@ -498,8 +501,11 @@ the spines.
 </script>
 
 
-Reference Records
------------------
+
+
+## Reference Records ##
+
+
 
 A particularly important type of global comment is the [*reference
 record.*](/reference-records). Reference records are formal ways of
@@ -609,8 +615,11 @@ types of reference records. A complete description of reference records
 is given in Appendix II.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced the Humdrum <span class="rep">kern</span> representation
 and a few of the more important reference records. As we have seen,

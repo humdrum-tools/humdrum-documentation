@@ -27,8 +27,11 @@ opportunities to create Humdrum spines that contain precisely the
 information of interest to the user.
 
 
-The *rend* Command
-------------------
+
+
+## The *rend* Command ##
+
+
 
 The <span class="tool">rend</span> command allows a Humdrum spine to be
 broken apart into two or more spines. Different pieces of information
@@ -87,8 +90,11 @@ The <span class="tool">rend</span> command is typically paired with a subsequent
 command.
 
 
-The *cleave* Command
---------------------
+
+
+## The *cleave* Command ##
+
+
 
 The <span class="tool">cleave</span> command amalgamates concurrent
 data tokens in two or more spines into a single data spine. In effect,
@@ -321,8 +327,11 @@ The final output is:
   \*-
 ```humdrum
 
-Creating Mixed Representations
-------------------------------
+
+
+## Creating Mixed Representations ##
+
+
 
 For some analytic tasks it is often useful to generate a special
 representation that combines all of the elements or types of data of
@@ -433,8 +442,11 @@ whether large leaps involving chromatically-altered tones tend to have a
 longer duration on the altered tone. Etc.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have seen how <span class="tool">rend</span> and
 <span class="tool">cleave</span> can be used to take bits and pieces

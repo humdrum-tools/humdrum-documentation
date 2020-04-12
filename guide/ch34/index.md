@@ -30,8 +30,11 @@ The chapter culminates with a script that automatically identifies
 is instructive for applications beyond serial analysis.
 
 
-Pitch-Class Representation
---------------------------
+
+
+## Pitch-Class Representation ##
+
+
 
 In set theoretic applications it is common to use pitch-class
 representations. The <span class="tool">pc</span> command can be used to
@@ -48,8 +51,11 @@ otherwise, the characters 1 and 0 do not uniquely specify a single
 pitch-class type.
 
 
-The *pcset* Command
--------------------
+
+
+## The *pcset* Command ##
+
+
 
 A common set theoretic task is identifying occurrences of various
 pitch-class set forms. Figure 34.1 identifies the set forms for several
@@ -152,8 +158,11 @@ used to generate the set *complement* rather than the principal set
 form.
 
 
-Prime Form and Normal Form
---------------------------
+
+
+## Prime Form and Normal Form ##
+
+
 
 
 The 3-11 set form designates both the major and minor chords (since they
@@ -208,8 +217,11 @@ grep -c '}.*\t(037)' AllBerg.all
 ```
 
 
-Interval Vectors Using the *iv* Command
----------------------------------------
+
+
+## Interval Vectors Using the *iv* Command ##
+
+
 
 Interval vectors identify the frequency of occurrence of various
 interval-classes for a given pitch-class set. The
@@ -253,8 +265,11 @@ pc schoenberg* | ditto -s ^= | iv | grep -c '<.....0>'
 ```
 
 
-Segmentation Using the *context* Command
-----------------------------------------
+
+
+## Segmentation Using the *context* Command ##
+
+
 
 So far, we have processed only "vertical" sets of concurrent pitches.
 In set-theory analyses, there are many other important ways of
@@ -308,8 +323,11 @@ musically-pertinent sets, and then assembling all of the
 <span class="rep">pcset</span> spines into a single file.
 
 
-The *reihe* Command
--------------------
+
+
+## The *reihe* Command ##
+
+
 
 Twelve-tone music raises additional analysis issues. Variants of a
 tone-row can be generated using the <span class="tool">reihe</span>
@@ -394,8 +412,11 @@ articulation marks, or any other type of Humdrum data. In [Chapter
 effectively used in many applications apart from serial analysis.
 
 
-Generating a Set Matrix
------------------------
+
+
+## Generating a Set Matrix ##
+
+
 
 
 The first step in automated row-finding is to generate a set matrix of
@@ -424,8 +445,11 @@ For any given input, the above script produces 48 short files named P0,
 P1, \... I0, I1 \... R0, R1 \... RI10, RI11.
 
 
-Locating and Identifying Tone-Rows
-----------------------------------
+
+
+## Locating and Identifying Tone-Rows ##
+
+
 
 Each of the row variant files can be used as a template for the
 <span class="tool">patt</span> command (see [Chapter 21](/guide/ch21)).
@@ -518,8 +542,11 @@ analyzing both individual instruments and groups of instruments works
 very well.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have discussed several tools related to set theory
 analysis. These include the <span class="tool">pc</span> (pitch-class)

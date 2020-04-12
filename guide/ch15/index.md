@@ -23,8 +23,11 @@ harmonic intervals: the <span class="tool">hint</span> and
 <span class="tool">ydelta</span> commands.
 
 
-Types of Harmonic Intervals
----------------------------
+
+
+## Types of Harmonic Intervals ##
+
+
 
 Harmonic intervals identify pitch distances between nominally
 concurrently-sounding notes. Example 15.1 illustrates five types of
@@ -119,8 +122,11 @@ We will consider just two tools for calculating harmonic intervals:
 <span class="tool">hint</span> and **ydelta.**
 
 
-Harmonic Intervals Using the *hint* Command
--------------------------------------------
+
+
+## Harmonic Intervals Using the *hint* Command ##
+
+
 
 The Humdrum <span class="tool">hint</span> command calculates harmonic
 intervals for pitch-related representations such as
@@ -214,8 +220,11 @@ will produce the following output for the final major chord in Example
 ```
 
 
-Propagating Data Using the *ditto* Command
-------------------------------------------
+
+
+## Propagating Data Using the *ditto* Command ##
+
+
 
 In the default operation, <span class="tool">hint</span> calculates intervals only between
 pitches that are explicitly present in an input data record. This means
@@ -361,8 +370,11 @@ As we will see in future chapters, the <span class="tool">ditto</span> command p
 in a wide variety of situations apart from calculating intervals.
 
 
-Using the *ditto* and *hint* Commands
--------------------------------------
+
+
+## Using the *ditto* and *hint* Commands ##
+
+
 
 
 Let's pause and consider some of the ways we might use the <span class="tool">ditto</span>
@@ -426,8 +438,11 @@ assemble temp1 temp2 | grep -c ^so.*P8
 ```
 
 
-Determining Implicit Harmonic Intervals
----------------------------------------
+
+
+## Determining Implicit Harmonic Intervals ##
+
+
 
 Recall that *implicit harmonic intervals* may be deemed to occur between
 tones that don't actually sound at the same time. This arises when one
@@ -525,8 +540,11 @@ Below we see the output assembled with the output from the corresponding
 ```
 
 
-The *ydelta* Command
---------------------
+
+
+## The *ydelta* Command ##
+
+
 
 
 Often it is useful to represent intervals by the number of semitones (or
@@ -635,8 +653,11 @@ The resulting output would be:
 ```
 
 
-More Examples Using the *ydelta* Command
-----------------------------------------
+
+
+## More Examples Using the *ydelta* Command ##
+
+
 
 What is the average semitone distance between the cantus and altus
 voices in Lassus motets? We can answer this question by first extracting
@@ -682,8 +703,11 @@ augmented fourth, and then to exclude any remaining records that match a
 diminished fifth.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 Harmonic intervals can be measured in a variety of ways. They can be
 characterized as diatonic qualities such as minor sevenths or augmented

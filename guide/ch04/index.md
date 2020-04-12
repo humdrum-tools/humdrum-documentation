@@ -35,8 +35,11 @@ scale-degree and MIDI pitch representations. In later chapters we will
 describe additional types of translations.
 
 
-ISO Pitch Representation
-------------------------
+
+
+## ISO Pitch Representation ##
+
+
 
 The best-known system for representing equally-tempered pitches is the
 International Standards Organization (ISO) format consisting of a letter
@@ -123,8 +126,11 @@ this chapter make use of the so-called \`common system\' for
 representing barlines.
 
 
-German Tonhöhe
---------------
+
+
+## German Tonhöhe ##
+
+
 
 The German system of pitch designations (*Tonhöhe*) is available in the
 Humdrum <span class="rep">Tonh</span> representation. The
@@ -154,8 +160,11 @@ tonh filename
 ```
 
 
-French Solfège
---------------
+
+
+## French Solfège ##
+
+
 
 The common French system for pitch naming uses a so-called "fixed-do"
 method of diatonic pitch designations: *do, ré, mi, fa, sol, la* and
@@ -172,8 +181,11 @@ on. As with the German and ISO pitch representations, octave is
 designated by integers with `do4` representing middle C.
 
 
-Frequency
----------
+
+
+## Frequency ##
+
+
 
 For acoustic-related applications it may be helpful to translate to
 frequency. The Humdrum <span class="rep">freq</span>
@@ -184,8 +196,11 @@ frequencies may be specified as integer or real values (with a decimal
 point).
 
 
-Cents
------
+
+
+## Cents ##
+
+
 
 The <span class="rep">cents</span> representation provides
 a means for representing pitches in absolute units with respect to
@@ -196,8 +211,11 @@ As in the case of <span class="rep">freq</span>, cents may be specified as integ
 as real values (with a decimal point).
 
 
-Semitones
----------
+
+
+## Semitones ##
+
+
 
 A related pitch representation is
 <span class="rep">semits</span>. In this case, all pitches
@@ -219,8 +237,11 @@ imported by various Humdrum tools. A complete description of <span class="rep">M
 will be given in [Chapter 7.](/guide/ch07)
 
 
-Scale Degree &mdash; *\*\*solfa* and *\*\*deg*
-------------------------------------------
+
+
+## Scale Degree &mdash; *\*\*solfa* and *\*\*deg* ##
+
+
 
 Two different Humdrum representations are provided to describe
 scale-degree related information:
@@ -313,8 +334,11 @@ Notice also the different ways of characterizing accidentals.
 ```
 
 
-Pitch Translations
-------------------
+
+
+## Pitch Translations ##
+
+
 
 Humdrum provides a number of commands for translating between the
 various pitch-related representations described above. Typically, the
@@ -460,8 +484,11 @@ tonh	¤	¤	¤	¤	¤	¤	¤	¤
 ```
 
 
-Transposition Using the *trans* Command
----------------------------------------
+
+
+## Transposition Using the *trans* Command ##
+
+
 
 
 A common pitch-related manipulation is transposition. The
@@ -573,8 +600,11 @@ appropriate pitch-related representations, such as <span class="rep">pitch</span
 <span class="rep">Tonh</span>, and <span class="rep">solfg</span>.
 
 
-Key Interpretations
--------------------
+
+
+## Key Interpretations ##
+
+
 
 In order for the <span class="tool">solfa</span> or <span class="tool">deg</span> commands to translate from other
 pitch representations, the encoded music must contain an explicit key
@@ -598,8 +628,11 @@ representation, and key interpretations can be redefined at any place in
 a score.
 
 
-Pitch Processing
-----------------
+
+
+## Pitch Processing ##
+
+
 
 Apart from transposition, translating from one representation to another
 provides opportunities for different sorts of processing. Suppose, for
@@ -674,8 +707,11 @@ differences between <span class="tool">deg</span> and <span class="tool">solfa</
 chromatically altered scale tones in a manner appropriate to the task.
 
 
-Uses for Pitch Translations
----------------------------
+
+
+## Uses for Pitch Translations ##
+
+
 
 Occasionally it is useful to process a given representation to the
 *same* representation. The <span class="tool">kern</span> command
@@ -728,8 +764,11 @@ output; if the key or key signature contains flats, then A-flat will be
 output.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced a number of pre-defined pitch-related
 representations. Simple commands can be used to translate from one

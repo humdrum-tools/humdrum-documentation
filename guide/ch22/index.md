@@ -25,8 +25,11 @@ be categorized according to arithmetic ranges. We will then revisit the
 to classify different types of non-numeric data tokens.
 
 
-The *recode* Command
---------------------
+
+
+## The *recode* Command ##
+
+
 
 Suppose that we have a Humdrum spine that contains numerical information
 representing the moment-to-moment heart-rate of a listener. Heart rate
@@ -174,8 +177,11 @@ it is present, the else statement should appear as the last
 reassignment.
 
 
-Classifying Intervals
----------------------
+
+
+## Classifying Intervals ##
+
+
 
 The <span class="tool">recode</span> command has innumerable
 applications. Suppose we wanted to determine how frequently ascending
@@ -234,8 +240,11 @@ mint melody | xdelta -s = | recode -f reassign -i '**mint' \
 > \| grep \'up-leap .\*\$\'
 
 
-Clarinet Registers
-------------------
+
+
+## Clarinet Registers ##
+
+
 
 Consider another use of the <span class="tool">recode</span> command.
 [Imagine that we wanted to arrange Claude Debussy's
@@ -280,8 +289,11 @@ trans -d -5 -c -9 syrinx | semits | recode -f reassign \
 > -i \'\*\*semits\' -s = \| rid -GLId \| sort \| uniq -c
 
 
-Open and Close Position Chords
-------------------------------
+
+
+## Open and Close Position Chords ##
+
+
 
 
 Inputs to the <span class="tool">recode</span> command can be quite
@@ -320,8 +332,11 @@ The **grep -c** commands tell us whether open position sonorities are
 more common than close position sonorities.
 
 
-Flute Fingering Transitions
----------------------------
+
+
+## Flute Fingering Transitions ##
+
+
 
 There is no fixed limit to the length of a reassignment file. Consider
 for example, the following file named `map`. Each <span class="rep">semits</span> value from
@@ -401,8 +416,11 @@ classified as *long*, *short* and *medium* (say). Sound pressure levels
 *pp*, etc.), and so on.
 
 
-Classifying with *humsed*
--------------------------
+
+
+## Classifying with *humsed* ##
+
+
 
 The <span class="tool">recode</span> command is restricted to
 classifying numerical data only. For many applications, it is useful to
@@ -467,8 +485,11 @@ The output will be a single spine that classifies the difficulty of all
 fingering transitions.
 
 
-Classifying Cadences
---------------------
+
+
+## Classifying Cadences ##
+
+
 
 Consider another application where we use <span class="tool">humsed</span> to classify
 cadences. Suppose we have Roman-numeral harmonic data (as provided by
@@ -519,8 +540,11 @@ could construct a whole series of re-write rules that classify harmonies
 in a variety of ways.
 
 
-Orchestration
--------------
+
+
+## Orchestration ##
+
+
 
 One of the simplest classifications in a musical score is whether or not
 an instrument is sounding or resting. Suppose we extracted the viola
@@ -679,8 +703,11 @@ examine how brass, woodwinds, strings, and percussion in general are
 related.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 A large number of analytic tasks simply involve classifying things. In
 general, two sorts of classifying methods can be distinguished: (1) a

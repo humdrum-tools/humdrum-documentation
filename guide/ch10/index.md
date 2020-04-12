@@ -22,8 +22,11 @@ expressions may be used to define musically useful patterns. In
 subsequent chapters, we'll make frequent use of regular expressions.
 
 
-The *grep* Command (Again)
---------------------------
+
+
+## The *grep* Command (Again) ##
+
+
 
 Although regular expressions are used in a number of Humdrum commands,
 they are most frequently used in conjunction with the <span class="unix">grep</span> command
@@ -299,8 +302,11 @@ grep '^{' * | grep -v r
 ```
 
 
-German, French, Italian, and Neapolitan Sixths
-----------------------------------------------
+
+
+## German, French, Italian, and Neapolitan Sixths ##
+
+
 
 In conjunction with the <span class="tool">solfa</span> command,
 <span class="unix">grep</span> can be used to search for various types of special chords.
@@ -366,8 +372,11 @@ solfa input | grep '2-' | grep '4' | grep -v '6-'
 ```
 
 
-AND-Searches Using the *xargs* Command
---------------------------------------
+
+
+## AND-Searches Using the *xargs* Command ##
+
+
 
 In some cases, we want to identify those files that match two entirely
 different patterns (in different records). Recall that the <span class="option">l</span> option
@@ -452,8 +461,11 @@ grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \
 > \'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
 
 
-OR-Searches Using the *grep -f* Command
----------------------------------------
+
+
+## OR-Searches Using the *grep -f* Command ##
+
+
 
 In effect, the above pipelines provide logical **AND** structures: e.g.
 identify works composed in the 17th century AND written for organ AND
@@ -559,8 +571,11 @@ egrep -c -f whole2 debussy
 ```
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 The <span class="unix">grep</span> command is usually thought of as a way to find particular
 patterns in a file or input stream. However, the various options for

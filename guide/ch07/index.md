@@ -25,8 +25,11 @@ chapter we will discuss the output-related tools:
 input tools are discussed in [Chapter 30.](/guide/ch30)
 
 
-The *\*\*MIDI* Representation
------------------------------
+
+
+## The *\*\*MIDI* Representation ##
+
+
 
 Humdrum provides a <span class="rep">MIDI</span>
 representation that closely parallels the commercial MIDI specification
@@ -172,8 +175,11 @@ Also notice that an additional data record is required at the end of the
 passage in order to turn off the final notes.
 
 
-The *midi* Command
-------------------
+
+
+## The *midi* Command ##
+
+
 
 The <span class="tool">midi</span> command converts Humdrum
 <span class="rep">kern</span> data into Humdrum <span class="rep">MIDI</span>
@@ -207,8 +213,11 @@ using the <span class="tool">smf</span> command, or to listen to the output usin
 of <span class="rep">MIDI</span> data itself.
 
 
-The *perform* Command
----------------------
+
+
+## The *perform* Command ##
+
+
 
 The <span class="tool">perform</span> command allows the user to
 listen to synthesized performances of <span class="rep">MIDI</span>-format input. When
@@ -270,8 +279,11 @@ mark (`?`) rather than the slash. If the search is successful, playback
 continues immediately from the new score position.
 
 
-Data Scrolling During Playback
-------------------------------
+
+
+## Data Scrolling During Playback ##
+
+
 
 The <span class="tool">midi</span> command provides a useful <span class="option">c</span> option that causes each
 data record to be repeated as a comment. For example, when the <span class="option">c</span>
@@ -330,8 +342,11 @@ immediately forward (or backward) to the next occurrence and begin
 playing from that point.
 
 
-Changing Tempo
---------------
+
+
+## Changing Tempo ##
+
+
 
 
 During playback, the tempo can be modified by typing the greater-than
@@ -355,8 +370,11 @@ information is available, <span class="tool">perform</span> uses a default tempo
 quarter-notes per minute.
 
 
-The *tacet* Command
--------------------
+
+
+## The *tacet* Command ##
+
+
 
 In rare circumstances, ciphers (stuck notes) can occur during MIDI
 performances; for instance, an intermittently functioning MIDI cable may
@@ -375,8 +393,11 @@ to listen selectively to specific parts or passages. In [Chapter
 harmonic, rhythmic and melodic patterns) found in some repertory.
 
 
-The *smf* Command
------------------
+
+
+## The *smf* Command ##
+
+
 
 Another MIDI-related tool is the <span class="tool">smf</span> command.
 This command allows the user to create "standard MIDI files" from
@@ -400,8 +421,11 @@ specify a default MIDI key velocity. See the *Humdrum Reference Manual*
 for details.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have learned how Humdrum data can be output as MIDI
 data. Humdrum provides a <span class="rep">MIDI</span> representation that closely parallels

@@ -44,8 +44,11 @@ writing a program &mdash; although most of your programs are just one line
 in length.
 
 
-Shell Special Characters
-------------------------
+
+
+## Shell Special Characters ##
+
+
 
 The shell interprets a number of characters in a special manner. When
 you type a command, you should know that most shells treat the following
@@ -57,8 +60,11 @@ the double-quote ("), and the backslash (\\). We'll consider the
 function of each of these characters one at a time.
 
 
-File Redirection (\>)
----------------------
+
+
+## File Redirection (\>) ##
+
+
 
 Some of the special shell characters have already been discussed. The
 greater-than-sign (\>) is a *file redirection operator.* It must be
@@ -88,8 +94,11 @@ sort inputfile >> outputfile
 ```
 
 
-Pipe (\|)
----------
+
+
+## Pipe (\|) ##
+
+
 
 The vertical bar (\|) is interpreted by the shell as a \`pipe.\' Pipes
 are used to join the output of one command to the input of a subsequent
@@ -108,8 +117,11 @@ command1 | command2 | command3 | command4
 ```
 
 
-Shell Wildcard (\*)
--------------------
+
+
+## Shell Wildcard (\*) ##
+
+
 
 The asterisk is interpreted by the shell as a "filename wildcard."
 When it appears by itself, the asterisk is \`expanded\' by the shell to
@@ -130,8 +142,11 @@ the file itself is over-written to receive the output. Including the
 output file as input is never a good idea.
 
 
-Comment (\#)
-------------
+
+
+## Comment (\#) ##
+
+
 
 The octothorpe character (\#) indicates a shell *comment*. Any
 characters following the \# (up to the end of the line) are simply
@@ -148,8 +163,11 @@ after the filename:
 grep OTL: filename   # (Search for Humdrum titles.)
 ```
 
-Escape Character (\\)
----------------------
+
+
+## Escape Character (\\) ##
+
+
 
 Sometimes we would like to have a special character treated literally.
 For example, suppose we wanted to search for records containing sharps
@@ -178,8 +196,11 @@ down-stems in a <span class="rep">kern</span> file:
 grep \\ filename
 ```
 
-Escape Quotations (`'...`\')
-----------------------------
+
+
+## Escape Quotations (`'...`\') ##
+
+
 
 Another way of escaping the special meaning of shell characters is to
 place the material in single quotes. For example, we can escape the
@@ -219,8 +240,11 @@ grep '# inputfile > outputfile  >
 ```
 
 
-Command Delimiter (;)
----------------------
+
+
+## Command Delimiter (;) ##
+
+
 
 The semicolon (;) indicates the end of a command. Its presence allows
 more than one command to be typed on a single line. For example, the
@@ -244,8 +268,11 @@ single line may seem redundant, there are a number of circumstances
 where this feature proves useful.
 
 
-Background Command (&)
-----------------------
+
+
+## Background Command (&) ##
+
+
 
 After typing a command, the command begins executing as soon as you type
 the carriage return or "enter" key. When the command has finished
@@ -263,8 +290,11 @@ of commands. For further information concerning these features, refer to
 a UNIX reference book.
 
 
-Shell Command Syntax
---------------------
+
+
+## Shell Command Syntax ##
+
+
 
 Shell commands follow a special syntax. There are six possible
 components to a common command:
@@ -347,8 +377,11 @@ trans -d -3 -c 2 gambia21
 ```
 
 
-Output Redirection
-------------------
+
+
+## Output Redirection ##
+
+
 
 Most commands support several input and output modes. Input to a command
 may come from three sources. In many cases the input will come from one
@@ -423,8 +456,11 @@ The <span class="unix">tee</span> command is a useful way of recording or divert
 intermediate data in the middle of a pipeline.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have noted that the shell interprets certain
 characters in a special way. We learned about the octothorpe (\#), the

@@ -142,8 +142,11 @@ discussed. Exploring the *Humdrum Reference Manual* is recommended for
 readers interested in continuing to develop facility with Humdrum.
 
 
-Pursuing a Project with Humdrum
--------------------------------
+
+
+## Pursuing a Project with Humdrum ##
+
+
 
 If you have made it this far in the book, you will now have a fairly
 sophisticated knowledge of Humdrum. With this background, we might

@@ -34,8 +34,11 @@ all that is necessary to assemble a repertory list of works conforming
 to complex selection criteria.
 
 
-The *find* Command
-------------------
+
+
+## The *find* Command ##
+
+
 
 The UNIX <span class="unix">find</span> command traverses through a file hierarchy, and finds
 all files that match certain conditions. The <span class="unix">find</span> command takes the
@@ -160,8 +163,11 @@ find /scores -type d -name *.tmp -exec rmdir "{}" ";"
 ```
 
 
-Content Searching
------------------
+
+
+## Content Searching ##
+
+
 
 For most music research applications, we are interested in identifying
 files on the basis of their contents. That is, we'd like to know
@@ -313,8 +319,11 @@ Folksong Collection*, it is not the case that German drinking songs are
 more likely to be in triple meters.
 
 
-Using *find* with the *xargs* Command
--------------------------------------
+
+
+## Using *find* with the *xargs* Command ##
+
+
 
 
 As we saw in [Chapter 10,](/guide/ch10) the <span class="unix">xargs</span> command can be
@@ -389,8 +398,11 @@ The output identifies all scores in compound meters written for woodwind
 quintet that contain changes of key.
 
 
-Repertories As File Links
--------------------------
+
+
+## Repertories As File Links ##
+
+
 
 Rather than applying commands to files stored in a list, it is often
 helpful to have all of the files accessible in one location. That is, we
@@ -444,8 +456,11 @@ chmod +x vocalfiles  ./vocalfiles
 We now have a new directory whose files contain scores with vocal parts.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 The <span class="unix">find</span> command provides a convenient way to traverse through an
 entire file-system looking for files that conform to specific criteria.

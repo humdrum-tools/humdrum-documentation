@@ -53,8 +53,11 @@ etc.	etc.	etc.
 ```
 
 
-Types of Records
-----------------
+
+
+## Types of Records ##
+
+
 
 Humdrum encodings consist of a set of one or more lines or *records.*
 There are three types of Humdrum records:
@@ -67,8 +70,11 @@ These three record types are mutually exclusive, so it is not possible
 to mix comments, interpretations, or data records on the same line.
 
 
-Comment Records
----------------
+
+
+## Comment Records ##
+
+
 
 As we noted in [Chapter 2,](/guide/ch02) there are two kinds of
 comments: global comments and local comments. *Global comments* pertain
@@ -87,8 +93,11 @@ spines. Comments may be used to insert free-format commentaries in
 Humdrum encodings.
 
 
-Interpretation Records
-----------------------
+
+
+## Interpretation Records ##
+
+
 
 *Interpretations* are lines that begin with the asterisk character
 (`*`). Interpretations are used to identify more precisely the state of
@@ -114,8 +123,11 @@ may pertain to a given set of data; unlike exclusive interpretations,
 tandem interpretations are not necessarily mutually exclusive.
 
 
-Data Records
-------------
+
+
+## Data Records ##
+
+
 
 Lines that do not contain either an exclamation mark or an asterisk in
 the first column are *data records.* Blank lines (i.e., lines which are
@@ -147,8 +159,11 @@ respectively. The tab and carriage return characters are used to format
 the data into *spines* and *records,* respectively.
 
 
-Data Tokens and Null Tokens
----------------------------
+
+
+## Data Tokens and Null Tokens ##
+
+
 
 As we noted above, the data in the data records are conceptually divided
 into tokens. In Humdrum, there are two possible types of tokens:
@@ -242,8 +257,11 @@ following a tab unless they are used to indicate a comment,
 interpretation, or null token, respectively.
 
 
-Data Sub-Tokens
----------------
+
+
+## Data Sub-Tokens ##
+
+
 
 Data tokens can be split into sub-tokens via the space character. In the
 first data record of the following example, the first spine contains two
@@ -269,8 +287,11 @@ and that data tokens cannot begin or end with a space character. Of
 course spaces can be used freely in comments and in interpretations.
 
 
-Spine Paths
------------
+
+
+## Spine Paths ##
+
+
 
 Humdrum representations often consist of a fixed number of spines that
 continue throughout the course of an encoded file. As we have seen in
@@ -495,8 +516,11 @@ A	B	C
 ```
 
 
-The Humdrum Syntax: A Formal Definition
----------------------------------------
+
+
+## The Humdrum Syntax: A Formal Definition ##
+
+
 
 With the preceding background it is now possible to define formally a
 Humdrum representation. First we can define a Humdrum file. A Humdrum
@@ -570,13 +594,19 @@ Any	data	record	having	fewer	or	more	spines	than	the	immediately
 preceding	data	record.
 A	record	having	only	one	join-spine	indication.
 A	record	having	only	one	exchange-spine	indication.
-A	record	having	more	than	two	exchange-spine	indications.
-------------------------------------------------------------------
+
+
+## A	record	having	more	than	two	exchange-spine	indications. ##
+
+
 *Some Illegal Humdrum Constructions*
 
 
-The *humdrum* Command
----------------------
+
+
+## The *humdrum* Command ##
+
+
 
 One of the most important commands in the Humdrum Toolkit is the
 <span class="tool">humdrum</span> command itself. This command is
@@ -662,8 +692,11 @@ trombone	trumpet
 ```
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 This chapter has identified the formal structural and organizational
 features of the Humdrum syntax. The syntax provides a framework within

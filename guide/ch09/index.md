@@ -48,8 +48,11 @@ regular expression to search for a given pattern. As with the study of a
 musical instrument, practise is advised.
 
 
-Literals
---------
+
+
+## Literals ##
+
+
 
 The simplest regular expressions are merely literal sequences of
 characters forming a character **string,** as in the pattern:
@@ -73,8 +76,11 @@ expression. The specific sequence of characters found in the input
 string is referred to as the *matched string* or *matched pattern.*
 
 
-Wild-Card
----------
+
+
+## Wild-Card ##
+
+
 
 Regular expressions that are not literal involve so-called
 *metacharacters.* Metacharacters are used to specify various operations,
@@ -95,8 +101,11 @@ character can be interposed between the \``c`\' and the \``u`\' provided
 there is precisely one such character.
 
 
-Escape Character
-----------------
+
+
+## Escape Character ##
+
+
 
 A problem with metacharacters such as the period is that sometimes the
 user wants to use them as literals. The special meaning of
@@ -113,8 +122,11 @@ will match the period character. The backslash itself may be escaped by
 preceding it by an additional backslash (i.e. `\\`).
 
 
-Repetition Operators
---------------------
+
+
+## Repetition Operators ##
+
+
 
 Another metacharacter is the plus sign (`+`). The plus sign means "one
 or more consecutive instances of the previous expression." For example,
@@ -267,8 +279,11 @@ as *repetition operators* since they indicate the number of times an
 expression can occur in order to match.
 
 
-Context Anchors
----------------
+
+
+## Context Anchors ##
+
+
 
 Often it is helpful to limit the number of occurrences matched by a
 given pattern. You may want to match patterns in a more restricted
@@ -308,8 +323,11 @@ expressions we have discussed. For example, the regular expression:
 matches any line that begins with \``a`\' and ends with \``z`\'.
 
 
-OR Logical Operator
--------------------
+
+
+## OR Logical Operator ##
+
+
 
 One of several possibilities may be matched by making use of the logical
 *OR* operator, represented by the vertical bar (`|`). For example, the
@@ -339,8 +357,11 @@ will match eight different strings, including `simple triple meter` and
 `compound quadruple meter`.
 
 
-Character Classes
------------------
+
+
+## Character Classes ##
+
+
 
 In the case of single characters, a convenient way of identifying or
 listing a set of possibilities is to use the *character class.* For
@@ -421,8 +442,11 @@ alphabetic order, the regular expression is considered ungrammatical and
 will result in an error.
 
 
-Examples of Regular Expressions
--------------------------------
+
+
+## Examples of Regular Expressions ##
+
+
 
 The following table lists some examples of regular expressions and
 provides a summary description of the effect of each expression:
@@ -453,8 +477,11 @@ AB+	match	A'	followed	by	one	or	more	B's
 *Examples of regular expressions.*
 
 
-Examples of Regular Expressions in Humdrum
-------------------------------------------
+
+
+## Examples of Regular Expressions in Humdrum ##
+
+
 
 The following table provides some examples of regular expressions
 pertinent to Humdrum-format inputs:
@@ -537,8 +564,11 @@ comments and interpretations prior to processing (see [Chapter
 13](/guide/ch13)).
 
 
-Basic, Extended, and Humdrum-Extended Regular Expressions
----------------------------------------------------------
+
+
+## Basic, Extended, and Humdrum-Extended Regular Expressions ##
+
+
 
 Over the years, new features have been added to regular expression
 syntax. Some of the early software tools that make use of regular
@@ -568,8 +598,11 @@ useful in musical applications. These Humdrum extensions will be
 discussed in [Chapter 21.](/guide/ch21)
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 Regular expressions provide a powerful method for defining abstract
 patterns of alphanumeric characters. The wild card (.) matches any

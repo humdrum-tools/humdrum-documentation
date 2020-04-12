@@ -27,8 +27,11 @@ nevertheless provide convenient tools for quickly determining the
 relationship between two or more inputs.
 
 
-Comparing Files Using *cmp*
----------------------------
+
+
+## Comparing Files Using *cmp* ##
+
+
 
 The <span class="unix">cmp</span> command does a character-by-character comparison and
 indicates whether or not two files are identical.
@@ -155,8 +158,11 @@ cmp temp1 temp2
 ```
 
 
-Comparing Files Using *diff*
-----------------------------
+
+
+## Comparing Files Using *diff* ##
+
+
 
 The problem with <span class="unix">cmp</span> is that it is unable to distinguish whether the
 difference between two files is profound or superficial. A useful
@@ -246,8 +252,11 @@ processing, one could identify works that have similar rhythms, melodic
 contours, harmonies, rhyme schemes, and so on.
 
 
-Comparing Inventories &mdash; The *comm* Command
---------------------------------------------
+
+
+## Comparing Inventories &mdash; The *comm* Command ##
+
+
 
 The <span class="unix">diff</span> command is sensitive to the order of data. Suppose that
 texts for two songs differ only in that one song reverses the order of
@@ -420,8 +429,11 @@ then the commonality measures will be sensitive to the relative
 frequency of words within the vocabularies.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced the UNIX <span class="unix">cmp</span>, <span class="unix">diff</span> and
 <span class="unix">comm</span> commands. The <span class="unix">cmp</span> command determines whether two files as

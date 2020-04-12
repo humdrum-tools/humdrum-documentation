@@ -25,8 +25,11 @@ you don't understand everything in this chapter. All of the topics
 mentioned here will be covered more thoroughly in later chapters.
 
 
-What Can Humdrum Do?
---------------------
+
+
+## What Can Humdrum Do? ##
+
+
 
 Although Humdrum facilitates exploratory investigations, it is best used
 when the user has a clear problem or question in mind. For example,
@@ -54,8 +57,11 @@ to answer using Humdrum. The primary impediment to a quick solution is
 the user's skill in interconnecting the right tools for the task at
 hand. The purpose of this book is to help you develop that skill.
 
-The Humdrum Syntax and the Humdrum Toolkit
-------------------------------------------
+
+
+## The Humdrum Syntax and the Humdrum Toolkit ##
+
+
 
 Humdrum consists of two distinct components: the *Humdrum Syntax* and
 the *Humdrum Toolkit.* The *Humdrum Syntax* is a grammar for
@@ -197,8 +203,11 @@ Now that we've sketched an overview of Humdrum, we can consider in
 greater detail the two principal components of Humdrum: the *Humdrum
 Syntax* and the *Humdrum Toolkit*.
 
-Humdrum Syntax
---------------
+
+
+## Humdrum Syntax ##
+
+
 
 Humdrum data are organized somewhat like the tables of a spread-sheet.
 As with a spreadsheet, you can define or label your own types of data.
@@ -309,8 +318,11 @@ scheme intended to represent the basic or core musical information of
 notes, durations, rests, barlines, and so on.
 
 
-Humdrum Tools
--------------
+
+
+## Humdrum Tools ##
+
+
 
 The Humdrum software is not a program that you invoke like a
 word-processor or notation editor. Humdrum is not a big program that you
@@ -331,8 +343,11 @@ chapter is to give you an initial taste of Humdrum. Don't worry if you
 don't understand everything at this point.
 
 
-Some Sample Commands
---------------------
+
+
+## Some Sample Commands ##
+
+
 
 One group of tools is used to extract or select sections of data.
 Vertical spines of data can be extracted from a Humdrum file using the
@@ -478,8 +493,11 @@ musical processes. In later chapters we'll encounter some scripts that
 contain 10 or more lines of commands.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have seen that Humdrum consists of two parts: (1) a
 representation *syntax* that is similar to tables in a spread-sheet, and

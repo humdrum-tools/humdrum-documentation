@@ -42,8 +42,11 @@ of the <span class="unix">awk</span> programming language. Awk is a so-called "s
 language. It is easy to learn but nevertheless quite powerful.
 
 
-The *awk* Programming Language
-------------------------------
+
+
+## The *awk* Programming Language ##
+
+
 
 Awk programs can be executed from the shell command line. A simple
 program is the following:
@@ -64,8 +67,11 @@ input" is assumed. That is, input will come from either data arriving
 through a pipeline, or data typed at the keyboard.
 
 
-Automatic Parsing of Input Data
--------------------------------
+
+
+## Automatic Parsing of Input Data ##
+
+
 
 Each line of input data is automatically assigned to the awk variable
 `$0`. This means that the command
@@ -109,8 +115,11 @@ awk '{print $2 + $3}'
 will print the sum of `$2` and `$3`, namely 32.
 
 
-Arithmetic Operations
----------------------
+
+
+## Arithmetic Operations ##
+
+
 
 Suppose that we have two <span class="rep">semits</span>
 spines as input and we would like to print the semitone difference
@@ -144,8 +153,11 @@ awk '{print $1 "\t" $3}'
 ```
 
 
-Conditional Statements
-----------------------
+
+
+## Conditional Statements ##
+
+
 
 Often we'd like to avoid processing certain records. For example, we
 might wish to avoid processing barlines. The awk **if** statement can be
@@ -203,8 +215,11 @@ awk '{FS="\t"; print $3}'
 Notice the use of the semicolon to separate individual instructions.
 
 
-Assigning Variables
--------------------
+
+
+## Assigning Variables ##
+
+
 
 Within an awk program, the user can assign and manipulate variables that
 store particular values. Variables may hold numerical values or they may
@@ -225,8 +240,11 @@ A=178+18  number = 2.2 + A  number_squared = number ^ 2
 ```
 
 
-Manipulating Character Strings
-------------------------------
+
+
+## Manipulating Character Strings ##
+
+
 
 Variables holding character strings can be concatenated together. In the
 following example, after the first three assignments, the variable
@@ -275,8 +293,11 @@ Notice that we are at liberty to add spaces, tabs, and newlines in order
 to improve the readability of our program.
 
 
-The *for* Loop
---------------
+
+
+## The *for* Loop ##
+
+
 
 Often we would like to repeat a process for several concurrent spines.
 For example, suppose we had four spines of
@@ -383,8 +404,11 @@ functions, system calls, begin and end blocks, other control-flow
 statements, and pipes and file manipulations.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have introduced some features of the <span class="unix">awk</span>
 pattern/action language. A programming language, like <span class="unix">awk</span> or

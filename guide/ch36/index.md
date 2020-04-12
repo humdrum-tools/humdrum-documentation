@@ -39,8 +39,11 @@ particular, we will discuss the **kern2cs** command which generates
 score data for the popular *Csound* digital sound synthesis language.
 
 
-The *\*\*spect* Representation
-------------------------------
+
+
+## The *\*\*spect* Representation ##
+
+
 
 A useful predefined sound-related representations that in Humdrum is the
 <span class="rep">spect</span> scheme. The <span class="rep">spect</span>
@@ -83,8 +86,11 @@ A
 ```
 
 
-The SHARC Database and *spect* Command
---------------------------------------
+
+
+## The SHARC Database and *spect* Command ##
+
+
 
 More commonly, the <span class="tool">spect</span> command is used to generate a
 <span class="rep">spect</span> (acoustic spectral data)
@@ -112,8 +118,11 @@ different playing methods including arco, vibrato, non-vibrato,
 pizzicato, mute, and martello.
 
 
-The *mask* Command
-------------------
+
+
+## The *mask* Command ##
+
+
 
 Masking is the tendency for sounds to obscure one another. In many
 cases, masking may cause a sound to become completely inaudible. This
@@ -146,8 +155,11 @@ the **mask** command itself will generate an error if the input
 sonorities have already been modified using the **mask** command.
 
 
-The *sdiss* Command
--------------------
+
+
+## The *sdiss* Command ##
+
+
 
 A great deal of research has been carried out over the centuries
 concerning the nature of consonance and dissonance. This complex subject
@@ -204,8 +216,11 @@ different numbers of complex tones. Further problems with the Kameoka
 and Kuriyagawa measurement method are described in Mashinter (1995).
 
 
-Connecting Humdrum with Csound &mdash; the *kern2cs* Command
---------------------------------------------------------
+
+
+## Connecting Humdrum with Csound &mdash; the *kern2cs* Command ##
+
+
 
 Apart from generating and processing acoustic spectra, it is often
 convenient to be able to listen to the data. Generating sounds from
@@ -278,8 +293,11 @@ for greater portability. *Csound* provides several other utilities for
 sound analysis, including Fourier analysis and linear predictive coding.
 
 
-Sound Analysis
---------------
+
+
+## Sound Analysis ##
+
+
 
 Humdrum does not provide any sound analysis tools *per se*. As we noted,
 *Csound* provides utilities for Fourier analysis and linear predictive
@@ -297,8 +315,11 @@ Users should consult recent audio and multi-media resources for
 up-to-date information.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have seen that Humdrum score-related data can be
 transformed into spectral information using the <span class="tool">spect</span> command. This

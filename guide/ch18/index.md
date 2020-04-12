@@ -26,8 +26,11 @@ pre-defined Humdrum representation for fretted instrument tablatures.
 However, we will begin with a grab-bag of unorthodox representations.
 
 
-Heart Beats and Other Esoterica
--------------------------------
+
+
+## Heart Beats and Other Esoterica ##
+
+
 
 The Humdrum syntax provides a framework within which different symbol
 systems can be defined. Each symbol system or representation scheme is
@@ -186,8 +189,11 @@ an instructive contrast to the score- and MIDI-based representations
 that we have relied on for most of the examples in this book.
 
 
-The *\*\*fret* Representation
------------------------------
+
+
+## The *\*\*fret* Representation ##
+
+
 
 The <span class="rep">fret</span> representation is a
 pre-defined Humdrum scheme that provides a comprehensive system for
@@ -444,8 +450,11 @@ and barlines. Rests tokens are denoted simply by the lower-case letter
 used by <span class="rep">kern</span> and other representations.
 
 
-Additional Features of *\*\*fret*
----------------------------------
+
+
+## Additional Features of *\*\*fret* ##
+
+
 
 *Bowing-direction* and *strumming* information is prepended to the
 beginning of the tablature-token. The direction of bowing/strumming is
@@ -613,8 +622,11 @@ as inputs, including <span class="tool">cents</span>,
 [**solfg**,](/tool/solfg) and [**tonh**.](/tool/tonh)
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have tried to reinforce the lesson that
 <span class="rep">kern</span> is only one of an unbounded

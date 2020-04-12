@@ -29,8 +29,11 @@ search directly for sequential patterns without having to use
 <span class="tool">context</span> to create pseudo-simultaneous collections.
 
 
-The *patt* Command
-------------------
+
+
+## The *patt* Command ##
+
+
 
 The <span class="tool">patt</span> command may be regarded as a
 two-dimensional version of <span class="unix">grep</span>. Like <span class="unix">grep</span>, <span class="tool">patt</span> searches
@@ -73,8 +76,11 @@ as follows:
 D
 Es
 C
-H
-------
+
+
+## H ##
+
+
 We would invoke the search as follows:
 
 `patt -f dmitri` *inputfile*
@@ -405,8 +411,11 @@ to define patterns involving a multitude of conditions involving many
 different types of data.
 
 
-Using *patt*\'s Tag Option
---------------------------
+
+
+## Using *patt*\'s Tag Option ##
+
+
 
 So far, we have seen that <span class="tool">patt</span> provides two
 kinds of output. In the default operation, <span class="tool">patt</span> outputs a simple
@@ -498,8 +507,11 @@ inversions, retrogrades, and retrograde inversions. We will use suitable
 tags to identify the specific transpositions: P0, I7, R11, RI8, etc.
 
 
-Matching Multiple Records Using the *patt* Command
---------------------------------------------------
+
+
+## Matching Multiple Records Using the *patt* Command ##
+
+
 
 Twelve-tone music raises several special issues for sequential pattern
 matching. For example, it is common in serial music to collapse segments
@@ -562,8 +574,11 @@ patt -f tonerow -t P0 -m Krenek
 ```
 
 
-The *pattern* Command
----------------------
+
+
+## The *pattern* Command ##
+
+
 
 Not all patterns can be identified using <span class="tool">patt</span>. The Humdrum
 <span class="tool">pattern</span> command permits an additional
@@ -611,8 +626,11 @@ major triad &mdash; the last of which must end a phrase:
 (}.\*(\<a name ="-\].\*"></a>)
 
 
-Patterns of Patterns
---------------------
+
+
+## Patterns of Patterns ##
+
+
 
 Music often exhibits hierarchical structures where particular types of
 patterns may be embedded in other patterns, or where low-level patterns
@@ -654,8 +672,11 @@ search might similarly be amalgamated and used as an input for a higher
 level search for works exhibiting a sonata-allegro structure.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter and previous chapters we have identified several
 search-related tools, including the UNIX <span class="unix">grep</span> and <span class="unix">egrep</span> commands

@@ -29,8 +29,11 @@ exceptions, improper processing, software bugs, and incautious
 interpretations of results.
 
 
-Encoding Errors
----------------
+
+
+## Encoding Errors ##
+
+
 
 In the first instance, the accuracy of your results will depend on the
 accuracy of the input data. Humdrum data may originate from a variety of
@@ -79,8 +82,11 @@ error will cause a problem. Whenever possible try to restrict pattern
 searches to small or concise patterns.
 
 
-Searching Tips
---------------
+
+
+## Searching Tips ##
+
+
 
 Many of the problems in computer-based musicology are evident when
 searching for some pattern. In general, there are two types of searching
@@ -265,8 +271,11 @@ search strategy away from the computer so that you have time to consider
 possible confounds.
 
 
-Pipeline Tips
--------------
+
+
+## Pipeline Tips ##
+
+
 
 Apart from searching tasks, most Humdrum processing involves two or more
 software tools linked in a pipeline. Pipelines can obscure all sorts of
@@ -288,8 +297,11 @@ processing errors.
     avoid undetected typing errors.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In research-oriented activities, it is essential to exercise care when
 relying on computer-based methods. Computers have an unbounded capacity

@@ -20,8 +20,11 @@ permalink:	/guide/ch06/index.html
 In this chapter we return to consider several more advanced topics
 related to the <span class="rep">kern</span> representation.
 
-Tuplets
--------
+
+
+## Tuplets ##
+
+
 
 As we saw in [Chapter 2](/guide/ch02), <span class="rep">kern</span> durations are
 represented using a reciprocal number notation. With the exception of
@@ -132,8 +135,11 @@ could be a sixteenth note, a quintuplet sixteenth, or some other
 duration.
 
 
-Grace Notes, Gruppettos and Appoggiaturas
------------------------------------------
+
+
+## Grace Notes, Gruppettos and Appoggiaturas ##
+
+
 
 The <span class="rep">kern</span> representation also allows for the encoding of grace notes
 (acciaccaturas, non-canonical gruppettos, and appoggiaturas.
@@ -177,8 +183,11 @@ subsequent note (whose notated duration has been shortened) is
 designated by the lower-case letter "`p`".
 
 
-Multiple Stops
---------------
+
+
+## Multiple Stops ##
+
+
 
 In the <span class="rep">kern</span> representation, spines typically represent individual
 musical parts or voices. Occasionally, a nominally single "part"
@@ -360,8 +369,11 @@ have been encoded for both notes in the double stop.
 
 
 
-Further Examples
-----------------
+
+
+## Further Examples ##
+
+
 
 Example 6.4 shows an excerpt from a Chopin *Etude* that illustrates a
 number of subtle features in the <span class="rep">kern</span> representation.
@@ -508,8 +520,11 @@ BBnq	.	.
 
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 This chapter completes our survey of the <span class="rep">kern</span> representation. We
 have noted an number of subtleties related to encoding tuplets, multiple

@@ -25,8 +25,11 @@ Humdrum <span class="tool">assemble</span>,
 commands.
 
 
-The *cat* Command
------------------
+
+
+## The *cat* Command ##
+
+
 
 
 The UNIX <span class="unix">cat</span> command allows two or more inputs to be concatenated
@@ -103,8 +106,11 @@ terminator. In other words, in the above output, <span class="tool">mint</span> 
 calculate the melodic intervals between notes in successive measures.
 
 
-The *rid* Command
------------------
+
+
+## The *rid* Command ##
+
+
 
 This problem can be resolved by using the Humdrum
 <span class="tool">rid</span> command. The <span class="tool">rid</span> command can be used to
@@ -234,8 +240,11 @@ begin without ending, etc. These anomalies may cause problems with
 subsequent processing.
 
 
-Assembling Parts Using the *assemble* Command
----------------------------------------------
+
+
+## Assembling Parts Using the *assemble* Command ##
+
+
 
 Assembling parts into a full score is slightly more challenging than
 concatenating together musical segments. The principle tool for joining
@@ -345,8 +354,11 @@ Note that if all of the input files conform to the Humdrum syntax, then
 output will also conform to the Humdrum syntax.
 
 
-Aligning Durations Using the *timebase* Command
------------------------------------------------
+
+
+## Aligning Durations Using the *timebase* Command ##
+
+
 
 Suppose now that we wanted to join two hypothetical files containing
 <span class="rep">kern</span> data. The first file contains
@@ -523,8 +535,11 @@ non-barline data record represents an elapsed duration equivalent to a
 thirty-second note.
 
 
-Assembling N-tuplets
---------------------
+
+
+## Assembling N-tuplets ##
+
+
 
 Typically, one can simply use the shortest duration present as a guide
 for a suitable time-base value. The shortest duration can be determined
@@ -572,8 +587,11 @@ assembled. For example, 6 x 8 = 48; so a time-base of 48 will be
 guaranteed to work for both files.
 
 
-Checking an Assembled Score Using *proof*
------------------------------------------
+
+
+## Checking an Assembled Score Using *proof* ##
+
+
 
 In assembling any score from a set of parts, there is always the danger
 of using the wrong time-base value. When parts are miscoordinated, it is
@@ -601,8 +619,11 @@ unnecessary null data records usingi [**rid -d**.](/tool/rid)
 <span class="tool">proof</span> command.
 
 
-Other Uses for the *timebase* Command
--------------------------------------
+
+
+## Other Uses for the *timebase* Command ##
+
+
 
 The most common use of <span class="tool">timebase</span> is as a way of expanding a file by
 padding it with null data records. However, <span class="tool">timebase</span> can also be
@@ -637,8 +658,11 @@ barlines are eliminated, <span class="tool">timebase</span> cannot synchronize t
 beginning of each bar and so simply floats along at the fixed time-base.
 
 
-Additional Uses of *assemble* and *timebase*
---------------------------------------------
+
+
+## Additional Uses of *assemble* and *timebase* ##
+
+
 
 Although we normally assemble parts together, sometimes it is useful to
 assemble entire scores together. Suppose we wanted to listen to a theme
@@ -776,8 +800,11 @@ We can repeat this command for beats one and two by changing the <span class="op
 parameter to 1 and 3 respectively.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have learned how to concatenate musical passages
 together using the <span class="unix">cat</span> command. We also learned how to eliminate

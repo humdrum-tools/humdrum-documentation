@@ -40,8 +40,11 @@ and identify their functions. In addition, we will learn about the shell
 *alias* function.
 
 
-Shell Special Characters
-------------------------
+
+
+## Shell Special Characters ##
+
+
 
 The remaining special shell characters include the following: the
 dollars sign (\$), the greve (\`), the less-than sign (\<), the question
@@ -49,8 +52,11 @@ mark (?), and the double quote ("). We'll consider the function of
 each of these characters in turn.
 
 
-Shell Variables
----------------
+
+
+## Shell Variables ##
+
+
 
 Like any programming language, the shell allows information to be stored
 and retrieved through shell *variables*. Variables can be given all
@@ -111,8 +117,11 @@ sort $X
 ```
 
 
-The Shell Greve
----------------
+
+
+## The Shell Greve ##
+
+
 
 It is often useful to be able to save the results of some operation in a
 shell variable. Suppose for example, that we want to sort a file
@@ -193,8 +202,11 @@ In this example, the imbedded command provides the regular expression
 rather than the files to be searched.
 
 
-Single Quotes, Double Quotes
-----------------------------
+
+
+## Single Quotes, Double Quotes ##
+
+
 
 In [Chapter 8](/guide/ch08) we learned that single quotation marks can
 be used to escape the special meanings of reserved shell characters &mdash;
@@ -221,8 +233,11 @@ single quotes provide the best means for disengaging the meanings of
 special characters.
 
 
-Using Shell Variables
----------------------
+
+
+## Using Shell Variables ##
+
+
 
 Let's consider an example where shell variables prove to be useful in
 Humdrum processing. Suppose for some score that we want to change the
@@ -252,8 +267,11 @@ argument to <span class="tool">humsed</span>. Using singe quotes, however, would
 variables.
 
 
-Aliases
--------
+
+
+## Aliases ##
+
+
 
 An alias is an alternative name for something. The shell provides a way
 of defining aliases, and these aliases can prove very convenient.
@@ -358,8 +376,11 @@ grep metersig inputfile
 ```
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have discussed how the shell interprets the dollars
 sign (\$), the greve (\`), and the double quote ("). When followed by

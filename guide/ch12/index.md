@@ -44,8 +44,11 @@ or segments from an input, such as specified measures, phrases, or
 sections.
 
 
-Extracting Spines: The *extract* Command
-----------------------------------------
+
+
+## Extracting Spines: The *extract* Command ##
+
+
 
 The <span class="tool">extract</span> command allows the user to
 select one or more spines from a Humdrum input. The command is typically
@@ -193,8 +196,11 @@ extract -f '$-2' brandenburg2.krn
 will extract the oboe part.
 
 
-Extraction by Interpretation
-----------------------------
+
+
+## Extraction by Interpretation ##
+
+
 
 
 Typically, it is inconvenient to have to determine the numerical
@@ -384,8 +390,11 @@ contrast, when <span class="tool">extract</span> finds a target tandem interpret
 begins outputting and doesn't stop until the spine is terminated.
 
 
-Using *extract* in Pipelines
-----------------------------
+
+
+## Using *extract* in Pipelines ##
+
+
 
 Of course the output from <span class="tool">extract</span> can be used to generate inputs for
 other Humdrum tools. Here are a few examples.
@@ -443,8 +452,11 @@ extract -i '*IGacmp' wolf | trans -d +1 -c +3 | ms | lpr
 ```
 
 
-Extracting Spines that Meander
-------------------------------
+
+
+## Extracting Spines that Meander ##
+
+
 
 As we saw in [Chapter 5,](/guide/ch05) spines can move around via
 various spine-path interpretations. Changes of spine position will cause
@@ -508,8 +520,11 @@ output is valid. A full discussion of the <span class="option">p</span> option i
 *Humdrum Reference Manual.*
 
 
-Field-Trace Extracting
-----------------------
+
+
+## Field-Trace Extracting ##
+
+
 
 For circumstances where the input is very complex, <span class="tool">extract</span> provides
 a *field-trace mode* (<span class="option">t</span> option) that allows the user to select any
@@ -518,8 +533,11 @@ is rarely used when extracting spines. Refer to the *Humdrum Reference
 Manual* for further information.
 
 
-Extracting Passages: The *yank* Command
----------------------------------------
+
+
+## Extracting Passages: The *yank* Command ##
+
+
 
 A useful companion to the <span class="tool">extract</span> command is the Humdrum
 <span class="tool">yank</span> command. The <span class="tool">yank</span> command can be used
@@ -576,8 +594,11 @@ the appropriate spine-path interpretations that specify how 4 spines
 became 5 spines.
 
 
-Yanking by Marker
------------------
+
+
+## Yanking by Marker ##
+
+
 
 Alternatively, <span class="tool">yank</span> can output lines relative
 to some user-defined *marker.* This mode of operation can be invoked
@@ -638,8 +659,11 @@ yank -m [{}] -r 0 sibelius | mint
 ```
 
 
-Yanking by Delimiters
----------------------
+
+
+## Yanking by Delimiters ##
+
+
 
 It is often convenient to yank material according to logical segments
 such as measures or phrases. In order to access such segments, the user
@@ -730,8 +754,11 @@ yank -n ^= -r 0 file1 file2 file3
 will yank any leading (anacrusis) material in each of the three files.
 
 
-Yanking by Section
-------------------
+
+
+## Yanking by Section ##
+
+
 
 When the <span class="option">s</span> option is invoked, <span class="tool">yank</span>
 extracts passages according to Humdrum section labels encoded in the
@@ -759,8 +786,11 @@ more than one section containing the same section-label. Such situations
 are described in [Chapter 20.](/guide/ch20)
 
 
-Examples Using *yank*
----------------------
+
+
+## Examples Using *yank* ##
+
+
 
 As mentioned earlier, <span class="tool">yank</span> will always produce a syntactically
 correct Humdrum output if given a proper Humdrum input. All
@@ -853,8 +883,11 @@ material can be rearranged by invoked the <span class="tool">yank</span> command
 once (e.g. `yank -l -r 100 ...; yank -l -r 99 ...; yank -l -r 98 ...`).
 
 
-Using *yank* in Pipelines
--------------------------
+
+
+## Using *yank* in Pipelines ##
+
+
 
 
 Like the other tools we have examined, <span class="tool">yank</span> can be profitably used
@@ -979,8 +1012,11 @@ between the last note of measure 7 and the first note of measure 8. This
 interval will be absent in the first case.
 
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 In this chapter we have learned how to extract musical parts using
 <span class="tool">extract</span> and how to grab musical passages using

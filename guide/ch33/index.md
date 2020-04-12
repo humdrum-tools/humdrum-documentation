@@ -28,8 +28,11 @@ sounds. This representation provides a companion to the
 [Chapter 27.](/guide/ch27) Various sonorous processes are illustrated.
 
 
-The \*\*IPA Representation
---------------------------
+
+
+## The \*\*IPA Representation ##
+
+
 
 The Humdrum <span class="rep">IPA</span> scheme provides a
 way to represent the International Phonetic Alphabet. The <span class="rep">IPA</span> scheme
@@ -114,8 +117,11 @@ commercial text-to-phoneme translators available for most common
 languages.
 
 
-Alliteration
-------------
+
+
+## Alliteration ##
+
+
 
 A common sonorous use of words is found in alliteration where several
 successive words commence with the same sound. A famous example of
@@ -262,8 +268,11 @@ allit:	f
 ```
 
 
-Classifying Phonemes
---------------------
+
+
+## Classifying Phonemes ##
+
+
 
 Linguists have devised innumerable ways for classifing phonemes. For
 example, phenomes such as *f*, *s*, *sh*, *th*, *v*, etc. are classified
@@ -289,8 +298,11 @@ Classifying phonemes in this way will allow us to broaden our searches
 for alliterative passages.
 
 
-Properties of Vowels
---------------------
+
+
+## Properties of Vowels ##
+
+
 
 Vowels are particular important in music since notes can be sustained
 only by increasing the duration of the vowels. In speech, more time is
@@ -335,8 +347,11 @@ This procedure can be repeated for several movements or pieces to
 provide a contrast for the piece of interest.
 
 
-Vowel Coloration
-----------------
+
+
+## Vowel Coloration ##
+
+
 
 When translating vocal texts from one language to another, it is often
 difficult for translators to preserve the vowel coloration. A vocal work
@@ -371,8 +386,11 @@ a longer value for <span class="tool">timebase</span>. Alternatively, we might u
 notes have a particularly high noticeability.
 
 
-Rhymes and Rhyme Schemes
-------------------------
+
+
+## Rhymes and Rhyme Schemes ##
+
+
 
 Rhymes are common poetic devices throughout the world's cultures.
 Rhymes involve the use of similar or identical word-final phonemes.
@@ -519,8 +537,11 @@ extract -i \'\*\*IPA\' \$1 \| extract -f 1 \| context -b { -e } \| rid
 
 rm rhyme.sed.\$\$
 
-Reprise
--------
+
+
+## Reprise ##
+
+
 
 By focusing on phonetic signifiers, the <span class="rep">IPA</span> representation
 provides opportunities for analyzing many sonorous aspects of vocal

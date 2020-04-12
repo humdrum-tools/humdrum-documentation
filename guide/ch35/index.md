@@ -33,8 +33,11 @@ melodic passages outline clear harmonic progressions which are also
 implicated in layer-related analyses.
 
 
-Implied Harmony
----------------
+
+
+## Implied Harmony ##
+
+
 
 Example 35.1 shows a two-phrase trumpet solo from Aaron Copland's *El
 Salon Mexico*. Harmonic progressions may be evident only when
