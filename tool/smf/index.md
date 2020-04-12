@@ -72,7 +72,7 @@ key-velocity value is 64.
 ### DIAGNOSTICS
 
 The <span class="tool">smf</span> command produces MIDI Standard \"format 0\" files. When used
-in conjunction with the <span class"tool">midi</span> command, the **midi -u**
+in conjunction with the <span class="tool">midi</span> command, the **midi -u**
 option should be invoked in order to ensure that all notes are turned
 off.
 

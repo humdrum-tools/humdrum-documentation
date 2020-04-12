@@ -550,11 +550,11 @@ file until after the default beat (`DEL*`) has been defined.
 
 ### SEE ALSO
 
-<span class"tool">assemble</span> (4), <span class"tool">cleave</span> (4),
-**encode.rc** (5), <span class"tool">humdrum</span> (4), **\*\*kern** (2),
-**\*\*MIDI** (2), <span class"tool">midi</span> (4), <span class"tool">num</span> (4),
-<span class"tool">perform</span> (4), <span class"tool">proof</span> (4),
-<span class"tool">record</span> (4), <span class"tool">timebase</span> (4), **vi**
+<span class="tool">assemble</span> (4), <span class="tool">cleave</span> (4),
+**encode.rc** (5), <span class="tool">humdrum</span> (4), **\*\*kern** (2),
+**\*\*MIDI** (2), <span class="tool">midi</span> (4), <span class="tool">num</span> (4),
+<span class="tool">perform</span> (4), <span class="tool">proof</span> (4),
+<span class="tool">record</span> (4), <span class="tool">timebase</span> (4), **vi**
 (UNIX)
 
 ------------------------------------------------------------------------

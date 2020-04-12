@@ -52,8 +52,8 @@ parentheses.)
 >
 *Summary of <span class="tool">solfa</span> Signifiers*
 
-The <span class="tool">solfa</span> command differs from the <span class"tool">deg</span> and
-<span class"tool">degree</span> commands in that pitches are represented
+The <span class="tool">solfa</span> command differs from the <span class="tool">deg</span> and
+<span class="tool">degree</span> commands in that pitches are represented
 without regard to major or minor *mode.* For example, in the key of C
 major, <span class="tool">deg</span> and <span class="tool">degree</span> will characterize A-flat as a lowered
 sixth scale degree, whereas the same pitch will be a normal sixth scale

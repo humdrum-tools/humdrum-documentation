@@ -94,10 +94,10 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">context</span> (4), **\*\*iv** (2), <span class"tool">iv</span> (4),
-**\*\*nf** (2), **\*\*pc** (2), <span class"tool">pc</span> (4), **\*\*pcset**
-(2), <span class"tool">pcset</span> (4), **\*\*pf** (2), <span class"tool">pf</span> (4),
-**\*\*semits** (2), <span class"tool">semits</span> (4)
+<span class="tool">context</span> (4), **\*\*iv** (2), <span class="tool">iv</span> (4),
+**\*\*nf** (2), **\*\*pc** (2), <span class="tool">pc</span> (4), **\*\*pcset**
+(2), <span class="tool">pcset</span> (4), **\*\*pf** (2), <span class="tool">pf</span> (4),
+**\*\*semits** (2), <span class="tool">semits</span> (4)
 
 ------------------------------------------------------------------------
 

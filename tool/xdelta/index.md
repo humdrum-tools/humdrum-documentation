@@ -236,7 +236,7 @@ processes this input as follows: ``
 Once again, the input interpretation (<span class="rep">semits</span>) has been modified to
 <span class="rep">Xsemits</span>. The leading or offset value \[3\] has been echoed in the
 second record. (The user might wish to eliminate such offset values via
-the <span class"tool">humsed</span> command; see below.) The third records in
+the <span class="tool">humsed</span> command; see below.) The third records in
 both the input and output contain double-stops. In the output, the first
 value of the double-stop (\`1\') represents the difference between 3 and
 4. The second value in the double-stop (\`4\') represents the difference

@@ -266,8 +266,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-**nl** (UNIX), **\*\*ordo** (2), <span class"tool">regexp</span> (4),
-<span class="tool">regexp</span> (6), <span class"tool">rend</span> (4)
+**nl** (UNIX), **\*\*ordo** (2), <span class="tool">regexp</span> (4),
+<span class="tool">regexp</span> (6), <span class="tool">rend</span> (4)
 
 ------------------------------------------------------------------------
 

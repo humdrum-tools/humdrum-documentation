@@ -81,7 +81,7 @@ are numbers. Consider the case of the <span class="rep">kern</span> token \"8aa\
 translating \`aa\#\' to A\#5, the non-pitch-related signifier \`8\' will
 also be output, hence the value 8A\#5 &mdash; which may cause confusion;
 commands such as [**tonh,**](tonh.html) [**solfg,**](solfg.html) and
-<span class"tool">pitch</span> treat the first number encountered in an input
+<span class="tool">pitch</span> treat the first number encountered in an input
 token as the octave designation. Hence further processing of this token
 may lead to it's interpretation as A\#8 &mdash; or even A\#58 &mdash; rather
 than A\#5.

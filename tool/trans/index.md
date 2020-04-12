@@ -220,9 +220,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">humsed</span> (4), **\*\*kern** (2), <span class"tool">kern</span>
-(4), **key signature** (3), <span class"tool">pitch</span> (4), **\*\*pitch**
-(2), <span class"tool">recode</span> (4), **\*\*solfg** (2),
+<span class="tool">humsed</span> (4), **\*\*kern** (2), <span class="tool">kern</span>
+(4), **key signature** (3), <span class="tool">pitch</span> (4), **\*\*pitch**
+(2), <span class="tool">recode</span> (4), **\*\*solfg** (2),
 [**solfg**](solfg.html) (4), **\*\*Tonh** (2), [**tonh**](tonh.html)
 (4), **transposition** (3)
 

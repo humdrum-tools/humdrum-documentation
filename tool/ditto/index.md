@@ -209,8 +209,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
-<span class"tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class"tool">simil</span>
+<span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
+<span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
 (4)
 
 ------------------------------------------------------------------------

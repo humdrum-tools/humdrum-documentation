@@ -611,9 +611,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">context</span> (4), **grep** (UNIX), <span class"tool">nf</span> (4),
-<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
-<span class"tool">pcset</span> (4)
+<span class="tool">context</span> (4), **grep** (UNIX), <span class="tool">nf</span> (4),
+<span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
+<span class="tool">pcset</span> (4)
 
 ------------------------------------------------------------------------
 

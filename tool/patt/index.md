@@ -78,7 +78,7 @@ A more circumspect regular expression template might look like this:
 (The caret (\^) and dollar sign (\$) are regular expression *anchors*
 that indicate the beginning of the record and end of the record
 respectively.) Refer to *regexp (6)* for further information regarding
-regular expressions. Note that the related <span class"tool">pattern</span>
+regular expressions. Note that the related <span class="tool">pattern</span>
 command implements a more powerful regular expression syntax for
 defining multi-record patterns.
 
@@ -308,8 +308,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-**grep** (UNIX), **egrep** (UNIX), <span class"tool">pattern</span> (4),
-<span class"tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class"tool">simil</span>
+**grep** (UNIX), **egrep** (UNIX), <span class="tool">pattern</span> (4),
+<span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
 (4)
 
 ------------------------------------------------------------------------

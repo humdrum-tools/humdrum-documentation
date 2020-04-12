@@ -25,7 +25,7 @@ translates this data into a simple Humdrum <span class="rep">MIDI</span> represe
 Input MIDI data is obtained through a Roland MPU-401 (or compatible)
 interface &mdash; usually connected in turn to a MIDI synthesizer. The
 obtained <span class="rep">MIDI</span> data can be manipulated using several Humdrum tools,
-or it can be played-back using the <span class"tool">perform</span> command.
+or it can be played-back using the <span class="tool">perform</span> command.
 
 Recording commences as soon as the command is invoked. Recording ceases
 when any ASCII key is pressed &mdash; with the exception of the space bar.

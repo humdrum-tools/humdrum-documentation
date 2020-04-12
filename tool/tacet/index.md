@@ -51,8 +51,8 @@ DOS 2.0 and up.
 
 ### SEE ALSO
 
-<span class"tool">midreset</span> (4), <span class"tool">perform</span> (4),
-<span class"tool">smf</span> (4)
+<span class="tool">midreset</span> (4), <span class="tool">perform</span> (4),
+<span class="tool">smf</span> (4)
 
 ------------------------------------------------------------------------
 

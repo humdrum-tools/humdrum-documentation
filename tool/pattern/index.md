@@ -222,7 +222,7 @@ appropriate matching passages from the input.
 
 For additional examples pertinent to the <span class="tool">pattern</span> command, refer to
 the [**EXAMPLES**](patt.html#EXAMPLES) section in the documentation for
-the related <span class"tool">patt</span> command.
+the related <span class="tool">patt</span> command.
 
 Note that in the above example, the extensive capabilities for defining
 complex regular expressions have not been used. Refer to **regexp (6)**
@@ -240,8 +240,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-**grep** (UNIX), **egrep** (UNIX), <span class"tool">patt</span> (4),
-<span class"tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class"tool">simil</span>
+**grep** (UNIX), **egrep** (UNIX), <span class="tool">patt</span> (4),
+<span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
 (4)
 
 ------------------------------------------------------------------------

@@ -195,7 +195,7 @@ the file `haydn08`:
 
 Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. (See the
-<span class"tool">thru</span> command.)
+<span class="tool">thru</span> command.)
 
 ------------------------------------------------------------------------
 

@@ -27,7 +27,7 @@ reference to an independent repertoire, or may be calculated as
 so-called \"self-information.\"
 
 In conjunction with other Humdrum tools (notably the
-<span class"tool">context</span> and <span class"tool">humsed</span> commands),
+<span class="tool">context</span> and <span class="tool">humsed</span> commands),
 <span class="tool">infot</span> permits sophisticated information-theoretic analyses to be
 carried out, including calculations of information flow, short-term
 conditional probabilities, and longer-term *m-dependency* analyses.
@@ -37,7 +37,7 @@ are suitable for further processing.
 
 Input to <span class="tool">infot</span> is restricted to a single spine. However, the input
 data tokens may contain multiple-stops representing complex contextual
-information (such as produced by the <span class"tool">context</span>
+information (such as produced by the <span class="tool">context</span>
 command).
 
 For the entire input, <span class="tool">infot</span> tabulates the total number of
@@ -74,7 +74,7 @@ The <span class="tool">infot</span> command provides the following options:
 >   ------------- ---------------------------------------------------------
 >   <span class="option">b</span>        output information (in bits) for each unique data token
 >   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">H</span>        format output as <span class"tool">humsed</span> commands
+>   <span class="option">H</span>        format output as <span class="tool">humsed</span> commands
 >   <span class="option">n</span>        output frequency count for each unique data token
 >   <span class="option">p</span>        output probability value for each unique data token
 >   <span class="option">s</span>        output information-related summary statistics
@@ -226,7 +226,7 @@ the <span class="option">H</span> option, and redirect the output to a file `rep
 > ` infot -bH repertoire > replace`
 
 This causes <span class="tool">infot</span> to produce as output a set of
-<span class"tool">humsed</span> commands. Given the identical `repertoire`
+<span class="tool">humsed</span> commands. Given the identical `repertoire`
 input, the following output is sent to the file `replace`:
 
 > ` s/^ABC$/3.124/g; s/^ABC /3.124/g; s/    ABC$/3.124/g; s/    ABC /3.124/g s/^BAC$/1.306/g; s/^BAC /1.306/g; s/    BAC$/1.306/g; s/    BAC /1.306/g s/^C C D$/1.95/g; s/^C C D  /1.95/g; s/ C C D$/1.95/g; s/   C C D   /1.95/g s/^X$/5.075/g; s/^X /5.075/g; s/    X$/5.075/g; s/  X   /5.075/g s/^XYZ$/19.334/g; s/^XYZ    /19.334/g; s/   XYZ$/19.334/g; s/   XYZ /19.334/g`
@@ -257,7 +257,7 @@ The following file (called `input`) contains the message of interest: ``
 >
 This file can be transformed so that the data tokens are replaced by
 corresponding information values as determined from the original
-repertoire. This is done by invoking the <span class"tool">humsed</span>
+repertoire. This is done by invoking the <span class="tool">humsed</span>
 command, and providing it with the substitution commands held in the
 file `replace`:
 
@@ -316,9 +316,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">context</span> (4), <span class"tool">humsed</span> (4),
-<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
-<span class"tool">simil</span> (4)
+<span class="tool">context</span> (4), <span class="tool">humsed</span> (4),
+<span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
+<span class="tool">simil</span> (4)
 
 ------------------------------------------------------------------------
 

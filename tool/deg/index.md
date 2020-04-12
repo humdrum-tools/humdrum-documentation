@@ -33,7 +33,7 @@ changes of key within an input. If no key information is provided prior
 to the first pitch-related data, <span class="tool">deg</span> issues an error message and
 terminates.
 
-The <span class="tool">deg</span> command differs from the (related) <span class"tool">degree</span>
+The <span class="tool">deg</span> command differs from the (related) <span class="tool">degree</span>
 command in that it outputs *relative* (rather than *absolute)*
 pitch-height information. Upward pitch motions are indicated by the
 caret (\^), whereas downward pitch motions are indicated by the

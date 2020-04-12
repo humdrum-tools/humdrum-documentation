@@ -32,7 +32,7 @@ specified changes of key within an input. If no key information is
 provided prior to the first pitch-related data, <span class="tool">degree</span> issues an
 error message and terminates.
 
-The <span class="tool">degree</span> command differs from the (related) <span class"tool">deg</span>
+The <span class="tool">degree</span> command differs from the (related) <span class="tool">deg</span>
 command in that it outputs *absolute* (rather than *relative)*
 pitch-height information. Along with the scale degree, the octave number
 is represented &mdash; the two values being separated by a slash (/). Hence

@@ -89,7 +89,8 @@ sub processLine {
 	my ($line) = @_;
 	for (my $i=0; $i<@commands; $i++) {
 		my $command = $commands[$i];
-		$line =~ s/\[\*\*$command\*\*\]\($command\.html\)/<span class"tool">$command<\/span>/g;
+		$line =~ s/<span class"tool">([^<]+)<\/span>/<span class="tool">$1<\/span>/g;
+		$line =~ s/\[\*\*$command\*\*\]\($command\.html\)/<span class="tool">$command<\/span>/g;
 		$line =~ s/\[\*\*$command\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>/g;
 		$line =~ s/\[\*\*$command,\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\[\*\*$command\.\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;

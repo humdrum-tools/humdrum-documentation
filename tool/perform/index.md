@@ -233,10 +233,10 @@ codes and MIDI system exclusive codes.
 
 ### SEE ALSO
 
-<span class"tool">encode</span> (4), **encode.rc** (5), **\*\*MIDI** (2),
-<span class"tool">midi</span> (4), <span class"tool">midreset</span> (4),
-<span class"tool">record</span> (4), <span class"tool">smf</span> (4),
-<span class"tool">tacet</span> (4)
+<span class="tool">encode</span> (4), **encode.rc** (5), **\*\*MIDI** (2),
+<span class="tool">midi</span> (4), <span class="tool">midreset</span> (4),
+<span class="tool">record</span> (4), <span class="tool">smf</span> (4),
+<span class="tool">tacet</span> (4)
 
 ------------------------------------------------------------------------
 

@@ -24,7 +24,7 @@ The <span class="tool">simil</span> command measures the degree of similarity be
 single-spine inputs. Similarity measures are calculated by determining
 the minimum *edit distance* &mdash; that is, the least amount of editorial
 manipulation required to transform the two inputs so that they are
-identical. In contrast to the <span class"tool">correl</span> command,
+identical. In contrast to the <span class="tool">correl</span> command,
 <span class="tool">simil</span> can act on both numeric and non-numeric data, and so can be
 used to characterize similarity for any form of Humdrum input.
 

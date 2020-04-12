@@ -150,7 +150,7 @@ When extracting a single strophe, either the abbreviated or
 through-composed versions can be used as input. However, when using the
 <span class="tool">strophe</span> command to select more than one strophe for output, it is
 essential that the input first be expanded to a through-composed
-version, via the <span class"tool">thru</span> command. For example, in order to
+version, via the <span class="tool">thru</span> command. For example, in order to
 select the first and third verses in the above passage by Schubert, the
 user would need to execute the following command pipeline:
 
@@ -257,7 +257,7 @@ The following example is concocted to illustrate the operation of the
 >   ------------------------- -------------------- ---------
 >
 Since this file is in abbreviated format, we must first expand it to
-through-composed form using the <span class"tool">thru</span> command. The
+through-composed form using the <span class="tool">thru</span> command. The
 resulting output is: ``
 
 >   ------------------------- -- -- ----------- -- -- ---------

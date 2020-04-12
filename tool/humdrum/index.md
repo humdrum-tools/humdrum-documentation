@@ -472,7 +472,7 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-<span class"tool">census</span> (4), <span class"tool">proof</span> (4)
+<span class="tool">census</span> (4), <span class="tool">proof</span> (4)
 
 ------------------------------------------------------------------------
 
