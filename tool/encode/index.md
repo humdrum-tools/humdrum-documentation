@@ -185,7 +185,7 @@ files.
 
 By way of example, the run-control instruction:
 
-> ` KEY 60 middle-C`
+` KEY 60 middle-C`
 
 assigns the key-on event for MIDI key \#60 to the string `middle-C`.
 When in *MIDI input mode,* each key-on event for key \#60 will cause the
@@ -200,7 +200,7 @@ given string will be output. By way of example, the following assignment
 maps key velocity values between 90 and 127 to a string consisting
 merely of the apostrophe (the <span class="rep">kern</span> signifier for a staccato note):
 
-> ` VEL 90 127 '`
+` VEL 90 127 '`
 
 Given this mapping, key-down velocities within the specified range will
 cause the apostrophe character to be prepared for insertion into the
@@ -226,25 +226,25 @@ values between 113 and 160 generate the string \``4`\' and so on. Notice
 that this file restricts the number of possible output \"durations\" to
 just five. ``
 
->   --------------------
->   \# Sample .rc file
->   KEY 60 c
->   KEY 62 d
->   KEY 64 e
->   KEY 65 f
->   KEY 67 g
->   KEY 69 a
->   KEY 71 b
->   KEY 72 cc
->   DEL 48 80 8
->   DEL 81 112 8.
->   DEL\* 113 160 4
->   DEL 161 224 4.
->   DEL 225 320 2
->   VEL 90 127 \'
->   ORDER DEL KEY VEL
->   --------------------
->
+--------------------
+\# Sample .rc file
+KEY 60 c
+KEY 62 d
+KEY 64 e
+KEY 65 f
+KEY 67 g
+KEY 69 a
+KEY 71 b
+KEY 72 cc
+DEL 48 80 8
+DEL 81 112 8.
+DEL\* 113 160 4
+DEL 161 224 4.
+DEL 225 320 2
+VEL 90 127 \'
+ORDER DEL KEY VEL
+--------------------
+
 Any records in the run-control file beginning with a **\#** character
 are treated as comments. Empty lines are ignored.
 
@@ -293,28 +293,28 @@ existing signifiers defined using a DEL instruction.
 The following table lists all of the types of instructions permitted in
 a run-control file.
 
->   ---------------------------------- -----------------------------------------------------
->   \# *text*                          unexecutable comment
->   BEAT *string*                      set beat to DEL whose output signifier is *string*
->                                      beat
->   BUFFER *n text*                    define (potentially multi-line) text buffer \# *in*
->                                      (0-9)
->   DEL *min max string*               key inter-onset times between *min* and *max*
->                                      clock ticks cause *string* to be output
->   KEY *n string*                     MIDI key-on \#*n* causes *string* to be output
->   METER *n*                          define number of beats per measure as *n*
->   METRE *n*                          same as METER
->   MM *on\|off*                       switch metronome *on* or *off*; default is *on*
->   ORDER *codeword1 codeword2 \...*   define order of string outputs, where codewords are
->                                      selected from: BUFFER, DEL, KEY, SRING, VEL
->   RECEIVE *n*                        define the MIDI channel from which data is
->                                      accepted
->   STRING *n text*                    define string constant \# *in* (0-9)
->   TEMPO *n*                          set metronome to *n* beats per minute
->   VEL *min max string*               key-down velocities between *min* and *max*
->                                      cause *string* to be output
->   ---------------------------------- -----------------------------------------------------
->
+---------------------------------- -----------------------------------------------------
+\# *text*                          unexecutable comment
+BEAT *string*                      set beat to DEL whose output signifier is *string*
+beat
+BUFFER *n text*                    define (potentially multi-line) text buffer \# *in*
+(0-9)
+DEL *min max string*               key inter-onset times between *min* and *max*
+clock ticks cause *string* to be output
+KEY *n string*                     MIDI key-on \#*n* causes *string* to be output
+METER *n*                          define number of beats per measure as *n*
+METRE *n*                          same as METER
+MM *on\|off*                       switch metronome *on* or *off*; default is *on*
+ORDER *codeword1 codeword2 \...*   define order of string outputs, where codewords are
+selected from: BUFFER, DEL, KEY, SRING, VEL
+RECEIVE *n*                        define the MIDI channel from which data is
+accepted
+STRING *n text*                    define string constant \# *in* (0-9)
+TEMPO *n*                          set metronome to *n* beats per minute
+VEL *min max string*               key-down velocities between *min* and *max*
+cause *string* to be output
+---------------------------------- -----------------------------------------------------
+
 *Definition types for <span class="tool">encode</span>*
 
 The `BUFFER`, `DEL`, `KEY`, `STRING`, and `VEL` instructions can be
@@ -390,7 +390,7 @@ case, control is returned to <span class="tool">encode</span>.
 The \`**b**\' command is used to read buffer text defined in the` .rc`
 file. Up to ten numbered buffers (0-9) can be defined. The command:
 
-> ` b 1`
+` b 1`
 
 will cause any text denoted `BUFFER 1` to be output following the
 current cursor position. Use of the upper-case \`**B**\' rather than
@@ -414,7 +414,7 @@ permitted in a `.rc` file. For example, the tempo may be changed, the
 metronome turned-off, the metronome beat redefined, a string variable
 assigned, or a specific key re-mapped, e.g.
 
-> ` set TEMPO 92  set MM off  set BEAT 4.  set STRING 3 !! Variation No. ...  set KEY 60 C4`
+` set TEMPO 92  set MM off  set BEAT 4.  set STRING 3 !! Variation No. ...  set KEY 60 C4`
 
 For the `BUFFER` command, **set** defines an *additional* buffer record,
 rather than replacing any existing buffer definitions.
@@ -433,66 +433,66 @@ affect on the command operation.
 The various built-in commands in <span class="tool">encode</span> are summarized in the
 following table.
 
->   --------------------- ------------------------------------------------------------------------
->   **EDIT MODE**         
->   CTRL-F                scroll forward one page
->   CTRL-B                scroll backward one page
->   CTRL-D                scroll down by half a page
->   CTRL-U                scroll up by half a page
->                         scroll forward one page
->                         scroll backward one page
->                         move cursor down one line
->                         move cursor up one line
->   j                     move cursor down one line
->   k                     move cursor up one line
->                         move cursor to the beginning of the next line
->   H                     move cursor to the top of the display
->   M                     move cursor to the middle of the display
->   L                     move cursor to the bottom of the display
->                         move cursor to the top of the display
->                         move cursor to the bottom of the display
->   -\>                   move cursor one character to the right
->   \<-                   move cursor one character to the left
->   l                     move cursor one character to the right
->   h                     move cursor one character to the left
->                         move cursor one character to the right
->   x                     delete character at current cursor position
->   X                     delete character immediately preceding currrent cursor position
->   d                     delete current line
->   u                     undo most recent deletion or insertion command
->                         insert text prior to current cursor position (invoke INPUT MODE)
->   i                     insert text prior to current cursor position (invoke INPUT MODE)
->   a                     insert text after to current cursor position (invoke INPUT MODE)
->   o                     insert text beginning with the next line (invoke INPUT MODE)
->   O                     insert text beginning with the previous line (invoke INPUT MODE)
->   A                     invoke MIDI INPUT MODE; insert data beginning with the next line
->   I                     invoke MIDI INPUT MODE; insert data beginning with the previous line
->   \<*number*\>          repeat ensuing command \<*number*\> times
->                         
->   **INPUT MODE**        
->   ESC                   return to EDIT MODE
->                         return to EDIT MODE
->                         
->   **MIDI INPUT MODE**   
->   ESC                   complete last MIDI event and return to EDIT MODE
->                         
->   **COMMAND MODE**      
->   b *n*                 append run-control buffer number *n* following current cursor position
->   B *n*                 insert run-control buffer number *n* before current cursor position
->   m                     invoke interactive proof-listening for <span class="rep">kern</span> or <span class="rep">MIDI</span> text
->   set *rc-command*      set or reset a `.rc mapping`
->   q                     quit <span class="tool">encode</span>
->   q!                    quit <span class="tool">encode</span> without saving modifications since last write
->   r *filename*          read input file *filename* at current cursor position
->   rc *controlfile*      use run-control file *controlfile* rather than current `.rc file`
->   s *n*                 append run-control string number *n* following current cursor position
->   S *n*                 insert run-control string number *n* before current cursor position
->   v                     spawn <span class="unix">vi</span> text editing session using current text
->   w \[*filename*\]      write file *filename* to disk; default filename is current file
->   w! *filename*         overwrite existing file *filename*
->   wq                    write current file and quit
->   --------------------- ------------------------------------------------------------------------
->
+--------------------- ------------------------------------------------------------------------
+**EDIT MODE**         
+CTRL-F                scroll forward one page
+CTRL-B                scroll backward one page
+CTRL-D                scroll down by half a page
+CTRL-U                scroll up by half a page
+scroll forward one page
+scroll backward one page
+move cursor down one line
+move cursor up one line
+j                     move cursor down one line
+k                     move cursor up one line
+move cursor to the beginning of the next line
+H                     move cursor to the top of the display
+M                     move cursor to the middle of the display
+L                     move cursor to the bottom of the display
+move cursor to the top of the display
+move cursor to the bottom of the display
+-\>                   move cursor one character to the right
+\<-                   move cursor one character to the left
+l                     move cursor one character to the right
+h                     move cursor one character to the left
+move cursor one character to the right
+x                     delete character at current cursor position
+X                     delete character immediately preceding currrent cursor position
+d                     delete current line
+u                     undo most recent deletion or insertion command
+insert text prior to current cursor position (invoke INPUT MODE)
+i                     insert text prior to current cursor position (invoke INPUT MODE)
+a                     insert text after to current cursor position (invoke INPUT MODE)
+o                     insert text beginning with the next line (invoke INPUT MODE)
+O                     insert text beginning with the previous line (invoke INPUT MODE)
+A                     invoke MIDI INPUT MODE; insert data beginning with the next line
+I                     invoke MIDI INPUT MODE; insert data beginning with the previous line
+\<*number*\>          repeat ensuing command \<*number*\> times
+
+**INPUT MODE**        
+ESC                   return to EDIT MODE
+return to EDIT MODE
+
+**MIDI INPUT MODE**   
+ESC                   complete last MIDI event and return to EDIT MODE
+
+**COMMAND MODE**      
+b *n*                 append run-control buffer number *n* following current cursor position
+B *n*                 insert run-control buffer number *n* before current cursor position
+m                     invoke interactive proof-listening for <span class="rep">kern</span> or <span class="rep">MIDI</span> text
+set *rc-command*      set or reset a `.rc mapping`
+q                     quit <span class="tool">encode</span>
+q!                    quit <span class="tool">encode</span> without saving modifications since last write
+r *filename*          read input file *filename* at current cursor position
+rc *controlfile*      use run-control file *controlfile* rather than current `.rc file`
+s *n*                 append run-control string number *n* following current cursor position
+S *n*                 insert run-control string number *n* before current cursor position
+v                     spawn <span class="unix">vi</span> text editing session using current text
+w \[*filename*\]      write file *filename* to disk; default filename is current file
+w! *filename*         overwrite existing file *filename*
+wq                    write current file and quit
+--------------------- ------------------------------------------------------------------------
+
 ------------------------------------------------------------------------
 
 []{#OPTIONS}
@@ -501,11 +501,11 @@ following table.
 
 The <span class="tool">encode</span> command provides the following options:
 
-> >   -------------- -------------------------------------------------------
-> >   <span class="option">h</span>         displays a help screen summarizing the command syntax
-> >   -r *file.rc*   invoke using the run-control file *file.rc*
-> >   -------------- -------------------------------------------------------
-> >
+-------------- -------------------------------------------------------
+<span class="option">h</span>         displays a help screen summarizing the command syntax
+-r *file.rc*   invoke using the run-control file *file.rc*
+-------------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">r</span> option permits the user to identify a specific run-control

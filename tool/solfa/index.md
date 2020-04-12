@@ -39,18 +39,18 @@ order to representing chromatic alterations. The system used by
 <span class="tool">solfa</span> is tabulated below. (Pronunciations are indicated in
 parentheses.)
 
->   ------------ ------------ -------------
->   basic        raised       **lowered**
->                             
->   do (*doe*)   di (*dee*)   de (*day*)
->   re (*ray*)   ri (*ree*)   ra (*raw*)
->   mi (*me*)    my (*my*)    me (*may*)
->   fa (*fah*)   fi (*fee*)   fe (*fay*)
->   so (*so*)    si (*see*)   se (*say*)
->   la (*la*)    li (*lee*)   le (*lay*)
->   ti (*tee*)   ty (*tie*)   te (*tay*)
->   ------------ ------------ -------------
->
+------------ ------------ -------------
+basic        raised       **lowered**
+
+do (*doe*)   di (*dee*)   de (*day*)
+re (*ray*)   ri (*ree*)   ra (*raw*)
+mi (*me*)    my (*my*)    me (*may*)
+fa (*fah*)   fi (*fee*)   fe (*fay*)
+so (*so*)    si (*see*)   se (*say*)
+la (*la*)    li (*lee*)   le (*lay*)
+ti (*tee*)   ty (*tie*)   te (*tay*)
+------------ ------------ -------------
+
 *Summary of <span class="tool">solfa</span> Signifiers*
 
 The <span class="tool">solfa</span> command differs from the <span class="tool">deg</span> and
@@ -74,13 +74,13 @@ representations (including <span class="rep">solfa</span>) refer to Section 2
 It is recommended that output files produced by the <span class="tool">solfa</span> command
 should be given names with the distinguishing .sol extension.
 
->   ----------- ----------------------------------------------------------------------
->   <span class="rep">kern</span>    core pitch/duration representation
->   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
->   <span class="rep">Tonh</span>    German pitch system
->   ----------- ----------------------------------------------------------------------
->
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core pitch/duration representation
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+<span class="rep">Tonh</span>    German pitch system
+----------- ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">solfa</span>.*
 
 ------------------------------------------------------------------------
@@ -91,7 +91,7 @@ The <span class="tool">solfa</span>
 
 command provides the following options:
 
-> <span class="option">h</span>
+<span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -125,64 +125,64 @@ contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI<
 processed by <span class="tool">solfa</span>. In addition, there is one non-pitch-related
 spines (<span class="rep">embell</span>). ``
 
->   ----------------------- ---------- ----------- ----------- ----------- ------------
->   !! \`solfa\' example.                                                  
->   \*\*kern                \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
->   \*M2/4                  \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
->   \*C:                    \*d:       \*G\#:      \*a:        \*F:        \*F:
->   =1                      =1         =1          =1          =1          =1
->   8ee-                    Gis2       /60/        do3         F4foo       ct
->   .                       .          /-60/       .           .           .
->   8f                      H2         /62/        fa3         G4bar       upt
->   .                       .          /-62/       .           .           .
->   8dd-                    B2         /70/        mi3         E4          ct
->   .                       .          /-70/       .           .           .
->   8d&mdash;                   Cis4       /61/        r           F4          sus
->   .                       .          /-61/       .           .           .
->   =2                      =2         =2          =2          =2          =2
->   \[4a-                   r          .           mi\_b3      F4 A4       .
->   .                       Heses2     .           re3         G4 Bb4      ct
->   4a-\]                   C3         /48/ /52/   do3         E4 C5       ct
->   .                       .          /-48/       .           .           .
->   .                       H2 E3      /-52/       la3         G4          ct
->   =3                      =3         =3          =3          =3          =3
->   r                       A2 F3      .           r           F4          .
->   ==                      ==         ==          ==          ==          ==
->   \*-                     \*-        \*-         \*-         \*-         \*-
->   ----------------------- ---------- ----------- ----------- ----------- ------------
->
+----------------------- ---------- ----------- ----------- ----------- ------------
+!! \`solfa\' example.                                                  
+\*\*kern                \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
+\*M2/4                  \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
+\*C:                    \*d:       \*G\#:      \*a:        \*F:        \*F:
+=1                      =1         =1          =1          =1          =1
+8ee-                    Gis2       /60/        do3         F4foo       ct
+.                       .          /-60/       .           .           .
+8f                      H2         /62/        fa3         G4bar       upt
+.                       .          /-62/       .           .           .
+8dd-                    B2         /70/        mi3         E4          ct
+.                       .          /-70/       .           .           .
+8d&mdash;                   Cis4       /61/        r           F4          sus
+.                       .          /-61/       .           .           .
+=2                      =2         =2          =2          =2          =2
+\[4a-                   r          .           mi\_b3      F4 A4       .
+.                       Heses2     .           re3         G4 Bb4      ct
+4a-\]                   C3         /48/ /52/   do3         E4 C5       ct
+.                       .          /-48/       .           .           .
+.                       H2 E3      /-52/       la3         G4          ct
+=3                      =3         =3          =3          =3          =3
+r                       A2 F3      .           r           F4          .
+==                      ==         ==          ==          ==          ==
+\*-                     \*-        \*-         \*-         \*-         \*-
+----------------------- ---------- ----------- ----------- ----------- ------------
+
 Executing the command:
 
-> ` solfa -tx input > output`
+` solfa -tx input > output`
 
 produces the following result: ``
 
->   ----------------------- ----------- ----------- ----------- ----------- ------------
->   !! \`solfa\' example.                                                   
->   \*\*solfa               \*\*solfa   \*\*MIDI    \*\*solfa   \*\*solfa   \*\*embell
->   \*M2/4                  \*M2/4      \*M2/4      \*M2/4      \*M2/4      \*M2/4
->   \*C:                    \*d:        \*G\#:      \*a:        \*F:        \*F:
->   =1                      =1          =1          =1          =1          =1
->   me                      fi          /60/        me          do          ct
->   .                       .           /-60/       .           .           .
->   fa                      la          /62/        le          r           upt
->   .                       .           /-62/       .           .           .
->   ra                      le          /70/        so          ti          ct
->   .                       .           /-70/       .           .           .
->   ra                      ti          /61/        r           do          sus
->   .                       .           /-61/       .           .           .
->   =2                      =2          =2          =2          =2          =2
->   le                      r           .           so          do mi       .
->   .                       le          .           fa          re fa       ct
->   .                       te          /48/ /52/   me          ti so       ct
->   .                       .           /-48/       .           .           .
->   .                       la re       /-52/       do          re          ct
->   =3                      =3          =3          =3          =3          =3
->   r                       so me       .           r           do          .
->   ==                      ==          ==          ==          ==          ==
->   \*-                     \*-         \*-         \*-         \*-         \*-
->   ----------------------- ----------- ----------- ----------- ----------- ------------
->
+----------------------- ----------- ----------- ----------- ----------- ------------
+!! \`solfa\' example.                                                   
+\*\*solfa               \*\*solfa   \*\*MIDI    \*\*solfa   \*\*solfa   \*\*embell
+\*M2/4                  \*M2/4      \*M2/4      \*M2/4      \*M2/4      \*M2/4
+\*C:                    \*d:        \*G\#:      \*a:        \*F:        \*F:
+=1                      =1          =1          =1          =1          =1
+me                      fi          /60/        me          do          ct
+.                       .           /-60/       .           .           .
+fa                      la          /62/        le          r           upt
+.                       .           /-62/       .           .           .
+ra                      le          /70/        so          ti          ct
+.                       .           /-70/       .           .           .
+ra                      ti          /61/        r           do          sus
+.                       .           /-61/       .           .           .
+=2                      =2          =2          =2          =2          =2
+le                      r           .           so          do mi       .
+.                       le          .           fa          re fa       ct
+.                       te          /48/ /52/   me          ti so       ct
+.                       .           /-48/       .           .           .
+.                       la re       /-52/       do          re          ct
+=3                      =3          =3          =3          =3          =3
+r                       so me       .           r           do          .
+==                      ==          ==          ==          ==          ==
+\*-                     \*-         \*-         \*-         \*-         \*-
+----------------------- ----------- ----------- ----------- ----------- ------------
+
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>

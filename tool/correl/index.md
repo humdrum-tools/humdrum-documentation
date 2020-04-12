@@ -66,20 +66,20 @@ non-numeric signifiers, only the first complete numerical subtoken
 contributes to the calculation. The following examples illustrate how
 <span class="tool">correl</span> interprets mixed data tokens:
 
->   -------------- --------------------------
->   data token     numerical interpretation
->                  
->   `4gg#`         4
->   `4.gg#`        4
->   `-33aa`        -33
->   `-aa33`        33
->   `x7.2yz`       7.2
->   `a7..2bc`      7
->   `[+5]12`       5
->   `$17@2`        17
->   `a1b2 c.3.d`   1 0.3
->   -------------- --------------------------
->
+-------------- --------------------------
+data token     numerical interpretation
+
+`4gg#`         4
+`4.gg#`        4
+`-33aa`        -33
+`-aa33`        33
+`x7.2yz`       7.2
+`a7..2bc`      7
+`[+5]12`       5
+`$17@2`        17
+`a1b2 c.3.d`   1 0.3
+-------------- --------------------------
+
 Humdrum multiple-stops require special attention in <span class="tool">correl</span> (see
 below).
 
@@ -98,15 +98,15 @@ distinguishing \`.cor\' extension.
 
 The <span class="tool">correl</span> command provides the following options:
 
->   ------------------- --------------------------------------------------------
->   -f *templatefile*   specify source pattern as *templatefile* and
->                       invoke dual input mode
->   <span class="option">h</span>              displays a help screen summarizing the command syntax
->   <span class="option">m</span>              disable matched-pairs criterion
->   -p *n*              output precision to *n* decimal places
->   -s *regexp*         skip; completely ignore data records matching *regexp*
->   ------------------- --------------------------------------------------------
->
+------------------- --------------------------------------------------------
+-f *templatefile*   specify source pattern as *templatefile* and
+invoke dual input mode
+<span class="option">h</span>              displays a help screen summarizing the command syntax
+<span class="option">m</span>              disable matched-pairs criterion
+-p *n*              output precision to *n* decimal places
+-s *regexp*         skip; completely ignore data records matching *regexp*
+------------------- --------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">f</span> option is used to specify an independent *template file* &mdash;
@@ -126,54 +126,54 @@ arranged as matched pairs &mdash; that is, the input conforms to the
 illustrate numerical data matching. The number of numerical data values
 in both spines are matched throughout the inputs: ``
 
->   ------------ ------------
->   \*\*spine1   \*\*spine2
->   10.0         4
->   7 3          2 .91
->   .            .
->   13.8         4
->   5 8 5        1 1 2
->   a b c        x
->   .            p q
->   \*-          \*-
->   ------------ ------------
->
+------------ ------------
+\*\*spine1   \*\*spine2
+10.0         4
+7 3          2 .91
+.            .
+13.8         4
+5 8 5        1 1 2
+a b c        x
+.            p q
+\*-          \*-
+------------ ------------
+
 By contrast, the following file shows several transgressions of the
 matched pairs criterion. For example, the first data record gives a
 numerical value in spine \#1 that is not matched by a numerical value in
 spine \#2. Similarly, the multiple-stop values in the second data record
 are unmatched in spine \#2: ``
 
->   ------------ -------------
->   \*\*spine1   \*\*spine2
->   9.7          a
->   7 31         2
->   .            114
->   426          .
->   r 11 7       35 xy08z 28
->   a b c        6 .07
->   .            p q
->   \*-          \*-
->   ------------ -------------
->
+------------ -------------
+\*\*spine1   \*\*spine2
+9.7          a
+7 31         2
+.            114
+426          .
+r 11 7       35 xy08z 28
+a b c        6 .07
+.            p q
+\*-          \*-
+------------ -------------
+
 In normal operation, a single failure to conform to the matched pairs
 criterion will cause <span class="tool">correl</span> to issue an error message and terminate
 operation. If the <span class="option">m</span> option is invoked, unmatched data is simply
 ignored. For example, with the <span class="option">m</span> option, the above input is treated
 as equivalent to the following input: ``
 
->   ------------ ------------
->   \*\*spine1   \*\*spine2
->   .            .
->   7            2
->   .            .
->   .            .
->   11 7         35 08
->   .            .
->   .            .
->   \*-          \*-
->   ------------ ------------
->
+------------ ------------
+\*\*spine1   \*\*spine2
+.            .
+7            2
+.            .
+.            .
+11 7         35 08
+.            .
+.            .
+\*-          \*-
+------------ ------------
+
 ------------------------------------------------------------------------
 
 ## EXAMPLES ##
@@ -183,37 +183,37 @@ example shows an excerpt containing considerable parallel motion between
 two polyphonic voices. Measuring the pitch-contour similarity can be
 done using the single input mode. ``
 
->   ----------------------------------------
->   !! J.S. Bach, Invention No. 8; BWV 779
->   ----------------------------------------
->
->   ------------ ------------
->   \*\*semits   \*\*semits
->   \*M3/4       \*M3/4
->   9            17
->   12           21
->   10           19
->   12           21
->   9            17
->   12           21
->   10           19
->   12           21
->   =6           =6
->   5            14
->   9            17
->   7            16
->   9            17
->   \*-          \*-
->   ------------ ------------
->
+----------------------------------------
+!! J.S. Bach, Invention No. 8; BWV 779
+----------------------------------------
+
+------------ ------------
+\*\*semits   \*\*semits
+\*M3/4       \*M3/4
+9            17
+12           21
+10           19
+12           21
+9            17
+12           21
+10           19
+12           21
+=6           =6
+5            14
+9            17
+7            16
+9            17
+\*-          \*-
+------------ ------------
+
 In order to avoid processing the measure numbers, the skip (<span class="option">s</span>)
 option is used; executing the command:
 
-> ` correl -s = bwv779`
+` correl -s = bwv779`
 
 will produce the following output:
 
-> ` 0.979`
+` 0.979`
 
 The second example illustrates the dual input mode. The target input
 consists of a single spine (labelled ` **input)` containing mixed
@@ -225,28 +225,28 @@ input and template files have no influence on the operation of
 <span class="tool">correl</span>. The third (output) spine is produced by the following
 command:
 
-> ` correl -f template input > output.cor`
+` correl -f template input > output.cor`
 
 ``
 
->   ----------- -------------- ------------
->   (input      (template      (correl
->   file)       file)          output)
->   \*\*input   \*\*template   \*\*correl
->   0           1a             1.000
->   1           2b             1.000
->   2           3c             1.000
->   3           \*-            -0.655
->   4                          -0.655
->   x1x                        0.866
->   y2.                        0.866
->   2z                         0.000
->   (3)                        -1.000
->   \[2\]                      .
->   01                         .
->   \*-                        \*-
->   ----------- -------------- ------------
->
+----------- -------------- ------------
+(input      (template      (correl
+file)       file)          output)
+\*\*input   \*\*template   \*\*correl
+0           1a             1.000
+1           2b             1.000
+2           3c             1.000
+3           \*-            -0.655
+4                          -0.655
+x1x                        0.866
+y2.                        0.866
+2z                         0.000
+(3)                        -1.000
+\[2\]                      .
+01                         .
+\*-                        \*-
+----------- -------------- ------------
+
 The similarity values generated by <span class="tool">correl</span> are given in the
 ` **correl` spine. Each successive value in the output spine is matched
 with a data token in the target input file (<span class="rep">foo</span>). For example, the
@@ -265,29 +265,29 @@ The following example provides a more complicated illustration of
 middle column is the source template, and the right-most column shows
 the corresponding output. ``
 
->   ----------- -------------- ------------
->   (input      (template      (correl
->   file)       file)          output)
->   \*\*input   \*\*template   \*\*correl
->   =1          1              .
->   1           2 3            1.000
->   2 3         .              -0.370
->   100         4              -0.742
->   8r          5 6            .
->   4           \*-            0.042
->   5 6                        .
->   =2                         .
->   0                          .
->   4r                         .
->   -2x -3                     .
->   -x8                        .
->   ==                         .
->   \*-                        \*-
->   ----------- -------------- ------------
->
+----------- -------------- ------------
+(input      (template      (correl
+file)       file)          output)
+\*\*input   \*\*template   \*\*correl
+=1          1              .
+1           2 3            1.000
+2 3         .              -0.370
+100         4              -0.742
+8r          5 6            .
+4           \*-            0.042
+5 6                        .
+=2                         .
+0                          .
+4r                         .
+-2x -3                     .
+-x8                        .
+==                         .
+\*-                        \*-
+----------- -------------- ------------
+
 The above output spine was created by executing the command:
 
-> ` correl -m -s '[=r]' -f template input > output.cor`
+` correl -m -s '[=r]' -f template input > output.cor`
 
 Due to the <span class="option">s</span> option, all records in the input file containing an
 equals-sign or lower-case \`r\' are eliminated from the calculations.
@@ -298,14 +298,14 @@ record in the input file to be ignored. For example, the first
 correlation value is calculated on the basis of the following
 coordination of numerical data: ``
 
->   ----- -----
->   1     1
->   2 3   2 3
->   100   .
->   4     4
->   5 6   5 6
->   ----- -----
->
+----- -----
+1     1
+2 3   2 3
+100   .
+4     4
+5 6   5 6
+----- -----
+
 Since the value \`100\' is not matched with a numerical value in the
 template, it is ignored in the correlation measure. (Note that without
 the <span class="option">m</span> option, no output would be generated.)
@@ -313,14 +313,14 @@ the <span class="option">m</span> option, no output would be generated.)
 At the next instant, the correlation value is calculated on the basis of
 the following coordination of numerical data: ``
 
->   ----- -----
->   2 3   1
->   100   2 3
->   4     .
->   5 6   4
->   0     5 6
->   ----- -----
->
+----- -----
+2 3   1
+100   2 3
+4     .
+5 6   4
+0     5 6
+----- -----
+
 The double-stops do not form matched pairs, hence much of the data is
 discarded. For example, in the first data record, 2 is matched with 1
 but 3 is discarded. In the second record, 100 is matched with 2 but 3 is
@@ -329,14 +329,14 @@ discarded, etc.
 The third correlation value is calculated on the basis of the following
 coordination of numerical data: ``
 
->   ------- -----
->   100     1
->   4       2 3
->   5 6     .
->   0       4
->   -2 -3   5 6
->   ------- -----
->
+------- -----
+100     1
+4       2 3
+5 6     .
+0       4
+-2 -3   5 6
+------- -----
+
 In this case, the correlation value is based on the following numerical
 pairing: 100 \<&mdash;\> 1, 4 \<&mdash;\> 2, 0 \<&mdash;\> 4, -2 \<&mdash;\> 5, -3
 \<&mdash;\> 6. All other numerical values are ignored.
@@ -344,14 +344,14 @@ pairing: 100 \<&mdash;\> 1, 4 \<&mdash;\> 2, 0 \<&mdash;\> 4, -2 \<&mdash;\> 5, 
 The final correlation value in this example is calculated on the basis
 of the following coordination of numerical data: ``
 
->   ------- -----
->   4       1
->   5 6     2 3
->   0       .
->   -2 -3   4
->   8       5 6
->   ------- -----
->
+------- -----
+4       1
+5 6     2 3
+0       .
+-2 -3   4
+8       5 6
+------- -----
+
 The corresponding correlation value is based on the following numerical
 pairing: 4 \<&mdash;\> 1, 5 \<&mdash;\> 2, 6 \<&mdash;\> 3, -2 \<&mdash;\> 4, 8 \<&mdash;\>
 5.

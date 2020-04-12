@@ -55,14 +55,14 @@ representations (including <span class="rep">degree</span>) refer to Section 2
 It is recommended that output files produced using the **dgr** command
 should be given names with the distinguishing \`.dgr\' extension.
 
-> >   ----------- ----------------------------------------------------------------------
-> >   <span class="rep">kern</span>    core pitch/duration representation
-> >   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
-> >   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
-> >   <span class="rep">Tonh</span>    German pitch system
-> >   ----------- ----------------------------------------------------------------------
-> >
-> *Input representations processed by <span class="tool">degree</span>.*
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core pitch/duration representation
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+<span class="rep">Tonh</span>    German pitch system
+----------- ----------------------------------------------------------------------
+
+*Input representations processed by <span class="tool">degree</span>.*
 
 ------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ should be given names with the distinguishing \`.dgr\' extension.
 
 The <span class="tool">degree</span> command provides the following options:
 
-> > <span class="option">h</span>
+<span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -122,64 +122,64 @@ contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI<
 processed by <span class="tool">degree</span>. In addition, there is one non-pitch-related
 spines (<span class="rep">embell</span>). ``
 
->   ------------------------ ---------- ----------- ----------- ----------- ------------
->   !! \`degree\' example.                                                  
->   \*\*kern                 \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
->   \*M2/4                   \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
->   \*C:                     \*d:       \*G\#:      \*a:        \*F:        \*F:
->   =1                       =1         =1          =1          =1          =1
->   8ee-                     Gis2       /60/        do3         F4foo       ct
->   .                        .          /-60/       .           .           .
->   8f                       H2         /62/        fa3         r           upt
->   .                        .          /-62/       .           .           .
->   8dd-                     B2         /70/        mi3         E4          ct
->   .                        .          /-70/       .           .           .
->   8d&mdash;                    Cis4       /61/        r           F4          sus
->   .                        .          /-61/       .           .           .
->   =2                       =2         =2          =2          =2          =2
->   \[4a-                    r          .           mi\~b3      F4 A4       .
->   .                        Heses2     .           re3         G4 Bb4      ct
->   4a-\]                    C3         /48/ /52/   do3         E4 C5       ct
->   .                        .          /-48/       .           .           .
->   .                        H2 E3      /-52/       la3         G4          ct
->   =3                       =3         =3          =3          =3          =3
->   r                        A2 F3      .           r           F4          .
->   ===                      ===        ===         ===         ===         ===
->   \*-                      \*-        \*-         \*-         \*-         \*-
->   ------------------------ ---------- ----------- ----------- ----------- ------------
->
+------------------------ ---------- ----------- ----------- ----------- ------------
+!! \`degree\' example.                                                  
+\*\*kern                 \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
+\*M2/4                   \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
+\*C:                     \*d:       \*G\#:      \*a:        \*F:        \*F:
+=1                       =1         =1          =1          =1          =1
+8ee-                     Gis2       /60/        do3         F4foo       ct
+.                        .          /-60/       .           .           .
+8f                       H2         /62/        fa3         r           upt
+.                        .          /-62/       .           .           .
+8dd-                     B2         /70/        mi3         E4          ct
+.                        .          /-70/       .           .           .
+8d&mdash;                    Cis4       /61/        r           F4          sus
+.                        .          /-61/       .           .           .
+=2                       =2         =2          =2          =2          =2
+\[4a-                    r          .           mi\~b3      F4 A4       .
+.                        Heses2     .           re3         G4 Bb4      ct
+4a-\]                    C3         /48/ /52/   do3         E4 C5       ct
+.                        .          /-48/       .           .           .
+.                        H2 E3      /-52/       la3         G4          ct
+=3                       =3         =3          =3          =3          =3
+r                        A2 F3      .           r           F4          .
+===                      ===        ===         ===         ===         ===
+\*-                      \*-        \*-         \*-         \*-         \*-
+------------------------ ---------- ----------- ----------- ----------- ------------
+
 Executing the command:
 
-> ` degree -tx input > output.dgr`
+` degree -tx input > output.dgr`
 
 produces the following result: ``
 
->   ------------------------ ------------ ----------- ------------ ------------ ------------
->   !! \`degree\' example.                                                      
->   \*\*degree               \*\*degree   \*\*MIDI    \*\*degree   \*\*degree   \*\*embell
->   \*M2/4                   \*M2/4       \*M2/4      \*M2/4       \*M2/4       \*M2/4
->   \*C:                     \*d:         \*G\#:      \*a:         \*F:         \*F:
->   =1                       =1           =1          =1           =1           =1
->   3-/5                     4+/2         /60/        3/3          1/4          ct
->   .                        .            /-60/       .            .            .
->   4/4                      6+/2         /62/        6/3          r            upt
->   .                        .            /-62/       .            .            .
->   2-/5                     6/2          /70/        5/3          7/4          ct
->   .                        .            /-70/       .            .            .
->   2-/4                     7/4          /61/        r            1/4          sus
->   .                        .            /-61/       .            .            .
->   =2                       =2           =2          =2           =2           =2
->   6-/4                     r            .           5-/3         1/4 3/4      .
->   .                        6-/2         .           4/3          2/4 4/4      ct
->   .                        7-/3         /48/ /52/   3/3          7/4 5/5      ct
->   .                        .            /-48/       .            .            .
->   .                        6+/2 2/3     /-52/       1/3          2/4          ct
->   =3                       =3           =3          =3           =3           =3
->   r                        5/2 3/3      .           r            1/4          .
->   ===                      ===          ===         ===          ===          ===
->   \*-                      \*-          \*-         \*-          \*-          \*-
->   ------------------------ ------------ ----------- ------------ ------------ ------------
->
+------------------------ ------------ ----------- ------------ ------------ ------------
+!! \`degree\' example.                                                      
+\*\*degree               \*\*degree   \*\*MIDI    \*\*degree   \*\*degree   \*\*embell
+\*M2/4                   \*M2/4       \*M2/4      \*M2/4       \*M2/4       \*M2/4
+\*C:                     \*d:         \*G\#:      \*a:         \*F:         \*F:
+=1                       =1           =1          =1           =1           =1
+3-/5                     4+/2         /60/        3/3          1/4          ct
+.                        .            /-60/       .            .            .
+4/4                      6+/2         /62/        6/3          r            upt
+.                        .            /-62/       .            .            .
+2-/5                     6/2          /70/        5/3          7/4          ct
+.                        .            /-70/       .            .            .
+2-/4                     7/4          /61/        r            1/4          sus
+.                        .            /-61/       .            .            .
+=2                       =2           =2          =2           =2           =2
+6-/4                     r            .           5-/3         1/4 3/4      .
+.                        6-/2         .           4/3          2/4 4/4      ct
+.                        7-/3         /48/ /52/   3/3          7/4 5/5      ct
+.                        .            /-48/       .            .            .
+.                        6+/2 2/3     /-52/       1/3          2/4          ct
+=3                       =3           =3          =3           =3           =3
+r                        5/2 3/3      .           r            1/4          .
+===                      ===          ===         ===          ===          ===
+\*-                      \*-          \*-         \*-          \*-          \*-
+------------------------ ------------ ----------- ------------ ------------ ------------
+
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>

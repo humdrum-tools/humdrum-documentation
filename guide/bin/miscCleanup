@@ -9,6 +9,7 @@
 # Description:   Convert:
 #                   \--             -->    &mdash;
 #                   [a-z]\'[a-z]    -->    [a-z]'[a-z]
+#                   ^(> +)+         -->    nothing
 #
 
 use strict;
@@ -59,6 +60,7 @@ sub processFile {
 ##      \--             -->    &mdash;
 ##      [a-z]\'[a-z]    -->    [a-z]'[a-z]
 ##      <\/span         -->    <\/span>
+##      ^(> +)+         -->    nothing
 ##
 
 sub processLine {
@@ -67,6 +69,7 @@ sub processLine {
 	$line =~ s/([a-z])\\'([a-z])/$1'$2/g;
 	$line =~ s/<\/span([^>\s])/<\/span> $1/g;
 	$line =~ s/<\/span\s([^>])/<\/span> $1/g;
+	$line =~ s/^(>\s*)+//;
 	return $line;
 }
 

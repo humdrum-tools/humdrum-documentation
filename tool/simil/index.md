@@ -119,18 +119,18 @@ named `simil.rc` and be located in the current directory or the user's
 home directory. Arbitrary costs may be assigned to any of eight edit
 operations shown in the following table:
 
->   ---------- ----------------------------------------------------------------------
->   Name Tag   Edit Operation
->   D1         Delete a nonrepeated token in String 1
->   D2         Delete a nonrepeated token in String 2
->   R1         Delete a repeated token in String 1
->   R2         Delete a repeated token in String 2
->   S0         Substitute a token that is repeated in neither String 1 nor String 2
->   S1         Substitute a token that is repeated in String 1 only
->   S2         Substitute a token that is repeated in String 2 only
->   S3         Substitute a token that is repeated in String 1 and String 2
->   ---------- ----------------------------------------------------------------------
->
+---------- ----------------------------------------------------------------------
+Name Tag   Edit Operation
+D1         Delete a nonrepeated token in String 1
+D2         Delete a nonrepeated token in String 2
+R1         Delete a repeated token in String 1
+R2         Delete a repeated token in String 2
+S0         Substitute a token that is repeated in neither String 1 nor String 2
+S1         Substitute a token that is repeated in String 1 only
+S2         Substitute a token that is repeated in String 2 only
+S3         Substitute a token that is repeated in String 1 and String 2
+---------- ----------------------------------------------------------------------
+
 *Edit operations used by <span class="tool">simil</span>.*
 
 In describing the edit operations, String 1 is the source string and
@@ -179,26 +179,26 @@ assigned more than one weight, the latest assignment is used. The user
 may effectively eliminate a given edit operation by defining an
 arbitrarily high edit penalty. ``
 
->   ----------------------- -----
->   \# This is a comment.   
->   R1                      0.7
->   R2                      0.9
->   ----------------------- -----
->
+----------------------- -----
+\# This is a comment.   
+R1                      0.7
+R2                      0.9
+----------------------- -----
+
 ------------------------------------------------------------------------
 
 ## OPTIONS ##
 
 The <span class="tool">simil</span> command provides the following options.
 
->   ------------- --------------------------------------------------------------------------------
->   <span class="option">n</span>        do not scale similarity measures according to template length
->   -r            reverse the order of *source* and *template* inputs on the command line;
->                 permits the source file to be entered using the standard input.
->   -x *length*   invoke *variable template mode*; break-up template file input into subordinate
->                 patterns of length *length*
->   ------------- --------------------------------------------------------------------------------
->
+------------- --------------------------------------------------------------------------------
+<span class="option">n</span>        do not scale similarity measures according to template length
+-r            reverse the order of *source* and *template* inputs on the command line;
+permits the source file to be entered using the standard input.
+-x *length*   invoke *variable template mode*; break-up template file input into subordinate
+patterns of length *length*
+------------- --------------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 Raw edit-distance scores are normally unreliable estimates of
@@ -232,28 +232,28 @@ a file named `source`; the middle column (not Humdrum) consists of the
 letters A, B and C, and is held in the file named `template`. The
 following command:
 
-> ` simil source template`
+` simil source template`
 
 generates the third column (labelled <span class="rep">simil</span>): ``
 
->   --------- ----------- -----------
->   (source   (template   (simil
->   input)    input)      output)
->   \*\*foo   A           \*\*simil
->   X         B           0.51
->   A         C           1.00
->   B                     0.51
->   C                     0.37
->   D                     0.51
->   A                     0.72
->   B                     0.72
->   B                     0.51
->   C                     0.51
->   B                     .
->   A                     .
->   \*-                   \*-
->   --------- ----------- -----------
->
+--------- ----------- -----------
+(source   (template   (simil
+input)    input)      output)
+\*\*foo   A           \*\*simil
+X         B           0.51
+A         C           1.00
+B                     0.51
+C                     0.37
+D                     0.51
+A                     0.72
+B                     0.72
+B                     0.51
+C                     0.51
+B                     .
+A                     .
+\*-                   \*-
+--------- ----------- -----------
+
 Each successive value in the output spine is matched with a data token
 in the source input file. For example, the second value (1.00) in the
 <span class="rep">simil</span> spine arises from an exact match of the (A, B, C) pattern
@@ -276,33 +276,33 @@ pitch is more dissimilar than *repeating* a pitch. In the following
 substitution, and decreased penalties have been assigned for repetition.
 ``
 
->   ---- -----
->   S0   1.6
->   S1   0.7
->   S3   0.7
->   ---- -----
->
+---- -----
+S0   1.6
+S1   0.7
+S3   0.7
+---- -----
+
 Repeating the above command with this new `simil.rc` file produces the
 following results: ``
 
->   --------- ----------- -----------
->   (source   (template   (simil
->   input)    input)      output)
->   \*\*foo   A           \*\*simil
->   X         B           0.51
->   A         C           1.00
->   B                     0.51
->   C                     0.26
->   D                     0.51
->   A                     0.79
->   B                     0.59
->   B                     0.51
->   C                     0.51
->   B                     .
->   A                     .
->   \*-                   \*-
->   --------- ----------- -----------
->
+--------- ----------- -----------
+(source   (template   (simil
+input)    input)      output)
+\*\*foo   A           \*\*simil
+X         B           0.51
+A         C           1.00
+B                     0.51
+C                     0.26
+D                     0.51
+A                     0.79
+B                     0.59
+B                     0.51
+C                     0.51
+B                     .
+A                     .
+\*-                   \*-
+--------- ----------- -----------
+
 Notice that the similarity measure for the pattern (A, B, B, C) has
 increased from 0.72 to 0.79, whereas the similarity measure for (B, B,
 C) has decreased from 0.72 to 0.59.
@@ -313,27 +313,27 @@ the template, there is little choice regarding the length of the
 subordinate templates. In the following command, a template length of
 two elements is specified:
 
-> ` simil -x 2 source template`
+` simil -x 2 source template`
 
 This command produces the following output: ``
 
->   ----------- ------------
->   \*\*simil   \*\*simxrf
->   0.37        1,2
->   1.00        1
->   1.00        2
->   0.37        1,2
->   0.37        1,2
->   1.00        1
->   0.61        1,2
->   1.00        2
->   0.61        1
->   0.61        2
->   0.61        1
->   .           .
->   \*-         \*-
->   ----------- ------------
->
+----------- ------------
+\*\*simil   \*\*simxrf
+0.37        1,2
+1.00        1
+1.00        2
+0.37        1,2
+0.37        1,2
+1.00        1
+0.61        1,2
+1.00        2
+0.61        1
+0.61        2
+0.61        1
+.           .
+\*-         \*-
+----------- ------------
+
 Only two two-element subordinate patterns are possible given out
 template &mdash; (A, B) and (B, C). The first subordinate template begins on
 line 1 of the template file, while the second subordinate template

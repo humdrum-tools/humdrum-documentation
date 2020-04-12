@@ -53,44 +53,44 @@ for distinguishing different editions or *ossia* passages. The following
 example encodes a melodic phrase containing four numbered verses from
 \"Das Wandern\" from *Die Schöne Müllerin* by Schubert. ``
 
->   -------------------------------------------------------------------
->   !! Franz Schubert, \`Das Wandern\' from \"Die Schoene Muellerin\"
->   -------------------------------------------------------------------
->
->   ----------------- ----------------- ---------- --------- ----------
->   \*\*kern          \*\*text                               
->   \*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]                        
->   \*\>V             \*\>V                                  
->   \*k\[b-e-\]       \*Deutsch                              
->   \*                \*solo                                 
->   \*                \*strophe                              
->   \*                \*\^                                   
->   \*                \*\^              \*\^                 
->   \*                \*S/1             \*S/2      \*S/3     \*S/4
->   8f                Das               Vom        Das       Die
->   =5                =5                =5         =5        =5
->   8f                Wan-              Was-       sehn      Stei-
->   8b-               -dern             -ser       wir       -ne
->   8a                ist               ha-        auch      selbst ,
->   8ee-              des               -ben       den       so
->   =6                =6                =6         =6        =6
->   (16dd             Mül-              wir's     Rä-       schwer
->   )16ff             \|                \|         \|        \|
->   (16dd             -lers             ge-        -dern     sie
->   )16b-             \|                \|         \|        \|
->   8f                Lust ,            -lernt ,   ab ,      sind ,
->   8dd               das               vom        den       die
->   =7                =7                =7         =7        =7
->   (8.cc             Wan-              Was-       Rä-       Stei-
->   )16a              \|                \|         \|        \|
->   8b-               -dern !           -ser !     -dern !   -ne !
->   8r                \%                \%         \%        \%
->   \*                \*S/fin           \*S/fin    \*S/fin   \*S/fin
->   \*                \*v               \*v        \*v       \*v
->   \*                \*S-                                   
->   \*-               \*-                                    
->   ----------------- ----------------- ---------- --------- ----------
->
+-------------------------------------------------------------------
+!! Franz Schubert, \`Das Wandern\' from \"Die Schoene Muellerin\"
+-------------------------------------------------------------------
+
+----------------- ----------------- ---------- --------- ----------
+\*\*kern          \*\*text                               
+\*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]                        
+\*\>V             \*\>V                                  
+\*k\[b-e-\]       \*Deutsch                              
+\*                \*solo                                 
+\*                \*strophe                              
+\*                \*\^                                   
+\*                \*\^              \*\^                 
+\*                \*S/1             \*S/2      \*S/3     \*S/4
+8f                Das               Vom        Das       Die
+=5                =5                =5         =5        =5
+8f                Wan-              Was-       sehn      Stei-
+8b-               -dern             -ser       wir       -ne
+8a                ist               ha-        auch      selbst ,
+8ee-              des               -ben       den       so
+=6                =6                =6         =6        =6
+(16dd             Mül-              wir's     Rä-       schwer
+)16ff             \|                \|         \|        \|
+(16dd             -lers             ge-        -dern     sie
+)16b-             \|                \|         \|        \|
+8f                Lust ,            -lernt ,   ab ,      sind ,
+8dd               das               vom        den       die
+=7                =7                =7         =7        =7
+(8.cc             Wan-              Was-       Rä-       Stei-
+)16a              \|                \|         \|        \|
+8b-               -dern !           -ser !     -dern !   -ne !
+8r                \%                \%         \%        \%
+\*                \*S/fin           \*S/fin    \*S/fin   \*S/fin
+\*                \*v               \*v        \*v       \*v
+\*                \*S-                                   
+\*-               \*-                                    
+----------------- ----------------- ---------- --------- ----------
+
 Notice that this file contains a single section labelled \`V\' (verse)
 and that an expansion list occurs near the beginning of the file that
 indicates the section is to be repeated 4 times in total.
@@ -107,41 +107,41 @@ passage.
 
 Executing the command:
 
-> ` strophe -s 4`
+` strophe -s 4`
 
 produces the following output: ``
 
->   -------------------------------------------------------------------
->   !! Franz Schubert, \`Das Wandern\' from \"Die Schoene Muellerin\"
->   -------------------------------------------------------------------
->
->   ----------------- -----------------
->   \*\*kern          \*\*text
->   \*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]
->   \*\>V             \*\>V
->   \*k\[b-e-\]       \*Deutsch
->   \*                \*solo
->   8f                Die
->   =5                =5
->   8f                Stei-
->   8b-               -ne
->   8a                selbst ,
->   8ee-              so
->   =6                =6
->   (16dd             schwer
->   )16ff             \|
->   (16dd             sie
->   )16b-             \|
->   8f                sind ,
->   8dd               die
->   =7                =7
->   (8.cc             Stei-
->   )16a              \|
->   8b-               -ne !
->   8r                \%
->   \*-               \*-
->   ----------------- -----------------
->
+-------------------------------------------------------------------
+!! Franz Schubert, \`Das Wandern\' from \"Die Schoene Muellerin\"
+-------------------------------------------------------------------
+
+----------------- -----------------
+\*\*kern          \*\*text
+\*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]
+\*\>V             \*\>V
+\*k\[b-e-\]       \*Deutsch
+\*                \*solo
+8f                Die
+=5                =5
+8f                Stei-
+8b-               -ne
+8a                selbst ,
+8ee-              so
+=6                =6
+(16dd             schwer
+)16ff             \|
+(16dd             sie
+)16b-             \|
+8f                sind ,
+8dd               die
+=7                =7
+(8.cc             Stei-
+)16a              \|
+8b-               -ne !
+8r                \%
+\*-               \*-
+----------------- -----------------
+
 Strophic encodings are nearly always encoded in *abbreviated* rather
 than *through-composed* file formats. Abbreviated encodings employ
 *section labels* and *expansion-lists* in order to identify how various
@@ -155,24 +155,24 @@ version, via the <span class="tool">thru</span> command. For example, in order t
 select the first and third verses in the above passage by Schubert, the
 user would need to execute the following command pipeline:
 
-> ` thru wandern | strophe -s 1,3`
+` thru wandern | strophe -s 1,3`
 
 The list following the <span class="option">s</span> option can contain individual strophes
 separated by commas. For example, the following command extracts verses
 1, 3 and 4 in succession:
 
-> ` thru wandern | strophe -s 1,3,4`
+` thru wandern | strophe -s 1,3,4`
 
 Strophes may also be output in non-numeric order as in the following
 command invocation:
 
-> ` thru wandern | strophe -s 4,3,2,1`
+` thru wandern | strophe -s 4,3,2,1`
 
 If the <span class="option">x</span> option is invoked, <span class="tool">strophe</span> outputs only a single
 strophe whose string *label* is specified as an option. Strophe names
 need not be numerical. E.g.
 
-> ` strophe -x ossia`
+` strophe -x ossia`
 
 If the <span class="tool">strophe</span> command is invoked without any option, then all
 strophes are expanded in the output in numerical order beginning with
@@ -191,14 +191,14 @@ verse.
 
 The various strophe-related tandem interpretations are summarized below:
 
->   --------------- -----------------------------
->   \*strophe       strophic passage initiator
->   \*S-            strophic passage terminator
->   \*S/*string*    strophe name label
->   \*S/*n\[.n\]*   strophe number label
->   \*S/fin         strophe end indicator
->   --------------- -----------------------------
->
+--------------- -----------------------------
+\*strophe       strophic passage initiator
+\*S-            strophic passage terminator
+\*S/*string*    strophe name label
+\*S/*n\[.n\]*   strophe number label
+\*S/fin         strophe end indicator
+--------------- -----------------------------
+
 *Types of Strophe Interpretations*
 
 Note that for each strophic passage, all strophe labels must appear on
@@ -210,12 +210,12 @@ the same record. See [EXAMPLES](#EXAMPLES) below.
 
 The *strophe* command provides the following options:
 
->   --------------------- -------------------------------------------------------
->   <span class="option">h</span>                displays a help screen summarizing the command syntax
->   -s *strophe\_list*    output numbered strophes according to *strophe\_list*
->   -x *strophe\_label*   output only strophes labelled *strophe\_label*
->   --------------------- -------------------------------------------------------
->
+--------------------- -------------------------------------------------------
+<span class="option">h</span>                displays a help screen summarizing the command syntax
+-s *strophe\_list*    output numbered strophes according to *strophe\_list*
+-x *strophe\_label*   output only strophes labelled *strophe\_label*
+--------------------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -227,128 +227,128 @@ Options are specified in the command line.
 The following example is concocted to illustrate the operation of the
 <span class="tool">strophe</span> command. Consider the following Humdrum input: ``
 
->   ------------------------- -------------------- ---------
->   !! \`strophe\' example.                        
->   \*\*example               \*\*bar              
->   \*\>\[A,V,V,Coda\]        \*\>\[A,V,V,Coda\]   
->   \*\>A                     \*\>A                
->   A                         i                    
->   \*\>V                     \*\>V                
->   \*                        \*\*foo              
->   \*                        \*strophe            
->   \*                        \*\^                 
->   \*                        \*S/1                \*S/2
->   B                         1                    2
->   \*                        \*S/fin              \*S/fin
->   \*                        \*v                  \*v
->   \*                        \*S-                 
->   \*                        \*\*bar              
->   C                         refrain              
->   \*                        \*strophe            
->   \*                        \*\^                 
->   \*                        \*S/1.1              \*S/2.1
->   B                         1                    2
->   \*                        \*S/fin              \*S/fin
->   \*                        \*v                  \*v
->   \*                        \*S-                 
->   \*\>Coda                  \*\>Coda             
->   \*                        \*\*foo              
->   E                         i                    
->   \*-                       \*-                  
->   ------------------------- -------------------- ---------
->
+------------------------- -------------------- ---------
+!! \`strophe\' example.                        
+\*\*example               \*\*bar              
+\*\>\[A,V,V,Coda\]        \*\>\[A,V,V,Coda\]   
+\*\>A                     \*\>A                
+A                         i                    
+\*\>V                     \*\>V                
+\*                        \*\*foo              
+\*                        \*strophe            
+\*                        \*\^                 
+\*                        \*S/1                \*S/2
+B                         1                    2
+\*                        \*S/fin              \*S/fin
+\*                        \*v                  \*v
+\*                        \*S-                 
+\*                        \*\*bar              
+C                         refrain              
+\*                        \*strophe            
+\*                        \*\^                 
+\*                        \*S/1.1              \*S/2.1
+B                         1                    2
+\*                        \*S/fin              \*S/fin
+\*                        \*v                  \*v
+\*                        \*S-                 
+\*\>Coda                  \*\>Coda             
+\*                        \*\*foo              
+E                         i                    
+\*-                       \*-                  
+------------------------- -------------------- ---------
+
 Since this file is in abbreviated format, we must first expand it to
 through-composed form using the <span class="tool">thru</span> command. The
 resulting output is: ``
 
->   ------------------------- -- -- ----------- -- -- ---------
->   !! \`strophe\' example.                           
->   \*\*example                     \*\*bar           
->   \*thru                          \*thru            
->   \*\>A                           \*\>A             
->   A                               i                 
->   \*\>V                           \*\>V             
->   \*                              \*\*foo           
->   \*                              \*thru            
->   \*                              \*strophe         
->   \*                              \*\^              
->   \*                              \*S/1             \*S/2
->   B                               1                 2
->   \*                              \*S/fin           \*S/fin
->   \*                              \*v               \*v
->   \*                              \*S-              
->   \*                              \*\*bar           
->   \*                              \*thru            
->   C                               refrain           
->   \*                              \*strophe         
->   \*                              \*\^              
->   \*                              \*S/1.1           \*S/2.1
->   B                               1                 2
->   \*                              \*S/fin           \*S/fin
->   \*                              \*v               \*v
->   \*                              \*S-              
->   \*\>V                           \*\>V             
->   \*                              \*\*foo           
->   \*                              \*thru            
->   \*                              \*strophe         
->   \*                              \*\^              
->   \*                              \*S/1             \*S/2
->   B                               1                 2
->   \*                              \*S/fin           \*S/fin
->   \*                              \*v               \*v
->   \*                              \*S-              
->   \*                              \*\*bar           
->   \*                              \*thru            
->   C                               refrain           
->   \*                              \*strophe         
->   \*                              \*\^              
->   \*                              \*S/1.1           \*S/2.1
->   B                               1                 2
->   \*                              \*S/fin           \*S/fin
->   \*                              \*v               \*v
->   \*                              \*S-              
->   \*\>Coda                        \*\>Coda          
->   \*                              \*\*foo           
->   \*                              \*thru            
->   E                               i                 
->   \*-                             \*-               
->   ------------------------- -- -- ----------- -- -- ---------
->
+------------------------- -- -- ----------- -- -- ---------
+!! \`strophe\' example.                           
+\*\*example                     \*\*bar           
+\*thru                          \*thru            
+\*\>A                           \*\>A             
+A                               i                 
+\*\>V                           \*\>V             
+\*                              \*\*foo           
+\*                              \*thru            
+\*                              \*strophe         
+\*                              \*\^              
+\*                              \*S/1             \*S/2
+B                               1                 2
+\*                              \*S/fin           \*S/fin
+\*                              \*v               \*v
+\*                              \*S-              
+\*                              \*\*bar           
+\*                              \*thru            
+C                               refrain           
+\*                              \*strophe         
+\*                              \*\^              
+\*                              \*S/1.1           \*S/2.1
+B                               1                 2
+\*                              \*S/fin           \*S/fin
+\*                              \*v               \*v
+\*                              \*S-              
+\*\>V                           \*\>V             
+\*                              \*\*foo           
+\*                              \*thru            
+\*                              \*strophe         
+\*                              \*\^              
+\*                              \*S/1             \*S/2
+B                               1                 2
+\*                              \*S/fin           \*S/fin
+\*                              \*v               \*v
+\*                              \*S-              
+\*                              \*\*bar           
+\*                              \*thru            
+C                               refrain           
+\*                              \*strophe         
+\*                              \*\^              
+\*                              \*S/1.1           \*S/2.1
+B                               1                 2
+\*                              \*S/fin           \*S/fin
+\*                              \*v               \*v
+\*                              \*S-              
+\*\>Coda                        \*\>Coda          
+\*                              \*\*foo           
+\*                              \*thru            
+E                               i                 
+\*-                             \*-               
+------------------------- -- -- ----------- -- -- ---------
+
 The command:
 
-> ` strophe file`
+` strophe file`
 
 will produce the following output: ``
 
->   ------------------------- ----------
->   !! \`strophe\' example.   
->   \*\*example               \*\*bar
->   \*thru                    \*thru
->   \*\>A                     \*\>A
->   A                         i
->   \*\>V                     \*\>V
->   \*                        \*\*foo
->   \*                        \*thru
->   B                         1
->   \*                        \*\*bar
->   \*                        \*thru
->   C                         refrain
->   B                         1
->   \*\>V                     \*\>V
->   \*                        \*\*foo
->   \*                        \*thru
->   B                         2
->   \*                        \*\*bar
->   \*                        \*thru
->   C                         refrain
->   B                         2
->   \*\>Coda                  \*\>Coda
->   \*                        \*\*foo
->   \*                        \*thru
->   E                         i
->   \*-                       \*-
->   ------------------------- ----------
->
+------------------------- ----------
+!! \`strophe\' example.   
+\*\*example               \*\*bar
+\*thru                    \*thru
+\*\>A                     \*\>A
+A                         i
+\*\>V                     \*\>V
+\*                        \*\*foo
+\*                        \*thru
+B                         1
+\*                        \*\*bar
+\*                        \*thru
+C                         refrain
+B                         1
+\*\>V                     \*\>V
+\*                        \*\*foo
+\*                        \*thru
+B                         2
+\*                        \*\*bar
+\*                        \*thru
+C                         refrain
+B                         2
+\*\>Coda                  \*\>Coda
+\*                        \*\*foo
+\*                        \*thru
+E                         i
+\*-                       \*-
+------------------------- ----------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

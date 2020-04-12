@@ -34,13 +34,13 @@ representations listed below. All other inputs are simply echoed in the
 output. For descriptions of the various input representations refer to
 Section 2 *(Representation Reference)* of this reference manual.
 
->   ----------- ----------------------------------------------------------------------
->   <span class="rep">kern</span>    core absolute pitch representation
->   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
->   <span class="rep">Tonh</span>    German pitch system
->   ----------- ----------------------------------------------------------------------
->
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core absolute pitch representation
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+<span class="rep">Tonh</span>    German pitch system
+----------- ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">trans</span>.*
 
 Transpositions are transformations that shift all pitch-signifier values
@@ -56,7 +56,7 @@ from C to E-flat), the diatonic offset is \`up two pitch-letter names,\'
 and the chromatic offset is \`up three semitones.\' The appropriate
 command invocation would be:
 
-> ` trans -d +2 -c +3 input > output`
+` trans -d +2 -c +3 input > output`
 
 The plus signs above are optional; in their absence, <span class="tool">trans</span> assumes
 an upward transposition. Note that negative offsets can be mixed with
@@ -76,13 +76,13 @@ should be given names with the distinguishing \`.tr\' extension.
 
 The <span class="tool">trans</span> command provides the following options:
 
->   ---------------- -------------------------------------------------------
->   -c \[*+-*\]*n*   transpose up(+) or down (-) *n* semitones
->   -d \[*+-*\]*n*   transpose up(+) or down (-) *n* diatonic letter names
->   <span class="option">h</span>           displays a help screen summarizing the command syntax
->   -k *keysig*      replace all input key signatures by *keysig*
->   ---------------- -------------------------------------------------------
->
+---------------- -------------------------------------------------------
+-c \[*+-*\]*n*   transpose up(+) or down (-) *n* semitones
+-d \[*+-*\]*n*   transpose up(+) or down (-) *n* diatonic letter names
+<span class="option">h</span>           displays a help screen summarizing the command syntax
+-k *keysig*      replace all input key signatures by *keysig*
+---------------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 Note that the <span class="option">d</span> \"option\" is manditory rather than optional.
@@ -104,19 +104,19 @@ The following examples illustrate the use of <span class="tool">trans</span>.
 Transposition up a minor third differs from transposition up an
 augmented second:
 
-> ` trans -d +2 -c +3 milhaud  trans -d +1 -c +3 milhaud`
+` trans -d +2 -c +3 milhaud  trans -d +1 -c +3 milhaud`
 
 Enharmonic transpositions can be accomplished by defining the chromatic
 offset as zero semitones. For example, the following command transposes
 up a diminished second. It might be used to transpose from the key of
 C-sharp to the key of D-flat.
 
-> ` trans -d +1 -c 0 moonlight`
+` trans -d +1 -c 0 moonlight`
 
 Transposition up or down an octave requires both a diatonic offset and a
 corresponding chromatic offset of plus or minus 12 semitones. e.g.
 
-> ` trans -d -7 -c -12 guitar`
+` trans -d -7 -c -12 guitar`
 
 In addition to exact pitch transpositions, <span class="tool">trans</span> can also perform
 *modal* transpositions. Modal transpositions arise when the pitch letter
@@ -126,7 +126,7 @@ specification. The following transposition changes diatonic pitch-letter
 names (down by two pitch-letters) so that the pitch C will become A,
 etc.
 
-> ` trans -d -2 major > aeolian`
+` trans -d -2 major > aeolian`
 
 For inputs in major keys, the corresponding outputs will be in Aeolian
 mode.
@@ -135,7 +135,7 @@ For some applications, two or more successive transpositions may be
 necessary. For example, the following pipeline modifies inputs in major
 keys so that they are in the tonic Dorian mode.
 
-> ` trans -d +1 major | trans -d -1 -c -2 > dorian`
+` trans -d +1 major | trans -d -1 -c -2 > dorian`
 
 The first <span class="tool">trans</span> carries out a modal transposition &mdash; up the
 interval of a diatonic second. Thus, a work in D major would be placed
@@ -151,7 +151,7 @@ interpretations* are similar in syntax to the <span class="tool">trans</span> co
 For example, the following tandem interpretation indicates that the
 score has been transposed up a major second.
 
-> ` *Trd1c2`
+` *Trd1c2`
 
 The tandem interpretation in effect echoes the operation of the original
 transposition. If a score has undergone more than one transposition, the
@@ -159,11 +159,11 @@ associated tandem interpretations will be ordered beginning with the
 most recent transposition. For example, a work that was transposed down
 a perfect fourth, followed by up a diminished second:
 
-> ` trans -d -3 -c -5  trans -d +1 -c 0`
+` trans -d -3 -c -5  trans -d +1 -c 0`
 
 would contain the tandem interpretation:
 
-> ` *Trd1c0  *Trd-3c-5`
+` *Trd1c0  *Trd-3c-5`
 
 ------------------------------------------------------------------------
 
@@ -172,43 +172,43 @@ would contain the tandem interpretation:
 The following example illustrates the operation of <span class="tool">trans</span>. Given the
 following input: ``
 
->   ---------- ----------- ---------- ----------- ---------
->   \*\*kern   \*\*pitch   \*\*Tonh   \*\*solfg   \*\*foo
->   \*k\[\]    \*          \*K\[\]    \*k\[b-\]   \*
->   =1         =1          =1         =1          .
->   c          C4          C4         do4         abc
->   c\#        C\#4        Cis4       do\~d4      .
->   d-         Db4         Des4       re\~b4      xyz
->   r          r           r          r           .
->   =2         =2          =2         =2          .
->   B-         Bb3         B3         si\~b3      .
->   B&mdash;       Bbb3        Heses3     si\~bb3     .
->   =3         =3          =3         =3          .
->   \*-        \*-         \*-        \*-         \*-
->   ---------- ----------- ---------- ----------- ---------
->
+---------- ----------- ---------- ----------- ---------
+\*\*kern   \*\*pitch   \*\*Tonh   \*\*solfg   \*\*foo
+\*k\[\]    \*          \*K\[\]    \*k\[b-\]   \*
+=1         =1          =1         =1          .
+c          C4          C4         do4         abc
+c\#        C\#4        Cis4       do\~d4      .
+d-         Db4         Des4       re\~b4      xyz
+r          r           r          r           .
+=2         =2          =2         =2          .
+B-         Bb3         B3         si\~b3      .
+B&mdash;       Bbb3        Heses3     si\~bb3     .
+=3         =3          =3         =3          .
+\*-        \*-         \*-        \*-         \*-
+---------- ----------- ---------- ----------- ---------
+
 the command
 
-> ` trans -d 1 -c 2 -k '*k[f#c#]'`
+` trans -d 1 -c 2 -k '*k[f#c#]'`
 
 would produce the following output: ``
 
->   --------------- ----------- --------------- --------------- ---------
->   \*\*kern        \*\*pitch   \*\*Tonh        \*\*solfg       \*\*foo
->   \*k\[f\#c\#\]   \*          \*k\[f\#c\#\]   \*k\[f\#c\#\]   \*
->   \*Trd1c2        \*Trd1c2    \*Trd1c2        \*Trd1c2        \*
->   =1              =1          =1              =1              .
->   d               D4          D4              re4             abc
->   d\#             D\#4        Dis4            re\~d4          .
->   e-              Eb4         Es4             mi\~b4          xyz
->   r               r           r               r               .
->   =2              =2          =2              =2              .
->   c               C4          C4              do4             .
->   c-              Cb4         Ces4            do\~b4          .
->   =3              =3          =3              =3              .
->   \*-             \*-         \*-             \*-             \*-
->   --------------- ----------- --------------- --------------- ---------
->
+--------------- ----------- --------------- --------------- ---------
+\*\*kern        \*\*pitch   \*\*Tonh        \*\*solfg       \*\*foo
+\*k\[f\#c\#\]   \*          \*k\[f\#c\#\]   \*k\[f\#c\#\]   \*
+\*Trd1c2        \*Trd1c2    \*Trd1c2        \*Trd1c2        \*
+=1              =1          =1              =1              .
+d               D4          D4              re4             abc
+d\#             D\#4        Dis4            re\~d4          .
+e-              Eb4         Es4             mi\~b4          xyz
+r               r           r               r               .
+=2              =2          =2              =2              .
+c               C4          C4              do4             .
+c-              Cb4         Ces4            do\~b4          .
+=3              =3          =3              =3              .
+\*-             \*-         \*-             \*-             \*-
+--------------- ----------- --------------- --------------- ---------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##
@@ -250,7 +250,7 @@ up 1 diatonic letter-name and 2 chromatic semitones from the absolute or
 concert pitch, the encoded score will contain the instrument's
 transposition tandem interpretation
 
-> ` *ITrd1c2`
+` *ITrd1c2`
 
 (even though the encoded data is at concert pitch). Note that it is
 possible subsequently to transpose such a score using the <span class="tool">trans</span>

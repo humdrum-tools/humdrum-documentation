@@ -72,16 +72,16 @@ Humdrum syntax.
 
 The <span class="tool">infot</span> command provides the following options:
 
->   ------------- ---------------------------------------------------------
->   <span class="option">b</span>        output information (in bits) for each unique data token
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">H</span>        format output as <span class="tool">humsed</span> commands
->   <span class="option">n</span>        output frequency count for each unique data token
->   <span class="option">p</span>        output probability value for each unique data token
->   <span class="option">s</span>        output information-related summary statistics
->   -x *regexp*   exclude tokens matching *regexp* from calculations
->   ------------- ---------------------------------------------------------
->
+------------- ---------------------------------------------------------
+<span class="option">b</span>        output information (in bits) for each unique data token
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+<span class="option">H</span>        format output as <span class="tool">humsed</span> commands
+<span class="option">n</span>        output frequency count for each unique data token
+<span class="option">p</span>        output probability value for each unique data token
+<span class="option">s</span>        output information-related summary statistics
+-x *regexp*   exclude tokens matching *regexp* from calculations
+------------- ---------------------------------------------------------
+
 Options are specified in the command line.
 
 With the <span class="option">n</span> option, <span class="tool">infot</span> outputs a two-column list where the
@@ -104,78 +104,78 @@ equation.](#Shannon%20and%20Weaver)
 The use of <span class="tool">infot</span> is illustrated in the following examples. Consider
 the following input: ``
 
->   ---------
->   \*\*foo
->   A
->   B2
->   C-c
->   A
->   B2
->   A
->   A
->   B2
->   C-c
->   A
->   A
->   X Y
->   \*-
->   ---------
->
+---------
+\*\*foo
+A
+B2
+C-c
+A
+B2
+A
+A
+B2
+C-c
+A
+A
+X Y
+\*-
+---------
+
 A simple command invocation would use the <span class="option">n</span> option to count the
 number of occurrences of each unique data token (or state):
 
-> ` infot -n input`
+` infot -n input`
 
 The corresponding output is: ``
 
->   ----- ---
->   A     6
->   B2    3
->   C-c   2
->   X Y   1
->   ----- ---
->
+----- ---
+A     6
+B2    3
+C-c   2
+X Y   1
+----- ---
+
 The tallies indicate that state \`A\' occurs 6 times, and that the least
 common state (\`X Y\') occurs just once. If we had invoked the <span class="option">p</span>
 option, the counts would be replaced by probabilities. The command:
 
-> ` infot -p input`
+` infot -p input`
 
 produces the following output: ``
 
->   ----- -------
->   A     0.500
->   B2    0.250
->   C-c   0.167
->   X Y   0.083
->   ----- -------
->
+----- -------
+A     0.500
+B2    0.250
+C-c   0.167
+X Y   0.083
+----- -------
+
 Alternatively, the <span class="option">b</span> option:
 
-> ` infot -b input`
+` infot -b input`
 
 would output information measures for each state, in bits: ``
 
->   ----- -------
->   A     1.000
->   B2    2.000
->   C-c   2.585
->   X Y   3.585
->   ----- -------
->
+----- -------
+A     1.000
+B2    2.000
+C-c   2.585
+X Y   3.585
+----- -------
+
 In the case of the <span class="option">s</span> option, summary statistics would be output,
 rather than a two-column list. For the above input, the following
 summary statistics would be generated: ``
 
->   ------------------------------------------- ---------
->   Total number of unique states in message:   4
->   Total information of message (in bits):     20.7549
->   Total possible information for message:     24
->   Info per state for equi-prob distrib:       2
->   Average information conveyed per state:     1.72957
->   Percent redundancy evident in message:      13.5213
->   ------------------------------------------- ---------
->
+------------------------------------------- ---------
+Total number of unique states in message:   4
+Total information of message (in bits):     20.7549
+Total possible information for message:     24
+Info per state for equi-prob distrib:       2
+Average information conveyed per state:     1.72957
+Percent redundancy evident in message:      13.5213
+------------------------------------------- ---------
+
 The first line of output merely indicates the number of unique states
 found in the input (in this case just 4). The fifth output line
 indicates the average information conveyed per state (in bits). The
@@ -198,18 +198,18 @@ content approaches the theoretical maximum.
 Consider now an example where a large number of messages from a
 repertoire (dubbed `repertoire`) is passed to <span class="tool">infot</span>:
 
-> ` infot -b repertoire`
+` infot -b repertoire`
 
 Suppose that the following output is produced: ``
 
->   ------- --------
->   ABC     3.124
->   BAC     1.306
->   C C D   1.950
->   X       5.075
->   XYZ     19.334
->   ------- --------
->
+------- --------
+ABC     3.124
+BAC     1.306
+C C D   1.950
+X       5.075
+XYZ     19.334
+------- --------
+
 This result indicates that, although there might have been hundreds of
 data tokens processed in the repertoire, only five different unique
 states were present. The greatest information content (lowest
@@ -224,13 +224,13 @@ increases and decreases over the course of this new \`message\'. This
 goal involves a two-part operation. First, we re-invoke <span class="tool">infot</span> adding
 the <span class="option">H</span> option, and redirect the output to a file `replace`:
 
-> ` infot -bH repertoire > replace`
+` infot -bH repertoire > replace`
 
 This causes <span class="tool">infot</span> to produce as output a set of
 <span class="tool">humsed</span> commands. Given the identical `repertoire`
 input, the following output is sent to the file `replace`:
 
-> ` s/^ABC$/3.124/g; s/^ABC /3.124/g; s/    ABC$/3.124/g; s/    ABC /3.124/g s/^BAC$/1.306/g; s/^BAC /1.306/g; s/    BAC$/1.306/g; s/    BAC /1.306/g s/^C C D$/1.95/g; s/^C C D  /1.95/g; s/ C C D$/1.95/g; s/   C C D   /1.95/g s/^X$/5.075/g; s/^X /5.075/g; s/    X$/5.075/g; s/  X   /5.075/g s/^XYZ$/19.334/g; s/^XYZ    /19.334/g; s/   XYZ$/19.334/g; s/   XYZ /19.334/g`
+` s/^ABC$/3.124/g; s/^ABC /3.124/g; s/    ABC$/3.124/g; s/    ABC /3.124/g s/^BAC$/1.306/g; s/^BAC /1.306/g; s/    BAC$/1.306/g; s/    BAC /1.306/g s/^C C D$/1.95/g; s/^C C D  /1.95/g; s/ C C D$/1.95/g; s/   C C D   /1.95/g s/^X$/5.075/g; s/^X /5.075/g; s/    X$/5.075/g; s/  X   /5.075/g s/^XYZ$/19.334/g; s/^XYZ    /19.334/g; s/   XYZ$/19.334/g; s/   XYZ /19.334/g`
 
 Although these commands may appear somewhat cryptic, they merely
 instruct the Humdrum stream editor [(<span class="tool">humsed</span>)](humsed.html) to
@@ -240,48 +240,48 @@ represent the number of bits of information.
 
 The following file (called `input`) contains the message of interest: ``
 
->   ---------
->   \*\*bar
->   BAC
->   BAC
->   C C D
->   .
->   =
->   \*
->   C C D
->   XYZ
->   X
->   ABC
->   BAC
->   \*-
->   ---------
->
+---------
+\*\*bar
+BAC
+BAC
+C C D
+.
+=
+\*
+C C D
+XYZ
+X
+ABC
+BAC
+\*-
+---------
+
 This file can be transformed so that the data tokens are replaced by
 corresponding information values as determined from the original
 repertoire. This is done by invoking the <span class="tool">humsed</span>
 command, and providing it with the substitution commands held in the
 file `replace`:
 
-> ` humsed -f replace input > output`
+` humsed -f replace input > output`
 
 The resulting output file would be as follows: ``
 
->   ---------
->   \*\*bar
->   1.306
->   1.306
->   1.950
->   .
->   =
->   \*
->   1.950
->   19.334
->   5.075
->   3.124
->   1.306
->   \*-
->   ---------
->
+---------
+\*\*bar
+1.306
+1.306
+1.950
+.
+=
+\*
+1.950
+19.334
+5.075
+3.124
+1.306
+\*-
+---------
+
 Notice that input data tokens which do not appear in the probability
 list (such as the equals-signs) remain unmodified.
 

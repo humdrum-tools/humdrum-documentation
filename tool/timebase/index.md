@@ -27,30 +27,30 @@ duration) of time. The effect of the <span class="tool">timebase</span> command 
 illustrated by an example. With a specified time-base of a sixteenth
 duration, the following input: ``
 
->   ---------- ---------- ---------- ----------
->   \*\*kern   \*\*kern   \*\*kern   \*\*kern
->   4g         8.r        8.cc       16ee
->   .          .          .          8ff
->   .          32b        16cc       16gg
->   .          32a        .          .
->   8f         8cc        8dd        8ff
->   \*-        \*-        \*-        \*-
->   ---------- ---------- ---------- ----------
->
+---------- ---------- ---------- ----------
+\*\*kern   \*\*kern   \*\*kern   \*\*kern
+4g         8.r        8.cc       16ee
+.          .          .          8ff
+.          32b        16cc       16gg
+.          32a        .          .
+8f         8cc        8dd        8ff
+\*-        \*-        \*-        \*-
+---------- ---------- ---------- ----------
+
 would produce the following output: ``
 
->   ---------- ---------- ---------- ----------
->   \*\*kern   \*\*kern   \*\*kern   \*\*kern
->   \*tb16     \*tb16     \*tb16     \*tb16
->   4g         8.r        8.cc       16ee
->   .          .          .          8ff
->   .          .          .          .
->   .          32b        16cc       16gg
->   8f         8cc        8dd        8ff
->   .          .          .          .
->   \*-        \*-        \*-        \*-
->   ---------- ---------- ---------- ----------
->
+---------- ---------- ---------- ----------
+\*\*kern   \*\*kern   \*\*kern   \*\*kern
+\*tb16     \*tb16     \*tb16     \*tb16
+4g         8.r        8.cc       16ee
+.          .          .          8ff
+.          .          .          .
+.          32b        16cc       16gg
+8f         8cc        8dd        8ff
+.          .          .          .
+\*-        \*-        \*-        \*-
+---------- ---------- ---------- ----------
+
 Each output record represents a snap-shot of a sixteenth duration
 following the previous data record. Depending upon the choice of
 time-base, the resulting output is either expanded or contracted in
@@ -74,17 +74,17 @@ command should be given names with the distinguishing \`.tb\' extension.
 
 The <span class="tool">timebase</span> command provides a number of options.
 
->   ----------- ----------------------------------------------------------
->   <span class="option">h</span>      displays a help screen summarizing the command syntax
->   -t *n*      set time-base where *n* represents a `**recip duration`
->   <span class="option">x</span>      strip duration values from the input
->   -M *mark*   prepend *mark* to beginning of any padded output records
->   -m *mark*   append *mark* to end of any padded output records
->   ----------- ----------------------------------------------------------
->
+----------- ----------------------------------------------------------
+<span class="option">h</span>      displays a help screen summarizing the command syntax
+-t *n*      set time-base where *n* represents a `**recip duration`
+<span class="option">x</span>      strip duration values from the input
+-M *mark*   prepend *mark* to beginning of any padded output records
+-m *mark*   append *mark* to end of any padded output records
+----------- ----------------------------------------------------------
+
 Options are specified in the command line. e.g.
 
-> ` timebase -t 8. -x`
+` timebase -t 8. -x`
 
 will remove <span class="rep">kern</span> or <span class="rep">recip</span> duration encodings from the output;
 each output data record will represent an elapsed duration of a dotted
@@ -94,7 +94,7 @@ The <span class="option">M</span> option adds a user-specified marker-string to 
 of all records that <span class="tool">timebase</span> pads to the output. For example, the
 command:
 
-> ` timebase -t 8 -M ABC`
+` timebase -t 8 -M ABC`
 
 will add the string `ABC` to the beginning of (otherwise) null data
 records added by <span class="tool">timebase</span>.

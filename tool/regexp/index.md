@@ -59,10 +59,10 @@ found in the UNIX <span class="unix">awk</span> command. This includes all so-ca
 
 The <span class="tool">regexp</span> command provides only a help option:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -72,18 +72,18 @@ Options are specified in the command line.
 Imagine the case where the sample text file specified in the command
 line contains the following three records:
 
-> ` The quick brown fox jumped over the lazy dogs.  Once upon a time, long, long ago ...  It was the best of times, it was the worst of times.`
+` The quick brown fox jumped over the lazy dogs.  Once upon a time, long, long ago ...  It was the best of times, it was the worst of times.`
 
 The following regular expression defines any character string beginning
 with the lower-case letter \`b\', followed by zero or one instance of
 any single character, followed by a lower-case vowel.
 
-> ` b.?[aeiou]`
+` b.?[aeiou]`
 
 Given this regular expression, the corresponding output would appear as
 follows:
 
-> ` The quick brown fox jumped over the lazy dogs.            ^ ^  It was the best of times, it was the worst of times.             ^^`
+` The quick brown fox jumped over the lazy dogs.            ^ ^  It was the best of times, it was the worst of times.             ^^`
 
 Notice that only those text lines matching the defined regular
 expression are displayed in the output.

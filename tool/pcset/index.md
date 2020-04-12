@@ -61,15 +61,15 @@ It is recommended that output files produced using the <span class="tool">pcset<
 should be given names with the distinguishing extensions \`.pcs\',
 \`.nf\' \`.pf\' or \`.iv\' &mdash; depending on the selected option.
 
->   ------------ --------------------------------------------------------------------
->   <span class="rep">iv</span>       interval-class vector representation
->   <span class="rep">nf</span>       normal form for pitch-class sets
->   <span class="rep">pc</span>       pitch-class representation
->   <span class="rep">pcset</span>    Fortean pitch-class set name
->   <span class="rep">pf</span>       prime form representation
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
->   ------------ --------------------------------------------------------------------
->
+------------ --------------------------------------------------------------------
+<span class="rep">iv</span>       interval-class vector representation
+<span class="rep">nf</span>       normal form for pitch-class sets
+<span class="rep">pc</span>       pitch-class representation
+<span class="rep">pcset</span>    Fortean pitch-class set name
+<span class="rep">pf</span>       prime form representation
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+------------ --------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">pcset</span>.*
 
 ------------------------------------------------------------------------
@@ -78,14 +78,14 @@ should be given names with the distinguishing extensions \`.pcs\',
 
 The <span class="tool">pcset</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">c</span>   generate output for set complement
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">n</span>   output normal form (<span class="rep">nf</span>) spine
->   <span class="option">p</span>   output prime form (<span class="rep">pf</span>) spine
->   <span class="option">v</span>   output interval-class vector (<span class="rep">iv</span>) spine
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">c</span>   generate output for set complement
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+<span class="option">n</span>   output normal form (<span class="rep">nf</span>) spine
+<span class="option">p</span>   output prime form (<span class="rep">pf</span>) spine
+<span class="option">v</span>   output interval-class vector (<span class="rep">iv</span>) spine
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 By default, the <span class="tool">pcset</span> command outputs a <span class="rep">pcset</span> representation.
@@ -121,17 +121,17 @@ are aliases for `pcset -v`, `pcset -n` and `pcset -p` respectively.
 The following command outputs the interval-class vectors for the sets
 formed by successive sonorities in the input file `webern`:
 
-> ` pcset -v webern > webern.iv`
+` pcset -v webern > webern.iv`
 
 The following command outputs the Fortean set type for the complement of
 the sonorities given in the input file `berg`:
 
-> ` pcset -c berg > berg.pcs`
+` pcset -c berg > berg.pcs`
 
 The following command outputs the normal form representation for sets
 formed from successive sonorities in the input file `boulez`:
 
-> ` pcset -n boulez.nf`
+` pcset -n boulez.nf`
 
 ------------------------------------------------------------------------
 

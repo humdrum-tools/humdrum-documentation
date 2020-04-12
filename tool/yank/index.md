@@ -36,18 +36,18 @@ record.
 
 The <span class="tool">yank</span> command provides the following options:
 
->   -------------- ---------------------------------------------------------------------------
->   <span class="option">c</span>         include all comments prior to the yanked material in the output
->   -e *regexp*    define end-delimiter for yanked segments as *regexp*; used with -o
->   <span class="option">h</span>         displays a help screen summarizing the command syntax
->   -l             yank all lines whose line numbers appear in -r *range*
->   -m *regexp*    yank lines matching *regexp* listed in -r *range*
->   -n *regexp*    yank segments delineated by *regexp* according to cardinal -r *range*
->   -o *regexp*    yank segments delineated by *regexp* according to ordinal -r *range*
->   -r *range*     yank section in ranges listed in *range*; used with -l, -m, -n, -o and -s
->   -s *section*   yank section labelled *section* according to -r *range*
->   -------------- ---------------------------------------------------------------------------
->
+-------------- ---------------------------------------------------------------------------
+<span class="option">c</span>         include all comments prior to the yanked material in the output
+-e *regexp*    define end-delimiter for yanked segments as *regexp*; used with -o
+<span class="option">h</span>         displays a help screen summarizing the command syntax
+-l             yank all lines whose line numbers appear in -r *range*
+-m *regexp*    yank lines matching *regexp* listed in -r *range*
+-n *regexp*    yank segments delineated by *regexp* according to cardinal -r *range*
+-o *regexp*    yank segments delineated by *regexp* according to ordinal -r *range*
+-r *range*     yank section in ranges listed in *range*; used with -l, -m, -n, -o and -s
+-s *section*   yank section labelled *section* according to -r *range*
+-------------- ---------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 The simplest operation for <span class="tool">yank</span> occurs when the <span class="option">l</span> option is
@@ -60,7 +60,7 @@ named `dvorak`:
 
 ``
 
-> yank -l -r 5,13,23-26 dvorak
+yank -l -r 5,13,23-26 dvorak
 
 The dollar sign (\$) can be used to refer to the last record in the
 input. For example, the following command yanks the first and last
@@ -68,7 +68,7 @@ records from the file `verdi`.
 
 ``
 
-> yank -l -r \'1,\$\' verdi
+yank -l -r \'1,\$\' verdi
 
 (Note that single quotes may be needed in regular expressions and range
 specifications in order to prevent the shell from misinterpreting
@@ -81,7 +81,7 @@ operator.)
 
 ``
 
-> yank -l -r \'\$-30-\$-10\' ginastera
+yank -l -r \'\$-30-\$-10\' ginastera
 
 In addition to the specified output lines, <span class="tool">yank</span> also outputs
 interpretations and comments as described below (see [INTERPRETATIONS
@@ -95,7 +95,7 @@ the string \"XXX\" in the file `wieck`.
 
 ``
 
-> yank -m XXX -r 1,3 wieck
+yank -m XXX -r 1,3 wieck
 
 The <span class="option">r</span> option is used to specify the range. If the value zero
 (\"0\") is specified in the range, then the record containing the marker
@@ -108,7 +108,7 @@ file `franck` beginning with a letter and ending with a number:
 
 ``
 
-> yank -m \'\^\[a-zA-Z\].\*\[0-9\]\$\' -r 1 franck
+yank -m \'\^\[a-zA-Z\].\*\[0-9\]\$\' -r 1 franck
 
 In musical applications, it is often convenient to yank material
 according to logical segments such as measures or phrases. In order to
@@ -121,7 +121,7 @@ providing a range of (measure) numbers. Consider the following command:
 
 ``
 
-> yank -o \^= -r 1,12-13,25 joplin
+yank -o \^= -r 1,12-13,25 joplin
 
 Unlike the <span class="option">m</span> option, the <span class="option">o</span> option interprets the range list as
 ordinal occurrences of segments delineated by the delimiter. Whole
@@ -141,7 +141,7 @@ example,
 
 ``
 
-> yank -o \'\^=\' -r 0 mahler
+yank -o \'\^=\' -r 0 mahler
 
 can be used to yank all records prior to the first common system
 barline. With the <span class="option">o</span> option, notice that *actual* measure numbers
@@ -157,7 +157,7 @@ For example,
 
 ``
 
-> yank -n \^= -r 12 goldberg
+yank -n \^= -r 12 goldberg
 
 will yank all segments begining with the label `=12` in the input file
 `goldberg`. If more than one segment carries the specified segment
@@ -175,7 +175,7 @@ the value zero may be reused for each specified input file. Thus, if
 
 ``
 
-> yank -n \^= -r 0 file1 file2 file3
+yank -n \^= -r 0 file1 file2 file3
 
 will yank any leading (anacrusis) material in each of the three files.
 
@@ -192,7 +192,7 @@ the file `haydn08`:
 
 ``
 
-> yank -s \'First Theme\' -r 2 haydn08
+yank -s \'First Theme\' -r 2 haydn08
 
 Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. (See the
@@ -221,26 +221,26 @@ The following examples illustrate how the <span class="tool">yank</span> command
 
 ``
 
-> yank -l -r 1120 messiaen
+yank -l -r 1120 messiaen
 
 yanks line 1120 in the file `messiaen`.
 
 ``
 
-> yank -n \^= -r 27 sinfonia
+yank -n \^= -r 27 sinfonia
 
 yanks numbered measures 27 from the <span class="rep">kern</span> file `sinfonia`.
 
 ``
 
-> yank -n \^= -r 10-20 minuet waltz
+yank -n \^= -r 10-20 minuet waltz
 
 yanks numbered measures 10 to 20 from *both* the <span class="rep">kern</span> files `minuet`
 and `waltz`.
 
 ``
 
-> yank -o \^= -r \'0,\$\' fugue ricercar
+yank -o \^= -r \'0,\$\' fugue ricercar
 
 yanks any initial anacrusis material plus the final measure of both
 `fugue` and `ricercar`.
@@ -252,7 +252,7 @@ the final measure of `ricercar`.
 
 ``
 
-> yank -n \'Rehearsal Marking \' -r 5-7 fugue ricercar
+yank -n \'Rehearsal Marking \' -r 5-7 fugue ricercar
 
 yanks segments beginning with the strings
 ` "Rehearsal Marking 5," "Rehearsal Marking 6,"` and
@@ -261,14 +261,14 @@ encountered containing the string ` "Rehearsal Marking ".`
 
 ``
 
-> yank -o { -e } -r \'1-\$\' webern
+yank -o { -e } -r \'1-\$\' webern
 
 yanks all segments in the file `webern` beginning with a record
 containing \"{\" and ending with a record containing \"}.\" The command:
 
 ``
 
-> yank -o { -e } -r \'1-4,\$-3-\$\' faure
+yank -o { -e } -r \'1-4,\$-3-\$\' faure
 
 yanks the first four and last four segments in the file `faure` &mdash;
 where segments begin with an open brace ({) and end with a closed brace
@@ -277,7 +277,7 @@ last four phrases in the file.
 
 ``
 
-> yank -s Coda -r 1 stamitz
+yank -s Coda -r 1 stamitz
 
 will yank the first occurrence of a section labelled `Coda` in the file
 `stamitz`.

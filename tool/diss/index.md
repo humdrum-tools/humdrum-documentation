@@ -54,10 +54,10 @@ The output file format is dubbed \`.dis\'
 
 The <span class="tool">diss</span> command provides only a help option:
 
-> >   -------- -------------------------------------------------------
-> >   <span class="option">h</span>   displays a help screen summarizing the command syntax
-> >   -------- -------------------------------------------------------
-> >
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">k</span> option pertains to <span class="rep">kern</span> inputs only. This option adds
@@ -78,12 +78,12 @@ corresponding sensory dissonance value as calculated by <span class="tool">diss<
 output value of about 65 is typical for a single pure tone at about 60
 dB SPL. An output value near zero results for silence.
 
->   ---------------------- ---------------------- ----------
->   \*\*spect              \*\*spect              \*\*diss
->   261;47 523;57 785;35   330;57 659;35 989;27   173
->   \*-                    \*-                    \*-
->   ---------------------- ---------------------- ----------
->
+---------------------- ---------------------- ----------
+\*\*spect              \*\*spect              \*\*diss
+261;47 523;57 785;35   330;57 659;35 989;27   173
+\*-                    \*-                    \*-
+---------------------- ---------------------- ----------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

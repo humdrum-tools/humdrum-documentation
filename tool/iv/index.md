@@ -44,15 +44,15 @@ this reference manual.
 It is recommended that output files produced using the <span class="tool">iv</span> command
 should be given names with the distinguishing \`.iv\' extension.
 
->   ------------ --------------------------------------------------------------------
->   <span class="rep">iv</span>       interval-class vector representation
->   <span class="rep">nf</span>       normal form representation
->   <span class="rep">pc</span>       pitch-class representation
->   <span class="rep">pcset</span>    Fortean pitch-class set name
->   <span class="rep">pf</span>       prime form representation
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
->   ------------ --------------------------------------------------------------------
->
+------------ --------------------------------------------------------------------
+<span class="rep">iv</span>       interval-class vector representation
+<span class="rep">nf</span>       normal form representation
+<span class="rep">pc</span>       pitch-class representation
+<span class="rep">pcset</span>    Fortean pitch-class set name
+<span class="rep">pf</span>       prime form representation
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+------------ --------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">iv</span>.*
 
 ------------------------------------------------------------------------
@@ -61,10 +61,10 @@ should be given names with the distinguishing \`.iv\' extension.
 
 The <span class="tool">iv</span> command provides only a help option:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -75,7 +75,7 @@ The following command outputs the interval-class vectors for successive
 sonorities in the input file `opus24`. The input may be pitches,
 pitch-classes, normal forms, Fortean set names, etc.
 
-> ` iv opus24 > opus24.iv`
+` iv opus24 > opus24.iv`
 
 ------------------------------------------------------------------------
 

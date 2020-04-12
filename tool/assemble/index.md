@@ -28,9 +28,9 @@ from files containing individual parts.
 The <span class="tool">assemble</span> command is similar to the UNIX ` paste` command. If
 file \`A\' contains:
 
-> ``
->
-> 1
+``
+
+1
 
 2
 
@@ -38,9 +38,9 @@ file \`A\' contains:
 
 and file \`B\' contains:
 
-> ``
->
-> A
+``
+
+A
 
 B
 
@@ -52,9 +52,9 @@ then the UNIX command:
 
 will produce the following output:
 
-> ``
->
-> 1
+``
+
+1
 
 A
 
@@ -88,10 +88,10 @@ appropriate spine-path terminators.
 
 The <span class="tool">assemble</span> command provides only a help option:
 
-> >   -------- -------------------------------------------------------
-> >   <span class="option">h</span>   displays a help screen summarizing the command syntax
-> >   -------- -------------------------------------------------------
-> >
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -104,66 +104,66 @@ records (4).
 
 **file1:** ``
 
->   -------------------
->   !! A sample file.
->   -------------------
->
->   --------- -- --------- -- ---------
->   \*\*foo      \*\*foo      \*\*foo
->   !1           !2           !3
->   X            .            X
->   X            .            .
->   \*           \*v          \*v
->   X            X            
->   .            X            
->   \*-          \*-          
->   --------- -- --------- -- ---------
->
+-------------------
+!! A sample file.
+-------------------
+
+--------- -- --------- -- ---------
+\*\*foo      \*\*foo      \*\*foo
+!1           !2           !3
+X            .            X
+X            .            .
+\*           \*v          \*v
+X            X            
+.            X            
+\*-          \*-          
+--------- -- --------- -- ---------
+
 **file2:**
 
->   ----------------------------------
->   !! A sample file.
->   !! An additional global comment.
->   ----------------------------------
->
->   ---------- ---------
->   \*\*bar    \*\*bar
->   !4         !5
->   .          .
->   X          X
->   \*v        \*v
->   ! joined   
->   X          
->   .          
->   \*-        
->   ---------- ---------
->
+----------------------------------
+!! A sample file.
+!! An additional global comment.
+----------------------------------
+
+---------- ---------
+\*\*bar    \*\*bar
+!4         !5
+.          .
+X          X
+\*v        \*v
+! joined   
+X          
+.          
+\*-        
+---------- ---------
+
 If the <span class="tool">assemble</span> command is invoked as:
 
 ``
 
-> assemble file1 file2
+assemble file1 file2
 
 then the corresponding output is: ``
 
->   ----------------------------------
->   !! A sample file.
->   !! An additional global comment.
->   ----------------------------------
->
->   --------- --------- ---------- --------- ---------
->   \*\*foo   \*\*foo   \*\*foo    \*\*bar   \*\*bar
->   !1        !2        !3         !4        !5
->   X         .         X          .         .
->   X         .         .          X         X
->   \*        \*v       \*v        \*        \*
->   \*        \*        \*v        \*v       
->   !         !         ! joined             
->   X         X         X                    
->   .         X         .                    
->   \*-       \*-       \*-                  
->   --------- --------- ---------- --------- ---------
->
+----------------------------------
+!! A sample file.
+!! An additional global comment.
+----------------------------------
+
+--------- --------- ---------- --------- ---------
+\*\*foo   \*\*foo   \*\*foo    \*\*bar   \*\*bar
+!1        !2        !3         !4        !5
+X         .         X          .         .
+X         .         .          X         X
+\*        \*v       \*v        \*        \*
+\*        \*        \*v        \*v       
+!         !         ! joined             
+X         X         X                    
+.         X         .                    
+\*-       \*-       \*-                  
+--------- --------- ---------- --------- ---------
+
 Notice that both input files begin with the identical global comment;
 only one copy of this comment appears in the output. The second file
 contains an additional global comment that is also output. The

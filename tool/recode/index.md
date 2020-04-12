@@ -45,11 +45,11 @@ and a resulting replacement *string.* When the condition is satisfied,
 the numerical data is replaced by the associated string. A simple
 reassignment file is: ``
 
->   ----- -------
->   ==0   zero
->   !=0   other
->   ----- -------
->
+----- -------
+==0   zero
+!=0   other
+----- -------
+
 This file contains two reassignment records. *Conditions* are given in
 the left column and the associated replacement *strings* are given in
 the right column. Conditions and strings are separated by a single tab.
@@ -62,16 +62,16 @@ token, the output replaces the number by the alphabetic string
 
 Permissible relational operators are listed in the following table.
 
->   ------ -----------------------
->   ==     equals
->   !=     not equals
->   \<     less than
->   \<=    less than or equal
->   \>     greater than
->   \>=    greater than or equal
->   else   default relation
->   ------ -----------------------
->
+------ -----------------------
+==     equals
+!=     not equals
+\<     less than
+\<=    less than or equal
+\>     greater than
+\>=    greater than or equal
+else   default relation
+------ -----------------------
+
 *Relational operators for <span class="tool">recode</span>*
 
 Permissible replacement strings include any combination of printable
@@ -82,12 +82,12 @@ if a numeric value satisfies more than one condition, only the first
 string replacement is made. Consider, for example, the following
 reassignment file: ``
 
->   ------- --------
->   \<=0    LOW
->   \>100   HIGH
->   \>0     MEDIUM
->   ------- --------
->
+------- --------
+\<=0    LOW
+\>100   HIGH
+\>0     MEDIUM
+------- --------
+
 In this case, all numeric values are replaced by one of three strings:
 ` HIGH, MEDIUM,` or ` LOW.` The order of specification is important in
 the above file. If the `MEDIUM` condition was specified prior to the
@@ -128,15 +128,15 @@ See OPTIONS for further information.
 
 The <span class="tool">recode</span> command provides the following options:
 
->   --------------------- -----------------------------------------------------------------
->   -f *reassign*         use reassignments given in file *reassign*
->   <span class="option">h</span>                displays a help screen summarizing the command syntax
->   -i *\'\*\*interp\'*   process only *\*\*interp* spines
->   -s *regexp*           skip; completely ignore tokens matching *regexp*;
->                         (echo in output only)
->   <span class="option">x</span>                (exclude) do not echo unprocessed data signifiers in the output
->   --------------------- -----------------------------------------------------------------
->
+--------------------- -----------------------------------------------------------------
+-f *reassign*         use reassignments given in file *reassign*
+<span class="option">h</span>                displays a help screen summarizing the command syntax
+-i *\'\*\*interp\'*   process only *\*\*interp* spines
+-s *regexp*           skip; completely ignore tokens matching *regexp*;
+(echo in output only)
+<span class="option">x</span>                (exclude) do not echo unprocessed data signifiers in the output
+--------------------- -----------------------------------------------------------------
+
 Options are specified in the command line.
 
 The user can suppress the echoing of non-numeric data within a token by
@@ -144,12 +144,12 @@ specifying the <span class="option">x</span> option on the command line. When th
 option is selected, only the replacement strings are output. For
 example, given the following reassignment file: ``
 
->   ------- --------
->   \<=0    LOW
->   \>100   HIGH
->   \>0     MEDIUM
->   ------- --------
->
+------- --------
+\<=0    LOW
+\>100   HIGH
+\>0     MEDIUM
+------- --------
+
 The input token ` foo200bar` would be output as `HIGH`. If a data token
 contains no numeric component, then the <span class="option">x</span> option causes a null
 token to be output.
@@ -176,70 +176,70 @@ to the following hypothetical Humdrum file named `patrie`.
 
 ``
 
->   ---------- ---------
->   \*\*kern   \*\*abc
->   16g        0
->   8.g        00
->   16g        1
->   =1         =1
->   4cc        2.0
->   4cc        +3.
->   4ee        4
->   4ee        -1
->   =2         =2
->   4.gg       22.
->   8ee        1.1
->   8.cc       .1
->   16cc       x1X
->   8.ee       x1x2x
->   16cc       1 2
->   =3         =3
->   4a         .
->   4r         r
->   \*-        \*-
->   ---------- ---------
->
+---------- ---------
+\*\*kern   \*\*abc
+16g        0
+8.g        00
+16g        1
+=1         =1
+4cc        2.0
+4cc        +3.
+4ee        4
+4ee        -1
+=2         =2
+4.gg       22.
+8ee        1.1
+8.cc       .1
+16cc       x1X
+8.ee       x1x2x
+16cc       1 2
+=3         =3
+4a         .
+4r         r
+\*-        \*-
+---------- ---------
+
 Consider also the following \"reassignment\" file, named `reassign`. ``
 
->   ------ ----------
->   ==0    zero
->   ==1    one
->   ==2    two
->   \<0    negative
->   \<=3   \<=3
->   \>4    \>4
->   else   ???
->   ------ ----------
->
+------ ----------
+==0    zero
+==1    one
+==2    two
+\<0    negative
+\<=3   \<=3
+\>4    \>4
+else   ???
+------ ----------
+
 The command:
 
-> ` recode -s = -i '**abc' -f reassign patrie`
+` recode -s = -i '**abc' -f reassign patrie`
 
 would produce the following output: ``
 
->   ---------- ----------
->   \*\*kern   \*\*abc
->   16g        zero
->   8.g        zero
->   16g        one
->   =1         =1
->   4cc        two
->   4cc        \<=3
->   4ee        ???
->   4ee        negative
->   =2         =2
->   4.gg       \>4
->   8ee        \<=3
->   8.cc       \<=3
->   16cc       xoneX
->   8.ee       xonex2x
->   16cc       one two
->   =3         =3
->   4a         .
->   4r         r
->   \*-        \*-
->   ---------- ----------
->
+---------- ----------
+\*\*kern   \*\*abc
+16g        zero
+8.g        zero
+16g        one
+=1         =1
+4cc        two
+4cc        \<=3
+4ee        ???
+4ee        negative
+=2         =2
+4.gg       \>4
+8ee        \<=3
+8.cc       \<=3
+16cc       xoneX
+8.ee       xonex2x
+16cc       one two
+=3         =3
+4a         .
+4r         r
+\*-        \*-
+---------- ----------
+
 Notice the following: (1) the measure numbers `1` and `2` have remained
 unchanged due to the skip option `-s =`, (2) the input `x1X` has been
 replaced by the output string ` xoneX` (non-numeric data remain in the

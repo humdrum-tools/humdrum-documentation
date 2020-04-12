@@ -41,17 +41,17 @@ label* is a tandem interpretation that consists of a single asterisk,
 followed by a greater-than sign, followed by a keyword that labels the
 section, e.g.
 
-> ``
->
-> `*>Exposition`
->
-> `*>Trio`
->
-> `*>Refrain`
->
-> `*>2nd ending`
->
-> `*>Coda `
+``
+
+`*>Exposition`
+
+`*>Trio`
+
+`*>Refrain`
+
+`*>2nd ending`
+
+`*>Coda `
 
 The section label *keywords* may contain any sequence of the following
 ASCII characters: the upper- or lower-case letters `A-Z`, the numbers
@@ -76,15 +76,15 @@ expansion-lists identify two section-labels in their lists. The last
 three expansion-lists have been labelled \`long,\' \`1955\' and
 \`Czerny\_edition\' respectively.
 
-> ``
->
-> `*>[section1,2nd ending]`
->
-> `*>long[Exposition,Exposition]`
->
-> `*>1955[Aria]`
->
-> `*>Czerny_edition[refrain] `
+``
+
+`*>[section1,2nd ending]`
+
+`*>long[Exposition,Exposition]`
+
+`*>1955[Aria]`
+
+`*>Czerny_edition[refrain] `
 
 The <span class="tool">thru</span> command outputs each section in the order specified in the
 expansion list. If more than one expansion list is present in a file,
@@ -97,11 +97,11 @@ then the desired *version* is indicated on the command line via the
 
 The <span class="tool">thru</span> command provides the following options:
 
->   -------------- -----------------------------------------------------------------
->   <span class="option">h</span>         displays a help screen summarizing the command syntax
->   -v *version*   expand the encoding according to expansion-list label *version*
->   -------------- -----------------------------------------------------------------
->
+-------------- -----------------------------------------------------------------
+<span class="option">h</span>         displays a help screen summarizing the command syntax
+-v *version*   expand the encoding according to expansion-list label *version*
+-------------- -----------------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -113,41 +113,41 @@ Options are specified in the command line.
 The following examples illustrate the operation of the <span class="tool">thru</span> command.
 Consider the following simple file: ``
 
->   ----------------- -----------------
->   \*\*example       \*\*example
->   \*\>\[A,B,A,C\]   \*\>\[A,B,A,C\]
->   \*\>A             \*\>A
->   data-A            data-A
->   \*\>B             \*\>B
->   data-B            data-B
->   \*\>C             \*\>C
->   data-C            data-C
->   \*-               \*-
->   ----------------- -----------------
->
+----------------- -----------------
+\*\*example       \*\*example
+\*\>\[A,B,A,C\]   \*\>\[A,B,A,C\]
+\*\>A             \*\>A
+data-A            data-A
+\*\>B             \*\>B
+data-B            data-B
+\*\>C             \*\>C
+data-C            data-C
+\*-               \*-
+----------------- -----------------
+
 This example contains just three data records &mdash; each of which has been
 labelled with its own section label. The file contains a single
 unlabelled expansion list which indicates that \`A\' section should be
 repeated between the \`B\' and \`C\' sections. The following command:
 
-> ` thru inputfile`
+` thru inputfile`
 
 would produce the following \"through-composed\" output: ``
 
->   ------------- -------------
->   \*\*example   \*\*example
->   \*thru        \*thru
->   \*\>A         \*\>A
->   data-A        data-A
->   \*\>B         \*\>B
->   data-B        data-B
->   \*\>A         \*\>A
->   data-A        data-A
->   \*\>C         \*\>C
->   data-C        data-C
->   \*-           \*-
->   ------------- -------------
->
+------------- -------------
+\*\*example   \*\*example
+\*thru        \*thru
+\*\>A         \*\>A
+data-A        data-A
+\*\>B         \*\>B
+data-B        data-B
+\*\>A         \*\>A
+data-A        data-A
+\*\>C         \*\>C
+data-C        data-C
+\*-           \*-
+------------- -------------
+
 Notice that the expansion-list record has been eliminated from the
 output. A `*thru` tandem interpretation is added to all output spines
 immediately following each instance of an exclusive interpretation in
@@ -173,37 +173,37 @@ Finally, Perahia has improvised an introduction to the work. Both the
 conventional interpretation and the hypothetical Perahia interpretation
 can be represented in the same encoded file as follows. ``
 
->   --------------------------------------
->   \*\*example
->   \*\>Perahia\[X,A,B,A,C,D,D,A,B,A,E\]
->   \*\>Conventional\[A,B,A,C,D,A,E\]
->   \*\>X
->   data-X
->   \*\>A
->   data-A
->   \*\>B
->   !! 1st ending
->   data-B
->   \*\>C
->   !! 2nd ending
->   data-C
->   \*\>D
->   data-D
->   \*\>E
->   !! Coda
->   data-E
->   \*-
->   --------------------------------------
->
+--------------------------------------
+\*\*example
+\*\>Perahia\[X,A,B,A,C,D,D,A,B,A,E\]
+\*\>Conventional\[A,B,A,C,D,A,E\]
+\*\>X
+data-X
+\*\>A
+data-A
+\*\>B
+!! 1st ending
+data-B
+\*\>C
+!! 2nd ending
+data-C
+\*\>D
+data-D
+\*\>E
+!! Coda
+data-E
+\*-
+--------------------------------------
+
 The hypothetical Perahia version can be recreated by invoking the
 command:
 
-> ` thru -v Perahia inputfile`
+` thru -v Perahia inputfile`
 
 Alternatively, the \"conventional\" interpretation of the Da Capo
 structure could be produced by the command:
 
-> ` thru -v Conventional inputfile`
+` thru -v Conventional inputfile`
 
 In each case, the <span class="tool">thru</span> command will expand the input file according
 to the designated label for the expansion-lists. Note that there is no

@@ -51,7 +51,7 @@ information may be specified either via the command line, or as encoded
 interpretations in the input stream. The command line method of
 specification is illustrated below:
 
-> ` metpos -m 9/16 -t 32`
+` metpos -m 9/16 -t 32`
 
 This command establishes a meter of 9/16 and a time-base of a
 thirty-second duration for the input.
@@ -91,7 +91,7 @@ extension.
 
 The <span class="tool">metpos</span> command provides the following options:
 
-> <span class="option">h</span>
+<span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -113,60 +113,60 @@ The following extract from Bartók's \"Two-Part Study\" No. 121 from
 left-most columns show the original input; all three columns show the
 corresponding output from <span class="tool">metpos</span>: ``
 
->   ---------- ---------- ------------
->   \*\*kern   \*\*kern   \*\*metpos
->   \*tb8      \*tb8      \*tb8
->   =16        =16        =16
->   \*M6/4     \*M6/4     \*M6/4
->   8Gn        8b-        1
->   8A         8ccn       4
->   8B-        8cc\#}     3
->   8cn        {8f\#      4
->   8c\#}      8gn        3
->   {8F\#      8a         4
->   8G         8b-        2
->   8A         8ccn       4
->   8B-        4b-        3
->   8cn        .          4
->   8c\#}      8fn}       3
->   8r         8r         4
->   =17        =17        =17
->   \*M4/4     \*M4/4     \*M4/4
->   8d         2r         1
->   4.d        .          4
->   .          .          3
->   .          .          4
->   {2d\_      8dd        2
->   .          4.dd       4
->   .          .          3
->   .          .          4
->   =18        =18        =18
->   8d         {1dd\_     1
->   8A         .          4
->   8F\#       .          3
->   8E         .          4
->   8D         .          2
->   8BB        .          4
->   8D         .          3
->   8E}        .          4
->   =19        =19        =19
->   \*M3/2     \*M3/2     \*M3/2
->   {8F\#      8dd        1
->   8A         8ffn       4
->   8c\#       8aa        3
->   8A         8ff        4
->   8F\#       8dd        2
->   8A         8ff        4
->   8F\#       8dd        3
->   8E         8ccn       4
->   8D         8b-        2
->   8BBn       8gn        4
->   8D         8b-        3
->   8E}        8cc        4
->   =20        =20        =20
->   \*-        \*-        \*-
->   ---------- ---------- ------------
->
+---------- ---------- ------------
+\*\*kern   \*\*kern   \*\*metpos
+\*tb8      \*tb8      \*tb8
+=16        =16        =16
+\*M6/4     \*M6/4     \*M6/4
+8Gn        8b-        1
+8A         8ccn       4
+8B-        8cc\#}     3
+8cn        {8f\#      4
+8c\#}      8gn        3
+{8F\#      8a         4
+8G         8b-        2
+8A         8ccn       4
+8B-        4b-        3
+8cn        .          4
+8c\#}      8fn}       3
+8r         8r         4
+=17        =17        =17
+\*M4/4     \*M4/4     \*M4/4
+8d         2r         1
+4.d        .          4
+.          .          3
+.          .          4
+{2d\_      8dd        2
+.          4.dd       4
+.          .          3
+.          .          4
+=18        =18        =18
+8d         {1dd\_     1
+8A         .          4
+8F\#       .          3
+8E         .          4
+8D         .          2
+8BB        .          4
+8D         .          3
+8E}        .          4
+=19        =19        =19
+\*M3/2     \*M3/2     \*M3/2
+{8F\#      8dd        1
+8A         8ffn       4
+8c\#       8aa        3
+8A         8ff        4
+8F\#       8dd        2
+8A         8ff        4
+8F\#       8dd        3
+8E         8ccn       4
+8D         8b-        2
+8BBn       8gn        4
+8D         8b-        3
+8E}        8cc        4
+=20        =20        =20
+\*-        \*-        \*-
+---------- ---------- ------------
+
 Notice that <span class="tool">metpos</span> adapts to changing meter signatures, and
 correctly distinguishes between metric accent patterns such as 6/4
 (measure 16) and 3/2 (measure 19).
@@ -201,48 +201,48 @@ interpreters, and revised *awk* (1985).
 In a number of meters, <span class="tool">metpos</span> is limited in the depth of permissible
 metric positions. These limitations are tabulated below:
 
->   -------------------- ----------------- ------------------------------
->   compound duple       7 metric levels   96 metric positions/measure
->   compound triple      6 metric levels   108 metric positions/measure
->   compound quadruple   7 metric levels   96 metric positions/measure
->   simple triple        7 metric levels   96 metric positions/measure
->   simple duple         no limitation     no limitation
->   simple quadruple     no limitation     no limitation
->   -------------------- ----------------- ------------------------------
->
+-------------------- ----------------- ------------------------------
+compound duple       7 metric levels   96 metric positions/measure
+compound triple      6 metric levels   108 metric positions/measure
+compound quadruple   7 metric levels   96 metric positions/measure
+simple triple        7 metric levels   96 metric positions/measure
+simple duple         no limitation     no limitation
+simple quadruple     no limitation     no limitation
+-------------------- ----------------- ------------------------------
+
 By way of example, it is possible to process music in 6/8 meter in
 time-base divisions as small as a 256th-notes, or a passage in 6/2 meter
 in 64th-note divisions. Smaller time-base divisions are not handled.
 
 The following meter signatures can be handled by **metpos:**
 
->   ------- ------- ------- ------- ------- --------
->   2/2,    3/2,    4/2,    6/2,    9/2,    12/2,
->   2/4,    3/4,    4/4,    6/4,    9/4,    12/4,
->   2/8,    3/8,    4/8,    6/8,    9/8,    12/8,
->   2/16,   3/16,   4/16,   6/16,   9/16,   12/16,
->   2/32,   3/32,   4/32,   6/32,   9/32,   12/32,
->   2/64,   3/64,   4/64,   6/64,   9/64,   12/64,
->   ------- ------- ------- ------- ------- --------
->
+------- ------- ------- ------- ------- --------
+2/2,    3/2,    4/2,    6/2,    9/2,    12/2,
+2/4,    3/4,    4/4,    6/4,    9/4,    12/4,
+2/8,    3/8,    4/8,    6/8,    9/8,    12/8,
+2/16,   3/16,   4/16,   6/16,   9/16,   12/16,
+2/32,   3/32,   4/32,   6/32,   9/32,   12/32,
+2/64,   3/64,   4/64,   6/64,   9/64,   12/64,
+------- ------- ------- ------- ------- --------
+
 Some meter signatures containing dotted durations can also be handled:
 
->   -------------- -------------- ---------------
->   2/2.(=6/4),    3/2.(=9/4),    4/2.(=12/4),
->   2/4.(=6/8),    3/4.(=9/8),    4/4.(=12/8),
->   2/8.(=6/16),   3/8.(=9/16),   4/8.(=12/16),
->   -------------- -------------- ---------------
->
+-------------- -------------- ---------------
+2/2.(=6/4),    3/2.(=9/4),    4/2.(=12/4),
+2/4.(=6/8),    3/4.(=9/8),    4/4.(=12/8),
+2/8.(=6/16),   3/8.(=9/16),   4/8.(=12/16),
+-------------- -------------- ---------------
+
 Meter signatures NOT handled by <span class="tool">metpos</span> include:
 
->   ------- ------- ------- -------- -------- -------- -------- -------- --------
->   5/2,    7/2,    8/2,    10/2,    11/2,    13/2,    14/2,    15/2,    16/2,
->   5/4,    7/4,    8/4,    10/4,    11/4,    13/4,    14/4,    15/4,    16/4,
->   5/8,    7/8,    8/8,    10/8,    11/8,    13/8,    14/8,    15/8,    16/8,
->   5/16,   7/16,   8/16,   10/16,   11/16,   13/16,   14/16,   15/16,   16/16,
->   etc.                                                                 
->   ------- ------- ------- -------- -------- -------- -------- -------- --------
->
+------- ------- ------- -------- -------- -------- -------- -------- --------
+5/2,    7/2,    8/2,    10/2,    11/2,    13/2,    14/2,    15/2,    16/2,
+5/4,    7/4,    8/4,    10/4,    11/4,    13/4,    14/4,    15/4,    16/4,
+5/8,    7/8,    8/8,    10/8,    11/8,    13/8,    14/8,    15/8,    16/8,
+5/16,   7/16,   8/16,   10/16,   11/16,   13/16,   14/16,   15/16,   16/16,
+etc.                                                                 
+------- ------- ------- -------- -------- -------- -------- -------- --------
+
 ------------------------------------------------------------------------
 
 ## PROPOSED MODIFICATIONS ##

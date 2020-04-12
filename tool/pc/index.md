@@ -37,18 +37,18 @@ reference manual.
 It is recommended that output files produced using the <span class="tool">pc</span> command
 should be given names with the distinguishing \`.pc\' extension.
 
->   ------------ ---------------------------------------------------------------------------
->   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   <span class="rep">freq</span>     fundamental frequency (in hertz)
->   <span class="rep">kern</span>     core pitch/duration representation
->   <span class="rep">pc</span>       pitch-class representation
->   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
->   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
->   <span class="rep">specC</span>    spectral centroid (in hertz)
->   <span class="rep">Tonh</span>     German pitch system
->   ------------ ---------------------------------------------------------------------------
->
+------------ ---------------------------------------------------------------------------
+<span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+<span class="rep">freq</span>     fundamental frequency (in hertz)
+<span class="rep">kern</span>     core pitch/duration representation
+<span class="rep">pc</span>       pitch-class representation
+<span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+<span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+<span class="rep">specC</span>    spectral centroid (in hertz)
+<span class="rep">Tonh</span>     German pitch system
+------------ ---------------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">pc</span>.*
 
 Note that the <span class="tool">pc</span> command is also able to reprocess pitch-class
@@ -63,13 +63,13 @@ alphanumeric (0,1,2,3 \... 9,A,B) or vice versa. (See documentation for
 
 The <span class="tool">pc</span> command provides the following options:
 
->   -------- ---------------------------------------------------------------------------------
->   <span class="option">a</span>   output alphanumeric representation (where A=10, B=11)
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied <span class="rep">kern</span> notes
->   <span class="option">x</span>   suppresses printing of non-pitch-class data
->   -------- ---------------------------------------------------------------------------------
->
+-------- ---------------------------------------------------------------------------------
+<span class="option">a</span>   output alphanumeric representation (where A=10, B=11)
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+<span class="option">t</span>   suppresses printing of all but the first note of a group of tied <span class="rep">kern</span> notes
+<span class="option">x</span>   suppresses printing of non-pitch-class data
+-------- ---------------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">a</span> option invokes an alternative (alphanumeric) form of the
@@ -105,52 +105,52 @@ non-pitch-class-related signifiers from the output.
 The following example illustrates the use of <span class="tool">pc</span>. The input contains
 four spines &mdash; one of which (<span class="rep">foo</span>) cannot be processed by <span class="tool">pc</span>. ``
 
->   -------------------- ---------- ------------ ---------
->   !! \`pc\' example.                           
->   \*\*semits           \*\*kern   \*\*pc       \*\*foo
->   \*M2/4               \*M2/4     \*           \*
->   =1                   =1         =1           .
->   8x                   8ee-       abc9 xyz10   A
->   .                    .          BCD          A
->   \#18@                8ff        .            B
->   23.1 -16             8dd-       .            B
->   (-2)                 8d-        8 7.         C
->   -12\...              .          0.8          C
->   =2                   =2         =2           D
->   \[3.0abc19           \[4a-      \(2) 3       D
->   &\]                  4a-\]      6&?          E
->   =3                   =3         =3           E
->   r                    2r         5 4          .
->   ===                  ==         ====         .
->   \*-                  \*-        \*-          \*-
->   -------------------- ---------- ------------ ---------
->
+-------------------- ---------- ------------ ---------
+!! \`pc\' example.                           
+\*\*semits           \*\*kern   \*\*pc       \*\*foo
+\*M2/4               \*M2/4     \*           \*
+=1                   =1         =1           .
+8x                   8ee-       abc9 xyz10   A
+.                    .          BCD          A
+\#18@                8ff        .            B
+23.1 -16             8dd-       .            B
+(-2)                 8d-        8 7.         C
+-12\...              .          0.8          C
+=2                   =2         =2           D
+\[3.0abc19           \[4a-      \(2) 3       D
+&\]                  4a-\]      6&?          E
+=3                   =3         =3           E
+r                    2r         5 4          .
+===                  ==         ====         .
+\*-                  \*-        \*-          \*-
+-------------------- ---------- ------------ ---------
+
 Executing the command
 
-> ` pc -xt input > output.pc`
+` pc -xt input > output.pc`
 
 produces the following result: ``
 
->   -------------------- -- -------- -- -------- -- ---------
->   !! \`pc\' example.                              
->   \*\*pc                  \*\*pc      \*\*pc      \*\*foo
->   \*M2/4                  \*M2/4      \*          \*
->   =1                      =1          =1          .
->   8                       3           9 10        A
->   .                       .           B           A
->   6                       5           .           B
->   11 8                    1           .           B
->   10                      1           8 7         C
->   0                       .           0           C
->   =2                      =2          =2          D
->   3                       8           2 3         D
->   .                       .           6           E
->   =3                      =3          =3          E
->   r                       r           5 4         .
->   ===                     ==          ====        .
->   \*-                     \*-         \*-         \*-
->   -------------------- -- -------- -- -------- -- ---------
->
+-------------------- -- -------- -- -------- -- ---------
+!! \`pc\' example.                              
+\*\*pc                  \*\*pc      \*\*pc      \*\*foo
+\*M2/4                  \*M2/4      \*          \*
+=1                      =1          =1          .
+8                       3           9 10        A
+.                       .           B           A
+6                       5           .           B
+11 8                    1           .           B
+10                      1           8 7         C
+0                       .           0           C
+=2                      =2          =2          D
+3                       8           2 3         D
+.                       .           6           E
+=3                      =3          =3          E
+r                       r           5 4         .
+===                     ==          ====        .
+\*-                     \*-         \*-         \*-
+-------------------- -- -------- -- -------- -- ---------
+
 Both processed and unprocessed spines are output. Notice that the <span class="rep">pc</span>
 value \`B\' in the token \`BCD\' has been maintained in the first
 measure. Notice that for the data tokens in the first spine of measure

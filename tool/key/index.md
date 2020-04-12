@@ -68,12 +68,12 @@ There is no special output file-type designation.
 
 The <span class="tool">key</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">a</span>   output correlation values for all keys
->   <span class="option">f</span>   output frequencies for all pitch-classes
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">a</span>   output correlation values for all keys
+<span class="option">f</span>   output frequencies for all pitch-classes
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">a</span> option will show all of the correlation coefficients for all
@@ -99,9 +99,9 @@ whole-notes plus a quarter-note duration. If inputs do not include
 durational information (such as in ` **semits` input), each note is
 assigned the nominal duration of a quarter-note.
 
-> ``
->
-> PC\[0\]: 5.50617
+``
+
+PC\[0\]: 5.50617
 
 PC\[1\]: 0.375
 

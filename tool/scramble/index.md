@@ -71,16 +71,16 @@ that they are not either repositioned, or their data tokens re-ordered.
 
 The <span class="tool">scramble</span> command provides the following option:
 
->   ------------- -----------------------------------------------------------------------
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">m</span>        redistribute subtokens in multiple stops across all tokens in the
->                 record; used in conjunction with <span class="option">t</span> only
->   <span class="option">r</span>        scramble the order of data records; don't scramble data tokens
->   -s *regexp*   skip; don't scramble records matching *regexp*;
->                 leave matching records intact, and in the same position
->   <span class="option">t</span>        scramble data tokens within each record; don't scramble record order
->   ------------- -----------------------------------------------------------------------
->
+------------- -----------------------------------------------------------------------
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+<span class="option">m</span>        redistribute subtokens in multiple stops across all tokens in the
+record; used in conjunction with <span class="option">t</span> only
+<span class="option">r</span>        scramble the order of data records; don't scramble data tokens
+-s *regexp*   skip; don't scramble records matching *regexp*;
+leave matching records intact, and in the same position
+<span class="option">t</span>        scramble data tokens within each record; don't scramble record order
+------------- -----------------------------------------------------------------------
+
 Options are specified in the command line. One of either the *record
 mode* (<span class="option">r</span>) or *token mode* (<span class="option">t</span>) must be invoked.
 
@@ -91,48 +91,48 @@ mode* (<span class="option">r</span>) or *token mode* (<span class="option">t</s
 The use of the <span class="tool">scramble</span> command can be illustrated using the
 following input: ``
 
->   --------------------- -----------
->   !! A global comment   
->   !! Another comment    
->   \*\*inter             \*\*inter
->   \*abcd                \*efgh
->   =1                    =1
->   1a 1b                 a
->   !local                !local
->   2                     b1 b2 b3
->   3                     c
->   =2                    =2
->   !! A later comment.   
->   4a 4b                 d
->   =3                    =3
->   5                     e
->   \*-                   \*-
->   --------------------- -----------
->
+--------------------- -----------
+!! A global comment   
+!! Another comment    
+\*\*inter             \*\*inter
+\*abcd                \*efgh
+=1                    =1
+1a 1b                 a
+!local                !local
+2                     b1 b2 b3
+3                     c
+=2                    =2
+!! A later comment.   
+4a 4b                 d
+=3                    =3
+5                     e
+\*-                   \*-
+--------------------- -----------
+
 When processed using the *record mode,* the command:
 
-> ` scramble -r -s = inputfile`
+` scramble -r -s = inputfile`
 
 might produce the following output: ``
 
->   --------------------- -----------
->   !! A global comment   
->   !! Another comment    
->   \*\*inter             \*\*inter
->   \*abcd                \*efgh
->   =1                    =1
->   3                     c
->   !local                !local
->   5                     e
->   1a 1b                 a
->   =2                    =2
->   !! A later comment.   
->   4a 4b                 d
->   =3                    =3
->   2                     b1 b2 b3
->   \*-                   \*-
->   --------------------- -----------
->
+--------------------- -----------
+!! A global comment   
+!! Another comment    
+\*\*inter             \*\*inter
+\*abcd                \*efgh
+=1                    =1
+3                     c
+!local                !local
+5                     e
+1a 1b                 a
+=2                    =2
+!! A later comment.   
+4a 4b                 d
+=3                    =3
+2                     b1 b2 b3
+\*-                   \*-
+--------------------- -----------
+
 In this example, notice that the Humdrum comments and interpretations
 remain in their original location; only the data records have been
 reordered. In addition, data records containing an equals-sign have been
@@ -140,28 +140,28 @@ frozen in their original locations.
 
 When processed using the *token mode,* the command:
 
-> ` scramble -t -m -s = inputfile`
+` scramble -t -m -s = inputfile`
 
 might produce the following output: ``
 
->   --------------------- -----------
->   !! A global comment   
->   !! Another comment    
->   \*\*inter             \*\*inter
->   \*abcd                \*efgh
->   =1                    =1
->   1b                    a 1a
->   !local                !local
->   b2                    b3 2 b1
->   c                     3
->   =2                    =2
->   !! A later comment.   
->   4a 4b                 d
->   =3                    =3
->   5                     e
->   \*-                   \*-
->   --------------------- -----------
->
+--------------------- -----------
+!! A global comment   
+!! Another comment    
+\*\*inter             \*\*inter
+\*abcd                \*efgh
+=1                    =1
+1b                    a 1a
+!local                !local
+b2                    b3 2 b1
+c                     3
+=2                    =2
+!! A later comment.   
+4a 4b                 d
+=3                    =3
+5                     e
+\*-                   \*-
+--------------------- -----------
+
 Notice that a complete scrambling of data tokens within a Humdrum file
 cannot be achieved merely by invoking one <span class="tool">scramble</span> mode followed by
 the other mode. In order to completely scramble a Humdrum file the user

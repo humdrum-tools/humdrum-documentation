@@ -36,7 +36,7 @@ to the UNIX ` cut` command. The user may specify a given field (data
 column) or set of fields to be selected from the input stream. For
 example, the command:
 
-> ` extract -f 1,3,8`
+` extract -f 1,3,8`
 
 will extract the first, third, and eighth spines from the input stream.
 In field mode, field specifications may also be made with respect to the
@@ -44,7 +44,7 @@ right-most field. For example, the expression ` "$"` refers to the
 right-most field in the input; the arithmetic expression ` "$-1"` refers
 to the right-most field minus one, etc. By way of example, the command:
 
-> ` extract -f '2,4-6,$' lassus`
+` extract -f '2,4-6,$' lassus`
 
 will extract the second, fourth, fifth, sixth, and last (right-most)
 spines in the file \"lassus.\" The ` extract -f` command differs from
@@ -55,7 +55,7 @@ In *interpretation mode,* the <span class="tool">extract</span> command outputs 
 containing the interpretation(s) specified by the user. By way of
 example, the command:
 
-> ` extract -i '<span class="tool">semits</span>,MIDI' hildegard`
+` extract -i '<span class="tool">semits</span>,MIDI' hildegard`
 
 will extract all spines in the file `hildegard` containing <span class="rep">semits</span> or
 <span class="rep">MIDI</span> data.
@@ -82,15 +82,15 @@ should be output; beginning at line 2, spines 3, 4, and 5 should be
 output; beginning at line 18, spines 1 and 4 should be output, and from
 line 78 to the end of the input, spine 9 should be output.
 
-> ``
->
-> >   ---- -----
-> >   1    1
-> >   2    3-5
-> >   18   1,4
-> >   78   9
-> >   ---- -----
-> >
+``
+
+---- -----
+1    1
+2    3-5
+18   1,4
+78   9
+---- -----
+
 The *field-trace* mode allows the user to select virtually any
 combination of data tokens from the input stream. Note that using the
 *field-trace* mode may produce output that no longer conforms to the
@@ -102,14 +102,14 @@ Humdrum syntax. (See EXAMPLES below.)
 
 The <span class="tool">extract</span> command provides the following options:
 
-> >   ---------------------- -------------------------------------------------------
-> >   -f *fieldlist*         select field mode
-> >   <span class="option">h</span>                 displays a help screen summarizing the command syntax
-> >   -i *interplist*        select interpretation mode
-> >   -p *spine\#*           select spine-path mode
-> >   -t *fieldtrace file*   select field-trace mode
-> >   ---------------------- -------------------------------------------------------
-> >
+---------------------- -------------------------------------------------------
+-f *fieldlist*         select field mode
+<span class="option">h</span>                 displays a help screen summarizing the command syntax
+-i *interplist*        select interpretation mode
+-p *spine\#*           select spine-path mode
+-t *fieldtrace file*   select field-trace mode
+---------------------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 A *fieldlist* consists of any set of integers separated by commas, or a
@@ -130,21 +130,21 @@ expansion of shell metacharacter (\*, ?, etc.).
 
 The following examples illustrate how <span class="tool">extract</span> may be used.
 
-> ` extract -f '1,3,$' holst`
+` extract -f '1,3,$' holst`
 
 outputs the first, third, and last columns from the file `holst`.
 
-> ` extract -p 4 mossolov`
+` extract -p 4 mossolov`
 
 outputs the spine *beginning* (but not necessarily continuing) in the
 fourth column of the file `mossolov`.
 
-> ` extract -t sibelius.fld sibelius`
+` extract -t sibelius.fld sibelius`
 
 outputs the spines specified in the file `sibelius.fld` for the file
 `sibelius`. (See SAMPLE OUTPUTS below.)
 
-> ` extract -i '*F:,*f:' hendrix`
+` extract -i '*F:,*f:' hendrix`
 
 outputs all spines that contain the tandem interpretations \*F: or \*f:
 (i.e. in the keys of F major or F minor).
@@ -156,80 +156,80 @@ outputs all spines that contain the tandem interpretations \*F: or \*f:
 The following examples illustrate the various <span class="tool">extract</span> options.
 Consider the following input file, dubbed `input1`: ``
 
->   ---------------------------- --------- --------- --------- ---------
->   !! \`extract\' example \#1                                 
->   \*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo
->   A                            x         1         a         bar
->   B                            y         2         b         .
->   C                            z         3         c         \#
->   \*-                          \*-       \*-       \*-       \*-
->   ---------------------------- --------- --------- --------- ---------
->
+---------------------------- --------- --------- --------- ---------
+!! \`extract\' example \#1                                 
+\*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo
+A                            x         1         a         bar
+B                            y         2         b         .
+C                            z         3         c         \#
+\*-                          \*-       \*-       \*-       \*-
+---------------------------- --------- --------- --------- ---------
+
 Executing either of the following commands:
 
-> ` extract -f '1,3,$-1' input1 > output`
+` extract -f '1,3,$-1' input1 > output`
 
 or
 
-> ` extract -i '**ABC,**123' input1 > output`
+` extract -i '**ABC,**123' input1 > output`
 
 would produce the following result: ``
 
->   ---------------------------- --------- ---------
->   !! \`extract\' example \#1             
->   \*\*ABC                      \*\*123   \*\*ABC
->   A                            1         a
->   B                            2         b
->   C                            3         c
->   \*-                          \*-       \*-
->   ---------------------------- --------- ---------
->
+---------------------------- --------- ---------
+!! \`extract\' example \#1             
+\*\*ABC                      \*\*123   \*\*ABC
+A                            1         a
+B                            2         b
+C                            3         c
+\*-                          \*-       \*-
+---------------------------- --------- ---------
+
 Consider next the following sample input &mdash; dubbed `input2`: ``
 
->   ---------------------------- --------- --------- --------- --------- ----
->   !! \`extract\' example \#2                                           
->   \*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo   
->   A                            x         1         a         \%        
->   \*                           \*        \*\^      \*        \*        
->   B                            y         2a        2b        b         &
->   C                            z         3a        3b        c         \#
->   \*                           \*x       \*x       \*        \*        \*
->   A                            4a        xyz       4b        d         \%
->   \*-                          \*        \*        \*        \*-       \*
->   5a                           xyz       5b        &                   
->   \*                           \*x       \*x       \*                  
->   6a                           6b        xyz       \#                  
->   \*v                          \*v       \*        \*                  
->   7                            xyz       \%                            
->   8                            xyz       &                             
->   \*-                          \*-       \*-                           
->   ---------------------------- --------- --------- --------- --------- ----
->
+---------------------------- --------- --------- --------- --------- ----
+!! \`extract\' example \#2                                           
+\*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo   
+A                            x         1         a         \%        
+\*                           \*        \*\^      \*        \*        
+B                            y         2a        2b        b         &
+C                            z         3a        3b        c         \#
+\*                           \*x       \*x       \*        \*        \*
+A                            4a        xyz       4b        d         \%
+\*-                          \*        \*        \*        \*-       \*
+5a                           xyz       5b        &                   
+\*                           \*x       \*x       \*                  
+6a                           6b        xyz       \#                  
+\*v                          \*v       \*        \*                  
+7                            xyz       \%                            
+8                            xyz       &                             
+\*-                          \*-       \*-                           
+---------------------------- --------- --------- --------- --------- ----
+
 Executing the command:
 
-> ` extract -p 3 input2 > output`
+` extract -p 3 input2 > output`
 
 would produce the following result: ``
 
->   ---------------------------- -----
->   !! \`extract\' example \#2   
->   \*\*123                      
->   1                            
->   \*\^                         
->   2a                           2b
->   3a                           3b
->   \*x                          \*
->   4a                           4b
->   \*                           \*
->   5a                           5b
->   \*                           \*x
->   6a                           6b
->   \*v                          \*v
->   7                            
->   8                            
->   \*-                          
->   ---------------------------- -----
->
+---------------------------- -----
+!! \`extract\' example \#2   
+\*\*123                      
+1                            
+\*\^                         
+2a                           2b
+3a                           3b
+\*x                          \*
+4a                           4b
+\*                           \*
+5a                           5b
+\*                           \*x
+6a                           6b
+\*v                          \*v
+7                            
+8                            
+\*-                          
+---------------------------- -----
+
 Notice that this output no longer conforms to the Humdrum syntax.
 (Output lines 7 and 11 contain only a single exchange-path
 interpretation.)
@@ -237,63 +237,63 @@ interpretation.)
 For the \`example \#2\' input file, the field-structure is as follows:
 ``
 
->   ---- ----- -------------------------------------
->   1    1-1   \# Line 1 must appear in the file.
->   4    1-5   \# \* \* \*\^ \* \* \....
->   5    1-6   \# Line after path indicator record
->   7    1-6   \# \* \*x \*x \* \....
->   8    1-6   \# Line after path indicator record
->   9    1-6   \# \*- \* \* \* \* \....
->   10   1-4   \# Line after path indicator record
->   11   1-4   \# \* \*x \*x \* \....
->   12   1-4   \# Line after path indicator record
->   13   1-4   \# \*v \*v \* \* \....
->   14   1-3   \# Line after path indicator record
->   16   1-3   \# \*- \*- \*- \....
->   ---- ----- -------------------------------------
->
+---- ----- -------------------------------------
+1    1-1   \# Line 1 must appear in the file.
+4    1-5   \# \* \* \*\^ \* \* \....
+5    1-6   \# Line after path indicator record
+7    1-6   \# \* \*x \*x \* \....
+8    1-6   \# Line after path indicator record
+9    1-6   \# \*- \* \* \* \* \....
+10   1-4   \# Line after path indicator record
+11   1-4   \# \* \*x \*x \* \....
+12   1-4   \# Line after path indicator record
+13   1-4   \# \*v \*v \* \* \....
+14   1-3   \# Line after path indicator record
+16   1-3   \# \*- \*- \*- \....
+---- ----- -------------------------------------
+
 (The above file may be generated via the ` fields -s` command.) On the
 basis of this information a user might create the following field-trace
 file, dubbed `trace`: ``
 
->   ---- -----
->   1    1
->   4    3
->   5    3,5
->   7    2,3
->   8    3,2
->   9    1,3
->   10   4
->   14   3
->   15   2
->   16   1
->   ---- -----
->
+---- -----
+1    1
+4    3
+5    3,5
+7    2,3
+8    3,2
+9    1,3
+10   4
+14   3
+15   2
+16   1
+---- -----
+
 Executing the following command:
 
-> ` extract -t trace input2 > output`
+` extract -t trace input2 > output`
 
 would produce the following result: ``
 
->   ---------------------------- -----
->   !! \`extract\' example \#2   
->   \*\*ABC                      
->   A                            
->   \*\^                         
->   2a                           b
->   3a                           c
->   \*x                          \*x
->   4a                           xyz
->   \*-                          \*
->   &                            
->   \*                           
->   \#                           
->   \*                           
->   \%                           
->   xyz                          
->   \*-                          
->   ---------------------------- -----
->
+---------------------------- -----
+!! \`extract\' example \#2   
+\*\*ABC                      
+A                            
+\*\^                         
+2a                           b
+3a                           c
+\*x                          \*x
+4a                           xyz
+\*-                          \*
+&                            
+\*                           
+\#                           
+\*                           
+\%                           
+xyz                          
+\*-                          
+---------------------------- -----
+
 Notice that in this case, data tokens have been selected from a variety
 of input spines.
 

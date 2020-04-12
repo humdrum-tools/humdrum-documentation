@@ -60,13 +60,13 @@ reference manual.
 It is recommended that output files produced using the <span class="tool">mint</span> command
 should be given names with the distinguishing \`.mnt\' extension.
 
->   ----------- ----------------------------------------------------------------------
->   <span class="rep">kern</span>    core pitch/duration representation
->   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
->   <span class="rep">Tonh</span>    German pitch system
->   ----------- ----------------------------------------------------------------------
->
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core pitch/duration representation
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+<span class="rep">Tonh</span>    German pitch system
+----------- ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">mint</span>.*
 
 ------------------------------------------------------------------------
@@ -75,19 +75,19 @@ should be given names with the distinguishing \`.mnt\' extension.
 
 The <span class="tool">mint</span> command provides the following options:
 
->   ------------- ----------------------------------------------------------------------------
->   <span class="option">a</span>        output absolute pitch interval without distinguishing ascending/descending
->   -b *regexp*   break; do not calculate difference for tokens matching *regexp*;
->                 restart interval calculations with next pitch token
->   <span class="option">c</span>        output compound intervals as non-compound intervals
->   <span class="option">d</span>        output diatonic interval size only, without the interval quality
->   <span class="option">e</span>        used only with <span class="option">s</span> option; echo skipped data tokens rather than
->                 outputting null tokens
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   -s *regexp*   skip; completely ignore tokens matching *regexp*; output null
->                 token(s) instead
->   ------------- ----------------------------------------------------------------------------
->
+------------- ----------------------------------------------------------------------------
+<span class="option">a</span>        output absolute pitch interval without distinguishing ascending/descending
+-b *regexp*   break; do not calculate difference for tokens matching *regexp*;
+restart interval calculations with next pitch token
+<span class="option">c</span>        output compound intervals as non-compound intervals
+<span class="option">d</span>        output diatonic interval size only, without the interval quality
+<span class="option">e</span>        used only with <span class="option">s</span> option; echo skipped data tokens rather than
+outputting null tokens
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+-s *regexp*   skip; completely ignore tokens matching *regexp*; output null
+token(s) instead
+------------- ----------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 By default, <span class="tool">mint</span> distinguishes ascending and descending intervals by
@@ -105,42 +105,42 @@ expressions cause a skip rather than a break.
 The various aspects of the <span class="tool">mint</span> command are best illustrated using a
 set of examples. Consider the following input: ``
 
->   ----------
->   \*\*kern
->   =1
->   8c
->   8g
->   4.b-
->   .
->   8e
->   =2
->   4f
->   8r
->   8C
->   4FF
->   =3
->   \*-
->   ----------
->
+----------
+\*\*kern
+=1
+8c
+8g
+4.b-
+.
+8e
+=2
+4f
+8r
+8C
+4FF
+=3
+\*-
+----------
+
 Using the default invocation, the <span class="tool">mint</span> command transforms the above
 input as follows: ``
 
->   ----------
->   \*\*mint
->   =1
->   \[c\]
->   +P5
->   +m3
->   .
->   -d5
->   =2
->   +m2
->   -P11
->   -P5
->   =3
->   \*-
->   ----------
->
+----------
+\*\*mint
+=1
+\[c\]
++P5
++m3
+.
+-d5
+=2
++m2
+-P11
+-P5
+=3
+\*-
+----------
+
 The leading or \"offset\" pitch \`c\' has been echoed in square brackets
 in the third record. This represents the initial pitch from which
 subsequent pitch distances are measured. This offset value reflects the
@@ -164,30 +164,30 @@ Depending on the application, users may wish to suppress the calculation
 of intervals across rests. In this case, the <span class="tool">mint</span> command can be
 invoked using the \"break\" (<span class="option">b</span>) option. Consider the command:
 
-> ` mint -b 'r' input > output.mnt`
+` mint -b 'r' input > output.mnt`
 
 Each time <span class="tool">mint</span> encounters a data token that matches the letter \`r\'
 it echoes the input token and begins looking for a new offset value.
 Applied to the above sample input file, this command produces the
 following output: ``
 
->   ----------
->   \*\*mint
->   =1
->   \[c\]
->   +P5
->   +m3
->   .
->   -d5
->   =2
->   +m2
->   8r
->   \[C\]
->   -P5
->   =3
->   \*-
->   ----------
->
+----------
+\*\*mint
+=1
+\[c\]
++P5
++m3
+.
+-d5
+=2
++m2
+8r
+\[C\]
+-P5
+=3
+\*-
+----------
+
 Notice that the descending perfect eleventh spanning the rest has been
 eliminated, and a new pitch offset value \`C\' has been echoed in the
 corresponding output.
@@ -196,29 +196,29 @@ The <span class="option">s</span> (skip) option can be used to allow the user to
 identify records that should not be involved in processing. For example,
 the command
 
-> ` mint -s '^[^4]+$' input > output.mnt`
+` mint -s '^[^4]+$' input > output.mnt`
 
 will cause any data token not matching the number 4 to be skipped during
 processing. Given the sample input, intervals will be calculated only
 between quarter-notes and dotted quarter-notes: ``
 
->   ----------
->   \*\*mint
->   =1
->   8c
->   8g
->   \[b-\]
->   .
->   8e
->   =2
->   -P4
->   8r
->   8C
->   -P15
->   =3
->   \*-
->   ----------
->
+----------
+\*\*mint
+=1
+8c
+8g
+\[b-\]
+.
+8e
+=2
+-P4
+8r
+8C
+-P15
+=3
+\*-
+----------
+
 Using the skip option, the user may calculate melodic intervals between
 pitches in strong metric positions, or pitches that have been marked as
 structural tones.
@@ -227,30 +227,30 @@ The <span class="tool">mint</span> command is also able to process numerical dat
 containing multiple-stops. Consider the following following sample
 input: ``
 
->   -----------
->   \*\*pitch
->   C4
->   B3 D4
->   A3 C4 F4
->   C4
->   C4
->   \*-
->   -----------
->
+-----------
+\*\*pitch
+C4
+B3 D4
+A3 C4 F4
+C4
+C4
+\*-
+-----------
+
 Notice the presence of the double- and triple-stops in the third and
 fourth records. Using the default invocation, the <span class="tool">mint</span> command
 processes this input as follows: ``
 
->   ---------------------
->   \*\*mint
->   \[C4\]
->   -m2 +M2
->   -M2 (+m2) (-M2) +m3
->   +m3 P1 -P4
->   P1
->   \*-
->   ---------------------
->
+---------------------
+\*\*mint
+\[C4\]
+-m2 +M2
+-M2 (+m2) (-M2) +m3
++m3 P1 -P4
+P1
+\*-
+---------------------
+
 The leading or offset value \[C4\] has been echoed in the second record.
 (The user might wish to eliminate such offset values via the
 <span class="tool">humsed</span> command; see below.) The third record in both
@@ -287,102 +287,102 @@ Depending on the goal, the presence of the parentheses makes it easy for
 the user to eliminate the inner intervals using the Humdrum
 stream-editor [<span class="tool">humsed</span>.](humsed.html) For example, the command
 
-> ` humsed 's/([^)]*) //g' input > output`
+` humsed 's/([^)]*) //g' input > output`
 
 can be used to eliminate inner intervals. Alternatively, the command
 
-> ` humsed 's/[()]//g' input > output`
+` humsed 's/[()]//g' input > output`
 
 can be used to eliminate the parentheses surrounding the inner
 intervals. Offset values can be transformed to null-tokens using the
 command
 
-> ` humsed 's/\\[[^]]*\\]/./g' input > output`
+` humsed 's/\\[[^]]*\\]/./g' input > output`
 
 records containing offset values can be eliminated using the command
 
-> ` humsed '/\\[.*\\]/d' input > output`
+` humsed '/\\[.*\\]/d' input > output`
 
 One final example illustrates how several spines can be processed
 concurrently by <span class="tool">mint</span>. ``
 
->   ----------------------------------------
->   !! J.S. Bach, keyboard Sinfonia No. 13
->   ----------------------------------------
->
->   ---------- ----------- ----------
->   \*\*Tonh   \*\*pitch   \*\*kern
->   \*M3/8     \*M3/8      \*M3/8
->   \*a:       \*a:        \*a:
->   =7         =7          =7
->   A3         G4          16ee
->   .          .           16ff\#
->   H3         F\#4        8.dd\#
->   H2         .           .
->   .          .           16ee
->   =8         =8          =8
->   E3         E4          4ee
->   .          F\#4        .
->   .          G4          .
->   .          A4          .
->   r          B4          \[8gg
->   .          C\#5        .
->   =9         =9          =9
->   r          \[D5        16gg\]
->   .          .           16bb-
->   .          .           16aa
->   .          .           16gg
->   .          .           16ff
->   .          .           16ee
->   =10        =10         =10
->   r          D5\]        \[4.ff
->   \*-        \*-         \*-
->   ---------- ----------- ----------
->
+----------------------------------------
+!! J.S. Bach, keyboard Sinfonia No. 13
+----------------------------------------
+
+---------- ----------- ----------
+\*\*Tonh   \*\*pitch   \*\*kern
+\*M3/8     \*M3/8      \*M3/8
+\*a:       \*a:        \*a:
+=7         =7          =7
+A3         G4          16ee
+.          .           16ff\#
+H3         F\#4        8.dd\#
+H2         .           .
+.          .           16ee
+=8         =8          =8
+E3         E4          4ee
+.          F\#4        .
+.          G4          .
+.          A4          .
+r          B4          \[8gg
+.          C\#5        .
+=9         =9          =9
+r          \[D5        16gg\]
+.          .           16bb-
+.          .           16aa
+.          .           16gg
+.          .           16ff
+.          .           16ee
+=10        =10         =10
+r          D5\]        \[4.ff
+\*-        \*-         \*-
+---------- ----------- ----------
+
 The following command invokes the <span class="option">a</span> and <span class="option">d</span> options. Indications
 of the direction of interval movement (ascending/descending) have been
 removed, and the diatonic interval sizes are output without the
 associated interval qualities (major/minor/perfect/diminished,
 augmented).
 
-> ` mint -a -d input | humsed 's/\\[[^\\t]*\\]/./g' > output`
+` mint -a -d input | humsed 's/\\[[^\\t]*\\]/./g' > output`
 
 Notice in the corresponding output that the initial offset pitches have
 been changed to a null tokens (due to the <span class="tool">humsed</span> command). ``
 
->   ----------------------------------------
->   !! J.S. Bach, keyboard Sinfonia No. 13
->   ----------------------------------------
->
->   ---------- ---------- ----------
->   \*\*mint   \*\*mint   \*\*mint
->   \*M3/8     \*M3/8     \*M3/8
->   \*a:       \*a:       \*a:
->   =7         =7         =7
->   .          .          .
->   .          .          2
->   2          2          3
->   8          .          .
->   .          .          2
->   =8         =8         =8
->   4          2          1
->   .          2          .
->   .          2          .
->   .          2          .
->   r          2          3
->   .          2          .
->   =9         =9         =9
->   r          2          1
->   .          .          3
->   .          .          2
->   .          .          2
->   .          .          2
->   .          .          2
->   =10        =10        =10
->   r          1          2
->   \*-        \*-        \*-
->   ---------- ---------- ----------
->
+----------------------------------------
+!! J.S. Bach, keyboard Sinfonia No. 13
+----------------------------------------
+
+---------- ---------- ----------
+\*\*mint   \*\*mint   \*\*mint
+\*M3/8     \*M3/8     \*M3/8
+\*a:       \*a:       \*a:
+=7         =7         =7
+.          .          .
+.          .          2
+2          2          3
+8          .          .
+.          .          2
+=8         =8         =8
+4          2          1
+.          2          .
+.          2          .
+.          2          .
+r          2          3
+.          2          .
+=9         =9         =9
+r          2          1
+.          .          3
+.          .          2
+.          .          2
+.          .          2
+.          .          2
+=10        =10        =10
+r          1          2
+\*-        \*-        \*-
+---------- ---------- ----------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

@@ -84,103 +84,103 @@ ignored. Output interpretations always echo the input interpretation.
 
 By way of example, consider the following input file `webern`: ``
 
->   -----------------------------------
->   !! Anton von Webern
->   !! Klavierstueck, opus posthumous
->   \*\*pc
->   =1
->   9
->   10
->   .
->   11
->   8
->   7
->   =2
->   1
->   2
->   3
->   6
->   5
->   4
->   =3
->   0
->   \*-
->   -----------------------------------
->
+-----------------------------------
+!! Anton von Webern
+!! Klavierstueck, opus posthumous
+\*\*pc
+=1
+9
+10
+.
+11
+8
+7
+=2
+1
+2
+3
+6
+5
+4
+=3
+0
+\*-
+-----------------------------------
+
 Executing the command:
 
-> ` reihe -p 1 webern`
+` reihe -p 1 webern`
 
 produces the following output: ``
 
->   --------
->   \*\*pc
->   1
->   2
->   3
->   0
->   11
->   5
->   6
->   7
->   10
->   9
->   8
->   4
->   \*-
->   --------
->
+--------
+\*\*pc
+1
+2
+3
+0
+11
+5
+6
+7
+10
+9
+8
+4
+\*-
+--------
+
 Notice that the comments, barlines, rests, and null tokens have been
 eliminated from the input file. This leaves the output in a form better
 suited to pattern matching using the <span class="tool">patt</span> or <span class="tool">pattern</span> commands.
 
 Similarly, executing the command:
 
-> ` reihe -r 1 webern`
+` reihe -r 1 webern`
 
 produces: ``
 
->   --------
->   \*\*pc
->   1
->   5
->   6
->   7
->   4
->   3
->   2
->   8
->   9
->   0
->   11
->   10
->   \*-
->   --------
->
+--------
+\*\*pc
+1
+5
+6
+7
+4
+3
+2
+8
+9
+0
+11
+10
+\*-
+--------
+
 ------------------------------------------------------------------------
 
 ## OPTIONS ##
 
 The <span class="tool">reihe</span> command provides the following options:
 
->   ------------------- --------------------------------------------------------------------------
->   <span class="option">a</span>              for <span class="rep">pc</span> inputs, output alphanumeric representation (where A=10, B=11)
->   <span class="option">h</span>              displays a help screen summarizing the command syntax
->   -I *n*              output inversion set-form starting on pitch-class *n*
->   -i *n*              same as -I option
->   -m *n*              calculate according to modulo *n* arithmetic
->   -P *n*              output prime set-form starting on pitch-class *n*
->   -p *n*              same as -P option
->   <span class="option">R</span>              output retrograde of input row
->   -R *n*              output retrograde set-form ending on pitch-class *n*
->   <span class="option">r</span>              same as <span class="option">R</span> option
->   -r *n*              same as -R *n* option
->   -RI *n*             output retrograde-inversion set-form ending on pitch-class *n*
->   -ri *n*             same as -RI option
->   -S \[*\\(+-*\]*n*   output set-form shifted *n* elements forward (+) or backward (-)
->   -s \[*\\(+-*\]n     same as -S option
->   ------------------- --------------------------------------------------------------------------
->
+------------------- --------------------------------------------------------------------------
+<span class="option">a</span>              for <span class="rep">pc</span> inputs, output alphanumeric representation (where A=10, B=11)
+<span class="option">h</span>              displays a help screen summarizing the command syntax
+-I *n*              output inversion set-form starting on pitch-class *n*
+-i *n*              same as -I option
+-m *n*              calculate according to modulo *n* arithmetic
+-P *n*              output prime set-form starting on pitch-class *n*
+-p *n*              same as -P option
+<span class="option">R</span>              output retrograde of input row
+-R *n*              output retrograde set-form ending on pitch-class *n*
+<span class="option">r</span>              same as <span class="option">R</span> option
+-r *n*              same as -R *n* option
+-RI *n*             output retrograde-inversion set-form ending on pitch-class *n*
+-ri *n*             same as -RI option
+-S \[*\\(+-*\]*n*   output set-form shifted *n* elements forward (+) or backward (-)
+-s \[*\\(+-*\]n     same as -S option
+------------------- --------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 When the <span class="option">a</span> option is invoked, pitch-class inputs (<span class="rep">pc</span>) will
@@ -203,55 +203,55 @@ options are thus mutually exclusive.
 The sample document given below shows a 5-tone row used in Igor
 Stravinsky's \"Dirge-Canons\" from *In Memoriam Dylan Thomas.* ``
 
->   ------------------------------
->   !! I. Stravinsky, 5-tone row
->   \*\*pc
->   2
->   3
->   6
->   5
->   4
->   \*-
->   ------------------------------
->
+------------------------------
+!! I. Stravinsky, 5-tone row
+\*\*pc
+2
+3
+6
+5
+4
+\*-
+------------------------------
+
 The command: `reihe -s -1 igor` would result in the following output: ``
 
->   --------
->   \*\*pc
->   3
->   6
->   5
->   4
->   2
->   \*-
->   --------
->
+--------
+\*\*pc
+3
+6
+5
+4
+2
+\*-
+--------
+
 The command: `reihe -a -i 2 igor` would result in the following output:
 ``
 
->   --------
->   \*\*pc
->   2
->   1
->   A
->   B
->   0
->   \*-
->   --------
->
+--------
+\*\*pc
+2
+1
+A
+B
+0
+\*-
+--------
+
 The command: `reihe -ri 0 -m 7 igor` would result in the following
 output: ``
 
->   --------
->   \*\*pc
->   5
->   4
->   3
->   6
->   0
->   \*-
->   --------
->
+--------
+\*\*pc
+5
+4
+3
+6
+0
+\*-
+--------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

@@ -41,7 +41,7 @@ encountered.
 
 The <span class="tool">census</span> command provides the following options:
 
-> > <span class="option">h</span>
+<span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -61,30 +61,30 @@ The following is a sample output where the <span class="option">k</span> option 
 invoked. Without the <span class="option">k</span> option, the \"KERN DATA\" would be absent
 from the output.
 
-> ``
->
-> >   ---------------------------- ----
-> >   HUMDRUM DATA                 
-> >   Number of data tokens:       33
-> >   Number of null tokens:       9
-> >   Number of multiple-stops:    1
-> >   Number of data records:      11
-> >   Number of interpretations:   2
-> >   Number of records:           14
-> >                                
-> >   KERN DATA                    
-> >   Number of note-heads:        8
-> >   Number of notes:             7
-> >   Longest note:                2
-> >   Shortest note:               16
-> >   Highest note:                cc
-> >   Lowest note:                 C
-> >   Number of rests:             4
-> >   Maximum concurrent notes:    2
-> >   Number of single barlines:   2
-> >   Number of double barlines:   1
-> >   ---------------------------- ----
-> >
+``
+
+---------------------------- ----
+HUMDRUM DATA                 
+Number of data tokens:       33
+Number of null tokens:       9
+Number of multiple-stops:    1
+Number of data records:      11
+Number of interpretations:   2
+Number of records:           14
+
+KERN DATA                    
+Number of note-heads:        8
+Number of notes:             7
+Longest note:                2
+Shortest note:               16
+Highest note:                cc
+Lowest note:                 C
+Number of rests:             4
+Maximum concurrent notes:    2
+Number of single barlines:   2
+Number of double barlines:   1
+---------------------------- ----
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

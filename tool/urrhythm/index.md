@@ -76,10 +76,10 @@ extension.
 
 The <span class="tool">urrhythm</span> command provides only a help option:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -91,44 +91,44 @@ first two spines (<span class="rep">kern</span> and <span class="rep">metpos</sp
 third spine (<span class="rep">URrhythm</span>) is added by the <span class="tool">urrhythm</span> command. All
 three spines are given in the output. ``
 
->   ---------- ------------ --------------
->   \*\*kern   \*\*metpos   \*\*URrhythm
->   \*M4/4     \*M4/4       \*M4/4
->   \*tb8      \*tb8        \*tb8
->   8g         3            N
->   8g\#       4            .
->   8a         2            N
->   \[8cc      4            .
->   8cc\]      3            S
->   8a         4            .
->   =1         =1           =1
->   4.cc       1            N
->   .          4            .
->   .          3            O
->   \[8b-      4            .
->   4.b-\]     2            S
->   .          4            .
->   .          3            O
->   \[8g       4            .
->   =2         =2           =2
->   8g\]       1            S
->   \[8e-      4            .
->   8e-\]      3            S
->   4.r        4            .
->   .          2            O
->   .          4            .
->   \[4c       3            N
->   .          4            .
->   =3         =3           =3
->   2c\]       1            S
->   .          4            .
->   .          3            O
->   .          4            .
->   4r         2            O
->   .          4            .
->   \*-        \*-          \*-
->   ---------- ------------ --------------
->
+---------- ------------ --------------
+\*\*kern   \*\*metpos   \*\*URrhythm
+\*M4/4     \*M4/4       \*M4/4
+\*tb8      \*tb8        \*tb8
+8g         3            N
+8g\#       4            .
+8a         2            N
+\[8cc      4            .
+8cc\]      3            S
+8a         4            .
+=1         =1           =1
+4.cc       1            N
+.          4            .
+.          3            O
+\[8b-      4            .
+4.b-\]     2            S
+.          4            .
+.          3            O
+\[8g       4            .
+=2         =2           =2
+8g\]       1            S
+\[8e-      4            .
+8e-\]      3            S
+4.r        4            .
+.          2            O
+.          4            .
+\[4c       3            N
+.          4            .
+=3         =3           =3
+2c\]       1            S
+.          4            .
+.          3            O
+.          4            .
+4r         2            O
+.          4            .
+\*-        \*-          \*-
+---------- ------------ --------------
+
 ------------------------------------------------------------------------
 
 ## WARNINGS ##

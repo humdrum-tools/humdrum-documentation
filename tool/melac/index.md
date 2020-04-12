@@ -43,10 +43,10 @@ should be given names with the distinguishing \`.mac\' extension.
 
 The <span class="tool">melac</span> command provides only a help option:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -58,27 +58,27 @@ The <span class="rep">semits</span> spine is the input, and the <span class="rep
 corresponding output. (A <span class="rep">kern</span> equivalent to <span class="rep">semits</span> has been
 added to increase the readability.) ``
 
->   ---------- ------------ -----------
->   \*\*kern   \*\*semits   \*\*melac
->   16ee       16           1
->   16cc       12           0.5
->   16b        11           0.355
->   16cc       12           0.2407
->   16g        7            0.1207
->   16cc       12           0.2407
->   16b        11           0.1207
->   16cc       12           0.0957
->   16ff       17           0.5561
->   16cc       12           0.085
->   16b        11           0.355
->   16cc       12           0.2407
->   16a        9            0.1207
->   16cc       12           0.2407
->   16b        11           0.1207
->   16cc       12           0.29
->   \*-        \*-          \*-
->   ---------- ------------ -----------
->
+---------- ------------ -----------
+\*\*kern   \*\*semits   \*\*melac
+16ee       16           1
+16cc       12           0.5
+16b        11           0.355
+16cc       12           0.2407
+16g        7            0.1207
+16cc       12           0.2407
+16b        11           0.1207
+16cc       12           0.0957
+16ff       17           0.5561
+16cc       12           0.085
+16b        11           0.355
+16cc       12           0.2407
+16a        9            0.1207
+16cc       12           0.2407
+16b        11           0.1207
+16cc       12           0.29
+\*-        \*-          \*-
+---------- ------------ -----------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

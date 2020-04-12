@@ -42,25 +42,25 @@ The <span class="tool">patt</span> command implements a full UNIX regular expres
 Each line in the template file represents an independent regular
 expression. For example, the template:
 
->   ---
->   1
->   2
->   3
->   ---
->
+---
+1
+2
+3
+---
+
 will match inputs such as the following:
 
->   ------
->   1
->   112
->   43.9
->   ------
->
+------
+1
+112
+43.9
+------
+
 or even
 
-> ``
->
-> 0x.=%&1\*
+``
+
+0x.=%&1\*
 
 Figure 32
 
@@ -68,9 +68,9 @@ abc(\...32\...)
 
 A more circumspect regular expression template might look like this:
 
-> ``
->
-> \^1\$
+``
+
+\^1\$
 
 \^2\$
 
@@ -89,17 +89,17 @@ defining multi-record patterns.
 
 The <span class="tool">patt</span> command supports the following options:
 
->   ------------------- ----------------------------------------------------------------------
->   <span class="option">c</span>              makes pattern-matching sensitive to comments
->   <span class="option">e</span>              echoes matched patterns in the output
->   -f *templatefile*   use pattern specified in *templatefile*
->   <span class="option">h</span>              displays a help screen summarizing the command syntax
->   <span class="option">m</span>              invokes collapsed multiple-record matching mode
->   -s *regexp*         skip (ignore) data records containing the defined regular expression
->   -t *output\_tag*    generate <span class="rep">patt</span> output spine; tag each occurrence of the pattern
->                       with the string *output\_tag*
->   ------------------- ----------------------------------------------------------------------
->
+------------------- ----------------------------------------------------------------------
+<span class="option">c</span>              makes pattern-matching sensitive to comments
+<span class="option">e</span>              echoes matched patterns in the output
+-f *templatefile*   use pattern specified in *templatefile*
+<span class="option">h</span>              displays a help screen summarizing the command syntax
+<span class="option">m</span>              invokes collapsed multiple-record matching mode
+-s *regexp*         skip (ignore) data records containing the defined regular expression
+-t *output\_tag*    generate <span class="rep">patt</span> output spine; tag each occurrence of the pattern
+with the string *output\_tag*
+------------------- ----------------------------------------------------------------------
+
 Options are specified in the command line.
 
 By default, the <span class="tool">patt</span> command is insensitive to the presence or
@@ -147,45 +147,45 @@ conforms to the Humdrum syntax.
 The following examples illustrate the operation of the <span class="tool">patt</span> command.
 Consider the following target file and pattern template file:
 
-> **template file:**
->
-> >   ---
-> >   1
-> >   2
-> >   3
-> >   ---
-> >
-> **target file:** ``
->
-> >   ---------
-> >   \*\*foo
-> >   1
-> >   2
-> >   =1
-> >   1 3
-> >   2 1
-> >   3 2
-> >   3
-> >   =2
-> >   1
-> >   2 3
-> >   4
-> >   2 3 1
-> >   \*-
-> >   ---------
-> >
+**template file:**
+
+---
+1
+2
+3
+---
+
+**target file:** ``
+
+---------
+\*\*foo
+1
+2
+=1
+1 3
+2 1
+3 2
+3
+=2
+1
+2 3
+4
+2 3 1
+\*-
+---------
+
 A simple search for the pattern template might use the command:
 
-> ` patt -f template target`
+` patt -f template target`
 
 Pattern matches are announced by outputting Humdrum global comments.
 Given the above command, the following output would result: ``
 
->   ------------------------------------------
->   !! Pattern found at line 5 of file input
->   !! Pattern found at line 6 of file input
->   ------------------------------------------
->
+------------------------------------------
+!! Pattern found at line 5 of file input
+!! Pattern found at line 6 of file input
+------------------------------------------
+
 In the first instance, notice that <span class="tool">patt</span> is able to identify
 overlapping patterns. Two instances of the 1-2-3 pattern are identified
 beginning on the fifth and sixth lines respectively.
@@ -196,45 +196,45 @@ barline in the fourth line. The barlines can be ignored by invoking the
 <span class="option">s</span> option, followed by a regular expression that uniquely identifies
 the records to be skipped &mdash; in this case the equals sign. The command:
 
-> ` patt -s = -f template target`
+` patt -s = -f template target`
 
 would produce the following output: ``
 
->   ------------------------------------------
->   !! Pattern found at line 2 of file input
->   !! Pattern found at line 5 of file input
->   !! Pattern found at line 6 of file input
->   ------------------------------------------
->
+------------------------------------------
+!! Pattern found at line 2 of file input
+!! Pattern found at line 5 of file input
+!! Pattern found at line 6 of file input
+------------------------------------------
+
 Actual instances of the pattern can be output by invoking the <span class="option">e</span>
 (echo) option:
 
-> ` patt -e -s = -f template target`
+` patt -e -s = -f template target`
 
 The following output would result: ``
 
->   ------------------------------------------
->   !! Pattern found at line 2 of file input
->   \*\*foo
->   1
->   2
->   =1
->   1 3
->   \*-
->   !! Pattern found at line 5 of file input
->   \*\*foo
->   1 3
->   2 1
->   3 2
->   \*-
->   !! Pattern found at line 6 of file input
->   \*\*foo
->   2 1
->   3 2
->   3
->   \*-
->   ------------------------------------------
->
+------------------------------------------
+!! Pattern found at line 2 of file input
+\*\*foo
+1
+2
+=1
+1 3
+\*-
+!! Pattern found at line 5 of file input
+\*\*foo
+1 3
+2 1
+3 2
+\*-
+!! Pattern found at line 6 of file input
+\*\*foo
+2 1
+3 2
+3
+\*-
+------------------------------------------
+
 Notice that each pattern found is output as a self-contained Humdrum
 output with initial exclusive interpretations and concluding spine-path
 terminators. If a single continuous output is desired, the **rid -u**
@@ -245,54 +245,54 @@ used to output a spine that marks each instance of the found pattern. In
 the following command, the beginning of each occurrence of the pattern
 is labelled in the <span class="rep">patt</span> spine by the tag \"one-two-three.\"
 
-> ` patt -t one-two-three -s = -f template target`
+` patt -t one-two-three -s = -f template target`
 
 The follow output would result: ``
 
->   --------- ---------------
->   \*\*foo   \*\*patt
->   1         one-two-three
->   2         .
->   =1        .
->   1 3       one-two-three
->   2 1       one-two-three
->   3 2       .
->   3         .
->   =2        .
->   1         .
->   2 3       .
->   4         .
->   2 3 1     .
->   \*-       \*-
->   --------- ---------------
->
+--------- ---------------
+\*\*foo   \*\*patt
+1         one-two-three
+2         .
+=1        .
+1 3       one-two-three
+2 1       one-two-three
+3 2       .
+3         .
+=2        .
+1         .
+2 3       .
+4         .
+2 3 1     .
+\*-       \*-
+--------- ---------------
+
 For some tasks (such as the identification of tone-rows in 12-tone
 music), nominally \"successive\" elements of the pattern may be
 collapsed within a single sonority or record. The <span class="option">m</span> option invokes
 a *multiple record matching* mode. By way of example, the following
 command:
 
-> ` patt -m -t theme123 -s = -f template target`
+` patt -m -t theme123 -s = -f template target`
 
 will produce the following output: ``
 
->   --------- ----------
->   \*\*foo   \*\*patt
->   1         theme123
->   2         .
->   =1        .
->   1 3       theme123
->   2 1       theme123
->   3 2       .
->   3         .
->   =2        .
->   1         theme123
->   2 3       .
->   4         .
->   2 3 1     theme123
->   \*-       \*-
->   --------- ----------
->
+--------- ----------
+\*\*foo   \*\*patt
+1         theme123
+2         .
+=1        .
+1 3       theme123
+2 1       theme123
+3 2       .
+3         .
+=2        .
+1         theme123
+2 3       .
+4         .
+2 3 1     theme123
+\*-       \*-
+--------- ----------
+
 Note that in the above examples, the extensive capabilities provided by
 <span class="tool">patt</span> for defining complex *regular expressions* have not been
 illustrated. Refer to **regexp (6)** for further pertinent information.

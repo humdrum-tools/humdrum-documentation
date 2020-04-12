@@ -52,19 +52,19 @@ equals 440 hertz is assumed. For descriptions of the various input
 representations (including <span class="rep">kern</span>) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
->   ------------ ----------------------------------------------------------------------
->   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
->   <span class="rep">degree</span>   scale degree including octave designation
->   <span class="rep">freq</span>     frequency in hertz (abbreviated Hz.)
->   <span class="rep">fret</span>     fretted-instrument pitch tablature
->   <span class="rep">MIDI</span>     Music Instrument Digital Interface key-press tablature
->   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
->   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
->   <span class="rep">specC</span>    spectral centroid (in hertz)
->   <span class="rep">Tonh</span>     German pitch system
->   ------------ ----------------------------------------------------------------------
->
+------------ ----------------------------------------------------------------------
+<span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
+<span class="rep">degree</span>   scale degree including octave designation
+<span class="rep">freq</span>     frequency in hertz (abbreviated Hz.)
+<span class="rep">fret</span>     fretted-instrument pitch tablature
+<span class="rep">MIDI</span>     Music Instrument Digital Interface key-press tablature
+<span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+<span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+<span class="rep">specC</span>    spectral centroid (in hertz)
+<span class="rep">Tonh</span>     German pitch system
+------------ ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">kern</span>.*
 
 For numerically-oriented inputs, such as
@@ -90,11 +90,11 @@ should be given names with the distinguishing \`.krn\' extension.
 
 The <span class="tool">kern</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">x</span>   suppresses printing of non-pitch-related signifiers
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+<span class="option">x</span>   suppresses printing of non-pitch-related signifiers
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 In the default operation, <span class="tool">kern</span> outputs any non-pitch-related
@@ -122,64 +122,64 @@ contains six pitch-related spines &mdash; two of which (<span class="rep">deg</s
 <span class="rep">cocho</span>) cannot be processed by <span class="tool">kern</span>. In addition, there are two
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
->   ------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
->   !! \`kern\' example \#1                                                                         
->   \*\*specC                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
->   \*M2/4                    \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
->   \*                        \*          \*          \*        \*tb8        \*          \*         \*
->   =1                        =1          =1          =1        =1           =1          =1         =1
->   foo2000                   G\#4foo     /60/bar     1foo      1            r           Gis2       ct
->   .                         .           /-60/       .         .            .           .          .
->   2321                      A3+20       /62/        2         3            9.89        H2         upt
->   .                         .           48/-62/     .         .            .           .          .
->   1807                      Ab3         0/70/64     1         2            7.07        B2         ct
->   .                         .           48/-70/     .         .            .           .          .
->   2487                      C\#4        /61/        6         3            7.135       Cis4       sus
->   .                         .           /-61/       .         .            .           .          .
->   =2                        =2          =2          =2        =2           =2          =2         =2
->   3323                      r           .           5         1            r           r          .
->   .                         .           .           7         3            5.5         Heses2     ct
->   3471                      D4-8        /48/ /52/   1         2            8.11        C3         ct
->   .                         .           /-48/       .         .            .           .          .
->   .                         D4 F4       /-52/       2         3            7.33 6.4    C3 Es3     ct
->   =3                        =3          =3          =3        =3           =3          =3         =3
->   r                         G4          .           r         1            r           H2 D3      .
->   ===                       ===         ===         ===       ===          ===         ===        ===
->   \*-                       \*-         \*-         \*-       \*-          \*-         \*-        \*-
->   ------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
->
+------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
+!! \`kern\' example \#1                                                                         
+\*\*specC                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
+\*M2/4                    \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
+\*                        \*          \*          \*        \*tb8        \*          \*         \*
+=1                        =1          =1          =1        =1           =1          =1         =1
+foo2000                   G\#4foo     /60/bar     1foo      1            r           Gis2       ct
+.                         .           /-60/       .         .            .           .          .
+2321                      A3+20       /62/        2         3            9.89        H2         upt
+.                         .           48/-62/     .         .            .           .          .
+1807                      Ab3         0/70/64     1         2            7.07        B2         ct
+.                         .           48/-70/     .         .            .           .          .
+2487                      C\#4        /61/        6         3            7.135       Cis4       sus
+.                         .           /-61/       .         .            .           .          .
+=2                        =2          =2          =2        =2           =2          =2         =2
+3323                      r           .           5         1            r           r          .
+.                         .           .           7         3            5.5         Heses2     ct
+3471                      D4-8        /48/ /52/   1         2            8.11        C3         ct
+.                         .           /-48/       .         .            .           .          .
+.                         D4 F4       /-52/       2         3            7.33 6.4    C3 Es3     ct
+=3                        =3          =3          =3        =3           =3          =3         =3
+r                         G4          .           r         1            r           H2 D3      .
+===                       ===         ===         ===       ===          ===         ===        ===
+\*-                       \*-         \*-         \*-       \*-          \*-         \*-        \*-
+------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
+
 Executing the command
 
-> ` kern -x input > output.krn`
+` kern -x input > output.krn`
 
 produces the following result: ``
 
->   ------------------------- ---------- ---------- --------- ------------ ----------- ---------- ------------
->   !! \`kern\' example \#1                                                                       
->   \*\*kern                  \*\*kern   \*\*kern   \*\*deg   \*\*metpos   \*\*cocho   \*\*kern   \*\*embell
->   \*M2/4                    \*M2/4     \*M2/4     \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
->   \*                        \*         \*         \*        \*tb8        \*          \*         \*
->   =1                        =1         =1         =1        =1           =1          =1         =1
->   bbb                       g\#        c          1foo      1            r           GG\#       ct
->   .                         .          .          .         .            .           .          .
->   dddd                      A          d          2         3            9.89        BB         upt
->   .                         .          .          .         .            .           .          .
->   aaa                       A-         b-         1         2            7.07        BB-        ct
->   .                         .          .          .         .            .           .          .
->   eeee-                     c\#        d-         6         3            7.135       c\#        sus
->   .                         .          .          .         .            .           .          .
->   =2                        =2         =2         =2        =2           =2          =2         =2
->   aaaa-                     r          .          5         1            r           r          .
->   .                         .          .          7         3            5.5         BB&mdash;      ct
->   aaaa                      d          C E        1         2            8.11        C          ct
->   .                         .          .          .         .            .           .          .
->   .                         d f        .          2         3            7.33 6.4    C E-       ct
->   =3                        =3         =3         =3        =3           =3          =3         =3
->   r                         g          .          r         1            r           BB D       .
->   ===                       ===        ===        ===       ===          ===         ===        ===
->   \*-                       \*-        \*-        \*-       \*-          \*-         \*-        \*-
->   ------------------------- ---------- ---------- --------- ------------ ----------- ---------- ------------
->
+------------------------- ---------- ---------- --------- ------------ ----------- ---------- ------------
+!! \`kern\' example \#1                                                                       
+\*\*kern                  \*\*kern   \*\*kern   \*\*deg   \*\*metpos   \*\*cocho   \*\*kern   \*\*embell
+\*M2/4                    \*M2/4     \*M2/4     \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
+\*                        \*         \*         \*        \*tb8        \*          \*         \*
+=1                        =1         =1         =1        =1           =1          =1         =1
+bbb                       g\#        c          1foo      1            r           GG\#       ct
+.                         .          .          .         .            .           .          .
+dddd                      A          d          2         3            9.89        BB         upt
+.                         .          .          .         .            .           .          .
+aaa                       A-         b-         1         2            7.07        BB-        ct
+.                         .          .          .         .            .           .          .
+eeee-                     c\#        d-         6         3            7.135       c\#        sus
+.                         .          .          .         .            .           .          .
+=2                        =2         =2         =2        =2           =2          =2         =2
+aaaa-                     r          .          5         1            r           r          .
+.                         .          .          7         3            5.5         BB&mdash;      ct
+aaaa                      d          C E        1         2            8.11        C          ct
+.                         .          .          .         .            .           .          .
+.                         d f        .          2         3            7.33 6.4    C E-       ct
+=3                        =3         =3         =3        =3           =3          =3         =3
+r                         g          .          r         1            r           BB D       .
+===                       ===        ===        ===       ===          ===         ===        ===
+\*-                       \*-        \*-        \*-       \*-          \*-         \*-        \*-
+------------------------- ---------- ---------- --------- ------------ ----------- ---------- ------------
+
 Both processed and unprocessed spines are output. Also notice that the
 non-pitch-related signifiers (e.g. foo) in the first notes of the
 `**specC, **pitch`, and <span class="rep">MIDI</span>, spines have been stripped away (due to
@@ -191,33 +191,33 @@ sharps pertain to only a specific absolute pitch. For example, Bb3 is
 preferred to A\#3, although A\#4 is preferred to Bb4. Similarly, C\#4 is
 preferred to Db4, although Db5 is preferred to C\#5. ``
 
->   ---------------------------
->   !! \`kern\' example \#2
->   \*\*semits
->   \*K\[B3-C4\#F4\#A4\#D5-\]
->   -2
->   10
->   1
->   6
->   13
->   \*-
->   ---------------------------
->
+---------------------------
+!! \`kern\' example \#2
+\*\*semits
+\*K\[B3-C4\#F4\#A4\#D5-\]
+-2
+10
+1
+6
+13
+\*-
+---------------------------
+
 Notice in the corresponding output given below, that all pitches are
 rendered with the correct enharmonic spelling. ``
 
->   ---------------------------
->   !! \`kern\' example \#2
->   \*\*kern
->   \*K\[B3-C4\#F4\#A4\#D5-\]
->   B-
->   a\#
->   c\#
->   f\#
->   dd-
->   \*-
->   ---------------------------
->
+---------------------------
+!! \`kern\' example \#2
+\*\*kern
+\*K\[B3-C4\#F4\#A4\#D5-\]
+B-
+a\#
+c\#
+f\#
+dd-
+\*-
+---------------------------
+
 ------------------------------------------------------------------------
 
 ## FILES ##

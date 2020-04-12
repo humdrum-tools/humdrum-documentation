@@ -84,14 +84,14 @@ comment containing the character string \"Second theme,\" the user can
 move immediately to this position in the input by entering the following
 command:
 
-> ` /Second theme`
+` /Second theme`
 
 followed by a carriage return (or ENTER). (The search string need only
 contain sufficient characters to distinguish uniquely the appropriate
 point of interest.) Similarly, the user can search backward for this
 character string by entering:
 
-> ` ?Second theme`
+` ?Second theme`
 
 If the search is successful, playback continues immediately from the new
 score position. If the search is unsuccessful, playback continues from
@@ -116,37 +116,37 @@ The following table summarizes the interactive commands provided by
 <span class="tool">perform</span>. A summary of these commands can be displayed from within
 <span class="tool">perform</span> by typing the **h** (help) command.
 
->   ------------ ---------------------------------------------------------
->                pause; suspend playback; strike any key to continue
->   \<           reduce tempo
->   \>           increase tempo
->   \-           go back to the beginning of the previous measure
->                and continue performing
->   *integer*-   go back *integer* measures and continue performing
->                from the beginning of that measure
->   \+           go forward to the beginning of the next measure
->                and continue performing
->   *integer*+   go forward *integer* measures and continue performing
->                from the beginning of that measure
->                by itself the carriage return moves to the beginning
->                of the score and continues performing
->   /*string*    search forward from the current position for the
->                next global comment containing *string* and continue
->                performing
->   ?*string*    search backward from the current position for the
->                nearest global comment containing *string* and continue
->                performing
->   *integer*    go to numbered measure *integer*; where more than
->                one measure shares the same numerical label go to the
->                next (forward) measure matching *integer*
->   h            display command summary help screen
->   p            panic; turn off all active notes
->   p            power panic; reset all notes off on all MIDI channels
->   q            same as **q**
->   Q            terminate the perform command
->                same as **q**
->   ------------ ---------------------------------------------------------
->
+------------ ---------------------------------------------------------
+pause; suspend playback; strike any key to continue
+\<           reduce tempo
+\>           increase tempo
+\-           go back to the beginning of the previous measure
+and continue performing
+*integer*-   go back *integer* measures and continue performing
+from the beginning of that measure
+\+           go forward to the beginning of the next measure
+and continue performing
+*integer*+   go forward *integer* measures and continue performing
+from the beginning of that measure
+by itself the carriage return moves to the beginning
+of the score and continues performing
+/*string*    search forward from the current position for the
+next global comment containing *string* and continue
+performing
+?*string*    search backward from the current position for the
+nearest global comment containing *string* and continue
+performing
+*integer*    go to numbered measure *integer*; where more than
+one measure shares the same numerical label go to the
+next (forward) measure matching *integer*
+h            display command summary help screen
+p            panic; turn off all active notes
+p            power panic; reset all notes off on all MIDI channels
+q            same as **q**
+Q            terminate the perform command
+same as **q**
+------------ ---------------------------------------------------------
+
 *Interactive commands in <span class="tool">perform</span>.*
 
 In order to facilitate user interaction, a number of keyboard
@@ -163,14 +163,14 @@ plus and minus signs respectively.
 
 The <span class="tool">perform</span> command provides the following command-line options:
 
->   ---------- ----------------------------------------------------------------
->   <span class="option">g</span>     suppress the echoing of global comments on the standard output
->   <span class="option">h</span>     displays a help screen summarizing the command syntax
->   -i *hex*   assign MIDI input/output address to *hex*
->   -t *n.n*   set initial tempo to *n.n* times the default tempo
->   -v *n*     specify default MIDI key-velocity value (0-127)
->   ---------- ----------------------------------------------------------------
->
+---------- ----------------------------------------------------------------
+<span class="option">g</span>     suppress the echoing of global comments on the standard output
+<span class="option">h</span>     displays a help screen summarizing the command syntax
+-i *hex*   assign MIDI input/output address to *hex*
+-t *n.n*   set initial tempo to *n.n* times the default tempo
+-v *n*     specify default MIDI key-velocity value (0-127)
+---------- ----------------------------------------------------------------
+
 Options are specified in the command line.
 
 In addition to modifying the tempo interactively while performing, the

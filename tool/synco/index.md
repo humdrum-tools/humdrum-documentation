@@ -34,25 +34,25 @@ implicitly encodes the occurrence of note onsets. Appropriate inputs to
 descriptions of the various input representations refer to Section 2
 *(Representation Reference)* of this reference manual.
 
->   ------------ ----------------------------------------------------------------------
->   <span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
->   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
->   <span class="rep">cocho</span>    cochlear coordinates (in millimeters)
->   <span class="rep">deg</span>      key-related relative scale degree
->   <span class="rep">degree</span>   key-related absolute scale degree
->   <span class="rep">freq</span>     fundamental frequency (in hertz)
->   <span class="rep">fret</span>     fretted-instrument pitch tablature
->   <span class="rep">kern</span>     core pitch/duration representation
->   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
->   <span class="rep">pc</span>       pitch class
->   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
->   <span class="rep">solfa</span>    tonic solfa syllables
->   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
->   <span class="rep">specC</span>    spectral centroid (in hertz)
->   <span class="rep">Tonh</span>     German pitch system
->   ------------ ----------------------------------------------------------------------
->
+------------ ----------------------------------------------------------------------
+<span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
+<span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
+<span class="rep">cocho</span>    cochlear coordinates (in millimeters)
+<span class="rep">deg</span>      key-related relative scale degree
+<span class="rep">degree</span>   key-related absolute scale degree
+<span class="rep">freq</span>     fundamental frequency (in hertz)
+<span class="rep">fret</span>     fretted-instrument pitch tablature
+<span class="rep">kern</span>     core pitch/duration representation
+<span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+<span class="rep">pc</span>       pitch class
+<span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+<span class="rep">solfa</span>    tonic solfa syllables
+<span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+<span class="rep">specC</span>    spectral centroid (in hertz)
+<span class="rep">Tonh</span>     German pitch system
+------------ ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">synco</span>.*
 
 The resulting <span class="rep">synco</span> spine contains numerical values, where zero
@@ -118,11 +118,11 @@ should be given names with the distinguishing \`.syn\' extension.
 
 The <span class="tool">synco</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">e</span>   echo the input in the output
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">e</span>   echo the input in the output
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 If the <span class="option">e</span> option is invoked, the output will echo all of the input
@@ -149,71 +149,71 @@ spine indicate the absence of any syncopation. In measure 3, a single
 syncopated moment happens at beat 2. The output was produced using the
 simple command: `synco inputfile`. ``](timebase.html)
 
->   ---------------- ------------ -----------
->   !! Example \#1                
->   \*\*pitch        \*\*metpos   \*\*synco
->   \*M2/4           \*M2/4       \*
->   \*tb8            \*tb8        \*tb8
->   =1               =1           =1
->   r                1            0
->   .                3            0
->   r                2            0
->   A4               3            0
->   =2               =2           =2
->   G4               1            0
->   .                3            0
->   B4               2            0
->   r                3            0
->   =3               =3           =3
->   C5               1            0
->   C5               3            0
->   .                2            0.41
->   B4               3            0
->   =4               =4           =4
->   \*-              \*-          \*-
->   ---------------- ------------ -----------
->
+---------------- ------------ -----------
+!! Example \#1                
+\*\*pitch        \*\*metpos   \*\*synco
+\*M2/4           \*M2/4       \*
+\*tb8            \*tb8        \*tb8
+=1               =1           =1
+r                1            0
+.                3            0
+r                2            0
+A4               3            0
+=2               =2           =2
+G4               1            0
+.                3            0
+B4               2            0
+r                3            0
+=3               =3           =3
+C5               1            0
+C5               3            0
+.                2            0.41
+B4               3            0
+=4               =4           =4
+\*-              \*-          \*-
+---------------- ------------ -----------
+
 In the following example, two metrically syncopated moments are evident.
 Notice that the rhythmic information for the two <span class="rep">kern</span> spines is
 amalgamated, and that the non-pitch spine (<span class="rep">foo</span>) has no affect on the
 processing. ``
 
->   ---------------- ---------- ------------ ---------- -----------
->   !! Example \#2                                      
->   \*\*foo          \*\*kern   \*\*metpos   \*\*kern   \*\*synco
->   \*               \*M2/4     \*M2/4       \*M2/4     \*
->   \*               \*tb8      \*tb8        \*tb8      \*tb8
->   A                =1         =1           =1         =1
->   A                4r         1            4r         0
->   A                .          4            .          0
->   A                .          3            .          0
->   A                .          4            .          0
->   A                8r         2            8r         0
->   A                .          4            .          0
->   A                \[8a       3            \[8a       0
->   A                .          4            .          0
->   A                =2         =2           =2         =2
->   A                4a\]       1            8a\]       1.10
->   A                .          4            .          0
->   A                .          3            8a         0
->   A                .          4            .          0
->   A                8b         2            8r         0
->   A                .          4            .          0
->   A                8r         3            8b         0
->   A                .          4            .          0
->   A                =3         =3           =3         =3
->   A                8cc        1            8cc        0
->   A                .          4            .          0
->   A                4.cc       3            4cc        0
->   A                .          4            .          0
->   A                .          2            .          0.41
->   A                .          4            .          0
->   A                .          3            8b         0
->   A                .          4            .          0
->   A                =4         =4           =4         =4
->   \*-              \*-        \*-          \*-        \*-
->   ---------------- ---------- ------------ ---------- -----------
->
+---------------- ---------- ------------ ---------- -----------
+!! Example \#2                                      
+\*\*foo          \*\*kern   \*\*metpos   \*\*kern   \*\*synco
+\*               \*M2/4     \*M2/4       \*M2/4     \*
+\*               \*tb8      \*tb8        \*tb8      \*tb8
+A                =1         =1           =1         =1
+A                4r         1            4r         0
+A                .          4            .          0
+A                .          3            .          0
+A                .          4            .          0
+A                8r         2            8r         0
+A                .          4            .          0
+A                \[8a       3            \[8a       0
+A                .          4            .          0
+A                =2         =2           =2         =2
+A                4a\]       1            8a\]       1.10
+A                .          4            .          0
+A                .          3            8a         0
+A                .          4            .          0
+A                8b         2            8r         0
+A                .          4            .          0
+A                8r         3            8b         0
+A                .          4            .          0
+A                =3         =3           =3         =3
+A                8cc        1            8cc        0
+A                .          4            .          0
+A                4.cc       3            4cc        0
+A                .          4            .          0
+A                .          2            .          0.41
+A                .          4            .          0
+A                .          3            8b         0
+A                .          4            .          0
+A                =4         =4           =4         =4
+\*-              \*-        \*-          \*-        \*-
+---------------- ---------- ------------ ---------- -----------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

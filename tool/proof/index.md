@@ -53,11 +53,11 @@ signature declarations.
 
 The <span class="tool">proof</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">w</span>   suppress output of warnings
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+<span class="option">w</span>   suppress output of warnings
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">w</span> option causes all warnings to be suppressed; only <span class="rep">kern</span>
@@ -70,40 +70,40 @@ error messages are output.
 The following list tabulates all of the potential errors and warnings
 issued by the <span class="tool">proof</span> command. ``
 
->   ---------------------------------------------------------------------------------
->   Error: Incoherent key signature, line *n*: assigned more than one accidental to
->   the same pitch.
->   Error: Inconsistent barline indication across spines at line *n*.
->   Error: Timing error in measure *x*, spine *y*, at line *n*
->   Error: Double stops at line *x* in spine *n* do not have same duration.
->   Error: Unmatched ties in spine *n*.
->   Error: Incorrect pitch specification in spine *x*, line *n*
->   Error: Incorrect duration specification in spine *x*, line *n*
->   Error: Incorrect accidental specification in spine *x*, line *n*
->   Error: Incorrect ornament specification in spine *x*, line *n*
->   Error: Tie must begin on valid kern note, spine *n*
->   Error: Incorrect tie encoding in spine *x*, line *n*
->   Error: Tied notes inconsistent in spine *x*, line *n*
->   Error: Incorrect tie specification in spine *x*, line *n*
->   Error: Incorrect tie in spine *x*, line *n*
->   Error: Incorrect slur, spine *x*, line *n*
->   Error: Incorrect slur specification in spine *x*, line *n*
->   Error: Incorrect phrase marking in spine *x*, line *n*
->   Error: Incorrect phrase specification in spine *x*, line *n*
->   Error: Only one pause permitted in data token. Spine *x*, line *n*
->   Warning: No double barline in input.
->   Warning: No meter declaration for spine *n*.
->   Warning: No tempo declaration for spine *n*.
->   Warning: No key declaration for spine *n*.
->   Warning: No key signature declaration for spine *n*.
->   Warning: Measure *n* may be out of place near line *n*
->   Warning: Material follows after double barline at line *n*
->   Warning: Measure *j* identical to measure *k* at line *n*
->   Warning: Possible change of meter in measure *x*, line *n*
->   Warning: Accidental may be missing in m.*x*, spine *y*, at line *n*
->   Warning: No double barline in input.
->   ---------------------------------------------------------------------------------
->
+---------------------------------------------------------------------------------
+Error: Incoherent key signature, line *n*: assigned more than one accidental to
+the same pitch.
+Error: Inconsistent barline indication across spines at line *n*.
+Error: Timing error in measure *x*, spine *y*, at line *n*
+Error: Double stops at line *x* in spine *n* do not have same duration.
+Error: Unmatched ties in spine *n*.
+Error: Incorrect pitch specification in spine *x*, line *n*
+Error: Incorrect duration specification in spine *x*, line *n*
+Error: Incorrect accidental specification in spine *x*, line *n*
+Error: Incorrect ornament specification in spine *x*, line *n*
+Error: Tie must begin on valid kern note, spine *n*
+Error: Incorrect tie encoding in spine *x*, line *n*
+Error: Tied notes inconsistent in spine *x*, line *n*
+Error: Incorrect tie specification in spine *x*, line *n*
+Error: Incorrect tie in spine *x*, line *n*
+Error: Incorrect slur, spine *x*, line *n*
+Error: Incorrect slur specification in spine *x*, line *n*
+Error: Incorrect phrase marking in spine *x*, line *n*
+Error: Incorrect phrase specification in spine *x*, line *n*
+Error: Only one pause permitted in data token. Spine *x*, line *n*
+Warning: No double barline in input.
+Warning: No meter declaration for spine *n*.
+Warning: No tempo declaration for spine *n*.
+Warning: No key declaration for spine *n*.
+Warning: No key signature declaration for spine *n*.
+Warning: Measure *n* may be out of place near line *n*
+Warning: Material follows after double barline at line *n*
+Warning: Measure *j* identical to measure *k* at line *n*
+Warning: Possible change of meter in measure *x*, line *n*
+Warning: Accidental may be missing in m.*x*, spine *y*, at line *n*
+Warning: No double barline in input.
+---------------------------------------------------------------------------------
+
 *Potential errors and warnings issued by <span class="tool">proof</span>.*
 
 ------------------------------------------------------------------------

@@ -39,16 +39,16 @@ named ` **Ysemits.`
 
 The <span class="tool">ydelta</span> command provides the following option:
 
->   ----------------- ----------------------------------------------------------------------------
->   <span class="option">h</span>            displays a help screen summarizing the command syntax
->   -i *\*\*interp*   process input spines with interpretations *\*\*interp*
->   <span class="option">o</span>            in square brackets output lowest value (\"origin\") from which
->                     differences are calculated
->   -s *regexp*       skip over records matching *regexp;* If all target spines contain the same
->                     token; token is output. If the tokens differ, the entire record is output
->                     (although all tabs are replaced by spaces).
->   ----------------- ----------------------------------------------------------------------------
->
+----------------- ----------------------------------------------------------------------------
+<span class="option">h</span>            displays a help screen summarizing the command syntax
+-i *\*\*interp*   process input spines with interpretations *\*\*interp*
+<span class="option">o</span>            in square brackets output lowest value (\"origin\") from which
+differences are calculated
+-s *regexp*       skip over records matching *regexp;* If all target spines contain the same
+token; token is output. If the tokens differ, the entire record is output
+(although all tabs are replaced by spaces).
+----------------- ----------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -58,70 +58,70 @@ Options are specified in the command line.
 The operation of <span class="tool">ydelta</span> is best illustrated using an example.
 Consider the following input file called `praetorius`: ``
 
->   ------------------------------------------------
->   !! Praetorius, Es ist ein\' Ros\' entsprungen.
->   ------------------------------------------------
->
->   ------------ ------------ ---------- ------------ ----------
->   \*\*semits   \*\*semits   \*\*text   \*\*semits   \*\*kern
->   !bass        !tenor       !text      !alto        !soprano
->   \*M2/2       \*M2/2       \*M2/2     \*M2/2       \*M2/2
->   \*F:         \*F:         \*         \*F:         \*F:
->   -7           0            Es         9            1cc
->   -7           0            ist        9            2cc
->   -7           -3           ein\'      5            2cc
->   -2           -2           Ros\'      5            2dd
->   -7           -3           ent-       5            2cc
->   -12          -5           sprun-     4            1cc
->   -10          -7           gen        2            1a
->   -14          -7           aus        2            1b-
->   -7           -3           ei-        0            2a
->   -8           0            ner        .            1g
->   -10          (-2          Wur-       2            .
->   .            -3)          .          .            1f
->   .            .            .          -3           .
->   -12          .            zel        0            .
->   .            -5           .          .            2e
->   -19          -3           zart,      0            1f
->   =            =            =          =            =
->   \*-          \*-          \*-        \*-          \*-
->   ------------ ------------ ---------- ------------ ----------
->
+------------------------------------------------
+!! Praetorius, Es ist ein\' Ros\' entsprungen.
+------------------------------------------------
+
+------------ ------------ ---------- ------------ ----------
+\*\*semits   \*\*semits   \*\*text   \*\*semits   \*\*kern
+!bass        !tenor       !text      !alto        !soprano
+\*M2/2       \*M2/2       \*M2/2     \*M2/2       \*M2/2
+\*F:         \*F:         \*         \*F:         \*F:
+-7           0            Es         9            1cc
+-7           0            ist        9            2cc
+-7           -3           ein\'      5            2cc
+-2           -2           Ros\'      5            2dd
+-7           -3           ent-       5            2cc
+-12          -5           sprun-     4            1cc
+-10          -7           gen        2            1a
+-14          -7           aus        2            1b-
+-7           -3           ei-        0            2a
+-8           0            ner        .            1g
+-10          (-2          Wur-       2            .
+.            -3)          .          .            1f
+.            .            .          -3           .
+-12          .            zel        0            .
+.            -5           .          .            2e
+-19          -3           zart,      0            1f
+=            =            =          =            =
+\*-          \*-          \*-        \*-          \*-
+------------ ------------ ---------- ------------ ----------
+
 Given the following command line:
 
-> ` ydelta -o -i '**semits' praetorius > chords`
+` ydelta -o -i '**semits' praetorius > chords`
 
 the above input file would result in the following output: ``
 
->   ------------------------------------------------
->   !! Praetorius, Es ist ein\' Ros\' entsprungen.
->   ------------------------------------------------
->
->   ---------------
->   \*\*Ysemits
->   !
->   \*
->   \*
->   \[-7\] 7 16
->   \[-7\] 7 16
->   \[-7\] 4 12
->   \[-2\] 0 7
->   \[-7\] 4 12
->   \[-12\] 7 16
->   \[-10\] 3 12
->   \[-14\] 7 16
->   \[-7\] 4 7
->   \[-8\] 8
->   \[-10\] 8 12
->   \[-3\]
->   \[-3\]
->   \[-12\] 12
->   \[-5\]
->   \[-19\] 16 19
->   .
->   \*-
->   ---------------
->
+------------------------------------------------
+!! Praetorius, Es ist ein\' Ros\' entsprungen.
+------------------------------------------------
+
+---------------
+\*\*Ysemits
+!
+\*
+\*
+\[-7\] 7 16
+\[-7\] 7 16
+\[-7\] 4 12
+\[-2\] 0 7
+\[-7\] 4 12
+\[-12\] 7 16
+\[-10\] 3 12
+\[-14\] 7 16
+\[-7\] 4 7
+\[-8\] 8
+\[-10\] 8 12
+\[-3\]
+\[-3\]
+\[-12\] 12
+\[-5\]
+\[-19\] 16 19
+.
+\*-
+---------------
+
 Only those input spines labelled ` **semits` have been processed; both
 ` **text` and ` **kern` have been ignored. The first value (given in
 square brackets) represents the lowest numerical value found in the

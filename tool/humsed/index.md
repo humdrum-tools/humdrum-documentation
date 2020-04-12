@@ -64,12 +64,12 @@ command.
 
 The <span class="tool">humsed</span> command provides the following options:
 
->   ----------------- ---------------------------------------------------------
->   <span class="option">h</span>            displays a help screen summarizing the command syntax
->   <span class="option">E</span>            invoke Extended Regular Expression syntax
->   -f *scriptfile*   execute editing instructions from the file *scriptfile*
->   ----------------- ---------------------------------------------------------
->
+----------------- ---------------------------------------------------------
+<span class="option">h</span>            displays a help screen summarizing the command syntax
+<span class="option">E</span>            invoke Extended Regular Expression syntax
+-f *scriptfile*   execute editing instructions from the file *scriptfile*
+----------------- ---------------------------------------------------------
+
 Options are specified in the command line.
 
 With the <span class="option">E</span> option, <span class="tool">humsed</span> invokes the \"extended\" regular
@@ -96,7 +96,7 @@ deletion, file-read and file-write instruction provided by <span class="tool">hu
 
 Simple substitution:
 
-> ` humsed 's/A/X/g' ragtime`
+` humsed 's/A/X/g' ragtime`
 
 The above command replaces the upper-case letter A by the upper-case
 letter X. Without the ` g` (global) modifier, only the first occurrence
@@ -109,7 +109,7 @@ limits the selection of records that are affected by the substitution.
 For example, the following command eliminates all measure numbers in a
 ` **kern` representation:
 
-> ` humsed '/=/s/[0-9]*//g' jellyroll`
+` humsed '/=/s/[0-9]*//g' jellyroll`
 
 Rather than simply eliminating all numerical data, the initial regular
 expression ` (/=/)` limits the substitution operation to those data
@@ -120,7 +120,7 @@ instructions. Instructions are separated by a semicolon, and are
 executed in succession for each data record. Consider the following
 command:
 
-> ` humsed 's/4[A-G]/8&/g;s/84/8/g' chicago > fastbass`
+` humsed 's/4[A-G]/8&/g;s/84/8/g' chicago > fastbass`
 
 This command changes all quarter-note pitches (in a ` **kern`
 representation) below middle C to eighth-note durations, while leaving
@@ -142,7 +142,7 @@ multiple single-character substitutions. For example, the following
 command replaces A with 0, B with 1, C with 2, etc. for the letters A to
 J:
 
-> ` humsed 'y/ABCDEFGHIJ/0123456789/' dixieland`
+` humsed 'y/ABCDEFGHIJ/0123456789/' dixieland`
 
 Substitutions are organized by mapping each element in the first
 character string with the corresponding element in the second string.
@@ -153,12 +153,12 @@ The delete instruction is preceded by a regular expression, followed by
 the single letter **d.** The following command deletes all data records
 containing the lower-case letter \"r\".
 
-> ` humsed '/r/d' swing`
+` humsed '/r/d' swing`
 
 The file-write instruction **(w)** provides a way of copying selected
 material to a specified output file. Consider the following command:
 
-> ` humsed '/;/w pauses' bigband`
+` humsed '/;/w pauses' bigband`
 
 This command identifies all data records in the file \"bigband\" that
 contain a semicolon (the ` **kern` pause signifier) and copies them into
@@ -175,11 +175,11 @@ For example, the following command could be used to search for ` **kern`
 pause signifiers (;) and add a global comment indicating the presence of
 a pause.
 
-> ` humsed '/;/r comment' bebop`
+` humsed '/;/r comment' bebop`
 
 &mdash; where the file \"comment\" contains the following global comment:
 
-> ` !! A pause.`
+` !! A pause.`
 
 ------------------------------------------------------------------------
 

@@ -43,7 +43,7 @@ an input.
 Each output record from the <span class="tool">fields</span> command consists of three pieces
 of information, such as illustrated below:
 
-> ` 13      1-10      # {(4.g#  4.b  ...`
+` 13      1-10      # {(4.g#  4.b  ...`
 
 The first field consists of a single number identifying the
 corresponding line number of the input file. The second field consists
@@ -87,15 +87,15 @@ extension.
 
 The <span class="tool">fields</span> command provides the following options:
 
->   ------------- -------------------------------------------------------
->   <span class="option">g</span>        identify lines with global comments
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">i</span>        identify any interpretation record
->   <span class="option">l</span>        identify lines with local commens
->   -r *regexp*   identify all lines matching *regexp*
->   <span class="option">s</span>        identify lines with spine-path indicators
->   ------------- -------------------------------------------------------
->
+------------- -------------------------------------------------------
+<span class="option">g</span>        identify lines with global comments
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+<span class="option">i</span>        identify any interpretation record
+<span class="option">l</span>        identify lines with local commens
+-r *regexp*   identify all lines matching *regexp*
+<span class="option">s</span>        identify lines with spine-path indicators
+------------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -104,84 +104,84 @@ Options are specified in the command line.
 
 Consider by way of illustration the following input file: ``
 
->   ----------------------- ----------- ------------- ------
->   !! \`fields\' example                             
->   \*\*numbers             \*\*alpha   \*\*symbols   
->   \*                      \*betics    \*            
->   14                      abc         \%@           
->   !some                   !local      !comments     
->   3                       .           \#&           
->   \*-                     \*          \*            
->   jkl                     \$+                       
->   !! a global comment                               
->   \*\^                    \*                        
->   uvw                     xyz         &%            
->   \*                      \*+         \*            
->   \*                      \*          \*\*numbers   \*
->   mno                     pqr         87            {\^}
->   \*-                     \*-         \*-           \*-
->   ----------------------- ----------- ------------- ------
->
+----------------------- ----------- ------------- ------
+!! \`fields\' example                             
+\*\*numbers             \*\*alpha   \*\*symbols   
+\*                      \*betics    \*            
+14                      abc         \%@           
+!some                   !local      !comments     
+3                       .           \#&           
+\*-                     \*          \*            
+jkl                     \$+                       
+!! a global comment                               
+\*\^                    \*                        
+uvw                     xyz         &%            
+\*                      \*+         \*            
+\*                      \*          \*\*numbers   \*
+mno                     pqr         87            {\^}
+\*-                     \*-         \*-           \*-
+----------------------- ----------- ------------- ------
+
 With the <span class="option">g</span> option, the fields command will produce the following
 output: ``
 
->   --- ----- ------------------------------------
->   1   1-1   \# Line 1 must appear in the file.
->   9   1-2   \# !! a globa \....
->   --- ----- ------------------------------------
->
+--- ----- ------------------------------------
+1   1-1   \# Line 1 must appear in the file.
+9   1-2   \# !! a globa \....
+--- ----- ------------------------------------
+
 With the <span class="option">l</span> option, the fields command will produce the following
 output: ``
 
->   --- ----- ------------------------------------
->   1   1-1   \# Line 1 must appear in the file.
->   5   1-3   \# !some !loc \....
->   --- ----- ------------------------------------
->
+--- ----- ------------------------------------
+1   1-1   \# Line 1 must appear in the file.
+5   1-3   \# !some !loc \....
+--- ----- ------------------------------------
+
 With the <span class="option">s</span> option, the fields command will produce the following
 output: ``
 
->   ---- ----- -------------------------------------
->   1    1-1   \# Line 1 must appear in the file.
->   7    1-3   \# \*- \* \* \....
->   8    1-2   \# Line after path indicator record
->   10   1-2   \# \*\^ \* \....
->   11   1-3   \# Line after path indicator record
->   12   1-3   \# \* \*+ \* \....
->   13   1-4   \# Line after path indicator record
->   15   1-4   \# \*- \*- \*- \* \....
->   ---- ----- -------------------------------------
->
+---- ----- -------------------------------------
+1    1-1   \# Line 1 must appear in the file.
+7    1-3   \# \*- \* \* \....
+8    1-2   \# Line after path indicator record
+10   1-2   \# \*\^ \* \....
+11   1-3   \# Line after path indicator record
+12   1-3   \# \* \*+ \* \....
+13   1-4   \# Line after path indicator record
+15   1-4   \# \*- \*- \*- \* \....
+---- ----- -------------------------------------
+
 With the <span class="option">i</span> option, the fields command will produce the following
 output: ``
 
->   ---- ----- -------------------------------------
->   1    1-1   \# Line 1 must appear in the file.
->   2    1-3   \# \*\*numbers \....
->   3    1-3   \# \* \*betics \....
->   7    1-3   \# \*- \* \* \....
->   8    1-2   \# Line after path indicator record
->   10   1-2   \# \*\^ \* \....
->   11   1-3   \# Line after path indicator record
->   12   1-3   \# \* \*+ \* \....
->   13   1-4   \# \* \* \*\*numb \....
->   15   1-4   \# \*- \*- \*- \* \....
->   ---- ----- -------------------------------------
->
+---- ----- -------------------------------------
+1    1-1   \# Line 1 must appear in the file.
+2    1-3   \# \*\*numbers \....
+3    1-3   \# \* \*betics \....
+7    1-3   \# \*- \* \* \....
+8    1-2   \# Line after path indicator record
+10   1-2   \# \*\^ \* \....
+11   1-3   \# Line after path indicator record
+12   1-3   \# \* \*+ \* \....
+13   1-4   \# \* \* \*\*numb \....
+15   1-4   \# \*- \*- \*- \* \....
+---- ----- -------------------------------------
+
 Using the <span class="option">r</span> option we can specify a regular expression on which
 record information cues. Executing the following command:
 
-> ` fields -r '[0-9]' input`
+` fields -r '[0-9]' input`
 
 produces the following output: ``
 
->   ---- ----- ------------------------------------
->   1    1-1   \# Line 1 must appear in the file.
->   4    1-3   \# 14 abc %@ \....
->   6    1-3   \# 3 . \#& \....
->   14   1-4   \# mno pqr 87 \....
->   ---- ----- ------------------------------------
->
+---- ----- ------------------------------------
+1    1-1   \# Line 1 must appear in the file.
+4    1-3   \# 14 abc %@ \....
+6    1-3   \# 3 . \#& \....
+14   1-4   \# mno pqr 87 \....
+---- ----- ------------------------------------
+
 Notice that only those records containing numerical data tokens have
 been listed.
 

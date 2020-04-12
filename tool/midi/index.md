@@ -37,15 +37,15 @@ should be given names with the distinguishing \`.hmd\' extension
 
 The <span class="tool">midi</span> command provides the following options:
 
->   -------- -----------------------------------------------------------------------------
->   <span class="option">c</span>   echo all data records as global comments (prior to the data record)
->   <span class="option">C</span>   echo all data records as global comments (following the data record)
->   -d *n*   assigns a note-duration of *n* <span class="rep">recip</span> value to all pitches and rests
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -q *n*   set number of MIDI clock ticks per quarter-duration to *n*
->   <span class="option">u</span>   suppress the deletion of duplicate (unison) concurrent note-on instructions
->   -------- -----------------------------------------------------------------------------
->
+-------- -----------------------------------------------------------------------------
+<span class="option">c</span>   echo all data records as global comments (prior to the data record)
+<span class="option">C</span>   echo all data records as global comments (following the data record)
+-d *n*   assigns a note-duration of *n* <span class="rep">recip</span> value to all pitches and rests
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-q *n*   set number of MIDI clock ticks per quarter-duration to *n*
+<span class="option">u</span>   suppress the deletion of duplicate (unison) concurrent note-on instructions
+-------- -----------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 If the <span class="option">c</span> option (\`comment\') is invoked, all data records are
@@ -108,12 +108,12 @@ Humdrum midi-format file.
 
 The following examples illustrate how <span class="tool">midi</span> may be invoked.
 
-> ` midi chopin > chopin.hmd`
+` midi chopin > chopin.hmd`
 
 converts the <span class="rep">kern</span> data from the file `chopin` to <span class="rep">MIDI</span> data in
 the file `chopin.hmd`. The command:
 
-> ` midi -c siegfrd.idl > siegfrd.hmd`
+` midi -c siegfrd.idl > siegfrd.hmd`
 
 translates the <span class="rep">kern</span> data from the file `siegfrd.idl` to <span class="rep">MIDI</span>
 data in the file `siegfrd.hmd` and echoes all <span class="rep">kern</span> data as global
@@ -129,28 +129,28 @@ outputs. In the first example, a simple C major scale is encoded in
 
 ``
 
->   ---------------------
->   !! midi example \#1
->   \*\*kern
->   \*M2/4
->   \*C:
->   =1
->   8c
->   8r
->   8d
->   8e
->   =2
->   8f
->   8g
->   8a
->   8b
->   =3
->   4cc
->   4r
->   ====
->   \*-
->   ---------------------
->
+---------------------
+!! midi example \#1
+\*\*kern
+\*M2/4
+\*C:
+=1
+8c
+8r
+8d
+8e
+=2
+8f
+8g
+8a
+8b
+=3
+4cc
+4r
+====
+\*-
+---------------------
+
 Executing the <span class="tool">midi</span> command with the default settings results in the
 <span class="rep">MIDI</span> output given below. Notice that a default channel of MIDI
 channel 1 has been assigned via the tandem interpretation `*Ch1`. Note
@@ -160,30 +160,30 @@ start of the subsequent note, key-on and key-off data are output as
 Humdrum double-stops (two tokens separated by a single space character).
 ``
 
->   ---------------------
->   !! midi example \#1
->   \*\*MIDI
->   \*Ch1
->   \*M2/4
->   \*C:
->   =1
->   72/60/64
->   36/-60/64
->   36/62/64
->   36/-62/64 36/64/64
->   =2
->   36/-64/64 36/65/64
->   36/-65/64 36/67/64
->   36/-67/64 36/69/64
->   36/-69/64 36/71/64
->   =3
->   36/-71/64 36/72/64
->   72/-72/64
->   ====
->   .
->   \*-
->   ---------------------
->
+---------------------
+!! midi example \#1
+\*\*MIDI
+\*Ch1
+\*M2/4
+\*C:
+=1
+72/60/64
+36/-60/64
+36/62/64
+36/-62/64 36/64/64
+=2
+36/-64/64 36/65/64
+36/-65/64 36/67/64
+36/-67/64 36/69/64
+36/-69/64 36/71/64
+=3
+36/-71/64 36/72/64
+72/-72/64
+====
+.
+\*-
+---------------------
+
 <span class="rep">MIDI</span> data consist of three numbers separated by slashes (/). The
 first integer represents the number of clock ticks that must elapse from
 the previous instruction before the current event is initiated. In the
@@ -196,49 +196,49 @@ represents the MIDI key velocity. The default key velocity is 64 units.
 The second example illustrates the handling of input containing
 multiple-stops. ``
 
->   --------------------- -----------
->   !! midi example \#2   
->   \*\*harm              \*\*kern
->   \*                    \*Ch3
->   =1                    =1
->   I                     4c 4e 4g
->   IV                    4c 4f 4a
->   V                     4d 4g 4b
->   I                     4e 4g 4cc
->   ==                    ==
->   \*-                   \*-
->   --------------------- -----------
->
+--------------------- -----------
+!! midi example \#2   
+\*\*harm              \*\*kern
+\*                    \*Ch3
+=1                    =1
+I                     4c 4e 4g
+IV                    4c 4f 4a
+V                     4d 4g 4b
+I                     4e 4g 4cc
+==                    ==
+\*-                   \*-
+--------------------- -----------
+
 The output below is generated by invoking the following command:
 
-> ` midi -c input > output`
+` midi -c input > output`
 
 ``
 
->   --------------------- ----------------------------------------------------------
->   !! midi example \#2   
->   \*\*harm              \*\*MIDI
->   \*                    \*Ch1
->   !!\*\*harm            \*\*kern
->   \*                    \*Ch3
->   !!\*                  \*Ch3
->   =1                    =1
->   !!=1                  =1
->   I                     0/60/64 0/64/64 0/67/64
->   !!I                   4c 4e 4g
->   IV                    96/-60/64 96/-64/64 96/-67/64 96/60/64 96/65/64 96/69/64
->   !!IV                  4c 4f 4a
->   V                     96/-60/64 96/-65/64 96/-69/64 96/62/64 96/67/64 96/71/64
->   !!V                   4d 4g 4b
->   I                     96/-62/64 96/-67/64 96/-71/64 96/64/64 96/67/64 96/72/64
->   !!I                   4e 4g 4cc
->   ==                    ==
->   !!==                  ==
->   .                     96/-64/64 96/-67/64 96/-72/64
->   \*-                   \*-
->   !!\*-                 \*-
->   --------------------- ----------------------------------------------------------
->
+--------------------- ----------------------------------------------------------
+!! midi example \#2   
+\*\*harm              \*\*MIDI
+\*                    \*Ch1
+!!\*\*harm            \*\*kern
+\*                    \*Ch3
+!!\*                  \*Ch3
+=1                    =1
+!!=1                  =1
+I                     0/60/64 0/64/64 0/67/64
+!!I                   4c 4e 4g
+IV                    96/-60/64 96/-64/64 96/-67/64 96/60/64 96/65/64 96/69/64
+!!IV                  4c 4f 4a
+V                     96/-60/64 96/-65/64 96/-69/64 96/62/64 96/67/64 96/71/64
+!!V                   4d 4g 4b
+I                     96/-62/64 96/-67/64 96/-71/64 96/64/64 96/67/64 96/72/64
+!!I                   4e 4g 4cc
+==                    ==
+!!==                  ==
+.                     96/-64/64 96/-67/64 96/-72/64
+\*-                   \*-
+!!\*-                 \*-
+--------------------- ----------------------------------------------------------
+
 Notice that non-kern data (<span class="rep">harm</span>) is echoed in the output. Also,
 notice that each input record has been reproduced as a global comment
 (preceded by !!). This feature is useful in conjunction with the

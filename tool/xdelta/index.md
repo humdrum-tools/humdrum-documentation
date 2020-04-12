@@ -90,16 +90,16 @@ the input file using the Humdrum <span class="tool">assemble</span> command.
 
 The <span class="tool">xdelta</span> command provides the following options:
 
->   ------------- ------------------------------------------------------------------
->   <span class="option">a</span>        output absolute difference values
->   -b *regexp*   break; do not calculate difference for tokens matching *regexp;*
->                 restart difference calculations with next numerical token
->   <span class="option">e</span>        echo non-numeric data for input tokens containing numbers
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   -s *regexp*   skip; completely ignore tokens matching *regexp;*
->                 (echo in output only)
->   ------------- ------------------------------------------------------------------
->
+------------- ------------------------------------------------------------------
+<span class="option">a</span>        output absolute difference values
+-b *regexp*   break; do not calculate difference for tokens matching *regexp;*
+restart difference calculations with next numerical token
+<span class="option">e</span>        echo non-numeric data for input tokens containing numbers
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+-s *regexp*   skip; completely ignore tokens matching *regexp;*
+(echo in output only)
+------------- ------------------------------------------------------------------
+
 Options are specified in the command line.
 
 The \"skip\" function takes precedence over the \"break\" function, so
@@ -115,33 +115,33 @@ a set of examples. Consider the following input:
 
 ``
 
->   -----------
->   \*\*cents
->   100
->   300
->   .
->   1200
->   600
->   -200
->   1000
->   \*-
->   -----------
->
+-----------
+\*\*cents
+100
+300
+.
+1200
+600
+-200
+1000
+\*-
+-----------
+
 Using the default invocation, the <span class="tool">xdelta</span> command transforms the
 above input into the following output: ``
 
->   ------------
->   \*\*Xcents
->   \[100\]
->   200
->   .
->   900
->   -600
->   \[-200\]
->   1200
->   \*-
->   ------------
->
+------------
+\*\*Xcents
+\[100\]
+200
+.
+900
+-600
+\[-200\]
+1200
+\*-
+------------
+
 Notice that the input interpretation (<span class="rep">cents</span>) has been modified to
 <span class="rep">Xcents</span> in the first record. As can be seen, the leading or
 \"offset\" value \``100`\' has been echoed in the second record &mdash;
@@ -171,25 +171,25 @@ Sometimes numerical values appear in tokens that the user doesn't want
 processed. A good example occurs with numbered barlines. Consider the
 following simple example. ``
 
->   ---------
->   \*\*dur
->   1.6
->   =1
->   2.5
->   \*-
->   ---------
->
+---------
+\*\*dur
+1.6
+=1
+2.5
+\*-
+---------
+
 If the <span class="tool">xdelta</span> command is invoked with the default options, the
 output will be: ``
 
->   ----------
->   \*\*Xdur
->   \[1.6\]
->   -0.6
->   1.5
->   \*-
->   ----------
->
+----------
+\*\*Xdur
+\[1.6\]
+-0.6
+1.5
+\*-
+----------
+
 In other words, the measure number (1) interacts (incorrectly) with the
 duration values. This can be avoided by using the <span class="option">s</span> (skip) option.
 The skip option allows the user to identify records that should not be
@@ -198,42 +198,42 @@ equals-sign; hence, the command ` xdelta -s = input` will cause the
 barlines to be ignored in the numerical calculation, and so produce the
 following (correct) output: ``
 
->   ----------
->   \*\*Xdur
->   \[1.6\]
->   =1
->   0.9
->   \*-
->   ----------
->
+----------
+\*\*Xdur
+\[1.6\]
+=1
+0.9
+\*-
+----------
+
 Some inputs may contain multiple-stops &mdash; that is, Humdrum data tokens
 containing two or more encoded components. The <span class="tool">xdelta</span> command is
 also able to process numerical data tokens containing
 multiple-components. Consider, for example, the following ` **semits`
 file: ``
 
->   ------------
->   \*\*semits
->   3
->   4 7
->   -3 -7 11
->   12
->   \*-
->   ------------
->
+------------
+\*\*semits
+3
+4 7
+-3 -7 11
+12
+\*-
+------------
+
 Notice the presence of the double- and triple-stops in the fourth and
 fifth records. Using the default invocation, the <span class="tool">xdelta</span> command
 processes this input as follows: ``
 
->   ------------------
->   \*\*Xsemits
->   \[3\]
->   1 4
->   -7 (-11) (-14) 4
->   15 19 1
->   \*-
->   ------------------
->
+------------------
+\*\*Xsemits
+\[3\]
+1 4
+-7 (-11) (-14) 4
+15 19 1
+\*-
+------------------
+
 Once again, the input interpretation (<span class="rep">semits</span>) has been modified to
 <span class="rep">Xsemits</span>. The leading or offset value \[3\] has been echoed in the
 second record. (The user might wish to eliminate such offset values via
@@ -275,22 +275,22 @@ Depending on the goal, the presence of the parentheses makes it easy for
 the user to eliminate the inner intervals using the Humdrum
 stream-editor [<span class="tool">humsed</span>.](humsed.html) For example, the command:
 
-> ` humsed 's/([^)]*) //g' input > output`
+` humsed 's/([^)]*) //g' input > output`
 
 can be used to eliminate inner intervals. Alternatively, the command:
 
-> ` humsed 's/[()]//g' input > output`
+` humsed 's/[()]//g' input > output`
 
 can be used to eliminate the parentheses surrounding the inner
 intervals. Offset values can be transformed to null-tokens using the
 command:
 
-> ` humsed 's/\[[^]]*\]/./g' input > output`
+` humsed 's/\[[^]]*\]/./g' input > output`
 
 Entire records containing offset values can be eliminated using the
 command:
 
-> ` humsed '/\[.*\]/d' input > output`
+` humsed '/\[.*\]/d' input > output`
 
 A further example shows how the output of <span class="tool">xdelta</span> can be recirculated
 as input, and the second derivative calculated. In the example below,
@@ -298,7 +298,7 @@ the first spine is the original input, consisting of a rising-falling
 major arpeggio, followed by an ascending major scale. The second spine
 is the corresponding output from the command:
 
-> ` xdelta -s = spine1 | humsed 's/\[.*\]/./' > spine2`
+` xdelta -s = spine1 | humsed 's/\[.*\]/./' > spine2`
 
 The original input and both outputs have been assembled together below.
 
@@ -307,7 +307,7 @@ has been changed to a null token (using **humsed).** The second spine
 has then been used as input to <span class="tool">xdelta</span> with the result of the
 following command given in the third spine.
 
-> ` xdelta -a -s = spine2 | humsed 's/\[.*\]/./' > spine3`
+` xdelta -a -s = spine2 | humsed 's/\[.*\]/./' > spine3`
 
 Notice that only absolute numerical differences have been generated in
 the third spine. In the output below, semitone pitch values are
@@ -318,32 +318,32 @@ arpeggio changes direction, and where the arpeggio changes to a scale.
 (It is common to encounter such large discontinuities whenever a pattern
 changes.) ``
 
->   ------------ ------------- --------------
->   \*\*semits   \*\*Xsemits   \*\*XXsemits
->   \*M3/4       \*M3/4        \*M3/4
->   =1           =1            =1
->   0            .             .
->   4            4             .
->   7            3             1
->   =2           =2            =2
->   12           5             2
->   7            -5            10
->   4            -3            2
->   =3           =3            =3
->   0            -4            1
->   2            2             6
->   4            2             0
->   5            1             1
->   =4           =4            =4
->   7            2             1
->   9            2             0
->   11           2             0
->   =5           =5            =5
->   12           1             1
->   ====         ====          ====
->   \*-          \*-           \*-
->   ------------ ------------- --------------
->
+------------ ------------- --------------
+\*\*semits   \*\*Xsemits   \*\*XXsemits
+\*M3/4       \*M3/4        \*M3/4
+=1           =1            =1
+0            .             .
+4            4             .
+7            3             1
+=2           =2            =2
+12           5             2
+7            -5            10
+4            -3            2
+=3           =3            =3
+0            -4            1
+2            2             6
+4            2             0
+5            1             1
+=4           =4            =4
+7            2             1
+9            2             0
+11           2             0
+=5           =5            =5
+12           1             1
+====         ====          ====
+\*-          \*-           \*-
+------------ ------------- --------------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##

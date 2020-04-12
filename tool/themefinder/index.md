@@ -65,14 +65,14 @@ to format the header text which appears immediately above the notated
 theme when displaying a search-results page. The following two headers
 illustrate typical header texts:
 
-> Beethoven, Ludwig van, *Pathetique Sonata*, Opus 13, No. 1.\
-> Anon. *Mrs. Brown's Owl*, Traditional English Ballad.
+Beethoven, Ludwig van, *Pathetique Sonata*, Opus 13, No. 1.\
+Anon. *Mrs. Brown's Owl*, Traditional English Ballad.
 
 The format for a given theme header is specified by indexing other
 reference information contained in the file. Consider, for example, the
 following record:
 
-> !!!ref: @{COM}, \<i\>@{OTL}\</i\> (@{XEN})
+!!!ref: @{COM}, \<i\>@{OTL}\</i\> (@{XEN})
 
 This record indicates that the !!!COM (composer) information should be
 displayed, followed by a comma, followed by a space, followed by the
@@ -152,29 +152,29 @@ refer to the documentation for the [ms command](ms.html).
 The info (.inf) files provide essential indexing information. A typical
 info file is shown below:
 
-> \@START: INFO\
-> \@THEME: albinoni-01-01\
-> \@REPERTOIRE: classical\
-> \@COLLECTION: lvh\
-> \@ISTN: 122293375723\
-> \@DESCRIPTION: Albinoni, Toaso Givanni: \<i\>Sonata 1\</i\> Op. 1 No.
-> 1\
-> \@MOVEMENTSNS:\
-> \@SINGLESNS:\
-> \@WORKSNS:\
-> \@COLLECTIONSNS: 122293375723 0596234234 23409234098243
-> 234098230498234 23409834059345 5069243098534098 234098340598345
-> 23049834059834\
-> \[other themes that are related by collection\]\
-> \@LINKTHEME: \[points to numbered files that contains web link to this
-> theme\]\
-> \@LINKMOVEMENT: \[points to numbered files that contains web link to
-> this movement\]\
-> \@LINKWORK: \[points to numbered files that contains web link to this
-> work\]\
-> \@LINKCOLLECTION: \[points to numbered files that contains web link to
-> this collection\]\
-> \@END: INFO
+\@START: INFO\
+\@THEME: albinoni-01-01\
+\@REPERTOIRE: classical\
+\@COLLECTION: lvh\
+\@ISTN: 122293375723\
+\@DESCRIPTION: Albinoni, Toaso Givanni: \<i\>Sonata 1\</i\> Op. 1 No.
+1\
+\@MOVEMENTSNS:\
+\@SINGLESNS:\
+\@WORKSNS:\
+\@COLLECTIONSNS: 122293375723 0596234234 23409234098243
+234098230498234 23409834059345 5069243098534098 234098340598345
+23049834059834\
+\[other themes that are related by collection\]\
+\@LINKTHEME: \[points to numbered files that contains web link to this
+theme\]\
+\@LINKMOVEMENT: \[points to numbered files that contains web link to
+this movement\]\
+\@LINKWORK: \[points to numbered files that contains web link to this
+work\]\
+\@LINKCOLLECTION: \[points to numbered files that contains web link to
+this collection\]\
+\@END: INFO
 
 The \@THEME record identifies the name of the original theme file
 (without the .thm extension). In the above case, the corresponding theme
@@ -232,10 +232,10 @@ words, all reference records for a single theme file are amalgamated and
 placed on a single line &mdash; one line for each theme file. (Note that
 single lines may contain several hundred characters.) E.g.
 
->   -------------- ----------------------------------- ------
->   020000000100   !!!COM: Albinoni, Tomaso Giovanni   etc.
->   -------------- ----------------------------------- ------
->
+-------------- ----------------------------------- ------
+020000000100   !!!COM: Albinoni, Tomaso Giovanni   etc.
+-------------- ----------------------------------- ------
+
 The .bib files are used when searching for reference-related information
 using *grep*.
 
@@ -248,12 +248,12 @@ assignment, the collection name, the file name for the original theme
 file (minus the .thm extension), and the ISTN number. A sample file is
 given below:
 
->   --------------- ---------------- ---------------- --------------
->   \*\*repertory   \*\*collection   \*\*theme        \*\*istn
->   classical       lvh              albinoni-01-01   122293375723
->   classical       lvh              albinoni-01-02   659146339995
->   --------------- ---------------- ---------------- --------------
->
+--------------- ---------------- ---------------- --------------
+\*\*repertory   \*\*collection   \*\*theme        \*\*istn
+classical       lvh              albinoni-01-01   122293375723
+classical       lvh              albinoni-01-02   659146339995
+--------------- ---------------- ---------------- --------------
+
 The following figure illustrates the overall directory structure.
 
 ![](themefinder.gif)
@@ -437,7 +437,7 @@ integrate the themes in themefinder as follows.
 Presuming that the themes warrant a new \"collection\" we would create a
 new subdirectory under /collections/. E.g.
 
-> mkdir /collections/ragtime
+mkdir /collections/ragtime
 
 Provide edited Humdrum files containing the themes. These files may
 contain any Humdrum spines, but must contain a \*\*kern spine. (Only the
@@ -446,15 +446,15 @@ addition, create a serious of 26 alphabetic subdirectories and
 distribute the files throughout these directories. (The distribution is
 arbitrary.)
 
-> mkdir /collections/ragtime/a\
-> mkdir /collections/ragtime/b\
-> mkdir /collections/ragtime/c\
-> etc.
+mkdir /collections/ragtime/a\
+mkdir /collections/ragtime/b\
+mkdir /collections/ragtime/c\
+etc.
 
 For a new collection, copy the \"Makefile\" from one of the existing
 collections to the new collection: E.g.
 
-> cp /collections/essen/Makefile /collections/ragtime
+cp /collections/essen/Makefile /collections/ragtime
 
 Change to the /themefinder/istn directory and run the \"make\" command
 (?Craig is this correction?). Make the ISTN index (/istn/all.istn) file,
@@ -464,16 +464,16 @@ numbers from free.istn and copy them to used.istn.
 
 Commands available with the makefile:
 
->   ---------------- -------------------------------------------------
->   **img**:         create gif image files with ms and convert.
->   <span class="tool">midi</span>:        create the midifiles and directory from source.
->   **info**:        create the info files from the source files.
->   **bib**:         create bibliographic database.
->   **database**:    create thema database.
->   **groupings**:   edit info files and isnert grouping data.
->   **clean**:       remove all backup directories.
->   ---------------- -------------------------------------------------
->
+---------------- -------------------------------------------------
+**img**:         create gif image files with ms and convert.
+<span class="tool">midi</span>:        create the midifiles and directory from source.
+**info**:        create the info files from the source files.
+**bib**:         create bibliographic database.
+**database**:    create thema database.
+**groupings**:   edit info files and isnert grouping data.
+**clean**:       remove all backup directories.
+---------------- -------------------------------------------------
+
 make img - runs makegifs (which takes a kern file and generates a gif
 file) i.e. runs mup; outputs are put in the /img directory results in
 /img/a/nnnn.gif /img/b/nnnn.gif, etc. make midi - makes a directory
@@ -489,16 +489,16 @@ Finally, set up the cache directories so everything is searchable. (The
 cache directory contains simply links to the real locations for the .gif
 .inf .mid and .thm files.)
 
-> cd /themefinder/web/cache/istn
+cd /themefinder/web/cache/istn
 
 new make command:
 
-> make allinks: create symbolic links for all themes.
+make allinks: create symbolic links for all themes.
 
 or by individual collections, e.g.
 
-> make tonerow\
-> make renaissance
+make tonerow\
+make renaissance
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-&mdash;
 BIB FILES; 020000000100 !!!COM: Albinoni, Tomaso Giovanni etc. \[All
@@ -694,17 +694,17 @@ installing theme data files and generating supporting files.
 
 I. Original Data Files
 
-> A. Theme files
->
-> > 1\. \*\*kern data\
-> > 2. Theme length\
-> > 3. Bibliographic records\
-> > 4. !!!ref: instruction
->
-> B. Naming conventions\
-> C. Theme group files\
-> D. Image files\
-> E. Conversion from other musical data formats into Humdrum.
+A. Theme files
+
+1\. \*\*kern data\
+2. Theme length\
+3. Bibliographic records\
+4. !!!ref: instruction
+
+B. Naming conventions\
+C. Theme group files\
+D. Image files\
+E. Conversion from other musical data formats into Humdrum.
 
 ------------------------------------------------------------------------
 
@@ -791,7 +791,7 @@ standard Humdrum bibliographic records may be found at
 http://dactyl.som.ohio-state.edu/Humdrum/guide.append1.html . For the
 above example, the title record would be:
 
-> !!!OTL: Twinkle, Twinkle, Little Star
+!!!OTL: Twinkle, Twinkle, Little Star
 
 You can also specify the language used in the bibliographic record by
 adding a two character ISO marker for the language (such as EN for
@@ -799,12 +799,12 @@ English, DE for german, ES for spanish, FR for french). This language
 encoding may be useful for future language display options in
 Themefinder, but are currently not used:
 
-> !!!OTL\@EN: Twinkle, Twinkle, Little Star
+!!!OTL\@EN: Twinkle, Twinkle, Little Star
 
 There is one bibliographic record which is required for application in
 generating a short text entry for the theme in the search results pages:
 
-> !!!ref:
+!!!ref:
 
 This record indicates what to display as identification for the theme on
 the search results pages in Themefinder. Shorthand substitution patterns
@@ -812,11 +812,11 @@ of the form @{XXX} are replaced with the contents of the bibliographic
 record starting with the pattern !!!XXX: . All other characters in the
 !!!ref: record will become part of the final text string:
 
-> !!!ref: *@{OTL}*
+!!!ref: *@{OTL}*
 
 For the above example theme, will become:
 
-> *Twinkle, Twinkle, Little Star*
+*Twinkle, Twinkle, Little Star*
 
 The *\...* surrounding the title are the HTML codes for indicating an
 italic font.
@@ -861,9 +861,9 @@ several levels:
 
 The collection group, for example, may consist of:
 
-> \(a) J.S. Bach's Well-Tempered Clavier, Book I\
-> (b) Vivaldi's Op.3 concertos\
-> (c) Chopin's Preludes
+\(a) J.S. Bach's Well-Tempered Clavier, Book I\
+(b) Vivaldi's Op.3 concertos\
+(c) Chopin's Preludes
 
 A general guideline for the size of a grouping is no more than 50
 themes. However, up to 100 themes in a group, particularly a collection
@@ -909,15 +909,15 @@ collection contains an incipit for each voice. The filenames of the
 Motet themes were organized such that each composition had the same
 filename start, followed by a voice indication:
 
-> j15672312-01.thm Soprano incipit\
-> j15672312-02.thm Alto incipit\
-> j15672312-03.thm Tenor incipit\
-> j15672312-04.thm Bass incipit
+j15672312-01.thm Soprano incipit\
+j15672312-02.thm Alto incipit\
+j15672312-03.thm Tenor incipit\
+j15672312-04.thm Bass incipit
 
 which could be automatically processed into a theme grouping entry like
 so:
 
-> w: j15672312-01 j15672312-02 j15672312-03 j15672312-04
+w: j15672312-01 j15672312-02 j15672312-03 j15672312-04
 
 Since automatic groupings of the themes are nearly impossible to
 generate without errors, the theme groups file should be generated by
@@ -947,15 +947,15 @@ can convert the data into Humdrum with an existing conversion program or
 write a new conversion program. Existing conversion programs in the
 Humdrum Toolkit:
 
-> \(1) MuseData to kern program called muse2kern\
-> (2) ESAC to kern\
-> (3) Finale to kern?
+\(1) MuseData to kern program called muse2kern\
+(2) ESAC to kern\
+(3) Finale to kern?
 
 Other conversion tools available:
 
-> \(3) MUSTRAN to kern\
-> (4) DARMS to kern &mdash; this is a specialized converter which converted
-> the Latin Motet incipit collection into Humdrum.
+\(3) MUSTRAN to kern\
+(4) DARMS to kern &mdash; this is a specialized converter which converted
+the Latin Motet incipit collection into Humdrum.
 
 Converting from MIDI is problematic for many reasons including:
 chromatic accidental information is not recorded, measure lines are

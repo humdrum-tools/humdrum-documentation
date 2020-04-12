@@ -59,14 +59,14 @@ Reference)* of this reference manual.
 It is recommended that output files produced using the <span class="tool">deg</span> command
 should be given names with the distinguishing \`.deg\' extension.
 
-> >   ----------- ----------------------------------------------------------------------
-> >   <span class="rep">kern</span>    core pitch/duration representation
-> >   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
-> >   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
-> >   <span class="rep">Tonh</span>    German pitch system
-> >   ----------- ----------------------------------------------------------------------
-> >
-> *Input representations processed by <span class="tool">deg</span>.*
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core pitch/duration representation
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+<span class="rep">Tonh</span>    German pitch system
+----------- ----------------------------------------------------------------------
+
+*Input representations processed by <span class="tool">deg</span>.*
 
 ------------------------------------------------------------------------
 
@@ -74,7 +74,7 @@ should be given names with the distinguishing \`.deg\' extension.
 
 The <span class="tool">deg</span> command provides the following options:
 
-> > <span class="option">h</span>
+<span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -125,68 +125,68 @@ four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) c
 processed by <span class="tool">deg</span>. In addition, there is one non-pitch-related spines
 (<span class="rep">embell</span>).
 
-> ``
->
-> >   --------------------- ---------- ----------- ----------- ----------- ------------
-> >   !! \`deg\' example.                                                  
-> >   \*\*kern              \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
-> >   \*M2/4                \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
-> >   \*C:                  \*d:       \*G\#:      \*a:        \*F:        \*F:
-> >   =1                    =1         =1          =1          =1          =1
-> >   8ee-                  Gis2       /60/        do3         F4foo       ct
-> >   .                     .          /-60/       .           .           .
-> >   8f                    H2         /62/        fa3         r           upt
-> >   .                     .          /-62/       .           .           .
-> >   8dd-                  B2         /70/        mi3         E4          ct
-> >   .                     .          /-70/       .           .           .
-> >   8d&mdash;                 Cis4       /61/        r           F4          sus
-> >   .                     .          /-61/       .           .           .
-> >   =2                    =2         =2          =2          =2          =2
-> >   \[4a-                 r          .           mi\~b3      F4 A4       .
-> >   .                     Heses2     .           re3         G4 Bb4      ct
-> >   4a-\]                 C3         /48/ /52/   do3         E4 C5       ct
-> >   .                     .          /-48/       .           .           .
-> >   .                     H2 E3      /-52/       la3         G4          ct
-> >   =3                    =3         =3          =3          =3          =3
-> >   r                     A2 F3      .           r           F4          .
-> >   ===                   ===        ===         ===         ===         ===
-> >   \*-                   \*-        \*-         \*-         \*-         \*-
-> >   --------------------- ---------- ----------- ----------- ----------- ------------
-> >
+``
+
+--------------------- ---------- ----------- ----------- ----------- ------------
+!! \`deg\' example.                                                  
+\*\*kern              \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
+\*M2/4                \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
+\*C:                  \*d:       \*G\#:      \*a:        \*F:        \*F:
+=1                    =1         =1          =1          =1          =1
+8ee-                  Gis2       /60/        do3         F4foo       ct
+.                     .          /-60/       .           .           .
+8f                    H2         /62/        fa3         r           upt
+.                     .          /-62/       .           .           .
+8dd-                  B2         /70/        mi3         E4          ct
+.                     .          /-70/       .           .           .
+8d&mdash;                 Cis4       /61/        r           F4          sus
+.                     .          /-61/       .           .           .
+=2                    =2         =2          =2          =2          =2
+\[4a-                 r          .           mi\~b3      F4 A4       .
+.                     Heses2     .           re3         G4 Bb4      ct
+4a-\]                 C3         /48/ /52/   do3         E4 C5       ct
+.                     .          /-48/       .           .           .
+.                     H2 E3      /-52/       la3         G4          ct
+=3                    =3         =3          =3          =3          =3
+r                     A2 F3      .           r           F4          .
+===                   ===        ===         ===         ===         ===
+\*-                   \*-        \*-         \*-         \*-         \*-
+--------------------- ---------- ----------- ----------- ----------- ------------
+
 Executing the command:
 
 ` deg -tx input > output.deg`
 
 produces the following result:
 
-> ``
->
-> >   --------------------- --------- ----------- --------- --------- ------------
-> >   !! \`deg\' example.                                             
-> >   \*\*deg               \*\*deg   \*\*MIDI    \*\*deg   \*\*deg   \*\*embell
-> >   \*M2/4                \*M2/4    \*M2/4      \*M2/4    \*M2/4    \*M2/4
-> >   \*C:                  \*d:      \*G\#:      \*a:      \*F:      \*F:
-> >   =1                    =1        =1          =1        =1        =1
-> >   3-                    4+        /60/        3         1         ct
-> >   .                     .         /-60/       .         .         .
-> >   v4                    \^6+      /62/        \^6       r         upt
-> >   .                     .         /-62/       .         .         .
-> >   \^2-                  v6        /70/        v5        v7        ct
-> >   .                     .         /-70/       .         .         .
-> >   v2-                   \^7       /61/        r         \^1       sus
-> >   .                     .         /-61/       .         .         .
-> >   =2                    =2        =2          =2        =2        =2
-> >   \^6-                  r         .           v5-       1 \^3     .
-> >   .                     v6-       .           v4        v2 \^4    ct
-> >   .                     \^7-      /48/ /52/   v3        v7 \^5    ct
-> >   .                     .         /-48/       .         .         .
-> >   .                     v6+ \^2   /-52/       \^1       v2        ct
-> >   =3                    =3        =3          =3        =3        =3
-> >   r                     v5 \^3    .           r         v1        .
-> >   ===                   ===       ===         ===       ===       ===
-> >   \*-                   \*-       \*-         \*-       \*-       \*-
-> >   --------------------- --------- ----------- --------- --------- ------------
-> >
+``
+
+--------------------- --------- ----------- --------- --------- ------------
+!! \`deg\' example.                                             
+\*\*deg               \*\*deg   \*\*MIDI    \*\*deg   \*\*deg   \*\*embell
+\*M2/4                \*M2/4    \*M2/4      \*M2/4    \*M2/4    \*M2/4
+\*C:                  \*d:      \*G\#:      \*a:      \*F:      \*F:
+=1                    =1        =1          =1        =1        =1
+3-                    4+        /60/        3         1         ct
+.                     .         /-60/       .         .         .
+v4                    \^6+      /62/        \^6       r         upt
+.                     .         /-62/       .         .         .
+\^2-                  v6        /70/        v5        v7        ct
+.                     .         /-70/       .         .         .
+v2-                   \^7       /61/        r         \^1       sus
+.                     .         /-61/       .         .         .
+=2                    =2        =2          =2        =2        =2
+\^6-                  r         .           v5-       1 \^3     .
+.                     v6-       .           v4        v2 \^4    ct
+.                     \^7-      /48/ /52/   v3        v7 \^5    ct
+.                     .         /-48/       .         .         .
+.                     v6+ \^2   /-52/       \^1       v2        ct
+=3                    =3        =3          =3        =3        =3
+r                     v5 \^3    .           r         v1        .
+===                   ===       ===         ===       ===       ===
+\*-                   \*-       \*-         \*-       \*-       \*-
+--------------------- --------- ----------- --------- --------- ------------
+
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>

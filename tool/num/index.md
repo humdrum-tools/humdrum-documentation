@@ -53,29 +53,29 @@ phrases, chords, notes, rests, or other musically-pertinent features.
 
 The <span class="tool">num</span> command provides the following options:
 
->   ----------------- --------------------------------------------------------------------
->   -a *\*\*interp*   append a new spine (*\*\*interp*) containing the output numbers
->   <span class="option">e</span>            place numbers at end of data tokens (rather than at the beginning)
->   <span class="option">f</span>            number all spines (all fields) in the input
->   <span class="option">h</span>            displays a help screen summarizing the command syntax
->   -i *n*            set increment value to *n* (defaults to 1)
->   -n *regexp*       number only those records matching *regexp*
->   -o *n*            set initial offset value to *n* (defaults to 1)
->   -O *n*            set offset value to *n* after a reset
->   -p *regexp*       horizontally position the output number immediately following the
->                     first occurrence of *regexp* on the line
->   -P *regexp*       horizontally position the output number immediately prior to the
->                     first occurrence of *regexp* on the line
->   -r *regexp*       resume numbering records when *regexp* is matched
->   -R *regexp*       resume numbering records after *regexp* is matched
->   -s *regexp*       suspend numbering records when *regexp* is matched
->   -S *regexp*       suspend numbering records after *regexp* is matched
->   <span class="option">T</span>            reset counter when all spines have exclusive interpretations
->   -x *regexp*       exclude numbering those records matching *regexp*
->   -z *regexp*       reset counter when record matches *regexp*
->   -Z *regexp*       reset counter after record matches *regexp*
->   ----------------- --------------------------------------------------------------------
->
+----------------- --------------------------------------------------------------------
+-a *\*\*interp*   append a new spine (*\*\*interp*) containing the output numbers
+<span class="option">e</span>            place numbers at end of data tokens (rather than at the beginning)
+<span class="option">f</span>            number all spines (all fields) in the input
+<span class="option">h</span>            displays a help screen summarizing the command syntax
+-i *n*            set increment value to *n* (defaults to 1)
+-n *regexp*       number only those records matching *regexp*
+-o *n*            set initial offset value to *n* (defaults to 1)
+-O *n*            set offset value to *n* after a reset
+-p *regexp*       horizontally position the output number immediately following the
+first occurrence of *regexp* on the line
+-P *regexp*       horizontally position the output number immediately prior to the
+first occurrence of *regexp* on the line
+-r *regexp*       resume numbering records when *regexp* is matched
+-R *regexp*       resume numbering records after *regexp* is matched
+-s *regexp*       suspend numbering records when *regexp* is matched
+-S *regexp*       suspend numbering records after *regexp* is matched
+<span class="option">T</span>            reset counter when all spines have exclusive interpretations
+-x *regexp*       exclude numbering those records matching *regexp*
+-z *regexp*       reset counter when record matches *regexp*
+-Z *regexp*       reset counter after record matches *regexp*
+----------------- --------------------------------------------------------------------
+
 Options are specified in the command line.
 
 Normally, the effect of <span class="tool">num</span> is to add numbers to data tokens already
@@ -173,37 +173,37 @@ The following examples illustrate how <span class="tool">num</span> may be used.
 following input (left spine) and corresponding <span class="tool">num</span> output (right
 spine). ``
 
->   ---------- -------------
->   \*\*kern   \*\*plength
->   =23        .
->   {8a        .
->   .          .
->   8cc        .
->   }8ee       3
->   {8g\#      .
->   =24        .
->   8dd        .
->   8ee        .
->   }8ff       4
->   8r         .
->   .          .
->   =25        .
->   {8gn       .
->   8cc        .
->   }8ee       3
->   {8f\#      .
->   =26        .
->   8cc        .
->   8dd        .
->   }8ee-      4
->   \*-        \*-
->   ---------- -------------
->
+---------- -------------
+\*\*kern   \*\*plength
+=23        .
+{8a        .
+.          .
+8cc        .
+}8ee       3
+{8g\#      .
+=24        .
+8dd        .
+8ee        .
+}8ff       4
+8r         .
+.          .
+=25        .
+{8gn       .
+8cc        .
+}8ee       3
+{8f\#      .
+=26        .
+8cc        .
+8dd        .
+}8ee-      4
+\*-        \*-
+---------- -------------
+
 The <span class="rep">plength</span> output indicates the number of notes in each phrase for
 the corresponding <span class="rep">kern</span> spine. The output was generated using the
 following command:
 
-> ` num -a '**plength' -z '{' -x '[.r=]' -s '{' -r '}' -S '}'`
+` num -a '**plength' -z '{' -x '[.r=]' -s '{' -r '}' -S '}'`
 
 The <span class="option">x</span> option excludes <span class="rep">kern</span> rests, barlines, and null tokens
 from the counting. The <span class="option">z</span> option causes the counter to be reset to 1
@@ -220,12 +220,12 @@ separate spine labelled <span class="rep">plength</span>.
 
 The command
 
-> ` num -a '**ordo' koto`
+` num -a '**ordo' koto`
 
 outputs a new spine labelled <span class="rep">ordo</span> containing successive integers
 beginning at 1 for each data record in the input.
 
-> ` num -n '^=' -x '==' -p '=' -o 108 sarod`
+` num -n '^=' -x '==' -p '=' -o 108 sarod`
 
 numbers all \"common system\" barlines in the file `sarod`, beginning
 with measure 108. Double barlines are not numbered (due to the <span class="option">x</span>
@@ -238,7 +238,7 @@ renumbered by first removing the existing measure numbers using
 
 The command
 
-> ` num -a '**phrase#' -n '{' -T rebec`
+` num -a '**phrase#' -n '{' -T rebec`
 
 outputs a spine containing numbers that number the beginning of each
 <span class="rep">kern</span> phrase for the file `rebec`; if any exclusive interpretation is
@@ -246,11 +246,11 @@ encountered, the phrase numbering is restarted at 1.
 
 The command
 
-> ` num -x '^='`
+` num -x '^='`
 
 numbers all data records other than common system barlines.
 
-> ` num -x '^=' -Z '='`
+` num -x '^=' -Z '='`
 
 numbers all data records within each common system measure &mdash; starting
 at the value 1 with each new measure.

@@ -37,12 +37,12 @@ affect the SMF output.
 
 The <span class="tool">smf</span> command provides the following command-line options:
 
->   ---------- -------------------------------------------------------
->   <span class="option">h</span>     displays a help screen summarizing the command syntax
->   -t *n.n*   set initial tempo to *n.n* times the default tempo
->   -v *n*     specify default MIDI key-velocity value (0-127)
->   ---------- -------------------------------------------------------
->
+---------- -------------------------------------------------------
+<span class="option">h</span>     displays a help screen summarizing the command syntax
+-t *n.n*   set initial tempo to *n.n* times the default tempo
+-v *n*     specify default MIDI key-velocity value (0-127)
+---------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The performance tempo may be specified either in the command line or in

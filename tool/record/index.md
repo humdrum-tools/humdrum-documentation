@@ -54,12 +54,12 @@ extension.
 
 The <span class="tool">record</span> command provides the following option:
 
->   ---------- ---------------------------------------------------------------
->   <span class="option">h</span>     displays a help screen summarizing the command syntax
->   -i *hex*   assign MIDI interface input/output address to *hex*
->   -q *n*     invokes quantizing using a temporal window of *n* clock ticks
->   ---------- ---------------------------------------------------------------
->
+---------- ---------------------------------------------------------------
+<span class="option">h</span>     displays a help screen summarizing the command syntax
+-i *hex*   assign MIDI interface input/output address to *hex*
+-q *n*     invokes quantizing using a temporal window of *n* clock ticks
+---------- ---------------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">q</span> option invokes a quantizing function where timing information
@@ -82,67 +82,67 @@ hexadecimal number.
 The following examples illustrate how <span class="tool">record</span> may be used. A simple
 command invocation is:
 
-> ` record`
+` record`
 
 Output <span class="rep">MIDI</span> data may appears as follows: ``
 
->   -------------------------------------
->   !! Data from the MPU-401 MIDI card.
->   \*\*MIDI
->   \*Ch1
->   236/67/64
->   12/-67/64
->   10/67/66
->   11/-67/64
->   13/67/51
->   12/-67/64
->   14/63/72
->   263/-63/64
->   84/65/61
->   15/-65/64
->   10/65/55
->   15/-65/64
->   11/65/51
->   23/-65/64
->   12/62/58
->   171/-62/64
->   \*-
->   -------------------------------------
->
+-------------------------------------
+!! Data from the MPU-401 MIDI card.
+\*\*MIDI
+\*Ch1
+236/67/64
+12/-67/64
+10/67/66
+11/-67/64
+13/67/51
+12/-67/64
+14/63/72
+263/-63/64
+84/65/61
+15/-65/64
+10/65/55
+15/-65/64
+11/65/51
+23/-65/64
+12/62/58
+171/-62/64
+\*-
+-------------------------------------
+
 Using the quantizing option:
 
-> ` record -q 10`
+` record -q 10`
 
 might produce output such as the following <span class="rep">MIDI</span> data. Notice the
 frequent occurrence of multiple-stops (more than one note-instruction in
 the spine). ``
 
->   --------------------------------------
->   !! Data from the MPU-401 MIDI card.
->   !! Quantizing set at 10 clock ticks.
->   \*\*MIDI
->   \*Ch1
->   303/50/39
->   13/-50/64 13/74/55
->   23/76/43
->   15/-74/64 15/78/58 15/-76/64
->   22/69/35 22/-78/64 22/62/43
->   18/-62/64 18/78/43 18/-69/64
->   22/76/35
->   14/-78/64 14/74/58
->   15/-76/64 15/-74/64
->   12/81/48 12/54/77
->   17/-54/64 17/74/69 17/-81/64
->   23/76/48
->   19/78/66 19/-74/64 19/-76/64
->   21/62/43 21/69/69 21/-78/64
->   14/-62/64 14/78/51 14/-69/64
->   25/76/58
->   17/-78/64 17/74/74 17/-76/64
->   15/-74/64
->   \*-
->   --------------------------------------
->
+--------------------------------------
+!! Data from the MPU-401 MIDI card.
+!! Quantizing set at 10 clock ticks.
+\*\*MIDI
+\*Ch1
+303/50/39
+13/-50/64 13/74/55
+23/76/43
+15/-74/64 15/78/58 15/-76/64
+22/69/35 22/-78/64 22/62/43
+18/-62/64 18/78/43 18/-69/64
+22/76/35
+14/-78/64 14/74/58
+15/-76/64 15/-74/64
+12/81/48 12/54/77
+17/-54/64 17/74/69 17/-81/64
+23/76/48
+19/78/66 19/-74/64 19/-76/64
+21/62/43 21/69/69 21/-78/64
+14/-62/64 14/78/51 14/-69/64
+25/76/58
+17/-78/64 17/74/74 17/-76/64
+15/-74/64
+\*-
+--------------------------------------
+
 ------------------------------------------------------------------------
 
 ## DIAGNOSTICS ##

@@ -46,11 +46,11 @@ document.
 
 The <span class="tool">veritas</span> command provides the following options:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">v</span>   invoke verbose mode
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+<span class="option">v</span>   invoke verbose mode
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">v</span> option will cause the checksum validation number to be

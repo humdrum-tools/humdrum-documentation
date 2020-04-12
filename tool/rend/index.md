@@ -34,26 +34,26 @@ accidental, and the octave number (e.g. A\#4). In some tasks it may be
 useful to split such information into separate spines. For example, a
 user may wish to reformat the following spine: ``
 
->   -----------
->   \*\*pitch
->   Ab3
->   Eb4
->   F\#4
->   C5
->   \*-
->   -----------
->
+-----------
+\*\*pitch
+Ab3
+Eb4
+F\#4
+C5
+\*-
+-----------
+
 as three independent spines: ``
 
->   ------------ ---------- ----------------
->   \*\*octave   \*\*note   \*\*accidental
->   3            Ab         b
->   4            Eb         b
->   4            F\#        \#
->   5            C          .
->   \*-          \*-        \*-
->   ------------ ---------- ----------------
->
+------------ ---------- ----------------
+\*\*octave   \*\*note   \*\*accidental
+3            Ab         b
+4            Eb         b
+4            F\#        \#
+5            C          .
+\*-          \*-        \*-
+------------ ---------- ----------------
+
 The <span class="tool">rend</span> command allows each occurrence of a target exclusive
 interpretation to be replaced by specified output spines. The user
 selects how the signfiers (characters) in the input spines are to be
@@ -64,19 +64,19 @@ characters) are identified using UNIX regular expression syntax (see
 The above transformation may be achieved by invoking the following
 command:
 
-> ` rend -i '**pitch' -f reassign`
+` rend -i '**pitch' -f reassign`
 
 The <span class="option">i</span> option specifies the target input interpretation, i.e., the
 input spine(s) to be processed. The <span class="option">f</span> option specifies a
 reassignment-file (named `reassign`) containing the following records:
 ``
 
->   ---------------- --------------
->   \*\*octave       \[0-9\]
->   \*\*note         \[A-Gb\#x\]+
->   \*\*accidental   \[b\#x\]+
->   ---------------- --------------
->
+---------------- --------------
+\*\*octave       \[0-9\]
+\*\*note         \[A-Gb\#x\]+
+\*\*accidental   \[b\#x\]+
+---------------- --------------
+
 Reassignment files consist of one or more records, each containing two
 strings separated by a tab. The left-most string identifies the name of
 the new spine to be generated. The right-most string defines an
@@ -97,15 +97,15 @@ case, for example, the order of the output spines will be
 
 The <span class="tool">rend</span> command provides the following options:
 
->   --------------------- --------------------------------------------------------------------------
->   -f *reassign*         maps input tokens to output tokens according to definitions given in the
->                         file *reassign*
->   <span class="option">h</span>                displays a help screen summarizing the command syntax
->   -i *target\_interp*   process all input spines whose exclusive interpretations are labelled
->                         *target\_interp*
->   <span class="option">s</span>                matches a single instance of the given pattern rather than all instances
->   --------------------- --------------------------------------------------------------------------
->
+--------------------- --------------------------------------------------------------------------
+-f *reassign*         maps input tokens to output tokens according to definitions given in the
+file *reassign*
+<span class="option">h</span>                displays a help screen summarizing the command syntax
+-i *target\_interp*   process all input spines whose exclusive interpretations are labelled
+*target\_interp*
+<span class="option">s</span>                matches a single instance of the given pattern rather than all instances
+--------------------- --------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------
@@ -114,11 +114,11 @@ Options are specified in the command line.
 
 Consider the following example:
 
-> ` rend -i '**kern' -f noterest song01`
+` rend -i '**kern' -f noterest song01`
 
 and the associated reassignment file named `noterest`:
 
-> ` **notes []A-Ga-g[#-]+|^=+[0-9]*  **rests [\\.0-9r]+|^=+[0-9]*`
+` **notes []A-Ga-g[#-]+|^=+[0-9]*  **rests [\\.0-9r]+|^=+[0-9]*`
 
 This command specifies that each ` **kern` spine in the file ` song01`
 is to be split into two new spines dubbed ` **notes` and ` **rests.` The
@@ -137,42 +137,42 @@ more equals-signs, followed by zero or more numbers.
 
 Given this command, the following input: ``
 
->   --------------------- ------------ ----------
->   \*\*kern              \*\*lyrics   \*\*kern
->   !! Commented input.                
->   8.G                   Hi-          4r
->   16G\#                 de-          .
->   =23                   =23          =23
->   8A                    ho-          2r
->   \[8c                  .            .
->   8c\]                  .            .
->   16r                   .            .
->   16A                   .            .
->   =24                   =24          =24
->   2C 2E                 hum.         2r
->   ===                   ===          ===
->   \*-                   \*-          \*-
->   --------------------- ------------ ----------
->
+--------------------- ------------ ----------
+\*\*kern              \*\*lyrics   \*\*kern
+!! Commented input.                
+8.G                   Hi-          4r
+16G\#                 de-          .
+=23                   =23          =23
+8A                    ho-          2r
+\[8c                  .            .
+8c\]                  .            .
+16r                   .            .
+16A                   .            .
+=24                   =24          =24
+2C 2E                 hum.         2r
+===                   ===          ===
+\*-                   \*-          \*-
+--------------------- ------------ ----------
+
 will produce the following output: ``
 
->   --------------------- ----------- ------------ ----------- -----------
->   \*\*notes             \*\*rests   \*\*lyrics   \*\*notes   \*\*rests
->   !! Commented input.                                        
->   G                     8.          Hi-          .           4r
->   G\#                   16          de-          .           .
->   =23                   =23         =23          =23         =23
->   A                     8           ho-          .           2r
->   \[c                   8           .            .           .
->   c\]                   8           .            .           .
->   .                     16r         .            .           .
->   A                     16          .            .           .
->   =24                   =24         =24          =24         =24
->   C E                   2 2         hum.         .           2r
->   ===                   ===         ===          ===         ===
->   \*-                   \*-         \*-          \*-         \*-
->   --------------------- ----------- ------------ ----------- -----------
->
+--------------------- ----------- ------------ ----------- -----------
+\*\*notes             \*\*rests   \*\*lyrics   \*\*notes   \*\*rests
+!! Commented input.                                        
+G                     8.          Hi-          .           4r
+G\#                   16          de-          .           .
+=23                   =23         =23          =23         =23
+A                     8           ho-          .           2r
+\[c                   8           .            .           .
+c\]                   8           .            .           .
+.                     16r         .            .           .
+A                     16          .            .           .
+=24                   =24         =24          =24         =24
+C E                   2 2         hum.         .           2r
+===                   ===         ===          ===         ===
+\*-                   \*-         \*-          \*-         \*-
+--------------------- ----------- ------------ ----------- -----------
+
 Notice that <span class="tool">rend</span> correctly handles Humdrum multiple-stops (such as
 `2C 2E`). Notice also that if no match is made, a null token (.) is
 output.
@@ -207,7 +207,7 @@ starting with a different interpretation, the output will fail to
 generate the proper spine terminator and add-spine path indicators. The
 result is a non-Humdrum file. Consider the following command:
 
-> ` rend -i '**ex1' -f reassign input`
+` rend -i '**ex1' -f reassign input`
 
 and the associate reassignment file (`reassign`):
 
@@ -215,30 +215,30 @@ and the associate reassignment file (`reassign`):
 
 Given the following input: ``
 
->   --------- ---------
->   \*\*ex1   \*\*ex2
->   a1        b2
->   \*tand1   \*tand2
->   c3        d4
->   \*        \*\*ex1
->   e5        f6
->   \*-       \*-
->   --------- ---------
->
+--------- ---------
+\*\*ex1   \*\*ex2
+a1        b2
+\*tand1   \*tand2
+c3        d4
+\*        \*\*ex1
+e5        f6
+\*-       \*-
+--------- ---------
+
 the corresponding output is given below. Note the absence of appropriate
 spine-path indicators between lines 4 and 5 (hence the output is
 non-Humdrum). ``
 
->   --------- --------- --------- ---------
->   \*\*let   \*\*num   \*\*ex2   
->   a         1         b2        
->   \*tand1   \*tand1   \*tand2   
->   c         3         d4        
->   \*        \*        \*\*let   \*\*num
->   e         5         f         6
->   \*-       \*-       \*-       \*-
->   --------- --------- --------- ---------
->
+--------- --------- --------- ---------
+\*\*let   \*\*num   \*\*ex2   
+a         1         b2        
+\*tand1   \*tand1   \*tand2   
+c         3         d4        
+\*        \*        \*\*let   \*\*num
+e         5         f         6
+\*-       \*-       \*-       \*-
+--------- --------- --------- ---------
+
 ------------------------------------------------------------------------
 
 \

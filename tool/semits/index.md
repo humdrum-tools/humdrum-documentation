@@ -39,19 +39,19 @@ It is recommended that output files produced using the <span class="tool">semits
 command should be given names with the distinguishing \`.sem\'
 extension.
 
->   ------------ ---------------------------------------------------------------------------
->   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   <span class="rep">freq</span>     fundamental frequency (in hertz)
->   <span class="rep">fret</span>     fretted-instrument pitch tablature
->   <span class="rep">kern</span>     core pitch/duration representation
->   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
->   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
->   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
->   <span class="rep">specC</span>    spectral centroid (in hertz)
->   <span class="rep">Tonh</span>     German pitch system
->   ------------ ---------------------------------------------------------------------------
->
+------------ ---------------------------------------------------------------------------
+<span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+<span class="rep">freq</span>     fundamental frequency (in hertz)
+<span class="rep">fret</span>     fretted-instrument pitch tablature
+<span class="rep">kern</span>     core pitch/duration representation
+<span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+<span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+<span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+<span class="rep">specC</span>    spectral centroid (in hertz)
+<span class="rep">Tonh</span>     German pitch system
+------------ ---------------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">semits</span>.*
 
 ------------------------------------------------------------------------
@@ -60,13 +60,13 @@ extension.
 
 The <span class="tool">semits</span> command provides the following options:
 
->   -------- ---------------------------------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -p *n*   output precision of *n* decimal places
->   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern notes`
->   <span class="option">x</span>   suppresses printing of non-semits data
->   -------- ---------------------------------------------------------------------------------
->
+-------- ---------------------------------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-p *n*   output precision of *n* decimal places
+<span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern notes`
+<span class="option">x</span>   suppresses printing of non-semits data
+-------- ---------------------------------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">p</span> option can be used to set the precision of the output values
@@ -101,64 +101,64 @@ contains six pitch-related spines &mdash; two of which (<span class="rep">deg</s
 <span class="rep">cocho</span>) cannot be processed by <span class="tool">semits</span>. In addition, there are two
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
->   ------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
->   !! \`semits\' example.                                                                         
->   \*\*kern                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
->   \*M2/4                   \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
->   \*                       \*          \*          \*        \*tb8        \*          \*         \*
->   =1                       =1          =1          =1        =1           =1          =1         =1
->   8ee-                     G\#4foo     /60/bar     1foo      1            r           Gis2       ct
->   .                        .           /-60/       .         .            .           .          .
->   8ff                      A3          /62/        2         3            9.89        H2         upt
->   .                        .           /-62/       .         .            .           .          .
->   8dd-                     Ab3         /70/        1         2            7.07        B2         ct
->   .                        .           /-70/       .         .            .           .          .
->   8d-                      C\#4        /61/        6         3            7.135       Cis4       sus
->   .                        .           /-61/       .         .            .           .          .
->   =2                       =2          =2          =2        =2           =2          =2         =2
->   \[4a-                    r           .           5         1            r           r          .
->   .                        .           .           7         3            5.5         Heses2     ct
->   4a-\]                    D4          /48/ /52/   1         2            8.11        C3         ct
->   .                        .           /-48/       .         .            .           .          .
->   .                        D4 F4       /-52/       2         3            7.33 6.4    C3 Es3     ct
->   =3                       =3          =3          =3        =3           =3          =3         =3
->   r                        G4          .           r         1            r           H2 D3      .
->   ===                      ===         ===         ===       ===          ===         ===        ===
->   \*-                      \*-         \*-         \*-       \*-          \*-         \*-        \*-
->   ------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
->
+------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
+!! \`semits\' example.                                                                         
+\*\*kern                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
+\*M2/4                   \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
+\*                       \*          \*          \*        \*tb8        \*          \*         \*
+=1                       =1          =1          =1        =1           =1          =1         =1
+8ee-                     G\#4foo     /60/bar     1foo      1            r           Gis2       ct
+.                        .           /-60/       .         .            .           .          .
+8ff                      A3          /62/        2         3            9.89        H2         upt
+.                        .           /-62/       .         .            .           .          .
+8dd-                     Ab3         /70/        1         2            7.07        B2         ct
+.                        .           /-70/       .         .            .           .          .
+8d-                      C\#4        /61/        6         3            7.135       Cis4       sus
+.                        .           /-61/       .         .            .           .          .
+=2                       =2          =2          =2        =2           =2          =2         =2
+\[4a-                    r           .           5         1            r           r          .
+.                        .           .           7         3            5.5         Heses2     ct
+4a-\]                    D4          /48/ /52/   1         2            8.11        C3         ct
+.                        .           /-48/       .         .            .           .          .
+.                        D4 F4       /-52/       2         3            7.33 6.4    C3 Es3     ct
+=3                       =3          =3          =3        =3           =3          =3         =3
+r                        G4          .           r         1            r           H2 D3      .
+===                      ===         ===         ===       ===          ===         ===        ===
+\*-                      \*-         \*-         \*-       \*-          \*-         \*-        \*-
+------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
+
 Executing the command
 
-> ` semits -tx input > output`
+` semits -tx input > output`
 
 produces the following result: ``
 
->   ------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
->   !! \`semits\' example.                                                                             
->   \*\*semits               \*\*semits   \*\*semits   \*\*deg   \*\*metpos   \*\*cocho   \*\*semits   \*\*embell
->   \*M2/4                   \*M2/4       \*M2/4       \*M2/4    \*M2/4       \*M2/4      \*M2/4       \*M2/4
->   \*                       \*           \*           \*        \*tb8        \*          \*           \*
->   =1                       =1           =1           =1        =1           =1          =1           =1
->   15                       8            0            1foo      1            r           -16          ct
->   .                        .            .            .         .            .           .            .
->   17                       -3           2            2         3            9.89        -13          upt
->   .                        .            .            .         .            .           .            .
->   13                       -4           10           1         2            7.07        -14          ct
->   .                        .            .            .         .            .           .            .
->   1                        1            1            6         3            7.135       1            sus
->   .                        .            .            .         .            .           .            .
->   =2                       =2           =2           =2        =2           =2          =2           =2
->   8                        r            .            5         1            r           r            .
->   .                        .            .            7         3            5.5         -15          ct
->   .                        2            -12 -8       1         2            8.11        -12          ct
->   .                        .            .            .         .            .           .            .
->   .                        2 5          .            2         3            7.33 6.4    -12 -9       ct
->   =3                       =3           =3           =3        =3           =3          =3           =3
->   r                        7            .            r         1            r           -13 -10      .
->   ===                      ===          ===          ===       ===          ===         ===          ===
->   \*-                      \*-          \*-          \*-       \*-          \*-         \*-          \*-
->   ------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
->
+------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
+!! \`semits\' example.                                                                             
+\*\*semits               \*\*semits   \*\*semits   \*\*deg   \*\*metpos   \*\*cocho   \*\*semits   \*\*embell
+\*M2/4                   \*M2/4       \*M2/4       \*M2/4    \*M2/4       \*M2/4      \*M2/4       \*M2/4
+\*                       \*           \*           \*        \*tb8        \*          \*           \*
+=1                       =1           =1           =1        =1           =1          =1           =1
+15                       8            0            1foo      1            r           -16          ct
+.                        .            .            .         .            .           .            .
+17                       -3           2            2         3            9.89        -13          upt
+.                        .            .            .         .            .           .            .
+13                       -4           10           1         2            7.07        -14          ct
+.                        .            .            .         .            .           .            .
+1                        1            1            6         3            7.135       1            sus
+.                        .            .            .         .            .           .            .
+=2                       =2           =2           =2        =2           =2          =2           =2
+8                        r            .            5         1            r           r            .
+.                        .            .            7         3            5.5         -15          ct
+.                        2            -12 -8       1         2            8.11        -12          ct
+.                        .            .            .         .            .           .            .
+.                        2 5          .            2         3            7.33 6.4    -12 -9       ct
+=3                       =3           =3           =3        =3           =3          =3           =3
+r                        7            .            r         1            r           -13 -10      .
+===                      ===          ===          ===       ===          ===         ===          ===
+\*-                      \*-          \*-          \*-       \*-          \*-         \*-          \*-
+------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
+
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>

@@ -42,44 +42,44 @@ template.
 Consider, first, a simple example where the template consists of the
 numbers 1, 2, 3 &mdash; each on a separate line:
 
-> ``
->
->   ---
->   1
->   2
->   3
->   ---
->
+``
+
+---
+1
+2
+3
+---
+
 This template will match inputs such as the following:
 
-> ``
->
->   ------
->   1
->   112
->   43.9
->   ------
->
+``
+
+------
+1
+112
+43.9
+------
+
 or even
 
-> ``
->
->   -----------------
->   0x.=%&1\*
->   Figure 32
->   abc(\...32\...)
->   -----------------
->
+``
+
+-----------------
+0x.=%&1\*
+Figure 32
+abc(\...32\...)
+-----------------
+
 A more circumspect regular expression template might look like this:
 
-> ``
->
->   -------
->   \^1\$
->   \^2\$
->   \^3\$
->   -------
->
+``
+
+-------
+\^1\$
+\^2\$
+\^3\$
+-------
+
 (The caret (\^) and dollar sign (\$) are regular expression *anchors*
 that indicate the beginning of the record and end of the record
 respectively.)
@@ -93,14 +93,14 @@ zero or more consecutive instances of *p,* whereas (*p*)? will match
 zero or one instance of *p.* The use of these metacharacters is
 illustrated below:
 
->   ------- -----------------------------------------------------
->   X+      matches X, XX, XXX, etc.
->   X\*     matches X, XX, XXX, etc. as well as the null string
->   X?      matches X or the null string
->   XX      matches XX
->   (XX)+   matches XX, XXXX, XXXXXX, etc.
->   ------- -----------------------------------------------------
->
+------- -----------------------------------------------------
+X+      matches X, XX, XXX, etc.
+X\*     matches X, XX, XXX, etc. as well as the null string
+X?      matches X or the null string
+XX      matches XX
+(XX)+   matches XX, XXXX, XXXXXX, etc.
+------- -----------------------------------------------------
+
 *Regular expression counting metacharacters*
 
 These metacharacters can be used in conjunction with other regular
@@ -115,12 +115,12 @@ specified by following the regular expression with a tab &mdash; followed by
 either +, \*, or ?. For example, consider the following <span class="tool">pattern</span>
 template: ``
 
->   --- ----
->   X   \+
->   Y   \*
->   Z   ?
->   --- ----
->
+--- ----
+X   \+
+Y   \*
+Z   ?
+--- ----
+
 The intervening tab characters are important here. They indicate that
 the metacharacters refer to the number of records rather than to the
 number of patterns in a given record. The first template record (X+)
@@ -141,35 +141,35 @@ The <span class="tool">pattern</span> command will identify *all* possible match
 beginning at each point in the input. Consider, by way of example, the
 following template file (named `template`): ``
 
->   --- ----
->   1   \+
->   2   \+
->   3   \+
->   4   \+
->   5   \+
->   --- ----
->
+--- ----
+1   \+
+2   \+
+3   \+
+4   \+
+5   \+
+--- ----
+
 The following Humdrum input file is named `example1`: ``
 
->   --------- ---------
->   \*\*num   \*\*num
->   1         1
->   2         2
->   3         2
->   4         3
->   5         4
->   5         5
->   6         6
->   \*-       \*-
->   --------- ---------
->
+--------- ---------
+\*\*num   \*\*num
+1         1
+2         2
+3         2
+4         3
+5         4
+5         5
+6         6
+\*-       \*-
+--------- ---------
+
 Given the command:
 
-> ` pattern -f template example1`
+` pattern -f template example1`
 
 the <span class="tool">pattern</span> command will produce the following output:
 
-> ` 4 patterns found from line 2 to line 7 of file example1  1 pattern found from line 2 to line 6 of file example1`
+` 4 patterns found from line 2 to line 7 of file example1  1 pattern found from line 2 to line 6 of file example1`
 
 The patterns are: 1-2-3-4-5, 1-2-2-3-4-5, 1-2-3-3-4-5, 1-2-3-4-4-5 and
 1-2-3-4-5-5. Note that the entire input line is used for matching
@@ -187,14 +187,14 @@ before invoking the <span class="tool">pattern</span> command.
 
 The <span class="tool">pattern</span> command supports the following options:
 
->   ------------- ----------------------------------------------------------------------
->   <span class="option">c</span>        makes pattern-matching sensitive to comments
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">i</span>        makes pattern-matching sensitive to interpretations
->   -s *regexp*   skip (ignore) data records containing the defined regular expression
->   <span class="option">y</span>        outputs appropriate \`yank\' commands in place of regular output
->   ------------- ----------------------------------------------------------------------
->
+------------- ----------------------------------------------------------------------
+<span class="option">c</span>        makes pattern-matching sensitive to comments
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+<span class="option">i</span>        makes pattern-matching sensitive to interpretations
+-s *regexp*   skip (ignore) data records containing the defined regular expression
+<span class="option">y</span>        outputs appropriate \`yank\' commands in place of regular output
+------------- ----------------------------------------------------------------------
+
 Options are specified in the command line.
 
 By default, the <span class="tool">pattern</span> command is insensitive to the presence or

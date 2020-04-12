@@ -35,23 +35,23 @@ reference manual.
 It is recommended that output files produced using the <span class="tool">vox</span> command
 should be given names with the distinguishing \`.vox\' extension.
 
->   ------------ ---------------------------------------------------------------------------
->   <span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
->   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   <span class="rep">cocho</span>    cochlear coordinates (in millimeters)
->   <span class="rep">deg</span>      key-related relative scale degree
->   <span class="rep">degree</span>   key-related absolute scale degree
->   <span class="rep">freq</span>     fundamental frequency (in hertz)
->   <span class="rep">kern</span>     core pitch/duration representation
->   <span class="rep">pc</span>       pitch class representation
->   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
->   <span class="rep">solfa</span>    tonic solfa syllables
->   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
->   <span class="rep">specC</span>    spectral centroid (in hertz)
->   <span class="rep">Tonh</span>     German pitch system
->   ------------ ---------------------------------------------------------------------------
->
+------------ ---------------------------------------------------------------------------
+<span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
+<span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+<span class="rep">cocho</span>    cochlear coordinates (in millimeters)
+<span class="rep">deg</span>      key-related relative scale degree
+<span class="rep">degree</span>   key-related absolute scale degree
+<span class="rep">freq</span>     fundamental frequency (in hertz)
+<span class="rep">kern</span>     core pitch/duration representation
+<span class="rep">pc</span>       pitch class representation
+<span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+<span class="rep">solfa</span>    tonic solfa syllables
+<span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+<span class="rep">specC</span>    spectral centroid (in hertz)
+<span class="rep">Tonh</span>     German pitch system
+------------ ---------------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">vox</span>.*
 
 ------------------------------------------------------------------------
@@ -60,10 +60,10 @@ should be given names with the distinguishing \`.vox\' extension.
 
 The <span class="tool">vox</span> command provides only a help option:
 
->   -------- -------------------------------------------------------
->   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   -------- -------------------------------------------------------
->
+-------- -------------------------------------------------------
+<span class="option">h</span>   displays a help screen summarizing the command syntax
+-------- -------------------------------------------------------
+
 Options are specified in the command line.
 
 ------------------------------------------------------------------------

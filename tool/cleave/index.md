@@ -40,7 +40,7 @@ EXAMPLES below.)
 The <span class="tool">cleave</span> command amalgamates all spines containing the
 interpretation(s) specified by the user. For example, the command:
 
-> ` cleave -i '**recip,**kern' -o '**output' katsumi`
+` cleave -i '**recip,**kern' -o '**output' katsumi`
 
 will amalgamate all spines in the file `katsumi` containing <span class="rep">recip</span> or
 <span class="rep">kern</span> data &mdash; and will output the amalgamated data in a spine
@@ -72,13 +72,13 @@ multiple-stops.
 
 The <span class="tool">cleave</span> command provides the following options:
 
->   ---------------------- -------------------------------------------------------------
->   -d *delimiter*         interpose the string *delimiter* between amalgamated tokens
->   -i *\'in\_interp\'*    list of input interpretations to be processed
->   -o *\'out\_interp\'*   specify output interpretation
->   <span class="option">r</span>                 suppress outputting of duplicate (repeated) signifiers
->   ---------------------- -------------------------------------------------------------
->
+---------------------- -------------------------------------------------------------
+-d *delimiter*         interpose the string *delimiter* between amalgamated tokens
+-i *\'in\_interp\'*    list of input interpretations to be processed
+-o *\'out\_interp\'*   specify output interpretation
+<span class="option">r</span>                 suppress outputting of duplicate (repeated) signifiers
+---------------------- -------------------------------------------------------------
+
 Options are specified in the command line.
 
 The <span class="option">d</span> option is used to specify a string that is inserted between
@@ -105,352 +105,352 @@ Consider the following input consisting of four spines representing
 octave-class, diatonic pitch letter name, accidental, and
 cents-deviation: ``
 
-> <span class="rep">oct</span>
->
-> <span class="rep">diaton</span>
->
-> <span class="rep">accid</span>
->
-> <span class="rep">Cdev</span>
->
-> `4`
->
-> `G`
->
-> `.`
->
-> `.`
->
-> `4`
->
-> `A`
->
-> `.`
->
-> `.`
->
-> `4`
->
-> `B`
->
-> `b`
->
-> `-10`
->
-> `5`
->
-> `C`
->
-> `.`
->
-> `.`
->
-> `5`
->
-> `D`
->
-> `.`
->
-> `.`
->
-> `5`
->
-> `E`
->
-> `b`
->
-> `.`
->
-> `5`
->
-> `F`
->
-> `#`
->
-> `+12`
->
-> `5`
->
-> `G`
->
-> `.`
->
-> `.`
->
-> `*-`
->
-> `*-`
->
-> `*-`
->
-> `*- ` The information available in these four spines might be
-> amalgamated into a single spine by executing the following command:
->
-> > ` cleave -i '**diaton,**accid,**oct,**Cdev' -o '**pitch' input`
->
-> The following output would be produced: ``
->
-> > <span class="rep">pitch</span>
-> >
-> > `G4`
-> >
-> > `A4`
-> >
-> > `Bb4-10`
-> >
-> > `C5`
-> >
-> > `D5`
-> >
-> > `Eb5`
-> >
-> > `F#5+12`
-> >
-> > `G5`
-> >
-> > `*- ` The output interpretation has been specified as <span class="rep">pitch</span>.
-> > Notice that the order of the signifiers in each output data token
-> > reflects the order of the input interpretations given in the command
-> > line &mdash; i.e., <span class="rep">diaton</span> values first, followed by <span class="rep">accid</span>,
-> > followed by <span class="rep">oct</span>, followed by <span class="rep">Cdev</span>. In the case of <span class="rep">accid</span>
-> > and <span class="rep">Cdev</span> data, notice that null tokens (periods) do not affect
-> > the output token. In the default invocation, note that no
-> > intervening characters are placed between the joined subtokens.
-> >
-> > In the following example, <span class="tool">cleave</span> is used to create double-stops
-> > from two spines having identical interpretations. Notice the
-> > presence of barlines. ``
-> >
-> > > <span class="rep">kern</span>
-> > >
-> > > <span class="rep">kern</span>
-> > >
-> > > `*M2/4`
-> > >
-> > > `*M2/4`
-> > >
-> > > `*foo`
-> > >
-> > > `*bar`
-> > >
-> > > `=1`
-> > >
-> > > `=1`
-> > >
-> > > `4c`
-> > >
-> > > `4e`
-> > >
-> > > `8d`
-> > >
-> > > `8f`
-> > >
-> > > `8e`
-> > >
-> > > `8g`
-> > >
-> > > `=2`
-> > >
-> > > `=2`
-> > >
-> > > `8f`
-> > >
-> > > `8a`
-> > >
-> > > `8g`
-> > >
-> > > `8b`
-> > >
-> > > `8a`
-> > >
-> > > `8cc`
-> > >
-> > > `8b`
-> > >
-> > > `8dd`
-> > >
-> > > `=3`
-> > >
-> > > `=3`
-> > >
-> > > `4cc`
-> > >
-> > > `4ee`
-> > >
-> > > `*-`
-> > >
-> > > `*- ` Executing the command
-> > >
-> > > > ` cleave -i '**kern' -d ' ' -o '**kern' input > output`
-> > >
-> > > will produce the following output: ``
-> > >
-> > > > <span class="rep">kern</span>
-> > > >
-> > > > `*M2/4`
-> > > >
-> > > > `*`
-> > > >
-> > > > `=1 =1`
-> > > >
-> > > > `4c 4e`
-> > > >
-> > > > `8d 8f`
-> > > >
-> > > > `8e 8g`
-> > > >
-> > > > `=2 =2`
-> > > >
-> > > > `8f 8a`
-> > > >
-> > > > `8g 8b`
-> > > >
-> > > > `8a 8cc`
-> > > >
-> > > > `8b 8dd`
-> > > >
-> > > > `=3 =3`
-> > > >
-> > > > `4cc 4ee`
-> > > >
-> > > > `*- ` Notice that if identical tandem interpretations appear in
-> > > > the target spines, then they are echoed in the output. Otherwise
-> > > > a null interpretation is output.
-> > > >
-> > > > The redundant measure numbers in the above output might be
-> > > > eliminated using the following <span class="tool">humsed</span>
-> > > > command:
-> > > >
-> > > > > ` humsed '/^=/s/ .*//' input > output`
-> > > >
-> > > > Alternatively, the input might have been preprocessed so that
-> > > > the barlines in one of the two input spines were replaced by
-> > > > null tokens.
-> > > >
-> > > > The <span class="option">r</span> option can be used to eliminate duplicate or repeated
-> > > > signifiers. Consider, for example, the following input: ``
-> > > >
-> > > > > <span class="rep">kern</span>
-> > > > >
-> > > > > <span class="rep">kern</span>
-> > > > >
-> > > > > `.`
-> > > > >
-> > > > > `4c`
-> > > > >
-> > > > > `(8`
-> > > > >
-> > > > > `8d`
-> > > > >
-> > > > > `)8`
-> > > > >
-> > > > > `8e`
-> > > > >
-> > > > > `(`
-> > > > >
-> > > > > `8f`
-> > > > >
-> > > > > `)`
-> > > > >
-> > > > > `8g`
-> > > > >
-> > > > > `8'`
-> > > > >
-> > > > > `8a`
-> > > > >
-> > > > > `8'`
-> > > > >
-> > > > > `8b`
-> > > > >
-> > > > > `.`
-> > > > >
-> > > > > `4cc`
-> > > > >
-> > > > > `*-`
-> > > > >
-> > > > > `*- ` The first <span class="rep">kern</span> spine includes articulation
-> > > > > information not present in the second spine. The pitch,
-> > > > > duration, and articulation information can be amalgamated
-> > > > > without duplication of the duration information using the
-> > > > > <span class="option">r</span> option:
-> > > > >
-> > > > > > ` cleave -r -i '**kern' -o '**kern' input > output`
-> > > > >
-> > > > > The resulting output is: ``
-> > > > >
-> > > > > > <span class="rep">kern</span>
-> > > > > >
-> > > > > > `4c`
-> > > > > >
-> > > > > > `(8d`
-> > > > > >
-> > > > > > `)8e`
-> > > > > >
-> > > > > > `(8f`
-> > > > > >
-> > > > > > `)8g`
-> > > > > >
-> > > > > > `8'a`
-> > > > > >
-> > > > > > `8'b`
-> > > > > >
-> > > > > > `4cc`
-> > > > > >
-> > > > > > `*- ` Users should be careful when using the <span class="option">r</span> option
-> > > > > > while at the same time assigning a delimiter that appears in
-> > > > > > the input stream. For example, if the slash (/) is defined
-> > > > > > as an output delimiter, and the <span class="option">r</span> option is invoked,
-> > > > > > then following input: ``
-> > > > > >
-> > > > > > > `ab`
-> > > > > > >
-> > > > > > > `a/b ` will produce the following output: ``
-> > > > > > >
-> > > > > > > > `ab// ` Note that the first slash in the above output
-> > > > > > > > delimits the material originally contained in the left
-> > > > > > > > and right spines. The second slash is a bona fide
-> > > > > > > > signifier in the right spine. If the delimiter in the
-> > > > > > > > above example was a space rather than a slash, then the
-> > > > > > > > result would produce trailing spaces &mdash; and so the
-> > > > > > > > output would no longer conform to the Humdrum syntax.
-> > > > > > > >
-> > > > > > > > ------------------------------------------------------------------------
-> > > > > > > >
-> > > > > > > > ### PORTABILITY
-> > > > > > > >
-> > > > > > > > DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS
-> > > > > > > > Toolkit. UNIX systems supporting the *Korn* shell or
-> > > > > > > > *Bourne* shell command interpreters, and revised *awk*
-> > > > > > > > (1985).
-> > > > > > > >
-> > > > > > > > ------------------------------------------------------------------------
-> > > > > > > >
-> > > > > > > > ### SEE ALSO
-> > > > > > > >
-> > > > > > > > `  assemble (4),  extract (4),  humsed (4),  rend (4)`
-> > > > > > > >
-> > > > > > > > ------------------------------------------------------------------------
-> > > > > > > >
-> > > > > > > > ### WARNINGS
-> > > > > > > >
-> > > > > > > > Syntactically correct Humdrum output is not guaranteed
-> > > > > > > > if the <span class="option">r</span> option is invoked while using the space as
-> > > > > > > > a delimiter.
-> > > > > > > >
-> > > > > > > > The use of regular expression metacharacters as
-> > > > > > > > delimiters (such as \^) can cause problems for
-> > > > > > > > <span class="tool">cleave</span>.
-> > > > > > > >
-> > > > > > > > ------------------------------------------------------------------------
-> > > > > > > >
-> > > > > > > > \
-> > > > > > > >
-> > > > > > > > -   [**Pertinent description in the Humdrum User
-> > > > > > > >     Guide**](../guide26.html#The_cleave_Command)
-> > > > > > > > -   [**Index to Humdrum
-> > > > > > > >     Commands**](../commands.toc.html)
-> > > > > > > > -   [**Table for Contents for Humdrum User
-> > > > > > > >     Guide**](../guide.toc.html)
-> > > > > > > >
-> > > > > > > > \
-> > > > > > > > \
+<span class="rep">oct</span>
+
+<span class="rep">diaton</span>
+
+<span class="rep">accid</span>
+
+<span class="rep">Cdev</span>
+
+`4`
+
+`G`
+
+`.`
+
+`.`
+
+`4`
+
+`A`
+
+`.`
+
+`.`
+
+`4`
+
+`B`
+
+`b`
+
+`-10`
+
+`5`
+
+`C`
+
+`.`
+
+`.`
+
+`5`
+
+`D`
+
+`.`
+
+`.`
+
+`5`
+
+`E`
+
+`b`
+
+`.`
+
+`5`
+
+`F`
+
+`#`
+
+`+12`
+
+`5`
+
+`G`
+
+`.`
+
+`.`
+
+`*-`
+
+`*-`
+
+`*-`
+
+`*- ` The information available in these four spines might be
+amalgamated into a single spine by executing the following command:
+
+` cleave -i '**diaton,**accid,**oct,**Cdev' -o '**pitch' input`
+
+The following output would be produced: ``
+
+<span class="rep">pitch</span>
+
+`G4`
+
+`A4`
+
+`Bb4-10`
+
+`C5`
+
+`D5`
+
+`Eb5`
+
+`F#5+12`
+
+`G5`
+
+`*- ` The output interpretation has been specified as <span class="rep">pitch</span>.
+Notice that the order of the signifiers in each output data token
+reflects the order of the input interpretations given in the command
+line &mdash; i.e., <span class="rep">diaton</span> values first, followed by <span class="rep">accid</span>,
+followed by <span class="rep">oct</span>, followed by <span class="rep">Cdev</span>. In the case of <span class="rep">accid</span>
+and <span class="rep">Cdev</span> data, notice that null tokens (periods) do not affect
+the output token. In the default invocation, note that no
+intervening characters are placed between the joined subtokens.
+
+In the following example, <span class="tool">cleave</span> is used to create double-stops
+from two spines having identical interpretations. Notice the
+presence of barlines. ``
+
+<span class="rep">kern</span>
+
+<span class="rep">kern</span>
+
+`*M2/4`
+
+`*M2/4`
+
+`*foo`
+
+`*bar`
+
+`=1`
+
+`=1`
+
+`4c`
+
+`4e`
+
+`8d`
+
+`8f`
+
+`8e`
+
+`8g`
+
+`=2`
+
+`=2`
+
+`8f`
+
+`8a`
+
+`8g`
+
+`8b`
+
+`8a`
+
+`8cc`
+
+`8b`
+
+`8dd`
+
+`=3`
+
+`=3`
+
+`4cc`
+
+`4ee`
+
+`*-`
+
+`*- ` Executing the command
+
+` cleave -i '**kern' -d ' ' -o '**kern' input > output`
+
+will produce the following output: ``
+
+<span class="rep">kern</span>
+
+`*M2/4`
+
+`*`
+
+`=1 =1`
+
+`4c 4e`
+
+`8d 8f`
+
+`8e 8g`
+
+`=2 =2`
+
+`8f 8a`
+
+`8g 8b`
+
+`8a 8cc`
+
+`8b 8dd`
+
+`=3 =3`
+
+`4cc 4ee`
+
+`*- ` Notice that if identical tandem interpretations appear in
+the target spines, then they are echoed in the output. Otherwise
+a null interpretation is output.
+
+The redundant measure numbers in the above output might be
+eliminated using the following <span class="tool">humsed</span>
+command:
+
+` humsed '/^=/s/ .*//' input > output`
+
+Alternatively, the input might have been preprocessed so that
+the barlines in one of the two input spines were replaced by
+null tokens.
+
+The <span class="option">r</span> option can be used to eliminate duplicate or repeated
+signifiers. Consider, for example, the following input: ``
+
+<span class="rep">kern</span>
+
+<span class="rep">kern</span>
+
+`.`
+
+`4c`
+
+`(8`
+
+`8d`
+
+`)8`
+
+`8e`
+
+`(`
+
+`8f`
+
+`)`
+
+`8g`
+
+`8'`
+
+`8a`
+
+`8'`
+
+`8b`
+
+`.`
+
+`4cc`
+
+`*-`
+
+`*- ` The first <span class="rep">kern</span> spine includes articulation
+information not present in the second spine. The pitch,
+duration, and articulation information can be amalgamated
+without duplication of the duration information using the
+<span class="option">r</span> option:
+
+` cleave -r -i '**kern' -o '**kern' input > output`
+
+The resulting output is: ``
+
+<span class="rep">kern</span>
+
+`4c`
+
+`(8d`
+
+`)8e`
+
+`(8f`
+
+`)8g`
+
+`8'a`
+
+`8'b`
+
+`4cc`
+
+`*- ` Users should be careful when using the <span class="option">r</span> option
+while at the same time assigning a delimiter that appears in
+the input stream. For example, if the slash (/) is defined
+as an output delimiter, and the <span class="option">r</span> option is invoked,
+then following input: ``
+
+`ab`
+
+`a/b ` will produce the following output: ``
+
+`ab// ` Note that the first slash in the above output
+delimits the material originally contained in the left
+and right spines. The second slash is a bona fide
+signifier in the right spine. If the delimiter in the
+above example was a space rather than a slash, then the
+result would produce trailing spaces &mdash; and so the
+output would no longer conform to the Humdrum syntax.
+
+------------------------------------------------------------------------
+
+### PORTABILITY
+
+DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS
+Toolkit. UNIX systems supporting the *Korn* shell or
+*Bourne* shell command interpreters, and revised *awk*
+(1985).
+
+------------------------------------------------------------------------
+
+### SEE ALSO
+
+`  assemble (4),  extract (4),  humsed (4),  rend (4)`
+
+------------------------------------------------------------------------
+
+### WARNINGS
+
+Syntactically correct Humdrum output is not guaranteed
+if the <span class="option">r</span> option is invoked while using the space as
+a delimiter.
+
+The use of regular expression metacharacters as
+delimiters (such as \^) can cause problems for
+<span class="tool">cleave</span>.
+
+------------------------------------------------------------------------
+
+\
+
+-   [**Pertinent description in the Humdrum User
+Guide**](../guide26.html#The_cleave_Command)
+-   [**Index to Humdrum
+Commands**](../commands.toc.html)
+-   [**Table for Contents for Humdrum User
+Guide**](../guide.toc.html)
+
+\
+\

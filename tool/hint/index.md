@@ -70,13 +70,13 @@ reference manual.
 It is recommended that output files produced using the <span class="tool">hint</span> command
 should be given names with the distinguishing \`.hnt\' extension.
 
->   ----------- ----------------------------------------------------------------------
->   <span class="rep">kern</span>    core absolute pitch representation
->   <span class="rep">Tonh</span>    German pitch system
->   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
->   ----------- ----------------------------------------------------------------------
->
+----------- ----------------------------------------------------------------------
+<span class="rep">kern</span>    core absolute pitch representation
+<span class="rep">Tonh</span>    German pitch system
+<span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+<span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+----------- ----------------------------------------------------------------------
+
 *Input representations processed by <span class="tool">hint</span>.*
 
 ------------------------------------------------------------------------
@@ -85,17 +85,17 @@ should be given names with the distinguishing \`.hnt\' extension.
 
 The <span class="tool">hint</span> command provides the following options:
 
->   ------------- ------------------------------------------------------------------
->   <span class="option">a</span>        calculate all intervals by permuting all pitches present
->   <span class="option">c</span>        output compound intervals as non-compound intervals
->   <span class="option">d</span>        output diatonic interval size only, without the interval quality
->   <span class="option">h</span>        displays a help screen summarizing the command syntax
->   <span class="option">l</span>        calculate intervals with respect to the lowest pitch present
->   -s *regexp*   skip; completely ignore records matching *regexp;*
->                 (output null token)
->   <span class="option">u</span>        eliminate unisons from the output
->   ------------- ------------------------------------------------------------------
->
+------------- ------------------------------------------------------------------
+<span class="option">a</span>        calculate all intervals by permuting all pitches present
+<span class="option">c</span>        output compound intervals as non-compound intervals
+<span class="option">d</span>        output diatonic interval size only, without the interval quality
+<span class="option">h</span>        displays a help screen summarizing the command syntax
+<span class="option">l</span>        calculate intervals with respect to the lowest pitch present
+-s *regexp*   skip; completely ignore records matching *regexp;*
+(output null token)
+<span class="option">u</span>        eliminate unisons from the output
+------------- ------------------------------------------------------------------
+
 The <span class="option">a</span> and <span class="option">l</span> options are mutually exclusive.
 
 Options are specified in the command line.
@@ -142,42 +142,42 @@ cause a hyphen (-) to be output.
 The various aspects of the <span class="tool">hint</span> command are illustrated in the
 following examples. Consider the following input: ``
 
->   ---------- ---------- ----------- ---------------------
->   \*\*kern   \*\*kern   \*\*pitch   \*\*commentary
->   =1         =1         =1          barline
->   8c         8e         G4          C major triad
->   8g         8c         E4          reordered pitches
->   4r         4r         r           rest
->   .          .          .           null tokens
->   4C         4e         G5          open position triad
->   =2         =2         =2          barline
->   4C 4E      4G 4c      C5          multiple-stops
->   4CC 4r     4e 4g      r           mixed notes & rest
->   8C         8C         .           unison
->   8C         8r         .           single pitch
->   =3         =3         =3          barline
->   \*-        \*-        \*-         \*-
->   ---------- ---------- ----------- ---------------------
->
+---------- ---------- ----------- ---------------------
+\*\*kern   \*\*kern   \*\*pitch   \*\*commentary
+=1         =1         =1          barline
+8c         8e         G4          C major triad
+8g         8c         E4          reordered pitches
+4r         4r         r           rest
+.          .          .           null tokens
+4C         4e         G5          open position triad
+=2         =2         =2          barline
+4C 4E      4G 4c      C5          multiple-stops
+4CC 4r     4e 4g      r           mixed notes & rest
+8C         8C         .           unison
+8C         8r         .           single pitch
+=3         =3         =3          barline
+\*-        \*-        \*-         \*-
+---------- ---------- ----------- ---------------------
+
 Using the default invocation, the <span class="tool">hint</span> command transforms the above
 input as follows: ``
 
->   -------------
->   \*\*hint
->   =1
->   M3 m3
->   M3 m3
->   .
->   M10 m10
->   =2
->   M3 m3 P4 P8
->   M17 m3
->   P1
->   \-
->   =3
->   \*-
->   -------------
->
+-------------
+\*\*hint
+=1
+M3 m3
+M3 m3
+.
+M10 m10
+=2
+M3 m3 P4 P8
+M17 m3
+P1
+\-
+=3
+\*-
+-------------
+
 The <span class="tool">hint</span> command correctly echoes (and ignores) both rests and
 kern-like barlines &mdash; as illustrated in the first and fourth output
 data records. The second output data record (M3 m3) indicates that two
@@ -199,27 +199,27 @@ record).
 The <span class="option">d</span> option causes only the diatonic interval sizes to be output
 as follows: ``
 
->   ----------
->   \*\*hint
->   =1
->   3 3
->   3 3
->   .
->   10 10
->   =2
->   3 3 4 8
->   17 3
->   1
->   \-
->   =3
->   \*-
->   ----------
->
+----------
+\*\*hint
+=1
+3 3
+3 3
+.
+10 10
+=2
+3 3 4 8
+17 3
+1
+\-
+=3
+\*-
+----------
+
 The <span class="option">s</span> (skip) option can be used to allow the user to selectively
 identify records that should not be involved in processing. Consider the
 command
 
-> ` hint -s r input > output.hnt`
+` hint -s r input > output.hnt`
 
 will cause any data token containing the letter \`r\' to suspend the
 calculation of any harmonic intervals for the current record. The
@@ -230,26 +230,26 @@ be calculated only when none of the pitch-related spines contain a rest.
 Given the first three spines of the above sample input (i.e. without the
 <span class="rep">commentary</span> spine), the command
 
-> ` hint -cu -s r input > output`
+` hint -cu -s r input > output`
 
 will produce the following output: ``
 
->   ----------
->   \*\*hint
->   =1
->   M3 m3
->   M3 m3
->   .
->   M3 m3
->   =2
->   M3 m3 P4
->   .
->   \-
->   \-
->   =3
->   \*-
->   ----------
->
+----------
+\*\*hint
+=1
+M3 m3
+M3 m3
+.
+M3 m3
+=2
+M3 m3 P4
+.
+\-
+\-
+=3
+\*-
+----------
+
 Notice that the major and minor tenths in the sixth data record have
 been rendered as major and minor thirds. Also note that the perfect
 unison in the tenth data record has been output as a hyphen &mdash; and that
@@ -261,44 +261,44 @@ The <span class="option">l</span> option causes <span class="tool">hint</span> t
 the lowest pitch present in the sonority. For example, with the above
 sample input, the <span class="option">l</span> option would produce the following output: ``
 
->   --------------
->   \*\*hint
->   \*
->   =1
->   M3 P5
->   M3 P5
->   .
->   M10 P19
->   =2
->   M3 P5 P8 P15
->   M17 P19
->   P1
->   \-
->   =3
->   \*-
->   --------------
->
+--------------
+\*\*hint
+\*
+=1
+M3 P5
+M3 P5
+.
+M10 P19
+=2
+M3 P5 P8 P15
+M17 P19
+P1
+\-
+=3
+\*-
+--------------
+
 The <span class="option">a</span> option calculates all possible intervals by pairing all
 pitches present in a given sonority. The order of the output intervals
 conforms to the following standard: all pitches are sorted from low to
 high; intervals are determined as 1-2, 1-3, 1-4, etc., 2-3, 2-4, etc. By
 way of example, the following input: ``
 
->   ---------- ----------
->   \*\*kern   \*\*kern
->   4C 4E 4G   4c 4c 4r
->   \*-        \*-
->   ---------- ----------
->
+---------- ----------
+\*\*kern   \*\*kern
+4C 4E 4G   4c 4c 4r
+\*-        \*-
+---------- ----------
+
 would produce the following output: ``
 
->   -------------------------------
->   \*\*hint
->   \*all
->   M3 P5 P8 P8 m3 m6 m6 P4 P4 P1
->   \*-
->   -------------------------------
->
+-------------------------------
+\*\*hint
+\*all
+M3 P5 P8 P8 m3 m6 m6 P4 P4 P1
+\*-
+-------------------------------
+
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##
