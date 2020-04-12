@@ -159,42 +159,47 @@ class="option">b</span>and <span class="option">e</span> options are
 mutually exclusive with the <span class="option">n</span>, <span
 class="option">p</span>, and <span class="option">i</span>options.
 
-In the default operation, <span class="tool">context</span> separates amalgamated tokens
-by inserting a space character. (Thus the input tokens are treated
-as subtokens in a Humdrum multiple-stop.) The <span class="option">d</span> option allows
-the user to define an alternative string as the subtoken delimiter.
+In the default operation, <span class="tool">context</span> separates
+amalgamated tokens by inserting a space character. (Thus the input
+tokens are treated as subtokens in a Humdrum multiple-stop.) The
+<span class="option">d</span> option allows the user to define an
+alternative string as the subtoken delimiter.
 
-The <span class="option">n</span> option allows the user to specify the maximum number of
-data records assembled into a single output record.
+The <span class="option">n</span> option allows the user to specify
+the maximum number of data records assembled into a single output
+record.
 
-The <span class="option">b</span> option allows the user to specify a \"begin\" marker.
-When this marker (*regexp*) is matched in the input, any current
-congealed record is output, and a new congealed record begins. Begin
-signifiers are defined as string patterns using the *regular
-expression* syntax.
+The <span class="option">b</span> option allows the user to specify
+a "begin" marker.  When this marker (*regexp*) is matched in the
+input, any current congealed record is output, and a new congealed
+record begins. Begin signifiers are defined as string patterns using
+the *regular expression* syntax.
 
-With the <span class="option">e</span> option, if <span class="tool">context</span> encounters a data record
-matching *regexp* then it appends the current input record to the
-current assembled output record and begins assembling a new record
-with the following input record.
+With the <span class="option">e</span> option, if <span
+class="tool">context</span> encounters a data record matching
+*regexp* then it appends the current input record to the current
+assembled output record and begins assembling a new record with the
+following input record.
 
-The <span class="option">i</span> option is used only with **-n;** it causes any data
-records matching *regexp* to be ignored in the counting of
-amalgamated tokens. Such \"uncounted\" records are nevertheless
-output.
+The <span class="option">i</span> option is used only with **-n;**
+it causes any data records matching *regexp* to be ignored in the
+counting of amalgamated tokens. Such \"uncounted\" records are
+nevertheless output.
 
-The <span class="option">o</span> option causes data records matching *regexp* to be
-omitted from the output.
+The <span class="option">o</span> option causes data records matching
+*regexp* to be omitted from the output.
 
-The <span class="option">p</span> option may be used in conjunction with <span class="option">n</span>. Normally,
-the output from **context -n** is padded with trailing null tokens
-&mdash; one fewer in number than the value specified with <span class="option">n</span>. The
-<span class="option">p</span> *n* option causes *n* null tokens to be padded at the
-*beginning* of the output spine, rather than trailing at the end.
+The <span class="option">p</span> option may be used in conjunction
+with <span class="option">n</span>. Normally, the output from
+**context -n** is padded with trailing null tokens &mdash; one fewer
+in number than the value specified with <span class="option">n</span>.
+The <span class="option">p</span> *n* option causes *n* null tokens
+to be padded at the *beginning* of the output spine, rather than
+trailing at the end.
 
 Note that tandem interpretations and comments are processed like
-null tokens; they are merely echoed in the output in their
-appropriate position. Note also that <span class="tool">context</span> automatically
+null tokens; they are merely echoed in the output in their appropriate
+position. Note also that <span class="tool">context</span> automatically
 breaks a congealed output record whenever it encounters a spine-path
 terminator or exclusive interpretation in the input.
 
@@ -203,418 +208,248 @@ terminator or exclusive interpretation in the input.
 ### EXAMPLES
 
 The following excerpt from Edgar Varèse's *Density 21.5 (1936)*
-illustrates the use of **context.** Consider the initial input: ``
+illustrates the use of **context.** Consider the initial input:
 
-`!! Edgar Varèse, Density 21.5 (1936)`
+```humdrum
+!!!COM: Varèse, Edgar
+!!!OTL: Density 21.5
+!!!ODT: 1936
+!!!ONB: excerpt: mm.41-45
+**kern
+*MM72
+=41
+(16f#
+16e#
+[8gn
+2.g_
+=42
+4g])
+4r
+4r
+8r
+(16f#
+16e#
+=43
+6gn)
+(6e#
+6f#
+8g)
+(8f#
+12e#
+12g
+12dn
+=44
+2a-)
+(4an
+8een
+[8bb-
+=45
+4bb-]
+2.ccc#)
+=45
+8r
+*-
+```
 
-`!! excerpt: mm.41-45`
+A simple transformation would be to amalgamate successive data
+records in overlapping groups of 3. The following command:
 
-<span class="rep">kern</span>
+```bash
+context -n 3 density
+```
 
-`*MM72`
+would produce the following output:
 
-`=41`
 
-`(16f#`
+```humdrum
+!!!COM: Varèse, Edgar
+!!!OTL: Density 21.5
+!!!ODT: 1936
+!!!ONB: excerpt: mm.41-45
+**kern
+*MM72
+=41 (16f# 16e#
+(16f# 16e# [8gn
+16e# [8gn 2.g_
+[8gn 2.g_ =42
+2.g_ =42 4g])
+=42 4g]) 4r
+4g]) 4r 4r
+4r 4r 8r
+4r 8r (16f#
+8r (16f# 16e#
+(16f# 16e# =43
+16e# =43 6gn)
+=43 6gn) (6e#
+6gn) (6e# 6f#
+(6e# 6f# 8g)
+6f# 8g) (8f#
+8g) (8f# 12e#
+(8f# 12e# 12g
+12e# 12g 12dn
+12g 12dn =44
+12dn =44 2a-)
+=44 2a-) (4an
+2a-) (4an 8een
+(4an 8een [8bb-
+8een [8bb- =45
+[8bb- =45 4bb-]
+=45 4bb-] 2.ccc#)
+4bb-] 2.ccc#) =45
+2.ccc#) =45 8r
+.
+.
+*-
+```
 
-`16e#`
-
-`[8gn`
-
-`2.g_`
-
-`=42`
-
-`4g])`
-
-`4r`
-
-`4r`
-
-`8r`
-
-`(16f#`
-
-`16e#`
-
-`=43`
-
-`6gn)`
-
-`(6e#`
-
-`6f#`
-
-`8g)`
-
-`(8f#`
-
-`12e#`
-
-`12g`
-
-`12dn`
-
-`=44`
-
-`2a-)`
-
-`(4an`
-
-`8een`
-
-`[8bb-`
-
-`=45`
-
-`4bb-]`
-
-`2.ccc#)`
-
-`=45`
-
-`8r`
-
-`*- ` A simple transformation would be to amalgamate successive
-data records in overlapping groups of 3. The following command:
-
-` context -n 3 density`
-
-would produce the following output: ``
-
-`!! Edgar Varèse, Density 21.5 (1936)`
->
-`!! excerpt: mm.41-45`
->
-<span class="rep">kern</span>
->
-`*MM72`
->
-`=41 (16f# 16e#`
->
-`(16f# 16e# [8gn`
->
-`16e# [8gn 2.g_`
->
-`[8gn 2.g_ =42`
->
-`2.g_ =42 4g])`
->
-`=42 4g]) 4r`
->
-`4g]) 4r 4r`
->
-`4r 4r 8r`
->
-`4r 8r (16f#`
->
-`8r (16f# 16e#`
->
-`(16f# 16e# =43`
->
-`16e# =43 6gn)`
->
-`=43 6gn) (6e#`
->
-`6gn) (6e# 6f#`
->
-`(6e# 6f# 8g)`
->
-`6f# 8g) (8f#`
->
-`8g) (8f# 12e#`
->
-`(8f# 12e# 12g`
->
-`12e# 12g 12dn`
->
-`12g 12dn =44`
->
-`12dn =44 2a-)`
->
-`=44 2a-) (4an`
->
-`2a-) (4an 8een`
->
-`(4an 8een [8bb-`
->
-`8een [8bb- =45`
->
-`[8bb- =45 4bb-]`
->
-`=45 4bb-] 2.ccc#)`
->
-`4bb-] 2.ccc#) =45`
->
-`2.ccc#) =45 8r`
->
-`.`
->
-`.`
->
-`*- ` Notice once again that the input and output have the same
+Notice once again that the input and output have the same
 number of records. Preserving the structure in this way allows
 the user to coordinate the contextual output with the original
 input using the <span class="tool">assemble</span> command.
->
+
 A more useful transformation might amalgamate successive data
 records in overlapping groups of 3 *notes;* that is where rests
 and barlines are not counted. The following command causes input
-records containing either an equals-sign or the letter \`r\' to
+records containing either an equals-sign or the letter `r` to
 be ignored when counting the number of amalgamated data records:
->
-` context -n 3 -i [=r] density`
->
+
+```bash
+context -n 3 -i [=r] density
+```
+
 The input and corresponding output are given in the left and
-right spines below: ``
->
-`!! Edgar Varèse, Density 21.5 (1936)`
+right spines below:
 
-`!! excerpt: mm.41-45 `
 
-<span class="rep">kern</span>
-
-<span class="rep">kern</span>
-
-`*MM72`
->
-`*MM72`
-
-`=41`
-
-`=41 (16f# 16e# [8gn`
-
-`(16f#`
-
-`(16f# 16e# [8gn`
-
-`16e#`
-
-`16e# [8gn 2.g_`
-
-`[8gn`
-
-`[8gn 2.g_ =42 4g])`
-
-`2.g_`
-
-`2.g_ =42 4g]) 4r 4r 8r (16f#`
-
-`=42`
-
-`=42 4g]) 4r 4r 8r (16f# 16e#`
-
-`4g])`
-
-`4g]) 4r 4r 8r (16f# 16e#`
-
-`4r`
-
-`4r 4r 8r (16f# 16e# =43 6gn)`
-
-`4r`
-
-`4r 8r (16f# 16e# =43 6gn)`
-
-`8r`
-
-`8r (16f# 16e# =43 6gn)`
-
-`(16f#`
-
-`(16f# 16e# =43 6gn)`
-
-`16e#`
-
-`16e# =43 6gn) (6e#`
-
-`=43`
-
-`=43 6gn) (6e# 6f#`
-
-`6gn)`
-
-`6gn) (6e# 6f#`
-
-`(6e#`
-
-`(6e# 6f# 8g)`
-
-`6f#`
-
-`6f# 8g) (8f#`
-
-`8g)`
-
-`8g) (8f# 12e#`
-
-`(8f#`
-
-`(8f# 12e# 12g`
-
-`12e#`
-
-`12e# 12g 12dn`
-
-`12g`
-
-`12g 12dn =44 2a-)`
-
-`12dn`
-
-`12dn =44 2a-) (4an`
-
-`=44`
-
-`=44 2a-) (4an 8een`
-
-`2a-)`
-
-`2a-) (4an 8een`
-
-`(4an`
-
-`(4an 8een [8bb-`
-
-`8een`
-
-`8een [8bb- =45 4bb-]`
-
-`[8bb-`
-
-`[8bb- =45 4bb-] 2.ccc#)`
-
-`=45`
-
+```humdrum
+!!!COM: Varèse, Edgar
+!!!OTL: Density 21.5
+!!!ODT: 1936
+!!!ONB: excerpt: mm.41-45
+**kern
+*MM72
+=41 (16f# 16e# [8gn
+(16f# 16e# [8gn
+16e# [8gn 2.g_
+[8gn 2.g_ =42 4g])
+2.g_ =42 4g]) 4r 4r 8r (16f#
+=42 4g]) 4r 4r 8r (16f# 16e#
+4g]) 4r 4r 8r (16f# 16e#
+4r 4r 8r (16f# 16e# =43 6gn)
+4r 8r (16f# 16e# =43 6gn)
+8r (16f# 16e# =43 6gn)
+(16f# 16e# =43 6gn)
+16e# =43 6gn) (6e#
+=43 6gn) (6e# 6f#
+6gn) (6e# 6f#
+(6e# 6f# 8g)
+6f# 8g) (8f#
+8g) (8f# 12e#
+(8f# 12e# 12g
+12e# 12g 12dn
+12g 12dn =44 2a-)
+12dn =44 2a-) (4an
+=44 2a-) (4an 8een
+2a-) (4an 8een
+(4an 8een [8bb-
+8een [8bb- =45 4bb-]
+[8bb- =45 4bb-] 2.ccc#)
 .
-
-`4bb-]`
-
 .
-
-`2.ccc#)`
-
 .
-
-`=45`
-
 .
-
-`8r`
-
 .
+*-
+```
 
-`*-`
 
-`*- ` Notice that as the end of the file is approached, <span class="tool">context</span> will
-continue amalgamating data records until it is no longer able to satisfy
-the amalgamating criteria. If unable to complete an output record,
-<span class="tool">context</span> will output a null token.
+Notice that as the end of the file is approached, <span
+class="tool">context</span> will continue amalgamating data records
+until it is no longer able to satisfy the amalgamating criteria.
+If unable to complete an output record, <span class="tool">context</span>
+will output a null token.
 
-If the above command had used the <span class="option">o</span> rather than the <span class="option">i</span> option,
-all of the rests and barlines would have been omitted from the output.
-Otherwise, the output would be the same as given above.
+If the above command had used the <span class="option">o</span>
+rather than the <span class="option">i</span> option, all of the
+rests and barlines would have been omitted from the output.  Otherwise,
+the output would be the same as given above.
 
-A more musically useful partitioning of Varèse's work might be based on
-slur markings. The following command uses open- and closed-slur markings
-to demarcate the contextual outputs; (note the need to escape the
-parentheses since they are regular expression metacharacters).
+A more musically useful partitioning of Varèse's work might be based
+on slur markings. The following command uses open- and closed-slur
+markings to demarcate the contextual outputs; (note the need to
+escape the parentheses since they are regular expression metacharacters).
 
-` context -b '\(' -e '\)' -o '[=r]' density`
+```bash
+context -b '\(' -e '\)' -o '[=r]' density
+```
 
-Notice that the ensuing output (shown below) pads the output with null
-tokens in order to maintain the same number of data records as the
-original input. (An output such as the following might be used as input
-to a command sequence such as **pc -x \| pcset**). ``
+Notice that the ensuing output (shown below) pads the output with
+null tokens in order to maintain the same number of data records
+as the original input. (An output such as the following might be
+used as input to a command sequence such as `pc -x | pcset`).
 
-`!! Edgar Varèse, Density 21.5 (1936)`
->
-`!! excerpt: mm.41-45`
->
-<span class="rep">kern</span>
->
-`*MM72`
->
-`.`
->
-`(16f# 16e# [8gn 2.g_ 4g])`
->
-`.`
->
+
+```humdrum
+!!!COM: Varèse, Edgar
+!!!OTL: Density 21.5
+!!!ODT: 1936
+!!!ONB: excerpt: mm.41-45
+**kern
+*MM72
 .
-
+(16f# 16e# [8gn 2.g_ 4g])
 .
-
 .
-
 .
-
 .
-
 .
-
 .
-
-`(16f# 16e# 6gn)`
-
 .
-
 .
-
+(16f# 16e# 6gn)
 .
-
-`(6e# 6f# 8g)`
-
 .
-
 .
-
-`(8f# 12e# 12g 12dn 2a-)`
-
+(6e# 6f# 8g)
 .
-
 .
-
+(8f# 12e# 12g 12dn 2a-)
 .
-
 .
-
 .
-
-`(4an 8een [8bb- 4bb-] 2.ccc#)`
-
 .
-
 .
-
+(4an 8een [8bb- 4bb-] 2.ccc#)
 .
-
 .
-
 .
-
 .
-
 .
+.
+.
+*-
+```
 
-`*- ` If there were any notes not embraced within a slur, the above
-command would have caused them to be output on their own line.
+If there were any notes not embraced within a slur, the above command
+would have caused them to be output on their own line.
 
 ------------------------------------------------------------------------
 
 ## PORTABILITY ##
 
-DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
-systems supporting the *Korn* shell or *Bourne* shell command
+DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit.
+UNIX systems supporting the *Korn* shell or *Bourne* shell command
 interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
 ## SEE ALSO ##
 
-<span class="tool">context</span> (4), **grep** (UNIX), <span class="tool">nf</span> (4),
-<span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
-<span class="tool">pcset</span> (4)
+<span class="tool">context</span> (4), 
+**grep** (UNIX), <span
+class="tool">nf</span> (4), <span class="tool">patt</span> (4),
+<span class="tool">pattern</span> (4), <span class="tool">pcset</span>
+(4)
 
 ------------------------------------------------------------------------
 
