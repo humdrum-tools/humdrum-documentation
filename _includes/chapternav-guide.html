@@ -64,9 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
 			nnumber = "0" + nnumber;
 		}
 		var output = "";
+
 		output += '<a target="_blank" href="';
 		output += '/Humdrum/guide' + nnumber + '.html';
-		output += '" class="btn btn-primary btn-lg btn-responsive">Original version</a>';
+		output += '" class="btn btn-primary btn-lg btn-responsive">Original HTML version</a>';
+
+		output += '<a style="margin-top:8px;" target="_blank" href="';
+		output += "http://ccarh.org/publications/manuals/humdrumuserguide/hug1998-chapter";
+		output += nnumber + ".pdf";
+		output += '" class="btn btn-primary btn-lg btn-responsive">Scan of 1998 edition</a>';
+
 		original.innerHTML = output;
 	}
 
