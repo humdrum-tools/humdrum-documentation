@@ -22,7 +22,7 @@ permalink:	/tool/humdrum/index.html
 The <span class="tool">humdrum</span> command identifies whether an input conforms to the
 Humdrum representation syntax. Error messages are issued where
 appropriate. If the input conforms to the Humdrum syntax, then the
-<span class="tool">humdrum</span> command produces no output, unless the verbose (**-v**)
+<span class="tool">humdrum</span> command produces no output, unless the verbose (<span class="option">v</span>)
 option is invoked.
 
 Formally, a Humdrum representation may be defined as any ASCII input
@@ -381,13 +381,13 @@ new
 The <span class="tool">humdrum</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
->   **-v**   verbose mode
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">v</span>   verbose mode
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-v** option invokes the verbose mode which provides summary
+The <span class="option">v</span> option invokes the verbose mode which provides summary
 information and statistics concerning the input file. A list of all of
 interpretations found in the file is output. In addition, an inventory
 of all of the ASCII signifiers (characters) found in the data records is

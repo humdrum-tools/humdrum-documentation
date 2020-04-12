@@ -62,18 +62,18 @@ the last note of one piece and the first note of a subsequent piece.)
 The <span class="tool">rid</span> command provides the following options:
 
 >   -------- ----------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
->   **-D**   remove all data records
->   **-d**   remove null data records
->   **-G**   remove all global comments
->   **-g**   remove null global comments
->   **-I**   remove all interpretation records
->   **-i**   remove null interpretation records
->   **-L**   remove all local comments
->   **-l**   remove null local comments
->   **-T**   remove all tandem interpretations
->   **-U**   remove unnecessary (duplicate) exclusive interpretations
->   **-u**   same as **-U**
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">D</span>   remove all data records
+>   <span class="option">d</span>   remove null data records
+>   <span class="option">G</span>   remove all global comments
+>   <span class="option">g</span>   remove null global comments
+>   <span class="option">I</span>   remove all interpretation records
+>   <span class="option">i</span>   remove null interpretation records
+>   <span class="option">L</span>   remove all local comments
+>   <span class="option">l</span>   remove null local comments
+>   <span class="option">T</span>   remove all tandem interpretations
+>   <span class="option">U</span>   remove unnecessary (duplicate) exclusive interpretations
+>   <span class="option">u</span>   same as <span class="option">U</span>
 >   -------- ----------------------------------------------------------
 >
 Options are specified in the command line.

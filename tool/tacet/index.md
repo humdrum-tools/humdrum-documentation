@@ -31,13 +31,13 @@ sounding notes (\"ciphers\") on a MIDI device.
 The <span class="tool">tacet</span> command provides the following options:
 
 >   ---------- -------------------------------------------------------
->   **-h**     displays a help screen summarizing the command syntax
+>   <span class="option">h</span>     displays a help screen summarizing the command syntax
 >   -i *hex*   assign MIDI input/output address to *hex*
 >   ---------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-i** option is used to specify the input/output address of the
+The <span class="option">i</span> option is used to specify the input/output address of the
 MIDI card. The default address is \`330.\' The address is specified as a
 hexadecimal number.
 

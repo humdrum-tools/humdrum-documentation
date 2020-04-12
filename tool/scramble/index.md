@@ -25,18 +25,18 @@ Humdrum data records or the arrangement of data tokens within each data
 record. The <span class="tool">scramble</span> command is useful for generating control data
 when testing contextual relationships between signifiers.
 
-Two modes of operation are supported according to whether the **-r**
-(record) or **-t** (token) option is invoked. When the **-r** mode is
+Two modes of operation are supported according to whether the <span class="option">r</span>
+(record) or <span class="option">t</span> (token) option is invoked. When the <span class="option">r</span> mode is
 selected, the order of data records is randomized. In this mode, each
 output record is identical to some input record; only the order of the
-output records is changed. When the **-t** mode is selected, the order
+output records is changed. When the <span class="option">t</span> mode is selected, the order
 of data tokens within each record is randomized. In this mode, the order
 of the input records is preserved &mdash; however, data tokens between
-concurrent spines are randomly swapped. The **-t** mode will also cause
+concurrent spines are randomly swapped. The <span class="option">t</span> mode will also cause
 sub-tokens within multiple stops to be rearranged within the data token.
-However, if the **-m** option is concurrently invoked, then sub-tokens
+However, if the <span class="option">m</span> option is concurrently invoked, then sub-tokens
 within multiple-stops will be randomly redistributed across all tokens
-in the record. The **-r** and **-t** options cannot be invoked
+in the record. The <span class="option">r</span> and <span class="option">t</span> options cannot be invoked
 concurrently.
 
 In both modes of operation, Humdrum comments and interpretations remain
@@ -47,13 +47,13 @@ records are affected by **scramble.**
 Each time <span class="tool">scramble</span> is invoked, a different random ordering is
 generated.
 
-Note that when using the **-r** mode, the scrambling process may produce
+Note that when using the <span class="option">r</span> mode, the scrambling process may produce
 an output that is no longer syntactically correct Humdrum. With the
-**-r** mode, <span class="tool">scramble</span> is guaranteed to produce Humdrum output only
+<span class="option">r</span> mode, <span class="tool">scramble</span> is guaranteed to produce Humdrum output only
 if (1) the input file is bona fide Humdrum, and (2) the number of spines
 in the input does not vary.
 
-With the **-t** mode, <span class="tool">scramble</span> will always produce output conforming
+With the <span class="option">t</span> mode, <span class="tool">scramble</span> will always produce output conforming
 to the Humdrum syntax, however it can produce uninterpretable output if
 concurrent spines do not contain the same type of data (that is, they
 have different exclusive interpretations).
@@ -61,7 +61,7 @@ have different exclusive interpretations).
 Notice also that reordering data records may destroy data-token links
 such as ` **kern` ties.
 
-A skip option (**-s**) permits users to anchor certain data records so
+A skip option (<span class="option">s</span>) permits users to anchor certain data records so
 that they are not either repositioned, or their data tokens re-ordered.
 
 ------------------------------------------------------------------------
@@ -71,17 +71,17 @@ that they are not either repositioned, or their data tokens re-ordered.
 The <span class="tool">scramble</span> command provides the following option:
 
 >   ------------- -----------------------------------------------------------------------
->   **-h**        displays a help screen summarizing the command syntax
->   **-m**        redistribute subtokens in multiple stops across all tokens in the
->                 record; used in conjunction with **-t** only
->   **-r**        scramble the order of data records; don't scramble data tokens
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
+>   <span class="option">m</span>        redistribute subtokens in multiple stops across all tokens in the
+>                 record; used in conjunction with <span class="option">t</span> only
+>   <span class="option">r</span>        scramble the order of data records; don't scramble data tokens
 >   -s *regexp*   skip; don't scramble records matching *regexp*;
 >                 leave matching records intact, and in the same position
->   **-t**        scramble data tokens within each record; don't scramble record order
+>   <span class="option">t</span>        scramble data tokens within each record; don't scramble record order
 >   ------------- -----------------------------------------------------------------------
 >
 Options are specified in the command line. One of either the *record
-mode* (**-r**) or *token mode* (**-t**) must be invoked.
+mode* (<span class="option">r</span>) or *token mode* (<span class="option">t</span>) must be invoked.
 
 ------------------------------------------------------------------------
 
@@ -196,12 +196,12 @@ interpreters, and revised *awk* (1985).
 ### WARNINGS
 
 If the number of spines changes over the course of the input file, valid
-Humdrum output is unlikely when using the **-r** option. Note also that
+Humdrum output is unlikely when using the <span class="option">r</span> option. Note also that
 reordering data records or data tokens will destroy data-token links
 such as
 
 Note that the <span class="tool">scramble</span> command cannot be used in pipes. ` **kern`
-\"ties.\" Use of the **-t** mode, can produce uninterpretable output
+\"ties.\" Use of the <span class="option">t</span> mode, can produce uninterpretable output
 when concurrent spines do not contain the same interpretations.
 
 ------------------------------------------------------------------------

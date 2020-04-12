@@ -54,12 +54,12 @@ The output file format is dubbed \`.dis\'
 The <span class="tool">diss</span> command provides only a help option:
 
 > >   -------- -------------------------------------------------------
-> >   **-h**   displays a help screen summarizing the command syntax
+> >   <span class="option">h</span>   displays a help screen summarizing the command syntax
 > >   -------- -------------------------------------------------------
 > >
 Options are specified in the command line.
 
-The **-k** option pertains to `**kern` inputs only. This option adds
+The <span class="option">k</span> option pertains to `**kern` inputs only. This option adds
 `**kern`-related information to the output.
 
 ------------------------------------------------------------------------

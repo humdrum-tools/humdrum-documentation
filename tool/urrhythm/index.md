@@ -76,7 +76,7 @@ extension.
 The <span class="tool">urrhythm</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.

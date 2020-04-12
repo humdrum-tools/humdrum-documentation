@@ -118,13 +118,13 @@ should be given names with the distinguishing \`.syn\' extension.
 The <span class="tool">synco</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-e**   echo the input in the output
->   **-h**   displays a help screen summarizing the command syntax
+>   <span class="option">e</span>   echo the input in the output
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-If the **-e** option is invoked, the output will echo all of the input
+If the <span class="option">e</span> option is invoked, the output will echo all of the input
 spines along with the `**synco` output.
 
 ------------------------------------------------------------------------

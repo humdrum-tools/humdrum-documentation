@@ -26,7 +26,7 @@ perfect fourth, or down an augmented third, or from major mode to
 Phrygian. A \"transposition interpretation\" is appended to the output
 to mark the score as having been transposed. By default, input key
 signatures are retained in the output, however users can specify any
-replacement key signature using the **-k** option.
+replacement key signature using the <span class="option">k</span> option.
 
 The <span class="tool">trans</span> command is able to process those pitch-related
 representations listed below. All other inputs are simply echoed in the
@@ -78,16 +78,16 @@ The <span class="tool">trans</span> command provides the following options:
 >   ---------------- -------------------------------------------------------
 >   -c \[*+-*\]*n*   transpose up(+) or down (-) *n* semitones
 >   -d \[*+-*\]*n*   transpose up(+) or down (-) *n* diatonic letter names
->   **-h**           displays a help screen summarizing the command syntax
+>   <span class="option">h</span>           displays a help screen summarizing the command syntax
 >   -k *keysig*      replace all input key signatures by *keysig*
 >   ---------------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-Note that the **-d** \"option\" is manditory rather than optional.
+Note that the <span class="option">d</span> \"option\" is manditory rather than optional.
 
 By default, <span class="tool">trans</span> maintains any original input key signatures in the
-transposed output. The **-k** option allows the user to specify a
+transposed output. The <span class="option">k</span> option allows the user to specify a
 replacement key signature. Either \"pitch-class\" (\*k\[\...\]) or
 \"pitch-height\" (\*K\[\...\]) key signatures can be specified. (See the
 *key signature* tandem interpretation &mdash; Section 3.)

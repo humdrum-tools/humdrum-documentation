@@ -129,17 +129,17 @@ The <span class="tool">recode</span> command provides the following options:
 
 >   --------------------- -----------------------------------------------------------------
 >   -f *reassign*         use reassignments given in file *reassign*
->   **-h**                displays a help screen summarizing the command syntax
+>   <span class="option">h</span>                displays a help screen summarizing the command syntax
 >   -i *\'\*\*interp\'*   process only *\*\*interp* spines
 >   -s *regexp*           skip; completely ignore tokens matching *regexp*;
 >                         (echo in output only)
->   **-x**                (exclude) do not echo unprocessed data signifiers in the output
+>   <span class="option">x</span>                (exclude) do not echo unprocessed data signifiers in the output
 >   --------------------- -----------------------------------------------------------------
 >
 Options are specified in the command line.
 
 The user can suppress the echoing of non-numeric data within a token by
-specifying the **-x** option on the command line. When this exclude
+specifying the <span class="option">x</span> option on the command line. When this exclude
 option is selected, only the replacement strings are output. For
 example, given the following reassignment file: ``
 
@@ -150,17 +150,17 @@ example, given the following reassignment file: ``
 >   ------- --------
 >
 The input token ` foo200bar` would be output as `HIGH`. If a data token
-contains no numeric component, then the **-x** option causes a null
+contains no numeric component, then the <span class="option">x</span> option causes a null
 token to be output.
 
-The **-x** option also suppresses the echoing of unprocessed numerical
+The <span class="option">x</span> option also suppresses the echoing of unprocessed numerical
 components. (Recall that string replacements made by <span class="tool">recode</span> are
 limited to the first occurrence of numerica data within a data token.)
-For example, with the **-x** option, the input data token ` foo200bar17`
+For example, with the <span class="option">x</span> option, the input data token ` foo200bar17`
 would be output as `HIGH`.
 
 Processing of certain types of data tokens may be avoided by invoking
-the **-s** (skip) option. This option must be accompanied by a
+the <span class="option">s</span> (skip) option. This option must be accompanied by a
 user-define regular-expression (see **regexp (6)**). Input data tokens
 matching this expression are not processed and are simply echoed in the
 output. This option may be useful, for example, in avoiding the
@@ -248,7 +248,7 @@ is modified), (4) the double-stop input `1 2` has been replaced by the
 output string ` one two,` and (5) both the null token (.) and the
 non-numeric token (`r`) have been echoed in the input unchanged.
 
-Note that with the **-x** option, all of the non-numeric signifiers in
+Note that with the <span class="option">x</span> option, all of the non-numeric signifiers in
 ` **abc` spine would be suppressed in the output. The single non-numeric
 token (`r`) would be output as a null token.
 

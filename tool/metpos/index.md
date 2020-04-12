@@ -90,7 +90,7 @@ extension.
 
 The <span class="tool">metpos</span> command provides the following options:
 
-> **-h**
+> <span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 

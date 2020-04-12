@@ -43,7 +43,7 @@ processing (see below).
 
 The <span class="tool">mint</span> command is able to handle multiple-stops. Data-flow
 interruptions such as the occurrence of barlines can be handled using
-the **-s** option. By defining *regular expression* patterns, the user
+the <span class="option">s</span> option. By defining *regular expression* patterns, the user
 may select which types of data tokens should be ignored by **mint.**
 (See EXAMPLES below.)
 
@@ -75,14 +75,14 @@ should be given names with the distinguishing \`.mnt\' extension.
 The <span class="tool">mint</span> command provides the following options:
 
 >   ------------- ----------------------------------------------------------------------------
->   **-a**        output absolute pitch interval without distinguishing ascending/descending
+>   <span class="option">a</span>        output absolute pitch interval without distinguishing ascending/descending
 >   -b *regexp*   break; do not calculate difference for tokens matching *regexp*;
 >                 restart interval calculations with next pitch token
->   **-c**        output compound intervals as non-compound intervals
->   **-d**        output diatonic interval size only, without the interval quality
->   **-e**        used only with **-s** option; echo skipped data tokens rather than
+>   <span class="option">c</span>        output compound intervals as non-compound intervals
+>   <span class="option">d</span>        output diatonic interval size only, without the interval quality
+>   <span class="option">e</span>        used only with <span class="option">s</span> option; echo skipped data tokens rather than
 >                 outputting null tokens
->   **-h**        displays a help screen summarizing the command syntax
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
 >   -s *regexp*   skip; completely ignore tokens matching *regexp*; output null
 >                 token(s) instead
 >   ------------- ----------------------------------------------------------------------------
@@ -90,7 +90,7 @@ The <span class="tool">mint</span> command provides the following options:
 Options are specified in the command line.
 
 By default, <span class="tool">mint</span> distinguishes ascending and descending intervals by
-prepending a plus or minus sign. If the **-a** option is invoked, then
+prepending a plus or minus sign. If the <span class="option">a</span> option is invoked, then
 only unsigned (absolute) intervals are output.
 
 The \"skip\" function takes precedence over the \"break\" function, so
@@ -161,7 +161,7 @@ greater than an octave remain as \"compound intervals.\"
 
 Depending on the application, users may wish to suppress the calculation
 of intervals across rests. In this case, the <span class="tool">mint</span> command can be
-invoked using the \"break\" (**-b**) option. Consider the command:
+invoked using the \"break\" (<span class="option">b</span>) option. Consider the command:
 
 > ` mint -b 'r' input > output.mnt`
 
@@ -191,7 +191,7 @@ Notice that the descending perfect eleventh spanning the rest has been
 eliminated, and a new pitch offset value \`C\' has been echoed in the
 corresponding output.
 
-The **-s** (skip) option can be used to allow the user to selectively
+The <span class="option">s</span> (skip) option can be used to allow the user to selectively
 identify records that should not be involved in processing. For example,
 the command
 
@@ -338,7 +338,7 @@ concurrently by **mint.** ``
 >   \*-        \*-         \*-
 >   ---------- ----------- ----------
 >
-The following command invokes the **-a** and **-d** options. Indications
+The following command invokes the <span class="option">a</span> and <span class="option">d</span> options. Indications
 of the direction of interval movement (ascending/descending) have been
 removed, and the diatonic interval sizes are output without the
 associated interval qualities (major/minor/perfect/diminished,

@@ -78,23 +78,23 @@ should be given names with the distinguishing extensions \`.pcs\',
 The <span class="tool">pcset</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-c**   generate output for set complement
->   **-h**   displays a help screen summarizing the command syntax
->   **-n**   output normal form (`**nf`) spine
->   **-p**   output prime form (`**pf`) spine
->   **-v**   output interval-class vector (`**iv`) spine
+>   <span class="option">c</span>   generate output for set complement
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">n</span>   output normal form (`**nf`) spine
+>   <span class="option">p</span>   output prime form (`**pf`) spine
+>   <span class="option">v</span>   output interval-class vector (`**iv`) spine
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
 By default, the <span class="tool">pcset</span> command outputs a `**pcset` representation.
 
-The **-n** option causes <span class="tool">pcset</span> to output normal form (`**nf`) data
+The <span class="option">n</span> option causes <span class="tool">pcset</span> to output normal form (`**nf`) data
 instead of `**pcset` data. \"Normal form\" is a standard way of
 representing the interval structure of any arbitrary set of
 pitch-classes.
 
-The **-p** option causes <span class="tool">pcset</span> to output the prime form (`**pf`) for
+The <span class="option">p</span> option causes <span class="tool">pcset</span> to output the prime form (`**pf`) for
 the input. Prime form is analogous to rearranging notes in a chord so
 that the spelling is in root position, close position, transposed so
 that the root of the chord is C. By way of example, any major chord
@@ -103,7 +103,7 @@ normal form: 0,4,7 &mdash; namely, a given (basic) pitch, plus a pitch 4
 semitones above than the basic pitch, plus a pitch 7 semitones above the
 basic pitch. (See [REFERENCES](#REFERENCES).)
 
-The **-v** option causes interval-class vector information (`**iv`) to
+The <span class="option">v</span> option causes interval-class vector information (`**iv`) to
 be output rather than `**pcset` data. All pitch-class sets can be
 characterized according to the possible interval-classes that can be
 constructed. The six-element interval-class vector specifies the

@@ -36,9 +36,9 @@ record.
 The <span class="tool">yank</span> command provides the following options:
 
 >   -------------- ---------------------------------------------------------------------------
->   **-c**         include all comments prior to the yanked material in the output
+>   <span class="option">c</span>         include all comments prior to the yanked material in the output
 >   -e *regexp*    define end-delimiter for yanked segments as *regexp*; used with -o
->   **-h**         displays a help screen summarizing the command syntax
+>   <span class="option">h</span>         displays a help screen summarizing the command syntax
 >   -l             yank all lines whose line numbers appear in -r *range*
 >   -m *regexp*    yank lines matching *regexp* listed in -r *range*
 >   -n *regexp*    yank segments delineated by *regexp* according to cardinal -r *range*
@@ -49,7 +49,7 @@ The <span class="tool">yank</span> command provides the following options:
 >
 Options are specified in the command line.
 
-The simplest operation for <span class="tool">yank</span> occurs when the **-l** option is
+The simplest operation for <span class="tool">yank</span> occurs when the <span class="option">l</span> option is
 specified. In this case <span class="tool">yank</span> echoes those lines in the input stream
 whose line-numbers appear in a specified *range.* The *range* consists
 of one of more integers separated by commas; inclusive ranges can be
@@ -87,7 +87,7 @@ interpretations and comments as described below (see [INTERPRETATIONS
 AND COMMENTS](#INTERPRETATIONS%20AND%20COMMENTS)).
 
 Alternatively, <span class="tool">yank</span> can output lines relative to some user-defined
-*marker.* This mode of operation can be invoked using the **-m** option.
+*marker.* This mode of operation can be invoked using the <span class="option">m</span> option.
 Markers are specified as regular expressions. The following command
 outputs the first and third data records following each occurrence of
 the string \"XXX\" in the file `wieck`.
@@ -96,7 +96,7 @@ the string \"XXX\" in the file `wieck`.
 
 > yank -m XXX -r 1,3 wieck
 
-The **-r** option is used to specify the range. If the value zero
+The <span class="option">r</span> option is used to specify the range. If the value zero
 (\"0\") is specified in the range, then the record containing the marker
 is itself output.
 
@@ -112,7 +112,7 @@ file `franck` beginning with a letter and ending with a number:
 In musical applications, it is often convenient to yank material
 according to logical segments such as measures or phrases. In order to
 access such segments, the user must specify a segment *delimiter* using
-the **-o** or the **-o** and **-e** options. For example, common system
+the <span class="option">o</span> or the <span class="option">o</span> and <span class="option">e</span> options. For example, common system
 barlines are represented by the presence of an equals-sign (=) at the
 beginning of a data token. Thus the user might yank specific measures
 from a ` **kern` file by defining the appropriate barline delimiter and
@@ -122,7 +122,7 @@ providing a range of (measure) numbers. Consider the following command:
 
 > yank -o \^= -r 1,12-13,25 joplin
 
-Unlike the **-m** option, the **-o** option interprets the range list as
+Unlike the <span class="option">m</span> option, the <span class="option">o</span> option interprets the range list as
 ordinal occurrences of segments delineated by the delimiter. Whole
 segments are output rather than specified records as is the case with
 **-m.** As in the case of markers, delimiters are interpreted according
@@ -143,12 +143,12 @@ example,
 > yank -o \'\^=\' -r 0 mahler
 
 can be used to yank all records prior to the first common system
-barline. With the **-o** option, notice that *actual* measure numbers
+barline. With the <span class="option">o</span> option, notice that *actual* measure numbers
 are irrelevant: <span class="tool">yank</span> selects segments according to their *ordinal*
 position in the input stream rather than according to their *cardinal*
 label.
 
-When the **-n** option is invoked, however, <span class="tool">yank</span> expects a numerical
+When the <span class="option">n</span> option is invoked, however, <span class="tool">yank</span> expects a numerical
 value to be present in the input immediately following the
 user-specified delimiter. In this case, <span class="tool">yank</span> selects segments based
 on their numbered label rather than their ordinal position in the input.
@@ -161,14 +161,14 @@ For example,
 will yank all segments begining with the label `=12` in the input file
 `goldberg`. If more than one segment carries the specified segment
 number(s), all such segment are output. Note that the dollar-sign anchor
-cannot be used in the range expression for the **-n** option. Note also
+cannot be used in the range expression for the <span class="option">n</span> option. Note also
 that input tokens containing non-numeric characters appended to the
 number will have no effect on the pattern match. For example, input
 tokens such as `=12a, =12b`, or `=12`; will be treated as equivalent to
 `=12`.
 
-As in the case of the **-o** option, the value zero (\"0\") addresses
-material prior to the first delimiter record. Like the **-o** option,
+As in the case of the <span class="option">o</span> option, the value zero (\"0\") addresses
+material prior to the first delimiter record. Like the <span class="option">o</span> option,
 the value zero may be reused for each specified input file. Thus, if
 `file1, file2` and `file3` are Humdrum files:
 
@@ -178,7 +178,7 @@ the value zero may be reused for each specified input file. Thus, if
 
 will yank any leading (anacrusis) material in each of the three files.
 
-When the **-s** option is invoked, <span class="tool">yank</span> extracts passages according
+When the <span class="option">s</span> option is invoked, <span class="tool">yank</span> extracts passages according
 to Humdrum section labels encoded in the input. Humdrum section labels
 are tandem interpretations that conform to the syntax:
 
@@ -210,7 +210,7 @@ appends the appropriate spine-path terminators at the end of the yanked
 segment.
 
 Any comments *prior* to the yanked passage may be included in the output
-by specifying the **-c** option.
+by specifying the <span class="option">c</span> option.
 
 ------------------------------------------------------------------------
 
@@ -301,7 +301,7 @@ output material can be rearranged by invoked the <span class="tool">yank</span> 
 than once (e.g.
 `yank -l -r 100 ...; yank -l -r 99 ...; yank -l -r 98 ...`).
 
-In the case of the **-m** option, note that range elements cannot
+In the case of the <span class="option">m</span> option, note that range elements cannot
 address records more than one marker away from the current marker. For
 example, in a file where markers occur every 10 records, range
 expressions such as `` `25' `` and `` `$-17' `` will result in no

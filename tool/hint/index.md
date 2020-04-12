@@ -34,7 +34,7 @@ spanning all pitch-related spines in an input record; this includes
 multiple-stops within spines. In the default operation, a single output
 interpretation ` (**hint)` is generated for any given input. All pitches
 in a given sonority (sounding moment) are first sorted in ascending
-pitch order. If the **-u** option is selected, duplicate pitches
+pitch order. If the <span class="option">u</span> option is selected, duplicate pitches
 (unisons) are treated as a single pitch-instance when calculating the
 intervening intervals. Intervals are then calculated between successive
 pairs of pitches &mdash; ordered from low to high. A single data token is
@@ -47,7 +47,7 @@ null token (.). Input records containing only rests result in the
 outputting of a rest token (r). Input records containing only a single
 pitch result in the outputting of a hyphen (-). Input records containing
 only a single duplicated pitch result in the outputting of the interval
-(P1) &mdash; unless the **-u** option is selected, in which case the a
+(P1) &mdash; unless the <span class="option">u</span> option is selected, in which case the a
 hyphen is output (-).
 
 The <span class="tool">hint</span> command recognizes and echoes \"common-system\" barlines
@@ -85,51 +85,51 @@ should be given names with the distinguishing \`.hnt\' extension.
 The <span class="tool">hint</span> command provides the following options:
 
 >   ------------- ------------------------------------------------------------------
->   **-a**        calculate all intervals by permuting all pitches present
->   **-c**        output compound intervals as non-compound intervals
->   **-d**        output diatonic interval size only, without the interval quality
->   **-h**        displays a help screen summarizing the command syntax
->   **-l**        calculate intervals with respect to the lowest pitch present
+>   <span class="option">a</span>        calculate all intervals by permuting all pitches present
+>   <span class="option">c</span>        output compound intervals as non-compound intervals
+>   <span class="option">d</span>        output diatonic interval size only, without the interval quality
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
+>   <span class="option">l</span>        calculate intervals with respect to the lowest pitch present
 >   -s *regexp*   skip; completely ignore records matching *regexp;*
 >                 (output null token)
->   **-u**        eliminate unisons from the output
+>   <span class="option">u</span>        eliminate unisons from the output
 >   ------------- ------------------------------------------------------------------
 >
-The **-a** and **-l** options are mutually exclusive.
+The <span class="option">a</span> and <span class="option">l</span> options are mutually exclusive.
 
 Options are specified in the command line.
 
-The **-a** option causes all permuted intervals within a sonority to be
+The <span class="option">a</span> option causes all permuted intervals within a sonority to be
 output rather than only those intervals between successive pitch-ordered
 pitches. Hence, the sonority (E4 G4 C5) will produce the output m3 m6 P4
 rather than m3 P4. A tandem interpretation (`*all`) is added to the
 output in order to indicate that the interval content is exhaustive.
 Note that the order of the intervals in the output token no longer has
-any significance when the **-a** option is invoked.
+any significance when the <span class="option">a</span> option is invoked.
 
-The **-c** option causes all compound intervals to be output as
+The <span class="option">c</span> option causes all compound intervals to be output as
 non-compound equivalents. Compound intervals are defined as those
 intervals greater than or equal to an octave in size. Hence, a major
 tenth interval will be output as a major third, and an octave will be
 output as a perfect unison.
 
-The **-d** option causes only the diatonic interval size to be output.
+The <span class="option">d</span> option causes only the diatonic interval size to be output.
 In this case, the interval quality signifiers (`AdmMP`) will be
-suppressed. For example, with the **-d** option, the output token \`3\'
+suppressed. For example, with the <span class="option">d</span> option, the output token \`3\'
 signifies any interval of a third, including major, minor, diminished,
 etc.
 
-The **-l** option causes <span class="tool">hint</span> to calculate all intervals with
+The <span class="option">l</span> option causes <span class="tool">hint</span> to calculate all intervals with
 respect to the lowest notated pitch present. Hence, the input sonority
 (G4 E4 C4) will produce the output M3 P5 rather than M3 m3.
 
-The **-s** option allows the user to define a regular expression, that
+The <span class="option">s</span> option allows the user to define a regular expression, that
 if matched, causes a null token to be output for the given record.
 
-The **-u** option eliminates duplicate pitches in interval calculations.
+The <span class="option">u</span> option eliminates duplicate pitches in interval calculations.
 For example, rather than outputting P1 M3 P1 for the sonority (C4 C4 E4
-E4), the **-u** option will result in the output M3. In the case of a
-sonority consisting of a repeated single pitch, the **-u** option will
+E4), the <span class="option">u</span> option will result in the output M3. In the case of a
+sonority consisting of a repeated single pitch, the <span class="option">u</span> option will
 cause a hyphen (-) to be output.
 
 ------------------------------------------------------------------------
@@ -195,7 +195,7 @@ is present (tenth data record). If a single pitch is present in the
 input, a hyphen is output rather than the P1 token (eleventh data
 record).
 
-The **-d** option causes only the diatonic interval sizes to be output
+The <span class="option">d</span> option causes only the diatonic interval sizes to be output
 as follows: ``
 
 >   ----------
@@ -214,7 +214,7 @@ as follows: ``
 >   \*-
 >   ----------
 >
-The **-s** (skip) option can be used to allow the user to selectively
+The <span class="option">s</span> (skip) option can be used to allow the user to selectively
 identify records that should not be involved in processing. Consider the
 command
 
@@ -256,9 +256,9 @@ the P1 formerly present in the eighth data record has disappeared. The
 presence of the rest in the original ninth data record has caused the
 outputting of a simple null token.
 
-The **-l** option causes <span class="tool">hint</span> to calculate intervals with respect to
+The <span class="option">l</span> option causes <span class="tool">hint</span> to calculate intervals with respect to
 the lowest pitch present in the sonority. For example, with the above
-sample input, the **-l** option would produce the following output: ``
+sample input, the <span class="option">l</span> option would produce the following output: ``
 
 >   --------------
 >   \*\*hint
@@ -277,7 +277,7 @@ sample input, the **-l** option would produce the following output: ``
 >   \*-
 >   --------------
 >
-The **-a** option calculates all possible intervals by pairing all
+The <span class="option">a</span> option calculates all possible intervals by pairing all
 pitches present in a given sonority. The order of the output intervals
 conforms to the following standard: all pitches are sorted from low to
 high; intervals are determined as 1-2, 1-3, 1-4, etc., 2-3, 2-4, etc. By

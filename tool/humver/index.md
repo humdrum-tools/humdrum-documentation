@@ -28,7 +28,7 @@ Toolkit.
 
 ### OPTIONS
 
-The **-s** option suppresses output and returns a value to the shell
+The <span class="option">s</span> option suppresses output and returns a value to the shell
 corresponding to the Humdrum Toolkit version number. (This option is
 useful in allowing shell programs to determine the version number
 without sending output to the standard output.)

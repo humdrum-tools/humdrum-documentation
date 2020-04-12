@@ -42,13 +42,13 @@ command).
 
 For the entire input, <span class="tool">infot</span> tabulates the total number of
 occurrences of each unique data record (hereafter referred to as
-\`states\'). For the **-n, -p** and **-b** options, <span class="tool">infot</span> outputs a
+\`states\'). For the **-n, -p** and <span class="option">b</span> options, <span class="tool">infot</span> outputs a
 two-column list where the left column indentifies each unique state and
 the right column provides one of several corresponding calculated
-measures. With the **-n** option, this measure is merely an integer
+measures. With the <span class="option">n</span> option, this measure is merely an integer
 count of the number of occurrences of each corresponding state. With the
-**-p** option, this measure is a probability of occurrence for each
-state. With the **-b** option, this measure identifies the information
+<span class="option">p</span> option, this measure is a probability of occurrence for each
+state. With the <span class="option">b</span> option, this measure identifies the information
 content for the corresponding state in bits.
 
 Information content (*H*) in bits is calculated according to the classic
@@ -72,27 +72,27 @@ Humdrum syntax.
 The <span class="tool">infot</span> command provides the following options:
 
 >   ------------- ---------------------------------------------------------
->   **-b**        output information (in bits) for each unique data token
->   **-h**        displays a help screen summarizing the command syntax
->   **-H**        format output as <span class"tool">humsed</span> commands
->   **-n**        output frequency count for each unique data token
->   **-p**        output probability value for each unique data token
->   **-s**        output information-related summary statistics
+>   <span class="option">b</span>        output information (in bits) for each unique data token
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
+>   <span class="option">H</span>        format output as <span class"tool">humsed</span> commands
+>   <span class="option">n</span>        output frequency count for each unique data token
+>   <span class="option">p</span>        output probability value for each unique data token
+>   <span class="option">s</span>        output information-related summary statistics
 >   -x *regexp*   exclude tokens matching *regexp* from calculations
 >   ------------- ---------------------------------------------------------
 >
 Options are specified in the command line.
 
-With the **-n** option, <span class="tool">infot</span> outputs a two-column list where the
+With the <span class="option">n</span> option, <span class="tool">infot</span> outputs a two-column list where the
 left column indentifies each unique state present in the input, and the
 right column provides an integer *count* indicating the number of
 occurrences for the corresponding state.
 
-With the **-p** option, <span class="tool">infot</span> outputs a two-column list where
+With the <span class="option">p</span> option, <span class="tool">infot</span> outputs a two-column list where
 *probabilities* of occurrence are output in the right-hand column,
 rather than counts.
 
-With the **-b** option, <span class="tool">infot</span> outputs the information (in bits) as
+With the <span class="option">b</span> option, <span class="tool">infot</span> outputs the information (in bits) as
 calculated according to the [Shannon-Weaver
 equation.](#Shannon%20and%20Weaver)
 
@@ -120,7 +120,7 @@ the following input: ``
 >   \*-
 >   ---------
 >
-A simple command invocation would use the **-n** option to count the
+A simple command invocation would use the <span class="option">n</span> option to count the
 number of occurrences of each unique data token (or state):
 
 > ` infot -n input`
@@ -135,7 +135,7 @@ The corresponding output is: ``
 >   ----- ---
 >
 The tallies indicate that state \`A\' occurs 6 times, and that the least
-common state (\`X Y\') occurs just once. If we had invoked the **-p**
+common state (\`X Y\') occurs just once. If we had invoked the <span class="option">p</span>
 option, the counts would be replaced by probabilities. The command:
 
 > ` infot -p input`
@@ -149,7 +149,7 @@ produces the following output: ``
 >   X Y   0.083
 >   ----- -------
 >
-Alternatively, the **-b** option:
+Alternatively, the <span class="option">b</span> option:
 
 > ` infot -b input`
 
@@ -162,7 +162,7 @@ would output information measures for each state, in bits: ``
 >   X Y   3.585
 >   ----- -------
 >
-In the case of the **-s** option, summary statistics would be output,
+In the case of the <span class="option">s</span> option, summary statistics would be output,
 rather than a two-column list. For the above input, the following
 summary statistics would be generated: ``
 
@@ -221,7 +221,7 @@ Now imagine we had another message presumed to belong to the same
 repertoire as our input. We would like to trace how the information
 increases and decreases over the course of this new \`message\'. This
 goal involves a two-part operation. First, we re-invoke <span class="tool">infot</span> adding
-the **-H** option, and redirect the output to a file `replace`:
+the <span class="option">H</span> option, and redirect the output to a file `replace`:
 
 > ` infot -bH repertoire > replace`
 

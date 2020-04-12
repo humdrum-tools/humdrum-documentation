@@ -59,20 +59,20 @@ should be given names with the distinguishing \`\"\' extension.
 The <span class="tool">freq</span> command provides the following options:
 
 >   -------- ---------------------------------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -p *n*   output precision of *n* decimal places
->   **-t**   suppresses printing of all but the first note of a group of tied `**kern notes`
->   **-x**   suppresses printing of non-frequency signifiers
+>   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern notes`
+>   <span class="option">x</span>   suppresses printing of non-frequency signifiers
 >   -------- ---------------------------------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-p** option can be used to set the precision of the output values
+The <span class="option">p</span> option can be used to set the precision of the output values
 to *n* decimal places. The default precision is two decimal places. Note
 that <span class="tool">freq</span> is able to process `**freq` as input; this feature allows
 the user to round-off existing `**freq` data to a specified precision.
 
-The **-t** option ensures that only a single output value is given for
+The <span class="option">t</span> option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
@@ -86,9 +86,9 @@ prove confusing &mdash; especially, when the non-pitch-related signifiers
 are numbers. Consider the case of the `**kern` token \"8aaa\"; after
 translating \`aaa\' to 1760.00 hertz, the non-pitch-related signifier
 \`8\' will also be output, hence the value 81760.00 &mdash; which will
-undoubtedly cause confusion. The **-x** option is useful for eliminating
+undoubtedly cause confusion. The <span class="option">x</span> option is useful for eliminating
 non-pitch-related signifiers from the output. For most `**kern` inputs,
-the **-x** option is recommended.
+the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
 
@@ -159,16 +159,16 @@ produces the following result: ``
 >
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the `**kern` spine has been
-rendered as a single note rather than as two notes (due to the **-t**
+rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**pitch, **MIDI`, and `**cocho` spines have been
-stripped away (due to the **-x** option).
+stripped away (due to the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

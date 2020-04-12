@@ -65,8 +65,8 @@ command:
 
 > ` rend -i '**pitch' -f reassign`
 
-The **-i** option specifies the target input interpretation, i.e., the
-input spine(s) to be processed. The **-f** option specifies a
+The <span class="option">i</span> option specifies the target input interpretation, i.e., the
+input spine(s) to be processed. The <span class="option">f</span> option specifies a
 reassignment-file (named `reassign`) containing the following records:
 ``
 
@@ -99,10 +99,10 @@ The <span class="tool">rend</span> command provides the following options:
 >   --------------------- --------------------------------------------------------------------------
 >   -f *reassign*         maps input tokens to output tokens according to definitions given in the
 >                         file *reassign*
->   **-h**                displays a help screen summarizing the command syntax
+>   <span class="option">h</span>                displays a help screen summarizing the command syntax
 >   -i *target\_interp*   process all input spines whose exclusive interpretations are labelled
 >                         *target\_interp*
->   **-s**                matches a single instance of the given pattern rather than all instances
+>   <span class="option">s</span>                matches a single instance of the given pattern rather than all instances
 >   --------------------- --------------------------------------------------------------------------
 >
 Options are specified in the command line.

@@ -68,17 +68,17 @@ There is no special output file-type designation.
 The <span class="tool">key</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-a**   output correlation values for all keys
->   **-f**   output frequencies for all pitch-classes
->   **-h**   displays a help screen summarizing the command syntax
+>   <span class="option">a</span>   output correlation values for all keys
+>   <span class="option">f</span>   output frequencies for all pitch-classes
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-a** option will show all of the correlation coefficients for all
+The <span class="option">a</span> option will show all of the correlation coefficients for all
 24 of the (enharmonic) major and minor keys.
 
-The **-f** option will output the relative frequencies for each of the
+The <span class="option">f</span> option will output the relative frequencies for each of the
 twelve chromatic pitch classes (in quarter-note durations).
 
 ------------------------------------------------------------------------
@@ -89,8 +89,8 @@ Without any options, typical outputs are of the following form:
 
 ` Estimated key: B minor    (r=0.8442)     confidence: 51.3%`
 
-With both the **-f** and **-a** options invoked, a typical output is
-given below. The **-f** option causes 12 pitch-class tallies to be
+With both the <span class="option">f</span> and <span class="option">a</span> options invoked, a typical output is
+given below. The <span class="option">f</span> option causes 12 pitch-class tallies to be
 outputted. These values are given in acculumated whole-note durations.
 For example, the output: \"PC\[5\]: 4.25\" means that the enharmonic
 pitch-class \"F\" appears in the passage for the equivalent of 4
@@ -150,7 +150,7 @@ Tonic\[11\] major -0.334105 minor 0.319835
 
 Estimated key: C major (r=0.7917) confidence: 5.7%
 
-The **-a** option causes the tonic major and minor correlations to be
+The <span class="option">a</span> option causes the tonic major and minor correlations to be
 printed for each pitch-class. Good key matches have a high positive
 correlation; the maximum value is 1.0.
 

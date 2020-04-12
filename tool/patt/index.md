@@ -26,7 +26,7 @@ number, echoed intact in the output stream, or tagged by a user-defined
 marker in a `**patt` output spine.
 
 The pattern sought must be defined as a separate \"template\" file. The
-template file is identified using the **-f** command option.
+template file is identified using the <span class="option">f</span> command option.
 
 Pattern templates consist of one or more records. Each record specifies
 a regular expression pattern. The input is scanned from beginning to
@@ -89,11 +89,11 @@ defining multi-record patterns.
 The <span class="tool">patt</span> command supports the following options:
 
 >   ------------------- ----------------------------------------------------------------------
->   **-c**              makes pattern-matching sensitive to comments
->   **-e**              echoes matched patterns in the output
+>   <span class="option">c</span>              makes pattern-matching sensitive to comments
+>   <span class="option">e</span>              echoes matched patterns in the output
 >   -f *templatefile*   use pattern specified in *templatefile*
->   **-h**              displays a help screen summarizing the command syntax
->   **-m**              invokes collapsed multiple-record matching mode
+>   <span class="option">h</span>              displays a help screen summarizing the command syntax
+>   <span class="option">m</span>              invokes collapsed multiple-record matching mode
 >   -s *regexp*         skip (ignore) data records containing the defined regular expression
 >   -t *output\_tag*    generate `**patt` output spine; tag each occurrence of the pattern
 >                       with the string *output\_tag*
@@ -103,36 +103,36 @@ Options are specified in the command line.
 
 By default, the <span class="tool">patt</span> command is insensitive to the presence or
 absence of Humdrum comments. Pattern searches may be made sensitive to
-occurrences of comments by specifying the **-c** option.
+occurrences of comments by specifying the <span class="option">c</span> option.
 
 In the default operation, <span class="tool">patt</span> outputs a Humdrum global comment for
 each pattern matched in the input. Each comment identifies the line
 number in the input where the found pattern begins.
 
-With the **-e** option, each instance of the found pattern is echoed in
+With the <span class="option">e</span> option, each instance of the found pattern is echoed in
 the output. Each output pattern is preceded by the appropriate exclusive
 interpretation(s) and followed by appropriate spine-path terminator(s).
 
 Certain types of data records may be ignored in the pattern-search by
-invoking the **-s** (skip) option. This option must be accompanied by a
+invoking the <span class="option">s</span> (skip) option. This option must be accompanied by a
 user-define regular expression. All input data records matching the
 regular expression are ignored. This option is useful, for example, in
 skipping null data tokens, barlines, marked embellishment tones, or
 other types of data.
 
-The **-m** option invokes a multiple record matching mode. In this mode,
+The <span class="option">m</span> option invokes a multiple record matching mode. In this mode,
 <span class="tool">patt</span> attempts to match as many successive regular expressions in the
 template file as possible for a given input record, before continuing
 with the next input and template records. In this way, a template file
 consisting of several records, may possibly match a single input record.
 (See [EXAMPLES](#EXAMPLES) below.)
 
-The **-t** option causes <span class="tool">patt</span> to output a single spine of `**patt`
+The <span class="option">t</span> option causes <span class="tool">patt</span> to output a single spine of `**patt`
 output. The user specifies an *output tag* (character string) on the
 command line. Each instance of the found pattern causes the tag to be
 output in the `**patt` spine at the position corresponding to the onset
 of each found pattern. (See [EXAMPLES](#EXAMPLES) below.) Note that the
-**-t** and **-e** options are mutually exclusive.
+<span class="option">t</span> and <span class="option">e</span> options are mutually exclusive.
 
 Whatever options are invoked, <span class="tool">patt</span> always produces output that
 conforms to the Humdrum syntax.
@@ -192,7 +192,7 @@ beginning on the fifth and sixth lines respectively.
 Note however, that the first instance of the pattern (beginning at line
 2) was not identified due to the interruption of the common system
 barline in the fourth line. The barlines can be ignored by invoking the
-**-s** option, followed by a regular expression that uniquely identifies
+<span class="option">s</span> option, followed by a regular expression that uniquely identifies
 the records to be skipped &mdash; in this case the equals sign. The command:
 
 > ` patt -s = -f template target`
@@ -205,7 +205,7 @@ would produce the following output: ``
 >   !! Pattern found at line 6 of file input
 >   ------------------------------------------
 >
-Actual instances of the pattern can be output by invoking the **-e**
+Actual instances of the pattern can be output by invoking the <span class="option">e</span>
 (echo) option:
 
 > ` patt -e -s = -f template target`
@@ -239,7 +239,7 @@ output with initial exclusive interpretations and concluding spine-path
 terminators. If a single continuous output is desired, the **rid -u**
 command may be used to eliminate the duplicate interpretations.
 
-Instead of outputting the individual patterns, the **-t** option may be
+Instead of outputting the individual patterns, the <span class="option">t</span> option may be
 used to output a spine that marks each instance of the found pattern. In
 the following command, the beginning of each occurrence of the pattern
 is labelled in the `**patt` spine by the tag \"one-two-three.\"
@@ -267,7 +267,7 @@ The follow output would result: ``
 >
 For some tasks (such as the identification of tone-rows in 12-tone
 music), nominally \"successive\" elements of the pattern may be
-collapsed within a single sonority or record. The **-m** option invokes
+collapsed within a single sonority or record. The <span class="option">m</span> option invokes
 a *multiple record matching* mode. By way of example, the following
 command:
 
@@ -317,7 +317,7 @@ interpreters, and revised *awk* (1985).
 ### WARNINGS
 
 If a comment is present in the template pattern, failing to specify the
-**-c** option will make pattern matching a logically impossibility.
+<span class="option">c</span> option will make pattern matching a logically impossibility.
 
 ------------------------------------------------------------------------
 

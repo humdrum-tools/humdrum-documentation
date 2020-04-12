@@ -69,7 +69,7 @@ should be given names with the distinguishing \`.dgr\' extension.
 
 The <span class="tool">degree</span> command provides the following options:
 
-> > **-h**
+> > <span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
@@ -81,17 +81,17 @@ specify default key
 
 specify override key
 
-**-t**
+<span class="option">t</span>
 
 suppresses printing of all but the first note of a group of tied
 `**kern notes`
 
-**-x**
+<span class="option">x</span>
 
 suppresses printing of
 non-`**degree signifiers   Options are specified in the command line. `
 
-The **-t** option ensures that only a single output value is given for
+The <span class="option">t</span> option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
@@ -108,8 +108,8 @@ non-pitch-related signifiers are numbers. Consider the case of the
 preceding non-pitch-related signifier \``4`\' will also be output, hence
 the value `43+/4` &mdash; which may cause confusion.
 
-The **-x** option is useful for eliminating non-pitch-related signifiers
-from the output. For most `**kern` inputs, the **-x** option is
+The <span class="option">x</span> option is useful for eliminating non-pitch-related signifiers
+from the output. For most `**kern` inputs, the <span class="option">x</span> option is
 recommended.
 
 ------------------------------------------------------------------------
@@ -181,10 +181,10 @@ produces the following result: ``
 >
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the `**kern` spine has been
-rendered as a single note rather than as two notes (due to the **-t**
+rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**pitch` spine have been stripped away (due to
-the **-x** option). Note that the plus and minus signs merely indicate
+the <span class="option">x</span> option). Note that the plus and minus signs merely indicate
 that a scale degree has been raised or lowered, but not by how much.
 Hence both the D-flat and D double-flat in measure 1 of the first
 (`**kern)` spine are rendered as degree \``2-`\'.
@@ -193,7 +193,7 @@ Hence both the D-flat and D double-flat in measure 1 of the first
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

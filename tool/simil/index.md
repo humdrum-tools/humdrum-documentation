@@ -75,7 +75,7 @@ In the *variable template mode,* the template input provides a
 \"reservoire\" from which multiple templates are derived. Specifically,
 the template input is broken-up into a series of (shorter) overlapping
 \"subordinate\" templates. The length of each of these subordinate
-templates is determined by the **-x** option parameter. For example,
+templates is determined by the <span class="option">x</span> option parameter. For example,
 consider a template input consisting of the values: 1, 2, 3, 4 &mdash; each
 number appearing on successive lines. With **-x 3**, two subordinate
 templates will be generated, each consisting of three data records: 1,
@@ -191,7 +191,7 @@ arbitrarily high edit penalty. ``
 The <span class="tool">simil</span> command provides the following options.
 
 >   ------------- --------------------------------------------------------------------------------
->   **-n**        do not scale similarity measures according to template length
+>   <span class="option">n</span>        do not scale similarity measures according to template length
 >   -r            reverse the order of *source* and *template* inputs on the command line;
 >                 permits the source file to be entered using the standard input.
 >   -x *length*   invoke *variable template mode*; break-up template file input into subordinate
@@ -207,17 +207,17 @@ template consisting of 20 elements. However, 3 edit operations is
 significant for a template consisting of only 5 elements. In the default
 operation, <span class="tool">simil</span> scales the edit-distance scores according to the
 length of the comparison template. This ensures that all similarity
-values remain between 0 and 1. The **-n** option defeats this scaling
+values remain between 0 and 1. The <span class="option">n</span> option defeats this scaling
 procedure, and outputs the raw similarity scores.
 
-The **-r** option reverses the order of the *source* and *template*
+The <span class="option">r</span> option reverses the order of the *source* and *template*
 input specifications on the command line. If both inputs are files, this
 option is of little use. Where one input is to be typed manually via the
 standard input, this option allows the user to specify a template file
 as input, and to type the source document manually.
 
-The **-x** option invokes the *variable template mode* discussed above.
-The numerical argument given to the **-x** option determines the length
+The <span class="option">x</span> option invokes the *variable template mode* discussed above.
+The numerical argument given to the <span class="option">x</span> option determines the length
 of the subordinate templates drawn from the template file.
 
 ------------------------------------------------------------------------

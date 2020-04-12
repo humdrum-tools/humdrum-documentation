@@ -70,10 +70,10 @@ the default operation is to suppress the echoing of non-numeric
 signifiers in the corresponding output. Hence, an input token \``33b`\'
 followed by \``p51.3xm`\' will result in the output token \``18.3`\'
 (i.e. 51.3 - 33). However, the accompanying non-numeric data can be
-echoed in the output by invoking the **-e** option.
+echoed in the output by invoking the <span class="option">e</span> option.
 
 The <span class="tool">xdelta</span> command is able to calculate unsigned (absolute) values
-where appropriate &mdash; using the **-a** option. It is also able to handle
+where appropriate &mdash; using the <span class="option">a</span> option. It is also able to handle
 multiple stops and data-flow interruptions such as the occurrence of
 barlines. By defining *regular expression* patterns, the user may select
 which types of data tokens should be ignored by **xdelta.** (See
@@ -90,11 +90,11 @@ the input file using the Humdrum <span class="tool">assemble</span> command.
 The <span class="tool">xdelta</span> command provides the following options:
 
 >   ------------- ------------------------------------------------------------------
->   **-a**        output absolute difference values
+>   <span class="option">a</span>        output absolute difference values
 >   -b *regexp*   break; do not calculate difference for tokens matching *regexp;*
 >                 restart difference calculations with next numerical token
->   **-e**        echo non-numeric data for input tokens containing numbers
->   **-h**        displays a help screen summarizing the command syntax
+>   <span class="option">e</span>        echo non-numeric data for input tokens containing numbers
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
 >   -s *regexp*   skip; completely ignore tokens matching *regexp;*
 >                 (echo in output only)
 >   ------------- ------------------------------------------------------------------
@@ -190,7 +190,7 @@ output will be: ``
 >   ----------
 >
 In other words, the measure number (1) interacts (incorrectly) with the
-duration values. This can be avoided by using the **-s** (skip) option.
+duration values. This can be avoided by using the <span class="option">s</span> (skip) option.
 The skip option allows the user to identify records that should not be
 involved in *delta* processing. The `**dur` barline signifier is the
 equals-sign; hence, the command ` xdelta -s = input` will cause the

@@ -75,12 +75,12 @@ The <span class="tool">cleave</span> command provides the following options:
 >   -d *delimiter*         interpose the string *delimiter* between amalgamated tokens
 >   -i *\'in\_interp\'*    list of input interpretations to be processed
 >   -o *\'out\_interp\'*   specify output interpretation
->   **-r**                 suppress outputting of duplicate (repeated) signifiers
+>   <span class="option">r</span>                 suppress outputting of duplicate (repeated) signifiers
 >   ---------------------- -------------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-d** option is used to specify a string that is inserted between
+The <span class="option">d</span> option is used to specify a string that is inserted between
 each component part forming the assembled output token. The default
 delimiter is the null string.
 
@@ -88,7 +88,7 @@ A given signifier (character) may be present in two or more concurrent
 input tokens &mdash; such as the letter \`A\' shared by the tokens \`AB\'
 and \`AX\'. Depending on the task, the user may want only a single
 instance of each signifier to be echoed in the output (e.g. \`ABX\'
-rather than \`ABAX\'). The **-r** option causes characters that are
+rather than \`ABAX\'). The <span class="option">r</span> option causes characters that are
 common to two or more input tokens to be output only once. The output
 position of any repeated character corresponds to the first instance of
 the character in the processed input.
@@ -326,7 +326,7 @@ cents-deviation: ``
 > > > > the barlines in one of the two input spines were replaced by
 > > > > null tokens.
 > > > >
-> > > > The **-r** option can be used to eliminate duplicate or repeated
+> > > > The <span class="option">r</span> option can be used to eliminate duplicate or repeated
 > > > > signifiers. Consider, for example, the following input: ``
 > > > >
 > > > > > `**kern`
@@ -371,7 +371,7 @@ cents-deviation: ``
 > > > > > information not present in the second spine. The pitch,
 > > > > > duration, and articulation information can be amalgamated
 > > > > > without duplication of the duration information using the
-> > > > > **-r** option:
+> > > > > <span class="option">r</span> option:
 > > > > >
 > > > > > > ` cleave -r -i '**kern' -o '**kern' input > output`
 > > > > >
@@ -395,10 +395,10 @@ cents-deviation: ``
 > > > > > >
 > > > > > > `4cc`
 > > > > > >
-> > > > > > `*- ` Users should be careful when using the **-r** option
+> > > > > > `*- ` Users should be careful when using the <span class="option">r</span> option
 > > > > > > while at the same time assigning a delimiter that appears in
 > > > > > > the input stream. For example, if the slash (/) is defined
-> > > > > > as an output delimiter, and the **-r** option is invoked,
+> > > > > > as an output delimiter, and the <span class="option">r</span> option is invoked,
 > > > > > > then following input: ``
 > > > > > >
 > > > > > > > `ab`
@@ -433,7 +433,7 @@ cents-deviation: ``
 > > > > > > > > ### WARNINGS
 > > > > > > > >
 > > > > > > > > Syntactically correct Humdrum output is not guaranteed
-> > > > > > > > if the **-r** option is invoked while using the space as
+> > > > > > > > if the <span class="option">r</span> option is invoked while using the space as
 > > > > > > > > a delimiter.
 > > > > > > > >
 > > > > > > > > The use of regular expression metacharacters as

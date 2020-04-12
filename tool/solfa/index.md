@@ -90,20 +90,20 @@ The <span class="tool">solfa</span>
 
 command provides the following options:
 
-> **-h**
+> <span class="option">h</span>
 
 displays a help screen summarizing the command syntax
 
-**-t**
+<span class="option">t</span>
 
 suppresses printing of all but the first note of a group of tied notes
 
-**-x**
+<span class="option">x</span>
 
 suppresses printing of
 non-`**solfa signifiers  Options are specified in the command line. `
 
-The **-t** option ensures that only a single output value is given for
+The <span class="option">t</span> option ensures that only a single output value is given for
 tied notes; the output coincides with the first note of the tie.
 
 In the default operation, <span class="tool">solfa</span> outputs non-pitch-related signifiers
@@ -112,7 +112,7 @@ in addition to the degree value. For example, in the key of D, the
 after translating G to fa, the \"4\...z\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
-confusing. The **-x** option is useful for eliminating non-pitch-related
+confusing. The <span class="option">x</span> option is useful for eliminating non-pitch-related
 signifiers from the output.
 
 ------------------------------------------------------------------------
@@ -184,16 +184,16 @@ produces the following result: ``
 >
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the `**kern` spine has been
-rendered as a single note rather than as two notes (due to the **-t**
+rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**pitch` spine have been stripped away (due to
-the **-x** option).
+the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

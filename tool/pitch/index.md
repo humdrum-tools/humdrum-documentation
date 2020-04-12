@@ -59,14 +59,14 @@ should be given names with the distinguishing \`.pit\' extension.
 The <span class="tool">pitch</span> command provides the following options:
 
 >   -------- ----------------------------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
->   **-t**   suppresses printing of all but the first of a group of tied `**kern notes`
->   **-x**   suppresses printing of non-pitch-related signifiers
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">t</span>   suppresses printing of all but the first of a group of tied `**kern notes`
+>   <span class="option">x</span>   suppresses printing of non-pitch-related signifiers
 >   -------- ----------------------------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-t** option ensures that only a single output value is given for
+The <span class="option">t</span> option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
@@ -86,8 +86,8 @@ token as the octave designation. Hence further processing of this token
 may lead to it's interpretation as A\#8 &mdash; or even A\#58 &mdash; rather
 than A\#5.
 
-The **-x** option is useful for eliminating non-pitch-related signifiers
-from the output. For most `**kern` inputs, the **-x** option is
+The <span class="option">x</span> option is useful for eliminating non-pitch-related signifiers
+from the output. For most `**kern` inputs, the <span class="option">x</span> option is
 recommended.
 
 ------------------------------------------------------------------------
@@ -161,10 +161,10 @@ produces the following result: ``
 >
 Both processed and unprocessed spines are output. Notice that the tied
 note at the beginning of measure 2 in the `**kern` spine has been
-rendered as a single note rather than as two notes (due to the **-t**
+rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**freq, **MIDI`, and `**cocho` spines have been
-stripped away (due to the **-x** option). In the case of the `**degree`
+stripped away (due to the <span class="option">x</span> option). In the case of the `**degree`
 input, <span class="tool">pitch</span> recognizes the spelling of various pitches in the
 context of the key of D minor. Hence, the raised third degree is F\#,
 and the raised sixth degree is B natural. Also note the presence of
@@ -175,7 +175,7 @@ cents-deviation from equal temperament in the translation of the
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

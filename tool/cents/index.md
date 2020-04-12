@@ -60,21 +60,21 @@ should be given names with the distinguishing \`.cnt\' extension.
 The <span class="tool">cents</span> command provides the following options:
 
 > >   -------- ---------------------------------------------------------------------------------
-> >   **-h**   displays a help screen summarizing the command syntax
+> >   <span class="option">h</span>   displays a help screen summarizing the command syntax
 > >   -p *n*   output precision of *n* decimal places
-> >   **-t**   suppresses printing of all but the first note of a group of tied `**kern notes`
-> >   **-x**   suppresses printing of non-cents signifiers
+> >   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern notes`
+> >   <span class="option">x</span>   suppresses printing of non-cents signifiers
 > >   -------- ---------------------------------------------------------------------------------
 > >
 Options are specified in the command line.
 
-The **-p** option can be used to set the precision of the output values
+The <span class="option">p</span> option can be used to set the precision of the output values
 to *n* decimal places. The default precision is integer values only
 (*n*=0). Note that <span class="tool">cents</span> is able to process `**cents` as input; this
 feature allows the user to round-off existing `**cents` data to a
 specified precision.
 
-The **-t** ensures that only a single output value is given for tied
+The <span class="option">t</span> ensures that only a single output value is given for tied
 `**kern` notes; the output coincides with the first note of the tie.
 
 In the default operation, <span class="tool">cents</span> outputs non-pitch-related signifiers
@@ -87,9 +87,9 @@ confusing &mdash; especially, when the non-pitch-related signifiers are
 numbers. Consider the case of the `**kern` token \"8aa\"; after
 translating \`aa\' to 2100 cents, the non-pitch-related signifier \`8\'
 will also be output, hence the value 82100 &mdash; which will undoubtedly
-cause confusion. The **-x** option is useful for eliminating
+cause confusion. The <span class="option">x</span> option is useful for eliminating
 non-pitch-related signifiers from the output. For most `**kern` inputs,
-the **-x** option is recommended.
+the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
 
@@ -812,16 +812,16 @@ non-pitch-related spines (`**embell` and `**metpos`). ``
 
 `*- ` Both processed and unprocessed spines are output. Notice that the
 tied note at the beginning of measure 2 in the `**kern` spine has been
-rendered as a single note rather than as two notes (due to the **-t**
+rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**pitch, **MIDI`, and `**cocho` spines have been
-stripped away (due to the **-x** option).
+stripped away (due to the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

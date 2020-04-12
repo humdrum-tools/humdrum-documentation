@@ -26,7 +26,7 @@ semitone distances separating pitches in a given vertical sonority or
 chord.
 
 The user indicates which spines in the input stream are to be processed
-by specifying an interpretation via the **-i** option. The output
+by specifying an interpretation via the <span class="option">i</span> option. The output
 interpretation is automatically assigned a new name by prepending the
 upper-case letter \`Y\' to the given input interpretation. For example,
 a specified input of ` **semits` will result in an output interpretation
@@ -39,9 +39,9 @@ named ` **Ysemits.`
 The <span class="tool">ydelta</span> command provides the following option:
 
 >   ----------------- ----------------------------------------------------------------------------
->   **-h**            displays a help screen summarizing the command syntax
+>   <span class="option">h</span>            displays a help screen summarizing the command syntax
 >   -i *\*\*interp*   process input spines with interpretations *\*\*interp*
->   **-o**            in square brackets output lowest value (\"origin\") from which
+>   <span class="option">o</span>            in square brackets output lowest value (\"origin\") from which
 >                     differences are calculated
 >   -s *regexp*       skip over records matching *regexp;* If all target spines contain the same
 >                     token; token is output. If the tokens differ, the entire record is output
@@ -125,7 +125,7 @@ Only those input spines labelled ` **semits` have been processed; both
 ` **text` and ` **kern` have been ignored. The first value (given in
 square brackets) represents the lowest numerical value found in the
 processed spine(s) for the current data record. This value appears only
-when the **-o** option is invoked. Successive numerical values indicate
+when the <span class="option">o</span> option is invoked. Successive numerical values indicate
 the differences between the lowest value and the remaining numeric
 values in the other spines. For example, the first input record contains
 the ` **semits` values -7, 0, and 9. The lowest of these values is -7

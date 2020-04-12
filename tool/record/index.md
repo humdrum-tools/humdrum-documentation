@@ -54,23 +54,23 @@ extension.
 The <span class="tool">record</span> command provides the following option:
 
 >   ---------- ---------------------------------------------------------------
->   **-h**     displays a help screen summarizing the command syntax
+>   <span class="option">h</span>     displays a help screen summarizing the command syntax
 >   -i *hex*   assign MIDI interface input/output address to *hex*
 >   -q *n*     invokes quantizing using a temporal window of *n* clock ticks
 >   ---------- ---------------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-q** option invokes a quantizing function where timing information
+The <span class="option">q</span> option invokes a quantizing function where timing information
 is rounded-off to a specified level of resolution. This option may be
 used to eliminate expressive timing information and assist in producing
 a canonical duration representation. The degree of quantizing is
-specified by the *n* argument to the **-q** option, where *n* represents
+specified by the *n* argument to the <span class="option">q</span> option, where *n* represents
 the quantizing window in MIDI clock ticks. Recorded events occurring
 within this window are deemed to be simultaneous, and are recorded as
 Humdrum double-stops in the output.
 
-The **-i** option is used to specify the input/output address of the
+The <span class="option">i</span> option is used to specify the input/output address of the
 MIDI card. The default address is \`330.\' The address is specified as a
 hexadecimal number.
 

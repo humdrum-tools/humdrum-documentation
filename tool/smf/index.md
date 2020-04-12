@@ -37,7 +37,7 @@ affect the SMF output.
 The <span class="tool">smf</span> command provides the following command-line options:
 
 >   ---------- -------------------------------------------------------
->   **-h**     displays a help screen summarizing the command syntax
+>   <span class="option">h</span>     displays a help screen summarizing the command syntax
 >   -t *n.n*   set initial tempo to *n.n* times the default tempo
 >   -v *n*     specify default MIDI key-velocity value (0-127)
 >   ---------- -------------------------------------------------------
@@ -46,7 +46,7 @@ Options are specified in the command line.
 
 The performance tempo may be specified either in the command line or in
 the input Humdrum representation. The tempo may be specified on the
-command line by using the **-t** option. The **-t** must be followed by
+command line by using the <span class="option">t</span> option. The <span class="option">t</span> must be followed by
 an integer or real value between 0.13 and 3.80. A value of 1.0
 corresponds to the default tempo of 66 quarter-notes per minute. A value
 of 2.0 doubles the tempo, whereas a value of 0.5 halves the tempo.
@@ -58,13 +58,13 @@ any tempo specified on the command line. If no tempo information is
 available, <span class="tool">smf</span> assumes a default tempo of 66 quarter-notes per
 minute.
 
-The **-v** option allows the user to specify a key-velocity default.
+The <span class="option">v</span> option allows the user to specify a key-velocity default.
 MIDI instruments normally treat key-velocity data as dynamic or accent
 information &mdash; thus higher key-velocity values are associated with
 accented notes. Permissible key-velocity values range between 0
-(slowest) and 127 (fastest). The **-v** option can be used to set the
+(slowest) and 127 (fastest). The <span class="option">v</span> option can be used to set the
 default key-velocity for key-on commands with unspecified
-key-velocities. In the absence of the **-v** option, the default
+key-velocities. In the absence of the <span class="option">v</span> option, the default
 key-velocity value is 64.
 
 ------------------------------------------------------------------------

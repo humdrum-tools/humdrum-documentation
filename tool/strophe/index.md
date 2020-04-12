@@ -156,7 +156,7 @@ user would need to execute the following command pipeline:
 
 > ` thru wandern | strophe -s 1,3`
 
-The list following the **-s** option can contain individual strophes
+The list following the <span class="option">s</span> option can contain individual strophes
 separated by commas. For example, the following command extracts verses
 1, 3 and 4 in succession:
 
@@ -167,7 +167,7 @@ command invocation:
 
 > ` thru wandern | strophe -s 4,3,2,1`
 
-If the **-x** option is invoked, <span class="tool">strophe</span> outputs only a single
+If the <span class="option">x</span> option is invoked, <span class="tool">strophe</span> outputs only a single
 strophe whose string *label* is specified as an option. Strophe names
 need not be numerical. E.g.
 
@@ -210,7 +210,7 @@ the same record. See [EXAMPLES](#EXAMPLES) below.
 The *strophe* command provides the following options:
 
 >   --------------------- -------------------------------------------------------
->   **-h**                displays a help screen summarizing the command syntax
+>   <span class="option">h</span>                displays a help screen summarizing the command syntax
 >   -s *strophe\_list*    output numbered strophes according to *strophe\_list*
 >   -x *strophe\_label*   output only strophes labelled *strophe\_label*
 >   --------------------- -------------------------------------------------------

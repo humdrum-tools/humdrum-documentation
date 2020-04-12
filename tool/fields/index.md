@@ -20,7 +20,7 @@ permalink:	/tool/fields/index.html
 
 ### DESCRIPTION
 
-The <span class="tool">fields</span> command works in conjunction with the **-t** option of
+The <span class="tool">fields</span> command works in conjunction with the <span class="option">t</span> option of
 the <span class="tool">extract</span> command to permit highly selective extraction of data
 from a Humdrum file. This command is used only rarely; it is invoked
 when the more usual options of <span class="tool">extract</span> fail to provide sufficient
@@ -53,9 +53,9 @@ octothorpe (\#) and continuing with the first ten characters of the
 corresponding line from the input file. The purpose of this comment
 information is to help orient the user when editing a field-trace file.
 
-Field-trace information can be requested by record-type: **-g** for
-global comments, **-l** for local comments, **-i** for exclusive and
-tandem interpretations, and **-s** for spine-path indicators. More than
+Field-trace information can be requested by record-type: <span class="option">g</span> for
+global comments, <span class="option">l</span> for local comments, <span class="option">i</span> for exclusive and
+tandem interpretations, and <span class="option">s</span> for spine-path indicators. More than
 one record-type can be requested. For example, when the **-gl** options
 are invoked, the <span class="tool">fields</span> command will produce an output line each
 time a local or global comment is encountered in the input. The line
@@ -67,7 +67,7 @@ record. For spine-path records, the current record as well as the next
 record are output so that the user knows the changes in the number of
 spines.
 
-A **-r** option permits the user to specify a *regular expression;*
+A <span class="option">r</span> option permits the user to specify a *regular expression;*
 field-trace data is output for each record matching the specified
 regular expression.
 
@@ -87,12 +87,12 @@ extension.
 The <span class="tool">fields</span> command provides the following options:
 
 >   ------------- -------------------------------------------------------
->   **-g**        identify lines with global comments
->   **-h**        displays a help screen summarizing the command syntax
->   **-i**        identify any interpretation record
->   **-l**        identify lines with local commens
+>   <span class="option">g</span>        identify lines with global comments
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
+>   <span class="option">i</span>        identify any interpretation record
+>   <span class="option">l</span>        identify lines with local commens
 >   -r *regexp*   identify all lines matching *regexp*
->   **-s**        identify lines with spine-path indicators
+>   <span class="option">s</span>        identify lines with spine-path indicators
 >   ------------- -------------------------------------------------------
 >
 Options are specified in the command line.
@@ -121,7 +121,7 @@ Consider by way of illustration the following input file: ``
 >   \*-                     \*-         \*-           \*-
 >   ----------------------- ----------- ------------- ------
 >
-With the **-g** option, the fields command will produce the following
+With the <span class="option">g</span> option, the fields command will produce the following
 output: ``
 
 >   --- ----- ------------------------------------
@@ -129,7 +129,7 @@ output: ``
 >   9   1-2   \# !! a globa \....
 >   --- ----- ------------------------------------
 >
-With the **-l** option, the fields command will produce the following
+With the <span class="option">l</span> option, the fields command will produce the following
 output: ``
 
 >   --- ----- ------------------------------------
@@ -137,7 +137,7 @@ output: ``
 >   5   1-3   \# !some !loc \....
 >   --- ----- ------------------------------------
 >
-With the **-s** option, the fields command will produce the following
+With the <span class="option">s</span> option, the fields command will produce the following
 output: ``
 
 >   ---- ----- -------------------------------------
@@ -151,7 +151,7 @@ output: ``
 >   15   1-4   \# \*- \*- \*- \* \....
 >   ---- ----- -------------------------------------
 >
-With the **-i** option, the fields command will produce the following
+With the <span class="option">i</span> option, the fields command will produce the following
 output: ``
 
 >   ---- ----- -------------------------------------
@@ -167,7 +167,7 @@ output: ``
 >   15   1-4   \# \*- \*- \*- \* \....
 >   ---- ----- -------------------------------------
 >
-Using the **-r** option we can specify a regular expression on which
+Using the <span class="option">r</span> option we can specify a regular expression on which
 record information cues. Executing the following command:
 
 > ` fields -r '[0-9]' input`

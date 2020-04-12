@@ -37,7 +37,7 @@ The <span class="tool">humsed</span> command accepts one or more **sed** instruc
 Instructions are specified on the command-line within a pair of single
 quotes. Where more than one editing instruction is specified, successive
 instructions are separated by a semicolon. Alternatively, instructions
-may be executed from a *scriptfile* using the **-f** option. If
+may be executed from a *scriptfile* using the <span class="option">f</span> option. If
 instructions are provided both on the command-line as well as via a
 *scriptfile,* the command line instructions are performed prior to the
 *scriptfile* instructions.
@@ -64,14 +64,14 @@ command.
 The <span class="tool">humsed</span> command provides the following options:
 
 >   ----------------- ---------------------------------------------------------
->   **-h**            displays a help screen summarizing the command syntax
->   **-E**            invoke Extended Regular Expression syntax
+>   <span class="option">h</span>            displays a help screen summarizing the command syntax
+>   <span class="option">E</span>            invoke Extended Regular Expression syntax
 >   -f *scriptfile*   execute editing instructions from the file *scriptfile*
 >   ----------------- ---------------------------------------------------------
 >
 Options are specified in the command line.
 
-With the **-E** option, <span class="tool">humsed</span> invokes the \"extended\" regular
+With the <span class="option">E</span> option, <span class="tool">humsed</span> invokes the \"extended\" regular
 expression syntax, rather than the normal or \"basic\" regular
 expression syntax. With extended regular expressions, the following
 additional operations are supported: one-or-more (+), zero-or-one (?),
@@ -79,10 +79,10 @@ logical OR (\|), precedence grouping ( ), and alphanumeric token start
 and end anchors \< \>.
 
 Note that not all systems support extended regular expressions for the
-**sed** command; on such systems the **-E** option for <span class="tool">humsed</span> is
+**sed** command; on such systems the <span class="option">E</span> option for <span class="tool">humsed</span> is
 ineffective and may result in an error.
 
-The **-f** options allows the user to specify a *scriptfile* that
+The <span class="option">f</span> options allows the user to specify a *scriptfile* that
 contains a set of editing instructions. Instructions in *scriptfile* are
 executed after any command-line editing scripts.
 
@@ -185,7 +185,7 @@ a pause.
 ### PORTABILITY
 
 Any system supporting the UNIX-style **sed** command. Note that the
-**-E** option is a non-POSIX extension currently supported only by the
+<span class="option">E</span> option is a non-POSIX extension currently supported only by the
 MKS toolkit. It is hoped that in the future, other systems will support
 extended regular expression syntax for **sed.**
 

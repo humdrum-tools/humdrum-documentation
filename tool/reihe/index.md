@@ -33,8 +33,8 @@ also permits cyclic rotation (shifting) of set elements.
 The input to the <span class="tool">reihe</span> command is interpreted as a *prime* or basic
 set of elements from which a transformed set is to be derived and
 output. Four traditional types of set-transformations can be generated
-by specifying the appropriate option: **-P** (prime), **-I**
-(inversion), **-R** (retrograde), and **-RI** (retrograde-inversion).
+by specifying the appropriate option: <span class="option">P</span> (prime), <span class="option">I</span>
+(inversion), <span class="option">R</span> (retrograde), and **-RI** (retrograde-inversion).
 Either upper- or lower-case characters can be used when specifying these
 options.
 
@@ -47,7 +47,7 @@ retrograde-inversion forms, the numerical parameter specifies the *last*
 value of the output row.
 
 Positive integers greater than 11 are permitted in the input &mdash; but are
-treated as modulo-12 equivalent (unless the **-m** option specifies a
+treated as modulo-12 equivalent (unless the <span class="option">m</span> option specifies a
 different modulus). In the case of `**pc` inputs, the upper-case letters
 A and B are accepted as aliases for pitch-classes 10 and 11
 respectively. Following the Fortean practice, pitch-classes 10 and 11
@@ -64,7 +64,7 @@ can be combined with each of the other traditional transformations only
 by invoking the <span class="tool">reihe</span> command twice in succession.
 
 Normally, <span class="tool">reihe</span> is used to transform numerical data (typically
-pitch-class values). However, the retrograde (**-r**) and shift (**-s**)
+pitch-class values). However, the retrograde (<span class="option">r</span>) and shift (<span class="option">s</span>)
 operations can be performed on any data (including non-numeric data &mdash;
 such as articulation marks). For non-numeric data, the retrograde option
 must be invoked without a numerical parameter. Attempting to transpose
@@ -72,7 +72,7 @@ non-numeric data will result in an error.
 
 The prime-form input file must contain a single spine. For untransposed
 retrogrades and rotational shift transformations, any single-spine
-Humdrum input will be accepted. If the **-m** option is invoked, any
+Humdrum input will be accepted. If the <span class="option">m</span> option is invoked, any
 input interpretation will be accepted provided all data tokens contain
 numbers only. In the case of tranposed prime, inversion, and retrograde
 transformations, the input must conform to the Humdrum pitch-class
@@ -163,16 +163,16 @@ produces: ``
 The <span class="tool">reihe</span> command provides the following options:
 
 >   ------------------- --------------------------------------------------------------------------
->   **-a**              for `**pc` inputs, output alphanumeric representation (where A=10, B=11)
->   **-h**              displays a help screen summarizing the command syntax
+>   <span class="option">a</span>              for `**pc` inputs, output alphanumeric representation (where A=10, B=11)
+>   <span class="option">h</span>              displays a help screen summarizing the command syntax
 >   -I *n*              output inversion set-form starting on pitch-class *n*
 >   -i *n*              same as -I option
 >   -m *n*              calculate according to modulo *n* arithmetic
 >   -P *n*              output prime set-form starting on pitch-class *n*
 >   -p *n*              same as -P option
->   **-R**              output retrograde of input row
+>   <span class="option">R</span>              output retrograde of input row
 >   -R *n*              output retrograde set-form ending on pitch-class *n*
->   **-r**              same as **-R** option
+>   <span class="option">r</span>              same as <span class="option">R</span> option
 >   -r *n*              same as -R *n* option
 >   -RI *n*             output retrograde-inversion set-form ending on pitch-class *n*
 >   -ri *n*             same as -RI option
@@ -182,17 +182,17 @@ The <span class="tool">reihe</span> command provides the following options:
 >
 Options are specified in the command line.
 
-When the **-a** option is invoked, pitch-class inputs (`**pc`) will
+When the <span class="option">a</span> option is invoked, pitch-class inputs (`**pc`) will
 produce pitch-class outputs using the alias values \`A\' for pitch-class
 10, and \`B\' for pitch-class 11. (See the **\*\*pc** representation.)
 
 By default, the <span class="tool">reihe</span> command assumes modulo 12 arithmetic for
 prime, inversion, retrograde, and retrograde-inversion transformations.
 In other words, transposing the numerical value \`11\' up three
-pitch-classes results in an output value of \`2.\' The **-m** option can
+pitch-classes results in an output value of \`2.\' The <span class="option">m</span> option can
 be used to specify some other modulo value. If this option is invoked
 with `**pc` input, the alias values (A=T=10; B=E=11) are disabled and
-only numerical data can be processed and output. The **-m** and **-a**
+only numerical data can be processed and output. The <span class="option">m</span> and <span class="option">a</span>
 options are thus mutually exclusive.
 
 ------------------------------------------------------------------------

@@ -163,8 +163,8 @@ plus and minus signs respectively.
 The <span class="tool">perform</span> command provides the following command-line options:
 
 >   ---------- ----------------------------------------------------------------
->   **-g**     suppress the echoing of global comments on the standard output
->   **-h**     displays a help screen summarizing the command syntax
+>   <span class="option">g</span>     suppress the echoing of global comments on the standard output
+>   <span class="option">h</span>     displays a help screen summarizing the command syntax
 >   -i *hex*   assign MIDI input/output address to *hex*
 >   -t *n.n*   set initial tempo to *n.n* times the default tempo
 >   -v *n*     specify default MIDI key-velocity value (0-127)
@@ -175,7 +175,7 @@ Options are specified in the command line.
 In addition to modifying the tempo interactively while performing, the
 performance tempo may be specified either in the command line or in the
 input Humdrum representation. The tempo may be specified on the command
-line by using the **-t** option. The **-t** must be followed by an
+line by using the <span class="option">t</span> option. The <span class="option">t</span> must be followed by an
 integer or real value between 0.13 and 3.80. A value of 1.0 corresponds
 to the default tempo of 66 quarter-notes per minute. A value of 2.0
 doubles the tempo, whereas a value of 0.5 halves the tempo.
@@ -185,19 +185,19 @@ input representation take precedence over any tempo specified on the
 command line. If no tempo information is available, <span class="tool">perform</span> uses the
 default tempo of 66 quarter-notes per minute.
 
-The **-v** option allows the user to specify a key-velocity default.
+The <span class="option">v</span> option allows the user to specify a key-velocity default.
 MIDI instruments normally treat key-velocity data as dynamic or accent
 information &mdash; thus higher key-velocity values are associated with
 accented notes. Permissible key-velocity values range between 0 and 127.
-The **-v** option can be used to set the default key-velocity for key-on
-commands with unspecified key-velocities. In the absence of the **-v**
+The <span class="option">v</span> option can be used to set the default key-velocity for key-on
+commands with unspecified key-velocities. In the absence of the <span class="option">v</span>
 option, the default key-velocity value is 64.
 
 In normal operation, <span class="tool">perform</span> echoes all global comments on the
-standard output. This feature may be defeated by invoking the **-g**
+standard output. This feature may be defeated by invoking the <span class="option">g</span>
 option.
 
-The **-i** option is used to specify the input/output address of the
+The <span class="option">i</span> option is used to specify the input/output address of the
 MIDI card. The default address is \`330.\' The address is specified as a
 hexadecimal number.
 

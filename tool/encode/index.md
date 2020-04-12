@@ -167,7 +167,7 @@ by playing on a MIDI keyboard) and ASCII character strings. Predefined
 mappings are specified in a *run-time control* (`.rc`) file. When the
 <span class="tool">encode</span> command is invoked, it must have access to a` .rc` file
 containing configuration information. The user can identify a
-specific` .rc` file on the command line via the **-r** option (see
+specific` .rc` file on the command line via the <span class="option">r</span> option (see
 [OPTIONS](#OPTIONS)). Alternatively, <span class="tool">encode</span> will seek a
 default` .rc` file (named `encode.rc`) residing in the the current
 directory, or if absent, in the `$HUMDRUM/etc` directory. The run-time
@@ -501,13 +501,13 @@ following table.
 The <span class="tool">encode</span> command provides the following options:
 
 > >   -------------- -------------------------------------------------------
-> >   **-h**         displays a help screen summarizing the command syntax
+> >   <span class="option">h</span>         displays a help screen summarizing the command syntax
 > >   -r *file.rc*   invoke using the run-control file *file.rc*
 > >   -------------- -------------------------------------------------------
 > >
 Options are specified in the command line.
 
-The **-r** option permits the user to identify a specific run-control
+The <span class="option">r</span> option permits the user to identify a specific run-control
 file to configure the <span class="tool">encode</span> editor. If this option is omitted,
 <span class="tool">encode</span> will seek a default run-control file named `encode.rc` in the
 current directory, or in the directory `$HUMDRUM/etc` if not present in

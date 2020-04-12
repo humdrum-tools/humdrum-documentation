@@ -90,8 +90,8 @@ should be given names with the distinguishing \`.krn\' extension.
 The <span class="tool">kern</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
->   **-x**   suppresses printing of non-pitch-related signifiers
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">x</span>   suppresses printing of non-pitch-related signifiers
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
@@ -106,9 +106,9 @@ confusing &mdash; especially, when the non-pitch-related signifiers are
 upper- or lower-case letters from A-G. Consider the case of the `**freq`
 token \"aA\#5\"; after translating \"A\#5\" to \"aa\", the leading
 non-pitch-related signifier \"a\" will be prepended to the output, hence
-the value \"aaa\" &mdash; which will undoubtedly cause confusion. The **-x**
+the value \"aaa\" &mdash; which will undoubtedly cause confusion. The <span class="option">x</span>
 option is useful for eliminating non-pitch-related signifiers from the
-output. For most inputs, the **-x** option is recommended.
+output. For most inputs, the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
 
@@ -182,7 +182,7 @@ produces the following result: ``
 Both processed and unprocessed spines are output. Also notice that the
 non-pitch-related signifiers (e.g. foo) in the first notes of the
 `**specC, **pitch`, and `**MIDI`, spines have been stripped away (due to
-the **-x** option).
+the <span class="option">x</span> option).
 
 Key signature sensitivity is illustrated in the following example. The
 input contains a \"pitch-height key signature\" &mdash; where flats and
@@ -221,7 +221,7 @@ rendered with the correct enharmonic spelling. ``
 
 ### FILES
 
-The file `x_option.awk` is used by this program when the **-x** option
+The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

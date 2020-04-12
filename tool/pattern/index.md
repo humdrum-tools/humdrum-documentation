@@ -26,7 +26,7 @@ innumerable data records. Occurrences of the pattern are identified in
 the output by line number.
 
 The pattern sought must be defined as a separate \"template\" file. The
-template file is identified using the **-f** command option.
+template file is identified using the <span class="option">f</span> command option.
 
 Pattern templates consist of one or more records. Each record specifies
 a standard UNIX regular expression &mdash; followed by an optional
@@ -187,11 +187,11 @@ before invoking the <span class="tool">pattern</span> command.
 The <span class="tool">pattern</span> command supports the following options:
 
 >   ------------- ----------------------------------------------------------------------
->   **-c**        makes pattern-matching sensitive to comments
->   **-h**        displays a help screen summarizing the command syntax
->   **-i**        makes pattern-matching sensitive to interpretations
+>   <span class="option">c</span>        makes pattern-matching sensitive to comments
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
+>   <span class="option">i</span>        makes pattern-matching sensitive to interpretations
 >   -s *regexp*   skip (ignore) data records containing the defined regular expression
->   **-y**        outputs appropriate \`yank\' commands in place of regular output
+>   <span class="option">y</span>        outputs appropriate \`yank\' commands in place of regular output
 >   ------------- ----------------------------------------------------------------------
 >
 Options are specified in the command line.
@@ -199,19 +199,19 @@ Options are specified in the command line.
 By default, the <span class="tool">pattern</span> command is insensitive to the presence or
 absence of Humdrum comments and interpretations. Pattern searches may be
 made sensitive to occurrences of comments (defined in the template) by
-specifying the **-c** option. Similarly, pattern searches may be made
-sensitive to occurrences of interpretations by specifying the **-i**
+specifying the <span class="option">c</span> option. Similarly, pattern searches may be made
+sensitive to occurrences of interpretations by specifying the <span class="option">i</span>
 option.
 
 Certain types of data records may be ignored in the pattern-search by
-invoking the **-s** (skip) option. This option must be accompanied by a
+invoking the <span class="option">s</span> (skip) option. This option must be accompanied by a
 user-define regular expression. All input data records matching the
 regular expression are ignored. This option is useful, for example, in
 skipping null data tokens, barlines, marked embellishment tones, or
 other types of data.
 
 The <span class="tool">pattern</span> command does not directly implement an \"echo\" option
-&mdash; such as provided by the related <span class="tool">patt</span> command. With the **-y**
+&mdash; such as provided by the related <span class="tool">patt</span> command. With the <span class="option">y</span>
 option, however, <span class="tool">pattern</span> will produce an output suitable for use
 with the Humdrum <span class="tool">yank</span> command. This permits the user to extract the
 appropriate matching passages from the input.
@@ -249,7 +249,7 @@ interpreters, and revised *awk* (1985).
 ### WARNINGS
 
 If a comment is present in the template pattern, failing to specify the
-**-c** option will make pattern matching a logically impossibility.
+<span class="option">c</span> option will make pattern matching a logically impossibility.
 
 ------------------------------------------------------------------------
 

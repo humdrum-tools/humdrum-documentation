@@ -103,7 +103,7 @@ The <span class="tool">extract</span> command provides the following options:
 
 > >   ---------------------- -------------------------------------------------------
 > >   -f *fieldlist*         select field mode
-> >   **-h**                 displays a help screen summarizing the command syntax
+> >   <span class="option">h</span>                 displays a help screen summarizing the command syntax
 > >   -i *interplist*        select interpretation mode
 > >   -p *spine\#*           select spine-path mode
 > >   -t *fieldtrace file*   select field-trace mode
@@ -116,7 +116,7 @@ range specification in which the lower and upper values are separated by
 a dash: e.g.`1,4-8,13`. With the exception of range specifications, the
 order of the integers in the list is unimportant, hence `13,1,4-8` is
 equivalent to `1,4-8,13`. The right-field anchor (\$) can be used only
-with the **-f** option.
+with the <span class="option">f</span> option.
 
 An *interplist* consists of any set of tandem or exclusive
 interpretations separated by commas, e.g.`'**kern,*C:'` Option arguments

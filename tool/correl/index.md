@@ -100,21 +100,21 @@ The <span class="tool">correl</span> command provides the following options:
 >   ------------------- --------------------------------------------------------
 >   -f *templatefile*   specify source pattern as *templatefile* and
 >                       invoke dual input mode
->   **-h**              displays a help screen summarizing the command syntax
->   **-m**              disable matched-pairs criterion
+>   <span class="option">h</span>              displays a help screen summarizing the command syntax
+>   <span class="option">m</span>              disable matched-pairs criterion
 >   -p *n*              output precision to *n* decimal places
 >   -s *regexp*         skip; completely ignore data records matching *regexp*
 >   ------------------- --------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-f** option is used to specify an independent *template file* &mdash;
+The <span class="option">f</span> option is used to specify an independent *template file* &mdash;
 and so invokes the *dual input mode.*
 
-The **-p** option can be used to set the precision of the output values
+The <span class="option">p</span> option can be used to set the precision of the output values
 to *n* decimal places. The default precision is 3 decimal places.
 
-The **-s** option allows the user to avoid (or skip) the processing of
+The <span class="option">s</span> option allows the user to avoid (or skip) the processing of
 certain types of data records. This option must be accompanied by a
 user-defined regular-expression. Input data records matching this
 expression are not processed.
@@ -157,8 +157,8 @@ are unmatched in spine \#2: ``
 >
 In normal operation, a single failure to conform to the matched pairs
 criterion will cause <span class="tool">correl</span> to issue an error message and terminate
-operation. If the **-m** option is invoked, unmatched data is simply
-ignored. For example, with the **-m** option, the above input is treated
+operation. If the <span class="option">m</span> option is invoked, unmatched data is simply
+ignored. For example, with the <span class="option">m</span> option, the above input is treated
 as equivalent to the following input: ``
 
 >   ------------ ------------
@@ -205,7 +205,7 @@ done using the single input mode. ``
 >   \*-          \*-
 >   ------------ ------------
 >
-In order to avoid processing the measure numbers, the skip (**-s**)
+In order to avoid processing the measure numbers, the skip (<span class="option">s</span>)
 option is used; executing the command:
 
 > ` correl -s = bwv779`
@@ -288,7 +288,7 @@ The above output spine was created by executing the command:
 
 > ` correl -m -s '[=r]' -f template input > output.cor`
 
-Due to the **-s** option, all records in the input file containing an
+Due to the <span class="option">s</span> option, all records in the input file containing an
 equals-sign or lower-case \`r\' are eliminated from the calculations.
 The presence of the null-token in the third data record of the template
 file is noteworthy. Although no correlations are calculated with the
@@ -307,7 +307,7 @@ coordination of numerical data: ``
 >
 Since the value \`100\' is not matched with a numerical value in the
 template, it is ignored in the correlation measure. (Note that without
-the **-m** option, no output would be generated.)
+the <span class="option">m</span> option, no output would be generated.)
 
 At the next instant, the correlation value is calculated on the basis of
 the following coordination of numerical data: ``
@@ -381,7 +381,7 @@ value depends on the number of input values given in the template spine.
 Novice users should consult a standard statistics textbook for further
 advice on how to interpret the results.
 
-For formal statistical measures, the **-m** option should never be
+For formal statistical measures, the <span class="option">m</span> option should never be
 invoked.
 
 If only one pair of matched values is present, the linear correlation is

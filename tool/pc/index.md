@@ -63,15 +63,15 @@ alphanumeric (0,1,2,3 \... 9,A,B) or vice versa. (See documentation for
 The <span class="tool">pc</span> command provides the following options:
 
 >   -------- ---------------------------------------------------------------------------------
->   **-a**   output alphanumeric representation (where A=10, B=11)
->   **-h**   displays a help screen summarizing the command syntax
->   **-t**   suppresses printing of all but the first note of a group of tied `**kern` notes
->   **-x**   suppresses printing of non-pitch-class data
+>   <span class="option">a</span>   output alphanumeric representation (where A=10, B=11)
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern` notes
+>   <span class="option">x</span>   suppresses printing of non-pitch-class data
 >   -------- ---------------------------------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-a** option invokes an alternative (alphanumeric) form of the
+The <span class="option">a</span> option invokes an alternative (alphanumeric) form of the
 `**pc` output where the upper-case letters \`A\' and \`B\' are
 substituted for the pitch-class integers 10 and 11, respectively. In
 addition, the input alias values \`T\' (ten) and \`E\' (eleven) are
@@ -80,7 +80,7 @@ values are often better suited to pattern-matching and searching tasks.
 Encodings using purely numeric values are especially useful when the
 representation is to be processed numerically.
 
-The **-t** option ensures that only a single output value is given for
+The <span class="option">t</span> option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
@@ -94,7 +94,7 @@ In the default operation, <span class="tool">pc</span> outputs non-pitch-related
 addition to the pitch-class value. For example, the `**semits` token
 \"X15yz\" will result in the output \"X3yz\" &mdash; that is, after
 translating 15 to pitch-class 3, the \"Xyz\" signifiers are retained in
-the output. The **-x** option is useful for eliminating
+the output. The <span class="option">x</span> option is useful for eliminating
 non-pitch-class-related signifiers from the output.
 
 ------------------------------------------------------------------------
@@ -157,13 +157,13 @@ measure. Notice that for the data tokens in the first spine of measure
 More than one numerical value is output only if the input token is truly
 a multiple-stop (as in the third spine of measure 1). Also notice that
 the tied note in the second spine at the beginning of measure 2 has been
-rendered as a single value \`8\' (due to the **-t** option).
+rendered as a single value \`8\' (due to the <span class="option">t</span> option).
 
 ------------------------------------------------------------------------
 
 ### FILES
 
-The file *x\_option.awk* is used by this program when the **-x** option
+The file *x\_option.awk* is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------

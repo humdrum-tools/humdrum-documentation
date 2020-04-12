@@ -68,7 +68,7 @@ will produce the following output: ``
 
 Notice that the output file has been padded with null tokens so that the
 number of output records matches the number of input records. By
-invoking the **-p** option, the padded null tokens can be placed either
+invoking the <span class="option">p</span> option, the padded null tokens can be placed either
 at the beginning or the end of the file, or split between beginning and
 end. For example, the command
 
@@ -77,7 +77,7 @@ context -n 3 -p 3 input
 ```
 
 will place the trailing null tokens in the above example at the
-beginning of the output. The **-p** option defaults to the value 0.
+beginning of the output. The <span class="option">p</span> option defaults to the value 0.
 
 If null tokens are present in the input, they remain in place, yet do
 not affect the congealed data records. For example, if a null token was
@@ -107,7 +107,7 @@ would produce an output beginning with a single padded null token: ``
 >
 > `*- ` Rather than specifying a fixed number of congealed data records,
 > input records can alternatively be amalgamated according to the
-> signifiers present in the input data itself. The **-e** option allows
+> signifiers present in the input data itself. The <span class="option">e</span> option allows
 > the user to specify an \"end\" signifier. When this signifier is
 > encountered in the input, the input record is appended to the current
 > congealed record &mdash; which is then output &mdash; and a new congealed
@@ -145,7 +145,7 @@ would produce an output beginning with a single padded null token: ``
 > > > >   -b *regexp*   begin a new output record starting with token matching *regexp*
 > > > >   -d *string*   use *string* as output delimiter for input records rather than the space character
 > > > >   -e *regexp*   begin a new output record starting after token matching *regexp*
-> > > >   **-h**        displays a help screen summarizing the command syntax
+> > > >   <span class="option">h</span>        displays a help screen summarizing the command syntax
 > > > >   -i *regexp*   ignore any records matching *regexp* when counting
 > > > >   -n *n*        amalgamate *n* input data records for each output record
 > > > >   -o *regexp*   omit any records matching *regexp* from amalgamated output; do
@@ -154,41 +154,41 @@ would produce an output beginning with a single padded null token: ``
 > > > >                 output spine
 > > > >   ------------- ------------------------------------------------------------------------------------
 > > > >
-> > Options are specified in the command line. Note that the **-b** and
-> > **-e** options are mutually exclusive with the **-n**, **-p**, and
-> > **-i** options.
+> > Options are specified in the command line. Note that the <span class="option">b</span> and
+> > <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>, <span class="option">p</span>, and
+> > <span class="option">i</span> options.
 > >
 > > In the default operation, <span class="tool">context</span> separates amalgamated tokens
 > > by inserting a space character. (Thus the input tokens are treated
-> > as subtokens in a Humdrum multiple-stop.) The **-d** option allows
+> > as subtokens in a Humdrum multiple-stop.) The <span class="option">d</span> option allows
 > > the user to define an alternative string as the subtoken delimiter.
 > >
-> > The **-n** option allows the user to specify the maximum number of
+> > The <span class="option">n</span> option allows the user to specify the maximum number of
 > > data records assembled into a single output record.
 > >
-> > The **-b** option allows the user to specify a \"begin\" marker.
+> > The <span class="option">b</span> option allows the user to specify a \"begin\" marker.
 > > When this marker (*regexp*) is matched in the input, any current
 > > congealed record is output, and a new congealed record begins. Begin
 > > signifiers are defined as string patterns using the *regular
 > > expression* syntax.
 > >
-> > With the **-e** option, if <span class="tool">context</span> encounters a data record
+> > With the <span class="option">e</span> option, if <span class="tool">context</span> encounters a data record
 > > matching *regexp* then it appends the current input record to the
 > > current assembled output record and begins assembling a new record
 > > with the following input record.
 > >
-> > The **-i** option is used only with **-n;** it causes any data
+> > The <span class="option">i</span> option is used only with **-n;** it causes any data
 > > records matching *regexp* to be ignored in the counting of
 > > amalgamated tokens. Such \"uncounted\" records are nevertheless
 > > output.
 > >
-> > The **-o** option causes data records matching *regexp* to be
+> > The <span class="option">o</span> option causes data records matching *regexp* to be
 > > omitted from the output.
 > >
-> > The **-p** option may be used in conjunction with **-n**. Normally,
+> > The <span class="option">p</span> option may be used in conjunction with <span class="option">n</span>. Normally,
 > > the output from **context -n** is padded with trailing null tokens
-> > &mdash; one fewer in number than the value specified with **-n**. The
-> > **-p** *n* option causes *n* null tokens to be padded at the
+> > &mdash; one fewer in number than the value specified with <span class="option">n</span>. The
+> > <span class="option">p</span> *n* option causes *n* null tokens to be padded at the
 > > *beginning* of the output spine, rather than trailing at the end.
 > >
 > > Note that tandem interpretations and comments are processed like
@@ -510,7 +510,7 @@ continue amalgamating data records until it is no longer able to satisfy
 the amalgamating criteria. If unable to complete an output record,
 <span class="tool">context</span> will output a null token.
 
-If the above command had used the **-o** rather than the **-i** option,
+If the above command had used the <span class="option">o</span> rather than the <span class="option">i</span> option,
 all of the rests and barlines would have been omitted from the output.
 Otherwise, the output would be the same as given above.
 
@@ -619,8 +619,8 @@ interpreters, and revised *awk* (1985).
 
 ### WARNINGS
 
-The **-b** and **-e** options are mutually exclusive with the **-n**,
-**-p**, and **-i** options.
+The <span class="option">b</span> and <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>,
+<span class="option">p</span>, and <span class="option">i</span> options.
 
 ------------------------------------------------------------------------
 

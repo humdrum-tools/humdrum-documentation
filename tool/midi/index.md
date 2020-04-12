@@ -37,35 +37,35 @@ should be given names with the distinguishing \`.hmd\' extension
 The <span class="tool">midi</span> command provides the following options:
 
 >   -------- -----------------------------------------------------------------------------
->   **-c**   echo all data records as global comments (prior to the data record)
->   **-C**   echo all data records as global comments (following the data record)
+>   <span class="option">c</span>   echo all data records as global comments (prior to the data record)
+>   <span class="option">C</span>   echo all data records as global comments (following the data record)
 >   -d *n*   assigns a note-duration of *n* `**recip` value to all pitches and rests
->   **-h**   displays a help screen summarizing the command syntax
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -q *n*   set number of MIDI clock ticks per quarter-duration to *n*
->   **-u**   suppress the deletion of duplicate (unison) concurrent note-on instructions
+>   <span class="option">u</span>   suppress the deletion of duplicate (unison) concurrent note-on instructions
 >   -------- -----------------------------------------------------------------------------
 >
 Options are specified in the command line.
 
-If the **-c** option (\`comment\') is invoked, all data records are
+If the <span class="option">c</span> option (\`comment\') is invoked, all data records are
 echoed as global comments in addition to the usual processing. This
 option is useful in conjunction with the <span class"tool">perform</span>
 command; <span class="tool">perform</span> echoes all global comments while playing MIDI
 inputs, and so the comment option allows the user to view the original
 `**kern` score while the music is performed.
 
-The **-d** *n* option allows the user to reassign all the durations of
+The <span class="option">d</span> *n* option allows the user to reassign all the durations of
 all notes and rests in a given input. The value *n* is specified in
 reciprocal duration notation (`**recip`), where \`4\' represents a
 quarter-duration, \`2.\' represents a dotted half-duration, \`12\'
 represents a quarter-note triplet, \`0\' represents a breve, etc. (See
-`**recip` in Section 2 for details.) With the **-d** option all pitches
+`**recip` in Section 2 for details.) With the <span class="option">d</span> option all pitches
 and rests in the input will be assigned the specified duration value &mdash;
 whether or not the notes already have encoded durations. This option is
 useful for such tasks as proof-listening to passages containing
 especially short notes, or auditing works &mdash; such as Gregorian chant
 &mdash; where durations have not been encoded or are suspect for other
-reasons. Note that the **-d** option should be used only in the case of
+reasons. Note that the <span class="option">d</span> option should be used only in the case of
 monophonic inputs, or multi-part inputs that contain strictly
 isochronous chords. Polyphonic inputs containing non-isochronous
 durations will cause a loss of synchronization between the parts. The
@@ -82,10 +82,10 @@ voice. In normal operation, <span class="tool">midi</span> suppresses the sendin
 of two MIDI \`note-off\' commands when a unison is encountered in the
 input. This ensures that the pitch will be sustained for the longer of
 the unison durations. This feature can be disabled by invoking the
-**-u** option.
+<span class="option">u</span> option.
 
 The <span class="tool">midi</span> command assigns a default duration of 72 MIDI clock-ticks
-per quarter-note. This default value may be reassigned using the **-q**
+per quarter-note. This default value may be reassigned using the <span class="option">q</span>
 *n* option. The value *n* should be chosen so that all canonical
 durations present in a given score divide evenly into it. For example,
 the default value of 72 clock-ticks per quarter-note, means that

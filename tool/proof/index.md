@@ -53,13 +53,13 @@ signature declarations.
 The <span class="tool">proof</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
->   **-h**   displays a help screen summarizing the command syntax
->   **-w**   suppress output of warnings
+>   <span class="option">h</span>   displays a help screen summarizing the command syntax
+>   <span class="option">w</span>   suppress output of warnings
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-The **-w** option causes all warnings to be suppressed; only `**kern`
+The <span class="option">w</span> option causes all warnings to be suppressed; only `**kern`
 error messages are output.
 
 ------------------------------------------------------------------------

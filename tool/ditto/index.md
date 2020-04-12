@@ -27,12 +27,12 @@ Humdrum null-tokens are place-holders that do not themselves encode
 data. Null-tokens consist of a single period character (\".\") &mdash;
 separated from other tokens by tabs, or appearing on a line by itself.
 The <span class="tool">ditto</span> command replaces occurrences of null-tokens with the most
-recent non-null data occurring in the same spine. When the **-p** option
+recent non-null data occurring in the same spine. When the <span class="option">p</span> option
 is invoked, the replacement data tokens are enclosed in parentheses ( ).
 If the initial data tokens in a spine are null-tokens, then null-tokens
 are output.
 
-In repeating previous data tokens, if the **-s** option is invoked,
+In repeating previous data tokens, if the <span class="option">s</span> option is invoked,
 <span class="tool">ditto</span> skips over any data records matching *regexp.* For example, if
 *regexp* is the equals-sign (the \"common system\" barline), then
 barline data tokens will not be repeated in subsequent data records
@@ -52,9 +52,9 @@ multiple-stop where necessary.
 The <span class="tool">ditto</span> command provides the following options:
 
 >   ------------- -------------------------------------------------------
->   **-h**        displays a help screen summarizing the command syntax
+>   <span class="option">h</span>        displays a help screen summarizing the command syntax
 >   -c *chars*    repeats only characters listed in *chars*
->   **-p**        place repeated data tokens in parentheses
+>   <span class="option">p</span>        place repeated data tokens in parentheses
 >   -s *regexp*   skip data records matching *regexp*
 >   ------------- -------------------------------------------------------
 >
@@ -126,8 +126,8 @@ data token in the same spine. Notice also that the barline for measure
 78 has been repeated. For many applications repeating of barlines will
 be inappropriate.
 
-The following, more complex example, illustrates the use of the **-p**
-and **-s** options. The input is shown on the left and the corresponding
+The following, more complex example, illustrates the use of the <span class="option">p</span>
+and <span class="option">s</span> options. The input is shown on the left and the corresponding
 output is shown on the right. The output was produced by invoking the
 following command:
 
@@ -167,12 +167,12 @@ In order to avoid repeating the barlines, the skip option has been
 invoked with the regular expression \"\^=\" &mdash; meaning any equals sign
 at the beginning of a line. (See <span class="tool">regexp</span> in Section 6 of this manual
 for details concerning regular expression syntax.) In addition, the
-**-p** option has been invoked so that all repeated tokens are placed in
+<span class="option">p</span> option has been invoked so that all repeated tokens are placed in
 parentheses. Notice that <span class="tool">ditto</span> adapts to changing spine-paths. Note
 especially the join-spine (\*v) interpretations leading to the
 double-stop:`(23 a)`.
 
-A final example illustrates the use of the **-c** option. Once again,
+A final example illustrates the use of the <span class="option">c</span> option. Once again,
 the input is shown on the left and the corresponding output is shown on
 the right. The output was produced by invoking the following command:
 

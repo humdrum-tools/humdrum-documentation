@@ -59,7 +59,7 @@ the second spine) has disappeared from the file as the time-base is only
 a sixteenth duration.
 
 The time-base is selected by assigning a `**recip` duration value to the
-**-t** option. Time-base durations may be dotted.
+<span class="option">t</span> option. Time-base durations may be dotted.
 
 Comments and barlines are preserved in the output, however, acciaccatura
 records (grace notes) are discarded.
@@ -74,9 +74,9 @@ command should be given names with the distinguishing \`.tb\' extension.
 The <span class="tool">timebase</span> command provides a number of options.
 
 >   ----------- ----------------------------------------------------------
->   **-h**      displays a help screen summarizing the command syntax
+>   <span class="option">h</span>      displays a help screen summarizing the command syntax
 >   -t *n*      set time-base where *n* represents a `**recip duration`
->   **-x**      strip duration values from the input
+>   <span class="option">x</span>      strip duration values from the input
 >   -M *mark*   prepend *mark* to beginning of any padded output records
 >   -m *mark*   append *mark* to end of any padded output records
 >   ----------- ----------------------------------------------------------
@@ -89,7 +89,7 @@ will remove `**kern` or `**recip` duration encodings from the output;
 each output data record will represent an elapsed duration of a dotted
 eighth note.
 
-The **-M** option adds a user-specified marker-string to the beginning
+The <span class="option">M</span> option adds a user-specified marker-string to the beginning
 of all records that <span class="tool">timebase</span> pads to the output. For example, the
 command:
 
@@ -98,8 +98,8 @@ command:
 will add the string `ABC` to the beginning of (otherwise) null data
 records added by **timebase.**
 
-The **-m** option appends a user-specified marker-string to the end of
-all padded output records. Both the **-M** and **-m** options can be
+The <span class="option">m</span> option appends a user-specified marker-string to the end of
+all padded output records. Both the <span class="option">M</span> and <span class="option">m</span> options can be
 used concurrently.
 
 ------------------------------------------------------------------------

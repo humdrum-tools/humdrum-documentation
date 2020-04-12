@@ -88,7 +88,7 @@ three expansion-lists have been labelled \`long,\' \`1955\' and
 The <span class="tool">thru</span> command outputs each section in the order specified in the
 expansion list. If more than one expansion list is present in a file,
 then the desired *version* is indicated on the command line via the
-**-v** option. (See [EXAMPLES](#EXAMPLES).)
+<span class="option">v</span> option. (See [EXAMPLES](#EXAMPLES).)
 
 ------------------------------------------------------------------------
 
@@ -97,7 +97,7 @@ then the desired *version* is indicated on the command line via the
 The <span class="tool">thru</span> command provides the following options:
 
 >   -------------- -----------------------------------------------------------------
->   **-h**         displays a help screen summarizing the command syntax
+>   <span class="option">h</span>         displays a help screen summarizing the command syntax
 >   -v *version*   expand the encoding according to expansion-list label *version*
 >   -------------- -----------------------------------------------------------------
 >
