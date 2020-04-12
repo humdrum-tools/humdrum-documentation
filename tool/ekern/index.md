@@ -5,7 +5,7 @@ permalink: /tool/ekern/index.html
 
 ### COMMAND
 
-**ekern** \-- translate ESAC music representation to the \*\*kern format
+**ekern** &mdash; translate ESAC music representation to the \*\*kern format
 
 On-line documentation is not currently available for this command.
 

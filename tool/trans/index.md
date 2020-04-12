@@ -88,7 +88,7 @@ By default, **trans** maintains any original input key signatures in the
 transposed output. The **-k** option allows the user to specify a
 replacement key signature. Either \"pitch-class\" (\*k\[\...\]) or
 \"pitch-height\" (\*K\[\...\]) key signatures can be specified. (See the
-*key signature* tandem interpretation \-- Section 3.)
+*key signature* tandem interpretation &mdash; Section 3.)
 
 ------------------------------------------------------------------------
 
@@ -134,7 +134,7 @@ keys so that they are in the tonic Dorian mode.
 
 > ` trans -d +1 major | trans -d -1 -c -2 > dorian`
 
-The first **trans** carries out a modal transposition \-- up the
+The first **trans** carries out a modal transposition &mdash; up the
 interval of a diatonic second. Thus, a work in D major would be placed
 in E Dorian. The second **trans** returns the score down the precise
 interval of a major second. Together, both transpositions would cause an
@@ -179,7 +179,7 @@ following input: ``
 >   r          r           r          r           .
 >   =2         =2          =2         =2          .
 >   B-         Bb3         B3         si\~b3      .
->   B\--       Bbb3        Heses3     si\~bb3     .
+>   B&mdash;       Bbb3        Heses3     si\~bb3     .
 >   =3         =3          =3         =3          .
 >   \*-        \*-         \*-        \*-         \*-
 >   ---------- ----------- ---------- ----------- ---------
@@ -234,17 +234,17 @@ in B-flat). The `**pitch, **kern, **Tonh`, and `**solfg` representations
 are intended to represent absolute or concert pitch; transposed scores
 are considered deviations from this convention. The *transpose tandem
 interpretation* should not be used to indicate that an encoding is for a
-transposing instrument. A special tandem interpretation \-- beginning
-` *ITr` \-- is reserved for such designations. The interpretation ` *Tr`
+transposing instrument. A special tandem interpretation &mdash; beginning
+` *ITr` &mdash; is reserved for such designations. The interpretation ` *Tr`
 means that the encoding no longer represents absolute or concert pitch.
 By contrast, the interpretation ` *ITr` means that the instrumentalist
 reads from a score whose pitches are notated differently from concert
 pitch; nevertheless, the ensuing data is encoded at concert pitch. For
 example, a trumpet in B-flat plays a B-flat by fingering the pitch C.
 The absolute pitch (B-flat) is the proper `**kern, **pitch, **solfg`, or
-`**Tonh` encoding. Since the instrumentalist\'s *notation* is transposed
+`**Tonh` encoding. Since the instrumentalist's *notation* is transposed
 up 1 diatonic letter-name and 2 chromatic semitones from the absolute or
-concert pitch, the encoded score will contain the instrument\'s
+concert pitch, the encoded score will contain the instrument's
 transposition tandem interpretation
 
 > ` *ITrd1c2`

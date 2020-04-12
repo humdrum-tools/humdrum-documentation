@@ -5,7 +5,7 @@ permalink: /tool/urrhythm/index.html
 
 ### COMMAND
 
-**urrhythm** \-- characterize Johnson-Laird rhythmic prototypes in a
+**urrhythm** &mdash; characterize Johnson-Laird rhythmic prototypes in a
 Humdrum passage
 
 ------------------------------------------------------------------------
@@ -21,13 +21,13 @@ Humdrum passage
 The **urrhythm** command outputs a single Humdrum spine (`**URrhythm`)
 containing data representing rhythmic \`prototypes\' (Ur-rhythms)
 evident in a musical passage. The command implements a variation of
-Johnson-Laird\'s theory of rhythmic prototypes (see
+Johnson-Laird's theory of rhythmic prototypes (see
 [REFERENCES](#REFERENCES) below). In order to identify the rhythmic
 prototypes, **urrhythm** requires information about note onsets and
 metric position. These may be provided via two input spines: `**kern`
 (or `**recip`) and `**metpos`.
 
-Johnson-Laird\'s rhythmic-prototype theory can be applied only to
+Johnson-Laird's rhythmic-prototype theory can be applied only to
 musical passages conforming to some established metric context, such as
 2/4, 3/2, or 12/8 meters. The **urrhythm** command handles all regular
 types of meters (simple and compound, duple, triple and quadruple).
@@ -58,7 +58,7 @@ syncopated.
 
 Syncopated beats can happen only after the first note onset; subsequent
 syncopated moments will require another note onset (i.e. two syncopated
-moments can\'t occur in a row without some note onset intervening).
+moments can't occur in a row without some note onset intervening).
 
 An \"Other\" (signified by the letter \`O\') is any beat that is not a
 Note (N) or a syncopation (S).
@@ -131,7 +131,7 @@ three spines are given in the output. ``
 ### WARNINGS
 
 The **urrhythm** command is currently unable to handle Humdrum
-spine-path changes \-- such as join-path, exchange-path, or split-path.
+spine-path changes &mdash; such as join-path, exchange-path, or split-path.
 If spine-path changes are encountered an error is issued and the command
 terminates.
 
@@ -153,8 +153,8 @@ interpreters, and revised *awk* (1985).
 
 ### NOTE
 
-The **urrhythm** command differs from Johnson-Laird\'s theory in the
-definition of syncopation. Johnson-Laird\'s theory requires that a
+The **urrhythm** command differs from Johnson-Laird's theory in the
+definition of syncopation. Johnson-Laird's theory requires that a
 listener be able to identify a syncopation retrospectively. That is, a
 listener is able to determine whether the current beat is a syncopation,
 only by determining what happens at the beginning of the next beat. The
@@ -173,7 +173,7 @@ level,\" *Psychomusicology,* Vol. 10 (1991) pp. 88-106.
 
 [Simpson, J. & Huron, D.](/Humdrum/Huron/publications.html) \"The
 perception of rhythmic similarity: A test of a modified version of
-Johnson-Laird\'s theory,\" *Canadian Acoustics,* Vol. 21, No. 3 (1993)
+Johnson-Laird's theory,\" *Canadian Acoustics,* Vol. 21, No. 3 (1993)
 pp. 89-90.
 
 ------------------------------------------------------------------------

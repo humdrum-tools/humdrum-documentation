@@ -119,7 +119,7 @@ and the associated reassignment file named `noterest`:
 
 This command specifies that each ` **kern` spine in the file ` song01`
 is to be split into two new spines dubbed ` **notes` and ` **rests.` The
-first regular expression \-- `'[]A-Ga-g[#-]+|^=+[0-9]*'` \-- indicates
+first regular expression &mdash; `'[]A-Ga-g[#-]+|^=+[0-9]*'` &mdash; indicates
 that the following strings should be echoed in the data records for
 `**notes`: the upper-case letters `A` to `G` and the lower-case letters
 `a` to `g`, plus the characters `[, ], #`, and `-`. Alternatively,

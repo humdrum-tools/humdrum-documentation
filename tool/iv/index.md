@@ -6,7 +6,7 @@ permalink: /tool/iv/index.html
 
 ### COMMAND
 
-**iv** \-- determine interval-class vectors for successive vertical
+**iv** &mdash; determine interval-class vectors for successive vertical
 sonorities for Humdrum inputs
 
 ------------------------------------------------------------------------

@@ -27,7 +27,7 @@ normal form (`**nf`), interval-vector (`**iv`), or Fortean set name
 \"Prime form\" is a standardized way of representing the symmetrical
 interval structure for any arbitrary set of pitch-classes. Prime form is
 the most intervalically compact representation of a pitch-class set,
-transposed to begin on pitch-class 0 \-- where inversions are deemed
+transposed to begin on pitch-class 0 &mdash; where inversions are deemed
 equivalent. By way of example, any major or minor chord, having any
 root, in any inversion, consisting of any number of notes, with any
 spelling, will have the prime form: 0,3,7. See [REFERENCES](#REFERENCES)

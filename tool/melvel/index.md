@@ -5,7 +5,7 @@ permalink: /tool/melvel/index.html
 
 ### COMMAND
 
-**melvel** \-- generate melodic velocity (in semitones per quarter
+**melvel** &mdash; generate melodic velocity (in semitones per quarter
 duration) for \*\*kern inputs
 
 On-line documentation is not currently available for this command.

@@ -20,7 +20,7 @@ permalink: /tool/encode/index.html
 The **encode** command provides an interactive editor for capturing
 Humdrum data from a MIDI input device. The operation of **encode** can
 be tailored by the user to generate a wide range of Humdrum
-representations \-- including representations designed by the user.
+representations &mdash; including representations designed by the user.
 
 The **encode** command is limited to encoding information one spine at a
 time. A typical use of **encode** might be to encode individual musical
@@ -33,7 +33,7 @@ only for IBM PC or compatible hardware running under the DOS operating
 system.
 
 The **encode** command implements a full-screen interactive text editor
-\-- similar to the **vi** text editor. When invoked, the screen is
+&mdash; similar to the **vi** text editor. When invoked, the screen is
 divided into three display regions: a *status window,* a *command
 window,* and a larger *text window.* The *status window* displays
 various pieces of information, including the name of the file being
@@ -78,7 +78,7 @@ Vertical motions of the cursor relative to the displayed text can be
 controlled by a variety of means. The up and down cursor-control keys
 move the cursor up one line or down one line respectively.
 Alternatively, the lower-case letters \`**k**\' and \`**j**\' may be
-used for up and down movements \-- as in the **vi** text editor. If the
+used for up and down movements &mdash; as in the **vi** text editor. If the
 cursor is at the bottom or top of the screen, cursor movement down or up
 a line (respectively) will cause the screen to scroll one line as
 needed. The carriage return or **ENTER** key will cause the cursor to
@@ -98,7 +98,7 @@ beginning of the appropriate line.
 Horizontal motions of the cursor within a line can be carried out using
 the left (**\<-**) and right (**-\>**) arrow keys. Alternatively, the
 lower-case \`**h**\' and \`**l**\' keys can be used as aliases for the
-left and right cursor motions \-- as in the **vi** text editor. The
+left and right cursor motions &mdash; as in the **vi** text editor. The
 **space** bar can also be used to move the cursor to the right. The
 dollar sign (**\$**) causes the cursor to move to the end of the current
 line. The number zero (**0**) or the caret (**\^**) causes the cursor to
@@ -188,7 +188,7 @@ assigns the key-on event for MIDI key \#60 to the string `middle-C`.
 When in *MIDI input mode,* each key-on event for key \#60 will cause the
 string `middle-C` to be prepared for insertion into the text window.
 Typically, a number of `KEY` definitions will appear in a given
-run-control file \-- often one definition for each MIDI key (0 to 127).
+run-control file &mdash; often one definition for each MIDI key (0 to 127).
 
 A second class of MIDI events is key-down velocity (`VEL`). Key
 velocities can range between 0 (low key velocity) and 127 (high key
@@ -211,7 +211,7 @@ key-presses, than by the keypress-to-keypress time spans; the elapsed
 time between one key-onset and the next key-onset provides a better
 estimate of the nominal musical duration of a note than the actual held
 duration. The variable `DEL` contains the *difference between successive
-key-onset times* \-- expressed in MIDI clock ticks. Values of `DEL` may
+key-onset times* &mdash; expressed in MIDI clock ticks. Values of `DEL` may
 range from 0 upward. For a tempo of 60 beats per minute, inter-onset
 durations of one second correspond to `DEL` values of about 100.
 
@@ -253,7 +253,7 @@ to the string \``c`\'; the delta-time would be mapped to the string
 \``8.`\'; and the key-velocity (`VEL`) would be mapped to the
 apostrophe. At the moment of the key-onset for key \#62, these three
 strings would be amalgamated according to the `ORDER` instruction (`DEL`
-first, `KEY` second, and `VEL` third) \-- producing the output string:
+first, `KEY` second, and `VEL` third) &mdash; producing the output string:
 `8.c'`
 
 Notice that **encode** outputs assembled strings only when the *next*
@@ -273,7 +273,7 @@ run-control file.
 
 The **encode** command has a built-in metronome for assisting real-time
 encoding. The metronome sends commands to the MIDI instrument generating
-metronome tones. Two types of tones are generated \-- tones marking each
+metronome tones. Two types of tones are generated &mdash; tones marking each
 beat, and tones marking the beginning of each measure. The metronome
 rate (in beats per minute) is set by the TEMPO command. The beat is
 specified in two ways. The default beat is indicated by the presence of
@@ -326,7 +326,7 @@ defined.
 ### COMMAND MODE
 
 The **encode** *command mode* allows a number of general-purpose
-commands to be executed \-- such as editing a specified file, changing a
+commands to be executed &mdash; such as editing a specified file, changing a
 default mapping, or auditioning the encoded material. The *command mode*
 can be invoked from the **encode** *edit mode* by typing the colon
 character (:).
@@ -349,7 +349,7 @@ session.
 If the user attempts to write to an existing file (that was not
 specified when **encode** was invoked), then an error message is issued.
 Overwriting an existing file can be achieved by appending an exclamation
-mark following the write instruction \-- as in \`**w! *filename***.\'
+mark following the write instruction &mdash; as in \`**w! *filename***.\'
 
 The \`**q**\' command causes **encode** to terminate. If the current
 file has been modified without writing to disk, then a warning will be
@@ -358,14 +358,14 @@ mark (\`**q!**\') will cause **encode** to terminate without saving any
 recent modifications.
 
 Note that the *quit* and *write* commands can be combined as a single
-instruction \-- \`**wq**\'.
+instruction &mdash; \`**wq**\'.
 
 The \`**r *filename***\' command causes **encode** to read the file
 *filename* into the text, beginning at the line following the current
 cursor position.
 
 The \`**v**\' command causes **encode** to spawn a **vi** text editing
-session \-- importing the current **encode** text. The **vi** text
+session &mdash; importing the current **encode** text. The **vi** text
 editor provides text manipulation capabilities, including searching,
 substitution, and macro-instruction facilities not available in
 **encode.** (Refer to the UNIX **vi** reference document for further

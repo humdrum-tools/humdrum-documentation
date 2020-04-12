@@ -90,7 +90,7 @@ output as the value 9.
 
 In the default operation, **pc** outputs non-pitch-related signifiers in
 addition to the pitch-class value. For example, the `**semits` token
-\"X15yz\" will result in the output \"X3yz\" \-- that is, after
+\"X15yz\" will result in the output \"X3yz\" &mdash; that is, after
 translating 15 to pitch-class 3, the \"Xyz\" signifiers are retained in
 the output. The **-x** option is useful for eliminating
 non-pitch-class-related signifiers from the output.
@@ -100,7 +100,7 @@ non-pitch-class-related signifiers from the output.
 ### EXAMPLES
 
 The following example illustrates the use of **pc.** The input contains
-four spines \-- one of which (`**foo`) cannot be processed by **pc.** ``
+four spines &mdash; one of which (`**foo`) cannot be processed by **pc.** ``
 
 >   -------------------- ---------- ------------ ---------
 >   !! \`pc\' example.                           

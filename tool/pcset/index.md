@@ -56,7 +56,7 @@ this reference manual.
 
 It is recommended that output files produced using the **pcset** command
 should be given names with the distinguishing extensions \`.pcs\',
-\`.nf\' \`.pf\' or \`.iv\' \-- depending on the selected option.
+\`.nf\' \`.pf\' or \`.iv\' &mdash; depending on the selected option.
 
 >   ------------ --------------------------------------------------------------------
 >   `**iv`       interval-class vector representation
@@ -97,7 +97,7 @@ the input. Prime form is analogous to rearranging notes in a chord so
 that the spelling is in root position, close position, transposed so
 that the root of the chord is C. By way of example, any major chord
 (having any root, in any inversion, with any spelling) will have the
-normal form: 0,4,7 \-- namely, a given (basic) pitch, plus a pitch 4
+normal form: 0,4,7 &mdash; namely, a given (basic) pitch, plus a pitch 4
 semitones above than the basic pitch, plus a pitch 7 semitones above the
 basic pitch. (See [REFERENCES](#REFERENCES).)
 

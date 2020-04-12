@@ -29,7 +29,7 @@ intervallically compact spelling of the pitch-classes evident in a given
 sonority. It is analogous to rearranging notes in a chord so that the
 spelling is in root position, close position, with duplicate
 pitch-classes eliminated. By way of example, a D major chord (in any
-inversion, with any spelling) will have the normal form: 2,6,9 \--
+inversion, with any spelling) will have the normal form: 2,6,9 &mdash;
 namely, the pitch-classes D, F\#, A (as opposed to 6,9,2 or 2,9,6). See
 [REFERENCES](#REFERENCES) below.
 

@@ -6,7 +6,7 @@ permalink: /tool/record/index.html
 
 ### COMMAND
 
-**record** \-- record live MIDI input in Humdrum `**MIDI` data format
+**record** &mdash; record live MIDI input in Humdrum `**MIDI` data format
 
 ------------------------------------------------------------------------
 
@@ -21,18 +21,18 @@ permalink: /tool/record/index.html
 The **record** command captures a stream of input MIDI data and
 translates this data into a simple Humdrum `**MIDI` representation.
 Input MIDI data is obtained through a Roland MPU-401 (or compatible)
-interface \-- usually connected in turn to a MIDI synthesizer. The
+interface &mdash; usually connected in turn to a MIDI synthesizer. The
 obtained `**MIDI` data can be manipulated using several Humdrum tools,
 or it can be played-back using the [**perform**](perform.html) command.
 
 Recording commences as soon as the command is invoked. Recording ceases
-when any ASCII key is pressed \-- with the exception of the space bar.
+when any ASCII key is pressed &mdash; with the exception of the space bar.
 Only MIDI key-press activity (including after-touch) information is
 recorded. MIDI system-exclusive instructions and other non-key-press
 data are not recorded.
 
 Each MIDI channel is represented using a separate Humdrum spine. New
-spines are added automatically during the recording \-- in response to
+spines are added automatically during the recording &mdash; in response to
 additional activity on new MIDI channels. Once a MIDI channel becomes
 active, the corresponding Humdrum spine continues to be output until the
 recording is terminated.

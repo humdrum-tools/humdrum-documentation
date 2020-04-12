@@ -20,7 +20,7 @@ criteria
 
 The **num** command produces sequential numerical output according to
 user-defined numbering criteria. In its default operation, **num**
-simply inserts numbers at the beginning of each data record \--
+simply inserts numbers at the beginning of each data record &mdash;
 beginning with the value 1, and increasing by 1 for successive data
 records. However, **num** provides various options that allow the user
 to specify more precisely the kinds of data and conditions under which
@@ -95,7 +95,7 @@ option is mutually exclusive with the **-a** option. In addition, the
 **-f** option cannot be used with the **-p** or **-P** options.
 
 The **-i** option allows the user to set the increment value for
-successive numbers. The default value is 1 \-- meaning that successive
+successive numbers. The default value is 1 &mdash; meaning that successive
 numerical outputs are 1 greater than the previous value. Negative
 increment values are also permissible. For example, the user might
 define an initial value beginning at 100, and decrement by 5 with each
@@ -148,7 +148,7 @@ option, then the counter is reset to the value 1.
 The **-x** option causes records matching a given regular expression to
 be excluded from the counting; no output is generated for such records.
 Note that when used in conjunction with the **-n** option, both the
-*match* and *don\'t match* criteria must be fulfilled in order for the
+*match* and *don't match* criteria must be fulfilled in order for the
 current record to participate in the counting.
 
 The **-z** option causes the counter to be reset (to the value specified
@@ -249,7 +249,7 @@ numbers all data records other than common system barlines.
 
 > ` num -x '^=' -Z '='`
 
-numbers all data records within each common system measure \-- starting
+numbers all data records within each common system measure &mdash; starting
 at the value 1 with each new measure.
 
 ------------------------------------------------------------------------

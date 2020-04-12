@@ -122,7 +122,7 @@ Consider the following simple file: ``
 >   \*-               \*-
 >   ----------------- -----------------
 >
-This example contains just three data records \-- each of which has been
+This example contains just three data records &mdash; each of which has been
 labelled with its own section label. The file contains a single
 unlabelled expansion list which indicates that \`A\' section should be
 repeated between the \`B\' and \`C\' sections. The following command:
@@ -156,7 +156,7 @@ of section-labels is not permitted in abbreviated-format encodings.
 
 Consider the following more complex example. Imagine a *Da Capo* work in
 which a conventional performance procedes as follows: a first section
-(\`A\') is performed twice, followed by first and second endings \--
+(\`A\') is performed twice, followed by first and second endings &mdash;
 labelled \`B\' and \`C\' respectively. A subsequent section ensues
 (\`D\'), followed by a return to the first section (\`A\'). This first
 section is played just once, immediately followed by a final coda
@@ -164,7 +164,7 @@ section (\`E\').
 
 Imagine also a hypothetical performance of this work in which Murray
 Perahia makes three changes: Perahia repeats the \`D\' section, he
-repeats the \`A\' section when returning to the Da Capo \-- re-using the
+repeats the \`A\' section when returning to the Da Capo &mdash; re-using the
 first ending before continuing to the coda following the repetition.
 Finally, Perahia has improvised an introduction to the work. Both the
 conventional interpretation and the hypothetical Perahia interpretation

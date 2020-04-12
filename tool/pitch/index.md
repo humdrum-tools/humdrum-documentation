@@ -70,18 +70,18 @@ tie.
 
 In the default operation, **pitch** outputs non-pitch-related signifiers
 in addition to the `**pitch` pitch value. For example, the `**Tonh`
-token \"Ges5zzz\" will result in the output \"Gb5zzz\" \-- that is,
+token \"Ges5zzz\" will result in the output \"Gb5zzz\" &mdash; that is,
 after translating Ges5 to Gb5, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
-prove confusing \-- especially, when the non-pitch-related signifiers
+prove confusing &mdash; especially, when the non-pitch-related signifiers
 are numbers. Consider the case of the `**kern` token \"8aa\#\"; after
 translating \`aa\#\' to A\#5, the non-pitch-related signifier \`8\' will
-also be output, hence the value 8A\#5 \-- which may cause confusion;
+also be output, hence the value 8A\#5 &mdash; which may cause confusion;
 commands such as [**tonh,**](tonh.html) [**solfg,**](solfg.html) and
 [**pitch**](pitch.html) treat the first number encountered in an input
 token as the octave designation. Hence further processing of this token
-may lead to it\'s interpretation as A\#8 \-- or even A\#58 \-- rather
+may lead to it's interpretation as A\#8 &mdash; or even A\#58 &mdash; rather
 than A\#5.
 
 The **-x** option is useful for eliminating non-pitch-related signifiers
@@ -93,7 +93,7 @@ recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **pitch.** The input
-contains six pitch-related spines \-- two of which (`**deg` and
+contains six pitch-related spines &mdash; two of which (`**deg` and
 `**cocho`) cannot be processed by **pitch.** In addition, there are two
 non-pitch-related spines (`**embell` and `**metpos`). ``
 

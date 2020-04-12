@@ -20,13 +20,13 @@ single-spine Humdrum inputs
 
 The **simil** command measures the degree of similarity between two
 single-spine inputs. Similarity measures are calculated by determining
-the minimum *edit distance* \-- that is, the least amount of editorial
+the minimum *edit distance* &mdash; that is, the least amount of editorial
 manipulation required to transform the two inputs so that they are
 identical. In contrast to the [**correl**](correl.html) command,
 **simil** can act on both numeric and non-numeric data, and so can be
 used to characterize similarity for any form of Humdrum input.
 
-Two inputs are required by **simil** \-- the *source* and *template*
+Two inputs are required by **simil** &mdash; the *source* and *template*
 inputs. Both inputs must contain single columns of data; multi-column
 inputs are forbidden. The *source* input must conform to the Humdrum
 syntax, however the *template* should contain only data records.
@@ -59,7 +59,7 @@ In *fixed template mode,* the entire *template* input is treated as a
 single pattern and compared with the *source* input. In this mode, the
 template may not be longer than the source input. If the length of the
 template is the same as the length of the source input, then only a
-single output value is generated \-- representing the edit-distance
+single output value is generated &mdash; representing the edit-distance
 similarity of the two files. The remaining output is padded by null
 tokens. If the template is shorter than the source input, then the
 source input is scanned using the template. For each data record in the
@@ -74,7 +74,7 @@ In the *variable template mode,* the template input provides a
 the template input is broken-up into a series of (shorter) overlapping
 \"subordinate\" templates. The length of each of these subordinate
 templates is determined by the **-x** option parameter. For example,
-consider a template input consisting of the values: 1, 2, 3, 4 \-- each
+consider a template input consisting of the values: 1, 2, 3, 4 &mdash; each
 number appearing on successive lines. With **-x 3**, two subordinate
 templates will be generated, each consisting of three data records: 1,
 2, 3 and 2, 3, 4. With **-x 2**, three subordinate templates will be
@@ -112,7 +112,7 @@ define these penalties.
 
 The **simil** command allows the user to define the cost of each edit
 operation via an initialization file. The initialization file must be
-named `simil.rc` and be located in the current directory or the user\'s
+named `simil.rc` and be located in the current directory or the user's
 home directory. Arbitrary costs may be assigned to any of eight edit
 operations shown in the following table:
 
@@ -158,8 +158,8 @@ whereas the template input consists entirely of alphabetic characters.
 In the case where all edit operations are assigned a penalty of +1, the
 minimum quantitative similarity between two strings is 0.37.
 
-Some user-defined weightings may give rise to peculiar results \-- such
-as negative costs \-- but **simil** does not forbid this. **Simil**
+Some user-defined weightings may give rise to peculiar results &mdash; such
+as negative costs &mdash; but **simil** does not forbid this. **Simil**
 generates warning messages if the weighting seem illogical; for example,
 if the cost of R1 is more than that of D1. In addition, **simil** will
 abort operation if the defined edit penalties transgress the triangular
@@ -332,7 +332,7 @@ This command produces the following output: ``
 >   ----------- ------------
 >
 Only two two-element subordinate patterns are possible given out
-template \-- (A, B) and (B, C). The first subordinate template begins on
+template &mdash; (A, B) and (B, C). The first subordinate template begins on
 line 1 of the template file, while the second subordinate template
 begins on line 2. The `**simxrf` spine identifies which of the
 subordinate patterns is most similar to the source file at the given

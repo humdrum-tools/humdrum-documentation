@@ -22,7 +22,7 @@ data token in the same spine. Various options modify this basic
 behavior.
 
 Humdrum null-tokens are place-holders that do not themselves encode
-data. Null-tokens consist of a single period character (\".\") \--
+data. Null-tokens consist of a single period character (\".\") &mdash;
 separated from other tokens by tabs, or appearing on a line by itself.
 The **ditto** command replaces occurrences of null-tokens with the most
 recent non-null data occurring in the same spine. When the **-p** option
@@ -162,7 +162,7 @@ following command:
 >   --------------- --------- --------- -- --------------- -- --------- --------- ---------
 >
 In order to avoid repeating the barlines, the skip option has been
-invoked with the regular expression \"\^=\" \-- meaning any equals sign
+invoked with the regular expression \"\^=\" &mdash; meaning any equals sign
 at the beginning of a line. (See **regexp** in Section 6 of this manual
 for details concerning regular expression syntax.) In addition, the
 **-p** option has been invoked so that all repeated tokens are placed in

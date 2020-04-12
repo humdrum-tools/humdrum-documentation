@@ -5,7 +5,7 @@ permalink: /tool/extract/index.html
 
 ### COMMAND
 
-**extract** \-- get specified spines from a Humdrum input
+**extract** &mdash; get specified spines from a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -181,7 +181,7 @@ would produce the following result: ``
 >   \*-                          \*-       \*-
 >   ---------------------------- --------- ---------
 >
-Consider next the following sample input \-- dubbed `input2`: ``
+Consider next the following sample input &mdash; dubbed `input2`: ``
 
 >   ---------------------------- --------- --------- --------- --------- ----
 >   !! \`extract\' example \#2                                           

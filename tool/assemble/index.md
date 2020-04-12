@@ -6,7 +6,7 @@ permalink: /tool/assemble/index.html
 
 ### COMMAND
 
-**assemble** \-- amalgamate two or more Humdrum files
+**assemble** &mdash; amalgamate two or more Humdrum files
 
 ------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ permalink: /tool/assemble/index.html
 ### DESCRIPTION
 
 The **assemble** command allows two or more structurally similar Humdrum
-files to be aligned together \-- such as where a full score is assembled
+files to be aligned together &mdash; such as where a full score is assembled
 from files containing individual parts.
 
 The **assemble** command is similar to the UNIX ` paste` command. If
@@ -63,7 +63,7 @@ B
 
 C
 
-The **assemble** command is a more sophisticated version of ` paste` \--
+The **assemble** command is a more sophisticated version of ` paste` &mdash;
 suitable for assembling several concurrent spines stored in different
 Humdrum files. The **assemble** command coordinates and synchronizes
 comments, interpretations, and data records from the input files.

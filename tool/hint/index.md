@@ -5,7 +5,7 @@ permalink: /tool/hint/index.html
 
 ### COMMAND
 
-**hint** \-- determine harmonic intervals between concurrent pitches for
+**hint** &mdash; determine harmonic intervals between concurrent pitches for
 Humdrum inputs
 
 ------------------------------------------------------------------------
@@ -24,7 +24,7 @@ combination of diatonic interval size and interval quality (such as a
 \`perfect fifth\' or \`minor ninth\'). Standard musical abbreviations
 are used (e.g., m2 - minor second; P4 - perfect fourth; A6 - augmented
 sixth; dd7 - doubly diminished seventh). By way of illustration,
-**hint** will change the ` **pitch` diad *C4-E4* (or *E4-C4)* \-- to the
+**hint** will change the ` **pitch` diad *C4-E4* (or *E4-C4)* &mdash; to the
 interval token *M3.*
 
 The **hint** command determines harmonic intervals for pitch tokens
@@ -35,8 +35,8 @@ in a given sonority (sounding moment) are first sorted in ascending
 pitch order. If the **-u** option is selected, duplicate pitches
 (unisons) are treated as a single pitch-instance when calculating the
 intervening intervals. Intervals are then calculated between successive
-pairs of pitches \-- ordered from low to high. A single data token is
-output \-- representing all intervals in a given sonority. If more than
+pairs of pitches &mdash; ordered from low to high. A single data token is
+output &mdash; representing all intervals in a given sonority. If more than
 one interval is present, the interval tokens are assembled as Humdrum
 multiple-stops within the output data token.
 
@@ -45,7 +45,7 @@ null token (.). Input records containing only rests result in the
 outputting of a rest token (r). Input records containing only a single
 pitch result in the outputting of a hyphen (-). Input records containing
 only a single duplicated pitch result in the outputting of the interval
-(P1) \-- unless the **-u** option is selected, in which case the a
+(P1) &mdash; unless the **-u** option is selected, in which case the a
 hyphen is output (-).
 
 The **hint** command recognizes and echoes \"common-system\" barlines
@@ -176,7 +176,7 @@ input as follows: ``
 >   -------------
 >
 The **hint** command correctly echoes (and ignores) both rests and
-kern-like barlines \-- as illustrated in the first and fourth output
+kern-like barlines &mdash; as illustrated in the first and fourth output
 data records. The second output data record (M3 m3) indicates that two
 intervals are present: the first interval is a major third above the
 lowest pitch, and the second interval is a minor third above the other
@@ -249,7 +249,7 @@ will produce the following output: ``
 >
 Notice that the major and minor tenths in the sixth data record have
 been rendered as major and minor thirds. Also note that the perfect
-unison in the tenth data record has been output as a hyphen \-- and that
+unison in the tenth data record has been output as a hyphen &mdash; and that
 the P1 formerly present in the eighth data record has disappeared. The
 presence of the rest in the original ninth data record has caused the
 outputting of a simple null token.

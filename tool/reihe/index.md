@@ -6,7 +6,7 @@ permalink: /tool/reihe/index.html
 
 ### COMMAND
 
-**reihe** \-- output specified row variant for a given Humdrum prime row
+**reihe** &mdash; output specified row variant for a given Humdrum prime row
 input
 
 ------------------------------------------------------------------------
@@ -24,7 +24,7 @@ row input. Normally, **reihe** is used to generate tone-row variants for
 12-tone rows. However, the \"tone-rows\" can consist of any number of
 pitch-classes and need not be based on modulo-12 class-equivalence. In
 certain circumstances the \"prime row\" may consist of non-numeric or
-non-pitch-related data \-- such as articulation marks or dynamic marks.
+non-pitch-related data &mdash; such as articulation marks or dynamic marks.
 In addition to the traditional set-theoretic transformations, **reihe**
 also permits cyclic rotation (shifting) of set elements.
 
@@ -44,18 +44,18 @@ transposed so that it begins on pitch-class 1. For retrograde and
 retrograde-inversion forms, the numerical parameter specifies the *last*
 value of the output row.
 
-Positive integers greater than 11 are permitted in the input \-- but are
+Positive integers greater than 11 are permitted in the input &mdash; but are
 treated as modulo-12 equivalent (unless the **-m** option specifies a
 different modulus). In the case of `**pc` inputs, the upper-case letters
 A and B are accepted as aliases for pitch-classes 10 and 11
 respectively. Following the Fortean practice, pitch-classes 10 and 11
 may alternatively be represented in the input by the upper-case letters
-T (ten) and E (eleven) \-- although this latter convention is
+T (ten) and E (eleven) &mdash; although this latter convention is
 discouraged.
 
 In addition to the traditional set-transformations of transposition,
 inversion, retrograde, and retrograde-inversion, **reihe** also provides
-for rotation \-- where the set elements are cyclically *shifted* by a
+for rotation &mdash; where the set elements are cyclically *shifted* by a
 specified number of positions. For example, **-s 3** causes each set
 element to be shifted forward by 3 positions. The shift transformation
 can be combined with each of the other traditional transformations only
@@ -63,7 +63,7 @@ by invoking the **reihe** command twice in succession.
 
 Normally, **reihe** is used to transform numerical data (typically
 pitch-class values). However, the retrograde (**-r**) and shift (**-s**)
-operations can be performed on any data (including non-numeric data \--
+operations can be performed on any data (including non-numeric data &mdash;
 such as articulation marks). For non-numeric data, the retrograde option
 must be invoked without a numerical parameter. Attempting to transpose
 non-numeric data will result in an error.
@@ -198,7 +198,7 @@ options are thus mutually exclusive.
 ### EXAMPLES
 
 The sample document given below shows a 5-tone row used in Igor
-Stravinsky\'s \"Dirge-Canons\" from *In Memoriam Dylan Thomas.* ``
+Stravinsky's \"Dirge-Canons\" from *In Memoriam Dylan Thomas.* ``
 
 >   ------------------------------
 >   !! I. Stravinsky, 5-tone row

@@ -6,7 +6,7 @@ permalink: /tool/regexp/index.html
 
 ### COMMAND
 
-**regexp** \-- interactive regular-expression tester
+**regexp** &mdash; interactive regular-expression tester
 
 ------------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ expression are displayed in the output.
 ### WARNINGS
 
 The regular-expression features provided by **regexp** depend on the
-local UNIX **awk** utility \-- as accessed via the `AWK_VER` shell
+local UNIX **awk** utility &mdash; as accessed via the `AWK_VER` shell
 variable. Available features may change depending on the version of
 **awk** used.
 

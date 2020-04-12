@@ -6,7 +6,7 @@ permalink: /tool/kern/index.html
 
 ### COMMAND
 
-**kern** \-- translate selected Humdrum pitch-related representations to
+**kern** &mdash; translate selected Humdrum pitch-related representations to
 `**kern`
 
 ------------------------------------------------------------------------
@@ -25,7 +25,7 @@ For example, the `**pitch` token \``Ab2`\' will be output as the
 `**kern` token \``AA-`\'. Continuous pitch-related representations, such
 as frequency (`**freq`) and cents (`**cents`) are rounded-off to the
 nearest equally-tempered pitch. Hence, `**freq` values between 254.178
-and 269.291 will be output as the `**kern` token for middle C \-- \`c\'.
+and 269.291 will be output as the `**kern` token for middle C &mdash; \`c\'.
 
 [Pitches in `**kern`](../representations/kern.html#Pitch) are encoded as
 equally-tempered values at concert pitch. Kern is not able to represent
@@ -33,10 +33,10 @@ pitch deviations from equal temperament. Diatonic pitch names are
 encoded using the letters A to G. Octaves are indicated by a system of
 upper- and lower-case letters, and by letter repetition. Middle C is
 represented by the single lower-case letter \`c\'. The C an octave above
-is represented by two lower-case letters: \`cc\' \-- with each
+is represented by two lower-case letters: \`cc\' &mdash; with each
 successive octave adding another letter. The C an octave below middle C
 is represented by a single upper-case \`C\'. The C an octave lower yet
-is represented by two upper-case letters: \`CC\' \-- and so forth.
+is represented by two upper-case letters: \`CC\' &mdash; and so forth.
 Changes of octave are deemed to occur between the pitches B and C. Thus
 the B below middle \`c\' is rendered as a single upper-case \`B\'; the B
 below \`cc\' is \`b\' and so forth. Sharps are indicated by the
@@ -96,15 +96,15 @@ Options are specified in the command line.
 
 In the default operation, **kern** outputs any non-pitch-related
 signifiers in addition to the kern value. For example, the `**pitch`
-token \"A6zzz\" will result in the output \"aaazzz\" \-- that is, after
+token \"A6zzz\" will result in the output \"aaazzz\" &mdash; that is, after
 translating A6 to \"aaa\", the \"zzz\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
-confusing \-- especially, when the non-pitch-related signifiers are
+confusing &mdash; especially, when the non-pitch-related signifiers are
 upper- or lower-case letters from A-G. Consider the case of the `**freq`
 token \"aA\#5\"; after translating \"A\#5\" to \"aa\", the leading
 non-pitch-related signifier \"a\" will be prepended to the output, hence
-the value \"aaa\" \-- which will undoubtedly cause confusion. The **-x**
+the value \"aaa\" &mdash; which will undoubtedly cause confusion. The **-x**
 option is useful for eliminating non-pitch-related signifiers from the
 output. For most inputs, the **-x** option is recommended.
 
@@ -115,7 +115,7 @@ output. For most inputs, the **-x** option is recommended.
 ### SAMPLE OUTPUTS
 
 The following example illustrates the use of **kern.** The input
-contains six pitch-related spines \-- two of which (`**deg` and
+contains six pitch-related spines &mdash; two of which (`**deg` and
 `**cocho`) cannot be processed by **kern.** In addition, there are two
 non-pitch-related spines (`**embell` and `**metpos`). ``
 
@@ -167,7 +167,7 @@ produces the following result: ``
 >   .                         .          .          .         .            .           .          .
 >   =2                        =2         =2         =2        =2           =2          =2         =2
 >   aaaa-                     r          .          5         1            r           r          .
->   .                         .          .          7         3            5.5         BB\--      ct
+>   .                         .          .          7         3            5.5         BB&mdash;      ct
 >   aaaa                      d          C E        1         2            8.11        C          ct
 >   .                         .          .          .         .            .           .          .
 >   .                         d f        .          2         3            7.33 6.4    C E-       ct
@@ -183,7 +183,7 @@ non-pitch-related signifiers (e.g. foo) in the first notes of the
 the **-x** option).
 
 Key signature sensitivity is illustrated in the following example. The
-input contains a \"pitch-height key signature\" \-- where flats and
+input contains a \"pitch-height key signature\" &mdash; where flats and
 sharps pertain to only a specific absolute pitch. For example, Bb3 is
 preferred to A\#3, although A\#4 is preferred to Bb4. Similarly, C\#4 is
 preferred to Db4, although Db5 is preferred to C\#5. ``

@@ -5,7 +5,7 @@ permalink: /tool/xdelta/index.html
 
 ### COMMAND
 
-**xdelta** \-- calculate sequential numeric differences between
+**xdelta** &mdash; calculate sequential numeric differences between
 successive Humdrum data tokens
 
 ------------------------------------------------------------------------
@@ -20,8 +20,8 @@ successive Humdrum data tokens
 
 The **xdelta** command calculates the numeric differences between
 successive data tokens within individual spines. By way of illustration,
-**xdelta** will change a sequence of numerical tokens \-- such as *x, y,
-z* \-- to their successive differences *y-x, z-y*. The **xdelta**
+**xdelta** will change a sequence of numerical tokens &mdash; such as *x, y,
+z* &mdash; to their successive differences *y-x, z-y*. The **xdelta**
 command might be used for such purposes as determining the melodic
 interval distances between successive pitches in a musical line, or
 calculating changes of duration for successive notes.
@@ -52,7 +52,7 @@ null token, followed by \``-2`\' will result in an output of \``3`\'.
 
 No difference value is calculated for the first numeric input token;
 however, the numeric value of the first numeric token is echoed in the
-output \-- appearing in square brackets. These initial values are
+output &mdash; appearing in square brackets. These initial values are
 referred to as *offset* values, since they indicate the starting value
 from which subsequent differences are calculated. Offset values can
 prove useful in attempting to reconstruct the input, but the user may
@@ -71,7 +71,7 @@ followed by \``p51.3xm`\' will result in the output token \``18.3`\'
 echoed in the output by invoking the **-e** option.
 
 The **xdelta** command is able to calculate unsigned (absolute) values
-where appropriate \-- using the **-a** option. It is also able to handle
+where appropriate &mdash; using the **-a** option. It is also able to handle
 multiple stops and data-flow interruptions such as the occurrence of
 barlines. By defining *regular expression* patterns, the user may select
 which types of data tokens should be ignored by **xdelta.** (See
@@ -141,11 +141,11 @@ above input into the following output: ``
 >
 Notice that the input interpretation (`**cents`) has been modified to
 `**Xcents` in the first record. As can be seen, the leading or
-\"offset\" value \``100`\' has been echoed in the second record \--
+\"offset\" value \``100`\' has been echoed in the second record &mdash;
 although it has been printed in square brackets. This is not a
 \"difference\" value since there is no previous numerical value from
 which to calculate a difference; **xdelta** simply echoes the initial
-starting value. The third output record contains the value \``200`\' \--
+starting value. The third output record contains the value \``200`\' &mdash;
 which is the difference between the second and third input records (300
 minus 100). (Musically, we would say that the difference between 100
 cents above middle C followed by 300 cents above middle C is an increase
@@ -164,7 +164,7 @@ values; the output echoes `[-200]` as the new offset. The ninth input
 record (`1000`) is 1200 cents above -200, and so the corresponding
 output value is 1200.
 
-Sometimes numerical values appear in tokens that the user doesn\'t want
+Sometimes numerical values appear in tokens that the user doesn't want
 processed. A good example occurs with numbered barlines. Consider the
 following simple example. ``
 
@@ -203,7 +203,7 @@ following (correct) output: ``
 >   \*-
 >   ----------
 >
-Some inputs may contain multiple-stops \-- that is, Humdrum data tokens
+Some inputs may contain multiple-stops &mdash; that is, Humdrum data tokens
 containing two or more encoded components. The **xdelta** command is
 also able to process numerical data tokens containing
 multiple-components. Consider, for example, the following ` **semits`

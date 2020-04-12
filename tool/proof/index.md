@@ -40,7 +40,7 @@ with a double barline, (12) warn of material encoded following a double
 barline, (13) warn of measures which change meters unannounced, (14)
 warn of the presence of identical material in consecutive measures, (15)
 warn of the presence of pitches which are encoded without an accidental
-\-- where the same pitch had previously received an accidental in the
+&mdash; where the same pitch had previously received an accidental in the
 same measure, and (16) warn of the absence of meter, tempo, key, and key
 signature declarations.
 

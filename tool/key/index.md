@@ -6,7 +6,7 @@ permalink: /tool/key/index.html
 
 ### COMMAND
 
-**key** \-- estimate the key for a Humdrum passage
+**key** &mdash; estimate the key for a Humdrum passage
 
 ------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ permalink: /tool/key/index.html
 ### DESCRIPTION
 
 The **key** command estimates the key of a given musical passage using
-Krumhansl\'s tonal hiearchy method. The command is restricted to
+Krumhansl's tonal hiearchy method. The command is restricted to
 identifying only those keys within the common major/minor tonal system.
 Modes outside the major/minor system are not recognized.
 
@@ -30,7 +30,7 @@ different interpretation.
 Output consists of three items of information:
 
 -   the *estimated key* for the passage,
--   a *coefficient of correlation* (Pearson\'s \"r\") that measures how
+-   a *coefficient of correlation* (Pearson's \"r\") that measures how
     well the pitch organization of the musical passage conforms to an
     idealized major or minor key template, and
 -   a *confidence score* that indicates how distinctive the key-match is
@@ -39,7 +39,7 @@ Output consists of three items of information:
     confidence scores indicate that there is at least one other key that
     is a good alternative candidate.
 
-The algorithm is based on Krumhansl\'s perceptually-based key-finding
+The algorithm is based on Krumhansl's perceptually-based key-finding
 method (see [references](#REFERENCES)). This method compares a given
 pitch-class frequency profile with two perceptually-determined
 prototypes (one each for major and minor modes). The coefficients used

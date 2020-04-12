@@ -6,7 +6,7 @@ permalink: /tool/melac/index.html
 
 ### COMMAND
 
-**melac** \-- calculate melodic accent values for successive pitches in
+**melac** &mdash; calculate melodic accent values for successive pitches in
 a Humdrum input
 
 ------------------------------------------------------------------------
@@ -26,8 +26,8 @@ accent) and 1 (maximum accent). Input is limited to only a single
 ` **semits` data spine.
 
 The **melac** command implements a model of melodic accent developed by
-Joseph Thomassen (see [REFERENCES](#REFERENCES)). Thomassen\'s model is
-sensitive to pitch contour only \-- distinguishing just three types of
+Joseph Thomassen (see [REFERENCES](#REFERENCES)). Thomassen's model is
+sensitive to pitch contour only &mdash; distinguishing just three types of
 melodic motion: ascending, descending, and unison. The model calculates
 tonal accent values according to a moving 3-pitch window.
 

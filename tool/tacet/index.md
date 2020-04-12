@@ -5,7 +5,7 @@ permalink: /tool/tacet/index.html
 
 ### COMMAND
 
-**tacet** \-- reset MIDI channels to ensure silence
+**tacet** &mdash; reset MIDI channels to ensure silence
 
 ------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ permalink: /tool/tacet/index.html
 
 The **tacet** command resets the MIDI output. It sends \"all-notes-off\"
 commands on MIDI channels 1-16. The **tacet** command is useful if a
-MIDI application has terminated abnormally \-- leaving one or more
+MIDI application has terminated abnormally &mdash; leaving one or more
 sounding notes (\"ciphers\") on a MIDI device.
 
 ------------------------------------------------------------------------

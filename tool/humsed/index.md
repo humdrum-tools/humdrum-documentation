@@ -6,7 +6,7 @@ permalink: /tool/humsed/index.html
 
 ### COMMAND
 
-**humsed** \-- stream editor for Humdrum inputs
+**humsed** &mdash; stream editor for Humdrum inputs
 
 ------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ transliteration, ` d` for deletion, ` i` for insertion, ` a` for append,
 preceded by an optional *regular expression* that limits the scope of
 the editing instruction only to those data records matching the regular
 expression. For example, the user may replace all occurrences of \`X\'
-with \`Y\' \-- provided the signifier \`Z\' also occurs in the same data
+with \`Y\' &mdash; provided the signifier \`Z\' also occurs in the same data
 record. In the case of the delete ` (d)` instruction, failing to specify
 a preceding regular expression will result in the deletion of all data
 records in the input.
@@ -128,10 +128,10 @@ prepends the number 8; thus the token 4F will be replaced by 84F. (Note
 that the ampersand (&) in the substitution denotes the matched string
 found by the target regular expression.) The second substitution
 ` (s/84/8/g)` replaces the string 84 by the string 8. In short, tokens
-such as 4F and 4CC\# will be modified to 8F and 8CC\# respectively \--
+such as 4F and 4CC\# will be modified to 8F and 8CC\# respectively &mdash;
 whereas tokens such as 2F and 4cc\# will remain unmodified. (Note that
 this command is inadequate if 24th notes (thirty-second note triplets)
-are present in the input \-- since they will be transformed to 28th
+are present in the input &mdash; since they will be transformed to 28th
 notes.)
 
 The transliteration instruction **(y)** provides a short-cut for
@@ -174,7 +174,7 @@ a pause.
 
 > ` humsed '/;/r comment' bebop`
 
-\-- where the file \"comment\" contains the following global comment:
+&mdash; where the file \"comment\" contains the following global comment:
 
 > ` !! A pause.`
 

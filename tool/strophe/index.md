@@ -31,14 +31,14 @@ Structurally, strophic data must begin from a single common spine, split
 apart into two or more alternative spines, and then rejoin to form a
 single spine. Since the strophes split from a common spine, all strophic
 data necessarily begin by sharing the same data type. Different
-exclusive interpretations may be introduced in the strophic passage \--
+exclusive interpretations may be introduced in the strophic passage &mdash;
 provided all strophic spines end up sharing the same data type just
 prior to being rejoined.
 
 The beginning of a strophic passage is signalled by the presence of a
-*strophic passage initiator* \-- a single asterisk followed by the
+*strophic passage initiator* &mdash; a single asterisk followed by the
 keyword \"strophe\" (`*strophe`). The end of a strophic passage is
-signalled by the *strophic passage terminator* \-- a single asterisk
+signalled by the *strophic passage terminator* &mdash; a single asterisk
 followed by the upper-case letter \`S\' followed by a minus sign
 (`*S-`). Each spine within the strophic passage begins with a *strophe
 label* and ends with a *strophe end indicator* (`*S/fin`).
@@ -71,7 +71,7 @@ example encodes a melodic phrase containing four numbered verses from
 >   8a                ist               ha-        auch      selbst ,
 >   8ee-              des               -ben       den       so
 >   =6                =6                =6         =6        =6
->   (16dd             Mül-              wir\'s     Rä-       schwer
+>   (16dd             Mül-              wir's     Rä-       schwer
 >   )16ff             \|                \|         \|        \|
 >   (16dd             -lers             ge-        -dern     sie
 >   )16b-             \|                \|         \|        \|
@@ -180,7 +180,7 @@ terminate the **strophe** command.
 Note that the **strophe** command allows strophe numbers containing a
 single decimal point, such as strophe `*S/4.2`. Having extracted the
 verse `*S/1`, the **strophe** command will output verse `*S/1.1` in
-preference to `*S/2` \-- if the decimal strophe is present. This feature
+preference to `*S/2` &mdash; if the decimal strophe is present. This feature
 allows more than one strophic passage to be encoded within a single
 abbreviated format file. This feature might prove useful, for example,
 in a musical work that contains a brief refrain in the middle of each

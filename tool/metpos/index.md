@@ -5,7 +5,7 @@ permalink: /tool/metpos/index.html
 
 ### COMMAND
 
-**metpos** \-- assign metric position indicators to Humdrum sonorities
+**metpos** &mdash; assign metric position indicators to Humdrum sonorities
 
 ------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ The **metpos** command is used to characterize the metric strength of
 successive sonorities in a musical passage. Specifically, **metpos**
 appends a Humdrum ` **metpos` spine to a time-base (`*tb`) input stream.
 The ` **metpos` spine contains integer values indicating the position in
-the metric hierarchy for each data record \-- given some meter
+the metric hierarchy for each data record &mdash; given some meter
 signature.
 
 The highest position in any given metric hierarchy is given the value
@@ -36,7 +36,7 @@ values according to their placement in the metric hierarchy. Larger
 `**metpos` values signify sonorities of lesser metric significance.
 
 Input to **metpos** can be any Humdrum file that conforms to the
-*time-base* format \-- i.e. where each data record represents an
+*time-base* format &mdash; i.e. where each data record represents an
 equivalent duration of time. Each input measure will thus contain the
 same number of data records. For example, in 3/4 meter with an
 eighth-note time-base, each complete measure should contain 6 data
@@ -105,7 +105,7 @@ set the initial time-base duration to *n*
 
 ### SAMPLE OUTPUTS
 
-The following extract from Bartók\'s \"Two-Part Study\" No. 121 from
+The following extract from Bartók's \"Two-Part Study\" No. 121 from
 *Mikrokosmos* demonstrates the effect of the **metpos** command. The two
 left-most columns show the original input; all three columns show the
 corresponding output from **metpos**: ``

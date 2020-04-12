@@ -5,7 +5,7 @@ permalink: /tool/midi/index.html
 
 ### COMMAND
 
-**midi** \-- convert from `**kern` to Humdrum `**MIDI` format
+**midi** &mdash; convert from `**kern` to Humdrum `**MIDI` format
 
 ------------------------------------------------------------------------
 
@@ -58,11 +58,11 @@ reciprocal duration notation (`**recip`), where \`4\' represents a
 quarter-duration, \`2.\' represents a dotted half-duration, \`12\'
 represents a quarter-note triplet, \`0\' represents a breve, etc. (See
 `**recip` in Section 2 for details.) With the **-d** option all pitches
-and rests in the input will be assigned the specified duration value \--
+and rests in the input will be assigned the specified duration value &mdash;
 whether or not the notes already have encoded durations. This option is
 useful for such tasks as proof-listening to passages containing
-especially short notes, or auditing works \-- such as Gregorian chant
-\-- where durations have not been encoded or are suspect for other
+especially short notes, or auditing works &mdash; such as Gregorian chant
+&mdash; where durations have not been encoded or are suspect for other
 reasons. Note that the **-d** option should be used only in the case of
 monophonic inputs, or multi-part inputs that contain strictly
 isochronous chords. Polyphonic inputs containing non-isochronous
@@ -71,11 +71,11 @@ resulting output is apt to cause serious problems with commands such as
 [**perform**](perform.html) and [**smf.**](smf.html)
 
 In contrast to MIDI performance data, canonical musical scores (such as
-`**kern`) frequently contain unisons \-- where two voices share the same
+`**kern`) frequently contain unisons &mdash; where two voices share the same
 pitch for a period of time. MIDI produces a \`note-off\' instruction at
 the end of each note; however only a single \`note-off\' instruction is
 required to turn-off a note. Unfortunately, the first note-off will
-terminate a note \-- even if the same pitch is sustained in another
+terminate a note &mdash; even if the same pitch is sustained in another
 voice. In normal operation, **midi** suppresses the sending of the first
 of two MIDI \`note-off\' commands when a unison is encountered in the
 input. This ensures that the pitch will be sustained for the longer of

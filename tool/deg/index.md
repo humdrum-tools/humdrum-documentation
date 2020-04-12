@@ -6,7 +6,7 @@ permalink: /tool/deg/index.html
 
 ### COMMAND
 
-**deg** \-- translate selected Humdrum pitch-related representations to
+**deg** &mdash; translate selected Humdrum pitch-related representations to
 relative scale degree (`**deg`)
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ relative scale degree (`**deg`)
 
 The **deg** command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
-`**deg` spines \-- where scale degrees are indicated by the numbers 1
+`**deg` spines &mdash; where scale degrees are indicated by the numbers 1
 (tonic) to 7 (leading tone). Scale degree information can be determined
 only with reference to some prevailing key. For example, the pitch C4 is
 the tonic (1) in the key of C major, but the submediant (6) in the key
@@ -99,15 +99,15 @@ tie.
 
 In the default operation, **deg** outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D major, the
-`**pitch` token \"G5zzz\" will result in the output \"4zzz\" \-- that
+`**pitch` token \"G5zzz\" will result in the output \"4zzz\" &mdash; that
 is, after translating G5 to 4, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
-prove confusing \-- especially, when the non-pitch-related signifiers
+prove confusing &mdash; especially, when the non-pitch-related signifiers
 are numbers. Consider the case of the `**kern` token \"4f\#\" in the key
 of D minor; after translating \``f#`\' to \``3+`\' (i.e. raised third
 degree), the preceding non-pitch-related signifier \``4`\' will also be
-output, hence the value `43+` \-- which may cause confusion.
+output, hence the value `43+` &mdash; which may cause confusion.
 
 The **-x** option is useful for eliminating non-pitch-related signifiers
 from the output. For most `**kern` inputs, the **-x** option is
@@ -118,7 +118,7 @@ recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **deg.** The input contains
-four pitch-related spines \-- one of which (`**MIDI`) cannot be
+four pitch-related spines &mdash; one of which (`**MIDI`) cannot be
 processed by **deg.** In addition, there is one non-pitch-related spines
 (`**embell`).
 
@@ -136,7 +136,7 @@ processed by **deg.** In addition, there is one non-pitch-related spines
 > >   .                     .          /-62/       .           .           .
 > >   8dd-                  B2         /70/        mi3         E4          ct
 > >   .                     .          /-70/       .           .           .
-> >   8d\--                 Cis4       /61/        r           F4          sus
+> >   8d&mdash;                 Cis4       /61/        r           F4          sus
 > >   .                     .          /-61/       .           .           .
 > >   =2                    =2         =2          =2          =2          =2
 > >   \[4a-                 r          .           mi\~b3      F4 A4       .

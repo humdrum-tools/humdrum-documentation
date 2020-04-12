@@ -6,7 +6,7 @@ permalink: /tool/yank/index.html
 
 ### COMMAND
 
-**yank** \-- extract passages from a Humdrum input
+**yank** &mdash; extract passages from a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ permalink: /tool/yank/index.html
 
 The **yank** command permits the selective extraction of segments or
 passages from a Humdrum input. Yanked material may consist of specified
-input records \-- addressed by absolute line number, or relative to some
+input records &mdash; addressed by absolute line number, or relative to some
 marker. In addition, **yank** is able to output logical segments (such
 as measures, phrases, or labelled sections), and is able to output
 material according to content. The output always consists of complete
@@ -267,7 +267,7 @@ containing \"{\" and ending with a record containing \"}.\" The command:
 
 > yank -o { -e } -r \'1-4,\$-3-\$\' faure
 
-yanks the first four and last four segments in the file `faure` \--
+yanks the first four and last four segments in the file `faure` &mdash;
 where segments begin with an open brace ({) and end with a closed brace
 (}). In the `**kern` representation, this would extract the first and
 last four phrases in the file.

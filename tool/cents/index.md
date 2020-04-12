@@ -6,7 +6,7 @@ permalink: /tool/cents/index.html
 
 ### COMMAND
 
-**cents** \-- translate selected Humdrum pitch-related representations
+**cents** &mdash; translate selected Humdrum pitch-related representations
 to cents
 
 ------------------------------------------------------------------------
@@ -77,14 +77,14 @@ The **-t** ensures that only a single output value is given for tied
 
 In the default operation, **cents** outputs non-pitch-related signifiers
 in addition to the cents value. For example, the `**pitch` token
-\"A5zzz\" will result in the output \"2100zzz\" \-- that is, after
+\"A5zzz\" will result in the output \"2100zzz\" &mdash; that is, after
 translating A5 to 2100 cents, the \"zzz\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
-confusing \-- especially, when the non-pitch-related signifiers are
+confusing &mdash; especially, when the non-pitch-related signifiers are
 numbers. Consider the case of the `**kern` token \"8aa\"; after
 translating \`aa\' to 2100 cents, the non-pitch-related signifier \`8\'
-will also be output, hence the value 82100 \-- which will undoubtedly
+will also be output, hence the value 82100 &mdash; which will undoubtedly
 cause confusion. The **-x** option is useful for eliminating
 non-pitch-related signifiers from the output. For most `**kern` inputs,
 the **-x** option is recommended.
@@ -94,7 +94,7 @@ the **-x** option is recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **cents.** The input
-contains six pitch-related spines \-- two of which (`**deg` and
+contains six pitch-related spines &mdash; two of which (`**deg` and
 `**cocho`) cannot be processed by **cents.** In addition, there are two
 non-pitch-related spines (`**embell` and `**metpos`). ``
 

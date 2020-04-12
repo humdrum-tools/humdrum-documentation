@@ -5,7 +5,7 @@ permalink: /tool/context/index.html
 
 ### COMMAND
 
-**context** \-- congeal Humdrum data records to form a contextual frame
+**context** &mdash; congeal Humdrum data records to form a contextual frame
 
 ------------------------------------------------------------------------
 
@@ -101,7 +101,7 @@ would produce an output beginning with a single padded null token: ``
 > signifiers present in the input data itself. The **-e** option allows
 > the user to specify an \"end\" signifier. When this signifier is
 > encountered in the input, the input record is appended to the current
-> congealed record \-- which is then output \-- and a new congealed
+> congealed record &mdash; which is then output &mdash; and a new congealed
 > output record begins. End signifiers are defined as string patterns
 > using the *regular expression* syntax (see **regexp (5)**). For
 > example, given an input of six successive numbers, the command
@@ -178,7 +178,7 @@ would produce an output beginning with a single padded null token: ``
 > >
 > > The **-p** option may be used in conjunction with **-n**. Normally,
 > > the output from **context -n** is padded with trailing null tokens
-> > \-- one fewer in number than the value specified with **-n**. The
+> > &mdash; one fewer in number than the value specified with **-n**. The
 > > **-p** *n* option causes *n* null tokens to be padded at the
 > > *beginning* of the output spine, rather than trailing at the end.
 > >
@@ -192,7 +192,7 @@ would produce an output beginning with a single padded null token: ``
 > >
 > > ### EXAMPLES
 > >
-> > The following excerpt from Edgar Varèse\'s *Density 21.5 (1936)*
+> > The following excerpt from Edgar Varèse's *Density 21.5 (1936)*
 > > illustrates the use of **context.** Consider the initial input: ``
 > >
 > > > `!! Edgar Varèse, Density 21.5 (1936)`
@@ -505,7 +505,7 @@ If the above command had used the **-o** rather than the **-i** option,
 all of the rests and barlines would have been omitted from the output.
 Otherwise, the output would be the same as given above.
 
-A more musically useful partitioning of Varèse\'s work might be based on
+A more musically useful partitioning of Varèse's work might be based on
 slur markings. The following command uses open- and closed-slur markings
 to demarcate the contextual outputs; (note the need to escape the
 parentheses since they are regular expression metacharacters).

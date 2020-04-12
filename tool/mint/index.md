@@ -23,7 +23,7 @@ successive pitches. Output pitch intervals are expressed as a diatonic
 interval size plus interval quality; a leading plus or minus sign
 indicates whether the interval is ascending or descending. By way of
 illustration, **mint** will change a sequence of `**pitch` data tokens
-\-- such as *C4, A4, E4* \-- to the interval sequence *+M6, -P4.* Each
+&mdash; such as *C4, A4, E4* &mdash; to the interval sequence *+M6, -P4.* Each
 pitch-related input spine is transformed to a corresponding `**mint`
 output spine.
 
@@ -32,7 +32,7 @@ The **mint** command determines melodic intervals only for pitch tokens
 determined by **mint.**
 
 No interval is calculated for the first pitch token; initial pitches are
-simply echoed in the output \-- appearing in square brackets. These
+simply echoed in the output &mdash; appearing in square brackets. These
 initial pitches are referred to as *offset* values, since they indicate
 the starting value from which subsequent intervals are calculated.
 Offset values can prove useful in attempting to reconstruct the input,

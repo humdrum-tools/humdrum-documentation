@@ -5,7 +5,7 @@ permalink: /tool/humdrum/index.html
 
 ### COMMAND
 
-**humdrum** \-- general syntax checker for Humdrum files
+**humdrum** &mdash; general syntax checker for Humdrum files
 
 ------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ option is invoked.
 
 Formally, a Humdrum representation may be defined as any ASCII input
 containing zero or more *comments, data records* or *interpretations*
-\-- with the restriction that no *data records* or *local comments*
+&mdash; with the restriction that no *data records* or *local comments*
 appear without a prior *exclusive interpretation,* and that the file
 maintain a coherent *spine* organization.
 
@@ -63,7 +63,7 @@ The following table defines some of the pertinent Humdrum terminology.
 >   *spine-path indicator*       one of the following five *interpretations*: \*+ \*- \*v \*\^ \*x
 >   *null token*                 the period (.) either alone on a single *record* or
 >                                separated from other characters by tabs
->   *spine*                      a column of information \-- including *data records, local*
+>   *spine*                      a column of information &mdash; including *data records, local*
 >                                *comments*, and *interpretations.*
 >   ---------------------------- ------------------------------------------------------------------------
 >

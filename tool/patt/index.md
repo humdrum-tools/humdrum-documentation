@@ -191,7 +191,7 @@ Note however, that the first instance of the pattern (beginning at line
 2) was not identified due to the interruption of the common system
 barline in the fourth line. The barlines can be ignored by invoking the
 **-s** option, followed by a regular expression that uniquely identifies
-the records to be skipped \-- in this case the equals sign. The command:
+the records to be skipped &mdash; in this case the equals sign. The command:
 
 > ` patt -s = -f template target`
 

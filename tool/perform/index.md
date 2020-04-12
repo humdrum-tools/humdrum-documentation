@@ -59,7 +59,7 @@ numbered measure corresponding to the current measure minus
 \<*number*\>, and continue playback from the beginning of that measure.
 The **perform** commands for moving forward and backward should be
 avoided when inputs contain unnumbered measures or highly unusual
-orderings \-- such as reverse-order measure numbers.
+orderings &mdash; such as reverse-order measure numbers.
 
 The tempo can be modified interactively by using the greater-than (`>`)
 and less-than (`<`) signs to increase or decrease the tempo
@@ -94,7 +94,7 @@ If the search is successful, playback continues immediately from the new
 score position. If the search is unsuccessful, playback continues from
 the current score position.
 
-In rare circumstances, ciphers (stuck notes) can occur in MIDI tasks \--
+In rare circumstances, ciphers (stuck notes) can occur in MIDI tasks &mdash;
 such as where an intermittent MIDI cable fails to convey a \"note-off\"
 instruction to an active synthesizer. The **p** command (\"panic\")
 turns off all active notes. In addition, a \"power panic\" command
@@ -185,7 +185,7 @@ default tempo of 66 quarter-notes per minute.
 
 The **-v** option allows the user to specify a key-velocity default.
 MIDI instruments normally treat key-velocity data as dynamic or accent
-information \-- thus higher key-velocity values are associated with
+information &mdash; thus higher key-velocity values are associated with
 accented notes. Permissible key-velocity values range between 0 and 127.
 The **-v** option can be used to set the default key-velocity for key-on
 commands with unspecified key-velocities. In the absence of the **-v**

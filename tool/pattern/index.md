@@ -5,7 +5,7 @@ permalink: /tool/pattern/index.html
 
 ### COMMAND
 
-**pattern** \-- exhaustively locate and count user-defined patterns in a
+**pattern** &mdash; exhaustively locate and count user-defined patterns in a
 Humdrum input
 
 ------------------------------------------------------------------------
@@ -27,7 +27,7 @@ The pattern sought must be defined as a separate \"template\" file. The
 template file is identified using the **-f** command option.
 
 Pattern templates consist of one or more records. Each record specifies
-a standard UNIX regular expression \-- followed by an optional
+a standard UNIX regular expression &mdash; followed by an optional
 \"record-count metacharacter.\" The input is scanned from beginning to
 end, in order to find passages that match the defined template. In the
 simplest case, a match is deemed to take place when successive records
@@ -37,7 +37,7 @@ the matching input need not be the same as the number of records in the
 template.
 
 Consider, first, a simple example where the template consists of the
-numbers 1, 2, 3 \-- each on a separate line:
+numbers 1, 2, 3 &mdash; each on a separate line:
 
 > ``
 >
@@ -108,7 +108,7 @@ In the **pattern** command, the regular expression counting
 metacharacters may *also* be used to specify the *number of successive
 records* that match the regular expression. We refer to this use as
 \"record-count metacharacters.\" Record-count metacharacters are
-specified by following the regular expression with a tab \-- followed by
+specified by following the regular expression with a tab &mdash; followed by
 either +, \*, or ?. For example, consider the following **pattern**
 template: ``
 
@@ -170,8 +170,8 @@ the **pattern** command will produce the following output:
 
 The patterns are: 1-2-3-4-5, 1-2-2-3-4-5, 1-2-3-3-4-5, 1-2-3-4-4-5 and
 1-2-3-4-5-5. Note that the entire input line is used for matching
-purposes. It doesn\'t matter, for example, whether the number \"2\" is
-matched in the left spine or the right spine \-- only that the number
+purposes. It doesn't matter, for example, whether the number \"2\" is
+matched in the left spine or the right spine &mdash; only that the number
 \"2\" is present on a given line. This feature is useful for identifying
 *Klangfarbenmelodie* and other \"threaded\" or \"diagonal\" patterns
 that can be traced between spines. If the user wishes to avoid such
@@ -209,7 +209,7 @@ skipping null data tokens, barlines, marked embellishment tones, or
 other types of data.
 
 The **pattern** command does not directly implement an \"echo\" option
-\-- such as provided by the related **patt** command. With the **-y**
+&mdash; such as provided by the related **patt** command. With the **-y**
 option, however, **pattern** will produce an output suitable for use
 with the Humdrum **yank** command. This permits the user to extract the
 appropriate matching passages from the input.

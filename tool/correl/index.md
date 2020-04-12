@@ -6,7 +6,7 @@ permalink: /tool/correl/index.html
 
 ### COMMAND
 
-**correl** \-- measure the numerical similarity between two Humdrum
+**correl** &mdash; measure the numerical similarity between two Humdrum
 spines
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ spines
 
 The **correl** command measures the degree of parametric (numerical)
 similarity between corresponding values in two Humdrum spines. More
-precisely, **correl** calculates Pearson\'s coefficient of correlation
+precisely, **correl** calculates Pearson's coefficient of correlation
 for paired tokens containing numerical data.
 
 Two modes of operation are provided. In the *single input mode,* a
@@ -29,8 +29,8 @@ single file containing two equal-length spines is processed. In this
 mode, the output from **correl** consists of a single number indicating
 the linear correlation between the two spines of numerical data.
 
-In the *dual input mode,* two single-spine numerical inputs \-- called
-the *template file* and the *input file* \-- are specified by the user.
+In the *dual input mode,* two single-spine numerical inputs &mdash; called
+the *template file* and the *input file* &mdash; are specified by the user.
 Normally, the template file is considerably shorter than the input file.
 In this mode, the output consists of a spine of numerical information
 (`**correl`) that reflects the momentary similarity between the template
@@ -41,10 +41,10 @@ correlational similarity determined at each point.
 In both *single input* and *dual input* modes, output numerical values
 range between +1 and -1. Correlation values reflect the degree to which
 two sets of numerical values rise and fall in synchrony. The maximum
-output value is +1 \-- indicating that the two sets of numbers are
+output value is +1 &mdash; indicating that the two sets of numbers are
 perfectly related according to a linear relationship. -nimum output
 value of -1 indicates that the two sets of numbers are perfectly
-out-of-phase \-- one set of numbers rises while the other set falls by a
+out-of-phase &mdash; one set of numbers rises while the other set falls by a
 proportional magnitude, and vice versa. A correlation value of zero
 indicates that there is no linear relationship between the two sets of
 numbers.
@@ -106,7 +106,7 @@ The **correl** command provides the following options:
 >
 Options are specified in the command line.
 
-The **-f** option is used to specify an independent *template file* \--
+The **-f** option is used to specify an independent *template file* &mdash;
 and so invokes the *dual input mode.*
 
 The **-p** option can be used to set the precision of the output values
@@ -118,7 +118,7 @@ user-defined regular-expression. Input data records matching this
 expression are not processed.
 
 Correlation values can be calculated only where all numerical data are
-arranged as matched pairs \-- that is, the input conforms to the
+arranged as matched pairs &mdash; that is, the input conforms to the
 \"matched pairs criterion.\" For example, the following two spines
 illustrate numerical data matching. The number of numerical data values
 in both spines are matched throughout the inputs: ``
@@ -216,7 +216,7 @@ The second example illustrates the dual input mode. The target input
 consists of a single spine (labelled ` **input)` containing mixed
 alphabetic and numerical values. (This input file is shown below as the
 left-most column.) The template file consists of the numerical sequence:
-1, 2, 3 \-- mixed with the letters a, b, c. (This file is shown as the
+1, 2, 3 &mdash; mixed with the letters a, b, c. (This file is shown as the
 middle column below.) Note that the non-numeric characters in both the
 input and template files have no influence on the operation of
 **correl.** The third (output) spine is produced by the following
@@ -335,8 +335,8 @@ coordination of numerical data: ``
 >   ------- -----
 >
 In this case, the correlation value is based on the following numerical
-pairing: 100 \<\--\> 1, 4 \<\--\> 2, 0 \<\--\> 4, -2 \<\--\> 5, -3
-\<\--\> 6. All other numerical values are ignored.
+pairing: 100 \<&mdash;\> 1, 4 \<&mdash;\> 2, 0 \<&mdash;\> 4, -2 \<&mdash;\> 5, -3
+\<&mdash;\> 6. All other numerical values are ignored.
 
 The final correlation value in this example is calculated on the basis
 of the following coordination of numerical data: ``
@@ -350,7 +350,7 @@ of the following coordination of numerical data: ``
 >   ------- -----
 >
 The corresponding correlation value is based on the following numerical
-pairing: 4 \<\--\> 1, 5 \<\--\> 2, 6 \<\--\> 3, -2 \<\--\> 4, 8 \<\--\>
+pairing: 4 \<&mdash;\> 1, 5 \<&mdash;\> 2, 6 \<&mdash;\> 3, -2 \<&mdash;\> 4, 8 \<&mdash;\>
 5.
 
 ------------------------------------------------------------------------

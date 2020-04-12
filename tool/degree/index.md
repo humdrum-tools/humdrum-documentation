@@ -5,7 +5,7 @@ permalink: /tool/degree/index.html
 
 ### COMMAND
 
-**degree** \-- translate selected Humdrum pitch-related representations
+**degree** &mdash; translate selected Humdrum pitch-related representations
 to absolute scale degree (`**degree`)
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ to absolute scale degree (`**degree`)
 
 The **degree** command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
-`**degree` spines \-- where scale degrees are indicated by the numbers 1
+`**degree` spines &mdash; where scale degrees are indicated by the numbers 1
 (tonic) to 7 (leading tone). Scale degree information can be determined
 only with reference to some prevailing key. For example, the pitch C4 is
 the tonic (1) in the key of C major, but the submediant (6) in the key
@@ -33,7 +33,7 @@ error message and terminates.
 The **degree** command differs from the (related) [**deg**](deg.html)
 command in that it outputs *absolute* (rather than *relative)*
 pitch-height information. Along with the scale degree, the octave number
-is represented \-- the two values being separated by a slash (/). Hence
+is represented &mdash; the two values being separated by a slash (/). Hence
 the token \`1/4\' means the first scale degree (tonic) in octave \`4\'.
 As in the case of [**deg**,](deg.html) plus and minus signs indicate
 whether a pitch has been chromatically raised or lowered. For example,
@@ -96,15 +96,15 @@ tie.
 In the default operation, **degree** outputs non-pitch-related
 signifiers in addition to the degree value. For example, in the key of D
 major, the `**pitch` token \"G5zzz\" will result in the output
-\"4/5zzz\" \-- that is, after translating G5 to 4/5, the \"zzz\"
+\"4/5zzz\" &mdash; that is, after translating G5 to 4/5, the \"zzz\"
 signifiers are retained in the output. For some applications, echoing
 non-pitch-related signifiers in the output is useful. However, in other
-situations, the result can prove confusing \-- especially, when the
+situations, the result can prove confusing &mdash; especially, when the
 non-pitch-related signifiers are numbers. Consider the case of the
 `**kern` token \"4f\#\" in the key of D minor; after translating
 \``f#`\' to \``3+/4`\' (i.e. raised third degree in octave 4), the
 preceding non-pitch-related signifier \``4`\' will also be output, hence
-the value `43+/4` \-- which may cause confusion.
+the value `43+/4` &mdash; which may cause confusion.
 
 The **-x** option is useful for eliminating non-pitch-related signifiers
 from the output. For most `**kern` inputs, the **-x** option is
@@ -115,7 +115,7 @@ recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **degree.** The input
-contains four pitch-related spines \-- one of which (`**MIDI`) cannot be
+contains four pitch-related spines &mdash; one of which (`**MIDI`) cannot be
 processed by **degree.** In addition, there is one non-pitch-related
 spines (`**embell`). ``
 
@@ -131,7 +131,7 @@ spines (`**embell`). ``
 >   .                        .          /-62/       .           .           .
 >   8dd-                     B2         /70/        mi3         E4          ct
 >   .                        .          /-70/       .           .           .
->   8d\--                    Cis4       /61/        r           F4          sus
+>   8d&mdash;                    Cis4       /61/        r           F4          sus
 >   .                        .          /-61/       .           .           .
 >   =2                       =2         =2          =2          =2          =2
 >   \[4a-                    r          .           mi\~b3      F4 A4       .

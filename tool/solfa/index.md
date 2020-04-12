@@ -20,8 +20,8 @@ to tonic solfa syllables (`**solfa`)
 
 The **solfa** command transforms various pitch-related inputs to the
 corresponding tonic solfa syllables. The command outputs one or more
-Humdrum `**solfa` spines \-- where pitches are designated by the
-syllables *do, re, mi, fa, so, la,* and *ti* \-- or their chromatic
+Humdrum `**solfa` spines &mdash; where pitches are designated by the
+syllables *do, re, mi, fa, so, la,* and *ti* &mdash; or their chromatic
 alterations: *di, da, ri, ra,* etc. (see below). Tonic solfa syllables
 can be determined only with reference to some prevailing key. For
 example, the pitch C is the tonic (`do`) in the key of C major, but the
@@ -56,7 +56,7 @@ without regard to major or minor *mode.* For example, in the key of C
 major, **deg** and **degree** will characterize A-flat as a lowered
 sixth scale degree, whereas the same pitch will be a normal sixth scale
 degree in the key of C minor. In the case of **solfa,** the A-flat will
-be characterized as `le` \-- whether or not the key is C major or C
+be characterized as `le` &mdash; whether or not the key is C major or C
 minor. As in the case of **deg** and **degree**, the amount of chromatic
 alteration is not represented; once a pitch is \"raised,\" raising it
 further will not change the output representation. For example, where
@@ -106,7 +106,7 @@ tied notes; the output coincides with the first note of the tie.
 
 In the default operation, **solfa** outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D, the
-`**kern` token \"4Gz\" will result in the output \"4faz\" \-- that is,
+`**kern` token \"4Gz\" will result in the output \"4faz\" &mdash; that is,
 after translating G to fa, the \"4\...z\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
@@ -118,7 +118,7 @@ signifiers from the output.
 ### EXAMPLES
 
 The following example illustrates the use of **solfa.** The input
-contains four pitch-related spines \-- one of which (`**MIDI`) cannot be
+contains four pitch-related spines &mdash; one of which (`**MIDI`) cannot be
 processed by **solfa.** In addition, there is one non-pitch-related
 spines (`**embell`). ``
 
@@ -134,7 +134,7 @@ spines (`**embell`). ``
 >   .                       .          /-62/       .           .           .
 >   8dd-                    B2         /70/        mi3         E4          ct
 >   .                       .          /-70/       .           .           .
->   8d\--                   Cis4       /61/        r           F4          sus
+>   8d&mdash;                   Cis4       /61/        r           F4          sus
 >   .                       .          /-61/       .           .           .
 >   =2                      =2         =2          =2          =2          =2
 >   \[4a-                   r          .           mi\_b3      F4 A4       .

@@ -5,7 +5,7 @@ permalink: /tool/infot/index.html
 
 ### COMMAND
 
-**infot** \-- calculate information theory measures for Humdrum inputs
+**infot** &mdash; calculate information theory measures for Humdrum inputs
 
 ------------------------------------------------------------------------
 
@@ -179,12 +179,12 @@ indicates the average information conveyed per state (in bits). The
 fourth output line indicates the theoretical maximum average information
 per state that could be communicated by a system having four states. The
 third line indicates the maximum possible information that could be
-communicated in a message of the same length as the input \-- given the
+communicated in a message of the same length as the input &mdash; given the
 theoretical maximum average information. (Since there are 12 data
 records, this value is simply 12 x 2 bits, or 24 bits.) The second
 output line gives the actual total information for the given input
 message. (This is always less-than, or equal-to the maximum theoretical
-value.) The final line indicates the amount of redundancy \-- as a
+value.) The final line indicates the amount of redundancy &mdash; as a
 percentage. That is, this value contrasts the actual information
 conveyed with the theoretical maximum.
 
@@ -232,7 +232,7 @@ input, the following output is sent to the file `replace`:
 Although these commands may appear somewhat cryptic, they merely
 instruct the Humdrum stream editor [(**humsed**)](humsed.html) to
 replace all occurrences of the five data tokens (in any input file) by
-the corresponding numerical values \-- in this case, values that
+the corresponding numerical values &mdash; in this case, values that
 represent the number of bits of information.
 
 The following file (called `input`) contains the message of interest: ``
@@ -295,7 +295,7 @@ message consisting of 8 items would be 8 x 2.322 or 18.58 bits. This
 suggests that this message is considerably less banal, (less redundant
 or more unique) than a typical message from the original repertoire. In
 particular, the occurrence of the state \`XYZ\' has a low probability of
-occurrence \-- and is likely to be a distinctive feature of this
+occurrence &mdash; and is likely to be a distinctive feature of this
 passage.
 
 In the above examples, only simple (zeroth-order) probabilities have

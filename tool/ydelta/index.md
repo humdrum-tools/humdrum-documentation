@@ -127,7 +127,7 @@ when the **-o** option is invoked. Successive numerical values indicate
 the differences between the lowest value and the remaining numeric
 values in the other spines. For example, the first input record contains
 the ` **semits` values -7, 0, and 9. The lowest of these values is -7
-\-- which is placed in square brackets. The next lowest value (0) is 7
+&mdash; which is placed in square brackets. The next lowest value (0) is 7
 units above the lowest value, whereas the value 9 is 16 units above the
 lowest value. These other values are sorted and printed in ascending
 order in the output token. Notice that the output is typically in the

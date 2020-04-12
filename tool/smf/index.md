@@ -58,7 +58,7 @@ minute.
 
 The **-v** option allows the user to specify a key-velocity default.
 MIDI instruments normally treat key-velocity data as dynamic or accent
-information \-- thus higher key-velocity values are associated with
+information &mdash; thus higher key-velocity values are associated with
 accented notes. Permissible key-velocity values range between 0
 (slowest) and 127 (fastest). The **-v** option can be used to set the
 default key-velocity for key-on commands with unspecified

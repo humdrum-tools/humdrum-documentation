@@ -50,7 +50,7 @@ repeats the name of an interpretation that is already active for a given
 spine. If a spine has not been terminated, there is frequently little
 need to indicate (again) the active interpretation for a given spine.
 (An exception occurs when the user wants the data to be processed as
-discontinuous \-- such as avoiding calculating pitch intervals between
+discontinuous &mdash; such as avoiding calculating pitch intervals between
 the last note of one piece and the first note of a subsequent piece.)
 
 ------------------------------------------------------------------------

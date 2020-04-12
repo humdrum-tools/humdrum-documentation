@@ -77,14 +77,14 @@ The **-t** ensures that only a single output value is given for tied
 
 In the default operation, **semits** outputs non-pitch-related
 signifiers in addition to the semits value. For example, the `**pitch`
-token \"A5zzz\" will result in the output \"21zzz\" \-- that is, after
+token \"A5zzz\" will result in the output \"21zzz\" &mdash; that is, after
 translating A5 to 21 semits, the \"zzz\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
-confusing \-- especially, when the non-pitch-related signifiers are
+confusing &mdash; especially, when the non-pitch-related signifiers are
 numbers. Consider the case of the `**kern` token \"8aa\"; after
 translating \`aa\' to 21 semits, the non-pitch-related signifier \`8\'
-will also be output, hence the value 821 \-- which will undoubtedly
+will also be output, hence the value 821 &mdash; which will undoubtedly
 cause confusion. The **-x** option is useful for eliminating
 non-pitch-related signifiers from the output. For most `**kern` inputs,
 the **-x** option is recommended.
@@ -94,7 +94,7 @@ the **-x** option is recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **semits.** The input
-contains six pitch-related spines \-- two of which (`**deg` and
+contains six pitch-related spines &mdash; two of which (`**deg` and
 `**cocho`) cannot be processed by **semits.** In addition, there are two
 non-pitch-related spines (`**embell` and `**metpos`). ``
 

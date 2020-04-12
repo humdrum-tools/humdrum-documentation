@@ -5,7 +5,7 @@ permalink: /tool/freq/index.html
 
 ### COMMAND
 
-**freq** \-- translate selected Humdrum pitch-related representations to
+**freq** &mdash; translate selected Humdrum pitch-related representations to
 frequency
 
 ------------------------------------------------------------------------
@@ -76,14 +76,14 @@ tie.
 
 In the default operation, **freq** outputs non-pitch-related signifiers
 in addition to the frequency value. For example, the `**pitch` token
-\"A6zzz\" will result in the output \"1760.00zzz\" \-- that is, after
+\"A6zzz\" will result in the output \"1760.00zzz\" &mdash; that is, after
 translating A6 to 1760.00 hertz, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
-prove confusing \-- especially, when the non-pitch-related signifiers
+prove confusing &mdash; especially, when the non-pitch-related signifiers
 are numbers. Consider the case of the `**kern` token \"8aaa\"; after
 translating \`aaa\' to 1760.00 hertz, the non-pitch-related signifier
-\`8\' will also be output, hence the value 81760.00 \-- which will
+\`8\' will also be output, hence the value 81760.00 &mdash; which will
 undoubtedly cause confusion. The **-x** option is useful for eliminating
 non-pitch-related signifiers from the output. For most `**kern` inputs,
 the **-x** option is recommended.
@@ -93,7 +93,7 @@ the **-x** option is recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **freq.** The input
-contains six pitch-related spines \-- one of which (`**deg`) cannot be
+contains six pitch-related spines &mdash; one of which (`**deg`) cannot be
 processed by **freq.** In addition, there are two non-pitch-related
 spines (`**embell` and `**metpos`). ``
 

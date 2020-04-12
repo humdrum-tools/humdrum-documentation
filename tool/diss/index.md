@@ -22,7 +22,7 @@ spectra
 The **diss** command measures the degree of sensory dissonance for
 successive acoustic moments. It outputs a single
 [\*\*diss](../representations/diss.rep.html) spine containing numerical
-values \-- where higher values indicate greater amounts of sensory
+values &mdash; where higher values indicate greater amounts of sensory
 dissonance. The input must consist of one or more
 [\*\*spect](../representations/spect.rep.html) spines. Each data record
 in the \*\*spect input represents a concurrent set of discrete

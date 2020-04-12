@@ -29,7 +29,7 @@ selected, the order of data records is randomized. In this mode, each
 output record is identical to some input record; only the order of the
 output records is changed. When the **-t** mode is selected, the order
 of data tokens within each record is randomized. In this mode, the order
-of the input records is preserved \-- however, data tokens between
+of the input records is preserved &mdash; however, data tokens between
 concurrent spines are randomly swapped. The **-t** mode will also cause
 sub-tokens within multiple stops to be rearranged within the data token.
 However, if the **-m** option is concurrently invoked, then sub-tokens
@@ -72,10 +72,10 @@ The **scramble** command provides the following option:
 >   **-h**        displays a help screen summarizing the command syntax
 >   **-m**        redistribute subtokens in multiple stops across all tokens in the
 >                 record; used in conjunction with **-t** only
->   **-r**        scramble the order of data records; don\'t scramble data tokens
->   -s *regexp*   skip; don\'t scramble records matching *regexp*;
+>   **-r**        scramble the order of data records; don't scramble data tokens
+>   -s *regexp*   skip; don't scramble records matching *regexp*;
 >                 leave matching records intact, and in the same position
->   **-t**        scramble data tokens within each record; don\'t scramble record order
+>   **-t**        scramble data tokens within each record; don't scramble record order
 >   ------------- -----------------------------------------------------------------------
 >
 Options are specified in the command line. One of either the *record

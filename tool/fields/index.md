@@ -6,7 +6,7 @@ permalink: /tool/fields/index.html
 
 ### COMMAND
 
-**fields** \-- list spine/field structure of a Humdrum file
+**fields** &mdash; list spine/field structure of a Humdrum file
 
 ------------------------------------------------------------------------
 

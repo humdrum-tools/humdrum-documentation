@@ -6,7 +6,7 @@ permalink: /tool/hum2fin/index.html
 
 ### COMMAND
 
-**hum2fin** \-- convert a humdrum file into a Finale enigma-format file
+**hum2fin** &mdash; convert a humdrum file into a Finale enigma-format file
 (.etf)
 
 ------------------------------------------------------------------------
@@ -22,7 +22,7 @@ permalink: /tool/hum2fin/index.html
 The **hum2fin** command provides the means to viewing humdrum files in
 the \"Finale\" graphical music notation editor by converting the Humdrum
 file into a Finale readable file. It takes a humdrum file as input and
-outputs a file with the same musical data represented in Finale\'s
+outputs a file with the same musical data represented in Finale's
 enigma transportable file format (.etf). The enigma format is an
 ASCII-based file format developed by CodaMusic Technology, developer of
 Finale, which allows finale data to be read by both Macs and PCs.
@@ -69,7 +69,7 @@ interpretation.
 4\. Reference record **hum2fin** reads the reference record !!!OTL and
 puts the text as the title of the music in the enigma file.
 
-5\. Humdrum\'s barline scheme **hum2fin** recognizes and translates the
+5\. Humdrum's barline scheme **hum2fin** recognizes and translates the
 following barline signifiers: ==\|!, ==:!\|, ==:\|!, ==, =!, =\", =-,
 =\', = and = with measure number.
 
@@ -116,8 +116,8 @@ upper-most part is typically represented by the right-most spine.
 -p (output unprocessed spines as textual underlay -not working)
 
 **hum2fin** has the option of processing the non-supported spines as
-\*\*silbe spines. This would enable users to view some spine\'s data as
-lyrics in Finale even if **hum2fin** has yet to support the spine\'s
+\*\*silbe spines. This would enable users to view some spine's data as
+lyrics in Finale even if **hum2fin** has yet to support the spine's
 particular representation. To enable this option, append to the command
 line\"-p\".
 

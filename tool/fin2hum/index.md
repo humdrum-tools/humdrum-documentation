@@ -5,7 +5,7 @@ permalink: /tool/fin2hum/index.html
 
 ### COMMAND
 
-**fin2hum** \-- converts a Finale enigma file (.etf) into a Humdrum file
+**fin2hum** &mdash; converts a Finale enigma file (.etf) into a Humdrum file
 
 ------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ humdrum format. The enigma format is an ASCII-based file format
 developed by CodaMusic Technology, developer of Finale, which allows
 finale data to be read by both Macs and PCs.
 
-As of April 2000, **fin2hum** is able to convert Finale\'s musical data
+As of April 2000, **fin2hum** is able to convert Finale's musical data
 into the following Humdrum representations or interpretations:
 
 1\. \*\*kern representation **fin2hum** supports most kern signifiers,
@@ -36,7 +36,7 @@ pitches \' z \^ ; \~ , \` : W M S u v q articulations and ornaments J, L
 beaming \[ \] - tie ( ) slur { } phrase /, \\\\ stemming \* Supported
 kern signifiers
 
-2\. Humdrum\'s barline scheme Hum2fin recognizes the following barline
+2\. Humdrum's barline scheme Hum2fin recognizes the following barline
 signifiers: ==\|!, ==:!\|, ==:\|!, ==, =!, =\", =-, =\', = and = with
 measure number.
 
