@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- extract'
-permalink: /tool/extract/index.html
+title:		'Humdrum Toolkit Command Reference -- extract'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/extract/index.html
 ---
 
 ### COMMAND

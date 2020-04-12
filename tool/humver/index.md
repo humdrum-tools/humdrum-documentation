@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- humver'
-permalink: /tool/humver/index.html
+title:		'Humdrum Toolkit Command Reference -- humver'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/humver/index.html
 ---
 
 ### COMMAND

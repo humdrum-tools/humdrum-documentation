@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- thru'
-permalink: /tool/thru/index.html
+title:		'Humdrum Toolkit Command Reference -- thru'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/thru/index.html
 ---
 
 ### COMMAND

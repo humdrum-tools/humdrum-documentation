@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- specc'
-permalink: /tool/specc/index.html
+title:		'Humdrum Toolkit Command Reference -- specc'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/specc/index.html
 ---
 
 ### COMMAND

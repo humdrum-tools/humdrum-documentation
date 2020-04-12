@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- synco'
-permalink: /tool/synco/index.html
+title:		'Humdrum Toolkit Command Reference -- synco'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/synco/index.html
 ---
 
 ### COMMAND

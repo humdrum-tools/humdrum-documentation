@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- recode'
-permalink: /tool/recode/index.html
+title:		'Humdrum Toolkit Command Reference -- recode'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/recode/index.html
 ---
 
 

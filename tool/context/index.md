@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- context'
-permalink: /tool/context/index.html
+title:		'Humdrum Toolkit Command Reference -- context'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/context/index.html
 ---
 
 ### COMMAND
@@ -11,7 +13,7 @@ permalink: /tool/context/index.html
 
 ### SYNOPSIS
 
-` context [-b regexp] [-d string] [-e regexp] [-i regexp] [-n n] [-o regexp] [-p n] [inputfile ...]`
+`context [-b regexp] [-d string] [-e regexp] [-i regexp] [-n n] [-o regexp] [-p n] [inputfile ...]`
 
 ------------------------------------------------------------------------
 
@@ -33,41 +35,46 @@ record. By way of example, consider a file (named `input`) consisting of
 a single spine whose data records contain the numbers 1 through 6 on
 separate lines: ``
 
->   -------------
->   \*\*numbers
->   1
->   2
->   3
->   4
->   5
->   6
->   \*-
->   -------------
->
+
+```humdrum
+**numbers
+1
+2
+3
+4
+5
+6
+*-
+```
+
 The command
 
-> ` context -n 3 input`
+```bash
+context -n 3 input
+```
 
 will produce the following output: ``
 
->   -------------
->   \*\*numbers
->   1 2 3
->   2 3 4
->   3 4 5
->   4 5 6
->   .
->   .
->   \*-
->   -------------
->
+```humdrum
+**numbers
+1 2 3
+2 3 4
+3 4 5
+4 5 6
+.
+.
+*-
+```
+
 Notice that the output file has been padded with null tokens so that the
 number of output records matches the number of input records. By
 invoking the **-p** option, the padded null tokens can be placed either
 at the beginning or the end of the file, or split between beginning and
 end. For example, the command
 
-> ` context -n 3 -p 3 input`
+```bash
+context -n 3 -p 3 input
+```
 
 will place the trailing null tokens in the above example at the
 beginning of the output. The **-p** option defaults to the value 0.
@@ -76,7 +83,9 @@ If null tokens are present in the input, they remain in place, yet do
 not affect the congealed data records. For example, if a null token was
 present between the numbers 1 and 2 in the above input, the command
 
-> ` context -n 4 -p 1 input`
+```bash
+context -n 4 -p 1 input
+```
 
 would produce an output beginning with a single padded null token: ``
 
@@ -615,12 +624,9 @@ The **-b** and **-e** options are mutually exclusive with the **-n**,
 
 ------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide19.html#The_context_Command)
+-   [**Pertinent description in the Humdrum User Guide**](../guide19.html#The_context_Command)
 -   [**Index to Humdrum Commands**](../commands.toc.html)
 -   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
 
-\
-\
+

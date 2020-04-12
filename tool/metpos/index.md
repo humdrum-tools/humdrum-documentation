@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- metpos'
-permalink: /tool/metpos/index.html
+title:		'Humdrum Toolkit Command Reference -- metpos'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/metpos/index.html
 ---
 
 ### COMMAND

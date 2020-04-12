@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- vox'
-permalink: /tool/vox/index.html
+title:		'Humdrum Toolkit Command Reference -- vox'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/vox/index.html
 ---
 
 ### COMMAND

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- encode'
-permalink: /tool/encode/index.html
+title:		'Humdrum Toolkit Command Reference -- encode'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/encode/index.html
 ---
 
 ### COMMAND

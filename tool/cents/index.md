@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- cents'
-permalink: /tool/cents/index.html
+title:		'Humdrum Toolkit Command Reference -- cents'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/cents/index.html
 ---
 
 

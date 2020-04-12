@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- patt'
-permalink: /tool/patt/index.html
+title:		'Humdrum Toolkit Command Reference -- patt'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/patt/index.html
 ---
 
 ### COMMAND

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- pattern'
-permalink: /tool/pattern/index.html
+title:		'Humdrum Toolkit Command Reference -- pattern'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/pattern/index.html
 ---
 
 ### COMMAND

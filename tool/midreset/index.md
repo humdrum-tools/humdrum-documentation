@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- midreset'
-permalink: /tool/midireset/index.html
+title:		'Humdrum Toolkit Command Reference -- midreset'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/midireset/index.html
 ---
 
 

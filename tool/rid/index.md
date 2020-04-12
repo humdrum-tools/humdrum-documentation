@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- rid'
-permalink: /tool/rid/index.html
+title:		'Humdrum Toolkit Command Reference -- rid'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/rid/index.html
 ---
 
 ### COMMAND

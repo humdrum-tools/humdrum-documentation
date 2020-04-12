@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- cocho'
-permalink: /tool/cocho/index.html
+title:		'Humdrum Toolkit Command Reference -- cocho'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/cocho/index.html
 ---
 
 

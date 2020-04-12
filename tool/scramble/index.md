@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- scramble'
-permalink: /tool/scramble/index.html
+title:		'Humdrum Toolkit Command Reference -- scramble'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/scramble/index.html
 ---
 
 ### COMMAND

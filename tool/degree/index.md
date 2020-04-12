@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- degree'
-permalink: /tool/degree/index.html
+title:		'Humdrum Toolkit Command Reference -- degree'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/degree/index.html
 ---
 
 ### COMMAND

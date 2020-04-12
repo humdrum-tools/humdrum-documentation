@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- strophe'
-permalink: /tool/strophe/index.html
+title:		'Humdrum Toolkit Command Reference -- strophe'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/strophe/index.html
 ---
 
 ### COMMAND

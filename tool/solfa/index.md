@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- solfa'
-permalink: /tool/solfa/index.html
+title:		'Humdrum Toolkit Command Reference -- solfa'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/solfa/index.html
 ---
 
 ### COMMAND

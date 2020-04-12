@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- ditto'
-permalink: /tool/ditto/index.html
+title:		'Humdrum Toolkit Command Reference -- ditto'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/ditto/index.html
 ---
 
 ### COMMAND

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- ekern'
-permalink: /tool/ekern/index.html
+title:		'Humdrum Toolkit Command Reference -- ekern'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/ekern/index.html
 ---
 
 ### COMMAND

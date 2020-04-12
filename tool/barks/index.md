@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- barks'
-permalink: /tool/barks/index.html
+title:		'Humdrum Toolkit Command Reference -- barks'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/barks/index.html
 ---
 
 

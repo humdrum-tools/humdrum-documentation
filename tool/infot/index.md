@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- infot'
-permalink: /tool/infot/index.html
+title:		'Humdrum Toolkit Command Reference -- infot'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/infot/index.html
 ---
 
 ### COMMAND

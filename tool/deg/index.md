@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- deg'
-permalink: /tool/deg/index.html
+title:		'Humdrum Toolkit Command Reference -- deg'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/deg/index.html
 ---
 
 

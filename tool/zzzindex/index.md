@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- Command Index'
-permalink: /tool/xxxxxx/index.html
+title:		'Humdrum Toolkit Command Reference -- Command Index'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/xxxxxx/index.html
 ---
 
 Humdrum Command Reference

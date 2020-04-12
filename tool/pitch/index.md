@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- pitch'
-permalink: /tool/pitch/index.html
+title:		'Humdrum Toolkit Command Reference -- pitch'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/pitch/index.html
 ---
 
 ### COMMAND

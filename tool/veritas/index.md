@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- veritas'
-permalink: /tool/veritas/index.html
+title:		'Humdrum Toolkit Command Reference -- veritas'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/veritas/index.html
 ---
 
 ### COMMAND

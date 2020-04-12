@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- perform'
-permalink: /tool/perform/index.html
+title:		'Humdrum Toolkit Command Reference -- perform'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/perform/index.html
 ---
 
 ### COMMAND

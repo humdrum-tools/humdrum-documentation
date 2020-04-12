@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- smf'
-permalink: /tool/smf/index.html
+title:		'Humdrum Toolkit Command Reference -- smf'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/smf/index.html
 ---
 
 ### COMMAND

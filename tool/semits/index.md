@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- semits'
-permalink: /tool/semits/index.html
+title:		'Humdrum Toolkit Command Reference -- semits'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/semits/index.html
 ---
 
 ### COMMAND

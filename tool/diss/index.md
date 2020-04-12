@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- diss'
-permalink: /tool/diss/index.html
+title:		'Humdrum Toolkit Command Reference -- diss'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/diss/index.html
 ---
 
 

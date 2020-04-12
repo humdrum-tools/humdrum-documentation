@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- pf'
-permalink: /tool/pf/index.html
+title:		'Humdrum Toolkit Command Reference -- pf'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/pf/index.html
 ---
 
 

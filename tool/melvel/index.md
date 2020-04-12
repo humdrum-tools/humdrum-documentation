@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- melvel'
-permalink: /tool/melvel/index.html
+title:		'Humdrum Toolkit Command Reference -- melvel'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/melvel/index.html
 ---
 
 ### COMMAND

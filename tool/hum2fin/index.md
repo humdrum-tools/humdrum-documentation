@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- hum2fin'
-permalink: /tool/hum2fin/index.html
+title:		'Humdrum Toolkit Command Reference -- hum2fin'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/hum2fin/index.html
 ---
 
 

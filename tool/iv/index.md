@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- iv'
-permalink: /tool/iv/index.html
+title:		'Humdrum Toolkit Command Reference -- iv'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/iv/index.html
 ---
 
 

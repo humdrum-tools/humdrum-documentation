@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- pcset'
-permalink: /tool/pcset/index.html
+title:		'Humdrum Toolkit Command Reference -- pcset'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/pcset/index.html
 ---
 
 ### COMMAND

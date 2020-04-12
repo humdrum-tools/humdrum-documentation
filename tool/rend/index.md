@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- rend'
-permalink: /tool/rend/index.html
+title:		'Humdrum Toolkit Command Reference -- rend'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/rend/index.html
 ---
 
 ### COMMAND

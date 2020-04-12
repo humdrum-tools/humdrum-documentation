@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- freq'
-permalink: /tool/freq/index.html
+title:		'Humdrum Toolkit Command Reference -- freq'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/freq/index.html
 ---
 
 ### COMMAND

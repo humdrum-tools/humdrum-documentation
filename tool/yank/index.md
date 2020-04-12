@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- yank'
-permalink: /tool/yank/index.html
+title:		'Humdrum Toolkit Command Reference -- yank'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/yank/index.html
 ---
 
 

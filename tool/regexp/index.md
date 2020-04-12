@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- regexp'
-permalink: /tool/regexp/index.html
+title:		'Humdrum Toolkit Command Reference -- regexp'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/regexp/index.html
 ---
 
 

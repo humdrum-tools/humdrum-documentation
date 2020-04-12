@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- key'
-permalink: /tool/key/index.html
+title:		'Humdrum Toolkit Command Reference -- key'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/key/index.html
 ---
 
 

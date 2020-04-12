@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- reihe'
-permalink: /tool/reihe/index.html
+title:		'Humdrum Toolkit Command Reference -- reihe'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/reihe/index.html
 ---
 
 

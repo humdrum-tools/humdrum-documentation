@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- dur'
-permalink: /tool/dur/index.html
+title:		'Humdrum Toolkit Command Reference -- dur'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/dur/index.html
 ---
 
 

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- nf'
-permalink: /tool/nf/index.html
+title:		'Humdrum Toolkit Command Reference -- nf'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/nf/index.html
 ---
 
 ### COMMAND

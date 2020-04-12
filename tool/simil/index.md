@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- simil'
-permalink: /tool/simil/index.html
+title:		'Humdrum Toolkit Command Reference -- simil'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/simil/index.html
 ---
 
 ### COMMAND

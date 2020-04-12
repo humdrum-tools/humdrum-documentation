@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- kern'
-permalink: /tool/kern/index.html
+title:		'Humdrum Toolkit Command Reference -- kern'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/kern/index.html
 ---
 
 

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- fade'
-permalink: /tool/fade/index.html
+title:		'Humdrum Toolkit Command Reference -- fade'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/fade/index.html
 ---
 
 ### COMMAND

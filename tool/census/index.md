@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- census'
-permalink: /tool/census/index.html
+title:		'Humdrum Toolkit Command Reference -- census'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/census/index.html
 ---
 
 

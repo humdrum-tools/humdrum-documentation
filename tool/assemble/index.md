@@ -1,7 +1,9 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- assemble'
-sidebar: main_sidebar
-permalink: /tool/assemble/index.html
+title:		'Humdrum Toolkit Command Reference -- assemble'
+author:		David Huron
+sidebar:	main_sidebar
+vim:		ft=html
+permalink:	/tool/assemble/index.html
 ---
 
 ### COMMAND

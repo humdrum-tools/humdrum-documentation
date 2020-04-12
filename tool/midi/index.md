@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- midi'
-permalink: /tool/midi/index.html
+title:		'Humdrum Toolkit Command Reference -- midi'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/midi/index.html
 ---
 
 ### COMMAND

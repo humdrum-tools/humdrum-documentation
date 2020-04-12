@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- ydelta'
-permalink: /tool/ydelta/index.html
+title:		'Humdrum Toolkit Command Reference -- ydelta'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/ydelta/index.html
 ---
 
 ### COMMAND

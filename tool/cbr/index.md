@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- cbr'
-permalink: /tool/cbr/index.html
+title:		'Humdrum Toolkit Command Reference -- cbr'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/cbr/index.html
 ---
 
 ------------------------------------------------------------------------

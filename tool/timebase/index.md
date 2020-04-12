@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- timebase'
-permalink: /tool/timebase/index.html
+title:		'Humdrum Toolkit Command Reference -- timebase'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/timebase/index.html
 ---
 
 ### COMMAND

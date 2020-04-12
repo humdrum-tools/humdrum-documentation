@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- xdelta'
-permalink: /tool/xdelta/index.html
+title:		'Humdrum Toolkit Command Reference -- xdelta'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/xdelta/index.html
 ---
 
 ### COMMAND

@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- fields'
-permalink: /tool/fields/index.html
+title:		'Humdrum Toolkit Command Reference -- fields'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/fields/index.html
 ---
 
 

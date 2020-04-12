@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- tacet'
-permalink: /tool/tacet/index.html
+title:		'Humdrum Toolkit Command Reference -- tacet'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/tacet/index.html
 ---
 
 ### COMMAND

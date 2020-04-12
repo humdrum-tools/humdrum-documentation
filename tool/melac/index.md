@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- melac'
-permalink: /tool/melac/index.html
+title:		'Humdrum Toolkit Command Reference -- melac'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/melac/index.html
 ---
 
 

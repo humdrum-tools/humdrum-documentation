@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- urrhythm'
-permalink: /tool/urrhythm/index.html
+title:		'Humdrum Toolkit Command Reference -- urrhythm'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/urrhythm/index.html
 ---
 
 ### COMMAND

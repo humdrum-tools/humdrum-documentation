@@ -14,6 +14,10 @@
 #                   [**census**](/tool/census)
 #                info
 #                   <span class="tool">census</span>
+#                and
+#                   [**census**](census.html)
+#                into
+#                   <span class="tool">census</span>
 #
 
 use strict;
@@ -74,14 +78,18 @@ sub processFile {
 ##      <span class="tool">census</span>
 ##   and
 ##      [**census**](/tool/census)
-##   info
+##   into
 ##      <span class="tool">census</span>
-##
+##   and
+##      [**census**](census.html)
+##   into
+##      <span class="tool">census</span>
 
 sub processLine {
 	my ($line) = @_;
 	for (my $i=0; $i<@commands; $i++) {
 		my $command = $commands[$i];
+		$line =~ s/\[\*\*$command\*\*\]\($command\.html\)/<span class"tool">$command<\/span>/g;
 		$line =~ s/\[\*\*$command\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>/g;
 		$line =~ s/\[\*\*$command,\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\[\*\*$command\.\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;

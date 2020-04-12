@@ -1,6 +1,8 @@
 ---
-title: 'Humdrum Toolkit Command Reference -- Themefinder'
-permalink: /tool/themefinder/index.html
+title:		'Humdrum Toolkit Command Reference -- Themefinder'
+author:		David Huron
+vim:		ft=html
+permalink:	/tool/themefinder/index.html
 ---
 
 Themefinder - General Documentation
