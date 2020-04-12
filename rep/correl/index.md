@@ -11,23 +11,23 @@ Statistical Correlations
 
 ### REPRESENTATION
 
-> **\*\*correl** \-- statistical correlation representation
+> <span class="rep">correl</span> \-- statistical correlation representation
 
 ### DESCRIPTION
 
-> The **\*\*correl** representation is used to characterize the degree
+> The <span class="rep">correl</span> representation is used to characterize the degree
 > of statistical correlation for successive moments. Data tokens for
-> **\*\*correl** decimal values ranging between -1 (perfect negative
+> <span class="rep">correl</span> decimal values ranging between -1 (perfect negative
 > correlation) and 1 (perfect positive correlation).
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**correl` data
+> It is recommended that files containing predominantly <span class="rep">correl</span> data
 > should be given names with the distinguishing \`.cor\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*correl** mappings of
+> The following table summarizes the <span class="rep">correl</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- -------------------------------------------------------
@@ -37,7 +37,7 @@ Statistical Correlations
 > >   \-    minus sign
 > >   ----- -------------------------------------------------------
 > >
-> > *Summary of **\*\*correl** Signifiers*
+> > *Summary of <span class="rep">correl</span> Signifiers*
 
 ### EXAMPLES
 
@@ -69,7 +69,7 @@ Statistical Correlations
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*correl** data as output:
+> The following Humdrum command produces <span class="rep">correl</span> data as output:
 >
 >   -- --------------------------------------- ----------------------------------------------------
 >                                              
@@ -87,7 +87,7 @@ Statistical Correlations
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*correl***
+> > *Tandem interpretations for <span class="rep">correl</span>*
 
 ### SEE ALSO
 

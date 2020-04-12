@@ -11,18 +11,18 @@ for Phonetic Sounds
 
 ### REPRESENTATION
 
- **\*\*IPA** \-- representation for International Phonetic Alphabet
+ <span class="rep">IPA</span> \-- representation for International Phonetic Alphabet
 
 ### DESCRIPTION
 
- The **\*\*IPA** scheme provides a means for representing phonetic
+ The <span class="rep">IPA</span> scheme provides a means for representing phonetic
  information based on the International Phonetic Alphabet (IPA). This
  representation is a Humdrum adaptation of the ASCII transliteration
- scheme for IPA developed by Evan Kirshenbaum. The **\*\*IPA**
+ scheme for IPA developed by Evan Kirshenbaum. The <span class="rep">IPA</span>
  representation permits the encoding of the basic phonetic constituents
  of spoken or sung utterances for several languages.
 
- Two types of data tokens are distinguished in **\*\*IPA**: phonetic
+ Two types of data tokens are distinguished in <span class="rep">IPA</span>: phonetic
  segments and silences.
 
  Spans of silence are represented by the percent sign (%) appearing as
@@ -74,12 +74,12 @@ for Phonetic Sounds
 
 ### FILE TYPE
 
- It is recommended that files containing predominantly `**IPA` data
+ It is recommended that files containing predominantly <span class="rep">IPA</span> data
  should be given names with the distinguishing \`.ipa\' extension.
 
 ### SIGNIFIERS
 
- The following table summarizes the **\*\*IPA** mappings of signifiers
+ The following table summarizes the <span class="rep">IPA</span> mappings of signifiers
  and signifieds. (§ All footnotes appear at the end of this table.)\
  \
 
@@ -135,7 +135,7 @@ for Phonetic Sounds
 |   ,        |      secondary stress (should precede stressed sound)
 |   \%       |      silence signifier
 
- *Summary of **\*\*IPA** Signifiers*
+ *Summary of <span class="rep">IPA</span> Signifiers*
 
  -   The IPA *schwa* is notated as an upside-down \`e\'.
  -   The IPA symbol consists of a *schwa* with a hook.
@@ -150,7 +150,7 @@ for Phonetic Sounds
 
 ### EXAMPLES
 
- Sample syllables and their corresponding **\*\*IPA** encodings are
+ Sample syllables and their corresponding <span class="rep">IPA</span> encodings are
  given below:
 
   | \*\*text  | \*\*IPA
@@ -202,7 +202,7 @@ for Phonetic Sounds
 
 ### PERTINENT COMMANDS
 
- The following Humdrum commands accept **\*\*IPA** encoded data as
+ The following Humdrum commands accept <span class="rep">IPA</span> encoded data as
  inputs:
 
                     
@@ -211,14 +211,14 @@ for Phonetic Sounds
 ### TANDEM INTERPRETATIONS
 
  The following tandem interpretations can be used in conjunction with
- **\*\*IPA**:
+ <span class="rep">IPA</span>:
 
   | instrument       |  \*I
   | instrument class |  \*IC
   | meter signatures |  \*M6/8
   | tempo            |  \*MM96.3
 
- *Tandem interpretations for **\*\*IPA***
+ *Tandem interpretations for <span class="rep">IPA</span>*
 
 ### SEE ALSO
 
@@ -228,7 +228,7 @@ for Phonetic Sounds
 
  The International Phonetic Alphabet itself is not well suited to the
  representation of clicks commonly found in African languages, and this
- limitation is evident in the **\*\*IPA** representation. A more
+ limitation is evident in the <span class="rep">IPA</span> representation. A more
  precise phonetic representation also developed by Evan Kirshenbaum
  might be adapted as the basis for a more refined Humdrum
  representation.

@@ -11,13 +11,13 @@ Metric Syncopation
 
 ### REPRESENTATION
 
-> **\*\*synco** \-- represent degree of metric syncopation
+> <span class="rep">synco</span> \-- represent degree of metric syncopation
 
 ### DESCRIPTION
 
-> The **\*\*synco** representation encodes numerical values that
+> The <span class="rep">synco</span> representation encodes numerical values that
 > indicate the degree of metric syncopation for successive moments in a
-> musical passage. Data tokens for **\*\*synco** consist only of decimal
+> musical passage. Data tokens for <span class="rep">synco</span> consist only of decimal
 > numbers. The value 0 indicates no metric syncopation at the current
 > data record. Higher numerical values indicate increasing amounts of
 > metric syncopation at the current data record.
@@ -33,7 +33,7 @@ Metric Syncopation
 > third beat is deemed syncopated because it occupies a higher metric
 > position than the previous onset.
 >
-> Numerical **\*\*synco** values are equal to the logarithm of the
+> Numerical <span class="rep">synco</span> values are equal to the logarithm of the
 > metric position of the previous onset minus the logarithm of the
 > metric position of the current moment \-- where the current moment has
 > no note onset, and coincides with a higher metric position than the
@@ -43,17 +43,17 @@ Metric Syncopation
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 >
-> Note: **\*\*synco** data is normally produced by the <span class="tool">synco</span>
+> Note: <span class="rep">synco</span> data is normally produced by the <span class="tool">synco</span>
 > command.
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**synco` data
+> It is recommended that files containing predominantly <span class="rep">synco</span> data
 > should be given names with the distinguishing \`.syn\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*synco** mappings of
+> The following table summarizes the <span class="rep">synco</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------
@@ -62,7 +62,7 @@ Metric Syncopation
 > >   =     barline; == double barline
 > >   ----- ----------------------------------
 > >
-> > *Summary of **\*\*synco** Signifiers*
+> > *Summary of <span class="rep">synco</span> Signifiers*
 
 ### EXAMPLES
 
@@ -92,7 +92,7 @@ Metric Syncopation
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*synco** data as output:
+> The following Humdrum command produces <span class="rep">synco</span> data as output:
 >
 > >   -- ------------------------------------- ------------------------------------------
 > >      <span class="tool">synco</span>   measure the degree of metric syncopation
@@ -101,7 +101,7 @@ Metric Syncopation
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*synco**:
+> <span class="rep">synco</span>:
 >
 > >   ------------------ -----------
 > >   MIDI channel       `*Ch1`
@@ -110,7 +110,7 @@ Metric Syncopation
 > >   timebase           `*tb32`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*synco***
+> > *Tandem interpretations for <span class="rep">synco</span>*
 
 ### SEE ALSO
 

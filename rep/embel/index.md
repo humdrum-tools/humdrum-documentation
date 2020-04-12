@@ -11,14 +11,14 @@ Embellishment Tones
 
 ### REPRESENTATION
 
-> **\*\*embel** \-- representation for embellishment tones
+> <span class="rep">embel</span> \-- representation for embellishment tones
 
 ### DESCRIPTION
 
-> The **\*\*embel** representation is used to represent the harmonic
+> The <span class="rep">embel</span> representation is used to represent the harmonic
 > status of individual pitches in a passage of Western tonal music.
 > There are several different ways of defining and classifying
-> embellishment tones. The **\*\*embel** representation categorizes
+> embellishment tones. The <span class="rep">embel</span> representation categorizes
 > embellishment tones according to the following criteria:
 >
 > -   whether or not the tone belongs to a given chord
@@ -68,7 +68,7 @@ Embellishment Tones
 > for a chordal tone to be transformed into a non-chordal embellishment,
 > such as a suspension. Whenever a tone changes function as an
 > embellishment, at the appropriate point it is indicated by placing the
-> **\*\*embel** data token in square brackets. The square brackets
+> <span class="rep">embel</span> data token in square brackets. The square brackets
 > indicate that the note is already sounding (no new note-onset), but
 > has changed function.
 >
@@ -84,13 +84,13 @@ Embellishment Tones
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**embel` data
+> It is recommended that files containing predominantly <span class="rep">embel</span> data
 > should be given names with the distinguishing \`.emb\' extension.
 
 ### SIGNIFIERS
 
 > The following table provides a complete list of signifiers defined in
-> **\*\*embel**:
+> <span class="rep">embel</span>:
 >
 > >   ------- --------------------------------------------------
 > >   aln     accented lower neighbor tone
@@ -123,7 +123,7 @@ Embellishment Tones
 > >   upt7    unaccented passing tone (7th added to the chord)
 > >   ------- --------------------------------------------------
 > >
-> > *Summary of **\*\*embel** Signifiers*
+> > *Summary of <span class="rep">embel</span> Signifiers*
 
 ### EXAMPLES
 
@@ -149,13 +149,13 @@ Embellishment Tones
 > >
 ### PERTINENT COMMANDS
 
-> Currently, no special-purpose Humdrum commands produce **\*\*embel**
-> as output, or process **\*\*embel** encoded data as input.
+> Currently, no special-purpose Humdrum commands produce <span class="rep">embel</span>
+> as output, or process <span class="rep">embel</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*embel**:
+> <span class="rep">embel</span>:
 >
 > >   ------------------ ------------
 > >   MIDI channel       `*Ch1`
@@ -164,7 +164,7 @@ Embellishment Tones
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*embel***
+> > *Tandem interpretations for <span class="rep">embel</span>*
 
 ### SEE ALSO
 

@@ -75,9 +75,9 @@ Number of Active Voices
 > The following Humdrum command produces **\*\*vox\#** data as output:
 >
 > >   -- --------------------------------- ----------------------------------------------------------------------------------------------
-> >      <span class="tool">vox</span>   determine number of concurrently active voices for **\*\*cbr**, **\*\*cents**,
-> >                                        **\*\*cocho**, **\*\*deg**, **\*\*degree**, **\*\*freq**, **\*\*kern**, **\*\*pc**,
-> >                                        **\*\*pitch**, **\*\*semits**, **\*\*solfa**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh**
+> >      <span class="tool">vox</span>   determine number of concurrently active voices for <span class="rep">cbr</span>, <span class="rep">cents</span>,
+> >                                        <span class="rep">cocho</span>, <span class="rep">deg</span>, <span class="rep">degree</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">pc</span>,
+> >                                        <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfa</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span>
 > >   -- --------------------------------- ----------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

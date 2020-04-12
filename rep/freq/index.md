@@ -11,16 +11,16 @@ Frequency
 
 ### REPRESENTATION
 
-> **\*\*freq** \-- frequency representation
+> <span class="rep">freq</span> \-- frequency representation
 
 ### DESCRIPTION
 
-> The **\*\*freq** representation can be used to represent frequencies
-> for pure or complex tones. **\*\*freq** distinguishes three types of
+> The <span class="rep">freq</span> representation can be used to represent frequencies
+> for pure or complex tones. <span class="rep">freq</span> distinguishes three types of
 > tokens: frequencies, rests, and barlines. Frequencies are encoded in
 > hertz (Hz) where 440 Hz means 440 cycles per second. Frequencies may
 > be specified as integer or real values (using a decimal). In addition,
-> **\*\*freq** provides limited capabilities for representing phrasing
+> <span class="rep">freq</span> provides limited capabilities for representing phrasing
 > and slurs.
 >
 > Barlines are represented using the \"common system\" for barlines \--
@@ -28,12 +28,12 @@ Frequency
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**freq` data
+> It is recommended that files containing predominantly <span class="rep">freq</span> data
 > should be given names with the distinguishing \`\"\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*freq** mappings of signifiers
+> The following table summarizes the <span class="rep">freq</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ----------------------------------------------
@@ -48,7 +48,7 @@ Frequency
 > >   ;     pause sign
 > >   ----- ----------------------------------------------
 > >
-> > *Summary of **\*\*freq** Signifiers*
+> > *Summary of <span class="rep">freq</span> Signifiers*
 
 ### EXAMPLES
 
@@ -76,37 +76,37 @@ Frequency
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*freq** encoded data as
+> The following Humdrum commands accept <span class="rep">freq</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------------- --------------------------------------------------------
 > >                                              
-> >      <span class="tool">barks</span>     translates **\*\*freq** to **\*\*barks**
-> >      <span class="tool">cbr</span>         translates **\*\*freq** to **\*\*cbr**
-> >      <span class="tool">cents</span>     translates **\*\*freq** to **\*\*cents**
-> >      <span class="tool">cocho</span>     translates **\*\*freq** to **\*\*cocho**
-> >      <span class="tool">kern</span>       translates **\*\*freq** to **\*\*kern**
-> >      <span class="tool">pc</span>           translates **\*\*freq** to **\*\*pc**
-> >      <span class="tool">pitch</span>     translates **\*\*freq** to **\*\*pitch**
-> >      <span class="tool">semits</span>   translate **\*\*freq** to numerical **\*\*semits**
-> >      <span class="tool">solfg</span>     translate **\*\*freq** to numerical **\*\*solfg**
-> >      <span class="tool">specc</span>     translate **\*\*freq** to numerical **\*\*specC**
-> >      <span class="tool">tonh</span>       translate **\*\*freq** to numerical **\*\*Tonh**
+> >      <span class="tool">barks</span>     translates <span class="rep">freq</span> to <span class="rep">barks</span>
+> >      <span class="tool">cbr</span>         translates <span class="rep">freq</span> to <span class="rep">cbr</span>
+> >      <span class="tool">cents</span>     translates <span class="rep">freq</span> to <span class="rep">cents</span>
+> >      <span class="tool">cocho</span>     translates <span class="rep">freq</span> to <span class="rep">cocho</span>
+> >      <span class="tool">kern</span>       translates <span class="rep">freq</span> to <span class="rep">kern</span>
+> >      <span class="tool">pc</span>           translates <span class="rep">freq</span> to <span class="rep">pc</span>
+> >      <span class="tool">pitch</span>     translates <span class="rep">freq</span> to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>   translate <span class="rep">freq</span> to numerical <span class="rep">semits</span>
+> >      <span class="tool">solfg</span>     translate <span class="rep">freq</span> to numerical <span class="rep">solfg</span>
+> >      <span class="tool">specc</span>     translate <span class="rep">freq</span> to numerical <span class="rep">specC</span>
+> >      <span class="tool">tonh</span>       translate <span class="rep">freq</span> to numerical <span class="rep">Tonh</span>
 > >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- --------------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*freq** data as output:
+> The following Humdrum command produces <span class="rep">freq</span> data as output:
 >
 > >   -- ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >                                          
-> >      <span class="tool">freq</span>   translates **\*\*cbr**, **\*\*cents**, **\*\*cocho**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
+> >      <span class="tool">freq</span>   translates <span class="rep">cbr</span>, <span class="rep">cents</span>, <span class="rep">cocho</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">cents</span>
 > >   -- ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*freq**:
+> <span class="rep">freq</span>:
 >
 > >   ------------------ ------------
 > >   pure tones         `*pure`
@@ -116,7 +116,7 @@ Frequency
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*freq***
+> > *Tandem interpretations for <span class="rep">freq</span>*
 
 ### SEE ALSO
 

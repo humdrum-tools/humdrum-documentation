@@ -11,19 +11,19 @@ German Pitch
 
 ### REPRESENTATION
 
-> **\*\*Tonh** \-- German Tonhöhe (pitch) notation
+> <span class="rep">Tonh</span> \-- German Tonhöhe (pitch) notation
 
 ### DESCRIPTION
 
-> The **\*\*Tonh** representation permits the encoding of Western
+> The <span class="rep">Tonh</span> representation permits the encoding of Western
 > musical pitches using the common German system for pitch naming. This
 > system is similar to the English system of pitch designations with the
 > exceptions noted below.
 >
-> The **\*\*Tonh** representation distinguishes three types of data
+> The <span class="rep">Tonh</span> representation distinguishes three types of data
 > tokens: pitches, rests, and barlines. Pitches are encoded using pitch
 > letter-name, accidental, and octave designation. In addition,
-> **\*\*Tonh** provides limited capabilities for representing phrasing
+> <span class="rep">Tonh</span> provides limited capabilities for representing phrasing
 > and slurs.
 >
 > Pitch tokens consist of three logical parts \-- without any
@@ -43,9 +43,9 @@ German Pitch
 > seventh above, inclusive. Octave numbers are incremented by one for
 > each successively higher octave, and are decremented by one for each
 > successively lower octave. Negative octave numbers are not permitted,
-> so the lowest pitch in the **\*\*Tonh** representation is C0 (16.35
+> so the lowest pitch in the <span class="rep">Tonh</span> representation is C0 (16.35
 > Hz). Only a single octave digit is permitted, so the highest
-> **\*\*Tonh** pitch is H9 (15,804 Hz).
+> <span class="rep">Tonh</span> pitch is H9 (15,804 Hz).
 >
 > Once again, no intervening spaces are permitted within a single note.
 > Notice that the order of signifiers is important for pitch encodings.
@@ -55,7 +55,7 @@ German Pitch
 > Several notes may be encoded concurrently in a single spine by using
 > the Humdrum multiple-stop convention: notes within multiple-stops are
 > separated by single spaces. The following example encodes a C-minor
-> chord as four pitches in two **\*\*Tonh** spines \-- each spine
+> chord as four pitches in two <span class="rep">Tonh</span> spines \-- each spine
 > containing a double-stop.
 >
 > > ``
@@ -79,12 +79,12 @@ German Pitch
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**Tonh` data
+> It is recommended that files containing predominantly <span class="rep">Tonh</span> data
 > should be given names with the distinguishing \`.tnh\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*Tonh** mappings of signifiers
+> The following table summarizes the <span class="rep">Tonh</span> mappings of signifiers
 > and signifieds.
 >
 > >   ------- -----------------------------------------------
@@ -108,7 +108,7 @@ German Pitch
 > >   ;       pause sign
 > >   ------- -----------------------------------------------
 > >
-> > *Summary of **\*\*Tonh** Signifiers*
+> > *Summary of <span class="rep">Tonh</span> Signifiers*
 
 ### EXAMPLES
 
@@ -141,37 +141,37 @@ German Pitch
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*Tonh** encoded data as
+> The following Humdrum commands accept <span class="rep">Tonh</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------------- ----------------------------------------------------------
-> >      <span class="tool">cents</span>     translate **\*\*Tonh** to **\*\*cents**
-> >      <span class="tool">deg</span>         translate **\*\*Tonh** to **\*\*deg**
-> >      <span class="tool">degree</span>   translate **\*\*Tonh** to **\*\*degree**
-> >      <span class="tool">freq</span>       translate **\*\*Tonh** to **\*\*freq**
-> >      [<span class="tool">hint</span>](../commands/hints.html)      calculate harmonic intervals from **\*\*Tonh** input
-> >      <span class="tool">kern</span>       translate **\*\*Tonh** to **\*\*kern**
-> >      <span class="tool">mint</span>       calculate melodic intervals from **\*\*Tonh** input
-> >      <span class="tool">pc</span>           translate **\*\*Tonh** pitch to **\*\*pc**
-> >      <span class="tool">pitch</span>     translate **\*\*Tonh** pitch to **\*\*pitch**
-> >      <span class="tool">semits</span>   translate **\*\*Tonh** pitch to numerical **\*\*semits**
-> >      <span class="tool">solfa</span>     translate **\*\*Tonh** pitch to **\*\*solfa**
-> >      <span class="tool">solfg</span>     translate **\*\*Tonh** pitch to **\*\*solfg**
-> >      <span class="tool">trans</span>     transpose **\*\*Tonh** score
+> >      <span class="tool">cents</span>     translate <span class="rep">Tonh</span> to <span class="rep">cents</span>
+> >      <span class="tool">deg</span>         translate <span class="rep">Tonh</span> to <span class="rep">deg</span>
+> >      <span class="tool">degree</span>   translate <span class="rep">Tonh</span> to <span class="rep">degree</span>
+> >      <span class="tool">freq</span>       translate <span class="rep">Tonh</span> to <span class="rep">freq</span>
+> >      [<span class="tool">hint</span>](../commands/hints.html)      calculate harmonic intervals from <span class="rep">Tonh</span> input
+> >      <span class="tool">kern</span>       translate <span class="rep">Tonh</span> to <span class="rep">kern</span>
+> >      <span class="tool">mint</span>       calculate melodic intervals from <span class="rep">Tonh</span> input
+> >      <span class="tool">pc</span>           translate <span class="rep">Tonh</span> pitch to <span class="rep">pc</span>
+> >      <span class="tool">pitch</span>     translate <span class="rep">Tonh</span> pitch to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>   translate <span class="rep">Tonh</span> pitch to numerical <span class="rep">semits</span>
+> >      <span class="tool">solfa</span>     translate <span class="rep">Tonh</span> pitch to <span class="rep">solfa</span>
+> >      <span class="tool">solfg</span>     translate <span class="rep">Tonh</span> pitch to <span class="rep">solfg</span>
+> >      <span class="tool">trans</span>     transpose <span class="rep">Tonh</span> score
 > >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- ----------------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*Tonh** data as output:
+> The following Humdrum command produces <span class="rep">Tonh</span> data as output:
 >
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> >      <span class="tool">tonh</span>   translates **\*\*cents**, **\*\*degree**, **\*\*fret**, **\*\*freq**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, and **\*\*specC** to **\*\*Tonh**
+> >      <span class="tool">tonh</span>   translates <span class="rep">cents</span>, <span class="rep">degree</span>, <span class="rep">fret</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, and <span class="rep">specC</span> to <span class="rep">Tonh</span>
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*Tonh**:
+> <span class="rep">Tonh</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -180,7 +180,7 @@ German Pitch
 > >   tempo              `*MM96.3`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*Tonh***
+> > *Tandem interpretations for <span class="rep">Tonh</span>*
 
 ### SEE ALSO
 

@@ -11,26 +11,26 @@ Similarity Values
 
 ### REPRESENTATION
 
-> **\*\*simil** \-- similarity representation
+> <span class="rep">simil</span> \-- similarity representation
 
 ### DESCRIPTION
 
-> The **\*\*simil** representation encodes numerical values that
+> The <span class="rep">simil</span> representation encodes numerical values that
 > indicate the [**Damerau-Levenshtein edit
 > distance**](../commands/simil.html#REFERENCES) between two other
-> Humdrum representations. Data tokens for **\*\*simil** consist only of
+> Humdrum representations. Data tokens for <span class="rep">simil</span> consist only of
 > decimal numbers. The value 1.0 indicates identical material beginning
 > at the current data record. Lower numerical values indicate
 > increasingly less similarity at the current data record.
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**simil` data
+> It is recommended that files containing predominantly <span class="rep">simil</span> data
 > should be given names with the distinguishing \`.sim\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*simil** mappings of
+> The following table summarizes the <span class="rep">simil</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------
@@ -38,7 +38,7 @@ Similarity Values
 > >   .     fractional delimiter; null token
 > >   ----- ----------------------------------
 > >
-> > *Summary of **\*\*simil** Signifiers*
+> > *Summary of <span class="rep">simil</span> Signifiers*
 
 ### EXAMPLES
 
@@ -63,7 +63,7 @@ Similarity Values
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*simil** data as output:
+> The following Humdrum command produces <span class="rep">simil</span> data as output:
 >
 > >   -- ------------------------------------- ---------------------------------------------------
 > >      <span class="tool">simil</span>   measure the similarity between two Humdrum spines
@@ -72,7 +72,7 @@ Similarity Values
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*simil**:
+> <span class="rep">simil</span>:
 >
 > >   ------------------ ------------
 > >   MIDI channel       `*Ch1`
@@ -81,7 +81,7 @@ Similarity Values
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*simil***
+> > *Tandem interpretations for <span class="rep">simil</span>*
 
 ### SEE ALSO
 

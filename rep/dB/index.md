@@ -11,11 +11,11 @@ Decibels
 
 ### REPRESENTATION
 
-> **\*\*dB** \-- relative amplitude representation
+> <span class="rep">dB</span> \-- relative amplitude representation
 
 ### DESCRIPTION
 
-> The **\*\*dB** representation is used to represent relative amplitude
+> The <span class="rep">dB</span> representation is used to represent relative amplitude
 > in decibels. The reference amplitude is deemed to be 0 dB. In a group
 > of tones, normally the loudest tone is selected as the reference.
 > Typically this means that other tones have negative decibel values.
@@ -25,12 +25,12 @@ Decibels
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**dB` data
+> It is recommended that files containing predominantly <span class="rep">dB</span> data
 > should be given names with the distinguishing \`.db\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*dB** mappings of signifiers
+> The following table summarizes the <span class="rep">dB</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- -----------------------------------------
@@ -40,7 +40,7 @@ Decibels
 > >   .     fractional second delimiter; null token
 > >   ----- -----------------------------------------
 > >
-> > *Summary of **\*\*dB** Signifiers*
+> > *Summary of <span class="rep">dB</span> Signifiers*
 
 ### EXAMPLES
 
@@ -61,7 +61,7 @@ Decibels
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command accepts **\*\*dB** encoded data as
+> The following Humdrum command accepts <span class="rep">dB</span> encoded data as
 > input:
 >
 > >   -- ------------------------------------- ----------------------------------------------------
@@ -80,7 +80,7 @@ Decibels
 > >   meter signatures   `*M6/8`
 > >   ------------------ ---------
 > >
-> > *Tandem interpretations for **\*\*dB***
+> > *Tandem interpretations for <span class="rep">dB</span>*
 
 ### SEE ALSO
 

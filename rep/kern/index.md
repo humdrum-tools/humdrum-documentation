@@ -11,32 +11,32 @@ Basic Notated Music
 
 ### REPRESENTATION
 
- **\*\*kern** \-- core pitch/duration representation for common
+ <span class="rep">kern</span> \-- core pitch/duration representation for common
  practice music notation
 
 ### DESCRIPTION
 
- The **\*\*kern** scheme can be used to represent basic or core
+ The <span class="rep">kern</span> scheme can be used to represent basic or core
  information for period-of-common-practice Western music. The
- **\*\*kern** representation allows pitch and canonical duration
- information to be encoded. In addition, **\*\*kern** also provides
+ <span class="rep">kern</span> representation allows pitch and canonical duration
+ information to be encoded. In addition, <span class="rep">kern</span> also provides
  limited capabilities for representing accidentals, articulation,
  ornamentation, ties, slurs, phrasing, barlines, stem-direction and
- beaming. In general, **\*\*kern** is intended to represent the
+ beaming. In general, <span class="rep">kern</span> is intended to represent the
  underlying semantic information implied by a musical score rather than
  the visual or orthographic information embodied by a given printed
- rendition; **\*\*kern** is designed to facilitate analytic
+ rendition; <span class="rep">kern</span> is designed to facilitate analytic
  applications rather than music printing or sound generation. Other
  Humdrum representations should be used for these latter purposes.
 
- Three types of data tokens are distinguished in **\*\*kern**: notes,
+ Three types of data tokens are distinguished in <span class="rep">kern</span>: notes,
  rests, and barlines.
 
  Notes can encode a variety of attributes including absolute pitch,
  accidental, canonical duration, articulation, ornamentation, ties,
  slurs, phrasing, stem-direction and beaming.
 
- Pitches in **\*\*kern** are encoded as \"nominally\" equally-tempered
+ Pitches in <span class="rep">kern</span> are encoded as \"nominally\" equally-tempered
  values. Transposing instruments are represented at concert pitch with
  a tandem interpretation indicating the nature of the transposition.
  Pitch information is encoded through a scheme of upper- and lower-case
@@ -53,7 +53,7 @@ Basic Notated Music
  minus sign (`-`) for flats, and the lower-case letter `n` for
  naturals. Accidentals are encoded immediately following the diatonic
  pitch information. Double-sharps and double-flats have no special
- representations in **\*\*kern** and are simply denoted by repetition
+ representations in <span class="rep">kern</span> and are simply denoted by repetition
  `(##)` and `(--)`. Triple- and quadruple accidentals are similarly
  encoded by repetition. Sharps, flats, and naturals are mutually
  exclusive in **\*\*kern,** so tokens such as `cc#n` and `GG-#` are
@@ -68,7 +68,7 @@ Basic Notated Music
 
  Note tokens may be modified by the presence of additional signifiers.
 
- The **\*\*kern** representation provides no generic means for
+ The <span class="rep">kern</span> representation provides no generic means for
  representing \"curved lines\" found in printed scores. Lines must be
  explicitly interpreted as ties, slurs or phrases. The open brace `{`
  denotes the beginning of a phrase. The closed brace `}` denotes the
@@ -89,7 +89,7 @@ Basic Notated Music
  turn. When a concluding turn is appended to the end of an ornament
  (such as a trill), the upper-case letter `R` is added to the ornament
  signifier (as in `tR` and `TR`). In addition to these ornaments,
- **\*\*kern** provides a signifier for (multi-note) arpeggiation (`:`).
+ <span class="rep">kern</span> provides a signifier for (multi-note) arpeggiation (`:`).
  The presence of ornaments other than trills, mordents, inverted
  mordents, and turns types can be indicated by the generic ornament
  symbol (`O`).
@@ -98,13 +98,13 @@ Basic Notated Music
  double-quote (`"`) for pizzicato, the greve (`` ` ``) for
  staccatissimo or attacca, the tilde (`~`) for tenuto, and the caret
  (`^`) for all note-related accents (including \< and \>). In addition,
- **\*\*kern** provides signifiers for up-bow (`v`) and down-bow (`u`).
+ <span class="rep">kern</span> provides signifiers for up-bow (`v`) and down-bow (`u`).
  The presence of other articulation types can be indicated by the
  generic articulation symbol (`I`).
 
- As noted, the **\*\*kern** scheme is intended for analytic
+ As noted, the <span class="rep">kern</span> scheme is intended for analytic
  applications rather than as a means for representing visual renderings
- of notation. Nevertheless, **\*\*kern** distinguishes up-stems,
+ of notation. Nevertheless, <span class="rep">kern</span> distinguishes up-stems,
  down-stems, and beamings in order to assist in analytic tasks such as
  the determination of voicings and in order to facilitate the parsing
  of note-groupings. Up-stems and down-stems are indicated by the slash
@@ -130,7 +130,7 @@ Basic Notated Music
  phrase. For example: `(   (   )    )` means that a short slur has
  occurred within a longer slur. Elisions are overlaps, for example,
  where an existing phrase fails to end while a new phrase begins. In
- **\*\*kern** the ampersand character is used to mark elided slurs or
+ <span class="rep">kern</span> the ampersand character is used to mark elided slurs or
  phrases. For example: `{   &{   }    &}` means that two phrases
  overlap \-- the initial phrase ending after second phrase has begun.
  Multiple levels of elisions are indicated by repeating the ampersand
@@ -141,7 +141,7 @@ Basic Notated Music
  elided phrase terminates after third phrase has ended.
 
  *Durations* are encoded in a manner identical to the
- [**\*\*recip**](recip.rep.html) representation. Durations are encoded
+ [<span class="rep">recip</span>](recip.rep.html) representation. Durations are encoded
  as nominal proportions using integer numbers and the period character.
  With the exception of the value zero, durations are represented by
  reciprocal numerical values corresponding to the American duration
@@ -158,9 +158,9 @@ Basic Notated Music
  (a whole duration) are signified by the value `3` (i.e. \"third
  notes\"). Eighth-note quintuplets (5 in the time of 4) are represented
  by the value `10` (a half duration divided by 5). See
- [**\*\*recip**](recip.rep.html) for further details.
+ [<span class="rep">recip</span>](recip.rep.html) for further details.
 
- The **\*\*kern** representation also allows for the encoding of
+ The <span class="rep">kern</span> representation also allows for the encoding of
  acciaccaturas, non-canonical groupettos, and appoggiaturas. Depending
  on the expected analytic application, one way to handle these
  notational devices is to encode the notes according to the manner in
@@ -170,7 +170,7 @@ Basic Notated Music
  certain types of studies.
 
  Acciaccaturas (grace notes) are visually represented as minature notes
- denoted by a slash mark through the stem. In **\*\*kern** these notes
+ denoted by a slash mark through the stem. In <span class="rep">kern</span> these notes
  are treated as \"durationless\" notes and are designated by the
  lower-case letter `q`. Hence, the token `G#q` denotes a G\#3
  acciaccatura. Non-canonical groupettos are minature (non-cue) notes
@@ -185,7 +185,7 @@ Basic Notated Music
  command eliminates these notes. Note that data records containing
  acciaccaturas or groupettos notes must not include normal notes.
 
- In the case of appoggiaturas, **\*\*kern** requires that they be
+ In the case of appoggiaturas, <span class="rep">kern</span> requires that they be
  encoded as performed. An appropriate duration is assigned to the
  appoggiatura according to common performance practice. The duration of
  the subsequent note is reduced by a corresponding amount. The status
@@ -218,8 +218,8 @@ Basic Notated Music
  score (such as expanding abbreviations), or it may be necessary to
  estimate missing or unreadable information. Interpreting the voicings
  (that is, making explicit the degree of connectedness between
- successive pitches) is an important editorial function in **\*\*kern**
- representations. The **\*\*kern** representation provides several
+ successive pitches) is an important editorial function in <span class="rep">kern</span>
+ representations. The <span class="rep">kern</span> representation provides several
  special-purpose signifiers to help make explicit various classes of
  editorial amendments, interpretations, or commentaries. Five types of
  editorial signifiers are made available: (1) *sic* (information is
@@ -235,12 +235,12 @@ Basic Notated Music
 
 ### FILE TYPE
 
- It is recommended that files containing predominantly `**kern` data
+ It is recommended that files containing predominantly <span class="rep">kern</span> data
  should be given names with the distinguishing \`.krn\' extension.
 
 ### SIGNIFIERS
 
- The following table summarizes the **\*\*kern** mappings of signifiers
+ The following table summarizes the <span class="rep">kern</span> mappings of signifiers
  and signifieds.
 
    ---------------- --------------------------------------------------------------------------
@@ -344,11 +344,11 @@ Basic Notated Music
    @ % + \| \< \>   undefined; [user assignable](../guide.append1.html#RDF)
    ---------------- --------------------------------------------------------------------------
 
- *Summary of **\*\*kern** Signifiers*
+ *Summary of <span class="rep">kern</span> Signifiers*
 
 ### CONTEXT DEPENDENCIES
 
- In general, signifiers in the **\*\*kern** representation are intended
+ In general, signifiers in the <span class="rep">kern</span> representation are intended
  to be context independent. This means, for example, that the data
  tokens `{(16ff#/'` and `/ff#16'({` are equivalent. A few exceptions to
  this principle are necessary in order to maintain the meaning of
@@ -372,8 +372,8 @@ Basic Notated Music
  pause signifier.
 
  In certain applications, it may be necessary to have a canonical
- ordering of the signifiers within **\*\*kern** data tokens. For
- example, when comparing two ostensibly identical **\*\*kern** files,
+ ordering of the signifiers within <span class="rep">kern</span> data tokens. For
+ example, when comparing two ostensibly identical <span class="rep">kern</span> files,
  trivial differences of signifier orderings will cause UNIX commands
  such as <span class="unix">cmp</span> and <span class="unix">diff</span> to declare the files to be \"different.\"
  In this case, it is useful to adopt a standard order of signifiers so
@@ -383,7 +383,7 @@ Basic Notated Music
  to define a simple regular expression \-- such as `16f#` rather than
  having to define a regular expression that handles all possible
  contextual orderings \-- such as `(16.*f#)|(f#.*16)`. For this reason,
- a canonical ordering of the **\*\*kern** signifiers is given in the
+ a canonical ordering of the <span class="rep">kern</span> signifiers is given in the
  following table.
 
    -------------------------------------- ----------------------------------- ----------------------------------
@@ -428,7 +428,7 @@ Basic Notated Music
    29\. editorial marks                   **xx** or **XX**                    
    -------------------------------------- ----------------------------------- ----------------------------------
 
- *Canonical Ordering of Signifiers in **\*\*kern** Note Tokens*
+ *Canonical Ordering of Signifiers in <span class="rep">kern</span> Note Tokens*
 
  \
  \
@@ -492,47 +492,47 @@ Basic Notated Music
 
 ### PERTINENT COMMANDS
 
- The following Humdrum commands accept **\*\*kern** encoded data as
+ The following Humdrum commands accept <span class="rep">kern</span> encoded data as
  inputs:
 
    -- ------------------------------------------- ----------------------------------------------------------
                                                   
-      [<span class="tool">census</span> -k](../commands/census.html)    determine general characteristics of a **\*\*kern** file
-      <span class="tool">cents</span>         translates **\*\*kern** to **\*\*cents**
-      <span class="tool">deg</span>             translates **\*\*kern** to **\*\*deg**
-      <span class="tool">degree</span>       translates **\*\*kern** to **\*\*degree**
-      <span class="tool">freq</span>           translates **\*\*kern** to **\*\*freq**
-      <span class="tool">hint</span>           calculate harmonic intervals from **\*\*kern** input
-      <span class="tool">key</span>             estimate the key of a **\*\*kern** input
-      <span class="tool">mint</span>           calculate melodic intervals from **\*\*kern** input
-      <span class="tool">pc</span>               translates **\*\*kern** to **\*\*pc**
-      <span class="tool">pitch</span>         translates **\*\*kern** to **\*\*pitch**
-      <span class="tool">proof</span>         check for errors in **\*\*kern** encoded file
-      <span class="tool">semits</span>       translate **\*\*kern** to numerical **\*\*semits**
-      <span class="tool">solfa</span>         translate **\*\*kern** to numerical **\*\*solfa**
-      <span class="tool">solfg</span>         translate **\*\*kern** to numerical **\*\*solfg**
+      [<span class="tool">census</span> -k](../commands/census.html)    determine general characteristics of a <span class="rep">kern</span> file
+      <span class="tool">cents</span>         translates <span class="rep">kern</span> to <span class="rep">cents</span>
+      <span class="tool">deg</span>             translates <span class="rep">kern</span> to <span class="rep">deg</span>
+      <span class="tool">degree</span>       translates <span class="rep">kern</span> to <span class="rep">degree</span>
+      <span class="tool">freq</span>           translates <span class="rep">kern</span> to <span class="rep">freq</span>
+      <span class="tool">hint</span>           calculate harmonic intervals from <span class="rep">kern</span> input
+      <span class="tool">key</span>             estimate the key of a <span class="rep">kern</span> input
+      <span class="tool">mint</span>           calculate melodic intervals from <span class="rep">kern</span> input
+      <span class="tool">pc</span>               translates <span class="rep">kern</span> to <span class="rep">pc</span>
+      <span class="tool">pitch</span>         translates <span class="rep">kern</span> to <span class="rep">pitch</span>
+      <span class="tool">proof</span>         check for errors in <span class="rep">kern</span> encoded file
+      <span class="tool">semits</span>       translate <span class="rep">kern</span> to numerical <span class="rep">semits</span>
+      <span class="tool">solfa</span>         translate <span class="rep">kern</span> to numerical <span class="rep">solfa</span>
+      <span class="tool">solfg</span>         translate <span class="rep">kern</span> to numerical <span class="rep">solfg</span>
       <span class="tool">synco</span>         measure degree of metric syncopation
-      <span class="tool">timebase</span>   reformat **\*\*kern** score with constant timebase
-      <span class="tool">tonh</span>           translate **\*\*kern** to numerical **\*\*Tonh**
-      <span class="tool">trans</span>         transpose **\*\*kern** score
+      <span class="tool">timebase</span>   reformat <span class="rep">kern</span> score with constant timebase
+      <span class="tool">tonh</span>           translate <span class="rep">kern</span> to numerical <span class="rep">Tonh</span>
+      <span class="tool">trans</span>         transpose <span class="rep">kern</span> score
       <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
       <span class="tool">vox</span>             determine active and inactive voices in a Humdrum file
                                                   
    -- ------------------------------------------- ----------------------------------------------------------
 
- The following Humdrum commands produce **\*\*kern** data as outputs:
+ The following Humdrum commands produce <span class="rep">kern</span> data as outputs:
 
    -- ------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                   
-      <span class="tool">kern</span>           translates **\*\*cents**, **\*\*degree**, **\*\*freq**, **\*\*fret**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*kern**
-      <span class="tool">timebase</span>   reformat **\*\*kern** score with constant timebase
-      <span class="tool">trans</span>         transpose **\*\*kern** score
+      <span class="tool">kern</span>           translates <span class="rep">cents</span>, <span class="rep">degree</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">kern</span>
+      <span class="tool">timebase</span>   reformat <span class="rep">kern</span> score with constant timebase
+      <span class="tool">trans</span>         transpose <span class="rep">kern</span> score
    -- ------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS
 
  The following tandem interpretations can be used in conjunction with
- **\*\*kern**:
+ <span class="rep">kern</span>:
 
    ------------------------ ------------
    clef                     `*clefG2`
@@ -546,7 +546,7 @@ Basic Notated Music
    transposing instrument   `*ITr`
    ------------------------ ------------
 
- *Tandem interpretations for **\*\*kern***
+ *Tandem interpretations for <span class="rep">kern</span>*
 
 ### SEE ALSO
 

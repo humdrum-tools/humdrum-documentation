@@ -11,17 +11,17 @@ Vocal Text
 
 ### REPRESENTATION
 
-> **\*\*text** \-- vocal text representation
+> <span class="rep">text</span> \-- vocal text representation
 
 ### DESCRIPTION
 
-> The **\*\*text** representation permits the representation of sung or
+> The <span class="rep">text</span> representation permits the representation of sung or
 > spoken language. Only languages transcribable into the Roman alphabet
-> can be represented using **\*\*text**. For non-Roman alphabets and
-> non-language vocables, refer to the [**\*\*IPA**](IPA.rep.html)
+> can be represented using <span class="rep">text</span>. For non-Roman alphabets and
+> non-language vocables, refer to the [<span class="rep">IPA</span>](IPA.rep.html)
 > representation.
 >
-> The **\*\*text** representation distinguishes three classes of data
+> The <span class="rep">text</span> representation distinguishes three classes of data
 > tokens: text-tokens, silence-tokens, and barlines.
 >
 > *Text-tokens* are of three types: syllabic, melismatic, and
@@ -37,13 +37,13 @@ Vocal Text
 > means that the previous syllable is sustained through the current
 > moment. Syllabic and polysyllabic text-tokens are more complicated.
 >
-> In the **\*\*text** representation, text-tokens are syllable-oriented,
+> In the <span class="rep">text</span> representation, text-tokens are syllable-oriented,
 > so words must be broken-up into the component syllables. Words may be
 > of three basic types: single-syllable words, multi-syllable words, and
 > hyphenated words (e.g. the word \"half-mast\"). As a result, four
 > types of syllables are distinguished: (1) a single-syllable word, (2)
 > a word-initiating syllable, (3) a word-completing syllable, and (4) a
-> mid-word syllable. In **\*\*text** the hyphen (`-`) is used to signify
+> mid-word syllable. In <span class="rep">text</span> the hyphen (`-`) is used to signify
 > syllable boundaries; the tilde (`~`) is used to signify boundaries
 > between hyphenated words (necessarily also a syllable boundary). The
 > following table illustrates the how these signifiers are used:
@@ -64,7 +64,7 @@ Vocal Text
 >
 > Occasionally, it is useful to encode several syllables or words for a
 > single moment (or pitch) \-- as in the case of *recitativo* passages.
-> In the **\*\*text** representation, such multi-word or polysyllabic
+> In the <span class="rep">text</span> representation, such multi-word or polysyllabic
 > text-tokens are encoded via Humdrum multiple-stops. That is, several
 > words or syllables are encoded on the same data record, with each
 > successive syllable separated by a space. The following encoding shows
@@ -81,12 +81,12 @@ Vocal Text
 > >   \*-         \*-
 > >   ----------- -------------
 > >
-> In the **\*\*text** representation, punctuation marks \-- such as
+> In the <span class="rep">text</span> representation, punctuation marks \-- such as
 > commas, periods, and exclamation marks \-- are segregated from the
 > syllable texts by a space. The period character is represented by the
 > asterisk (`*`) in order to avoid the illegal construction of a period
 > (null token) in a multiple stop. Five remaining punctuation marks are
-> represented literally in **\*\*text**: comma (`,`), exclamation mark
+> represented literally in <span class="rep">text</span>: comma (`,`), exclamation mark
 > (`!`), question mark (`?`), colon (`:`), and the semicolon (`;`). When
 > used in a melismatic context, an explicitly notated (printed) dash is
 > represented by a double vertical bar (`||`). This signifies both the
@@ -97,24 +97,24 @@ Vocal Text
 > presence of a space. It is important to remember that periods are
 > represented by asterisks.
 >
-> The **\*\*text** representation is intended to represent canonical
+> The <span class="rep">text</span> representation is intended to represent canonical
 > language information rather than verbatim transcriptions of a printed
 > score. Textual abbreviations and printing conventions such as
 > *\"etc.,\" \"\#\"* and *\"\$\"* must be expanded as: *et ce- -te- -ra,
 > num- -ber,* and *dol- -lar* respectively (depending on the language).
 > (If the user wishes to represent *text as printed,* an explicit
-> **\*\*underlay** or **\*\*overlay** representation would be more
+> <span class="rep">underlay</span> or <span class="rep">overlay</span> representation would be more
 > appropriate.)
 >
 > Where greater subtlety is required for pronunciation, refer to the
-> [**\*\*IPA**](IPA.rep.html) representation.
+> [<span class="rep">IPA</span>](IPA.rep.html) representation.
 >
 > The original ASCII character set is regrettably hostile to non-English
 > languages, especially with regard to accents. With the extended
 > (international) ASCII set, French, German, and other accents are
 > properly handled, but for English users, a given computer system may
 > prove inflexible for non-English materials. In such cases, the
-> **\*\*text** representation provides the following aliases to
+> <span class="rep">text</span> representation provides the following aliases to
 > designate common accents. Accent signifiers are assumed to modify the
 > immediately preceding Roman letter.
 >
@@ -130,9 +130,9 @@ Vocal Text
 > >   7    enya (tilde)
 > >   ---- --------------------------
 > >
-> > *Accent signifiers in **\*\*text***
+> > *Accent signifiers in <span class="rep">text</span>*
 >
-> Musical phrasing can be explicitly represented in **\*\*text** via the
+> Musical phrasing can be explicitly represented in <span class="rep">text</span> via the
 > open brace (`{`) and closed brace (`}`) for phrase-beginnings and
 > phrase-endings respectively. Slurs can be represented via the open
 > bracket (`[`) and closed bracket (`]`). Stressed and unstressed
@@ -140,7 +140,7 @@ Vocal Text
 > or the underscore (`_`) respectively \-- at the beginning of the
 > associated text.
 >
-> A handful of vocables can be represented via **\*\*text** including
+> A handful of vocables can be represented via <span class="rep">text</span> including
 > humming (signified by the upper-case letter \`M\' by itself) and
 > laughing (signified by the upper-case letter \`L\' by itself). Tandem
 > interpretation also permit encoding of the depth of vibrato and the
@@ -150,7 +150,7 @@ Vocal Text
 > ennunciation is indicated by `*ennun9`. Intermediate values can be
 > used as needed.
 >
-> Apart from text-tokens **\*\*text** also permits the encoding of
+> Apart from text-tokens <span class="rep">text</span> also permits the encoding of
 > silence-tokens and barlines. Silence-tokens consist simply of the
 > percent sign (`%`) appearing in isolation. This indicates the
 > termination or absence of any vocal sound.
@@ -166,12 +166,12 @@ Vocal Text
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**text` data
+> It is recommended that files containing predominantly <span class="rep">text</span> data
 > should be given names with the distinguishing \`.txt\' extension.
 
 ### SIGNIFIERS
 
-> The complete system of signifiers used by **\*\*text** is summarized
+> The complete system of signifiers used by <span class="rep">text</span> is summarized
 > in the following table.
 >
 > >   ------ ------------------------------------------------
@@ -209,7 +209,7 @@ Vocal Text
 > >   7      enya (tilde)
 > >   ------ ------------------------------------------------
 > >
-> > *Summary of **\*\*text** Signifiers*
+> > *Summary of <span class="rep">text</span> Signifiers*
 
 ### EXAMPLES
 
@@ -245,13 +245,13 @@ Vocal Text
 
 ### PERTINENT COMMANDS
 
-> Currently, no special-purpose Humdrum commands produce **\*\*text** as
-> output or process **\*\*text** encoded data as input.
+> Currently, no special-purpose Humdrum commands produce <span class="rep">text</span> as
+> output or process <span class="rep">text</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*text**:
+> <span class="rep">text</span>:
 >
 > >   -------------------- -------------
 > >   language indicator   `*Deutsch`
@@ -266,7 +266,7 @@ Vocal Text
 > >   ennunciation         `*ennun5`
 > >   -------------------- -------------
 > >
-> > *Tandem interpretations for **\*\*text***
+> > *Tandem interpretations for <span class="rep">text</span>*
 
 ### SEE ALSO
 

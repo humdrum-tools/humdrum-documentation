@@ -11,11 +11,11 @@ Pitch-Class
 
 ### REPRESENTATION
 
- **\*\*pc** \-- pitch-class representation
+ <span class="rep">pc</span> \-- pitch-class representation
 
 ### DESCRIPTION
 
- The **\*\*pc** representation can be used to characterize
+ The <span class="rep">pc</span> representation can be used to characterize
  *pitch-class* or *chroma* information. Two pitches are said to share
  the same pitch-class or chroma when they are octave equivalents. No
  distinction is made between enharmonic spellings. Hence C-sharp4 and
@@ -23,13 +23,13 @@ Pitch-Class
  pitch-classes are identified by integer values between 0 and 11, where
  C=0, C-sharp/D-flat=1 \... B=11.
 
- Three types of data tokens are distinguished by **\*\*pc**:
+ Three types of data tokens are distinguished by <span class="rep">pc</span>:
  pitch-class tokens, rest tokens, and barlines.
 
  Pitch-class tokens are encoded as either numeric, or mixed alphabetic
- and numeric values. Following traditional practice, **\*\*pc** encodes
+ and numeric values. Following traditional practice, <span class="rep">pc</span> encodes
  pitch-classes using the integer values between 0 and 11, where C=0,
- C-sharp/D-flat=1 \... B=11. The **\*\*pc** representation provides
+ C-sharp/D-flat=1 \... B=11. The <span class="rep">pc</span> representation provides
  aliases for the integers 10 and 11 (\`A\' and \`B\' respectively).
  (Encodings using purely numeric values are especially useful when the
  representation is to be processed numerically. Encodings using mixed
@@ -39,14 +39,14 @@ Pitch-Class
  \`1\' is `(^|[^1])1([^01]|$)`, whereas the corresponding regular
  expression for alphanumeric pitch-class data is simply `1`.)
 
- In addition to the basic pitch-class information, **\*\*pc** also
+ In addition to the basic pitch-class information, <span class="rep">pc</span> also
  provides limited capabilities for representing articulation marks,
  ties, slurs, and phrasing. Slurs and phrase markings can be nested
  (slurs within slurs) and may also be elided. Nested markings mean that
  one slur or phrase is entirely subsumed within another slur or phrase.
  For example: ( ( ) ) means that a short slur has occurred within a
  longer slur. Elisions are overlaps, for example, where an existing
- phrase fails to end before a new phrase begins. In **\*\*pc** the
+ phrase fails to end before a new phrase begins. In <span class="rep">pc</span> the
  ampersand character is used to mark elided slurs or phrases. For
  example: { &{ } &} means that a phrase begins, but does not end until
  after another phrase has begun. The ampersand is used to mark a
@@ -65,12 +65,12 @@ Pitch-Class
 
 ### FILE TYPE
 
- It is recommended that files containing predominantly `**pc` data
+ It is recommended that files containing predominantly <span class="rep">pc</span> data
  should be given names with the distinguishing \`.pc\' extension.
 
 ### SIGNIFIERS
 
- The following table summarizes the **\*\*pc** mappings of signifiers
+ The following table summarizes the <span class="rep">pc</span> mappings of signifiers
  and signifieds.
 
    |0-9   |pitch-class values specified as integers
@@ -98,7 +98,7 @@ Pitch-Class
    |\^    |accent mark
    |&     |elision marker (for slurs or phases)
 
- *Summary of **\*\*pc** Signifiers*
+ *Summary of <span class="rep">pc</span> Signifiers*
 
 ### EXAMPLES
 
@@ -146,13 +146,13 @@ Pitch-Class
 
 ### PERTINENT COMMANDS
 
- The following Humdrum commands accept **\*\*pc** encoded data as
+ The following Humdrum commands accept <span class="rep">pc</span> encoded data as
  inputs:
 
    -- ------------------------------------- ------------------------------------------------------------------
       <span class="tool">iv</span>         determine interval vectors for vertical sonorities
       <span class="tool">nf</span>         determine normal form for vertical sonorities
-      <span class="tool">pc</span>         convert between numerical and alphanumerical forms of **\*\*pc**
+      <span class="tool">pc</span>         convert between numerical and alphanumerical forms of <span class="rep">pc</span>
       <span class="tool">pcset</span>   convert to set-theoretic representations
       <span class="tool">pf</span>         determine prime form for vertical sonorities
       <span class="tool">reihe</span>   output tone-row variant for a given prime row
@@ -160,16 +160,16 @@ Pitch-Class
                                             
    -- ------------------------------------- ------------------------------------------------------------------
 
- The following Humdrum command produces **\*\*pc** data as output:
+ The following Humdrum command produces <span class="rep">pc</span> data as output:
 
    -- ------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
-      <span class="tool">pc</span>   translates **\*\*cents**, **\*\*freq**, **\*\*kern**, **\*\*pc**, **\*\*pitch**, **\*\*Tonh**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, to **\*\*pc**
+      <span class="tool">pc</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">pc</span>, <span class="rep">pitch</span>, <span class="rep">Tonh</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, to <span class="rep">pc</span>
    -- ------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS
 
  The following tandem interpretations can be used in conjunction with
- **\*\*pc**:
+ <span class="rep">pc</span>:
 
  |  meter signatures   `*M6/8`
  |  key signatures     `*k[f#c#]`
@@ -177,7 +177,7 @@ Pitch-Class
  |  tempo              `*MM96.3`
  |  timebase           `*tb32`
 
- *Tandem interpretations for **\*\*pc***
+ *Tandem interpretations for <span class="rep">pc</span>*
 
 ### SEE ALSO
 

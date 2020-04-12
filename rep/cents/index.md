@@ -11,12 +11,12 @@ Pitch Cents
 
 ### REPRESENTATION
 
-> **\*\*cents** \-- absolute pitch representation in hundredths of
+> <span class="rep">cents</span> \-- absolute pitch representation in hundredths of
 > semitones
 
 ### DESCRIPTION
 
-> The **\*\*cents** representation is used to represent absolute pitch
+> The <span class="rep">cents</span> representation is used to represent absolute pitch
 > in units of hundredths of semitones with respect to middle C. Each
 > equally tempered semitone spans a distance of 100 cents. Middle C is
 > designated zero cents. All other pitches are represented with respect
@@ -36,12 +36,12 @@ Pitch Cents
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**cents` spines
+> It is recommended that files containing predominantly <span class="rep">cents</span> spines
 > should be given names with the distinguishing \`.cnt\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*cents** mappings of
+> The following table summarizes the <span class="rep">cents</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ------------------------------
@@ -58,7 +58,7 @@ Pitch Cents
 > >   ;     pause sign
 > >   ----- ------------------------------
 > >
-> > *Summary of **\*\*cents** Signifiers*
+> > *Summary of <span class="rep">cents</span> Signifiers*
 
 ### EXAMPLES
 
@@ -87,28 +87,28 @@ Pitch Cents
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*cents** encoded data as
+> The following Humdrum commands accept <span class="rep">cents</span> encoded data as
 > inputs:
 >
 >   -- --------------------------------------- ----------------------------------------------------------
 >                                              
 >      <span class="tool">cents</span>     change numerical precision of \*\*cents values
->      <span class="tool">freq</span>       translates **\*\*cents** to **\*\*freq**
->      <span class="tool">kern</span>       translates **\*\*cents** to **\*\*kern**
->      <span class="tool">pc</span>           translates **\*\*cents** to **\*\*pc**
->      <span class="tool">pitch</span>     translate **\*\*cents** pitch to numerical **\*\*pitch**
->      <span class="tool">semits</span>   translates **\*\*cents** to **\*\*semits**
->      <span class="tool">solfg</span>     translates **\*\*cents** to **\*\*solfg**
->      <span class="tool">tonh</span>       translates **\*\*cents** to **\*\*Tonh**
+>      <span class="tool">freq</span>       translates <span class="rep">cents</span> to <span class="rep">freq</span>
+>      <span class="tool">kern</span>       translates <span class="rep">cents</span> to <span class="rep">kern</span>
+>      <span class="tool">pc</span>           translates <span class="rep">cents</span> to <span class="rep">pc</span>
+>      <span class="tool">pitch</span>     translate <span class="rep">cents</span> pitch to numerical <span class="rep">pitch</span>
+>      <span class="tool">semits</span>   translates <span class="rep">cents</span> to <span class="rep">semits</span>
+>      <span class="tool">solfg</span>     translates <span class="rep">cents</span> to <span class="rep">solfg</span>
+>      <span class="tool">tonh</span>       translates <span class="rep">cents</span> to <span class="rep">Tonh</span>
 >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 >                                              
 >   -- --------------------------------------- ----------------------------------------------------------
 >
-> The following Humdrum command produces **\*\*cents** data as output:
+> The following Humdrum command produces <span class="rep">cents</span> data as output:
 >
 >   -- ------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >                                            
->      <span class="tool">cents</span>   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
+>      <span class="tool">cents</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">cents</span>
 >   -- ------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
 ### TANDEM INTERPRETATIONS
@@ -124,7 +124,7 @@ Pitch Cents
 > >   tempo              `*MM96.3`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*cents***
+> > *Tandem interpretations for <span class="rep">cents</span>*
 
 ### SEE ALSO
 

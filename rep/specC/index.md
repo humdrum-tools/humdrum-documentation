@@ -11,11 +11,11 @@ Spectral Centroid
 
 ### REPRESENTATION
 
-> **\*\*specC** \-- spectral centroid representation
+> <span class="rep">specC</span> \-- spectral centroid representation
 
 ### DESCRIPTION
 
-> The **\*\*specC** representation can be used to represent the
+> The <span class="rep">specC</span> representation can be used to represent the
 > frequency of the spectral centroid for pure or complex tones. Spectral
 > centroid is the amplitude-weighted mean of several frequency
 > components. For example, given three frequencies (200, 400, 900 Hz) of
@@ -36,12 +36,12 @@ Spectral Centroid
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**specC` data
+> It is recommended that files containing predominantly <span class="rep">specC</span> data
 > should be given names with the distinguishing \`.spc\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*specC** mappings of
+> The following table summarizes the <span class="rep">specC</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------------------
@@ -51,7 +51,7 @@ Spectral Centroid
 > >   =     barline; == double barline
 > >   ----- ----------------------------------------------
 > >
-> > *Summary of **\*\*specC** Signifiers*
+> > *Summary of <span class="rep">specC</span> Signifiers*
 
 ### EXAMPLES
 
@@ -79,34 +79,34 @@ represented by the single letter \`r\'.
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*specC** encoded data as
+> The following Humdrum commands accept <span class="rep">specC</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------------- -----------------------------------------------------
-> >      <span class="tool">cents</span>     translates **\*\*specC** to **\*\*cents**
-> >      <span class="tool">deg</span>         translate **\*\*specC** to **\*\*deg**
-> >      <span class="tool">degree</span>   translate **\*\*specC** to **\*\*degree**
-> >      <span class="tool">freq</span>       translate **\*\*specC** to **\*\*freq**
-> >      <span class="tool">kern</span>       translates **\*\*specC** to **\*\*kern**
-> >      <span class="tool">pc</span>           translate **\*\*specC** pitch to **\*\*pc**
-> >      <span class="tool">pitch</span>     translates **\*\*specC** to **\*\*pitch**
-> >      <span class="tool">semits</span>   translate **\*\*specC** to numerical **\*\*semits**
-> >      <span class="tool">solfg</span>     translate **\*\*specC** pitch to **\*\*solfg**
-> >      <span class="tool">specc</span>     change numerical precision of **\*\*specC** values
-> >      <span class="tool">tonh</span>       translate **\*\*solfg** pitch to **\*\*Tonh**
+> >      <span class="tool">cents</span>     translates <span class="rep">specC</span> to <span class="rep">cents</span>
+> >      <span class="tool">deg</span>         translate <span class="rep">specC</span> to <span class="rep">deg</span>
+> >      <span class="tool">degree</span>   translate <span class="rep">specC</span> to <span class="rep">degree</span>
+> >      <span class="tool">freq</span>       translate <span class="rep">specC</span> to <span class="rep">freq</span>
+> >      <span class="tool">kern</span>       translates <span class="rep">specC</span> to <span class="rep">kern</span>
+> >      <span class="tool">pc</span>           translate <span class="rep">specC</span> pitch to <span class="rep">pc</span>
+> >      <span class="tool">pitch</span>     translates <span class="rep">specC</span> to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>   translate <span class="rep">specC</span> to numerical <span class="rep">semits</span>
+> >      <span class="tool">solfg</span>     translate <span class="rep">specC</span> pitch to <span class="rep">solfg</span>
+> >      <span class="tool">specc</span>     change numerical precision of <span class="rep">specC</span> values
+> >      <span class="tool">tonh</span>       translate <span class="rep">solfg</span> pitch to <span class="rep">Tonh</span>
 > >                                              
 > >   -- --------------------------------------- -----------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*specC** data as output:
+> The following Humdrum command produces <span class="rep">specC</span> data as output:
 >
 > >   -- ------------------------------------- -------------------------------------------------------------
-> >      <span class="tool">specc</span>   translates **\*\*freq**, and **\*\*specC** to **\*\*specC**
+> >      <span class="tool">specc</span>   translates <span class="rep">freq</span>, and <span class="rep">specC</span> to <span class="rep">specC</span>
 > >   -- ------------------------------------- -------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*specC**:
+> <span class="rep">specC</span>:
 >
 > >   ------------------ ------------
 > >   pure tones         `*pure`
@@ -116,7 +116,7 @@ represented by the single letter \`r\'.
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*specC***
+> > *Tandem interpretations for <span class="rep">specC</span>*
 
 ### SEE ALSO
 

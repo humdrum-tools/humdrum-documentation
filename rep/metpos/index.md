@@ -11,13 +11,13 @@ Metric Hierarchy
 
 ### REPRESENTATION
 
-> **\*\*metpos** \-- position in metric hierarchy
+> <span class="rep">metpos</span> \-- position in metric hierarchy
 
 ### DESCRIPTION
 
-> The **\*\*metpos** representation consists of simply a set of
+> The <span class="rep">metpos</span> representation consists of simply a set of
 > numerical values indicating the order of events. Normally, a
-> **\*\*metpos** spine simply encodes a set of ascending integers
+> <span class="rep">metpos</span> spine simply encodes a set of ascending integers
 > marking the succession of events:
 >
 > > ``
@@ -32,9 +32,9 @@ Metric Hierarchy
 > >   \*-
 > >   ------------
 > >
-> The **\*\*metpos** representation also recognizes **\*\*kern**-like
+> The <span class="rep">metpos</span> representation also recognizes <span class="rep">kern</span>-like
 > [**barlines**](barlines.rep.html). The presence of an equals-sign
-> ` (=)` in the first column of a **\*\*metpos** spine is used to denote
+> ` (=)` in the first column of a <span class="rep">metpos</span> spine is used to denote
 > a barline. Immediately after the equals sign there may follow an
 > optional integer value indicating the measure number (e.g. ` =107` \--
 > for measure 107). In addition, a lower-case alphabetic character may
@@ -55,12 +55,12 @@ Metric Hierarchy
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**metpos` data
+> It is recommended that files containing predominantly <span class="rep">metpos</span> data
 > should be given names with the distinguishing \`.mtp\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*metpos** mappings of
+> The following table summarizes the <span class="rep">metpos</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------
@@ -70,7 +70,7 @@ Metric Hierarchy
 > >   ==    double barline
 > >   ----- ----------------------------------
 > >
-> > *Summary of **\*\*metpos** Signifiers*
+> > *Summary of <span class="rep">metpos</span> Signifiers*
 
 ### EXAMPLES
 
@@ -106,7 +106,7 @@ Metric Hierarchy
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*metpos** encoded data as
+> The following Humdrum commands accept <span class="rep">metpos</span> encoded data as
 > inputs:
 >
 > >   -- ------------------------------------------- ---------------------------------------------------
@@ -114,16 +114,16 @@ Metric Hierarchy
 > >      <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
 > >   -- ------------------------------------------- ---------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*metpos** data as output:
+> The following Humdrum command produces <span class="rep">metpos</span> data as output:
 >
 > >   -- --------------------------------------- ---------------------------------------------------------------------------------------------
-> >      <span class="tool">metpos</span>   generate metric position values for timebase-formatted **\*\*kern** or **\*\*recip** inputs
+> >      <span class="tool">metpos</span>   generate metric position values for timebase-formatted <span class="rep">kern</span> or <span class="rep">recip</span> inputs
 > >   -- --------------------------------------- ---------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*metpos**:
+> <span class="rep">metpos</span>:
 >
 > >   ------------------ -----------
 > >   MIDI channel       `*Ch1`
@@ -132,7 +132,7 @@ Metric Hierarchy
 > >   timebase           `*tb32`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*metpos***
+> > *Tandem interpretations for <span class="rep">metpos</span>*
 
 ### SEE ALSO
 

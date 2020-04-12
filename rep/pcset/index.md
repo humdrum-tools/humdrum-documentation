@@ -11,7 +11,7 @@ Pitch-Class Sets
 
 ### REPRESENTATION
 
-> **\*\*pcset** \-- Fortean pitch-class set representation
+> <span class="rep">pcset</span> \-- Fortean pitch-class set representation
 
 ### DESCRIPTION
 
@@ -31,7 +31,7 @@ Pitch-Class Sets
 > to indicate that the set shares the same interval-class content as
 > some other set. (said to be Z-related sets). For example, sets 4-Z15
 > and 4-Z29 are said to be Z-related since they both exhibit the same
-> interval-class content. (See [**\*\*iv**](iv.rep.html)
+> interval-class content. (See [<span class="rep">iv</span>](iv.rep.html)
 > representation.)
 >
 > Barlines are represented using the \"common system\" barlines \-- see
@@ -39,7 +39,7 @@ Pitch-Class Sets
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**pcs` data
+> It is recommended that files containing predominantly <span class="rep">pcs</span> data
 > should be given names with the distinguishing \`.pcs\' extension.
 
 ### SIGNIFIERS
@@ -60,10 +60,10 @@ Pitch-Class Sets
 
 > The following sample document shows a pitch-class representation for
 > the opening measures of Schoenberg\'s \"Sommerm\\o\'u\\(..\'d\" from
-> *Three Songs,* Opus 48. The right-most spine shows a `**pcset`
+> *Three Songs,* Opus 48. The right-most spine shows a <span class="rep">pcset</span>
 > representation identifying the pitch-class content of each sonority.
-> (The `**pcset` spine might be generated using the <span class="tool">pcset</span> command,
-> after the `**pc` pitch-class spines are *filled-out* using the
+> (The <span class="rep">pcset</span> spine might be generated using the <span class="tool">pcset</span> command,
+> after the <span class="rep">pc</span> pitch-class spines are *filled-out* using the
 > **fill** command.)
 >
 > > ``
@@ -132,7 +132,7 @@ Pitch-Class Sets
 > >   timebase           \*tb32
 > >   ------------------ ----------
 > >
-> > *Tandem interpretations for **\*\*pcset***
+> > *Tandem interpretations for <span class="rep">pcset</span>*
 
 ### SEE ALSO
 

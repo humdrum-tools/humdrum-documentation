@@ -11,22 +11,22 @@ Duration
 
 ### REPRESENTATION
 
-> **\*\*dur** \-- duration (time-span) representation
+> <span class="rep">dur</span> \-- duration (time-span) representation
 
 ### DESCRIPTION
 
-> The **\*\*dur** representation can be used to encode a sequence of
+> The <span class="rep">dur</span> representation can be used to encode a sequence of
 > time-spans or successive durations. Units may be seconds, minutes,
 > hours, days, months, and/or years.
 >
-> In the **\*\*dur** representation, duration information is encoded
+> In the <span class="rep">dur</span> representation, duration information is encoded
 > according to the following basic syntax:
 >
 > *years**/**months**/**days**/**hours**:**minutes**:**seconds**.**decimal*
 >
 > Duration information may be encoded in full, or may consist of
 > isolated elements or parts. The following table shows the most
-> succinct ways of encoding single duration values within **\*\*dur**:
+> succinct ways of encoding single duration values within <span class="rep">dur</span>:
 >
 > >   -------- -------------------------------
 > >   `.11`    11 one-hundredths of a second
@@ -38,7 +38,7 @@ Duration
 > >   `//11`   11 days
 > >   -------- -------------------------------
 > >
-> > *Examples of **\*\*dur** components*
+> > *Examples of <span class="rep">dur</span> components*
 >
 > Notice that if a single numerical value appears, it is interpreted as
 > *seconds*. For example, the data token ` 32` represents a duration of
@@ -46,7 +46,7 @@ Duration
 > interpreted as the number of *years*; if a single value appears
 > followed by a colon, it is interpreted as the number of *minutes*.
 > Days and hours require two leading or two trailing delimiters
-> respectively. In general, abbreviated forms of **\*\*dur**
+> respectively. In general, abbreviated forms of <span class="rep">dur</span>
 > representations tend to favor the two extremes of durations: in
 > seconds and in years.
 >
@@ -60,7 +60,7 @@ Duration
 > ` /9//` means a duration of 9 months. The data token ` //730/` means
 > 730 days.
 >
-> The **\*\*dur** representation provides a means for representing
+> The <span class="rep">dur</span> representation provides a means for representing
 > approximate durations. It also provides a means for representing
 > uncertainty, as well as mechanisms for representing time boundaries
 > (prior to \...; after \...).
@@ -74,9 +74,9 @@ Duration
 > is taken to be uncertain. Hence, the token ` ?3:` signifies a duration
 > of perhaps 3 minutes.
 >
-> The **\*\*dur** representation does not support the \`x\' and \`z\'
-> signifies used by related representations such as **\*\*date** and
-> **\*\*Zeit.** However, **\*\*dur** is able to represent shorter-than
+> The <span class="rep">dur</span> representation does not support the \`x\' and \`z\'
+> signifies used by related representations such as <span class="rep">date</span> and
+> **\*\*Zeit.** However, <span class="rep">dur</span> is able to represent shorter-than
 > (\<) and longer-than (\>) indications. For example, the data token
 > ` <1:` means a duration of less than one minute.
 >
@@ -85,12 +85,12 @@ Duration
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**dur` data
+> It is recommended that files containing predominantly <span class="rep">dur</span> data
 > should be given names with the distinguishing \`.dur\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*dur** mappings of signifiers
+> The following table summarizes the <span class="rep">dur</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ----------------------------------------------------
@@ -106,7 +106,7 @@ Duration
 > >   ==    double barline
 > >   ----- ----------------------------------------------------
 > >
-> > *Summary of **\*\*dur** Signifiers*
+> > *Summary of <span class="rep">dur</span> Signifiers*
 
 ### EXAMPLES
 
@@ -133,7 +133,7 @@ Duration
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*dur** data as output:
+> The following Humdrum command produces <span class="rep">dur</span> data as output:
 >
 <span class="tool">dur</span>
 
@@ -142,7 +142,7 @@ change canonical durations (`**recip) to elapsed time in seconds   `
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*dur**:
+> <span class="rep">dur</span>:
 >
 > >   ------------------ -----------
 > >   MIDI channel       `*Ch1`
@@ -151,7 +151,7 @@ change canonical durations (`**recip) to elapsed time in seconds   `
 > >   timebase           `*tb32`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*dur***
+> > *Tandem interpretations for <span class="rep">dur</span>*
 
 ### SEE ALSO
 

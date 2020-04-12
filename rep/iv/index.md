@@ -11,7 +11,7 @@ Interval Vectors
 
 ### REPRESENTATION
 
-**\*\*iv** \-- interval vector representation
+<span class="rep">iv</span> \-- interval vector representation
 
 On-line documentation is not currently available for this
 representation.

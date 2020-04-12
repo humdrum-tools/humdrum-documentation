@@ -11,7 +11,7 @@ Time-base
 
 ### REPRESENTATION
 
-**\*\*timebase** \-- time-base representation
+<span class="rep">timebase</span> \-- time-base representation
 
 On-line documentation is not currently available for this
 representation.

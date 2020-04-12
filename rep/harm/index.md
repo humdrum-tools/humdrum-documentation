@@ -11,12 +11,12 @@ Functional Harmony
 
 ### REPRESENTATION
 
-> **\*\*harm** \-- representation for Western functional harmony
+> <span class="rep">harm</span> \-- representation for Western functional harmony
 
 ### DESCRIPTION
 
-> The **\*\*harm** representation provides one method for encoding
-> Western functional harmony. In the **\*\*harm** representation, chords
+> The <span class="rep">harm</span> representation provides one method for encoding
+> Western functional harmony. In the <span class="rep">harm</span> representation, chords
 > are normally identified within a key context \-- such as G minor, or
 > A-flat major. Keys are normally indicated using the \"key\" tandem
 > interpretation. If no key indication is provided, the harmony
@@ -24,7 +24,7 @@ Functional Harmony
 > (neither major or minor). (Key-independent representations may be
 > useful for comparing harmonic patterns between groups of works in
 > varying keys.) Changes of key can be defined at any point in a
-> **\*\*harm** representation. The defined key context remains in effect
+> <span class="rep">harm</span> representation. The defined key context remains in effect
 > until the occurrence of another key-interpretation or until the key
 > context is specifically \"undefined\": the reserved key-interpretation
 > `*?:` can be used to \"undefine\" the key context.
@@ -74,7 +74,7 @@ Functional Harmony
 > \"c\"; third inversion - \"d\"; etc. Root position is implied, so in
 > the absence of a letter designation (a,b,c \...) the token *IV* means
 > a IV chord in root position. Figured-bass notation is not used in
-> **\*\*harm** because it proves inconsistent in the spelling of
+> <span class="rep">harm</span> because it proves inconsistent in the spelling of
 > extended tertian chords. In the case of a fully spelled 13th chord in
 > root position, for example, the figured bass would be 1-2-3-4-5-6-7.
 > However, this same figured bass would apply to all inversions of the
@@ -114,7 +114,7 @@ Functional Harmony
 > single key. The use of secondary dominants and modulations requires
 > that some means be provided for indicating shifting key areas. When
 > shifts of key are sanctioned, these should normally be encoded using
-> an \"X of Y\" approach \-- e.g. V of V. In the **\*\*harm**
+> an \"X of Y\" approach \-- e.g. V of V. In the <span class="rep">harm</span>
 > representation, such shifts are indicated via the slash character (/).
 > For example, a dominant seventh chord on the supertonic degree can be
 > represented as V7/ii. If a passage modulates to the subdominant and
@@ -129,7 +129,7 @@ Functional Harmony
 > \-- such as the Neopolitan chord, and the \"ethnic sixth\" chords:
 > Italian, French, and German. The Neopolitan chord is a major triad
 > whose root is the lowered supertonic; it is represented in
-> **\*\*harm** by the reserved upper-case letter \"N\". The Neopolitan
+> <span class="rep">harm</span> by the reserved upper-case letter \"N\". The Neopolitan
 > chord normally appears as a first inversion chord, so the Neopolitan
 > sixth chord would be represented as \"Nb\". Notice that the Neopolitan
 > sixth chord is equivalent to \"-IIb\". The Italian, French, and German
@@ -161,7 +161,7 @@ Functional Harmony
 > the use of square brackets \[\]. All other indications are assumed to
 > be explicit. In the case of bi-tonal works, the user may elect to pair
 > explicit and alternate encodings, e.g. iii\[v/vi\], or make use of two
-> independent **\*\*harm** spines. Two or more **\*\*harm** spines may
+> independent <span class="rep">harm</span> spines. Two or more <span class="rep">harm</span> spines may
 > be necessary in the case of polytonal works.
 >
 > Barlines are represented using the \"common system\" for barlines \--
@@ -169,12 +169,12 @@ Functional Harmony
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**harm` data
+> It is recommended that files containing predominantly <span class="rep">harm</span> data
 > should be given names with the distinguishing \`.hrm\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*harm** mappings of signifiers
+> The following table summarizes the <span class="rep">harm</span> mappings of signifiers
 > and signifieds.
 >
 > >   -------- -------------------------------------------
@@ -219,7 +219,7 @@ Functional Harmony
 > >   viioD7   full-diminished seventh chord
 > >   -------- -------------------------------------------
 > >
-> > *Summary of **\*\*harm** Signifiers*
+> > *Summary of <span class="rep">harm</span> Signifiers*
 
 ### EXAMPLES
 
@@ -267,13 +267,13 @@ Functional Harmony
 > >
 ### PERTINENT COMMANDS
 
-> Currently, no special-purpose Humdrum commands produce **\*\*harm** as
-> output, or process **\*\*harm** encoded data input.
+> Currently, no special-purpose Humdrum commands produce <span class="rep">harm</span> as
+> output, or process <span class="rep">harm</span> encoded data input.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*harm**:
+> <span class="rep">harm</span>:
 >
 > >   ------------------ ------------
 > >   MIDI channel       `*Ch1`
@@ -282,7 +282,7 @@ Functional Harmony
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*harm***
+> > *Tandem interpretations for <span class="rep">harm</span>*
 
 ### SEE ALSO
 

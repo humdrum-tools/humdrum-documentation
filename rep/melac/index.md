@@ -11,13 +11,13 @@ Melodic Accent
 
 ### REPRESENTATION
 
-> **\*\*melac** \-- melodic accent representation
+> <span class="rep">melac</span> \-- melodic accent representation
 
 ### DESCRIPTION
 
-> The **\*\*melac** representation is used to characterize the degree of
+> The <span class="rep">melac</span> representation is used to characterize the degree of
 > pitch-related stress (melodic accent) for successive moments. Three
-> types of tokens are recognized by **\*\*melac**: stress-tokens, rests,
+> types of tokens are recognized by <span class="rep">melac</span>: stress-tokens, rests,
 > and barlines. Stress-tokens encode decimal values ranging between 0
 > (no stress) and 1 (maximum stress).
 >
@@ -26,12 +26,12 @@ Melodic Accent
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**melac` data
+> It is recommended that files containing predominantly <span class="rep">melac</span> data
 > should be given names with the distinguishing \`.mac\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*melac** mappings of
+> The following table summarizes the <span class="rep">melac</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- --------------------------------------------
@@ -42,14 +42,14 @@ Melodic Accent
 > >   =;    barline with pause sign
 > >   ----- --------------------------------------------
 > >
-> > *Summary of **\*\*melac** Signifiers*
+> > *Summary of <span class="rep">melac</span> Signifiers*
 
 ### EXAMPLES
 
-> The following sample document shows a single spine of **\*\*melac**
+> The following sample document shows a single spine of <span class="rep">melac</span>
 > data for the bass line of J. S. Bach\'s two-part keyboard Invention
-> No. 1. The corresponding [**\*\*kern**](kern.rep.html) and
-> [**\*\*semits**](semits.rep.html) representations are also shown:
+> No. 1. The corresponding [<span class="rep">kern</span>](kern.rep.html) and
+> [<span class="rep">semits</span>](semits.rep.html) representations are also shown:
 >
 > > ``
 > >
@@ -89,7 +89,7 @@ Melodic Accent
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*melac** data as output:
+> The following Humdrum command produces <span class="rep">melac</span> data as output:
 >
 > >   -- ------------------------------------- --------------------------------------------------------
 > >      <span class="tool">melac</span>   calculate melodic accent values for successive pitches
@@ -98,7 +98,7 @@ Melodic Accent
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*melac**:
+> <span class="rep">melac</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -106,7 +106,7 @@ Melodic Accent
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*melac***
+> > *Tandem interpretations for <span class="rep">melac</span>*
 
 ### SEE ALSO
 

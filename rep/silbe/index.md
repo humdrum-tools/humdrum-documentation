@@ -11,7 +11,7 @@ Syllables
 
 ### REPRESENTATION
 
-> **\*\*silbe** \-- syllable-oriented text representation
+> <span class="rep">silbe</span> \-- syllable-oriented text representation
 
 On-line documentation is not currently available for this representaton.
 

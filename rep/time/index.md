@@ -11,16 +11,16 @@ Elapsed Time
 
 ### REPRESENTATION
 
- **\*\*time** \-- relative elapsed time (in seconds)
+ <span class="rep">time</span> \-- relative elapsed time (in seconds)
 
 ### DESCRIPTION
 
- The **\*\*time** representation is used to represent cumulative time
+ The <span class="rep">time</span> representation is used to represent cumulative time
  (from some arbitrary moment deemed \"time zero\") to the onset of the
- current moment. A typical use for **\*\*time** is to represent the
+ current moment. A typical use for <span class="rep">time</span> is to represent the
  elapsed time from the beginning of a work (in seconds). Data tokens in
- **\*\*time** consist simply of numbers of seconds, with an optional
- decimal value. The **\*\*time** representation has no provision for
+ <span class="rep">time</span> consist simply of numbers of seconds, with an optional
+ decimal value. The <span class="rep">time</span> representation has no provision for
  representing \"hours\" or \"minutes\".
 
  Barlines are represented using the \"common system\" for barlines \--
@@ -28,12 +28,12 @@ Elapsed Time
 
 ### FILE TYPE
 
- It is recommended that files containing predominantly `**time` data
+ It is recommended that files containing predominantly <span class="rep">time</span> data
  should be given names with the distinguishing \`.tim\' extension.
 
 ### SIGNIFIERS
 
- The following table summarizes the **\*\*time** mappings of signifiers
+ The following table summarizes the <span class="rep">time</span> mappings of signifiers
  and signifieds.
 
   | 0-9 |  decimal values
@@ -41,7 +41,7 @@ Elapsed Time
   | =   |  barlines
   | ==  |  double barline
 
- *Summary of **\*\*time** Signifiers*
+ *Summary of <span class="rep">time</span> Signifiers*
 
 ### EXAMPLES
 
@@ -74,19 +74,19 @@ Elapsed Time
 
 ### PERTINENT COMMANDS
 
- Currently, no special-purpose Humdrum commands produce **\*\*time** as
- output, or process **\*\*time** encoded data as input.
+ Currently, no special-purpose Humdrum commands produce <span class="rep">time</span> as
+ output, or process <span class="rep">time</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
  The following tandem interpretations can be used in conjunction with
- **\*\*time**:
+ <span class="rep">time</span>:
 
   | MIDI channel      | `*Ch1`
   | meter signatures  | `*M6/8`
   | tempo             | `*MM96.3`
 
- *Tandem interpretations for **\*\*time***
+ *Tandem interpretations for <span class="rep">time</span>*
 
 ### SEE ALSO
 

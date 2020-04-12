@@ -83,7 +83,7 @@ Barlines
    :     repeat sign
    ----- ------------------------------------------------
 
- *Summary of **\*\*kern**-like Barline Signifiers*
+ *Summary of <span class="rep">kern</span>-like Barline Signifiers*
 
 []{#EXAMPLES}
 
@@ -124,33 +124,33 @@ Barlines
  \
 
    ------------------ ----------------------------------------------------------
-   **\*\*cents**      absolute pitch representation in hundredths of semitones
-   **\*\*deg**        relative scale degree representation
-   **\*\*degree**     absolute scale degree representation
-   **\*\*diss**       sensory dissonance representation
-   **\*\*dur**        event duration (in seconds)
-   **\*\*embel**      representation for embellishment tones
-   **\*\*freq**       frequency representation
-   **\*\*fret**       generalized fretted tablature representation
-   **\*\*harm**       representation for Western functional harmony
-   **\*\*kern**       core pitch/duration of common practice music notation
-   **\*\*melac**      melodic accent representation
-   **\*\*MIDI**       Musical Instrument Digital Interface notation
-   **\*\*mint**       melodic interval representation
-   **\*\*pc**         pitch-class representation
-   **\*\*pcset**      Fortean pitch-class set representation
-   **\*\*pitch**      American National Standards Institute pitch notation
-   **\*\*recip**      beat-proportion representation
-   **\*\*semits**     semitone absolute pitch representation
-   **\*\*solfg**      French solfège (pitch) representation
-   **\*\*specC**      spectral centroid representation
-   **\*\*spect**      discrete frequency spectrum representation
-   **\*\*synco**      represent degree of metric syncopation
-   **\*\*takt**       beat-position representation
-   **\*\*text**       vocal text representation
-   **\*\*time**       relative elapsed time (in seconds)
-   **\*\*Tonh**       German Tonh\\o\'o\\(..\'he (pitch) representation
-   **\*\*URrhythm**   represent Johnson-Laird beat prototypes for a passage
+   <span class="rep">cents</span>      absolute pitch representation in hundredths of semitones
+   <span class="rep">deg</span>        relative scale degree representation
+   <span class="rep">degree</span>     absolute scale degree representation
+   <span class="rep">diss</span>       sensory dissonance representation
+   <span class="rep">dur</span>        event duration (in seconds)
+   <span class="rep">embel</span>      representation for embellishment tones
+   <span class="rep">freq</span>       frequency representation
+   <span class="rep">fret</span>       generalized fretted tablature representation
+   <span class="rep">harm</span>       representation for Western functional harmony
+   <span class="rep">kern</span>       core pitch/duration of common practice music notation
+   <span class="rep">melac</span>      melodic accent representation
+   <span class="rep">MIDI</span>       Musical Instrument Digital Interface notation
+   <span class="rep">mint</span>       melodic interval representation
+   <span class="rep">pc</span>         pitch-class representation
+   <span class="rep">pcset</span>      Fortean pitch-class set representation
+   <span class="rep">pitch</span>      American National Standards Institute pitch notation
+   <span class="rep">recip</span>      beat-proportion representation
+   <span class="rep">semits</span>     semitone absolute pitch representation
+   <span class="rep">solfg</span>      French solfège (pitch) representation
+   <span class="rep">specC</span>      spectral centroid representation
+   <span class="rep">spect</span>      discrete frequency spectrum representation
+   <span class="rep">synco</span>      represent degree of metric syncopation
+   <span class="rep">takt</span>       beat-position representation
+   <span class="rep">text</span>       vocal text representation
+   <span class="rep">time</span>       relative elapsed time (in seconds)
+   <span class="rep">Tonh</span>       German Tonh\\o\'o\\(..\'he (pitch) representation
+   <span class="rep">URrhythm</span>   represent Johnson-Laird beat prototypes for a passage
    **\*\*vox\#**      representation of number of concurrently active voices
    ------------------ ----------------------------------------------------------
 

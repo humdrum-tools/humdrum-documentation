@@ -11,7 +11,7 @@ Beat Position
 
 ### REPRESENTATION
 
-> **\*\*takt** \-- beat-position representation
+> <span class="rep">takt</span> \-- beat-position representation
 
 ### DESCRIPTION
 
@@ -19,12 +19,12 @@ Beat Position
 > recurring cycle or pattern. In music, the best example of such
 > recurring moments is the pattern of beats within a measure. In 3/4
 > meter, for example, a recurring cycle of beats occurs: 1-2-3-1-2-3
-> \... The **\*\*takt** interpretation permits the representation of
+> \... The <span class="rep">takt</span> interpretation permits the representation of
 > recurring moments within some temporal cycle. For most applications,
 > the duration of the repeating cycle will be equivalent to the measure.
 > However, other cycles are possible, such as phrase, sub-phrase, etc.
 >
-> In **\*\*takt**, integer values refer to beats, hence the value \`2\'
+> In <span class="rep">takt</span>, integer values refer to beats, hence the value \`2\'
 > refers to the second beat. Fractional values refer to moments within
 > beats. For example, the value \`3.5\' refers to the second half of the
 > third beat. In 4/4 meter, the value \`4.75\' refers to the last
@@ -74,12 +74,12 @@ Beat Position
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**takt` data
+> It is recommended that files containing predominantly <span class="rep">takt</span> data
 > should be given names with the distinguishing \`.tak\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*takt** mappings of signifiers
+> The following table summarizes the <span class="rep">takt</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ----------------------------------
@@ -89,7 +89,7 @@ Beat Position
 > >   ==    double barline
 > >   ----- ----------------------------------
 > >
-> > *Summary of **\*\*takt** Signifiers*
+> > *Summary of <span class="rep">takt</span> Signifiers*
 
 ### EXAMPLES
 
@@ -130,20 +130,20 @@ Beat Position
 > >
 ### PERTINENT COMMANDS
 
-> Currently, no special-purpose Humdrum commands produce **\*\*takt** as
-> output, or process **\*\*takt** encoded data as input.
+> Currently, no special-purpose Humdrum commands produce <span class="rep">takt</span> as
+> output, or process <span class="rep">takt</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*takt**:
+> <span class="rep">takt</span>:
 >
 > >   ------------------ -----------
 > >   meter signatures   `*M6/8`
 > >   tempo              `*MM96.3`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*takt***
+> > *Tandem interpretations for <span class="rep">takt</span>*
 
 ### SEE ALSO
 

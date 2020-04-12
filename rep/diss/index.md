@@ -11,11 +11,11 @@ Dissonance
 
 ### REPRESENTATION
 
-> **\*\*diss** \-- sensory dissonance representation
+> <span class="rep">diss</span> \-- sensory dissonance representation
 
 ### DESCRIPTION
 
-> The **\*\*diss** representation is used to characterize the degree of
+> The <span class="rep">diss</span> representation is used to characterize the degree of
 > sensory dissonance for successive acoustic moments. Two types of
 > tokens are recognized by **\*\*diss:** dissonance-tokens and barlines.
 > Dissonance-tokens encode integer values greater than or equal to zero.
@@ -28,12 +28,12 @@ Dissonance
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**diss` data
+> It is recommended that files containing predominantly <span class="rep">diss</span> data
 > should be given names with the distinguishing \`.dis\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*diss** mappings of signifiers
+> The following table summarizes the <span class="rep">diss</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ------------------------------------------
@@ -44,7 +44,7 @@ Dissonance
 > >   =;    barline with pause sign
 > >   ----- ------------------------------------------
 > >
-> > *Summary of **\*\*diss** Signifiers*
+> > *Summary of <span class="rep">diss</span> Signifiers*
 
 ### EXAMPLES
 
@@ -70,11 +70,11 @@ Dissonance
 > >   \*-
 > >   ----------
 > >
-> Note that rests are not represented in the **\*\*diss** scheme.
+> Note that rests are not represented in the <span class="rep">diss</span> scheme.
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*diss** data as output:
+> The following Humdrum command produces <span class="rep">diss</span> data as output:
 >
 > >   -- ----------------------------------- -------------------------------------------------------------------
 > >                                          
@@ -84,7 +84,7 @@ Dissonance
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*diss**:
+> <span class="rep">diss</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -92,7 +92,7 @@ Dissonance
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*diss***
+> > *Tandem interpretations for <span class="rep">diss</span>*
 
 ### SEE ALSO
 

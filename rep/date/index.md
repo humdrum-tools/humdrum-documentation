@@ -11,28 +11,28 @@ Absolute Time
 
 ### REPRESENTATION
 
-> **\*\*date** \-- absolute time representation (year, month, day, hour,
+> <span class="rep">date</span> \-- absolute time representation (year, month, day, hour,
 > minute, second \...)
 
 ### DESCRIPTION
 
-> The **\*\*date** representation provides a flexible means for
-> specifying particular moments in historical time. The **\*\*date**
+> The <span class="rep">date</span> representation provides a flexible means for
+> specifying particular moments in historical time. The <span class="rep">date</span>
 > scheme is able to represent year, month, day, hour, minute, second,
 > and fractional second information. In addition, various degrees of
 > approximation and uncertainty may be represented. N.B. Time-*spans*
-> are not represented by **\*\*date**; see the
-> [**\*\*dur**](dur.rep.html), [**\*\*time**](time.rep.html), or
-> [**\*\*Zeit**](Zeit.rep.html) representations.
+> are not represented by <span class="rep">date</span>; see the
+> [<span class="rep">dur</span>](dur.rep.html), [<span class="rep">time</span>](time.rep.html), or
+> [<span class="rep">Zeit</span>](Zeit.rep.html) representations.
 >
-> In the **\*\*date** representation, date information is encoded
+> In the <span class="rep">date</span> representation, date information is encoded
 > according to the following basic syntax:
 >
 > *year**/**month**/**day**/**hour**:**minute**:**second**.**decimal*
 >
 > Date information may be encoded in full, or may consist of isolated
 > elements or parts. The following table shows the most succinct ways of
-> encoding single date values within **\*\*date**:
+> encoding single date values within <span class="rep">date</span>:
 >
 > >   -------- -----------------------------------
 > >   `.11`    eleven one-hundredths of a second
@@ -45,22 +45,22 @@ Absolute Time
 > >   `//11`   11th day of the month
 > >   -------- -----------------------------------
 > >
-> > *Examples of **\*\*date** components*
+> > *Examples of <span class="rep">date</span> components*
 >
 > Notice that if a single numerical value appears, it is interpreted as
 > *seconds*; if a single value appears followed by a slash, it is
 > interpreted as a *year*; if a single value appears followed by a
 > colon, it is interpreted as a *minutes*. Days and hours require two
 > leading or two trailing delimiters respectively. In general,
-> abbreviated forms of **\*\*date** representations tend to favor the
+> abbreviated forms of <span class="rep">date</span> representations tend to favor the
 > two extremes of time: seconds and years. These are the time frames
 > that are typically of greatest interest to music scholars.
 >
-> The **\*\*date** representation makes use of the Gregorian calendar
+> The <span class="rep">date</span> representation makes use of the Gregorian calendar
 > and the 24-hour clock; Dates prior to the year 1 A.D. can be specified
 > by prepending the \"at\" sign (`@`) to the year.
 >
-> The **\*\*date** representation provides three distinct means for
+> The <span class="rep">date</span> representation provides three distinct means for
 > representing approximate moments. It also provides two independent
 > means for representing uncertainty, as well as mechanisms for
 > representing time boundaries (prior to \...; after \...).
@@ -82,33 +82,33 @@ Absolute Time
 > 2:30 PM. In this case, only the value \`30\' is approximate.
 >
 > A third method for representing temporal approximation employs the
-> caret (\^) to denote a range. For example, the **\*\*date** token:
+> caret (\^) to denote a range. For example, the <span class="rep">date</span> token:
 >
 > > ` 1554/^1557/`
 >
 > represents a moment somewhere between the years 1554 and 1557.
-> Conceptually, **\*\*date** is intended to represent *moments* rather
+> Conceptually, <span class="rep">date</span> is intended to represent *moments* rather
 > than *periods* of time. In other words, the above token represents a
 > moment sometime between 1554 and 1557; it is not intended to signify
-> an event that spanned the years 1554 to 1557. **\*\*date** does not
+> an event that spanned the years 1554 to 1557. <span class="rep">date</span> does not
 > presume how long a moment \"lasts,\" so it is theoretically possible
 > to interpret 1554 to 1557 as a \"long moment.\" However, another
 > representation \-- **\*\*Zeit (2)** \-- is intended to represent
 > *periods* of time, and so is better suited to the task of representing
 > an ongoing state or condition. In **\*\*date,** the caret (\^) is
 > meant merely to provide a more precise means for specifying the degree
-> of approximation. The following **\*\*date** tokens:
+> of approximation. The following <span class="rep">date</span> tokens:
 >
 > > ` 1954/6/1/^1954/6/2/  2.23^2.238`
 >
 > represent approximate times between June 1st and 2nd, 1954, and
 > between 2.230 and 2.238 seconds respectively.
 >
-> In addition to methods for representing approximation, **\*\*date**
+> In addition to methods for representing approximation, <span class="rep">date</span>
 > also allows three methods for the encoding of uncertainty. General
-> uncertainty is signified using the question-mark (?). A **\*\*date**
+> uncertainty is signified using the question-mark (?). A <span class="rep">date</span>
 > token preceded by a question-mark indicates that the date information
-> is *uncertain* (rather than imprecise). For example, the **\*\*date**
+> is *uncertain* (rather than imprecise). For example, the <span class="rep">date</span>
 > token:
 >
 > > ` ?1661/4//`
@@ -137,13 +137,13 @@ Absolute Time
 > value.
 >
 > A third method for representing uncertainty is provided by the
-> **\*\*date** logical OR signifier (\|). As in the case of the logical
+> <span class="rep">date</span> logical OR signifier (\|). As in the case of the logical
 > BETWEEN (\^), the OR signifier separates two component sub-dates. For
 > example, the token ` 10:41:|11:41:` means \"either 10:41 AM or 11:41
 > AM.\"
 >
 > In addition to the approximation and uncertainty signifiers,
-> **\*\*date** also permits the encoding of time boundaries. The
+> <span class="rep">date</span> also permits the encoding of time boundaries. The
 > less-than sign (\<) denotes \"prior to\" and the greater-than sign
 > (\>) denotes \"after.\" For example, the data token ` <1100/` means
 > prior to 1100 A.D., whereas the token ` >21::` means after 21 hours.
@@ -161,12 +161,12 @@ Absolute Time
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**data` data
+> It is recommended that files containing predominantly <span class="rep">data</span> data
 > should be given names with the distinguishing \`.dte\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*date** mappings of signifiers
+> The following table summarizes the <span class="rep">date</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ----------------------------------------------
@@ -185,11 +185,11 @@ Absolute Time
 > >   \|    \"or\" conjunction
 > >   ----- ----------------------------------------------
 > >
-> > *Summary of **\*\*date** Signifiers*
+> > *Summary of <span class="rep">date</span> Signifiers*
 
 ### EXAMPLES
 
-> Several examples of **\*\*date** data tokens are identified below:
+> Several examples of <span class="rep">date</span> data tokens are identified below:
 >
 > >   ------------------------- ---------------------------------------------------
 > >   \*\*date tokens           meaning
@@ -222,7 +222,7 @@ Absolute Time
 > >   `>?~1933/7/30z/`          Perhaps sometime after about July 30(?) 1933.
 > >   ------------------------- ---------------------------------------------------
 > >
-> > *Examples of **\*\*date** Tokens*
+> > *Examples of <span class="rep">date</span> Tokens*
 
 The following is a sample document:
 
@@ -241,20 +241,20 @@ The following is a sample document:
 >
 ### PERTINENT COMMANDS
 
-> Currently, no special-purpose Humdrum commands produce **\*\*date** as
-> output, or process **\*\*date** encoded data as input.
+> Currently, no special-purpose Humdrum commands produce <span class="rep">date</span> as
+> output, or process <span class="rep">date</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*date**:
+> <span class="rep">date</span>:
 >
 > >   ------------------ -----------
 > >   meter signatures   `*M6/8`
 > >   tempo              `*MM96.3`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*date***
+> > *Tandem interpretations for <span class="rep">date</span>*
 
 ### SEE ALSO
 

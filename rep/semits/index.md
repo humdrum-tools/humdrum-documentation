@@ -11,11 +11,11 @@ Semitone Pitch
 
 ### REPRESENTATION
 
-> **\*\*semits** \-- semitone absolute pitch representation
+> <span class="rep">semits</span> \-- semitone absolute pitch representation
 
 ### DESCRIPTION
 
-> The **\*\*semits** representation is used to represent absolute pitch
+> The <span class="rep">semits</span> representation is used to represent absolute pitch
 > in semitone units with respect to middle C. Middle C is designated
 > zero semitones. All other pitches are represented with respect to this
 > reference, hence A4 is 9 semits and A3 is -3 semits. Fractional values
@@ -34,12 +34,12 @@ Semitone Pitch
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**semits` data
+> It is recommended that files containing predominantly <span class="rep">semits</span> data
 > should be given names with the distinguishing \`.sem\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*semits** mappings of
+> The following table summarizes the <span class="rep">semits</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------
@@ -56,12 +56,12 @@ Semitone Pitch
 > >   ;     pause sign
 > >   ----- ----------------------------------
 > >
-> > *Summary of **\*\*semits** Signifiers*
+> > *Summary of <span class="rep">semits</span> Signifiers*
 
 ### EXAMPLES
 
-> The following sample document shows a [**\*\*kern**](kern.rep.html)
-> spine with corresponding `**semits` pitch values.
+> The following sample document shows a [<span class="rep">kern</span>](kern.rep.html)
+> spine with corresponding <span class="rep">semits</span> pitch values.
 >
 > > ``
 > >
@@ -88,33 +88,33 @@ Semitone Pitch
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*semits** encoded data as
+> The following Humdrum commands accept <span class="rep">semits</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------------- --------------------------------------------------------
-> >      <span class="tool">cents</span>     translates **\*\*semits** to **\*\*cents**
-> >      <span class="tool">freq</span>       translates **\*\*semits** to **\*\*freq**
-> >      <span class="tool">kern</span>       translates **\*\*semits** to **\*\*kern**
+> >      <span class="tool">cents</span>     translates <span class="rep">semits</span> to <span class="rep">cents</span>
+> >      <span class="tool">freq</span>       translates <span class="rep">semits</span> to <span class="rep">freq</span>
+> >      <span class="tool">kern</span>       translates <span class="rep">semits</span> to <span class="rep">kern</span>
 > >      <span class="tool">melac</span>     calculate melodic accent values for successive pitches
-> >      <span class="tool">pc</span>           translate **\*\*semits** pitch to **\*\*pc**
-> >      <span class="tool">pitch</span>     translate **\*\*semits** pitch to **\*\*pitch**
-> >      <span class="tool">semits</span>   change numerical precision of **\*\*semits** values
-> >      <span class="tool">solfg</span>     translate **\*\*semits** pitch to **\*\*solfg**
-> >      <span class="tool">tonh</span>       translate **\*\*semits** pitch to **\*\*Tonh**
+> >      <span class="tool">pc</span>           translate <span class="rep">semits</span> pitch to <span class="rep">pc</span>
+> >      <span class="tool">pitch</span>     translate <span class="rep">semits</span> pitch to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>   change numerical precision of <span class="rep">semits</span> values
+> >      <span class="tool">solfg</span>     translate <span class="rep">semits</span> pitch to <span class="rep">solfg</span>
+> >      <span class="tool">tonh</span>       translate <span class="rep">semits</span> pitch to <span class="rep">Tonh</span>
 > >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- --------------------------------------------------------
 > >
-> The following Humdrum commands produce **\*\*semits** data as outputs:
+> The following Humdrum commands produce <span class="rep">semits</span> data as outputs:
 >
 > >   -- --------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> >      <span class="tool">semits</span>   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, **\*\*Tonh**, to **\*\*semits**
+> >      <span class="tool">semits</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, <span class="rep">Tonh</span>, to <span class="rep">semits</span>
 > >   -- --------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*semits**:
+> <span class="rep">semits</span>:
 >
 > >   ------------------ ------------
 > >   MIDI channel       `*Ch1`
@@ -123,7 +123,7 @@ Semitone Pitch
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*semits***
+> > *Tandem interpretations for <span class="rep">semits</span>*
 
 ### SEE ALSO
 

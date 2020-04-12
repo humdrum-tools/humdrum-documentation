@@ -11,17 +11,17 @@ French Solfège
 
 ### REPRESENTATION
 
-> **\*\*solfg** \-- French solfège (pitch) notation
+> <span class="rep">solfg</span> \-- French solfège (pitch) notation
 
 ### DESCRIPTION
 
-> The **\*\*solfg** representation permits the encoding of Western
+> The <span class="rep">solfg</span> representation permits the encoding of Western
 > musical pitches using the common French system for pitch naming.
 >
-> The **\*\*solfg** representation distinguishes three types of data
+> The <span class="rep">solfg</span> representation distinguishes three types of data
 > tokens: pitches, rests, and barlines. Pitches are encoded using
 > diatonic pitch names, accidentals, and octave indications. In
-> addition, **\*\*solfg** provides limited capabilities for representing
+> addition, <span class="rep">solfg</span> provides limited capabilities for representing
 > phrasing and slurs.
 >
 > Pitch tokens consist of three logical parts \-- without any
@@ -39,9 +39,9 @@ French Solfège
 > major seventh above, inclusive. Octave numbers are incremented by one
 > for each successively higher octave, and are decremented by one for
 > each successively lower octave. Negative octave numbers are not
-> permitted, so the lowest pitch in the **\*\*solfg** representation is
+> permitted, so the lowest pitch in the <span class="rep">solfg</span> representation is
 > do0 (16.35 Hz). Only a single octave digit is permitted, so the
-> highest **\*\*solfg** pitch is si9 (15,804 Hz).
+> highest <span class="rep">solfg</span> pitch is si9 (15,804 Hz).
 >
 > Once again, no intervening spaces are permitted within a single note.
 > Notice that the order of signifiers is important for pitch encodings.
@@ -51,7 +51,7 @@ French Solfège
 > Several notes may be encoded concurrently in a single spine by using
 > the Humdrum multiple-stop convention: notes within multiple-stops are
 > separated by single spaces. The following example encodes a C-minor
-> chord as four pitches in two **\*\*solfg** spines \-- each spine
+> chord as four pitches in two <span class="rep">solfg</span> spines \-- each spine
 > containing a double-stop.
 >
 > > ``
@@ -75,12 +75,12 @@ French Solfège
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**solfg` data
+> It is recommended that files containing predominantly <span class="rep">solfg</span> data
 > should be given names with the distinguishing \`.slg\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*solfg** mappings of
+> The following table summarizes the <span class="rep">solfg</span> mappings of
 > signifiers and signifieds.
 >
 > >   ------------ ------------------------------------------------
@@ -101,7 +101,7 @@ French Solfège
 > >   ;            pause sign
 > >   ------------ ------------------------------------------------
 > >
-> > *Summary of **\*\*solfg** Signifiers*
+> > *Summary of <span class="rep">solfg</span> Signifiers*
 
 ### EXAMPLES
 
@@ -129,37 +129,37 @@ French Solfège
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*solfg** encoded data as
+> The following Humdrum commands accept <span class="rep">solfg</span> encoded data as
 > inputs:
 >
 >   -- --------------------------------------- -----------------------------------------------------------
->      <span class="tool">cents</span>     translate **\*\*solfg** to **\*\*cents**
->      <span class="tool">deg</span>         translate **\*\*solfg** to **\*\*deg**
->      <span class="tool">degree</span>   translate **\*\*solfg** to **\*\*degree**
->      <span class="tool">freq</span>       translate **\*\*solfg** to **\*\*freq**
->      <span class="tool">hint</span>       calculate harmonic intervals from **\*\*solfg** input
->      <span class="tool">kern</span>       translate **\*\*solfg** to **\*\*kern**
->      <span class="tool">mint</span>       calculate melodic intervals from **\*\*solfg** input
->      <span class="tool">pc</span>           translate **\*\*solfg** pitch to **\*\*pc**
->      <span class="tool">pitch</span>     translate **\*\*solfg** pitch to **\*\*pitch**
->      <span class="tool">semits</span>   translate **\*\*solfg** pitch to numerical **\*\*semits**
->      <span class="tool">solfa</span>     translate **\*\*solfg** pitch to **\*\*solfa**
->      <span class="tool">tonh</span>       translate **\*\*solfg** pitch to **\*\*Tonh**
->      <span class="tool">trans</span>     transpose **\*\*solfg** score
+>      <span class="tool">cents</span>     translate <span class="rep">solfg</span> to <span class="rep">cents</span>
+>      <span class="tool">deg</span>         translate <span class="rep">solfg</span> to <span class="rep">deg</span>
+>      <span class="tool">degree</span>   translate <span class="rep">solfg</span> to <span class="rep">degree</span>
+>      <span class="tool">freq</span>       translate <span class="rep">solfg</span> to <span class="rep">freq</span>
+>      <span class="tool">hint</span>       calculate harmonic intervals from <span class="rep">solfg</span> input
+>      <span class="tool">kern</span>       translate <span class="rep">solfg</span> to <span class="rep">kern</span>
+>      <span class="tool">mint</span>       calculate melodic intervals from <span class="rep">solfg</span> input
+>      <span class="tool">pc</span>           translate <span class="rep">solfg</span> pitch to <span class="rep">pc</span>
+>      <span class="tool">pitch</span>     translate <span class="rep">solfg</span> pitch to <span class="rep">pitch</span>
+>      <span class="tool">semits</span>   translate <span class="rep">solfg</span> pitch to numerical <span class="rep">semits</span>
+>      <span class="tool">solfa</span>     translate <span class="rep">solfg</span> pitch to <span class="rep">solfa</span>
+>      <span class="tool">tonh</span>       translate <span class="rep">solfg</span> pitch to <span class="rep">Tonh</span>
+>      <span class="tool">trans</span>     transpose <span class="rep">solfg</span> score
 >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 >                                              
 >   -- --------------------------------------- -----------------------------------------------------------
 >
-> The following Humdrum command produces **\*\*solfg** data as output:
+> The following Humdrum command produces <span class="rep">solfg</span> data as output:
 >
 >   -- ------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
->      <span class="tool">solfg</span>   translates **\*\*cents**, **\*\*degree**, **\*\*fret**, **\*\*freq**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*specC**, and **\*\*Tonh** to **\*\*solfg**
+>      <span class="tool">solfg</span>   translates <span class="rep">cents</span>, <span class="rep">degree</span>, <span class="rep">fret</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">solfg</span>
 >   -- ------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*solfg**:
+> <span class="rep">solfg</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -168,7 +168,7 @@ French Solfège
 > >   tempo              `*MM96.3`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*solfg***
+> > *Tandem interpretations for <span class="rep">solfg</span>*
 
 ### SEE ALSO
 

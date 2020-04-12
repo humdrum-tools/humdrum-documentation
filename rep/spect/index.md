@@ -11,13 +11,13 @@ Frequency Spectra
 
 ### REPRESENTATION
 
-> **\*\*spect** \-- discrete frequency spectrum representation
+> <span class="rep">spect</span> \-- discrete frequency spectrum representation
 
 ### DESCRIPTION
 
-> The **\*\*spect** representation is used to represent successive
+> The <span class="rep">spect</span> representation is used to represent successive
 > acoustic spectra. Three types of data tokens are recognized by
-> **\*\*spect**: spectral data, silence (ambient spectrum), and
+> <span class="rep">spect</span>: spectral data, silence (ambient spectrum), and
 > barlines. In the case of spectral data, each token represents a
 > complete spectrum specified as a set of concurrent discrete frequency
 > components. Each component in the spectrum is represented by a pair of
@@ -37,12 +37,12 @@ Frequency Spectra
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**spect` data
+> It is recommended that files containing predominantly <span class="rep">spect</span> data
 > should be given names with the distinguishing \`.spe\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*spect** mappings of
+> The following table summarizes the <span class="rep">spect</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- ----------------------------------------------------
@@ -54,7 +54,7 @@ Frequency Spectra
 > >   =;    barline with pause sign
 > >   ----- ----------------------------------------------------
 > >
-> > *Summary of **\*\*spect** Signifiers*
+> > *Summary of <span class="rep">spect</span> Signifiers*
 
 ### EXAMPLES
 
@@ -66,7 +66,7 @@ Frequency Spectra
 > respectively. Following the barline are two data records that encode
 > two different amalgamations of the preceding two three-component
 > spectra. Notice that these two spectra are identical; only the order
-> of the components differs. In the **\*\*spect** representation there
+> of the components differs. In the <span class="rep">spect</span> representation there
 > is no special requirement that the spectral components be encoded in
 > any particular order.
 >
@@ -85,7 +85,7 @@ Frequency Spectra
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*spect** data as output:
+> The following Humdrum command produces <span class="rep">spect</span> data as output:
 >
 > >   -- ------------------------------------- -----------------------------------------------------------
 > >      <span class="tool">spect</span>   assemble total spectral content for individual sonorities
@@ -94,7 +94,7 @@ Frequency Spectra
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*spect**:
+> <span class="rep">spect</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -102,7 +102,7 @@ Frequency Spectra
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*spect***
+> > *Tandem interpretations for <span class="rep">spect</span>*
 
 ### SEE ALSO
 
@@ -110,7 +110,7 @@ Frequency Spectra
 
 ### WARNING
 
-> The **\*\*spect** representation frequently produces long data
+> The <span class="rep">spect</span> representation frequently produces long data
 > records. Viewing or editing the output using restricted window widths
 > may be inconvenient.
 

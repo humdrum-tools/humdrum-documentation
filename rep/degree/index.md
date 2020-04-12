@@ -11,17 +11,17 @@ Absolute Scale Degree
 
 ### REPRESENTATION
 
-> **\*\*degree** -- absolute scale degree representation
+> <span class="rep">degree</span> -- absolute scale degree representation
 
 ### DESCRIPTION
 
-> The **\*\*degree** representation can be used to represent
+> The <span class="rep">degree</span> representation can be used to represent
 > key-dependent scale-degree information for music in major or minor
-> keys. The **\*\*degree** representation differs from the related
-> [**\*\*deg**](deg.rep.html) representation in that it encodes absolute
+> keys. The <span class="rep">degree</span> representation differs from the related
+> [<span class="rep">deg</span>](deg.rep.html) representation in that it encodes absolute
 > rather than relative pitch-height information.
 >
-> Three types of data tokens are distinguished by **\*\*degree**: scale
+> Three types of data tokens are distinguished by <span class="rep">degree</span>: scale
 > degree tokens, rest tokens, and barlines.
 >
 > Scale degree tokens are encoded as a combination of degree values,
@@ -58,12 +58,12 @@ Absolute Scale Degree
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**degree` data
+> It is recommended that files containing predominantly <span class="rep">degree</span> data
 > should be given names with the distinguishing \`.dgr\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*degree** mappings of
+> The following table summarizes the <span class="rep">degree</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- --------------------------------------------------------
@@ -75,14 +75,14 @@ Absolute Scale Degree
 > >   =     barline; == double barline
 > >   ----- --------------------------------------------------------
 > >
-> > *Summary of **\*\*degree** Signifiers*
+> > *Summary of <span class="rep">degree</span> Signifiers*
 
 ### EXAMPLES
 
 > The sample document given below shows the opening subject of the Fugue
 > in C minor in the second volume of Bach\'s *Well Tempered Clavier.*
-> The left spine shows a [**\*\*kern**](kern.rep.html) encoding while
-> the right spine shows a corresponding **\*\*degree** encoding.
+> The left spine shows a [<span class="rep">kern</span>](kern.rep.html) encoding while
+> the right spine shows a corresponding <span class="rep">degree</span> encoding.
 >
 > > ``
 > >
@@ -116,37 +116,37 @@ Absolute Scale Degree
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*degree** encoded data as
+> The following Humdrum commands accept <span class="rep">degree</span> encoded data as
 > inputs:
 >
 > >   -- ------------------------------------- --------------------------------------------------------
 > >                                            
-> >      <span class="tool">kern</span>     translates **\*\*degree** to **\*\*kern**
-> >      <span class="tool">pitch</span>   translates **\*\*degree** to **\*\*pitch**
-> >      <span class="tool">solfg</span>   translates **\*\*degree** to **\*\*solfg**
-> >      <span class="tool">tonh</span>     translates **\*\*degree** to **\*\*Tonh**
+> >      <span class="tool">kern</span>     translates <span class="rep">degree</span> to <span class="rep">kern</span>
+> >      <span class="tool">pitch</span>   translates <span class="rep">degree</span> to <span class="rep">pitch</span>
+> >      <span class="tool">solfg</span>   translates <span class="rep">degree</span> to <span class="rep">solfg</span>
+> >      <span class="tool">tonh</span>     translates <span class="rep">degree</span> to <span class="rep">Tonh</span>
 > >      <span class="tool">vox</span>       determine active and inactive voices in a Humdrum file
 > >                                            
 > >   -- ------------------------------------- --------------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*degree** data as output:
+> The following Humdrum command produces <span class="rep">degree</span> data as output:
 >
 > >   -- --------------------------------------- ----------------------------------------------------------------------------------------
 > >                                              
-> >      <span class="tool">degree</span>   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**, to **\*\*degree**
+> >      <span class="tool">degree</span>   translates <span class="rep">kern</span>, <span class="rep">pitch</span>, <span class="rep">solfg</span>, <span class="rep">Tonh</span>, to <span class="rep">degree</span>
 > >   -- --------------------------------------- ----------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*degree**:
+> <span class="rep">degree</span>:
 >
 > >   ---------------- ------------
 > >   key signatures   `*k[f#c#]`
 > >   key              `*c#:`
 > >   ---------------- ------------
 > >
-> > *Tandem interpretations for **\*\*degree***
+> > *Tandem interpretations for <span class="rep">degree</span>*
 
 ### SEE ALSO
 

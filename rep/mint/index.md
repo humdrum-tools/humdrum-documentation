@@ -11,12 +11,12 @@ Melodic Intervals
 
 ### REPRESENTATION
 
-> **\*\*mint** \-- melodic interval representation
+> <span class="rep">mint</span> \-- melodic interval representation
 
 ### DESCRIPTION
 
-> The **\*\*mint** representation provides a means for characterizing
-> sequential (melodic) pitch distances. The **\*\*mint** representation
+> The <span class="rep">mint</span> representation provides a means for characterizing
+> sequential (melodic) pitch distances. The <span class="rep">mint</span> representation
 > permits the encoding of four types of data tokens: interval tokens,
 > pitch offsets, rests, and barlines.
 >
@@ -26,7 +26,7 @@ Melodic Intervals
 > ascending motion, or a leading minus sign (-) for descending motion.
 > No special signifier is provided to denote unison motion. Note that
 > interval direction information is optional, and so is not a mandatory
-> aspect of the **\*\*mint** representation.
+> aspect of the <span class="rep">mint</span> representation.
 >
 > The diatonic interval size is signified by integer values \-- 1 for
 > unison, 2 for second, 3 for third, 11 for eleventh, and so on.
@@ -39,23 +39,23 @@ Melodic Intervals
 > and quadruply- diminished or augmented intervals are similarly
 > represented by character repetition, e.g. \`AAA\'. Note that interval
 > quality information is optional, and so is not a mandatory aspect of
-> the **\*\*mint** representation.
+> the <span class="rep">mint</span> representation.
 >
-> The normal or canonical order for data elements in a **\*\*mint**
+> The normal or canonical order for data elements in a <span class="rep">mint</span>
 > interval token is as follows: (1) direction of interval motion, (2)
 > diatonic interval size, (3) interval quality. Note that more than one
 > interval token may appear within Humdrum multiple-stops.
 >
 > Pitch offsets indicate initial or starting absolute pitches from which
 > successive pitch intervals arise. Pitch offsets are optional and need
-> not appear in a **\*\*mint** representation. Pitch offsets are
+> not appear in a <span class="rep">mint</span> representation. Pitch offsets are
 > distinguished by square brackets. Within the square brackets appears a
 > pitch designation using any one of the following pitch-related
-> representations: [**\*\*kern**](kern.rep.html),
-> [**\*\*pitch**](pitch.rep.html), [**\*\*solfg**](solfg.rep.html) or
-> [**\*\*Tonh**](Tonh.rep.html). For example, the following **\*\*mint**
-> pitch offsets are considered equivalent: \`b\' (**\*\*kern**), \`B5\'
-> (**\*\*pitch**), \`si5\' (**\*\*solfg**), \`H5\' (**\*\*Tonh**). Where
+> representations: [<span class="rep">kern</span>](kern.rep.html),
+> [<span class="rep">pitch</span>](pitch.rep.html), [<span class="rep">solfg</span>](solfg.rep.html) or
+> [<span class="rep">Tonh</span>](Tonh.rep.html). For example, the following <span class="rep">mint</span>
+> pitch offsets are considered equivalent: \`b\' (<span class="rep">kern</span>), \`B5\'
+> (<span class="rep">pitch</span>), \`si5\' (<span class="rep">solfg</span>), \`H5\' (<span class="rep">Tonh</span>). Where
 > necessary, several pitch offsets may appear as a Humdrum
 > multiple-stop.
 >
@@ -66,12 +66,12 @@ Melodic Intervals
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**mint` data
+> It is recommended that files containing predominantly <span class="rep">mint</span> data
 > should be given names with the distinguishing \`.mnt\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*mint** mappings of signifiers
+> The following table summarizes the <span class="rep">mint</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- -------------------------------------------
@@ -88,12 +88,12 @@ Melodic Intervals
 > >   ;     measure pause
 > >   ----- -------------------------------------------
 > >
-> > *Summary of **\*\*mint** Signifiers*
+> > *Summary of <span class="rep">mint</span> Signifiers*
 
 ### EXAMPLES
 
-> The following example shows a `**pitch` spine on the left and a
-> corresponding `**mint` spine on the right.
+> The following example shows a <span class="rep">pitch</span> spine on the left and a
+> corresponding <span class="rep">mint</span> spine on the right.
 >
 > > ``
 > >
@@ -114,16 +114,16 @@ Melodic Intervals
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*mint** data as outputs:
+> The following Humdrum command produces <span class="rep">mint</span> data as outputs:
 >
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------
-> >      <span class="tool">mint</span>   produces **\*\*mint** output from **\*\*pitch**, **\*\*kern**, **\*\*solfg**, or **\*\*Tonh** input
+> >      <span class="tool">mint</span>   produces <span class="rep">mint</span> output from <span class="rep">pitch</span>, <span class="rep">kern</span>, <span class="rep">solfg</span>, or <span class="rep">Tonh</span> input
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*mint**:
+> <span class="rep">mint</span>:
 >
 > >   ------------------ ------------
 > >   meter signatures   `*M6/8`
@@ -131,7 +131,7 @@ Melodic Intervals
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*mint***
+> > *Tandem interpretations for <span class="rep">mint</span>*
 
 ### SEE ALSO
 

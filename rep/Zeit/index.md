@@ -11,36 +11,36 @@ Absolute Time Period
 
 ### REPRESENTATION
 
-**\*\*Zeit** \-- absolute period of time
+<span class="rep">Zeit</span> \-- absolute period of time
 
 ### DESCRIPTION
 
-The **\*\*Zeit** representation is used to represent spans of time,
+The <span class="rep">Zeit</span> representation is used to represent spans of time,
 such as the life-span of a composer, or the chronology of a rehearsal.
-The syntax for **\*\*Zeit** is nearly identical to the
-[**\*\*date**](date.rep.html) representation. Since **\*\*Zeit**
+The syntax for <span class="rep">Zeit</span> is nearly identical to the
+[<span class="rep">date</span>](date.rep.html) representation. Since <span class="rep">Zeit</span>
 represents a span of time, two date tokens must be specified and
-separated by a dash (`-`). For example, the **\*\*Zeit** data token
+separated by a dash (`-`). For example, the <span class="rep">Zeit</span> data token
 `1770/-1827/` represents the period from 1770 to 1827.
 
-The **\*\*Zeit** representation includes all of the features of
-[**\*\*date**](date.rep.html) for signifying approximation (\~),
+The <span class="rep">Zeit</span> representation includes all of the features of
+[<span class="rep">date</span>](date.rep.html) for signifying approximation (\~),
 uncertainty (?), approximate value (x), uncertain value (z), as well
 as between-range (\^), either-or (\|), prior (\<) and after (\>)
 boundaries. Either one or both of the dates specified in a
-**\*\*Zeit** data token may encode complex degrees of approximation or
+<span class="rep">Zeit</span> data token may encode complex degrees of approximation or
 uncertainty.
 
-Conceptually, **\*\*Zeit** data tokens consist of two
-[**\*\*date**](date.rep.html) \"sub-tokens.\" Zeit tokens are encoded
+Conceptually, <span class="rep">Zeit</span> data tokens consist of two
+[<span class="rep">date</span>](date.rep.html) \"sub-tokens.\" Zeit tokens are encoded
 according to the following basic syntax:
 
 *year**/**month**/**day**/**hour**:**minute**:**second**.**decimal**-**year**/**month**/**day**/**hour**:**minute**:**second**.**decimal*
 
-The data tokens making-up the **\*\*Zeit** information may be encoded
+The data tokens making-up the <span class="rep">Zeit</span> information may be encoded
 in full, or may consist of isolated elements or parts. The following
 table shows the most succinct ways of encoding single date values
-within sub-tokens in **\*\*Zeit**:
+within sub-tokens in <span class="rep">Zeit</span>:
 
 >   -------- -----------------------------------
 >   `.11`    eleven one-hundredths of a second
@@ -63,30 +63,30 @@ abbreviated forms of date sub-tokens tend to favor the two extremes of
 time: seconds and years. These are the time frames that are typically
 of greatest interest to music scholars.
 
-The **\*\*Zeit** representation makes use of the Gregorian calendar
+The <span class="rep">Zeit</span> representation makes use of the Gregorian calendar
 and the 24-hour clock. Dates prior to the year 1 A.D. can be specified
 by prepending a minus sign to the year.
 
-The **\*\*Zeit** representation provides three distinct means for
+The <span class="rep">Zeit</span> representation provides three distinct means for
 representing approximate moments. It also provides two independent
 means for representing uncertainty, as well as mechanisms for
 representing time boundaries (prior to \...; after \...). For the
 appropriate representation syntax refer to
-[**\*\*date**](date.rep.html).
+[<span class="rep">date</span>](date.rep.html).
 
 ### FILE TYPE
 
-It is recommended that files containing predominantly `**Zeit` data
+It is recommended that files containing predominantly <span class="rep">Zeit</span> data
 should be given names with the distinguishing \`.zt\' extension.
 
 ### SIGNIFIERS
 
-The following table summarizes the **\*\*Zeit** mappings of signifiers
+The following table summarizes the <span class="rep">Zeit</span> mappings of signifiers
 and signifieds.
 
 >   ----- ----------------------------------------------
 >   \-    sub-token separator (from-to); (must appear
->         in each **\*\*Zeit** data token)
+>         in each <span class="rep">Zeit</span> data token)
 >   0-9   decimal values
 >   @     year B.C. rather than A.D.
 >   /     year-month, month-day and day-hour delimiter
@@ -102,11 +102,11 @@ and signifieds.
 >   \|    \"or\" conjunction
 >   ----- ----------------------------------------------
 
-> *Summary of **\*\*Zeit** Signifiers*
+> *Summary of <span class="rep">Zeit</span> Signifiers*
 
 ### EXAMPLES
 
-Several examples of **\*\*Zeit** data tokens are identified below:
+Several examples of <span class="rep">Zeit</span> data tokens are identified below:
 
 >   ------------------------- ----------------------------------------------
 >   \*\*Zeit tokens           meaning
@@ -132,9 +132,9 @@ Several examples of **\*\*Zeit** data tokens are identified below:
 >                             ending August 23rd.
 >   ------------------------- ----------------------------------------------
 
-> *Examples of **\*\*Zeit** Tokens*
+> *Examples of <span class="rep">Zeit</span> Tokens*
 
-The following examples illustrate the use of the `**Zeit`
+The following examples illustrate the use of the <span class="rep">Zeit</span>
 representation:
 
 
@@ -180,19 +180,19 @@ representation:
 
 ### PERTINENT COMMANDS
 
-Currently, no special-purpose Humdrum commands produce **\*\*Zeit** as
-output, or process **\*\*Zeit** encoded data as input.
+Currently, no special-purpose Humdrum commands produce <span class="rep">Zeit</span> as
+output, or process <span class="rep">Zeit</span> encoded data as input.
 
 ### TANDEM INTERPRETATIONS
 
 The following tandem interpretations can be used in conjunction with
-**\*\*Zeit**:
+<span class="rep">Zeit</span>:
 
 >   ------------------ ---------
 >   meter signatures   `*M6/8`
 >   ------------------ ---------
 
-> *Tandem interpretations for **\*\*Zeit***
+> *Tandem interpretations for <span class="rep">Zeit</span>*
 
 ### SEE ALSO
 

@@ -11,37 +11,37 @@ Bhatkhande Notation
 
 ### REPRESENTATION
 
-> **\*\*bhatk** \-- representation for Bhatkhande notation
+> <span class="rep">bhatk</span> \-- representation for Bhatkhande notation
 
 ### DESCRIPTION
 
-> The **\*\*bhatk** scheme can be used to represent the basic
+> The <span class="rep">bhatk</span> scheme can be used to represent the basic
 > information of the notation system created by Vishnu Narayanan
-> Bhatkhande used to transcribe Hindustani music. The **\*\*bhatk**
+> Bhatkhande used to transcribe Hindustani music. The <span class="rep">bhatk</span>
 > representation allows a monophonic encoding of the various notes
-> including performance gestures akin to ornaments. **\*\*bhatk** is
+> including performance gestures akin to ornaments. <span class="rep">bhatk</span> is
 > primarily designed to facilitate analytic applications rather than
 > music printing or sound generation. Other Humdrum representations
 > should be used for these latter purposes. Since one main purpose of
-> **\*\*bhatk** is to allow research tasks concerning scribal practices
+> <span class="rep">bhatk</span> is to allow research tasks concerning scribal practices
 > in the manuscripts, the layout and the orthographic information of the
 > manuscripts are represented rather exactly. Non-notational information
 > as clef setting and position of the music within the manuscripts
 > (folio) and on the page (line number) is represented using tandem
 > interpretations and local comments.
 >
-> These types of data tokens are distinguished in **\*\*bhatk**: neumes
+> These types of data tokens are distinguished in <span class="rep">bhatk</span>: neumes
 > and flat or natural icons.
 >
 > Neumes can encode a variety of attributes including neume-type,
 > accidental and liquescence-type.
 >
-> Pitches are not directly encoded in the **\*\*bhatk** representation.
-> Instead, a parallel [**\*\*kern**](kern.rep.html) spine is expected to
+> Pitches are not directly encoded in the <span class="rep">bhatk</span> representation.
+> Instead, a parallel [<span class="rep">kern</span>](kern.rep.html) spine is expected to
 > encode the corresponding pitches, as well as a parallel spine for the
 > text.
 >
-> A wide variety of neume types can be encoded using **\*\*bhatk**. The
+> A wide variety of neume types can be encoded using <span class="rep">bhatk</span>. The
 > following table identifies these individual types.
 >
 > Scale degrees:
@@ -81,7 +81,7 @@ Bhatkhande Notation
 > the beginning and end of the group.
 >
 > The only accidentals in Hildegard\'s notation are the flat (b
-> *rotundum*) and the natural (b *quadratum*) sign. The **\*\*bhatk**
+> *rotundum*) and the natural (b *quadratum*) sign. The <span class="rep">bhatk</span>
 > representation makes a distinction between two types of flat and
 > natural signifiers: An orthographic and a semantic flat or natural.
 > Orthographic accidentals frequently appear well before the notes they
@@ -101,7 +101,7 @@ Bhatkhande Notation
 > In representing any work, editorial interpretations are inevitable. It
 > may be necessary to make explicit certain implicit information in a
 > manuscript (such as expanding abbreviations), or it may be necessary
-> to estimate missing or unreadable information. The **\*\*bhatk**
+> to estimate missing or unreadable information. The <span class="rep">bhatk</span>
 > representation provides several special-purpose signifiers to help
 > make explicit various classes of editorial amendments,
 > interpretations, or commentaries. Five types of editorial signifiers
@@ -116,12 +116,12 @@ Bhatkhande Notation
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**bhatk` data
+> It is recommended that files containing predominantly <span class="rep">bhatk</span> data
 > should be given names with the distinguishing \`.hgd\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*bhatk** mappings of
+> The following table summarizes the <span class="rep">bhatk</span> mappings of
 > signifiers and signifieds.
 >
 > > S
@@ -289,7 +289,7 @@ editorial footnote in an ensuing comment
 editorial mark: entire preceding data token has accompanying editorial
 footnote in an ensuing comment
 
-*Summary of **\*\*bhatk** Signifiers*
+*Summary of <span class="rep">bhatk</span> Signifiers*
 
 > Order of signifiers:
 >
@@ -306,9 +306,9 @@ footnote in an ensuing comment
 
 ### EXAMPLES
 
-> The following sample document shows a [**\*\*kern**](kern.rep.html)
-> spine with corresponding `**bhatk` data. In addition, a
-> [**\*\*silbe**](silbe.rep.html) spine has been used to encode the
+> The following sample document shows a [<span class="rep">kern</span>](kern.rep.html)
+> spine with corresponding <span class="rep">bhatk</span> data. In addition, a
+> [<span class="rep">silbe</span>](silbe.rep.html) spine has been used to encode the
 > text.
 >
 > > ``
@@ -464,12 +464,12 @@ footnote in an ensuing comment
 ### PERTINENT COMMANDS
 
 > There are currently no Humdrum commands that directly process
-> **\*\*bhatk** encoded data.
+> <span class="rep">bhatk</span> encoded data.
 
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretation can be used in conjunction with
-> **\*\*bhatk**:
+> <span class="rep">bhatk</span>:
 >
 > >   ------------------ ----------
 > >   raag               `*raag:`
@@ -482,7 +482,7 @@ footnote in an ensuing comment
 > > II](../guide.append2.html) of the [*Humdrum User
 > > Guide.*](../guide.toc.html)
 > >
-> > *Tandem interpretations for **\*\*bhatk***
+> > *Tandem interpretations for <span class="rep">bhatk</span>*
 
 ### SEE ALSO
 

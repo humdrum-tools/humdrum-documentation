@@ -12,14 +12,14 @@ Solfa Syllables
 
 ### REPRESENTATION
 
- **\*\*solfa** \-- representation for tonic solfa syllables
+ <span class="rep">solfa</span> \-- representation for tonic solfa syllables
 
 ### DESCRIPTION
 
- The **\*\*solfa** representation permits the encoding of extended
+ The <span class="rep">solfa</span> representation permits the encoding of extended
  tonic solfa syllables for the \"moveable doh\" system of pitch naming.
 
- The **\*\*solfa** representation distinguishes three types of data
+ The <span class="rep">solfa</span> representation distinguishes three types of data
  tokens: pitches, rests, and barlines.
 
  Pitches tokens are represented using the syllables *do, re, mi, fa,
@@ -28,25 +28,25 @@ Solfa Syllables
  only with reference to some prevailing key. For example, the pitch C
  is the tonic (`do`) in the key of C major or C minor.
 
- The **\*\*solfa** representation does not distinguish between major
+ The <span class="rep">solfa</span> representation does not distinguish between major
  and minor modes. Only the tonic pitch is of importance when
  determining the representation for a given pitch. For example, in both
  C major and C minor, the pitch A-natural is represented as `la` while
  the pitch A-flat is represented as `le`.
 
  The amount of chromatic alteration is not represented by
- **\*\*solfa**; once a pitch is \"raised,\" raising it further will not
+ <span class="rep">solfa</span>; once a pitch is \"raised,\" raising it further will not
  change the note\'s representation. For example, where the tonic pitch
  is B-flat, both B-natural and B-sharp are represented by `di`.
 
  Octave designations are not represented in **\*\*solfa.** However,
- **\*\*solfa** provides limited capabilities for representing phrasing
+ <span class="rep">solfa</span> provides limited capabilities for representing phrasing
  and slurs.
 
  Several pitches may be encoded concurrently in a single spine by using
  the Humdrum multiple-stop convention: pitches within multiple-stops
  are separated by single spaces. For example, the following example
- encodes a 4-note tonic major chord using two **\*\*solfa** spines \--
+ encodes a 4-note tonic major chord using two <span class="rep">solfa</span> spines \--
  each spine containing a double-stop.
 
   | \*\*solfa   |\*\*solfa
@@ -71,7 +71,7 @@ Solfa Syllables
 
 ### SIGNIFIERS
 
- The following table summarizes the **\*\*solfa** mappings of
+ The following table summarizes the <span class="rep">solfa</span> mappings of
  signifiers and signifieds.
 
   | do  | (pronounced *doe*) tonic pitch
@@ -103,7 +103,7 @@ Solfa Syllables
   | }   | phrase mark (end)
   | ;   | pause sign
 
- *Summary of **\*\*solfa** Signifiers*
+ *Summary of <span class="rep">solfa</span> Signifiers*
 
 ### EXAMPLES
 
@@ -134,7 +134,7 @@ Solfa Syllables
 
 ### PERTINENT COMMANDS
 
- The following Humdrum command accepts **\*\*solfa** encoded data as
+ The following Humdrum command accepts <span class="rep">solfa</span> encoded data as
  inputs:
 
    -- --------------------------------- --------------------------------------------------------
@@ -142,23 +142,23 @@ Solfa Syllables
                                         
    -- --------------------------------- --------------------------------------------------------
 
- The following Humdrum command produces **\*\*solfa** data as output:
+ The following Humdrum command produces <span class="rep">solfa</span> data as output:
 
    -- ------------------------------------- ---------------------------------------------------------------------
-      <span class="tool">solfa</span>   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**
+      <span class="tool">solfa</span>   translates <span class="rep">kern</span>, <span class="rep">pitch</span>, <span class="rep">solfg</span>, <span class="rep">Tonh</span>
    -- ------------------------------------- ---------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS
 
  The following tandem interpretations can be used in conjunction with
- **\*\*solfa**:
+ <span class="rep">solfa</span>:
 
   | meter signatures |  `*M6/8`
   | key signatures   |  `*k[f#c#]`
   | key              |  `*c#:`
   | tempo            |  `*MM96.3`
 
- *Tandem interpretations for **\*\*solfa***
+ *Tandem interpretations for <span class="rep">solfa</span>*
 
 ### SEE ALSO
 

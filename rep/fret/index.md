@@ -11,30 +11,30 @@ Tablature
 
 ### REPRESENTATION
 
-> **\*\*fret** \-- generalized fretted tablature representation
+> <span class="rep">fret</span> \-- generalized fretted tablature representation
 
 ### DESCRIPTION
 
-> The **\*\*fret** representation provides a comprehensive system for
+> The <span class="rep">fret</span> representation provides a comprehensive system for
 > representing performance aspects for fretted instruments. The
-> **\*\*fret** scheme is suitable for representing tablature information
+> <span class="rep">fret</span> scheme is suitable for representing tablature information
 > for most fretted instruments, including: common 6-string and 12-string
 > guitars, the 4-string bass guitar, lute, mandore, theorbo, chitarrone,
-> mandoline, banjo, dulcimer, and viols. The **\*\*fret** interpretation
+> mandoline, banjo, dulcimer, and viols. The <span class="rep">fret</span> interpretation
 > is not limited to equal-temperament tuning, and so can be used to
 > represent non-Western fretted instruments, such as the oud and the
 > sitar.
 >
-> The **\*\*fret** representation is performance-oriented rather than
-> notationally-oriented. Thus **\*\*fret** is not suitable for
+> The <span class="rep">fret</span> representation is performance-oriented rather than
+> notationally-oriented. Thus <span class="rep">fret</span> is not suitable for
 > distinguishing different visual renderings \-- such as traditional
 > French or German lute tablatures. Special-purpose Humdrum
 > representations should be used if the user\'s goal is to distinguish
 > different forms of visual signifiers.
 >
-> The **\*\*fret** representation distinguishes three types of data
+> The <span class="rep">fret</span> representation distinguishes three types of data
 > tokens: tablature-tokens, rests, and barlines. In addition,
-> **\*\*fret** provides three special-purpose tandem interpretations to
+> <span class="rep">fret</span> provides three special-purpose tandem interpretations to
 > specify more precisely the instrument\'s layout and tuning.
 >
 > The basic pitches produced by fretted instruments depend on three
@@ -46,7 +46,7 @@ Tablature
 > fret tuning have default settings,§ (§ The default absolute tuning is
 > E2; the default fret tuning is one semitone for each successive fret.)
 > however, the relative tuning of the open strings (`*RT:`) must be
-> explicitly encoded in a **\*\*fret** spine.
+> explicitly encoded in a <span class="rep">fret</span> spine.
 >
 > The absolute tuning of an instrument is indicated by encoding the
 > pitch of the lowest string using the `*AT:` tandem interpretation. For
@@ -56,10 +56,10 @@ Tablature
 > > \*AT:E2
 >
 > The `*AT:` interpretation makes use of
-> [**\*\*pitch**](pitch.rep.html)-type pitch designations and may also
+> [<span class="rep">pitch</span>](pitch.rep.html)-type pitch designations and may also
 > include cents deviation. For example, an instrument tuned 45 cents
 > sharp might be represented as ` *AT:E2+45.` Encoding the absolute
-> tuning of an instrument is optional in the **\*\*fret**
+> tuning of an instrument is optional in the <span class="rep">fret</span>
 > representation.
 >
 > The tandem interpretation (`*RT:`) specifies the relative tuning,
@@ -115,7 +115,7 @@ Tablature
 > Of course the absolute tuning of the lute was highly variable, so the
 > lowest pitch would not necessarily be G2.
 >
-> In addition to the absolute and relative tunings, **\*\*fret** also
+> In addition to the absolute and relative tunings, <span class="rep">fret</span> also
 > allows the user to specify the tuning of successive frets. In Western
 > instruments, frets are normally placed in semitone increments. For a
 > 12-fret instrument, this semitone arrangement may be explicitly
@@ -154,7 +154,7 @@ Tablature
 > finger action, and (5) percussive effects. In addition, the
 > tablature-token can encode bowing and strumming information.
 >
-> In the **\*\*fret** representation, the status of a string/course can
+> In the <span class="rep">fret</span> representation, the status of a string/course can
 > occupy one of sixteen states: (1) inactive, (2) plucked, (3) plucked
 > ponticello, (4) plucked sul tasto, (5) plucked tremolo, (6) pizzicato,
 > (7) bowed, (8) bowed ponticello, (9) bowed sul tasto, (10) spiccato,
@@ -224,7 +224,7 @@ Tablature
 >
 > > \>\| \|2 \|2 \| \| \|
 >
-> The **\*\*fret** representation also permits the optional encoding of
+> The <span class="rep">fret</span> representation also permits the optional encoding of
 > *fingering* information. For the plucking-hand (normally right hand),
 > traditional musical abbreviations are used: *P* (pollex) for the
 > thumb, *I* (index) for the index finger, *M* (medius) for the middle
@@ -263,15 +263,15 @@ Tablature
 > > \| \|2b \|2c \| \| \|\
 > > : :2b :2d : : :
 >
-> Note that in the **\*\*fret** representation, no special signifiers
+> Note that in the <span class="rep">fret</span> representation, no special signifiers
 > are provided for so-called \`hammer-on\' or (ascending-slur), nor for
 > the so-called \`pull-off\' or (descending-slur). During the
 > ascending-slur, the sound is produced simply by engaging the next
-> fret. This can be represented in **\*\*fret** by using the \"let
+> fret. This can be represented in <span class="rep">fret</span> by using the \"let
 > ring\" signifier (:) in conjunction with the appropriate fret
 > notation. The descending-slur can be similarly notated.
 >
-> The **\*\*fret** representation also provides several short-hand
+> The <span class="rep">fret</span> representation also provides several short-hand
 > abbreviations for common ornaments and effects. Trills are indicated
 > by the letters \`t\' (one semitone) and \`T\' (two semitones).
 > Mordents are indicated by the letters \`m\' (one semitone) and \`D\'
@@ -293,7 +293,7 @@ Tablature
 > conjunction with a plucked or (uncommonly) bowed string, these
 > signifiers appear at the beginning of the tablature-token.
 >
-> Apart from tablature-tokens, **\*\*fret** also permits the encoding of
+> Apart from tablature-tokens, <span class="rep">fret</span> also permits the encoding of
 > rests and barlines. Rest tokens are denoted simply by the lower-case
 > letter \`r\'.
 >
@@ -302,12 +302,12 @@ Tablature
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**fret` data
+> It is recommended that files containing predominantly <span class="rep">fret</span> data
 > should be given names with the distinguishing \`.frt\' extension.
 
 ### SIGNIFIERS
 
-> The complete system of signifiers used by **\*\*fret** is summarized
+> The complete system of signifiers used by <span class="rep">fret</span> is summarized
 > in the following table.
 >
 > >   ---------------------------- -------------------------------------------------
@@ -377,12 +377,12 @@ Tablature
 > >   Y                            \`thump\' on top-plate
 > >   ---------------------------- -------------------------------------------------
 > >
-> > *Summary of **\*\*fret** Signifiers*
+> > *Summary of <span class="rep">fret</span> Signifiers*
 
 ### EXAMPLES
 
-> A sample document is given below. The [**\*\*kern**](kern.rep.html)
-> representation echoes the pitches in the **\*\*fret** representation.
+> A sample document is given below. The [<span class="rep">kern</span>](kern.rep.html)
+> representation echoes the pitches in the <span class="rep">fret</span> representation.
 >
 > > ``
 > >
@@ -414,23 +414,23 @@ Tablature
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*fret** encoded data as
+> The following Humdrum commands accept <span class="rep">fret</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------------- -----------------------------------------------------------
-> >      <span class="tool">cents</span>     translates **\*\*fret** to **\*\*cents**
-> >      <span class="tool">freq</span>       translates **\*\*fret** to **\*\*freq**
-> >      <span class="tool">kern</span>       translates **\*\*fret** to **\*\*kern**
-> >      <span class="tool">pitch</span>     translates **\*\*fret** to **\*\*pitch**
-> >      <span class="tool">semits</span>   translates **\*\*fret** pitch to numerical **\*\*semits**
-> >      <span class="tool">solfg</span>     translates **\*\*fret** pitch to numerical **\*\*solfg**
-> >      <span class="tool">tonh</span>       translates **\*\*fret** pitch to numerical **\*\*Tonh**
+> >      <span class="tool">cents</span>     translates <span class="rep">fret</span> to <span class="rep">cents</span>
+> >      <span class="tool">freq</span>       translates <span class="rep">fret</span> to <span class="rep">freq</span>
+> >      <span class="tool">kern</span>       translates <span class="rep">fret</span> to <span class="rep">kern</span>
+> >      <span class="tool">pitch</span>     translates <span class="rep">fret</span> to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>   translates <span class="rep">fret</span> pitch to numerical <span class="rep">semits</span>
+> >      <span class="tool">solfg</span>     translates <span class="rep">fret</span> pitch to numerical <span class="rep">solfg</span>
+> >      <span class="tool">tonh</span>       translates <span class="rep">fret</span> pitch to numerical <span class="rep">Tonh</span>
 > >   -- --------------------------------------- -----------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*fret**:
+> <span class="rep">fret</span>:
 >
 > >   ------------------ ------------
 > >   ensemble           `*a2`
@@ -442,7 +442,7 @@ Tablature
 > >   key                `*c#:`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*fret***
+> > *Tandem interpretations for <span class="rep">fret</span>*
 
 ### SEE ALSO
 

@@ -11,17 +11,17 @@ Beat Prototypes
 
 ### REPRESENTATION
 
-> **\*\*URrhythm** \-- represent Johnson-Laird beat prototypes for a
+> <span class="rep">URrhythm</span> \-- represent Johnson-Laird beat prototypes for a
 > passage
 
 ### DESCRIPTION
 
-> The **\*\*URrhythm** representation encodes beat \"prototypes\"
+> The <span class="rep">URrhythm</span> representation encodes beat \"prototypes\"
 > (Ur-rhythms) evident in a musical passage. The representation is based
 > on Johnson-Laird\'s theory of rhythmic prototypes (see
 > [**REFERENCES**](#REFERENCES) below).
 >
-> The **\*\*URrhythm** representation characterizes each beat in a
+> The <span class="rep">URrhythm</span> representation characterizes each beat in a
 > passage as belonging to one of three \"beat types\": *Note* (N),
 > *Syncopation* (S), or *Other* (O). Only principle beats are
 > characterized in this way. Hence, in 3/4 or 9/8 meters, three beats
@@ -57,12 +57,12 @@ Beat Prototypes
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**URrhythm`
+> It is recommended that files containing predominantly <span class="rep">URrhythm</span>
 > data should be given names with the distinguishing \`.urr\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*URrhythm** mappings of
+> The following table summarizes the <span class="rep">URrhythm</span> mappings of
 > signifiers and signifieds.
 >
 > >   ----- --------------------------------
@@ -74,7 +74,7 @@ Beat Prototypes
 > >   0-9   measure numbers
 > >   ----- --------------------------------
 > >
-> > *Summary of **\*\*URrhythm** Signifiers*
+> > *Summary of <span class="rep">URrhythm</span> Signifiers*
 
 ### EXAMPLES
 
@@ -115,7 +115,7 @@ Beat Prototypes
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command produces **\*\*URrhythm** data as
+> The following Humdrum command produces <span class="rep">URrhythm</span> data as
 > output:
 >
 > >   -- ------------------------------------------- ---------------------------------------------------
@@ -125,7 +125,7 @@ Beat Prototypes
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*URrhythm**:
+> <span class="rep">URrhythm</span>:
 >
 > >   ------------------ -----------
 > >   meter signatures   `*M6/8`
@@ -133,7 +133,7 @@ Beat Prototypes
 > >   timebase           `*tb32`
 > >   ------------------ -----------
 > >
-> > *Tandem interpretations for **\*\*URrhythm***
+> > *Tandem interpretations for <span class="rep">URrhythm</span>*
 
 ### SEE ALSO
 

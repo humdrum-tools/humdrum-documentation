@@ -11,11 +11,11 @@ MIDI
 
 ### REPRESENTATION
 
-> **\*\*MIDI** \-- Musical Instrument Digital Interface notation
+> <span class="rep">MIDI</span> \-- Musical Instrument Digital Interface notation
 
 ### DESCRIPTION
 
-> The **\*\*MIDI** representation is a Humdrum version of the well-known
+> The <span class="rep">MIDI</span> representation is a Humdrum version of the well-known
 > MIDI standard. MIDI is an industry standard used to exchange
 > information between sound synthesizers. MIDI is also used in various
 > software applications such as some music printing software. MIDI is a
@@ -29,12 +29,12 @@ MIDI
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**MIDI` data
+> It is recommended that files containing predominantly <span class="rep">MIDI</span> data
 > should be given names with the distinguishing \`.hmd\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*MIDI** mappings of signifiers
+> The following table summarizes the <span class="rep">MIDI</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- ----------------------------
@@ -44,7 +44,7 @@ MIDI
 > >   \-    note off
 > >   ----- ----------------------------
 > >
-> > *Summary of **\*\*MIDI** Signifiers*
+> > *Summary of <span class="rep">MIDI</span> Signifiers*
 
 ### EXAMPLES
 
@@ -68,7 +68,7 @@ MIDI
 > >   \*-
 > >   --------------------
 > >
-> Each **\*\*MIDI** data token consist of three elements or components.
+> Each <span class="rep">MIDI</span> data token consist of three elements or components.
 > Each element is an integer value; elements within a data token are
 > delimited by the slash character (/).
 >
@@ -92,40 +92,40 @@ MIDI
 >
 > Note that the key-velocity component of a data token is optional and
 > need not appear. However, both the clock-tick value and the key-event
-> values must be present in each **\*\*MIDI** data token.
+> values must be present in each <span class="rep">MIDI</span> data token.
 >
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
 ### PERTINENT COMMANDS
 
-> The following Humdrum commands accept **\*\*MIDI** encoded data as
+> The following Humdrum commands accept <span class="rep">MIDI</span> encoded data as
 > inputs:
 >
 > >   -- ----------------------------------------- -------------------------------------------
-> >      <span class="tool">cents</span>       translates **\*\*MIDI** to **\*\*cents**
-> >      <span class="tool">fade</span>         fade-in or fade-out **\*\*MIDI** data
-> >      <span class="tool">freq</span>         translates **\*\*MIDI** to **\*\*freq**
-> >      <span class="tool">kern</span>         translates **\*\*MIDI** to **\*\*kern**
-> >      <span class="tool">perform</span>   play Humdrum **\*\*MIDI** files
-> >      <span class="tool">pitch</span>       translates **\*\*MIDI** to **\*\*pitch**
-> >      <span class="tool">semits</span>     translates **\*\*MIDI** to **\*\*semits**
+> >      <span class="tool">cents</span>       translates <span class="rep">MIDI</span> to <span class="rep">cents</span>
+> >      <span class="tool">fade</span>         fade-in or fade-out <span class="rep">MIDI</span> data
+> >      <span class="tool">freq</span>         translates <span class="rep">MIDI</span> to <span class="rep">freq</span>
+> >      <span class="tool">kern</span>         translates <span class="rep">MIDI</span> to <span class="rep">kern</span>
+> >      <span class="tool">perform</span>   play Humdrum <span class="rep">MIDI</span> files
+> >      <span class="tool">pitch</span>       translates <span class="rep">MIDI</span> to <span class="rep">pitch</span>
+> >      <span class="tool">semits</span>     translates <span class="rep">MIDI</span> to <span class="rep">semits</span>
 > >      <span class="tool">smf</span>           generate standard MIDI file
-> >      <span class="tool">solfg</span>       translates **\*\*MIDI** to **\*\*solfg**
-> >      <span class="tool">tonh</span>         translates **\*\*MIDI** to **\*\*Tonh**
+> >      <span class="tool">solfg</span>       translates <span class="rep">MIDI</span> to <span class="rep">solfg</span>
+> >      <span class="tool">tonh</span>         translates <span class="rep">MIDI</span> to <span class="rep">Tonh</span>
 > >   -- ----------------------------------------- -------------------------------------------
 > >
-> The following Humdrum commands produce **\*\*MIDI** data as outputs:
+> The following Humdrum commands produce <span class="rep">MIDI</span> data as outputs:
 >
 > >   -- --------------------------------------- ------------------------------------------------------
-> >      <span class="tool">midi</span>       produces **\*\*MIDI** output from **\*\*kern** input
-> >      <span class="tool">record</span>   records **\*\*MIDI** data from a MIDI input
+> >      <span class="tool">midi</span>       produces <span class="rep">MIDI</span> output from <span class="rep">kern</span> input
+> >      <span class="tool">record</span>   records <span class="rep">MIDI</span> data from a MIDI input
 > >   -- --------------------------------------- ------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*MIDI**:
+> <span class="rep">MIDI</span>:
 >
 > >   ------------------ ------------
 > >   MIDI channel       `*Ch1`
@@ -135,7 +135,7 @@ MIDI
 > >   tempo              `*MM96.3`
 > >   ------------------ ------------
 > >
-> > *Tandem interpretations for **\*\*MIDI***
+> > *Tandem interpretations for <span class="rep">MIDI</span>*
 
 ### SEE ALSO
 

@@ -11,17 +11,17 @@ Relative Scale Degree
 
 ### REPRESENTATION
 
-> **\*\*deg** \-- relative scale degree representation
+> <span class="rep">deg</span> \-- relative scale degree representation
 
 ### DESCRIPTION
 
-> The **\*\*deg** representation can be used to represent key-dependent
+> The <span class="rep">deg</span> representation can be used to represent key-dependent
 > scale-degree information for music in major or minor keys. The
-> **\*\*deg** representation differs from the related
-> [**\*\*degree**](degree.rep.html) representation in that it encodes
+> <span class="rep">deg</span> representation differs from the related
+> [<span class="rep">degree</span>](degree.rep.html) representation in that it encodes
 > relative rather than absolute pitch-height information.
 >
-> Three types of data tokens are distinguished by **\*\*deg**: scale
+> Three types of data tokens are distinguished by <span class="rep">deg</span>: scale
 > degree tokens, rest tokens, and barlines.
 >
 > Scale degree tokens are encoded as a combination of melodic approach,
@@ -55,12 +55,12 @@ Relative Scale Degree
 
 ### FILE TYPE
 
-> It is recommended that files containing predominantly `**deg` data
+> It is recommended that files containing predominantly <span class="rep">deg</span> data
 > should be given names with the distinguishing \`.deg\' extension.
 
 ### SIGNIFIERS
 
-> The following table summarizes the **\*\*deg** mappings of signifiers
+> The following table summarizes the <span class="rep">deg</span> mappings of signifiers
 > and signifieds.
 >
 > >   ----- -------------------------------------
@@ -74,14 +74,14 @@ Relative Scale Degree
 > >   =     barline; == double barline
 > >   ----- -------------------------------------
 > >
-> > *Summary of **\*\*deg** Signifiers*
+> > *Summary of <span class="rep">deg</span> Signifiers*
 
 ### EXAMPLES
 
 > The sample document given below shows the opening subject of the Fugue
 > in C minor in the second volume of Bach\'s *Well Tempered Clavier.*
-> The left spine shows a [**\*\*kern**](kern.rep.html) encoding while
-> the right spine shows a corresponding **\*\*deg** encoding.
+> The left spine shows a [<span class="rep">kern</span>](kern.rep.html) encoding while
+> the right spine shows a corresponding <span class="rep">deg</span> encoding.
 >
 > > ``
 > >
@@ -115,7 +115,7 @@ Relative Scale Degree
 > >
 ### PERTINENT COMMANDS
 
-> The following Humdrum command accepts **\*\*deg** encoded data as
+> The following Humdrum command accepts <span class="rep">deg</span> encoded data as
 > inputs:
 >
 > >   -- --------------------------------- --------------------------------------------------------
@@ -124,24 +124,24 @@ Relative Scale Degree
 > >                                        
 > >   -- --------------------------------- --------------------------------------------------------
 > >
-> The following Humdrum command produces **\*\*deg** data as output:
+> The following Humdrum command produces <span class="rep">deg</span> data as output:
 >
 > >   -- --------------------------------- -------------------------------------------------------------------------
 > >                                        
-> >      <span class="tool">deg</span>   translates **\*\*kern, \*\*pitch, \*\*Tonh, \*\*solfg**, to **\*\*deg**
+> >      <span class="tool">deg</span>   translates **\*\*kern, \*\*pitch, \*\*Tonh, \*\*solfg**, to <span class="rep">deg</span>
 > >   -- --------------------------------- -------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
 
 > The following tandem interpretations can be used in conjunction with
-> **\*\*deg**:
+> <span class="rep">deg</span>:
 >
 > >   ---------------- ------------
 > >   key signatures   `*k[f#c#]`
 > >   key              `*c#:`
 > >   ---------------- ------------
 > >
-> > *Tandem interpretations for **\*\*deg***
+> > *Tandem interpretations for <span class="rep">deg</span>*
 
 ### SEE ALSO
 
