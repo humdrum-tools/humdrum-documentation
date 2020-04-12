@@ -375,7 +375,7 @@ Basic Notated Music
  ordering of the signifiers within **\*\*kern** data tokens. For
  example, when comparing two ostensibly identical **\*\*kern** files,
  trivial differences of signifier orderings will cause UNIX commands
- such as **cmp** and **diff** to declare the files to be \"different.\"
+ such as <span class="unix">cmp</span> and <span class="unix">diff</span> to declare the files to be \"different.\"
  In this case, it is useful to adopt a standard order of signifiers so
  that direct file comparisons may be made. Similarly, differences in
  signifier orderings can cause problems for pattern matching tasks. For
