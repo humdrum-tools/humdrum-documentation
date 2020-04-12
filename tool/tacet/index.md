@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- tacet'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/tacet/index.html

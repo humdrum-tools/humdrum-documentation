@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- reihe'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/reihe/index.html

@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- census'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/census/index.html

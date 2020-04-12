@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- record'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/record/index.html

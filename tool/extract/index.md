@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- extract'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/extract/index.html

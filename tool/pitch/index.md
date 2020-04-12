@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- pitch'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/pitch/index.html

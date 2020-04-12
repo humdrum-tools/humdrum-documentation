@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- assemble'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 sidebar:	main_sidebar
 vim:		ft=html

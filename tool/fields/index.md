@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- fields'
 author:		David Huron
+last-edited:	
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/fields/index.html
