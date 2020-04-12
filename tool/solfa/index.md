@@ -7,7 +7,7 @@ permalink:	/tool/solfa/index.html
 
 ### COMMAND
 
-**solfa** -- translate selected Humdrum pitch-related representations
+<span class="tool">solfa</span> -- translate selected Humdrum pitch-related representations
 to tonic solfa syllables (`**solfa`)
 
 ------------------------------------------------------------------------
@@ -20,22 +20,22 @@ to tonic solfa syllables (`**solfa`)
 
 ### DESCRIPTION
 
-The **solfa** command transforms various pitch-related inputs to the
+The <span class="tool">solfa</span> command transforms various pitch-related inputs to the
 corresponding tonic solfa syllables. The command outputs one or more
 Humdrum `**solfa` spines &mdash; where pitches are designated by the
 syllables *do, re, mi, fa, so, la,* and *ti* &mdash; or their chromatic
 alterations: *di, da, ri, ra,* etc. (see below). Tonic solfa syllables
 can be determined only with reference to some prevailing key. For
 example, the pitch C is the tonic (`do`) in the key of C major, but the
-mediant (`mi`) in the key of A-flat major. The **solfa** command expects
+mediant (`mi`) in the key of A-flat major. The <span class="tool">solfa</span> command expects
 a tandem interpretation indicating the key of the input passage;
-**solfa** will adapt to specified changes of key within an input stream.
+<span class="tool">solfa</span> will adapt to specified changes of key within an input stream.
 If no key information is provided prior to the first pitch-related data,
-**solfa** issues an error message and terminates.
+<span class="tool">solfa</span> issues an error message and terminates.
 
 There are various systems for extending the tonic solfa syllables in
 order to representing chromatic alterations. The system used by
-**solfa** is tabulated below. (Pronunciations are indicated in
+<span class="tool">solfa</span> is tabulated below. (Pronunciations are indicated in
 parentheses.)
 
 >   ------------ ------------ -------------
@@ -50,27 +50,27 @@ parentheses.)
 >   ti (*tee*)   ty (*tie*)   te (*tay*)
 >   ------------ ------------ -------------
 >
-*Summary of **solfa** Signifiers*
+*Summary of <span class="tool">solfa</span> Signifiers*
 
-The **solfa** command differs from the [**deg**](deg.html) and
-[**degree**](degree.html) commands in that pitches are represented
+The <span class="tool">solfa</span> command differs from the <span class"tool">deg</span> and
+<span class"tool">degree</span> commands in that pitches are represented
 without regard to major or minor *mode.* For example, in the key of C
-major, **deg** and **degree** will characterize A-flat as a lowered
+major, <span class="tool">deg</span> and <span class="tool">degree</span> will characterize A-flat as a lowered
 sixth scale degree, whereas the same pitch will be a normal sixth scale
 degree in the key of C minor. In the case of **solfa,** the A-flat will
 be characterized as `le` &mdash; whether or not the key is C major or C
-minor. As in the case of **deg** and **degree**, the amount of chromatic
+minor. As in the case of <span class="tool">deg</span> and <span class="tool">degree</span>, the amount of chromatic
 alteration is not represented; once a pitch is \"raised,\" raising it
 further will not change the output representation. For example, where
 the tonic pitch is B-flat, both B-natural and B-sharp are represented by
 `di`.
 
-The **solfa** command is able to translate any of the pitch-related
+The <span class="tool">solfa</span> command is able to translate any of the pitch-related
 representations listed below. For descriptions of the various input
 representations (including `**solfa`) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
-It is recommended that output files produced by the **solfa** command
+It is recommended that output files produced by the <span class="tool">solfa</span> command
 should be given names with the distinguishing .sol extension.
 
 >   ----------- ----------------------------------------------------------------------
@@ -80,13 +80,13 @@ should be given names with the distinguishing .sol extension.
 >   `**Tonh`    German pitch system
 >   ----------- ----------------------------------------------------------------------
 >
-*Input representations processed by **solfa**.*
+*Input representations processed by <span class="tool">solfa</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **solfa**
+The <span class="tool">solfa</span>
 
 command provides the following options:
 
@@ -106,7 +106,7 @@ non-`**solfa signifiers  Options are specified in the command line. `
 The **-t** option ensures that only a single output value is given for
 tied notes; the output coincides with the first note of the tie.
 
-In the default operation, **solfa** outputs non-pitch-related signifiers
+In the default operation, <span class="tool">solfa</span> outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D, the
 `**kern` token \"4Gz\" will result in the output \"4faz\" &mdash; that is,
 after translating G to fa, the \"4\...z\" signifiers are retained in the

@@ -8,7 +8,7 @@ permalink:	/tool/midireset/index.html
 
 ### COMMAND
 
-**midreset** &mdash; reset MIDI controller card
+<span class="tool">midreset</span> &mdash; reset MIDI controller card
 
 ------------------------------------------------------------------------
 
@@ -20,15 +20,15 @@ permalink:	/tool/midireset/index.html
 
 ### DESCRIPTION
 
-The **midreset** command resets the MIDI controller card. The
-**midreset** command is useful if a MIDI application has terminated
+The <span class="tool">midreset</span> command resets the MIDI controller card. The
+<span class="tool">midreset</span> command is useful if a MIDI application has terminated
 abnormally &mdash; leaving the MIDI card unaccessable to further use.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **midreset** command provides only a help option:
+The <span class="tool">midreset</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -46,8 +46,8 @@ DOS 2.0 and up.
 
 ### SEE ALSO
 
-[**perform**](perform.html) (4), [**smf**](smf.html) (4),
-[**tacet**](tacet.html) (4)
+<span class"tool">perform</span> (4), <span class"tool">smf</span> (4),
+<span class"tool">tacet</span> (4)
 
 ------------------------------------------------------------------------
 

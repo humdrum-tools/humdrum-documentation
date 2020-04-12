@@ -7,7 +7,7 @@ permalink:	/tool/proof/index.html
 
 ### COMMAND
 
-**proof** -- check syntax of Humdrum `**kern` file
+<span class="tool">proof</span> -- check syntax of Humdrum `**kern` file
 
 ------------------------------------------------------------------------
 
@@ -19,11 +19,11 @@ permalink:	/tool/proof/index.html
 
 ### DESCRIPTION
 
-The **proof** command checks the syntax of
+The <span class="tool">proof</span> command checks the syntax of
 [`**kern`-encoded](../representations/kern.html) files. It may be used
 to assist in the detection and correction of `**kern` encoding errors.
 
-The **proof** command scans the input stream for ten types of errors:
+The <span class="tool">proof</span> command scans the input stream for ten types of errors:
 (1) consistency of incremented measure numbers, and measure-number
 agreement between concurrent parts, (2) incoherent pitch tokens (such as
 assigning two pitches to the same note), (3) incoherent durations (such
@@ -36,7 +36,7 @@ consistent slur markings (e.g. \`(\' must precede and be matched with
 \`)\' etc. with the exception of elisions (&)), (8) tied notes which
 differ in pitch or pitch spelling, (9) unequal total durations for each
 voice within a measure, and (10) the presence of multiple-stops that do
-not share the same duration. In addition, **proof** issues a number of
+not share the same duration. In addition, <span class="tool">proof</span> issues a number of
 warnings of possible data errors: (11) warn of files which do not end
 with a double barline, (12) warn of material encoded following a double
 barline, (13) warn of measures which change meters unannounced, (14)
@@ -50,7 +50,7 @@ signature declarations.
 
 ### OPTIONS
 
-The **proof** command provides the following options:
+The <span class="tool">proof</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -67,7 +67,7 @@ error messages are output.
 ### DIAGNOSTICS
 
 The following list tabulates all of the potential errors and warnings
-issued by the **proof** command. ``
+issued by the <span class="tool">proof</span> command. ``
 
 >   ---------------------------------------------------------------------------------
 >   Error: Incoherent key signature, line *n*: assigned more than one accidental to
@@ -103,7 +103,7 @@ issued by the **proof** command. ``
 >   Warning: No double barline in input.
 >   ---------------------------------------------------------------------------------
 >
-*Potential errors and warnings issued by **proof**.*
+*Potential errors and warnings issued by <span class="tool">proof</span>.*
 
 ------------------------------------------------------------------------
 

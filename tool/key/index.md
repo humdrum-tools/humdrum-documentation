@@ -8,7 +8,7 @@ permalink:	/tool/key/index.html
 
 ### COMMAND
 
-**key** &mdash; estimate the key for a Humdrum passage
+<span class="tool">key</span> &mdash; estimate the key for a Humdrum passage
 
 ------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ permalink:	/tool/key/index.html
 
 ### DESCRIPTION
 
-The **key** command estimates the key of a given musical passage using
+The <span class="tool">key</span> command estimates the key of a given musical passage using
 Krumhansl's tonal hiearchy method. The command is restricted to
 identifying only those keys within the common major/minor tonal system.
 Modes outside the major/minor system are not recognized.
@@ -51,10 +51,10 @@ properly, durational information ought to be provided. When using
 ` **semits` format input, best results are achieved when the input has a
 *time-base* format. (See the **timebase (4)** command.)
 
-The **key** command is poor at distinguishing less common enharmonic
+The <span class="tool">key</span> command is poor at distinguishing less common enharmonic
 keys. For example, it is unable to distinguish the following enharmonic
 spellings for tonic pitches: C-flat, B-sharp, E-sharp, F-flat. Also,
-**key** is unable to distinguish enharmonic spellings involving double-
+<span class="tool">key</span> is unable to distinguish enharmonic spellings involving double-
 or triple- sharps or flats. That is, G double-sharp major is identified
 as A major. KEY is able to distinguish the more common enharmonic
 spellings (such as E-flat versus D-sharp).
@@ -65,7 +65,7 @@ There is no special output file-type designation.
 
 ### OPTIONS
 
-The **key** command provides the following options:
+The <span class="tool">key</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-a**   output correlation values for all keys
@@ -179,9 +179,9 @@ interpreters, and revised *awk* (1985).
 
 ### WARNINGS
 
-As noted, **key** is very limited. When used to find \"the key\" of a
+As noted, <span class="tool">key</span> is very limited. When used to find \"the key\" of a
 particular work, it frequently produces incorrect results. In
-particular, for much tonal music, **key** has a tendency to mistakenly
+particular, for much tonal music, <span class="tool">key</span> has a tendency to mistakenly
 identify the dominant of the key rather than the tonic. See also the
 discussion under \"proposed modifications.\"
 
@@ -197,7 +197,7 @@ The current version does not handle multiple stops in ` **kern` spines.
 
 Currently the program is sensitive to ` **semits` and ` **kern`
 interpretations. If no recognizable interpretation is given in the input
-stream, **key** assumes ` **kern` compatible input. This may lead to
+stream, <span class="tool">key</span> assumes ` **kern` compatible input. This may lead to
 erroneous results.
 
 ------------------------------------------------------------------------
@@ -219,14 +219,14 @@ keys,\" *Psychological Review,* Vol. 89 (1982) pp.334-368.
 
 ### PROPOSED MODIFICATIONS
 
-The **key** command is likely to appeal to two types of uses: (1) those
+The <span class="tool">key</span> command is likely to appeal to two types of uses: (1) those
 who are interested in knowing the key of a musical work without having
 to examine the work manually, or (2) those who are interested in a
 perceptual characterization of the tonality of a passage. These goals
-are quite different. The current **key** command implements the second
-approach; **key** is not very good at consistently and correctly
+are quite different. The current <span class="tool">key</span> command implements the second
+approach; <span class="tool">key</span> is not very good at consistently and correctly
 identifying \"The Key\" of typical tonal works. Another command (or
-variant of the **key** command) might use contextual heuristics (such as
+variant of the <span class="tool">key</span> command) might use contextual heuristics (such as
 looking at the final chord of a work, or examining cadences) in order to
 better identify \"the key\" of a work.
 

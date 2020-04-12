@@ -7,7 +7,7 @@ permalink:	/tool/nf/index.html
 
 ### COMMAND
 
-**nf** -- determine normal form for successive vertical sonorities in
+<span class="tool">nf</span> -- determine normal form for successive vertical sonorities in
 Humdrum inputs
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Humdrum inputs
 
 ### DESCRIPTION
 
-The **nf** command is used to determine the *normal form* for any of
+The <span class="tool">nf</span> command is used to determine the *normal form* for any of
 five set-theory related inputs: pitch (`**semits`), pitch-class
 (`**pc`), prime form (`**pf`), interval-class vector (`**iv`), or
 Fortean set name (`**pcset`).
@@ -35,18 +35,18 @@ inversion, with any spelling) will have the normal form: 2,6,9 &mdash;
 namely, the pitch-classes D, F\#, A (as opposed to 6,9,2 or 2,9,6). See
 [REFERENCES](#REFERENCES) below.
 
-When provided with `**semits` or `**pc` inputs, **nf** treats each input
+When provided with `**semits` or `**pc` inputs, <span class="tool">nf</span> treats each input
 record as a set of pitches. Unisons and other pitch-class duplications
 have no effect on the output. Rests within a set of pitches are ignored;
 where an input record consists solely of one or more rests, a null-token
 is output.
 
-The **nf** command is able to translate any of the representations
+The <span class="tool">nf</span> command is able to translate any of the representations
 listed below. For descriptions of the various input representations
 (including `**nf`) refer to Section 2 *(Representation Reference)* of
 this reference manual.
 
-It is recommended that output files produced using the **nf** command
+It is recommended that output files produced using the <span class="tool">nf</span> command
 should be given names with the distinguishing \`.nf\' extension.
 
 >   ------------ --------------------------------------------------------------------
@@ -58,13 +58,13 @@ should be given names with the distinguishing \`.nf\' extension.
 >   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
-*Input representations processed by **nf**.*
+*Input representations processed by <span class="tool">nf</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **nf** command provides only a help option:
+The <span class="tool">nf</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -94,16 +94,16 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**context**](context.html) (4), **\*\*iv** (2), [**iv**](iv.html) (4),
-**\*\*nf** (2), **\*\*pc** (2), [**pc**](pc.html) (4), **\*\*pcset**
-(2), [**pcset**](pcset.html) (4), **\*\*pf** (2), [**pf**](pf.html) (4),
-**\*\*semits** (2), [**semits**](semits.html) (4)
+<span class"tool">context</span> (4), **\*\*iv** (2), <span class"tool">iv</span> (4),
+**\*\*nf** (2), **\*\*pc** (2), <span class"tool">pc</span> (4), **\*\*pcset**
+(2), <span class"tool">pcset</span> (4), **\*\*pf** (2), <span class"tool">pf</span> (4),
+**\*\*semits** (2), <span class"tool">semits</span> (4)
 
 ------------------------------------------------------------------------
 
 ### NOTE
 
-The **nf** command is a shell script that invokes `pcset -n`.
+The <span class="tool">nf</span> command is a shell script that invokes `pcset -n`.
 
 ------------------------------------------------------------------------
 

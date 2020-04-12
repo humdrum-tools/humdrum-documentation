@@ -7,7 +7,7 @@ permalink:	/tool/trans/index.html
 
 ### COMMAND
 
-**trans** -- transpose selected Humdrum pitch representations
+<span class="tool">trans</span> -- transpose selected Humdrum pitch representations
 
 ------------------------------------------------------------------------
 
@@ -19,16 +19,16 @@ permalink:	/tool/trans/index.html
 
 ### DESCRIPTION
 
-The **trans** command transposes various Humdrum pitch representations.
+The <span class="tool">trans</span> command transposes various Humdrum pitch representations.
 Transposed outputs maintain proper pitch-interval spellings, except in
-modal transposition; **trans** might be used to transpose a work up a
+modal transposition; <span class="tool">trans</span> might be used to transpose a work up a
 perfect fourth, or down an augmented third, or from major mode to
 Phrygian. A \"transposition interpretation\" is appended to the output
 to mark the score as having been transposed. By default, input key
 signatures are retained in the output, however users can specify any
 replacement key signature using the **-k** option.
 
-The **trans** command is able to process those pitch-related
+The <span class="tool">trans</span> command is able to process those pitch-related
 representations listed below. All other inputs are simply echoed in the
 output. For descriptions of the various input representations refer to
 Section 2 *(Representation Reference)* of this reference manual.
@@ -40,7 +40,7 @@ Section 2 *(Representation Reference)* of this reference manual.
 >   `**Tonh`    German pitch system
 >   ----------- ----------------------------------------------------------------------
 >
-*Input representations processed by **trans**.*
+*Input representations processed by <span class="tool">trans</span>.*
 
 Transpositions are transformations that shift all pitch-signifier values
 up or down by some amount. Transpositions are specified by defining a
@@ -57,7 +57,7 @@ command invocation would be:
 
 > ` trans -d +2 -c +3 input > output`
 
-The plus signs above are optional; in their absence, **trans** assumes
+The plus signs above are optional; in their absence, <span class="tool">trans</span> assumes
 an upward transposition. Note that negative offsets can be mixed with
 positive offsets. For example, ` trans -d -1 -c +1` will transpose the
 pitch C to B double-sharp, and F flat to E sharp, etc. (i.e. down one
@@ -66,14 +66,14 @@ letter name, yet up one semitone).
 Modal transpositions are invoked by simply omitting the chromatic offset
 information. (See [EXAMPLES](#EXAMPLES) below.)
 
-It is recommended that output files produced using the **trans** command
+It is recommended that output files produced using the <span class="tool">trans</span> command
 should be given names with the distinguishing \`.tr\' extension.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **trans** command provides the following options:
+The <span class="tool">trans</span> command provides the following options:
 
 >   ---------------- -------------------------------------------------------
 >   -c \[*+-*\]*n*   transpose up(+) or down (-) *n* semitones
@@ -86,7 +86,7 @@ Options are specified in the command line.
 
 Note that the **-d** \"option\" is manditory rather than optional.
 
-By default, **trans** maintains any original input key signatures in the
+By default, <span class="tool">trans</span> maintains any original input key signatures in the
 transposed output. The **-k** option allows the user to specify a
 replacement key signature. Either \"pitch-class\" (\*k\[\...\]) or
 \"pitch-height\" (\*K\[\...\]) key signatures can be specified. (See the
@@ -117,7 +117,7 @@ corresponding chromatic offset of plus or minus 12 semitones. e.g.
 
 > ` trans -d -7 -c -12 guitar`
 
-In addition to exact pitch transpositions, **trans** can also perform
+In addition to exact pitch transpositions, <span class="tool">trans</span> can also perform
 *modal* transpositions. Modal transpositions arise when the pitch letter
 names are modified without regard for the precise semitone offset. To
 invoke a modal transposition, simply omit the chromatic offset
@@ -136,17 +136,17 @@ keys so that they are in the tonic Dorian mode.
 
 > ` trans -d +1 major | trans -d -1 -c -2 > dorian`
 
-The first **trans** carries out a modal transposition &mdash; up the
+The first <span class="tool">trans</span> carries out a modal transposition &mdash; up the
 interval of a diatonic second. Thus, a work in D major would be placed
-in E Dorian. The second **trans** returns the score down the precise
+in E Dorian. The second <span class="tool">trans</span> returns the score down the precise
 interval of a major second. Together, both transpositions would cause an
 input in F major to be transformed to F Dorian; an input in B-flat major
 would be transformed to B-flat Dorian, etc.
 
-Whenever **trans** is invoked, it adds a tandem interpretation to the
+Whenever <span class="tool">trans</span> is invoked, it adds a tandem interpretation to the
 output indicating that the output representation has been transposed and
 is no longer at the original pitch. *Transposition tandem
-interpretations* are similar in syntax to the **trans** command itself.
+interpretations* are similar in syntax to the <span class="tool">trans</span> command itself.
 For example, the following tandem interpretation indicates that the
 score has been transposed up a major second.
 
@@ -220,9 +220,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**humsed**](humsed.html) (4), **\*\*kern** (2), [**kern**](kern.html)
-(4), **key signature** (3), [**pitch**](pitch.html) (4), **\*\*pitch**
-(2), [**recode**](recode.html) (4), **\*\*solfg** (2),
+<span class"tool">humsed</span> (4), **\*\*kern** (2), <span class"tool">kern</span>
+(4), **key signature** (3), <span class"tool">pitch</span> (4), **\*\*pitch**
+(2), <span class"tool">recode</span> (4), **\*\*solfg** (2),
 [**solfg**](solfg.html) (4), **\*\*Tonh** (2), [**tonh**](tonh.html)
 (4), **transposition** (3)
 
@@ -252,11 +252,11 @@ transposition tandem interpretation
 > ` *ITrd1c2`
 
 (even though the encoded data is at concert pitch). Note that it is
-possible subsequently to transpose such a score using the **trans**
+possible subsequently to transpose such a score using the <span class="tool">trans</span>
 command.
 
 Note that by default, key and key signature tandem interpretations are
-not modified by **trans** since the `**pitch, **kern, **solfg`, and
+not modified by <span class="tool">trans</span> since the `**pitch, **kern, **solfg`, and
 `**Tonh` representations are intended to encode the original key and key
 signature at absolute pitch.
 

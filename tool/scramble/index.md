@@ -7,7 +7,7 @@ permalink:	/tool/scramble/index.html
 
 ### COMMAND
 
-**scramble** -- randomize order of either Humdrum data records or data
+<span class="tool">scramble</span> -- randomize order of either Humdrum data records or data
 tokens
 
 ------------------------------------------------------------------------
@@ -20,9 +20,9 @@ tokens
 
 ### DESCRIPTION
 
-The **scramble** command can be used to randomize either the order of
+The <span class="tool">scramble</span> command can be used to randomize either the order of
 Humdrum data records or the arrangement of data tokens within each data
-record. The **scramble** command is useful for generating control data
+record. The <span class="tool">scramble</span> command is useful for generating control data
 when testing contextual relationships between signifiers.
 
 Two modes of operation are supported according to whether the **-r**
@@ -44,16 +44,16 @@ unaffected. Comments and interpretations are output intact, and in
 precisely the same location (line number) as in the input. Only data
 records are affected by **scramble.**
 
-Each time **scramble** is invoked, a different random ordering is
+Each time <span class="tool">scramble</span> is invoked, a different random ordering is
 generated.
 
 Note that when using the **-r** mode, the scrambling process may produce
 an output that is no longer syntactically correct Humdrum. With the
-**-r** mode, **scramble** is guaranteed to produce Humdrum output only
+**-r** mode, <span class="tool">scramble</span> is guaranteed to produce Humdrum output only
 if (1) the input file is bona fide Humdrum, and (2) the number of spines
 in the input does not vary.
 
-With the **-t** mode, **scramble** will always produce output conforming
+With the **-t** mode, <span class="tool">scramble</span> will always produce output conforming
 to the Humdrum syntax, however it can produce uninterpretable output if
 concurrent spines do not contain the same type of data (that is, they
 have different exclusive interpretations).
@@ -68,7 +68,7 @@ that they are not either repositioned, or their data tokens re-ordered.
 
 ### OPTIONS
 
-The **scramble** command provides the following option:
+The <span class="tool">scramble</span> command provides the following option:
 
 >   ------------- -----------------------------------------------------------------------
 >   **-h**        displays a help screen summarizing the command syntax
@@ -87,7 +87,7 @@ mode* (**-r**) or *token mode* (**-t**) must be invoked.
 
 ### EXAMPLES
 
-The use of the **scramble** command can be illustrated using the
+The use of the <span class="tool">scramble</span> command can be illustrated using the
 following input: ``
 
 >   --------------------- -----------
@@ -162,18 +162,18 @@ might produce the following output: ``
 >   --------------------- -----------
 >
 Notice that a complete scrambling of data tokens within a Humdrum file
-cannot be achieved merely by invoking one **scramble** mode followed by
+cannot be achieved merely by invoking one <span class="tool">scramble</span> mode followed by
 the other mode. In order to completely scramble a Humdrum file the user
 must extract and scramble the record order for each spine independently,
 and then reassemble the scrambled spines into a new file using the
-**assemble** command.
+<span class="tool">assemble</span> command.
 
 Note also that where the number of spines changes over the course of the
 input file, valid Humdrum output is unlikely. Outputs consistent with
 the Humdrum syntax can be ensured by using the **fields -i** command to
-chronicle changing numbers of spines in a file, followed by the **yank**
+chronicle changing numbers of spines in a file, followed by the <span class="tool">yank</span>
 command to segregate data blocks containing the same number of spines.
-Each such bock can be **scramble**d independently and then the blocks
+Each such bock can be <span class="tool">scramble</span>d independently and then the blocks
 reconnected using the UNIX **cat** command. Unnecessary (duplicate)
 interpretations can be eliminated using **rid -u.**
 
@@ -200,7 +200,7 @@ Humdrum output is unlikely when using the **-r** option. Note also that
 reordering data records or data tokens will destroy data-token links
 such as
 
-Note that the **scramble** command cannot be used in pipes. ` **kern`
+Note that the <span class="tool">scramble</span> command cannot be used in pipes. ` **kern`
 \"ties.\" Use of the **-t** mode, can produce uninterpretable output
 when concurrent spines do not contain the same interpretations.
 

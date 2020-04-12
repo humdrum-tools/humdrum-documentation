@@ -8,7 +8,7 @@ permalink:	/tool/reihe/index.html
 
 ### COMMAND
 
-**reihe** &mdash; output specified row variant for a given Humdrum prime row
+<span class="tool">reihe</span> &mdash; output specified row variant for a given Humdrum prime row
 input
 
 ------------------------------------------------------------------------
@@ -21,16 +21,16 @@ input
 
 ### DESCRIPTION
 
-The **reihe** command outputs a specified row variant for a given prime
-row input. Normally, **reihe** is used to generate tone-row variants for
+The <span class="tool">reihe</span> command outputs a specified row variant for a given prime
+row input. Normally, <span class="tool">reihe</span> is used to generate tone-row variants for
 12-tone rows. However, the \"tone-rows\" can consist of any number of
 pitch-classes and need not be based on modulo-12 class-equivalence. In
 certain circumstances the \"prime row\" may consist of non-numeric or
 non-pitch-related data &mdash; such as articulation marks or dynamic marks.
-In addition to the traditional set-theoretic transformations, **reihe**
+In addition to the traditional set-theoretic transformations, <span class="tool">reihe</span>
 also permits cyclic rotation (shifting) of set elements.
 
-The input to the **reihe** command is interpreted as a *prime* or basic
+The input to the <span class="tool">reihe</span> command is interpreted as a *prime* or basic
 set of elements from which a transformed set is to be derived and
 output. Four traditional types of set-transformations can be generated
 by specifying the appropriate option: **-P** (prime), **-I**
@@ -56,14 +56,14 @@ T (ten) and E (eleven) &mdash; although this latter convention is
 discouraged.
 
 In addition to the traditional set-transformations of transposition,
-inversion, retrograde, and retrograde-inversion, **reihe** also provides
+inversion, retrograde, and retrograde-inversion, <span class="tool">reihe</span> also provides
 for rotation &mdash; where the set elements are cyclically *shifted* by a
 specified number of positions. For example, **-s 3** causes each set
 element to be shifted forward by 3 positions. The shift transformation
 can be combined with each of the other traditional transformations only
-by invoking the **reihe** command twice in succession.
+by invoking the <span class="tool">reihe</span> command twice in succession.
 
-Normally, **reihe** is used to transform numerical data (typically
+Normally, <span class="tool">reihe</span> is used to transform numerical data (typically
 pitch-class values). However, the retrograde (**-r**) and shift (**-s**)
 operations can be performed on any data (including non-numeric data &mdash;
 such as articulation marks). For non-numeric data, the retrograde option
@@ -131,7 +131,7 @@ produces the following output: ``
 >
 Notice that the comments, barlines, rests, and null tokens have been
 eliminated from the input file. This leaves the output in a form better
-suited to pattern matching using the **patt** or **pattern** commands.
+suited to pattern matching using the <span class="tool">patt</span> or <span class="tool">pattern</span> commands.
 
 Similarly, executing the command:
 
@@ -160,7 +160,7 @@ produces: ``
 
 ### OPTIONS
 
-The **reihe** command provides the following options:
+The <span class="tool">reihe</span> command provides the following options:
 
 >   ------------------- --------------------------------------------------------------------------
 >   **-a**              for `**pc` inputs, output alphanumeric representation (where A=10, B=11)
@@ -186,7 +186,7 @@ When the **-a** option is invoked, pitch-class inputs (`**pc`) will
 produce pitch-class outputs using the alias values \`A\' for pitch-class
 10, and \`B\' for pitch-class 11. (See the **\*\*pc** representation.)
 
-By default, the **reihe** command assumes modulo 12 arithmetic for
+By default, the <span class="tool">reihe</span> command assumes modulo 12 arithmetic for
 prime, inversion, retrograde, and retrograde-inversion transformations.
 In other words, transposing the numerical value \`11\' up three
 pitch-classes results in an output value of \`2.\' The **-m** option can

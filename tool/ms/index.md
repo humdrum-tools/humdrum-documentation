@@ -7,7 +7,7 @@ permalink:	/tool/ms/index.html
 
 ### COMMAND
 
-**ms** -- generate postscript musical notation output via Arkkra's Mup
+<span class="tool">ms</span> -- generate postscript musical notation output via Arkkra's Mup
 
 On-line documentation is not currently available for this command.
 

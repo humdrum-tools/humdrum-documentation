@@ -7,7 +7,7 @@ permalink:	/tool/freq/index.html
 
 ### COMMAND
 
-**freq** &mdash; translate selected Humdrum pitch-related representations to
+<span class="tool">freq</span> &mdash; translate selected Humdrum pitch-related representations to
 frequency
 
 ------------------------------------------------------------------------
@@ -20,19 +20,19 @@ frequency
 
 ### DESCRIPTION
 
-The **freq** command transforms various pitch-related inputs to
+The <span class="tool">freq</span> command transforms various pitch-related inputs to
 corresponding frequency representations. It outputs one or more Humdrum
 `**freq` spines containing numerical values (in hertz) corresponding to
 the fundamental frequency for pitch-related input tokens. For example,
 the `**pitch` token \"C4\" is transformed to 261.63 (hertz).
 
-The **freq** command is able to translate any of the pitch-related
+The <span class="tool">freq</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
 representations (including `**freq`) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
-It is recommended that output files produced using the **freq** command
+It is recommended that output files produced using the <span class="tool">freq</span> command
 should be given names with the distinguishing \`\"\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
@@ -50,13 +50,13 @@ should be given names with the distinguishing \`\"\' extension.
 >   `**Tonh`     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
-*Input representations processed by **freq**.*
+*Input representations processed by <span class="tool">freq</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **freq** command provides the following options:
+The <span class="tool">freq</span> command provides the following options:
 
 >   -------- ---------------------------------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -69,14 +69,14 @@ Options are specified in the command line.
 
 The **-p** option can be used to set the precision of the output values
 to *n* decimal places. The default precision is two decimal places. Note
-that **freq** is able to process `**freq` as input; this feature allows
+that <span class="tool">freq</span> is able to process `**freq` as input; this feature allows
 the user to round-off existing `**freq` data to a specified precision.
 
 The **-t** option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
-In the default operation, **freq** outputs non-pitch-related signifiers
+In the default operation, <span class="tool">freq</span> outputs non-pitch-related signifiers
 in addition to the frequency value. For example, the `**pitch` token
 \"A6zzz\" will result in the output \"1760.00zzz\" &mdash; that is, after
 translating A6 to 1760.00 hertz, the \"zzz\" signifiers are retained in

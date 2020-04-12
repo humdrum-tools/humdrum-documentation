@@ -7,7 +7,7 @@ permalink:	/tool/humver/index.html
 
 ### COMMAND
 
-**humver** -- display Humdrum toolkit version and copyright information
+<span class="tool">humver</span> -- display Humdrum toolkit version and copyright information
 
 ------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ permalink:	/tool/humver/index.html
 
 ### DESCRIPTION
 
-The **humver** command tells the user which version or release of the
+The <span class="tool">humver</span> command tells the user which version or release of the
 Humdrum Toolkit is installed or available on a given computer system.
 The command also prints copyright information pertaining to the Humdrum
 Toolkit.

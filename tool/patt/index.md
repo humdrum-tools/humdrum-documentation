@@ -7,7 +7,7 @@ permalink:	/tool/patt/index.html
 
 ### COMMAND
 
-**patt** -- locate and output user-defined patterns in a Humdrum input
+<span class="tool">patt</span> -- locate and output user-defined patterns in a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ permalink:	/tool/patt/index.html
 
 ### DESCRIPTION
 
-The **patt** command is used to locate occurrences of a user-defined
+The <span class="tool">patt</span> command is used to locate occurrences of a user-defined
 pattern in some Humdrum input. The patterns sought may span innumerable
 data records. Occurrences of the pattern may be identified by line
 number, echoed intact in the output stream, or tagged by a user-defined
@@ -37,7 +37,7 @@ of the template. For example, if the template is 9 lines in length, then
 the input stream must contain 9 successive lines of matching data in
 order for a pattern match to be successful.
 
-The **patt** command implements a full UNIX regular expression syntax.
+The <span class="tool">patt</span> command implements a full UNIX regular expression syntax.
 Each line in the template file represents an independent regular
 expression. For example, the template:
 
@@ -78,7 +78,7 @@ A more circumspect regular expression template might look like this:
 (The caret (\^) and dollar sign (\$) are regular expression *anchors*
 that indicate the beginning of the record and end of the record
 respectively.) Refer to *regexp (6)* for further information regarding
-regular expressions. Note that the related [**pattern**](pattern.html)
+regular expressions. Note that the related <span class"tool">pattern</span>
 command implements a more powerful regular expression syntax for
 defining multi-record patterns.
 
@@ -86,7 +86,7 @@ defining multi-record patterns.
 
 ### OPTIONS
 
-The **patt** command supports the following options:
+The <span class="tool">patt</span> command supports the following options:
 
 >   ------------------- ----------------------------------------------------------------------
 >   **-c**              makes pattern-matching sensitive to comments
@@ -101,11 +101,11 @@ The **patt** command supports the following options:
 >
 Options are specified in the command line.
 
-By default, the **patt** command is insensitive to the presence or
+By default, the <span class="tool">patt</span> command is insensitive to the presence or
 absence of Humdrum comments. Pattern searches may be made sensitive to
 occurrences of comments by specifying the **-c** option.
 
-In the default operation, **patt** outputs a Humdrum global comment for
+In the default operation, <span class="tool">patt</span> outputs a Humdrum global comment for
 each pattern matched in the input. Each comment identifies the line
 number in the input where the found pattern begins.
 
@@ -121,20 +121,20 @@ skipping null data tokens, barlines, marked embellishment tones, or
 other types of data.
 
 The **-m** option invokes a multiple record matching mode. In this mode,
-**patt** attempts to match as many successive regular expressions in the
+<span class="tool">patt</span> attempts to match as many successive regular expressions in the
 template file as possible for a given input record, before continuing
 with the next input and template records. In this way, a template file
 consisting of several records, may possibly match a single input record.
 (See [EXAMPLES](#EXAMPLES) below.)
 
-The **-t** option causes **patt** to output a single spine of `**patt`
+The **-t** option causes <span class="tool">patt</span> to output a single spine of `**patt`
 output. The user specifies an *output tag* (character string) on the
 command line. Each instance of the found pattern causes the tag to be
 output in the `**patt` spine at the position corresponding to the onset
 of each found pattern. (See [EXAMPLES](#EXAMPLES) below.) Note that the
 **-t** and **-e** options are mutually exclusive.
 
-Whatever options are invoked, **patt** always produces output that
+Whatever options are invoked, <span class="tool">patt</span> always produces output that
 conforms to the Humdrum syntax.
 
 ------------------------------------------------------------------------
@@ -143,7 +143,7 @@ conforms to the Humdrum syntax.
 
 ### EXAMPLES
 
-The following examples illustrate the operation of the **patt** command.
+The following examples illustrate the operation of the <span class="tool">patt</span> command.
 Consider the following target file and pattern template file:
 
 > **template file:**
@@ -185,7 +185,7 @@ Given the above command, the following output would result: ``
 >   !! Pattern found at line 6 of file input
 >   ------------------------------------------
 >
-In the first instance, notice that **patt** is able to identify
+In the first instance, notice that <span class="tool">patt</span> is able to identify
 overlapping patterns. Two instances of the 1-2-3 pattern are identified
 beginning on the fifth and sixth lines respectively.
 
@@ -293,7 +293,7 @@ will produce the following output: ``
 >   --------- ----------
 >
 Note that in the above examples, the extensive capabilities provided by
-**patt** for defining complex *regular expressions* have not been
+<span class="tool">patt</span> for defining complex *regular expressions* have not been
 illustrated. Refer to **regexp (6)** for further pertinent information.
 
 ------------------------------------------------------------------------
@@ -308,8 +308,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-**grep** (UNIX), **egrep** (UNIX), [**pattern**](pattern.html) (4),
-[**regexp**](regexp.html) (4), **regexp** (6), [**simil**](simil.html)
+**grep** (UNIX), **egrep** (UNIX), <span class"tool">pattern</span> (4),
+<span class"tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class"tool">simil</span>
 (4)
 
 ------------------------------------------------------------------------
@@ -323,12 +323,12 @@ If a comment is present in the template pattern, failing to specify the
 
 ### NOTE
 
-The **patt** command differs from the related **pattern** command in the
-following ways: (1) **patt** always produces output conforming to the
-Humdrum syntax whereas **pattern** never produces Humdrum output. (2)
-**pattern** allows multi-record \`wild cards\' in the template file, and
+The <span class="tool">patt</span> command differs from the related <span class="tool">pattern</span> command in the
+following ways: (1) <span class="tool">patt</span> always produces output conforming to the
+Humdrum syntax whereas <span class="tool">pattern</span> never produces Humdrum output. (2)
+<span class="tool">pattern</span> allows multi-record \`wild cards\' in the template file, and
 so permits the creation of more sophisticated regular expressions. (3)
-The **pattern** command does not directly provide an \"echo\" option.
+The <span class="tool">pattern</span> command does not directly provide an \"echo\" option.
 
 ------------------------------------------------------------------------
 

@@ -7,7 +7,7 @@ permalink:	/tool/pcset/index.html
 
 ### COMMAND
 
-**pcset** -- convert Humdrum pitch and pitch-class information to
+<span class="tool">pcset</span> -- convert Humdrum pitch and pitch-class information to
 set-theoretic representations
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ set-theoretic representations
 
 ### DESCRIPTION
 
-The **pcset** command is used to generate and convert between various
+The <span class="tool">pcset</span> command is used to generate and convert between various
 set-theoretic representations.
 
 By default, the output is the Fortean pitch-class set type (`**pcset`).
@@ -29,34 +29,34 @@ form* (`**nf`) or the more succinct *prime form* (`**pf`) or the
 associated *interval-class vector* (`**iv`). See
 [REFERENCES](#REFERENCES) below.
 
-In addition to accepting `**semits` or `**pc` inputs, **pcset** can also
+In addition to accepting `**semits` or `**pc` inputs, <span class="tool">pcset</span> can also
 process `**nf`, `**iv`, `**pf` or `**pcset` inputs. This permits the
 user to determine the normal form, prime form or interval-class vector
 for a given pc-set, or the interval-class vector for a given pc-set,
 prime form, or normal form, etc.
 
-For all of the above translations, **pcset** also provides a
+For all of the above translations, <span class="tool">pcset</span> also provides a
 *complementation* operator, where output values corresponding to the
 pitch-class set complement. For example, when the complementation option
 is invoked, an input consisting of the pitch-classes (0,4,7,10) would
 produce an output pertinent to the complementary set (1,2,3,5,6,8,9,11).
 Complementation can be applied to any accepted input type, including
 normal form, prime form, interval-class vector, and pc-set. Note that if
-the input consists of all twelve pitch-classes, **pcset** produces a
+the input consists of all twelve pitch-classes, <span class="tool">pcset</span> produces a
 null token as the set complement.
 
-When provided with `**semits` or `**pc` inputs, **pcset** treats each
+When provided with `**semits` or `**pc` inputs, <span class="tool">pcset</span> treats each
 input record as a set of pitches. Unisons and other pitch-class
 duplications have no effect on the output. Rests within a set of pitches
 are ignored; where an input record consists solely of one or more rests,
 a null-token is output.
 
-The **pcset** command is able to translate any of the representations
+The <span class="tool">pcset</span> command is able to translate any of the representations
 listed below. For descriptions of the various input representations
 (including `**pcset`) refer to Section 2 *(Representation Reference)* of
 this reference manual.
 
-It is recommended that output files produced using the **pcset** command
+It is recommended that output files produced using the <span class="tool">pcset</span> command
 should be given names with the distinguishing extensions \`.pcs\',
 \`.nf\' \`.pf\' or \`.iv\' &mdash; depending on the selected option.
 
@@ -69,13 +69,13 @@ should be given names with the distinguishing extensions \`.pcs\',
 >   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
-*Input representations processed by **pcset**.*
+*Input representations processed by <span class="tool">pcset</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **pcset** command provides the following options:
+The <span class="tool">pcset</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-c**   generate output for set complement
@@ -87,14 +87,14 @@ The **pcset** command provides the following options:
 >
 Options are specified in the command line.
 
-By default, the **pcset** command outputs a `**pcset` representation.
+By default, the <span class="tool">pcset</span> command outputs a `**pcset` representation.
 
-The **-n** option causes **pcset** to output normal form (`**nf`) data
+The **-n** option causes <span class="tool">pcset</span> to output normal form (`**nf`) data
 instead of `**pcset` data. \"Normal form\" is a standard way of
 representing the interval structure of any arbitrary set of
 pitch-classes.
 
-The **-p** option causes **pcset** to output the prime form (`**pf`) for
+The **-p** option causes <span class="tool">pcset</span> to output the prime form (`**pf`) for
 the input. Prime form is analogous to rearranging notes in a chord so
 that the spelling is in root position, close position, transposed so
 that the root of the chord is C. By way of example, any major chord
@@ -110,7 +110,7 @@ constructed. The six-element interval-class vector specifies the
 abundance of various interval-classes from 1 semitone to 6 semitones.
 (See [REFERENCES](#REFERENCES).)
 
-Note that the **iv** command, the **nf** command, and the **pf** command
+Note that the <span class="tool">iv</span> command, the <span class="tool">nf</span> command, and the <span class="tool">pf</span> command
 are aliases for `pcset -v`, `pcset -n` and `pcset -p` respectively.
 
 ------------------------------------------------------------------------
@@ -144,10 +144,10 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[context](context.html) **context** (4), **\*\*iv** (2),
-[**iv**](iv.html) (4), **\*\*nf** (2), [**nf**](nf.html) (4), **\*\*pc**
-(2), [**pc**](pc.html) (4), **\*\*pcset** (2), **\*\*pf** (2),
-[**pf**](pf.html) (4), **\*\*semits** (2), [**semits**](semits.html) (4)
+[context](context.html) <span class="tool">context</span> (4), **\*\*iv** (2),
+<span class"tool">iv</span> (4), **\*\*nf** (2), <span class"tool">nf</span> (4), **\*\*pc**
+(2), <span class"tool">pc</span> (4), **\*\*pcset** (2), **\*\*pf** (2),
+<span class"tool">pf</span> (4), **\*\*semits** (2), <span class"tool">semits</span> (4)
 
 ------------------------------------------------------------------------
 

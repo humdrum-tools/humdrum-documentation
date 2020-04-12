@@ -7,7 +7,7 @@ permalink:	/tool/tacet/index.html
 
 ### COMMAND
 
-**tacet** &mdash; reset MIDI channels to ensure silence
+<span class="tool">tacet</span> &mdash; reset MIDI channels to ensure silence
 
 ------------------------------------------------------------------------
 
@@ -19,8 +19,8 @@ permalink:	/tool/tacet/index.html
 
 ### DESCRIPTION
 
-The **tacet** command resets the MIDI output. It sends \"all-notes-off\"
-commands on MIDI channels 1-16. The **tacet** command is useful if a
+The <span class="tool">tacet</span> command resets the MIDI output. It sends \"all-notes-off\"
+commands on MIDI channels 1-16. The <span class="tool">tacet</span> command is useful if a
 MIDI application has terminated abnormally &mdash; leaving one or more
 sounding notes (\"ciphers\") on a MIDI device.
 
@@ -28,7 +28,7 @@ sounding notes (\"ciphers\") on a MIDI device.
 
 ### OPTIONS
 
-The **tacet** command provides the following options:
+The <span class="tool">tacet</span> command provides the following options:
 
 >   ---------- -------------------------------------------------------
 >   **-h**     displays a help screen summarizing the command syntax
@@ -51,8 +51,8 @@ DOS 2.0 and up.
 
 ### SEE ALSO
 
-[**midreset**](midreset.html) (4), [**perform**](perform.html) (4),
-[**smf**](smf.html) (4)
+<span class"tool">midreset</span> (4), <span class"tool">perform</span> (4),
+<span class"tool">smf</span> (4)
 
 ------------------------------------------------------------------------
 

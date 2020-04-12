@@ -7,7 +7,7 @@ permalink:	/tool/semits/index.html
 
 ### COMMAND
 
-**semits** -- translate selected Humdrum pitch-related representations
+<span class="tool">semits</span> -- translate selected Humdrum pitch-related representations
 to numerical semitones
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ to numerical semitones
 
 ### DESCRIPTION
 
-The **semits** command transforms various pitch-related inputs to
+The <span class="tool">semits</span> command transforms various pitch-related inputs to
 corresponding numerical semitone values. It outputs one or more Humdrum
 `**semits` spines containing values corresponding to the semitone
 distance from middle C for pitch-related input tokens. Pitches above
@@ -28,13 +28,13 @@ middle C produce positive output values, whereas pitches below middle C
 produce negative output values. For example, the `**pitch` token \"C3\"
 is transformed to -12 (-ts).
 
-The **semits** command is able to translate any of the pitch-related
+The <span class="tool">semits</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
 representations (including `**semits`) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
-It is recommended that output files produced using the **semits**
+It is recommended that output files produced using the <span class="tool">semits</span>
 command should be given names with the distinguishing \`.sem\'
 extension.
 
@@ -51,13 +51,13 @@ extension.
 >   `**Tonh`     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
-*Input representations processed by **semits**.*
+*Input representations processed by <span class="tool">semits</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **semits** command provides the following options:
+The <span class="tool">semits</span> command provides the following options:
 
 >   -------- ---------------------------------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -70,14 +70,14 @@ Options are specified in the command line.
 
 The **-p** option can be used to set the precision of the output values
 to *n* decimal places. The default precision is integer values only.
-Note that **semits** is able to process `**semits` as input; this
+Note that <span class="tool">semits</span> is able to process `**semits` as input; this
 feature allows the user to round-off existing `**semits` data to a
 specified precision.
 
 The **-t** ensures that only a single output value is given for tied
 `**kern` notes; the output coincides with the first note of the tie.
 
-In the default operation, **semits** outputs non-pitch-related
+In the default operation, <span class="tool">semits</span> outputs non-pitch-related
 signifiers in addition to the semits value. For example, the `**pitch`
 token \"A5zzz\" will result in the output \"21zzz\" &mdash; that is, after
 translating A5 to 21 semits, the \"zzz\" signifiers are retained in the

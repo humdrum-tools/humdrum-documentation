@@ -7,7 +7,7 @@ permalink:	/tool/encode/index.html
 
 ### COMMAND
 
-**encode** -- interactive Humdrum encoding from MIDI input
+<span class="tool">encode</span> -- interactive Humdrum encoding from MIDI input
 
 ------------------------------------------------------------------------
 
@@ -19,22 +19,22 @@ permalink:	/tool/encode/index.html
 
 ### DESCRIPTION
 
-The **encode** command provides an interactive editor for capturing
-Humdrum data from a MIDI input device. The operation of **encode** can
+The <span class="tool">encode</span> command provides an interactive editor for capturing
+Humdrum data from a MIDI input device. The operation of <span class="tool">encode</span> can
 be tailored by the user to generate a wide range of Humdrum
 representations &mdash; including representations designed by the user.
 
-The **encode** command is limited to encoding information one spine at a
-time. A typical use of **encode** might be to encode individual musical
+The <span class="tool">encode</span> command is limited to encoding information one spine at a
+time. A typical use of <span class="tool">encode</span> might be to encode individual musical
 \"parts\" or \"voices\" in a representation such as `**kern`; the user
-might then use the Humdrum **timebase** and **assemble** commands to
+might then use the Humdrum <span class="tool">timebase</span> and <span class="tool">assemble</span> commands to
 construct a full score from the encoded parts. The user must have access
 to an appropriate MIDI controller connected via a Roland MPU-401 (or
-compatible) MIDI controller card. Currently, **encode** is available
+compatible) MIDI controller card. Currently, <span class="tool">encode</span> is available
 only for IBM PC or compatible hardware running under the DOS operating
 system.
 
-The **encode** command implements a full-screen interactive text editor
+The <span class="tool">encode</span> command implements a full-screen interactive text editor
 &mdash; similar to the **vi** text editor. When invoked, the screen is
 divided into three display regions: a *status window,* a *command
 window,* and a larger *text window.* The *status window* displays
@@ -53,7 +53,7 @@ input mode,* and *command mode.*
 
 ### EDIT MODE
 
-When **encode** is first invoked, the editor is placed in *edit mode.*
+When <span class="tool">encode</span> is first invoked, the editor is placed in *edit mode.*
 If an edit-file has been specified in the command-line, then the
 beginning of any existing text is displayed in the text window. Edit
 mode allows the user to move to particular locations in the text and
@@ -145,7 +145,7 @@ cause a new line to be opened immediately *prior* to the current line.
 
 Once the input mode is invoked, typed ASCII characters will be added at
 the current cursor position until the ESCape or TAB key is pressed.
-Pressing ESCape or TAB will return **encode** to the *edit mode.* Tabs
+Pressing ESCape or TAB will return <span class="tool">encode</span> to the *edit mode.* Tabs
 are explicitly forbidden as input in order to reduce the possibility of
 creating text that does not conform to the Humdrum syntax.
 
@@ -153,7 +153,7 @@ creating text that does not conform to the Humdrum syntax.
 
 ### MIDI INPUT MODE
 
-The most characteristic feature of **encode** is the *MIDI input mode.*
+The most characteristic feature of <span class="tool">encode</span> is the *MIDI input mode.*
 The MIDI input mode can be invoked from *edit mode* by typing either of
 the upper-case letters \`**A**\' or \`**I**\'. The letter \`**I**\' will
 cause all subsequent MIDI-driven input to be *inserted* immediately
@@ -165,14 +165,14 @@ In the *MIDI input mode,* data is entered into the current document
 according to user-defined mappings between *MIDI events* (such as caused
 by playing on a MIDI keyboard) and ASCII character strings. Predefined
 mappings are specified in a *run-time control* (`.rc`) file. When the
-**encode** command is invoked, it must have access to a` .rc` file
+<span class="tool">encode</span> command is invoked, it must have access to a` .rc` file
 containing configuration information. The user can identify a
 specific` .rc` file on the command line via the **-r** option (see
-[OPTIONS](#OPTIONS)). Alternatively, **encode** will seek a
+[OPTIONS](#OPTIONS)). Alternatively, <span class="tool">encode</span> will seek a
 default` .rc` file (named `encode.rc`) residing in the the current
 directory, or if absent, in the `$HUMDRUM/etc` directory. The run-time
 control file is essential to the operation of **encode,** and inability
-to locate a ` .rc` file will cause **encode** to abort (see discussion
+to locate a ` .rc` file will cause <span class="tool">encode</span> to abort (see discussion
 in [OPTIONS](#OPTIONS) below).
 
 The run-control file contains a series of definitions mapping MIDI
@@ -248,7 +248,7 @@ Any records in the run-control file beginning with a **\#** character
 are treated as comments. Empty lines are ignored.
 
 The effect of the above run-control file can be illustrated by example.
-Imagine that **encode** received two key-on events (key \#60 followed by
+Imagine that <span class="tool">encode</span> received two key-on events (key \#60 followed by
 key \#62), where the first key exhibited a velocity value of 94 and the
 inter-onset time (`DEL`) was 100. The first key (\#60) would be mapped
 to the string \``c`\'; the delta-time would be mapped to the string
@@ -258,7 +258,7 @@ strings would be amalgamated according to the `ORDER` instruction (`DEL`
 first, `KEY` second, and `VEL` third) &mdash; producing the output string:
 `8.c'`
 
-Notice that **encode** outputs assembled strings only when the *next*
+Notice that <span class="tool">encode</span> outputs assembled strings only when the *next*
 key-on event occurs. This means that the text display is always one
 \"note\" behind the performer. Note that if musical durations are based
 on key inter-onset times, it is impossible to output a note prior to the
@@ -268,12 +268,12 @@ typing the ESCape key. (The timing of the last note is based on the
 
 In addition to mapping velocities, inter-onset times, and key numbers,
 run-control files can define a number of other attributes. The MIDI
-channel number attended to by **encode** can be set by the `RECEIVE`
+channel number attended to by <span class="tool">encode</span> can be set by the `RECEIVE`
 instruction. Any one of 16 channels (1-16) can be selected. A default
 channel 1 is assumed if no `RECEIVE` instruction is present in the
 run-control file.
 
-The **encode** command has a built-in metronome for assisting real-time
+The <span class="tool">encode</span> command has a built-in metronome for assisting real-time
 encoding. The metronome sends commands to the MIDI instrument generating
 metronome tones. Two types of tones are generated &mdash; tones marking each
 beat, and tones marking the beginning of each measure. The metronome
@@ -314,7 +314,7 @@ a run-control file.
 >                                      cause *string* to be output
 >   ---------------------------------- -----------------------------------------------------
 >
-*Definition types for **encode***
+*Definition types for <span class="tool">encode</span>*
 
 The `BUFFER`, `DEL`, `KEY`, `STRING`, and `VEL` instructions can be
 repeated multiple times within the `.rc` file. All other instructions
@@ -327,14 +327,14 @@ defined.
 
 ### COMMAND MODE
 
-The **encode** *command mode* allows a number of general-purpose
+The <span class="tool">encode</span> *command mode* allows a number of general-purpose
 commands to be executed &mdash; such as editing a specified file, changing a
 default mapping, or auditioning the encoded material. The *command mode*
-can be invoked from the **encode** *edit mode* by typing the colon
+can be invoked from the <span class="tool">encode</span> *edit mode* by typing the colon
 character (:).
 
 Each command is formulated in the *command window* and launched by
-pressing the ENTER key. After execution, **encode** is returned to *edit
+pressing the ENTER key. After execution, <span class="tool">encode</span> is returned to *edit
 mode.*
 
 Most commands consist of a single character; some commands require one
@@ -342,37 +342,37 @@ or more parameters.
 
 The \`**w**\' command causes the current text to be written to disk. If
 there is currently no active filename, then an error is displayed
-indicating that **encode** is unable to write a file without knowledge
+indicating that <span class="tool">encode</span> is unable to write a file without knowledge
 of the filename. The command \`w *filename*\' will cause the current
-contents to be written to the file *filename*. If **encode** was invoked
+contents to be written to the file *filename*. If <span class="tool">encode</span> was invoked
 with a specified filename, then that filename is active throughout the
 session.
 
 If the user attempts to write to an existing file (that was not
-specified when **encode** was invoked), then an error message is issued.
+specified when <span class="tool">encode</span> was invoked), then an error message is issued.
 Overwriting an existing file can be achieved by appending an exclamation
 mark following the write instruction &mdash; as in \`**w! *filename***.\'
 
-The \`**q**\' command causes **encode** to terminate. If the current
+The \`**q**\' command causes <span class="tool">encode</span> to terminate. If the current
 file has been modified without writing to disk, then a warning will be
 displayed and the quit instruction ignored. Appending an exclamation
-mark (\`**q!**\') will cause **encode** to terminate without saving any
+mark (\`**q!**\') will cause <span class="tool">encode</span> to terminate without saving any
 recent modifications.
 
 Note that the *quit* and *write* commands can be combined as a single
 instruction &mdash; \`**wq**\'.
 
-The \`**r *filename***\' command causes **encode** to read the file
+The \`**r *filename***\' command causes <span class="tool">encode</span> to read the file
 *filename* into the text, beginning at the line following the current
 cursor position.
 
-The \`**v**\' command causes **encode** to spawn a **vi** text editing
-session &mdash; importing the current **encode** text. The **vi** text
+The \`**v**\' command causes <span class="tool">encode</span> to spawn a **vi** text editing
+session &mdash; importing the current <span class="tool">encode</span> text. The **vi** text
 editor provides text manipulation capabilities, including searching,
 substitution, and macro-instruction facilities not available in
 **encode.** (Refer to the UNIX **vi** reference document for further
 information.) When the **vi** session is closed, the edited text file is
-returned to the **encode** session.
+returned to the <span class="tool">encode</span> session.
 
 The \`**m**\' command invokes a Humdrum pipeline that is suitable for
 auditioning text data conforming to either the `**kern` or `**MIDI`
@@ -382,7 +382,7 @@ data will be translated to `**MIDI` data and sent to the `perform`
 command. The user can then interactively proof-listen or audition the
 encoded data. Refer to the **perform (4)** for information regarding the
 types of interactive commands available during proof-listening. The
-**perform** command is terminated when the end-of-file is reached, or if
+<span class="tool">perform</span> command is terminated when the end-of-file is reached, or if
 the user presses either the ESCape key or the letter \`q\'. In either
 case, control is returned to **encode.**
 
@@ -396,14 +396,14 @@ current cursor position. Use of the upper-case \`**B**\' rather than
 \`**b**\' causes the buffer contents to be inserted prior to the current
 line rather than following the current line.
 
-Buffer zero (0) has a special status. When the **encode** command is
+Buffer zero (0) has a special status. When the <span class="tool">encode</span> command is
 invoked, if the current text is empty (i.e. empty file or no filename
 specified), then the contents of `BUFFER 0` are automatically inserted
 into the text. This provides a convenient way to import header
 information for a newly encoded file.
 
-The \`**rc *filename***\' command causes **encode** to use a different
-run-control file *filename*. This allows the **encode** environment to
+The \`**rc *filename***\' command causes <span class="tool">encode</span> to use a different
+run-control file *filename*. This allows the <span class="tool">encode</span> environment to
 be entirely reconfigured without interrupting the encoding session. This
 command can prove useful, for example, when the music being encoded
 changes key.
@@ -429,7 +429,7 @@ affect on the command operation.
 
 ### SUMMARY
 
-The various built-in commands in **encode** are summarized in the
+The various built-in commands in <span class="tool">encode</span> are summarized in the
 following table.
 
 >   --------------------- ------------------------------------------------------------------------
@@ -480,8 +480,8 @@ following table.
 >   B *n*                 insert run-control buffer number *n* before current cursor position
 >   m                     invoke interactive proof-listening for `**kern` or `**MIDI` text
 >   set *rc-command*      set or reset a `.rc mapping`
->   q                     quit **encode**
->   q!                    quit **encode** without saving modifications since last write
+>   q                     quit <span class="tool">encode</span>
+>   q!                    quit <span class="tool">encode</span> without saving modifications since last write
 >   r *filename*          read input file *filename* at current cursor position
 >   rc *controlfile*      use run-control file *controlfile* rather than current `.rc file`
 >   s *n*                 append run-control string number *n* following current cursor position
@@ -498,7 +498,7 @@ following table.
 
 ### OPTIONS
 
-The **encode** command provides the following options:
+The <span class="tool">encode</span> command provides the following options:
 
 > >   -------------- -------------------------------------------------------
 > >   **-h**         displays a help screen summarizing the command syntax
@@ -508,13 +508,13 @@ The **encode** command provides the following options:
 Options are specified in the command line.
 
 The **-r** option permits the user to identify a specific run-control
-file to configure the **encode** editor. If this option is omitted,
-**encode** will seek a default run-control file named `encode.rc` in the
+file to configure the <span class="tool">encode</span> editor. If this option is omitted,
+<span class="tool">encode</span> will seek a default run-control file named `encode.rc` in the
 current directory, or in the directory `$HUMDRUM/etc` if not present in
-the current directory. If the option is specified, **encode** will
+the current directory. If the option is specified, <span class="tool">encode</span> will
 search the current directory for the specified run-control file. If this
-search fails to locate the file, **encode** will search `$HUMDRUM/etc`.
-If this fails, **encode** will treat the input filename as an absolute
+search fails to locate the file, <span class="tool">encode</span> will search `$HUMDRUM/etc`.
+If this fails, <span class="tool">encode</span> will treat the input filename as an absolute
 file path. If this fails, encode will issue an error message indicating
 that it failed to locate the specified run-control file.
 
@@ -550,11 +550,11 @@ file until after the default beat (`DEL*`) has been defined.
 
 ### SEE ALSO
 
-[**assemble**](assemble.html) (4), [**cleave**](cleave.html) (4),
-**encode.rc** (5), [**humdrum**](humdrum.html) (4), **\*\*kern** (2),
-**\*\*MIDI** (2), [**midi**](midi.html) (4), [**num**](num.html) (4),
-[**perform**](perform.html) (4), [**proof**](proof.html) (4),
-[**record**](record.html) (4), [**timebase**](timebase.html) (4), **vi**
+<span class"tool">assemble</span> (4), <span class"tool">cleave</span> (4),
+**encode.rc** (5), <span class"tool">humdrum</span> (4), **\*\*kern** (2),
+**\*\*MIDI** (2), <span class"tool">midi</span> (4), <span class"tool">num</span> (4),
+<span class"tool">perform</span> (4), <span class"tool">proof</span> (4),
+<span class"tool">record</span> (4), <span class"tool">timebase</span> (4), **vi**
 (UNIX)
 
 ------------------------------------------------------------------------

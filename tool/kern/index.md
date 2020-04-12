@@ -8,7 +8,7 @@ permalink:	/tool/kern/index.html
 
 ### COMMAND
 
-**kern** &mdash; translate selected Humdrum pitch-related representations to
+<span class="tool">kern</span> &mdash; translate selected Humdrum pitch-related representations to
 `**kern`
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ permalink:	/tool/kern/index.html
 
 ### DESCRIPTION
 
-The **kern** command transforms various pitch-related inputs to
+The <span class="tool">kern</span> command transforms various pitch-related inputs to
 corresponding [`**kern` representation](../representations/kern.html)s.
 For example, the `**pitch` token \``Ab2`\' will be output as the
 `**kern` token \``AA-`\'. Continuous pitch-related representations, such
@@ -45,7 +45,7 @@ below \`cc\' is \`b\' and so forth. Sharps are indicated by the
 octothorpe sign (`#`) whereas flats are indicated by the minus sign
 (`-`).
 
-The **kern** command is able to translate any of the pitch-related
+The <span class="tool">kern</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
 representations (including `**kern`) refer to Section 2 *(Representation
@@ -64,12 +64,12 @@ Reference)* of this reference manual.
 >   `**Tonh`     German pitch system
 >   ------------ ----------------------------------------------------------------------
 >
-*Input representations processed by **kern**.*
+*Input representations processed by <span class="tool">kern</span>.*
 
 For numerically-oriented inputs, such as
 `**cents, **freq, **MIDI, **semits`, and `**specC`, variant enharmonic
 spellings are selected for output according to the prevailing key
-signature or explicit key indication. (Refer to **key** and **key
+signature or explicit key indication. (Refer to <span class="tool">key</span> and **key
 signatures** in Section 3 *(Humdrum Tandem Interpretations).* Hence, in
 the key of G minor, F-sharp and E-flat spellings will be output rather
 than G-flat and D-sharp. Kern recognizes the presence of key, or key
@@ -80,14 +80,14 @@ the case of pitch-height key signatures, the user can specify complex
 spelling preferences, such as F\#2 rather than Gb2, but Gb3 rather than
 F\#3, etc. See [SAMPLE OUTPUT](#SAMPLE%20OUTPUTS) below.
 
-It is recommended that output files produced using the **kern** command
+It is recommended that output files produced using the <span class="tool">kern</span> command
 should be given names with the distinguishing \`.krn\' extension.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **kern** command provides the following options:
+The <span class="tool">kern</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -96,7 +96,7 @@ The **kern** command provides the following options:
 >
 Options are specified in the command line.
 
-In the default operation, **kern** outputs any non-pitch-related
+In the default operation, <span class="tool">kern</span> outputs any non-pitch-related
 signifiers in addition to the kern value. For example, the `**pitch`
 token \"A6zzz\" will result in the output \"aaazzz\" &mdash; that is, after
 translating A6 to \"aaa\", the \"zzz\" signifiers are retained in the
@@ -242,7 +242,7 @@ interpreters, and revised *awk* (1985).
 
 ### BUGS
 
-When translating `**pitch`, `**solfg`, or `**Tonh`, inputs, **kern**
+When translating `**pitch`, `**solfg`, or `**Tonh`, inputs, <span class="tool">kern</span>
 ignores cents deviation. Hence C\#6+80 is rendered as \`ccc\#\' rather
 than the nearest pitch \`ddd\'.
 
@@ -254,7 +254,7 @@ Humdrum representations are expected to avoid context dependency insofar
 as possible. This can lead to unexpected results. For example, the
 letter \`x\' in `**pitch` is intended to signify the presence of a
 double sharp. Thus the `**pitch` input token \`xyzC4\' is correctly
-translated by **kern** as \`yzc\#\#\'. Similarly, the `**pitch` input
+translated by <span class="tool">kern</span> as \`yzc\#\#\'. Similarly, the `**pitch` input
 token \`1yzC4\' becomes \`yzCCC4\'. (The first numerical value is
 interpreted as the octave number and the trailing number 4 is
 interpreted as a non-pitch-related signifier.)

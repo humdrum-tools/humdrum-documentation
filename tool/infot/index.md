@@ -7,7 +7,7 @@ permalink:	/tool/infot/index.html
 
 ### COMMAND
 
-**infot** &mdash; calculate information theory measures for Humdrum inputs
+<span class="tool">infot</span> &mdash; calculate information theory measures for Humdrum inputs
 
 ------------------------------------------------------------------------
 
@@ -19,30 +19,30 @@ permalink:	/tool/infot/index.html
 
 ### DESCRIPTION
 
-The **infot** command provides a general-purpose tool for measuring the
+The <span class="tool">infot</span> command provides a general-purpose tool for measuring the
 probability relationships between user-selected data tokens. Given a
-specified input stream, **infot** can calculate one of several pertinent
+specified input stream, <span class="tool">infot</span> can calculate one of several pertinent
 information-theoretic values. The values may be calculated with
 reference to an independent repertoire, or may be calculated as
 so-called \"self-information.\"
 
 In conjunction with other Humdrum tools (notably the
-[**context**](context.html) and [**humsed**](humsed.html) commands),
-**infot** permits sophisticated information-theoretic analyses to be
+<span class"tool">context</span> and <span class"tool">humsed</span> commands),
+<span class="tool">infot</span> permits sophisticated information-theoretic analyses to be
 carried out, including calculations of information flow, short-term
 conditional probabilities, and longer-term *m-dependency* analyses.
 Alternatively, a simple set of summary statistics can be requested. In
-most cases, users will want to use **infot** to generate outputs that
+most cases, users will want to use <span class="tool">infot</span> to generate outputs that
 are suitable for further processing.
 
-Input to **infot** is restricted to a single spine. However, the input
+Input to <span class="tool">infot</span> is restricted to a single spine. However, the input
 data tokens may contain multiple-stops representing complex contextual
-information (such as produced by the [**context**](context.html)
+information (such as produced by the <span class"tool">context</span>
 command).
 
-For the entire input, **infot** tabulates the total number of
+For the entire input, <span class="tool">infot</span> tabulates the total number of
 occurrences of each unique data record (hereafter referred to as
-\`states\'). For the **-n, -p** and **-b** options, **infot** outputs a
+\`states\'). For the **-n, -p** and **-b** options, <span class="tool">infot</span> outputs a
 two-column list where the left column indentifies each unique state and
 the right column provides one of several corresponding calculated
 measures. With the **-n** option, this measure is merely an integer
@@ -62,19 +62,19 @@ possible unique states in the repertoire, and \$p sub i\$ is the
 probability of occurrence of state \$i\$ from the repertoire. .EQ delim
 off .EN
 
-Note that the outputs produced by **infot** do not conform to the
+Note that the outputs produced by <span class="tool">infot</span> do not conform to the
 Humdrum syntax.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **infot** command provides the following options:
+The <span class="tool">infot</span> command provides the following options:
 
 >   ------------- ---------------------------------------------------------
 >   **-b**        output information (in bits) for each unique data token
 >   **-h**        displays a help screen summarizing the command syntax
->   **-H**        format output as [**humsed**](humsed.html) commands
+>   **-H**        format output as <span class"tool">humsed</span> commands
 >   **-n**        output frequency count for each unique data token
 >   **-p**        output probability value for each unique data token
 >   **-s**        output information-related summary statistics
@@ -83,16 +83,16 @@ The **infot** command provides the following options:
 >
 Options are specified in the command line.
 
-With the **-n** option, **infot** outputs a two-column list where the
+With the **-n** option, <span class="tool">infot</span> outputs a two-column list where the
 left column indentifies each unique state present in the input, and the
 right column provides an integer *count* indicating the number of
 occurrences for the corresponding state.
 
-With the **-p** option, **infot** outputs a two-column list where
+With the **-p** option, <span class="tool">infot</span> outputs a two-column list where
 *probabilities* of occurrence are output in the right-hand column,
 rather than counts.
 
-With the **-b** option, **infot** outputs the information (in bits) as
+With the **-b** option, <span class="tool">infot</span> outputs the information (in bits) as
 calculated according to the [Shannon-Weaver
 equation.](#Shannon%20and%20Weaver)
 
@@ -100,7 +100,7 @@ equation.](#Shannon%20and%20Weaver)
 
 ### EXAMPLES
 
-The use of **infot** is illustrated in the following examples. Consider
+The use of <span class="tool">infot</span> is illustrated in the following examples. Consider
 the following input: ``
 
 >   ---------
@@ -195,7 +195,7 @@ equivalence, the redundancy approaches zero and the average information
 content approaches the theoretical maximum.
 
 Consider now an example where a large number of messages from a
-repertoire (dubbed `repertoire`) is passed to **infot**:
+repertoire (dubbed `repertoire`) is passed to <span class="tool">infot</span>:
 
 > ` infot -b repertoire`
 
@@ -220,19 +220,19 @@ treated as a single state.
 Now imagine we had another message presumed to belong to the same
 repertoire as our input. We would like to trace how the information
 increases and decreases over the course of this new \`message\'. This
-goal involves a two-part operation. First, we re-invoke **infot** adding
+goal involves a two-part operation. First, we re-invoke <span class="tool">infot</span> adding
 the **-H** option, and redirect the output to a file `replace`:
 
 > ` infot -bH repertoire > replace`
 
-This causes **infot** to produce as output a set of
-[**humsed**](humsed.html) commands. Given the identical `repertoire`
+This causes <span class="tool">infot</span> to produce as output a set of
+<span class"tool">humsed</span> commands. Given the identical `repertoire`
 input, the following output is sent to the file `replace`:
 
 > ` s/^ABC$/3.124/g; s/^ABC /3.124/g; s/    ABC$/3.124/g; s/    ABC /3.124/g s/^BAC$/1.306/g; s/^BAC /1.306/g; s/    BAC$/1.306/g; s/    BAC /1.306/g s/^C C D$/1.95/g; s/^C C D  /1.95/g; s/ C C D$/1.95/g; s/   C C D   /1.95/g s/^X$/5.075/g; s/^X /5.075/g; s/    X$/5.075/g; s/  X   /5.075/g s/^XYZ$/19.334/g; s/^XYZ    /19.334/g; s/   XYZ$/19.334/g; s/   XYZ /19.334/g`
 
 Although these commands may appear somewhat cryptic, they merely
-instruct the Humdrum stream editor [(**humsed**)](humsed.html) to
+instruct the Humdrum stream editor [(<span class="tool">humsed</span>)](humsed.html) to
 replace all occurrences of the five data tokens (in any input file) by
 the corresponding numerical values &mdash; in this case, values that
 represent the number of bits of information.
@@ -257,7 +257,7 @@ The following file (called `input`) contains the message of interest: ``
 >
 This file can be transformed so that the data tokens are replaced by
 corresponding information values as determined from the original
-repertoire. This is done by invoking the [**humsed**](humsed.html)
+repertoire. This is done by invoking the <span class"tool">humsed</span>
 command, and providing it with the substitution commands held in the
 file `replace`:
 
@@ -302,7 +302,7 @@ passage.
 
 In the above examples, only simple (zeroth-order) probabilities have
 been examined. Higher-order and *m*-dependency probabilities may be
-measured by reformulating the input using the **context** command.
+measured by reformulating the input using the <span class="tool">context</span> command.
 
 ------------------------------------------------------------------------
 
@@ -316,9 +316,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**context**](context.html) (4), [**humsed**](humsed.html) (4),
-[**patt**](patt.html) (4), [**pattern**](pattern.html) (4),
-[**simil**](simil.html) (4)
+<span class"tool">context</span> (4), <span class"tool">humsed</span> (4),
+<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
+<span class"tool">simil</span> (4)
 
 ------------------------------------------------------------------------
 

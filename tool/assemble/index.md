@@ -8,7 +8,7 @@ permalink:	/tool/assemble/index.html
 
 ### COMMAND
 
-**assemble** &mdash; amalgamate two or more Humdrum files
+<span class="tool">assemble</span> &mdash; amalgamate two or more Humdrum files
 
 ------------------------------------------------------------------------
 
@@ -20,11 +20,11 @@ permalink:	/tool/assemble/index.html
 
 ### DESCRIPTION
 
-The **assemble** command allows two or more structurally similar Humdrum
+The <span class="tool">assemble</span> command allows two or more structurally similar Humdrum
 files to be aligned together &mdash; such as where a full score is assembled
 from files containing individual parts.
 
-The **assemble** command is similar to the UNIX ` paste` command. If
+The <span class="tool">assemble</span> command is similar to the UNIX ` paste` command. If
 file \`A\' contains:
 
 > ``
@@ -65,9 +65,9 @@ B
 
 C
 
-The **assemble** command is a more sophisticated version of ` paste` &mdash;
+The <span class="tool">assemble</span> command is a more sophisticated version of ` paste` &mdash;
 suitable for assembling several concurrent spines stored in different
-Humdrum files. The **assemble** command coordinates and synchronizes
+Humdrum files. The <span class="tool">assemble</span> command coordinates and synchronizes
 comments, interpretations, and data records from the input files.
 Duplicate global comments are avoided. Corresponding local comments are
 output where appropriate. Where one file contains local comments and a
@@ -75,7 +75,7 @@ second file contains none, null local comments are inserted as
 appropriate. Similarly, null interpretations may also be added as
 necessary.
 
-The **assemble** command expects that the input files will normally have
+The <span class="tool">assemble</span> command expects that the input files will normally have
 the same number of data records. These data records are aligned
 side-by-side. If the input files do not contain the same number of data
 records, then the spines in the shorter file will be terminated with
@@ -85,7 +85,7 @@ appropriate spine-path terminators.
 
 ### OPTIONS
 
-The **assemble** command provides only a help option:
+The <span class="tool">assemble</span> command provides only a help option:
 
 > >   -------- -------------------------------------------------------
 > >   **-h**   displays a help screen summarizing the command syntax
@@ -97,7 +97,7 @@ Options are specified in the command line.
 
 ### EXAMPLES
 
-The operation of **assemble** can be illustrated by considering the
+The operation of <span class="tool">assemble</span> can be illustrated by considering the
 following two input files. Both files contain the same number of data
 records (4).
 
@@ -137,7 +137,7 @@ records (4).
 >   \*-        
 >   ---------- ---------
 >
-If the **assemble** command is invoked as:
+If the <span class="tool">assemble</span> command is invoked as:
 
 ``
 

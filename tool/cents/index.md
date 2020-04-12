@@ -8,7 +8,7 @@ permalink:	/tool/cents/index.html
 
 ### COMMAND
 
-**cents** &mdash; translate selected Humdrum pitch-related representations
+<span class="tool">cents</span> &mdash; translate selected Humdrum pitch-related representations
 to cents
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ to cents
 
 ### DESCRIPTION
 
-The **cents** command transforms various pitch-related inputs to
+The <span class="tool">cents</span> command transforms various pitch-related inputs to
 corresponding numerical values in hundredths of semitones. It outputs
 one or more Humdrum `**cents` spines containing values corresponding to
 the cents distance from middle C for pitch-related input tokens. Pitches
@@ -29,7 +29,7 @@ above middle C produce positive output values, whereas pitches below
 middle C produce negative output values. For example, the `**pitch`
 token \"C3\" is transformed to -1200 (cents).
 
-The **cents** command is able to translate any of the pitch-related
+The <span class="tool">cents</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
 representations (including `**cents`) refer to Section 2
@@ -51,13 +51,13 @@ should be given names with the distinguishing \`.cnt\' extension.
 > >   `**Tonh`     German pitch system
 > >   ------------ -------------------------------------------------------------------------
 > >
-> *Input representations processed by **cents**.*
+> *Input representations processed by <span class="tool">cents</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **cents** command provides the following options:
+The <span class="tool">cents</span> command provides the following options:
 
 > >   -------- ---------------------------------------------------------------------------------
 > >   **-h**   displays a help screen summarizing the command syntax
@@ -70,14 +70,14 @@ Options are specified in the command line.
 
 The **-p** option can be used to set the precision of the output values
 to *n* decimal places. The default precision is integer values only
-(*n*=0). Note that **cents** is able to process `**cents` as input; this
+(*n*=0). Note that <span class="tool">cents</span> is able to process `**cents` as input; this
 feature allows the user to round-off existing `**cents` data to a
 specified precision.
 
 The **-t** ensures that only a single output value is given for tied
 `**kern` notes; the output coincides with the first note of the tie.
 
-In the default operation, **cents** outputs non-pitch-related signifiers
+In the default operation, <span class="tool">cents</span> outputs non-pitch-related signifiers
 in addition to the cents value. For example, the `**pitch` token
 \"A5zzz\" will result in the output \"2100zzz\" &mdash; that is, after
 translating A5 to 2100 cents, the \"zzz\" signifiers are retained in the

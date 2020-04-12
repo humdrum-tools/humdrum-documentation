@@ -7,7 +7,7 @@ permalink:	/tool/specc/index.html
 
 ### COMMAND
 
-**specc** -- translate spectral data to spectral centroid
+<span class="tool">specc</span> -- translate spectral data to spectral centroid
 
 On-line documentation is not currently available for this command.
 

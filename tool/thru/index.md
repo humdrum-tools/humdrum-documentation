@@ -7,7 +7,7 @@ permalink:	/tool/thru/index.html
 
 ### COMMAND
 
-**thru** -- expand Humdrum abbreviated format representation to
+<span class="tool">thru</span> -- expand Humdrum abbreviated format representation to
 through-composed format
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ through-composed format
 
 ### DESCRIPTION
 
-The **thru** command expands *abbreviated format* Humdrum
+The <span class="tool">thru</span> command expands *abbreviated format* Humdrum
 representations to *through-composed formats* in which input passages
 are rearranged and output according to some specified *expansion list.*
 
@@ -28,13 +28,13 @@ Musical scores frequently contain notational devices such as repeat
 signs and Da Capos which permit more succinct renderings of a given
 document. Humdrum *section labels* and *expansion-lists* provide
 parallel mechanisms for encoding *abbreviated format* files. The
-**thru** command is normally used to expand various repetition devices.
+<span class="tool">thru</span> command is normally used to expand various repetition devices.
 However, depending on the input, one of several expansions (dubbed
-*versions*) may be possible. Hence, **thru** is also useful for
+*versions*) may be possible. Hence, <span class="tool">thru</span> is also useful for
 selecting a particular edition, performance, or interpretation from a
 composite input.
 
-The input to **thru** must contain one or more sections identified by
+The input to <span class="tool">thru</span> must contain one or more sections identified by
 section labels. A *section* is a set of contiguous records. A *section
 label* is a tandem interpretation that consists of a single asterisk,
 followed by a greater-than sign, followed by a keyword that labels the
@@ -85,7 +85,7 @@ three expansion-lists have been labelled \`long,\' \`1955\' and
 >
 > `*>Czerny_edition[refrain] `
 
-The **thru** command outputs each section in the order specified in the
+The <span class="tool">thru</span> command outputs each section in the order specified in the
 expansion list. If more than one expansion list is present in a file,
 then the desired *version* is indicated on the command line via the
 **-v** option. (See [EXAMPLES](#EXAMPLES).)
@@ -94,7 +94,7 @@ then the desired *version* is indicated on the command line via the
 
 ### OPTIONS
 
-The **thru** command provides the following options:
+The <span class="tool">thru</span> command provides the following options:
 
 >   -------------- -----------------------------------------------------------------
 >   **-h**         displays a help screen summarizing the command syntax
@@ -109,7 +109,7 @@ Options are specified in the command line.
 
 ### EXAMPLES
 
-The following examples illustrate the operation of the **thru** command.
+The following examples illustrate the operation of the <span class="tool">thru</span> command.
 Consider the following simple file: ``
 
 >   ----------------- -----------------
@@ -151,7 +151,7 @@ Notice that the expansion-list record has been eliminated from the
 output. A `*thru` tandem interpretation is added to all output spines
 immediately following each instance of an exclusive interpretation in
 the input. If `*thru` tandem interpretations are already present in the
-input, they are discarded (thus, running a file through **thru** twice
+input, they are discarded (thus, running a file through <span class="tool">thru</span> twice
 will not change the file in any way). Also notice that there are now two
 sections in the output sharing the same label (`*>A`). This duplication
 of section-labels is not permitted in abbreviated-format encodings.
@@ -204,7 +204,7 @@ structure could be produced by the command:
 
 > ` thru -v Conventional inputfile`
 
-In each case, the **thru** command will expand the input file according
+In each case, the <span class="tool">thru</span> command will expand the input file according
 to the designated label for the expansion-lists. Note that there is no
 limit to the number of expansion-lists that may appear in a Humdrum
 file.
@@ -227,14 +227,14 @@ interpreters, and revised *awk* (1985).
 
 ### WARNINGS
 
-Humdrum ouput is not guaranteed with the **thru** command. In order to
+Humdrum ouput is not guaranteed with the <span class="tool">thru</span> command. In order to
 assure Humdrum output, it is necessary to have the same number of active
 spines at each point where sections are joined together in the expanded
 output. In addition, the exclusive interpretations must match where
 sections are joined.
 
 Note that if an expansion list appears after some initial data records,
-then **thru** causes the initial material to be output before expanding
+then <span class="tool">thru</span> causes the initial material to be output before expanding
 the document according to the expansion list.
 
 No two expansion lists can be identified using the same version label.

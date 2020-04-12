@@ -8,7 +8,7 @@ permalink:	/tool/record/index.html
 
 ### COMMAND
 
-**record** &mdash; record live MIDI input in Humdrum `**MIDI` data format
+<span class="tool">record</span> &mdash; record live MIDI input in Humdrum `**MIDI` data format
 
 ------------------------------------------------------------------------
 
@@ -20,12 +20,12 @@ permalink:	/tool/record/index.html
 
 ### DESCRIPTION
 
-The **record** command captures a stream of input MIDI data and
+The <span class="tool">record</span> command captures a stream of input MIDI data and
 translates this data into a simple Humdrum `**MIDI` representation.
 Input MIDI data is obtained through a Roland MPU-401 (or compatible)
 interface &mdash; usually connected in turn to a MIDI synthesizer. The
 obtained `**MIDI` data can be manipulated using several Humdrum tools,
-or it can be played-back using the [**perform**](perform.html) command.
+or it can be played-back using the <span class"tool">perform</span> command.
 
 Recording commences as soon as the command is invoked. Recording ceases
 when any ASCII key is pressed &mdash; with the exception of the space bar.
@@ -43,7 +43,7 @@ At any time during the recording process, pressing the space bar will
 insert a `**MIDI` barline data token in the output stream. Measure
 numbers are incremented automatically beginning with measure 1.
 
-It is recommended that output files produced using the **record**
+It is recommended that output files produced using the <span class="tool">record</span>
 command should be given names with the distinguishing \`.hmd\'
 extension.
 
@@ -51,7 +51,7 @@ extension.
 
 ### OPTIONS
 
-The **record** command provides the following option:
+The <span class="tool">record</span> command provides the following option:
 
 >   ---------- ---------------------------------------------------------------
 >   **-h**     displays a help screen summarizing the command syntax
@@ -78,7 +78,7 @@ hexadecimal number.
 
 ### SAMPLE OUTPUT
 
-The following examples illustrate how **record** may be used. A simple
+The following examples illustrate how <span class="tool">record</span> may be used. A simple
 command invocation is:
 
 > ` record`

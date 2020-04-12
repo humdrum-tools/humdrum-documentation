@@ -8,7 +8,7 @@ permalink:	/tool/dur/index.html
 
 ### COMMAND
 
-**dur** -- calculate time duration (in seconds) from musical durations
+<span class="tool">dur</span> -- calculate time duration (in seconds) from musical durations
 (\*\*recip or \*\*kern)
 
 On-line documentation is not currently available for this command.

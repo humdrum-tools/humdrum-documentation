@@ -8,7 +8,7 @@ permalink:	/tool/recode/index.html
 
 ### COMMAND
 
-**recode** -- recode numeric tokens in selected Humdrum spines
+<span class="tool">recode</span> -- recode numeric tokens in selected Humdrum spines
 
 ------------------------------------------------------------------------
 
@@ -20,13 +20,13 @@ permalink:	/tool/recode/index.html
 
 ### DESCRIPTION
 
-The **recode** command is used to recode numeric components of data
-tokens in selected input spines. Typically, **recode** is used to
+The <span class="tool">recode</span> command is used to recode numeric components of data
+tokens in selected input spines. Typically, <span class="tool">recode</span> is used to
 reassign a range of numerical values into a finite set of classes or
-categories. For example, **recode** could be used to reassign all
+categories. For example, <span class="tool">recode</span> could be used to reassign all
 numerical values less than zero to the value -1, and to assign all
 values greater than or equal to zero to the value +1. A typical use of
-**recode** might be to reassign melodic intervals (represented in
+<span class="tool">recode</span> might be to reassign melodic intervals (represented in
 semitones) to one of five categories: (1) unison \[0 semits\], (2) up
 step \[plus 1 or 2 semits\], (3) up leap \[plus 3 or more semits\], (4)
 down step \[minus 1 or 2 semits\], (5) down leap \[minus 3 or more
@@ -34,7 +34,7 @@ semits\]. Similarly, duration information might be rhythmically
 \"justified\" so that all durations near 0.5 seconds are recoded as
 precisely 0.5 seconds.
 
-Note that **recode** will modify only those input spines matching the
+Note that <span class="tool">recode</span> will modify only those input spines matching the
 exclusive interpretation specified in the command line.
 
 The manner by which numeric values are reassigned is specified by the
@@ -71,7 +71,7 @@ Permissible relational operators are listed in the following table.
 >   else   default relation
 >   ------ -----------------------
 >
-*Relational operators for **recode***
+*Relational operators for <span class="tool">recode</span>*
 
 Permissible replacement strings include any combination of printable
 ASCII characters with the exception of the tab.
@@ -96,7 +96,7 @@ categorized as `MEDIUM` rather than as `HIGH`.
 The *else* relation can be used to specify the default string output for
 numeric input values that satisfy none of the preceding conditions in
 the reassignment file. If no *else* condition is specified and none of
-the other conditions are satisfied, **recode** outputs the original
+the other conditions are satisfied, <span class="tool">recode</span> outputs the original
 input token without any modification.
 
 Substitutions are made even when a number is embedded in non-numeric
@@ -105,18 +105,18 @@ data. For example, given the above reassignment file, an input token
 portion of the input string (200) would be deemed to satisfy the
 condition (\>100) and so would be replaced by the string (\"HIGH\").
 
-An important property of the **recode** command is that string
+An important property of the <span class="tool">recode</span> command is that string
 replacements are limited to the **first** occurrence of numeric data
 within each data token. Subsequent numeric data within the token remains
 untouched. Thus, using the above reassignment file, the input token
 `foo200bar300` would be output as `fooHIGHbar300`.
 
 In the case of multiple-stops (data tokens having two or more parts
-separated by spaces), **recode** processes the first occurrence of
+separated by spaces), <span class="tool">recode</span> processes the first occurrence of
 numeric data for each part of the token. For example, the double-stop
 token `foo200 bar300` would be output as `fooHIGH barHIGH`.
 
-The **recode** command provides options to identify which data tokens
+The <span class="tool">recode</span> command provides options to identify which data tokens
 may be excluded (skipped) in processing **(-s),** plus an option that
 suppresses the echoing of unprocessed signifiers in the output **(-x).**
 See OPTIONS for further information.
@@ -125,7 +125,7 @@ See OPTIONS for further information.
 
 ### OPTIONS
 
-The **recode** command provides the following options:
+The <span class="tool">recode</span> command provides the following options:
 
 >   --------------------- -----------------------------------------------------------------
 >   -f *reassign*         use reassignments given in file *reassign*
@@ -154,7 +154,7 @@ contains no numeric component, then the **-x** option causes a null
 token to be output.
 
 The **-x** option also suppresses the echoing of unprocessed numerical
-components. (Recall that string replacements made by **recode** are
+components. (Recall that string replacements made by <span class="tool">recode</span> are
 limited to the first occurrence of numerica data within a data token.)
 For example, with the **-x** option, the input data token ` foo200bar17`
 would be output as `HIGH`.
@@ -170,7 +170,7 @@ processing of barlines, or other types of data.
 
 ### EXAMPLES
 
-The operation of the **recode** command can be illustrated by referring
+The operation of the <span class="tool">recode</span> command can be illustrated by referring
 to the following hypothetical Humdrum file named `patrie`.
 
 ``

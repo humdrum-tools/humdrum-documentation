@@ -7,7 +7,7 @@ permalink:	/tool/degree/index.html
 
 ### COMMAND
 
-**degree** &mdash; translate selected Humdrum pitch-related representations
+<span class="tool">degree</span> &mdash; translate selected Humdrum pitch-related representations
 to absolute scale degree (`**degree`)
 
 ------------------------------------------------------------------------
@@ -20,24 +20,24 @@ to absolute scale degree (`**degree`)
 
 ### DESCRIPTION
 
-The **degree** command transforms various pitch-related inputs to the
+The <span class="tool">degree</span> command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
 `**degree` spines &mdash; where scale degrees are indicated by the numbers 1
 (tonic) to 7 (leading tone). Scale degree information can be determined
 only with reference to some prevailing key. For example, the pitch C4 is
 the tonic (1) in the key of C major, but the submediant (6) in the key
-of E minor. The **degree** command expects a tandem interpretation
-indicating the key of the input passage; **degree** will adapt to
+of E minor. The <span class="tool">degree</span> command expects a tandem interpretation
+indicating the key of the input passage; <span class="tool">degree</span> will adapt to
 specified changes of key within an input. If no key information is
-provided prior to the first pitch-related data, **degree** issues an
+provided prior to the first pitch-related data, <span class="tool">degree</span> issues an
 error message and terminates.
 
-The **degree** command differs from the (related) [**deg**](deg.html)
+The <span class="tool">degree</span> command differs from the (related) <span class"tool">deg</span>
 command in that it outputs *absolute* (rather than *relative)*
 pitch-height information. Along with the scale degree, the octave number
 is represented &mdash; the two values being separated by a slash (/). Hence
 the token \`1/4\' means the first scale degree (tonic) in octave \`4\'.
-As in the case of [**deg**,](deg.html) plus and minus signs indicate
+As in the case of [<span class="tool">deg</span>,](deg.html) plus and minus signs indicate
 whether a pitch has been chromatically raised or lowered. For example,
 the pitch A-flat is designated \`6-\' in the key of C major, but \`6\'
 in the key of C minor. The harmonic minor scale is assumed for all minor
@@ -46,7 +46,7 @@ minor, whereas B natural is considered the \"normal\" (rather than
 \"raised\") seventh degree. For some applications, this interpretation
 of the minor-scale seventh degree may cause difficulties.
 
-The **degree** command is able to translate any of the pitch-related
+The <span class="tool">degree</span> command is able to translate any of the pitch-related
 representations listed below. For descriptions of the various input
 representations (including `**degree`) refer to Section 2
 *(Representation Reference)* of this reference manual.
@@ -61,13 +61,13 @@ should be given names with the distinguishing \`.dgr\' extension.
 > >   `**Tonh`    German pitch system
 > >   ----------- ----------------------------------------------------------------------
 > >
-> *Input representations processed by **degree**.*
+> *Input representations processed by <span class="tool">degree</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **degree** command provides the following options:
+The <span class="tool">degree</span> command provides the following options:
 
 > > **-h**
 
@@ -95,7 +95,7 @@ The **-t** option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
-In the default operation, **degree** outputs non-pitch-related
+In the default operation, <span class="tool">degree</span> outputs non-pitch-related
 signifiers in addition to the degree value. For example, in the key of D
 major, the `**pitch` token \"G5zzz\" will result in the output
 \"4/5zzz\" &mdash; that is, after translating G5 to 4/5, the \"zzz\"

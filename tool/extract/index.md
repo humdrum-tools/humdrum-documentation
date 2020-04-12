@@ -7,7 +7,7 @@ permalink:	/tool/extract/index.html
 
 ### COMMAND
 
-**extract** &mdash; get specified spines from a Humdrum input
+<span class="tool">extract</span> &mdash; get specified spines from a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -19,9 +19,9 @@ permalink:	/tool/extract/index.html
 
 ### DESCRIPTION
 
-The **extract** command allows the user to select one or more spines
+The <span class="tool">extract</span> command allows the user to select one or more spines
 from a Humdrum input. The command is typically used to extract parts
-(such as a tuba part) from some multi-part score; however **extract**
+(such as a tuba part) from some multi-part score; however <span class="tool">extract</span>
 can be used to isolate dynamic markings, musical lyrics, or any other
 stream of information that has been encoded as a separate Humdrum spine.
 
@@ -50,7 +50,7 @@ spines in the file \"lassus.\" The ` extract -f` command differs from
 the UNIX ` cut` command in that Humdrum global comments are properly
 preserved in the output.
 
-In *interpretation mode,* the **extract** command outputs all spines
+In *interpretation mode,* the <span class="tool">extract</span> command outputs all spines
 containing the interpretation(s) specified by the user. By way of
 example, the command:
 
@@ -69,7 +69,7 @@ of that spine through the input until it is terminated or the
 end-of-file is encountered. What begins as the third column, may end up
 as some other column (or columns) in the input.
 
-In the *field-trace mode,* the **extract** command accepts a list of
+In the *field-trace mode,* the <span class="tool">extract</span> command accepts a list of
 spine-column positions over the course of the file. In the *field-trace*
 mode, the user provides a file containing a list specifying the precise
 selection of spines through the file at various line numbers. The first
@@ -99,7 +99,7 @@ Humdrum syntax. (See EXAMPLES below.)
 
 ### OPTIONS
 
-The **extract** command provides the following options:
+The <span class="tool">extract</span> command provides the following options:
 
 > >   ---------------------- -------------------------------------------------------
 > >   -f *fieldlist*         select field mode
@@ -127,7 +127,7 @@ expansion of shell metacharacter (\*, ?, etc.).
 
 ### EXAMPLES
 
-The following examples illustrate how **extract** may be used.
+The following examples illustrate how <span class="tool">extract</span> may be used.
 
 > ` extract -f '1,3,$' holst`
 
@@ -152,7 +152,7 @@ outputs all spines that contain the tandem interpretations \*F: or \*f:
 
 ### SAMPLE OUTPUTS
 
-The following examples illustrate the various **extract** options.
+The following examples illustrate the various <span class="tool">extract</span> options.
 Consider the following input file, dubbed `input1`: ``
 
 >   ---------------------------- --------- --------- --------- ---------
@@ -327,8 +327,8 @@ specified spine.
 
 ### SEE ALSO
 
-[**assemble**](assemble.html) (4), **cut** (UNIX),
-[**fields**](fields.html) (4), [**yank**](yank.html) (4)
+<span class"tool">assemble</span> (4), **cut** (UNIX),
+<span class"tool">fields</span> (4), <span class"tool">yank</span> (4)
 
 ------------------------------------------------------------------------
 

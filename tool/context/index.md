@@ -7,7 +7,7 @@ permalink:	/tool/context/index.html
 
 ### COMMAND
 
-**context** &mdash; congeal Humdrum data records to form a contextual frame
+<span class="tool">context</span> &mdash; congeal Humdrum data records to form a contextual frame
 
 ------------------------------------------------------------------------
 
@@ -19,17 +19,17 @@ permalink:	/tool/context/index.html
 
 ### DESCRIPTION
 
-The **context** command amalgamates one or more successive input data
+The <span class="tool">context</span> command amalgamates one or more successive input data
 records into single records according to user-defined criteria. Only
-single-spine Humdrum inputs are permitted. The **context** command
+single-spine Humdrum inputs are permitted. The <span class="tool">context</span> command
 provides a useful means for amalgamating on a single line those data
 tokens that are somehow deemed to be contextually related. For example,
-**context** might be used to link together all pitches in a measure, or
+<span class="tool">context</span> might be used to link together all pitches in a measure, or
 pair the first and last notes of each phrase. The command is useful in
 such tasks as partitioning possible pitch-class sets or grouping
 arpeggio tones into chords.
 
-In its simplest mode of operation **context** will join a specified
+In its simplest mode of operation <span class="tool">context</span> will join a specified
 number of successive data records together to form a single output
 record. By way of example, consider a file (named `input`) consisting of
 a single spine whose data records contain the numbers 1 through 6 on
@@ -139,7 +139,7 @@ would produce an output beginning with a single padded null token: ``
 > >
 > > ### OPTIONS
 > >
-> > The **context** command supports the following options:
+> > The <span class="tool">context</span> command supports the following options:
 > >
 > > > >   ------------- ------------------------------------------------------------------------------------
 > > > >   -b *regexp*   begin a new output record starting with token matching *regexp*
@@ -158,7 +158,7 @@ would produce an output beginning with a single padded null token: ``
 > > **-e** options are mutually exclusive with the **-n**, **-p**, and
 > > **-i** options.
 > >
-> > In the default operation, **context** separates amalgamated tokens
+> > In the default operation, <span class="tool">context</span> separates amalgamated tokens
 > > by inserting a space character. (Thus the input tokens are treated
 > > as subtokens in a Humdrum multiple-stop.) The **-d** option allows
 > > the user to define an alternative string as the subtoken delimiter.
@@ -172,7 +172,7 @@ would produce an output beginning with a single padded null token: ``
 > > signifiers are defined as string patterns using the *regular
 > > expression* syntax.
 > >
-> > With the **-e** option, if **context** encounters a data record
+> > With the **-e** option, if <span class="tool">context</span> encounters a data record
 > > matching *regexp* then it appends the current input record to the
 > > current assembled output record and begins assembling a new record
 > > with the following input record.
@@ -193,7 +193,7 @@ would produce an output beginning with a single padded null token: ``
 > >
 > > Note that tandem interpretations and comments are processed like
 > > null tokens; they are merely echoed in the output in their
-> > appropriate position. Note also that **context** automatically
+> > appropriate position. Note also that <span class="tool">context</span> automatically
 > > breaks a congealed output record whenever it encounters a spine-path
 > > terminator or exclusive interpretation in the input.
 > >
@@ -354,7 +354,7 @@ would produce an output beginning with a single padded null token: ``
 > > > > `*- ` Notice once again that the input and output have the same
 > > > > number of records. Preserving the structure in this way allows
 > > > > the user to coordinate the contextual output with the original
-> > > > input using the **assemble** command.
+> > > > input using the <span class="tool">assemble</span> command.
 > > > >
 > > > > A more useful transformation might amalgamate successive data
 > > > > records in overlapping groups of 3 *notes;* that is where rests
@@ -505,10 +505,10 @@ would produce an output beginning with a single padded null token: ``
 
 `*-`
 
-`*- ` Notice that as the end of the file is approached, **context** will
+`*- ` Notice that as the end of the file is approached, <span class="tool">context</span> will
 continue amalgamating data records until it is no longer able to satisfy
 the amalgamating criteria. If unable to complete an output record,
-**context** will output a null token.
+<span class="tool">context</span> will output a null token.
 
 If the above command had used the **-o** rather than the **-i** option,
 all of the rests and barlines would have been omitted from the output.
@@ -611,9 +611,9 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**context**](context.html) (4), **grep** (UNIX), [**nf**](nf.html) (4),
-[**patt**](patt.html) (4), [**pattern**](pattern.html) (4),
-[**pcset**](pcset.html) (4)
+<span class"tool">context</span> (4), **grep** (UNIX), <span class"tool">nf</span> (4),
+<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
+<span class"tool">pcset</span> (4)
 
 ------------------------------------------------------------------------
 

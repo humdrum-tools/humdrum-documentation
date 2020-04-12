@@ -8,7 +8,7 @@ permalink:	/tool/regexp/index.html
 
 ### COMMAND
 
-**regexp** &mdash; interactive regular-expression tester
+<span class="tool">regexp</span> &mdash; interactive regular-expression tester
 
 ------------------------------------------------------------------------
 
@@ -20,11 +20,11 @@ permalink:	/tool/regexp/index.html
 
 ### DESCRIPTION
 
-The **regexp** command invokes an interactive pattern-matcher that is
+The <span class="tool">regexp</span> command invokes an interactive pattern-matcher that is
 useful for formulating and refining regular expressions. *Regular
 expressions* provide a generic means for defining patterns of characters
 (see tutorial in Section 6). Innumerable UNIX and Humdrum commands make
-use of regular expressions. The **regexp** command allows the user to
+use of regular expressions. The <span class="tool">regexp</span> command allows the user to
 test interactively various expressions using a sample text. If no sample
 text is supplied by the user *(inputfile)* then a short default text is
 used.
@@ -32,7 +32,7 @@ used.
 Once invoked, the user may interactively input a regular expression
 followed by a carriage return. The sample text is scanned for
 occurrences of the defined regular expression. Any text lines containing
-the matched expression are displayed on the screen; **regexp** differs
+the matched expression are displayed on the screen; <span class="tool">regexp</span> differs
 from the UNIX **grep** command in that the precise locations of the
 matched pattern are explicitly marked. (See EXAMPLES below.) Note that
 only the first occurrence of a matching pattern is identified in each
@@ -44,10 +44,10 @@ expression `.*` or by simply typing a carriage return. Viewing the
 sample text is helpful in identifying character-strings that are not
 identified by a given regular expression.
 
-The **regexp** command is terminated by typing an end-of-file marker
+The <span class="tool">regexp</span> command is terminated by typing an end-of-file marker
 (control-D on UNIX; control-Z on DOS or OS/2).
 
-The **regexp** command implements the same regular expression features
+The <span class="tool">regexp</span> command implements the same regular expression features
 found in the UNIX **awk** command. This includes all so-called
 \"extended\" regular expression features with the exception of \\\> and
 \\\<.
@@ -56,7 +56,7 @@ found in the UNIX **awk** command. This includes all so-called
 
 ### OPTIONS
 
-The **regexp** command provides only a help option:
+The <span class="tool">regexp</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -91,7 +91,7 @@ expression are displayed in the output.
 
 ### WARNINGS
 
-The regular-expression features provided by **regexp** depend on the
+The regular-expression features provided by <span class="tool">regexp</span> depend on the
 local UNIX **awk** utility &mdash; as accessed via the `AWK_VER` shell
 variable. Available features may change depending on the version of
 **awk** used.

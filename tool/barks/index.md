@@ -8,7 +8,7 @@ permalink:	/tool/barks/index.html
 
 ### COMMAND
 
-**barks** &mdash; translate frequency data to critical bands, in Zwicker's
+<span class="tool">barks</span> &mdash; translate frequency data to critical bands, in Zwicker's
 \"bark\" unit
 
 On-line documentation is not currently available for this command.

@@ -7,7 +7,7 @@ permalink:	/tool/urrhythm/index.html
 
 ### COMMAND
 
-**urrhythm** &mdash; characterize Johnson-Laird rhythmic prototypes in a
+<span class="tool">urrhythm</span> &mdash; characterize Johnson-Laird rhythmic prototypes in a
 Humdrum passage
 
 ------------------------------------------------------------------------
@@ -20,25 +20,25 @@ Humdrum passage
 
 ### DESCRIPTION
 
-The **urrhythm** command outputs a single Humdrum spine (`**URrhythm`)
+The <span class="tool">urrhythm</span> command outputs a single Humdrum spine (`**URrhythm`)
 containing data representing rhythmic \`prototypes\' (Ur-rhythms)
 evident in a musical passage. The command implements a variation of
 Johnson-Laird's theory of rhythmic prototypes (see
 [REFERENCES](#REFERENCES) below). In order to identify the rhythmic
-prototypes, **urrhythm** requires information about note onsets and
+prototypes, <span class="tool">urrhythm</span> requires information about note onsets and
 metric position. These may be provided via two input spines: `**kern`
 (or `**recip`) and `**metpos`.
 
 Johnson-Laird's rhythmic-prototype theory can be applied only to
 musical passages conforming to some established metric context, such as
-2/4, 3/2, or 12/8 meters. The **urrhythm** command handles all regular
+2/4, 3/2, or 12/8 meters. The <span class="tool">urrhythm</span> command handles all regular
 types of meters (simple and compound, duple, triple and quadruple).
 Specifically, any meter having a \"numerator\" of 2, 3, 4, 6, 9, or 12
 can be processed. **Urrhym** adapts to changes of meter, but is unable
 to handle irregular meters. If an irregular meter is encountered in the
 input an error is generated and the command terminates.
 
-**urrhythm** characterizes each beat in a passage as belonging to one of
+<span class="tool">urrhythm</span> characterizes each beat in a passage as belonging to one of
 three beat types: *Note* (N), *Syncopation* (S), or *Other* (O). Only
 major beats are characterized in this way. Hence, in 3/4 or 9/8 meters,
 three beats will be characterized for each complete measure. Similarly,
@@ -65,7 +65,7 @@ moments can't occur in a row without some note onset intervening).
 An \"Other\" (signified by the letter \`O\') is any beat that is not a
 Note (N) or a syncopation (S).
 
-It is recommended that output files produced using the **urrhythm**
+It is recommended that output files produced using the <span class="tool">urrhythm</span>
 command should be given names with the distinguishing \`.urr\'
 extension.
 
@@ -73,7 +73,7 @@ extension.
 
 ### OPTIONS
 
-The **urrhythm** command provides only a help option:
+The <span class="tool">urrhythm</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -87,7 +87,7 @@ Options are specified in the command line.
 
 The following example illustrates the operation of **urrhythm.** The
 first two spines (`**kern` and `**metpos`) constitute the input. The
-third spine (`**URrhythm`) is added by the **urrhythm** command. All
+third spine (`**URrhythm`) is added by the <span class="tool">urrhythm</span> command. All
 three spines are given in the output. ``
 
 >   ---------- ------------ --------------
@@ -132,7 +132,7 @@ three spines are given in the output. ``
 
 ### WARNINGS
 
-The **urrhythm** command is currently unable to handle Humdrum
+The <span class="tool">urrhythm</span> command is currently unable to handle Humdrum
 spine-path changes &mdash; such as join-path, exchange-path, or split-path.
 If spine-path changes are encountered an error is issued and the command
 terminates.
@@ -155,7 +155,7 @@ interpreters, and revised *awk* (1985).
 
 ### NOTE
 
-The **urrhythm** command differs from Johnson-Laird's theory in the
+The <span class="tool">urrhythm</span> command differs from Johnson-Laird's theory in the
 definition of syncopation. Johnson-Laird's theory requires that a
 listener be able to identify a syncopation retrospectively. That is, a
 listener is able to determine whether the current beat is a syncopation,

@@ -7,7 +7,7 @@ permalink:	/tool/strophe/index.html
 
 ### COMMAND
 
-**strophe** -- selectively extract strophic data for Humdrum inputs
+<span class="tool">strophe</span> -- selectively extract strophic data for Humdrum inputs
 
 ------------------------------------------------------------------------
 
@@ -19,14 +19,14 @@ permalink:	/tool/strophe/index.html
 
 ### DESCRIPTION
 
-The **strophe** command is used to isolate or extract selective strophic
+The <span class="tool">strophe</span> command is used to isolate or extract selective strophic
 data. Strophic data encode alternative concurrent information for a
 given passage. Examples of alternative concurrent information might
 include the texts for different verses of a song, alternative renditions
 of the same passage (such as *ossia* passages), or differing editorial
 interpretations of a given note or sequence of notes.
 
-The **strophe** command permits the user to extract selected information
+The <span class="tool">strophe</span> command permits the user to extract selected information
 paths (called *strophes*) present in a Humdrum input.
 
 Structurally, strophic data must begin from a single common spine, split
@@ -148,9 +148,9 @@ passages are repeated and ordered.
 
 When extracting a single strophe, either the abbreviated or
 through-composed versions can be used as input. However, when using the
-**strophe** command to select more than one strophe for output, it is
+<span class="tool">strophe</span> command to select more than one strophe for output, it is
 essential that the input first be expanded to a through-composed
-version, via the [**thru**](thru.html) command. For example, in order to
+version, via the <span class"tool">thru</span> command. For example, in order to
 select the first and third verses in the above passage by Schubert, the
 user would need to execute the following command pipeline:
 
@@ -167,21 +167,21 @@ command invocation:
 
 > ` thru wandern | strophe -s 4,3,2,1`
 
-If the **-x** option is invoked, **strophe** outputs only a single
+If the **-x** option is invoked, <span class="tool">strophe</span> outputs only a single
 strophe whose string *label* is specified as an option. Strophe names
 need not be numerical. E.g.
 
 > ` strophe -x ossia`
 
-If the **strophe** command is invoked without any option, then all
+If the <span class="tool">strophe</span> command is invoked without any option, then all
 strophes are expanded in the output in numerical order beginning with
 strophe 1. Missing numerical strophes (such as a missing strophe `S/3`
 in a four-strophe encoding) will cause an error to be generated and
-terminate the **strophe** command.
+terminate the <span class="tool">strophe</span> command.
 
-Note that the **strophe** command allows strophe numbers containing a
+Note that the <span class="tool">strophe</span> command allows strophe numbers containing a
 single decimal point, such as strophe `*S/4.2`. Having extracted the
-verse `*S/1`, the **strophe** command will output verse `*S/1.1` in
+verse `*S/1`, the <span class="tool">strophe</span> command will output verse `*S/1.1` in
 preference to `*S/2` &mdash; if the decimal strophe is present. This feature
 allows more than one strophic passage to be encoded within a single
 abbreviated format file. This feature might prove useful, for example,
@@ -224,7 +224,7 @@ Options are specified in the command line.
 ### EXAMPLES
 
 The following example is concocted to illustrate the operation of the
-**strophe** command. Consider the following Humdrum input: ``
+<span class="tool">strophe</span> command. Consider the following Humdrum input: ``
 
 >   ------------------------- -------------------- ---------
 >   !! \`strophe\' example.                        
@@ -257,7 +257,7 @@ The following example is concocted to illustrate the operation of the
 >   ------------------------- -------------------- ---------
 >
 Since this file is in abbreviated format, we must first expand it to
-through-composed form using the [**thru**](thru.html) command. The
+through-composed form using the <span class"tool">thru</span> command. The
 resulting output is: ``
 
 >   ------------------------- -- -- ----------- -- -- ---------

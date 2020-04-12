@@ -7,7 +7,7 @@ permalink:	/tool/text/index.html
 
 ### COMMAND
 
-**text** -- generate (word-oriented) \*\*text from (syllable-oriented)
+<span class="tool">text</span> -- generate (word-oriented) \*\*text from (syllable-oriented)
 \*\*silbe input
 
 On-line documentation is not currently available for this command.

@@ -8,7 +8,7 @@ permalink:	/tool/deg/index.html
 
 ### COMMAND
 
-**deg** &mdash; translate selected Humdrum pitch-related representations to
+<span class="tool">deg</span> &mdash; translate selected Humdrum pitch-related representations to
 relative scale degree (`**deg`)
 
 ------------------------------------------------------------------------
@@ -21,26 +21,26 @@ relative scale degree (`**deg`)
 
 ### DESCRIPTION
 
-The **deg** command transforms various pitch-related inputs to the
+The <span class="tool">deg</span> command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
 `**deg` spines &mdash; where scale degrees are indicated by the numbers 1
 (tonic) to 7 (leading tone). Scale degree information can be determined
 only with reference to some prevailing key. For example, the pitch C4 is
 the tonic (1) in the key of C major, but the submediant (6) in the key
-of E minor. The **deg** command expects a tandem interpretation
-indicating the key of the input passage; **deg** will adapt to specified
+of E minor. The <span class="tool">deg</span> command expects a tandem interpretation
+indicating the key of the input passage; <span class="tool">deg</span> will adapt to specified
 changes of key within an input. If no key information is provided prior
-to the first pitch-related data, **deg** issues an error message and
+to the first pitch-related data, <span class="tool">deg</span> issues an error message and
 terminates.
 
-The **deg** command differs from the (related) [**degree**](degree.html)
+The <span class="tool">deg</span> command differs from the (related) <span class"tool">degree</span>
 command in that it outputs *relative* (rather than *absolute)*
 pitch-height information. Upward pitch motions are indicated by the
 caret (\^), whereas downward pitch motions are indicated by the
 lower-case letter \`v\'. Hence, the token \`1\' followed by \`\^5\'
 means that the ensuing dominant pitch is above rather than below the
 preceding tonic pitch. No absolute pitch-height information is
-represented. As in the case of [**degree**,](degree.html) plus and minus
+represented. As in the case of [<span class="tool">degree</span>,](degree.html) plus and minus
 signs indicate whether a pitch has been chromatically raised or lowered.
 For example, the pitch A-flat is designated \`6-\' in the key of C
 major, but \`6\' in the key of C minor. The harmonic minor scale is
@@ -50,12 +50,12 @@ seventh degree in C minor, whereas B natural is considered the
 applications, this interpretation of the minor-scale seventh degree may
 cause difficulties.
 
-The **deg** command is able to translate any of the pitch-related
+The <span class="tool">deg</span> command is able to translate any of the pitch-related
 representations listed below. For descriptions of the various input
 representations (including `**deg`) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
-It is recommended that output files produced using the **deg** command
+It is recommended that output files produced using the <span class="tool">deg</span> command
 should be given names with the distinguishing \`.deg\' extension.
 
 > >   ----------- ----------------------------------------------------------------------
@@ -65,13 +65,13 @@ should be given names with the distinguishing \`.deg\' extension.
 > >   `**Tonh`    German pitch system
 > >   ----------- ----------------------------------------------------------------------
 > >
-> *Input representations processed by **deg**.*
+> *Input representations processed by <span class="tool">deg</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **deg** command provides the following options:
+The <span class="tool">deg</span> command provides the following options:
 
 > > **-h**
 
@@ -99,7 +99,7 @@ The **-t** option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
-In the default operation, **deg** outputs non-pitch-related signifiers
+In the default operation, <span class="tool">deg</span> outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D major, the
 `**pitch` token \"G5zzz\" will result in the output \"4zzz\" &mdash; that
 is, after translating G5 to 4, the \"zzz\" signifiers are retained in

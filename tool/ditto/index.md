@@ -7,7 +7,7 @@ permalink:	/tool/ditto/index.html
 
 ### COMMAND
 
-**ditto** -- replace Humdrum null tokens with previous data token
+<span class="tool">ditto</span> -- replace Humdrum null tokens with previous data token
 
 ------------------------------------------------------------------------
 
@@ -19,21 +19,21 @@ permalink:	/tool/ditto/index.html
 
 ### DESCRIPTION
 
-The **ditto** replaces Humdrum null tokens with the previous non-null
+The <span class="tool">ditto</span> replaces Humdrum null tokens with the previous non-null
 data token in the same spine. Various options modify this basic
 behavior.
 
 Humdrum null-tokens are place-holders that do not themselves encode
 data. Null-tokens consist of a single period character (\".\") &mdash;
 separated from other tokens by tabs, or appearing on a line by itself.
-The **ditto** command replaces occurrences of null-tokens with the most
+The <span class="tool">ditto</span> command replaces occurrences of null-tokens with the most
 recent non-null data occurring in the same spine. When the **-p** option
 is invoked, the replacement data tokens are enclosed in parentheses ( ).
 If the initial data tokens in a spine are null-tokens, then null-tokens
 are output.
 
 In repeating previous data tokens, if the **-s** option is invoked,
-**ditto** skips over any data records matching *regexp.* For example, if
+<span class="tool">ditto</span> skips over any data records matching *regexp.* For example, if
 *regexp* is the equals-sign (the \"common system\" barline), then
 barline data tokens will not be repeated in subsequent data records
 containing null tokens. Thus, if a data token \`X\' is followed by a
@@ -41,15 +41,15 @@ token that matches the regular expression /=/, then subsequent
 null-tokens will be replaced by the token \`X\' rather than by the
 equals sign.
 
-The **ditto** command correctly handles spine path changes. In the case
-where two or more spines join together, **ditto** outputs a
+The <span class="tool">ditto</span> command correctly handles spine path changes. In the case
+where two or more spines join together, <span class="tool">ditto</span> outputs a
 multiple-stop where necessary.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **ditto** command provides the following options:
+The <span class="tool">ditto</span> command provides the following options:
 
 >   ------------- -------------------------------------------------------
 >   **-h**        displays a help screen summarizing the command syntax
@@ -65,7 +65,7 @@ Options are specified in the command line.
 ### EXAMPLES
 
 The following inputs and outputs illustrate the operation of the
-**ditto** command. Consider the following input: ``
+<span class="tool">ditto</span> command. Consider the following input: ``
 
 >   -------------- ----------
 >   !! Example 1   
@@ -165,10 +165,10 @@ following command:
 >
 In order to avoid repeating the barlines, the skip option has been
 invoked with the regular expression \"\^=\" &mdash; meaning any equals sign
-at the beginning of a line. (See **regexp** in Section 6 of this manual
+at the beginning of a line. (See <span class="tool">regexp</span> in Section 6 of this manual
 for details concerning regular expression syntax.) In addition, the
 **-p** option has been invoked so that all repeated tokens are placed in
-parentheses. Notice that **ditto** adapts to changing spine-paths. Note
+parentheses. Notice that <span class="tool">ditto</span> adapts to changing spine-paths. Note
 especially the join-spine (\*v) interpretations leading to the
 double-stop:`(23 a)`.
 
@@ -209,8 +209,8 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**patt**](patt.html) (4), [**pattern**](pattern.html) (4),
-[**regexp**](regexp.html) (4), **regexp** (6), [**simil**](simil.html)
+<span class"tool">patt</span> (4), <span class"tool">pattern</span> (4),
+<span class"tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class"tool">simil</span>
 (4)
 
 ------------------------------------------------------------------------

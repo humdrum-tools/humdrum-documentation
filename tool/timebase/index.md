@@ -7,7 +7,7 @@ permalink:	/tool/timebase/index.html
 
 ### COMMAND
 
-**timebase** -- reformat Humdrum `**kern` or `**recip` score with
+<span class="tool">timebase</span> -- reformat Humdrum `**kern` or `**recip` score with
 constant time-base
 
 ------------------------------------------------------------------------
@@ -20,9 +20,9 @@ constant time-base
 
 ### DESCRIPTION
 
-The **timebase** command is used to reformat `**kern` or `**recip`
+The <span class="tool">timebase</span> command is used to reformat `**kern` or `**recip`
 inputs so that output data records represent equivalent slices (elapsed
-duration) of time. The effect of the **timebase** command is best
+duration) of time. The effect of the <span class="tool">timebase</span> command is best
 illustrated by an example. With a specified time-base of a sixteenth
 duration, the following input: ``
 
@@ -64,14 +64,14 @@ The time-base is selected by assigning a `**recip` duration value to the
 Comments and barlines are preserved in the output, however, acciaccatura
 records (grace notes) are discarded.
 
-It is recommended that output files produced using the **timebase**
+It is recommended that output files produced using the <span class="tool">timebase</span>
 command should be given names with the distinguishing \`.tb\' extension.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **timebase** command provides a number of options.
+The <span class="tool">timebase</span> command provides a number of options.
 
 >   ----------- ----------------------------------------------------------
 >   **-h**      displays a help screen summarizing the command syntax
@@ -90,7 +90,7 @@ each output data record will represent an elapsed duration of a dotted
 eighth note.
 
 The **-M** option adds a user-specified marker-string to the beginning
-of all records that **timebase** pads to the output. For example, the
+of all records that <span class="tool">timebase</span> pads to the output. For example, the
 command:
 
 > ` timebase -t 8 -M ABC`
@@ -121,7 +121,7 @@ interpreters, and revised *awk* (1985).
 ### WARNINGS
 
 Depending upon the defined time-base, passages of prolonged syncopation
-may disappear from the output. The **timebase** command assumes the
+may disappear from the output. The <span class="tool">timebase</span> command assumes the
 integrity of the duration structure of the input score. Corrupt duration
 structures in the input will produce unpredictable results.
 

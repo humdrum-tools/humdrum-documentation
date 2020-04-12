@@ -7,7 +7,7 @@ permalink:	/tool/ydelta/index.html
 
 ### COMMAND
 
-**ydelta** -- calculate numeric differences for concurrent Humdrum data
+<span class="tool">ydelta</span> -- calculate numeric differences for concurrent Humdrum data
 
 ------------------------------------------------------------------------
 
@@ -19,9 +19,9 @@ permalink:	/tool/ydelta/index.html
 
 ### DESCRIPTION
 
-The **ydelta** command outputs a single spine containing numeric data
+The <span class="tool">ydelta</span> command outputs a single spine containing numeric data
 representing the numeric differences for concurrent tokens in specified
-input spines. For example, **ydelta** may be used to characterize the
+input spines. For example, <span class="tool">ydelta</span> may be used to characterize the
 semitone distances separating pitches in a given vertical sonority or
 chord.
 
@@ -36,7 +36,7 @@ named ` **Ysemits.`
 
 ### OPTIONS
 
-The **ydelta** command provides the following option:
+The <span class="tool">ydelta</span> command provides the following option:
 
 >   ----------------- ----------------------------------------------------------------------------
 >   **-h**            displays a help screen summarizing the command syntax
@@ -54,7 +54,7 @@ Options are specified in the command line.
 
 ### EXAMPLES
 
-The operation of **ydelta** is best illustrated using an example.
+The operation of <span class="tool">ydelta</span> is best illustrated using an example.
 Consider the following input file called `praetorius`: ``
 
 >   ------------------------------------------------

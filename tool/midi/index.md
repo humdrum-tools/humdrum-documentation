@@ -7,7 +7,7 @@ permalink:	/tool/midi/index.html
 
 ### COMMAND
 
-**midi** &mdash; convert from `**kern` to Humdrum `**MIDI` format
+<span class="tool">midi</span> &mdash; convert from `**kern` to Humdrum `**MIDI` format
 
 ------------------------------------------------------------------------
 
@@ -19,14 +19,14 @@ permalink:	/tool/midi/index.html
 
 ### DESCRIPTION
 
-The **midi** command converts Humdrum `**kern` data into Humdrum
+The <span class="tool">midi</span> command converts Humdrum `**kern` data into Humdrum
 `**MIDI` data. Humdrum `**MIDI` data may be played by the
-[**perform**](perform.html) command or converted to a standard MIDI file
-using the [**smf**](smf.html) command. The **midi** command will
+<span class"tool">perform</span> command or converted to a standard MIDI file
+using the <span class"tool">smf</span> command. The <span class="tool">midi</span> command will
 translate all `**kern` spines in the input stream into `**MIDI` data,
 and will echo any non-kern spines.
 
-It is recommended that output files produced using the **midi** command
+It is recommended that output files produced using the <span class="tool">midi</span> command
 should be given names with the distinguishing \`.hmd\' extension
 (\`Humdrum midi\').
 
@@ -34,7 +34,7 @@ should be given names with the distinguishing \`.hmd\' extension
 
 ### OPTIONS
 
-The **midi** command provides the following options:
+The <span class="tool">midi</span> command provides the following options:
 
 >   -------- -----------------------------------------------------------------------------
 >   **-c**   echo all data records as global comments (prior to the data record)
@@ -49,8 +49,8 @@ Options are specified in the command line.
 
 If the **-c** option (\`comment\') is invoked, all data records are
 echoed as global comments in addition to the usual processing. This
-option is useful in conjunction with the [**perform**](perform.html)
-command; **perform** echoes all global comments while playing MIDI
+option is useful in conjunction with the <span class"tool">perform</span>
+command; <span class="tool">perform</span> echoes all global comments while playing MIDI
 inputs, and so the comment option allows the user to view the original
 `**kern` score while the music is performed.
 
@@ -70,7 +70,7 @@ monophonic inputs, or multi-part inputs that contain strictly
 isochronous chords. Polyphonic inputs containing non-isochronous
 durations will cause a loss of synchronization between the parts. The
 resulting output is apt to cause serious problems with commands such as
-[**perform**](perform.html) and [**smf.**](smf.html)
+<span class"tool">perform</span> and [**smf.**](smf.html)
 
 In contrast to MIDI performance data, canonical musical scores (such as
 `**kern`) frequently contain unisons &mdash; where two voices share the same
@@ -78,13 +78,13 @@ pitch for a period of time. MIDI produces a \`note-off\' instruction at
 the end of each note; however only a single \`note-off\' instruction is
 required to turn-off a note. Unfortunately, the first note-off will
 terminate a note &mdash; even if the same pitch is sustained in another
-voice. In normal operation, **midi** suppresses the sending of the first
+voice. In normal operation, <span class="tool">midi</span> suppresses the sending of the first
 of two MIDI \`note-off\' commands when a unison is encountered in the
 input. This ensures that the pitch will be sustained for the longer of
 the unison durations. This feature can be disabled by invoking the
 **-u** option.
 
-The **midi** command assigns a default duration of 72 MIDI clock-ticks
+The <span class="tool">midi</span> command assigns a default duration of 72 MIDI clock-ticks
 per quarter-note. This default value may be reassigned using the **-q**
 *n* option. The value *n* should be chosen so that all canonical
 durations present in a given score divide evenly into it. For example,
@@ -97,7 +97,7 @@ sixty-fourth notes can cause synchronization problems since they do not
 divide evenly into 72. The user may wish to reassign this value
 depending on the types of canonical durations present in a given input.
 Changing the default number of clock-ticks will affect the tempo of
-performance when using the [**perform**](perform.html) command. Hence,
+performance when using the <span class"tool">perform</span> command. Hence,
 it may be necessary to revise the tempo indication of a resulting
 Humdrum midi-format file.
 
@@ -105,7 +105,7 @@ Humdrum midi-format file.
 
 ### EXAMPLES
 
-The following examples illustrate how **midi** may be invoked.
+The following examples illustrate how <span class="tool">midi</span> may be invoked.
 
 > ` midi chopin > chopin.hmd`
 
@@ -122,7 +122,7 @@ comments.
 
 ### SAMPLE OUTPUTS
 
-The operation of **midi** is illustrated in the following inputs and
+The operation of <span class="tool">midi</span> is illustrated in the following inputs and
 outputs. In the first example, a simple C major scale is encoded in
 `**kern`.
 
@@ -150,7 +150,7 @@ outputs. In the first example, a simple C major scale is encoded in
 >   \*-
 >   ---------------------
 >
-Executing the **midi** command with the default settings results in the
+Executing the <span class="tool">midi</span> command with the default settings results in the
 `**MIDI` output given below. Notice that a default channel of MIDI
 channel 1 has been assigned via the tandem interpretation `*Ch1`. Note
 also that each `**kern` note has resulted in two MIDI instructions:
@@ -241,15 +241,15 @@ The output below is generated by invoking the following command:
 Notice that non-kern data (`**harm`) is echoed in the output. Also,
 notice that each input record has been reproduced as a global comment
 (preceded by !!). This feature is useful in conjunction with the
-[**perform**](perform.html) command.
+<span class"tool">perform</span> command.
 
 ------------------------------------------------------------------------
 
 ### DIAGNOSTICS
 
-The **midi** command echoes tempo indications for the benefit of the
-[**perform**](perform.html) command. If a tempo range is specified (e.g.
-MM92-98), **midi** calculates the average range and echoes that (MM95).
+The <span class="tool">midi</span> command echoes tempo indications for the benefit of the
+<span class"tool">perform</span> command. If a tempo range is specified (e.g.
+MM92-98), <span class="tool">midi</span> calculates the average range and echoes that (MM95).
 Tempo terms (such as \"largo\") are not handled by **midi.**
 
 ------------------------------------------------------------------------
@@ -262,10 +262,10 @@ DOS 2.0 and up.
 
 ### SEE ALSO
 
-[**humdrum**](humdrum.html) (4), **\*\*kern** (2), [**kern**](kern.html)
-(4), **\*\*MIDI** (2), [**perform**](perform.html) (4),
-[**proof**](proof.html) (4), [**smf**](smf.html) (4),
-[**tacet**](tacet.html) (4)
+<span class"tool">humdrum</span> (4), **\*\*kern** (2), <span class"tool">kern</span>
+(4), **\*\*MIDI** (2), <span class"tool">perform</span> (4),
+<span class"tool">proof</span> (4), <span class"tool">smf</span> (4),
+<span class"tool">tacet</span> (4)
 
 ------------------------------------------------------------------------
 

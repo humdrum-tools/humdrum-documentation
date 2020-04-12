@@ -8,7 +8,7 @@ permalink:	/tool/iv/index.html
 
 ### COMMAND
 
-**iv** &mdash; determine interval-class vectors for successive vertical
+<span class="tool">iv</span> &mdash; determine interval-class vectors for successive vertical
 sonorities for Humdrum inputs
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ sonorities for Humdrum inputs
 
 ### DESCRIPTION
 
-The **iv** command is used to determine the *interval-class vector* for
+The <span class="tool">iv</span> command is used to determine the *interval-class vector* for
 any of five set-theory related inputs: pitch (`**semits`), pitch-class
 (`**pc`), normal form (`**nf`), prime form (`**pf`), or Fortean set name
 (`**pcset`). An interval-class vector is a six-element numerical list
@@ -29,18 +29,18 @@ that indicates the abundance of various interval-classes (from 1
 semitone to 6 semitones) for some pitch-class set. See
 [REFERENCES](#REFERENCES) below.
 
-When provided with `**semits` or `**pc` inputs, **iv** treats each input
+When provided with `**semits` or `**pc` inputs, <span class="tool">iv</span> treats each input
 record as a set of pitches. Unisons and other pitch-class duplications
 have no effect on the output. Rests within a set of pitches are ignored;
 where an input record consists solely of one or more rests, a null-token
 is output.
 
-The **iv** command is able to translate any of the representations
+The <span class="tool">iv</span> command is able to translate any of the representations
 listed below. For descriptions of the various input representations
 (including `**iv`) refer to Section 2 *(Representation Reference)* of
 this reference manual.
 
-It is recommended that output files produced using the **iv** command
+It is recommended that output files produced using the <span class="tool">iv</span> command
 should be given names with the distinguishing \`.iv\' extension.
 
 >   ------------ --------------------------------------------------------------------
@@ -52,13 +52,13 @@ should be given names with the distinguishing \`.iv\' extension.
 >   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
-*Input representations processed by **iv**.*
+*Input representations processed by <span class="tool">iv</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **iv** command provides only a help option:
+The <span class="tool">iv</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -88,16 +88,16 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**context**](context.html) (4), **\*\*iv** (2), **\*\*nf** (2),
-[**nf**](nf.html) (4), **\*\*pc** (2), [**pc**](pc.html) (4),
-**\*\*pcset** (2), [**pcset**](pcset.html) (4), **\*\*pf** (2),
-[**pf**](pf.html) (4), **\*\*semits** (2), [**semits**](semits.html) (4)
+<span class"tool">context</span> (4), **\*\*iv** (2), **\*\*nf** (2),
+<span class"tool">nf</span> (4), **\*\*pc** (2), <span class"tool">pc</span> (4),
+**\*\*pcset** (2), <span class"tool">pcset</span> (4), **\*\*pf** (2),
+<span class"tool">pf</span> (4), **\*\*semits** (2), <span class"tool">semits</span> (4)
 
 ------------------------------------------------------------------------
 
 ### NOTE
 
-The **iv** command is a shell script that invokes `pcset -v`.
+The <span class="tool">iv</span> command is a shell script that invokes `pcset -v`.
 
 ------------------------------------------------------------------------
 

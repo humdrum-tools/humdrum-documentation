@@ -8,7 +8,7 @@ permalink:	/tool/cocho/index.html
 
 ### COMMAND
 
-**cocho** &mdash; translate frequency data to cochlear coordinates, in
+<span class="tool">cocho</span> &mdash; translate frequency data to cochlear coordinates, in
 millimeters from the apex
 
 On-line documentation is not currently available for this command.

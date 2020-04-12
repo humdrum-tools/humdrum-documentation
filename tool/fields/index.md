@@ -8,7 +8,7 @@ permalink:	/tool/fields/index.html
 
 ### COMMAND
 
-**fields** &mdash; list spine/field structure of a Humdrum file
+<span class="tool">fields</span> &mdash; list spine/field structure of a Humdrum file
 
 ------------------------------------------------------------------------
 
@@ -20,26 +20,26 @@ permalink:	/tool/fields/index.html
 
 ### DESCRIPTION
 
-The **fields** command works in conjunction with the **-t** option of
-the **extract** command to permit highly selective extraction of data
+The <span class="tool">fields</span> command works in conjunction with the **-t** option of
+the <span class="tool">extract</span> command to permit highly selective extraction of data
 from a Humdrum file. This command is used only rarely; it is invoked
-when the more usual options of **extract** fail to provide sufficient
+when the more usual options of <span class="tool">extract</span> fail to provide sufficient
 flexibility in isolating certain Humdrum data.
 
-The **fields** command outputs a so-called \"field-trace file\" for a
+The <span class="tool">fields</span> command outputs a so-called \"field-trace file\" for a
 given Humdrum input. This file can be edited by the user and then used
-with the **extract** command to select data from the original input
+with the <span class="tool">extract</span> command to select data from the original input
 file. For repetitive tasks, the field-trace file is more convenient than
 manual editing of the input file.
 
-When invoking the **fields** command, the user specifies the types of
+When invoking the <span class="tool">fields</span> command, the user specifies the types of
 records to be used as reference points in the editing task. The command
 then produces a listing of record numbers as well as the corresponding
 number of fields for each record of the specified type. For example, the
 user may wish to use spine-path changes as reference points for editing
 an input.
 
-Each output record from the **fields** command consists of three pieces
+Each output record from the <span class="tool">fields</span> command consists of three pieces
 of information, such as illustrated below:
 
 > ` 13      1-10      # {(4.g#  4.b  ...`
@@ -57,7 +57,7 @@ Field-trace information can be requested by record-type: **-g** for
 global comments, **-l** for local comments, **-i** for exclusive and
 tandem interpretations, and **-s** for spine-path indicators. More than
 one record-type can be requested. For example, when the **-gl** options
-are invoked, the **fields** command will produce an output line each
+are invoked, the <span class="tool">fields</span> command will produce an output line each
 time a local or global comment is encountered in the input. The line
 number and number of fields will be given in the output.
 
@@ -76,7 +76,7 @@ Note that when an unedited field-trace file is used in conjunction with
 field-range (second column in the output), the user can select which
 specific fields will be output.
 
-It is recommended that output files produced using the **fields**
+It is recommended that output files produced using the <span class="tool">fields</span>
 command should be given names with the distinguishing \`.ftf\'
 extension.
 
@@ -84,7 +84,7 @@ extension.
 
 ### OPTIONS
 
-The **fields** command provides the following options:
+The <span class="tool">fields</span> command provides the following options:
 
 >   ------------- -------------------------------------------------------
 >   **-g**        identify lines with global comments

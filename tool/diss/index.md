@@ -8,7 +8,7 @@ permalink:	/tool/diss/index.html
 
 ### COMMAND
 
-**diss** -- calculate the degree of sensory dissonance for successive
+<span class="tool">diss</span> -- calculate the degree of sensory dissonance for successive
 spectra
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ spectra
 
 ### DESCRIPTION
 
-The **diss** command measures the degree of sensory dissonance for
+The <span class="tool">diss</span> command measures the degree of sensory dissonance for
 successive acoustic moments. It outputs a single
 [\*\*diss](../representations/diss.rep.html) spine containing numerical
 values &mdash; where higher values indicate greater amounts of sensory
@@ -32,7 +32,7 @@ frequencies (spectrum). Spectral data consist of sets of paired
 frequency/amplitude values for each pure tone component present. Typical
 musical sonorities contain dozens of spectral components.
 
-The **diss** command implements an algorithm arising from the work of
+The <span class="tool">diss</span> command implements an algorithm arising from the work of
 Kameoka and Kuriyagawa (see REFERENCES.) *Sensory dissonance* is a
 low-level auditory phenomenon that is considered distinct from
 culturally-mediated and contextual experiences of consonance or
@@ -51,7 +51,7 @@ The output file format is dubbed \`.dis\'
 
 ### OPTIONS
 
-The **diss** command provides only a help option:
+The <span class="tool">diss</span> command provides only a help option:
 
 > >   -------- -------------------------------------------------------
 > >   **-h**   displays a help screen summarizing the command syntax
@@ -67,7 +67,7 @@ The **-k** option pertains to `**kern` inputs only. This option adds
 ### EXAMPLES
 
 The following example illustrates an input and a corresponding output
-from the **diss** command. The first and second spines (\*\*spect)
+from the <span class="tool">diss</span> command. The first and second spines (\*\*spect)
 encode a simple input spectrum consisting of six pure tone components.
 The first component has a frequency of 261 Hz at a sound pressure level
 of 47 decibels. The six components represent the pitches C4 and E4

@@ -7,7 +7,7 @@ permalink:	/tool/rid/index.html
 
 ### COMMAND
 
-**rid** -- eliminate specified Humdrum record types
+<span class="tool">rid</span> -- eliminate specified Humdrum record types
 
 ------------------------------------------------------------------------
 
@@ -19,9 +19,9 @@ permalink:	/tool/rid/index.html
 
 ### DESCRIPTION
 
-The **rid** command allows the user to eliminate specified types of
+The <span class="tool">rid</span> command allows the user to eliminate specified types of
 Humdrum records (lines) from the input stream. Depending on the options
-selected, **rid** will eliminate global comments, local comments,
+selected, <span class="tool">rid</span> will eliminate global comments, local comments,
 interpretations, duplicate exclusive interpretations, tandem
 interpretations, data records, data records consisting of just null
 tokens (null data records), empty global or local comments, empty
@@ -59,7 +59,7 @@ the last note of one piece and the first note of a subsequent piece.)
 
 ### OPTIONS
 
-The **rid** command provides the following options:
+The <span class="tool">rid</span> command provides the following options:
 
 >   -------- ----------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax

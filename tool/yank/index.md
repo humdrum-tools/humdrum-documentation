@@ -8,7 +8,7 @@ permalink:	/tool/yank/index.html
 
 ### COMMAND
 
-**yank** &mdash; extract passages from a Humdrum input
+<span class="tool">yank</span> &mdash; extract passages from a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -20,20 +20,20 @@ permalink:	/tool/yank/index.html
 
 ### DESCRIPTION
 
-The **yank** command permits the selective extraction of segments or
+The <span class="tool">yank</span> command permits the selective extraction of segments or
 passages from a Humdrum input. Yanked material may consist of specified
 input records &mdash; addressed by absolute line number, or relative to some
-marker. In addition, **yank** is able to output logical segments (such
+marker. In addition, <span class="tool">yank</span> is able to output logical segments (such
 as measures, phrases, or labelled sections), and is able to output
 material according to content. The output always consists of complete
-records; **yank** never outputs partial contents of a given input
+records; <span class="tool">yank</span> never outputs partial contents of a given input
 record.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **yank** command provides the following options:
+The <span class="tool">yank</span> command provides the following options:
 
 >   -------------- ---------------------------------------------------------------------------
 >   **-c**         include all comments prior to the yanked material in the output
@@ -49,8 +49,8 @@ The **yank** command provides the following options:
 >
 Options are specified in the command line.
 
-The simplest operation for **yank** occurs when the **-l** option is
-specified. In this case **yank** echoes those lines in the input stream
+The simplest operation for <span class="tool">yank</span> occurs when the **-l** option is
+specified. In this case <span class="tool">yank</span> echoes those lines in the input stream
 whose line-numbers appear in a specified *range.* The *range* consists
 of one of more integers separated by commas; inclusive ranges can be
 specified by separating two integers by a dash (-). For example, the
@@ -82,11 +82,11 @@ operator.)
 
 > yank -l -r \'\$-30-\$-10\' ginastera
 
-In addition to the specified output lines, **yank** also outputs
+In addition to the specified output lines, <span class="tool">yank</span> also outputs
 interpretations and comments as described below (see [INTERPRETATIONS
 AND COMMENTS](#INTERPRETATIONS%20AND%20COMMENTS)).
 
-Alternatively, **yank** can output lines relative to some user-defined
+Alternatively, <span class="tool">yank</span> can output lines relative to some user-defined
 *marker.* This mode of operation can be invoked using the **-m** option.
 Markers are specified as regular expressions. The following command
 outputs the first and third data records following each occurrence of
@@ -100,7 +100,7 @@ The **-r** option is used to specify the range. If the value zero
 (\"0\") is specified in the range, then the record containing the marker
 is itself output.
 
-Since markers are interpreted by **yank** as regular expressions,
+Since markers are interpreted by <span class="tool">yank</span> as regular expressions,
 complex markers can be defined. For example, the following command yanks
 the first data record following all occurrences of any record in the
 file `franck` beginning with a letter and ending with a number:
@@ -144,13 +144,13 @@ example,
 
 can be used to yank all records prior to the first common system
 barline. With the **-o** option, notice that *actual* measure numbers
-are irrelevant: **yank** selects segments according to their *ordinal*
+are irrelevant: <span class="tool">yank</span> selects segments according to their *ordinal*
 position in the input stream rather than according to their *cardinal*
 label.
 
-When the **-n** option is invoked, however, **yank** expects a numerical
+When the **-n** option is invoked, however, <span class="tool">yank</span> expects a numerical
 value to be present in the input immediately following the
-user-specified delimiter. In this case, **yank** selects segments based
+user-specified delimiter. In this case, <span class="tool">yank</span> selects segments based
 on their numbered label rather than their ordinal position in the input.
 For example,
 
@@ -178,7 +178,7 @@ the value zero may be reused for each specified input file. Thus, if
 
 will yank any leading (anacrusis) material in each of the three files.
 
-When the **-s** option is invoked, **yank** extracts passages according
+When the **-s** option is invoked, <span class="tool">yank</span> extracts passages according
 to Humdrum section labels encoded in the input. Humdrum section labels
 are tandem interpretations that conform to the syntax:
 
@@ -195,7 +195,7 @@ the file `haydn08`:
 
 Note that with \"through-composed\" Humdrum files it is possible to have
 more than one section containing the same section-label. (See the
-[**thru**](thru.html) command.)
+<span class"tool">thru</span> command.)
 
 ------------------------------------------------------------------------
 
@@ -203,9 +203,9 @@ more than one section containing the same section-label. (See the
 
 ### INTERPRETATIONS AND COMMENTS
 
-If **yank** is given a Humdrum input, it always produces a syntactically
+If <span class="tool">yank</span> is given a Humdrum input, it always produces a syntactically
 correct Humdrum output. All interpretations prior to and within the
-yanked material are echoed in the output. The **yank** command also
+yanked material are echoed in the output. The <span class="tool">yank</span> command also
 appends the appropriate spine-path terminators at the end of the yanked
 segment.
 
@@ -216,7 +216,7 @@ by specifying the **-c** option.
 
 ### EXAMPLES
 
-The following examples illustrate how the **yank** command may be used.
+The following examples illustrate how the <span class="tool">yank</span> command may be used.
 
 ``
 
@@ -285,19 +285,19 @@ will yank the first occurrence of a section labelled `Coda` in the file
 
 ### WARNINGS
 
-Where integer ranges are specified in the **yank** range-list,
+Where integer ranges are specified in the <span class="tool">yank</span> range-list,
 overlapping values are collapsed. For example, the command
 `yank -l -r 5-7,6-8` is interpreted as equivalent to `yank -l -r 5-8`;
 lines 6 and 7 will be echoed only once in the output stream. If the user
 wishes to have multiple occurrences of material in the output stream,
-the **yank** command can be invoked more than once (e.g.
+the <span class="tool">yank</span> command can be invoked more than once (e.g.
 `yank -l -r 5-7 ...; yank -l -r 6-8 ...`).
 
 Note that yanked segments cannot be output in an order other than their
 order in the input. For example, assuming that measure numbers in an
-input stream increase sequentially, **yank** is unable to output measure
+input stream increase sequentially, <span class="tool">yank</span> is unable to output measure
 number 6 prior to outputting measure number 5. Once again, the order of
-output material can be rearranged by invoked the **yank** command more
+output material can be rearranged by invoked the <span class="tool">yank</span> command more
 than once (e.g.
 `yank -l -r 100 ...; yank -l -r 99 ...; yank -l -r 98 ...`).
 

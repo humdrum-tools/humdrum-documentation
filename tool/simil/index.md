@@ -7,7 +7,7 @@ permalink:	/tool/simil/index.html
 
 ### COMMAND
 
-**simil** -- measure the non-numeric similarity between two
+<span class="tool">simil</span> -- measure the non-numeric similarity between two
 single-spine Humdrum inputs
 
 ------------------------------------------------------------------------
@@ -20,15 +20,15 @@ single-spine Humdrum inputs
 
 ### DESCRIPTION
 
-The **simil** command measures the degree of similarity between two
+The <span class="tool">simil</span> command measures the degree of similarity between two
 single-spine inputs. Similarity measures are calculated by determining
 the minimum *edit distance* &mdash; that is, the least amount of editorial
 manipulation required to transform the two inputs so that they are
-identical. In contrast to the [**correl**](correl.html) command,
-**simil** can act on both numeric and non-numeric data, and so can be
+identical. In contrast to the <span class"tool">correl</span> command,
+<span class="tool">simil</span> can act on both numeric and non-numeric data, and so can be
 used to characterize similarity for any form of Humdrum input.
 
-Two inputs are required by **simil** &mdash; the *source* and *template*
+Two inputs are required by <span class="tool">simil</span> &mdash; the *source* and *template*
 inputs. Both inputs must contain single columns of data; multi-column
 inputs are forbidden. The *source* input must conform to the Humdrum
 syntax, however the *template* should contain only data records.
@@ -36,12 +36,12 @@ Comments and interpretations should not appear in the *template.* In
 addition, following the initial exclusive interpretation, all comments
 and interpretations in the *source* input should be removed.
 
-Depending on the mode of operation, **simil** outputs either one or two
+Depending on the mode of operation, <span class="tool">simil</span> outputs either one or two
 spines of continuous information regarding the similarity of the two
-inputs. The length of **simil**\'s output matches that of the *source*
+inputs. The length of <span class="tool">simil</span>\'s output matches that of the *source*
 file.
 
-Two modes of operation are provided by **simil**: the *fixed template
+Two modes of operation are provided by <span class="tool">simil</span>: the *fixed template
 mode* and the *variable template mode.* The fixed template mode is
 useful for scanning a source input for patterns similar to a given
 template. This mode of operation is useful when the user knows in
@@ -87,7 +87,7 @@ Two output spines are generated in the *variable template mode:*
 information identifying the place in the template input where a
 subordinate pattern is highly similar to the current position in the
 source file. As each record is encountered in the source input,
-**simil** scans the list of all possible subordinate templates and
+<span class="tool">simil</span> scans the list of all possible subordinate templates and
 identifies the template with the highest similarity value. This value is
 output (in the `**simil` spine) along with the *line number* in the
 original template input where the subordinate template begins. If more
@@ -96,23 +96,23 @@ line numbers for each high-similarity template appear in the `**simxrf`
 spine, separated by commas. Common subordinate patterns will appear
 frequently in the `**simxrf` output.
 
-It is recommended that output files produced using the **simil** command
+It is recommended that output files produced using the <span class="tool">simil</span> command
 should be given names with the distinguishing \`.sim\' extension.
 
 ------------------------------------------------------------------------
 
 ### FURTHER DETAILS
 
-The **simil** program implements the Damerau-Levenshtein metric for edit
+The <span class="tool">simil</span> program implements the Damerau-Levenshtein metric for edit
 distance (see [REFERENCES](#REFERENCES)). Permissible edit operations
 include substitutions and deletions. Each edit action incurs a penalty,
 and the cummulative edit-distance penalty determines the similarity.
 
-In the default operation, **simil** assigns equivalent edit penalties
+In the default operation, <span class="tool">simil</span> assigns equivalent edit penalties
 (1.0) for deletions and substitutions. However, the user can explicitly
 define these penalties.
 
-The **simil** command allows the user to define the cost of each edit
+The <span class="tool">simil</span> command allows the user to define the cost of each edit
 operation via an initialization file. The initialization file must be
 named `simil.rc` and be located in the current directory or the user's
 home directory. Arbitrary costs may be assigned to any of eight edit
@@ -130,7 +130,7 @@ operations shown in the following table:
 >   S3         Substitute a token that is repeated in String 1 and String 2
 >   ---------- ----------------------------------------------------------------------
 >
-*Edit operations used by **simil**.*
+*Edit operations used by <span class="tool">simil</span>.*
 
 In describing the edit operations, String 1 is the source string and
 String 2 is the template string. Notice that there is no overt edit
@@ -144,7 +144,7 @@ asymmetrical penalties allows the user to specify that the deletion of
 tones from the embellished version is less costly than deletion of tones
 from the basic melody.
 
-Since repetition is a common form of musical variation, **simil** allows
+Since repetition is a common form of musical variation, <span class="tool">simil</span> allows
 the user to distinguish between repeated and non-repeated tokens. A
 repeated token is defined as one that is immediately preceded by an
 identical token. Thus, in deleting a sequence of identical symbols in
@@ -153,7 +153,7 @@ operations, whereas the deletion of the first occurrence is a D1
 operation.
 
 Note that the minimum theoretical similarity for any set of penalty
-weightings can be determined empirically by providing the **simil**
+weightings can be determined empirically by providing the <span class="tool">simil</span>
 program with source and template strings that share no symbols in
 common. For example, the source input may consist entirely of numbers,
 whereas the template input consists entirely of alphabetic characters.
@@ -161,9 +161,9 @@ In the case where all edit operations are assigned a penalty of +1, the
 minimum quantitative similarity between two strings is 0.37.
 
 Some user-defined weightings may give rise to peculiar results &mdash; such
-as negative costs &mdash; but **simil** does not forbid this. **Simil**
+as negative costs &mdash; but <span class="tool">simil</span> does not forbid this. **Simil**
 generates warning messages if the weighting seem illogical; for example,
-if the cost of R1 is more than that of D1. In addition, **simil** will
+if the cost of R1 is more than that of D1. In addition, <span class="tool">simil</span> will
 abort operation if the defined edit penalties transgress the triangular
 inequality (see [REFERENCES](#REFERENCES)). The default weighting for
 all operations is +1.
@@ -188,7 +188,7 @@ arbitrarily high edit penalty. ``
 
 ### OPTIONS
 
-The **simil** command provides the following options.
+The <span class="tool">simil</span> command provides the following options.
 
 >   ------------- --------------------------------------------------------------------------------
 >   **-n**        do not scale similarity measures according to template length
@@ -205,7 +205,7 @@ similarity, unless the length of the template is considered. For
 example, 3 editing operations constitutes a rather modest change for a
 template consisting of 20 elements. However, 3 edit operations is
 significant for a template consisting of only 5 elements. In the default
-operation, **simil** scales the edit-distance scores according to the
+operation, <span class="tool">simil</span> scales the edit-distance scores according to the
 length of the comparison template. This ensures that all similarity
 values remain between 0 and 1. The **-n** option defeats this scaling
 procedure, and outputs the raw similarity scores.
@@ -260,9 +260,9 @@ in the source input file. For example, the second value (1.00) in the
 highest value (0.72) occurs in both the sixth and seventh `**simil` data
 records, indicating that fairly similar sequences occur beginning with
 the sixth and seventh data records in the source input. Specifically,
-**simil** has recognized that the sequence (A, B, B, C) is only one
+<span class="tool">simil</span> has recognized that the sequence (A, B, B, C) is only one
 edit-operation (a deletion) different from the template (A, B, C). In
-the ensuing record, **simil** has recognized that the sequence (B, B, C)
+the ensuing record, <span class="tool">simil</span> has recognized that the sequence (B, B, C)
 is only one edit-operation (substitution A/B) different from (A, B, C).
 Notice that the final value (0.51) indicates that the edit distance for
 (C, B, A) is less like the template. Also notice that the lowest value

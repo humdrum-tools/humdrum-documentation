@@ -7,7 +7,7 @@ permalink:	/tool/veritas/index.html
 
 ### COMMAND
 
-**veritas** -- validate that a Humdrum document has not been modified
+<span class="tool">veritas</span> -- validate that a Humdrum document has not been modified
 
 ------------------------------------------------------------------------
 
@@ -19,13 +19,13 @@ permalink:	/tool/veritas/index.html
 
 ### DESCRIPTION
 
-The **veritas** command provides an on-line means for formally or
+The <span class="tool">veritas</span> command provides an on-line means for formally or
 informally verifying that a given Humdrum file originates with a given
 publisher or source, or whether the file has been modified in some way.
 The command provides a convenient way of reassuring scholars of the
 accuracy or origin of a document.
 
-The **veritas** command looks for a checksum validation number encoded
+The <span class="tool">veritas</span> command looks for a checksum validation number encoded
 in a VTS reference record in the given input file. (See the [**Reference
 Records (1)**](../guide.append1.html) description.) The command then
 calculates the checksum for the file (excluding the VTS record itself)
@@ -43,7 +43,7 @@ document.
 
 ### OPTIONS
 
-The **veritas** command provides the following options:
+The <span class="tool">veritas</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax

@@ -7,7 +7,7 @@ permalink:	/tool/metpos/index.html
 
 ### COMMAND
 
-**metpos** &mdash; assign metric position indicators to Humdrum sonorities
+<span class="tool">metpos</span> &mdash; assign metric position indicators to Humdrum sonorities
 
 ------------------------------------------------------------------------
 
@@ -19,8 +19,8 @@ permalink:	/tool/metpos/index.html
 
 ### DESCRIPTION
 
-The **metpos** command is used to characterize the metric strength of
-successive sonorities in a musical passage. Specifically, **metpos**
+The <span class="tool">metpos</span> command is used to characterize the metric strength of
+successive sonorities in a musical passage. Specifically, <span class="tool">metpos</span>
 appends a Humdrum ` **metpos` spine to a time-base (`*tb`) input stream.
 The ` **metpos` spine contains integer values indicating the position in
 the metric hierarchy for each data record &mdash; given some meter
@@ -37,14 +37,14 @@ sub-sub-beats, etc.) are assigned successively increasing numerical
 values according to their placement in the metric hierarchy. Larger
 `**metpos` values signify sonorities of lesser metric significance.
 
-Input to **metpos** can be any Humdrum file that conforms to the
+Input to <span class="tool">metpos</span> can be any Humdrum file that conforms to the
 *time-base* format &mdash; i.e. where each data record represents an
 equivalent duration of time. Each input measure will thus contain the
 same number of data records. For example, in 3/4 meter with an
 eighth-note time-base, each complete measure should contain 6 data
 records.
 
-For correct operation, **metpos** must be informed of both the *meter
+For correct operation, <span class="tool">metpos</span> must be informed of both the *meter
 signature* and the *time-base* for the given input passage. This
 information may be specified either via the command line, or as encoded
 interpretations in the input stream. The command line method of
@@ -58,13 +58,13 @@ thirty-second duration for the input.
 Alternatively, the meter signature and time-base duration can be made
 known through the presence of interpretation records in the encoded
 input. In the above case, the meter signature can be made known to
-**metpos** through the `*M9/16` interpretation, while the time-base
+<span class="tool">metpos</span> through the `*M9/16` interpretation, while the time-base
 duration can be made known to through the `*tb32` interpretation. A
 time-base and meter signature interpretation must appear in all spines
 of the input file prior to the occurrence of any data records. Note that
-once the initial meter is established, **metpos** is able to adapt to
+once the initial meter is established, <span class="tool">metpos</span> is able to adapt to
 encoded changes of meter within a given score or input stream. If meter
-or time-base information is not available to **metpos** an error message
+or time-base information is not available to <span class="tool">metpos</span> an error message
 will be issued and execution terminated.
 
 As noted above, metric hierarchies are represented through a series of
@@ -77,10 +77,10 @@ is: 1, 4, 3, 4, 2, 4, 3, 4. Metric hierarchies in compound meters are
 also possible. For example, in the case of 6/8 meter (16th durations)
 the metric hierarchy is: 1, 4, 3, 4, 3, 4, 2, 4, 3, 4, 3, 4.
 
-Note that **metpos** is unable to deal with irregular meters. (See
+Note that <span class="tool">metpos</span> is unable to deal with irregular meters. (See
 \"LIMITS\" below.)
 
-It is recommended that output files produced using the **metpos**
+It is recommended that output files produced using the <span class="tool">metpos</span>
 command should be given names with the distinguishing \`.met\'
 extension.
 
@@ -88,7 +88,7 @@ extension.
 
 ### OPTIONS
 
-The **metpos** command provides the following options:
+The <span class="tool">metpos</span> command provides the following options:
 
 > **-h**
 
@@ -108,9 +108,9 @@ set the initial time-base duration to *n*
 ### SAMPLE OUTPUTS
 
 The following extract from Bartók's \"Two-Part Study\" No. 121 from
-*Mikrokosmos* demonstrates the effect of the **metpos** command. The two
+*Mikrokosmos* demonstrates the effect of the <span class="tool">metpos</span> command. The two
 left-most columns show the original input; all three columns show the
-corresponding output from **metpos**: ``
+corresponding output from <span class="tool">metpos</span>: ``
 
 >   ---------- ---------- ------------
 >   \*\*kern   \*\*kern   \*\*metpos
@@ -166,7 +166,7 @@ corresponding output from **metpos**: ``
 >   \*-        \*-        \*-
 >   ---------- ---------- ------------
 >
-Notice that **metpos** adapts to changing meter signatures, and
+Notice that <span class="tool">metpos</span> adapts to changing meter signatures, and
 correctly distinguishes between metric accent patterns such as 6/4
 (measure 16) and 3/2 (measure 19).
 
@@ -197,7 +197,7 @@ interpreters, and revised *awk* (1985).
 
 ### LIMITS
 
-In a number of meters, **metpos** is limited in the depth of permissible
+In a number of meters, <span class="tool">metpos</span> is limited in the depth of permissible
 metric positions. These limitations are tabulated below:
 
 >   -------------------- ----------------- ------------------------------
@@ -232,7 +232,7 @@ Some meter signatures containing dotted durations can also be handled:
 >   2/8.(=6/16),   3/8.(=9/16),   4/8.(=12/16),
 >   -------------- -------------- ---------------
 >
-Meter signatures NOT handled by **metpos** include:
+Meter signatures NOT handled by <span class="tool">metpos</span> include:
 
 >   ------- ------- ------- -------- -------- -------- -------- -------- --------
 >   5/2,    7/2,    8/2,    10/2,    11/2,    13/2,    14/2,    15/2,    16/2,

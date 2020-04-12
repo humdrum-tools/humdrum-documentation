@@ -8,7 +8,7 @@ permalink:	/tool/pf/index.html
 
 ### COMMAND
 
-**pf** -- determine prime form for successive Humdrum vertical
+<span class="tool">pf</span> -- determine prime form for successive Humdrum vertical
 sonorities
 
 ------------------------------------------------------------------------
@@ -21,7 +21,7 @@ sonorities
 
 ### DESCRIPTION
 
-The **pf** command is used to determine the *prime form* for any of five
+The <span class="tool">pf</span> command is used to determine the *prime form* for any of five
 set-theory related inputs: pitch (`**semits`), pitch-class (`**pc`),
 normal form (`**nf`), interval-vector (`**iv`), or Fortean set name
 (`**pcset`).
@@ -35,11 +35,11 @@ root, in any inversion, consisting of any number of notes, with any
 spelling, will have the prime form: 0,3,7. See [REFERENCES](#REFERENCES)
 below.
 
-When provided with `**semits` or `**pc` inputs, **pf** treats each input
+When provided with `**semits` or `**pc` inputs, <span class="tool">pf</span> treats each input
 record as a set of pitches. Unisons and other pitch-class duplications
 have no effect on the output. Rests within a set of pitches are ignored;
 where an input record consists solely of one or more rests, a null-token
-is output. The **pf** command can also accept other set theoretic
+is output. The <span class="tool">pf</span> command can also accept other set theoretic
 inputs, such as `**nf`, `**iv`, `**pcset`, as well as `**pf` itself.
 
 The following table identifies the input representations accepted by
@@ -47,7 +47,7 @@ The following table identifies the input representations accepted by
 `**pf`) refer to Section 2 *(Representation Reference)* of this
 reference manual.
 
-It is recommended that output files produced using the **pf** command
+It is recommended that output files produced using the <span class="tool">pf</span> command
 should be given names with the distinguishing \`.pf\' extension.
 
 >   ------------ --------------------------------------------------------------------
@@ -59,13 +59,13 @@ should be given names with the distinguishing \`.pf\' extension.
 >   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
-*Input representations processed by **pf**.*
+*Input representations processed by <span class="tool">pf</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **pf** command provides only a help option:
+The <span class="tool">pf</span> command provides only a help option:
 
 > >   -------- -------------------------------------------------------
 > >   **-h**   displays a help screen summarizing the command syntax
@@ -95,16 +95,16 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**context**](context.html) (4), **\*\*iv** (2), [**iv**](iv.html) (4),
-**\*\*nf** (2), [**nf**](nf.html) (4), **\*\*pc** (2), [**pc**](pc.html)
-(4), **\*\*pcset** (2), [**pcset**](pcset.html) (4), **\*\*pf** (2),
-**\*\*semits** (2), [**semits**](semits.html) (4)
+<span class"tool">context</span> (4), **\*\*iv** (2), <span class"tool">iv</span> (4),
+**\*\*nf** (2), <span class"tool">nf</span> (4), **\*\*pc** (2), <span class"tool">pc</span>
+(4), **\*\*pcset** (2), <span class"tool">pcset</span> (4), **\*\*pf** (2),
+**\*\*semits** (2), <span class"tool">semits</span> (4)
 
 ------------------------------------------------------------------------
 
 ### NOTE
 
-The **pf** command is a shell script that invokes `pcset -p`.
+The <span class="tool">pf</span> command is a shell script that invokes `pcset -p`.
 
 ------------------------------------------------------------------------
 

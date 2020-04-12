@@ -7,7 +7,7 @@ permalink:	/tool/pitch/index.html
 
 ### COMMAND
 
-**pitch** -- translate selected Humdrum pitch-related representations
+<span class="tool">pitch</span> -- translate selected Humdrum pitch-related representations
 to American standard pitch notation
 
 ------------------------------------------------------------------------
@@ -20,21 +20,21 @@ to American standard pitch notation
 
 ### DESCRIPTION
 
-The **pitch** command transforms various pitch-related inputs to the
+The <span class="tool">pitch</span> command transforms various pitch-related inputs to the
 corresponding pitch designations approved by the American National
-Standards Institute (ANSI). The **pitch** command outputs one or more
+Standards Institute (ANSI). The <span class="tool">pitch</span> command outputs one or more
 Humdrum `**pitch` spines. ANSI pitch designations use the upper-case
 letters A to G followed by an optional accidental, followed by an octave
 number. In the Humdrum `**pitch` representation, optional cents
 deviation from equal temperament can also be encoded.
 
-The **pitch** command is able to translate any of the pitch-related
+The <span class="tool">pitch</span> command is able to translate any of the pitch-related
 input representations listed below. In each case, a tuning standard of
 A4 equals 440 hertz is assumed. For descriptions of the various input
 representations (including `**pitch`) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
-It is recommended that output files produced using the **pitch** command
+It is recommended that output files produced using the <span class="tool">pitch</span> command
 should be given names with the distinguishing \`.pit\' extension.
 
 >   ------------ --------------------------------------------------------------------
@@ -50,13 +50,13 @@ should be given names with the distinguishing \`.pit\' extension.
 >   `**Tonh`     German pitch system
 >   ------------ --------------------------------------------------------------------
 >
-*Input representations processed by **pitch**.*
+*Input representations processed by <span class="tool">pitch</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **pitch** command provides the following options:
+The <span class="tool">pitch</span> command provides the following options:
 
 >   -------- ----------------------------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -70,7 +70,7 @@ The **-t** option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
-In the default operation, **pitch** outputs non-pitch-related signifiers
+In the default operation, <span class="tool">pitch</span> outputs non-pitch-related signifiers
 in addition to the `**pitch` pitch value. For example, the `**Tonh`
 token \"Ges5zzz\" will result in the output \"Gb5zzz\" &mdash; that is,
 after translating Ges5 to Gb5, the \"zzz\" signifiers are retained in
@@ -81,7 +81,7 @@ are numbers. Consider the case of the `**kern` token \"8aa\#\"; after
 translating \`aa\#\' to A\#5, the non-pitch-related signifier \`8\' will
 also be output, hence the value 8A\#5 &mdash; which may cause confusion;
 commands such as [**tonh,**](tonh.html) [**solfg,**](solfg.html) and
-[**pitch**](pitch.html) treat the first number encountered in an input
+<span class"tool">pitch</span> treat the first number encountered in an input
 token as the octave designation. Hence further processing of this token
 may lead to it's interpretation as A\#8 &mdash; or even A\#58 &mdash; rather
 than A\#5.
@@ -165,7 +165,7 @@ rendered as a single note rather than as two notes (due to the **-t**
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
 the first notes of the `**freq, **MIDI`, and `**cocho` spines have been
 stripped away (due to the **-x** option). In the case of the `**degree`
-input, **pitch** recognizes the spelling of various pitches in the
+input, <span class="tool">pitch</span> recognizes the spelling of various pitches in the
 context of the key of D minor. Hence, the raised third degree is F\#,
 and the raised sixth degree is B natural. Also note the presence of
 cents-deviation from equal temperament in the translation of the

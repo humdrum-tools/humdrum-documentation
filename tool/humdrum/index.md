@@ -7,7 +7,7 @@ permalink:	/tool/humdrum/index.html
 
 ### COMMAND
 
-**humdrum** &mdash; general syntax checker for Humdrum files
+<span class="tool">humdrum</span> &mdash; general syntax checker for Humdrum files
 
 ------------------------------------------------------------------------
 
@@ -19,10 +19,10 @@ permalink:	/tool/humdrum/index.html
 
 ### DESCRIPTION
 
-The **humdrum** command identifies whether an input conforms to the
+The <span class="tool">humdrum</span> command identifies whether an input conforms to the
 Humdrum representation syntax. Error messages are issued where
 appropriate. If the input conforms to the Humdrum syntax, then the
-**humdrum** command produces no output, unless the verbose (**-v**)
+<span class="tool">humdrum</span> command produces no output, unless the verbose (**-v**)
 option is invoked.
 
 Formally, a Humdrum representation may be defined as any ASCII input
@@ -378,7 +378,7 @@ new
 
 ### OPTIONS
 
-The **humdrum** command provides the following options:
+The <span class="tool">humdrum</span> command provides the following options:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -397,7 +397,7 @@ the number of null tokens encountered.
 The verbose summary also produces a number of statistics related to the
 spine-organization in the Humdrum file. Both the minimum and maximum
 number of spines are identified. The paths of the various spines through
-the file are also summarized. Specifically, **humdrum** indicates the
+the file are also summarized. Specifically, <span class="tool">humdrum</span> indicates the
 number of terminated spines, the number of new spines introduced, the
 number of joined spines, the number of split spines, and the number of
 exchanged spines.
@@ -456,7 +456,7 @@ output for the above file would be:
 
 ### FILES
 
-The **humdrum** command uses a kornshell script to invoke an executable.
+The <span class="tool">humdrum</span> command uses a kornshell script to invoke an executable.
 In order to avoid conflict, the executable file is named `humdrum_.exe`
 (`humdrum_` on UNIX) rather than `humdrum.exe`.
 
@@ -472,14 +472,14 @@ interpreters, and revised *awk* (1985).
 
 ### SEE ALSO
 
-[**census**](census.html) (4), [**proof**](proof.html) (4)
+<span class"tool">census</span> (4), <span class"tool">proof</span> (4)
 
 ------------------------------------------------------------------------
 
 ### DIAGNOSTICS
 
 The following list tabulates all of the potential errors and warnings
-issued by the **humdrum** command. ``
+issued by the <span class="tool">humdrum</span> command. ``
 
 >   ------------ ----------------------------------------------------------------------
 >   ERROR 1:     Record containing add-spine indicator has not been followed
@@ -525,7 +525,7 @@ issued by the **humdrum** command. ``
 >   WARNING 5:   Data token may be mistaken for tandem interpretation in line
 >   ------------ ----------------------------------------------------------------------
 >
-*Potential errors and warnings issued by **humdrum**.*
+*Potential errors and warnings issued by <span class="tool">humdrum</span>.*
 
 ------------------------------------------------------------------------
 

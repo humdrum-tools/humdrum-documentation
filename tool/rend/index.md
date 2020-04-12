@@ -7,7 +7,7 @@ permalink:	/tool/rend/index.html
 
 ### COMMAND
 
-**rend** -- split data tokens from specified Humdrum spines into
+<span class="tool">rend</span> -- split data tokens from specified Humdrum spines into
 component sub-tokens
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ component sub-tokens
 
 ### DESCRIPTION
 
-The **rend** command breaks apart data tokens from selected input spines
+The <span class="tool">rend</span> command breaks apart data tokens from selected input spines
 into one or more sub-tokens distributed across one or more newly created
 output spines. The user specifies which input spine or spines are to be
 split. The manner in which the signifiers are to be distributed is
@@ -53,7 +53,7 @@ as three independent spines: ``
 >   \*-          \*-        \*-
 >   ------------ ---------- ----------------
 >
-The **rend** command allows each occurrence of a target exclusive
+The <span class="tool">rend</span> command allows each occurrence of a target exclusive
 interpretation to be replaced by specified output spines. The user
 selects how the signfiers (characters) in the input spines are to be
 distributed to the replacement output spines. Signifiers (ASCII
@@ -94,7 +94,7 @@ case, for example, the order of the output spines will be
 
 ### OPTIONS
 
-The **rend** command provides the following options:
+The <span class="tool">rend</span> command provides the following options:
 
 >   --------------------- --------------------------------------------------------------------------
 >   -f *reassign*         maps input tokens to output tokens according to definitions given in the
@@ -125,13 +125,13 @@ first regular expression &mdash; `'[]A-Ga-g[#-]+|^=+[0-9]*'` &mdash; indicates
 that the following strings should be echoed in the data records for
 `**notes`: the upper-case letters `A` to `G` and the lower-case letters
 `a` to `g`, plus the characters `[, ], #`, and `-`. Alternatively,
-**rend** will echo any data token beginning with one or more
+<span class="tool">rend</span> will echo any data token beginning with one or more
 equals-signs, followed by zero or more numbers.
 
 Similarly, the second ` **rests` spine will contain characters that
 match the regular expression \'\[\\\\.0-9r\]+\|\^+=\[0-9\]\*\'. This
 includes the period (.), all numbers (0-9), plus the letter *r.*
-Alternatively, **rend** will echo any data token beginning with one or
+Alternatively, <span class="tool">rend</span> will echo any data token beginning with one or
 more equals-signs, followed by zero or more numbers.
 
 Given this command, the following input: ``
@@ -172,7 +172,7 @@ will produce the following output: ``
 >   \*-                   \*-         \*-          \*-         \*-
 >   --------------------- ----------- ------------ ----------- -----------
 >
-Notice that **rend** correctly handles Humdrum multiple-stops (such as
+Notice that <span class="tool">rend</span> correctly handles Humdrum multiple-stops (such as
 `2C 2E`). Notice also that if no match is made, a null token (.) is
 output.
 

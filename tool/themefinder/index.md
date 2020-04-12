@@ -462,7 +462,7 @@ Commands available with the makefile:
 
 >   ---------------- -------------------------------------------------
 >   **img**:         create gif image files with ms and convert.
->   **midi**:        create the midifiles and directory from source.
+>   <span class="tool">midi</span>:        create the midifiles and directory from source.
 >   **info**:        create the info files from the source files.
 >   **bib**:         create bibliographic database.
 >   **database**:    create thema database.

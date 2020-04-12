@@ -7,7 +7,7 @@ permalink:	/tool/spect/index.html
 
 ### COMMAND
 
-**spect** -- generate spectral data from note information using the
+<span class="tool">spect</span> -- generate spectral data from note information using the
 SHARC timbre database
 
 On-line documentation is not currently available for this command.

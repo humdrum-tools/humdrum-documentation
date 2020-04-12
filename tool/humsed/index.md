@@ -8,7 +8,7 @@ permalink:	/tool/humsed/index.html
 
 ### COMMAND
 
-**humsed** &mdash; stream editor for Humdrum inputs
+<span class="tool">humsed</span> &mdash; stream editor for Humdrum inputs
 
 ------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ permalink:	/tool/humsed/index.html
 
 ### DESCRIPTION
 
-The **humsed** command provides a stream-editor for Humdrum data
+The <span class="tool">humsed</span> command provides a stream-editor for Humdrum data
 records. A stream-editor is a non-interactive editor that automatically
 processes a given input according to a user-specified set of editing
 instructions. Possible editing operations include substitution,
@@ -28,12 +28,12 @@ deletion, transliteration, file-read, and file-write. By default the
 output is sent to the display, however the output can be routed to a
 file using file redirection (\> *outputfile).*
 
-The **humsed** command is fashioned after the UNIX **sed** stream
-editor. In contrast to **sed,** **humsed** editing instructions are
+The <span class="tool">humsed</span> command is fashioned after the UNIX **sed** stream
+editor. In contrast to **sed,** <span class="tool">humsed</span> editing instructions are
 applied only to Humdrum data records; Humdrum *interpretations* and
 *comments* are not affected by **humsed.**
 
-The **humsed** command accepts one or more **sed** instructions.
+The <span class="tool">humsed</span> command accepts one or more **sed** instructions.
 Instructions are specified on the command-line within a pair of single
 quotes. Where more than one editing instruction is specified, successive
 instructions are separated by a semicolon. Alternatively, instructions
@@ -53,7 +53,7 @@ record. In the case of the delete ` (d)` instruction, failing to specify
 a preceding regular expression will result in the deletion of all data
 records in the input.
 
-For further information concerning the syntax and use of **humsed**
+For further information concerning the syntax and use of <span class="tool">humsed</span>
 editing instructions, refer to the documentation for the UNIX **sed**
 command.
 
@@ -61,7 +61,7 @@ command.
 
 ### OPTIONS
 
-The **humsed** command provides the following options:
+The <span class="tool">humsed</span> command provides the following options:
 
 >   ----------------- ---------------------------------------------------------
 >   **-h**            displays a help screen summarizing the command syntax
@@ -71,7 +71,7 @@ The **humsed** command provides the following options:
 >
 Options are specified in the command line.
 
-With the **-E** option, **humsed** invokes the \"extended\" regular
+With the **-E** option, <span class="tool">humsed</span> invokes the \"extended\" regular
 expression syntax, rather than the normal or \"basic\" regular
 expression syntax. With extended regular expressions, the following
 additional operations are supported: one-or-more (+), zero-or-one (?),
@@ -79,7 +79,7 @@ logical OR (\|), precedence grouping ( ), and alphanumeric token start
 and end anchors \< \>.
 
 Note that not all systems support extended regular expressions for the
-**sed** command; on such systems the **-E** option for **humsed** is
+**sed** command; on such systems the **-E** option for <span class="tool">humsed</span> is
 ineffective and may result in an error.
 
 The **-f** options allows the user to specify a *scriptfile* that
@@ -161,14 +161,14 @@ material to a specified output file. Consider the following command:
 
 This command identifies all data records in the file \"bigband\" that
 contain a semicolon (the ` **kern` pause signifier) and copies them into
-the file \"pauses.\" Recall that **humsed** operates only on Humdrum
+the file \"pauses.\" Recall that <span class="tool">humsed</span> operates only on Humdrum
 data records, so the ` w` command will cause only data records to be
 outputted. Hence the resulting file \"pauses\" will not be a valid
 Humdrum file. (If the user wishes the extracted material to be in a
-valid Humdrum format, this could be done using the Humdrum **yank**
+valid Humdrum format, this could be done using the Humdrum <span class="tool">yank</span>
 command:`yank -m ';' 0 bigband > pauses`.)
 
-The **humsed** command can also be used to read **(r)** material from a
+The <span class="tool">humsed</span> command can also be used to read **(r)** material from a
 specified file whenever a certain condition occurs in the input stream.
 For example, the following command could be used to search for ` **kern`
 pause signifiers (;) and add a global comment indicating the presence of

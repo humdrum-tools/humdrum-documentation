@@ -7,7 +7,7 @@ permalink:	/tool/smf/index.html
 
 ### COMMAND
 
-**smf** -- generate standard MIDI file from Humdrum `**MIDI` input
+<span class="tool">smf</span> -- generate standard MIDI file from Humdrum `**MIDI` input
 
 ------------------------------------------------------------------------
 
@@ -19,13 +19,13 @@ permalink:	/tool/smf/index.html
 
 ### DESCRIPTION
 
-The **smf** command allows the user to create \"standard MIDI files\"
+The <span class="tool">smf</span> command allows the user to create \"standard MIDI files\"
 from Humdrum `**MIDI`-format files. Standard MIDI files (SMFs) are
 industry-standard binary files that can be imported by a variety of MIDI
 applications software packages, including sequencer programs and several
 music notation packages.
 
-The **smf** command accepts as input Humdrum files containing `**MIDI`
+The <span class="tool">smf</span> command accepts as input Humdrum files containing `**MIDI`
 representations. All `**MIDI` spines present in the input stream are
 translated to SMF MIDI. Non-`**MIDI` spines are ignored and will not
 affect the SMF output.
@@ -34,7 +34,7 @@ affect the SMF output.
 
 ### OPTIONS
 
-The **smf** command provides the following command-line options:
+The <span class="tool">smf</span> command provides the following command-line options:
 
 >   ---------- -------------------------------------------------------
 >   **-h**     displays a help screen summarizing the command syntax
@@ -55,7 +55,7 @@ interpretation for metronome marking (e.g. `*MM96`). Minimum and maximum
 tempi are 8 and 250 quarter-notes per minute respectively. Tempo
 specifications found in the input representation take precedence over
 any tempo specified on the command line. If no tempo information is
-available, **smf** assumes a default tempo of 66 quarter-notes per
+available, <span class="tool">smf</span> assumes a default tempo of 66 quarter-notes per
 minute.
 
 The **-v** option allows the user to specify a key-velocity default.
@@ -71,8 +71,8 @@ key-velocity value is 64.
 
 ### DIAGNOSTICS
 
-The **smf** command produces MIDI Standard \"format 0\" files. When used
-in conjunction with the [**midi**](midi.html) command, the **midi -u**
+The <span class="tool">smf</span> command produces MIDI Standard \"format 0\" files. When used
+in conjunction with the <span class"tool">midi</span> command, the **midi -u**
 option should be invoked in order to ensure that all notes are turned
 off.
 

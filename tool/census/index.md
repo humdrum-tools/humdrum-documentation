@@ -8,7 +8,7 @@ permalink:	/tool/census/index.html
 
 ### COMMAND
 
-**census** -- determine general properties of a Humdrum input
+<span class="tool">census</span> -- determine general properties of a Humdrum input
 
 ------------------------------------------------------------------------
 
@@ -20,13 +20,13 @@ permalink:	/tool/census/index.html
 
 ### DESCRIPTION
 
-The **census** command provides a summary of seven gross features of any
+The <span class="tool">census</span> command provides a summary of seven gross features of any
 Humdrum input. It provides counts of the total number of records
 (lines), the number of unique interpretations encountered, the number of
 comments, the number of data records, the number of data tokens, null
 tokens, and multiple-stops.
 
-When the **-k** option is invoked, **census** provides a summary of a
+When the **-k** option is invoked, <span class="tool">census</span> provides a summary of a
 further ten features pertaining to `**kern` inputs. This summary
 includes the number of single and double barline records, the maximum
 number of concurrent notes, the total number of note-heads, the total
@@ -38,7 +38,7 @@ encountered.
 
 ### OPTIONS
 
-The **census** command provides the following options:
+The <span class="tool">census</span> command provides the following options:
 
 > > **-h**
 

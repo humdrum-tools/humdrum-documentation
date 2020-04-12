@@ -7,7 +7,7 @@ permalink:	/tool/vox/index.html
 
 ### COMMAND
 
-**vox** -- determine number of simultaneously active pitches in a
+<span class="tool">vox</span> -- determine number of simultaneously active pitches in a
 Humdrum input
 
 ------------------------------------------------------------------------
@@ -20,18 +20,18 @@ Humdrum input
 
 ### DESCRIPTION
 
-The **vox** command calculates the number of tones sounding together at
+The <span class="tool">vox</span> command calculates the number of tones sounding together at
 successive moments in time. It outputs a single Humdrum spine (`**vox#`)
 where successive integers indicate the total number of concurrently
 sounding pitches for each data record. Multiple-stops are properly
 supported.
 
-The **vox** command accepts as input any pitch-encoded Humdrum
+The <span class="tool">vox</span> command accepts as input any pitch-encoded Humdrum
 representations listed below. For descriptions of the various input
 representations refer to Section 2 *(Representation Reference)* of this
 reference manual.
 
-It is recommended that output files produced using the **vox** command
+It is recommended that output files produced using the <span class="tool">vox</span> command
 should be given names with the distinguishing \`.vox\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
@@ -51,13 +51,13 @@ should be given names with the distinguishing \`.vox\' extension.
 >   `**Tonh`     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
-*Input representations processed by **vox**.*
+*Input representations processed by <span class="tool">vox</span>.*
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **vox** command provides only a help option:
+The <span class="tool">vox</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax

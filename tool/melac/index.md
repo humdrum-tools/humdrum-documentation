@@ -8,7 +8,7 @@ permalink:	/tool/melac/index.html
 
 ### COMMAND
 
-**melac** &mdash; calculate melodic accent values for successive pitches in
+<span class="tool">melac</span> &mdash; calculate melodic accent values for successive pitches in
 a Humdrum input
 
 ------------------------------------------------------------------------
@@ -21,26 +21,26 @@ a Humdrum input
 
 ### DESCRIPTION
 
-The **melac** command accepts as input Humdrum ` **semits` data and
+The <span class="tool">melac</span> command accepts as input Humdrum ` **semits` data and
 outputs a series of values representing the degree of melodic accent
 associated with each note. Melodic accent values vary between 0 (no
 accent) and 1 (maximum accent). Input is limited to only a single
 ` **semits` data spine.
 
-The **melac** command implements a model of melodic accent developed by
+The <span class="tool">melac</span> command implements a model of melodic accent developed by
 Joseph Thomassen (see [REFERENCES](#REFERENCES)). Thomassen's model is
 sensitive to pitch contour only &mdash; distinguishing just three types of
 melodic motion: ascending, descending, and unison. The model calculates
 tonal accent values according to a moving 3-pitch window.
 
-It is recommended that output files produced using the **melac** command
+It is recommended that output files produced using the <span class="tool">melac</span> command
 should be given names with the distinguishing \`.mac\' extension.
 
 ------------------------------------------------------------------------
 
 ### OPTIONS
 
-The **melac** command provides only a help option:
+The <span class="tool">melac</span> command provides only a help option:
 
 >   -------- -------------------------------------------------------
 >   **-h**   displays a help screen summarizing the command syntax
@@ -52,7 +52,7 @@ Options are specified in the command line.
 
 ### EXAMPLES
 
-The following example illustrates the output of the **melac** command.
+The following example illustrates the output of the <span class="tool">melac</span> command.
 The `**semits` spine is the input, and the `**melac` spine is the
 corresponding output. (A `**kern` equivalent to `**semits` has been
 added to increase the readability.) ``

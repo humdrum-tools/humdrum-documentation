@@ -8,7 +8,7 @@ permalink:	/tool/pc/index.html
 
 ### COMMAND
 
-**pc** -- translate Humdrum semitone representation or pc to
+<span class="tool">pc</span> -- translate Humdrum semitone representation or pc to
 pitch-class
 
 ------------------------------------------------------------------------
@@ -21,19 +21,19 @@ pitch-class
 
 ### DESCRIPTION
 
-The **pc** command transforms various pitch-related inputs to
+The <span class="tool">pc</span> command transforms various pitch-related inputs to
 corresponding numerical pitch-class equivalents: C=0, C-sharp/D-flat=1,
 D=2, . . . B=11. It outputs one or more Humdrum `**pc` spines containing
 pitch-class values corresponding to each of the input pitch tokens. For
 example, the `**semits` token \"-13\" is transformed to 11 (pc).
 
-The **pc** command is able to translate any of the pitch-related
+The <span class="tool">pc</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the input and output
 representations refer to Section 2 *(Representation Reference)* of this
 reference manual.
 
-It is recommended that output files produced using the **pc** command
+It is recommended that output files produced using the <span class="tool">pc</span> command
 should be given names with the distinguishing \`.pc\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
@@ -48,9 +48,9 @@ should be given names with the distinguishing \`.pc\' extension.
 >   `**Tonh`     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
-*Input representations processed by **pc**.*
+*Input representations processed by <span class="tool">pc</span>.*
 
-Note that the **pc** command is also able to reprocess pitch-class
+Note that the <span class="tool">pc</span> command is also able to reprocess pitch-class
 (`**pc`) inputs. This allows pitch-class representations to be
 translated from numeric-only (0,1,2,3 \... 9,10,11) to mixed
 alphanumeric (0,1,2,3 \... 9,A,B) or vice versa. (See documentation for
@@ -60,7 +60,7 @@ alphanumeric (0,1,2,3 \... 9,A,B) or vice versa. (See documentation for
 
 ### OPTIONS
 
-The **pc** command provides the following options:
+The <span class="tool">pc</span> command provides the following options:
 
 >   -------- ---------------------------------------------------------------------------------
 >   **-a**   output alphanumeric representation (where A=10, B=11)
@@ -84,13 +84,13 @@ The **-t** option ensures that only a single output value is given for
 tied `**kern` notes; the output coincides with the first note of the
 tie.
 
-Note that **pc** will round-off frequencies and non-integer semitone
+Note that <span class="tool">pc</span> will round-off frequencies and non-integer semitone
 input values to the nearest pitch-class. Hence, an input `**semits` data
 token of 5.6 will be rendered in the `**pc` output as the value 6.
 Similarly, the input `**freq` value 452.1 will be rendered in the `**pc`
 output as the value 9.
 
-In the default operation, **pc** outputs non-pitch-related signifiers in
+In the default operation, <span class="tool">pc</span> outputs non-pitch-related signifiers in
 addition to the pitch-class value. For example, the `**semits` token
 \"X15yz\" will result in the output \"X3yz\" &mdash; that is, after
 translating 15 to pitch-class 3, the \"Xyz\" signifiers are retained in

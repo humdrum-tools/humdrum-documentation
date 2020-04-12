@@ -7,7 +7,7 @@ permalink:	/tool/fade/index.html
 
 ### COMMAND
 
-**fade** &mdash; modify \*\*MIDI data to effect a fade-in or fade-out
+<span class="tool">fade</span> &mdash; modify \*\*MIDI data to effect a fade-in or fade-out
 
 On-line documentation is not currently available for this command.
 
