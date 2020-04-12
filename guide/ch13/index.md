@@ -19,7 +19,7 @@ permalink:	/guide/ch13/index.html
 In the previous chapter we learned how to extract parts and passages
 from Humdrum files. In this chapter we discuss the reverse procedures:
 how to assemble and coordinate larger documents from individual segments
-and parts. We will discuss four tools: the UNIX **cat** command, and the
+and parts. We will discuss four tools: the UNIX <span class="unix">cat</span> command, and the
 Humdrum <span class="tool">assemble</span>,
 <span class="tool">timebase</span> and <span class="tool">rid</span>
 commands.
@@ -29,7 +29,7 @@ The *cat* Command
 -----------------
 
 
-The UNIX **cat** command allows two or more inputs to be concatenated
+The UNIX <span class="unix">cat</span> command allows two or more inputs to be concatenated
 together. If we concatenate two files, the output will consist of the
 contents of the first file, followed immediately by the contents of the
 second file. For example, the following command will concatenate
@@ -630,7 +630,7 @@ use the following command:
 grep -v ^= waltz | timebase -t 1. > 3rd_beat
 ```
 
-Note that the use of **grep** here is essential in order to eliminate
+Note that the use of <span class="unix">grep</span> here is essential in order to eliminate
 barlines. The <span class="tool">timebase</span> command resets itself with each barline, so
 time-base durations are calculated from the beginning of the bar. When
 barlines are eliminated, <span class="tool">timebase</span> cannot synchronize to the
@@ -665,7 +665,7 @@ assemble temp1 temp2 | midi | perform
 
 Similarly, suppose we would like to compare the bass lines for each
 variation in some set. We might extract each of the bass lines, assemble
-them into a single score, and then use the <span class="tool">ms</span> and **ghostview**
+them into a single score, and then use the <span class="tool">ms</span> and <span class="unix">ghostview</span>
 commands to allow us to see all of the bass lines for all of the
 variations concurrently.
 
@@ -703,7 +703,7 @@ assemble them together. This will generate an output consisting of two
 spines, [`**mint`](/rep/mint) and
 [`**solfa`](/rep/solfa). In effect, the `**mint`
 spine data will tell us the interval used to approach the scale degree
-encoded in the `**solfa` spine. We can use **grep** to search for the
+encoded in the `**solfa` spine. We can use <span class="unix">grep</span> to search for the
 appropriate combinations of interval and scale degree and count the
 number of occurrences:
 
@@ -745,7 +745,7 @@ extract -i '**harm' howells > temp3
 We have also extracted the `**harm` spine and placed it in the file
 `temp3`. If we assemble together our three temporary files, the result
 will have three spines: `**deg`, `**mint` and `**harm`. We can now use
-**grep** to search and count all instances of subdominant pitches that
+<span class="unix">grep</span> to search and count all instances of subdominant pitches that
 are approached by ascending thirds/sixths and that coincide with
 dominant seventh chords (in the `**kern` representation: \``V7`\'):
 
@@ -764,7 +764,7 @@ data record will correspond to the onset of the third beat. Recall from
 extract particular data records following a specified marker. In the
 following command, we have defined the marker as a barline (`-m ^=`) and
 instructed <span class="tool">yank</span> to fetch the fifth line following each occurrence of
-the marker (`-r 5`). In our example, the **grep** command is being used
+the marker (`-r 5`). In our example, the <span class="unix">grep</span> command is being used
 to count V/V chords occurring on third beats:
 
 ```bash
@@ -782,7 +782,7 @@ Reprise
 -------
 
 In this chapter we have learned how to concatenate musical passages
-together using the **cat** command. We also learned how to eliminate
+together using the <span class="unix">cat</span> command. We also learned how to eliminate
 redundant exclusive and tandem interpretations from concatenated outputs
 using the <span class="option">u</span> and <span class="option">t</span> options for <span class="tool">rid</span>. In
 addition, we learned how to assemble two or more spines into a single

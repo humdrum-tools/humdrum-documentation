@@ -79,13 +79,13 @@ number of noteheads. A tied note is considered to be a single "note,"
 although it may be notated using two or more noteheads.
 
 The output from <span class="tool">census</span> can be restricted to a particular item of
-information by "piping" the output to the UNIX **grep** command.
+information by "piping" the output to the UNIX <span class="unix">grep</span> command.
 
 
 Simple Searches using the *grep* Command
 ----------------------------------------
 
-The UNIX **grep** command is a popular tool for searching for lines that
+The UNIX <span class="unix">grep</span> command is a popular tool for searching for lines that
 match some specified pattern. Patterns may be simple strings of
 characters, or may be more complicated constructions defined using the
 UNIX *regular expression* syntax. Regular expressions will be described
@@ -117,16 +117,16 @@ grep 'Andante' *
 Once again, every line containing the sought pattern is echoed in the
 output. If more than one pattern is found, each instance of the pattern
 will be output on a separate line. Whenever an asterisk or "wildcard"
-is used as part of the filename, **grep** causes the *name* of each file
+is used as part of the filename, <span class="unix">grep</span> causes the *name* of each file
 to be prepended to the output for all patterns that are found:
 
 ```bash
 opus28:!! Andante  opus29:!! Andante  opus46:!! Andante  opus91:!! Andante  opus98:!! Andante
 ```
 
-By default, **grep** distinguishes upper- and lower-case characters, so
+By default, <span class="unix">grep</span> distinguishes upper- and lower-case characters, so
 the above command will not match strings such as "`ANDANTE`". However,
-the <span class="option">i</span> option tells **grep** to ignore the case when searching.
+the <span class="option">i</span> option tells <span class="unix">grep</span> to ignore the case when searching.
 E.g.,
 
 ```bash
@@ -147,7 +147,7 @@ Pattern Locations Using grep -n
 -------------------------------
 
 If a pattern is found, it is sometimes helpful to know the precise
-location of the pattern. The <span class="option">n</span> option tells **grep** to prepend the
+location of the pattern. The <span class="option">n</span> option tells <span class="unix">grep</span> to prepend the
 *line number* for each matching instance. The following command
 identifies the line numbers for lines containing a double sharp for the
 file `melody.krn`:
@@ -171,7 +171,7 @@ Counting Pattern Occurrences Using grep -c
 
 
 In some cases, the user is interested in counting the total number of
-instances of a found pattern. The <span class="option">c</span> option causes **grep** to
+instances of a found pattern. The <span class="option">c</span> option causes <span class="unix">grep</span> to
 output a numerical *count* of the number of lines containing matching
 instances. For example, in the `**kern` representation, the beginning of
 each phrase is marked by the presence of an open curly brace (\``{`\').
@@ -182,7 +182,7 @@ the file `glazunov.krn`:
 grep -c '{' glazunov.krn
 ```
 
-As noted, the **grep** command will search all lines (including
+As noted, the <span class="unix">grep</span> command will search all lines (including
 comments) for matching instances of the specified pattern. If a curly
 brace were to appear in a comment or other non-data record, then our
 phrase-count would be incorrect. More carefully constructed patterns
@@ -198,7 +198,7 @@ library-type information using reference records. For example, the
 [**composer\'s name**](guide.append1.html#Authorship_Information) is
 encoded in a `!!!COM:` record, and the
 [**title**](guide.append1.html#Identification_Information) is encoded
-via the `!!!OTL:` record. In conjunction with the **grep** command,
+via the `!!!OTL:` record. In conjunction with the <span class="unix">grep</span> command,
 these three-letter codes provide useful tags to search for pertinent
 information. For example, the following command will identify the
 composer for the file `opus24.krn`:
@@ -236,23 +236,23 @@ The output might look as follows:
 foster11:!!!OTL: Oh! Susanna  foster12:!!!OTL: Jeanie with the Light Brown Hair  foster13:!!!OTL: Beautiful Dreamer  foster14:!!!OTL: Gwine to Run All Night (or 'De Camptown Race')  foster15:!!!OTL: My Old Kentucky Home, Good-Night  foster16:!!!OTL: We are Coming, Father Abraam  foster17:!!!OTL: Don't Bet Your Money on De Shanghai  foster18:!!!OTL: Gentle Annie  foster19:!!!OTL: If You've Only Got a Moustache  foster20:!!!OTL: Maggie by my Side  foster21:!!!OTL: Old Folks at Home  foster22:!!!OTL: Better Times are Coming  foster23:!!!OTL: When this Dreadful War is Ended  foster24:!!!OTL: Hard Times Comes Again No More
 ```
 
-Remember that when a wildcard is used in filenames, **grep** prepends
+Remember that when a wildcard is used in filenames, <span class="unix">grep</span> prepends
 the filename prior to found patterns. These filename \`headers\' can be
-eliminated by selecting the <span class="option">h</span> option for **grep**:
+eliminated by selecting the <span class="option">h</span> option for <span class="unix">grep</span>:
 
 ```bash
 grep -h '!!!OTL:' *
 ```
 
-(N.B. Some older versions of **grep** do not support all of the options
+(N.B. Some older versions of <span class="unix">grep</span> do not support all of the options
 described here. Filename headers can be stripped from the output by
-using the UNIX **sed** command described in [Chapter 14.](/guide/ch14))
+using the UNIX <span class="unix">sed</span> command described in [Chapter 14.](/guide/ch14))
 
 We might place the resulting list of titles in a separate file using the
 UNIX *file redirection* construction. The output of a command can be
 placed into a file by following the command with a greater-than sign
 (\>) followed by a filename. For example, the following command places
-the output from **grep** in a file called `titles`:
+the output from <span class="unix">grep</span> in a file called `titles`:
 
 ```bash
 grep -h '!!!OTL:' * > titles
@@ -271,7 +271,7 @@ The *sort* Command
 ------------------
 
 The UNIX operating system provides a general sorting utility called
-**sort**. We might use this utility to rearrange the titles in
+<span class="unix">sort</span>. We might use this utility to rearrange the titles in
 alphabetical order:
 
 ```bash
@@ -279,7 +279,7 @@ sort titles
 ```
 
 Rather than using an intermediate file, we can directly connect the
-**grep** and **sort** commands using a UNIX "pipe." The vertical bar
+<span class="unix">grep</span> and <span class="unix">sort</span> commands using a UNIX "pipe." The vertical bar
 (`|`) creates a connection between the output of one command and the
 input of the next command. We can combine the above two commands to
 create an alphabetical listing of all titles in the current directory:
@@ -303,29 +303,29 @@ The *uniq* Command
 Bach often harmonized a chorale melody more than once. In the 185
 chorales in the original 1784 edition, several duplicate titles are
 present. Suppose you want to create an alphabetical list of titles, but
-you want to exclude duplicate titles. The UNIX **uniq** command provides
+you want to exclude duplicate titles. The UNIX <span class="unix">uniq</span> command provides
 a useful utility for eliminating duplication. Without any option,
-**uniq** simply eliminates any successive repeated lines. For example,
+<span class="unix">uniq</span> simply eliminates any successive repeated lines. For example,
 given the input:
 
 ```bash
 1  1  1  2  2  3
 ```
 
-the **uniq** command will produce the following output:
+the <span class="unix">uniq</span> command will produce the following output:
 
 ```bash
 1  2  3
 ```
 
-Note that **uniq** only discards *successive* repeated records; an input
-such as the following would remain unmodified by the **uniq** command:
+Note that <span class="unix">uniq</span> only discards *successive* repeated records; an input
+such as the following would remain unmodified by the <span class="unix">uniq</span> command:
 
 ```bash
 1  2  3  1  3  1
 ```
 
-Another important point about **uniq** is that successive lines must be
+Another important point about <span class="unix">uniq</span> is that successive lines must be
 *exact repetitions* in order to be discarded. For example, if one line
 has a trailing blank that is not present in the previous line, then the
 line is not discarded.
@@ -340,8 +340,8 @@ grep -h '!!!OTL:' * | sort | uniq
 
 Note that our "pipeline" consists of three successive commands with
 the outputs connected to the inputs using the UNIX pipe symbol (`|`).
-The **sort** command is essential in order to collect identical titles
-as successive lines before passing the list to **uniq**.
+The <span class="unix">sort</span> command is essential in order to collect identical titles
+as successive lines before passing the list to <span class="unix">uniq</span>.
 
 Suppose you wanted to ensure that all of the works in the current
 directory are composed by the same composer. The same command structure
@@ -378,7 +378,7 @@ grep -h '!!!AIN:' * | sort | uniq
 Options for the *uniq* Command
 ------------------------------
 
-Like **grep**, the **uniq** command provides several options that modify
+Like <span class="unix">grep</span>, the <span class="unix">uniq</span> command provides several options that modify
 its behavior. The <span class="option">d</span> option causes only those records to be output
 which are *duplicated* (i.e. two or more instances). Conversely, the
 <span class="option">u</span> option causes only those records to be output that are truly
@@ -403,7 +403,7 @@ in the current directory. The output might look as follows:
 ```
 
 Having established which titles are duplicates, a logical next step
-might be to identify the specific files involved. We can use **grep**
+might be to identify the specific files involved. We can use <span class="unix">grep</span>
 again to search for a specific title. Without the <span class="option">h</span> option, the
 output will identify the appropriate filenames. For example:
 
@@ -425,7 +425,7 @@ bwv272.krn:!!!OTL: Befiehl du deine Wege
 
 Sometimes we would like to have an output that contains *only* the
 *filenames* containing the sought pattern. The <span class="option">l</span> option causes
-**grep** to output only filenames that contain one or more instances of
+<span class="unix">grep</span> to output only filenames that contain one or more instances of
 the sought pattern:
 
 ```bash
@@ -444,13 +444,13 @@ bwv271.krn
 bwv272.krn
 ```
 
-As we\'ve already notes, the <span class="option">u</span> option for **uniq** causes only
+As we\'ve already notes, the <span class="option">u</span> option for <span class="unix">uniq</span> causes only
 unique entries in a list to be passed to the output. This is often
 useful in identifying works that differ in some way from other works in
 a group or corpus. For example, in some repertory, you may remember that
 a particular work had a different instrumentation than the other works.
 But you may not be able to remember what the specific instrumentation
-was. Use the <span class="option">u</span> option for **uniq** to produce a list consisting of
+was. Use the <span class="option">u</span> option for <span class="unix">uniq</span> to produce a list consisting of
 only those works whose instrumentation differs from all others:
 
 ```bash
@@ -458,7 +458,7 @@ grep -h '!!!AIN:' * | sort | uniq -u
 ```
 
 
-As in the case of the **grep** command, **uniq** also supports a <span class="option">c</span>
+As in the case of the <span class="unix">grep</span> command, <span class="unix">uniq</span> also supports a <span class="option">c</span>
 option which counts the number of occurrences of a pattern. For example,
 if we want to count the number of works by each composer in the current
 directory:
@@ -478,8 +478,8 @@ Notice that the number of instances is prepended to the reference
 records.
 
 Incidentally, if we wanted to rearrange this list in order of the number
-of works, we could pass the above output to yet another **sort**
-command. Since **sort** sorts from left to right, it will begin sorting
+of works, we could pass the above output to yet another <span class="unix">sort</span>
+command. Since <span class="unix">sort</span> sorts from left to right, it will begin sorting
 according to the numerical values at the extreme left. The command
 
 ```bash
@@ -492,16 +492,16 @@ will rearrange the above output as follows:
  2 !!!COM: Caldara, Antonio   2 !!!COM: Sweelinck, Jan Pieterszoon   4 !!!COM: Josquin Des Pres   9 !!!COM: Berardi, Angelo  12 !!!COM: Zarlino, Gioseffo
 ```
 
-It is important to understand that the two **sort** commands in our
+It is important to understand that the two <span class="unix">sort</span> commands in our
 pipeline achieve different goals but use the same process. The first
-**sort** command sorts the composer\'s names into alphabetical order.
-This is done so that the ensuing **uniq** command is able to count
+<span class="unix">sort</span> command sorts the composer\'s names into alphabetical order.
+This is done so that the ensuing <span class="unix">uniq</span> command is able to count
 successive identical records. Since the **uniq -c** command prepends
-numerical counts, the subsequent **sort** sorts first according to the
+numerical counts, the subsequent <span class="unix">sort</span> sorts first according to the
 numbers to the left of the reference records.
 
-As a final note, we might mention that, like **grep** and **uniq**, the
-**sort** command has several options. One option, the <span class="option">r</span> option,
+As a final note, we might mention that, like <span class="unix">grep</span> and <span class="unix">uniq</span>, the
+<span class="unix">sort</span> command has several options. One option, the <span class="option">r</span> option,
 causes the output to be arranged in reverse order. This can be useful in
 producing lists that are ordered from most common to least common.
 
@@ -519,31 +519,31 @@ of notes and rests, the highest and lowest notes, the number of
 barlines, etc.
 
 In this chapter we also introduced simple searching techniques using the
-**grep** command; **grep** provides a useful way of locating particular
-patterns of text characters in files. We used **grep** to identify
+<span class="unix">grep</span> command; <span class="unix">grep</span> provides a useful way of locating particular
+patterns of text characters in files. We used <span class="unix">grep</span> to identify
 composers, titles, instrumentation and other information. Most of our
 examples were limited to searching for Humdrum reference records. In
-later chapters we will use **grep** in more sophisticated searches. We
-noted several useful options for **grep**: the <span class="option">c</span> option causes a
+later chapters we will use <span class="unix">grep</span> in more sophisticated searches. We
+noted several useful options for <span class="unix">grep</span>: the <span class="option">c</span> option causes a
 count to be output of the number of instances of the pattern in each
-file. The <span class="option">i</span> option causes **grep** to ignore any distinction
+file. The <span class="option">i</span> option causes <span class="unix">grep</span> to ignore any distinction
 between upper- and lower-case characters when searching for patterns.
-The <span class="option">h</span> option causes **grep** to suppress outputting the filenames
+The <span class="option">h</span> option causes <span class="unix">grep</span> to suppress outputting the filenames
 prior to found patterns when more than one file is searched. The <span class="option">l</span>
 option results in only the filenames being output. In a later chapter we
-will encounter a number of other useful options provided by **grep**.
+will encounter a number of other useful options provided by <span class="unix">grep</span>.
 
-Also discussed in this chapter was the **uniq** command; **uniq**
+Also discussed in this chapter was the <span class="unix">uniq</span> command; <span class="unix">uniq</span>
 provides a useful utility for eliminating or isolating duplicate records
 or lines. Once again a number of useful options were introduced. The
-<span class="option">c</span> option causes **uniq** to prepend a count of the number of
+<span class="option">c</span> option causes <span class="unix">uniq</span> to prepend a count of the number of
 duplicate input lines. The <span class="option">d</span> option results in only duplicate input
 lines being noted in the output. The <span class="option">u</span> option does the reverse:
 only those input lines that are unique are passed to the output.
 
-Finally, we introduced the UNIX **sort** utility. This command
+Finally, we introduced the UNIX <span class="unix">sort</span> utility. This command
 rearranges the order of successive input lines so they are in
-alphabetic/numeric order. The **sort** command provides a wealth of
+alphabetic/numeric order. The <span class="unix">sort</span> command provides a wealth of
 useful options; however, we mentioned only the <span class="option">r</span> option \-- which
 causes the output to be sorted in reverse order.
 

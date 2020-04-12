@@ -381,7 +381,7 @@ short (S) using the <span class="tool">dur</span> command, followed by
 
 Using <span class="tool">context</span> **-n 3** we could then create
 contextual \`triples\' so that data records contain three durations.
-Suppose also that we have used **sed** to change the names of the
+Suppose also that we have used <span class="unix">sed</span> to change the names of the
 exclusive interpretations so they are more appropriate. As a result we
 have three spines that, when assembled together are organized as in
 Example 26.1

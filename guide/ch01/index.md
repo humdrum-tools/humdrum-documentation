@@ -432,7 +432,7 @@ mint -c filename | egrep -n '((d5)|(A4))'
 ```
 
 Incidentally, Humdrum data can be processed by many common commands that
-are not part of the Humdrum Toolkit. The **egrep** command in the above
+are not part of the Humdrum Toolkit. The <span class="unix">egrep</span> command in the above
 pipeline is a common computer utility and is not part of the Humdrum
 Toolkit.
 

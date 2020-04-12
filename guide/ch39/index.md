@@ -120,12 +120,12 @@ manner.
     <span class="tool">perform</span> commands to listen to sample
     passages; ensure that the data makes sense.
 -   If you are uncertain of the quality of the data, try encoding a
-    randomly selected subset and then use the UNIX **diff** command to
+    randomly selected subset and then use the UNIX <span class="unix">diff</span> command to
     identify any differences between the original data and the
     re-encoded data.
 -   Always read any release notes or README files that accompany the
     data.
--   Use **grep** to search for *warning* and *Nota Bene* reference
+-   Use <span class="unix">grep</span> to search for *warning* and *Nota Bene* reference
     records (`!!!RWG:` and `!!!ONB:`). These records may contain
     important editorial notes or warnings.
 -   Where appropriate, expand files to through-composed versions (using
@@ -138,22 +138,22 @@ manner.
 -   If necessary, eliminate certain types of data that might confound or
     interfere with your search in some way. Use
     <span class="tool">rid</span>, **grep -v**,
-    <span class="tool">extract</span> <span class="option">i</span>, **sed** and/or
+    <span class="tool">extract</span> <span class="option">i</span>, <span class="unix">sed</span> and/or
     <span class="tool">humsed</span> to restrict the data.
 
 **(2) Ensure that you are searching all of the intended data:**
 
--   Use **grep** to search for titles, or composers, or opus numbers,
+-   Use <span class="unix">grep</span> to search for titles, or composers, or opus numbers,
     etc., in order to ensure that the file or files you are searching
     are the ones you want. Also check to ensure that you are not
     searching materials that don\'t belong in the input.
 -   Be wary of searching duplicated materials. Create inventories of
     titles, opus numbers, etc., and use **uniq -d** to identify unwanted
     duplicate copies of works or files.
--   Use the **ls -l** or **wc** commands to determine the size of the
+-   Use the **ls -l** or <span class="unix">wc</span> commands to determine the size of the
     search data. Does the amount of input data seem unduly small or
     unduly large?
--   Use the **find** command to search the system for other files that
+-   Use the <span class="unix">find</span> command to search the system for other files that
     ought to be included in the search task.
 
 **(3) One of the most common problems in searching arises** **from
@@ -163,15 +163,15 @@ inaccurate or inappropriate search templates.**
 
 -   Be careful when formulating regular expressions. Read aloud the
     meaning of the regular expression.
--   Do not use *extended* regular expressions with the **grep** command.
-    Use **egrep** instead.
+-   Do not use *extended* regular expressions with the <span class="unix">grep</span> command.
+    Use <span class="unix">egrep</span> instead.
 -   Ensure that you know which characters in your search template are
     meta-characters.
 -   Execute your command from a shell script file so that you don\'t
     inadvertently make a typing error when entering the command.
 -   Maintain a command history file so that you have a permanent record
     of what you did. Depending on the system settings, the UNIX
-    **history** command will display the past 100 (or more) commands you
+    <span class="unix">history</span> command will display the past 100 (or more) commands you
     have executed. Place this information in a permanent `record` file
     as follows:
 
@@ -187,7 +187,7 @@ inaccurate or inappropriate search templates.**
     "lures" in your test \-- i.e., patterns that are close to what you
     want, but should be rejected.
 -   Use extra caution when using "not" logic. For example, the
-    **grep** expression "not-A" (i.e. `[^A]`) will still match records
+    <span class="unix">grep</span> expression "not-A" (i.e. `[^A]`) will still match records
     containing the letter `A` as long as one non-A letter is present.
     The commands
 
@@ -229,7 +229,7 @@ inaccurate or inappropriate search templates.**
 **Tips:**
 
 -   Remember that *extended* regular expressions require the use of
-    **egrep** rather than **grep**.
+    <span class="unix">egrep</span> rather than <span class="unix">grep</span>.
 -   Re-read the documentation to ensure that each software tool does
     what you think it does.
 -   Refer to the examples given in the *Humdrum Reference Manual* in
@@ -280,7 +280,7 @@ processing errors.
     confidence in your pipeline use a *different* sample of input data.
     Again add one software tool at a time while inspecting the results
     at each stage.
--   Use the UNIX **tee** command to generate files at intermediate
+-   Use the UNIX <span class="unix">tee</span> command to generate files at intermediate
     points in the processing. Use the
     <span class="tool">assemble</span> command to align inputs and
     outputs at various stages in the processing.

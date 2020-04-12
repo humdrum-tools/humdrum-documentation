@@ -544,7 +544,7 @@ extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \
 Another approach to this problem might be to count the number of dynamic
 contrasts, avoiding the use of the **db** command. In the following
 pipeline, we use <span class="tool">context</span> to generate pairs
-of dynamic markings, and then use **grep** to count the number of
+of dynamic markings, and then use <span class="unix">grep</span> to count the number of
 alternations between *f* and *p*.
 
 ```bash
@@ -654,7 +654,7 @@ extract -i '**MIDI' mono_input | humsed 's/.*\///' \
 ```
 > \| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
 
-Notice the use of the **sed** command to replace the \*\*MIDI
+Notice the use of the <span class="unix">sed</span> command to replace the \*\*MIDI
 interpretation by a \*\*dB interpretation.
 
 ------------------------------------------------------------------------

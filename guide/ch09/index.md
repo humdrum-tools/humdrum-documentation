@@ -24,7 +24,7 @@ successful pattern match might even be used to initiate further pattern
 searches.
 
 In [Chapter 3](/guide/ch03) we introduced simple searching using the
-**grep** command. We used **grep** to search for strings of characters
+<span class="unix">grep</span> command. We used <span class="unix">grep</span> to search for strings of characters
 that match a particular pre-defined string. This chapter describes the
 full power of *regular expressions* for defining complex patterns of
 characters. Becoming skilled with regular expressions is perhaps the
@@ -550,7 +550,7 @@ anchors (`^`) and (`$`), character classes (`[...]`), or complementary
 character classes (`[^...]`). Parenthesis grouping is supported in basic
 regular expressions, but the parentheses must be used in conjunction
 with the backslash to *enable* this function (i.e.` \(  \)  `). In
-[Chapter 3](/guide/ch03) we introduced the **grep** command; **grep**
+[Chapter 3](/guide/ch03) we introduced the <span class="unix">grep</span> command; <span class="unix">grep</span>
 supports only basic regular expressions.
 
 "Extended" regular expressions include the following: the
@@ -558,8 +558,8 @@ single-character wild-card (`.`), the repetition operators (`*), (?)`
 and `(+)`, the context anchors (`^`) and (`$`), character classes
 (`[...]`), complementary character classes (`[^...]`), the logical OR
 (`|`), and parenthesis grouping. Extended regular expressions are
-supported by the **egrep** command; **egrep** operates in the same
-manner as **grep**, only the search patterns are interpreted according
+supported by the <span class="unix">egrep</span> command; <span class="unix">egrep</span> operates in the same
+manner as <span class="unix">grep</span>, only the search patterns are interpreted according
 to extended regular expression syntax.
 
 The Humdrum <span class="tool">pattern</span> command further extends regular expression
@@ -584,8 +584,8 @@ may be defined (\[\^ \]). The logical OR (\|) may be used in conjunction
 with parentheses to define more complex expressions.
 
 There are many software tools that make use of regular expressions. The
-UNIX **grep** command supports standard or "basic" regular
-expressions. The UNIX **egrep** command supports "extended" regular
+UNIX <span class="unix">grep</span> command supports standard or "basic" regular
+expressions. The UNIX <span class="unix">egrep</span> command supports "extended" regular
 expressions.
 
 In the next chapter we will explore how regular expressions may be used

@@ -85,7 +85,7 @@ the input so only the data of interest is present. Second we need to
 occurrences of each type of data token.
 
 Let\'s begin by discussing the second process. In [Chapter
-3](/guide/ch03) we saw how the UNIX **sort** command will rearrange
+3](/guide/ch03) we saw how the UNIX <span class="unix">sort</span> command will rearrange
 lines of data so that they are in alphabetical/numerical order. The
 command:
 
@@ -116,7 +116,7 @@ the output. Similarly, the \`B\'s have been rearranged on successive
 lines.
 
 The third step in generating an inventory is to count the number of
-occurrences of each unique data token. The **uniq** command described in
+occurrences of each unique data token. The <span class="unix">uniq</span> command described in
 [Chapter 3](/guide/ch03) will eliminate successive duplicate lines. For
 example, if we type:
 
@@ -136,12 +136,12 @@ C
 ```
 
 Notice that repetitions of the data "A" and "B" have disappeared.
-The simple **uniq** command is useful for telling us *how many different
+The simple <span class="unix">uniq</span> command is useful for telling us *how many different
 things* there are in an input. For example, the above output identifies
 just five different records \-- and three different types of data
 records.
 
-Recall that the <span class="option">c</span> option for **uniq** will cause a \`count\' to be
+Recall that the <span class="option">c</span> option for <span class="unix">uniq</span> will cause a \`count\' to be
 prepended to each output line. The command:
 
 ```bash
@@ -195,7 +195,7 @@ By way of summary, generating an inventory is a three-step process.
 First we *filter* the input so only the data of interest is present.
 Typically, this means using the <span class="tool">rid</span> command with one or more options
 to eliminate comments, interpretations, and perhaps null data records.
-Second we *sort* the data using the **sort** command so that identical
+Second we *sort* the data using the <span class="unix">sort</span> command so that identical
 records are amalgamated as neighbors. Finally, we use the **uniq -c** to
 *count* the number of occurrences of each type of data token. All three
 steps can be amalgamated into a single pipeline:
@@ -291,7 +291,7 @@ extract -i '**alpha' alphabet > justalpha
 extract -i '**bet' alphabet > justbet
 ```
 
-The **cat** command can then be used to concatenate the files end-to-end
+The <span class="unix">cat</span> command can then be used to concatenate the files end-to-end
 so they form a single column of data. With each data token of interest
 is on its own line, we can generate the appropriate inventory:
 
@@ -311,7 +311,7 @@ frequent or least frequent occurrences. For such long outputs, it might
 be more convenient to produce an output sorted according to frequency of
 occurrence. Notice that each output record from **uniq -c** begins with
 a number, and so the output is ideally suited for numerical sorting.
-We\'ve already learned that the **sort** command rearranges input
+We\'ve already learned that the <span class="unix">sort</span> command rearranges input
 records in alphabetic/numeric order.
 
 If we type
@@ -331,7 +331,7 @@ The output will be as follows:
 
 Now the output is sorted so that the least frequent occurrences are at
 the beginning, and the most frequent occurrences are at the end of the
-output. Incidentally, **sort** has a <span class="option">r</span> option that causes the
+output. Incidentally, <span class="unix">sort</span> has a <span class="option">r</span> option that causes the
 output to be sorted in reverse order. If we use **sort -r**, then the
 most common occurrences will be placed at the beginning of the output:
 
@@ -364,12 +364,12 @@ In other circumstances, it may be helpful to determine the proportion or
 percentage values rather than the actual numerical count. This can be
 calculated by dividing each of the inventory count numbers by the total
 number of data records processed. A convenient way to count records is
-via the UNIX **wc** (word count) command. The **wc** command provides
-three options. With the <span class="option">c</span> option, **wc** counts the number of
-characters in an input. With the <span class="option">w</span> option, **wc** counts the number
+via the UNIX <span class="unix">wc</span> (word count) command. The <span class="unix">wc</span> command provides
+three options. With the <span class="option">c</span> option, <span class="unix">wc</span> counts the number of
+characters in an input. With the <span class="option">w</span> option, <span class="unix">wc</span> counts the number
 of words in an input. A "word" is defined as any sequence of
 characters delineated by white space, such as spaces, tabs or new lines.
-With the <span class="option">l</span> option, **wc** counts the nmber of lines or records in
+With the <span class="option">l</span> option, <span class="unix">wc</span> counts the nmber of lines or records in
 the input.
 
 We can count the total number of non-null data records in a Humdrum
@@ -383,7 +383,7 @@ This will give us the total number of items in our inventory. Simple
 division will generate the percentages for each type of data record.
 
 Suppose, for example, that the total number of data records was
-determined to be 874. Using the UNIX **awk** command will allow us to
+determined to be 874. Using the UNIX <span class="unix">awk</span> command will allow us to
 easily generate the percentages for each data type via the command:
 
 ```bash
@@ -398,9 +398,9 @@ corresponding type of data.
 Excluding or Seeking Rare Events
 --------------------------------
 
-Recall from [Chapter 3](/guide/ch03) that the **uniq** command provides
+Recall from [Chapter 3](/guide/ch03) that the <span class="unix">uniq</span> command provides
 other options (besides the <span class="option">c</span> option). The <span class="option">d</span> option causes
-**uniq** to output *only* those records that are duplicated. In other
+<span class="unix">uniq</span> to output *only* those records that are duplicated. In other
 words, records that occur only once are eliminated from the input. This
 option can be useful when there are a lot of single-occurrence data
 tokens and you are only interested in those data records that occur more
@@ -418,7 +418,7 @@ Transforming and Editing Inventory Data
 ---------------------------------------
 
 Notice that two data records must be identical in order for them to be
-considered "the same" by **sort** and **uniq**. This means that
+considered "the same" by <span class="unix">sort</span> and <span class="unix">uniq</span>. This means that
 records such as the following are considered entirely different:
 
 
@@ -432,8 +432,8 @@ CBA
 ```
 
 Remember that step \#1 in generating inventories requires that we filter
-the data so only the data of interest is passed to **sort** and
-**uniq**. This means we must be careful about the state of the input.
+the data so only the data of interest is passed to <span class="unix">sort</span> and
+<span class="unix">uniq</span>. This means we must be careful about the state of the input.
 Depending on your goal, we will either want to *translate* the input to
 some other more appropriate representation, or *edit* the existing
 representation in order to discard or transform otherwise confounding
@@ -449,7 +449,7 @@ scale degrees using the <span class="tool">deg</span> or
 <span class="tool">solfa</span> commands.
 
 Instead of translating our data, we might wish to edit the data using
-the **sed** or <span class="tool">humsed</span> stream editors.
+the <span class="unix">sed</span> or <span class="tool">humsed</span> stream editors.
 Suppose we had a file (named "notes") consisting of pitch information,
 and we wanted to create an inventory of the diatonic pitch-letter names.
 Our input might look like this:

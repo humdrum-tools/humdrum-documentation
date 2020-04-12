@@ -199,8 +199,8 @@ first method, we translate to semitone data using
 using <span class="tool">xdelta</span>, and then classify into five
 interval types using <span class="tool">recode</span>. The
 <span class="tool">context</span> **-n 2** command will create pairs
-of interval types, then <span class="tool">rid</span>, **sort** and
-**uniq -c** are used to generate an inventory. Finally, we use **grep**
+of interval types, then <span class="tool">rid</span>, <span class="unix">sort</span> and
+**uniq -c** are used to generate an inventory. Finally, we use <span class="unix">grep</span>
 to identify what happens following ascending leaps:
 
 ```bash
@@ -387,7 +387,7 @@ We could create a similar reassignment file containing fingers
 pertaining to the pre-Boehm flute. Suppose the revised reassignment file
 was called `premodern`. We could determine how the finger transitions
 differ between the pre-Boehm traverse flute and the modern flute. In
-[Chapter 29](/guide/ch29) we will see how the **diff** command can be
+[Chapter 29](/guide/ch29) we will see how the <span class="unix">diff</span> command can be
 used to identify differences between two spines. This will allow us to
 identify specific places in the score where Baroque and modern
 fingerings differ.
@@ -407,7 +407,7 @@ Classifying with *humsed*
 The <span class="tool">recode</span> command is restricted to
 classifying numerical data only. For many applications, it is useful to
 be able to classify data according to non-numerical criteria. As we saw
-in [Chapter 14,](/guide/ch14) stream editors such as **sed** and
+in [Chapter 14,](/guide/ch14) stream editors such as <span class="unix">sed</span> and
 <span class="tool">humsed</span> provide automated substitution
 operations. Such string substitutions can be used for non-parametric
 classifying. We can illustrate this with **humsed.**
@@ -491,7 +491,7 @@ s/^[IiVv].*$/./
 
 (The precise file will depend on your preferred way of labeling
 cadences.) Remember that, unlike the <span class="tool">recode</span> command, all of the
-substitutions in a <span class="tool">humsed</span> or **sed** script are applied to every
+substitutions in a <span class="tool">humsed</span> or <span class="unix">sed</span> script are applied to every
 input line. The final substitution causes any record beginning with
 either an *i*, *i*, *v* or *V* to be changed to a null data token. In
 effect, any progression that is not deemed to be an authentic, plagal or
@@ -507,7 +507,7 @@ extract -i '**harm' chorales | context -o = -n 2 \
 We first extract the `**harm` spine using <span class="tool">extract</span>. We then generate
 a sequence of two-chord progressions using <span class="tool">context</span> \-- taking care
 to omit barlines (`-o =`). We then use <span class="tool">humsed</span> to run the script of
-cadence-name substitutions. Finally, we use the **sed** command to
+cadence-name substitutions. Finally, we use the <span class="unix">sed</span> command to
 change the name of the exclusive interpretation from `**harm` to
 something more suitable \-- `**cadences`.
 

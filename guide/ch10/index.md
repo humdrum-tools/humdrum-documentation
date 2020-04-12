@@ -26,12 +26,12 @@ The *grep* Command (Again)
 --------------------------
 
 Although regular expressions are used in a number of Humdrum commands,
-they are most frequently used in conjunction with the **grep** command
-encountered in [Chapter 3.](/guide/ch03) **grep** is a popular software
+they are most frequently used in conjunction with the <span class="unix">grep</span> command
+encountered in [Chapter 3.](/guide/ch03) <span class="unix">grep</span> is a popular software
 tool that is available from a number of manufacturers and sources. Many
-versions of **grep** differ in the options provided. For example, the
-version of **grep** distributed by the GNU Software Foundation provides
-no fewer than 19 options. Some of the most common options for **grep**
+versions of <span class="unix">grep</span> differ in the options provided. For example, the
+version of <span class="unix">grep</span> distributed by the GNU Software Foundation provides
+no fewer than 19 options. Some of the most common options for <span class="unix">grep</span>
 are identified in Table 10.1.
 
 **Table 10.1**
@@ -47,7 +47,7 @@ are identified in Table 10.1.
 -L	list	names	of	files	*not*	containing	the	regular	expression
 ```
 
-*Common options for the **grep** command.*
+*Common options for the <span class="unix">grep</span> command.*
 
 Many of the predefined Humdrum representations make use of the "common
 system" for representing barlines. The following command counts the
@@ -85,7 +85,7 @@ grep '^!!!*' *
 
 Notice that the two asterisks serve different functions in the above
 command. The first asterisk means "zero or more instances" and is part
-of the regular expression passed to **grep**. The second asterisk means
+of the regular expression passed to <span class="unix">grep</span>. The second asterisk means
 "all files in the current directory" and is expanded by the shell. The
 first asterisk is \`protected\' from the shell by the single quotes.
 Otherwise, the first asterisk might be expanded by the shell to a list
@@ -114,7 +114,7 @@ grep -c '\^' danmark3.krn
 
 
 In the following command we have used the backslash to escape the
-special meaning of the asterisk. The <span class="option">l</span> option causes **grep** to
+special meaning of the asterisk. The <span class="option">l</span> option causes <span class="unix">grep</span> to
 output only the names of any files that contain a line matching the
 pattern. Hence, the following command identifies those files in the
 current directory that encode music in 9/8 meter:
@@ -199,7 +199,7 @@ List those works that are in irregular meters:
 grep -l '!!!AMT.*irregular' *
 ```
 
-The <span class="option">L</span> option for **grep** causes the output to contain a list of
+The <span class="option">L</span> option for <span class="unix">grep</span> causes the output to contain a list of
 files *not* containing the regular expression. For example, we could
 identify those works that don\'t bear any dedication:
 
@@ -230,7 +230,7 @@ grep -c '!!!AMT.*simple.*triple' *
 
 
 When searching for more complex patterns it may be necessary to use
-**grep** more than once. Consider, for example, the problem of
+<span class="unix">grep</span> more than once. Consider, for example, the problem of
 identifying works whose titles contain both the words `Liebe` and `Tod`.
 The first of the following commands will identify only those titles that
 contain `Liebe` followed by `Tod`, whereas the second command will
@@ -243,12 +243,12 @@ grep '!!!OTL.*Liebe.*Tod' *
 grep '!!!OTL.*Tod.*Liebe' *
 ```
 
-A better solution is to pipe the output between two **grep** commands.
+A better solution is to pipe the output between two <span class="unix">grep</span> commands.
 Recall that the vertical bar (\`\|\') conveyes or "pipes" the output
 from one command to the input of a subsequent command. The following
 command passes all opus-title records (`OTL`) containing the word
-`Liebe` to a second **grep**, which passes only those records also
-containing the word `Tod`. Since both **grep** commands process the
+`Liebe` to a second <span class="unix">grep</span>, which passes only those records also
+containing the word `Tod`. Since both <span class="unix">grep</span> commands process the
 entire input line, it does not matter whether the word `Tod` precedes or
 follows the word `Liebe`:
 
@@ -256,7 +256,7 @@ follows the word `Liebe`:
 grep '!!!OTL.*Liebe' * | grep 'Tod'
 ```
 
-The <span class="option">v</span> option for **grep** causes a "reverse" or "negative"
+The <span class="option">v</span> option for <span class="unix">grep</span> causes a "reverse" or "negative"
 output. Instead of outputting all records that *match* the specified
 regular expression, the <span class="option">v</span> option causes only those records to be
 output that do *not* match the given regular expression. For example,
@@ -303,7 +303,7 @@ German, French, Italian, and Neapolitan Sixths
 ----------------------------------------------
 
 In conjunction with the <span class="tool">solfa</span> command,
-**grep** can be used to search for various types of special chords.
+<span class="unix">grep</span> can be used to search for various types of special chords.
 Suppose, for example, that we wanted to identify occurrences of
 augmented sixth chords. An augmented sixth chord is characterized by an
 augmented sixth interval occurring between the lowered sixth
@@ -325,7 +325,7 @@ degree is lower in pitch than the raised fourth degree. For augmented
 sixth chords, this is a reasonable presumption. In the unlikely
 situation that the raised fourth degree is lower in pitch than the
 lowered sixth degree, we would need to also search for the expression
-\``4+.*6-`\'. Alternatively, we could use two separate **grep**
+\``4+.*6-`\'. Alternatively, we could use two separate <span class="unix">grep</span>
 commands, eliminating the constraint of order:
 
 ```bash
@@ -371,12 +371,12 @@ AND-Searches Using the *xargs* Command
 
 In some cases, we want to identify those files that match two entirely
 different patterns (in different records). Recall that the <span class="option">l</span> option
-causes **grep** to output the *filename* rather than the matching
-record. If we could pass along these file names to another **grep**
+causes <span class="unix">grep</span> to output the *filename* rather than the matching
+record. If we could pass along these file names to another <span class="unix">grep</span>
 command, we could search those same files for yet another pattern.
 
 
-The UNIX **xargs** command provides a useful way of transferring the
+The UNIX <span class="unix">xargs</span> command provides a useful way of transferring the
 output from one command to be used as final arguments for a subsequent
 command. For example, the following command takes each file whose opus
 title contains the word `Liebe` and counts the number of phrases.
@@ -386,10 +386,10 @@ grep -l '!!!OTL:.*Liebe' * | xargs grep -c '^{'
 ```
 
 In this case the **grep -l** command outputs a list of names of files
-containing the string `Liebe` in an OTL reference record. The **xargs**
+containing the string `Liebe` in an OTL reference record. The <span class="unix">xargs</span>
 command causes these filenames to be appended to the end of the
-following **grep** command. The **grep -c** command will thus be applied
-only to those files already identified by the previous **grep** as
+following <span class="unix">grep</span> command. The **grep -c** command will thus be applied
+only to those files already identified by the previous <span class="unix">grep</span> as
 containing `Liebe` in the title.
 
 
@@ -419,7 +419,7 @@ grep -li '!!!OTL.*death' * | xargs grep -c '^\*[A-G][#-]*:'
 ```
 
 
-Note that the **xargs** command can be used again and again to continue
+Note that the <span class="unix">xargs</span> command can be used again and again to continue
 propagating file names as arguments to subsequent searches. For example,
 the following command outputs the key signatures for all works
 originating from Africa that are written in 3/4 meter:
@@ -457,7 +457,7 @@ OR-Searches Using the *grep -f* Command
 
 In effect, the above pipelines provide logical **AND** structures: e.g.
 identify works composed in the 17th century AND written for organ AND
-containing a passage in 6/8 meter. The <span class="option">f</span> option for **grep**
+containing a passage in 6/8 meter. The <span class="option">f</span> option for <span class="unix">grep</span>
 provides a way of creating logical **OR** searches. With the <span class="option">f</span>
 option, we specify a file containing the patterns being sought. For
 example, we might create a file called `criteria` containing the
@@ -467,13 +467,13 @@ following three regular expressions:
 !!!ODT.*16[0-9][0-9]/  !!!AIN.*organ  \*M6/8
 ```
 
-We would invoke **grep** as follows:
+We would invoke <span class="unix">grep</span> as follows:
 
 ```bash
 grep -l -f criteria *
 ```
 
-The <span class="option">f</span> option tells **grep** to fetch the file `criteria` and use
+The <span class="option">f</span> option tells <span class="unix">grep</span> to fetch the file `criteria` and use
 the records in this file as regular expressions. A match is made if any
 of the regular expressions is found.
 
@@ -541,8 +541,8 @@ neither a sharp (\#) nor a flat (-) nor another letter \`C\', nor is
 followed by the end of the line (\$).
 
 Recall that parenthesis grouping (\...) is part of the *extended*
-regular expression syntax. Therefore, we should use the **egrep** rather
-than the **grep** command with the above expressions. We can count the
+regular expression syntax. Therefore, we should use the <span class="unix">egrep</span> rather
+than the <span class="unix">grep</span> command with the above expressions. We can count the
 number of notes in a monophonic `**kern` input that belong to this
 whole-tone set:
 
@@ -564,22 +564,22 @@ egrep -c -f whole2 debussy
 Reprise
 -------
 
-The **grep** command is usually thought of as a way to find particular
+The <span class="unix">grep</span> command is usually thought of as a way to find particular
 patterns in a file or input stream. However, the various options for
-**grep** (such as -v, -l, and -L) allow **grep** to be used for other
+<span class="unix">grep</span> (such as -v, -l, and -L) allow <span class="unix">grep</span> to be used for other
 purposes. It can be used to isolate data, to count occurrences of
 patterns, to eliminate unwanted lines, to identify files for processing,
 and to avoid files that contain certain information.
 
-We have seen how the **xargs** command can be used to carry out
+We have seen how the <span class="unix">xargs</span> command can be used to carry out
 **AND**-searches where each work must conform to multiple criteria. We
-have also seen how the <span class="option">f</span> option for **grep** can be used to permit
+have also seen how the <span class="option">f</span> option for <span class="unix">grep</span> can be used to permit
 **OR**-searches where a work needs to conform only to one of a set of
 possible criteria.
 
-Although this chapter has focussed principally on the **grep** command,
+Although this chapter has focussed principally on the <span class="unix">grep</span> command,
 the ensuing chapters will show that regular expressions are used by a
 wide variety of commands. In [Chapter 33,](/guide/ch33) many more
-powerful examples will be discussed in conjunction with the **find**
+powerful examples will be discussed in conjunction with the <span class="unix">find</span>
 command.
 

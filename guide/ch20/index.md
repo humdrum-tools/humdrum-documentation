@@ -369,7 +369,7 @@ Section labels can be used in a wide number of applications. By way of
 illustration, here are a few pipeline processes involving section
 labels. First, we might ask the question \-- how does the user know
 what sections labels are present in a document? This is a task for
-**grep**:
+<span class="unix">grep</span>:
 `grep '^\*>'` *file*
 This command will also output any expansion-lists. If we want to
 restrict our output to identifying which *versions* are available for

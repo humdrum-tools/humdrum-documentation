@@ -24,7 +24,7 @@ editor can be used, for example, to automatically transform a document
 from British spelling to American spelling. Stream editors are
 especially useful when processing large numbers of documents \-- such as
 a series of files encoding some musical repertory. In this chapter we
-will introduce two stream editors: **sed** and
+will introduce two stream editors: <span class="unix">sed</span> and
 <span class="tool">humsed</span>.
 
 
@@ -32,9 +32,9 @@ The *sed* and *humsed* Commands
 -------------------------------
 
 The <span class="tool">humsed</span> command is simply a Humdrum
-version of the UNIX **sed** stream editor. The syntax and operation of
-**sed** and <span class="tool">humsed</span> are virtually identical. However, <span class="tool">humsed</span> will
-modify only Humdrum data records, whereas **sed** will modify any type
+version of the UNIX <span class="unix">sed</span> stream editor. The syntax and operation of
+<span class="unix">sed</span> and <span class="tool">humsed</span> are virtually identical. However, <span class="tool">humsed</span> will
+modify only Humdrum data records, whereas <span class="unix">sed</span> will modify any type
 of record, including Humdrum comments and interpretations. Both stream
 editors provide operations for *substitution*, *insertion*, *deletion*,
 *transliteration*, *file-read* and *file-write*. When used in
@@ -46,7 +46,7 @@ Simple Substitutions
 --------------------
 
 The most frequently used stream-editing operation is substitution. Both
-<span class="tool">humsed</span> and **sed** designate substitutions by the lower-case letter
+<span class="tool">humsed</span> and <span class="unix">sed</span> designate substitutions by the lower-case letter
 `s`. Substitutions require two strings: the *target string* to be
 replaced, and the *replacement string* to be introduced. The syntax for
 substitutions is as follows:
@@ -78,7 +78,7 @@ using the backslash character.
 
 There are two ways to execute a substition operation such as given
 above. One way is to give the substitution as a command-line argument to
-**sed** or <span class="tool">humsed</span>:
+<span class="unix">sed</span> or <span class="tool">humsed</span>:
 
 ```bash
 humsed s%A%B% filename
@@ -123,7 +123,7 @@ shell, we have escaped the entire substitution operation by placing it
 in single quotes. (Alternatively, we could place a backslash immediately
 before the double-quote character.) Note also the presence of the `g`
 option at the end of the string. Permissible options include any
-positive integer or the letter `g`. Without any option, the **sed** and
+positive integer or the letter `g`. Without any option, the <span class="unix">sed</span> and
 <span class="tool">humsed</span> substitute (s) operation will replace only the *first*
 occurrence of the string in each data record. The `g` option specifies a
 "global" substitution, in that all occurrences on a given data record
@@ -274,7 +274,7 @@ extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \
 ```
 
 The <span class="tool">extract</span> command has been added to ensure that we only process
-[`**MIDI`](/rep/MIDI) data; the **grep** command
+[`**MIDI`](/rep/MIDI) data; the <span class="unix">grep</span> command
 ensures that possible barlines are eliminated, and the <span class="tool">rid</span> command
 eliminates comments and interpretations prior to passing the data to the
 **stats** command.
@@ -284,7 +284,7 @@ Eliminate Everything But \...
 -----------------------------
 
 A common use for <span class="tool">humsed</span> is to eliminate
-signifiers that are not of interest. Stream editors like **sed** and
+signifiers that are not of interest. Stream editors like <span class="unix">sed</span> and
 <span class="tool">humsed</span> can be used to dramatically simplify a representation.
 
 Did Monteverdi use equivalent numbers of sharps and flats? Or did he
@@ -314,7 +314,7 @@ humsed 's/[^     ][^     ]*/./g' *inputfile*
 followed by zero or more instances of not-a-tab characters, by a single
 period character.) This sort of command can be useful in generating a
 file that maintains the *structure* but not the *content* of some
-document. Incidentally, neither the **sed** nor the <span class="tool">humsed</span> commands
+document. Incidentally, neither the <span class="unix">sed</span> nor the <span class="tool">humsed</span> commands
 support extended regular expressions, so we are not able to use the `+`
 metacharacter in the above substitution.
 
@@ -341,7 +341,7 @@ grep -v ^= *inputfile*
 In the general case, **humsed /\.../d** is preferable to **grep -v**.
 Remember that <span class="tool">humsed</span> only manipulates
 Humdrum data records; it never touches comments or interpretations. The
-**grep** command has no such restriction. Consider, for example, the
+<span class="unix">grep</span> command has no such restriction. Consider, for example, the
 following command to eliminate grace notes (acciaccaturas) from a
 `**kern`-format file.
 
@@ -462,7 +462,7 @@ Executing from a File
 When several instructions are involved in stream editing, it can be
 inconvenient to type multiple operations on the command line. It is
 easier to place the editing instructions in a file, and use the <span class="option">f</span>
-option (with either **sed** or <span class="tool">humsed</span>) to
+option (with either <span class="unix">sed</span> or <span class="tool">humsed</span>) to
 execute from the file. Consider, for example, the task of rhythmic
 diminution, where the durations of notes are halved. We might create a
 file called `diminute` containing the following operations:
@@ -604,20 +604,20 @@ humsed 'cadential-64/r comment.6-4' output > commented.output
 Reprise
 -------
 
-The **sed** and <span class="tool">humsed</span> commands provide
+The <span class="unix">sed</span> and <span class="tool">humsed</span> commands provide
 stream editors that can automatically edit a data stream. We\'ve seen
 that multiple operations can be carried out, either from the command
 line or from a file containing editing instructions. It should be noted
-that the **sed** and <span class="tool">humsed</span> commands provide many more editing
+that the <span class="unix">sed</span> and <span class="tool">humsed</span> commands provide many more editing
 facilities than those discussed in this chapter. Some 25 operations are
-provided by **sed** and <span class="tool">humsed</span>. For example, segments of text can be
+provided by <span class="unix">sed</span> and <span class="tool">humsed</span>. For example, segments of text can be
 stored in various buffers, the contents of these buffers modified, and
 the results placed anywhere in the output text. Markers can be set at
 particular points and conditional branch statements executed.
 Stream-editing scripts have been written to execute programs of
 considerable complexity. However, for most tasks, the simple substitute
 (**s**) and delete (**d**) operations are the most useful. For further
-information about stream editing using **sed**, refer to the book on
-**sed** and **awk** written by Dale Dougherty (listed in the
+information about stream editing using <span class="unix">sed</span>, refer to the book on
+<span class="unix">sed</span> and <span class="unix">awk</span> written by Dale Dougherty (listed in the
 bibliography).
 

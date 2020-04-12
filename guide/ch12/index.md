@@ -226,7 +226,7 @@ An important use of the <span class="option">i</span> option for <span class="to
 a particular input contains only a specified type of information. For
 example, the lower-case letter \``r`\' represents a rest in the
 [`**kern`](/rep/kern) representation. If we wish to
-determine which sonorities contain rests, we might want to use **grep**
+determine which sonorities contain rests, we might want to use <span class="unix">grep</span>
 to search for this letter. However, the input might contain other
 Humdrum interpretations (such as `**text`) where the presence of the
 letter \``r`\' does not signify a rest. We can ensure that our search is
@@ -434,7 +434,7 @@ extract -i '*ICstr' brahms | ms > brahms.ps
 ```
 
 
-The UNIX **lpr** command can be used to print a file or input stream.
+The UNIX <span class="unix">lpr</span> command can be used to print a file or input stream.
 Suppose we want to transpose the piano accompaniment for a song by Hugo
 Wolf up an augmented second, and then print the transposed part:
 
@@ -611,15 +611,15 @@ construction:
 yank -m regexp -r 0
 ```
 
-This command is analogous to the familiar **grep** command. However, the
+This command is analogous to the familiar <span class="unix">grep</span> command. However, the
 output from <span class="tool">yank</span> will preserve all of the appropriate
 interpretations. In short, <span class="tool">yank</span> guarantees that the output conforms
-to the Humdrum syntax, whereas **grep** does not.
+to the Humdrum syntax, whereas <span class="unix">grep</span> does not.
 
 
 Suppose, for example, that we wanted to calculate the pitch intervals
 between notes that either begin or end a phrase in a monophonic input.
-If we use **grep** to search for
+If we use <span class="unix">grep</span> to search for
 [`**kern`](/rep/kern) phrase indicators, we will be
 unable to process the resulting (non-Humdrum) output, since it will
 typically consist of just data records:
@@ -995,7 +995,7 @@ arbitrary delimiters. In addition to extracting by measures, by
 sonorities, or by labelled sections, we can extract by rests, phrase
 marks \-- in fact, by any user-defined marker. We also saw how the
 command **yank -m *regular-expression* -r 0** can be used as a more
-sophisticated version of **grep** \-- a search tool that ensures the
+sophisticated version of <span class="unix">grep</span> \-- a search tool that ensures the
 output will conform to the Humdrum syntax.
 
 In the next chapter we will discuss how segments of music can be put

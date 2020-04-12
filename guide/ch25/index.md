@@ -319,7 +319,7 @@ correlation. Values between +0.8 and +1.0 might be recoded as
 "similar"; values between +0.5 and +0.8 might be recoded as
 "maybe"; all other values might be recoded as null tokens.
 Assembling the recoded [`**correl`](/rep/correl) spines, one could
-use **grep** to search for moments in the score that are suitable
+use <span class="unix">grep</span> to search for moments in the score that are suitable
 marked as "similar" for both pitch and duration.
 
 Finally, a word of caution is in order regarding the use of the
@@ -1082,6 +1082,6 @@ allows the user to tailor the similarity measures to better suit the
 type of data being considered.
 The tools described in this chapter complement the pattern searching
 tools (such as <span class="tool">patt</span>,
-<span class="tool">pattern</span> and **grep**) described earlier.
+<span class="tool">pattern</span> and <span class="unix">grep</span>) described earlier.
 
 

@@ -82,7 +82,7 @@ generated from the individual parts using the
 <span class="tool">assemble</span> commands.
 
 The <span class="tool">encode</span> command implements a full-screen interactive editor
-similar to the **vi** text editor. When invoked, the screen is divided
+similar to the <span class="unix">vi</span> text editor. When invoked, the screen is divided
 into three display regions, including a *status window*, a *command
 window*, and a larger *text window*. The *status window* displays
 various items of basic information about the file being edited. The

@@ -16,12 +16,12 @@ permalink:	/guide/ch21/index.html
 ------------------------------------------------------------------------
 
 
-The **grep** and **egrep** commands are useful for identifying patterns
+The <span class="unix">grep</span> and <span class="unix">egrep</span> commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the
 <span class="tool">context</span> command can be used to amalgamate
 groups of successive data tokens on a single line \-- and so facilitate
-searching for sequential patterns using **grep** or **egrep**. For many
-tasks, the combination of <span class="tool">context</span> and **grep** provides the most
+searching for sequential patterns using <span class="unix">grep</span> or <span class="unix">egrep</span>. For many
+tasks, the combination of <span class="tool">context</span> and <span class="unix">grep</span> provides the most
 convenient way to search for user-specified patterns. However, not all
 patterns can be conveniently identified using this approach. In this
 chapter we will introduce two additional tools that are intended to
@@ -33,9 +33,9 @@ The *patt* Command
 ------------------
 
 The <span class="tool">patt</span> command may be regarded as a
-two-dimensional version of **grep**. Like **grep**, <span class="tool">patt</span> searches
+two-dimensional version of <span class="unix">grep</span>. Like <span class="unix">grep</span>, <span class="tool">patt</span> searches
 for lines that match user-specified regular expressions. However, unlike
-**grep**, <span class="tool">patt</span> can search for a sequence of records that match a
+<span class="unix">grep</span>, <span class="tool">patt</span> can search for a sequence of records that match a
 sequence of user-specified regular expressions. Specifically, <span class="tool">patt</span>
 will look for an input line that matches the first (of potential many)
 user-specified regular expression. Then <span class="tool">patt</span> will determine whether
@@ -174,7 +174,7 @@ measures of Bach\'s second fugue from the *Well-Tempered Clavier*, vol.
 end with a *tierce de picardie*. We need to search for a raised third
 scale degree in close proximity to the end of a work for those works in
 a minor key. First we might identify those works in minor keys. The
-following **grep** command will search all files in the current
+following <span class="unix">grep</span> command will search all files in the current
 directory for a tandem interpretation indicating a minor key. Recall
 that minor keys are identified by an asterisk followed by a lower-case
 pitch-letter name, followed by an optional accidental, followed by the
@@ -660,7 +660,7 @@ Reprise
 -------
 
 In this chapter and previous chapters we have identified several
-search-related tools, including the UNIX **grep** and **egrep** commands
+search-related tools, including the UNIX <span class="unix">grep</span> and <span class="unix">egrep</span> commands
 as well as the Humdrum <span class="tool">patt</span> and
 <span class="tool">pattern</span> commands. Each of these tools has
 different strengths and weaknesses and it is not always clear which tool

@@ -205,7 +205,7 @@ text inputfile > outputfile
 A simple text-related task might be looking for occurrences of a
 particular word, such as the German "Liebe" (love). If the lyrics are
 encoded in the [`**text`](/rep/text) representation,
-then a simple **grep** will suffice:
+then a simple <span class="unix">grep</span> will suffice:
 
 ```bash
 grep -n 'Liebe' schubert
@@ -214,7 +214,7 @@ grep -n 'Liebe' schubert
 Recall that the <span class="option">n</span> option gives the line number of any occurrences
 found. If the input is encoded in the
 [`**silbe`](/rep/silbe) representation, then the
-output of <span class="tool">text</span> can be piped to **grep**:
+output of <span class="tool">text</span> can be piped to <span class="unix">grep</span>:
 
 ```bash
 extract -i '**silbe' schubert | text | grep -n 'Liebe'
@@ -222,7 +222,7 @@ extract -i '**silbe' schubert | text | grep -n 'Liebe'
 
 
 Given a `**silbe` input, a inventory of words can be generated using
-**sort** and **uniq** in the usual way:
+<span class="unix">sort</span> and <span class="unix">uniq</span> in the usual way:
 
 ```bash
 extract -i '**silbe' song | text | rid -GLId | sort | uniq
@@ -260,7 +260,7 @@ Another common task is simply to provide a readable text of the text or
 lyrics of a work. Given a `**text` representation, we can use the
 <span class="tool">rid</span> command to eliminate all records except
 non-null data records. This will result in a list of words \-- one word
-per line. UNIX provides a simple text formatter called **fmt** that will
+per line. UNIX provides a simple text formatter called <span class="unix">fmt</span> that will
 assemble words or lines into a block text where all output lines are
 roughly the same width. <a name ="Gregorian_Chant"></a>
 [Consider the Gregorian chant *A Solis Ortus* from the *Liber Usualis*
@@ -276,7 +276,7 @@ The Latin text for this chant can be formatted as follows:
 extract -i '**silbe' chant12 | text | rid -GLId | fmt -50
 ```
 
-The **-50** option tells **fmt** to place no more than 50 characters per
+The **-50** option tells <span class="unix">fmt</span> to place no more than 50 characters per
 line. The default line-length is 72 characters. The above pipeline
 produces the following output:
 
@@ -353,7 +353,7 @@ The result is as follows:
 A solis ortus cardine }  ad usque terrae limitem, }  Christum canamus principem, }  natum Maria Virgine. }  Beatus auctor saeculi }  servile corpus induit: }  ut carne carnem liberans, }  ne perderet quos condidit. }  Castae parentis viscera }  cae lestis intratgratia: }  venter puellae bajulat }  secreta, quae non noverat. }  Domus pudici pectoris }  tem plum repente fit Dei: }  intacta nesciens virum, }  concepit alvo filium. }
 ```
 
-We could clean up the output by using the **sed** command to remove the
+We could clean up the output by using the <span class="unix">sed</span> command to remove the
 trailing closed curly brace. We simple add the following to the
 pipeline:
 
@@ -393,8 +393,8 @@ A so/- -lis or/- -tus car/- -di- -ne  ad us- -que ter/- -rae li/- -mi- -tem,  Ch
 If we are looking for vocal texts that exhibit a recurring rhythm, we
 might make a simple addition to the above script. Instead of outputting
 the actual syllables in each phrase, we would output a count of the
-number of syllables in each phrase. The standard **awk** utility allows
-us to write simple in-line programs. The following **awk** script simply
+number of syllables in each phrase. The standard <span class="unix">awk</span> utility allows
+us to write simple in-line programs. The following <span class="unix">awk</span> script simply
 outputs the number of fields (white-space separated text) in each input
 line:
 
@@ -538,7 +538,7 @@ where the middle word (in bold) identifies the keyword.]{#Samuel_Barber}
 >   `chant21`   2    `Dominus a cena, misit aquam`
 >   etc.             
 >   ----------- ---- -------------------------------------------
-We would also like to provide a **grep**-like search tool so users can
+We would also like to provide a <span class="unix">grep</span>-like search tool so users can
 search for particular keywords.
 
 The following script will generate our concordance file. For each file
@@ -581,10 +581,10 @@ rm temp\[1-4\]
 Having generated our concordance file, we can now create a simple tool
 that allows us to search for keywords. Suppose we kept our concordance
 information in a file called `~/home/concord/master`. In essence, we\'d
-like to create a command akin to **grep** \-- but one that searches this
+like to create a command akin to <span class="unix">grep</span> \-- but one that searches this
 file solely according to the third word in the in the context. We cannot
-use **grep** directly since it will find all occurrences of a word no
-matter where it occurs in the context. We need to tell **grep** to
+use <span class="unix">grep</span> directly since it will find all occurrences of a word no
+matter where it occurs in the context. We need to tell <span class="unix">grep</span> to
 ignore all other data. The filename, bar number, and context fields are
 separated by tabs. We can ignore the first two fields by eliminating
 everything up to the last tab in the line. Since words are separated by
@@ -597,7 +597,7 @@ Below is a simple one-line script for a command called **keyword.** The
 user simply types the command **keyword** followed by a regular
 expression that will allow him/her to search for a given word in
 context. Note that since we\'ve used the extended regular expression
-character \`+\' \-- we must invoke **egrep** rather than **grep** in our
+character \`+\' \-- we must invoke <span class="unix">egrep</span> rather than <span class="unix">grep</span> in our
 script:
 
 
@@ -648,7 +648,7 @@ text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 
 Having ensured that there is no more than one word per line we can now
 search for a line contain *just* "like" or "as." The **-4** option
-for **egrep** causes any matched lines to be output with four preceding
+for <span class="unix">egrep</span> causes any matched lines to be output with four preceding
 and four following lines of context. In addition, an extra line is added
 consisting of two dashes (`--`) to segregate each pattern output. That
 is, for each match, ten lines of output are typically given. In order to
@@ -657,7 +657,7 @@ into a horizontal list where each line represents a single match for
 "like" or "as."
 
 The <span class="tool">context</span> command would enable us to do
-this. Unfortunately, however, the output from **egrep** fails to conform
+this. Unfortunately, however, the output from <span class="unix">egrep</span> fails to conform
 to the Humdrum syntax. In particular, adding `^\*` to the regular
 expression will fail to ensure a proper Humdrum output since preceding
 and following contextual lines will also be output.
@@ -676,7 +676,7 @@ text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
 
 Now we can make use of the <span class="tool">context</span> command. Each context ends with
-the double-dash delimiters generated by **egrep**. The
+the double-dash delimiters generated by <span class="unix">egrep</span>. The
 <span class="tool">rid</span> command can be used to eliminate the
 interpretations added by **hum**.
 
@@ -720,7 +720,7 @@ filled-in.
 semits * | text | extract -i '**semits,**text' | ditto -s =
 ```
 
-Next, we can use **egrep** to search for the words of interest:
+Next, we can use <span class="unix">egrep</span> to search for the words of interest:
 
 ```bash
 semits * | text | extract -i '**semits,**text' | ditto -s = \
@@ -829,13 +829,13 @@ fairly neutral words will tend to dilute an otherwise large positive or
 negative score. It may be preferable to observe the maximum positive and
 negative values. Alternatively, it may be appropriate to limit the
 average to (say) the ten most emotionally charged words. We can do this
-by sorting the numerical values and using the **head** and **tail**
+by sorting the numerical values and using the <span class="unix">head</span> and <span class="unix">tail</span>
 commands to select the highest or lowest values. In our revised
 processing, we use **sort -n** to sort the values in numerical order \--
-placing the output in a temporary file. The UNIX **head** command allows
+placing the output in a temporary file. The UNIX <span class="unix">head</span> command allows
 us to access a specified number of lines at the beginning of a file: the
 option **-5** specifies the first five lines. Similarly, the UNIX
-**tail** command allows us to access a specified number of lines at the
+<span class="unix">tail</span> command allows us to access a specified number of lines at the
 end of a file. The ten highest and lowest values are then concatenated
 together and piped to the **stats** command:
 
@@ -863,13 +863,13 @@ substitution prior to numerical sorting:
 humsed 's/[+-]//g'
 ```
 
-Once again, we could use the **head** command to isolate the 10 or 20
+Once again, we could use the <span class="unix">head</span> command to isolate the 10 or 20
 most emotionally charged words.
 
 Another variant of this approach might be to identify those words in a
 text which are most emotionally charged. Suppose we wanted to determine
 the location of the most emotionally charged word. A combination of
-**sort** and **grep** can be applied to this task. First we generate a
+<span class="unix">sort</span> and <span class="unix">grep</span> can be applied to this task. First we generate a
 spine containing the emotional-charge values taking care to eliminate
 the signs:
 
@@ -923,9 +923,9 @@ In this chapter we have introduced two text-related representations:
 [`**text`](/rep/text) and
 [`**silbe`](/rep/silbe). We have examined the
 <span class="tool">text</span> command (which translates from `**silbe` to `**text`). We have
-also been exposed to the UNIX **fmt** command (a simple text formatter),
-the **cut** command (similar to **extract -f**), and the **head** and
-**tail** commands.
+also been exposed to the UNIX <span class="unix">fmt</span> command (a simple text formatter),
+the **cut** command (similar to **extract -f**), and the <span class="unix">head</span> and
+<span class="unix">tail</span> commands.
 
 In [Chapter 34](/guide/ch34) we will examine further representations
 and processes related to phonetic data.

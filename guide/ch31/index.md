@@ -37,8 +37,8 @@ to complex selection criteria.
 The *find* Command
 ------------------
 
-The UNIX **find** command traverses through a file hierarchy, and finds
-all files that match certain conditions. The **find** command takes the
+The UNIX <span class="unix">find</span> command traverses through a file hierarchy, and finds
+all files that match certain conditions. The <span class="unix">find</span> command takes the
 following syntax:
 
 ```bash
@@ -77,27 +77,27 @@ means all files under the `scores/bach` directory. The period character:
  .
 ```
 
-tells **find** to commence searching from the current directory.
+tells <span class="unix">find</span> to commence searching from the current directory.
 
-Since **find** searches all files under the given path, its operation
+Since <span class="unix">find</span> searches all files under the given path, its operation
 may be quite slow when there are thousands of files to search. It\'s
 wise to restrict the search by choosing a reasonable starting point. For
 example, specifying the path `/scores/bach/chorales` may save a great
 deal of time compared with the path `/scores`. Although we won\'t
-discuss them in this book, the **find** command provides a number of
+discuss them in this book, the <span class="unix">find</span> command provides a number of
 options that help to restrict the depth of searches or otherwise
-"prune" the search. When first trying **find** it\'s a good idea to
+"prune" the search. When first trying <span class="unix">find</span> it\'s a good idea to
 limit the searches to small segments of the file system.
 
 
-When searching through the specific *PATH*, **find** is able to carry
+When searching through the specific *PATH*, <span class="unix">find</span> is able to carry
 out a wide variety of possible tests on each file. One simple action is
 to test whether the file-name conforms to a given regular expression.
 Consider, for example, the goal of identifying all files representing
 pitch-class ([`**pc`](/rep/pc)) information. The
 Humdrum convention is to identify these files by adding the `.pc`
 extension to the filename \-- such as `opus24.pc`. The following
-**find** command will traverse through the `/scores` directory (and all
+<span class="unix">find</span> command will traverse through the `/scores` directory (and all
 sub-directories) searching for files that contain the `pc` file
 extension:
 
@@ -127,7 +127,7 @@ Any matching file is then deleted using the UNIX **rm** command:
 find /scores -name *.tmp -exec rm "{}" ";"
 ```
 
-This command illustrates a number of features of the **find** command.
+This command illustrates a number of features of the <span class="unix">find</span> command.
 The search begins from the *path* `/scores`. The *option* `-name *.tmp`
 identifies the search condition. The `-exec` flag identifies the
 *action* as that of executing a command. The arguments between `-exec`
@@ -168,7 +168,7 @@ files on the basis of their contents. That is, we\'d like to know
 what\'s inside the file before we take any action.
 
 
-The **grep** command is especially useful in determining whether certain
+The <span class="unix">grep</span> command is especially useful in determining whether certain
 items of information are present in a file. For example, the following
 command identifies all files in the path `/scores` that contain passages
 in 7/8 meter:
@@ -177,10 +177,10 @@ in 7/8 meter:
 find /scores -type f -exec grep -l '\*M7/8' "{}" ";"
 ```
 
-Recall that the <span class="option">l</span> option for **grep** causes the output to consist
+Recall that the <span class="option">l</span> option for <span class="unix">grep</span> causes the output to consist
 only of names of files that contain the sought regular expression. Note
 that the **-type f** option has been specified in order to ensure that
-the **grep** command is only executed for files.
+the <span class="unix">grep</span> command is only executed for files.
 
 
 The structure of the above command can be used to search for all sorts
@@ -238,7 +238,7 @@ directory that are rondos:
 find . -exec grep -il '!!!AFR.*rondo' "{}" ";"
 ```
 
-Recall that the <span class="option">i</span> option for **grep** makes the pattern-match
+Recall that the <span class="option">i</span> option for <span class="unix">grep</span> makes the pattern-match
 insensitive to upper- or lower-case.
 
 
@@ -282,7 +282,7 @@ find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \
 ```
 > "{}" ";"
 
-Often the **find** command can be used to answer research questions more
+Often the <span class="unix">find</span> command can be used to answer research questions more
 directly. Suppose we wanted to determine whether German drinking songs
 more likely to be in triple meter. There are over four thousand German
 folksongs encoded in Helmut Schaffrath\'s *Essen Folksong Collection*.
@@ -317,9 +317,9 @@ Using *find* with the *xargs* Command
 -------------------------------------
 
 
-As we saw in [Chapter 10,](/guide/ch10) the **xargs** command can be
+As we saw in [Chapter 10,](/guide/ch10) the <span class="unix">xargs</span> command can be
 used to propagate file names from command to command within a pipeline.
-Using **xargs** in conjunction with **find** provides a powerful means
+Using <span class="unix">xargs</span> in conjunction with <span class="unix">find</span> provides a powerful means
 for finding works that conform to highly complex criteria. For example,
 the following command identifies all files in the path `/corelli` that
 contain a change of meter signature:
@@ -349,10 +349,10 @@ find /scores -type f -name '*' | xargs grep -c '^\*k\[' \
 > \| grep -v \':\[01\]\$\'
 
 
-As a further example of the use of **xargs**, consider the following
+As a further example of the use of <span class="unix">xargs</span>, consider the following
 extension of the above pipeline. The **grep -v** command causes only
 those files containing more than one key signature to be passed. The
-**sed** command eliminates the colon and the number appended to the
+<span class="unix">sed</span> command eliminates the colon and the number appended to the
 filenames. The ensuing **grep -c** counts the number of meter signatures
 in each file. The final **grep -v** passes only those filenames
 containing 2 or more meter signatures.
@@ -367,9 +367,9 @@ In summary, the above pipeline identifies all scores that contain both a
 change of key signature as well as a change of meter signature.
 
 
-The **xargs** command can also be used to process a list of files \--
+The <span class="unix">xargs</span> command can also be used to process a list of files \--
 where the list has been stored in a file. For example, suppose we used
-the **find** command to locate all scores in compound meters written for
+the <span class="unix">find</span> command to locate all scores in compound meters written for
 woodwind quintet:
 
 ```bash
@@ -431,10 +431,10 @@ ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor2
 ```
 etc.
 
-(The <span class="option">s</span> option for **ln** is used to create a so-called "symbolic"
+(The <span class="option">s</span> option for <span class="unix">ln</span> is used to create a so-called "symbolic"
 link.)
 
-Using the **chmod** command, we can make this file executable, and then
+Using the <span class="unix">chmod</span> command, we can make this file executable, and then
 we can execute it:
 
 ```bash
@@ -449,12 +449,12 @@ We now have a new directory whose files contain scores with vocal parts.
 Reprise
 -------
 
-The **find** command provides a convenient way to traverse through an
+The <span class="unix">find</span> command provides a convenient way to traverse through an
 entire file-system looking for files that conform to specific criteria.
-In musicological tasks, the **find** command is especially well suited
+In musicological tasks, the <span class="unix">find</span> command is especially well suited
 to assembling a repertory of scores that exhibit some characteristic(s)
 of interest. Multiple selection criteria can be accommodated by using
-one or more pipes in conjunction with the **grep** command.
+one or more pipes in conjunction with the <span class="unix">grep</span> command.
 
 For convenience, it is often helpful to create a new directory that
 holds all of works selected for a study repertory. On UNIX systems, file

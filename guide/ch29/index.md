@@ -21,7 +21,7 @@ via the Humdrum <span class="tool">simil</span> and
 <span class="tool">correl</span> commands. This chapter revisits the
 problem of similarity by focussing on differences and commonalities.
 Specifically, this chapter introduces three additional tools, the UNIX
-**cmp**, **diff** and **comm** commands. Although these commands are
+<span class="unix">cmp</span>, <span class="unix">diff</span> and <span class="unix">comm</span> commands. Although these commands are
 less sophisticated than the <span class="tool">simil</span> and <span class="tool">correl</span> commands, they
 nevertheless provide convenient tools for quickly determining the
 relationship between two or more inputs.
@@ -30,21 +30,21 @@ relationship between two or more inputs.
 Comparing Files Using *cmp*
 ---------------------------
 
-The **cmp** command does a character-by-character comparison and
+The <span class="unix">cmp</span> command does a character-by-character comparison and
 indicates whether or not two files are identical.
 
 ```bash
 cmp file1 file2
 ```
 
-If the two files differ, **cmp** generates a message indicating the
+If the two files differ, <span class="unix">cmp</span> generates a message indicating the
 first point where the two files differ. E.g.,
 
 ```bash
 file1 file2 differ: char 4, line 10
 ```
 
-If the two files are identical, **cmp** simply outputs nothing
+If the two files are identical, <span class="unix">cmp</span> simply outputs nothing
 ("silence is golden").
 
 Sometimes files differ in ways that may be uninteresting. For example,
@@ -158,12 +158,12 @@ cmp temp1 temp2
 Comparing Files Using *diff*
 ----------------------------
 
-The problem with **cmp** is that it is unable to distinguish whether the
+The problem with <span class="unix">cmp</span> is that it is unable to distinguish whether the
 difference between two files is profound or superficial. A useful
-alternative to the **cmp** command is the UNIX **diff** command. The
-**diff** command attempts to determine the minimum set of changes needed
-to convert one file to another file. The output from **diff** entails
-editing commands reminiscent of the **ed** text editor. For example, two
+alternative to the <span class="unix">cmp</span> command is the UNIX <span class="unix">diff</span> command. The
+<span class="unix">diff</span> command attempts to determine the minimum set of changes needed
+to convert one file to another file. The output from <span class="unix">diff</span> entails
+editing commands reminiscent of the <span class="unix">ed</span> text editor. For example, two
 latin texts that differ at line 40, might generate the following output:
 
 ```bash
@@ -174,7 +174,7 @@ latin texts that differ at line 40, might generate the following output:
 Let\'s consider again the question of whether two works have essentially
 the same lyrics. Many otherwise similar texts might differ in trivial
 ways. For example, texts may differ in punctuation or in the use of
-upper- and lower-case characters. The **diff** command provides a <span class="option">i</span>
+upper- and lower-case characters. The <span class="unix">diff</span> command provides a <span class="option">i</span>
 option that ignores distinctions between upper- and lower-case
 characters. Punctuation marks can be eliminated by adding a suitable
 <span class="tool">humsed</span> filter.
@@ -188,15 +188,15 @@ extract -i \'\*\*silbe\' file2 \| text \| humsed \'s/\[\^a-zA-Z
 > \| rid -GLId \> temp2
 diff -i file1 file2
 
-Every time **diff** encounters a difference between the two files, it
+Every time <span class="unix">diff</span> encounters a difference between the two files, it
 will output several lines identify the location of the difference and
-showing the conflicting lines in the two files. The **diff** command is
+showing the conflicting lines in the two files. The <span class="unix">diff</span> command is
 line-oriented. Two lines need only differ by a single character in order
-for **diff** to generate an output.
+for <span class="unix">diff</span> to generate an output.
 
 When there are more than a dozen or so differences, the output becomes
 cumbersome to read. A useful alternative is to avoid looking at the raw
-output from **diff**; instead, we might simply count the number of lines
+output from <span class="unix">diff</span>; instead, we might simply count the number of lines
 of output (using **wc -l**). When compared with the total length of the
 input, the number of output lines can provide a rough estimate of the
 magnitude of the differences between the two files. A suitable revision
@@ -213,9 +213,9 @@ task by embedding the above script in a loop so that the comparison
 (second) file cycles through a series of possibilities. A simple
 **while** loop will enable us to do this. Since our script may process a
 large number of scores, we ought to format our output for ease of
-reading. The **echo** command in our script outputs each filename in
+reading. The <span class="unix">echo</span> command in our script outputs each filename in
 turn with the a count of the number of output lines generated by
-**diff**.
+<span class="unix">diff</span>.
 
 
 ```bash
@@ -249,7 +249,7 @@ contours, harmonies, rhyme schemes, and so on.
 Comparing Inventories \-- The *comm* Command
 --------------------------------------------
 
-The **diff** command is sensitive to the order of data. Suppose that
+The <span class="unix">diff</span> command is sensitive to the order of data. Suppose that
 texts for two songs differ only in that one song reverses the order of
 verses 3 and 4. Comparing the "wrong" verses will tend to exaggerate
 what are really minor differences between the two songs. In addition,
@@ -301,11 +301,11 @@ tuarum
 
 Notice that a number of words are present in both texts, such as
 *domine*, *et*, *eum*, *filio*, and so on. Identifying the common
-vocabulary items is easily done by the UNIX **comm** command; **comm**
+vocabulary items is easily done by the UNIX <span class="unix">comm</span> command; <span class="unix">comm</span>
 compares two sorted files and identifies which lines are shared in
 common and which lines are unique to one file or the other.
 
-The **comm** command outputs three columns: the first column identifies
+The <span class="unix">comm</span> command outputs three columns: the first column identifies
 only those lines that are present in the first file, the second column
 identifies only those lines that are present in the second file, and the
 third column identifies those lines that are present in both files. In
@@ -345,12 +345,12 @@ videbitur
 In the above case, five words are unique to `inventory1`, six words are
 unique to `inventory2` and nine words are common to both.
 
-The **comm** command provides numbered options that suppress specified
+The <span class="unix">comm</span> command provides numbered options that suppress specified
 columns. For example, the command **comm -13** will suppress columns one
 and three (outputing column two). (Empty lines are also suppressed with
 these options.) A convenient measure of similarity is to express the
 shared vocabulary items as a percentage of the total combined
-vocabularies. We can do this using the word-count command, **wc**. The
+vocabularies. We can do this using the word-count command, <span class="unix">wc</span>. The
 first command counts the total number of words and the second command
 counts the total number of shared words:
 
@@ -361,9 +361,9 @@ comm inventory1 inventory2 | wc -l
 comm -3 inventory1 inventory2 | wc -l
 ```
 
-An important point about **comm** is that the order of materials is
+An important point about <span class="unix">comm</span> is that the order of materials is
 important in the input files. If the word *filio* occurs near the
-beginning of `inventory1` but near the end of `inventory2` then **comm**
+beginning of `inventory1` but near the end of `inventory2` then <span class="unix">comm</span>
 will not consider the record common to both files. This is the reason
 why we used an alphabetical sort (**sort -d**) in our original
 processing.
@@ -413,9 +413,9 @@ as follows:
 Comparing these two inventories will produce little in common due to the
 presence of the numbers. For example, the records "`3    et`" and
 "`4    et`" will be deemed entirely different. However, we can
-eliminate the numbers using an appropriate **sed** command leaving us
+eliminate the numbers using an appropriate <span class="unix">sed</span> command leaving us
 with vocabulary lists that are ordered according to the frequency of
-occurrence of the words. If we apply the **comm** command to these lists
+occurrence of the words. If we apply the <span class="unix">comm</span> command to these lists
 then the commonality measures will be sensitive to the relative
 frequency of words within the vocabularies.
 
@@ -425,16 +425,16 @@ frequency of words within the vocabularies.
 Reprise
 -------
 
-In this chapter we have introduced the UNIX **cmp**, **diff** and
-**comm** commands. The **cmp** command determines whether two files as
-are the same or different. The **diff** command identifies how two files
-differ. The **comm** command identifies which (sorted) lines two files
-share in common; **comm** also allows us to identify which lines are
+In this chapter we have introduced the UNIX <span class="unix">cmp</span>, <span class="unix">diff</span> and
+<span class="unix">comm</span> commands. The <span class="unix">cmp</span> command determines whether two files as
+are the same or different. The <span class="unix">diff</span> command identifies how two files
+differ. The <span class="unix">comm</span> command identifies which (sorted) lines two files
+share in common; <span class="unix">comm</span> also allows us to identify which lines are
 unique to just one of the files.
 
 The value of these tools is amplified when the inputs are pre-processed
 to eliminate unwanted or distracting data, and when post-processing is
-done (using **wc**) to estimate the magnitude of the differences or
+done (using <span class="unix">wc</span>) to estimate the magnitude of the differences or
 commonalities.
 
 Together with the <span class="tool">simil</span> and

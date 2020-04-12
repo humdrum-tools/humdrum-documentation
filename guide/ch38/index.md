@@ -97,7 +97,7 @@ comparison repertories have the same proportion of major/minor keys. One
 might similarly match instrumentation, date or period of composition,
 duration of work, tempi, and so on.
 
-Humdrum users can use the **find** and **grep** commands to identify
+Humdrum users can use the <span class="unix">find</span> and <span class="unix">grep</span> commands to identify
 works that match particular controlled characteristics (see [Chapter
 33](/guide/ch33)). For example, the following command might locate all
 files that contain scores in triple meter. The results are placed in a
@@ -163,7 +163,7 @@ representations and then use the <span class="tool">xdelta</span>
 command to calculate numerical differences. The <span class="option">a</span> option for
 <span class="tool">xdelta</span> causes only absolute (unsigned) values to be calculated. The
 <span class="tool">rid</span> command can be used to eliminate everything
-but data records and the **grep** command can be used to eliminate
+but data records and the <span class="unix">grep</span> command can be used to eliminate
 barlines and rests. We can then calculate the average interval size by
 piping the output to the **stats** command. For typical folk melodies,
 the average interval size is roughly two semitones.
@@ -315,15 +315,15 @@ last note was first, then our control repertory would preserve both the
 frequency of occurrence of all the pitches, and also preserve the
 pitch-proximity distribution.
 
-The UNIX **tac** command can be used to reverse the order of records.
+The UNIX <span class="unix">tac</span> command can be used to reverse the order of records.
 Suppose we had an input consisting of the number 1 through 10 on
-successive lines. The **tac** command would transform this input so that
+successive lines. The <span class="unix">tac</span> command would transform this input so that
 the output consists of the reverse ordering of numbers from 10 to 1.
 
-If we apply **tac** to a Humdrum file, then the result will no longer
+If we apply <span class="unix">tac</span> to a Humdrum file, then the result will no longer
 conform to the Humdrum syntax \-- the spine-path terminators will appear
 at the beginning of the file and the exclusive interpretations will
-appear at the end of the file. If we use **tac** we could simply restore
+appear at the end of the file. If we use <span class="unix">tac</span> we could simply restore
 the correct syntax by hand-editing the file and moving the exclusive
 interpretations and the spine-path terminators to their proper
 locations. We now have a "retrograde" passage.

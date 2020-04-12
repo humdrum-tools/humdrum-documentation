@@ -49,7 +49,7 @@ The first <span class="tool">humsed</span> substitution eliminates all data othe
 numbers 0 to 9, the period, the lower-case `r`, and the space (for
 multiple-stops). Barlines remain untouched in the output. The second
 <span class="tool">humsed</span> substitution changes any empty lines to null data tokens;
-this might be necessary in the case of grace notes. The ensuing **sed**
+this might be necessary in the case of grace notes. The ensuing <span class="unix">sed</span>
 command is used simply to change the exclusive interpretation from
 `**kern` to `**recip`.
 
@@ -165,8 +165,8 @@ dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \
 
 The <span class="option">e</span> option ensures that `**kern` staccato marks (\') are passed
 along to the output. The <span class="tool">rid</span> command eliminates
-everything but Humdrum data records. Then **grep** is used to isolate
-only those notes containing a staccato mark. The **sed** script is used
+everything but Humdrum data records. Then <span class="unix">grep</span> is used to isolate
+only those notes containing a staccato mark. The <span class="unix">sed</span> script is used
 to eliminate the apostrophe, and finally the numbers are passed to the
 **stats** command. The `max` value from **stats** will identify the
 duration (in seconds) of the longest note marked staccato.
@@ -509,7 +509,7 @@ else	weak
 ```
 
 The words \`strong\', \`secondary\', and \`weak\' can then be sought by
-**grep** or **yank -m**, allowing us to isolate points of particular
+<span class="unix">grep</span> or **yank -m**, allowing us to isolate points of particular
 metric stress. Since <span class="tool">metpos</span> adapts to changing meters, we can
 confidently process inputs that may contain mixtures of meters.
 
@@ -674,7 +674,7 @@ Now we can assemble the resulting metric change spine with our original
 [`**deg`](/rep/deg) spine. Each data record will
 contain the scale degree in the first spine and the change of metric
 position data in the second spine. The final task is to create an
-inventory using <span class="tool">rid</span>, **sort** and **uniq**:
+inventory using <span class="tool">rid</span>, <span class="unix">sort</span> and <span class="unix">uniq</span>:
 
 ```bash
 assemble magyar.deg magyar.xmp | rid -GLId | grep -v ^= \

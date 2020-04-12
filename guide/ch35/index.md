@@ -140,7 +140,7 @@ In order to identify these as G major and D dominant chords it would be
 convenient to reduce the sets to (2,7,B) and (0,2,6,9) respectively. For
 this task, we can use a The following awk script eliminates repeated
 tokens within a record: (huniq: We might call this script **huniq**
-since it acts like a horizontal version of the **uniq** command:
+since it acts like a horizontal version of the <span class="unix">uniq</span> command:
 
 ```awk
 awk '{

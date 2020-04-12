@@ -136,7 +136,7 @@ lies	lAiz
 Given an `**IPA` input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using <span class="tool">humsed</span>. This
 task requires some additional knowledge about using
-<span class="tool">humsed</span>. Both **sed** and <span class="tool">humsed</span> provide
+<span class="tool">humsed</span>. Both <span class="unix">sed</span> and <span class="tool">humsed</span> provide
 a "back reference" construction that allows users to manipulate a
 matched expression without knowing the precise matched sequence of
 characters. The expression to be matched is indicated via parentheses
@@ -153,7 +153,7 @@ sed 's/^\(.\).*/\1/'
 
 In this command, the referenced expression consists of the period (match
 any single character). Notice that this expression is back-referenced in
-the replacement string \-- `\1`. In other words, this **sed** command
+the replacement string \-- `\1`. In other words, this <span class="unix">sed</span> command
 carries out the following operation: find a single character at the
 beginning of a line followed by zero or more characters. Replace this
 entire string by just the first character in the line.
@@ -227,7 +227,7 @@ Dfl
 ```
 
 Let\'s add one further refinement which illustrates yet another feature
-provided by **sed** and <span class="tool">humsed</span>. Recall that operations such as
+provided by <span class="unix">sed</span> and <span class="tool">humsed</span>. Recall that operations such as
 substitions (`s`) and deletions (`d`) can be preceded by a regular
 expression that limits the operation only to those lines that match the
 expression. For example, the command `sed '/=/s/[0-9]//g'` will
@@ -420,7 +420,7 @@ The result is as follows:
 ```
 
 The rhyming portion of words typically consist of a final vowel plus any
-subsequent consonants. We can isolate these phonemes using **sed**.
+subsequent consonants. We can isolate these phonemes using <span class="unix">sed</span>.
 Notice our use of back reference to preserve the final phonemes:
 
 ```bash
@@ -438,8 +438,8 @@ It}
 Uls}
 ```
 
-A little further processing can remove the closing braces using **sed**,
-and eliminate the duplicate lines using **sort** and **uniq**.
+A little further processing can remove the closing braces using <span class="unix">sed</span>,
+and eliminate the duplicate lines using <span class="unix">sort</span> and <span class="unix">uniq</span>.
 
 ```bash
  ... | humsed 's/}//' | sort | uniq

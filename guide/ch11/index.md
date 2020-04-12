@@ -481,7 +481,7 @@ mint Chevalier* | grep -c '-[Mm]2'
 ```
 
 An alternative way of achieving the same goal might simplify the regular
-expression to **grep** and use the <span class="option">d</span> (diatonic) option for
+expression to <span class="unix">grep</span> and use the <span class="option">d</span> (diatonic) option for
 <span class="tool">mint</span>:
 
 ```bash
@@ -500,7 +500,7 @@ extract -i '*Ivox' Platters | mint -c | egrep '(A4)|(d5)'
 ```
 
 Here we have used the extended regular expression capabilities of
-**egrep** to specify an either/or pattern.
+<span class="unix">egrep</span> to specify an either/or pattern.
 
 Suppose we had a directory containing only files encoding melodies using
 the [`**mint`](/rep/mint) representation. Does any

@@ -605,7 +605,7 @@ Apart from transposition, translating from one representation to another
 provides opportunities for different sorts of processing. Suppose, for
 example, we wanted to know whether the subdominant pitch occurs more
 frequently in one vocal repertory than in another repertory. We can use
-<span class="tool">solfa</span> in conjunction with **grep**\'s <span class="option">c</span> option to count the
+<span class="tool">solfa</span> in conjunction with <span class="unix">grep</span>\'s <span class="option">c</span> option to count the
 number of occurrences. (For the following examples, we will assume that
 the inputs consist of only a single spine, that barlines are absent, and
 that appropriate interpretations are provided indicating the key of each
@@ -641,14 +641,14 @@ approach. The caret (**\^**) indicates approach from below, whereas the
 lower-case **v** indicates approach from above. Suppose we wanted to
 determine whether the dominant pitch is more commonly approached from
 above or from below. Assuming a monophonic input, we can once again use
-**grep** to answer this question. First let\'s count how many dominant
+<span class="unix">grep</span> to answer this question. First let\'s count how many dominant
 pitches (\`5\') are approached from above (\`v\'):
 
 ```bash
 deg repertory.krn | grep -c v5
 ```
 
-The caret has a special meaning for **grep** which will be discussed in
+The caret has a special meaning for <span class="unix">grep</span> which will be discussed in
 [Chapter 9.](/guide/ch09) We can escape the special meaning by
 preceding the caret by a backslash. In order to count the number of
 dominant pitches approached from below we can use the following:
@@ -693,12 +693,12 @@ with the <span class="option">k</span> option.
  census -k melody.krn
 ```
 
-We can use the **uniq** command to eliminate successive repeated pitches
+We can use the <span class="unix">uniq</span> command to eliminate successive repeated pitches
 \-- but only if the note tokens are identical. First we can use [**kern
 -x**](/tool/kern) to translate "from `**kern` to `**kern`"
 while eliminating non-pitch-related data. Then we need to remove
 barlines so they don\'t interfere with pitches that are repeated across
-the measure. Using **uniq** will then eliminate all of the successively
+the measure. Using <span class="unix">uniq</span> will then eliminate all of the successively
 duplicated records, so a sequence of six G\'s will be reduced to a
 single G. Finally, we pipe the output to **census -k** to count the
 total number of notes.

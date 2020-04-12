@@ -16,8 +16,8 @@ permalink:	/guide/ch24/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 16](/guide/ch16) we learned about the **alias** feature of
-the shell. The **alias** command allowed us to create new commands by
+In [Chapter 16](/guide/ch16) we learned about the <span class="unix">alias</span> feature of
+the shell. The <span class="unix">alias</span> command allowed us to create new commands by
 assigning a complex pipeline to a single-word command. In this chapter
 we will learn how to use the shell to write more complex programs. Shell
 programs allow users to reduce lengthy sequences of Humdrum commands to
@@ -48,14 +48,14 @@ sequence for each file, an alternative is to place the above commands in
 a file. Let\'s assume that we put the above commands in a file called
 `Schenker`. In order to execute this file as a shell script, we need to
 assign *execute permissions* to the file. We can do this by invoking the
-UNIX **chmod** command.
+UNIX <span class="unix">chmod</span> command.
 
 ```bash
 chmod +x Schenker
 ```
 
-The **+x** option causes **chmod** to add execute permissions to the
-file `Schenker`. Using **chmod** we can change modes related to
+The **+x** option causes <span class="unix">chmod</span> to add execute permissions to the
+file `Schenker`. Using <span class="unix">chmod</span> we can change modes related to
 *executing* a file, *reading* a file, and *writing* to a file. Possible
 mode changes include the following:
 
@@ -137,8 +137,8 @@ Suppose we wanted our **Schenker** command to apply only to tonal works
 work, we might want to have **Schenker** test for the presence of a
 tandem interpretation specifying the key.
 
-Let\'s begin by using **grep** to search for a key tandem
-interpretation. An appropriate **grep** command would be:
+Let\'s begin by using <span class="unix">grep</span> to search for a key tandem
+interpretation. An appropriate <span class="unix">grep</span> command would be:
 
 ```bash
 grep '^\*[A-Ga-g][#-]*:' $1
@@ -150,7 +150,7 @@ Let\'s assign the key interpretation to the variable KEY:
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1` ``
 
-If no key indicator is found by **grep**, then the variable KEY will be
+If no key indicator is found by <span class="unix">grep</span>, then the variable KEY will be
 empty. We can test for this condition using the shell **if** statement.
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
@@ -164,7 +164,7 @@ comparison. Our test is whether the variable \$KEY is equivalent to the
 empty or null string "". If the test is true, then the commands
 following the `then` statement are executed. By convention, these
 commands are indented for clarity. In the above case, two commands are
-executed if the \$KEY variable is empty. The **echo** command causes the
+executed if the \$KEY variable is empty. The <span class="unix">echo</span> command causes the
 quoted string to be output. The **exit** command causes the script to
 terminate. Notice the presence of the **fi** command (**if** backwards).
 This command simply indicates that the if-block has ended.
@@ -268,7 +268,7 @@ Reprise
 In this chapter we have illustrated how to package complex Humdrum
 command scripts into shell programs. This allows us to create
 special-purpose commands. We learned that files can be transformed into
-executable scripts through the **chmod** command. We also learned how to
+executable scripts through the <span class="unix">chmod</span> command. We also learned how to
 pass parameters from the command line to the script, and how to assign
 and modify the contents of variables. In addition, we learned how to
 influence the flow of control using the **if** and **for** statements.
@@ -339,7 +339,7 @@ extract -i '*alto'     | census -k  extract -i '*tenor'    | census -k  extract 
 
 If we wanted to get a little fancier, we could filter the output so that
 only the highest and lowest pitch information is output. The UNIX
-**grep** command will let us define a string for searching; **egrep**
+<span class="unix">grep</span> command will let us define a string for searching; <span class="unix">egrep</span>
 permits compound strings, such as the use of the OR bar (\|):
 
 ```bash
@@ -391,13 +391,13 @@ indicate descending intervals; \'P\' means perfect, \'M\' means major,
   \*-
   ----------
 Searching for diminished or augmented intervals is as simple as using
-the Unix **grep** command, with the appropriate regular expression:
+the Unix <span class="unix">grep</span> command, with the appropriate regular expression:
 
 ```bash
 grep -n '[Ad]' 
 ```
 
-The <span class="option">n</span> option will cause **grep** to prepend the line number of any
+The <span class="option">n</span> option will cause <span class="unix">grep</span> to prepend the line number of any
 matching patterns, so we can refer back to the original input file.
 
 In order to avoid the letters \`A\' or \`d\' found in comments or
@@ -407,13 +407,13 @@ interpretations, we might consider using the Humdrum <span class="tool">rid</spa
 rid -GLI  | grep -n '[Ad]'
 ```
 
-However, this will cause the line numbers output by **grep** to be
+However, this will cause the line numbers output by <span class="unix">grep</span> to be
 wrong. The line numbers will correspond to the input file with the
 comments and interpretations removed.
 
-A better approach is to send the complete file to **grep**, and use a
+A better approach is to send the complete file to <span class="unix">grep</span>, and use a
 more circumspect regular expression to eliminate comments and
-interpretations within **grep**. **egrep** allows us to define more
+interpretations within <span class="unix">grep</span>. <span class="unix">egrep</span> allows us to define more
 complex regular expressions:
 
 ```bash
@@ -644,7 +644,7 @@ any lines which contain two instances of the number \`7\' \-- that is,
 two concurrent instances of the leading-tone.
 
 Searching for the number \`7\' is easily done using the standard Unix
-**grep** (get regular expression) command:
+<span class="unix">grep</span> (get regular expression) command:
 
 ```bash
 deg  | grep -n '7'
@@ -669,7 +669,7 @@ any character, followed by the number 7". In short, this expression
 will match any record in which the number 7 occurs at least twice.
 
 As in the case of our earlier search for augmented and diminished
-intervals, **grep** is insensitive to whether the matching character
+intervals, <span class="unix">grep</span> is insensitive to whether the matching character
 string is found in a data record, or whether it occurs in a Humdrum
 comment or interpretation. In order to avoid matching comments or
 interpretations, a further refinement to our regular expression is
@@ -761,7 +761,7 @@ If we now invoke the <span class="tool">ditto</span> command, the modified outpu
   \*- \*-
   -------------------
 Notice that the two null tokens in the left-hand spine have been
-replaced by copies of the most recent data token. Now our **grep**
+replaced by copies of the most recent data token. Now our <span class="unix">grep</span>
 command will find the two leading tones in the second last data record.
 
 In summary, the complete command pipeline would be:
@@ -801,12 +801,12 @@ conflict with semitone designations:
 `extract -i '*alto,*tenor'` ` | semits -x`
 
 Next we need to compare the two parts at each moment in order to
-determine whether they have the same numerical value. The Unix **awk**
+determine whether they have the same numerical value. The Unix <span class="unix">awk</span>
 command will allow us to do some arithmetic. Awk auto- matically parses
 an input, so the value of the first spine is referred to as \`\$1\', the
-value of the second spine is \`\$2\' and so on. The **awk** expression
+value of the second spine is \`\$2\' and so on. The <span class="unix">awk</span> expression
 `` `$1==$2' `` is a test of whether the first and second spines are
-equivalent. The **awk** action `` `print NR' `` means to print the
+equivalent. The <span class="unix">awk</span> action `` `print NR' `` means to print the
 current line number (record number is `` `NR' ``).
 
 So the following command will print the line number for any input in
@@ -816,7 +816,7 @@ which the semitone value is the same for both the alto and tenor voices:
 extract -i '*alto,*tenor'  | semits -x | awk '{if($1==$2) print NR}'
 ```
 
-There is a problem with this pipeline however. The **awk** command will
+There is a problem with this pipeline however. The <span class="unix">awk</span> command will
 match all sorts of non-numeric inputs \-- such as where null tokens (.)
 occur in both parts at the same time. Consequently, we need to be
 careful to avoid non-numeric inputs and comments.
@@ -830,7 +830,7 @@ in regular expressions by the lower-case letter \`t\' preceded by a
 backslash. Hence the expression \`\[\^0-9\\t-\]\' will match only those
 lines consisting solely of numbers, the minus sign, and tabs.
 
-The following **awk** script will output the line numbers for all inputs
+The following <span class="unix">awk</span> script will output the line numbers for all inputs
 where the first and second spines contain identical numbers:
 
 ```bash
@@ -856,7 +856,7 @@ lower than a nominally lower voice.
 The relations "higher" and "lower" suggest the use of an arithmetic
 operator such as greater-than (\>) or less-than (\<). In brief, we will
 approach this question by translating the pitches to a numerical scale,
-and then use the general-purpose Unix **awk** command to test whether
+and then use the general-purpose Unix <span class="unix">awk</span> command to test whether
 the nominally lower voice is truly lower.
 
 First we need to translate the pitch representation to some sort of
@@ -883,8 +883,8 @@ leading-tone problem. Hence:
 extract -i '*alto,*tenor'  | semits -x | ditto -s =
 ```
 
-Finally, we can use the Unix **awk** command to do a little arithmetic.
-Once again, in **awk**, `` `$1' `` and `` `$2' `` refer to the first and
+Finally, we can use the Unix <span class="unix">awk</span> command to do a little arithmetic.
+Once again, in <span class="unix">awk</span>, `` `$1' `` and `` `$2' `` refer to the first and
 second input fields, and the built-in variable `` `NR' `` refers to the
 current record (line) number. The expression
 `` `{if($1>$2) print NR}' `` is a miniature program that says: "if the
@@ -900,7 +900,7 @@ second spine, then tell us where that occurs.
 
 Since the `**semits` representation uses the lower-case letter \`r\' to
 represent a rest, we should avoid the possibility of comparing a number
-(note) with a rest. We can use a variation on the same **awk** script as
+(note) with a rest. We can use a variation on the same <span class="unix">awk</span> script as
 we used when checking for unisons:
 
 ```bash
@@ -930,7 +930,7 @@ Having transformed the pitch input to a numerical form, we simply need
 to check whether the difference between the two semitone values is
 greater than 12 semitones.
 
-The **awk** portion of our command is modified so that we are informed
+The <span class="unix">awk</span> portion of our command is modified so that we are informed
 if the nominally higher voice is more than 12 semitones away from the
 other voice:
 
@@ -1066,7 +1066,7 @@ Any other situation means that the exposed octaves rule has not been
 violated.
 
 In other words, our final test can be expressed using the following
-**egrep** command:
+<span class="unix">egrep</span> command:
 
 ```bash
 egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap'

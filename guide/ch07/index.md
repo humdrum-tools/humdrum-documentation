@@ -36,7 +36,7 @@ intermediate format; using Humdrum commands such as
 [<span class="tool">smf</span>,](/tool/perform) true MIDI data can be generated.
 However, since the `**MIDI` representation conforms to the Humdrum
 syntax, the data can be manipulated, modified and searched in the same
-way as other Humdrum data. For example, we can use **grep** to search
+way as other Humdrum data. For example, we can use <span class="unix">grep</span> to search
 MIDI data, etc.
 
 MIDI is a type of "tablature" notation. It describes a set of

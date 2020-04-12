@@ -1,0 +1,114 @@
+#!/usr/bin/perl
+#
+# Programmer:    Craig Stuart Sapp <craig.stanford.edu>
+# Creation Date: Sat Apr 11 20:16:21 PDT 2020
+# Last Modified: Sat Apr 11 20:16:24 PDT 2020
+# Filename:      makeToolSpan
+# Syntax:        perl 5
+#
+# Description:   Convert:
+#                   **grep** 
+#                into
+#                   <span class="unix">grep</span>
+#
+
+use strict;
+
+my @files = @ARGV;
+my @unix;
+
+# Unix commands mentioned in the Humdrum Toolkit User Guide:
+$unix[@unix] = "alias";
+$unix[@unix] = "awk";
+$unix[@unix] = "cat";
+$unix[@unix] = "chmod";
+$unix[@unix] = "cmp";
+$unix[@unix] = "comm";
+$unix[@unix] = "diff";
+$unix[@unix] = "echo";
+$unix[@unix] = "ed";
+$unix[@unix] = "egrep";
+$unix[@unix] = "emacs";
+$unix[@unix] = "find";
+$unix[@unix] = "fmt";
+$unix[@unix] = "ghostview";
+$unix[@unix] = "grep";
+$unix[@unix] = "head";
+$unix[@unix] = "history";
+$unix[@unix] = "ln";
+$unix[@unix] = "lpr";
+$unix[@unix] = "perl";
+$unix[@unix] = "sed";
+$unix[@unix] = "sort";
+$unix[@unix] = "tac";
+$unix[@unix] = "tail";
+$unix[@unix] = "tee";
+$unix[@unix] = "uniq";
+$unix[@unix] = "vi";
+$unix[@unix] = "wc";
+$unix[@unix] = "xargs";
+
+foreach my $file (@files) {
+	processFile($file);
+}
+
+exit(0);
+
+
+
+##############################
+##
+## processFile --
+##
+
+sub processFile {
+	my ($file) = @_;
+	open (FILE, $file) or die "Cannot read $file\n";
+	my @contents = <FILE>;
+	chomp @contents;
+	close FILE;
+	my $changed = 0;
+	my $newline;
+	for (my $i=0; $i<@contents; $i++) {
+		$newline = processLine($contents[$i]);
+		if ($newline ne $contents[$i]) {
+			$contents[$i] = $newline;
+			$changed = 1;
+		}
+	}
+	return if !$changed;
+	print STDERR "Updating file $file\n";
+	# print "FILE CONTENTS: ", join("\n", @contents), "\n";
+	open (FILE, ">$file") or die "Cannot write $file\n";
+	for (my $i=0; $i<@contents; $i++) {
+		print FILE "$contents[$i]\n";
+	}
+	close FILE;
+}
+
+
+
+##############################
+##
+## processLine --
+##
+##      **census** 
+##   into
+##      <span class="tool">census</span>
+##   and
+##      [**census**](/tool/census)
+##   info
+##      <span class="tool">census</span>
+##
+
+sub processLine {
+	my ($line) = @_;
+	for (my $i=0; $i<@unix; $i++) {
+		my $command = $unix[$i];
+		$line =~ s/\*\*$command\*\*/<span class="unix">$command<\/span>/g;
+	}
+	return $line;
+}
+
+
+

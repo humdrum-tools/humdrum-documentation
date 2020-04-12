@@ -127,7 +127,7 @@ assemble opus24 opus24.pcs > opus24.all
 
 Now we can search for data records containing phrase (\`{}\') or slur
 (\'()\') markers. Using <span class="tool">yank</span> **-m \... -r 0**
-rather than **grep** assures that the output retains the Humdrum syntax
+rather than <span class="unix">grep</span> assures that the output retains the Humdrum syntax
 (see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
 allow us to use <span class="tool">extract</span> to isolate just the
 `**pcset` data. Finally, we create an inventory of the pc sets. The

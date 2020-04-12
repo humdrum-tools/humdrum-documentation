@@ -277,11 +277,11 @@ components to a common command:
 -   output redirection.
 
 Each of these components is separated by \`blank space\' (tabs or
-spaces). A command begins with the command name \-- such as **uniq**,
-**sort**, or <span class="tool">pitch</span>. A command argument is a
+spaces). A command begins with the command name \-- such as <span class="unix">uniq</span>,
+<span class="unix">sort</span>, or <span class="tool">pitch</span>. A command argument is a
 special requirement of only some commands. A good example of a command
-argument is the search pattern given to the **grep** command. In the
-following command, **grep** is the command name, "Lennon" is the
+argument is the search pattern given to the <span class="unix">grep</span> command. In the
+following command, <span class="unix">grep</span> is the command name, "Lennon" is the
 command argument and `beatles` is the input file name:
 
 ```bash
@@ -290,7 +290,7 @@ grep Lennon beatles
 
 For most commands, it is possible to process more than one input file.
 These files are simply listed at the end of the command. For example,
-the following **grep** command searches for the string "McCartney" in
+the following <span class="unix">grep</span> command searches for the string "McCartney" in
 the file `beatles` and in the file `wings`:
 
 ```bash
@@ -300,9 +300,9 @@ grep McCartney beatles wings
 Most commands provide *options* that modify the behavior of the command
 in some way. Command options are designated by a leading dash character.
 The specific option is usually indicated by a single alphabetic letter,
-such as the <span class="option">b</span> option (spoken: "dash-B" option). In the **uniq**
+such as the <span class="option">b</span> option (spoken: "dash-B" option). In the <span class="unix">uniq</span>
 command, the <span class="option">c</span> option causes a count to be prepended to each output
-line. In the following command, **uniq** is the command name, <span class="option">c</span> is
+line. In the following command, <span class="unix">uniq</span> is the command name, <span class="option">c</span> is
 the option, and `ghana32` is the name of the input file:
 
 ```bash
@@ -400,15 +400,15 @@ using the pipe operator (`|`), the entire command line is known as a
 Tee
 ---
 
-A special shell command known as **tee** can be used to clone a copy of
+A special shell command known as <span class="unix">tee</span> can be used to clone a copy of
 some output, so that two identical output streams are generated. In the
-first example below, the output is piped to **tee** which writes one
+first example below, the output is piped to <span class="unix">tee</span> which writes one
 copy of the output to the file `outfile` and the second copy appears on
 the screen. In the second example, the output from **command1** is
 split: one copy is piped to **command2** for further processing, while
 an identical copy is stored in the file `outfile1`; if the file
 `outfile1` already exists, its contents will be overwritten. In the
-third example, the append option (<span class="option">a</span>) for **tee** has been invoked
+third example, the append option (<span class="option">a</span>) for <span class="unix">tee</span> has been invoked
 \-- meaning that the output from `command` will be added to the end of
 any existing data in the file `outfile`. If the file `outfile` does not
 already exist, it will be created.
@@ -419,7 +419,7 @@ command | tee outfile  command1 | tee outfile1 | command2 > outfile2  command | 
 ```
 
 
-The **tee** command is a useful way of recording or diverting some
+The <span class="unix">tee</span> command is a useful way of recording or diverting some
 intermediate data in the middle of a pipeline.
 
 ------------------------------------------------------------------------

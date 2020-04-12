@@ -57,24 +57,24 @@ classes of tasks:
     <span class="tool">midi</span> and
     <span class="tool">perform</span> commands.
 -   ***Searching for things.*** When searching for things within
-    specified files, appropriate commands include: **grep**, **egrep**,
+    specified files, appropriate commands include: <span class="unix">grep</span>, <span class="unix">egrep</span>,
     [**yank -m**,](/tool/yank) <span class="tool">patt</span>,
     <span class="tool">pattern</span>,
     <span class="tool">correl</span>, <span class="tool">simil</span>
     and [**humdrum -v**.](/tool/humdrum) When searching for
     files that meet certain conditions, appropriate commands include
-    **grep -l**, **egrep -l** and **find**. Most of these search tools
+    **grep -l**, **egrep -l** and <span class="unix">find</span>. Most of these search tools
     rely extensively on regular expressions to define patterns of
     characters.
--   ***Counting things.*** Appropriate commands include: **wc**, **wc
+-   ***Counting things.*** Appropriate commands include: <span class="unix">wc</span>, **wc
     -l**, **grep -c**, **egrep -c**, <span class="tool">census</span>
     and **census -k**. Eliminating unnecessary or confounding
     information can be achieved using <span class="tool">rid</span>,
-    <span class="tool">extract</span>, **grep -v**, **sed** and
+    <span class="tool">extract</span>, **grep -v**, <span class="unix">sed</span> and
     <span class="tool">humsed</span>.
 -   ***Editing things.*** Manual editing may be done using any text
-    editor, such as **emacs** or **vi**. Automated (or "stream")
-    editing may be done using **sed** and
+    editor, such as <span class="unix">emacs</span> or <span class="unix">vi</span>. Automated (or "stream")
+    editing may be done using <span class="unix">sed</span> and
     <span class="tool">humsed</span>.
 -   ***Editorializing.*** E.g., add an editorial footnote to a specified
     note or passage; indicate that a passage differs from the
@@ -96,24 +96,24 @@ classes of tasks:
     numerical values can be done using
     <span class="tool">xdelta</span>,
     <span class="tool">ydelta</span>,
-    <span class="tool">recode</span> and **awk**.
+    <span class="tool">recode</span> and <span class="unix">awk</span>.
 -   ***Extracting or selecting information.*** Appropriate commands
     include: <span class="tool">extract</span>,
-    <span class="tool">yank</span>, **grep**, **egrep**, [**yank
+    <span class="tool">yank</span>, <span class="unix">grep</span>, <span class="unix">egrep</span>, [**yank
     -m**,](/tool/yank) <span class="tool">thru</span>,
     <span class="tool">strophe</span>, <span class="tool">rend</span>
     and **csplit**.
 -   ***Linking or joining information.*** Appropriate commands include:
-    <span class="tool">assemble</span>, **cat**,
+    <span class="tool">assemble</span>, <span class="unix">cat</span>,
     <span class="tool">cleave</span>,
     <span class="tool">timebase</span>,
     <span class="tool">context</span>,
     <span class="tool">ditto</span> and **join**.
 -   ***Generating inventories of things.*** Appropriate commands
-    include: **sort** and **uniq**. Once again, unnecessary or
+    include: <span class="unix">sort</span> and <span class="unix">uniq</span>. Once again, unnecessary or
     confounding information can be eliminated using
     <span class="tool">rid</span>, <span class="tool">extract</span>,
-    **grep -v**, [**yank -m**,](/tool/yank) **sed** or
+    **grep -v**, [**yank -m**,](/tool/yank) <span class="unix">sed</span> or
     <span class="tool">humsed</span>.
 -   ***Classifying things.*** Numerical values can be classified using
     [<span class="tool">recode</span>;](/tool/recode) non-numerical data can be
@@ -123,7 +123,7 @@ classes of tasks:
     <span class="tool">humsed</span> and
     <span class="tool">timebase</span>.
 -   ***Comparing whether things are the same or similar.*** Appropriate
-    commands include: **diff**, **diff3**, **cmp**,
+    commands include: <span class="unix">diff</span>, **diff3**, <span class="unix">cmp</span>,
     <span class="tool">correl</span> and
     <span class="tool">simil</span>.
 -   ***Capturing data.*** MIDI data can be input via
@@ -166,7 +166,7 @@ seven questions provide useful guidelines:
 
 -   *What materials are available for processing?*
 
-    > Use **find** and **grep** to locate useful materials.
+    > Use <span class="unix">find</span> and <span class="unix">grep</span> to locate useful materials.
 
 -   *What materials do I need to create?*
 
@@ -191,8 +191,8 @@ seven questions provide useful guidelines:
 
     > Use <span class="tool">rid</span>,
     > <span class="tool">extract</span>,
-    > <span class="tool">yank</span>, **sed**,
-    > <span class="tool">humsed</span>, **uniq**, **uniq -d** and
+    > <span class="tool">yank</span>, <span class="unix">sed</span>,
+    > <span class="tool">humsed</span>, <span class="unix">uniq</span>, **uniq -d** and
     > **grep -v** to eliminate selective materials.
 
 -   *What data do I need to coordinate?*
@@ -206,6 +206,6 @@ seven questions provide useful guidelines:
 
     > Use comparative tests whenever you can. Use
     > <span class="tool">scramble</span> -r, **scramble -t**,
-    > **tac** and <span class="tool">reihe</span> -s to generate
+    > <span class="unix">tac</span> and <span class="tool">reihe</span> -s to generate
     > control groups.
 

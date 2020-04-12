@@ -405,7 +405,7 @@ extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \
 ```
 > \| grep -c \[MmPAd\]
 
-The second **grep** counts the total number of intervals by looking for
+The second <span class="unix">grep</span> counts the total number of intervals by looking for
 all of the interval qualities (major, minor, perfect, etc.)
 
 Suppose we have extracted two horn parts from an orchestral score. Are
@@ -662,7 +662,7 @@ ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \
 Suppose we have a two-part input. Are there tritone intervals (explicit
 and passing) that are not spelled as either an augmented fourth or
 diminished fifth? We can answer this question by using both <span class="tool">hint</span> and
-<span class="tool">ydelta</span> and a suitable sequence of **grep** commands. The <span class="tool">ditto</span>
+<span class="tool">ydelta</span> and a suitable sequence of <span class="unix">grep</span> commands. The <span class="tool">ditto</span>
 command is used to ensure that both explicit and passing intervals are
 generated.
 
