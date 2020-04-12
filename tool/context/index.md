@@ -8,7 +8,7 @@ permalink:	/tool/context/index.html
 
 ## COMMAND ##
 
-<span class="tool">context</span&mdash; congeal Humdrum data records to form a contextual frame
+<span class="tool">context</span> &mdash; congeal Humdrum data records to form a contextual frame
 
 ------------------------------------------------------------------------
 
@@ -20,13 +20,13 @@ permalink:	/tool/context/index.html
 
 ## DESCRIPTION ##
 
-The <span class="tool">context</spancommand amalgamates one or
+The <span class="tool">context</span> command amalgamates one or
 more successive input data records into single records according
 to user-defined criteria. Only single-spine Humdrum inputs are
-permitted. The <span class="tool">context</spancommand provides
+permitted. The <span class="tool">context</span> command provides
 a useful means for amalgamating on a single line those data tokens
 that are somehow deemed to be contextually related. For example,
-<span class="tool">context</spanmight be used to link together
+<span class="tool">context</span> might be used to link together
 all pitches in a measure, or pair the first and last notes of each
 phrase. The command is useful in such tasks as partitioning possible
 pitch-class sets or grouping arpeggio tones into chords.
@@ -70,7 +70,7 @@ will produce the following output: ``
 
 Notice that the output file has been padded with null tokens so
 that the number of output records matches the number of input
-records. By invoking the <span class="option">p</spanoption, the
+records. By invoking the <span class="option">p</span> option, the
 padded null tokens can be placed either at the beginning or the end
 of the file, or split between beginning and end. For example, the
 command
@@ -80,7 +80,7 @@ context -n 3 -p 3 input
 ```
 
 will place the trailing null tokens in the above example at the
-beginning of the output. The <span class="option">p</spanoption
+beginning of the output. The <span class="option">p</span> option
 defaults to the value `0`.
 
 If null tokens are present in the input, they remain in place, yet
@@ -108,7 +108,7 @@ would produce an output beginning with a single padded null token: ``
 
 Rather than specifying a fixed number of congealed data records,
 input records can alternatively be amalgamated according to the
-signifiers present in the input data itself. The <span class="option">e</spanoption allows
+signifiers present in the input data itself. The <span class="option">e</span> option allows
 the user to specify an \"end\" signifier. When this signifier is
 encountered in the input, the input record is appended to the current
 congealed record &mdash; which is then output &mdash; and a new congealed
@@ -155,46 +155,46 @@ options:
    ------------- ------------------------------------------------------------------------------------
 
 Options are specified in the command line. Note that the <span
-class="option">b</span>and <span class="option">e</spanoptions are
+class="option">b</span>and <span class="option">e</span> options are
 mutually exclusive with the <span class="option">n</span>, <span
 class="option">p</span>, and <span class="option">i</span>options.
 
-In the default operation, <span class="tool">context</spanseparates amalgamated tokens
+In the default operation, <span class="tool">context</span> separates amalgamated tokens
 by inserting a space character. (Thus the input tokens are treated
-as subtokens in a Humdrum multiple-stop.) The <span class="option">d</spanoption allows
+as subtokens in a Humdrum multiple-stop.) The <span class="option">d</span> option allows
 the user to define an alternative string as the subtoken delimiter.
 
-The <span class="option">n</spanoption allows the user to specify the maximum number of
+The <span class="option">n</span> option allows the user to specify the maximum number of
 data records assembled into a single output record.
 
-The <span class="option">b</spanoption allows the user to specify a \"begin\" marker.
+The <span class="option">b</span> option allows the user to specify a \"begin\" marker.
 When this marker (*regexp*) is matched in the input, any current
 congealed record is output, and a new congealed record begins. Begin
 signifiers are defined as string patterns using the *regular
 expression* syntax.
 
-With the <span class="option">e</spanoption, if <span class="tool">context</span> encounters a data record
+With the <span class="option">e</span> option, if <span class="tool">context</span> encounters a data record
 matching *regexp* then it appends the current input record to the
 current assembled output record and begins assembling a new record
 with the following input record.
 
-The <span class="option">i</spanoption is used only with **-n;** it causes any data
+The <span class="option">i</span> option is used only with **-n;** it causes any data
 records matching *regexp* to be ignored in the counting of
 amalgamated tokens. Such \"uncounted\" records are nevertheless
 output.
 
-The <span class="option">o</spanoption causes data records matching *regexp* to be
+The <span class="option">o</span> option causes data records matching *regexp* to be
 omitted from the output.
 
-The <span class="option">p</spanoption may be used in conjunction with <span class="option">n</span>. Normally,
+The <span class="option">p</span> option may be used in conjunction with <span class="option">n</span>. Normally,
 the output from **context -n** is padded with trailing null tokens
 &mdash; one fewer in number than the value specified with <span class="option">n</span>. The
-<span class="option">p</span*n* option causes *n* null tokens to be padded at the
+<span class="option">p</span> *n* option causes *n* null tokens to be padded at the
 *beginning* of the output spine, rather than trailing at the end.
 
 Note that tandem interpretations and comments are processed like
 null tokens; they are merely echoed in the output in their
-appropriate position. Note also that <span class="tool">context</spanautomatically
+appropriate position. Note also that <span class="tool">context</span> automatically
 breaks a congealed output record whenever it encounters a spine-path
 terminator or exclusive interpretation in the input.
 
@@ -506,12 +506,12 @@ right spines below: ``
 
 `*-`
 
-`*- ` Notice that as the end of the file is approached, <span class="tool">context</spanwill
+`*- ` Notice that as the end of the file is approached, <span class="tool">context</span> will
 continue amalgamating data records until it is no longer able to satisfy
 the amalgamating criteria. If unable to complete an output record,
-<span class="tool">context</spanwill output a null token.
+<span class="tool">context</span> will output a null token.
 
-If the above command had used the <span class="option">o</spanrather than the <span class="option">i</span> option,
+If the above command had used the <span class="option">o</span> rather than the <span class="option">i</span> option,
 all of the rests and barlines would have been omitted from the output.
 Otherwise, the output would be the same as given above.
 
@@ -612,16 +612,16 @@ interpreters, and revised *awk* (1985).
 
 ## SEE ALSO ##
 
-<span class="tool">context</span(4), **grep** (UNIX), <span class="tool">nf</span> (4),
-<span class="tool">patt</span(4), <span class="tool">pattern</span> (4),
-<span class="tool">pcset</span(4)
+<span class="tool">context</span> (4), **grep** (UNIX), <span class="tool">nf</span> (4),
+<span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
+<span class="tool">pcset</span> (4)
 
 ------------------------------------------------------------------------
 
 ## WARNINGS ##
 
-The <span class="option">b</spanand <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>,
-<span class="option">p</span>, and <span class="option">i</spanoptions.
+The <span class="option">b</span> and <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>,
+<span class="option">p</span>, and <span class="option">i</span> options.
 
 ------------------------------------------------------------------------
 

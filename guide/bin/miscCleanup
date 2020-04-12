@@ -58,12 +58,15 @@ sub processFile {
 ## processLine --
 ##      \--             -->    &mdash;
 ##      [a-z]\'[a-z]    -->    [a-z]'[a-z]
+##      <\/span         -->    <\/span>
 ##
 
 sub processLine {
 	my ($line) = @_;
 	$line =~ s/\\--/\&mdash;/g;
 	$line =~ s/([a-z])\\'([a-z])/$1'$2/g;
+	$line =~ s/<\/span([^>\s])/<\/span> $1/g;
+	$line =~ s/<\/span\s([^>])/<\/span> $1/g;
 	return $line;
 }
 
