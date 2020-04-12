@@ -155,27 +155,27 @@ see [**barlines**](barlines.rep.html).
 > inputs:
 >
 > >   -- --------------------------------------- -----------------------------------------------------------
-> >      [**cents**](../commands/cents.html)     translates **\*\*pitch** to **\*\*cents**
-> >      [**deg**](../commands/deg.html)         translate **\*\*pitch** to **\*\*deg**
-> >      [**degree**](../commands/degree.html)   translate **\*\*pitch** to **\*\*degree**
-> >      [**freq**](../commands/freq.html)       translates **\*\*pitch** to **\*\*freq**
-> >      [**hint**](../commands/hint.html)       calculate harmonic intervals from **\*\*pitch** input
-> >      [**kern**](../commands/kern.html)       translates **\*\*pitch** to **\*\*kern**
-> >      [**mint**](../commands/mint.html)       calculate melodic intervals from **\*\*pitch** input
-> >      [**pc**](../commands/pc.html)           translate **\*\*pitch** pitch to **\*\*pc**
-> >      [**semits**](../commands/semits.html)   translate **\*\*pitch** pitch to numerical **\*\*semits**
-> >      [**solfa**](../commands/solfa.html)     translate **\*\*pitch** pitch to **\*\*solfa**
-> >      [**solfg**](../commands/solfg.html)     translate **\*\*pitch** pitch to **\*\*solfg**
-> >      [**tonh**](../commands/tonh.html)       translate **\*\*pitch** pitch to **\*\*Tonh**
-> >      [**trans**](../commands/trans.html)     transpose **\*\*pitch** score
-> >      [**vox**](../commands/vox.html)         determine active and inactive voices in a Humdrum file
+> >      <span class="tool">cents</span>     translates **\*\*pitch** to **\*\*cents**
+> >      <span class="tool">deg</span>         translate **\*\*pitch** to **\*\*deg**
+> >      <span class="tool">degree</span>   translate **\*\*pitch** to **\*\*degree**
+> >      <span class="tool">freq</span>       translates **\*\*pitch** to **\*\*freq**
+> >      <span class="tool">hint</span>       calculate harmonic intervals from **\*\*pitch** input
+> >      <span class="tool">kern</span>       translates **\*\*pitch** to **\*\*kern**
+> >      <span class="tool">mint</span>       calculate melodic intervals from **\*\*pitch** input
+> >      <span class="tool">pc</span>           translate **\*\*pitch** pitch to **\*\*pc**
+> >      <span class="tool">semits</span>   translate **\*\*pitch** pitch to numerical **\*\*semits**
+> >      <span class="tool">solfa</span>     translate **\*\*pitch** pitch to **\*\*solfa**
+> >      <span class="tool">solfg</span>     translate **\*\*pitch** pitch to **\*\*solfg**
+> >      <span class="tool">tonh</span>       translate **\*\*pitch** pitch to **\*\*Tonh**
+> >      <span class="tool">trans</span>     transpose **\*\*pitch** score
+> >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- -----------------------------------------------------------
 > >
 > The following Humdrum command produces **\*\*pitch** data as output:
 >
 > >   -- ------------------------------------- -------------------------------------------------------------------------------------
-> >      [**pitch**](../commands/pitch.html)   translates **\*\*cents**, **\*\*degree**, **\*\*freq**, **\*\*fret**, **\*\*kern**,
+> >      <span class="tool">pitch</span>   translates **\*\*cents**, **\*\*degree**, **\*\*freq**, **\*\*fret**, **\*\*kern**,
 > >                                            **\*\*MIDI**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to
 > >                                            **\*\*pitch**
 > >   -- ------------------------------------- -------------------------------------------------------------------------------------

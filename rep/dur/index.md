@@ -135,7 +135,7 @@ Duration
 
 > The following Humdrum command produces **\*\*dur** data as output:
 >
-[**dur**](../commands/dur.html)
+<span class="tool">dur</span>
 
 change canonical durations (`**recip) to elapsed time in seconds   `
 

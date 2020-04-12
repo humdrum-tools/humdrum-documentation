@@ -88,7 +88,7 @@ Frequency Spectra
 > The following Humdrum command produces **\*\*spect** data as output:
 >
 > >   -- ------------------------------------- -----------------------------------------------------------
-> >      [**spect**](../commands/spect.html)   assemble total spectral content for individual sonorities
+> >      <span class="tool">spect</span>   assemble total spectral content for individual sonorities
 > >   -- ------------------------------------- -----------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

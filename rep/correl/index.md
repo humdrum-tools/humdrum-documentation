@@ -73,7 +73,7 @@ Statistical Correlations
 >
 >   -- --------------------------------------- ----------------------------------------------------
 >                                              
->      [**correl**](../commands/correl.html)   calculate numerical correlation between two spines
+>      <span class="tool">correl</span>   calculate numerical correlation between two spines
 >   -- --------------------------------------- ----------------------------------------------------
 >
 ### TANDEM INTERPRETATIONS

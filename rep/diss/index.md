@@ -78,7 +78,7 @@ Dissonance
 >
 > >   -- ----------------------------------- -------------------------------------------------------------------
 > >                                          
-> >      [**diss**](../commands/diss.html)   calculate the degree of sensory dissonance for successive spectra
+> >      <span class="tool">diss</span>   calculate the degree of sensory dissonance for successive spectra
 > >   -- ----------------------------------- -------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

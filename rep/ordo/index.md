@@ -77,7 +77,7 @@ Sequential Order
 > The following Humdrum command produces **\*\*ordo** data as output:
 >
 > >   -- --------------------------------- --------------------------------------
-> >      [**num**](../commands/num.html)   number selected Humdrum data records
+> >      <span class="tool">num</span>   number selected Humdrum data records
 > >   -- --------------------------------- --------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

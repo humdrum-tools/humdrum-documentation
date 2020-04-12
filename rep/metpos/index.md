@@ -110,14 +110,14 @@ Metric Hierarchy
 > inputs:
 >
 > >   -- ------------------------------------------- ---------------------------------------------------
-> >      [**synco**](../commands/synco.html)         measure degree of metric syncopation
-> >      [**urrhythm**](../commands/urrhythm.html)   characterize the rhythmic prototypes in a passage
+> >      <span class="tool">synco</span>         measure degree of metric syncopation
+> >      <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
 > >   -- ------------------------------------------- ---------------------------------------------------
 > >
 > The following Humdrum command produces **\*\*metpos** data as output:
 >
 > >   -- --------------------------------------- ---------------------------------------------------------------------------------------------
-> >      [**metpos**](../commands/metpos.html)   generate metric position values for timebase-formatted **\*\*kern** or **\*\*recip** inputs
+> >      <span class="tool">metpos</span>   generate metric position values for timebase-formatted **\*\*kern** or **\*\*recip** inputs
 > >   -- --------------------------------------- ---------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

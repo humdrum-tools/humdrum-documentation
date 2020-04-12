@@ -162,7 +162,7 @@ Vocal Text
 > \"verses\" sung to the same musical setting. Abbreviated
 > representations may take advantage of the Humdrum *strophe* mechanism
 > to avoid duplicate encoding of melodies, etc. See
-> [**strophe**](../commands/strophe.html).
+> <span class="tool">strophe</span>.
 
 ### FILE TYPE
 

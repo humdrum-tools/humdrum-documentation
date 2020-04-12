@@ -119,7 +119,7 @@ Beat Prototypes
 > output:
 >
 > >   -- ------------------------------------------- ---------------------------------------------------
-> >      [**urrhythm**](../commands/urrhythm.html)   characterize the rhythmic prototypes in a passage
+> >      <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
 > >   -- ------------------------------------------- ---------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

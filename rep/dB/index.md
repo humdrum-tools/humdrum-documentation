@@ -66,7 +66,7 @@ Decibels
 >
 > >   -- ------------------------------------- ----------------------------------------------------
 > >                                            
-> >      [**spect**](../commands/spect.html)   convert notated sonority to instantaneous spectrum
+> >      <span class="tool">spect</span>   convert notated sonority to instantaneous spectrum
 > >   -- ------------------------------------- ----------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

@@ -81,18 +81,18 @@ Frequency
 >
 > >   -- --------------------------------------- --------------------------------------------------------
 > >                                              
-> >      [**barks**](../commands/barks.html)     translates **\*\*freq** to **\*\*barks**
-> >      [**cbr**](../commands/cbr.html)         translates **\*\*freq** to **\*\*cbr**
-> >      [**cents**](../commands/cents.html)     translates **\*\*freq** to **\*\*cents**
-> >      [**cocho**](../commands/cocho.html)     translates **\*\*freq** to **\*\*cocho**
-> >      [**kern**](../commands/kern.html)       translates **\*\*freq** to **\*\*kern**
-> >      [**pc**](../commands/pc.html)           translates **\*\*freq** to **\*\*pc**
-> >      [**pitch**](../commands/pitch.html)     translates **\*\*freq** to **\*\*pitch**
-> >      [**semits**](../commands/semits.html)   translate **\*\*freq** to numerical **\*\*semits**
-> >      [**solfg**](../commands/solfg.html)     translate **\*\*freq** to numerical **\*\*solfg**
-> >      [**specc**](../commands/specc.html)     translate **\*\*freq** to numerical **\*\*specC**
-> >      [**tonh**](../commands/tonh.html)       translate **\*\*freq** to numerical **\*\*Tonh**
-> >      [**vox**](../commands/vox.html)         determine active and inactive voices in a Humdrum file
+> >      <span class="tool">barks</span>     translates **\*\*freq** to **\*\*barks**
+> >      <span class="tool">cbr</span>         translates **\*\*freq** to **\*\*cbr**
+> >      <span class="tool">cents</span>     translates **\*\*freq** to **\*\*cents**
+> >      <span class="tool">cocho</span>     translates **\*\*freq** to **\*\*cocho**
+> >      <span class="tool">kern</span>       translates **\*\*freq** to **\*\*kern**
+> >      <span class="tool">pc</span>           translates **\*\*freq** to **\*\*pc**
+> >      <span class="tool">pitch</span>     translates **\*\*freq** to **\*\*pitch**
+> >      <span class="tool">semits</span>   translate **\*\*freq** to numerical **\*\*semits**
+> >      <span class="tool">solfg</span>     translate **\*\*freq** to numerical **\*\*solfg**
+> >      <span class="tool">specc</span>     translate **\*\*freq** to numerical **\*\*specC**
+> >      <span class="tool">tonh</span>       translate **\*\*freq** to numerical **\*\*Tonh**
+> >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- --------------------------------------------------------
 > >
@@ -100,7 +100,7 @@ Frequency
 >
 > >   -- ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >                                          
-> >      [**freq**](../commands/freq.html)   translates **\*\*cbr**, **\*\*cents**, **\*\*cocho**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
+> >      <span class="tool">freq</span>   translates **\*\*cbr**, **\*\*cents**, **\*\*cocho**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
 > >   -- ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

@@ -121,11 +121,11 @@ Absolute Scale Degree
 >
 > >   -- ------------------------------------- --------------------------------------------------------
 > >                                            
-> >      [**kern**](../commands/kern.html)     translates **\*\*degree** to **\*\*kern**
-> >      [**pitch**](../commands/pitch.html)   translates **\*\*degree** to **\*\*pitch**
-> >      [**solfg**](../commands/solfg.html)   translates **\*\*degree** to **\*\*solfg**
-> >      [**tonh**](../commands/tonh.html)     translates **\*\*degree** to **\*\*Tonh**
-> >      [**vox**](../commands/vox.html)       determine active and inactive voices in a Humdrum file
+> >      <span class="tool">kern</span>     translates **\*\*degree** to **\*\*kern**
+> >      <span class="tool">pitch</span>   translates **\*\*degree** to **\*\*pitch**
+> >      <span class="tool">solfg</span>   translates **\*\*degree** to **\*\*solfg**
+> >      <span class="tool">tonh</span>     translates **\*\*degree** to **\*\*Tonh**
+> >      <span class="tool">vox</span>       determine active and inactive voices in a Humdrum file
 > >                                            
 > >   -- ------------------------------------- --------------------------------------------------------
 > >
@@ -133,7 +133,7 @@ Absolute Scale Degree
 >
 > >   -- --------------------------------------- ----------------------------------------------------------------------------------------
 > >                                              
-> >      [**degree**](../commands/degree.html)   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**, to **\*\*degree**
+> >      <span class="tool">degree</span>   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**, to **\*\*degree**
 > >   -- --------------------------------------- ----------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

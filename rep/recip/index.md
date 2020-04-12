@@ -131,8 +131,8 @@ Beats
 
    -- ------------------------------------------- ------------------------------------------------------
                                                   
-      [**timebase**](../commands/timebase.html)   reformat **\*\*recip** score with constant time-base
-      [**urrhythm**](../commands/urrhythm.html)   characterize the rhythmic prototype in a passage
+      <span class="tool">timebase</span>   reformat **\*\*recip** score with constant time-base
+      <span class="tool">urrhythm</span>   characterize the rhythmic prototype in a passage
    -- ------------------------------------------- ------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS

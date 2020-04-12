@@ -133,27 +133,27 @@ French Solfège
 > inputs:
 >
 >   -- --------------------------------------- -----------------------------------------------------------
->      [**cents**](../commands/cents.html)     translate **\*\*solfg** to **\*\*cents**
->      [**deg**](../commands/deg.html)         translate **\*\*solfg** to **\*\*deg**
->      [**degree**](../commands/degree.html)   translate **\*\*solfg** to **\*\*degree**
->      [**freq**](../commands/freq.html)       translate **\*\*solfg** to **\*\*freq**
->      [**hint**](../commands/hint.html)       calculate harmonic intervals from **\*\*solfg** input
->      [**kern**](../commands/kern.html)       translate **\*\*solfg** to **\*\*kern**
->      [**mint**](../commands/mint.html)       calculate melodic intervals from **\*\*solfg** input
->      [**pc**](../commands/pc.html)           translate **\*\*solfg** pitch to **\*\*pc**
->      [**pitch**](../commands/pitch.html)     translate **\*\*solfg** pitch to **\*\*pitch**
->      [**semits**](../commands/semits.html)   translate **\*\*solfg** pitch to numerical **\*\*semits**
->      [**solfa**](../commands/solfa.html)     translate **\*\*solfg** pitch to **\*\*solfa**
->      [**tonh**](../commands/tonh.html)       translate **\*\*solfg** pitch to **\*\*Tonh**
->      [**trans**](../commands/trans.html)     transpose **\*\*solfg** score
->      [**vox**](../commands/vox.html)         determine active and inactive voices in a Humdrum file
+>      <span class="tool">cents</span>     translate **\*\*solfg** to **\*\*cents**
+>      <span class="tool">deg</span>         translate **\*\*solfg** to **\*\*deg**
+>      <span class="tool">degree</span>   translate **\*\*solfg** to **\*\*degree**
+>      <span class="tool">freq</span>       translate **\*\*solfg** to **\*\*freq**
+>      <span class="tool">hint</span>       calculate harmonic intervals from **\*\*solfg** input
+>      <span class="tool">kern</span>       translate **\*\*solfg** to **\*\*kern**
+>      <span class="tool">mint</span>       calculate melodic intervals from **\*\*solfg** input
+>      <span class="tool">pc</span>           translate **\*\*solfg** pitch to **\*\*pc**
+>      <span class="tool">pitch</span>     translate **\*\*solfg** pitch to **\*\*pitch**
+>      <span class="tool">semits</span>   translate **\*\*solfg** pitch to numerical **\*\*semits**
+>      <span class="tool">solfa</span>     translate **\*\*solfg** pitch to **\*\*solfa**
+>      <span class="tool">tonh</span>       translate **\*\*solfg** pitch to **\*\*Tonh**
+>      <span class="tool">trans</span>     transpose **\*\*solfg** score
+>      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 >                                              
 >   -- --------------------------------------- -----------------------------------------------------------
 >
 > The following Humdrum command produces **\*\*solfg** data as output:
 >
 >   -- ------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
->      [**solfg**](../commands/solfg.html)   translates **\*\*cents**, **\*\*degree**, **\*\*fret**, **\*\*freq**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*specC**, and **\*\*Tonh** to **\*\*solfg**
+>      <span class="tool">solfg</span>   translates **\*\*cents**, **\*\*degree**, **\*\*fret**, **\*\*freq**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*specC**, and **\*\*Tonh** to **\*\*solfg**
 >   -- ------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
 ### TANDEM INTERPRETATIONS

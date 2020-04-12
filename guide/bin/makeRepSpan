@@ -22,7 +22,10 @@
 #                   [**\*\*kern**](representations/kern.rep.html)
 #                into
 #                   <span class="rep">kern</span>
-#
+#                and
+#                   **\*\*kern**
+#                into 
+#                   <span class="rep">kern</span>
 
 use strict;
 
@@ -89,11 +92,16 @@ sub processFile {
 ##        [**\*\*kern**](representations/kern.rep.html)
 ##     into
 ##        <span class="rep">kern</span>
+##     and
+##        **\*\*kern**
+##     into 
+##        <span class="rep">kern</span>
 ##
 
 sub processLine {
 	my ($line) = @_;
 	$line =~ s/\[\*\*\\\*\\\*([a-zA-Z]+)\(representations\/[a-zA-Z]+\.rep\.html\)/<span class="rep">$1<\/span>/g;
+	$line =~ s/\*\*\\\*\\\*([a-zA-Z]+)\*\*/<span class="rep">$1<\/span>/g;
 	$line =~ s/\[\\\*\\\*([a-zA-Z]+)\]\(\.\.\/representations\/[a-zA-Z]+\.rep\.html\)/<span class="rep">$1<\/span>/g;
 	$line =~ s/\[\`\*\*([a-zA-Z]+)\`\]\(\/rep\/[a-zA-Z]+\)/<span class="rep">$1<\/span>/g;
 	$line =~ s/\`\*\*([a-zA-Z]+)\`/<span class="rep">$1<\/span>/g;

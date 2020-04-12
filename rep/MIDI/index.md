@@ -103,23 +103,23 @@ MIDI
 > inputs:
 >
 > >   -- ----------------------------------------- -------------------------------------------
-> >      [**cents**](../commands/cents.html)       translates **\*\*MIDI** to **\*\*cents**
-> >      [**fade**](../commands/fade.html)         fade-in or fade-out **\*\*MIDI** data
-> >      [**freq**](../commands/freq.html)         translates **\*\*MIDI** to **\*\*freq**
-> >      [**kern**](../commands/kern.html)         translates **\*\*MIDI** to **\*\*kern**
-> >      [**perform**](../commands/perform.html)   play Humdrum **\*\*MIDI** files
-> >      [**pitch**](../commands/pitch.html)       translates **\*\*MIDI** to **\*\*pitch**
-> >      [**semits**](../commands/semits.html)     translates **\*\*MIDI** to **\*\*semits**
-> >      [**smf**](../commands/smf.html)           generate standard MIDI file
-> >      [**solfg**](../commands/solfg.html)       translates **\*\*MIDI** to **\*\*solfg**
-> >      [**tonh**](../commands/tonh.html)         translates **\*\*MIDI** to **\*\*Tonh**
+> >      <span class="tool">cents</span>       translates **\*\*MIDI** to **\*\*cents**
+> >      <span class="tool">fade</span>         fade-in or fade-out **\*\*MIDI** data
+> >      <span class="tool">freq</span>         translates **\*\*MIDI** to **\*\*freq**
+> >      <span class="tool">kern</span>         translates **\*\*MIDI** to **\*\*kern**
+> >      <span class="tool">perform</span>   play Humdrum **\*\*MIDI** files
+> >      <span class="tool">pitch</span>       translates **\*\*MIDI** to **\*\*pitch**
+> >      <span class="tool">semits</span>     translates **\*\*MIDI** to **\*\*semits**
+> >      <span class="tool">smf</span>           generate standard MIDI file
+> >      <span class="tool">solfg</span>       translates **\*\*MIDI** to **\*\*solfg**
+> >      <span class="tool">tonh</span>         translates **\*\*MIDI** to **\*\*Tonh**
 > >   -- ----------------------------------------- -------------------------------------------
 > >
 > The following Humdrum commands produce **\*\*MIDI** data as outputs:
 >
 > >   -- --------------------------------------- ------------------------------------------------------
-> >      [**midi**](../commands/midi.html)       produces **\*\*MIDI** output from **\*\*kern** input
-> >      [**record**](../commands/record.html)   records **\*\*MIDI** data from a MIDI input
+> >      <span class="tool">midi</span>       produces **\*\*MIDI** output from **\*\*kern** input
+> >      <span class="tool">record</span>   records **\*\*MIDI** data from a MIDI input
 > >   -- --------------------------------------- ------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

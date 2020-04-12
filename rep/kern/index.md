@@ -181,7 +181,7 @@ Basic Notated Music
  upper-case letter `Q`. Hence, a minature sixteenth-note middle C would
  be encoded as `16cQ`. Depending on the analytic task, these notes may
  be treated as equivalent to their notated durations, or they may be
- discarded. For example, the [**timebase**](../commands/timebase.html)
+ discarded. For example, the <span class="tool">timebase</span>
  command eliminates these notes. Note that data records containing
  acciaccaturas or groupettos notes must not include normal notes.
 
@@ -497,26 +497,26 @@ Basic Notated Music
 
    -- ------------------------------------------- ----------------------------------------------------------
                                                   
-      [**census** -k](../commands/census.html)    determine general characteristics of a **\*\*kern** file
-      [**cents**](../commands/cents.html)         translates **\*\*kern** to **\*\*cents**
-      [**deg**](../commands/deg.html)             translates **\*\*kern** to **\*\*deg**
-      [**degree**](../commands/degree.html)       translates **\*\*kern** to **\*\*degree**
-      [**freq**](../commands/freq.html)           translates **\*\*kern** to **\*\*freq**
-      [**hint**](../commands/hint.html)           calculate harmonic intervals from **\*\*kern** input
-      [**key**](../commands/key.html)             estimate the key of a **\*\*kern** input
-      [**mint**](../commands/mint.html)           calculate melodic intervals from **\*\*kern** input
-      [**pc**](../commands/pc.html)               translates **\*\*kern** to **\*\*pc**
-      [**pitch**](../commands/pitch.html)         translates **\*\*kern** to **\*\*pitch**
-      [**proof**](../commands/proof.html)         check for errors in **\*\*kern** encoded file
-      [**semits**](../commands/semits.html)       translate **\*\*kern** to numerical **\*\*semits**
-      [**solfa**](../commands/solfa.html)         translate **\*\*kern** to numerical **\*\*solfa**
-      [**solfg**](../commands/solfg.html)         translate **\*\*kern** to numerical **\*\*solfg**
-      [**synco**](../commands/synco.html)         measure degree of metric syncopation
-      [**timebase**](../commands/timebase.html)   reformat **\*\*kern** score with constant timebase
-      [**tonh**](../commands/tonh.html)           translate **\*\*kern** to numerical **\*\*Tonh**
-      [**trans**](../commands/trans.html)         transpose **\*\*kern** score
-      [**urrhythm**](../commands/urrhythm.html)   characterize the rhythmic prototypes in a passage
-      [**vox**](../commands/vox.html)             determine active and inactive voices in a Humdrum file
+      [<span class="tool">census</span> -k](../commands/census.html)    determine general characteristics of a **\*\*kern** file
+      <span class="tool">cents</span>         translates **\*\*kern** to **\*\*cents**
+      <span class="tool">deg</span>             translates **\*\*kern** to **\*\*deg**
+      <span class="tool">degree</span>       translates **\*\*kern** to **\*\*degree**
+      <span class="tool">freq</span>           translates **\*\*kern** to **\*\*freq**
+      <span class="tool">hint</span>           calculate harmonic intervals from **\*\*kern** input
+      <span class="tool">key</span>             estimate the key of a **\*\*kern** input
+      <span class="tool">mint</span>           calculate melodic intervals from **\*\*kern** input
+      <span class="tool">pc</span>               translates **\*\*kern** to **\*\*pc**
+      <span class="tool">pitch</span>         translates **\*\*kern** to **\*\*pitch**
+      <span class="tool">proof</span>         check for errors in **\*\*kern** encoded file
+      <span class="tool">semits</span>       translate **\*\*kern** to numerical **\*\*semits**
+      <span class="tool">solfa</span>         translate **\*\*kern** to numerical **\*\*solfa**
+      <span class="tool">solfg</span>         translate **\*\*kern** to numerical **\*\*solfg**
+      <span class="tool">synco</span>         measure degree of metric syncopation
+      <span class="tool">timebase</span>   reformat **\*\*kern** score with constant timebase
+      <span class="tool">tonh</span>           translate **\*\*kern** to numerical **\*\*Tonh**
+      <span class="tool">trans</span>         transpose **\*\*kern** score
+      <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
+      <span class="tool">vox</span>             determine active and inactive voices in a Humdrum file
                                                   
    -- ------------------------------------------- ----------------------------------------------------------
 
@@ -524,9 +524,9 @@ Basic Notated Music
 
    -- ------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                   
-      [**kern**](../commands/kern.html)           translates **\*\*cents**, **\*\*degree**, **\*\*freq**, **\*\*fret**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*kern**
-      [**timebase**](../commands/timebase.html)   reformat **\*\*kern** score with constant timebase
-      [**trans**](../commands/trans.html)         transpose **\*\*kern** score
+      <span class="tool">kern</span>           translates **\*\*cents**, **\*\*degree**, **\*\*freq**, **\*\*fret**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*kern**
+      <span class="tool">timebase</span>   reformat **\*\*kern** score with constant timebase
+      <span class="tool">trans</span>         transpose **\*\*kern** score
    -- ------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS

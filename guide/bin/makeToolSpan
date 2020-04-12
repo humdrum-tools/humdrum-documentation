@@ -26,6 +26,10 @@
 #                   [**census**](census.html)
 #                into
 #                   <span class="tool">census</span>
+#                and
+#                   [**census**](../commands/census.html)
+#                info
+#                   <span class="tool">census</span>
 #
 
 use strict;
@@ -35,6 +39,12 @@ my @commands = glob("../tool/*");
 for (my $i=0; $i<@commands; $i++) {
 	$commands[$i] =~ s/^\.\.\/tool\///;
 }
+# Commands which do not seem to have documentation:
+$commands[@commands] = "tonh";
+$commands[@commands] = "solfa";
+$commands[@commands] = "solfg";
+
+
 # print "TOOLS: ", join("\n", @commands), "\n";
 
 foreach my $file (@files) {
@@ -100,6 +110,10 @@ sub processFile {
 ##      **census,** 
 ##   into
 ##      <span class="tool">census</span>,
+##   and
+##      [**census**](../commands/census.html)
+##   info
+##      <span class="tool">census</span>
 
 sub processLine {
 	my ($line) = @_;
@@ -112,6 +126,9 @@ sub processLine {
 		$line =~ s/\[\*\*$command\.\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;
 		$line =~ s/\[\*\*$command\*\*,\]\(\/tool\/$command\)/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\[\*\*$command\*\*\.\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;
+		$line =~ s/\[\*\*$command\*\*\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>/g;
+		$line =~ s/\[\*\*$command\*\*,\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>,/g;
+		$line =~ s/\[\*\*$command\*\*\.\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>./g;
 		$line =~ s/\*\*$command\.\*\*/<span class="tool">$command<\/span>./g;
 		$line =~ s/\*\*$command,\*\*/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\*\*$command\*\*/<span class="tool">$command<\/span>/g;

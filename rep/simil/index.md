@@ -66,7 +66,7 @@ Similarity Values
 > The following Humdrum command produces **\*\*simil** data as output:
 >
 > >   -- ------------------------------------- ---------------------------------------------------
-> >      [**simil**](../commands/simil.html)   measure the similarity between two Humdrum spines
+> >      <span class="tool">simil</span>   measure the similarity between two Humdrum spines
 > >   -- ------------------------------------- ---------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

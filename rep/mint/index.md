@@ -117,7 +117,7 @@ Melodic Intervals
 > The following Humdrum command produces **\*\*mint** data as outputs:
 >
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------
-> >      [**mint**](../commands/mint.html)   produces **\*\*mint** output from **\*\*pitch**, **\*\*kern**, **\*\*solfg**, or **\*\*Tonh** input
+> >      <span class="tool">mint</span>   produces **\*\*mint** output from **\*\*pitch**, **\*\*kern**, **\*\*solfg**, or **\*\*Tonh** input
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

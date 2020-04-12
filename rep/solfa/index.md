@@ -138,14 +138,14 @@ Solfa Syllables
  inputs:
 
    -- --------------------------------- --------------------------------------------------------
-      [**vox**](../commands/vox.html)   determine active and inactive voices in a Humdrum file
+      <span class="tool">vox</span>   determine active and inactive voices in a Humdrum file
                                         
    -- --------------------------------- --------------------------------------------------------
 
  The following Humdrum command produces **\*\*solfa** data as output:
 
    -- ------------------------------------- ---------------------------------------------------------------------
-      [**solfa**](../commands/solfa.html)   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**
+      <span class="tool">solfa</span>   translates **\*\*kern**, **\*\*pitch**, **\*\*solfg**, **\*\*Tonh**
    -- ------------------------------------- ---------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS

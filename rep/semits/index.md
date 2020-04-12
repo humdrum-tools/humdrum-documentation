@@ -92,23 +92,23 @@ Semitone Pitch
 > inputs:
 >
 > >   -- --------------------------------------- --------------------------------------------------------
-> >      [**cents**](../commands/cents.html)     translates **\*\*semits** to **\*\*cents**
-> >      [**freq**](../commands/freq.html)       translates **\*\*semits** to **\*\*freq**
-> >      [**kern**](../commands/kern.html)       translates **\*\*semits** to **\*\*kern**
-> >      [**melac**](../commands/melac.html)     calculate melodic accent values for successive pitches
-> >      [**pc**](../commands/pc.html)           translate **\*\*semits** pitch to **\*\*pc**
-> >      [**pitch**](../commands/pitch.html)     translate **\*\*semits** pitch to **\*\*pitch**
-> >      [**semits**](../commands/semits.html)   change numerical precision of **\*\*semits** values
-> >      [**solfg**](../commands/solfg.html)     translate **\*\*semits** pitch to **\*\*solfg**
-> >      [**tonh**](../commands/tonh.html)       translate **\*\*semits** pitch to **\*\*Tonh**
-> >      [**vox**](../commands/vox.html)         determine active and inactive voices in a Humdrum file
+> >      <span class="tool">cents</span>     translates **\*\*semits** to **\*\*cents**
+> >      <span class="tool">freq</span>       translates **\*\*semits** to **\*\*freq**
+> >      <span class="tool">kern</span>       translates **\*\*semits** to **\*\*kern**
+> >      <span class="tool">melac</span>     calculate melodic accent values for successive pitches
+> >      <span class="tool">pc</span>           translate **\*\*semits** pitch to **\*\*pc**
+> >      <span class="tool">pitch</span>     translate **\*\*semits** pitch to **\*\*pitch**
+> >      <span class="tool">semits</span>   change numerical precision of **\*\*semits** values
+> >      <span class="tool">solfg</span>     translate **\*\*semits** pitch to **\*\*solfg**
+> >      <span class="tool">tonh</span>       translate **\*\*semits** pitch to **\*\*Tonh**
+> >      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 > >                                              
 > >   -- --------------------------------------- --------------------------------------------------------
 > >
 > The following Humdrum commands produce **\*\*semits** data as outputs:
 >
 > >   -- --------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-> >      [**semits**](../commands/semits.html)   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, **\*\*Tonh**, to **\*\*semits**
+> >      <span class="tool">semits</span>   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, **\*\*Tonh**, to **\*\*semits**
 > >   -- --------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

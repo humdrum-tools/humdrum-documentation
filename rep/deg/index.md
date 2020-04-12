@@ -120,7 +120,7 @@ Relative Scale Degree
 >
 > >   -- --------------------------------- --------------------------------------------------------
 > >                                        
-> >      [**vox**](../commands/vox.html)   determine active and inactive voices in a Humdrum file
+> >      <span class="tool">vox</span>   determine active and inactive voices in a Humdrum file
 > >                                        
 > >   -- --------------------------------- --------------------------------------------------------
 > >
@@ -128,7 +128,7 @@ Relative Scale Degree
 >
 > >   -- --------------------------------- -------------------------------------------------------------------------
 > >                                        
-> >      [**deg**](../commands/deg.html)   translates **\*\*kern, \*\*pitch, \*\*Tonh, \*\*solfg**, to **\*\*deg**
+> >      <span class="tool">deg</span>   translates **\*\*kern, \*\*pitch, \*\*Tonh, \*\*solfg**, to **\*\*deg**
 > >   -- --------------------------------- -------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

@@ -43,7 +43,7 @@ Metric Syncopation
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 >
-> Note: **\*\*synco** data is normally produced by the **synco**
+> Note: **\*\*synco** data is normally produced by the <span class="tool">synco</span>
 > command.
 
 ### FILE TYPE
@@ -95,7 +95,7 @@ Metric Syncopation
 > The following Humdrum command produces **\*\*synco** data as output:
 >
 > >   -- ------------------------------------- ------------------------------------------
-> >      [**synco**](../commands/synco.html)   measure the degree of metric syncopation
+> >      <span class="tool">synco</span>   measure the degree of metric syncopation
 > >   -- ------------------------------------- ------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

@@ -150,20 +150,20 @@ Pitch-Class
  inputs:
 
    -- ------------------------------------- ------------------------------------------------------------------
-      [**iv**](../commands/iv.html)         determine interval vectors for vertical sonorities
-      [**nf**](../commands/nf.html)         determine normal form for vertical sonorities
-      [**pc**](../commands/pc.html)         convert between numerical and alphanumerical forms of **\*\*pc**
-      [**pcset**](../commands/pcset.html)   convert to set-theoretic representations
-      [**pf**](../commands/pf.html)         determine prime form for vertical sonorities
-      [**reihe**](../commands/reihe.html)   output tone-row variant for a given prime row
-      [**vox**](../commands/vox.html)       determine active and inactive voices in a Humdrum file
+      <span class="tool">iv</span>         determine interval vectors for vertical sonorities
+      <span class="tool">nf</span>         determine normal form for vertical sonorities
+      <span class="tool">pc</span>         convert between numerical and alphanumerical forms of **\*\*pc**
+      <span class="tool">pcset</span>   convert to set-theoretic representations
+      <span class="tool">pf</span>         determine prime form for vertical sonorities
+      <span class="tool">reihe</span>   output tone-row variant for a given prime row
+      <span class="tool">vox</span>       determine active and inactive voices in a Humdrum file
                                             
    -- ------------------------------------- ------------------------------------------------------------------
 
  The following Humdrum command produces **\*\*pc** data as output:
 
    -- ------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
-      [**pc**](../commands/pc.html)   translates **\*\*cents**, **\*\*freq**, **\*\*kern**, **\*\*pc**, **\*\*pitch**, **\*\*Tonh**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, to **\*\*pc**
+      <span class="tool">pc</span>   translates **\*\*cents**, **\*\*freq**, **\*\*kern**, **\*\*pc**, **\*\*pitch**, **\*\*Tonh**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, to **\*\*pc**
    -- ------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### TANDEM INTERPRETATIONS

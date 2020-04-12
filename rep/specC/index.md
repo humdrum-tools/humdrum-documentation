@@ -83,24 +83,24 @@ represented by the single letter \`r\'.
 > inputs:
 >
 > >   -- --------------------------------------- -----------------------------------------------------
-> >      [**cents**](../commands/cents.html)     translates **\*\*specC** to **\*\*cents**
-> >      [**deg**](../commands/deg.html)         translate **\*\*specC** to **\*\*deg**
-> >      [**degree**](../commands/degree.html)   translate **\*\*specC** to **\*\*degree**
-> >      [**freq**](../commands/freq.html)       translate **\*\*specC** to **\*\*freq**
-> >      [**kern**](../commands/kern.html)       translates **\*\*specC** to **\*\*kern**
-> >      [**pc**](../commands/pc.html)           translate **\*\*specC** pitch to **\*\*pc**
-> >      [**pitch**](../commands/pitch.html)     translates **\*\*specC** to **\*\*pitch**
-> >      [**semits**](../commands/semits.html)   translate **\*\*specC** to numerical **\*\*semits**
-> >      [**solfg**](../commands/solfg.html)     translate **\*\*specC** pitch to **\*\*solfg**
-> >      [**specc**](../commands/specc.html)     change numerical precision of **\*\*specC** values
-> >      [**tonh**](../commands/tonh.html)       translate **\*\*solfg** pitch to **\*\*Tonh**
+> >      <span class="tool">cents</span>     translates **\*\*specC** to **\*\*cents**
+> >      <span class="tool">deg</span>         translate **\*\*specC** to **\*\*deg**
+> >      <span class="tool">degree</span>   translate **\*\*specC** to **\*\*degree**
+> >      <span class="tool">freq</span>       translate **\*\*specC** to **\*\*freq**
+> >      <span class="tool">kern</span>       translates **\*\*specC** to **\*\*kern**
+> >      <span class="tool">pc</span>           translate **\*\*specC** pitch to **\*\*pc**
+> >      <span class="tool">pitch</span>     translates **\*\*specC** to **\*\*pitch**
+> >      <span class="tool">semits</span>   translate **\*\*specC** to numerical **\*\*semits**
+> >      <span class="tool">solfg</span>     translate **\*\*specC** pitch to **\*\*solfg**
+> >      <span class="tool">specc</span>     change numerical precision of **\*\*specC** values
+> >      <span class="tool">tonh</span>       translate **\*\*solfg** pitch to **\*\*Tonh**
 > >                                              
 > >   -- --------------------------------------- -----------------------------------------------------
 > >
 > The following Humdrum command produces **\*\*specC** data as output:
 >
 > >   -- ------------------------------------- -------------------------------------------------------------
-> >      [**specc**](../commands/specc.html)   translates **\*\*freq**, and **\*\*specC** to **\*\*specC**
+> >      <span class="tool">specc</span>   translates **\*\*freq**, and **\*\*specC** to **\*\*specC**
 > >   -- ------------------------------------- -------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

@@ -75,7 +75,7 @@ Number of Active Voices
 > The following Humdrum command produces **\*\*vox\#** data as output:
 >
 > >   -- --------------------------------- ----------------------------------------------------------------------------------------------
-> >      [**vox**](../commands/vox.html)   determine number of concurrently active voices for **\*\*cbr**, **\*\*cents**,
+> >      <span class="tool">vox</span>   determine number of concurrently active voices for **\*\*cbr**, **\*\*cents**,
 > >                                        **\*\*cocho**, **\*\*deg**, **\*\*degree**, **\*\*freq**, **\*\*kern**, **\*\*pc**,
 > >                                        **\*\*pitch**, **\*\*semits**, **\*\*solfa**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh**
 > >   -- --------------------------------- ----------------------------------------------------------------------------------------------

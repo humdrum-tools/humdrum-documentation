@@ -92,15 +92,15 @@ Pitch Cents
 >
 >   -- --------------------------------------- ----------------------------------------------------------
 >                                              
->      [**cents**](../commands/cents.html)     change numerical precision of \*\*cents values
->      [**freq**](../commands/freq.html)       translates **\*\*cents** to **\*\*freq**
->      [**kern**](../commands/kern.html)       translates **\*\*cents** to **\*\*kern**
->      [**pc**](../commands/pc.html)           translates **\*\*cents** to **\*\*pc**
->      [**pitch**](../commands/pitch.html)     translate **\*\*cents** pitch to numerical **\*\*pitch**
->      [**semits**](../commands/semits.html)   translates **\*\*cents** to **\*\*semits**
->      [**solfg**](../commands/solfg.html)     translates **\*\*cents** to **\*\*solfg**
->      [**tonh**](../commands/tonh.html)       translates **\*\*cents** to **\*\*Tonh**
->      [**vox**](../commands/vox.html)         determine active and inactive voices in a Humdrum file
+>      <span class="tool">cents</span>     change numerical precision of \*\*cents values
+>      <span class="tool">freq</span>       translates **\*\*cents** to **\*\*freq**
+>      <span class="tool">kern</span>       translates **\*\*cents** to **\*\*kern**
+>      <span class="tool">pc</span>           translates **\*\*cents** to **\*\*pc**
+>      <span class="tool">pitch</span>     translate **\*\*cents** pitch to numerical **\*\*pitch**
+>      <span class="tool">semits</span>   translates **\*\*cents** to **\*\*semits**
+>      <span class="tool">solfg</span>     translates **\*\*cents** to **\*\*solfg**
+>      <span class="tool">tonh</span>       translates **\*\*cents** to **\*\*Tonh**
+>      <span class="tool">vox</span>         determine active and inactive voices in a Humdrum file
 >                                              
 >   -- --------------------------------------- ----------------------------------------------------------
 >
@@ -108,7 +108,7 @@ Pitch Cents
 >
 >   -- ------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >                                            
->      [**cents**](../commands/cents.html)   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
+>      <span class="tool">cents</span>   translates **\*\*cents**, **\*\*freq**, **\*\*fret**, **\*\*kern**, **\*\*MIDI**, **\*\*pitch**, **\*\*semits**, **\*\*solfg**, **\*\*specC**, and **\*\*Tonh** to **\*\*cents**
 >   -- ------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
 ### TANDEM INTERPRETATIONS

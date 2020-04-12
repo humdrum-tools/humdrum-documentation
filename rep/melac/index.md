@@ -92,7 +92,7 @@ Melodic Accent
 > The following Humdrum command produces **\*\*melac** data as output:
 >
 > >   -- ------------------------------------- --------------------------------------------------------
-> >      [**melac**](../commands/melac.html)   calculate melodic accent values for successive pitches
+> >      <span class="tool">melac</span>   calculate melodic accent values for successive pitches
 > >   -- ------------------------------------- --------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

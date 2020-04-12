@@ -62,7 +62,7 @@ Pitch-Class Sets
 > the opening measures of Schoenberg\'s \"Sommerm\\o\'u\\(..\'d\" from
 > *Three Songs,* Opus 48. The right-most spine shows a `**pcset`
 > representation identifying the pitch-class content of each sonority.
-> (The `**pcset` spine might be generated using the **pcset** command,
+> (The `**pcset` spine might be generated using the <span class="tool">pcset</span> command,
 > after the `**pc` pitch-class spines are *filled-out* using the
 > **fill** command.)
 >
@@ -106,17 +106,17 @@ Pitch-Class Sets
 > inputs:
 >
 > >   -- ------------------------------------- ----------------------------------------------------------------------------
-> >      [**iv**](../commands/iv.html)         determine interval vectors for successive vertical sonorities
-> >      [**nf**](../commands/nf.html)         determine normal form for successive vertical sonorities
-> >      [**pcset**](../commands/pcset.html)   convert pitch and pitch-class information to set-theoretic representations
-> >      [**pf**](../commands/pf.html)         prime form representation
+> >      <span class="tool">iv</span>         determine interval vectors for successive vertical sonorities
+> >      <span class="tool">nf</span>         determine normal form for successive vertical sonorities
+> >      <span class="tool">pcset</span>   convert pitch and pitch-class information to set-theoretic representations
+> >      <span class="tool">pf</span>         prime form representation
 > >                                            
 > >   -- ------------------------------------- ----------------------------------------------------------------------------
 > >
 > The following Humdrum command produces *\*\*pcset* data as output:
 >
 > >   -- ------------------------------------- ----------------------------------------------------------------------------
-> >      [**pcset**](../commands/pcset.html)   convert pitch and pitch-class information to set-theoretic representations
+> >      <span class="tool">pcset</span>   convert pitch and pitch-class information to set-theoretic representations
 > >   -- ------------------------------------- ----------------------------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS

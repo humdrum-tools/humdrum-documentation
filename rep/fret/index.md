@@ -418,13 +418,13 @@ Tablature
 > inputs:
 >
 > >   -- --------------------------------------- -----------------------------------------------------------
-> >      [**cents**](../commands/cents.html)     translates **\*\*fret** to **\*\*cents**
-> >      [**freq**](../commands/freq.html)       translates **\*\*fret** to **\*\*freq**
-> >      [**kern**](../commands/kern.html)       translates **\*\*fret** to **\*\*kern**
-> >      [**pitch**](../commands/pitch.html)     translates **\*\*fret** to **\*\*pitch**
-> >      [**semits**](../commands/semits.html)   translates **\*\*fret** pitch to numerical **\*\*semits**
-> >      [**solfg**](../commands/solfg.html)     translates **\*\*fret** pitch to numerical **\*\*solfg**
-> >      [**tonh**](../commands/tonh.html)       translates **\*\*fret** pitch to numerical **\*\*Tonh**
+> >      <span class="tool">cents</span>     translates **\*\*fret** to **\*\*cents**
+> >      <span class="tool">freq</span>       translates **\*\*fret** to **\*\*freq**
+> >      <span class="tool">kern</span>       translates **\*\*fret** to **\*\*kern**
+> >      <span class="tool">pitch</span>     translates **\*\*fret** to **\*\*pitch**
+> >      <span class="tool">semits</span>   translates **\*\*fret** pitch to numerical **\*\*semits**
+> >      <span class="tool">solfg</span>     translates **\*\*fret** pitch to numerical **\*\*solfg**
+> >      <span class="tool">tonh</span>       translates **\*\*fret** pitch to numerical **\*\*Tonh**
 > >   -- --------------------------------------- -----------------------------------------------------------
 > >
 ### TANDEM INTERPRETATIONS
