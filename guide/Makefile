@@ -13,6 +13,12 @@ unix-span:
 option-span:
 	$(BIN)/makeOptionSpan ch??/index.md
 
+rep-span:
+	$(BIN)/makeRepSpan ch??/index.md
+
+misc:
+	$(BIN)/miscCleanup ch??/index.md
+
 misc:
 	$(BIN)/miscCleanup ch??/index.md
 

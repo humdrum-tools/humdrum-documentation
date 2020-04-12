@@ -202,7 +202,7 @@ position of various spines in order to extract them. With the <span class="optio
 option, <span class="tool">extract</span> outputs all spines containing a specified
 *interpretation.* Suppose we had a file containing a Schubert song,
 including vocal score, piano accompaniment and vocal text (encoded using
-[`**text`](/rep/text)). The vocal text from the file
+<span class="rep">text</span>). The vocal text from the file
 `lieder` can be extracted as follows:
 
 ```bash
@@ -219,18 +219,18 @@ extract -i '**semits,**MIDI' hildegard
 ```
 
 will extract all spines in the file `hildegard` containing
-[`**semits`](/rep/semits) or
-[`**MIDI`](/rep/MIDI) data.
+<span class="rep">semits</span> or
+<span class="rep">MIDI</span> data.
 
 An important use of the <span class="option">i</span> option for <span class="tool">extract</span> is to ensure that
 a particular input contains only a specified type of information. For
 example, the lower-case letter \``r`\' represents a rest in the
-[`**kern`](/rep/kern) representation. If we wish to
+<span class="rep">kern</span> representation. If we wish to
 determine which sonorities contain rests, we might want to use <span class="unix">grep</span>
 to search for this letter. However, the input might contain other
-Humdrum interpretations (such as `**text`) where the presence of the
+Humdrum interpretations (such as <span class="rep">text</span>) where the presence of the
 letter \``r`\' does not signify a rest. We can ensure that our search is
-limited to `**kern` data by using the <span class="tool">extract</span> command:
+limited to <span class="rep">kern</span> data by using the <span class="tool">extract</span> command:
 
 ```bash
 extract -i '**kern' | grep  ...
@@ -329,7 +329,7 @@ will result in the output:
   z
   \*-
   ---------
-The `**foo` and `**bar` data are mutually exclusive. Now consider an
+The <span class="rep">foo</span> and <span class="rep">bar</span> data are mutually exclusive. Now consider an
 input file where `foo` and `bar` are tandem interpretations:
 
 ```humdrum
@@ -409,7 +409,7 @@ With the <span class="tool">midi</span> and
 <span class="tool">perform</span> commands, <span class="tool">extract</span> allows the
 user to hear particular parts. For example, the following command
 extracts the bass and soprano voices, translates them to
-[`**MIDI`](/rep/MIDI) data, and plays the output:
+<span class="rep">MIDI</span> data, and plays the output:
 
 ```bash
 extract -i '*Ibass,*Isopran' lassus | midi | perform
@@ -465,10 +465,10 @@ A	a1	a2	b	x
 *-	*-	*-	*-	*-
 ```
 
-Suppose we want to extract the second spine (the first `**dip`) spine.
+Suppose we want to extract the second spine (the first <span class="rep">dip</span>) spine.
 Using the field option (<span class="option">f</span>) will generate an error message since
 this spine splits. Similarly, using the interpretation (<span class="option">i</span>) option
-will fail because the output will contain *all* of the `**dip` spines.
+will fail because the output will contain *all* of the <span class="rep">dip</span> spines.
 
 The <span class="tool">extract</span> command provides a third <span class="option">p</span> option that traces
 specific spine *paths.* Like the <span class="option">f</span> option, the <span class="option">p</span> option
@@ -620,7 +620,7 @@ to the Humdrum syntax, whereas <span class="unix">grep</span> does not.
 Suppose, for example, that we wanted to calculate the pitch intervals
 between notes that either begin or end a phrase in a monophonic input.
 If we use <span class="unix">grep</span> to search for
-[`**kern`](/rep/kern) phrase indicators, we will be
+<span class="rep">kern</span> phrase indicators, we will be
 unable to process the resulting (non-Humdrum) output, since it will
 typically consist of just data records:
 
@@ -685,7 +685,7 @@ their *cardinal* label.
 
 
 Not all segments are defined by a single marker. For example, unlike
-barlines, `**kern` phrases are marked by separate phrase-begin
+barlines, <span class="rep">kern</span> phrases are marked by separate phrase-begin
 signifiers (\`{\') and phrase-end signifiers (\`}\'). The <span class="option">e</span> option
 for <span class="tool">yank</span> can be used to explicitly identify markers that *end* a
 segment. For example, the following command extracts the first four
@@ -784,14 +784,14 @@ yanks line 1120 in the file `messiaen`.
 yank -n ^= -r 27 sinfonia
 ```
 
-yanks numbered measures 27 from the `**kern` file `sinfonia`.
+yanks numbered measures 27 from the <span class="rep">kern</span> file `sinfonia`.
 
 
 ```bash
 yank -n ^= -r 10-20 minuet waltz
 ```
 
-yanks numbered measures 10 to 20 from both the `**kern` files `minuet`
+yanks numbered measures 10 to 20 from both the <span class="rep">kern</span> files `minuet`
 and `waltz`.
 
 
@@ -834,7 +834,7 @@ yank -o { -e } -r '1-4,$-3-$' faure
 
 yanks the first four and last four segments in the file `faure`, where
 segments begin with an open brace ({) and end with a closed brace (}).
-In the `**kern` representation, this would extract the first four and
+In the <span class="rep">kern</span> representation, this would extract the first four and
 last four phrases in the file.
 
 
@@ -884,7 +884,7 @@ yank -s Recapitulation haydn | yank -o { -e } -r 1 > Rphrase
 
 
 Suppose we want to know how many notes there are in measures 8-16 in a
-`**kern` file named `borodin`.
+<span class="rep">kern</span> file named `borodin`.
 
 ```bash
 yank -n = -r 8-16 borodin | census -k

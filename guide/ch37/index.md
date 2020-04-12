@@ -152,7 +152,7 @@ before the financial and legal issues are satisfactorily addressed.
 
 In some cases, you will be translating from one electronic format to
 another &mdash; such as from MIDI to
-[`**kern`](/rep/kern). Once again, be conscious of
+<span class="rep">kern</span>. Once again, be conscious of
 any copyright issues that are raised. Few experiences are more
 discouraging than discovering that your work cannot be distributed
 because you failed to consider seriously the copyright issues involved.
@@ -239,7 +239,7 @@ assemble all parts into a single full score.
 Transposing Instruments
 -----------------------
 
-In the case of the `**kern` representation, all parts are represented at
+In the case of the <span class="rep">kern</span> representation, all parts are represented at
 concert pitch. It is typically easier to encode the parts as written and
 then transpose the result using the Humdrum
 <span class="tool">trans</span> command. For example, material for
@@ -257,7 +257,7 @@ trans -d -2 -c -3
 ```
 
 The <span class="tool">trans</span> command adds a transposition interpretation to the output
-in order to identify that the material has been shifted. In the `**kern`
+in order to identify that the material has been shifted. In the <span class="rep">kern</span>
 representation, transposed instruments must be explicitly identified
 using a special "transposing-instrument interpretation" (see *Humdrum
 Reference Manual* &mdash; Section 3 for details). A suitable interpretation
@@ -348,7 +348,7 @@ A common encoding error is to render mid-movement double barlines as
 Ornamentation
 -------------
 
-The `**kern` representation makes a distinction between whole-tone and
+The <span class="rep">kern</span> representation makes a distinction between whole-tone and
 semitone trills and mordents. Typically, each ornament must be examined
 manually and the correct code selected.
 
@@ -357,8 +357,8 @@ some sort of editorial decision will be necessary. One possibility is to
 add the kern \`x\' signifier immediately following the \`T\' or \`t\'.
 This indicates that the trill size is an "editorial interpretation."
 
-The `**kern` representation treats appoggiaturas in a special way. In
-general, `**kern` is oriented to representing things in a manner closer
+The <span class="rep">kern</span> representation treats appoggiaturas in a special way. In
+general, <span class="rep">kern</span> is oriented to representing things in a manner closer
 to how they sound. Consequently, appoggiaturas are encoded as they would
 be logically performed. For example, a quarter-note preceded by an
 appoggiatura (small note) would be performed as two eighth-notes.
@@ -438,7 +438,7 @@ editorial footnotes, local comments, global comments, interpretation
 data, *sic* and *ossia* designations, version labels, sectional labels,
 and expansion lists.
 
-The [`**kern`](/rep/kern) representation provides
+The <span class="rep">kern</span> representation provides
 several special-purpose signifiers to help make explicit various classes
 of editorial amendments, interpretations, or commentaries. Five types of
 editorial signifiers are available: (1) *sic* (information is encoded
@@ -452,7 +452,7 @@ intervention) signified by the `X` character; (5) *footnote*
 (accompanying local or global comment provides a text commentary
 pertaining to specified data token) signified by `?`.
 
-One of the most onerous impositions of the `**kern` representation is
+One of the most onerous impositions of the <span class="rep">kern</span> representation is
 the requirement that the music be interpreted into a coherent spine
 organization. Why not avoid interpreting the voicings?
 
@@ -564,7 +564,7 @@ humdrum full.krn
 ```
 
 Use the Humdrum <span class="tool">proof</span> <span class="option">k</span> command to identify any syntactical
-errors in any encoded `**kern` data:
+errors in any encoded <span class="rep">kern</span> data:
 
 ```bash
 proof -k full.krn
@@ -637,7 +637,7 @@ Preparing a Distribution
 
 Finally, you may want to prepare the material you have encoded for
 public distribution. Rename the score files and collect them into a
-coherent repertory. If your data is encoded in the `**kern` format, be
+coherent repertory. If your data is encoded in the <span class="rep">kern</span> format, be
 sure to use the `.krn` file extension. Place all resulting Humdrum files
 in a single directory.
 

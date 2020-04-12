@@ -22,7 +22,7 @@ chapter we briefly introduce the <span class="tool">record</span> and
 for capturing MIDI input and translating them to representations that
 conform to the Humdrum syntax. The <span class="tool">record</span> command translates a live
 or computer-generated MIDI performance to the
-[`**MIDI`](/rep/MIDI) representation. The <span class="tool">encode</span>
+<span class="rep">MIDI</span> representation. The <span class="tool">encode</span>
 command provides an interactive editor that translates MIDI events to
 any pre-defined or user-defined Humdrum representation.
 
@@ -35,13 +35,13 @@ The *record* Command
 --------------------
 
 The <span class="tool">record</span> command captures a stream of
-input MIDI data and translates this data into the Humdrum `**MIDI`
+input MIDI data and translates this data into the Humdrum <span class="rep">MIDI</span>
 representation described in [Chapter 7.](/guide/ch07) The input data is
 obtained from a MIDI instrument such as a keyboard synthesizer.
 
 Recording commences as soon as the command is invoked and recording
 ceases when any key is pressed &mdash; with the exception of the space bar.
-Pressing the space bar causes a `**MIDI` barline token to be output.
+Pressing the space bar causes a <span class="rep">MIDI</span> barline token to be output.
 Measure numbers are incremented automatically beginning with measure 1.
 
 Only MIDI key-press activity (including after-touch) information is
@@ -68,9 +68,9 @@ The <span class="tool">encode</span> command provides an interactive
 editor for capturing Humdrum data from a MIDI input, such as a keyboard
 synthesizer. MIDI events are mapped to user-defined signifiers so
 <span class="tool">encode</span> can be used to enter data directly into a particular
-representation such as [`**kern`](/rep/kern),
-[`**fret`](/rep/fret),
-[`**solfg`](/rep/solfg), etc. Since the mapping of
+representation such as <span class="rep">kern</span>,
+<span class="rep">fret</span>,
+<span class="rep">solfg</span>, etc. Since the mapping of
 MIDI events to Humdrum data tokens is arbitrary, users can enter data
 using a representation design by the user.
 
@@ -107,7 +107,7 @@ Such mappings can be made for each individual MIDI key. In addition, the
 user may define mappings for *key velocity*. For example, the following
 instruction in the configuration file will map any key-velocities
 between 90 and 127 MIDI units to the apostrophe character (the
-[`**kern`](/rep/kern) signifier for a staccato
+<span class="rep">kern</span> signifier for a staccato
 note):
 
 ```bash

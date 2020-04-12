@@ -104,7 +104,7 @@ grep 8.- *.krn
 Frequently it is necessary to turn off the special meanings for
 metacharacters such as \^, \$, and \*. Recall that this can be done by
 inserting a backslash (`\`) immediately prior to the metacharacter. In
-the [`**kern`](/rep/kern) representation the caret
+the <span class="rep">kern</span> representation the caret
 signifies an accent. In a monophonic input, we might count the number of
 notes that have a notated accent as follows:
 
@@ -310,9 +310,9 @@ augmented sixth interval occurring between the lowered sixth
 scale-degree and the raised fourth scale-degree. In [Chapter
 4,](/guide/ch04) we saw that the <span class="tool">solfa</span> command represents pitches
 with respect to an encoded tonic pitch. In the
-[`**solfa`](/rep/solfa) representation, the lowered
+<span class="rep">solfa</span> representation, the lowered
 sixth and raised fourth degrees will be represented as `6-` and `4+`
-respectively. First we translate the input to the `**solfa`
+respectively. First we translate the input to the <span class="rep">solfa</span>
 representation, and then we search for records matching the appropriate
 regular expression:
 
@@ -483,7 +483,7 @@ that encode works composed in the 17th century OR written for organ OR
 in 6/8 meter. The <span class="option">f</span> option is more typically used to specify
 several variations of the same idea. For example, suppose we were
 searching for D major triads in
-[`**pitch`](/rep/pitch) data. We could use a file
+<span class="rep">pitch</span> data. We could use a file
 containing the following regular expressions:
 
 ```bash
@@ -524,7 +524,7 @@ grep -L -f criteria *
 
 Another way of thinking of the <span class="option">f</span> option is that it allows us to
 define equivalences. Consider, for example, the task of counting all of
-the notes in a `**kern` melody that belong to a particular whole-tone
+the notes in a <span class="rep">kern</span> melody that belong to a particular whole-tone
 pitch set. Let's create two files, one called `whole1` and the other
 called `whole2`. The file `whole1` might contain the following regular
 expressions:
@@ -543,7 +543,7 @@ followed by the end of the line (\$).
 Recall that parenthesis grouping (\...) is part of the *extended*
 regular expression syntax. Therefore, we should use the <span class="unix">egrep</span> rather
 than the <span class="unix">grep</span> command with the above expressions. We can count the
-number of notes in a monophonic `**kern` input that belong to this
+number of notes in a monophonic <span class="rep">kern</span> input that belong to this
 whole-tone set:
 
 ```bash

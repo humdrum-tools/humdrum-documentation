@@ -93,7 +93,7 @@ might result in an output such as the following:
 ```
 
 Notice that each complete measure ends with spine-path terminators and
-that the [`**kern`](/rep/kern) exclusive
+that the <span class="rep">kern</span> exclusive
 interpretations are repeated. This organization has a number of
 repercussions for various Humdrum tools. For example, the
 <span class="tool">mint</span> command calculates melodic intervals
@@ -164,7 +164,7 @@ non-null data records are retained in the output.
 With the <span class="option">u</span> option, <span class="tool">rid</span> will remove "unnecessary" exclusive
 interpretations. Exclusive interpretations are deemed unnecessary if
 they don't change the current status of the data. In the following
-example, the second `**psaltery` interpretation is redundant. The **rid
+example, the second <span class="rep">psaltery</span> interpretation is redundant. The **rid
 -u** command would remove the first spine-path terminator and the second
 exclusive interpretation &mdash; leaving a continuous data spine.
 
@@ -228,7 +228,7 @@ The resulting output is given below:
 Of course care should be exercised when concatenating inputs together.
 Although an output may conform to the Humdrum syntax, the result can
 nevertheless violate conventions for a specific representation such as
-`**kern`. For example, if we were to concatenate measure 85 to measure
+<span class="rep">kern</span>. For example, if we were to concatenate measure 85 to measure
 87, it is possible that tied-notes won't match up, or that phrases will
 begin without ending, etc. These anomalies may cause problems with
 subsequent processing.
@@ -349,7 +349,7 @@ Aligning Durations Using the *timebase* Command
 -----------------------------------------------
 
 Suppose now that we wanted to join two hypothetical files containing
-[`**kern`](/rep/kern) data. The first file contains
+<span class="rep">kern</span> data. The first file contains
 two quarter notes, whereas the second file contains four eighth notes:
 
 ```humdrum
@@ -375,8 +375,8 @@ uncoordinated result. The two quarter notes in file 1 will be
 incorrectly matched with the first two eighth notes in file 2.
 
 The Humdrum <span class="tool">timebase</span> command can be used
-to reformat either [`**kern`](/rep/kern) or
-[`**recip`](/rep/recip) inputs so that each output
+to reformat either <span class="rep">kern</span> or
+<span class="rep">recip</span> inputs so that each output
 data record represents an equivalent slice (elapsed duration) of time.
 (Barlines are ignored by <span class="tool">timebase</span>.) The <span class="tool">timebase</span> command
 achieves this by padding an input with null data records. In the above
@@ -489,7 +489,7 @@ following input:
 The following command will cause the addition of null data records so
 that each data record represents an elapsed time of a 32nd duration.
 Incidentally, notice that any spine contain non-rhythmic data &mdash; such
-as the `**commentary` spine in the above example &mdash; is also transformed
+as the <span class="rep">commentary</span> spine in the above example &mdash; is also transformed
 so that synchronous data is maintained.
 
 ```bash
@@ -580,7 +580,7 @@ of using the wrong time-base value. When parts are miscoordinated, it is
 typically the consequence of one or more notes being discarded by
 <span class="tool">timebase</span>. Fortunately, such miscoordinations are easily detected by
 applying the <span class="tool">proof</span> command to any assembled
-`**kern` output. The <span class="tool">proof</span> utility checks `**kern` representations
+<span class="rep">kern</span> output. The <span class="tool">proof</span> utility checks <span class="rep">kern</span> representations
 for a wide variety of possible encoding errors or ambiguities:
 
 ```bash
@@ -588,7 +588,7 @@ proof fullscore
 ```
 
 By way of summary, creating a full score from a set of
-[`**kern`](/rep/kern) parts involves the following
+<span class="rep">kern</span> parts involves the following
 five tasks: (1) Identify a common duration factor for all the parts. Use
 <span class="tool">census</span> to determine the shortest duration;
 if any of the parts contains an N-tuplet, then the common duration
@@ -655,7 +655,7 @@ yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2
 ```
 
 Then we assemble the two sections together, translate to the
-[`**MIDI`](/rep/MIDI) representation and use
+<span class="rep">MIDI</span> representation and use
 <span class="tool">perform</span> to listen to both sections at the
 same time:
 
@@ -700,10 +700,10 @@ solfa melodies > temp2
 
 The files `temp1` and `temp2` will have the same length, so we can
 assemble them together. This will generate an output consisting of two
-spines, [`**mint`](/rep/mint) and
-[`**solfa`](/rep/solfa). In effect, the `**mint`
+spines, <span class="rep">mint</span> and
+<span class="rep">solfa</span>. In effect, the <span class="rep">mint</span>
 spine data will tell us the interval used to approach the scale degree
-encoded in the `**solfa` spine. We can use <span class="unix">grep</span> to search for the
+encoded in the <span class="rep">solfa</span> spine. We can use <span class="unix">grep</span> to search for the
 appropriate combinations of interval and scale degree and count the
 number of occurrences:
 
@@ -717,7 +717,7 @@ assemble temp1 temp2 | grep -c '-m2.*ti'
 
 This same approach can be used to address (innumerable) questions
 pertaining to concurrent patterns. For example, suppose we have a
-[`**harm`](/rep/harm) spine that identifies the
+<span class="rep">harm</span> spine that identifies the
 \`Roman numeral\' functional harmony for some choral work. We can
 identify complex situations such as the following: for the soprano
 voice, count how many subdominant pitches are approached by an interval
@@ -742,12 +742,12 @@ extract -i '*Isopran' howells | mint -d > temp2
 extract -i '**harm' howells > temp3
 ```
 
-We have also extracted the `**harm` spine and placed it in the file
+We have also extracted the <span class="rep">harm</span> spine and placed it in the file
 `temp3`. If we assemble together our three temporary files, the result
-will have three spines: `**deg`, `**mint` and `**harm`. We can now use
+will have three spines: <span class="rep">deg</span>, <span class="rep">mint</span> and <span class="rep">harm</span>. We can now use
 <span class="unix">grep</span> to search and count all instances of subdominant pitches that
 are approached by ascending thirds/sixths and that coincide with
-dominant seventh chords (in the `**kern` representation: \``V7`\'):
+dominant seventh chords (in the <span class="rep">kern</span> representation: \``V7`\'):
 
 `assemble temp1 temp2 temp3 | grep -c '^4``+[36]``V7`
 
@@ -787,14 +787,14 @@ redundant exclusive and tandem interpretations from concatenated outputs
 using the <span class="option">u</span> and <span class="option">t</span> options for <span class="tool">rid</span>. In
 addition, we learned how to assemble two or more spines into a single
 output file using <span class="tool">assemble</span>. In the case of
-[`**kern`](/rep/kern) and
-[`**recip`](/rep/recip) representations, we learned
+<span class="rep">kern</span> and
+<span class="rep">recip</span> representations, we learned
 how to use the <span class="tool">timebase</span> command to
 preprocess each constituent file so that all data records represent
 equivalent elapsed durations. Having assembled a full score from parts,
 <span class="tool">rid</span> <span class="option">d</span> can be used to eliminate any residual or unnecessary null
 data records. The <span class="tool">proof</span> command can be used
-to ensure that any assembled `**kern` data is correctly aligned.
+to ensure that any assembled <span class="rep">kern</span> data is correctly aligned.
 
 Finally, we learned that the <span class="tool">timebase</span> command can be used for other
 analytic purposes. Specifically, it can be used to reduce a score

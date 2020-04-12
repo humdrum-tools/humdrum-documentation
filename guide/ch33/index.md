@@ -21,22 +21,22 @@ distinctive sounds that can prove to be musically useful. Poets and
 composers often arrange or choose texts so that the sequence of sounds
 create alliteration, onomatopoeia, rhythm, rhyme and other sonorous
 effects. This chapter introduces the
-[`**IPA`](/rep/IPA) scheme for representing speech
+<span class="rep">IPA</span> scheme for representing speech
 sounds. This representation provides a companion to the
-[`**text`](/rep/text) and
-[`**silbe`](/rep/silbe) representations discussed in
+<span class="rep">text</span> and
+<span class="rep">silbe</span> representations discussed in
 [Chapter 27.](/guide/ch27) Various sonorous processes are illustrated.
 
 
 The \*\*IPA Representation
 --------------------------
 
-The Humdrum [`**IPA`](/rep/IPA) scheme provides a
-way to represent the International Phonetic Alphabet. The `**IPA` scheme
+The Humdrum <span class="rep">IPA</span> scheme provides a
+way to represent the International Phonetic Alphabet. The <span class="rep">IPA</span> scheme
 is based on the transliteration scheme developed by linguist Evan
 Kirshenbaum. The scheme is suitable for representing the basic phonemes
 found in most of the world's languages. The table below summarizes the
-`**IPA` mappings for various phonemes.
+<span class="rep">IPA</span> mappings for various phonemes.
 
 ```humdrum
 @	**schwa**§	as	in	(unaccented)	*banana,	collide,	alone*	or	(accented)	*humdrum*
@@ -107,9 +107,9 @@ positioned	as	in	the	beginning	of	the	word	yard'
     following or hooked beneath the consonant.
 
 Humdrum does not provide a tool for translating from
-[`**text`](/rep/text) or
-[`**silbe`](/rep/silbe) representations to
-[`**IPA`](/rep/IPA). However, there are a number of
+<span class="rep">text</span> or
+<span class="rep">silbe</span> representations to
+<span class="rep">IPA</span>. However, there are a number of
 commercial text-to-phoneme translators available for most common
 languages.
 
@@ -133,7 +133,7 @@ lies	lAiz
 *-	*-
 ```
 
-Given an `**IPA` input, occurrences of alliteration can be found by
+Given an <span class="rep">IPA</span> input, occurrences of alliteration can be found by
 first isolating the initial phoneme for each word using <span class="tool">humsed</span>. This
 task requires some additional knowledge about using
 <span class="tool">humsed</span>. Both <span class="unix">sed</span> and <span class="tool">humsed</span> provide
@@ -159,7 +159,7 @@ beginning of a line followed by zero or more characters. Replace this
 entire string by just the first character in the line.
 
 Let's now use this back-reference technique in our alliteration search.
-First we extract the [`**IPA`](/rep/IPA) spine and
+First we extract the <span class="rep">IPA</span> spine and
 use <span class="tool">humsed</span> to eliminate all but the first character in each data
 record:
 
@@ -319,7 +319,7 @@ Sullivan operetta exhibits a preponderance of high vowels. We might
 begin by creating a re-assignment file where the estimated height of
 each vowel is given a value between 1 (low) and 10 (high). We can
 estimate the overall average vowel height for a piece by averaging these
-values together. The basic pipeline will extract the pertinent `**IPA`
+values together. The basic pipeline will extract the pertinent <span class="rep">IPA</span>
 spine, eliminate all non-vowel phonemes, add spaces between each vowel,
 and then assign estimated heights to each vowel. Finally, non-data
 records are eliminated using <span class="tool">rid</span> and the data
@@ -484,7 +484,7 @@ C
 B  
 ```
 Note that the entire analytic procedure can be placed in a shell
-script and applied to any input containing `**IPA` text. The following
+script and applied to any input containing <span class="rep">IPA</span> text. The following
 script adds a number of refinements.
 ```bash
 # RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ 
@@ -521,11 +521,11 @@ rm rhyme.sed.\$\$
 ------------------------------------------------------------------------
 Reprise
 -------
-By focusing on phonetic signifiers, the `**IPA` representation
+By focusing on phonetic signifiers, the <span class="rep">IPA</span> representation
 provides opportunities for analyzing many sonorous aspects of vocal
 sounds &mdash; including alliteration, vowel coloration, rhyme, and other
 effects. Although we did not illustrate it in this chapter, the
-[`**IPA`](/rep/IPA) representation can be used in
-conjunction witht the [`**silbe`](/rep/silbe)
+<span class="rep">IPA</span> representation can be used in
+conjunction witht the <span class="rep">silbe</span>
 representation to characterize complex aspects of rhythm and rhyme in
 vocal texts.

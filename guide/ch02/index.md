@@ -17,16 +17,16 @@ permalink:	/guide/ch02/index.html
 ------------------------------------------------------------------------
 
 
-The `**kern` representation can be used to represent basic or core
-information for common Western music. The `**kern` scheme can be used to
+The <span class="rep">kern</span> representation can be used to represent basic or core
+information for common Western music. The <span class="rep">kern</span> scheme can be used to
 encode pitch and duration, plus other common score-related information.
-In this chapter, we will introduce `**kern` through a series of tutorial
-examples. A more comprehensive description of `**kern` will be given in
+In this chapter, we will introduce <span class="rep">kern</span> through a series of tutorial
+examples. A more comprehensive description of <span class="rep">kern</span> will be given in
 [Chapter 6.](/guide/ch06) Our intention here is to provide a quick
 introduction.
 
 Consider the opening motive from J.S. Bach's *Art of Fugue* shown in
-Example 2.1. A corresponding `**kern` representation is given below the
+Example 2.1. A corresponding <span class="rep">kern</span> representation is given below the
 notation.
 
 **Example 2.1.** J.S. Bach *Die Kunst der Fuge*
@@ -67,17 +67,17 @@ notation.
 *-
 </script>
 
-In general, `**kern` is intended to represent the underlying
+In general, <span class="rep">kern</span> is intended to represent the underlying
 *functional* information conveyed by a musical score rather than the
 visual or *orthographic* information found in a given printed rendition.
-The `**kern` representation is designed to facilitate analytic
+The <span class="rep">kern</span> representation is designed to facilitate analytic
 applications rather than music printing or sound generation.
 Nevertheless, both visual output and sound output can be generated from
-the `**kern` representation.
+the <span class="rep">kern</span> representation.
 
 Notice that whereas the notation is laid out horizontally across the
 page, the Humdrum representation procedes vertically down the page. The
-representation begins with the keyword `**kern` which indicates that the
+representation begins with the keyword <span class="rep">kern</span> which indicates that the
 ensuing encoded material conforms to the kern representation. The
 encoded passage ends with a special
 [*terminator*](glossary.html#Terminator) token (`*-`).
@@ -89,7 +89,7 @@ flat, B-flat: the minus sign here indicates a flat. The meter signature
 
 Lines that begin with an equals-sign indicate *logical* barlines.
 Musical works may begin with either a complete measure or a partial
-measure. In the `**kern` representation, the beginning of the first
+measure. In the <span class="rep">kern</span> representation, the beginning of the first
 measure is explicitly indicated. In Example 2.1, the encoding for the
 first barline (`=-`) is a functional encoding that doesn't correspond
 to anything in the printed score. The minus sign following the
@@ -122,13 +122,13 @@ Accidentals are encoded using the octothorpe (`#`) for sharps, the minus
 sign (`-`) for flats, and the lower-case letter "`n`" for naturals.
 Accidentals are encoded immediately following the pitch letter name.
 Double-sharps and double-flats have no special representations in
-`**kern` and are simply denoted by repetition: (`##`) and (`--`)
+<span class="rep">kern</span> and are simply denoted by repetition: (`##`) and (`--`)
 respectively. Triple and quadruple accidentals are similarly encoded by
 repetition. Sharps, flats, and naturals are mutually exclusive in
-`**kern`, so tokens such as "`cc#n`" and "`GG-#`" are illegal.
+<span class="rep">kern</span>, so tokens such as "`cc#n`" and "`GG-#`" are illegal.
 
 In Example 2.2, two musical parts are encoded. In the corresponding
-`**kern` encoding, each musical part or voice has been assigned to a
+<span class="rep">kern</span> encoding, each musical part or voice has been assigned to a
 different musical staff &mdash; labelled `*staff1` and `*staff2`. Notice
 that the upper part has been encoded in the right-most column. The
 layout is exactly as though the musical score were turned sideways.
@@ -184,11 +184,11 @@ layout is exactly as though the musical score were turned sideways.
 
 
 Each column contains its own separate information. Both columns have
-been labelled `**kern` and are terminated (`*-`). The columns are
+been labelled <span class="rep">kern</span> and are terminated (`*-`). The columns are
 separated by a single tab. Barline information is also encoded in each
 column. Notice that measure numbers have been added following the
 barline indicator (=). Although measure numbers may not be present in
-the printed score, it is normal to include them in `**kern` encodings.
+the printed score, it is normal to include them in <span class="rep">kern</span> encodings.
 
 A notable feature when representing multi-part music is the presence of
 place holders called [*null tokens*.](glossary.html#Null%20Token) A null
@@ -200,26 +200,26 @@ part is moving.
 Rests are encoded by the lower-case letter \``r`\'. Notice that the
 first rest in the lower part has not been encoded as a whole rest.
 Instead, it has been rendered as a dotted half rest. This is a good
-illustration of how `**kern` is intended to be a *functional* rather
+illustration of how <span class="rep">kern</span> is intended to be a *functional* rather
 than *orthographic* (visual) representation. Nevertheless, users can
 explicitly indicate that the rest is visually rendered as a whole rest
 by adding a second lower-case letter `r`.
 
 Another important difference between functional and orthographic
 representations is evident in the treatment of accidentals. In the
-`**kern` representation, all pitches are encoded without regard for what
-is going on around them. For example, in `**kern`, pitches are encoded
+<span class="rep">kern</span> representation, all pitches are encoded without regard for what
+is going on around them. For example, in <span class="rep">kern</span>, pitches are encoded
 with the appropriate accidental, even if the accidental is specified in
 a key-signature or is present earlier in the same measure. Hence the
 explicit encoding of all occurrences of B-flats in Example 2.2.
 
-All pitches are encoded as absolute pitches. In `**kern`, even
+All pitches are encoded as absolute pitches. In <span class="rep">kern</span>, even
 transposing instruments are always represented at (sounding) concert
 pitch. A special *transposition interpretation* is provided to indicate
 the nature of any transposing instrument &mdash; but the encoded pitches &mdash;
 selves appear only at concert pitch.
 
-Finally, pitches in `**kern` are encoded as "nominally"
+Finally, pitches in <span class="rep">kern</span> are encoded as "nominally"
 equally-tempered values. A special *temperament interpretation* is
 provided to indicate if the tuning system is other than equal
 temperament.
@@ -241,7 +241,7 @@ angles). Multiple beams and partial beams are discussed in Example 2.4.
 
 Example 2.3 shows a four-part chorale harmonization by Bach. In this
 example, two musical parts share each of the two staves. Notice how the
-corresponding `**kern` encoding assigns each part to a separate column,
+corresponding <span class="rep">kern</span> encoding assigns each part to a separate column,
 but links the appropriate parts using the `*staff` indicators.
 
 **Example 2.3.** *Nun danket alle Gott*, arr. J.S. Bach.
@@ -299,7 +299,7 @@ but links the appropriate parts using the `*staff` indicators.
 Once again, clefs, key signatures and meter signatures are encoded
 separately for each part. Notice how the meter signature has been
 encoded as 4/4 rather than \`common time\'. This again reflects
-`**kern`\'s preoccupation with functional information rather than
+<span class="rep">kern</span>\'s preoccupation with functional information rather than
 orthographic information. (Later we will see how to encode the fact that
 the meter signature is visually rendered as \`C\' rather than 4/4.)
 
@@ -307,9 +307,9 @@ In measure 2, pauses (`;`) have been encoded for all four voices even
 though only two pause symbols appear in the printed notation.
 
 In the third measure, the last note of the alto part has been tied into
-the fourth measure. The `**kern` representation provides no generic
+the fourth measure. The <span class="rep">kern</span> representation provides no generic
 means for representing "curved lines" found in printed scores. Since
-`**kern` is a "functional" rather than an "orthographic"
+<span class="rep">kern</span> is a "functional" rather than an "orthographic"
 representation, all lines are explicitly interpreted as either *ties,
 slurs* or *phrases.*
 
@@ -329,11 +329,11 @@ may also be *elided* (e.g. overlapping phrases) to a single depth.
 under another slur or phrase. For example: `(  (  )  )` means that a
 short slur has occurred within a longer slur. *Elisions* are overlaps,
 for example, where an existing phrase fails to end while a new phrase
-begins. In `**kern` the ampersand character (`&`) is used to mark elided
+begins. In <span class="rep">kern</span> the ampersand character (`&`) is used to mark elided
 slurs or phrases. For example: `{  &{  }  &}` means that two phrases
 overlap &mdash; the first phrase ending after the second phrase has begun.
 
-Example 2.3 ends with a repeat sign. The `**kern` representation makes a
+Example 2.3 ends with a repeat sign. The <span class="rep">kern</span> representation makes a
 distinction between repeat signs that appear in the score and repeat
 signs that are obeyed in performance. In this example, only the visual
 or orthographic rendering of the barline has been encoded. Later, in
@@ -435,7 +435,7 @@ represented by open (`(`) and closed (`)`) parentheses respectively.
 Notice that the middle part in the third measure contains a tied note.
 Considering the presence of concurrent slurs in the other parts it is
 possible that an appropriate interpretation of the score would regard
-the middle voice as also slurred. Notice that in the `**kern`
+the middle voice as also slurred. Notice that in the <span class="rep">kern</span>
 representation, notes can be tied, slurred, and phrased concurrently.
 
 
@@ -614,12 +614,12 @@ is given in Appendix II.
 Reprise
 -------
 
-In this chapter we have introduced the Humdrum `**kern` representation
+In this chapter we have introduced the Humdrum <span class="rep">kern</span> representation
 and a few of the more important reference records. As we have seen,
-`**kern` can be used to encode core information for common musical
-scores; `**kern` is used to represent *functional* information rather
+<span class="rep">kern</span> can be used to encode core information for common musical
+scores; <span class="rep">kern</span> is used to represent *functional* information rather
 than *orthographic* (visual) information. In [Chapter 6](/guide/ch06)
-an expanded description of `**kern` will be given that includes a much
+an expanded description of <span class="rep">kern</span> will be given that includes a much
 wider variety of concepts and situations than we have encountered in
 this chapter. [**Appendices I**](guide.append1.html) and
 [**II**](guide.append2.html) provide expanded information pertaining to

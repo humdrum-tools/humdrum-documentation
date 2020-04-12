@@ -17,11 +17,11 @@ permalink:	/guide/ch18/index.html
 
 
 Throughout this book, our examples have tended to rely on just a handful
-of Humdrum representations &mdash; `**kern` in particular. Of course the
+of Humdrum representations &mdash; <span class="rep">kern</span> in particular. Of course the
 Humdrum syntax provides opportunities for an unlimited number of
 representations. In this chapter, we will consider some less common
 representations. Most of the chapter will deal with the
-[`**fret`](/rep/fret) representation &mdash; a
+<span class="rep">fret</span> representation &mdash; a
 pre-defined Humdrum representation for fretted instrument tablatures.
 However, we will begin with a grab-bag of unorthodox representations.
 
@@ -181,7 +181,7 @@ about designing special-purpose Humdrum representations.
 
 For the remainder of this chapter we will examine a pre-defined
 representation scheme for fretted instrument tablatures. Although not
-all users will be interested in the `**fret` representation, it provides
+all users will be interested in the <span class="rep">fret</span> representation, it provides
 an instructive contrast to the score- and MIDI-based representations
 that we have relied on for most of the examples in this book.
 
@@ -189,18 +189,18 @@ that we have relied on for most of the examples in this book.
 The *\*\*fret* Representation
 -----------------------------
 
-The [`**fret`](/rep/fret) representation is a
+The <span class="rep">fret</span> representation is a
 pre-defined Humdrum scheme that provides a comprehensive system for
-representing performance aspects for fretted instruments. The `**fret`
+representing performance aspects for fretted instruments. The <span class="rep">fret</span>
 scheme is suitable for representing tablature information for most
 fretted instruments, such as various guitars, lute, mandore, theorbo,
-chitarrone, mandoline, banjo, dulcimer, and even viols. The `**fret`
+chitarrone, mandoline, banjo, dulcimer, and even viols. The <span class="rep">fret</span>
 interpretation is not limited to equal-temperament tuning, and so can be
 used to represent non-Western fretted instruments, such as the *oud* and
 the *sitar*.
 
-The `**fret` representation is performance-oriented rather than
-notationally-oriented. Thus `**fret` is not suitable for distinguishing
+The <span class="rep">fret</span> representation is performance-oriented rather than
+notationally-oriented. Thus <span class="rep">fret</span> is not suitable for distinguishing
 different visual renderings &mdash; such as differences between traditional
 French or German lute tablatures. Some other Humdrum representation
 should be used if the user's goal is to distinguish different forms of
@@ -222,10 +222,10 @@ so would be encoded with the following tandem interpretation:
 ```
 
 The `*AT:` interpretation makes use of
-[`**pitch`](/rep/pitch)-type pitch designations and
+<span class="rep">pitch</span>-type pitch designations and
 may also include cents deviation. For example, an instrument tuned 45
 cents sharp might be represented as `*AT:E2+45`. Encoding the absolute
-tuning is optional with [`**fret`](/rep/fret); when
+tuning is optional with <span class="rep">fret</span>; when
 absent, a default tuning of E2 will be assumed by various processing
 tools.
 
@@ -295,7 +295,7 @@ non-integer semitone values for various strings, such as a string tuned
 9.91 semitones above the lowest string.
 
 In addition to the absolute and relative tunings,
-[`**fret`](/rep/fret) also allows the user to
+<span class="rep">fret</span> also allows the user to
 specify the tuning of successive frets using the `FT:` tandem
 interpretation. In Western instruments, frets are normally placed in
 semitone increments. For a 12-fret instrument, this semitone arrangement
@@ -323,7 +323,7 @@ identical fret distances. That is, if the first fret is positioned 1
 semitone above the open string, then this relative pitch arrangement
 must be true of all strings.
 
-The [`**fret`](/rep/fret) representation
+The <span class="rep">fret</span> representation
 distinguishes three types of data tokens: tablature-tokens, rests, and
 barlines. *Tablature-tokens* encode information regarding the
 fret/finger positions, the manner by which individual strings are
@@ -345,7 +345,7 @@ string/course status, (2) fret position, (3) bowing/strumming, (4)
 finger action, and (5) percussive effects. In addition, the
 tablature-token can encode bowing and strumming information.
 
-In the [`**fret`](/rep/fret) representation, the
+In the <span class="rep">fret</span> representation, the
 status of a string/course can occupy one of sixteen states. An
 *inactive* string is signified by th-nus sign (`-`). An ordinary
 *plucked* string is represented by the vertical line (`|`). Plucking
@@ -391,12 +391,12 @@ second fret.
 ```
 
 Example 18.2 shows a sample passage for guitar with a corresponding
-`**fret` representation displayed beneath. The `**fret` representation
-does not encode duration information. It is common to join the `**fret`
-spine with a [`**recip`](/rep/recip) spine
+<span class="rep">fret</span> representation displayed beneath. The <span class="rep">fret</span> representation
+does not encode duration information. It is common to join the <span class="rep">fret</span>
+spine with a <span class="rep">recip</span> spine
 representing the nominal duration data. In example 18.2 a
-[`**kern`](/rep/kern) spine is also shown indicating
-the pitches in the `**fret` representation.
+<span class="rep">kern</span> spine is also shown indicating
+the pitches in the <span class="rep">fret</span> representation.
 
 **Example 18.2.** J.S. Bach, *Anna Magdalena Bach Notebook* Menuet II.
 Guitar arr.
@@ -428,7 +428,7 @@ Guitar arr.
 *-	*-	*-
 ```
 
-The `**fret` representation also provides several short-hand
+The <span class="rep">fret</span> representation also provides several short-hand
 abbreviations for common ornaments and effects. Trills are indicated by
 the letters \`t\' (one semitone) and \`T\' (two semitones). Mordents are
 indicated by the letters \`m\' (one semitone) and \`D\' (two semitones).
@@ -438,10 +438,10 @@ Inverted mordents are indicated by the letters \`w\' (one semitone) and
 distinguished: \`v\' for transverse vibrato and \`V\' for lateral
 vibrato. Pitch bending is signified by the tilde (\~).
 
-Apart from tablature-tokens, `**fret` also permits the encoding of rests
+Apart from tablature-tokens, <span class="rep">fret</span> also permits the encoding of rests
 and barlines. Rests tokens are denoted simply by the lower-case letter
 \`r\'. Barlines are represented using the "common system" for barlines
-used by `**kern` and other representations.
+used by <span class="rep">kern</span> and other representations.
 
 
 Additional Features of *\*\*fret*
@@ -470,7 +470,7 @@ commonly-tuned guitar is represented as:
 Notice that there is no space between the right angle bracket and the
 first vertical bar.
 
-The [`**fret`](/rep/fret) representation also
+The <span class="rep">fret</span> representation also
 permits the optional encoding of *fingering* information. For the
 plucking-hand (normally right hand), traditional musical abbreviations
 are used: *P* (pollex) for the thumb, *I* (index) for the index finger,
@@ -513,15 +513,15 @@ finger:
 | |2b |2c | | |  : :2b :2d : : :
 ```
 
-Note that in the `**fret` representation, no special signifiers are
+Note that in the <span class="rep">fret</span> representation, no special signifiers are
 provided for so-called \`hammer-on\' or (ascending-slur), nor for the
 so-called \`pull-off\' or (descending-slur). During the ascending-slur,
 the sound is produced simply by engaging the next fret. This can be
-represented in `**fret` by using the "let ring" signifier (:) in
+represented in <span class="rep">fret</span> by using the "let ring" signifier (:) in
 conjunction with the appropriate fret notation. The descending-slur can
 be similarly notated.
 
-Four types of "percussion effects" can be represented using `**fret`.
+Four types of "percussion effects" can be represented using <span class="rep">fret</span>.
 The two most common *tambours* involve tapping on the bridge
 (represented by the lower-case letter \`u\') and tapping on the strings
 near the bridge (represented by the upper-case letter \`U\'). A simple
@@ -533,7 +533,7 @@ a line by themselves. When sounded in conjunction with a plucked or
 the tablature-token.
 
 The complete system of signifiers used by
-[`**fret`](/rep/fret) is summarized in Table 18.1.
+<span class="rep">fret</span> is summarized in Table 18.1.
 
 **Table 18.1. Signifiers used by *\*\*fret*.**
 
@@ -606,7 +606,7 @@ Y	thump'	on	top-plate
 
 *Summary of *\*\*fret* Signifiers*
 
-A number of pitch-related Humdrum commands accept `**fret` encoded data
+A number of pitch-related Humdrum commands accept <span class="rep">fret</span> encoded data
 as inputs, including <span class="tool">cents</span>,
 <span class="tool">freq</span>, <span class="tool">kern</span>,
 <span class="tool">pitch</span>, <span class="tool">semits</span>,
@@ -619,7 +619,7 @@ Reprise
 -------
 
 In this chapter we have tried to reinforce the lesson that
-[`**kern`](/rep/kern) is only one of an unbounded
+<span class="rep">kern</span> is only one of an unbounded
 number of existing and possible Humdrum representations. As a Humdrum
 user, you are free to concoct your own representations to better address
 the kinds of information you are interested in manipulating. As long as

@@ -153,7 +153,7 @@ Escape Character (\\)
 
 Sometimes we would like to have a special character treated literally.
 For example, suppose we wanted to search for records containing sharps
-in a [`**kern`](/rep/kern) file. The following
+in a <span class="rep">kern</span> file. The following
 command will not work because the shell will insist on interpreting the
 octothorpe as beginning a comment:
 
@@ -172,7 +172,7 @@ grep \# filename
 
 The backslash character itself can be treated literally by preceding it
 with another backslash. For example, the following command searches for
-down-stems in a `**kern` file:
+down-stems in a <span class="rep">kern</span> file:
 
 ```bash
 grep \\ filename

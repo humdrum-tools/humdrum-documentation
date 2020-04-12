@@ -94,7 +94,7 @@ When searching through the specific *PATH*, <span class="unix">find</span> is ab
 out a wide variety of possible tests on each file. One simple action is
 to test whether the file-name conforms to a given regular expression.
 Consider, for example, the goal of identifying all files representing
-pitch-class ([`**pc`](/rep/pc)) information. The
+pitch-class (<span class="rep">pc</span>) information. The
 Humdrum convention is to identify these files by adding the `.pc`
 extension to the filename &mdash; such as `opus24.pc`. The following
 <span class="unix">find</span> command will traverse through the `/scores` directory (and all

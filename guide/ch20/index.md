@@ -809,10 +809,10 @@ Stei-
 `*- ` Notice that this file contains a single section labelled \`1\'
 and that an expansion list occurs near the beginning of the file
 that indicates section 1 is to be repeated 4 times in total.
-The strophic passage pertains only to the spine marked `**silbe`.
-The [`**silbe`](/rep/silbe) representation
+The strophic passage pertains only to the spine marked <span class="rep">silbe</span>.
+The <span class="rep">silbe</span> representation
 pertains to syllabic text encoding and is a pre-defined
-representation in Humdrum. The `**silbe` representation is discussed
+representation in Humdrum. The <span class="rep">silbe</span> representation is discussed
 in [Chapter 27.](/guide/ch27) Following the strophic passage
 indicator (`*strophe`), the spine is split apart until the required
 number of verses are generated. Then each spine is labelled with its
@@ -866,7 +866,7 @@ Notice that all of the tandem interpretations related to the strophe
 organization are eliminated from the output.
 Suppose that we wanted to create a through-composed version of the
 entire work. We would expect as output, just two spines &mdash; the
-[`**kern`](/rep/kern) spine and the `**silbe`
+<span class="rep">kern</span> spine and the <span class="rep">silbe</span>
 spine. First, we need to create the full length version using the
 <span class="tool">thru</span> command. This will take the default expansion list, and
 repeat the appropriate section for each successive verse.
@@ -911,7 +911,7 @@ repeat this procedure for both verses:
 `strophe -x 2` *file*` | extract -i '**silbe' | rid -GLId \`
 >
 > \| grep -v \[=\\\|%\] \| wc -l
-(In the `**silbe` representation, the vertical bar (\|) and the
+(In the <span class="rep">silbe</span> representation, the vertical bar (\|) and the
 percent sign (%) have special meanings so the **grep -v** is used to
 eliminate them along with barlines.)
 ------------------------------------------------------------------------

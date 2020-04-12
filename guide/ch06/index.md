@@ -18,12 +18,12 @@ permalink:	/guide/ch06/index.html
 
 
 In this chapter we return to consider several more advanced topics
-related to the `**kern` representation.
+related to the <span class="rep">kern</span> representation.
 
 Tuplets
 -------
 
-As we saw in [Chapter 2](/guide/ch02), `**kern` durations are
+As we saw in [Chapter 2](/guide/ch02), <span class="rep">kern</span> durations are
 represented using a reciprocal number notation. With the exception of
 the value zero, durations are represented by reciprocal numerical values
 corresponding to the American duration names: "1" for whole note,
@@ -41,21 +41,21 @@ reciprocal logic. Consider, for example, the quarter-note triplet
 duration. Three quarter triplets occur in the time of four quarters or
 one whole duration. If we divide a whole duration ("`1`") into three
 equal parts, each part has a duration of one-third. The corresponding
-reciprocal integer for 1/3 is 3, hence `**kern` represents a
+reciprocal integer for 1/3 is 3, hence <span class="rep">kern</span> represents a
 quarter-note triplet as a "third-note", `3`. Similarly, eighth-note
 triplets are represented by the integer 6 and sixteenth-note triplets
 are represented by the integer 12. Eighth-note quintuplets (5 in the
 time of 4) will be represented by the value 10 (a half duration divided
 by 5).
 
-In general, the way to determine the `**kern` equivalent of an arbitrary
+In general, the way to determine the <span class="rep">kern</span> equivalent of an arbitrary
 "tuplet" duration is to multiply the number of tuplets by the total
 duration which they occupy. If 7 notes of equal duration occupy the
 duration of a whole-note ("`1`"), then each septuplet is represented
 by the value 7 (i.e. 1 x 7). A more extreme example is 23 notes in the
-time of a doubly dotted quarter. The appropriate `**kern` duration can
+time of a doubly dotted quarter. The appropriate <span class="rep">kern</span> duration can
 be found by multiplying 4 by 23 (equals 92) and adding the appropriate
-augmentation dots. Thus "92.." is the correct `**kern` encoding for a
+augmentation dots. Thus "92.." is the correct <span class="rep">kern</span> encoding for a
 note whose duration is 23 notes in the time of a doubly-dotted quarter.
 
 By way of illustration, example 6.1 shows an excerpt from Sigfrid
@@ -135,7 +135,7 @@ duration.
 Grace Notes, Gruppettos and Appoggiaturas
 -----------------------------------------
 
-The `**kern` representation also allows for the encoding of grace notes
+The <span class="rep">kern</span> representation also allows for the encoding of grace notes
 (acciaccaturas, non-canonical gruppettos, and appoggiaturas.
 
 Depending on the expected analytic application, one way to handle these
@@ -146,7 +146,7 @@ potentially less analytic status, a special designation for these notes
 can be useful for certain types of studies.
 
 *Grace notes* (acciaccaturas) are visually rendered as miniature notes
-with a slash drawn through the stem. In the `**kern` representation
+with a slash drawn through the stem. In the <span class="rep">kern</span> representation
 these notes are treated as "durationless" notes and are designated by
 the lower-case letter "`q`". Hence, the token "`G#q`" denotes a G#3
 grace note with an indeterminate duration.
@@ -167,7 +167,7 @@ Humdrum [<span class="tool">timebase</span>](/command/timebase) command (describ
 notes. Note that data records containing acciaccaturas or gruppetto
 notes must *not* also include normal notes.
 
-In the case of *appoggiaturas,* `**kern` requires that they be encoded
+In the case of *appoggiaturas,* <span class="rep">kern</span> requires that they be encoded
 as performed. An appropriate duration is assigned to the appoggiatura
 according to common performance practice. The duration of the subsequent
 note is reduced by a corresponding amount. The status of the two notes
@@ -180,12 +180,12 @@ designated by the lower-case letter "`p`".
 Multiple Stops
 --------------
 
-In the `**kern` representation, spines typically represent individual
+In the <span class="rep">kern</span> representation, spines typically represent individual
 musical parts or voices. Occasionally, a nominally single "part"
 contains more than one concurrent note. A good example of such a
 situation occurs when a violin plays a double stop.
 
-The `**kern` representation provides three different ways of
+The <span class="rep">kern</span> representation provides three different ways of
 representing such situations: (1) multiple stops, (2) spine splitting
 and rejoining, and (3) introduction and retiring of a momentary
 "part". Each of these representation methods captures a different way
@@ -195,7 +195,7 @@ editorial or processing goal.
 First we will consider the generic Humdrum *subtoken.* A data token
 becomes a multiple stop when two or more subtokens are present,
 separated by single spaces. By way of illustration, the following
-`**kern` data represents a scale played in ascending thirds:
+<span class="rep">kern</span> data represents a scale played in ascending thirds:
 
 {% include verovio.html
 	source="guide-06-1c"
@@ -217,18 +217,18 @@ separated by single spaces. By way of illustration, the following
 *-
 </script>
 
-An important restriction for multiple stops in the `**kern`
+An important restriction for multiple stops in the <span class="rep">kern</span>
 representation is that they must encode notes of the same duration. In
 the above example, the left and right components of the multiple stop
 always share the same duration. (Note that this is a restriction of
-multiple stops in the `**kern` representation only, and does not
+multiple stops in the <span class="rep">kern</span> representation only, and does not
 necessarily apply to other Humdrum representations.)
 
 Notice that multiple stops are represented with a single spine (that is,
 there are no tabs present).
 
-Multiple stops may occur at any point in a `**kern` spine. For example,
-the following `**kern` data represents a scale that begins and ends with
+Multiple stops may occur at any point in a <span class="rep">kern</span> spine. For example,
+the following <span class="rep">kern</span> data represents a scale that begins and ends with
 chords:
 
 {% include verovio.html
@@ -320,7 +320,7 @@ as double stops within a single part.
 </script>
 
 
-When encoding multiple stops in the `**kern` representation, some note
+When encoding multiple stops in the <span class="rep">kern</span> representation, some note
 attributes should be encoded for each note in the multiple stop, whereas
 other markings should be encoded only once for the entire multiple stop.
 Note-related attributes such as articulation marks, stem directions, and
@@ -334,7 +334,7 @@ has been encoded once. However, the staccato markings have been encoded
 for both notes in each of the double stops. Similarly, separate ties
 have been encoded for both notes in the double stop.
 
-**Example 6.3.** Attribute encoding for `**kern` multiple stops.
+**Example 6.3.** Attribute encoding for <span class="rep">kern</span> multiple stops.
 
 {% include verovio.html
 	source="guide-06-3"
@@ -364,7 +364,7 @@ Further Examples
 ----------------
 
 Example 6.4 shows an excerpt from a Chopin *Etude* that illustrates a
-number of subtle features in the `**kern` representation.
+number of subtle features in the <span class="rep">kern</span> representation.
 
 The opening measure consists solely of gruppetto notes; each has been
 designated by the upper-case letter \`Q\'. The double-barline has been
@@ -388,7 +388,7 @@ note). Thus slurs should not be encoded as part of the grace note.
 
 The grace-note E-natural coincides with the end of the first phrase and
 the beginning of the second phrase. The phrases are said to be
-"elided" (overlapping). Since `**kern` phrases are represented by open
+"elided" (overlapping). Since <span class="rep">kern</span> phrases are represented by open
 and close braces, the ampersand character is used to indicate elisions.
 
 Notice that the \`inner\' accompaniment chords have been encoded as
@@ -511,12 +511,12 @@ BBnq	.	.
 Reprise
 -------
 
-This chapter completes our survey of the `**kern` representation. We
+This chapter completes our survey of the <span class="rep">kern</span> representation. We
 have noted an number of subtleties related to encoding tuplets, multiple
 stops, gruppettos, acciaccaturas, elided phrases, and spine path
 changes.
 
 A more complete description of the
-[`**kern`](representation/kern) representation may be found in
+[<span class="rep">kern</span>](representation/kern) representation may be found in
 the *Humdrum Reference Manual.*
 

@@ -29,14 +29,14 @@ The *\*\*recip* Representation
 
 For many types of processing tasks it is helpful to have a
 representation that encodes rhythmic information only. The
-[`**recip`](/rep/recip) representation is simply a
-subset of [`**kern`](/rep/kern) that excludes all
+<span class="rep">recip</span> representation is simply a
+subset of <span class="rep">kern</span> that excludes all
 information apart from the nominal note durations and common system
-barlines. In addition, `**recip` distinguishes rests from notes by
+barlines. In addition, <span class="rep">recip</span> distinguishes rests from notes by
 including the \``r`\' signifier. Without an accompanying \``r`\' a
 duration is assumed to pertain to a note.
 
-Generating `**recip` data from `**kern` is straightforward using
+Generating <span class="rep">recip</span> data from <span class="rep">kern</span> is straightforward using
 <span class="tool">humsed</span>. For a single-spine input, the
 following command will make the translation:
 
@@ -51,11 +51,11 @@ multiple-stops). Barlines remain untouched in the output. The second
 <span class="tool">humsed</span> substitution changes any empty lines to null data tokens;
 this might be necessary in the case of grace notes. The ensuing <span class="unix">sed</span>
 command is used simply to change the exclusive interpretation from
-`**kern` to `**recip`.
+<span class="rep">kern</span> to <span class="rep">recip</span>.
 
 A simple type of processing might entail creating an inventory of
 rhythmic patterns. Suppose we wanted to determine the most common
-rhythmic pattern spanning a measure. Using a monophonic `**recip` input,
+rhythmic pattern spanning a measure. Using a monophonic <span class="rep">recip</span> input,
 we could use <span class="tool">context</span> to amalgamate the
 appropriate data tokens:
 
@@ -84,11 +84,11 @@ The *dur* Command
 -----------------
 
 The <span class="tool">dur</span> command produces
-[`**dur`](/rep/dur) output from either a `**kern` or
-`**recip` input. The `**dur` representation scheme consists simply of
+<span class="rep">dur</span> output from either a <span class="rep">kern</span> or
+<span class="rep">recip</span> input. The <span class="rep">dur</span> representation scheme consists simply of
 the elapsed duration of notes and rests, expressed in seconds. The
-following example shows a simple `**dur` representation (right spine)
-with a corresponding `**kern` input:
+following example shows a simple <span class="rep">dur</span> representation (right spine)
+with a corresponding <span class="rep">kern</span> input:
 
 
 ```humdrum
@@ -107,14 +107,14 @@ with a corresponding `**kern` input:
 *-	*-
 ```
 
-As in the case of `**recip`, the `**dur` representation designates rests
+As in the case of <span class="rep">recip</span>, the <span class="rep">dur</span> representation designates rests
 via the lower-case `r` and uses the common system for barlines. Notice
-that `**dur` assumes a metronome indication of quarter-note equals 60
+that <span class="rep">dur</span> assumes a metronome indication of quarter-note equals 60
 beats per minute if no other metronome marking is given.
 
 Suppose that we wanted to estimate the total duration of some monophonic
 passage (ignoring rubato). We can do this by translating the score to
-`**dur`, eliminating everything but notes and rests, and sending the
+<span class="rep">dur</span>, eliminating everything but notes and rests, and sending the
 output to the **stats** command:
 
 ```bash
@@ -163,7 +163,7 @@ dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \
 > \| stats
 
 
-The <span class="option">e</span> option ensures that `**kern` staccato marks (\') are passed
+The <span class="option">e</span> option ensures that <span class="rep">kern</span> staccato marks (\') are passed
 along to the output. The <span class="tool">rid</span> command eliminates
 everything but Humdrum data records. Then <span class="unix">grep</span> is used to isolate
 only those notes containing a staccato mark. The <span class="unix">sed</span> script is used
@@ -235,7 +235,7 @@ thru inputfile | dur | rid -GLID | stats -o ^=
 
 Recall that the <span class="tool">xdelta</span> command can be used
 to calculate numerical differences between successive values. If the
-input to <span class="tool">xdelta</span> is `**dur` duration information, then we can
+input to <span class="tool">xdelta</span> is <span class="rep">dur</span> duration information, then we can
 determine rates of change of duration. Most music exhibits lengthy
 passages of similar duration notes &mdash; as in a sequence of sixteenth
 notes. In French overtures, successive notes are often of highly
@@ -370,12 +370,12 @@ contain explicit durational information. Suppose, for example, that for
 a waltz repertory, we want to contrast those chord functions that tend
 to occur on the first beat with those that happen on the third beat. We
 will need to have an input that includes both a
-[`**harm`](/rep/harm) spine encoding the Roman
-numeral harmonic analysis, as well as one or more `**kern` or `**recip`
+<span class="rep">harm</span> spine encoding the Roman
+numeral harmonic analysis, as well as one or more <span class="rep">kern</span> or <span class="rep">recip</span>
 spines that include the durational information. We can use the
 <span class="tool">timebase</span> command to expand the output accordingly &mdash; cuing on the
-duration information provided by `**kern` or `**recip`. Having suitable
-expanded the input, we can dispense with everything but the `**harm`
+duration information provided by <span class="rep">kern</span> or <span class="rep">recip</span>. Having suitable
+expanded the input, we can dispense with everything but the <span class="rep">harm</span>
 spine. For works in 3/4 meter, the following pipeline would provide an
 inventory of chords occurring on the first beat of each bar:
 
@@ -399,7 +399,7 @@ The *metpos* Command
 --------------------
 
 The <span class="tool">metpos</span> command generates a
-[`**metpos`](/rep/metpos) output spine containing
+<span class="rep">metpos</span> output spine containing
 numbers that indicate the metric strength of each sonority. By "metric
 position" we mean the position of importance in the metric hierarchy
 for a measure.
@@ -413,7 +413,7 @@ second and third beats in the measure are both assigned to the second
 level in the metric hierarchy.) All other metric positions in the
 measure (beats, sub-beats, sub-sub-beats, etc.) are assigned
 successively increasing numerical values according to their placement in
-the metric hierarchy. In summary, larger `**metpos` values signify
+the metric hierarchy. In summary, larger <span class="rep">metpos</span> values signify
 sonorities of *lesser* metric significance.
 
 By way of illustration, consider the case of successive eighth notes in
@@ -495,7 +495,7 @@ Notice that <span class="tool">metpos</span> adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
 
-The [`**metpos`](/rep/metpos) values provide
+The <span class="rep">metpos</span> values provide
 additional ways of addressing various rhythmic questions. We might use
 <span class="tool">recode</span> for example, to recode the numerical
 outputs from <span class="tool">metpos</span> into a smaller set of discrete categories. For
@@ -534,7 +534,7 @@ creating two spines of information &mdash; scale-degree and relative metric
 strength.
 
 Assuming that our Hungarian melodies encode key information, creating a
-[`**deg`](/rep/deg) spine is straightforward. Recall
+<span class="rep">deg</span> spine is straightforward. Recall
 that the <span class="option">a</span> option for <span class="tool">deg</span> avoids
 distinguishing the direction of approach (from above or below):
 
@@ -562,7 +562,7 @@ metpos magyar.tb > magyar.mp
 ```
 
 Note that <span class="tool">metpos</span> automatically echoes the input along with the new
-`**metpos` spine. At this point, the result might look as follows:
+<span class="rep">metpos</span> spine. At this point, the result might look as follows:
 
 ```bash
 !!!OTL: Graf Friedrich In Oesterraaich sin di Gassen sou enge 
@@ -590,7 +590,7 @@ eighth-note G and the eighth-note B is "strong-to-weak" and that the
 relationship between the eighth-note B and the eighth-note D is
 "weak-to-strong." In order to procede we need to eliminate all of the
 data records that contain only a metpos value &mdash; that is, there is no
-pitch present in the [`**kern`](/rep/kern) spine. We
+pitch present in the <span class="rep">kern</span> spine. We
 can do this using <span class="tool">humsed</span>; we simply delete all lines that begin with
 a period character:
 
@@ -618,7 +618,7 @@ The result is as follows:
 etc.	
 ```
 
-Notice that the successive `**metpos` values will now allow us to
+Notice that the successive <span class="rep">metpos</span> values will now allow us to
 characterize the changes in stress between successive notes: 2 followed
 by 3 indicates a strong-to-weak change of metric position, 3 followed by
 1 indicates a weak-to-strong change of metric position. We can use
@@ -627,7 +627,7 @@ metric position values: positive differences will indicate
 weak-to-strong changes and negative differences will indicate
 strong-to-weak changes. If both values have the same metric position
 value, then the successive notes hold equal positions in the metric
-hierarchy. Before using <span class="tool">xdelta</span> we need to isolate the `**metpos`
+hierarchy. Before using <span class="tool">xdelta</span> we need to isolate the <span class="rep">metpos</span>
 spine using <span class="tool">extract</span>:
 
 ```bash
@@ -671,7 +671,7 @@ humsed '/^\./d' magyar.mp | extract -i '**metpos' \
 > magyar.xmp
 
 Now we can assemble the resulting metric change spine with our original
-[`**deg`](/rep/deg) spine. Each data record will
+<span class="rep">deg</span> spine. Each data record will
 contain the scale degree in the first spine and the change of metric
 position data in the second spine. The final task is to create an
 inventory using <span class="tool">rid</span>, <span class="unix">sort</span> and <span class="unix">uniq</span>:
@@ -746,7 +746,7 @@ positions using <span class="tool">metpos</span>; and characterizing
 metric syncopation using <span class="tool">synco</span>.
 
 Processing data that does not explicitly contain duration-related
-information (such as `**harm` or `**deg`) often requires some
+information (such as <span class="rep">harm</span> or <span class="rep">deg</span>) often requires some
 preparation. It is often useful to maintain a coordinated file where the
 spines of interest are linked with duration-related spines that assist
 in processing.

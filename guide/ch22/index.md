@@ -304,7 +304,7 @@ the soprano and tenor voices. Our reassignment file might be as follows:
 ```
 
 We will need to extract the soprano and tenor voices, translate the
-pitch representation to [`**semits`](/rep/semits)
+pitch representation to <span class="rep">semits</span>
 and use <span class="tool">ydelta</span> to calculate the semitone
 distance between the two voices. In the following set of commands, we
 have also added the <span class="tool">ditto</span> command to ensure
@@ -324,7 +324,7 @@ Flute Fingering Transitions
 ---------------------------
 
 There is no fixed limit to the length of a reassignment file. Consider
-for example, the following file named `map`. Each `**semits` value from
+for example, the following file named `map`. Each <span class="rep">semits</span> value from
 C4 (0) to C7 (36) has been assigned to a schematic representation of
 flute fingerings. The letter \`X\' indicates a closed key, whereas the
 letter \`O\' indicates an open key. The first letter pertains to the
@@ -358,7 +358,7 @@ else	rest
 Suppose we wanted to determine what kinds of fingering *transitions*
 occur in Joachim Quantz's flute concertos. Since instrument fingerings
 are insensitive to enharmonic spelling, an appropriate input
-representation would be `**semits`. Having used
+representation would be <span class="rep">semits</span>. Having used
 <span class="tool">recode</span> to translate the pitches to
 fingerings, we can then use **context -n 2** to generate diads of
 successive finger combinations.
@@ -393,7 +393,7 @@ identify specific places in the score where Baroque and modern
 fingerings differ.
 
 The <span class="tool">recode</span> command can be used for innumerable other kinds of
-classifications. For example, [`**kern`](/rep/kern)
+classifications. For example, <span class="rep">kern</span>
 durations might be expressed in seconds (using the
 <span class="tool">dur</span> command), and the elapsed times then
 classified as *long*, *short* and *medium* (say). Sound pressure levels
@@ -472,7 +472,7 @@ Classifying Cadences
 
 Consider another application where we use <span class="tool">humsed</span> to classify
 cadences. Suppose we have Roman-numeral harmonic data (as provided by
-the [`**harm`](/rep/harm) representation). In the
+the <span class="rep">harm</span> representation). In the
 case of Bach's chorale harmonizations, for example, cadences are
 clearly evident by the presence of pauses (designated by the semicolon).
 We can easily create a spine that identifies only cadences. Consider a
@@ -504,12 +504,12 @@ extract -i '**harm' chorales | context -o = -n 2 \
 ```
 > \| humsed -f cadences \| sed \'s/\\\*\\\*harm/\*\*cadences/\'
 
-We first extract the `**harm` spine using <span class="tool">extract</span>. We then generate
+We first extract the <span class="rep">harm</span> spine using <span class="tool">extract</span>. We then generate
 a sequence of two-chord progressions using <span class="tool">context</span> &mdash; taking care
 to omit barlines (`-o =`). We then use <span class="tool">humsed</span> to run the script of
 cadence-name substitutions. Finally, we use the <span class="unix">sed</span> command to
-change the name of the exclusive interpretation from `**harm` to
-something more suitable &mdash; `**cadences`.
+change the name of the exclusive interpretation from <span class="rep">harm</span> to
+something more suitable &mdash; <span class="rep">cadences</span>.
 
 Many more sophisticated variants of this sort of procedure may be used.
 For example, one could first classify harmonies more broadly. In

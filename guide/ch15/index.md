@@ -124,10 +124,10 @@ Harmonic Intervals Using the *hint* Command
 
 The Humdrum <span class="tool">hint</span> command calculates harmonic
 intervals for pitch-related representations such as
-[`**kern`](/rep/kern),
-[`**pitch`](/rep/pitch),
-[`**solfg`](/rep/solfg), and
-[`**Tonh`](/rep/Tonh). As in the case of the
+<span class="rep">kern</span>,
+<span class="rep">pitch</span>,
+<span class="rep">solfg</span>, and
+<span class="rep">Tonh</span>. As in the case of the
 <span class="tool">mint</span> command, output intervals are expressed as a combination of
 diatonic interval size plus interval quality (such as \`perfect fourth\'
 and \`minor ninth\').
@@ -135,7 +135,7 @@ and \`minor ninth\').
 In the default operation, <span class="tool">hint</span> calculates only explicit harmonic
 intervals; for sonorities containing more than two pitches, only stacked
 harmonic intervals are calculated. The output from the <span class="tool">hint</span> command
-always consists of a single [`**hint`](/rep/hint)
+always consists of a single <span class="rep">hint</span>
 spine. Any number of spines may be present in the input, but only
 pitch-related spines are processed. Given the default invocation, the
 output corresponding to Example 15.1 is as follows:
@@ -257,7 +257,7 @@ C	abc
 Each null token has been replaced by the preceding data token within the
 spine.
 
-Consider the effect of <span class="tool">ditto</span> on the `**kern` data in Example 15.1:
+Consider the effect of <span class="tool">ditto</span> on the <span class="rep">kern</span> data in Example 15.1:
 
 ```bash
 ditto -p example15.1
@@ -532,7 +532,7 @@ The *ydelta* Command
 Often it is useful to represent intervals by the number of semitones (or
 some other numerical value). We might begin by using the <span class="tool">semits</span>
 command to translate Example 15.1 to a
-[`**semits`](/rep/semits) representation.
+<span class="rep">semits</span> representation.
 
 ```bash
 semits example15.1

@@ -36,9 +36,9 @@ Pitch-Class Representation
 In set theoretic applications it is common to use pitch-class
 representations. The <span class="tool">pc</span> command can be used to
 transform pitch-related representations (such as
-[`**pitch`](/rep/pitch),
-[`**freq`](/rep/freq) and
-[`**kern`](/rep/kern)) to a conventional pitch-class
+<span class="rep">pitch</span>,
+<span class="rep">freq</span> and
+<span class="rep">kern</span>) to a conventional pitch-class
 notation where pitch-class C is represented by the value zero. With the
 <span class="option">a</span> option, <span class="tool">pc</span> will generate outputs where the pc values \`10\'
 and \`11\' are rendered by the alphabetic characters \`A\' and \`B\'
@@ -65,11 +65,11 @@ Figure 34.1. Examples of PC set forms.
 ![](guide.figures/guide34.1.gif)
 
 The <span class="tool">pcset</span> command identifies pitch-class sets
-from [`**pc`](/rep/pc) or
-[`**semits`](/rep/semits) input. Illustrated below
-are the corresponding [`**kern`](/rep/kern),
-[`**pc`](/rep/pc) and
-[`**pcset`](/rep/pcset) representations for Example
+from <span class="rep">pc</span> or
+<span class="rep">semits</span> input. Illustrated below
+are the corresponding <span class="rep">kern</span>,
+<span class="rep">pc</span> and
+<span class="rep">pcset</span> representations for Example
 34.1.
 
 ```humdrum
@@ -108,12 +108,12 @@ pc opus24 | ditto -s ^= | pcset
 
 
 If we wanted, we could assemble the resulting
-[`**pcset`](/rep/pcset) spine to the original input.
+<span class="rep">pcset</span> spine to the original input.
 This would allow us to search for particular patterns that are
 coordinated with certain pitch-class sets. For example, we might be
 interested in comparing the pitch-class sets that coincide with the
 beginnings of slurs/phrases versus those pitch-class sets coinciding
-with the ends of slurs/phrases. First we generate the `**pcset` spine:
+with the ends of slurs/phrases. First we generate the <span class="rep">pcset</span> spine:
 
 ```bash
 pc opus24 | ditto -s ^= | pcset > opus24.pcs
@@ -130,7 +130,7 @@ Now we can search for data records containing phrase (\`{}\') or slur
 rather than <span class="unix">grep</span> assures that the output retains the Humdrum syntax
 (see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
 allow us to use <span class="tool">extract</span> to isolate just the
-`**pcset` data. Finally, we create an inventory of the pc sets. The
+<span class="rep">pcset</span> data. Finally, we create an inventory of the pc sets. The
 process is repeated &mdash; once for beginning slurs/phrases, and once for
 ends of slurs/phrases.
 
@@ -181,7 +181,7 @@ Next we generate the normal set forms:
 pc AllBerg | ditto -s ^= | nf > AllBerg.nf
 ```
 
-Assemble the [`**nf`](/rep/nf) spine with the
+Assemble the <span class="rep">nf</span> spine with the
 original scores:
 
 ```bash
@@ -215,11 +215,11 @@ Interval vectors identify the frequency of occurrence of various
 interval-classes for a given pitch-class set. The
 <span class="tool">iv</span> command generates the six-element interval
 vector for any of several types of inputs &mdash; including semitones
-([`**semits`](/rep/semits)), pitch-class
-([`**pc`](/rep/pc)), normal form
-([`**nf`](/rep/nf)), prime form
-([`**pf`](/rep/pf)), and pitch-class set
-([`**pcset`](/rep/pcset)). The following example
+(<span class="rep">semits</span>), pitch-class
+(<span class="rep">pc</span>), normal form
+(<span class="rep">nf</span>), prime form
+(<span class="rep">pf</span>), and pitch-class set
+(<span class="rep">pcset</span>). The following example
 shows several different pitch-class sets, their corresponding
 pitch-class sets and (right-most spine), the associated interval vector.
 
@@ -305,7 +305,7 @@ When a work consists of more than one instrument or part, useful
 segmentations can be made by extracting each instrument individually,
 using <span class="tool">context</span> to generate
 musically-pertinent sets, and then assembling all of the
-[`**pcset`](/rep/pcset) spines into a single file.
+<span class="rep">pcset</span> spines into a single file.
 
 
 The *reihe* Command
@@ -454,7 +454,7 @@ pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp
 
 The main searching task is done by <span class="tool">patt</span>. The
 <span class="tool">patt</span> command is executed 48 times &mdash; once for
-each row variant. The <span class="option">t</span> (tag) option is used so that a `**patt`
+each row variant. The <span class="option">t</span> (tag) option is used so that a <span class="rep">patt</span>
 output is generated. Each time a match is made the appropriate name
 (e.g. P4) is output in the spine. The <span class="option">s</span> option is used to skip
 barlines and null data records when matching patterns. The <span class="option">m</span> option
@@ -487,7 +487,7 @@ collapsed into a vertical chord:
 done
 
 Each of the above 48 <span class="tool">patt</span> searches resulted in a separate temporary
-output file. It would be convenient to reduce all 48 `**patt` spines
+output file. It would be convenient to reduce all 48 <span class="rep">patt</span> spines
 into a single aggregate spine. This can be done using the
 <span class="tool">assemble</span> and
 <span class="tool">cleave</span> commands:

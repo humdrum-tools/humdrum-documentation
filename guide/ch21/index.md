@@ -49,7 +49,7 @@ a contiguous sequence of input lines.
 The operation of <span class="tool">patt</span> is easier to describe through an example.
 Consider the following input using the German *Tonhöhe* pitch
 designations described in [Chapter 4.](/guide/ch04) Recall that the
-[`**Tonh`](/rep/Tonh) system of pitch names allows
+<span class="rep">Tonh</span> system of pitch names allows
 Bach to spell his name (B=B-flat; H=B-natural). Less well-known is the
 fact that Dmitri Shostakovich also used the German pitch system to
 create motives based on his name: D-S-C-H (S=Es=E-flat). (The German
@@ -99,7 +99,7 @@ ostinato figure in minor thirds:
 
 ![](guide.figures/guide21.1.gif)
 >   ------------ -------------
->   `**Tonh`     \*\*Tonh
+>   <span class="rep">Tonh</span>     \*\*Tonh
 >   `*k[b-e-]`   \*K\[b-e-\]
 >   `*M9/8`      \*M9/8
 >   `=1-`        =1-
@@ -193,7 +193,7 @@ pitch E as `3` and in C minor <span class="tool">deg</span> will represent the p
 as \``mi`\' whether the mode is major or minor.
 
 In order to locate picardy thirds, we can look for raised mediants in
-the `**deg` representation. Specifically, we can look for a raised
+the <span class="rep">deg</span> representation. Specifically, we can look for a raised
 mediant pitch immediately prior to a double barline. Our template file
 (dubbed "`picardy`") might look as follows:
 
@@ -208,7 +208,7 @@ instances." So placing it in square brackets causes the special meaning
 to be escaped.
 
 In order to search for such picardy thirds, we should translate each
-input file to the `**deg` representation, and then search for raised
+input file to the <span class="rep">deg</span> representation, and then search for raised
 mediants immediately prior to a double bar:
 
 ```bash
@@ -227,7 +227,7 @@ second volume of Bach's *Well-Tempered Clavier*:
 > `!!!COM: Bach, Johann Sebastian`
 > `!!!XEN: The Well-Tempered Clavier, Volume 2, Fugue 4. `
 >   ---------------- --------------------- ---------------------
->   `**kern`         \*\*kern              \*\*kern
+>   <span class="rep">kern</span>         \*\*kern              \*\*kern
 >   `*clefF4`        \*clefG2              \*clefG2
 >   `*M12/16`        \*M12/16              \*M12/16
 >   `*k[f#c#g#d#]`   \*k\[f\#c\#g\#d\#\]   \*k\[f\#c\#g\#d\#\]
@@ -256,7 +256,7 @@ The <span class="tool">patt</span> command provides a <span class="option">s</sp
 skip or ignore certain records in the input. Any regular expression can
 be given as a parameter for the <span class="option">s</span> option. In the following
 pipeline, we have instruction <span class="tool">patt</span> to skip over any records matching
-the lower-case letter \``r`\' (the `**kern` rest signifier):
+the lower-case letter \``r`\' (the <span class="rep">kern</span> rest signifier):
 
 `deg `*inputfile.krn*` | patt -s r -f picardy`
 
@@ -283,7 +283,7 @@ P5  P5
 
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
-[`**hint`](/rep/hint) harmonic-interval
+<span class="rep">hint</span> harmonic-interval
 representation. The <span class="option">c</span> option for <span class="tool">hint</span>
 collapses compound intervals to their non-compound equivalents so
 consecutive twelfths, nineteenths, etc. will also be identified. In the
@@ -314,10 +314,10 @@ distinctive cadential formula.
 
 ![](guide.figures/guide21.4.gif)
 
-Below is a [`**kern`](/rep/kern) encoding of the
+Below is a <span class="rep">kern</span> encoding of the
 final two measures along with corresponding
-[`**hint`](/rep/hint) and
-[`**deg`](/rep/deg) spines. The \*\*hint spine was
+<span class="rep">hint</span> and
+<span class="rep">deg</span> spines. The \*\*hint spine was
 generated using <span class="tool">hint</span> <span class="option">l</span> in order to
 generate intervals with respect to the lowest pitch.
 
@@ -416,15 +416,15 @@ found. In addition, <span class="tool">patt</span> provides a third type of outp
 <span class="option">t</span> option.
 
 When the <span class="option">t</span> option is invoked, <span class="tool">patt</span> will output the original
-input, plus an addition `**patt` spine. The `**patt` spine typically
+input, plus an addition <span class="rep">patt</span> spine. The <span class="rep">patt</span> spine typically
 consists of mostly null tokens. However, each time the input matches the
-sought pattern, a user-defined "tag" will appear in the `**patt`
+sought pattern, a user-defined "tag" will appear in the <span class="rep">patt</span>
 spine. Consider the following example.
 
 
 Suppose we are interested in identifying deceptive cadences in Bach's
 chorale harmonizations. Imagine that we already have a
-[`**harm`](/rep/harm) spine containing a Roman
+<span class="rep">harm</span> spine containing a Roman
 numeral harmonic analysis. There are different ways of defining a
 deceptive cadence, but a frequent definition is that it involves a
 dominant chord followed by a submediant chord in a cadential context. In
@@ -598,7 +598,7 @@ one line containing the letter \``X`\'.
 Record-repetition operators can be used in conjunction with all of the
 other regular expression features. For example, the following regular
 expression matches one or more successive
-[`**kern`](/rep/kern) data records containing the
+<span class="rep">kern</span> data records containing the
 pitch \``G`\' (naturals only) followed optionally by a single \``G#`\'
 followed by one or more records containing one or more pitches from an A
 major triad &mdash; the last of which must end a phrase:

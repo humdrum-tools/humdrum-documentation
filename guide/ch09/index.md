@@ -479,7 +479,7 @@ Recapitulation'	or	recapitulation'
 
 By way of illustration, the next table shows examples of regular
 expressions appropriate for processing
-[`**kern`](/rep/kern) representations.
+<span class="rep">kern</span> representations.
 
 
 ```humdrum
@@ -519,7 +519,7 @@ given above in the expression
 (\^\[\^\*!\].\**regexp*)\|(\^*regexp*)
 
 For example, the following regular expression can be used to match
-[`**kern`](/rep/kern) trills without possibly
+<span class="rep">kern</span> trills without possibly
 mistaking comments or interpretations:
 
 ``

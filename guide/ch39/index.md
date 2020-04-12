@@ -112,7 +112,7 @@ manner.
     determine whether the kind of data (signifiers) you are interested
     in are truly present in all of the files to be searched.
 -   Use the <span class="tool">proof</span> command to ensure that any
-    [`**kern`](/rep/kern) data is properly encoded.
+    <span class="rep">kern</span> data is properly encoded.
 -   Visually inspect sample passages from the input data. Do not rely
     solely on the <span class="tool">ms</span> command; instead, look at the actual ASCII text
     data using the **more** command.

@@ -33,7 +33,7 @@ Types of Melodic Intervals
 --------------------------
 
 Example 11.1 provides a contrived illustration of seven different types
-of melodic intervals. (The corresponding `**kern` representation is
+of melodic intervals. (The corresponding <span class="rep">kern</span> representation is
 given on the following page.) The simplest melodic interval is
 calculated between successive pitches within the same voice or part. We
 might call this a *voiced melodic interval.* Examples of voiced melodic
@@ -79,7 +79,7 @@ two or more parts. For example, Example 11.2 shows a plausible
 reinterpretation of the voicings for the first measure. Here the
 quarter-note G is presumed to continue from the preceding eighth-note F
 rather than from the half-note C. In the context of the original
-`**kern` encoding above, we might call such intervals *cross-voice
+<span class="rep">kern</span> encoding above, we might call such intervals *cross-voice
 melodic intervals.*
 
 **Example 11.2** Possible re-interpretation of opening measure for
@@ -135,10 +135,10 @@ Melodic Intervals Using the *mint* Command
 
 The Humdrum <span class="tool">mint</span> command calculates melodic
 intervals for pitch-related representations such as
-[`**kern`](/rep/kern),
-[`**pitch`](/rep/pitch),
-[`**solfg`](/rep/solfg) and
-[`**Tonh`](/rep/Tonh). Output intervals are
+<span class="rep">kern</span>,
+<span class="rep">pitch</span>,
+<span class="rep">solfg</span> and
+<span class="rep">Tonh</span>. Output intervals are
 expressed using the traditional diatonic terms where both interval
 quality and interval size are specified. Interval qualities include
 perfect (`P`), major (`M`), minor (`m`), augmented (`A`) and diminished
@@ -183,7 +183,7 @@ output via the <span class="option">t</span> option for **mint.**
 Sometimes it is useful to maintain the initial starting pitches in the
 output. The presence of these "offset" pitch values can prove useful
 in later reconstructing the original pitches from the
-[`**mint`](/rep/mint) interval data. When the <span class="option">o</span>
+<span class="rep">mint</span> interval data. When the <span class="option">o</span>
 option is invoked, <span class="tool">mint</span> outputs the initial starting pitches (placed
 in square brackets) from which the subsequent melodic intervals have
 been calculated.
@@ -191,7 +191,7 @@ been calculated.
 In order to avoid outputting interrupted intervals, the <span class="option">b</span> (break)
 option can be used. This option requires a subsequent regular expression
 that defines the contexts where the interval calculation should be
-suspended and restarted. A common invocation would identify `**kern`
+suspended and restarted. A common invocation would identify <span class="rep">kern</span>
 rests (`r`) as a suitable place to break melodic interval calculations.
 For example,
 
@@ -226,7 +226,7 @@ Depending on the regular expression given, the <span class="option">b</span> opt
 for a variety of specialized intervals. For example, suppose that we
 wanted to avoid calculating intervals between the last note of a phrase
 and the first note of the next phrase. In the
-[`**kern`](/rep/kern) representation, the open and
+<span class="rep">kern</span> representation, the open and
 closed curly braces are used to indicate the beginnings and ends of
 phrases. We need to tell <span class="tool">mint</span> to break interval calculations each
 time an end-of-phrase signifier is encountered:
@@ -235,7 +235,7 @@ time an end-of-phrase signifier is encountered:
 mint -b '}' inputfile
 ```
 
-Similarly, the `**kern` representation uses the semicolon (`;`) to
+Similarly, the <span class="rep">kern</span> representation uses the semicolon (`;`) to
 represent pauses. We might instruct <span class="tool">mint</span> to avoid calculating
 intervals between notes having pauses and the subsequent note:
 
@@ -368,7 +368,7 @@ typical use:
 cleave -d ' ' -i '**kern' -o '**kern' example11a
 ```
 
-With the `**kern` encoding for Example 11.1 as input, the corresponding
+With the <span class="rep">kern</span> encoding for Example 11.1 as input, the corresponding
 output would be:
 
 
@@ -388,7 +388,7 @@ output would be:
 *-
 ```
 
-Note that this output doesn't quite conform to the `**kern` syntax: the
+Note that this output doesn't quite conform to the <span class="rep">kern</span> syntax: the
 barlines have been duplicated as double-stops, and the durations aren't
 right for multiple-stops. We can clean up the output using
 <span class="tool">humsed</span>, but the incoherent durations won't
@@ -503,7 +503,7 @@ Here we have used the extended regular expression capabilities of
 <span class="unix">egrep</span> to specify an either/or pattern.
 
 Suppose we had a directory containing only files encoding melodies using
-the [`**mint`](/rep/mint) representation. Does any
+the <span class="rep">mint</span> representation. Does any
 melody in the current directory contain both an ascending major sixth
 and a descending major sixth?
 
@@ -535,8 +535,8 @@ values, such as the number semitones or the number of cents. The
 calculating numerical differences between successive values within
 individual spines. In order to use <span class="tool">xdelta</span> to calculate semitone
 differences, we first need to transform our representation to
-[`**semits`](/rep/semits) (discussed in [Chapter
-4](/guide/ch04)). Recall that in the `**semits` representation, middle
+<span class="rep">semits</span> (discussed in [Chapter
+4](/guide/ch04)). Recall that in the <span class="rep">semits</span> representation, middle
 C is designated by the value zero, and all other pitches are represented
 by their (positive or negative) semitone distance. A C-major scale would
 appear as follows:
@@ -578,11 +578,11 @@ token, and all subsequent values represent the numerical *difference*
 between successive values. If the scale had been descending in pitch,
 then the difference values would be negative.
 
-Notice also that the input interpretation (`**semits`) has been modified
-to `**Xsemits`). The input representation for <span class="tool">xdelta</span> does not
+Notice also that the input interpretation (<span class="rep">semits</span>) has been modified
+to <span class="rep">Xsemits</span>). The input representation for <span class="tool">xdelta</span> does not
 matter. The output is always modified so the letter X is prepended to
 the representation. This means that <span class="tool">xdelta</span> could as easily be used
-to calculate differences in cents (`**Xcents`), frequency (`**Xfreq`) or
+to calculate differences in cents (<span class="rep">Xcents</span>), frequency (<span class="rep">Xfreq</span>) or
 any other representation that contains numbers.
 
 When <span class="tool">xdelta</span> encounters multiple-stops, it behaves in a manner
@@ -609,7 +609,7 @@ The <span class="tool">xdelta</span> command produces the following output:
 *-
 ```
 
-Once again, the interpretation has been modified to `**Xsemits` and the
+Once again, the interpretation has been modified to <span class="rep">Xsemits</span> and the
 leading value has been changed to a null token. In going from the value
 3 to the values 2 and 5, the output differences are -1 and +2
 respectively. In going from the values 2 and 5 to the values -1, 7 and

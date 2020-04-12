@@ -162,7 +162,7 @@ will produce the following output:
 The prepended counts tell us that \`A\' occurs three times, \`B\' occurs
 twice, and all other records occur just once.
 
-In the above output, `**alpha`, and `*-` are Humdrum interpretations
+In the above output, <span class="rep">alpha</span>, and `*-` are Humdrum interpretations
 rather than data, so we probably don't want them to appear in our
 inventory. If our file had contained comments, or null data records,
 then these would have also appeared in our output, although we are not
@@ -184,7 +184,7 @@ local comments, omitting all interpretations, and deleting all null data
 records will result in an output consisting only of non-null data
 records.
 
-Returning to our `**alpha` data, we can eliminate everything but data
+Returning to our <span class="rep">alpha</span> data, we can eliminate everything but data
 records as follows:
 
 ```bash
@@ -262,7 +262,7 @@ interested only in alpha-related data, we need to eliminate the
 irrelevant \*\*bet data so it won't interfere. This can be done using
 the Humdrum <span class="tool">extract</span> command.
 
-For example, we can create an inventory of just the `**bet` data:
+For example, we can create an inventory of just the <span class="rep">bet</span> data:
 
 ```bash
 extract -i '**bet' alphabet | rid -GLId | sort | uniq -c \
@@ -535,7 +535,7 @@ extract -i '**dynam' brahm* | rid -GLId | sort | uniq -c \
 
 
 *Are flats more common than sharps in Monteverdi?* Let's presume that
-the input is monophonic `**kern` data.
+the input is monophonic <span class="rep">kern</span> data.
 
 ```bash
 humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
@@ -546,7 +546,7 @@ humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
 Assume that copies of early and late works have been concatenated to the
 files `early` and `late`. The <span class="tool">humsed</span> command
 here eliminates all data with the exception of
-[`**kern`](/rep/kern) articulation marks. (See
+<span class="rep">kern</span> articulation marks. (See
 [Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)
 
 `` extract -i '**kern' early | humsed 's/[^"`~^:I]//g' \ ``

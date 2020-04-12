@@ -1,0 +1,82 @@
+#!/usr/bin/perl
+#
+# Programmer:    Craig Stuart Sapp <craig.stanford.edu>
+# Creation Date: Sat Apr 11 20:16:21 PDT 2020
+# Last Modified: Sat Apr 11 20:16:24 PDT 2020
+# Filename:      makeRepSpan
+# Syntax:        perl 5
+#
+# Description:   Convert:
+#                   [`**kern`](/rep/kern)
+#                into
+#                   <span class="rep">kern</span>
+#                and
+#                   `**rep`
+#                info
+#                   <span class="rep">kern</span>
+#
+
+use strict;
+
+my @files = @ARGV;
+foreach my $file (@files) {
+	processFile($file);
+}
+
+exit(0);
+
+
+
+##############################
+##
+## processFile --
+##
+
+sub processFile {
+	my ($file) = @_;
+	open (FILE, $file) or die "Cannot read $file\n";
+	my @contents = <FILE>;
+	chomp @contents;
+	close FILE;
+	my $changed = 0;
+	my $newline;
+	for (my $i=0; $i<@contents; $i++) {
+		$newline = processLine($contents[$i]);
+		if ($newline ne $contents[$i]) {
+			$contents[$i] = $newline;
+			$changed = 1;
+		}
+	}
+	return if !$changed;
+	print STDERR "Updating file $file\n";
+	open (FILE, ">$file") or die "Cannot write $file\n";
+	for (my $i=0; $i<@contents; $i++) {
+		print FILE "$contents[$i]\n";
+	}
+	close FILE;
+}
+
+
+
+##############################
+##
+## processLine --
+##
+##        [`**kern`](/rep/kern)
+##     into
+##        <span class="rep">kern</span>
+##     and
+##        `**rep`
+##     info
+##        <span class="rep">kern</span>
+##
+
+sub processLine {
+	my ($line) = @_;
+	$line =~ s/\[\`\*\*([a-zA-Z]+)\`\]\(\/rep\/[a-zA-Z]+\)/<span class="rep">$1<\/span>/g;
+	$line =~ s/\`\*\*([a-zA-Z]+)\`/<span class="rep">$1<\/span>/g;
+	return $line;
+}
+
+
+

@@ -112,7 +112,7 @@ context -b = -o = copland
 ```
 
 Identify the chords is facilitated by using the pitch-class
-([`**pc`](/rep/pc)) representation described in
+(<span class="rep">pc</span>) representation described in
 [Chapter 34.](/guide/ch34)
 
 ```bash

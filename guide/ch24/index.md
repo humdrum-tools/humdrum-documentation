@@ -250,7 +250,7 @@ leader
 ```
 
 The input is assumed to contain two voices, each in a separate
-[`**kern`](/rep/kern) spine. The nominally lower
+<span class="rep">kern</span> spine. The nominally lower
 voice should be in the first spine. For music containing more than two
 voices, the Humdrum <span class="tool">extract</span> command should be used to select
 successive pairs of voices for processing by **leader**.
@@ -291,7 +291,7 @@ of conservatory training for art musicians.
 
 For illustration purposes, we'll apply some of the Humdrum tools to the
 problem of identifying betrayals of the classic rules of voice-leading
-in a `**kern`-encoded score. Note that our purpose here is not to
+in a <span class="rep">kern</span>-encoded score. Note that our purpose here is not to
 legislate how to compose or arrange! We're simply using the traditional
 voice-leading rules as a way to introduce various pattern-searching
 techniques.
@@ -304,7 +304,7 @@ techniques.
 
 The Humdrum <span class="tool">census</span> command provides a summary of various elementary
 features of any Humdrum input. With the <span class="option">k</span> option, <span class="tool">census</span>
-provides a summary of a further ten features pertaining to `**kern`
+provides a summary of a further ten features pertaining to <span class="rep">kern</span>
 format inputs. This includes the highest and lowest notes present.
 
 ```bash
@@ -354,7 +354,7 @@ extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'
 
 Implementing this is simple. We first translate our pitch- related data
 to the melodic interval format &mdash;
-[`**mint`](/rep/mint). This can be done using the
+<span class="rep">mint</span>. This can be done using the
 Humdrum <span class="tool">mint</span> command. For example, consider the following melodic
 fragment from the 2nd movement of Bach's Brandenburg Concerto No. 5:
 
@@ -461,7 +461,7 @@ we'll use <span class="tool">patt</span>.
 First, we need to reformat our input so the data represent harmonic
 intervals rather than pitches. The Humdrum <span class="tool">hint</span> command will change
 most pitch representations to the harmonic interval representation &mdash;
-[`**hint`](/rep/hint). Consider, for example, the
+<span class="rep">hint</span>. Consider, for example, the
 following input:
 
 
@@ -518,7 +518,7 @@ pattern-template has been stored. The <span class="option">s</span> option tells
 any input records that should be skipped during the search process. The
 <span class="option">s</span> option is followed by a regular expression &mdash; in this case the
 equals-sign &mdash; so that any input records containing the equals-sign
-(i.e. `**hint` barlines) are ignored.
+(i.e. <span class="rep">hint</span> barlines) are ignored.
 
 The default output from <span class="tool">patt</span> identifies the location of any
 instances of the pattern it finds in the source document.
@@ -697,7 +697,7 @@ spines are present in the input to be searched.
 In order to do this, we can use the Humdrum <span class="tool">extract</span> command as a
 filter, and identify the types of interpretations we want to pass. In
 the following modification to our pipe, the <span class="tool">extract</span> command has been
-used to ensure that only [`**deg`](/rep/deg) spines
+used to ensure that only <span class="rep">deg</span> spines
 are present:
 
 ```bash
@@ -790,7 +790,7 @@ so will facilitate comparison.
 The Humdrum <span class="tool">semits</span> command translates pitches to semitone distances
 where middle C is denoted as zero. For example, where two voices both
 play B3 at the same time, both the parts will have a
-[`**semits`](/rep/semits) value of minus one (-1).
+<span class="rep">semits</span> value of minus one (-1).
 
 Like the <span class="tool">deg</span> command, the <span class="tool">semits</span> command provides a **"-x**
 option that eliminates from the output stream any characters that don't
@@ -861,9 +861,9 @@ the nominally lower voice is truly lower.
 
 First we need to translate the pitch representation to some sort of
 numerical form. We have several options. We could translate the pitches
-to frequency ([`**freq`](/rep/freq)), or we could
-translate them to semitones (`**semits`), or we could translate them to
-cents (\*\*cents). Let's use `**semits`. Once again, in this
+to frequency (<span class="rep">freq</span>), or we could
+translate them to semitones (<span class="rep">semits</span>), or we could translate them to
+cents (\*\*cents). Let's use <span class="rep">semits</span>. Once again, in this
 representation, middle-C is represented by the number zero, and all
 other pitches are represented by their semitone distance (positive or
 negative) with respect to this reference.
@@ -898,7 +898,7 @@ extract -i '*alto,*tenor'  | semits -x | ditto -s = | awk '{if($1>$2) print NR}'
 In short, if the left-most spine has a lower numerical value than the
 second spine, then tell us where that occurs.
 
-Since the `**semits` representation uses the lower-case letter \`r\' to
+Since the <span class="rep">semits</span> representation uses the lower-case letter \`r\' to
 represent a rest, we should avoid the possibility of comparing a number
 (note) with a rest. We can use a variation on the same <span class="unix">awk</span> script as
 we used when checking for unisons:
@@ -1036,7 +1036,7 @@ First, the two voices must be separated by an octave (or two octaves, or
 a unison, etc.). (This suggests that we use the <span class="tool">hint</span> command with
 the <span class="option">c</span> option in order to reduce compound intervals to their
 non-compound equivalents.) Second, the voices must be moving in the same
-direction. (The `**deg` representation may be suitable here, since it
+direction. (The <span class="rep">deg</span> representation may be suitable here, since it
 distinguishes notes according to whether they are approached from below
 ("\^") or above ("v").) Third, both voices must be moving by leap
 (e.g. more than two semitones).

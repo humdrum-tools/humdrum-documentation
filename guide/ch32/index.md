@@ -112,7 +112,7 @@ will print the sum of `$2` and `$3`, namely 32.
 Arithmetic Operations
 ---------------------
 
-Suppose that we have two [`**semits`](/rep/semits)
+Suppose that we have two <span class="rep">semits</span>
 spines as input and we would like to print the semitone difference
 between the two parts for each sonority. Typically, the higher part is
 placed in the right-most spine, so it makes most sense to subtract \$1
@@ -280,7 +280,7 @@ The *for* Loop
 
 Often we would like to repeat a process for several concurrent spines.
 For example, suppose we had four spines of
-[`**solfa`](/rep/solfa) data and we want to output
+<span class="rep">solfa</span> data and we want to output
 the total number of leading-tones for each sonority. Awk provides a
 **for** instruction that allows us to cycle through a series of values.
 The **for**-loop construction has the following syntax:

@@ -18,9 +18,9 @@ permalink:	/guide/ch05/index.html
 
 In the previous chapters we have seen several examples of pre-defined
 Humdrum representations, such as
-[`**kern`](/rep/kern),
-[`**solfa`](/rep/solfa) and
-[`**MIDI`](/rep/MIDI). These representations exhibit
+<span class="rep">kern</span>,
+<span class="rep">solfa</span> and
+<span class="rep">MIDI</span>. These representations exhibit
 a number of common properties, including the manner in which the data
 are organized in spines. In this chapter, we provide a complete
 description of the Humdrum representation syntax. This chapter will help
@@ -189,7 +189,7 @@ running. Notice that null tokens (.) indicate nothing at all and merely
 act as place-holders to maintain the format of the two spines. Notice
 also that interpretations must be defined for each spine, and that each
 interpretation consists of some keyword appended to the double asterisks
-(e.g. `**left`). No intervening spaces are permitted between the
+(e.g. <span class="rep">left</span>). No intervening spaces are permitted between the
 interpretation *keyword* (`left`) and the asterisks; however, spaces may
 appear as part of the keyword itself. In addition, when more than one
 spine is present, both the data tokens and the associated
@@ -225,7 +225,7 @@ or "arm," but we could not say that "foot" is an attribute of
 
 Users are free to define as many different exclusive and tandem
 interpretations as they wish. For example, a user might define the
-interpretation `**bowing` that would be suitable for encoding detailed
+interpretation <span class="rep">bowing</span> that would be suitable for encoding detailed
 bowing information in works for strings. For each exclusive
 interpretation, the Humdrum user can re-define the meaning of all of the
 text characters, with the exception of the tab and the carriage return,

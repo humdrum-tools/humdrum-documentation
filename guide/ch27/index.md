@@ -25,13 +25,13 @@ word-rhythms, and phonetic and syllabic effects such as alliteration,
 vowel-coloration.
 
 Humdrum provides three pre-defined representations pertinent to text or
-lyrics. The [`**text`](/rep/text) representation can
+lyrics. The <span class="rep">text</span> representation can
 be used to represent *words*; the
-[`**silbe`](/rep/silbe) representation can be used
+<span class="rep">silbe</span> representation can be used
 to represent *syllables*; and the
-[`**IPA`](/rep/IPA) representation can be used to
+<span class="rep">IPA</span> representation can be used to
 represent *phonemes* (via the International Phonetic Alphabet).
-Discussion of the `**IPA` representation will be delayed until [Chapter
+Discussion of the <span class="rep">IPA</span> representation will be delayed until [Chapter
 34.](/guide/ch34) In this chapter we will look at various
 representational and processing issues related to the manipulation of
 words and syllables.
@@ -43,9 +43,9 @@ The *\*\*text* and *\*\*silbe* Representations
 
 Syllable- and word-oriented representations are illustrated in the
 following excerpt from a motet by Byrd (Example 27.1). The encoded
-Humdrum data includes three spines: `**text`, `**silbe` and `**kern`.
-Normally, only the `**silbe` and `**kern` data would be encoded &mdash;
-since the `**text` spine can be generated from the `**silbe`
+Humdrum data includes three spines: <span class="rep">text</span>, <span class="rep">silbe</span> and <span class="rep">kern</span>.
+Normally, only the <span class="rep">silbe</span> and <span class="rep">kern</span> data would be encoded &mdash;
+since the <span class="rep">text</span> spine can be generated from the <span class="rep">silbe</span>
 representation.
 
 **Example 27.1.** From William Byrd, *Why Do I use my paper ink and
@@ -118,18 +118,18 @@ pen.*
 >   ------------ ------------ ----------
 Note that all three representations in Example 27.1 make use of the
 common system for representing barlines. In the
-[`**text`](/rep/text) representation tokens
+<span class="rep">text</span> representation tokens
 represent individual words. In some scores, several words will be
 associated with a single moment (or pitch), as in the case of
 *recitativo* passages. Multi-word tokens are encoded as Humdrum
 multiple-stops with a space separating each word on a record.
 
-In the [`**silbe`](/rep/silbe) representation tokens
-represent individual syllables. In `**silbe` the hyphen (-) is used
+In the <span class="rep">silbe</span> representation tokens
+represent individual syllables. In <span class="rep">silbe</span> the hyphen (-) is used
 explicitly to signify syllable boundaries and the tilde (\~) is used to
 signify boundaries between hyphenated words (necessarily also a syllable
 boundary). In other words, four types of syllables are distinguished by
-`**silbe`: (1) a single-syllable word, (2) a word-initiating syllable,
+<span class="rep">silbe</span>: (1) a single-syllable word, (2) a word-initiating syllable,
 (3) a word-completing syllable, and (4) a mid-word syllable. The
 following table illustrates how these signifiers are used:
 
@@ -147,7 +147,7 @@ text~	a	single-syllable	word	beginning	a	hyphenated	multi-word
 -text~	a	word-completing	syllable	--	part	of	a	hyphenated	multi-word
 ```
 
-Both the `**text` and `**silbe` representations are able to distinguish
+Both the <span class="rep">text</span> and <span class="rep">silbe</span> representations are able to distinguish
 different tones of voice such as spoken voice, whispered voice, laughing
 voice, emotional voice, *Sprechstimme* and humming. In addition, there
 are signifiers for indicating untexted laughter and untexted sobs or
@@ -186,11 +186,11 @@ The *text* Command
 ------------------
 
 In most notated music, lyrics are written using a syllabic
-representation rather than a word-oriented representation. The `**silbe`
+representation rather than a word-oriented representation. The <span class="rep">silbe</span>
 representation is typically a better representation of the score than
-`**text`. However, for many analytic applications, words often prove to
+<span class="rep">text</span>. However, for many analytic applications, words often prove to
 be more convenient. The Humdrum <span class="tool">text</span> command can be used to
-translate `**silbe` data to `**text` data. In general, syllabic
+translate <span class="rep">silbe</span> data to <span class="rep">text</span> data. In general, syllabic
 information is useful for addressing questions related to rhythm and
 rhyme, whereas text information is more useful for addressing questions
 related to semantics, metaphor, word-painting, etc.
@@ -204,7 +204,7 @@ text inputfile > outputfile
 
 A simple text-related task might be looking for occurrences of a
 particular word, such as the German "Liebe" (love). If the lyrics are
-encoded in the [`**text`](/rep/text) representation,
+encoded in the <span class="rep">text</span> representation,
 then a simple <span class="unix">grep</span> will suffice:
 
 ```bash
@@ -213,7 +213,7 @@ grep -n 'Liebe' schubert
 
 Recall that the <span class="option">n</span> option gives the line number of any occurrences
 found. If the input is encoded in the
-[`**silbe`](/rep/silbe) representation, then the
+<span class="rep">silbe</span> representation, then the
 output of <span class="tool">text</span> can be piped to <span class="unix">grep</span>:
 
 ```bash
@@ -221,7 +221,7 @@ extract -i '**silbe' schubert | text | grep -n 'Liebe'
 ```
 
 
-Given a `**silbe` input, a inventory of words can be generated using
+Given a <span class="rep">silbe</span> input, a inventory of words can be generated using
 <span class="unix">sort</span> and <span class="unix">uniq</span> in the usual way:
 
 ```bash
@@ -257,7 +257,7 @@ The *fmt* Command
 -----------------
 
 Another common task is simply to provide a readable text of the text or
-lyrics of a work. Given a `**text` representation, we can use the
+lyrics of a work. Given a <span class="rep">text</span> representation, we can use the
 <span class="tool">rid</span> command to eliminate all records except
 non-null data records. This will result in a list of words &mdash; one word
 per line. UNIX provides a simple text formatter called <span class="unix">fmt</span> that will
@@ -305,12 +305,12 @@ A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  nat
 
 Yet another way of arranging the text output would be to parse the text
 according to explicit phrase marks in the
-[`**kern`](/rep/kern) data. This will require a
+<span class="rep">kern</span> data. This will require a
 little more work, but it's worth going through the steps since the same
 process can be applied to any representation. First, we will need to
-transfer the end-of-phrase signifier (\``}`\') from the `**kern` spine
-to the `**silbe` spine. This transfer entails four steps. (1) Extract
-the monophonic `**kern` spine and eliminate all data signifiers except
+transfer the end-of-phrase signifier (\``}`\') from the <span class="rep">kern</span> spine
+to the <span class="rep">silbe</span> spine. This transfer entails four steps. (1) Extract
+the monophonic <span class="rep">kern</span> spine and eliminate all data signifiers except
 closing curly braces (\``}`\'). Store the result in a temporary file:
 
 ```bash
@@ -323,7 +323,7 @@ substitution commands. The first eliminates all data signifiers except
 the close curly brace. The second substitution transforms empty output
 lines to null data records by adding a single period.
 
-\(2) Extract the `**silbe` spine, translate it to `**text` and store the
+\(2) Extract the <span class="rep">silbe</span> spine, translate it to <span class="rep">text</span> and store the
 result in another temporary file:
 
 ```bash
@@ -364,7 +364,7 @@ pipeline:
 You might have noticed that each of the above phrases seems to consist
 of eight syllables. We can confirm this by returning to the syllabic
 rather than word-oriented output. For the above command sequence, simply
-omit the <span class="tool">text</span> command and replace `**text` with `**silbe`. The
+omit the <span class="tool">text</span> command and replace <span class="rep">text</span> with <span class="rep">silbe</span>. The
 revised script becomes:
 
 ```bash
@@ -542,13 +542,13 @@ We would also like to provide a <span class="unix">grep</span>-like search tool 
 search for particular keywords.
 
 The following script will generate our concordance file. For each file
-specified in the input, we extract the `**silbe` spine and store it. We
+specified in the input, we extract the <span class="rep">silbe</span> spine and store it. We
 then process this spine no less than three times. In the first pass, we
-translate from the `**silbe` to the `**text` representation, and
+translate from the <span class="rep">silbe</span> to the <span class="rep">text</span> representation, and
 generate a context of 5 words (**-n 5**) making sure to omit barlines
 (**-o =**). We also pad the amalgamated line with three null tokens
 (**-p 3**) so the context is centered near the third word in the
-sequence. In the second pass, we generate a new spine (`**nums`) that
+sequence. In the second pass, we generate a new spine (<span class="rep">nums</span>) that
 contains only bar numbers. The <span class="tool">ditto</span> command
 is used to ensure that every data record contains a bar number. To
 ensure that pick-up bars are numbered with the value 0, we've used
@@ -665,7 +665,7 @@ and following contextual lines will also be output.
 The **hum** command is a special command that takes non-Humdrum input
 and adds sufficient interpretation records so as to make the input
 conform to the Humdrum syntax. Typically, this means simply adding a
-generic initial exclusive interpretation (`**A`) and a spine-path
+generic initial exclusive interpretation (<span class="rep">A</span>) and a spine-path
 terminator (`*-`). If the input contains tabs, then appropriate spines
 will be added. If the input contains empty lines, then they will be
 changed to null data records.
@@ -703,9 +703,9 @@ repertory as a whole. Any significant difference might alert us to
 possible word painting.
 
 First we translate any pitch data to
-[`**semits`](/rep/semits) and any `**silbe` data to
-`**text`. We will also filter the outputs to ensure that only `**semits`
-and `**text` are present.
+<span class="rep">semits</span> and any <span class="rep">silbe</span> data to
+<span class="rep">text</span>. We will also filter the outputs to ensure that only <span class="rep">semits</span>
+and <span class="rep">text</span> are present.
 
 ```bash
 semits * | text | extract -i '**semits,**text'
@@ -730,7 +730,7 @@ semits * | text | extract -i '**semits,**text' | ditto -s = \
 Notice the addition of the expression `^\*` in the search pattern. This
 expression will match any Humdrum interpretation records and so ensures
 that the output conforms to the Humdrum syntax. We can now isolate the
-`**semits` data and pass the output to **stats** in order to determine
+<span class="rep">semits</span> data and pass the output to **stats** in order to determine
 the average pitch for the words coinciding with the words
 high/hoch/haut:
 
@@ -808,7 +808,7 @@ words, words that are not present in the emotionality list are not
 rated.
 
 In order to process our input, any syllabic text would first be
-translated to the `**text` representation, and all other spines
+translated to the <span class="rep">text</span> representation, and all other spines
 discarded using **extract -i**.
 
 `text` *inputfile*` | extract -i '**text' ...`
@@ -920,9 +920,9 @@ Reprise
 -------
 
 In this chapter we have introduced two text-related representations:
-[`**text`](/rep/text) and
-[`**silbe`](/rep/silbe). We have examined the
-<span class="tool">text</span> command (which translates from `**silbe` to `**text`). We have
+<span class="rep">text</span> and
+<span class="rep">silbe</span>. We have examined the
+<span class="tool">text</span> command (which translates from <span class="rep">silbe</span> to <span class="rep">text</span>). We have
 also been exposed to the UNIX <span class="unix">fmt</span> command (a simple text formatter),
 the **cut** command (similar to **extract -f**), and the <span class="unix">head</span> and
 <span class="unix">tail</span> commands.

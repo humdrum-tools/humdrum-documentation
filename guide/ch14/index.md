@@ -106,10 +106,10 @@ output to a temporary file, and then use the UNIX **mv** command to
 rename the output.
 
 
-Suppose that you had encoded a musical work in the `**kern`
+Suppose that you had encoded a musical work in the <span class="rep">kern</span>
 representation. Having finished the encoding, you realize that what you
 thought were *pizzicato* marks are really *spiccato* marks. In the
-[`**kern`](/rep/kern) representation, pizzicatos are
+<span class="rep">kern</span> representation, pizzicatos are
 indicated by the double quote (`"`) whereas spiccatos are represented by
 the lower-case letter `s`. We can change all pizzicato marks to spiccato
 marks using the following command:
@@ -138,14 +138,14 @@ The *target string* in substitution operations is actually a regular
 expression. This means that we can specify patterns using the full power
 of regular expression syntax. Frequently, it is useful to eliminate
 certain kinds of information from a file. For example, we can eliminate
-all sharps and flats from a `**kern`-format file as follows:
+all sharps and flats from a <span class="rep">kern</span>-format file as follows:
 
 ```bash
 humsed s/[#-]//g *inputfile*
 ```
 
 Suppose we wanted to eliminate all beaming information in a score. In
-the `**kern` representation, open and closed beams are represented by
+the <span class="rep">kern</span> representation, open and closed beams are represented by
 `L` and `J` respectively; partial beams are represented by `K` and `k`.
 
 ```bash
@@ -163,7 +163,7 @@ humsed s/[^JLkK]//g *inputfile*
 
 Sometimes we need to restrict the circumstances where the data are
 eliminated. For example, we might want to eliminate all measure numbers.
-Eliminating all numbers from a `**kern` file will have the undesirable
+Eliminating all numbers from a <span class="rep">kern</span> file will have the undesirable
 consequence of eliminating all note durations as well. Most
 <span class="tool">humsed</span> operations can be *preceded* by a
 regular expression delineated by slashes. This tells <span class="tool">humsed</span> to
@@ -196,7 +196,7 @@ humsed /^=/sX=[0-9]*X=Xg *inputfile* | num -n ^= -x == -p = -o 72
 ```
 
 Suppose we wanted to eliminate all octave numbers from a
-[`**pitch`](/rep/pitch) representation. In this case
+<span class="rep">pitch</span> representation. In this case
 we want to delete all numbers except when they occur in conjunction with
 a barline. Our substitution should occur only when the current record
 does not match a leading equals sign:
@@ -274,7 +274,7 @@ extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \
 ```
 
 The <span class="tool">extract</span> command has been added to ensure that we only process
-[`**MIDI`](/rep/MIDI) data; the <span class="unix">grep</span> command
+<span class="rep">MIDI</span> data; the <span class="unix">grep</span> command
 ensures that possible barlines are eliminated, and the <span class="tool">rid</span> command
 eliminates comments and interpretations prior to passing the data to the
 **stats** command.
@@ -296,7 +296,7 @@ inventory of just sharps and flats:
 humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
 ```
 
-In some tasks, we might wish to transform a `**kern`-format file so that
+In some tasks, we might wish to transform a <span class="rep">kern</span>-format file so that
 only pitch-related information is preserved:
 
 ```bash
@@ -343,7 +343,7 @@ Remember that <span class="tool">humsed</span> only manipulates
 Humdrum data records; it never touches comments or interpretations. The
 <span class="unix">grep</span> command has no such restriction. Consider, for example, the
 following command to eliminate grace notes (acciaccaturas) from a
-`**kern`-format file.
+<span class="rep">kern</span>-format file.
 
 ```bash
 humsed '/q/d' *inputfile*
@@ -362,7 +362,7 @@ the letter \`q\'.
 Suppose that we wanted to know whether a melody still evokes a certain
 key perception even if we eliminate all the tonic pitches. First we
 translate the representation to scale degree and assemble this file with
-the original `**kern` representation for the melody.
+the original <span class="rep">kern</span> representation for the melody.
 
 ```bash
 deg` *input* > temp
@@ -395,7 +395,7 @@ Adding Information
 
 The substitute command can also be used to add information to points in
 a Humdrum input. For example, we might wish to add an explicit
-breath-mark (`,`) to the end of each phrase in a `**kern`-format input:
+breath-mark (`,`) to the end of each phrase in a <span class="rep">kern</span>-format input:
 
 ```bash
 humsed s/}/},/g *inputfile*
@@ -407,7 +407,7 @@ matched string." Suppose we want to add a tenuto mark to every
 quarter-note in a work. The following substitution seeks the number
 \`4\' followed by any character that is not a digit or period. This
 pattern is replaced by itself (&) followed by a tilde (\~), the
-[`**kern`](/rep/kern) signifier for a tenuto mark:
+<span class="rep">kern</span> signifier for a tenuto mark:
 
 ```bash
 humsed s/4[^0-9.]/&~/g *inputfile*
@@ -419,7 +419,7 @@ Multiple Substitutions
 
 Some tasks may require more than one substitution command. Multiple
 operations can be invoked by separating each operation by a semicolon.
-In the following example, we change all `**kern` quarter-notes to
+In the following example, we change all <span class="rep">kern</span> quarter-notes to
 eighth-note durations:
 
 ```bash
@@ -441,7 +441,7 @@ In some situations, we will want to switch two or more signifiers &mdash;
 make all A\'s B\'s and all B\'s A\'s. These sorts of tasks require three
 substitutions and involve creating a unique temporary string. For
 example, the following command changes all
-[`**kern`](/rep/kern) up-bows to down-bows and vice
+<span class="rep">kern</span> up-bows to down-bows and vice
 versa.
 
 ```bash
@@ -449,7 +449,7 @@ humsed 's/u/ABC/g; s/v/u/g; s/ABC/v/g' *inputfile*
 ```
 
 The first substitution changes down-bows (\``u`\') to the unique
-temporary string `ABC`. (In the `**kern` representation `ABC` is an
+temporary string `ABC`. (In the <span class="rep">kern</span> representation `ABC` is an
 illegal pitch representation, so it is bound to be a unique character
 string.) The second substitution changes up-bows (`v`) to down-bows. The
 third substitution changes occurrences of the temporary string `ABC` to
@@ -488,7 +488,7 @@ A useful feature of <span class="tool">humsed</span> is the "write"
 or `w` operation. This operation causes a line to be written to the end
 of a specified file. Suppose, for example, we wanted to collect all
 seventh chords into a separate file called `sevenths`. With a
-[`**harm`](/rep/harm)-format input, the appropriate
+<span class="rep">harm</span>-format input, the appropriate
 command would be:
 
 ```bash
@@ -528,7 +528,7 @@ maintain the phrase indicators, we will avoid the <span class="option">x</span> 
 <span class="tool">deg</span>. However, the <span class="option">x</span> option will pass *all* of the non-pitch
 related signifiers, including the duration data which encodes numbers.
 Hence, we will not be able to distinguish the subdominant (\`4\') pitch
-from a `**kern` quarter-note (\`4\'). The problem is resolved by first
+from a <span class="rep">kern</span> quarter-note (\`4\'). The problem is resolved by first
 eliminating all of the duration information (numbers) from the original
 input:
 

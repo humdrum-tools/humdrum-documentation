@@ -28,13 +28,13 @@ input tools are discussed in [Chapter 30.](/guide/ch30)
 The *\*\*MIDI* Representation
 -----------------------------
 
-Humdrum provides a [`**MIDI`](/rep/MIDI)
+Humdrum provides a <span class="rep">MIDI</span>
 representation that closely parallels the commercial MIDI specification
 but conforms to the Humdrum data format. This representation provides an
 intermediate format; using Humdrum commands such as
 <span class="tool">perform</span> and
 [<span class="tool">smf</span>,](/tool/perform) true MIDI data can be generated.
-However, since the `**MIDI` representation conforms to the Humdrum
+However, since the <span class="rep">MIDI</span> representation conforms to the Humdrum
 syntax, the data can be manipulated, modified and searched in the same
 way as other Humdrum data. For example, we can use <span class="unix">grep</span> to search
 MIDI data, etc.
@@ -49,7 +49,7 @@ pertinent signifiers such as pitch spelling (e.g., F-sharp versus
 G-flat), stem directions, ties, slurs, phrasing, etc. In addition, MIDI
 does not represent rests.
 
-A simple [`**MIDI`](/rep/MIDI) example is given
+A simple <span class="rep">MIDI</span> example is given
 below. It consists just a single note (middle C):
 
 ```humdrum
@@ -61,12 +61,12 @@ below. It consists just a single note (middle C):
 *-
 ```
 
-Notice that there are two `**MIDI` data tokens: one to specify note-on
-and one to specify note-off events. Each `**MIDI` data token consists of
+Notice that there are two <span class="rep">MIDI</span> data tokens: one to specify note-on
+and one to specify note-off events. Each <span class="rep">MIDI</span> data token consists of
 three elements or components, delimited by a slash character (/). The
 first element in the data token represents the number of clock ticks
 before the current event is to occur. The absolute duration of a single
-clock tick is determined by the `**MIDI` clock speed, which is variable.
+clock tick is determined by the <span class="rep">MIDI</span> clock speed, which is variable.
 In our example, 54 clock ticks elapse before the note is turned on, and
 another 80 clock ticks elapse before the note is turned off. The initial
 pause before the first note begins is not necessary; however, many MIDI
@@ -74,23 +74,23 @@ cards introduce a brief delay before beginning to send the first data in
 a stream. The leading pause prevents a "rushed" burst of initial
 notes.
 
-The second element in a data token represents the `**MIDI` key number.
+The second element in a data token represents the <span class="rep">MIDI</span> key number.
 Successive numbers refer to semitone pitches where middle C is
 designated key `60`. Key-off events are represented by negative
 integers, so `-60` means turn off key `60`. Key numbers range between 1
 and 127.
 
-The third element in a data token represents the `**MIDI` key velocity.
+The third element in a data token represents the <span class="rep">MIDI</span> key velocity.
 MIDI instruments normally interpret key velocity as dynamic or accent
 information. Higher key-velocity values are associated with accented
 notes. In the case of key-off events, the key-velocity component
 represents the key-up velocity.
 
 Unlike most other Humdrum representations, the
-[`**MIDI`](/rep/MIDI) format requires two data
+<span class="rep">MIDI</span> format requires two data
 tokens for each note. The following example shows a three note C-major
-triad. The [`**kern`](/rep/kern) data is shown in
-the left spine with the corresponding `**MIDI` data in the right spine.
+triad. The <span class="rep">kern</span> data is shown in
+the left spine with the corresponding <span class="rep">MIDI</span> data in the right spine.
 Notice that each data token consists of three subtokens, one for each
 note:
 
@@ -110,7 +110,7 @@ Notice that all key-off events occur simultaneously.
 
 Suppose we add a second chord consisting of the dyad D4 and F4. The dyad
 begins at the same time that the C major triad ends. This results in
-five subtokens in the corresponding `**MIDI` data record. Three key-off
+five subtokens in the corresponding <span class="rep">MIDI</span> data record. Three key-off
 events are synchronous with two key-on events:
 
 ```humdrum
@@ -164,7 +164,7 @@ beginning of Darius Milhaud's *Touches Blanches*.
 *-	*-	*-	*-
 ```
 
-The [`**MIDI`](/rep/MIDI) representation always
+The <span class="rep">MIDI</span> representation always
 expects a tandem interpretation indicating the MIDI channel assignment.
 In Example 7.1 both parts have been assigned to channel 1. Once again,
 simultaneous key-on and key-off events often appear as double-stops.
@@ -176,8 +176,8 @@ The *midi* Command
 ------------------
 
 The <span class="tool">midi</span> command converts Humdrum
-[`**kern`](/rep/kern) data into Humdrum `**MIDI`
-data. By way of example, the above `**MIDI` data can be generated as
+<span class="rep">kern</span> data into Humdrum <span class="rep">MIDI</span>
+data. By way of example, the above <span class="rep">MIDI</span> data can be generated as
 follows:
 
 ```bash
@@ -187,43 +187,43 @@ midi inven05.krn > inven05.hmd
 The `.hmd` filename extension is a common way of designating Humdrum
 `MIDI` data.
 
-Since the `**kern` representation does not encode key-velocity
+Since the <span class="rep">kern</span> representation does not encode key-velocity
 information, the <span class="tool">midi</span> command assumes a default key velocity of 64
 (from a range of 1 to 127). If the input is monophonic, <span class="tool">midi</span> will
 also allow the user to set a fixed note duration using the <span class="option">d</span>
 option. This is useful for auditing notes that do not have duration
 values. For example, a Gregorian chant might be represented without
 durations. The following command takes a file containing a 12-tone row
-(pitch information only) and produces a `**MIDI` output where all notes
+(pitch information only) and produces a <span class="rep">MIDI</span> output where all notes
 assigned to a quarter duration:
 
 ```bash
 midi -d 4 tonerow > tonerow.hmd
 ```
 
-The most common use of `**MIDI` data is to create a standard MIDI file
+The most common use of <span class="rep">MIDI</span> data is to create a standard MIDI file
 using the <span class="tool">smf</span> command, or to listen to the output using the
 <span class="tool">perform</span> command. In some cases, it is useful to carry out processing
-of `**MIDI` data itself.
+of <span class="rep">MIDI</span> data itself.
 
 
 The *perform* Command
 ---------------------
 
 The <span class="tool">perform</span> command allows the user to
-listen to synthesized performances of `**MIDI`-format input. When
+listen to synthesized performances of <span class="rep">MIDI</span>-format input. When
 invoked, <span class="tool">perform</span> provides a simple interactive environment suitable
 for proof-listening and other audition tasks.
 
 The <span class="tool">perform</span> command accepts any Humdrum input; however, only
-[`**MIDI`](/rep/MIDI) spines present in the input
+<span class="rep">MIDI</span> spines present in the input
 stream are performed. Non-MIDI spines are simply ignored and do not
 affect the sound output. The <span class="tool">perform</span> command generates serial MIDI
 data which are sent directly to a MIDI controller card or on-board
 sound-card.
 
 The <span class="tool">perform</span> command is typically the last command in a pipe preceded
-by the <span class="tool">midi</span> command. For example, a `**kern`-format score can be
+by the <span class="tool">midi</span> command. For example, a <span class="rep">kern</span>-format score can be
 heard using the following command:
 
 ```bash
@@ -299,7 +299,7 @@ Since, by default, the <span class="tool">perform</span> command echoes all glob
 the screen during playback, this means that the Humdrum data will also
 appear on the screen as it is being played. In addition, the commented
 data records are accessible to the forward- and backward-search
-commands. For example, in the [`**kern`](/rep/kern)
+commands. For example, in the <span class="rep">kern</span>
 representation, pauses are indicated by a semicolon; hence the user
 might search for the next pause symbol by typing:
 
@@ -380,14 +380,14 @@ The *smf* Command
 
 Another MIDI-related tool is the <span class="tool">smf</span> command.
 This command allows the user to create "standard MIDI files" from
-Humdrum `**MIDI`-format files. Standard MIDI files are industry-standard
+Humdrum <span class="rep">MIDI</span>-format files. Standard MIDI files are industry-standard
 binary files that can be imported by a variety of MIDI applications
 software packages on many different platforms, including sequencer
 programs and most music notation packages.
 
-The <span class="tool">smf</span> command translates only `**MIDI` input spines; all
-non-`**MIDI` spines are simply ignored. Suppose we begin with a
-`**kern`-format file named `joplin`. We can create a standard MIDI file
+The <span class="tool">smf</span> command translates only <span class="rep">MIDI</span> input spines; all
+non-<span class="rep">MIDI</span> spines are simply ignored. Suppose we begin with a
+<span class="rep">kern</span>-format file named `joplin`. We can create a standard MIDI file
 as follows:
 
 ```bash
@@ -406,14 +406,14 @@ Reprise
 -------
 
 In this chapter we have learned how Humdrum data can be output as MIDI
-data. Humdrum provides a `**MIDI` representation that closely parallels
+data. Humdrum provides a <span class="rep">MIDI</span> representation that closely parallels
 MIDI but remains in conformity with the Humdrum syntax. This means that
 the data can still be processed with other Humdrum tools (as we will see
 in later chapters).
 
 The <span class="tool">midi</span> command can translate
-[`**kern`](/rep/kern) data to
-[`**MIDI`](/rep/MIDI) and the
+<span class="rep">kern</span> data to
+<span class="rep">MIDI</span> and the
 <span class="tool">perform</span> and <span class="tool">smf</span>
 commands can be used to generate true MIDI data for listening. The
 <span class="tool">perform</span> command provides a simple interactive command-line sequencer

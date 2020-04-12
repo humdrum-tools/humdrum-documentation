@@ -17,7 +17,7 @@ permalink:	/guide/ch03/index.html
 
 
 Now that we have learned some things about Humdrum representations (and
-the `**kern` representation in particular), let's explore some basic
+the <span class="rep">kern</span> representation in particular), let's explore some basic
 processing tasks.
 
 
@@ -49,7 +49,7 @@ Most commands provide *options* that will modify the operation of the
 command in a particular way. In UNIX-style commands, options follow
 after the command name and are typically specified by a single letter
 preceded by a hyphen. The <span class="option">k</span> option with the <span class="tool">census</span> command will
-give further information pertaining to the Humdrum `**kern`
+give further information pertaining to the Humdrum <span class="rep">kern</span>
 representation. With the <span class="option">k</span> option, the output includes the number
 of notes in the file, the longest, shortest, highest, and lowest notes,
 the maximum number of concurrent notes or voices, the number of rests,
@@ -173,7 +173,7 @@ Counting Pattern Occurrences Using grep -c
 In some cases, the user is interested in counting the total number of
 instances of a found pattern. The <span class="option">c</span> option causes <span class="unix">grep</span> to
 output a numerical *count* of the number of lines containing matching
-instances. For example, in the `**kern` representation, the beginning of
+instances. For example, in the <span class="rep">kern</span> representation, the beginning of
 each phrase is marked by the presence of an open curly brace (\``{`\').
 So the following command can be used to count the number of phrases in
 the file `glazunov.krn`:
@@ -514,7 +514,7 @@ Reprise
 In this chapter we have introduced some elementary ways of processing
 Humdrum files. We noted that the <span class="tool">census</span> command can be used to
 identify basic statistics about a file. The <span class="option">k</span> option for <span class="tool">census</span>
-provides basic information related to `**kern` files, such as the number
+provides basic information related to <span class="rep">kern</span> files, such as the number
 of notes and rests, the highest and lowest notes, the number of
 barlines, etc.
 
