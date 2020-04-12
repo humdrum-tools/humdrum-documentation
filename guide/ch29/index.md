@@ -419,8 +419,6 @@ occurrence of the words. If we apply the <span class="unix">comm</span> command 
 then the commonality measures will be sensitive to the relative
 frequency of words within the vocabularies.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

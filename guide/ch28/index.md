@@ -657,8 +657,6 @@ extract -i '**MIDI' mono_input | humsed 's/.*\///' \
 Notice the use of the <span class="unix">sed</span> command to replace the \*\*MIDI
 interpretation by a \*\*dB interpretation.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

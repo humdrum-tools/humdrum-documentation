@@ -443,8 +443,6 @@ chmod +x vocalfiles  ./vocalfiles
 
 We now have a new directory whose files contain scores with vocal parts.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

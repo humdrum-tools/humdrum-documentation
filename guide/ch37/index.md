@@ -670,8 +670,6 @@ Franz Liszt, Hungarian Rhapsody No. 8 in F-sharp minor (solo piano).
 Amsterdam: Rijkaard Software Publishers, 1994; H. Vorisek (Ed.),
 Electronic edition version 2.1, checksum 891678772.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

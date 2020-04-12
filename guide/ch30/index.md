@@ -161,8 +161,6 @@ interpreted input, defining buffers and string constants, and so on.
 Using the configuration files, users can tailor the <span class="tool">encode</span> editor to
 suit specific needs and skills.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

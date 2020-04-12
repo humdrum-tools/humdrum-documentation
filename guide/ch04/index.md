@@ -727,8 +727,6 @@ example, if the key signature contains sharps, then G-sharp will be
 output; if the key or key signature contains flats, then A-flat will be
 output.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

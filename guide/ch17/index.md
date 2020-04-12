@@ -589,8 +589,6 @@ Mussorgsky?*
 
 This problem is addressed in [Chapter 36.](/guide/ch36)
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

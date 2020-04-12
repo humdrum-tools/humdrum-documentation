@@ -296,8 +296,6 @@ Sound synthesis and analysis software has a rapid rate of development.
 Users should consult recent audio and multi-media resources for
 up-to-date information.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

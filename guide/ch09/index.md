@@ -567,8 +567,6 @@ syntax by providing multi-record repetition operators that prove very
 useful in musical applications. These Humdrum extensions will be
 discussed in [Chapter 21.](/guide/ch21)
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

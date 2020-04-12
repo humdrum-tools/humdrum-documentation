@@ -432,8 +432,6 @@ A similar approach can be used to address other questions, such as
 whether large leaps involving chromatically-altered tones tend to have a
 longer duration on the altered tone. Etc.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

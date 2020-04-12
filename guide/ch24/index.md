@@ -259,8 +259,6 @@ successive pairs of voices for processing by **leader**.
 # LEADER  #  # A shell program to check for voice-leading infractions.  # This command is invoked as:  #  #   leader   #  # where  is assumed to be a file containing two voices, each  # in a separate **kern spine, where the nominally lower voice is in the  # first spine.    # Before processing, ensure that a proper input file has been specified.  if <a name =" 8. Check for overlapping parts.  extract -f 2 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/upper  extract -f 1 $1 | sed 's/^=.*/./' > $TMPDIR/lower  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR}'  extract -f 1 $1 | sed 's/^=.*/./' | context -n 2 -p 1 -d XXX | \      rid -GL | humsed 's/XXX.*//' > $TMPDIR/lower  extract -f 2 $1 | sed 's/^=.*/./' > $TMPDIR/upper  assemble $TMPDIR/lower $TMPDIR/upper | semits -x | ditto | \      awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print "Parts overlap at line: " NR"></a>'     # 9. Check for exposed octaves.  hint -c $1 > $TMPDIR/s1  extract -f 1 $1 | deg > $TMPDIR/s2  extract -f 2 $1 | deg > $TMPDIR/s3  extract -f 1 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s4  extract -f 2 $1 | mint | humsed 's/.*[3-9].*/leap/' > $TMPDIR/s5  assemble $TMPDIR/s1 $TMPDIR/s2 $TMPDIR/s3 $TMPDIR/s4 $TMPDIR/s5 > $TMPDIR/temp  egrep -n 'P1.*\^.*\^.*leap.*leap|P1.*v.*v.*leap.*leap' $TMPDIR/temp | \      sed 's/:.*/./;s/^/Exposed octave at line: /'    # Clean-up some temporary files.  rm $TMPDIR/template $TMPDIR/upper $TMPDIR/lower $TMPDIR/s[1-5] $TMPDIR/temp
 ```
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

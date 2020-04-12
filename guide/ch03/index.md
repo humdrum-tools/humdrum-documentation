@@ -505,8 +505,6 @@ As a final note, we might mention that, like <span class="unix">grep</span> and 
 causes the output to be arranged in reverse order. This can be useful in
 producing lists that are ordered from most common to least common.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

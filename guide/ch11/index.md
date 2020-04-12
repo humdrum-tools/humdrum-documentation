@@ -650,8 +650,6 @@ containing two <span class="tool">xdelta</span> commands:
 
 `xdelta -s ^= inputfile` `| xdelta -s ^= `
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

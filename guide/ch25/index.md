@@ -1057,9 +1057,10 @@ The file `primary.krn` contains only those notes having the highest
 estimated accent values. Using this file, we can continue processing
 using either a parametric (<span class="tool">correl</span>) or non-parametric (<span class="tool">simil</span>)
 similarity method.
-------------------------------------------------------------------------
+
 Reprise
 -------
+
 In this chapter we have introduced two types of similarity tools:
 <span class="tool">correl</span> and
 <span class="tool">simil</span>. For both tools, the criterion of

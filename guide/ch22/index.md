@@ -678,8 +678,6 @@ Similarly, we could reduce instruments to instrument classes, and
 examine how brass, woodwinds, strings, and percussion in general are
 related.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

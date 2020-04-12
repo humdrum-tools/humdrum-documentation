@@ -608,8 +608,6 @@ In our discussion here we have only identified some of the more common
 types of reference records. A complete description of reference records
 is given in Appendix II.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

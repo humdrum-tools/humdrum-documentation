@@ -399,8 +399,6 @@ user to set the tempo, whereas the <span class="option">v</span> option allows t
 specify a default MIDI key velocity. See the *Humdrum Reference Manual*
 for details.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

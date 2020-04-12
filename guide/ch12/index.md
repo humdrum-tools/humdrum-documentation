@@ -978,8 +978,6 @@ In the second case, an interval will probably be calculated between
 between the last note of measure 7 and the first note of measure 8. This
 interval will be absent in the first case.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

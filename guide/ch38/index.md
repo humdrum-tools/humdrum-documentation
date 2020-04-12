@@ -433,8 +433,6 @@ rm spine\[12\] temp
 This *autophase* procedure has been used to address many differ kinds of
 questions pertaining to how musical parts interrelate.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

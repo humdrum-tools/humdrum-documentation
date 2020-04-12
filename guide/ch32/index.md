@@ -382,8 +382,6 @@ arrays, built-in variables, string-processing functions, user-defined
 functions, system calls, begin and end blocks, other control-flow
 statements, and pipes and file manipulations.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

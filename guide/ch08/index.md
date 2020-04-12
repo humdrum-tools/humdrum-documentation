@@ -422,8 +422,6 @@ command | tee outfile  command1 | tee outfile1 | command2 > outfile2  command | 
 The <span class="unix">tee</span> command is a useful way of recording or diverting some
 intermediate data in the middle of a pipeline.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

@@ -517,8 +517,6 @@ For a complex work like Webern's Opus 24 Concerto, this strategy of
 analyzing both individual instruments and groups of instruments works
 very well.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

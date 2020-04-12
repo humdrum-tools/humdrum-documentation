@@ -287,8 +287,6 @@ processing errors.
 -   Execute your finalized pipeline from a shell script in order to
     avoid undetected typing errors.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

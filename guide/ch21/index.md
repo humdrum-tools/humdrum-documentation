@@ -653,8 +653,6 @@ Recapitulation. Together with outputs from parallel searches for
 search might similarly be amalgamated and used as an input for a higher
 level search for works exhibiting a sonata-allegro structure.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

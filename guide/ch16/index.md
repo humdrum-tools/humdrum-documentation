@@ -357,8 +357,6 @@ Now we can search for meter signatures as follows:
 grep metersig inputfile
 ```
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

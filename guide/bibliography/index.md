@@ -208,13 +208,4 @@ Wiggens, G., Miranda, E., Smaill, A. & Harris, M. A framework for the
 evaluation of music representation systems. *Computer Music Journal,*
 Vol. 17, No. 3 (1993) pp. 31-42.
 
-------------------------------------------------------------------------
 
-
-[**Next Appendix**](guide.append1.html)
-
-[**Table of Contents**](guide.toc.html)
-
-[**Detailed Contents**](guide.toc.detailed.html)\
-\
-© Copyright 1999 David Huron

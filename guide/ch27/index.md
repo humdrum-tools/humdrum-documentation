@@ -913,8 +913,6 @@ music. In the case of the folk *ballad*, a detailed story unfolds.
 Differences in language use may be correlated with the `!!!AGN`
 reference record used to identify genres.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

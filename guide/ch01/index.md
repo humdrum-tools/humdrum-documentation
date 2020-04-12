@@ -477,8 +477,6 @@ More complicated scripts can be written to carry out more sophisticated
 musical processes. In later chapters we'll encounter some scripts that
 contain 10 or more lines of commands.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

@@ -612,8 +612,6 @@ as inputs, including <span class="tool">cents</span>,
 <span class="tool">pitch</span>, <span class="tool">semits</span>,
 [**solfg**,](/tool/solfg) and [**tonh**.](/tool/tonh)
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

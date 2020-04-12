@@ -598,8 +598,6 @@ pattern -f template *inputfile* > output
 humsed 'cadential-64/r comment.6-4' output > commented.output
 ```
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

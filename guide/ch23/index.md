@@ -728,8 +728,6 @@ could be used to generate two-chord harmonic progressions. This would
 permit us to determine, for example, whether a specific progression such
 as *ii-V* tends to fall in strong-to-weak or weak-to-strong contexts.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

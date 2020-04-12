@@ -518,9 +518,10 @@ extract -i \'\*\*IPA\' \$1 \| extract -f 1 \| context -b { -e } \| rid
 > \| sed -f rhyme.sed.\$\$
 
 rm rhyme.sed.\$\$
-------------------------------------------------------------------------
+
 Reprise
 -------
+
 By focusing on phonetic signifiers, the <span class="rep">IPA</span> representation
 provides opportunities for analyzing many sonorous aspects of vocal
 sounds &mdash; including alliteration, vowel coloration, rhyme, and other

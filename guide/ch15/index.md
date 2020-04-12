@@ -681,8 +681,6 @@ Notice the use of **grep -v** to first exclude any records that match an
 augmented fourth, and then to exclude any remaining records that match a
 diminished fifth.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

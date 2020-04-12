@@ -775,8 +775,6 @@ timebase -t 8 strauss | solfa | yank -m = -r 5 | grep re \
 We can repeat this command for beats one and two by changing the <span class="option">r</span>
 parameter to 1 and 3 respectively.
 
-------------------------------------------------------------------------
-
 
 Reprise
 -------

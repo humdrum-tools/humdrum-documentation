@@ -914,9 +914,10 @@ repeat this procedure for both verses:
 (In the <span class="rep">silbe</span> representation, the vertical bar (\|) and the
 percent sign (%) have special meanings so the **grep -v** is used to
 eliminate them along with barlines.)
-------------------------------------------------------------------------
+
 Reprise
 -------
+
 Between stophes and sections, highly non-linear musical documents
 can be constructed. We have seen how section labels can be defined,
 how lists of sections ("expansion lists") can be constructed and
