@@ -11,7 +11,7 @@ Pitch-Class
 
 ## REPRESENTATION ##
 
- <span class="rep">pc</span> \-- pitch-class representation
+ <span class="rep">pc</span> &mdash; pitch-class representation
 
 ## DESCRIPTION ##
 
@@ -60,7 +60,7 @@ Pitch-Class
 
  Rests are represented by the single letter \`r\'.
 
- Barlines are represented using the \"common system\" for barlines \--
+ Barlines are represented using the \"common system\" for barlines &mdash;
  see [**barlines**](barlines.rep.html).
 
 ## FILE TYPE ##
@@ -103,9 +103,9 @@ Pitch-Class
 ## EXAMPLES ##
 
  The following sample document shows a pitch-class representation for
- the opening measures of Schoenberg\'s \"Sommerm\\o\'u\\(..\'d\" from
+ the opening measures of Schoenberg's \"Sommerm\\o'u\\(..\'d\" from
  *Three Songs,* opus 48. The left-most spine shows a mixed alphabetic
- and numeric encoding \-- where pitch-class 11 is represented by the
+ and numeric encoding &mdash; where pitch-class 11 is represented by the
  letter \`B\'.
 
  ```

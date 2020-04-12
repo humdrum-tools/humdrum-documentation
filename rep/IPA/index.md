@@ -11,7 +11,7 @@ for Phonetic Sounds
 
 ## REPRESENTATION ##
 
- <span class="rep">IPA</span> \-- representation for International Phonetic Alphabet
+ <span class="rep">IPA</span> &mdash; representation for International Phonetic Alphabet
 
 ## DESCRIPTION ##
 
@@ -45,10 +45,10 @@ for Phonetic Sounds
  Individual phonemes are represented according to the signifiers listed
  in the table given below. For example, the upper-case letter \`A\'
  signifies the \`aw\' vowel as in the standard American pronunciation
- of *l\\o\'a\\(ul\'\\o\'w\\(ul\', c\\o\'o\\(ul\'t* and
- *b\\o\'o\\(ul\'ther*. Any vowel or diphthong signifier can be modified
+ of *l\\o'a\\(ul\'\\o'w\\(ul\', c\\o'o\\(ul't* and
+ *b\\o'o\\(ul'ther*. Any vowel or diphthong signifier can be modified
  by the subsequent presence of a tilde; the modified vowel is
- pronounced with open nasal passages \-- as in the French \"un bon vin
+ pronounced with open nasal passages &mdash; as in the French \"un bon vin
  blanc,\" which is encoded as:\
  \
 
@@ -68,9 +68,9 @@ for Phonetic Sounds
  the tongue is positioned as at the beginning of the word *yacht.* Any
  consonant signifier that is followed by a dash indicates that the
  consonant and the preceding *schwa* (see below) are pronounced as an
- independent syllable \-- as in the case of the words
- *batt\\o\'l\\(ul\'\\o\'e\\(ul\', mitt\\o\'e\\(ul\'\\o\'n\\(ul\'* and
- *eat\\o\'e\\(ul\'\\o\'n\\(ul\'*.
+ independent syllable &mdash; as in the case of the words
+ *batt\\o'l\\(ul\'\\o'e\\(ul\', mitt\\o'e\\(ul\'\\o'n\\(ul\'* and
+ *eat\\o'e\\(ul\'\\o'n\\(ul\'*.
 
 ## FILE TYPE ##
 
@@ -83,52 +83,52 @@ for Phonetic Sounds
  and signifieds. (§ All footnotes appear at the end of this table.)\
  \
 
-|   @        |      schwa§ as in (unaccented) *b\\o\'a\\(ul\'nan\\o\'a\\(ul\', c\\o\'o\\(ul\'llide, \\o\'a\\(ul\'lone*
-|   V        |      (IPA symbol: \\(an); as in *h\\o\'u\\(ul\'t* or *h\\o\'u\\(ul\'mdr\\o\'u\\(ul\'m*
-|   R        |      R\\(dd; as in *b\\o\'u\\(ul\'rn, op\\o\'e\\(ul\'\\o\'r\\(ul\'ation, d\\o\'i\\(ul\'\\o\'r\\(ul\'t, \\o\'u\\(ul\'\\o\'r\\(ul\'gent*
-|   &        |      short a (IPA symbol: \\(ae); as in *m\\o\'a\\(ul\'t, m\\o\'a\\(ul\'p, m\\o\'a\\(ul\'d, g\\o\'a\\(ul\'g, sn\\o\'a\\(ul\'p, p\\o\'a\\(ul\'tch*
-|   A        |      \\o\'a\\(..\' (IPA symbol: *a*); as in *b\\o\'o\\(ul\'ther, c\\o\'o\\(ul\'t*, and, with most American speakers, *f\\o\'a\\(ul\'ther, c\\o\'a\\(ul\'rt*
-|   a        |      \\o\'a\\(de\'; *f\\o\'a\\(ul\'ther* as pronounced by speakers who do not rhyme it with *bother*.
-|   E        |      short e (IPA symbol: \\(\*e or E); as in *g\\o\'e\\(ul\'t, b\\o\'e\\(ul\'d, p\\o\'e\\(ul\'ck, \\o\'e\\(ul\'dge*
-|   i        |      long e (IPA symbol: \\o\'i\'); as in *b\\o\'e\\(ul\'\\o\'a\\(ul\'t, gr\\o\'e\\(ul\'\\o\'e\\(ul\'d, \\o\'e\\(ul\'venl\\o\'y\\(ul\', \\o\'e\\(ul\'\\o\'a\\(ul\'s\\o\'y\\(ul\'*
-|   I        |      short i (IPA symbol: I or \\(\*i); as in *t\\o\'i\\(ul\'p, ban\\o\'i\\(ul\'sh, act\\o\'i\\(ul\'ve*
-|   O        |      \\o\'o\\(de\' (IPA symbol: backward \`c\'); as in *l\\o\'a\\(ul\'\\o\'w\\(ul\', \\o\'a\\(ul\'ll, sh\\o\'a\\(ul\'\\o\'w\\(ul\'m*
-|   W        |      oe digraph (IPA symbol: \\(oe); as in the French *b\\o\'o\\(ul\'\\o\'e\\(ul\'\\o\'u\\(ul\'f*, German *H\\o\'o\\(..\\(ul\'lle*
-|   o        |      \\o\'o/\' digraph; as in the French *b\\o\'o\\(ul\'\\o\'e\\(ul\'\\o\'u\\(ul\'fs*, d\\o\'e\\(ul\'\\o\'u\\(ul\'x, German *fl\\o\'o\\(..\\(ul\'te*
-|   u        |      \\o\'u\\(..\'; as in *r\\o\'u\\(ul\'le, y\\o\'o\\(ul\'\\o\'u\\(ul\'th, f\\o\'e\\(ul\'\\o\'w\\(ul\', \\o\'o\\(ul\'\\o\'o\\(ul\'ze*
-|   H        |      \\o\'u\\(..\' (IPA symbol: upside & backwards \`h\'); as in French *n\\o\'u\\(ul\'ance*, *l\\o\'u\\(ul\'i*
-|   U        |      \\o\'u\\(de\' (IPA symbol: \\(\*u or U or \\(\*w); as in *p\\o\'u\\(ul\'ll, w\\o\'o\\(ul\'\\o\'o\\(ul\'d, b\\o\'o\\(ul\'\\o\'o\\(ul\'k*
-|   y        |      ue; as in the German *f\\o\'u\\(..\\(ul\'hren*, *\\o\'U\\(..\\(ul\'bung*
-|   Y        |      UE; as in the German *Gl\\o\'u\\(..\\(ul\'ck*, *klavierst\\o\'u\\(..\\(ul\'ck*
+|   @        |      schwa§ as in (unaccented) *b\\o'a\\(ul'nan\\o'a\\(ul\', c\\o'o\\(ul'llide, \\o'a\\(ul'lone*
+|   V        |      (IPA symbol: \\(an); as in *h\\o'u\\(ul't* or *h\\o'u\\(ul'mdr\\o'u\\(ul'm*
+|   R        |      R\\(dd; as in *b\\o'u\\(ul'rn, op\\o'e\\(ul\'\\o'r\\(ul'ation, d\\o'i\\(ul\'\\o'r\\(ul't, \\o'u\\(ul\'\\o'r\\(ul'gent*
+|   &        |      short a (IPA symbol: \\(ae); as in *m\\o'a\\(ul't, m\\o'a\\(ul'p, m\\o'a\\(ul'd, g\\o'a\\(ul'g, sn\\o'a\\(ul'p, p\\o'a\\(ul'tch*
+|   A        |      \\o'a\\(..\' (IPA symbol: *a*); as in *b\\o'o\\(ul'ther, c\\o'o\\(ul't*, and, with most American speakers, *f\\o'a\\(ul'ther, c\\o'a\\(ul'rt*
+|   a        |      \\o'a\\(de\'; *f\\o'a\\(ul'ther* as pronounced by speakers who do not rhyme it with *bother*.
+|   E        |      short e (IPA symbol: \\(\*e or E); as in *g\\o'e\\(ul't, b\\o'e\\(ul'd, p\\o'e\\(ul'ck, \\o'e\\(ul'dge*
+|   i        |      long e (IPA symbol: \\o'i\'); as in *b\\o'e\\(ul\'\\o'a\\(ul't, gr\\o'e\\(ul\'\\o'e\\(ul'd, \\o'e\\(ul'venl\\o'y\\(ul\', \\o'e\\(ul\'\\o'a\\(ul's\\o'y\\(ul\'*
+|   I        |      short i (IPA symbol: I or \\(\*i); as in *t\\o'i\\(ul'p, ban\\o'i\\(ul'sh, act\\o'i\\(ul've*
+|   O        |      \\o'o\\(de\' (IPA symbol: backward \`c\'); as in *l\\o'a\\(ul\'\\o'w\\(ul\', \\o'a\\(ul'll, sh\\o'a\\(ul\'\\o'w\\(ul'm*
+|   W        |      oe digraph (IPA symbol: \\(oe); as in the French *b\\o'o\\(ul\'\\o'e\\(ul\'\\o'u\\(ul'f*, German *H\\o'o\\(..\\(ul'lle*
+|   o        |      \\o'o/\' digraph; as in the French *b\\o'o\\(ul\'\\o'e\\(ul\'\\o'u\\(ul'fs*, d\\o'e\\(ul\'\\o'u\\(ul'x, German *fl\\o'o\\(..\\(ul'te*
+|   u        |      \\o'u\\(..\'; as in *r\\o'u\\(ul'le, y\\o'o\\(ul\'\\o'u\\(ul'th, f\\o'e\\(ul\'\\o'w\\(ul\', \\o'o\\(ul\'\\o'o\\(ul'ze*
+|   H        |      \\o'u\\(..\' (IPA symbol: upside & backwards \`h\'); as in French *n\\o'u\\(ul'ance*, *l\\o'u\\(ul'i*
+|   U        |      \\o'u\\(de\' (IPA symbol: \\(\*u or U or \\(\*w); as in *p\\o'u\\(ul'll, w\\o'o\\(ul\'\\o'o\\(ul'd, b\\o'o\\(ul\'\\o'o\\(ul'k*
+|   y        |      ue; as in the German *f\\o'u\\(..\\(ul'hren*, *\\o\'U\\(..\\(ul'bung*
+|   Y        |      UE; as in the German *Gl\\o'u\\(..\\(ul'ck*, *klavierst\\o'u\\(..\\(ul'ck*
 |   *vowel*\~|      following a vowel\* indicates a vowel or diphthong pronounced wit hopen nasal passages; as in the French \"un bon vin blanc\" (`W~ bo~ va~ blA~`)
-|   b        |      b; as in *\\o\'b\\(ul\'a\\o\'b\\(ul\'y, ca\\o\'b\\(ul\'in, ro\\o\'b\\(ul\'*
-|   d        |      d; as in *\\o\'d\\(ul\'ee\\o\'d\\(ul\', \\o\'d\\(ul\'ulcimer, a\\o\'dd\\(ul\'er*
-|   f        |      f; as in *\\o\'f\\(ul\'eel, cu\\o\'f\\(ul\'\\o\'f\\(ul\'*, \\o\'f\\(ul\'orte
-|   g        |      g; as in *\\o\'g\\(ul\'o, ba\\o\'g\\(ul\', \\o\'g\\(ul\'ift*
-|   h        |      h; as in *\\o\'h\\(ul\'ear, a\\o\'h\\(ul\'ead, \\o\'h\\(ul\'orn*
-|   k        |      k; as in *\\o\'c\\(ul\'oo\\o\'k\\(ul\', ta\\o\'k\\(ul\'\\o\'e\\(ul\', a\\o\'c\\(ul\'\\o\'h\\(ul\'\\o\'e\\(ul\'*
-|   x        |      K (IPA symbol: \\o\'x\\(ul\'); as in the German *i\\o\'c\\(ul\'\\o\'h\\(ul\', Ba\\o\'c\\(ul\'\\o\'h\\(ul\'*
-|   C        |      as in the German *i\\o\'c\\(ul\'\\o\'h\\(ul\', trauri\\o\'g\\(ul\'*
-|   l        |      l; as in *\\o\'l\\(ul\'ibretto, \\o\'l\\(ul\'i\\o\'l\\(ul\'y, poo\\o\'l\\(ul\'*
-|   L        |      gl (IPA symbol lambda); as in the Italian *passaca\\o\'g\\(ul\'\\o\'l\\(ul\'ia, a\\o\'g\\(ul\'\\o\'l\\(ul\'io*
-|   m        |      m; as in *\\o\'m\\(ul\'usic, li\\o\'m\\(ul\'\\o\'b\\(ul\', ny\\o\'m\\(ul\'ph*
-|   n        |      n; as in *i\\o\'n\\(ul\'o, \\o\'n\\(ul\'strument, ow\\o\'n\\(ul\'*
-|   N        |      eng (IPA symbol: \`n\' with a tail); as in *si\\o\'n\\(ul\'\\o\'g\\(ul\', fi\\o\'n\\(ul\'\\o\'g\\(ul\'er, i\\o\'n\\(ul\'k*
-|   J        |      enya; as in the Italian Lasa\\o\'g\\(ul\'\\o\'n\\(ul\'e, French *a\\o\'g\\(ul\'\\o\'n\\(ul\'eau, Dordo\\o\'g\\(ul\'\\o\'n\\(ul\'e*
-|   p        |      p; as in *\\o\'p\\(ul\'iano, bee\\o\'p\\(ul\'er, li\\o\'p\\(ul\'*
-|   r        |      r; as in *\\o\'r\\(ul\'eed, o\\o\'r\\(ul\'gan, ca\\o\'r\\(ul\'*
-|   s        |      s; as in *\\o\'s\\(ul\'eek, \\o\'s\\(ul\'our\\o\'c\\(ul\'\\o\'e\\(ul\', ba\\o\'s\\(ul\'\\o\'s\\(ul\'*
-|   S        |      sh \[\"esh\"\] (IPA symbol: \\o\'\\(It\\(Im\\(Ib\'); as in *\\o\'s\\(ul\'\\o\'h\\(ul\'y, cre\\o\'s\\(ul\'\\o\'c\\(ul\'endo, spe\\o\'c\\(ul\'\\o\'i\\(ul\'al*
-|   t        |      t; as in *\\o\'t\\(ul\'empo, \\o\'t\\(ul\'ie, a\\o\'t\\(ul\'\\o\'t\\(ul\'acca*
-|   T        |      th \[\"theta\"\] (IPA symbol: \\(\*h); as in *\\o\'t\\(ul\'\\o\'h\\(ul\'in, pa\\o\'t\\(ul\'\\o\'h\\(ul\', e\\o\'t\\(ul\'\\o\'h\\(ul\'er*
-|   D        |      \\o\'t\\(ul\'\\o\'h\\(ul\' \[\"eth\"\] (IPA symbol: \\o\'d\~\') as in *\\o\'t\\(ul\'\\o\'h\\(ul\'en, ei\\o\'t\\(ul\'\\o\'h\\(ul\'er, smoo\\o\'t\\(ul\'\\o\'h\\(ul\'*
-|   v        |      v; as in *\\o\'v\\(ul\'oice, \\o\'v\\(ul\'i\\o\'v\\(ul\'id, li\\o\'v\\(ul\'\\o\'e\\(ul\'*
-|   w        |      w; as in *\\o\'w\\(ul\'e, a\\o\'w\\(ul\'ay*
-|   j        |      j; as in *\\o\'y\\(ul\'es, \\o\'y\\(ul\'oung, c\\o\'u\\(ul\'e, on\\o\'i\\(ul\'\\o\'o\\(ul\'n*
-|   z        |      z; as in *\\o\'z\\(ul\'one, rai\\o\'s\\(ul\'\\o\'e\\(ul\', \\o\'x\\(ul\'ylophone*
-|   Z        |      zh \[\"yogh\"\\(sc\]; as in *mea\\o\'s\\(ul\'ure, vi\\o\'s\\(ul\'\\o\'i\\(ul\'on, a\\o\'z\\(ul\'ure*
-|  *consonant*- |   following a consonant (l-, n-, m-, or N-)\*\* indicates a consonant preceded by a *schwa* that is pronounced as an independent syllable; as in batt\\o\'l\\(ul\'\\o\'e\\(ul\',
-|            |      mitt\\o\'e\\(ul\'\\o\'n\\(ul\', eat\\o\'e\\(ul\'\\o\'n\\(ul\'\\fR
+|   b        |      b; as in *\\o'b\\(ul'a\\o'b\\(ul'y, ca\\o'b\\(ul'in, ro\\o'b\\(ul\'*
+|   d        |      d; as in *\\o'd\\(ul'ee\\o'd\\(ul\', \\o'd\\(ul'ulcimer, a\\o'dd\\(ul'er*
+|   f        |      f; as in *\\o'f\\(ul'eel, cu\\o'f\\(ul\'\\o'f\\(ul\'*, \\o'f\\(ul'orte
+|   g        |      g; as in *\\o'g\\(ul'o, ba\\o'g\\(ul\', \\o'g\\(ul'ift*
+|   h        |      h; as in *\\o'h\\(ul'ear, a\\o'h\\(ul'ead, \\o'h\\(ul'orn*
+|   k        |      k; as in *\\o'c\\(ul'oo\\o'k\\(ul\', ta\\o'k\\(ul\'\\o'e\\(ul\', a\\o'c\\(ul\'\\o'h\\(ul\'\\o'e\\(ul\'*
+|   x        |      K (IPA symbol: \\o'x\\(ul\'); as in the German *i\\o'c\\(ul\'\\o'h\\(ul\', Ba\\o'c\\(ul\'\\o'h\\(ul\'*
+|   C        |      as in the German *i\\o'c\\(ul\'\\o'h\\(ul\', trauri\\o'g\\(ul\'*
+|   l        |      l; as in *\\o'l\\(ul'ibretto, \\o'l\\(ul'i\\o'l\\(ul'y, poo\\o'l\\(ul\'*
+|   L        |      gl (IPA symbol lambda); as in the Italian *passaca\\o'g\\(ul\'\\o'l\\(ul'ia, a\\o'g\\(ul\'\\o'l\\(ul'io*
+|   m        |      m; as in *\\o'm\\(ul'usic, li\\o'm\\(ul\'\\o'b\\(ul\', ny\\o'm\\(ul'ph*
+|   n        |      n; as in *i\\o'n\\(ul'o, \\o'n\\(ul'strument, ow\\o'n\\(ul\'*
+|   N        |      eng (IPA symbol: \`n\' with a tail); as in *si\\o'n\\(ul\'\\o'g\\(ul\', fi\\o'n\\(ul\'\\o'g\\(ul'er, i\\o'n\\(ul'k*
+|   J        |      enya; as in the Italian Lasa\\o'g\\(ul\'\\o'n\\(ul'e, French *a\\o'g\\(ul\'\\o'n\\(ul'eau, Dordo\\o'g\\(ul\'\\o'n\\(ul'e*
+|   p        |      p; as in *\\o'p\\(ul'iano, bee\\o'p\\(ul'er, li\\o'p\\(ul\'*
+|   r        |      r; as in *\\o'r\\(ul'eed, o\\o'r\\(ul'gan, ca\\o'r\\(ul\'*
+|   s        |      s; as in *\\o's\\(ul'eek, \\o's\\(ul'our\\o'c\\(ul\'\\o'e\\(ul\', ba\\o's\\(ul\'\\o's\\(ul\'*
+|   S        |      sh \[\"esh\"\] (IPA symbol: \\o\'\\(It\\(Im\\(Ib\'); as in *\\o's\\(ul\'\\o'h\\(ul'y, cre\\o's\\(ul\'\\o'c\\(ul'endo, spe\\o'c\\(ul\'\\o'i\\(ul'al*
+|   t        |      t; as in *\\o't\\(ul'empo, \\o't\\(ul'ie, a\\o't\\(ul\'\\o't\\(ul'acca*
+|   T        |      th \[\"theta\"\] (IPA symbol: \\(\*h); as in *\\o't\\(ul\'\\o'h\\(ul'in, pa\\o't\\(ul\'\\o'h\\(ul\', e\\o't\\(ul\'\\o'h\\(ul'er*
+|   D        |      \\o't\\(ul\'\\o'h\\(ul\' \[\"eth\"\] (IPA symbol: \\o'd\~\') as in *\\o't\\(ul\'\\o'h\\(ul'en, ei\\o't\\(ul\'\\o'h\\(ul'er, smoo\\o't\\(ul\'\\o'h\\(ul\'*
+|   v        |      v; as in *\\o'v\\(ul'oice, \\o'v\\(ul'i\\o'v\\(ul'id, li\\o'v\\(ul\'\\o'e\\(ul\'*
+|   w        |      w; as in *\\o'w\\(ul'e, a\\o'w\\(ul'ay*
+|   j        |      j; as in *\\o'y\\(ul'es, \\o'y\\(ul'oung, c\\o'u\\(ul'e, on\\o'i\\(ul\'\\o'o\\(ul'n*
+|   z        |      z; as in *\\o'z\\(ul'one, rai\\o's\\(ul\'\\o'e\\(ul\', \\o'x\\(ul'ylophone*
+|   Z        |      zh \[\"yogh\"\\(sc\]; as in *mea\\o's\\(ul'ure, vi\\o's\\(ul\'\\o'i\\(ul'on, a\\o'z\\(ul'ure*
+|  *consonant*- |   following a consonant (l-, n-, m-, or N-)\*\* indicates a consonant preceded by a *schwa* that is pronounced as an independent syllable; as in batt\\o'l\\(ul\'\\o'e\\(ul\',
+|            |      mitt\\o'e\\(ul\'\\o'n\\(ul\', eat\\o'e\\(ul\'\\o'n\\(ul\'\\fR
 |   *consonant*; |   following a consonant,§§ indicates that the front of the tongue is
 |            |      positioned as in the beginning of the word \`yard\'
 |   \\\'     |      primary stress (should precede stressed sound)

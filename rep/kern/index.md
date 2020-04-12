@@ -11,7 +11,7 @@ Basic Notated Music
 
 ## REPRESENTATION ##
 
- <span class="rep">kern</span> \-- core pitch/duration representation for common
+ <span class="rep">kern</span> &mdash; core pitch/duration representation for common
  practice music notation
 
 ## DESCRIPTION ##
@@ -132,7 +132,7 @@ Basic Notated Music
  where an existing phrase fails to end while a new phrase begins. In
  <span class="rep">kern</span> the ampersand character is used to mark elided slurs or
  phrases. For example: `{   &{   }    &}` means that two phrases
- overlap \-- the initial phrase ending after second phrase has begun.
+ overlap &mdash; the initial phrase ending after second phrase has begun.
  Multiple levels of elisions are indicated by repeating the ampersand
  character. Both the beginning and ending must be marked by the same
  number of ampersands. For example, the following coding represents a
@@ -149,7 +149,7 @@ Basic Notated Music
  etc. The number zero (`0`) is reserved for the *breve* duration (i.e.
  a duration of twice the length of a whole note). Dotted durations are
  indicated by adding the period character (`.`) immediately following
- the numerical value \-- hence `8.` signifies a dotted-eighth note and
+ the numerical value &mdash; hence `8.` signifies a dotted-eighth note and
  `2..` signifies a doubly-dotted half note. Any number of augmentation
  dots may follow the duration integer.
 
@@ -204,14 +204,14 @@ Basic Notated Music
  used to indicate that the visual rendering of the rest is as a whole
  rest.
 
- Barlines are represented using the \"common system\" for barlines \--
+ Barlines are represented using the \"common system\" for barlines &mdash;
  see [**barlines**](barlines.rep.html). A barline is denoted by the
- occurrence of an equals sign (`=`) at the beginning of the token \--
+ occurrence of an equals sign (`=`) at the beginning of the token &mdash;
  followed by an optional measure number (integer) followed by an
  optional letter (single lower-case alphabetic character), followed by
  an optional pause marking (`;`). Double-barlines are represented by
  the occurrence of two or more equals signs (`==`) at the beginning of
- the token \-- followed by an optional pause marking (`;`).
+ the token &mdash; followed by an optional pause marking (`;`).
 
  In representing any work, editorial interpretations are inevitable. It
  may be necessary to make explicit certain implicit information in a
@@ -226,7 +226,7 @@ Basic Notated Music
  encoded literally, but is questionable) signified by `Y`; (2)
  *invisible symbol* (unprinted note, rest or barline, but logically
  implied) signified by `y`; (3) *editorial interpretation,* (a
- \"modest\" editorial act of interpretation \-- such as the
+ \"modest\" editorial act of interpretation &mdash; such as the
  interpretation of accidentals in *musica ficta*) signified by `x`; (4)
  *editorial intervention* (a \"significant\" editorial intervention)
  signified by `X`; (5) *footnote* (accompanying local or global comment
@@ -313,7 +313,7 @@ Basic Notated Music
    Y                editorial mark: *sic* marking; information is encoded
    Z                undefined; [user assignable](../guide.append1.html#RDF)
                     literally, but is questionable
-                    (space character) multiple-stop conjunction \-- indicates
+                    (space character) multiple-stop conjunction &mdash; indicates
                     joint note-tokens
    =                barline; == double barline
    \[               first note of a tie
@@ -331,8 +331,8 @@ Basic Notated Music
    \~               tenuto mark
    \^               accent mark
    :                arpeggiation (of multi-note chord)
-   \|               in barline \-- thin line designator
-   !                in barline \-- thick line designator
+   \|               in barline &mdash; thin line designator
+   !                in barline &mdash; thick line designator
    ,                breath mark
    /                up-stem
    \\               down-stem
@@ -361,7 +361,7 @@ Basic Notated Music
  but not `16ff#.` or `.16ff#`. Sharps, flats, and naturals must follow
  immediately after the corresponding alphabetic pitch signifiers
  (`16ff#` but not `16#ff`). Signifiers that can be repeated must be
- contiguous. This include pp, PP, LL, JJ, XX, xx, ??, \#\#, \--, and ..
+ contiguous. This include pp, PP, LL, JJ, XX, xx, ??, \#\#, &mdash;, and ..
 
  The elision marker (`&`) must immediately precede the associated slur
  (`&{ ... &}`) or slur (`&( ... &)`).
@@ -380,9 +380,9 @@ Basic Notated Music
  that direct file comparisons may be made. Similarly, differences in
  signifier orderings can cause problems for pattern matching tasks. For
  example, in searching for a sixteenth-note F-sharp, it is convenient
- to define a simple regular expression \-- such as `16f#` rather than
+ to define a simple regular expression &mdash; such as `16f#` rather than
  having to define a regular expression that handles all possible
- contextual orderings \-- such as `(16.*f#)|(f#.*16)`. For this reason,
+ contextual orderings &mdash; such as `(16.*f#)|(f#.*16)`. For this reason,
  a canonical ordering of the <span class="rep">kern</span> signifiers is given in the
  following table.
 

@@ -11,7 +11,7 @@ Barlines
 
 ## REPRESENTATION ##
 
- **barlines** \-- \"common system\" for representing barlines
+ **barlines** &mdash; \"common system\" for representing barlines
 
 ## DESCRIPTION ##
 
@@ -25,9 +25,9 @@ Barlines
  of the barlines. Barlines are logically signified by the presence of
  an equals-sign ` (=)` in the first column of a spine. Immediately
  after the equals sign there may follow an optional integer value
- indicating the measure number (e.g. ` =107` \-- for measure 107). In
+ indicating the measure number (e.g. ` =107` &mdash; for measure 107). In
  addition, a lower-case alphabetic character may be appended to the
- measure number \-- as in: ` =14b.` This convention permits the user to
+ measure number &mdash; as in: ` =14b.` This convention permits the user to
  distinguish measure numbers for first and second endings, etc. Measure
  numbers refer to the measure immediately following the barline, thus
  the token ` =23` occurs just prior to the encoded data for measure 23.
@@ -36,8 +36,8 @@ Barlines
  signs ` (==).` Several consecutive equals signs may be encoded in
  order to enhance readability (e.g. ` =======).`
 
- An additional attribute for barlines is the *pause* \-- which is
- represented by the\-- icolon (;). Thus the token ` =4;` means that the
+ An additional attribute for barlines is the *pause* &mdash; which is
+ represented by the&mdash; icolon (;). Thus the token ` =4;` means that the
  barline starting measure number 4 has a pause written above or below
  it, while the token ` =====;` means that a double barline contains a
  pause indication.
@@ -54,7 +54,7 @@ Barlines
  Partial barlines (rendered as a short vertical stroke across the top
  of the staff) are signified by the single greve character (`` ` ``).
  \"Invisible\" barlines are signified by the minus sign (`-`). In
- addition, barlines may be associated with repetition marks \--
+ addition, barlines may be associated with repetition marks &mdash;
  pointing left, right, or in both directions. The repeat sign is
  denoted by the colon character `:`). (Note that this repeat sign is a
  *visual* signifier, rather than a logical signifier of repetition; see
@@ -149,7 +149,7 @@ Barlines
    <span class="rep">takt</span>       beat-position representation
    <span class="rep">text</span>       vocal text representation
    <span class="rep">time</span>       relative elapsed time (in seconds)
-   <span class="rep">Tonh</span>       German Tonh\\o\'o\\(..\'he (pitch) representation
+   <span class="rep">Tonh</span>       German Tonh\\o'o\\(..\'he (pitch) representation
    <span class="rep">URrhythm</span>   represent Johnson-Laird beat prototypes for a passage
    **\*\*vox\#**      representation of number of concurrently active voices
    ------------------ ----------------------------------------------------------

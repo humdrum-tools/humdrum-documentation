@@ -12,7 +12,7 @@ Solfa Syllables
 
 ## REPRESENTATION ##
 
- <span class="rep">solfa</span> \-- representation for tonic solfa syllables
+ <span class="rep">solfa</span> &mdash; representation for tonic solfa syllables
 
 ## DESCRIPTION ##
 
@@ -23,7 +23,7 @@ Solfa Syllables
  tokens: pitches, rests, and barlines.
 
  Pitches tokens are represented using the syllables *do, re, mi, fa,
- so, la,* and *ti* \-- or their chromatic alterations: *di, da, ri,
+ so, la,* and *ti* &mdash; or their chromatic alterations: *di, da, ri,
  ra,* etc. (see table below). Tonic solfa syllables can be determined
  only with reference to some prevailing key. For example, the pitch C
  is the tonic (`do`) in the key of C major or C minor.
@@ -36,7 +36,7 @@ Solfa Syllables
 
  The amount of chromatic alteration is not represented by
  <span class="rep">solfa</span>; once a pitch is \"raised,\" raising it further will not
- change the note\'s representation. For example, where the tonic pitch
+ change the note's representation. For example, where the tonic pitch
  is B-flat, both B-natural and B-sharp are represented by `di`.
 
  Octave designations are not represented in **\*\*solfa.** However,
@@ -46,7 +46,7 @@ Solfa Syllables
  Several pitches may be encoded concurrently in a single spine by using
  the Humdrum multiple-stop convention: pitches within multiple-stops
  are separated by single spaces. For example, the following example
- encodes a 4-note tonic major chord using two <span class="rep">solfa</span> spines \--
+ encodes a 4-note tonic major chord using two <span class="rep">solfa</span> spines &mdash;
  each spine containing a double-stop.
 
   | \*\*solfa   |\*\*solfa
@@ -62,7 +62,7 @@ Solfa Syllables
 
  Rest tokens are denoted by the lower-case letter \`r\'.
 
- Barlines are represented using the \"common system\" for barlines \--
+ Barlines are represented using the \"common system\" for barlines &mdash;
  see [**barlines**](barlines.rep.html).
 
 ## FILE TYPE ##

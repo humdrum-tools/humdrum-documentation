@@ -11,7 +11,7 @@ Elapsed Time
 
 ## REPRESENTATION ##
 
- <span class="rep">time</span> \-- relative elapsed time (in seconds)
+ <span class="rep">time</span> &mdash; relative elapsed time (in seconds)
 
 ## DESCRIPTION ##
 
@@ -23,7 +23,7 @@ Elapsed Time
  decimal value. The <span class="rep">time</span> representation has no provision for
  representing \"hours\" or \"minutes\".
 
- Barlines are represented using the \"common system\" for barlines \--
+ Barlines are represented using the \"common system\" for barlines &mdash;
  see [**barlines**](barlines.rep.html).
 
 ## FILE TYPE ##

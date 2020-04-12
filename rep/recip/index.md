@@ -11,7 +11,7 @@ Beats
 
 ## REPRESENTATION ##
 
- <span class="rep">recip</span> \-- beat-proportion representation
+ <span class="rep">recip</span> &mdash; beat-proportion representation
 
 ## DESCRIPTION ##
 
@@ -63,7 +63,7 @@ Beats
  duration (\"1\") into three equal parts, each part has a duration of
  one-third. The corresponding reciprocal integer for 1/3 is 3, hence
  <span class="rep">recip</span> represents a quarter-note triplet as a \"third-note\"
- \-- 3. Similarly, eighth-note triplets are represented by the integer
+ &mdash; 3. Similarly, eighth-note triplets are represented by the integer
  6 while sixteenth-note triplets are represented by the integer 12.
  Eighth-note quintuplets (5 in the time of 4) will be represented by
  the value 10 (a half duration divided by 5).
@@ -82,7 +82,7 @@ Beats
  The <span class="rep">recip</span> representation can be used to encode a sequence of
  time-spans or successive durations. The units are inverse time units.
 
- Barlines are represented using the \"common system\" for barlines \--
+ Barlines are represented using the \"common system\" for barlines &mdash;
  see [**barlines**](barlines.rep.html).
 
 ## FILE TYPE ##

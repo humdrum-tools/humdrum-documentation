@@ -11,7 +11,7 @@ Absolute Time Period
 
 ## REPRESENTATION ##
 
-<span class="rep">Zeit</span> \-- absolute period of time
+<span class="rep">Zeit</span> &mdash; absolute period of time
 
 ## DESCRIPTION ##
 
@@ -42,17 +42,17 @@ in full, or may consist of isolated elements or parts. The following
 table shows the most succinct ways of encoding single date values
 within sub-tokens in <span class="rep">Zeit</span>:
 
->   -------- -----------------------------------
->   `.11`    eleven one-hundredths of a second
->   `11`     11th second
->   `11:`    11th minute
->   `11::`   11 o\'clock
->   `11/`    A.D. 11
->   `/11`    November
->   `//11`   11th day of the month
->   -------- -----------------------------------
+-------- -----------------------------------
+`.11`    eleven one-hundredths of a second
+`11`     11th second
+`11:`    11th minute
+`11::`   11 o'clock
+`11/`    A.D. 11
+`/11`    November
+`//11`   11th day of the month
+-------- -----------------------------------
 
-> *Examples of **date** sub-components*
+*Examples of **date** sub-components*
 
 Notice that if a single numerical value appears, it is interpreted as
 *seconds*; if a single value appears followed by a slash, it is
@@ -84,99 +84,99 @@ should be given names with the distinguishing \`.zt\' extension.
 The following table summarizes the <span class="rep">Zeit</span> mappings of signifiers
 and signifieds.
 
->   ----- ----------------------------------------------
->   \-    sub-token separator (from-to); (must appear
->         in each <span class="rep">Zeit</span> data token)
->   0-9   decimal values
->   @     year B.C. rather than A.D.
->   /     year-month, month-day and day-hour delimiter
->   :     hour-minute and minute-second delimiter
->   .     fractional second delimiter; null token
->   ?     date uncertain
->   z     value uncertain
->   \~    date approximate
->   x     value approximate
->   \<    sometime prior to
->   \>    sometime after
->   \^    \"between\" conjunction
->   \|    \"or\" conjunction
->   ----- ----------------------------------------------
+----- ----------------------------------------------
+\-    sub-token separator (from-to); (must appear
+in each <span class="rep">Zeit</span> data token)
+0-9   decimal values
+@     year B.C. rather than A.D.
+/     year-month, month-day and day-hour delimiter
+:     hour-minute and minute-second delimiter
+.     fractional second delimiter; null token
+?     date uncertain
+z     value uncertain
+\~    date approximate
+x     value approximate
+\<    sometime prior to
+\>    sometime after
+\^    \"between\" conjunction
+\|    \"or\" conjunction
+----- ----------------------------------------------
 
-> *Summary of <span class="rep">Zeit</span> Signifiers*
+*Summary of <span class="rep">Zeit</span> Signifiers*
 
 ## EXAMPLES ##
 
 Several examples of <span class="rep">Zeit</span> data tokens are identified below:
 
->   ------------------------- ----------------------------------------------
->   \*\*Zeit tokens           meaning
+------------------------- ----------------------------------------------
+\*\*Zeit tokens           meaning
 
->   `1939/-1945/`             From 1939 to 1945.
->   `1817/06/02/-1817/6/15`   From June 2nd to 15th, 1817.
->   `1817/6/02/-1817/06/15`   From June 2nd to 15th, 1817.
->   `///10::-///11::`         From 10 AM to 11 AM.
->   `10::-11::`               From 10 AM to 11 AM.
->   `~10::-~11::`             From approximately 10 AM to approximately
->                             11 AM.
->   `>22::-<23::`             From sometime after 10 PM to sometime
->                             before 11 PM.
->   `:11:51-:12:35`           From 11 minutes 51 seconds to 12 minutes
->                             35 seconds.
->   `.001-.008`               From 1 millisecond to 8 milliseconds.
->   `23.8-41.3`               From 23.8 seconds to 41.3 seconds.
->   `//12/31-//1/1`           From December 31st to New Years\' Day.
->   `<?1231///-1283/3/9`      From before perhaps 1231 to March 9th 1283.
->   `<1724/2//-1724/4z/2`     From before Feb. 1724 to April (?) 2nd 1724.
->   `1848/|1849/-1851/`       From 1848 or 1849 to 1851.
->   `/5/9/^/5/11/-//8/23`     Starting sometime between May 9th and 11th
->                             ending August 23rd.
->   ------------------------- ----------------------------------------------
+`1939/-1945/`             From 1939 to 1945.
+`1817/06/02/-1817/6/15`   From June 2nd to 15th, 1817.
+`1817/6/02/-1817/06/15`   From June 2nd to 15th, 1817.
+`///10::-///11::`         From 10 AM to 11 AM.
+`10::-11::`               From 10 AM to 11 AM.
+`~10::-~11::`             From approximately 10 AM to approximately
+11 AM.
+`>22::-<23::`             From sometime after 10 PM to sometime
+before 11 PM.
+`:11:51-:12:35`           From 11 minutes 51 seconds to 12 minutes
+35 seconds.
+`.001-.008`               From 1 millisecond to 8 milliseconds.
+`23.8-41.3`               From 23.8 seconds to 41.3 seconds.
+`//12/31-//1/1`           From December 31st to New Years\' Day.
+`<?1231///-1283/3/9`      From before perhaps 1231 to March 9th 1283.
+`<1724/2//-1724/4z/2`     From before Feb. 1724 to April (?) 2nd 1724.
+`1848/|1849/-1851/`       From 1848 or 1849 to 1851.
+`/5/9/^/5/11/-//8/23`     Starting sometime between May 9th and 11th
+ending August 23rd.
+------------------------- ----------------------------------------------
 
-> *Examples of <span class="rep">Zeit</span> Tokens*
+*Examples of <span class="rep">Zeit</span> Tokens*
 
 The following examples illustrate the use of the <span class="rep">Zeit</span>
 representation:
 
 
->   --------------------- ---------------------
->   \*\*Zeit              \*\*maker
->   ?1644/-1737/12/18     Stradivari, Antonio
->   1794/4/9-1881/11/25   Boehm, Theobald
->   1797/2/15-1871/2/7    Steinweg, Heinrich
->   1814/11/6-1894/2/4    Sax, Adolphe
->   \*-                   \*-
->   --------------------- ---------------------
+--------------------- ---------------------
+\*\*Zeit              \*\*maker
+?1644/-1737/12/18     Stradivari, Antonio
+1794/4/9-1881/11/25   Boehm, Theobald
+1797/2/15-1871/2/7    Steinweg, Heinrich
+1814/11/6-1894/2/4    Sax, Adolphe
+\*-                   \*-
+--------------------- ---------------------
 
 
->   ----------------------- -------------------
->   \*\*Zeit                \*\*recording log
->   /4/9:20:18-/4/9:20:20   Aria - Take \#1
->   /4/9:20:20-/4/9:20:22   Aria - Take \#2
->   /4/9:20:23-/4/9:20:25   Aria - Take \#3
->   /4/9:20:25-/4/9:20:27   Var.1 - Take \#1
->   \*-                     \*-
->   ----------------------- -------------------
+----------------------- -------------------
+\*\*Zeit                \*\*recording log
+/4/9:20:18-/4/9:20:20   Aria - Take \#1
+/4/9:20:20-/4/9:20:22   Aria - Take \#2
+/4/9:20:23-/4/9:20:25   Aria - Take \#3
+/4/9:20:25-/4/9:20:27   Var.1 - Take \#1
+\*-                     \*-
+----------------------- -------------------
 
 
->   ------------- ----------------
->   \*\*Zeit      \*\*section
->   0:0-0:23      Introduction
->   0:23-1:58     Exposition
->   1:58.3-3:22   Development
->   3:22-4:51     Recapitulation
->   4:52-5:04     Coda
->   \*-           \*-
->   ------------- ----------------
+------------- ----------------
+\*\*Zeit      \*\*section
+0:0-0:23      Introduction
+0:23-1:58     Exposition
+1:58.3-3:22   Development
+3:22-4:51     Recapitulation
+4:52-5:04     Coda
+\*-           \*-
+------------- ----------------
 
 
->   ----------------- -------------
->   \*\*Zeit          \*\*style
->   \~1450/-\~1600/   Renaissance
->   \~1600/-\~1750/   Baroque
->   \~1775/-\~1825/   Classicism
->   \~1800/-\~1900/   Romanticism
->   \*-               \*-
->   ----------------- -------------
+----------------- -------------
+\*\*Zeit          \*\*style
+\~1450/-\~1600/   Renaissance
+\~1600/-\~1750/   Baroque
+\~1775/-\~1825/   Classicism
+\~1800/-\~1900/   Romanticism
+\*-               \*-
+----------------- -------------
 
 ## PERTINENT COMMANDS ##
 
@@ -188,11 +188,11 @@ output, or process <span class="rep">Zeit</span> encoded data as input.
 The following tandem interpretations can be used in conjunction with
 <span class="rep">Zeit</span>:
 
->   ------------------ ---------
->   meter signatures   `*M6/8`
->   ------------------ ---------
+------------------ ---------
+meter signatures   `*M6/8`
+------------------ ---------
 
-> *Tandem interpretations for <span class="rep">Zeit</span>*
+*Tandem interpretations for <span class="rep">Zeit</span>*
 
 ## SEE ALSO ##
 

@@ -11,7 +11,7 @@ Harmonic Intervals
 
 ## REPRESENTATION ##
 
-> <span class="rep">hint</span> \-- representation for harmonic intervals
+<span class="rep">hint</span> &mdash; representation for harmonic intervals
 
 On-line documentation is not currently available for this
 representation.
