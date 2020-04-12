@@ -55,7 +55,7 @@ The command
 context -n 3 input
 ```
 
-will produce the following output: ``
+will produce the following output:
 
 ```humdrum
 **numbers
@@ -463,7 +463,7 @@ interpreters, and revised *awk* (1985).
 
 ## SEE ALSO ##
 
-<span class="tool">context</span> (4), 
+<span class="tool">context</span> (4),
 <span class="unix">grep</span> (UNIX),
 <span class="tool">nf</span> (4),
 <span class="tool">patt</span> (4),
