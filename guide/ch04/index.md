@@ -219,7 +219,7 @@ imported by various Humdrum tools. A complete description of `**MIDI`
 will be given in [Chapter 7.](/guide/ch07)
 
 
-Scale Degree \-- *\*\*solfa* and *\*\*deg*
+Scale Degree &mdash; *\*\*solfa* and *\*\*deg*
 ------------------------------------------
 
 Two different Humdrum representations are provided to describe
@@ -262,7 +262,7 @@ represented without regard to major or minor *mode.* For example, in the
 key of C major, `**deg` will characterize A-flat as a lowered sixth
 scale degree (`6-`), whereas the same pitch will be a normal (unaltered)
 sixth scale degree in the key of C minor (`6`). In the case of
-`**solfa`, the A-flat will be represented as `le` \-- whether or not the
+`**solfa`, the A-flat will be represented as `le` &mdash; whether or not the
 key is C major or C minor. Like `**deg`, the amount of chromatic
 alteration is not represented in `**solfa`. Once a pitch is raised,
 raising it further will not change the representation. For example, if
@@ -641,7 +641,7 @@ approach. The caret (**\^**) indicates approach from below, whereas the
 lower-case **v** indicates approach from above. Suppose we wanted to
 determine whether the dominant pitch is more commonly approached from
 above or from below. Assuming a monophonic input, we can once again use
-<span class="unix">grep</span> to answer this question. First let\'s count how many dominant
+<span class="unix">grep</span> to answer this question. First let's count how many dominant
 pitches (\`5\') are approached from above (\`v\'):
 
 ```bash
@@ -661,9 +661,9 @@ Recall that some scale tones are spelled differently depending on
 whether the mode is major or minor. For example, in A major the mediant
 pitch is C sharp; but in A minor the mediant pitch is C natural. The
 <span class="tool">deg</span> and <span class="tool">solfa</span> commands produce subtly contrasting outputs that
-make one or the other command better suited depending on the user\'s
+make one or the other command better suited depending on the user's
 goal. The <span class="tool">deg</span> command would represent C sharp in A major, and C
-natural in A minor by the same scale degree \-- `3`. In the key of A
+natural in A minor by the same scale degree &mdash; `3`. In the key of A
 major, C natural would be characterized as a lowered mediant (`3-`) and
 in A minor, C sharp would be characterized as a raised mediant (`3+`).
 By contrast, the <span class="tool">solfa</span> command characterizes pitches with respect to
@@ -694,10 +694,10 @@ with the <span class="option">k</span> option.
 ```
 
 We can use the <span class="unix">uniq</span> command to eliminate successive repeated pitches
-\-- but only if the note tokens are identical. First we can use [**kern
+&mdash; but only if the note tokens are identical. First we can use [**kern
 -x**](/tool/kern) to translate "from `**kern` to `**kern`"
 while eliminating non-pitch-related data. Then we need to remove
-barlines so they don\'t interfere with pitches that are repeated across
+barlines so they don't interfere with pitches that are repeated across
 the measure. Using <span class="unix">uniq</span> will then eliminate all of the successively
 duplicated records, so a sequence of six G\'s will be reduced to a
 single G. Finally, we pipe the output to **census -k** to count the
@@ -736,12 +736,12 @@ Reprise
 In this chapter we have introduced a number of pre-defined pitch-related
 representations. Simple commands can be used to translate from one
 representation to another. Which representation is most appropriate
-depends on the user\'s goal.
+depends on the user's goal.
 
 There is a wealth of other representation formats related to pitch
 distances, tablatures, timing, and other types of musical information.
 These representations will be explored in later chapters. In addition,
-we\'ll describe how to design your own representations \--
+we'll describe how to design your own representations &mdash;
 representations that may be better tailored to a specific application.
 However, before we continue discussing further representations, this is
 an appropriate point to present a more formal description of the general

@@ -17,11 +17,11 @@ permalink:	/guide/ch01/index.html
 
 
 Humdrum is a general-purpose software system intended to assist music
-researchers. Humdrum\'s capabilities are quite broad, so it is difficult
+researchers. Humdrum's capabilities are quite broad, so it is difficult
 to describe concisely what it can do. This chapter provides a brief tour
-through Humdrum: the goal is to give you a quick glimpse of Humdrum\'s
-capabilities and to help sketch some of the big picture. Don\'t worry if
-you don\'t understand everything in this chapter. All of the topics
+through Humdrum: the goal is to give you a quick glimpse of Humdrum's
+capabilities and to help sketch some of the big picture. Don't worry if
+you don't understand everything in this chapter. All of the topics
 mentioned here will be covered more thoroughly in later chapters.
 
 
@@ -34,7 +34,7 @@ Humdrum allows users to pose and answer questions such as the following:
 
 -   In the music of Stravinsky, are dissonances more common in strong
     metric positions than in weak metric positions?
--   In Urdu folk songs, how common is the so-called "melodic arch" \--
+-   In Urdu folk songs, how common is the so-called "melodic arch" &mdash;
     where phrases tend to ascend and then descend in pitch? <a name ="Hendrix"></a>
 -   What are the most common fret-board patterns in guitar riffs by Jimi
     Hendrix?
@@ -51,7 +51,7 @@ Humdrum allows users to pose and answer questions such as the following:
 Although the Humdrum tools may take just seconds to compute an answer
 for any of the above problems, only a few of these questions are *easy*
 to answer using Humdrum. The primary impediment to a quick solution is
-the user\'s skill in interconnecting the right tools for the task at
+the user's skill in interconnecting the right tools for the task at
 hand. The purpose of this book is to help you develop that skill.
 
 The Humdrum Syntax and the Humdrum Toolkit
@@ -59,15 +59,15 @@ The Humdrum Syntax and the Humdrum Toolkit
 
 Humdrum consists of two distinct components: the *Humdrum Syntax* and
 the *Humdrum Toolkit.* The *Humdrum Syntax* is a grammar for
-representing information. Over the course of this book we\'ll encounter
+representing information. Over the course of this book we'll encounter
 a variety of representation schemes that conform to this syntax. The
-syntax itself doesn\'t represent anything: it merely provides a common
+syntax itself doesn't represent anything: it merely provides a common
 framework for representing all sorts of information. Within the syntax
 an endless number of representation schemes can be defined.
 Theoretically, any type of sequential symbolic data may be accommodated
-\-- such as medieval square notation, MIDI data, acoustic spectra, piano
+&mdash; such as medieval square notation, MIDI data, acoustic spectra, piano
 fingerings, changes of emotional states, Indian tabla notations, dance
-steps, Schenkerian graphs, concert programs \-- or even industrial
+steps, Schenkerian graphs, concert programs &mdash; or even industrial
 chemical processes.
 
 A number of representation schemes are pre-defined in Humdrum; however,
@@ -91,7 +91,7 @@ operations.
 
 -   **Visual display.** E.g., display a score beginning at measure 128;
     output the libretto from Act II, Scene 5; print the string parts for
-    the Coda \-- including the Roman numeral harmonic analysis.
+    the Coda &mdash; including the Roman numeral harmonic analysis.
 -   **Aural display.** E.g., play the bass trombone part slowly
     beginning at measure 70; play just the opening two measures from all
     of the works in a given repertory.
@@ -104,7 +104,7 @@ operations.
 -   **Editing.** E.g., change all up-stems to down-stems in measure 88
     of the second horn part.
 -   **Editorializing.** E.g., add an editorial footnote to a specified
-    note; indicate that a passage differs from the composer\'s
+    note; indicate that a passage differs from the composer's
     autograph.
 -   **Transforming or translating between representations.** E.g.,
     transpose from one key to another; calculate the harmonic intervals
@@ -141,9 +141,9 @@ operations.
     data from a notation program.
 -   **Trouble-shooting.** E.g., identify any transgressions of
     notational conventions; check whether a score has been tampered
-    with; get help when you\'re stuck.
+    with; get help when you're stuck.
 
-If the above functions sound vague, that\'s because the corresponding
+If the above functions sound vague, that's because the corresponding
 Humdrum tools are similarly broad in their function. For example, the
 Humdrum <span class="tool">patt</span> tool can be used to locate
 Landini cadences, label statements of 12-tone rows, or search for piano
@@ -157,7 +157,7 @@ scholarship hinges on interpretations, this would seem to preclude
 computers from being of much use. However, there are some things that
 computers do well, and when a skilled user intervenes to make a few
 crucial interpretations, the resulting computer/human interaction can
-lead to pretty sophisticated results \-- as we will see.
+lead to pretty sophisticated results &mdash; as we will see.
 
 Although computers are typically not good at interpreting data,
 interpretive software will become increasingly important as
@@ -165,9 +165,9 @@ computational musicology continues to develop. Humdrum provides a
 handful of tools that *interpret* data in various ways. For example, the
 <span class="tool">key</span> command implements the Krumhansl and
 Kessler method for estimating the key of a music passage. The
-<span class="tool">melac</span> command implements Joseph Thomassen\'s
+<span class="tool">melac</span> command implements Joseph Thomassen's
 model of melodic accent. Other interpretive tools characterize
-syncopation or implement Johnson-Laird\'s model of rhythmic prototypes.
+syncopation or implement Johnson-Laird's model of rhythmic prototypes.
 
 The names of some of the Humdrum tools will be readily recognizable by
 musicians. Humdrum tools such as <span class="tool">key</span>,
@@ -175,7 +175,7 @@ musicians. Humdrum tools such as <span class="tool">key</span>,
 <span class="tool">tacet</span>, <span class="tool">trans</span> and
 <span class="tool">reihe</span> may evoke fairly accurate ideas about
 what they do. Ironically, the most recognizable tools are typically the
-least useful tools in the toolkit \-- because they are so specialized.
+least useful tools in the toolkit &mdash; because they are so specialized.
 The most powerful Humdrum tools have names such as
 <span class="tool">cleave</span>, <span class="tool">humsed</span>,
 <span class="tool">simil</span>, <span class="tool">recode</span>,
@@ -193,7 +193,7 @@ or more command *pipelines.* Although each individual tool may have only
 a modest effect, the tools\' combined capacity for solving complex
 problems is legion.
 
-Now that we\'ve sketched an overview of Humdrum, we can consider in
+Now that we've sketched an overview of Humdrum, we can consider in
 greater detail the two principal components of Humdrum: the *Humdrum
 Syntax* and the *Humdrum Toolkit*.
 
@@ -204,14 +204,14 @@ Humdrum data are organized somewhat like the tables of a spread-sheet.
 As with a spreadsheet, you can define or label your own types of data.
 As with a spreadsheet, the different *columns* can be set up to
 represent whatever type of data you like. The *rows* of data, however,
-have a fixed meaning \-- they represent successive moments in time; that
+have a fixed meaning &mdash; they represent successive moments in time; that
 is, time passes as you move down the page.
 
 By way of example, consider Table 1.1. This table shows something akin
 to a piano-roll. The diatonic pitches are labelled in columns from C4
 (middle C) to C5. Each row represents the passage of a sixteenth
 duration. The table entries indicate whether the note is *on* or *off*.
-The table encodes an ascending scale. As the table stands, it\'s not
+The table encodes an ascending scale. As the table stands, it's not
 clear whether each note has a duration of an eighth note or whether two
 successive sixteenth notes are sounded for each pitch:
 
@@ -277,7 +277,7 @@ hyphen.
 *-	*-	*-	*-
 ```
 
-It does not matter what characters appear in the table \-- numbers,
+It does not matter what characters appear in the table &mdash; numbers,
 letters, symbols, etc. (although there are some restrictions concerning
 the use of spaces and tabs). The table can have as many columns as you
 like, and can be as long as you like. Unlike spreadsheet columns,
@@ -291,7 +291,7 @@ might pertain to the whole table, to a given row or column, to a given
 data cell, or to a particular item of information within a cell (such as
 a single letter or digit). Since the *columns* in Humdrum data can roam
 about the table in a semi-flexible way, they are referred to as
-[**spines.**](glossary.html#Spines) We\'ll see how these devices are
+[**spines.**](glossary.html#Spines) We'll see how these devices are
 used in later chapters.
 
 The most common Humdrum files encode musical notes in the various cells
@@ -302,8 +302,8 @@ Some twenty or more representation schemes are pre-defined in Humdrum,
 but remember that users are always free to concoct their own
 representations as necessary. As in a spread-sheet, the spines or
 columns can be used to represent whatever you like. In the following
-chapter, we\'ll look at the most commonly used of the pre-defined
-Humdrum representations \-- the *kern* representation. This
+chapter, we'll look at the most commonly used of the pre-defined
+Humdrum representations &mdash; the *kern* representation. This
 representation gets its name from the German word for *core*; it is a
 scheme intended to represent the basic or core musical information of
 notes, durations, rests, barlines, and so on.
@@ -315,7 +315,7 @@ Humdrum Tools
 The Humdrum software is not a program that you invoke like a
 word-processor or notation editor. Humdrum is not a big program that you
 start-up when you want to do music research. Instead, Humdrum provides a
-toolbox of *utilities* \-- most of which can be accessed at any time
+toolbox of *utilities* &mdash; most of which can be accessed at any time
 from anywhere in the system.
 
 Any data that conforms to the Humdrum syntax can be manipulated using
@@ -327,8 +327,8 @@ things.
 
 For the remainder of this chapter, we will describe a few Humdrum tools
 and illustrate how they might be used. Once again, the goal in this
-chapter is to give you an initial taste of Humdrum. Don\'t worry if you
-don\'t understand everything at this point.
+chapter is to give you an initial taste of Humdrum. Don't worry if you
+don't understand everything at this point.
 
 
 Some Sample Commands
@@ -399,7 +399,7 @@ Or select the second-last phrase in the work:
 yank -o { -e } -r '$-1' filename
 ```
 
-Don\'t worry about the complex syntax for these commands; the command
+Don't worry about the complex syntax for these commands; the command
 formats will be discussed fully in the ensuing chapters. For now, it is
 important only that you get a feel for some of the types of operations
 that Humdrum users might perform.
@@ -424,7 +424,7 @@ yank -s '*>Coda' Cui | yank -o ^= -r 1,$ | midi | perform -t .5
 
 Some tools translate from one representation to another. For example,
 the <span class="tool">mint</span> command generates melodic interval
-information. The following command locates all tritones \-- including
+information. The following command locates all tritones &mdash; including
 compound (octave) equivalents:
 
 ```bash
@@ -474,7 +474,7 @@ echo P5 > P5  echo '= *' >> P5; echo P5 >> P5  extract -i '*Ibass,*Ialto' file |
 ```
 
 More complicated scripts can be written to carry out more sophisticated
-musical processes. In later chapters we\'ll encounter some scripts that
+musical processes. In later chapters we'll encounter some scripts that
 contain 10 or more lines of commands.
 
 ------------------------------------------------------------------------

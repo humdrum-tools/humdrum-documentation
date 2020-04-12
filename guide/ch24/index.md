@@ -45,7 +45,7 @@ In the above hypothetical script, we have processed an input file called
 `inputfile`. It may be that this is a procedure we would like to apply
 to several different files. Rather than typing the above command
 sequence for each file, an alternative is to place the above commands in
-a file. Let\'s assume that we put the above commands in a file called
+a file. Let's assume that we put the above commands in a file called
 `Schenker`. In order to execute this file as a shell script, we need to
 assign *execute permissions* to the file. We can do this by invoking the
 UNIX <span class="unix">chmod</span> command.
@@ -92,7 +92,7 @@ As currently written, our program can be applied only to an input file
 whose name is literally `inputfile`. If we wanted to, we could edit our
 script and update the name of the input filename every time we want to
 use the command. However, it would be more convenient to specify the
-input filename on the command line \-- as we can do for other commands.
+input filename on the command line &mdash; as we can do for other commands.
 For example, it would be convenient to be able to type commands such as
 the following:
 
@@ -125,7 +125,7 @@ extract -i '**Urlinie' $1 | humsed '/X/d' \
 assemble Ursatz Urlinie \| rid -GLId \| graph
 
 This change means that our **Schenker** command can be applied to any
-user-specified input file \-- simply by typing the filename in the
+user-specified input file &mdash; simply by typing the filename in the
 command.
 
 
@@ -133,11 +133,11 @@ Flow of Control: The *if* Statement
 -----------------------------------
 
 Suppose we wanted our **Schenker** command to apply only to tonal works
-\-- more specifically, to works with a known key. Before processing a
+&mdash; more specifically, to works with a known key. Before processing a
 work, we might want to have **Schenker** test for the presence of a
 tandem interpretation specifying the key.
 
-Let\'s begin by using <span class="unix">grep</span> to search for a key tandem
+Let's begin by using <span class="unix">grep</span> to search for a key tandem
 interpretation. An appropriate <span class="unix">grep</span> command would be:
 
 ```bash
@@ -146,7 +146,7 @@ grep '^\*[A-Ga-g][#-]*:' $1
 
 Recall that we can assign the output of any command to a shell variable
 by placing the command within back-quotes or greves, i.e. \`\...\`.
-Let\'s assign the key interpretation to the variable KEY:
+Let's assign the key interpretation to the variable KEY:
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1` ``
 
@@ -185,7 +185,7 @@ fi
 
 Notice the addition of the **else** statement. The **else** statement
 delineates the block of commands to be executed whenever the **if**
-condition fails \-- that is, when the \$KEY variable does *not* equal
+condition fails &mdash; that is, when the \$KEY variable does *not* equal
 the null string. Once again, to make the script more readable, we indent
 the commands contained in the else-block.
 
@@ -205,7 +205,7 @@ in a directory containing a large number of Czech folksongs named
 `czech01.krn`, `czech02.krn`, `czech03.krn`, and so on.
 
 We would like to run the **census -k** command on each file separately,
-but we\'d prefer not to type the command for each score. The **for**
+but we'd prefer not to type the command for each score. The **for**
 statement provides a convenient way to do this. The following commands
 might be typed directly at the shell:
 
@@ -240,7 +240,7 @@ A Script for Identifying Transgressions of Voice-Leading
 Shell programs can be of arbitrary complexity. Below is a shell program
 (dubbed **leader**) whose purpose is to identify all instances of
 betrayals of nine classic rules of voice-leading for a two-part input. A
-number of refinements have been added to the program \-- including input
+number of refinements have been added to the program &mdash; including input
 file checking, and formatting of the output.
 
 The program is invoked as follows:
@@ -289,10 +289,10 @@ Locating Violations of the Rules of Voice-Leading
 The traditional rules of voice-leading have formed a standard component
 of conservatory training for art musicians.
 
-For illustration purposes, we\'ll apply some of the Humdrum tools to the
+For illustration purposes, we'll apply some of the Humdrum tools to the
 problem of identifying betrayals of the classic rules of voice-leading
 in a `**kern`-encoded score. Note that our purpose here is not to
-legislate how to compose or arrange! We\'re simply using the traditional
+legislate how to compose or arrange! We're simply using the traditional
 voice-leading rules as a way to introduce various pattern-searching
 techniques.
 
@@ -353,10 +353,10 @@ extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'
 #### RULE: "Avoid parts that move by augmented or diminished intervals.
 
 Implementing this is simple. We first translate our pitch- related data
-to the melodic interval format \--
+to the melodic interval format &mdash;
 [`**mint`](/rep/mint). This can be done using the
 Humdrum <span class="tool">mint</span> command. For example, consider the following melodic
-fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:
+fragment from the 2nd movement of Bach's Brandenburg Concerto No. 5:
 
 
 ```humdrum
@@ -451,16 +451,16 @@ intervals present.
 
 #### RULE: "Avoid consecutive fifths and octaves between any two parts.
 
-Let\'s focus on identifying consecutive fifths \-- since the process is
+Let's focus on identifying consecutive fifths &mdash; since the process is
 the same for octaves.
 
 Either the Humdrum <span class="tool">patt</span> or <span class="tool">pattern</span> commands can be used to find
 patterns that span more than one line or record. For this example,
-we\'ll use <span class="tool">patt</span>.
+we'll use <span class="tool">patt</span>.
 
 First, we need to reformat our input so the data represent harmonic
 intervals rather than pitches. The Humdrum <span class="tool">hint</span> command will change
-most pitch representations to the harmonic interval representation \--
+most pitch representations to the harmonic interval representation &mdash;
 [`**hint`](/rep/hint). Consider, for example, the
 following input:
 
@@ -516,8 +516,8 @@ occurrences of the defined pattern using the following command:
 The <span class="option">f</span> option is used to identify the file (`template`) in which the
 pattern-template has been stored. The <span class="option">s</span> option tells <span class="tool">patt</span> of
 any input records that should be skipped during the search process. The
-<span class="option">s</span> option is followed by a regular expression \-- in this case the
-equals-sign \-- so that any input records containing the equals-sign
+<span class="option">s</span> option is followed by a regular expression &mdash; in this case the
+equals-sign &mdash; so that any input records containing the equals-sign
 (i.e. `**hint` barlines) are ignored.
 
 The default output from <span class="tool">patt</span> identifies the location of any
@@ -572,7 +572,7 @@ extract -i '*soprano,*alto'   | hint -c | patt -f template -s =  extract -i '*so
 ```
 
 (There are shorter ways of doing these permutations that involves a
-little shell programming, but we\'ll leave that for another time.)
+little shell programming, but we'll leave that for another time.)
 
 
 (4) Doubled Leading Tone
@@ -640,7 +640,7 @@ deg
 ```
 
 Having translated the representation in this way, we need to search for
-any lines which contain two instances of the number \`7\' \-- that is,
+any lines which contain two instances of the number \`7\' &mdash; that is,
 two concurrent instances of the leading-tone.
 
 Searching for the number \`7\' is easily done using the standard Unix
@@ -682,16 +682,16 @@ deg  | egrep -n '^7.*7|^[^!*].*7.*7'
 In this case, the regular expression says the following: "find any
 occurrence of the number 7 at the beginning of the line followed by zero
 or more characters followed by the number 7; or match any character at
-the beginning of the line \-- other than an exclamation mark or an
-asterisk \-- followed by zero or more characters, followed by the number
+the beginning of the line &mdash; other than an exclamation mark or an
+asterisk &mdash; followed by zero or more characters, followed by the number
 7, followed by zero or more characters, followed by another number 7.
 
 Depending on the input, it is possible that Humdrum spines will be
 present that do not represent scale degree information. It is possible
-that these other kinds of data may also make use of the number 7 \-- but
+that these other kinds of data may also make use of the number 7 &mdash; but
 *not* to represent the leading-tone. In other words, it is possible that
 a matching \`7\' has nothing to do with scale degrees. We can ensure
-that this doesn\'t happen by first ensuring that *only* scale-degree
+that this doesn't happen by first ensuring that *only* scale-degree
 spines are present in the input to be searched.
 
 In order to do this, we can use the Humdrum <span class="tool">extract</span> command as a
@@ -706,7 +706,7 @@ deg  | extract -i '**deg' | egrep -n '^7.*7|^[^!*].*7.*7'
 
 There are still some refinements that we could add to this command
 sequence, but as it stands it is guaranteed to find all doubled
-leading-tones \-- provided the notes begin at the same time. Consider
+leading-tones &mdash; provided the notes begin at the same time. Consider
 the following hypothetical passage:
 
 
@@ -779,12 +779,12 @@ pipeline is suitable for a very wide variety of pattern searches.
 
 #### RULE: "Avoid the sharing of pitches by two parts."
 
-For this rule, let\'s assume that we also want to identify unisons that
+For this rule, let's assume that we also want to identify unisons that
 are spelled enharmonically (such as F-sharp and G-flat).
 
 First, we need to translate the two parts into some absolute pitch
-representation \-- such as frequency or semitones. This will ensure that
-enharmonically equivalent pitches have the same representation \-- and
+representation &mdash; such as frequency or semitones. This will ensure that
+enharmonically equivalent pitches have the same representation &mdash; and
 so will facilitate comparison.
 
 The Humdrum <span class="tool">semits</span> command translates pitches to semitone distances
@@ -793,7 +793,7 @@ play B3 at the same time, both the parts will have a
 [`**semits`](/rep/semits) value of minus one (-1).
 
 Like the <span class="tool">deg</span> command, the <span class="tool">semits</span> command provides a **"-x**
-option that eliminates from the output stream any characters that don\'t
+option that eliminates from the output stream any characters that don't
 pertain to semitones. Hence the following command will eliminate
 durations or other possible numerical representations that might
 conflict with semitone designations:
@@ -817,13 +817,13 @@ extract -i '*alto,*tenor'  | semits -x | awk '{if($1==$2) print NR}'
 ```
 
 There is a problem with this pipeline however. The <span class="unix">awk</span> command will
-match all sorts of non-numeric inputs \-- such as where null tokens (.)
+match all sorts of non-numeric inputs &mdash; such as where null tokens (.)
 occur in both parts at the same time. Consequently, we need to be
 careful to avoid non-numeric inputs and comments.
 
-The regular expression \`\[\^0-9\]\' will match any line that doesn\'t
+The regular expression \`\[\^0-9\]\' will match any line that doesn't
 consist solely of numbers. The expression \`\[\^0-9-\]\' will match any
-line that doesn\'t consist solely of numbers or the minus sign. Since
+line that doesn't consist solely of numbers or the minus sign. Since
 the tab character will also be present in our data records, we should
 also include the tab in our regular expression. The tab may be denoted
 in regular expressions by the lower-case letter \`t\' preceded by a
@@ -863,7 +863,7 @@ First we need to translate the pitch representation to some sort of
 numerical form. We have several options. We could translate the pitches
 to frequency ([`**freq`](/rep/freq)), or we could
 translate them to semitones (`**semits`), or we could translate them to
-cents (\*\*cents). Let\'s use `**semits`. Once again, in this
+cents (\*\*cents). Let's use `**semits`. Once again, in this
 representation, middle-C is represented by the number zero, and all
 other pitches are represented by their semitone distance (positive or
 negative) with respect to this reference.
@@ -966,7 +966,7 @@ tutorial, we will make a modification to our earlier part-crossing
 detector. In brief, we will extract one of the parts, shift the data
 tokens within that part, paste the two parts back together, and then
 check to determine whether the shifted part shows any "crossed parts"
-\-- using our earlier command pipeline.
+&mdash; using our earlier command pipeline.
 
 The following command pipe will shift the data tokens in a spine down
 one record. (The last data record will disappear.)
@@ -975,7 +975,7 @@ one record. (The last data record will disappear.)
 context -n 2 -p 1 -d XXX  | humsed 's/XXX.*//'
 ```
 
-In this tutorial, we won\'t discuss how this works, since the
+In this tutorial, we won't discuss how this works, since the
 <span class="tool">context</span> and <span class="tool">humsed</span> commands will be covered in a future
 tutorial. For now, we can note that shifting (say) the alto part can be
 done by extracting the appropriate voice, and then using the shift
@@ -1000,7 +1000,7 @@ assemble alto.shf soprano > tempfile
 ```
 
 Then we test this intermediate file for instances of "part-crossing"
-\-- using our earlier command pipeline:
+&mdash; using our earlier command pipeline:
 
 ```bash
 semits -x tempfile | ditto -s = | awk '{if($0~/[^0-9\t-]/)next}{if($1>$2) print NR}'
@@ -1023,7 +1023,7 @@ extract -i '*soprano'  | context -n 2 -p 1 -d XXX | humsed 's/XXX.*//' > soprano
 ```
 
 This processing needs to be applied for each pair of successive voices
-\-- soprano/alto, alto/tenor, tenor/bass.
+&mdash; soprano/alto, alto/tenor, tenor/bass.
 
 
 (9) Exposed Octaves
@@ -1041,7 +1041,7 @@ distinguishes notes according to whether they are approached from below
 ("\^") or above ("v").) Third, both voices must be moving by leap
 (e.g. more than two semitones).
 
-To address this problem, let\'s plan to create five different spines.
+To address this problem, let's plan to create five different spines.
 The first spine will encode harmonic interval size so that all compound
 equivalents to a unison are represented by the string "P1".
 

@@ -13,5 +13,7 @@ unix-span:
 option-span:
 	$(BIN)/makeOptionSpan ch??/index.md
 
+misc:
+	$(BIN)/miscCleanup ch??/index.md
 
 

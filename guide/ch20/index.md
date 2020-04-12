@@ -49,7 +49,7 @@ following are examples of section labels.
  *>Coda  *>1st Ending  *>Refrain  *>Exposition>2nd Theme
 ```
 
-Notice that spaces can appear in section labels \-- as in `1st Ending`.
+Notice that spaces can appear in section labels &mdash; as in `1st Ending`.
 Sections begin with a section label and generally end when another
 section label is encountered. Sections also end whenever all spines are
 assigned new exclusive interpretations, or all spines terminate. If
@@ -137,14 +137,14 @@ distinguish different versions, each expansion list is given a unique
 Here we see two expansion lists, one carries the version label
 `Gould1982` and the other is labelled version `Landowska`. These
 expansion lists might encode different interpretations of the repeats in
-a rounded binary form \-- Landowska performed the second repeat whereas
+a rounded binary form &mdash; Landowska performed the second repeat whereas
 Gould (1982) did not. When the <span class="tool">thru</span> command is invoked, the user can
 specify which *version* is intended using the <span class="option">v</span> option. The
 appropriate through-composed expansion will be output.
 
 The following example illustrates the use of the <span class="tool">thru</span> command in
 selecting particular versions of data in a file. Three sections are
-encoded in the file \-- labelled A, B and C. Each section in this
+encoded in the file &mdash; labelled A, B and C. Each section in this
 example contains just a single data record. Three expansion lists are
 encoded: one is unlabelled, a second is labelled `long` and a third is
 labelled `weird`.
@@ -206,7 +206,7 @@ thru file
 Section Types
 -------------
 
-Suppose we had two different theorists \-- Smith and Jones \-- who had
+Suppose we had two different theorists &mdash; Smith and Jones &mdash; who had
 analyzed the same work differently. Smith thinks there are basically two
 sections in the work, whereas Jones argues that there are essentially
 three sections. Humdrum permits alternative schemes of section labels to
@@ -252,7 +252,7 @@ data4
 Normally, the <span class="tool">yank</span> command extracts a labelled section up to the
 next occurrence of a section label. However, the <span class="option">t</span> option causes
 <span class="tool">yank</span> to ignore all section labels except for a specified type. We
-could extract Smith\'s \`B\' section by using the <span class="option">t</span> option to limit
+could extract Smith's \`B\' section by using the <span class="option">t</span> option to limit
 extraction to "Smith"-type section labels:
 
 ```bash
@@ -367,7 +367,7 @@ Using the *yank* and *thru* Commands
 ------------------------------------
 Section labels can be used in a wide number of applications. By way of
 illustration, here are a few pipeline processes involving section
-labels. First, we might ask the question \-- how does the user know
+labels. First, we might ask the question &mdash; how does the user know
 what sections labels are present in a document? This is a task for
 <span class="unix">grep</span>:
 `grep '^\*>'` *file*
@@ -385,7 +385,7 @@ Compare the estimated key for the second theme in the exposition
 versus the estimated key for the second theme in the recapitulation:
 `yank -t Form -s '2nd Theme' -r 1` *file*` | key`
 `yank -t Form -s '2nd Theme' -r 2` *file*` | key`
-Determine the nominal (non-rubato) duration of Gould\'s performance of
+Determine the nominal (non-rubato) duration of Gould's performance of
 the work:
 `thru -v Gould1982` *file*` | extract -i '**kern' | extract -f 1 \`
 \| dur -d \| rid -GLId \| grep -v \'\^=\' \| stats \| grep -i
@@ -410,12 +410,12 @@ split apart into two or more alternative spines, and then rejoin to
 form a single spine. Since the strophes split from a common spine,
 they all necessarily begin by sharing the same exclusive
 interpretation. Different exclusive interpretations may be introduced
-in the strophic passage \-- provided all strophic spines end up
+in the strophic passage &mdash; provided all strophic spines end up
 sharing the same data type just prior to being rejoined.
 The beginning of a strophic passage is signalled by the presence of a
-*strophic passage initiator* \-- a single asterisk followed by the
+*strophic passage initiator* &mdash; a single asterisk followed by the
 keyword "strophe" (`*strophe`). The end of a strophic passage is
-signalled by the *strophic passage terminator* \-- a single asterisk
+signalled by the *strophic passage terminator* &mdash; a single asterisk
 followed by the upper-case letter \`S\' followed by a minus sign
 (`*S-`). Each spine within the strophic passage begins with a *strophe
 label* and ends with a *strophe end indicator* (`*S/fin`). Strophe
@@ -865,7 +865,7 @@ Using the above data, the result is:
 Notice that all of the tandem interpretations related to the strophe
 organization are eliminated from the output.
 Suppose that we wanted to create a through-composed version of the
-entire work. We would expect as output, just two spines \-- the
+entire work. We would expect as output, just two spines &mdash; the
 [`**kern`](/rep/kern) spine and the `**silbe`
 spine. First, we need to create the full length version using the
 <span class="tool">thru</span> command. This will take the default expansion list, and

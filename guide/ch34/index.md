@@ -22,7 +22,7 @@ serial-inspired analytic processing. In this chapter we introduce the
 <span class="tool">iv</span>, <span class="tool">pf</span> and
 <span class="tool">nf</span> commands These commands reveal their greatest
 power when used in conjunction with Humdrum tools we have already
-encountered \-- such as <span class="tool">context</span>,
+encountered &mdash; such as <span class="tool">context</span>,
 <span class="tool">humsed</span> and <span class="tool">patt</span>.
 
 The chapter culminates with a script that automatically identifies
@@ -87,7 +87,7 @@ are the corresponding [`**kern`](/rep/kern),
 ```
 
 Suppose we wanted to identify the pc sets for successive vertical
-sonorities in the first movement of Webern\'s Opus 24 concerto. First,
+sonorities in the first movement of Webern's Opus 24 concerto. First,
 we translate the input to a pitch-class representation, and then we
 apply the <span class="tool">pcset</span> command:
 
@@ -97,7 +97,7 @@ pc opus24 | pcset
 
 Of course this command will only identify the set forms for pitches that
 have concurrent attacks. If any pitch is sustained,
-<span class="tool">pcset</span> won\'t know that some null tokens
+<span class="tool">pcset</span> won't know that some null tokens
 indicate sustained pitch activity. We can rectify this by using the
 <span class="tool">ditto</span> command ([Chapter 15](/guide/ch15)) to
 fill-out the null tokens:
@@ -131,7 +131,7 @@ rather than <span class="unix">grep</span> assures that the output retains the H
 (see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
 allow us to use <span class="tool">extract</span> to isolate just the
 `**pcset` data. Finally, we create an inventory of the pc sets. The
-process is repeated \-- once for beginning slurs/phrases, and once for
+process is repeated &mdash; once for beginning slurs/phrases, and once for
 ends of slurs/phrases.
 
 ```bash
@@ -169,7 +169,7 @@ First, we locate all works composed by Berg:
 
 `` BERG=`find /scores -type f -exec grep -l '!!!COM.*Berg,' "{}" ";"` ``
 
-Let\'s put all the Berg works in a single temporary file:
+Let's put all the Berg works in a single temporary file:
 
 ```bash
 cat $BERG > AllBerg
@@ -188,7 +188,7 @@ original scores:
 assemble AllBerg AllBerg.nf > AllBerg.all
 ```
 
-Now we\'re ready to count the number of phrases that match the
+Now we're ready to count the number of phrases that match the
 appropriate patterns. First, count the total number of phrases:
 
 ```bash
@@ -214,7 +214,7 @@ Interval Vectors Using the *iv* Command
 Interval vectors identify the frequency of occurrence of various
 interval-classes for a given pitch-class set. The
 <span class="tool">iv</span> command generates the six-element interval
-vector for any of several types of inputs \-- including semitones
+vector for any of several types of inputs &mdash; including semitones
 ([`**semits`](/rep/semits)), pitch-class
 ([`**pc`](/rep/pc)), normal form
 ([`**nf`](/rep/nf)), prime form
@@ -265,7 +265,7 @@ tokens.
 
 
 Suppose, for example, we wanted to analyze set forms in Claude
-Debussy\'s *Syrinx* for solo flute. The opening measures are shown in
+Debussy's *Syrinx* for solo flute. The opening measures are shown in
 Example 34.1.
 
 **Example 34.1.** From Claude Debussy, *Syrinx* for flute.
@@ -319,7 +319,7 @@ option), for inversions (<span class="option">I</span> option), for retrogrades 
 and for retrograde-inversions (**-RI** option).
 
 Inputs do not have to be 12-tone rows. The 5-tone row used in Igor
-Stravinsky\'s "Dirge-Canons" from *In Memoriam Dylan Thomas* is as
+Stravinsky's "Dirge-Canons" from *In Memoriam Dylan Thomas* is as
 follows:
 
 ```humdrum
@@ -387,7 +387,7 @@ end:
 
 
 The shift option for <span class="tool">reihe</span> can be used to shift *any* type of data
-\-- not just pitches of pitch-classes. For example, one might use the
+&mdash; not just pitches of pitch-classes. For example, one might use the
 shift option to rotationally permute dynamic markings, text, durations,
 articulation marks, or any other type of Humdrum data. In [Chapter
 38](/guide/ch38) we will see how the shift option for <span class="tool">reihe</span> can be
@@ -402,13 +402,13 @@ The first step in automated row-finding is to generate a set matrix of
 all the set variants. Typically, the user begins with a hypothesized
 tone row. Suppose the tone-row was stored in a file called `primerow`.
 From this we can generate the entire set matrix. There is a Humdrum
-**matrix** command that automatically generates a set matrix, but let\'s
+**matrix** command that automatically generates a set matrix, but let's
 create our own script to see how this can be done.
 
 The following script uses the <span class="tool">reihe</span> command
 to generate each set form. Each form is stored in a separate file with
 names such as `I8` and `RI3`. There are two noteworthy features to this
-script. Notice that the alphanumeric system (<span class="option">a</span> option) is used \--
+script. Notice that the alphanumeric system (<span class="option">a</span> option) is used &mdash;
 so the values \`A\' and \`B\' are used rather than \`10\' and \`11\';
 this will facilitate searching. Also notice that our script provides an
 option that allows us to specify *partial* rows: that is, we can store
@@ -453,12 +453,12 @@ pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp
 ```
 
 The main searching task is done by <span class="tool">patt</span>. The
-<span class="tool">patt</span> command is executed 48 times \-- once for
+<span class="tool">patt</span> command is executed 48 times &mdash; once for
 each row variant. The <span class="option">t</span> (tag) option is used so that a `**patt`
 output is generated. Each time a match is made the appropriate name
 (e.g. P4) is output in the spine. The <span class="option">s</span> option is used to skip
 barlines and null data records when matching patterns. The <span class="option">m</span> option
-invokes the multi-record matching mode \-- which allows <span class="tool">patt</span> to
+invokes the multi-record matching mode &mdash; which allows <span class="tool">patt</span> to
 recognize row statements where several nominally successive pitches are
 collapsed into a vertical chord:
 
@@ -501,7 +501,7 @@ There are a few subtleties and problems that deserve mention about our
 longer patterns. Since row statements tend to be unique after the first
 4 or 5 notes, it is preferable to clip the row patterns used as
 templates. Reducing the length of the templates can lead to "false
-hits" \-- but these tend to be infrequent and are easily recognized.
+hits" &mdash; but these tend to be infrequent and are easily recognized.
 
 Applied to an entire multi-part score, **rowfind** may miss concurrent
 row statements due to interposed notes appearing in an irrelevant
@@ -513,7 +513,7 @@ statements crossing between instruments may be missed. This problem can
 be addressed by extracting pairs and groups of instruments and analyzing
 them together.
 
-For a complex work like Webern\'s Opus 24 Concerto, this strategy of
+For a complex work like Webern's Opus 24 Concerto, this strategy of
 analyzing both individual instruments and groups of instruments works
 very well.
 
@@ -544,5 +544,5 @@ example, much more sophisticated approaches to segmentation can be
 created by using some of the layer techniques described in the [next
 Chapter.](/guide/ch35) Similarly, the pattern searches could easily be
 expanded to look at other parameters typical of "complete serialism"
-\-- such as durations, dynamics, articulation marks, and so on.
+&mdash; such as durations, dynamics, articulation marks, and so on.
 

@@ -42,7 +42,7 @@ Regular expressions will not allow users to define every possible
 musical pattern of potential interest. In particular, regular
 expressions cannot be used directly to identify deep-structure patterns
 from surface-level representations. However, regular expressions are
-quite powerful \-- much more powerful than they appear to the novice
+quite powerful &mdash; much more powerful than they appear to the novice
 user. Not all users will be equally adept at formulating an appropriate
 regular expression to search for a given pattern. As with the study of a
 musical instrument, practise is advised.
@@ -80,7 +80,7 @@ Regular expressions that are not literal involve so-called
 *metacharacters.* Metacharacters are used to specify various operations,
 and so are not interpreted as their literal selves. The simplest regular
 expression metacharacter is the period (`.`). The period matches *any
-single character* \-- including spaces, tabs, and other ASCII
+single character* &mdash; including spaces, tabs, and other ASCII
 characters. For example, the pattern:
 
 ``
@@ -132,7 +132,7 @@ consists of three characters, whereas in "`folly`" the matched string
 consists of just two characters.
 
 The plus sign in our example modifies only the preceding letter \``o`\'
-\-- that is, the single letter \``o`\' is deemed to be the *previous
+&mdash; that is, the single letter \``o`\' is deemed to be the *previous
 expression* which is affected by the `+`. However, the affected
 expression need not consist of just a single character. In regular
 expressions, parentheses ( ) are metacharacters that can be used to bind
@@ -196,7 +196,7 @@ specifies any character string beginning with an upper-case \``D`\'
 followed by zero or more instances of the letter \``o`\' followed by the
 letter \``r`\'. This pattern is present in such strings as "`Dorian`,"
 "`Doors`" as well as "`Drum`," and "`Drone`." As in the case of
-the plus sign, the asterisk modifies only the preceding expression \--
+the plus sign, the asterisk modifies only the preceding expression &mdash;
 in this case the letter \``o`\'. Multi-character expressions may be
 modified by the asterisk repetition operator by placing the expression
 in parentheses. Thus, the regular expression:
@@ -235,7 +235,7 @@ expressions. For example, the expression:
 will match any string beginning with a left curly brace and ending with
 a right curly brace. If we replaced the curly braces by the space
 character, then the resulting regular expression would match any string
-of characters separated by spaces \-- such as printed words.
+of characters separated by spaces &mdash; such as printed words.
 
 A third repetition operator is the question mark (`?`), which means
 "zero or one instance of the preceding expression." This metacharacter
@@ -259,7 +259,7 @@ Ch?(o)+
 is present in such strings as "`Chorale`," "`Couperin`," and
 "`Cooper`," but not in "`Chloe`" or "`Chant`."
 
-In summary, we\'ve identified three metacharacters pertaining to the
+In summary, we've identified three metacharacters pertaining to the
 number of occurrences of some character or string. The plus sign means
 "one or more," the asterisk means "zero or more," and the question
 mark means "zero or one." Collectively, these metacharacters are known
@@ -385,7 +385,7 @@ represents the class of all upper-case letters from A to Z. Similarly,
 \[0-9\]
 
 represents the class of digits from zero to nine. The expression given
-earlier \-- `[abcdefg]` \-- can be simplified further to: `[a-g]`.
+earlier &mdash; `[abcdefg]` &mdash; can be simplified further to: `[a-g]`.
 Several ranges can be mixed within a single character class:
 
 ``

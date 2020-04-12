@@ -16,10 +16,10 @@ permalink:	/guide/ch10/index.html
 ------------------------------------------------------------------------
 
 
-Now that you have a better understanding of regular expressions, let\'s
+Now that you have a better understanding of regular expressions, let's
 apply them. This chapter provides many examples of how regular
 expressions may be used to define musically useful patterns. In
-subsequent chapters, we\'ll make frequent use of regular expressions.
+subsequent chapters, we'll make frequent use of regular expressions.
 
 
 The *grep* Command (Again)
@@ -145,7 +145,7 @@ instrumentation includes a trumpet:
 grep -l '!!!AIN.*tromp' *
 ```
 
-The `.*` expression is needed since we don\'t know what other
+The `.*` expression is needed since we don't know what other
 instruments might be listed following `AIN` and before `tromp`.
 Instrumentation reference records require that instrument codes appear
 in alphabetical order. This makes it easier to conduct searches for
@@ -201,7 +201,7 @@ grep -l '!!!AMT.*irregular' *
 
 The <span class="option">L</span> option for <span class="unix">grep</span> causes the output to contain a list of
 files *not* containing the regular expression. For example, we could
-identify those works that don\'t bear any dedication:
+identify those works that don't bear any dedication:
 
 ```bash
 grep -L '!!!ODE:' *
@@ -215,7 +215,7 @@ grep -L '!!!COM: Schumann' *
 ```
 
 
-Identify any works that don\'t contain any double barlines:
+Identify any works that don't contain any double barlines:
 
 ```bash
 grep -L '^==' *
@@ -525,7 +525,7 @@ grep -L -f criteria *
 Another way of thinking of the <span class="option">f</span> option is that it allows us to
 define equivalences. Consider, for example, the task of counting all of
 the notes in a `**kern` melody that belong to a particular whole-tone
-pitch set. Let\'s create two files, one called `whole1` and the other
+pitch set. Let's create two files, one called `whole1` and the other
 called `whole2`. The file `whole1` might contain the following regular
 expressions:
 

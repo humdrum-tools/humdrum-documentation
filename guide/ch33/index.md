@@ -35,7 +35,7 @@ The Humdrum [`**IPA`](/rep/IPA) scheme provides a
 way to represent the International Phonetic Alphabet. The `**IPA` scheme
 is based on the transliteration scheme developed by linguist Evan
 Kirshenbaum. The scheme is suitable for representing the basic phonemes
-found in most of the world\'s languages. The table below summarizes the
+found in most of the world's languages. The table below summarizes the
 `**IPA` mappings for various phonemes.
 
 ```humdrum
@@ -119,7 +119,7 @@ Alliteration
 
 A common sonorous use of words is found in alliteration where several
 successive words commence with the same sound. A famous example of
-alliteration is found at the beginning of William Shakespeare\'s
+alliteration is found at the beginning of William Shakespeare's
 *Tempest*:
 
 ```humdrum
@@ -153,12 +153,12 @@ sed 's/^\(.\).*/\1/'
 
 In this command, the referenced expression consists of the period (match
 any single character). Notice that this expression is back-referenced in
-the replacement string \-- `\1`. In other words, this <span class="unix">sed</span> command
+the replacement string &mdash; `\1`. In other words, this <span class="unix">sed</span> command
 carries out the following operation: find a single character at the
 beginning of a line followed by zero or more characters. Replace this
 entire string by just the first character in the line.
 
-Let\'s now use this back-reference technique in our alliteration search.
+Let's now use this back-reference technique in our alliteration search.
 First we extract the [`**IPA`](/rep/IPA) spine and
 use <span class="tool">humsed</span> to eliminate all but the first character in each data
 record:
@@ -226,7 +226,7 @@ Dfl
 *-
 ```
 
-Let\'s add one further refinement which illustrates yet another feature
+Let's add one further refinement which illustrates yet another feature
 provided by <span class="unix">sed</span> and <span class="tool">humsed</span>. Recall that operations such as
 substitions (`s`) and deletions (`d`) can be preceded by a regular
 expression that limits the operation only to those lines that match the
@@ -271,7 +271,7 @@ as fricatives. Bi-labial plosives include the *p* and *b* sounds. The
 *m* and *n* sounds are classified as nasals. And so on.
 
 For some tasks, it is often useful to reduce the phonemes to phonetic
-classes. For example, in our example from Shakespeare\'s *Tempest*, the
+classes. For example, in our example from Shakespeare's *Tempest*, the
 \`th\' in \`thy\' is part of the fricative alliteration.
 
 In [Chapter 22](/guide/ch22) we saw how
@@ -344,7 +344,7 @@ can be considerably maligned if a prominent (high/long) note is changed
 from an \`ah\' sound to an \`ee\' sound.
 
 Suppose we want to determine which of several English translations of a
-song by Schubert best preserves the vowel coloration. As above, let\'s
+song by Schubert best preserves the vowel coloration. As above, let's
 limit our notion of coloration to vowel height. (Of course any other
 similarity mapping or dimension can be used.) As in our Gilbert and
 Sullivan example, we could simply compare the overall vowel height for
@@ -374,26 +374,26 @@ notes have a particularly high noticeability.
 Rhymes and Rhyme Schemes
 ------------------------
 
-Rhymes are common poetic devices throughout the world\'s cultures.
+Rhymes are common poetic devices throughout the world's cultures.
 Rhymes involve the use of similar or identical word-final phonemes.
 Typically, rhymes are based on the final phonemes of phrase-terminating
 words, but rhymes commonly occur in mid-phrase and other positions in
 poetry from various cultures. Consider the rhymes in the following
 traditional nonsense verse:
 
-We\'re all in the dumps,
+We're all in the dumps,
 For diamonds are trumps,
-The kittens are gone to St. Paul\'s
+The kittens are gone to St. Paul's
 The babies are bit,
-The moon\'s in a fit
+The moon's in a fit
 And the houses are built without walls.
 
--Anon. "We\'re All in the Dumps" From The Faber Book of Nonsense
+-Anon. "We're All in the Dumps" From The Faber Book of Nonsense
 Verse, Geoffrey Grigson (ed.) 1979; p.65
 
 Suppose we want to automatically identify the rhyme scheme for this (or
 some other) text. Our first order of business is to identify
-phrase-terminating points. Let\'s assume we already have some phrase
+phrase-terminating points. Let's assume we already have some phrase
 indicators (via curly braces {}). Our input might begin as follows:
 
 ```humdrum
@@ -523,7 +523,7 @@ Reprise
 -------
 By focusing on phonetic signifiers, the `**IPA` representation
 provides opportunities for analyzing many sonorous aspects of vocal
-sounds \-- including alliteration, vowel coloration, rhyme, and other
+sounds &mdash; including alliteration, vowel coloration, rhyme, and other
 effects. Although we did not illustrate it in this chapter, the
 [`**IPA`](/rep/IPA) representation can be used in
 conjunction witht the [`**silbe`](/rep/silbe)

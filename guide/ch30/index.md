@@ -40,7 +40,7 @@ representation described in [Chapter 7.](/guide/ch07) The input data is
 obtained from a MIDI instrument such as a keyboard synthesizer.
 
 Recording commences as soon as the command is invoked and recording
-ceases when any key is pressed \-- with the exception of the space bar.
+ceases when any key is pressed &mdash; with the exception of the space bar.
 Pressing the space bar causes a `**MIDI` barline token to be output.
 Measure numbers are incremented automatically beginning with measure 1.
 
@@ -115,7 +115,7 @@ VEL 90 127 '
 ```
 
 A third class of mapping instructions relates to the elapsed time
-between MIDI key onsets \-- "delta time" or DEL. Consider, for
+between MIDI key onsets &mdash; "delta time" or DEL. Consider, for
 example, the following configuration instructions:
 
 ```bash

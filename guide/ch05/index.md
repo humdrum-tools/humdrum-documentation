@@ -92,10 +92,10 @@ Interpretation Records
 
 *Interpretations* are lines that begin with the asterisk character
 (`*`). Interpretations are used to identify more precisely the state of
-the representation \-- for example, to indicate that an encoded part is
+the representation &mdash; for example, to indicate that an encoded part is
 for a transposing instrument in E-flat, or to indicate that the
 representation is for a given Balinese tuning, or that the
-representation encodes a conductor\'s physical gestures. Humdrum
+representation encodes a conductor's physical gestures. Humdrum
 requires that at least one interpretation must be specified before any
 data records are encountered. The difference between a comment and an
 interpretation is that interpretations are formal, potentially
@@ -137,7 +137,7 @@ together related tokens through time. Spines become meaningful only when
 they are labelled by adding an interpretation.
 
 By itself, Humdrum recognizes only six ASCII characters. Two of these
-characters \-- the exclamation mark (!) and the asterisk (\*) \-- have a
+characters &mdash; the exclamation mark (!) and the asterisk (\*) &mdash; have a
 special meaning *only* when they appear in the first column of a record
 (or are preceded by a tab; see below). The remaining special Humdrum
 characters are the period (.), the space, the tab character, and the
@@ -182,7 +182,7 @@ X	.
 ```
 
 The user has defined two interpretations: "left" and "right." The
-intention is to represent the footfalls of a person\'s left and right
+intention is to represent the footfalls of a person's left and right
 feet. The representation simply encodes that the left and right feet
 have alternating events, such as might be produced by walking or
 running. Notice that null tokens (.) indicate nothing at all and merely
@@ -195,7 +195,7 @@ appear as part of the keyword itself. In addition, when more than one
 spine is present, both the data tokens and the associated
 interpretations must be separated by a tab character; spaces cannot be
 used to separate spines. Finally, note that each spine is formally
-terminated by a *spine-path terminator* \-- an asterisk followed by a
+terminated by a *spine-path terminator* &mdash; an asterisk followed by a
 minus sign.
 
 Interpretations can be cascaded so that a single spine has more than one

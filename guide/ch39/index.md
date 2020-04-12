@@ -44,7 +44,7 @@ may spend a considerable amount of time becoming familiar with a
 manuscript, and the same practice is recommended for computational
 musicologists. Users should look at the data, listen to the data,
 compare the data to published sources, and generally browse and peruse
-it. Most data errors are discovered while processing the data \-- such
+it. Most data errors are discovered while processing the data &mdash; such
 as finding a suspicious major ninth melodic interval in a simple song.
 Over time, more and more errors are eventually discovered and corrected.
 Unfortunately, there is no magic flag that pops up to notify us when all
@@ -97,7 +97,7 @@ data, (2) failure to search all of the intended data, (3) inaccurate or
 inappropriate definition of the search template, (4) failure to
 understand how a given search tool or option operates, (5) failure on
 the part of the user to form a clear idea of what is being sought.
-Let\'s deal with each of these problems in turn.
+Let's deal with each of these problems in turn.
 
 **(1) No search can produce accurate results if the data** **to be
 searched is inaccurate.** You can increase the accuracy of your search
@@ -146,7 +146,7 @@ manner.
 -   Use <span class="unix">grep</span> to search for titles, or composers, or opus numbers,
     etc., in order to ensure that the file or files you are searching
     are the ones you want. Also check to ensure that you are not
-    searching materials that don\'t belong in the input.
+    searching materials that don't belong in the input.
 -   Be wary of searching duplicated materials. Create inventories of
     titles, opus numbers, etc., and use **uniq -d** to identify unwanted
     duplicate copies of works or files.
@@ -167,7 +167,7 @@ inaccurate or inappropriate search templates.**
     Use <span class="unix">egrep</span> instead.
 -   Ensure that you know which characters in your search template are
     meta-characters.
--   Execute your command from a shell script file so that you don\'t
+-   Execute your command from a shell script file so that you don't
     inadvertently make a typing error when entering the command.
 -   Maintain a command history file so that you have a permanent record
     of what you did. Depending on the system settings, the UNIX
@@ -184,7 +184,7 @@ inaccurate or inappropriate search templates.**
 
 -   Create a test file containing different patterns, and test the
     ability of your regular expressions to catch all cases. Included
-    "lures" in your test \-- i.e., patterns that are close to what you
+    "lures" in your test &mdash; i.e., patterns that are close to what you
     want, but should be rejected.
 -   Use extra caution when using "not" logic. For example, the
     <span class="unix">grep</span> expression "not-A" (i.e. `[^A]`) will still match records
@@ -216,7 +216,7 @@ inaccurate or inappropriate search templates.**
 -   Ask whether the output makes sense. Given the amount of music
     searched, does it make sense to find the number of occurrences
     found?
--   Try making a slight modification to your pattern template \-- a
+-   Try making a slight modification to your pattern template &mdash; a
     modification that you know should produce a different result.
 -   Look for converging evidence. Try two or three contrasting
     approaches to ensure that the same answer arises for each approach.
@@ -241,7 +241,7 @@ inaccurate or inappropriate search templates.**
     documentation pertains to the correct version.
 -   Read the "Release Notes" for the software you use. Known software
     bugs are often reported in such notes or in the documentation.
--   Report discovered bugs to the software\'s author. Even if the
+-   Report discovered bugs to the software's author. Even if the
     software is not revised, other users should be informed of the
     problem.
 
@@ -259,7 +259,7 @@ sought:**
     of the data.
 
 Compared with manual research, computer searches are impressively fast.
-However, don\'t let yourself be caught-up by the speed of interaction.
+However, don't let yourself be caught-up by the speed of interaction.
 Take your time and reflect on the problem being addressed. Formulate a
 search strategy away from the computer so that you have time to consider
 possible confounds.

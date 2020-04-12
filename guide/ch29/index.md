@@ -171,7 +171,7 @@ latin texts that differ at line 40, might generate the following output:
 ```
 
 
-Let\'s consider again the question of whether two works have essentially
+Let's consider again the question of whether two works have essentially
 the same lyrics. Many otherwise similar texts might differ in trivial
 ways. For example, texts may differ in punctuation or in the use of
 upper- and lower-case characters. The <span class="unix">diff</span> command provides a <span class="option">i</span>
@@ -246,7 +246,7 @@ processing, one could identify works that have similar rhythms, melodic
 contours, harmonies, rhyme schemes, and so on.
 
 
-Comparing Inventories \-- The *comm* Command
+Comparing Inventories &mdash; The *comm* Command
 --------------------------------------------
 
 The <span class="unix">diff</span> command is sensitive to the order of data. Suppose that
@@ -254,7 +254,7 @@ texts for two songs differ only in that one song reverses the order of
 verses 3 and 4. Comparing the "wrong" verses will tend to exaggerate
 what are really minor differences between the two songs. In addition,
 the above approach is too sensitive to word or phrase repetition. Many
-works \-- especially polyphonic vocal works \-- use extensive
+works &mdash; especially polyphonic vocal works &mdash; use extensive
 repetitions (e.g., "on the bank, on the bank, on the bank of the
 river"). Short texts (such as for the *Kyrie* of the Latin mass) are
 especially prone to use highly distinctive repetition. How can we tell

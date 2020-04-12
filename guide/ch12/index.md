@@ -56,7 +56,7 @@ as a separate Humdrum spine.
 
 The **extract"** command has several modes of operation. With the
 <span class="option">f</span> option, the user may specify a given data column (spine) or
-"field" to extract. Consider the opening of Bach\'s second Brandenburg
+"field" to extract. Consider the opening of Bach's second Brandenburg
 Concerto shown in Example 12.1.
 
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
@@ -181,7 +181,7 @@ as follows:
 extract -f '$' brandenburg2.krn
 ```
 
-(Notice the use of the single quotes to ensure that the shell doesn\'t
+(Notice the use of the single quotes to ensure that the shell doesn't
 misinterpret the dollar sign.) Simple arithmetic expressions are also
 permitted; for example \``$-1`\' refers to the right-most field minus
 one, etc. By way of example, the command
@@ -381,7 +381,7 @@ will result in the output:
 When searching for a particular exclusive interpretation, <span class="tool">extract</span>
 resets each time a new exclusive interpretation is encountered. By
 contrast, when <span class="tool">extract</span> finds a target tandem interpretation, it
-begins outputting and doesn\'t stop until the spine is terminated.
+begins outputting and doesn't stop until the spine is terminated.
 
 
 Using *extract* in Pipelines
@@ -993,9 +993,9 @@ that no other type of information is present in a data stream. In the
 case of <span class="tool">yank</span> we saw that passages can be extracted by defining
 arbitrary delimiters. In addition to extracting by measures, by
 sonorities, or by labelled sections, we can extract by rests, phrase
-marks \-- in fact, by any user-defined marker. We also saw how the
+marks &mdash; in fact, by any user-defined marker. We also saw how the
 command **yank -m *regular-expression* -r 0** can be used as a more
-sophisticated version of <span class="unix">grep</span> \-- a search tool that ensures the
+sophisticated version of <span class="unix">grep</span> &mdash; a search tool that ensures the
 output will conform to the Humdrum syntax.
 
 In the next chapter we will discuss how segments of music can be put

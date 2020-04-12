@@ -16,16 +16,16 @@ permalink:	/guide/ch17/index.html
 ------------------------------------------------------------------------
 
 
-Many research problems can be addressed by building an *inventory* \--
+Many research problems can be addressed by building an *inventory* &mdash;
 that is, identifying the number of occurrences of various types of data.
 Questions such as the following all pertain to the generation of
 inventories:
 
 -   Does Liszt use a greater variety of harmonies than Chopin?
 -   What is the most frequently used dynamic marking in Beethoven, and
-    how does Beethoven\'s practice compare with that of Brahms?
+    how does Beethoven's practice compare with that of Brahms?
 -   Are flats more common than sharps in Monteverdi?
--   Did Bartók\'s preferred articulation marks change over his lifetime?
+-   Did Bartók's preferred articulation marks change over his lifetime?
 -   Is there a tendency to use the subdominant pitch less often in pop
     melodies than in (say) French chanson?
 -   How frequent are light-related words such as "lumen" or "lumine"
@@ -45,7 +45,7 @@ How many different types of \_\_\_\_\_ are there?
 What is the most/least common \_\_\_\_\_?
 What is the frequency of occurrence for various \_\_\_\_\_s?
 
-In some cases, we\'re asked to compare two or more repertories when
+In some cases, we're asked to compare two or more repertories when
 answering one of these basic questions.
 
 For illustration purposes, consider the case of a Humdrum file named
@@ -63,10 +63,10 @@ B
 *-
 ```
 
-It doesn\'t matter what the data represent. The "`A`", "`B`", and
+It doesn't matter what the data represent. The "`A`", "`B`", and
 "`C`" might signify different articulation marks, chords, harmonic
 intervals, or instrumental configurations. Whatever is represented, the
-process of generating an inventory is the same. Ultimately, we\'d like
+process of generating an inventory is the same. Ultimately, we'd like
 to produce a simple distribution that indicates:
 
 ```
@@ -84,7 +84,7 @@ the input so only the data of interest is present. Second we need to
 *sort* like-with-like. And third we need to *count* the number of
 occurrences of each type of data token.
 
-Let\'s begin by discussing the second process. In [Chapter
+Let's begin by discussing the second process. In [Chapter
 3](/guide/ch03) we saw how the UNIX <span class="unix">sort</span> command will rearrange
 lines of data so that they are in alphabetical/numerical order. The
 command:
@@ -138,7 +138,7 @@ C
 Notice that repetitions of the data "A" and "B" have disappeared.
 The simple <span class="unix">uniq</span> command is useful for telling us *how many different
 things* there are in an input. For example, the above output identifies
-just five different records \-- and three different types of data
+just five different records &mdash; and three different types of data
 records.
 
 Recall that the <span class="option">c</span> option for <span class="unix">uniq</span> will cause a \`count\' to be
@@ -163,12 +163,12 @@ The prepended counts tell us that \`A\' occurs three times, \`B\' occurs
 twice, and all other records occur just once.
 
 In the above output, `**alpha`, and `*-` are Humdrum interpretations
-rather than data, so we probably don\'t want them to appear in our
+rather than data, so we probably don't want them to appear in our
 inventory. If our file had contained comments, or null data records,
 then these would have also appeared in our output, although we are not
 likely to be interested in them. This leads us to what is normally the
-first step in generating an inventory \-- *filtering* the input in order
-to eliminate records that we\'d prefer to omit from our final output.
+first step in generating an inventory &mdash; *filtering* the input in order
+to eliminate records that we'd prefer to omit from our final output.
 
 
 Filtering Data with the *rid* Command
@@ -205,7 +205,7 @@ rid -GLId alpha | sort | uniq -c > inventory.alpha
 ```
 
 Notice that the inventory will pertain to whatever data was provided in
-the original input. We\'ve been using the abstract data "A", "B",
+the original input. We've been using the abstract data "A", "B",
 and "C". However, this data might represent any type of discrete data,
 such as Latin text, piano fingerings, or dance steps.
 
@@ -248,7 +248,7 @@ If we apply our above inventory-generating commands for the file
 Notice that the inventory is based on *entire records* containing both
 "alpha" and "bet" data. This is the reason why the alpha-bet
 data-pair "`A   $50`" is considered different from alpha-bet data
-"`A   $200`". Depending on the user\'s goal, this may or may not be
+"`A   $200`". Depending on the user's goal, this may or may not be
 the most appropriate output.
 
 A situation where this approach might be desired arises when we are
@@ -259,7 +259,7 @@ have both concurrent data tokens participating in the inventory.
 
 In other circumstances, we may not want this. For example, if we are
 interested only in alpha-related data, we need to eliminate the
-irrelevant \*\*bet data so it won\'t interfere. This can be done using
+irrelevant \*\*bet data so it won't interfere. This can be done using
 the Humdrum <span class="tool">extract</span> command.
 
 For example, we can create an inventory of just the `**bet` data:
@@ -277,7 +277,7 @@ The resulting `inventory.bet` file will contain:
 5	$50
 ```
 
-\-- meaning 5 occurrences of the data "\$50" and 1 occurrence of
+&mdash; meaning 5 occurrences of the data "\$50" and 1 occurrence of
 "\$200".
 
 Sometimes it is useful to create an aggregate inventory of the data in
@@ -311,7 +311,7 @@ frequent or least frequent occurrences. For such long outputs, it might
 be more convenient to produce an output sorted according to frequency of
 occurrence. Notice that each output record from **uniq -c** begins with
 a number, and so the output is ideally suited for numerical sorting.
-We\'ve already learned that the <span class="unix">sort</span> command rearranges input
+We've already learned that the <span class="unix">sort</span> command rearranges input
 records in alphabetic/numeric order.
 
 If we type
@@ -440,7 +440,7 @@ representation in order to discard or transform otherwise confounding
 data.
 
 *Translating* data involves changing from one type of information to
-another \-- that is, changing the exclusive interpretations. For
+another &mdash; that is, changing the exclusive interpretations. For
 example, if we want to produce an inventory of melodic intervals, then
 we might use the <span class="tool">mint</span> or
 <span class="tool">xdelta</span> commands to generate a suitable
@@ -479,7 +479,7 @@ Without modification, our inventory would appear as follows:
 1	F#
 ```
 
-But this inventory distinguishes D-sharp from D-natural \-- which is not
+But this inventory distinguishes D-sharp from D-natural &mdash; which is not
 what we want. The answer is to filter our input so that the sharps are
 removed.
 
@@ -490,7 +490,7 @@ pipe:
 humsed 's/#//' notes | rid -GLId | sort | uniq -c
 ```
 
-\-- will produce the following output:
+&mdash; will produce the following output:
 
 
 ```humdrum
@@ -522,7 +522,7 @@ extract -i '**harm' chopin* | rid -GLId | sort | uniq | wc -l
 
 
 *What is the most frequently used dynamic marking in Beethoven,* *and
-how does Beethoven\'s practice compare with that of Brahms?*
+how does Beethoven's practice compare with that of Brahms?*
 
 ```bash
 extract -i '**dynam' beeth* | rid -GLId | sort | uniq -c \
@@ -534,7 +534,7 @@ extract -i '**dynam' brahm* | rid -GLId | sort | uniq -c \
 > \| sort -r \| head -1
 
 
-*Are flats more common than sharps in Monteverdi?* Let\'s presume that
+*Are flats more common than sharps in Monteverdi?* Let's presume that
 the input is monophonic `**kern` data.
 
 ```bash
@@ -542,7 +542,7 @@ humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
 ```
 
 
-*Did Bartók\'s preferred articulation marks change* *over his lifetime?*
+*Did Bartók's preferred articulation marks change* *over his lifetime?*
 Assume that copies of early and late works have been concatenated to the
 files `early` and `late`. The <span class="tool">humsed</span> command
 here eliminates all data with the exception of

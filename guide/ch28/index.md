@@ -52,7 +52,7 @@ occur in two distinct phases or does the repetition of the term
 "*cresc.*" merely indicate a continuation of a single *crescendo*?
 Does this *crescendo* move to a dynamic level above *piano* and abruptly
 reduce to *piano*? Does the final *crescendo* begin at a *piano* level
-and get louder \-- followed by a relatively abrupt reduction to
+and get louder &mdash; followed by a relatively abrupt reduction to
 *pianissimo*? Or does the final *crescendo* begin below *piano* and
 gradually reach *pianissimo*? Such ambiguities are rampant in printed
 musical scores. We can examine the accompanying musical context to help
@@ -113,7 +113,7 @@ diminuendos, continuations are indicated using the closed parenthesis.
 
 In the `**dynam` representation, no distinction is made for various ways
 a composer might indicate a crescendo or a diminuendo. For example, it
-doesn\'t matter whether a diminuendo is notated as *dim.*, *dimin.*,
+doesn't matter whether a diminuendo is notated as *dim.*, *dimin.*,
 *diminuendo*, *decres.*, *decresc.*, *decresendo*, *calando*, *morendo*,
 *se perdant*, *cédéz*, *gradually quieter*, or via a hairpin or wedge
 graphic diminuendo. All are represented by `>` \... `)` \... `]`.
@@ -305,8 +305,8 @@ follows:
 The `*staff1/2` tandem interpretation indicates that the dynamic
 markings pertain to both staffs 1 and 2, however all vertical
 [`**dyn`](/rep/dyn) distance measures are encoded
-with respect to staff 1. (Reversing the numerical order \-- `*staff2/1`
-\-- would cause all distances to be measured with respect to staff 2.)
+with respect to staff 1. (Reversing the numerical order &mdash; `*staff2/1`
+&mdash; would cause all distances to be measured with respect to staff 2.)
 The token `0.8f{-4}` means that the signifier *f* is located 0.8
 quarter-duration spaces from the beginning of the bar and 4 staff-line
 steps below the center line of staff 1. The token `1.6>{-4.3}/1.5/`
@@ -471,10 +471,10 @@ Suppose we want to determine whether there is an association between
 dynamic levels and pitch height for Klezmer music. That is, does the
 music tend to be quieter for lower pitches and louder for higher
 pitches? A straightforward way to determine this is to compare dynamic
-level with pitch height \-- represented in semitones
+level with pitch height &mdash; represented in semitones
 ([`**semits`](/rep/semits)). The
 <span class="tool">correl</span> command can then be used to measure
-Pearson\'s coefficient of correlation. If there is a relationship
+Pearson's coefficient of correlation. If there is a relationship
 between pitch height and dynamic level then the correlation should be
 positive.
 
@@ -483,9 +483,9 @@ positive.
 semits klezmer | correl -s ^= -m
 ```
 
-This command assumes an input consisting of two spines \-- one
+This command assumes an input consisting of two spines &mdash; one
 pitch-related and a `**dB` spine. The <span class="option">s</span> option for <span class="tool">correl</span> is
-used to skip barlines so bar numbers aren\'t included in the
+used to skip barlines so bar numbers aren't included in the
 calculation. The <span class="option">m</span> option for <span class="tool">correl</span> disables the "matched
 pairs" criterion. Normally, if a number is found in one spine but not
 the other then <span class="tool">correl</span> will complain and terminate. With the <span class="option">m</span>
@@ -614,7 +614,7 @@ to (and including) the last slash character:
 extract -i '**MIDI' mono_input | humsed 's/.*\///'
 ```
 
-This will leave us with just the key-down velocity data. Let\'s suppose
+This will leave us with just the key-down velocity data. Let's suppose
 that the following rough decibel equivalents are established:
 
 ```humdrum

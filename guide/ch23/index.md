@@ -64,7 +64,7 @@ context -b ^= -o ^= input.recip | rid -GLId | sort \
 ```
 > \| uniq -c \| sort -nr
 
-The output for the combined voices of Bach\'s two-part Invention No. 5
+The output for the combined voices of Bach's two-part Invention No. 5
 shows just seven patterns. The most characteristic patterns are the
 second one: `8r 16 16 8 8 4 4` and the fourth one:
 `8 16 16 8 8 4 4`.
@@ -140,7 +140,7 @@ dur -M 72 -d input.krn | rid -GLId | grep -v '^=' | stats
 Of course, the duration of a passage is not the same as the length of
 time a given instrument sounds. Suppose, for example, that we wanted to
 compare the duration of trumpet activity in the final movements of
-Beethoven\'s symphonies. We need to make a distinction between the
+Beethoven's symphonies. We need to make a distinction between the
 duration of notes and the duration of rests. Since the duration values
 for rests are distinguished by the trailing letter \`r\', we can use
 **grep -v** to eliminate all rest tokens.
@@ -175,7 +175,7 @@ duration (in seconds) of the longest note marked staccato.
 This same basic pipeline can be used for a variety of similar problems.
 Suppose, for example, that we want to determine whether notes at the
 ends of phrases tend to be longer than notes at the beginnings of
-phrases \-- and if so, how much longer? In this case, we want to have
+phrases &mdash; and if so, how much longer? In this case, we want to have
 <span class="tool">dur</span> echo phrase-related signifiers:
 
 ```bash
@@ -217,7 +217,7 @@ yank -s 'Recapituation' -r 1 inputfile | dur | rid -GLId \
 ```
 > \| grep -v \'=\' \| stats
 
-Do initial phrases in Schubert\'s vocal works tend to be shorter than
+Do initial phrases in Schubert's vocal works tend to be shorter than
 final phrases?
 
 ```bash
@@ -237,7 +237,7 @@ Recall that the <span class="tool">xdelta</span> command can be used
 to calculate numerical differences between successive values. If the
 input to <span class="tool">xdelta</span> is `**dur` duration information, then we can
 determine rates of change of duration. Most music exhibits lengthy
-passages of similar duration notes \-- as in a sequence of sixteenth
+passages of similar duration notes &mdash; as in a sequence of sixteenth
 notes. In French overtures, successive notes are often of highly
 contrasting durations (longer, very-short, long, etc.). Using <span class="tool">xdelta</span>
 we can identify such large changes of duration. For example, the
@@ -373,7 +373,7 @@ will need to have an input that includes both a
 [`**harm`](/rep/harm) spine encoding the Roman
 numeral harmonic analysis, as well as one or more `**kern` or `**recip`
 spines that include the durational information. We can use the
-<span class="tool">timebase</span> command to expand the output accordingly \-- cuing on the
+<span class="tool">timebase</span> command to expand the output accordingly &mdash; cuing on the
 duration information provided by `**kern` or `**recip`. Having suitable
 expanded the input, we can dispense with everything but the `**harm`
 spine. For works in 3/4 meter, the following pipeline would provide an
@@ -387,7 +387,7 @@ timebase -t 8 input | extract -i '**harm' \
 And the following variation would provide an inventory of chords
 occurring on the third beat of each bar. (There are 6 eighth durations
 in a bar of 3/4, therefore the beginning of the third beat will coincide
-with the 5th eighth \-- hence the range `-r 5`:
+with the 5th eighth &mdash; hence the range `-r 5`:
 
 ```bash
 timebase -t 8 input | extract -i '**harm' \
@@ -432,7 +432,7 @@ signature* and the *timebase* for the given input passage. This
 information can be specified via the command line, however it is usually
 available in the input stream via appropriate tandem interpretations.
 
-The following extract from Bartók\'s "Two-Part Study" No. 121 from
+The following extract from Bartók's "Two-Part Study" No. 121 from
 *Mikrokosmos* demonstrates the effect of the <span class="tool">metpos</span> command. The two
 left-most columns show the original input; all three columns show the
 corresponding output from <span class="tool">metpos</span>:
@@ -530,7 +530,7 @@ measures for supertonic, mediant, subdominant, etc. scale degrees.
 This task involves creating an inventory where fourteen different items
 are possible: (1) tonic strong-to-weak, (2) tonic weak-to-strong, (3)
 supertonic, strong-to-weak, etc. A suitable inventory will involve
-creating two spines of information \-- scale-degree and relative metric
+creating two spines of information &mdash; scale-degree and relative metric
 strength.
 
 Assuming that our Hungarian melodies encode key information, creating a
@@ -589,7 +589,7 @@ We want to be able to say that the relationship between the first
 eighth-note G and the eighth-note B is "strong-to-weak" and that the
 relationship between the eighth-note B and the eighth-note D is
 "weak-to-strong." In order to procede we need to eliminate all of the
-data records that contain only a metpos value \-- that is, there is no
+data records that contain only a metpos value &mdash; that is, there is no
 pitch present in the [`**kern`](/rep/kern) spine. We
 can do this using <span class="tool">humsed</span>; we simply delete all lines that begin with
 a period character:

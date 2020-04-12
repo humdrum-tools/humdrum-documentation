@@ -30,7 +30,7 @@ works and how it is possible to connect the tools to perform particular
 tasks. The power and creativity of Humdrum truly lies in the hands of
 the user.
 
-As we\'ve seen, there are two parts to Humdrum: the *Humdrum syntax* and
+As we've seen, there are two parts to Humdrum: the *Humdrum syntax* and
 the *Humdrum toolkit.* The Humdrum syntax simply provides a formal
 framework for representing any kind of sequential symbolic data. A
 number of representation schemes are pre-defined in Humdrum, but you are
@@ -78,7 +78,7 @@ classes of tasks:
     <span class="tool">humsed</span>.
 -   ***Editorializing.*** E.g., add an editorial footnote to a specified
     note or passage; indicate that a passage differs from the
-    composer\'s autograph.
+    composer's autograph.
 -   ***Transforming or translating between representations.***
     Appropriate commands include: <span class="tool">cents</span>,
     <span class="tool">deg</span>, <span class="tool">degree</span>,
@@ -179,7 +179,7 @@ seven questions provide useful guidelines:
 
     > Use <span class="tool">recode</span> and
     > <span class="tool">humsed</span> to classify data into various
-    > classes \-- such as *up*, *down*, *leap*, *long*, *short*,
+    > classes &mdash; such as *up*, *down*, *leap*, *long*, *short*,
     > *difficult*, *easy*, *clarion register*, *dominant*, etc.
     > Use translating/transforming commands such as
     > <span class="tool">mint</span>,

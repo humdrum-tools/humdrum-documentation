@@ -17,11 +17,11 @@ permalink:	/guide/ch18/index.html
 
 
 Throughout this book, our examples have tended to rely on just a handful
-of Humdrum representations \-- `**kern` in particular. Of course the
+of Humdrum representations &mdash; `**kern` in particular. Of course the
 Humdrum syntax provides opportunities for an unlimited number of
 representations. In this chapter, we will consider some less common
 representations. Most of the chapter will deal with the
-[`**fret`](/rep/fret) representation \-- a
+[`**fret`](/rep/fret) representation &mdash; a
 pre-defined Humdrum representation for fretted instrument tablatures.
 However, we will begin with a grab-bag of unorthodox representations.
 
@@ -63,7 +63,7 @@ oblique
 *-
 ```
 
-Chords might be classified \-- using words:
+Chords might be classified &mdash; using words:
 
 ```humdrum
 **chords
@@ -201,9 +201,9 @@ the *sitar*.
 
 The `**fret` representation is performance-oriented rather than
 notationally-oriented. Thus `**fret` is not suitable for distinguishing
-different visual renderings \-- such as differences between traditional
+different visual renderings &mdash; such as differences between traditional
 French or German lute tablatures. Some other Humdrum representation
-should be used if the user\'s goal is to distinguish different forms of
+should be used if the user's goal is to distinguish different forms of
 visual signifiers.
 
 The basic pitches produced by fretted instruments depend on three
@@ -235,11 +235,11 @@ strings together in close physical proximity so that two strings are
 treated by the performer as a single virtual "string." Such paired
 strings are referred to as *courses.* For example, the 12-string guitar
 is constructed using 6 courses, and is played much like a 6-string
-guitar \-- except that two strings sound together, rather than a single
+guitar &mdash; except that two strings sound together, rather than a single
 string.
 
 The `*RT:` tandem interpretation encodes the relative tuning of each
-string by specifying the number of semitones above the lowest string \--
+string by specifying the number of semitones above the lowest string &mdash;
 where each course is delineated by a colon (:). In Example 18.1 three
 sample tunings are shown. Example (a) defines the most common relative
 tuning for the six-string guitar. Successive strings are tuned 0, 5, 10,
@@ -285,7 +285,7 @@ strings withint courses are delineated by commas. In this case, the
 lower four courses consists of two strings tuned an octave apart,
 whereas the upper two courses consist of paired unison strings.
 
-Example (c) shows the most common tuning of the 6-course *lute* \-- a
+Example (c) shows the most common tuning of the 6-course *lute* &mdash; a
 tuning referred to as the so-called *vieil accord*: G2, C3, F3, A3, D4,
 and G4. During the first half of the 16th century, it was common to tune
 the lower three courses in octaves.
@@ -309,7 +309,7 @@ Each successive numerical value indicates the number of semitones above
 the open string for successive fret positions. The interpretation begins
 with the tuning of the first fret rather than the tuning of the open
 string. The above interpretation is similar to the *default fret tuning*
-\-- which is an increase of precisely one\-- itone for each successive
+&mdash; which is an increase of precisely one&mdash; itone for each successive
 fret. The default fret tuning is not limited to 12 frets as in the above
 example. An instrument constructed with nine 1/4-tone fret positions can
 be encoded as follows:
@@ -452,14 +452,14 @@ beginning of the tablature-token. The direction of bowing/strumming is
 encoded using the left and right angle brackets: `>` means to bow/strum
 from the strings on the left side of the representation toward the
 strings on the right side of the representation. (On most instruments
-this means strumming "downward" \-- from the lowest- to the
+this means strumming "downward" &mdash; from the lowest- to the
 highest-pitched strings.) The left angle bracket: `<` means to strum in
 the opposite direction. A rough indication of the speed of
 bowing/strumming can be represented by duplicating these signifiers. For
 example, `>>` means a slower "downward" bow/strum, and `<<<` means an
 especially slow "upward" bow/strum. The percent sign (%) is used to
-signify the so-called *rasgueado* \-- or flamboyant Spanish strum. Once
-again these signifiers appear at the beginning of a tablature-token \--
+signify the so-called *rasgueado* &mdash; or flamboyant Spanish strum. Once
+again these signifiers appear at the beginning of a tablature-token &mdash;
 whenever they are encoded. Strumming all 6 open strings downward on a
 commonly-tuned guitar is represented as:
 

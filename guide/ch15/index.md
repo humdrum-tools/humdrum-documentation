@@ -54,7 +54,7 @@ interval is the perfect octave in the first sonority of Example 15.1
 ```
 
 Less obvious harmonic intervals arise when tone onsets are not
-synchronous \-- yet both pitches are sustained simultaneously for a
+synchronous &mdash; yet both pitches are sustained simultaneously for a
 period of time. We might call these *passing harmonic intervals.* Two
 examples are evident in Example 15.1: the minor seventh between the D
 and the sustained C, and the minor sixth between E and C. Most music
@@ -113,7 +113,7 @@ methods include (1) stacked harmonic intervals, (2) bass-related
 harmonic intervals, and (3) permuted harmonic intervals.
 
 As in the case of melodic intervals, harmonic intervals can be
-calculated according to a variety of units \-- including diatonic
+calculated according to a variety of units &mdash; including diatonic
 intervals, semitones, cents, frequency, and even cochlear coordinates.
 We will consider just two tools for calculating harmonic intervals:
 <span class="tool">hint</span> and **ydelta.**
@@ -354,7 +354,7 @@ cause only the lower-case letters \`a\' and \`b\' to be propagated:
 ditto -c ab
 ```
 
-This feature allows users to replicate only certain kinds of data \--
+This feature allows users to replicate only certain kinds of data &mdash;
 such as pitches, durations, dynamic marks, etc.
 
 As we will see in future chapters, the <span class="tool">ditto</span> command proves useful
@@ -365,9 +365,9 @@ Using the *ditto* and *hint* Commands
 -------------------------------------
 
 
-Let\'s pause and consider some of the ways we might use the <span class="tool">ditto</span>
-and <span class="tool">hint</span> commands. First, let\'s determine if some input contains a
-particular interval. Are there any augmented sixth intervals in Bach\'s
+Let's pause and consider some of the ways we might use the <span class="tool">ditto</span>
+and <span class="tool">hint</span> commands. First, let's determine if some input contains a
+particular interval. Are there any augmented sixth intervals in Bach's
 two-part inventions? The following commands look for explicit and
 passing sixths respectively. Notice the use of the <span class="option">c</span> option so
 octave equivalents will also be identified:
@@ -381,7 +381,7 @@ ditto -s ^= inventio* | hint -c | grep A6
 
 
 Are there any diminished octave intervals between any two concurrent
-notes in any of Beethoven\'s piano sonatas?
+notes in any of Beethoven's piano sonatas?
 
 ```bash
 ditto -s ^= sonatas* | hint -a | grep d8
@@ -430,7 +430,7 @@ Determining Implicit Harmonic Intervals
 ---------------------------------------
 
 Recall that *implicit harmonic intervals* may be deemed to occur between
-tones that don\'t actually sound at the same time. This arises when one
+tones that don't actually sound at the same time. This arises when one
 part has a rest while the other part is sounding. Note that if we could
 eliminate rest tokens, then we could use <span class="tool">ditto</span> to repeat previous
 pitch tokens in place of the rests and so generate implicit harmonic
@@ -445,7 +445,7 @@ following substitution:
 humsed 's/.*r.*/.    ./' example15.1
 ```
 
-Unfortunately, this isn\'t quite right. The above substitution will find
+Unfortunately, this isn't quite right. The above substitution will find
 any data record containing the letter \`r\' and transform the entire
 record to a single null data record. We need to address individual data
 tokens. In this example, rest tokens may be in two possible positions:
@@ -608,7 +608,7 @@ record can be output in square brackets using the <span class="option">o</span> 
 Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> calculates numerical intervals
 only when more than one value is present on a given input data record.
 As in the case of **hint,** we might use the <span class="tool">ditto</span> command to
-propagate pitch values \-- replacing all the null data tokens. A
+propagate pitch values &mdash; replacing all the null data tokens. A
 suitable command would be:
 
 ```bash
@@ -689,7 +689,7 @@ Reprise
 
 Harmonic intervals can be measured in a variety of ways. They can be
 characterized as diatonic qualities such as minor sevenths or augmented
-sixths. They can be measured in terms of semitone distance \-- or even
+sixths. They can be measured in terms of semitone distance &mdash; or even
 in cents or hertz (frequency difference). Only the diatonic size may be
 of interest (e.g., "a fifth"), and compound intervals (e.g., major
 tenth) can be expressed by their non-compound equivalents (major third).

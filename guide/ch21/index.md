@@ -19,7 +19,7 @@ permalink:	/guide/ch21/index.html
 The <span class="unix">grep</span> and <span class="unix">egrep</span> commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the
 <span class="tool">context</span> command can be used to amalgamate
-groups of successive data tokens on a single line \-- and so facilitate
+groups of successive data tokens on a single line &mdash; and so facilitate
 searching for sequential patterns using <span class="unix">grep</span> or <span class="unix">egrep</span>. For many
 tasks, the combination of <span class="tool">context</span> and <span class="unix">grep</span> provides the most
 convenient way to search for user-specified patterns. However, not all
@@ -167,9 +167,9 @@ interpretations and terminating spine-path terminators.
 
 
 Most Baroque composers were fond of ending works written in minor keys
-on the tonic major chord \-- the so-called *tierce de picardie* or
+on the tonic major chord &mdash; the so-called *tierce de picardie* or
 Picardy Third. Example 21.2 shows a typical example from the final
-measures of Bach\'s second fugue from the *Well-Tempered Clavier*, vol.
+measures of Bach's second fugue from the *Well-Tempered Clavier*, vol.
 1. Suppose that we wanted to identify all works in some repertory that
 end with a *tierce de picardie*. We need to search for a raised third
 scale degree in close proximity to the end of a work for those works in
@@ -219,7 +219,7 @@ A problem with this search strategy is that it assumes that the raised
 third will occur in the final sonority prior to the double barline. One
 possible confound might be the presence of one or more rests following
 the final chord. This situation is evident in Fugue No. 4 from the
-second volume of Bach\'s *Well-Tempered Clavier*:
+second volume of Bach's *Well-Tempered Clavier*:
 
 **Example 21.3.** J.S. Bach, *Well-Tempered Clavier*, Vol. 2, Fugue 4.
 
@@ -422,13 +422,13 @@ sought pattern, a user-defined "tag" will appear in the `**patt`
 spine. Consider the following example.
 
 
-Suppose we are interested in identifying deceptive cadences in Bach\'s
+Suppose we are interested in identifying deceptive cadences in Bach's
 chorale harmonizations. Imagine that we already have a
 [`**harm`](/rep/harm) spine containing a Roman
 numeral harmonic analysis. There are different ways of defining a
 deceptive cadence, but a frequent definition is that it involves a
 dominant chord followed by a submediant chord in a cadential context. In
-the case of Bach\'s chorale harmonizations, cadences are readily
+the case of Bach's chorale harmonizations, cadences are readily
 identified by the pause symbol. Our search template might look as
 follows:
 
@@ -467,7 +467,7 @@ etc.
 
 In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
-from several "passes" using <span class="tool">patt</span> \-- one pass for each type of
+from several "passes" using <span class="tool">patt</span> &mdash; one pass for each type of
 cadence. For example, we could collapse several tagged outputs to
 produce a single spine that identifies all of the various types of
 cadences:
@@ -504,7 +504,7 @@ Matching Multiple Records Using the *patt* Command
 Twelve-tone music raises several special issues for sequential pattern
 matching. For example, it is common in serial music to collapse segments
 of a tone-row in order to create vertical chords. Consider the following
-excerpt from Ernst Krenek\'s suite for solo \'cello. The tone row
+excerpt from Ernst Krenek's suite for solo \'cello. The tone row
 consists of the ordered pitches: D, G-flat, F, D-flat, C, B, E-flat, A,
 B-flat, A-flat, E, G.
 
@@ -570,7 +570,7 @@ Not all patterns can be identified using <span class="tool">patt</span>. The Hum
 regular expression feature that is especially useful in musical
 applications. Specifically, <span class="tool">pattern</span> permits the defining of patterns
 spanning more than one line or record. Record-repetition operators are
-specified by following the regular expression with a tab \-- followed by
+specified by following the regular expression with a tab &mdash; followed by
 either `+`, `*`, or `?`. For example, consider the following
 Humdrum-extension regular expression:
 
@@ -601,7 +601,7 @@ expression matches one or more successive
 [`**kern`](/rep/kern) data records containing the
 pitch \``G`\' (naturals only) followed optionally by a single \``G#`\'
 followed by one or more records containing one or more pitches from an A
-major triad \-- the last of which must end a phrase:
+major triad &mdash; the last of which must end a phrase:
 
 ``
 
@@ -664,7 +664,7 @@ search-related tools, including the UNIX <span class="unix">grep</span> and <spa
 as well as the Humdrum <span class="tool">patt</span> and
 <span class="tool">pattern</span> commands. Each of these tools has
 different strengths and weaknesses and it is not always clear which tool
-is best for a given task. When searching, don\'t forget to consider how
+is best for a given task. When searching, don't forget to consider how
 <span class="tool">context</span>,
 <span class="tool">humsed</span>, <span class="tool">rid</span> and
 other tools might facilitate the searching task. In future chapters will

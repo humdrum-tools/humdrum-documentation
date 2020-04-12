@@ -163,10 +163,10 @@ non-null data records are retained in the output.
 
 With the <span class="option">u</span> option, <span class="tool">rid</span> will remove "unnecessary" exclusive
 interpretations. Exclusive interpretations are deemed unnecessary if
-they don\'t change the current status of the data. In the following
+they don't change the current status of the data. In the following
 example, the second `**psaltery` interpretation is redundant. The **rid
 -u** command would remove the first spine-path terminator and the second
-exclusive interpretation \-- leaving a continuous data spine.
+exclusive interpretation &mdash; leaving a continuous data spine.
 
 ```humdrum
 **psaltery
@@ -229,7 +229,7 @@ Of course care should be exercised when concatenating inputs together.
 Although an output may conform to the Humdrum syntax, the result can
 nevertheless violate conventions for a specific representation such as
 `**kern`. For example, if we were to concatenate measure 85 to measure
-87, it is possible that tied-notes won\'t match up, or that phrases will
+87, it is possible that tied-notes won't match up, or that phrases will
 begin without ending, etc. These anomalies may cause problems with
 subsequent processing.
 
@@ -398,7 +398,7 @@ The new file would look like this:
 *-
 ```
 
-The <span class="option">t</span> option is used to indicate the "time base" \-- in this
+The <span class="option">t</span> option is used to indicate the "time base" &mdash; in this
 case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
 using the <span class="tool">assemble</span> command as before. The command:
@@ -488,8 +488,8 @@ following input:
 
 The following command will cause the addition of null data records so
 that each data record represents an elapsed time of a 32nd duration.
-Incidentally, notice that any spine contain non-rhythmic data \-- such
-as the `**commentary` spine in the above example \-- is also transformed
+Incidentally, notice that any spine contain non-rhythmic data &mdash; such
+as the `**commentary` spine in the above example &mdash; is also transformed
 so that synchronous data is maintained.
 
 ```bash
@@ -722,7 +722,7 @@ pertaining to concurrent patterns. For example, suppose we have a
 identify complex situations such as the following: for the soprano
 voice, count how many subdominant pitches are approached by an interval
 of a rising third or a rising sixth and coincide with a dominant seventh
-chord. First, let\'s extract the soprano line and create a corresponding
+chord. First, let's extract the soprano line and create a corresponding
 scale degree representation using <span class="tool">deg</span>. We can use the <span class="option">a</span> option
 to avoid outputting the melodic direction signifiers (`^` and `v`):
 
@@ -730,7 +730,7 @@ to avoid outputting the melodic direction signifiers (`^` and `v`):
 extract -i '*Isopran' howells | deg -a > temp1
 ```
 
-Next, let\'s again extract the soprano voice and create a corresponding
+Next, let's again extract the soprano voice and create a corresponding
 melodic interval representation using <span class="tool">mint</span>. Since we are not
 interested in interval qualities we can invoke the <span class="option">d</span> option to
 output only diatonic interval sizes.

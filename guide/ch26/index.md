@@ -120,7 +120,7 @@ tells <span class="tool">cleave</span> which exclusive interpretations
 should be cleaved together. In the above case, we have provided a list
 of three types of data. The <span class="option">o</span> option tells
 <span class="tool">cleave</span> what to call the resulting cleaved
-spine. In this case, we\'ve simply called the result `**new`.
+spine. In this case, we've simply called the result `**new`.
 
 Suppose that we would like to automatically add key-velocities to some
 [`**MIDI`](/rep/MIDI) data that reflect the normal
@@ -190,7 +190,7 @@ the metric position spine (on the right):
 *-	*-
 ```
 
-Let\'s now eliminate the null data tokens introduced by <span class="tool">timebase</span>.
+Let's now eliminate the null data tokens introduced by <span class="tool">timebase</span>.
 Using <span class="tool">humsed</span>, we delete each data record
 beginning with a period character:
 

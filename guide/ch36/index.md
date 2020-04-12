@@ -33,7 +33,7 @@ manner that simulates human hearing; **sdiss** characterizes the degree
 of sensory dissonance for arbitrary sonorities.
 
 In addition, we will consider how Humdrum data can be used in
-conjunction with non-Humdrum tools \-- such as digital sound editors,
+conjunction with non-Humdrum tools &mdash; such as digital sound editors,
 spectral analysis tools, and general signal processing software, In
 particular, we will discuss the **kern2cs** command which generates
 score data for the popular *Csound* digital sound synthesis language.
@@ -94,7 +94,7 @@ The <span class="tool">spect</span> command recognizes instrument tandem interpr
 (`clarinet.spe`). These files are derived from the SHARC database of
 music instrument spectra created by Gregory Sandell (1991). The file
 contains precise spectral measurements for recordings of the instrument
-playing each note throughout the instrument\'s range. Suppose that the
+playing each note throughout the instrument's range. Suppose that the
 input to <span class="tool">spect</span> contains the note F\#5 for oboe (i.e., semits value
 18). Then <span class="tool">spect</span> will retrieve the spectral information for a
 recording of an oboe playing F\#5 and add it to the composite spectrum
@@ -204,7 +204,7 @@ different numbers of complex tones. Further problems with the Kameoka
 and Kuriyagawa measurement method are described in Mashinter (1995).
 
 
-Connecting Humdrum with Csound \-- the *kern2cs* Command
+Connecting Humdrum with Csound &mdash; the *kern2cs* Command
 --------------------------------------------------------
 
 Apart from generating and processing acoustic spectra, it is often
@@ -304,7 +304,7 @@ Reprise
 
 In this chapter we have seen that Humdrum score-related data can be
 transformed into spectral information using the <span class="tool">spect</span> command. This
-allows us to reconstitute a score as a sequence of sonorous spectra \--
+allows us to reconstitute a score as a sequence of sonorous spectra &mdash;
 which might be used for studies in timbre or orchestration. The **mask**
 tool can be used to revise a spectral description so that it reflects
 how listeners hear rather than the actual acoustical information

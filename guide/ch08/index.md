@@ -26,12 +26,12 @@ this book where we will pause and examine some of the more pertinent and
 valuable features of the shell.
 
 In UNIX environments, many different shells have been developed over the
-years. The original UNIX shell was the *C-shell* \-- a shell whose
+years. The original UNIX shell was the *C-shell* &mdash; a shell whose
 syntax is similar to the C programming language. A later shell was
 developed by Stephen Bourne and is known as the *Bourne shell.*
 Subsequent improvements by David Korn resulted in the *Korn shell.* The
 Bourne shell was improved in light of many features introduced in the
-Korn shell, and resulted in the *Bourne Again Shell* \-- known as
+Korn shell, and resulted in the *Bourne Again Shell* &mdash; known as
 *Bash*. The Korn and Bash shells are the most popular and powerful of
 the current generation of shells. Although they were originally
 developed for the UNIX operating system, these shells are also available
@@ -40,7 +40,7 @@ systems.
 
 Shells themselves are advanced programming languages that provide
 complex control structures. When you type a command, you are already
-writing a program \-- although most of your programs are just one line
+writing a program &mdash; although most of your programs are just one line
 in length.
 
 
@@ -53,7 +53,7 @@ characters as having a special meaning: the octothorpe (\#), the
 dollar-sign (\$), the semicolon (;), the ampersand (&), the verticule
 (\|), the asterisk (\*), the apostrophe (\'), the greve (\`), the
 greater-than sign (\>), the less-than sign (\<), the question-mark (?),
-the double-quote ("), and the backslash (\\). We\'ll consider the
+the double-quote ("), and the backslash (\\). We'll consider the
 function of each of these characters one at a time.
 
 
@@ -115,7 +115,7 @@ The asterisk is interpreted by the shell as a "filename wildcard."
 When it appears by itself, the asterisk is \`expanded\' by the shell to
 a list of all files in the current directory (in alphabetical order).
 For example, if the current directory contained just three files:
-`alice`, `barry` and `chris` \-- then the following command would be
+`alice`, `barry` and `chris` &mdash; then the following command would be
 applied to all three files in consecutive order:
 
 ```bash
@@ -125,7 +125,7 @@ command * > people
 The file expansion occurs at the moment when the command is invoked. So
 although the file `people` is added to the current directory, it is not
 included as its own input. However, if the above command was executed a
-second time, then the file expansion would include `people` \-- even as
+second time, then the file expansion would include `people` &mdash; even as
 the file itself is over-written to receive the output. Including the
 output file as input is never a good idea.
 
@@ -238,7 +238,7 @@ command2
 ```
 
 When both commands appear on the same line, they are still executed
-sequentially, so the second command doesn\'t begin until the first is
+sequentially, so the second command doesn't begin until the first is
 completed. Although the ability to place two or more commands on a
 single line may seem redundant, there are a number of circumstances
 where this feature proves useful.
@@ -277,7 +277,7 @@ components to a common command:
 -   output redirection.
 
 Each of these components is separated by \`blank space\' (tabs or
-spaces). A command begins with the command name \-- such as <span class="unix">uniq</span>,
+spaces). A command begins with the command name &mdash; such as <span class="unix">uniq</span>,
 <span class="unix">sort</span>, or <span class="tool">pitch</span>. A command argument is a
 special requirement of only some commands. A good example of a command
 argument is the search pattern given to the <span class="unix">grep</span> command. In the
@@ -323,7 +323,7 @@ Options and their accompanying parameters must be separated by blank
 space (i.e. one or more spaces and/or tabs). If more than one option is
 invoked, and none of the invoked options require a parameter, then the
 option-letters may be combined. For example, the <span class="option">a</span> and <span class="option">b</span>
-options might be invoked as **-ab** (or as **-ba)** \-- provided neither
+options might be invoked as **-ab** (or as **-ba)** &mdash; provided neither
 option requires a parameter.
 
 Whenever an option requires a parameter, the option must be specified
@@ -409,7 +409,7 @@ split: one copy is piped to **command2** for further processing, while
 an identical copy is stored in the file `outfile1`; if the file
 `outfile1` already exists, its contents will be overwritten. In the
 third example, the append option (<span class="option">a</span>) for <span class="unix">tee</span> has been invoked
-\-- meaning that the output from `command` will be added to the end of
+&mdash; meaning that the output from `command` will be added to the end of
 any existing data in the file `outfile`. If the file `outfile` does not
 already exist, it will be created.
 
@@ -432,7 +432,7 @@ In this chapter we have noted that the shell interprets certain
 characters in a special way. We learned about the octothorpe (\#), the
 ampersand (&), the verticule (\|), the asterisk (\*), the apostrophe
 (\'), the greater-than sign (\>), the semicolon (;), and the backslash
-(\\). In a later chapter we\'ll discuss the remaining special
+(\\). In a later chapter we'll discuss the remaining special
 characters: the dollar-sign (\$), the apostrophe (\'), the less-than
 sign (\<), the question-mark (?), and the double-quote ("),
 

@@ -147,7 +147,7 @@ awk '{print $1 "\t" $3}'
 Conditional Statements
 ----------------------
 
-Often we\'d like to avoid processing certain records. For example, we
+Often we'd like to avoid processing certain records. For example, we
 might wish to avoid processing barlines. The awk **if** statement can be
 used to restrict the operation to particular circumstances. Consider the
 following awk program:
@@ -250,7 +250,7 @@ For example, the following instruction changes all occurrences of `X` to
 gsub("X","Y",string)
 ```
 
-Suppose that we wanted to increment all measure numbers by 1. Let\'s
+Suppose that we wanted to increment all measure numbers by 1. Let's
 presume our input contains only a single spine. First we test for the
 presence of the equal sign at the beginning of the input record. If the
 input is not a barline, then we simple print the line in the output.
@@ -348,7 +348,7 @@ awk '{
 
 Although our output data will consist of a single column (spine) of
 numbers, it is possible that an input will contain more than one
-interpretation \-- and so cause the output to fail to conform to the
+interpretation &mdash; and so cause the output to fail to conform to the
 Humdrum syntax. Rather than simply echoing any interpretation records,
 we might ensure that only a single interpretation is generated for the
 output. First, we might look for exclusive interpretations (beginning

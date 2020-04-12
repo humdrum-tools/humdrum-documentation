@@ -17,7 +17,7 @@ permalink:	/guide/ch03/index.html
 
 
 Now that we have learned some things about Humdrum representations (and
-the `**kern` representation in particular), let\'s explore some basic
+the `**kern` representation in particular), let's explore some basic
 processing tasks.
 
 
@@ -162,7 +162,7 @@ The output might look like this:
 1109:{4g##  1731:16g##  3002:16f##
 ```
 
-\-- meaning that double sharps were found in lines 1109, 1731, and 3002
+&mdash; meaning that double sharps were found in lines 1109, 1731, and 3002
 in the file `melody.krn`.
 
 
@@ -195,7 +195,7 @@ Searching for Reference Information
 
 As we saw in [Chapter 2,](/guide/ch02) Humdrum files typically encode
 library-type information using reference records. For example, the
-[**composer\'s name**](guide.append1.html#Authorship_Information) is
+[**composer's name**](guide.append1.html#Authorship_Information) is
 encoded in a `!!!COM:` record, and the
 [**title**](guide.append1.html#Identification_Information) is encoded
 via the `!!!OTL:` record. In conjunction with the <span class="unix">grep</span> command,
@@ -331,7 +331,7 @@ has a trailing blank that is not present in the previous line, then the
 line is not discarded.
 
 Returning to our problem of creating a list of unique titles for J.S.
-Bach\'s chorale harmonizations, we can use the following command
+Bach's chorale harmonizations, we can use the following command
 pipeline.
 
 ```bash
@@ -346,7 +346,7 @@ as successive lines before passing the list to <span class="unix">uniq</span>.
 Suppose you wanted to ensure that all of the works in the current
 directory are composed by the same composer. The same command structure
 can be used, only we would search for reference records encoding the
-composer\'s name:
+composer's name:
 
 ```bash
 grep -h '!!!COM:' * | sort | uniq
@@ -386,9 +386,9 @@ which are *duplicated* (i.e. two or more instances). Conversely, the
 
 
 Suppose, for example, that we want to know which of the Bach chorales
-are harmonizations of the same tunes \-- that is, have the same titles.
+are harmonizations of the same tunes &mdash; that is, have the same titles.
 (Of course the same chorale might be known by two or more titles, but
-let\'s defer this problem until [Chapter 25.](/guide/ch25)) The <span class="option">d</span>
+let's defer this problem until [Chapter 25.](/guide/ch25)) The <span class="option">d</span>
 option will only output the duplicate records:
 
 ```bash
@@ -444,7 +444,7 @@ bwv271.krn
 bwv272.krn
 ```
 
-As we\'ve already notes, the <span class="option">u</span> option for <span class="unix">uniq</span> causes only
+As we've already notes, the <span class="option">u</span> option for <span class="unix">uniq</span> causes only
 unique entries in a list to be passed to the output. This is often
 useful in identifying works that differ in some way from other works in
 a group or corpus. For example, in some repertory, you may remember that
@@ -494,7 +494,7 @@ will rearrange the above output as follows:
 
 It is important to understand that the two <span class="unix">sort</span> commands in our
 pipeline achieve different goals but use the same process. The first
-<span class="unix">sort</span> command sorts the composer\'s names into alphabetical order.
+<span class="unix">sort</span> command sorts the composer's names into alphabetical order.
 This is done so that the ensuing <span class="unix">uniq</span> command is able to count
 successive identical records. Since the **uniq -c** command prepends
 numerical counts, the subsequent <span class="unix">sort</span> sorts first according to the
@@ -544,6 +544,6 @@ only those input lines that are unique are passed to the output.
 Finally, we introduced the UNIX <span class="unix">sort</span> utility. This command
 rearranges the order of successive input lines so they are in
 alphabetic/numeric order. The <span class="unix">sort</span> command provides a wealth of
-useful options; however, we mentioned only the <span class="option">r</span> option \-- which
+useful options; however, we mentioned only the <span class="option">r</span> option &mdash; which
 causes the output to be sorted in reverse order.
 

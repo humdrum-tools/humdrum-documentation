@@ -103,7 +103,7 @@ The <span class="option">f</span> option is required, and is used to identify th
 containing the reassignment information. The <span class="option">i</span> option is also
 required, and is used to identify the exclusive interpretation for the
 data to be processed. The <span class="option">s</span> option tells <span class="tool">recode</span> to skip records
-matching some specified regular expression \-- in this case, to skip
+matching some specified regular expression &mdash; in this case, to skip
 barlines. Finally, "`changes`" is the name of our input file.
 
 The result of applying this process to the right-most spine in the above
@@ -179,7 +179,7 @@ Classifying Intervals
 
 The <span class="tool">recode</span> command has innumerable
 applications. Suppose we wanted to determine how frequently ascending
-melodic leaps are followed by a descending step. Let\'s consider two
+melodic leaps are followed by a descending step. Let's consider two
 different ways of distinguishing steps and leaps: a "semitone" method
 and a "diatonic" method. In the first method, we might define a step
 interval as either one or two semitones. Our reassignment file (dubbed
@@ -238,7 +238,7 @@ Clarinet Registers
 ------------------
 
 Consider another use of the <span class="tool">recode</span> command.
-[Imagine that we wanted to arrange Claude Debussy\'s
+[Imagine that we wanted to arrange Claude Debussy's
 *Syrinx* for soprano clarinet instead of flute. Our principle concern as
 arranger is determining what key would be especially well suited to the
 clarinet. Tone color is particularly important for this piece. The
@@ -270,8 +270,8 @@ else	too-low
 ```
 
 Now we simply explore various transpositions using <span class="tool">trans</span> and create
-an inventory of pitch types. For Debussy\'s *Syrinx*, the minimum number
-of throat tones (without exceeding the clarinet\'s range) occurs when we
+an inventory of pitch types. For Debussy's *Syrinx*, the minimum number
+of throat tones (without exceeding the clarinet's range) occurs when we
 transpose down a major sixth:
 
 ```bash
@@ -293,7 +293,7 @@ claimed that close position chords are more common than open position.
 How might we test this?
 
 In determining an appropriate sequence of Humdrum commands, it is often
-helpful to work backwards from our goal. We\'d like to end up with a
+helpful to work backwards from our goal. We'd like to end up with a
 spine that simply encodes the words "open" or "close" for each
 sonority. This classification will be based on the distance separating
 the soprano and tenor voices. Our reassignment file might be as follows:
@@ -356,7 +356,7 @@ else	rest
 ```
 
 Suppose we wanted to determine what kinds of fingering *transitions*
-occur in Joachim Quantz\'s flute concertos. Since instrument fingerings
+occur in Joachim Quantz's flute concertos. Since instrument fingerings
 are insensitive to enharmonic spelling, an appropriate input
 representation would be `**semits`. Having used
 <span class="tool">recode</span> to translate the pitches to
@@ -417,11 +417,11 @@ Suppose we wanted to classify various flute finger-transitions as either
 *easy*, *moderate* or *difficult*. For example, F4 to G4 is an easy
 fingering, E5 to A5 is a moderate fingering, whereas C5 to D5 is
 difficult. As before, it is best to use a semitone representation so we
-don\'t need to consider differences in enharmonic pitch spelling. We can
+don't need to consider differences in enharmonic pitch spelling. We can
 use the <span class="tool">semits</span> command to transform all
 pitches. Then we can use **context -n 2** to generate pairs of
 successive pitches as double-stops. We can then create a <span class="tool">humsed</span>
-script file (let\'s call it `difficulty`) containing substitutions such
+script file (let's call it `difficulty`) containing substitutions such
 as the following:
 
 ```humdrum
@@ -473,7 +473,7 @@ Classifying Cadences
 Consider another application where we use <span class="tool">humsed</span> to classify
 cadences. Suppose we have Roman-numeral harmonic data (as provided by
 the [`**harm`](/rep/harm) representation). In the
-case of Bach\'s chorale harmonizations, for example, cadences are
+case of Bach's chorale harmonizations, for example, cadences are
 clearly evident by the presence of pauses (designated by the semicolon).
 We can easily create a spine that identifies only cadences. Consider a
 suitable reassignment file (dubbed `cadences`):
@@ -505,11 +505,11 @@ extract -i '**harm' chorales | context -o = -n 2 \
 > \| humsed -f cadences \| sed \'s/\\\*\\\*harm/\*\*cadences/\'
 
 We first extract the `**harm` spine using <span class="tool">extract</span>. We then generate
-a sequence of two-chord progressions using <span class="tool">context</span> \-- taking care
+a sequence of two-chord progressions using <span class="tool">context</span> &mdash; taking care
 to omit barlines (`-o =`). We then use <span class="tool">humsed</span> to run the script of
 cadence-name substitutions. Finally, we use the <span class="unix">sed</span> command to
 change the name of the exclusive interpretation from `**harm` to
-something more suitable \-- `**cadences`.
+something more suitable &mdash; `**cadences`.
 
 Many more sophisticated variants of this sort of procedure may be used.
 For example, one could first classify harmonies more broadly. In
@@ -524,7 +524,7 @@ Orchestration
 
 One of the simplest classifications in a musical score is whether or not
 an instrument is sounding or resting. Suppose we extracted the viola
-part from Beethoven\'s Symphony No. 1. We might use the <span class="tool">ditto</span>
+part from Beethoven's Symphony No. 1. We might use the <span class="tool">ditto</span>
 command to ensure that each data record encodes either a note, rest, or
 barline:
 
@@ -532,12 +532,12 @@ barline:
 extract -i '*Iviola' symphony1 | ditto -s =
 ```
 
-Let\'s append to this pipeline a <span class="tool">humsed</span> command that makes two
+Let's append to this pipeline a <span class="tool">humsed</span> command that makes two
 string substitutions. The first substitution replaces all data records
 containing the lower-case letter `r` (i.e., rests) with the string
 `-viola`. The second substitution changes any record that does not begin
 with either a minus sign or an equals sign to the string `+viola`. In
-effect, we\'ve transformed the viola part so that all data tokens encode
+effect, we've transformed the viola part so that all data tokens encode
 either `+viola`, `-viola` or are barlines.
 
 ```bash
@@ -546,7 +546,7 @@ extract -i '*Iviola' symphony1 | ditto -s = \
 > \| humsed \'s/.\*r.\*/-viola/; /s/\^\[\^-=\].\*\$/+viola/\' \> viola
 
 Now imagine that we repeat this process for every instrument in
-Beethoven\'s Symphony No. 1. In each case, we substitute the name of the
+Beethoven's Symphony No. 1. In each case, we substitute the name of the
 instrument (preceded by a plus-sign or minus-sign) for the various note
 or rest tokens.
 
@@ -603,7 +603,7 @@ sounding with the exception of the clarinet.
 
 
 A representation such as the above provides an opportunity to study
-instrumental combinations in Beethoven\'s orchestration. For example,
+instrumental combinations in Beethoven's orchestration. For example,
 the following command will count the number of sonorities where the oboe
 and bassoon sound concurrently:
 
@@ -665,7 +665,7 @@ etc.
 Many refinements can be added to this basic approach. For example,
 instead of classifying instruments as simply being "present" or
 "absent," we might distinguish various registers for each instrument
-\-- as we did with the clarinet when describing <span class="tool">recode</span>. We could
+&mdash; as we did with the clarinet when describing <span class="tool">recode</span>. We could
 then determine whether Beethoven tends to link, say, activity in the
 chalemeau register of the clarinet with low register activity in the
 strings.

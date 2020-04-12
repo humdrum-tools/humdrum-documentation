@@ -59,7 +59,7 @@ augmentation dots. Thus "92.." is the correct `**kern` encoding for a
 note whose duration is 23 notes in the time of a doubly-dotted quarter.
 
 By way of illustration, example 6.1 shows an excerpt from Sigfrid
-Karg-Elert\'s *Caprices* Op. 107, No. 23 for solo flute. The work is in
+Karg-Elert's *Caprices* Op. 107, No. 23 for solo flute. The work is in
 3/4 meter. The last beat of the first measure has 9 notes in the time of
 a quarter duration. The reciprocal encoding is 9 x 4 or 36th notes.
 
@@ -373,7 +373,7 @@ meter signature (`*M3/4`) and the tempo (`*MM66`). Note that metronome
 markings using the `*MM` interpretation are always given in
 quarter-durations per minute. If the metronome marking had been given as
 half-note equals 48, then the tempo interpretation would be given as
-`*MM96` \-- i.e. quarter-note equals 96 beats per minute.
+`*MM96` &mdash; i.e. quarter-note equals 96 beats per minute.
 
 Two grace-notes are evident in the passage. The first occurs just after
 the double-bar, and the second occurs three measures later. These notes

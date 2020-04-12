@@ -27,7 +27,7 @@ In this chapter we identify and describe some of the tasks and issues
 involved in preparing electronic musical documents in the Humdrum
 format. In general, the following discussion pertains to the production
 of electronic documents representing musical score information. However,
-the basic procedures are applicable to any kind of data \-- from sound
+the basic procedures are applicable to any kind of data &mdash; from sound
 recordings to historical choreographies of ballets.
 
 
@@ -36,12 +36,12 @@ The Process of Electronic Editing
 
 Electronic editing entails translating one representation into another
 representation. In many cases, an electronic edition is prepared from
-existing source documents \-- such as printed scores or manuscripts. In
+existing source documents &mdash; such as printed scores or manuscripts. In
 other cases, an electronic edition may be prepared from another
-electronic form \-- such as MIDI. When translating between two formats,
+electronic form &mdash; such as MIDI. When translating between two formats,
 it is important to be familiar with both representations. Descriptions
 of a number of popular electronic music formats may be found in Eleanor
-Selfridge-Field\'s encyclopedic [*Handbook of Musical
+Selfridge-Field's encyclopedic [*Handbook of Musical
 Codes*](guide.bibliog.html#Handbook) (1997).
 
 The principal processes involved in electronic editing include
@@ -75,7 +75,7 @@ a later date. Additional information can be inserted into a Humdrum
 encoding by using the <span class="tool">assemble</span> and
 <span class="tool">cleave</span> commands. In general, it is important
 that the encoding of electronic documents not consume all of a
-researcher\'s efforts and resources. The most common problem that beset
+researcher's efforts and resources. The most common problem that beset
 early projects in computational musicology was that researchers rarely
 got past the stage of inputting data. Early researchers typically ran
 out of time, money or enthusiasm before they could turn to *using* the
@@ -127,7 +127,7 @@ the principal variant sources and encode each independently. A third
 approach is to encode several variants within a single document and
 provide Humdrum "versions" that allow users to select particular
 "readings" from a single file. A fourth approach is to create your own
-"critical" edition \-- based on a close re-examination of the original
+"critical" edition &mdash; based on a close re-examination of the original
 materials.
 
 An important consideration will be the copyright status of the materials
@@ -143,7 +143,7 @@ reprints that correspond to your electronic edition.
 
 The best materials are usually under copyright. If you encode this
 material without permission, you will never be able to distribute the
-encodings \-- even on a non-profit basis. Most modern publishers profess
+encodings &mdash; even on a non-profit basis. Most modern publishers profess
 an interest in electronic publishing, but (at the time of this writing)
 few publishers have any pertinent expertise, and fewer yet are willing
 to encourage or allow the preparation of electronic documents from their
@@ -151,7 +151,7 @@ publication catalogue by third parties. It is likely to take decades
 before the financial and legal issues are satisfactorily addressed.
 
 In some cases, you will be translating from one electronic format to
-another \-- such as from MIDI to
+another &mdash; such as from MIDI to
 [`**kern`](/rep/kern). Once again, be conscious of
 any copyright issues that are raised. Few experiences are more
 discouraging than discovering that your work cannot be distributed
@@ -169,9 +169,9 @@ a subset or selection of works from the given corpus.
 A common expectation is that studying a sample subset of works will
 inform us about the corpus as a whole. That is, it is commonly expected
 that studying a number of works by, say, Offenbach, the scholar may be
-able to identify general characteristics of Offenbach\'s writing. In
+able to identify general characteristics of Offenbach's writing. In
 order for this assumption to be valid, statisticians tell us that the
-sample of works must be a *representative* sample \-- free of all sorts
+sample of works must be a *representative* sample &mdash; free of all sorts
 of possible selection biases.
 
 From a research perspective, the best sample is a *random sample.*
@@ -184,7 +184,7 @@ that share some common feature that makes the collection seem
 However, picking and choosing what to encode will prevent researchers
 from being able to draw general conclusions about the repertory as a
 whole. For example, selecting the first 100 items will typically bias
-the sample to early works in a composer\'s career. Selecting 100 random
+the sample to early works in a composer's career. Selecting 100 random
 items provides a very good statistical sample of a population of 2,000
 items.
 
@@ -192,7 +192,7 @@ Unfortunately, since random sampling has little precedence in
 traditional humanities research, many scholars are resistent to the
 idea. The value of random sampling has been established beyond a doubt
 by statisticians. This is not the place to rehearse the detailed
-arguments. Simply take my word for it: if you can\'t encode a complete
+arguments. Simply take my word for it: if you can't encode a complete
 corpus, the very best solution is to select a random sample.
 
 In making such a random sample, it is essential to resist the temptation
@@ -224,12 +224,12 @@ As you encode the selected materials, editorial problems or questions
 will inevitably arise. As you gain experience, you may realize that
 earlier encoding practices were not the best. You may want to return to
 these problems and encode them in a different manner. Be sure to keep
-notes \-- either pencil marks on a page, or local comments in a file \--
+notes &mdash; either pencil marks on a page, or local comments in a file &mdash;
 so that you can easily revisit these problem sites later. Again, it is
 valuable to encode works in random order in order to avoid possible
-confounds arising from editorial experience. That is, you don\'t want a
-scholar\'s conclusions about differences between early works and late
-works to be merely an artifact of the electronic editor\'s increasing
+confounds arising from editorial experience. That is, you don't want a
+scholar's conclusions about differences between early works and late
+works to be merely an artifact of the electronic editor's increasing
 experience.
 
 Typically, it is more efficient to encode individual parts and then
@@ -260,7 +260,7 @@ The <span class="tool">trans</span> command adds a transposition interpretation 
 in order to identify that the material has been shifted. In the `**kern`
 representation, transposed instruments must be explicitly identified
 using a special "transposing-instrument interpretation" (see *Humdrum
-Reference Manual* \-- Section 3 for details). A suitable interpretation
+Reference Manual* &mdash; Section 3 for details). A suitable interpretation
 can be created by adding the upper-case letter \`I\' prior to the \`T\'
 in the appropriate tandem interpretation. In the case of a horn in F for
 example, the transpostion interpretation would be modified from
@@ -289,7 +289,7 @@ indicator for "harpsichord" is
 
 Standardized instrument class designators include `*ICklav` for keyboard
 instruments and `*ICidio` for percussion instruments, etc., and
-instrument grouping designators \-- such as `*IGripn` for *ripieno*
+instrument grouping designators &mdash; such as `*IGripn` for *ripieno*
 instruments and `*IGacmp` for accompaniment instruments. These
 instrument class designators can also be found in Appendix II.
 
@@ -312,7 +312,7 @@ work:
 ```
 
 Recall that the common system for representing barlines makes a
-distinction between the logical *function* of a barline and it\'s visual
+distinction between the logical *function* of a barline and it's visual
 or *orthographic* appearance. For example, the common system for
 barlines distinguishes between double barlines whose function is to
 indicate the end of a work or movement, and double barlines that simply
@@ -383,7 +383,7 @@ useful to label the introduction, exposition, development,
 recapitulation, etc. Some works include explicitly notated labels. These
 labels may be traditional, e.g. "Coda," or they may reflect
 programatic descriptions, such as the section entitled *Il canto
-degl\'uccelli* \[The song of the birds\] in Vivaldi\'s *The Four
+degl'uccelli* \[The song of the birds\] in Vivaldi's *The Four
 Seasons.*
 
 Where appropriate, suitable section labels should be created and encoded
@@ -445,7 +445,7 @@ editorial signifiers are available: (1) *sic* (information is encoded
 literally, but is questionable) signified by the `Y` character; (2)
 *invisible symbol* (Unprinted note, rest or barline, but logically
 implied) signified by the `y` character; (3) *editorial interpretation*,
-(a "modest" editorial act of interpretation \-- such as the
+(a "modest" editorial act of interpretation &mdash; such as the
 interpretation of accidentals in *musica ficta*) signified by the `x`
 character; (4) *editorial intervention* (a "significant" editorial
 intervention) signified by the `X` character; (5) *footnote*
@@ -470,16 +470,16 @@ to undergo continuous revision. In research, it is common for documents
 to be reinterpreted, annotated, or recast in light of newly found
 documents.
 
-The kern \``x`\' signifies an "editorial interpretation" \-- that the
+The kern \``x`\' signifies an "editorial interpretation" &mdash; that the
 immediately preceding signifier is interpreted. The kern \``xx`\' also
 signifies an editorial interpretation where the immediately preceding
 data token is interpreted. The kern \``X`\' signifies an "editorial
-intervention" \-- that the immediately preceding signifier is an
+intervention" &mdash; that the immediately preceding signifier is an
 editorial addition. The kern \``XX`\' also signifies an editorial
 intervention where the immediately preceding data token is an editorial
-addition. The kern \``y`\' designates a invisible symbol \-- such as an
+addition. The kern \``y`\' designates a invisible symbol &mdash; such as an
 unprinted note or rest that is logically implied. The kern \``Y`\'
-signifies an editorial *sic* marking \-- that the information is encoded
+signifies an editorial *sic* marking &mdash; that the information is encoded
 literally, but is questionable. The kern \``?`\' signifies an editorial
 footnote where the immediately preceding signifier has an accompanying
 editorial footnote (located in a comment record). The kern \``??`\'
@@ -587,7 +587,7 @@ The <span class="tool">perform</span> command allows you to *pause* (press the s
 enter), to increase (type \<) or decrease (type \>) the *tempo,* and to
 *return* to the beginning of the score (type enter). There are many
 other functions within the <span class="tool">perform</span> command; refer to the *Humdrum
-Reference Manual* \-- section 4 for further details.
+Reference Manual* &mdash; section 4 for further details.
 
 
 Data Integrity Using the VTS Checksum Record
@@ -657,7 +657,7 @@ Electronic Citation
 
 Electronic editions of music might be cited in printed or other
 documents by including the following information. The "author" (e.g.
-**!!!COM:**), the "title" \-- either original title (**!!!OTL:**) or
+**!!!COM:**), the "title" &mdash; either original title (**!!!OTL:**) or
 translated title (**!!!XEN:**). The editor (**!!!EED:**), published
 (**!!!YEP:**), date of publication and copyright owner (**!!!YED:**),
 and electronic version (**EEV:**). In addition, a full citation ought to

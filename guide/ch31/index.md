@@ -19,11 +19,11 @@ permalink:	/guide/ch31/index.html
 In initiating a research project, we often begin by selecting a suitable
 repertory for study. A common approach is to focus on a particular
 composer, period, style, or culture. For example, a researcher might
-focus on 17th century canons, or on Beethoven\'s compositions prior to
+focus on 17th century canons, or on Beethoven's compositions prior to
 Opus 20, or on Ojibway songs transcribed in the 1900s. Depending on the
 research task, the user may wish to locate works that conform to highly
-complex criteria \-- such as solo Baroque flute works written in
-compound meters, or slow Russian symphonic movements that don\'t include
+complex criteria &mdash; such as solo Baroque flute works written in
+compound meters, or slow Russian symphonic movements that don't include
 any wind instruments and are written in minor keys.
 
 In this chapter, we discuss how to search entire file-systems for
@@ -80,13 +80,13 @@ means all files under the `scores/bach` directory. The period character:
 tells <span class="unix">find</span> to commence searching from the current directory.
 
 Since <span class="unix">find</span> searches all files under the given path, its operation
-may be quite slow when there are thousands of files to search. It\'s
+may be quite slow when there are thousands of files to search. It's
 wise to restrict the search by choosing a reasonable starting point. For
 example, specifying the path `/scores/bach/chorales` may save a great
-deal of time compared with the path `/scores`. Although we won\'t
+deal of time compared with the path `/scores`. Although we won't
 discuss them in this book, the <span class="unix">find</span> command provides a number of
 options that help to restrict the depth of searches or otherwise
-"prune" the search. When first trying <span class="unix">find</span> it\'s a good idea to
+"prune" the search. When first trying <span class="unix">find</span> it's a good idea to
 limit the searches to small segments of the file system.
 
 
@@ -96,7 +96,7 @@ to test whether the file-name conforms to a given regular expression.
 Consider, for example, the goal of identifying all files representing
 pitch-class ([`**pc`](/rep/pc)) information. The
 Humdrum convention is to identify these files by adding the `.pc`
-extension to the filename \-- such as `opus24.pc`. The following
+extension to the filename &mdash; such as `opus24.pc`. The following
 <span class="unix">find</span> command will traverse through the `/scores` directory (and all
 sub-directories) searching for files that contain the `pc` file
 extension:
@@ -164,8 +164,8 @@ Content Searching
 -----------------
 
 For most music research applications, we are interested in identifying
-files on the basis of their contents. That is, we\'d like to know
-what\'s inside the file before we take any action.
+files on the basis of their contents. That is, we'd like to know
+what's inside the file before we take any action.
 
 
 The <span class="unix">grep</span> command is especially useful in determining whether certain
@@ -212,8 +212,8 @@ find /scores -type f -exec grep -l '\*<a name ="-]*:' "{"></a>" ";"
 
 
 Humdrum reference records are ideal targets for such searches since
-reference records encode information such as the composer\'s name,
-composer\'s dates, title of work, date of composition, movement number,
+reference records encode information such as the composer's name,
+composer's dates, title of work, date of composition, movement number,
 instrumentation, meter classification, and so on. For example, the
 following command identifies all files in the path `/scores` that are
 composed by Franck:
@@ -285,7 +285,7 @@ find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \
 Often the <span class="unix">find</span> command can be used to answer research questions more
 directly. Suppose we wanted to determine whether German drinking songs
 more likely to be in triple meter. There are over four thousand German
-folksongs encoded in Helmut Schaffrath\'s *Essen Folksong Collection*.
+folksongs encoded in Helmut Schaffrath's *Essen Folksong Collection*.
 These works contain genre-related tags encoded as "`AGN`" reference
 records. One of the genres distinguished is "Trinklied" (drinking
 song).
@@ -367,7 +367,7 @@ In summary, the above pipeline identifies all scores that contain both a
 change of key signature as well as a change of meter signature.
 
 
-The <span class="unix">xargs</span> command can also be used to process a list of files \--
+The <span class="unix">xargs</span> command can also be used to process a list of files &mdash;
 where the list has been stored in a file. For example, suppose we used
 the <span class="unix">find</span> command to locate all scores in compound meters written for
 woodwind quintet:

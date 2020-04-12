@@ -25,7 +25,7 @@ examples. A more comprehensive description of `**kern` will be given in
 [Chapter 6.](/guide/ch06) Our intention here is to provide a quick
 introduction.
 
-Consider the opening motive from J.S. Bach\'s *Art of Fugue* shown in
+Consider the opening motive from J.S. Bach's *Art of Fugue* shown in
 Example 2.1. A corresponding `**kern` representation is given below the
 notation.
 
@@ -91,7 +91,7 @@ Lines that begin with an equals-sign indicate *logical* barlines.
 Musical works may begin with either a complete measure or a partial
 measure. In the `**kern` representation, the beginning of the first
 measure is explicitly indicated. In Example 2.1, the encoding for the
-first barline (`=-`) is a functional encoding that doesn\'t correspond
+first barline (`=-`) is a functional encoding that doesn't correspond
 to anything in the printed score. The minus sign following the
 equals-sign indicates that the barline is "invisible." The presence of
 this logical barline allows various Humdrum tools to recognize that the
@@ -129,7 +129,7 @@ repetition. Sharps, flats, and naturals are mutually exclusive in
 
 In Example 2.2, two musical parts are encoded. In the corresponding
 `**kern` encoding, each musical part or voice has been assigned to a
-different musical staff \-- labelled `*staff1` and `*staff2`. Notice
+different musical staff &mdash; labelled `*staff1` and `*staff2`. Notice
 that the upper part has been encoded in the right-most column. The
 layout is exactly as though the musical score were turned sideways.
 
@@ -216,7 +216,7 @@ explicit encoding of all occurrences of B-flats in Example 2.2.
 All pitches are encoded as absolute pitches. In `**kern`, even
 transposing instruments are always represented at (sounding) concert
 pitch. A special *transposition interpretation* is provided to indicate
-the nature of any transposing instrument \-- but the encoded pitches \--
+the nature of any transposing instrument &mdash; but the encoded pitches &mdash;
 selves appear only at concert pitch.
 
 Finally, pitches in `**kern` are encoded as "nominally"
@@ -226,7 +226,7 @@ temperament.
 
 Two other aspects of Example 2.2 are noteworthy. In measure 3 an
 inverted mordent appears on the first note in the bass part. Mordents
-are encoded via the letter \``M`\' \-- upper-case \``M`\' for whole-tone
+are encoded via the letter \``M`\' &mdash; upper-case \``M`\' for whole-tone
 mordents and lower-case \``m`\' for semitone mordents. Inverted mordents
 are similarly encoded using the letter \``W`\'. In Example 2.2, it is
 not clear whether the mordent should be a semitone (consistent with a G
@@ -331,7 +331,7 @@ short slur has occurred within a longer slur. *Elisions* are overlaps,
 for example, where an existing phrase fails to end while a new phrase
 begins. In `**kern` the ampersand character (`&`) is used to mark elided
 slurs or phrases. For example: `{  &{  }  &}` means that two phrases
-overlap \-- the first phrase ending after the second phrase has begun.
+overlap &mdash; the first phrase ending after the second phrase has begun.
 
 Example 2.3 ends with a repeat sign. The `**kern` representation makes a
 distinction between repeat signs that appear in the score and repeat
@@ -505,7 +505,7 @@ A particularly important type of global comment is the [*reference
 record.*](/reference-records). Reference records are formal ways of
 encoding "library-type" information pertaining to a Humdrum document.
 Reference records provide standardized ways of encoding bibliographic
-information \-- suitable for computer-based access.
+information &mdash; suitable for computer-based access.
 
 Humdrum reference records are designated by three exclamation marks at
 the beginning of a line, followed by a letter code, followed by an
@@ -539,7 +539,7 @@ placed at the end of the file.
 
 Reference codes that begin with the letter \``C`\' pertain to the
 composer. The \``COM`\' code identifies the composer (surname first
-followed by given names). The \``CDT`\' code identifies the composer\'s
+followed by given names). The \``CDT`\' code identifies the composer's
 birth and death dates. A special format is used in defining such
 dates, and so there are accurate ways to represent uncertainty,
 approximation, ranges of dates, and alternative dates. The *Humdrum
@@ -547,7 +547,7 @@ Reference Manual* describes date formats in great detail.
 
 Reference codes that begin with the letter \``O`\' pertain to the
 work or opus. The \``OTL`\' code identifies the title of the encoded
-material \-- in this case the \`*Les augures printaniers*\'. The
+material &mdash; in this case the \`*Les augures printaniers*\'. The
 \``OPT`\' code identifies the \`parent\' work from which the encoded
 music belongs. The \``ODE`\' code identifies the name of a person
 or organization to which the work was dedicated. All three of these

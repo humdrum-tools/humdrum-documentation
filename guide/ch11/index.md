@@ -24,7 +24,7 @@ when the pitches are concurrent the distance is referred to as a
 The simplicity of these definitions is deceptive. In real music, the
 determination of pitch intervals can be surprisingly complicated. In
 this chapter we will discuss Humdrum tools related to melodic pitch
-intervals \-- specifically the <span class="tool">mint</span> (melodic
+intervals &mdash; specifically the <span class="tool">mint</span> (melodic
 interval) and <span class="tool">xdelta</span> commands. Discussion of
 harmonic intervals will be delayed until [Chapter 15.](/guide/ch15)
 
@@ -92,7 +92,7 @@ the upper part, two successive double stops are encoded. In the case of
 multiple-stops, it is common to perceive the outer-most notes as
 connected. Hence, the B would resolve to the C and the F would resolve
 to the E. We might call such intervals *unvoiced outer intervals.* We
-may call them *unvoiced* because they aren\'t encoded using separate
+may call them *unvoiced* because they aren't encoded using separate
 spines. The voicings are implied, principally because the notes form an
 \`upper\' or \`lower\' part.
 
@@ -329,7 +329,7 @@ matching the string \``16`\':
 ```
 
 This command would produce an output that highlights the descending
-arpeggiated major chord \-- from C5 to G4 (down a P4), to E4 (down a m3)
+arpeggiated major chord &mdash; from C5 to G4 (down a P4), to E4 (down a m3)
 to C4 (down a M3).
 
 
@@ -388,10 +388,10 @@ output would be:
 *-
 ```
 
-Note that this output doesn\'t quite conform to the `**kern` syntax: the
-barlines have been duplicated as double-stops, and the durations aren\'t
+Note that this output doesn't quite conform to the `**kern` syntax: the
+barlines have been duplicated as double-stops, and the durations aren't
 right for multiple-stops. We can clean up the output using
-<span class="tool">humsed</span>, but the incoherent durations won\'t
+<span class="tool">humsed</span>, but the incoherent durations won't
 cause problems if our intention is to calculate pitch intervals.
 
 If we pipe the above output through the <span class="tool">mint</span> command, the
@@ -659,7 +659,7 @@ Reprise
 Intervals come in a mind-boggling range of types and sizes. Interval
 sizes can be measured in a variety of ways. They can be characterized as
 diatonic qualities such as minor sevenths or augmented sixths. They can
-be measured in terms of semitone distance \-- or even in cents or hertz
+be measured in terms of semitone distance &mdash; or even in cents or hertz
 (frequency difference). Only the diatonic size may be of interest (e.g.,
 "a fifth"), and compound intervals (e.g., major tenth) can be
 expressed by their non-compound equivalents (major third).

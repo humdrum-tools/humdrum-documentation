@@ -44,7 +44,7 @@ The *\*\*text* and *\*\*silbe* Representations
 Syllable- and word-oriented representations are illustrated in the
 following excerpt from a motet by Byrd (Example 27.1). The encoded
 Humdrum data includes three spines: `**text`, `**silbe` and `**kern`.
-Normally, only the `**silbe` and `**kern` data would be encoded \--
+Normally, only the `**silbe` and `**kern` data would be encoded &mdash;
 since the `**text` spine can be generated from the `**silbe`
 representation.
 
@@ -259,7 +259,7 @@ The *fmt* Command
 Another common task is simply to provide a readable text of the text or
 lyrics of a work. Given a `**text` representation, we can use the
 <span class="tool">rid</span> command to eliminate all records except
-non-null data records. This will result in a list of words \-- one word
+non-null data records. This will result in a list of words &mdash; one word
 per line. UNIX provides a simple text formatter called <span class="unix">fmt</span> that will
 assemble words or lines into a block text where all output lines are
 roughly the same width. <a name ="Gregorian_Chant"></a>
@@ -306,7 +306,7 @@ A solis ortus cardine ad usque terrae limitem,  Christum canamus principem,  nat
 Yet another way of arranging the text output would be to parse the text
 according to explicit phrase marks in the
 [`**kern`](/rep/kern) data. This will require a
-little more work, but it\'s worth going through the steps since the same
+little more work, but it's worth going through the steps since the same
 process can be applied to any representation. First, we will need to
 transfer the end-of-phrase signifier (\``}`\') from the `**kern` spine
 to the `**silbe` spine. This transfer entails four steps. (1) Extract
@@ -403,7 +403,7 @@ awk '{print NF}'
 ```
 
 If we add this to the end of our command sequence, then the output would
-simply be a sequence of numbers \-- where each number indicates the
+simply be a sequence of numbers &mdash; where each number indicates the
 number of syllables in successive phrases. In the case of *O Solis
 Ortus* our output would consist of a series of 8s indicating that each
 phrase contains precisely eighth syllables.
@@ -469,7 +469,7 @@ With the following results:
 ```
 
 We can create a summary rhythmic pattern by adding together the values
-in each column \-- that is, counting the number of accented syllables
+in each column &mdash; that is, counting the number of accented syllables
 that occur in each syllable position within the phrase. We can isolate
 each column using the UNIX **cut** command; **cut** is analogous to the
 Humdrum <span class="tool">extract</span> command. Fields are
@@ -500,7 +500,7 @@ position of the phrase, nine stressed syllables in the second syllable
 position, and so on. These results suggest the following rhythmic
 structure: medium-strong-weak-strong-weak-strong-weak-weak. By way of
 conclusion, it appears that this work has a strongly rhythmic text
-structure \-- implying that this \`chant\' might have been sung
+structure &mdash; implying that this \`chant\' might have been sung
 rhythmically.
 
 
@@ -513,7 +513,7 @@ context of several preceding and following words, and provide detailed
 information about the location of the word in some repertory or corpus.
 
 [Suppose, for example, that we wanted to create a concordance for the
-lyrics in Samuel Barber\'s songs. We would like to create a file that
+lyrics in Samuel Barber's songs. We would like to create a file that
 has a structure such as shown in Table 26.3 below. The first column
 identifies the filename. The second column identifies the bar number in
 which the keyword occurs. The third column gives a five-word context
@@ -551,12 +551,12 @@ generate a context of 5 words (**-n 5**) making sure to omit barlines
 sequence. In the second pass, we generate a new spine (`**nums`) that
 contains only bar numbers. The <span class="tool">ditto</span> command
 is used to ensure that every data record contains a bar number. To
-ensure that pick-up bars are numbered with the value 0, we\'ve used
+ensure that pick-up bars are numbered with the value 0, we've used
 <span class="tool">humsed</span> to replace any leading null-tokens
 with the number 0. In the third pass, we replace every data token with
 the name of the file. Finally, we assemble all three of these spines,
 eliminate everything but data records, and also eliminate lines that
-don\'t contain any text. All of this processing is carried out in a
+don't contain any text. All of this processing is carried out in a
 while-loop that cycles through all of the files provided when the
 command is invoked.
 
@@ -580,8 +580,8 @@ rm temp\[1-4\]
 
 Having generated our concordance file, we can now create a simple tool
 that allows us to search for keywords. Suppose we kept our concordance
-information in a file called `~/home/concord/master`. In essence, we\'d
-like to create a command akin to <span class="unix">grep</span> \-- but one that searches this
+information in a file called `~/home/concord/master`. In essence, we'd
+like to create a command akin to <span class="unix">grep</span> &mdash; but one that searches this
 file solely according to the third word in the in the context. We cannot
 use <span class="unix">grep</span> directly since it will find all occurrences of a word no
 matter where it occurs in the context. We need to tell <span class="unix">grep</span> to
@@ -596,8 +596,8 @@ All we need to do is paste our keyword to the end of this expression.
 Below is a simple one-line script for a command called **keyword.** The
 user simply types the command **keyword** followed by a regular
 expression that will allow him/her to search for a given word in
-context. Note that since we\'ve used the extended regular expression
-character \`+\' \-- we must invoke <span class="unix">egrep</span> rather than <span class="unix">grep</span> in our
+context. Note that since we've used the extended regular expression
+character \`+\' &mdash; we must invoke <span class="unix">egrep</span> rather than <span class="unix">grep</span> in our
 script:
 
 
@@ -613,14 +613,14 @@ concordance to help identify metaphor or image related words (such as
 Simile
 ------
 
-One of the most important poetic devices is the *simile* \-- where an
+One of the most important poetic devices is the *simile* &mdash; where an
 analogy or metaphorical link is created between two things ("My love is
 like a red red rose.") In English, similes are often (though not
 always) signalled by the presence of the words "like" or "as."
 
 A simple task involves searching for \`like\' or \`as\' in the lyrics of
 some input. For each occurrence of these words, suppose that we would
-like to output a line that places the word in context \-- specifically
+like to output a line that places the word in context &mdash; specifically
 the preceding and following four words.
 
 First we transform and isolate the text data using the <span class="tool">text</span> and
@@ -683,7 +683,7 @@ interpretations added by **hum**.
 ```bash
 text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 ```
-> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'\--\' \\
+> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'&mdash;\' \\
 > \| rid -Id
 
 
@@ -831,7 +831,7 @@ negative values. Alternatively, it may be appropriate to limit the
 average to (say) the ten most emotionally charged words. We can do this
 by sorting the numerical values and using the <span class="unix">head</span> and <span class="unix">tail</span>
 commands to select the highest or lowest values. In our revised
-processing, we use **sort -n** to sort the values in numerical order \--
+processing, we use **sort -n** to sort the values in numerical order &mdash;
 placing the output in a temporary file. The UNIX <span class="unix">head</span> command allows
 us to access a specified number of lines at the beginning of a file: the
 option **-5** specifies the first five lines. Similarly, the UNIX
@@ -852,7 +852,7 @@ in an average near zero and be mistaken for lyrics that exhibit little
 emotionality. The **stats** command outputs a variance measure that can
 be used to gauge the spread of the data. However, another way to address
 this problem is by ignoring the plus and minus signs in the input. That
-is, a rough index of emotionality \-- independent of whether the emotion
+is, a rough index of emotionality &mdash; independent of whether the emotion
 is predominantly negative or positive would simply focus on the most
 emotionally charged words.
 

@@ -17,11 +17,11 @@ permalink:	/guide/ch38/index.html
 
 
 Much of music research centers on the task of describing things. A
-researcher might offer a description of "House" style, or Wagner\'s
+researcher might offer a description of "House" style, or Wagner's
 orchestration, commonalities in themes by Respighi, or a Balinese
 variation technique. Good descriptions are based on the identification
 of *features*. A "feature" is a notable or characteristic part of
-something \-- something that helps to distinguish one thing from another
+something &mdash; something that helps to distinguish one thing from another
 thing (or one group of things from another group of things).
 
 Not all truthful descriptions qualify as distinctive features. Imagine
@@ -44,14 +44,14 @@ describing something that is commonplace.
 In this chapter, we will describe several methods to help researchers
 determine whether a presumed feature is distinctive. In essence, we will
 ask the following question: "How likely is it that this is a feature of
-some larger class of objects \-- like the class of all musical works?"
+some larger class of objects &mdash; like the class of all musical works?"
 If the feature is commonly found in many situations, then we are not
 justified in claiming that the feature is unique to a particular
 situation.
 
 In order to determine whether a proposed feature is distinctive of a
 work, we need to compare the incidence of occurrence with a body of
-works where we wouldn\'t expect the feature to be so common. In
+works where we wouldn't expect the feature to be so common. In
 systematic musicology, we say we are looking for a comparison or
 *control* sample. There are four basic approaches to establishing a
 control sample:
@@ -66,19 +66,19 @@ Comparison Repertory
 --------------------
 
 By a "comparison repertory" we mean a group of works, that we
-hypothesize do not show the same distinctive feature \-- although in
+hypothesize do not show the same distinctive feature &mdash; although in
 other respects the works are similar.
 
 Suppose a scholar has observed a particular feature that appears to
 occur frequently in the music of Respighi. Is this pattern a
-characteristic feature of Respighi\'s music? We cannot know this by
+characteristic feature of Respighi's music? We cannot know this by
 looking only at the music of Respighi. We must choose a comparison
 repertory and show that the same feature is not common in the comparison
 group.
 
 Ideally, the researcher should choose a comparison repertory that is as
 similar as possible to the target repertory. For example, if we found
-that Respighi\'s music contrasted with Rameau\'s music, we would not be
+that Respighi's music contrasted with Rameau's music, we would not be
 able to dismiss the possibility that the observed differences arise
 because of differences in nationality, or differences in stylistic
 period, or differences in instrumentation, etc. Choosing a similar
@@ -127,7 +127,7 @@ No matter what comparison repertory we choose, someone might be able to
 claim that any observed differences arise due to some other factor. For
 example, we might compare early and late works by Bach as a way of
 tracing his musical development. However, someone might claim that any
-differences found are not related to Bach\'s development as a composer,
+differences found are not related to Bach's development as a composer,
 but are due to different tastes in Weimar versus Leipzig. Bach was
 simply showing his ability to adapt to local tastes.
 
@@ -136,7 +136,7 @@ Randomizing
 -----------
 
 Sometimes scholars formulate hypotheses that are intended to pertain to
-the whole of music \-- that is, the feature is thought to be a musical
+the whole of music &mdash; that is, the feature is thought to be a musical
 universal. In these cases it may be impossible to identify a comparison
 repertory.
 
@@ -235,12 +235,12 @@ efforts to organize melodies using relatively small melodic intervals.
 
 
 A similar approach can be used to address innumerable questions. For
-example, in Haydn\'s music, it seems that Haydn tends to avoid following
+example, in Haydn's music, it seems that Haydn tends to avoid following
 the dominant by a subdominant chord (i.e., *V-IV*). On the other hand,
-Haydn\'s use of the *IV* chord is comparatively infrequent, so the
+Haydn's use of the *IV* chord is comparatively infrequent, so the
 apparent absence of this progression may simply be an artifact of the
 relative scarcity of subdominant chords. We can address this question by
-comparing Haydn\'s actual harmonic progressions with randomly generated
+comparing Haydn's actual harmonic progressions with randomly generated
 progressions. First we count the total number of *V-IV* progressions:
 
 ```bash
@@ -321,7 +321,7 @@ successive lines. The <span class="unix">tac</span> command would transform this
 the output consists of the reverse ordering of numbers from 10 to 1.
 
 If we apply <span class="unix">tac</span> to a Humdrum file, then the result will no longer
-conform to the Humdrum syntax \-- the spine-path terminators will appear
+conform to the Humdrum syntax &mdash; the spine-path terminators will appear
 at the beginning of the file and the exclusive interpretations will
 appear at the end of the file. If we use <span class="unix">tac</span> we could simply restore
 the correct syntax by hand-editing the file and moving the exclusive
@@ -375,9 +375,9 @@ last data token to be moved to the beginning:
 *-
 ```
 
-Let\'s apply this technique to our problem of whether a given composer
+Let's apply this technique to our problem of whether a given composer
 tends to avoid octaves between the soprano and bass voices. First, we
-extract each of the voices. Let\'s also eliminate barlines and use
+extract each of the voices. Let's also eliminate barlines and use
 <span class="tool">ditto</span> to replicate the pitch values through
 null tokens.
 
@@ -388,7 +388,7 @@ extract -i '*sopran' composition | grep -v = | ditto > voice1
 extract -i '*bass' composition | grep -v = | ditto > voice2
 ```
 
-Now let\'s shift one part with respect to the other using
+Now let's shift one part with respect to the other using
 [<span class="tool">reihe</span>](/tool/scramble) <span class="option">s</span>.
 
 ```bash

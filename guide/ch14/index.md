@@ -22,7 +22,7 @@ non-interactive editors that automatically process a given input
 according to a user-specified set of editing instructions. A stream
 editor can be used, for example, to automatically transform a document
 from British spelling to American spelling. Stream editors are
-especially useful when processing large numbers of documents \-- such as
+especially useful when processing large numbers of documents &mdash; such as
 a series of files encoding some musical repertory. In this chapter we
 will introduce two stream editors: <span class="unix">sed</span> and
 <span class="tool">humsed</span>.
@@ -101,7 +101,7 @@ humsed -f revise *inputfile*
 By default the output will be displayed on the screen. Using
 file-redirection (\>) the output can be placed in some other file. Note
 that you should never redirect the output to the same file as the input
-\-- this will destroy the original input file. If necessary, send the
+&mdash; this will destroy the original input file. If necessary, send the
 output to a temporary file, and then use the UNIX **mv** command to
 rename the output.
 
@@ -185,7 +185,7 @@ for all numbers on the current data record.
 Incidentally, Humdrum provides a <span class="tool">num</span> command
 that can be used to insert numbers in data records. The
 <span class="tool">num</span> command supports an elaborate set of
-options, but is not used often, so we won\'t describe it here. The
+options, but is not used often, so we won't describe it here. The
 following command renumbers all of the barlines in an input so that the
 first measure begins with the number 72. (Refer to the *Humdrum
 Reference Manual* for details regarding <span class="tool">num</span>.)
@@ -207,7 +207,7 @@ humsed /^[^=]/s%[0-9]%%g *inputfile*
 
 
 Suppose we wanted to determine which of two MIDI performances exhibits
-more dynamic range \-- that is, which performance has a greater
+more dynamic range &mdash; that is, which performance has a greater
 variability in key-down velocities. Recall from [Chapter
 7](/guide/ch07) that MIDI data tokens consist of three elements
 separated by slashes (/). The third element is the key velocity. First,
@@ -382,7 +382,7 @@ assemble *input* temp | humsed '/1$/s%[A-Ga-g#-]*%r%' | midi \
 
 Perhaps we might want to eliminate all the pitch information, and simply
 listen to the rhythmic structure of a work. That is, we might change all
-of the pitches in a work to a single pitch \-- in the following case,
+of the pitches in a work to a single pitch &mdash; in the following case,
 middle C:
 
 ```bash
@@ -437,7 +437,7 @@ the transformation.
 Switching Signifiers
 --------------------
 
-In some situations, we will want to switch two or more signifiers \--
+In some situations, we will want to switch two or more signifiers &mdash;
 make all A\'s B\'s and all B\'s A\'s. These sorts of tasks require three
 substitutions and involve creating a unique temporary string. For
 example, the following command changes all
@@ -571,8 +571,8 @@ Another useful feature is the <span class="tool">humsed</span>
 "read" or `r` operation. Whenever a leading regular expression is
 matched, a file is read in at that point. Suppose, for example, that we
 want to annotate a file with Humdrum comments identifying the presence
-of cadential 6-4 chords. First, we might create a file \-- `comment.6-4`
-\-- containing the following Humdrum comment:
+of cadential 6-4 chords. First, we might create a file &mdash; `comment.6-4`
+&mdash; containing the following Humdrum comment:
 
 ```bash
 !! A likely cadential 6-4 progression.
@@ -605,7 +605,7 @@ Reprise
 -------
 
 The <span class="unix">sed</span> and <span class="tool">humsed</span> commands provide
-stream editors that can automatically edit a data stream. We\'ve seen
+stream editors that can automatically edit a data stream. We've seen
 that multiple operations can be carried out, either from the command
 line or from a file containing editing instructions. It should be noted
 that the <span class="unix">sed</span> and <span class="tool">humsed</span> commands provide many more editing
