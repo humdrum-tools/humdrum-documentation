@@ -44,7 +44,7 @@ is output. The <span class="tool">pf</span> command can also accept other set th
 inputs, such as <span class="rep">nf</span>, <span class="rep">iv</span>, <span class="rep">pcset</span>, as well as <span class="rep">pf</span> itself.
 
 The following table identifies the input representations accepted by
-**pf.** For descriptions of the various input representations (including
+<span class="tool">pf</span>. For descriptions of the various input representations (including
 <span class="rep">pf</span>) refer to Section 2 *(Representation Reference)* of this
 reference manual.
 

@@ -178,7 +178,7 @@ as equivalent to the following input: ``
 
 ## EXAMPLES ##
 
-The following examples illustrate the operation of **correl.** The first
+The following examples illustrate the operation of <span class="tool">correl</span>. The first
 example shows an excerpt containing considerable parallel motion between
 two polyphonic voices. Measuring the pitch-contour similarity can be
 done using the single input mode. ``
@@ -222,7 +222,7 @@ left-most column.) The template file consists of the numerical sequence:
 1, 2, 3 &mdash; mixed with the letters a, b, c. (This file is shown as the
 middle column below.) Note that the non-numeric characters in both the
 input and template files have no influence on the operation of
-**correl.** The third (output) spine is produced by the following
+<span class="tool">correl</span>. The third (output) spine is produced by the following
 command:
 
 > ` correl -f template input > output.cor`
@@ -261,7 +261,7 @@ template (1, 2, 3). By contrast, the immediately preceding output value
 relationship with the source template (1, 2, 3).
 
 The following example provides a more complicated illustration of
-**correl.** Once again the left-most column is the target input, the
+<span class="tool">correl</span>. Once again the left-most column is the target input, the
 middle column is the source template, and the right-most column shows
 the corresponding output. ``
 

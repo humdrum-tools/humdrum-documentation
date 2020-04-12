@@ -99,7 +99,7 @@ replacement key signature. Either \"pitch-class\" (\*k\[\...\]) or
 
 ## EXAMPLES ##
 
-The following examples illustrate the use of **trans.**
+The following examples illustrate the use of <span class="tool">trans</span>.
 
 Transposition up a minor third differs from transposition up an
 augmented second:
@@ -169,7 +169,7 @@ would contain the tandem interpretation:
 
 ## SAMPLE OUTPUT ##
 
-The following example illustrates the operation of **trans.** Given the
+The following example illustrates the operation of <span class="tool">trans</span>. Given the
 following input: ``
 
 >   ---------- ----------- ---------- ----------- ---------

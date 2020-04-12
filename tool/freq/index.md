@@ -95,9 +95,9 @@ the <span class="option">x</span> option is recommended.
 
 ## EXAMPLES ##
 
-The following example illustrates the use of **freq.** The input
+The following example illustrates the use of <span class="tool">freq</span>. The input
 contains six pitch-related spines &mdash; one of which (<span class="rep">deg</span>) cannot be
-processed by **freq.** In addition, there are two non-pitch-related
+processed by <span class="tool">freq</span>. In addition, there are two non-pitch-related
 spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ---------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------

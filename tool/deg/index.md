@@ -120,9 +120,9 @@ recommended.
 
 ## EXAMPLES ##
 
-The following example illustrates the use of **deg.** The input contains
+The following example illustrates the use of <span class="tool">deg</span>. The input contains
 four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
-processed by **deg.** In addition, there is one non-pitch-related spines
+processed by <span class="tool">deg</span>. In addition, there is one non-pitch-related spines
 (<span class="rep">embell</span>).
 
 > ``

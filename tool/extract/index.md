@@ -55,7 +55,7 @@ In *interpretation mode,* the <span class="tool">extract</span> command outputs 
 containing the interpretation(s) specified by the user. By way of
 example, the command:
 
-> ` extract -i '**semits,**MIDI' hildegard`
+> ` extract -i '<span class="tool">semits</span>,MIDI' hildegard`
 
 will extract all spines in the file `hildegard` containing <span class="rep">semits</span> or
 <span class="rep">MIDI</span> data.

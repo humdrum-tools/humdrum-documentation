@@ -86,7 +86,7 @@ Options are specified in the command line.
 
 ## EXAMPLES ##
 
-The following example illustrates the operation of **urrhythm.** The
+The following example illustrates the operation of <span class="tool">urrhythm</span>. The
 first two spines (<span class="rep">kern</span> and <span class="rep">metpos</span>) constitute the input. The
 third spine (<span class="rep">URrhythm</span>) is added by the <span class="tool">urrhythm</span> command. All
 three spines are given in the output. ``

@@ -134,7 +134,7 @@ spines along with the <span class="rep">synco</span> output.
 
 ## EXAMPLES ##
 
-The following two examples illustrate the use of **synco.** In both
+The following two examples illustrate the use of <span class="tool">synco</span>. In both
 examples, the left-most spines represent the input, and the right-most
 spine (labelled <span class="rep">synco</span>) represents the corresponding output.
 

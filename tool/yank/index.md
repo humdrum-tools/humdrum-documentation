@@ -316,7 +316,7 @@ expression `` `6-$-7' `` will result in no output.
 ## FILES ##
 
 The files `find_reg.awk`, `findpair.awk` and `number.awk` are used by
-**yank.**
+<span class="tool">yank</span>.
 
 ------------------------------------------------------------------------
 

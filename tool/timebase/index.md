@@ -97,7 +97,7 @@ command:
 > ` timebase -t 8 -M ABC`
 
 will add the string `ABC` to the beginning of (otherwise) null data
-records added by **timebase.**
+records added by <span class="tool">timebase</span>.
 
 The <span class="option">m</span> option appends a user-specified marker-string to the end of
 all padded output records. Both the <span class="option">M</span> and <span class="option">m</span> options can be

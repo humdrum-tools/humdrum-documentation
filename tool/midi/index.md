@@ -71,7 +71,7 @@ monophonic inputs, or multi-part inputs that contain strictly
 isochronous chords. Polyphonic inputs containing non-isochronous
 durations will cause a loss of synchronization between the parts. The
 resulting output is apt to cause serious problems with commands such as
-<span class="tool">perform</span> and [**smf.**](smf.html)
+<span class="tool">perform</span> and [<span class="tool">smf</span>.](smf.html)
 
 In contrast to MIDI performance data, canonical musical scores (such as
 <span class="rep">kern</span>) frequently contain unisons &mdash; where two voices share the same
@@ -251,7 +251,7 @@ notice that each input record has been reproduced as a global comment
 The <span class="tool">midi</span> command echoes tempo indications for the benefit of the
 <span class="tool">perform</span> command. If a tempo range is specified (e.g.
 MM92-98), <span class="tool">midi</span> calculates the average range and echoes that (MM95).
-Tempo terms (such as \"largo\") are not handled by **midi.**
+Tempo terms (such as \"largo\") are not handled by <span class="tool">midi</span>.
 
 ------------------------------------------------------------------------
 

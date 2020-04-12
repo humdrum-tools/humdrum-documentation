@@ -87,7 +87,7 @@ whereas the corresponding lower-case options eliminate only null records
 
 ## EXAMPLES ##
 
-The following examples illustrate the use of **rid.** Consider the
+The following examples illustrate the use of <span class="tool">rid</span>. Consider the
 following input file: ``
 
 >   -------------------- -----------

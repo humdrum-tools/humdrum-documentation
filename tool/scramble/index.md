@@ -43,7 +43,7 @@ concurrently.
 In both modes of operation, Humdrum comments and interpretations remain
 unaffected. Comments and interpretations are output intact, and in
 precisely the same location (line number) as in the input. Only data
-records are affected by **scramble.**
+records are affected by <span class="tool">scramble</span>.
 
 Each time <span class="tool">scramble</span> is invoked, a different random ordering is
 generated.

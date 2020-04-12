@@ -117,9 +117,9 @@ output. For most inputs, the <span class="option">x</span> option is recommended
 
 ## SAMPLE OUTPUTS ##
 
-The following example illustrates the use of **kern.** The input
+The following example illustrates the use of <span class="tool">kern</span>. The input
 contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
-<span class="rep">cocho</span>) cannot be processed by **kern.** In addition, there are two
+<span class="rep">cocho</span>) cannot be processed by <span class="tool">kern</span>. In addition, there are two
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------

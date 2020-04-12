@@ -172,7 +172,7 @@ specific` .rc` file on the command line via the <span class="option">r</span> op
 [OPTIONS](#OPTIONS)). Alternatively, <span class="tool">encode</span> will seek a
 default` .rc` file (named `encode.rc`) residing in the the current
 directory, or if absent, in the `$HUMDRUM/etc` directory. The run-time
-control file is essential to the operation of **encode,** and inability
+control file is essential to the operation of <span class="tool">encode</span>, and inability
 to locate a ` .rc` file will cause <span class="tool">encode</span> to abort (see discussion
 in [OPTIONS](#OPTIONS) below).
 
@@ -371,7 +371,7 @@ The \`**v**\' command causes <span class="tool">encode</span> to spawn a <span c
 session &mdash; importing the current <span class="tool">encode</span> text. The <span class="unix">vi</span> text
 editor provides text manipulation capabilities, including searching,
 substitution, and macro-instruction facilities not available in
-**encode.** (Refer to the UNIX <span class="unix">vi</span> reference document for further
+<span class="tool">encode</span>. (Refer to the UNIX <span class="unix">vi</span> reference document for further
 information.) When the <span class="unix">vi</span> session is closed, the edited text file is
 returned to the <span class="tool">encode</span> session.
 
@@ -385,7 +385,7 @@ encoded data. Refer to the **perform (4)** for information regarding the
 types of interactive commands available during proof-listening. The
 <span class="tool">perform</span> command is terminated when the end-of-file is reached, or if
 the user presses either the ESCape key or the letter \`q\'. In either
-case, control is returned to **encode.**
+case, control is returned to <span class="tool">encode</span>.
 
 The \`**b**\' command is used to read buffer text defined in the` .rc`
 file. Up to ten numbered buffers (0-9) can be defined. The command:

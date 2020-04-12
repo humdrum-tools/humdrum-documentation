@@ -225,7 +225,7 @@ of the subordinate templates drawn from the template file.
 
 ## EXAMPLES ##
 
-The following examples illustrate the operation of **simil.** Consider
+The following examples illustrate the operation of <span class="tool">simil</span>. Consider
 first, the *fixed template mode.* In the following example, the source
 input consists of the left-most spine (labelled <span class="rep">foo</span>) and is held in
 a file named `source`; the middle column (not Humdrum) consists of the

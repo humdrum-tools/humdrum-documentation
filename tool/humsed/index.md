@@ -32,7 +32,7 @@ file using file redirection (\> *outputfile).*
 The <span class="tool">humsed</span> command is fashioned after the UNIX <span class="unix">sed</span> stream
 editor. In contrast to **sed,** <span class="tool">humsed</span> editing instructions are
 applied only to Humdrum data records; Humdrum *interpretations* and
-*comments* are not affected by **humsed.**
+*comments* are not affected by <span class="tool">humsed</span>.
 
 The <span class="tool">humsed</span> command accepts one or more <span class="unix">sed</span> instructions.
 Instructions are specified on the command-line within a pair of single
@@ -92,7 +92,7 @@ executed after any command-line editing scripts.
 ## EXAMPLES ##
 
 The following examples illustrate the substitution, transliteration,
-deletion, file-read and file-write instruction provided by **humsed.**
+deletion, file-read and file-write instruction provided by <span class="tool">humsed</span>.
 
 Simple substitution:
 

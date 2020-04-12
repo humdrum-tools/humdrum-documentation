@@ -242,7 +242,7 @@ No two expansion lists can be identified using the same version label.
 
 If two sections contain the same section label in the abbreviated
 document, then subsequent sections having the same label are ignored
-when expanded by **thru.**
+when expanded by <span class="tool">thru</span>.
 
 Inputs that contain different section labels or expansion-lists in
 concurrent spines are illegal and will produce an error.

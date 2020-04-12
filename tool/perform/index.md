@@ -45,7 +45,7 @@ The <span class="tool">perform</span> command provides a set of interactive comm
 allow the user to pause and resume playback, to change tempo, to move to
 any measure by absolute or relative reference, and to search forward or
 backward for commented markers. Editing of MIDI data is not available
-using **perform.**
+using <span class="tool">perform</span>.
 
 Playback can be suspended by typing the space-bar; typing any key will
 resume playback. By itself, typing ENTER will return to the beginning of
@@ -113,7 +113,7 @@ The <span class="tool">perform</span> command is terminated by typing either **q
 or by pressing the escape key (ESC).
 
 The following table summarizes the interactive commands provided by
-**perform.** A summary of these commands can be displayed from within
+<span class="tool">perform</span>. A summary of these commands can be displayed from within
 <span class="tool">perform</span> by typing the **h** (help) command.
 
 >   ------------ ---------------------------------------------------------

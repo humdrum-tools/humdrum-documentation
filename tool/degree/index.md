@@ -117,9 +117,9 @@ recommended.
 
 ## EXAMPLES ##
 
-The following example illustrates the use of **degree.** The input
+The following example illustrates the use of <span class="tool">degree</span>. The input
 contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
-processed by **degree.** In addition, there is one non-pitch-related
+processed by <span class="tool">degree</span>. In addition, there is one non-pitch-related
 spines (<span class="rep">embell</span>). ``
 
 >   ------------------------ ---------- ----------- ----------- ----------- ------------

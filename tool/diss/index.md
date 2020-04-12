@@ -74,7 +74,7 @@ The first component has a frequency of 261 Hz at a sound pressure level
 of 47 decibels. The six components represent the pitches C4 and E4
 played with 3 harmonics each. The third spine
 (<span class="rep">diss</span>) displays the
-corresponding sensory dissonance value as calculated by **diss.** An
+corresponding sensory dissonance value as calculated by <span class="tool">diss</span>. An
 output value of about 65 is typical for a single pure tone at about 60
 dB SPL. An output value near zero results for silence.
 

@@ -11,6 +11,14 @@
 #                into
 #                   <span class="tool">census</span>
 #                and
+#                   **census.** 
+#                into
+#                   <span class="tool">census</span>.
+#                and
+#                   **census,** 
+#                into
+#                   <span class="tool">census</span>,
+#                and
 #                   [**census**](/tool/census)
 #                info
 #                   <span class="tool">census</span>
@@ -84,6 +92,14 @@ sub processFile {
 ##      [**census**](census.html)
 ##   into
 ##      <span class="tool">census</span>
+##   and
+##      **census.** 
+##   into
+##      <span class="tool">census</span>.
+##   and
+##      **census,** 
+##   into
+##      <span class="tool">census</span>,
 
 sub processLine {
 	my ($line) = @_;
@@ -96,6 +112,8 @@ sub processLine {
 		$line =~ s/\[\*\*$command\.\*\*\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;
 		$line =~ s/\[\*\*$command\*\*,\]\(\/tool\/$command\)/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\[\*\*$command\*\*\.\]\(\/tool\/$command\)/<span class="tool">$command<\/span>./g;
+		$line =~ s/\*\*$command\.\*\*/<span class="tool">$command<\/span>./g;
+		$line =~ s/\*\*$command,\*\*/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\*\*$command\*\*/<span class="tool">$command<\/span>/g;
 	}
 	return $line;

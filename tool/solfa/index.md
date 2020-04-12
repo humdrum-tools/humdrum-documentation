@@ -58,7 +58,7 @@ The <span class="tool">solfa</span> command differs from the <span class="tool">
 without regard to major or minor *mode.* For example, in the key of C
 major, <span class="tool">deg</span> and <span class="tool">degree</span> will characterize A-flat as a lowered
 sixth scale degree, whereas the same pitch will be a normal sixth scale
-degree in the key of C minor. In the case of **solfa,** the A-flat will
+degree in the key of C minor. In the case of <span class="tool">solfa</span>, the A-flat will
 be characterized as `le` &mdash; whether or not the key is C major or C
 minor. As in the case of <span class="tool">deg</span> and <span class="tool">degree</span>, the amount of chromatic
 alteration is not represented; once a pitch is \"raised,\" raising it
@@ -120,9 +120,9 @@ signifiers from the output.
 
 ## EXAMPLES ##
 
-The following example illustrates the use of **solfa.** The input
+The following example illustrates the use of <span class="tool">solfa</span>. The input
 contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
-processed by **solfa.** In addition, there is one non-pitch-related
+processed by <span class="tool">solfa</span>. In addition, there is one non-pitch-related
 spines (<span class="rep">embell</span>). ``
 
 >   ----------------------- ---------- ----------- ----------- ----------- ------------

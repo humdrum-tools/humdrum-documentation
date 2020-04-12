@@ -102,8 +102,8 @@ non-pitch-class-related signifiers from the output.
 
 ## EXAMPLES ##
 
-The following example illustrates the use of **pc.** The input contains
-four spines &mdash; one of which (<span class="rep">foo</span>) cannot be processed by **pc.** ``
+The following example illustrates the use of <span class="tool">pc</span>. The input contains
+four spines &mdash; one of which (<span class="rep">foo</span>) cannot be processed by <span class="tool">pc</span>. ``
 
 >   -------------------- ---------- ------------ ---------
 >   !! \`pc\' example.                           
