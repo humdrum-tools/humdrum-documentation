@@ -135,29 +135,46 @@ would produce the following output:
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">context</span> command supports the following
 options:
 
+<style>
 
-   ------------- ------------------------------------------------------------------------------------
-   -b *regexp*   begin a new output record starting with token matching *regexp*
-   -d *string*   use *string* as output delimiter for input records rather than the space character
-   -e *regexp*   begin a new output record starting after token matching *regexp*
-   <span class="option">h</span>       displays a help screen summarizing the command syntax
-   -i *regexp*   ignore any records matching *regexp* when counting
-   -n *n*        amalgamate *n* input data records for each output record
-   -o *regexp*   omit any records matching *regexp* from amalgamated output; do
-                 not count
-   -p *n*        pad *n* (normally trailing) null tokens at the beginning of the
-                 output spine
-   ------------- ------------------------------------------------------------------------------------
+table.mtable tr td:first-child {
+	white-space: nowrap;
+}
+
+</style>
+
+<table class="mtable">
+
+<tr>
+<th>
+Option
+</th>
+<th>
+Description
+</th>
+</tr>
+
+<tr><td> <span class="option">b</span> <i>regexp</i> </td><td> begin a new output record starting with token matching <i>regexp</i>                    </td></tr>
+<tr><td> <span class="option">d</span> <i>string</i> </td><td> use <i>string</i> as output delimiter for input records rather than the space character </td></tr>
+<tr><td> <span class="option">e</span> <i>regexp</i> </td><td> begin a new output record starting after token matching <i>regexp</i>                   </td></tr>
+<tr><td> <span class="option">h</span>               </td><td> displays a help screen summarizing the command syntax                                  </td></tr>
+<tr><td> <span class="option">i</span> <i>regexp</i> </td><td> ignore any records matching <i>regexp</i> when counting                                 </td></tr>
+<tr><td> <span class="option">n</span> <i>n</i>      </td><td> amalgamate <i>n</i> input data records for each output record                           </td></tr>
+<tr><td> <span class="option">o</span> <i>regexp</i> </td><td> omit any records matching <i>regexp</i> from amalgamated output; do not count           </td></tr>
+<tr><td> <span class="option">p</span> <i>n</i>      </td><td> pad <i>n</i> (normally trailing) null tokens at the beginning of the output spine       </td></tr>
+
+</table>
+
 
 Options are specified in the command line. Note that the <span
-class="option">b</span>and <span class="option">e</span> options are
+class="option">b</span> and <span class="option">e</span> options are
 mutually exclusive with the <span class="option">n</span>, <span
-class="option">p</span>, and <span class="option">i</span>options.
+class="option">p</span>, and <span class="option">i</span> options.
 
 In the default operation, <span class="tool">context</span> separates
 amalgamated tokens by inserting a space character. (Thus the input
@@ -208,7 +225,8 @@ terminator or exclusive interpretation in the input.
 ### EXAMPLES
 
 The following excerpt from Edgar Varèse's *Density 21.5 (1936)*
-illustrates the use of **context.** Consider the initial input:
+illustrates the use of <span class="tool">context</span>. Consider
+the initial input:
 
 ```humdrum
 !!!COM: Varèse, Edgar
@@ -446,17 +464,20 @@ interpreters, and revised *awk* (1985).
 ## SEE ALSO ##
 
 <span class="tool">context</span> (4), 
-<span class="unix">grep</span> (UNIX), <span
-class="tool">nf</span> (4), <span class="tool">patt</span> (4),
-<span class="tool">pattern</span> (4), <span class="tool">pcset</span>
-(4)
+<span class="unix">grep</span> (UNIX),
+<span class="tool">nf</span> (4),
+<span class="tool">patt</span> (4),
+<span class="tool">pattern</span> (4),
+<span class="tool">pcset</span> (4)
 
 ------------------------------------------------------------------------
 
 ## WARNINGS ##
 
-The <span class="option">b</span> and <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>,
-<span class="option">p</span>, and <span class="option">i</span> options.
+The <span class="option">b</span> and <span class="option">e</span>
+options are mutually exclusive with the <span class="option">n</span>,
+<span class="option">p</span>, and <span class="option">i</span>
+options.
 
 ------------------------------------------------------------------------
 
