@@ -454,7 +454,7 @@ yank -s Development -r 1 symphony3 | extract -i '**dynam' \
 
 Does a work tend to begin quietly and end loudly, or vice versa? Here we
 might compare the first 10 measures with the final 10 measures. Notice
-the use of [**ditto**](/tool/ditto) to increase the number of
+the use of <span class="tool">ditto</span> to increase the number of
 values participating in the calculation of the average dynamic level:
 
 ```bash
@@ -473,7 +473,7 @@ music tend to be quieter for lower pitches and louder for higher
 pitches? A straightforward way to determine this is to compare dynamic
 level with pitch height \-- represented in semitones
 ([`**semits`](/rep/semits)). The
-[**correl**](/tool/correl) command can then be used to measure
+<span class="tool">correl</span> command can then be used to measure
 Pearson\'s coefficient of correlation. If there is a relationship
 between pitch height and dynamic level then the correlation should be
 positive.
@@ -484,11 +484,11 @@ semits klezmer | correl -s ^= -m
 ```
 
 This command assumes an input consisting of two spines \-- one
-pitch-related and a `**dB` spine. The **-s** option for **correl** is
+pitch-related and a `**dB` spine. The **-s** option for <span class="tool">correl</span> is
 used to skip barlines so bar numbers aren\'t included in the
-calculation. The **-m** option for **correl** disables the "matched
+calculation. The **-m** option for <span class="tool">correl</span> disables the "matched
 pairs" criterion. Normally, if a number is found in one spine but not
-the other then **correl** will complain and terminate. With the **-m**
+the other then <span class="tool">correl</span> will complain and terminate. With the **-m**
 option, each encoded pitch need not have a corresponding dynamic level
 indication and vice versa.
 
@@ -505,7 +505,7 @@ A variation on this procedure might be to restrict the comparison over a
 specified pitch range. For example, one might think that higher pitches
 tend to be louder but that lower pitches are neither softer nor louder
 than usual. In order to test this view we can use the
-[**recode**](/tool/recode) command to reassign "low" pitches
+<span class="tool">recode</span> command to reassign "low" pitches
 to a single value. By way of illustration, the reassignment might
 presume that below G4 (semits=7) there is no relationship between pitch
 height and dynamic level. We might recode all values lower than 7 to a
@@ -531,9 +531,9 @@ average (or maximum) changes in dynamic level. If a work contains many
 crescendos and diminuendos markings, then most of the changes in `**dB`
 values will be small. Conversely, alternations between contrasting
 dynamic levels will cause the average decibel differences to be larger.
-The [**xdelta**](/tool/xdelta) command can be used to calculate
+The <span class="tool">xdelta</span> command can be used to calculate
 the changes in dynamic level. Notice that it is important to avoid using
-the [**ditto**](/tool/ditto) command since repeated dynamic
+the <span class="tool">ditto</span> command since repeated dynamic
 level values will cause the average dynamic difference to approach zero.
 
 ```bash
@@ -543,7 +543,7 @@ extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \
 
 Another approach to this problem might be to count the number of dynamic
 contrasts, avoiding the use of the **db** command. In the following
-pipeline, we use [**context**](/tool/context) to generate pairs
+pipeline, we use <span class="tool">context</span> to generate pairs
 of dynamic markings, and then use **grep** to count the number of
 alternations between *f* and *p*.
 
@@ -607,7 +607,7 @@ notes with a corresponding \*\*MIDI representation.
 
 In order to translate to a \*\*dB representation, we must first isolate
 the key velocity values for key-on events. The following
-[**humsed**](/tool/humsed) command simply eliminates all data up
+<span class="tool">humsed</span> command simply eliminates all data up
 to (and including) the last slash character:
 
 ```bash
@@ -634,7 +634,7 @@ key	velocity	approximate	dB	SPL
 0	0
 ```
 
-An appropriate reassignment file for [**recode**](/tool/recode)
+An appropriate reassignment file for <span class="tool">recode</span>
 would begin as follows:
 
 ```humdrum

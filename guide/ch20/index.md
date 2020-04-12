@@ -26,8 +26,8 @@ renditions, divergent sources, and competing editions or versions.
 This chapter describes the basic Humdrum mechanisms for representing
 non-linear musical structures. The two critical mechanisms are the
 Humdrum *section* and *strophe*. We will encounter examples using the
-[**yank**](/tool/yank), [**thru**](/tool/thru), and
-[**strophe**](/tool/strophe) commands.
+<span class="tool">yank</span>, <span class="tool">thru</span>, and
+<span class="tool">strophe</span> commands.
 
 
 Section Labels
@@ -84,31 +84,31 @@ Using *yank* to Extract Sections
 --------------------------------
 
 
-We encountered the [**yank**](/tool/yank) command earlier in
-[Chapter 12.](/guide/ch12) Recall that **yank** can be used to extract
+We encountered the <span class="tool">yank</span> command earlier in
+[Chapter 12.](/guide/ch12) Recall that <span class="tool">yank</span> can be used to extract
 material by *section* using the **-s** option. For example, if the
 appropriate section is labelled, we might extract the coda of a work as
 follows:
 
 `yank -s Coda -r 1` *file*
 
-Recall that the **-r** option is mandatory with **yank**; in this case,
+Recall that the **-r** option is mandatory with <span class="tool">yank</span>; in this case,
 it identifies the *first* occurrence of a section labelled `Coda`.
 
 
 Using the *thru* Command to Expand Encodings
 --------------------------------------------
 
-The Humdrum [**thru**](/tool/thru) command expands *abbreviated
+The Humdrum <span class="tool">thru</span> command expands *abbreviated
 format* representations to a so-called *through-composed format* in
 which repeated passages are expanded according to an expansion list.
-When the **thru** command is invoked, it eliminates any expansion lists
-present in the input; in addition, **thru** places a `*thru` tandem
+When the <span class="tool">thru</span> command is invoked, it eliminates any expansion lists
+present in the input; in addition, <span class="tool">thru</span> places a `*thru` tandem
 interpretation in all spines immediately following each instance of an
 exclusive interpretation in the input. This marks the file as being in a
 through-composed format. Any other `*thru` tandem interpretations
 encountered in the input are subsequently discarded. As a result,
-running a file through **thru** twice will not result in further changes
+running a file through <span class="tool">thru</span> twice will not result in further changes
 to the file.
 
 
@@ -138,11 +138,11 @@ Here we see two expansion lists, one carries the version label
 `Gould1982` and the other is labelled version `Landowska`. These
 expansion lists might encode different interpretations of the repeats in
 a rounded binary form \-- Landowska performed the second repeat whereas
-Gould (1982) did not. When the **thru** command is invoked, the user can
+Gould (1982) did not. When the <span class="tool">thru</span> command is invoked, the user can
 specify which *version* is intended using the **-v** option. The
 appropriate through-composed expansion will be output.
 
-The following example illustrates the use of the **thru** command in
+The following example illustrates the use of the <span class="tool">thru</span> command in
 selecting particular versions of data in a file. Three sections are
 encoded in the file \-- labelled A, B and C. Each section in this
 example contains just a single data record. Three expansion lists are
@@ -193,7 +193,7 @@ that there are now two sections in the output sharing the same label
 abbreviated-format encodings and can only occur in through-composed
 documents.
 
-Without the **-v** option, **thru** expands the abbreviated file
+Without the **-v** option, <span class="tool">thru</span> expands the abbreviated file
 according to the *unlabelled* (default) expansion list. So the following
 command would result in an output consisting of section A, followed by
 section B, followed by section A (again), followed by section C:
@@ -249,9 +249,9 @@ data4
 
 `` *-  Both Smith and Jones label the work as beginning with section `A'. Later Jones's `B' section begins; then Smith's `B' section; then Jones's `C' section. Note that Smith's `B' section also contains the material Jones has identified as section `C'.  ``
 
-Normally, the **yank** command extracts a labelled section up to the
+Normally, the <span class="tool">yank</span> command extracts a labelled section up to the
 next occurrence of a section label. However, the **-t** option causes
-**yank** to ignore all section labels except for a specified type. We
+<span class="tool">yank</span> to ignore all section labels except for a specified type. We
 could extract Smith\'s \`B\' section by using the **-t** option to limit
 extraction to "Smith"-type section labels:
 
@@ -343,7 +343,7 @@ data7
 `*-  All of the above section labels are identified as type Form`.
 However, two levels are distinguished (denoted by `>` and `>>`).
 Subsections are specified by increasing the number of greater-than
-signs, hence `2nd Theme` is a subsection. When **yank** is invoked, it
+signs, hence `2nd Theme` is a subsection. When <span class="tool">yank</span> is invoked, it
 will extract the identified section up to the next section of
 comparable level. The operation is illustrated in the following sample
 commands: indicating the first and second themes.
@@ -823,8 +823,8 @@ spines rejoin, and then a strophic passage terminator (`*S-`) marks
 the end of the strophic passage.
 The *strophe* Command
 ---------------------
-The Humdrum **strophe** command can be used to isolate or extract
-selective strophic data. The **-x** option for **strophe** allows
+The Humdrum <span class="tool">strophe</span> command can be used to isolate or extract
+selective strophic data. The **-x** option for <span class="tool">strophe</span> allows
 the user to extract a particular labelled strophe. Consider, for
 example the effect of the following command:
 ```bash
@@ -868,15 +868,15 @@ Suppose that we wanted to create a through-composed version of the
 entire work. We would expect as output, just two spines \-- the
 [`**kern`](/rep/kern) spine and the `**silbe`
 spine. First, we need to create the full length version using the
-**thru** command. This will take the default expansion list, and
+<span class="tool">thru</span> command. This will take the default expansion list, and
 repeat the appropriate section for each successive verse.
 ```bash
 thru schubert
 ```
 The effect of this will be to simply repeat section 1 four times.
 However, each repetition will contain all four verses. We can use
-the **strophe** command to eliminate the unwanted verse texts at
-each verse. When no option is given, **strophe** operates by
+the <span class="tool">strophe</span> command to eliminate the unwanted verse texts at
+each verse. When no option is given, <span class="tool">strophe</span> operates by
 preserving strophes in numerical order. That is, when it encounters
 the first strophic section it will preserve strophe \#1 (`*S/1`);
 then when it encounters the next strophic section it will preserve
@@ -887,7 +887,7 @@ illustrated above.
 thru schubert | strophe
 ```
 Incidentally, the input passage need not necessary begin with
-strophe \#1. The **strophe** command will adapt to the input, and
+strophe \#1. The <span class="tool">strophe</span> command will adapt to the input, and
 use the lowest previously unencountered strophe number.
 Using the *strophe* and *thru* Commands
 ---------------------------------------
@@ -920,11 +920,11 @@ Reprise
 Between stophes and sections, highly non-linear musical documents
 can be constructed. We have seen how section labels can be defined,
 how lists of sections ("expansion lists") can be constructed and
-expanded to through-composed formats using the **thru** command. An
+expanded to through-composed formats using the <span class="tool">thru</span> command. An
 unlabelled expansion list is the default version. Other versions
 have labelled expansion lists.
 Several different *types* of section labels can coexist in the same
-document and the **yank** command can be instructed to ignore all
+document and the <span class="tool">yank</span> command can be instructed to ignore all
 sections other than a certain type via the **-t** option.
 The basic ideas introduced in this chapter are summarized in the
 following table.

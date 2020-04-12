@@ -252,7 +252,7 @@ leader
 The input is assumed to contain two voices, each in a separate
 [`**kern`](/rep/kern) spine. The nominally lower
 voice should be in the first spine. For music containing more than two
-voices, the Humdrum **extract** command should be used to select
+voices, the Humdrum <span class="tool">extract</span> command should be used to select
 successive pairs of voices for processing by **leader**.
 
 ```bash
@@ -302,8 +302,8 @@ techniques.
 
 #### RULE: "Avoid parts that are out of range."
 
-The Humdrum **census** command provides a summary of various elementary
-features of any Humdrum input. With the **-k** option, **census**
+The Humdrum <span class="tool">census</span> command provides a summary of various elementary
+features of any Humdrum input. With the **-k** option, <span class="tool">census</span>
 provides a summary of a further ten features pertaining to `**kern`
 format inputs. This includes the highest and lowest notes present.
 
@@ -312,7 +312,7 @@ census -k
 ```
 
 Since we are interested in the highest and lowest notes for each
-individual part (rather than for the whole piece), we should **extract**
+individual part (rather than for the whole piece), we should <span class="tool">extract</span>
 each part before processing it with **census.**
 
 ```bash
@@ -355,7 +355,7 @@ extract -i '*soprano'   | census -k | egrep 'Highest|Lowest'
 Implementing this is simple. We first translate our pitch- related data
 to the melodic interval format \--
 [`**mint`](/rep/mint). This can be done using the
-Humdrum **mint** command. For example, consider the following melodic
+Humdrum <span class="tool">mint</span> command. For example, consider the following melodic
 fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:
 
 
@@ -372,7 +372,7 @@ fragment from the 2nd movement of Bach\'s Brandenburg Concerto No. 5:
   8dd
   \*-
   ----------
-Given this input, the **mint** command will produce the following
+Given this input, the <span class="tool">mint</span> command will produce the following
 output. Plus signs indicate ascending intervals, while minus signs
 indicate descending intervals; \'P\' means perfect, \'M\' means major,
 \'m\' means minor, \'A\' means augmented, and \'d\' means diminished:
@@ -401,7 +401,7 @@ The **-n** option will cause **grep** to prepend the line number of any
 matching patterns, so we can refer back to the original input file.
 
 In order to avoid the letters \`A\' or \`d\' found in comments or
-interpretations, we might consider using the Humdrum **rid** command:
+interpretations, we might consider using the Humdrum <span class="tool">rid</span> command:
 
 ```bash
 rid -GLI  | grep -n '[Ad]'
@@ -431,7 +431,7 @@ beginning of the line does not start with an exclamation mark (i.e.
 Humdrum comment) or an asterisk (i.e. Humdrum interpretation).
 
 If we want to look for augmented or diminished intervals in a particular
-part or voice, we would begin by using the **extract** command to
+part or voice, we would begin by using the <span class="tool">extract</span> command to
 isolate the voice of interest.
 
 Finally, putting all of the elements together in a Unix pipeline, we get
@@ -454,12 +454,12 @@ intervals present.
 Let\'s focus on identifying consecutive fifths \-- since the process is
 the same for octaves.
 
-Either the Humdrum **patt** or **pattern** commands can be used to find
+Either the Humdrum <span class="tool">patt</span> or <span class="tool">pattern</span> commands can be used to find
 patterns that span more than one line or record. For this example,
-we\'ll use **patt**.
+we\'ll use <span class="tool">patt</span>.
 
 First, we need to reformat our input so the data represent harmonic
-intervals rather than pitches. The Humdrum **hint** command will change
+intervals rather than pitches. The Humdrum <span class="tool">hint</span> command will change
 most pitch representations to the harmonic interval representation \--
 [`**hint`](/rep/hint). Consider, for example, the
 following input:
@@ -495,7 +495,7 @@ The following output will be produced:
 (Notice that, in this case, the consecutive fifths are separated by a
 barline.)
 
-Second, we need to define a pattern template for the **patt** command.
+Second, we need to define a pattern template for the <span class="tool">patt</span> command.
 The template is a series of one or more regular expressions that are
 stored in a separate file. In this case the pattern is trivial: just two
 consecutive perfect fifth tokens. We might store the following pattern
@@ -510,17 +510,17 @@ P5
 necessarily be \`perfect,\' we could simply eliminate the letter "P"
 in each interval given in the template.)
 
-Given the above output from the **hint** command, we could search for
+Given the above output from the <span class="tool">hint</span> command, we could search for
 occurrences of the defined pattern using the following command:
 
 The **-f** option is used to identify the file (`template`) in which the
-pattern-template has been stored. The **-s** option tells **patt** of
+pattern-template has been stored. The **-s** option tells <span class="tool">patt</span> of
 any input records that should be skipped during the search process. The
 **-s** option is followed by a regular expression \-- in this case the
 equals-sign \-- so that any input records containing the equals-sign
 (i.e. `**hint` barlines) are ignored.
 
-The default output from **patt** identifies the location of any
+The default output from <span class="tool">patt</span> identifies the location of any
 instances of the pattern it finds in the source document.
 
 The appropriate pipeline is:
@@ -534,7 +534,7 @@ we are searching for parallel perfect fifths only. The consecutive
 fifths rule pertains to all intervals that are compound-equivalents to
 perfect fifths (such as perfect twelfths, etc.).
 
-This additional criteria is easily handled. The **hint** command
+This additional criteria is easily handled. The <span class="tool">hint</span> command
 provides a **-c** option that causes all compound intervals to be
 represented by their non-compound equivalents. For example, major tenths
 and major seventheenths, etc. will all be represented as "M3", and so
@@ -581,7 +581,7 @@ little shell programming, but we\'ll leave that for another time.)
 #### RULE: "Avoid doubling the leading-tone."
 
 Pitches can be identified as "leading-tones" only when we have some
-idea of their key-related scale-degree. The Humdrum **deg** command
+idea of their key-related scale-degree. The Humdrum <span class="tool">deg</span> command
 translates pitch representations to a scale-degree representation where
 the numbers 1 to 7 represent tonic to leading-tone designations.
 
@@ -613,7 +613,7 @@ following passage is in B minor:
   8dd
   \*-
   ----------
-The **deg** command can be used to transform this representation to
+The <span class="tool">deg</span> command can be used to transform this representation to
 scale degree. The passage begins on the dominant (degree \`5\'), ascends
 (\^) to the tonic (\`1\'), ascends to the supertonic (\^2), ascends to
 the median (\^3) and then descends to the leading- tone (v7), etc.:
@@ -694,9 +694,9 @@ a matching \`7\' has nothing to do with scale degrees. We can ensure
 that this doesn\'t happen by first ensuring that *only* scale-degree
 spines are present in the input to be searched.
 
-In order to do this, we can use the Humdrum **extract** command as a
+In order to do this, we can use the Humdrum <span class="tool">extract</span> command as a
 filter, and identify the types of interpretations we want to pass. In
-the following modification to our pipe, the **extract** command has been
+the following modification to our pipe, the <span class="tool">extract</span> command has been
 used to ensure that only [`**deg`](/rep/deg) spines
 are present:
 
@@ -729,9 +729,9 @@ in the above example with the sixteenth-note B concurrent with the held
 quarter-note B in the other part.
 
 This criterion can be accommodated by a further refinement to our
-command pipeline. The Humdrum **ditto** command is used to replace null
+command pipeline. The Humdrum <span class="tool">ditto</span> command is used to replace null
 data tokens by the immediately preceding data token in the same spine.
-Consider first, the output from the **deg** command for the above
+Consider first, the output from the <span class="tool">deg</span> command for the above
 example:
 
 
@@ -746,7 +746,7 @@ example:
   v6 \^1
   \*- \*-
   -------------------
-If we now invoke the **ditto** command, the modified output is:
+If we now invoke the <span class="tool">ditto</span> command, the modified output is:
 
 
 ```humdrum
@@ -787,12 +787,12 @@ representation \-- such as frequency or semitones. This will ensure that
 enharmonically equivalent pitches have the same representation \-- and
 so will facilitate comparison.
 
-The Humdrum **semits** command translates pitches to semitone distances
+The Humdrum <span class="tool">semits</span> command translates pitches to semitone distances
 where middle C is denoted as zero. For example, where two voices both
 play B3 at the same time, both the parts will have a
 [`**semits`](/rep/semits) value of minus one (-1).
 
-Like the **deg** command, the **semits** command provides a **"-x**
+Like the <span class="tool">deg</span> command, the <span class="tool">semits</span> command provides a **"-x**
 option that eliminates from the output stream any characters that don\'t
 pertain to semitones. Hence the following command will eliminate
 durations or other possible numerical representations that might
@@ -876,7 +876,7 @@ extract -i '*soprano,*alto'  | semits -x
 ```
 
 Since part-crossing may occur when one voice is holding a note, we
-should use the Humdrum **ditto** command, as we did for the doubled
+should use the Humdrum <span class="tool">ditto</span> command, as we did for the doubled
 leading-tone problem. Hence:
 
 ```bash
@@ -976,7 +976,7 @@ context -n 2 -p 1 -d XXX  | humsed 's/XXX.*//'
 ```
 
 In this tutorial, we won\'t discuss how this works, since the
-**context** and **humsed** commands will be covered in a future
+<span class="tool">context</span> and <span class="tool">humsed</span> commands will be covered in a future
 tutorial. For now, we can note that shifting (say) the alto part can be
 done by extracting the appropriate voice, and then using the shift
 command sequence shown above:
@@ -1033,7 +1033,7 @@ This processing needs to be applied for each pair of successive voices
 
 Violations of the exposed octaves rules must meet three conditions.
 First, the two voices must be separated by an octave (or two octaves, or
-a unison, etc.). (This suggests that we use the **hint** command with
+a unison, etc.). (This suggests that we use the <span class="tool">hint</span> command with
 the **-c** option in order to reduce compound intervals to their
 non-compound equivalents.) Second, the voices must be moving in the same
 direction. (The `**deg` representation may be suitable here, since it
@@ -1075,7 +1075,7 @@ egrep -n 'P1.*^.*^.*leap.*leap|P1.*v.*v.*leap.*leap'
 Now all we need to do is generate our five spines and assemble them in
 the proper order.
 
-The first spine is easily generated using the **hint** command. Remember
+The first spine is easily generated using the <span class="tool">hint</span> command. Remember
 that the **-c** option means that all intervals an octave or greater
 will be represented by the within-octave equivalent.
 
@@ -1084,7 +1084,7 @@ extract -i '*alto,*tenor'  | hint -c > spine1
 ```
 
 The second and third spines can be generated using the Humdrum
-[**deg**](/tool/deg) command:
+<span class="tool">deg</span> command:
 
 ```bash
 extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3
@@ -1092,7 +1092,7 @@ extract -i '*alto'   | deg > spine2  extract -i '*tenor'  | deg > spine3
 
 The fourth and fifth spines require a little more work. First, we
 calculate the melodic intervals for each voice using the Humdrum
-[**mint**](/tool/mint) command.
+<span class="tool">mint</span> command.
 
 ```bash
 extract -i '*alto'  | mint  ...
@@ -1101,7 +1101,7 @@ extract -i '*alto'  | mint  ...
 Secondly, we need to change all data tokens indicating intervals greater
 than a diatonic second (3 or more semitones) into the data token
 consisting of the (arbitrary) character string "leap". This can be
-done using the [**humsed**](/tool/humsed) stream editor.
+done using the <span class="tool">humsed</span> stream editor.
 
 ```bash
  ...  humsed 's/.*[3-9].*/leap/' > spine4   [spine5 for the other voice]

@@ -579,11 +579,11 @@ The *humdrum* Command
 ---------------------
 
 One of the most important commands in the Humdrum Toolkit is the
-[**humdrum**](/tool/humdrum) command itself. This command is
+<span class="tool">humdrum</span> command itself. This command is
 used to identify whether a file or other input stream conforms to the
-above Humdrum syntax. Where appropriate, the **humdrum** command issues
+above Humdrum syntax. Where appropriate, the <span class="tool">humdrum</span> command issues
 error messages identifying the type and location of any syntactic
-transgressions. If no infractions are found, **humdrum** produces no
+transgressions. If no infractions are found, <span class="tool">humdrum</span> produces no
 output (i.e., in UNIX parlance "silence is golden"). All of the
 commands in the Humdrum toolkit assume that the inputs given to them
 conform to the Humdrum syntax. Whenever you encounter a problem, you

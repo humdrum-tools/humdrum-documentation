@@ -18,27 +18,27 @@ permalink:	/guide/ch21/index.html
 
 The **grep** and **egrep** commands are useful for identifying patterns
 that occur on single lines. As we saw in [Chapter 19,](/guide/ch19) the
-[**context**](/tool/context) command can be used to amalgamate
+<span class="tool">context</span> command can be used to amalgamate
 groups of successive data tokens on a single line \-- and so facilitate
 searching for sequential patterns using **grep** or **egrep**. For many
-tasks, the combination of **context** and **grep** provides the most
+tasks, the combination of <span class="tool">context</span> and **grep** provides the most
 convenient way to search for user-specified patterns. However, not all
 patterns can be conveniently identified using this approach. In this
 chapter we will introduce two additional tools that are intended to
 search directly for sequential patterns without having to use
-**context** to create pseudo-simultaneous collections.
+<span class="tool">context</span> to create pseudo-simultaneous collections.
 
 
 The *patt* Command
 ------------------
 
-The [**patt**](/tool/patt) command may be regarded as a
-two-dimensional version of **grep**. Like **grep**, **patt** searches
+The <span class="tool">patt</span> command may be regarded as a
+two-dimensional version of **grep**. Like **grep**, <span class="tool">patt</span> searches
 for lines that match user-specified regular expressions. However, unlike
-**grep**, **patt** can search for a sequence of records that match a
-sequence of user-specified regular expressions. Specifically, **patt**
+**grep**, <span class="tool">patt</span> can search for a sequence of records that match a
+sequence of user-specified regular expressions. Specifically, <span class="tool">patt</span>
 will look for an input line that matches the first (of potential many)
-user-specified regular expression. Then **patt** will determine whether
+user-specified regular expression. Then <span class="tool">patt</span> will determine whether
 the following input line matches the second user-specified regular
 expression \... and so on, until the entire sequence of the
 user-specified regular expressions are exhausted. A pattern match is
@@ -46,7 +46,7 @@ deemed to occur only if all of the successive regular expressions match
 a contiguous sequence of input lines.
 
 
-The operation of **patt** is easier to describe through an example.
+The operation of <span class="tool">patt</span> is easier to describe through an example.
 Consider the following input using the German *Tonhöhe* pitch
 designations described in [Chapter 4.](/guide/ch04) Recall that the
 [`**Tonh`](/rep/Tonh) system of pitch names allows
@@ -64,7 +64,7 @@ H3
 *-
 ```
 
-Suppose we were looking for possible instances of D-S-C-H. The **patt**
+Suppose we were looking for possible instances of D-S-C-H. The <span class="tool">patt</span>
 command requires a template file that contains one or more successive
 regular expressions. A suitable template file (named `dmitri`) would be
 as follows:
@@ -79,10 +79,10 @@ We would invoke the search as follows:
 
 `patt -f dmitri` *inputfile*
 
-The **-f** option is mandatory: it conveys to **patt** the name of the
+The **-f** option is mandatory: it conveys to <span class="tool">patt</span> the name of the
 template file used in the search.
 
-In the default operation, **patt** simply outputs a global comment
+In the default operation, <span class="tool">patt</span> simply outputs a global comment
 identifying the location of any matching segments. One global comment is
 output for each matching pattern. In the above case, the output would be
 as follows:
@@ -91,7 +91,7 @@ as follows:
 !! Pattern found at line 2 of file Tonh
 ```
 
-The [**patt**](/tool/patt) command will also identify any
+The <span class="tool">patt</span> command will also identify any
 overlapping patterns. For example, suppose we had an input containing an
 ostinato figure in minor thirds:
 
@@ -114,7 +114,7 @@ ostinato figure in minor thirds:
 >   `H3`         D4
 >   `=`          =
 >   ------------ -------------
-If we applied the above **patt** command to this `ostinato` file, we
+If we applied the above <span class="tool">patt</span> command to this `ostinato` file, we
 would get the following output:
 
 ```bash
@@ -124,7 +124,7 @@ would get the following output:
 !! Pattern found at line 11 of file ostinato
 ```
 
-We can instruct **patt** to output specific instances of the pattern
+We can instruct <span class="tool">patt</span> to output specific instances of the pattern
 using the **-e** (echo) option. Consider the following command:
 
 ```bash
@@ -185,11 +185,11 @@ matching record:
 grep -l '^\*[a-g][-#]*:' *
 ```
 
-Recall that the [**deg**](/tool/deg) command is mode sensitive,
-whereas the [**solfa**](/tool/solfa) command is mode
-insensitive. That is, in the key of C major, **deg** will represent the
-pitch E as `3` and in C minor **deg** will represent the pitch E
-(natural) as `3+`. By contrast, the **solfa** command will represent E
+Recall that the <span class="tool">deg</span> command is mode sensitive,
+whereas the <span class="tool">solfa</span> command is mode
+insensitive. That is, in the key of C major, <span class="tool">deg</span> will represent the
+pitch E as `3` and in C minor <span class="tool">deg</span> will represent the pitch E
+(natural) as `3+`. By contrast, the <span class="tool">solfa</span> command will represent E
 as \``mi`\' whether the mode is major or minor.
 
 In order to locate picardy thirds, we can look for raised mediants in
@@ -202,7 +202,7 @@ mediant pitch immediately prior to a double barline. Our template file
 ```
 
 Notice that the plus sign has been placed in square brackets. The
-**patt** command accepts only *extended* regular expressions. The plus
+<span class="tool">patt</span> command accepts only *extended* regular expressions. The plus
 sign is a metacharacter that normally indicates "one or more
 instances." So placing it in square brackets causes the special meaning
 to be escaped.
@@ -252,10 +252,10 @@ second volume of Bach\'s *Well-Tempered Clavier*:
 >   `==`             ==                    ==
 >   `*-`             \*-                   \*-
 >   ---------------- --------------------- ---------------------
-The **patt** command provides a **-s** option that allows the user to
+The <span class="tool">patt</span> command provides a **-s** option that allows the user to
 skip or ignore certain records in the input. Any regular expression can
 be given as a parameter for the **-s** option. In the following
-pipeline, we have instruction **patt** to skip over any records matching
+pipeline, we have instruction <span class="tool">patt</span> to skip over any records matching
 the lower-case letter \``r`\' (the `**kern` rest signifier):
 
 `deg `*inputfile.krn*` | patt -s r -f picardy`
@@ -264,8 +264,8 @@ Even ignoring rests may not be sufficient to identify the raised third
 near the double barline. For example, if any other note from the tonic
 chord follows after the raised third, then the third will appear several
 records prior to the double barline. We can solve this problem by using
-the [**ditto**](/tool/ditto) command discussed in [Chapter
-15;](/guide/ch15) **ditto** can be used to propagate the raised third
+the <span class="tool">ditto</span> command discussed in [Chapter
+15;](/guide/ch15) <span class="tool">ditto</span> can be used to propagate the raised third
 through the sustained final chord. Our revised pipeline is:
 
 ```bash
@@ -284,11 +284,11 @@ P5  P5
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
 [`**hint`](/rep/hint) harmonic-interval
-representation. The **-c** option for [**hint**](/tool/hint)
+representation. The **-c** option for <span class="tool">hint</span>
 collapses compound intervals to their non-compound equivalents so
 consecutive twelfths, nineteenths, etc. will also be identified. In the
 following command pipeline, notice the use of the **-s** option for
-[**patt**](/tool/patt) in order to skip barlines. This ensures
+<span class="tool">patt</span> in order to skip barlines. This ensures
 that crossing a barline does not result in a failure to identify a
 consecutive fifth.
 
@@ -318,7 +318,7 @@ Below is a [`**kern`](/rep/kern) encoding of the
 final two measures along with corresponding
 [`**hint`](/rep/hint) and
 [`**deg`](/rep/deg) spines. The \*\*hint spine was
-generated using [**hint**](/tool/hint) **-l** in order to
+generated using <span class="tool">hint</span> **-l** in order to
 generate intervals with respect to the lowest pitch.
 
 ```bash
@@ -341,9 +341,9 @@ generate intervals with respect to the lowest pitch.
 *-	*-	*-	*-	*-	*-	*-
 ```
 
-Notice that **hint** has failed to generate the passing interval forming
+Notice that <span class="tool">hint</span> has failed to generate the passing interval forming
 the perfect fifth between the E and the A. This can be remedied by using
-**ditto** to duplicate all of the pitches. This will cause **hint** to
+<span class="tool">ditto</span> to duplicate all of the pitches. This will cause <span class="tool">hint</span> to
 generate all of the passing harmonic intervals. The revised \*\*hint
 spine is given below.
 
@@ -399,7 +399,7 @@ commands would be the following:
 ditto -s ^= inputfile | hint -l > temp1  deg inputfile > temp2  assemble temp1 temp2 | patt -s ^= -f Landini-Cadence
 ```
 
-In general, **patt** templates can be used to specify both concurrent
+In general, <span class="tool">patt</span> templates can be used to specify both concurrent
 conditions as well as dynamic or temporal conditions. This allows users
 to define patterns involving a multitude of conditions involving many
 different types of data.
@@ -408,14 +408,14 @@ different types of data.
 Using *patt*\'s Tag Option
 --------------------------
 
-So far, we have seen that [**patt**](/tool/patt) provides two
-kinds of output. In the default operation, **patt** outputs a simple
+So far, we have seen that <span class="tool">patt</span> provides two
+kinds of output. In the default operation, <span class="tool">patt</span> outputs a simple
 global comment each time it finds a matching segment in the input. With
-the **-e** option, **patt** will also echo the specific passage(s)
-found. In addition, **patt** provides a third type of output using the
+the **-e** option, <span class="tool">patt</span> will also echo the specific passage(s)
+found. In addition, <span class="tool">patt</span> provides a third type of output using the
 **-t** option.
 
-When the **-t** option is invoked, **patt** will output the original
+When the **-t** option is invoked, <span class="tool">patt</span> will output the original
 input, plus an addition `**patt` spine. The `**patt` spine typically
 consists of mostly null tokens. However, each time the input matches the
 sought pattern, a user-defined "tag" will appear in the `**patt`
@@ -442,7 +442,7 @@ the beginning of a line that is followed by either the end of the line
 record will be followed by a record containing either `vi` or `VI`
 followed by a semicolon."
 
-When invoking the **patt** command, we can specify our preferred output
+When invoking the <span class="tool">patt</span> command, we can specify our preferred output
 tag along with the **-t** option as follows:
 
 ```bash
@@ -467,7 +467,7 @@ etc.
 
 In [Chapter 26](/guide/ch26) we will learn how to collapse several
 spines into a single spine. This will allow us to assemble the results
-from several "passes" using **patt** \-- one pass for each type of
+from several "passes" using <span class="tool">patt</span> \-- one pass for each type of
 cadence. For example, we could collapse several tagged outputs to
 produce a single spine that identifies all of the various types of
 cadences:
@@ -489,7 +489,7 @@ etc.
 ```
 
 There are no restrictions as to the types of tags that can be generated
-by **patt**. A user might tag the beginning of motivic or thematic
+by <span class="tool">patt</span>. A user might tag the beginning of motivic or thematic
 statements, various harmonic progressions, variation techniques,
 fingering patterns, quotations or allusions, stylistic clichés, etc. In
 [Chapter 35](/guide/ch35) we will use the **-t** option to label
@@ -548,8 +548,8 @@ for the above Krenek passage would be:
   etc.
   `*-`
   --------
-The **-m** option for [**patt**](/tool/patt) invokes a
-"multi-record matching" mode. In this mode, **patt** attempts to match
+The **-m** option for <span class="tool">patt</span> invokes a
+"multi-record matching" mode. In this mode, <span class="tool">patt</span> attempts to match
 as many successive regular expressions in the template file as possible
 for a given input record, before continuing with the next input and
 template records. In this way, several records in the template file may
@@ -565,10 +565,10 @@ patt -f tonerow -t P0 -m Krenek
 The *pattern* Command
 ---------------------
 
-Not all patterns can be identified using **patt**. The Humdrum
-[**pattern**](/tool/pattern) command permits an additional
+Not all patterns can be identified using <span class="tool">patt</span>. The Humdrum
+<span class="tool">pattern</span> command permits an additional
 regular expression feature that is especially useful in musical
-applications. Specifically, **pattern** permits the defining of patterns
+applications. Specifically, <span class="tool">pattern</span> permits the defining of patterns
 spanning more than one line or record. Record-repetition operators are
 specified by following the regular expression with a tab \-- followed by
 either `+`, `*`, or `?`. For example, consider the following
@@ -617,7 +617,7 @@ Patterns of Patterns
 Music often exhibits hierarchical structures where particular types of
 patterns may be embedded in other patterns, or where low-level patterns
 join together to form higher-level patterns. As we have seen, the **-t**
-(tag) option for the **patt** command allows a new output spine to be
+(tag) option for the <span class="tool">patt</span> command allows a new output spine to be
 generated. This spine contains user-defined labels marking the beginning
 of each found pattern. The labels can contain any user-defined text
 string such as `authentic cadence`, `episode`, `Motive 3b`,
@@ -634,7 +634,7 @@ providing unbounded possibilities for searching for patterns of
 patterns.
 
 Consider, for example, the following template for the
-[**pattern**](/tool/pattern) command:
+<span class="tool">pattern</span> command:
 
 ```humdrum
 Theme	1	(tonic)	+
@@ -647,7 +647,7 @@ Coda	?
 The template reads "one or more instances of `Theme 1 (tonic)`,
 followed by zero or more instances of `Bridge`, followed by one or more
 instances of `Theme 2 (tonic)`, followed by zero or one instance of
-`Coda`." This template might be used by **pattern** to identify a
+`Coda`." This template might be used by <span class="tool">pattern</span> to identify a
 Recapitulation. Together with outputs from parallel searches for
 \`Exposition\' and \`Development\' the results of a \`Recapitulation\'
 search might similarly be amalgamated and used as an input for a higher
@@ -661,14 +661,14 @@ Reprise
 
 In this chapter and previous chapters we have identified several
 search-related tools, including the UNIX **grep** and **egrep** commands
-as well as the Humdrum [**patt**](/tool/patt) and
-[**pattern**](/tool/pattern) commands. Each of these tools has
+as well as the Humdrum <span class="tool">patt</span> and
+<span class="tool">pattern</span> commands. Each of these tools has
 different strengths and weaknesses and it is not always clear which tool
 is best for a given task. When searching, don\'t forget to consider how
-[**context**](/tool/context),
-[**humsed**](/tool/humsed), [**rid**](/tool/rid) and
+<span class="tool">context</span>,
+<span class="tool">humsed</span>, <span class="tool">rid</span> and
 other tools might facilitate the searching task. In future chapters will
 will consider how "similarity" tools such as
-[**correl**](/tool/correl) and [**simil**](/tool/simil)
+<span class="tool">correl</span> and <span class="tool">simil</span>
 can contribute to more sophisticated pattern searches.
 

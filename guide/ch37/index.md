@@ -72,8 +72,8 @@ underlay, and even pitch information.
 
 Note that it is always possible to incorporate additional information at
 a later date. Additional information can be inserted into a Humdrum
-encoding by using the [**assemble**](/tool/assemble) and
-[**cleave**](/tool/cleave) commands. In general, it is important
+encoding by using the <span class="tool">assemble</span> and
+<span class="tool">cleave</span> commands. In general, it is important
 that the encoding of electronic documents not consume all of a
 researcher\'s efforts and resources. The most common problem that beset
 early projects in computational musicology was that researchers rarely
@@ -216,7 +216,7 @@ Once you have established your materials and have decided on the type of
 encoding, you can go ahead and begin encoding the documents in random
 order. Use whatever resources are available to you. These might include
 scanning software, MIDI performance capture, or the Humdrum
-[**encode**](/tool/encode) command. Begin by encoding a sample
+<span class="tool">encode</span> command. Begin by encoding a sample
 section or sections. Spend some time determining ways to increase your
 productivity.
 
@@ -242,7 +242,7 @@ Transposing Instruments
 In the case of the `**kern` representation, all parts are represented at
 concert pitch. It is typically easier to encode the parts as written and
 then transpose the result using the Humdrum
-[**trans**](/tool/trans) command. For example, material for
+<span class="tool">trans</span> command. For example, material for
 B-flat trumpet or B-flat clarinet can be transposed using the following
 command:
 
@@ -256,7 +256,7 @@ In the case of clarinet in A, a suitable transposition would be:
 trans -d -2 -c -3
 ```
 
-The **trans** command adds a transposition interpretation to the output
+The <span class="tool">trans</span> command adds a transposition interpretation to the output
 in order to identify that the material has been shifted. In the `**kern`
 representation, transposed instruments must be explicitly identified
 using a special "transposing-instrument interpretation" (see *Humdrum
@@ -396,7 +396,7 @@ can include the space character:
 
 If you include section labels, you must also include a Humdrum
 "Expansion List" to indicate how the sections are connected. The
-Humdrum [**thru**](/tool/thru) command causes a through-composed
+Humdrum <span class="tool">thru</span> command causes a through-composed
 version of a file to be generated according to the expansion list. For
 example, an expansion list for a simple binary work may be encoded as:
 
@@ -412,7 +412,7 @@ and expansion lists must be encoded. In some cases, there is more than
 one way of interpreting how to realize the repeats. The most
 "conventional" realization should be encoded with the *unnamed
 expansion list.* This will specify the default expansion using the
-Humdrum **thru** command. Suppose for example, that you are encoding a
+Humdrum <span class="tool">thru</span> command. Suppose for example, that you are encoding a
 typical minuet and trio. The conventional performance practice involves
 repeating all sections of both the minuet and trio, but then avoiding
 the repeats in the minuet following the Da Capo. A suitable expansion
@@ -555,7 +555,7 @@ Proof-reading Materials
 -----------------------
 
 Once you have encoded your document, you should create a error-checking
-strategy. The Humdrum [**humdrum**](/tool/humdrum) command can
+strategy. The Humdrum <span class="tool">humdrum</span> command can
 be used to identify whether the final encoded output conforms to the
 Humdrum syntax:
 
@@ -563,7 +563,7 @@ Humdrum syntax:
 humdrum full.krn
 ```
 
-Use the Humdrum **proof** **-k** command to identify any syntactical
+Use the Humdrum <span class="tool">proof</span> **-k** command to identify any syntactical
 errors in any encoded `**kern` data:
 
 ```bash
@@ -572,9 +572,9 @@ proof -k full.krn
 
 
 One of the best ways to ensure that musical data makes sense is to
-listen to it. The Humdrum [**midi**](/tool/midi) and
-[**perform**](/tool/perform) commands can be used to listen to
-your data. The **-c** option for **midi** causes the Humdrum data to be
+listen to it. The Humdrum <span class="tool">midi</span> and
+<span class="tool">perform</span> commands can be used to listen to
+your data. The **-c** option for <span class="tool">midi</span> causes the Humdrum data to be
 displayed while the MIDI data is performed. This can further help in
 locating errors.
 
@@ -582,11 +582,11 @@ locating errors.
 midi -c full.krn | perform
 ```
 
-The **perform** command allows you to *pause* (press the space bar), to
+The <span class="tool">perform</span> command allows you to *pause* (press the space bar), to
 *move* to a particular measure (type a measure number followed by
 enter), to increase (type \<) or decrease (type \>) the *tempo,* and to
 *return* to the beginning of the score (type enter). There are many
-other functions within the **perform** command; refer to the *Humdrum
+other functions within the <span class="tool">perform</span> command; refer to the *Humdrum
 Reference Manual* \-- section 4 for further details.
 
 
@@ -600,12 +600,12 @@ Did I make some modification to this file that I\'ve forgotten about?
 Has someone tampered with this data?
 
 Humdrum provides a means for ensuring that a particular file is what it
-purports to be. The [**veritas**](/tool/veritas) command
+purports to be. The <span class="tool">veritas</span> command
 provides a formal means for verifying that a given Humdrum file is
 identical to the original distribution file and has not been modified in
 some way.
 
-The **veritas** command works by looking for a VTS reference record in
+The <span class="tool">veritas</span> command works by looking for a VTS reference record in
 the file. It then calculates a "checksum" for the file (excluding the
 VTS record itself) and compares this value with the encoded VTS value.
 If these values differ, a warning is issued that the file has been
@@ -622,7 +622,7 @@ Open the original file and move to the bottom of the document. Then read
 in the calculated checksum value. Finally, insert the \``!!!VTS: `\'
 reference record designator.
 
-You can check that everything is fine by invoking the **veritas**
+You can check that everything is fine by invoking the <span class="tool">veritas</span>
 command:
 
 The command will complain only if the VTS checksum value does not

@@ -189,13 +189,13 @@ In most notated music, lyrics are written using a syllabic
 representation rather than a word-oriented representation. The `**silbe`
 representation is typically a better representation of the score than
 `**text`. However, for many analytic applications, words often prove to
-be more convenient. The Humdrum **text** command can be used to
+be more convenient. The Humdrum <span class="tool">text</span> command can be used to
 translate `**silbe` data to `**text` data. In general, syllabic
 information is useful for addressing questions related to rhythm and
 rhyme, whereas text information is more useful for addressing questions
 related to semantics, metaphor, word-painting, etc.
 
-Invoking the **text** command is straightforward:
+Invoking the <span class="tool">text</span> command is straightforward:
 
 ```bash
 text inputfile > outputfile
@@ -214,7 +214,7 @@ grep -n 'Liebe' schubert
 Recall that the **-n** option gives the line number of any occurrences
 found. If the input is encoded in the
 [`**silbe`](/rep/silbe) representation, then the
-output of **text** can be piped to **grep**:
+output of <span class="tool">text</span> can be piped to **grep**:
 
 ```bash
 extract -i '**silbe' schubert | text | grep -n 'Liebe'
@@ -230,10 +230,10 @@ extract -i '**silbe' song | text | rid -GLId | sort | uniq
 
 Frequently, it is useful to search for a group of words rather than
 individual words. Suppose we are looking for the phrase "white
-Pangur." The [**context**](/tool/context) command can be used
+Pangur." The <span class="tool">context</span> command can be used
 to amalgamate words as multiple stops. If we are looking for a phrase
 consisting of just two words, we might use the **-n 2** option for
-**context**:
+<span class="tool">context</span>:
 
 ```bash
 text barber | context -n 2 | grep -i 'white Pangur'
@@ -242,7 +242,7 @@ text barber | context -n 2 | grep -i 'white Pangur'
 
 Alternatively, we might amalgamate words so they form sentences, or at
 least phrases. Puntuation marks provide a convenient marker for ending
-the amalgamation process carried out by **context**. In the following
+the amalgamation process carried out by <span class="tool">context</span>. In the following
 command, we have defined a regular expression with a character-class
 containing all of the puntuation marks. The output from this command
 will display all punctuated phrases (one per line) that contain the
@@ -258,7 +258,7 @@ The *fmt* Command
 
 Another common task is simply to provide a readable text of the text or
 lyrics of a work. Given a `**text` representation, we can use the
-[**rid**](/tool/rid) command to eliminate all records except
+<span class="tool">rid</span> command to eliminate all records except
 non-null data records. This will result in a list of words \-- one word
 per line. UNIX provides a simple text formatter called **fmt** that will
 assemble words or lines into a block text where all output lines are
@@ -287,7 +287,7 @@ A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natu
 
 Another useful output would have the text arranged with one sentence or
 phrase on each line. As before we can use the
-[**context**](/tool/context) command with the **-e** option to
+<span class="tool">context</span> command with the **-e** option to
 amalgamate words, where each amalgamated line ends with a punctuation
 mark:
 
@@ -318,7 +318,7 @@ extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \
 ```
 > \> temp1
 
-Notice that [**humsed**](/tool/humsed) has been given two
+Notice that <span class="tool">humsed</span> has been given two
 substitution commands. The first eliminates all data signifiers except
 the close curly brace. The second substitution transforms empty output
 lines to null data records by adding a single period.
@@ -331,7 +331,7 @@ extract -i '**silbe' chant12 | text > temp2
 ```
 
 \(3) Assemble the two temporary files together and use the
-[**cleave**](/tool/cleave) command to join the end-of-phrase
+<span class="tool">cleave</span> command to join the end-of-phrase
 marker to the syllable representation.
 
 ```bash
@@ -339,8 +339,8 @@ assemble temp1 temp2 | cleave -i '**kern,**text' \
 ```
 > -o \'\*\*text\' \> temp3
 
-With this cleaved data we can now use the **context** command to
-amalgamate phrase-related text. Finally, **rid** is used to eliminate
+With this cleaved data we can now use the <span class="tool">context</span> command to
+amalgamate phrase-related text. Finally, <span class="tool">rid</span> is used to eliminate
 everything but non-null data records.
 
 ```bash
@@ -364,7 +364,7 @@ pipeline:
 You might have noticed that each of the above phrases seems to consist
 of eight syllables. We can confirm this by returning to the syllabic
 rather than word-oriented output. For the above command sequence, simply
-omit the **text** command and replace `**text` with `**silbe`. The
+omit the <span class="tool">text</span> command and replace `**text` with `**silbe`. The
 revised script becomes:
 
 ```bash
@@ -447,7 +447,7 @@ unstressed syllable and `1` indicates a stressed syllable:
 ```
 
 The above output was generated using the
-[**humsed**](/tool/humsed) command. Any syllable containing a
+<span class="tool">humsed</span> command. Any syllable containing a
 trailing asterisk (`*`) is re-written as a \`1\', otherwise as a \`0\'.
 
 ```bash
@@ -472,7 +472,7 @@ We can create a summary rhythmic pattern by adding together the values
 in each column \-- that is, counting the number of accented syllables
 that occur in each syllable position within the phrase. We can isolate
 each column using the UNIX **cut** command; **cut** is analogous to the
-Humdrum [**extract**](/tool/extract) command. Fields are
+Humdrum <span class="tool">extract</span> command. Fields are
 delineated by white space (tabs or spaces). For example, **cut -f 1**
 will isolate the first column of numbers. We can then pipe the results
 to the **stats** utility in order to calculate the numerical total. For
@@ -549,10 +549,10 @@ generate a context of 5 words (**-n 5**) making sure to omit barlines
 (**-o =**). We also pad the amalgamated line with three null tokens
 (**-p 3**) so the context is centered near the third word in the
 sequence. In the second pass, we generate a new spine (`**nums`) that
-contains only bar numbers. The [**ditto**](/tool/ditto) command
+contains only bar numbers. The <span class="tool">ditto</span> command
 is used to ensure that every data record contains a bar number. To
 ensure that pick-up bars are numbered with the value 0, we\'ve used
-[**humsed**](/tool/humsed) to replace any leading null-tokens
+<span class="tool">humsed</span> to replace any leading null-tokens
 with the number 0. In the third pass, we replace every data token with
 the name of the file. Finally, we assemble all three of these spines,
 eliminate everything but data records, and also eliminate lines that
@@ -623,8 +623,8 @@ some input. For each occurrence of these words, suppose that we would
 like to output a line that places the word in context \-- specifically
 the preceding and following four words.
 
-First we transform and isolate the text data using the **text** and
-[**extract**](/tool/extract) commands:
+First we transform and isolate the text data using the <span class="tool">text</span> and
+<span class="tool">extract</span> commands:
 
 ```bash
 text inputfile | extract -i '**text' 
@@ -632,7 +632,7 @@ text inputfile | extract -i '**text'
 
 Since the input may contain multiple-stops, we might consider the
 precaution of ensuring no more than one word per data record. For this
-we can use **humsed**. Specifically, we can replace any spaces by a
+we can use <span class="tool">humsed</span>. Specifically, we can replace any spaces by a
 carriage return. Since the carriage return is interpreted by the shell
 as the instruction to begin executing a command, we need to escape it.
 Depending on the shell, the carriage return can be escaped in various
@@ -656,7 +656,7 @@ generate our final output, we need to transform the linear list of words
 into a horizontal list where each line represents a single match for
 "like" or "as."
 
-The [**context**](/tool/context) command would enable us to do
+The <span class="tool">context</span> command would enable us to do
 this. Unfortunately, however, the output from **egrep** fails to conform
 to the Humdrum syntax. In particular, adding `^\*` to the regular
 expression will fail to ensure a proper Humdrum output since preceding
@@ -675,9 +675,9 @@ text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 ```
 > \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
 
-Now we can make use of the **context** command. Each context ends with
+Now we can make use of the <span class="tool">context</span> command. Each context ends with
 the double-dash delimiters generated by **egrep**. The
-[**rid**](/tool/rid) command can be used to eliminate the
+<span class="tool">rid</span> command can be used to eliminate the
 interpretations added by **hum**.
 
 ```bash
@@ -713,7 +713,7 @@ semits * | text | extract -i '**semits,**text'
 
 Since a word may be sustained through more than one pitch, and a pitch
 may be intoned for more than one word, we should use the
-[**ditto**](/tool/ditto) command to ensure that null tokens are
+<span class="tool">ditto</span> command to ensure that null tokens are
 filled-in.
 
 ```bash
@@ -783,10 +783,10 @@ whose lyrics are most emotionally charged. One way to generate a crude
 index of emotionality is to measure the average ratings for the ten most
 emotion-laden words in a given input.
 
-The [**humsed**](/tool/humsed) command provides an appropriate
+The <span class="tool">humsed</span> command provides an appropriate
 place to start. In effect, we would take a table (such as Table 26.4)
 and use it to create a series of substitutions. Emotionally-charged
-words would be replaced by a numerical rating. Our **humsed** script
+words would be replaced by a numerical rating. Our <span class="tool">humsed</span> script
 would have the following form. Notice that the first substitution is
 used to eliminate punctuation marks.
 
@@ -856,7 +856,7 @@ is, a rough index of emotionality \-- independent of whether the emotion
 is predominantly negative or positive would simply focus on the most
 emotionally charged words.
 
-The plus and minus signs can be eliminated using a simple **humsed**
+The plus and minus signs can be eliminated using a simple <span class="tool">humsed</span>
 substitution prior to numerical sorting:
 
 ```bash
@@ -880,7 +880,7 @@ Next we assemble this new spine with the original input:
 
 `assemble charges` *inputfile*
 
-We can isolate data records using **rid** and then use **sort -n** to
+We can isolate data records using <span class="tool">rid</span> and then use **sort -n** to
 sort according to the numbers present in the first column. The most
 emotional charged word will be at the end of the file (largest number)
 so we can use **tail -1** to identify the word:
@@ -922,7 +922,7 @@ Reprise
 In this chapter we have introduced two text-related representations:
 [`**text`](/rep/text) and
 [`**silbe`](/rep/silbe). We have examined the
-**text** command (which translates from `**silbe` to `**text`). We have
+<span class="tool">text</span> command (which translates from `**silbe` to `**text`). We have
 also been exposed to the UNIX **fmt** command (a simple text formatter),
 the **cut** command (similar to **extract -f**), and the **head** and
 **tail** commands.

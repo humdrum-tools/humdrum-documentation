@@ -24,7 +24,7 @@ processing tasks.
 The *census* Command
 --------------------
 
-The Humdrum [**census**](/tool/census) command provides basic
+The Humdrum <span class="tool">census</span> command provides basic
 information about an input stream or file. We can invoke the command by
 typing the command name followed by the name of a file. The command
 
@@ -48,7 +48,7 @@ HUMDRUM	DATA
 Most commands provide *options* that will modify the operation of the
 command in a particular way. In UNIX-style commands, options follow
 after the command name and are typically specified by a single letter
-preceded by a hyphen. The **-k** option with the **census** command will
+preceded by a hyphen. The **-k** option with the <span class="tool">census</span> command will
 give further information pertaining to the Humdrum `**kern`
 representation. With the **-k** option, the output includes the number
 of notes in the file, the longest, shortest, highest, and lowest notes,
@@ -78,7 +78,7 @@ Notice that a distinction is made between the number of notes and the
 number of noteheads. A tied note is considered to be a single "note,"
 although it may be notated using two or more noteheads.
 
-The output from **census** can be restricted to a particular item of
+The output from <span class="tool">census</span> can be restricted to a particular item of
 information by "piping" the output to the UNIX **grep** command.
 
 
@@ -512,8 +512,8 @@ Reprise
 -------
 
 In this chapter we have introduced some elementary ways of processing
-Humdrum files. We noted that the **census** command can be used to
-identify basic statistics about a file. The **-k** option for **census**
+Humdrum files. We noted that the <span class="tool">census</span> command can be used to
+identify basic statistics about a file. The **-k** option for <span class="tool">census</span>
 provides basic information related to `**kern` files, such as the number
 of notes and rests, the highest and lowest notes, the number of
 barlines, etc.

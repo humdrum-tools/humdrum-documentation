@@ -51,90 +51,90 @@ By way of review, we can group the various Humdrum (and UNIX) tools
 according to the type of operation. There are roughly a dozen or so
 classes of tasks:
 
--   ***Displaying things.*** The **ms** command can be used to print or
+-   ***Displaying things.*** The <span class="tool">ms</span> command can be used to print or
     display musical notation.
 -   ***Auditing.*** MIDI sound output can be generated using the
-    [**midi**](/tool/midi) and
-    [**perform**](/tool/perform) commands.
+    <span class="tool">midi</span> and
+    <span class="tool">perform</span> commands.
 -   ***Searching for things.*** When searching for things within
     specified files, appropriate commands include: **grep**, **egrep**,
-    [**yank -m**,](/tool/yank) [**patt**,](/tool/patt)
-    [**pattern**,](/tool/pattern)
-    [**correl**,](/tool/correl) [**simil**](/tool/simil)
+    [**yank -m**,](/tool/yank) <span class="tool">patt</span>,
+    <span class="tool">pattern</span>,
+    <span class="tool">correl</span>, <span class="tool">simil</span>
     and [**humdrum -v**.](/tool/humdrum) When searching for
     files that meet certain conditions, appropriate commands include
     **grep -l**, **egrep -l** and **find**. Most of these search tools
     rely extensively on regular expressions to define patterns of
     characters.
 -   ***Counting things.*** Appropriate commands include: **wc**, **wc
-    -l**, **grep -c**, **egrep -c**, [**census**](/tool/census)
+    -l**, **grep -c**, **egrep -c**, <span class="tool">census</span>
     and **census -k**. Eliminating unnecessary or confounding
-    information can be achieved using [**rid**,](/tool/rid)
-    [**extract**,](/tool/extract) **grep -v**, **sed** and
-    [**humsed**.](/tool/humsed)
+    information can be achieved using <span class="tool">rid</span>,
+    <span class="tool">extract</span>, **grep -v**, **sed** and
+    <span class="tool">humsed</span>.
 -   ***Editing things.*** Manual editing may be done using any text
     editor, such as **emacs** or **vi**. Automated (or "stream")
     editing may be done using **sed** and
-    [**humsed**.](/tool/humsed)
+    <span class="tool">humsed</span>.
 -   ***Editorializing.*** E.g., add an editorial footnote to a specified
     note or passage; indicate that a passage differs from the
     composer\'s autograph.
 -   ***Transforming or translating between representations.***
-    Appropriate commands include: [**cents**,](/tool/cents)
-    [**deg**,](/tool/deg) [**degree**,](/tool/degree)
-    **dur**, [**freq**,](/tool/freq)
-    [**hint**,](/tool/hint) [**humsed**,](/tool/humsed)
-    [**iv**,](/tool/iv) [**kern**,](/tool/kern)
-    [**mint**,](/tool/mint) [**pc**,](/tool/pc)
-    [**pf**,](/tool/pf) [**pitch**,](/tool/pitch)
-    [**reihe**,](/tool/reihe)
-    [**semits**,](/tool/semits)
-    [**solfa**,](/tool/solfa) [**solfg**,](/tool/solfg)
-    **text**, [**tonh**,](/tool/tonh)
-    [**trans**](/tool/trans) and [**vox**.](/tool/vox)
+    Appropriate commands include: <span class="tool">cents</span>,
+    <span class="tool">deg</span>, <span class="tool">degree</span>,
+    <span class="tool">dur</span>, <span class="tool">freq</span>,
+    <span class="tool">hint</span>, <span class="tool">humsed</span>,
+    <span class="tool">iv</span>, <span class="tool">kern</span>,
+    <span class="tool">mint</span>, <span class="tool">pc</span>,
+    <span class="tool">pf</span>, <span class="tool">pitch</span>,
+    <span class="tool">reihe</span>,
+    <span class="tool">semits</span>,
+    <span class="tool">solfa</span>, [**solfg**,](/tool/solfg)
+    <span class="tool">text</span>, [**tonh**,](/tool/tonh)
+    <span class="tool">trans</span> and <span class="tool">vox</span>.
 -   ***Arithmetic transformations of representations.*** Manipulating
     numerical values can be done using
-    [**xdelta**,](/tool/xdelta)
-    [**ydelta**,](/tool/ydelta)
-    [**recode**](/tool/recode) and **awk**.
+    <span class="tool">xdelta</span>,
+    <span class="tool">ydelta</span>,
+    <span class="tool">recode</span> and **awk**.
 -   ***Extracting or selecting information.*** Appropriate commands
-    include: [**extract**,](/tool/extract)
-    [**yank**,](/tool/yank) **grep**, **egrep**, [**yank
-    -m**,](/tool/yank) [**thru**,](/tool/thru)
-    [**strophe**,](/tool/strophe) [**rend**](/tool/rend)
+    include: <span class="tool">extract</span>,
+    <span class="tool">yank</span>, **grep**, **egrep**, [**yank
+    -m**,](/tool/yank) <span class="tool">thru</span>,
+    <span class="tool">strophe</span>, <span class="tool">rend</span>
     and **csplit**.
 -   ***Linking or joining information.*** Appropriate commands include:
-    [**assemble**,](/tool/assemble) **cat**,
-    [**cleave**,](/tool/cleave)
-    [**timebase**,](/tool/timebase)
-    [**context**,](/tool/context)
-    [**ditto**](/tool/ditto) and **join**.
+    <span class="tool">assemble</span>, **cat**,
+    <span class="tool">cleave</span>,
+    <span class="tool">timebase</span>,
+    <span class="tool">context</span>,
+    <span class="tool">ditto</span> and **join**.
 -   ***Generating inventories of things.*** Appropriate commands
     include: **sort** and **uniq**. Once again, unnecessary or
     confounding information can be eliminated using
-    [**rid**,](/tool/rid) [**extract**,](/tool/extract)
+    <span class="tool">rid</span>, <span class="tool">extract</span>,
     **grep -v**, [**yank -m**,](/tool/yank) **sed** or
-    [**humsed**.](/tool/humsed)
+    <span class="tool">humsed</span>.
 -   ***Classifying things.*** Numerical values can be classified using
-    [**recode**;](/tool/recode) non-numerical data can be
-    classified using [**humsed**.](/tool/humsed)
+    [<span class="tool">recode</span>;](/tool/recode) non-numerical data can be
+    classified using <span class="tool">humsed</span>.
 -   ***Labelling things.*** Appropriate commands include: [**patt
-    -t**,](/tool/patt) [**recode**,](/tool/recode)
-    [**humsed**](/tool/humsed) and
-    [**timebase**.](/tool/timebase)
+    -t**,](/tool/patt) <span class="tool">recode</span>,
+    <span class="tool">humsed</span> and
+    <span class="tool">timebase</span>.
 -   ***Comparing whether things are the same or similar.*** Appropriate
     commands include: **diff**, **diff3**, **cmp**,
-    [**correl**](/tool/correl) and
-    [**simil**.](/tool/simil)
+    <span class="tool">correl</span> and
+    <span class="tool">simil</span>.
 -   ***Capturing data.*** MIDI data can be input via
-    [**encode**](/tool/encode) and
-    [**record.**](/tool/record)
+    <span class="tool">encode</span> and
+    <span class="tool">record</span>.
 -   ***Trouble-shooting.*** Appropriate commands include:
-    [**humdrum**,](/tool/humdrum) [**humdrum
-    -v**,](/tool/humdrum) [**proof**,](/tool/proof)
+    <span class="tool">humdrum</span>, [**humdrum
+    -v**,](/tool/humdrum) <span class="tool">proof</span>,
     [**proof -k**,](/tool/proof)
-    [**veritas**,](/tool/veritas) [**midi**](/tool/midi)
-    and [**perform**.](/tool/perform)
+    <span class="tool">veritas</span>, <span class="tool">midi</span>
+    and <span class="tool">perform</span>.
 
 Not all of the existing Humdrum Tools were covered in this book. Nor
 were all of the available options described for all of the tools
@@ -170,42 +170,42 @@ seven questions provide useful guidelines:
 
 -   *What materials do I need to create?*
 
-    > Use [**encode**](/tool/encode) to create new data. Use
-    > [**humdrum**](/tool/humdrum) and
-    > [**proof**](/tool/proof) to check the data. If necessary,
+    > Use <span class="tool">encode</span> to create new data. Use
+    > <span class="tool">humdrum</span> and
+    > <span class="tool">proof</span> to check the data. If necessary,
     > define your own Humdrum representation for a given purpose.
 
 -   *How do I transform my data so it is easier to process?*
 
-    > Use [**recode**](/tool/recode) and
-    > [**humsed**](/tool/humsed) to classify data into various
+    > Use <span class="tool">recode</span> and
+    > <span class="tool">humsed</span> to classify data into various
     > classes \-- such as *up*, *down*, *leap*, *long*, *short*,
     > *difficult*, *easy*, *clarion register*, *dominant*, etc.
     > Use translating/transforming commands such as
-    > [**mint**,](/tool/mint)
-    > [**ydelta**,](/tool/ydelta)
-    > [**pcset**,](/tool/pcset) etc to translate the data to a
+    > <span class="tool">mint</span>,
+    > <span class="tool">ydelta</span>,
+    > <span class="tool">pcset</span>, etc to translate the data to a
     > different representation.
 
 -   *What data should I eliminate?*
 
-    > Use [**rid**,](/tool/rid)
-    > [**extract**,](/tool/extract)
-    > [**yank**,](/tool/yank) **sed**,
-    > [**humsed**,](/tool/humsed) **uniq**, **uniq -d** and
+    > Use <span class="tool">rid</span>,
+    > <span class="tool">extract</span>,
+    > <span class="tool">yank</span>, **sed**,
+    > <span class="tool">humsed</span>, **uniq**, **uniq -d** and
     > **grep -v** to eliminate selective materials.
 
 -   *What data do I need to coordinate?*
 
-    > Use [**context**](/tool/context) to generate contextual
-    > information. Use [**assemble**,](/tool/assemble)
-    > [**rend**](/tool/rend) and
-    > [**cleave**](/tool/cleave) to link information together.
+    > Use <span class="tool">context</span> to generate contextual
+    > information. Use <span class="tool">assemble</span>,
+    > <span class="tool">rend</span> and
+    > <span class="tool">cleave</span> to link information together.
 
 -   *How do I know my results are worthwhile?*
 
     > Use comparative tests whenever you can. Use
-    > [**scramble**](/tool/scramble) -r, **scramble -t**,
-    > **tac** and [**reihe**](/tool/reihe) -s to generate
+    > <span class="tool">scramble</span> -r, **scramble -t**,
+    > **tac** and <span class="tool">reihe</span> -s to generate
     > control groups.
 

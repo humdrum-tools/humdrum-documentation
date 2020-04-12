@@ -25,15 +25,15 @@ from British spelling to American spelling. Stream editors are
 especially useful when processing large numbers of documents \-- such as
 a series of files encoding some musical repertory. In this chapter we
 will introduce two stream editors: **sed** and
-[**humsed**](/tool/humsed).
+<span class="tool">humsed</span>.
 
 
 The *sed* and *humsed* Commands
 -------------------------------
 
-The [**humsed**](/tool/humsed) command is simply a Humdrum
+The <span class="tool">humsed</span> command is simply a Humdrum
 version of the UNIX **sed** stream editor. The syntax and operation of
-**sed** and **humsed** are virtually identical. However, **humsed** will
+**sed** and <span class="tool">humsed</span> are virtually identical. However, <span class="tool">humsed</span> will
 modify only Humdrum data records, whereas **sed** will modify any type
 of record, including Humdrum comments and interpretations. Both stream
 editors provide operations for *substitution*, *insertion*, *deletion*,
@@ -46,7 +46,7 @@ Simple Substitutions
 --------------------
 
 The most frequently used stream-editing operation is substitution. Both
-**humsed** and **sed** designate substitutions by the lower-case letter
+<span class="tool">humsed</span> and **sed** designate substitutions by the lower-case letter
 `s`. Substitutions require two strings: the *target string* to be
 replaced, and the *replacement string* to be introduced. The syntax for
 substitutions is as follows:
@@ -78,7 +78,7 @@ using the backslash character.
 
 There are two ways to execute a substition operation such as given
 above. One way is to give the substitution as a command-line argument to
-**sed** or **humsed**:
+**sed** or <span class="tool">humsed</span>:
 
 ```bash
 humsed s%A%B% filename
@@ -124,7 +124,7 @@ in single quotes. (Alternatively, we could place a backslash immediately
 before the double-quote character.) Note also the presence of the `g`
 option at the end of the string. Permissible options include any
 positive integer or the letter `g`. Without any option, the **sed** and
-**humsed** substitute (s) operation will replace only the *first*
+<span class="tool">humsed</span> substitute (s) operation will replace only the *first*
 occurrence of the string in each data record. The `g` option specifies a
 "global" substitution, in that all occurrences on a given data record
 are replaced. If the option consisted of the number \`3\', then only the
@@ -165,8 +165,8 @@ Sometimes we need to restrict the circumstances where the data are
 eliminated. For example, we might want to eliminate all measure numbers.
 Eliminating all numbers from a `**kern` file will have the undesirable
 consequence of eliminating all note durations as well. Most
-[**humsed**](/tool/humsed) operations can be *preceded* by a
-regular expression delineated by slashes. This tells **humsed** to
+<span class="tool">humsed</span> operations can be *preceded* by a
+regular expression delineated by slashes. This tells <span class="tool">humsed</span> to
 execute this substitution only if the data record matches the leading
 regular expression. For example, the following command eliminates
 measure numbers but not note durations:
@@ -182,13 +182,13 @@ zero and nine, and replace that by an empty string; do this substitution
 for all numbers on the current data record.
 
 
-Incidentally, Humdrum provides a [**num**](/tool/num) command
+Incidentally, Humdrum provides a <span class="tool">num</span> command
 that can be used to insert numbers in data records. The
-[**num**](/tool/num) command supports an elaborate set of
+<span class="tool">num</span> command supports an elaborate set of
 options, but is not used often, so we won\'t describe it here. The
 following command renumbers all of the barlines in an input so that the
 first measure begins with the number 72. (Refer to the *Humdrum
-Reference Manual* for details regarding **num**.)
+Reference Manual* for details regarding <span class="tool">num</span>.)
 
 
 ```bash
@@ -273,9 +273,9 @@ extract -i '**MIDI' perform2 | grep -v ^= | humsed -r revise \
    | rid -GLId | stats
 ```
 
-The **extract** command has been added to ensure that we only process
+The <span class="tool">extract</span> command has been added to ensure that we only process
 [`**MIDI`](/rep/MIDI) data; the **grep** command
-ensures that possible barlines are eliminated, and the **rid** command
+ensures that possible barlines are eliminated, and the <span class="tool">rid</span> command
 eliminates comments and interpretations prior to passing the data to the
 **stats** command.
 
@@ -283,9 +283,9 @@ eliminates comments and interpretations prior to passing the data to the
 Eliminate Everything But \...
 -----------------------------
 
-A common use for [**humsed**](/tool/humsed) is to eliminate
+A common use for <span class="tool">humsed</span> is to eliminate
 signifiers that are not of interest. Stream editors like **sed** and
-**humsed** can be used to dramatically simplify a representation.
+<span class="tool">humsed</span> can be used to dramatically simplify a representation.
 
 Did Monteverdi use equivalent numbers of sharps and flats? Or did he
 favor one accidental over the other? A simple way to determine this is
@@ -314,7 +314,7 @@ humsed 's/[^     ][^     ]*/./g' *inputfile*
 followed by zero or more instances of not-a-tab characters, by a single
 period character.) This sort of command can be useful in generating a
 file that maintains the *structure* but not the *content* of some
-document. Incidentally, neither the **sed** nor the **humsed** commands
+document. Incidentally, neither the **sed** nor the <span class="tool">humsed</span> commands
 support extended regular expressions, so we are not able to use the `+`
 metacharacter in the above substitution.
 
@@ -339,7 +339,7 @@ grep -v ^= *inputfile*
 ```
 
 In the general case, **humsed /\.../d** is preferable to **grep -v**.
-Remember that [**humsed**](/tool/humsed) only manipulates
+Remember that <span class="tool">humsed</span> only manipulates
 Humdrum data records; it never touches comments or interpretations. The
 **grep** command has no such restriction. Consider, for example, the
 following command to eliminate grace notes (acciaccaturas) from a
@@ -462,7 +462,7 @@ Executing from a File
 When several instructions are involved in stream editing, it can be
 inconvenient to type multiple operations on the command line. It is
 easier to place the editing instructions in a file, and use the **-f**
-option (with either **sed** or [**humsed**](/tool/humsed)) to
+option (with either **sed** or <span class="tool">humsed</span>) to
 execute from the file. Consider, for example, the task of rhythmic
 diminution, where the durations of notes are halved. We might create a
 file called `diminute` containing the following operations:
@@ -484,7 +484,7 @@ humsed -f diminute *inputfile*
 Writing to a File
 -----------------
 
-A useful feature of [**humsed**](/tool/humsed) is the "write"
+A useful feature of <span class="tool">humsed</span> is the "write"
 or `w` operation. This operation causes a line to be written to the end
 of a specified file. Suppose, for example, we wanted to collect all
 seventh chords into a separate file called `sevenths`. With a
@@ -522,10 +522,10 @@ In some cases, a stream editor can be used to eliminate or modify data
 that will confound subsequent processing. For example, suppose we wanted
 to count the number of phrases that begin on the subdominant and the
 number of phrases that end on the subdominant. The
-[**deg**](/tool/deg) command will allow us to identify
+<span class="tool">deg</span> command will allow us to identify
 subdominant pitches (via the number \`4\'). Since we would like to
 maintain the phrase indicators, we will avoid the **-x** option for
-**deg**. However, the **-x** option will pass *all* of the non-pitch
+<span class="tool">deg</span>. However, the **-x** option will pass *all* of the non-pitch
 related signifiers, including the duration data which encodes numbers.
 Hence, we will not be able to distinguish the subdominant (\`4\') pitch
 from a `**kern` quarter-note (\`4\'). The problem is resolved by first
@@ -567,7 +567,7 @@ context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
 Reading a File as Input
 -----------------------
 
-Another useful feature is the [**humsed**](/tool/humsed)
+Another useful feature is the <span class="tool">humsed</span>
 "read" or `r` operation. Whenever a leading regular expression is
 matched, a file is read in at that point. Suppose, for example, that we
 want to annotate a file with Humdrum comments identifying the presence
@@ -578,7 +578,7 @@ of cadential 6-4 chords. First, we might create a file \-- `comment.6-4`
 !! A likely cadential 6-4 progression.
 ```
 
-We can use the Humdrum [**pattern**](/tool/pattern) command (to
+We can use the Humdrum <span class="tool">pattern</span> command (to
 be described in [Chapter 21](/guide/ch21)), as follows:
 
 File `template`:
@@ -604,13 +604,13 @@ humsed 'cadential-64/r comment.6-4' output > commented.output
 Reprise
 -------
 
-The **sed** and [**humsed**](/tool/humsed) commands provide
+The **sed** and <span class="tool">humsed</span> commands provide
 stream editors that can automatically edit a data stream. We\'ve seen
 that multiple operations can be carried out, either from the command
 line or from a file containing editing instructions. It should be noted
-that the **sed** and **humsed** commands provide many more editing
+that the **sed** and <span class="tool">humsed</span> commands provide many more editing
 facilities than those discussed in this chapter. Some 25 operations are
-provided by **sed** and **humsed**. For example, segments of text can be
+provided by **sed** and <span class="tool">humsed</span>. For example, segments of text can be
 stored in various buffers, the contents of these buffers modified, and
 the results placed anywhere in the output text. Markers can be set at
 particular points and conditional branch statements executed.

@@ -20,8 +20,8 @@ In the previous chapter we learned how to extract parts and passages
 from Humdrum files. In this chapter we discuss the reverse procedures:
 how to assemble and coordinate larger documents from individual segments
 and parts. We will discuss four tools: the UNIX **cat** command, and the
-Humdrum [**assemble**](/tool/assemble),
-[**timebase**](/tool/timebase) and [**rid**](/tool/rid)
+Humdrum <span class="tool">assemble</span>,
+<span class="tool">timebase</span> and <span class="tool">rid</span>
 commands.
 
 
@@ -96,10 +96,10 @@ Notice that each complete measure ends with spine-path terminators and
 that the [`**kern`](/rep/kern) exclusive
 interpretations are repeated. This organization has a number of
 repercussions for various Humdrum tools. For example, the
-[**mint**](/tool/mint) command calculates melodic intervals
-between successive notes within a spine. However, **mint** will not
+<span class="tool">mint</span> command calculates melodic intervals
+between successive notes within a spine. However, <span class="tool">mint</span> will not
 calculate intervals between pitches that are separated by a spine-path
-terminator. In other words, in the above output, **mint** will fail to
+terminator. In other words, in the above output, <span class="tool">mint</span> will fail to
 calculate the melodic intervals between notes in successive measures.
 
 
@@ -107,8 +107,8 @@ The *rid* Command
 -----------------
 
 This problem can be resolved by using the Humdrum
-[**rid**](/tool/rid) command. The **rid** command can be used to
-eliminate various kinds of records. Each option for **rid** eliminates a
+<span class="tool">rid</span> command. The <span class="tool">rid</span> command can be used to
+eliminate various kinds of records. Each option for <span class="tool">rid</span> eliminates a
 different class of records. Here are the record classes with their
 associated options:
 
@@ -158,10 +158,10 @@ local comments, interpretations, and null data records:
 rid -GLId
 ```
 
-The option combination **-GLId** is very common with **rid** since only
+The option combination **-GLId** is very common with <span class="tool">rid</span> since only
 non-null data records are retained in the output.
 
-With the **-u** option, **rid** will remove "unnecessary" exclusive
+With the **-u** option, <span class="tool">rid</span> will remove "unnecessary" exclusive
 interpretations. Exclusive interpretations are deemed unnecessary if
 they don\'t change the current status of the data. In the following
 example, the second `**psaltery` interpretation is redundant. The **rid
@@ -179,7 +179,7 @@ exclusive interpretation \-- leaving a continuous data spine.
 *-
 ```
 
-In addition, **rid** provides a **-t** option which removes
+In addition, <span class="tool">rid</span> provides a **-t** option which removes
 "duplicate" or repeated tandem interpretations. In the above example
 there is no need to repeat the meter signature and key signature in each
 measure. The following command will concatenate each of the three
@@ -239,7 +239,7 @@ Assembling Parts Using the *assemble* Command
 
 Assembling parts into a full score is slightly more challenging than
 concatenating together musical segments. The principle tool for joining
-spines together is the [**assemble**](/tool/assemble) command.
+spines together is the <span class="tool">assemble</span> command.
 Consider the following two files:
 
 ```humdrum
@@ -268,7 +268,7 @@ E
 *-
 ```
 
-These two files can be aligned side by side using **assemble**:
+These two files can be aligned side by side using <span class="tool">assemble</span>:
 
 ```bash
 assemble letters numbers
@@ -297,13 +297,13 @@ global comments occur at the same location in both files, only a single
 instance of the comment is output. (4) Dissimilar global comments are
 output successively.
 
-The files joined by **assemble** are not confined to a single spine. For
+The files joined by <span class="tool">assemble</span> are not confined to a single spine. For
 example, one input file may contain 2 spines and a second file may
 contain 20 spines. The resulting output will contain 22 spines. There is
 no limit to the number of files that can be assembled at one time.
 
 In many cases, the input files will have dissimilar lengths. The
-**assemble** command will correctly terminate the appropriate spines.
+<span class="tool">assemble</span> command will correctly terminate the appropriate spines.
 For example, in the above case, if the `numbers` file contained only the
 numbers 1 to 3, the assembled output would appear as follows:
 
@@ -322,7 +322,7 @@ E
 *-	
 ```
 
-If the order of the input files was reversed, **assemble** would produce
+If the order of the input files was reversed, <span class="tool">assemble</span> would produce
 an output with the appropriate spine-path changes:
 
 ```humdrum
@@ -341,7 +341,7 @@ E
 ```
 
 Note that if all of the input files conform to the Humdrum syntax, then
-[**assemble**](/tool/assemble) guarantees that the assembled
+<span class="tool">assemble</span> guarantees that the assembled
 output will also conform to the Humdrum syntax.
 
 
@@ -370,15 +370,15 @@ two quarter notes, whereas the second file contains four eighth notes:
 *-
 ```
 
-Using **assemble** to paste them together will clearly lead to an
+Using <span class="tool">assemble</span> to paste them together will clearly lead to an
 uncoordinated result. The two quarter notes in file 1 will be
 incorrectly matched with the first two eighth notes in file 2.
 
-The Humdrum [**timebase**](/tool/timebase) command can be used
+The Humdrum <span class="tool">timebase</span> command can be used
 to reformat either [`**kern`](/rep/kern) or
 [`**recip`](/rep/recip) inputs so that each output
 data record represents an equivalent slice (elapsed duration) of time.
-(Barlines are ignored by **timebase**.) The **timebase** command
+(Barlines are ignored by <span class="tool">timebase</span>.) The <span class="tool">timebase</span> command
 achieves this by padding an input with null data records. In the above
 case, we would preprocess file 1 as follows:
 
@@ -401,7 +401,7 @@ The new file would look like this:
 The **-t** option is used to indicate the "time base" \-- in this
 case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
-using the **assemble** command as before. The command:
+using the <span class="tool">assemble</span> command as before. The command:
 
 ```bash
 assemble file1.tb file2
@@ -432,7 +432,7 @@ consider a revised `file2`:
 *-
 ```
 
-Before assembling the two parts, we would need to apply the **timebase**
+Before assembling the two parts, we would need to apply the <span class="tool">timebase</span>
 command to this file (using the same 8th-note time-base value).
 Assembling the two "time-based" files would produce the following
 result:
@@ -451,8 +451,8 @@ result:
 Notice that we have a spurious null data record in the last line; both
 parts encode null tokens. For most processing, the presence of null data
 records is inconsequential. However, if we wish, these null data records
-can be eliminated using the **rid** command with the **-d** option. In
-fact it is common to follow an **assemble** command with **rid -d** to
+can be eliminated using the <span class="tool">rid</span> command with the **-d** option. In
+fact it is common to follow an <span class="tool">assemble</span> command with **rid -d** to
 strip away unnecessary null data records. The command:
 
 ```bash
@@ -471,7 +471,7 @@ would result in the following output:
 *-	*-
 ```
 
-The [**timebase**](/tool/timebase) command can be applied to
+The <span class="tool">timebase</span> command can be applied to
 multi-spine inputs as well as single-spine inputs. Consider, the
 following input:
 
@@ -517,7 +517,7 @@ The corresponding output is as follows.
 *-	*-	*-	*-	*-
 ```
 
-Notice that **timebase** has added a tandem interpretation (`*tb32`).
+Notice that <span class="tool">timebase</span> has added a tandem interpretation (`*tb32`).
 This indicates that the output has been processed so that each
 non-barline data record represents an elapsed duration equivalent to a
 thirty-second note.
@@ -528,7 +528,7 @@ Assembling N-tuplets
 
 Typically, one can simply use the shortest duration present as a guide
 for a suitable time-base value. The shortest duration can be determined
-using the [**census**](/tool/census) -k command described in
+using the <span class="tool">census</span> -k command described in
 [Chapter 4.](/guide/ch04) However, tuplets require a little more
 sophistication. Suppose we wanted to assemble two parts, one containing
 just eighth-notes and the other containing just quarter-note triplets.
@@ -578,9 +578,9 @@ Checking an Assembled Score Using *proof*
 In assembling any score from a set of parts, there is always the danger
 of using the wrong time-base value. When parts are miscoordinated, it is
 typically the consequence of one or more notes being discarded by
-**timebase**. Fortunately, such miscoordinations are easily detected by
-applying the [**proof**](/tool/proof) command to any assembled
-`**kern` output. The **proof** utility checks `**kern` representations
+<span class="tool">timebase</span>. Fortunately, such miscoordinations are easily detected by
+applying the <span class="tool">proof</span> command to any assembled
+`**kern` output. The <span class="tool">proof</span> utility checks `**kern` representations
 for a wide variety of possible encoding errors or ambiguities:
 
 ```bash
@@ -590,22 +590,22 @@ proof fullscore
 By way of summary, creating a full score from a set of
 [`**kern`](/rep/kern) parts involves the following
 five tasks: (1) Identify a common duration factor for all the parts. Use
-[**census**](/tool/census) to determine the shortest duration;
+<span class="tool">census</span> to determine the shortest duration;
 if any of the parts contains an N-tuplet, then the common duration
 factor may be smaller than the shortest note. (2) Use the
-[**timebase**](/tool/timebase) command to expand each input file
+<span class="tool">timebase</span> command to expand each input file
 separately using the common duration factor. (3) Assemble the parts
-using [**assemble**.](/tool/assemble) (4) If desired, eliminate
+using <span class="tool">assemble</span>. (4) If desired, eliminate
 unnecessary null data records usingi [**rid -d**.](/tool/rid)
 (5) Check the assembled score for rhythmic coherence using the
-[**proof**](/tool/proof) command.
+<span class="tool">proof</span> command.
 
 
 Other Uses for the *timebase* Command
 -------------------------------------
 
-The most common use of **timebase** is as a way of expanding a file by
-padding it with null data records. However, **timebase** can also be
+The most common use of <span class="tool">timebase</span> is as a way of expanding a file by
+padding it with null data records. However, <span class="tool">timebase</span> can also be
 used to contract a file, giving us only those sonorities that lie a
 fixed duration apart. For example, specifying a time-base of **-t 2**
 will cause only those sonorities that are separated by a half-note
@@ -631,9 +631,9 @@ grep -v ^= waltz | timebase -t 1. > 3rd_beat
 ```
 
 Note that the use of **grep** here is essential in order to eliminate
-barlines. The **timebase** command resets itself with each barline, so
+barlines. The <span class="tool">timebase</span> command resets itself with each barline, so
 time-base durations are calculated from the beginning of the bar. When
-barlines are eliminated, **timebase** cannot synchronize to the
+barlines are eliminated, <span class="tool">timebase</span> cannot synchronize to the
 beginning of each bar and so simply floats along at the fixed time-base.
 
 
@@ -643,9 +643,9 @@ Additional Uses of *assemble* and *timebase*
 Although we normally assemble parts together, sometimes it is useful to
 assemble entire scores together. Suppose we wanted to listen to a theme
 at the same time as one of its variations. We might first use
-[**yank**](/tool/yank) to extract the appropriate sections. At
+<span class="tool">yank</span> to extract the appropriate sections. At
 the same time we might determine a common duration factor and expand
-them using **timebase**.
+them using <span class="tool">timebase</span>.
 
 ```bash
 yank -s Theme -r 1 blacksmith | timebase -t 32 > temp1
@@ -656,7 +656,7 @@ yank -s 'Variation 1' -r 1 blacksmith | timebase -t 32 > temp2
 
 Then we assemble the two sections together, translate to the
 [`**MIDI`](/rep/MIDI) representation and use
-[**perform**](/tool/perform) to listen to both sections at the
+<span class="tool">perform</span> to listen to both sections at the
 same time:
 
 ```bash
@@ -665,7 +665,7 @@ assemble temp1 temp2 | midi | perform
 
 Similarly, suppose we would like to compare the bass lines for each
 variation in some set. We might extract each of the bass lines, assemble
-them into a single score, and then use the **ms** and **ghostview**
+them into a single score, and then use the <span class="tool">ms</span> and **ghostview**
 commands to allow us to see all of the bass lines for all of the
 variations concurrently.
 
@@ -683,12 +683,12 @@ assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps
 ghostview basslines.ps
 ```
 
-The most common use of **assemble** is not to assemble parts, but to
+The most common use of <span class="tool">assemble</span> is not to assemble parts, but to
 assemble different types of concurrent information. Suppose we would
 like to determine whether descending minor seconds are more likely to be
 *fa-mi* rather than *do-ti*. We can use the
-[**mint**](/tool/mint) command to characterize melodic
-intervals, and the [**solfa**](/tool/solfa) command to
+<span class="tool">mint</span> command to characterize melodic
+intervals, and the <span class="tool">solfa</span> command to
 characterize scale degrees. Assume that our input is monophonic:
 
 ```bash
@@ -723,7 +723,7 @@ identify complex situations such as the following: for the soprano
 voice, count how many subdominant pitches are approached by an interval
 of a rising third or a rising sixth and coincide with a dominant seventh
 chord. First, let\'s extract the soprano line and create a corresponding
-scale degree representation using **deg**. We can use the **-a** option
+scale degree representation using <span class="tool">deg</span>. We can use the **-a** option
 to avoid outputting the melodic direction signifiers (`^` and `v`):
 
 ```bash
@@ -731,7 +731,7 @@ extract -i '*Isopran' howells | deg -a > temp1
 ```
 
 Next, let\'s again extract the soprano voice and create a corresponding
-melodic interval representation using **mint**. Since we are not
+melodic interval representation using <span class="tool">mint</span>. Since we are not
 interested in interval qualities we can invoke the **-d** option to
 output only diatonic interval sizes.
 
@@ -752,10 +752,10 @@ dominant seventh chords (in the `**kern` representation: \``V7`\'):
 `assemble temp1 temp2 temp3 | grep -c '^4``+[36]``V7`
 
 
-The **timebase** command can also be used for tasks other than
+The <span class="tool">timebase</span> command can also be used for tasks other than
 assembling parts together. Suppose we would like to determine whether
 secondary dominant chords are more likely to appear on the third beat
-than other beats in a triple meter work. The **timebase** command can be
+than other beats in a triple meter work. The <span class="tool">timebase</span> command can be
 used to reformat a score so that each measure occupies the same number
 of data records. For example, in a 3/4 meter, an eighth-note time-base
 will mean that each measure will contain six data records, and the fifth
@@ -763,7 +763,7 @@ data record will correspond to the onset of the third beat. Recall from
 [Chapter 12](/guide/ch12) that the **yank -m** command allows us to
 extract particular data records following a specified marker. In the
 following command, we have defined the marker as a barline (`-m ^=`) and
-instructed **yank** to fetch the fifth line following each occurrence of
+instructed <span class="tool">yank</span> to fetch the fifth line following each occurrence of
 the marker (`-r 5`). In our example, the **grep** command is being used
 to count V/V chords occurring on third beats:
 
@@ -784,21 +784,21 @@ Reprise
 In this chapter we have learned how to concatenate musical passages
 together using the **cat** command. We also learned how to eliminate
 redundant exclusive and tandem interpretations from concatenated outputs
-using the **-u** and **-t** options for [**rid**](/tool/rid). In
+using the **-u** and **-t** options for <span class="tool">rid</span>. In
 addition, we learned how to assemble two or more spines into a single
-output file using [**assemble**](/tool/assemble). In the case of
+output file using <span class="tool">assemble</span>. In the case of
 [`**kern`](/rep/kern) and
 [`**recip`](/rep/recip) representations, we learned
-how to use the [**timebase**](/tool/timebase) command to
+how to use the <span class="tool">timebase</span> command to
 preprocess each constituent file so that all data records represent
 equivalent elapsed durations. Having assembled a full score from parts,
-**rid** **-d** can be used to eliminate any residual or unnecessary null
-data records. The [**proof**](/tool/proof) command can be used
+<span class="tool">rid</span> **-d** can be used to eliminate any residual or unnecessary null
+data records. The <span class="tool">proof</span> command can be used
 to ensure that any assembled `**kern` data is correctly aligned.
 
-Finally, we learned that the **timebase** command can be used for other
+Finally, we learned that the <span class="tool">timebase</span> command can be used for other
 analytic purposes. Specifically, it can be used to reduce a score
 rhythmically so only particular onset points or beats are retained. In
-[Chapter 23](/guide/ch23) we will see additional uses of **timebase**
+[Chapter 23](/guide/ch23) we will see additional uses of <span class="tool">timebase</span>
 for a variety of types of rhythmic tasks.
 

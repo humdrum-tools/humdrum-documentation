@@ -162,7 +162,7 @@ sixteenth-note middle C would be encoded as "`16cQ`".
 When processed by various tools in the Humdrum Toolkit, these notes may
 be treated as equivalent to their notated durations. Alternatively, in
 some types of processing these notes may be discarded. For example, the
-Humdrum [**timebase**](/command/timebase) command (described in
+Humdrum [<span class="tool">timebase</span>](/command/timebase) command (described in
 [Chapter 13)](/guide/ch13) eliminates acciaccaturas and gruppetto
 notes. Note that data records containing acciaccaturas or gruppetto
 notes must *not* also include normal notes.

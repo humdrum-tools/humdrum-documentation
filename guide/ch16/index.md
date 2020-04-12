@@ -236,8 +236,8 @@ measure 38 (i.e. beginning of measure 39). In the following script,
 `` A=`grep -n ^=34` ``
 `` B=`grep -n ^=39` ``
 
-Now we can construct an appropriate [**humsed**](/tool/humsed)
-command. Recall that each substitute (`s`) command in **humsed** can be
+Now we can construct an appropriate <span class="tool">humsed</span>
+command. Recall that each substitute (`s`) command in <span class="tool">humsed</span> can be
 preceded by a range indication. In the following command, the `$A` and
 `$B` variables convey the appropriate range to each substitution. This
 means that the substitutions are limited to the line numbers ranging
@@ -247,7 +247,7 @@ between `$A` and `$B`.
 
 Notice that we have used double quotes (") rather than single quotes.
 The quotation marks are necessary to pass all three substitutions as an
-argument to **humsed**. Using singe quotes, however, would have caused
+argument to <span class="tool">humsed</span>. Using singe quotes, however, would have caused
 `$A` and `$B` to be treated as literal strings rather than shell
 variables.
 

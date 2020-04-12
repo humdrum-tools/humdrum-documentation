@@ -175,10 +175,10 @@ Filtering Data with the *rid* Command
 -------------------------------------
 
 As we saw in [Chapter 13,](/guide/ch13) the
-[**rid**](/tool/rid) command can be used to eliminate various
+<span class="tool">rid</span> command can be used to eliminate various
 classes of Humdrum records. For example, **rid -G** eliminates all
 global comments; **rid -D** eliminates all data records, etc. The option
-combination **-GLId** is very common with **rid** since only data
+combination **-GLId** is very common with <span class="tool">rid</span> since only data
 records are retained in the output. That is, eliminating all global and
 local comments, omitting all interpretations, and deleting all null data
 records will result in an output consisting only of non-null data
@@ -193,7 +193,7 @@ rid -GLId alpha > filtered.alpha
 
 By way of summary, generating an inventory is a three-step process.
 First we *filter* the input so only the data of interest is present.
-Typically, this means using the **rid** command with one or more options
+Typically, this means using the <span class="tool">rid</span> command with one or more options
 to eliminate comments, interpretations, and perhaps null data records.
 Second we *sort* the data using the **sort** command so that identical
 records are amalgamated as neighbors. Finally, we use the **uniq -c** to
@@ -260,7 +260,7 @@ have both concurrent data tokens participating in the inventory.
 In other circumstances, we may not want this. For example, if we are
 interested only in alpha-related data, we need to eliminate the
 irrelevant \*\*bet data so it won\'t interfere. This can be done using
-the Humdrum **extract** command.
+the Humdrum <span class="tool">extract</span> command.
 
 For example, we can create an inventory of just the `**bet` data:
 
@@ -281,7 +281,7 @@ The resulting `inventory.bet` file will contain:
 "\$200".
 
 Sometimes it is useful to create an aggregate inventory of the data in
-each separate spine. In such cases, we will need to use **extract**
+each separate spine. In such cases, we will need to use <span class="tool">extract</span>
 several times so that each spine is placed in a separate file:
 
 ```bash
@@ -442,14 +442,14 @@ data.
 *Translating* data involves changing from one type of information to
 another \-- that is, changing the exclusive interpretations. For
 example, if we want to produce an inventory of melodic intervals, then
-we might use the [**mint**](/tool/mint) or
-[**xdelta**](/tool/xdelta) commands to generate a suitable
+we might use the <span class="tool">mint</span> or
+<span class="tool">xdelta</span> commands to generate a suitable
 representation. Alternatively, we might want to generate an inventory of
-scale degrees using the [**deg**](/tool/deg) or
-[**solfa**](/tool/solfa) commands.
+scale degrees using the <span class="tool">deg</span> or
+<span class="tool">solfa</span> commands.
 
 Instead of translating our data, we might wish to edit the data using
-the **sed** or [**humsed**](/tool/humsed) stream editors.
+the **sed** or <span class="tool">humsed</span> stream editors.
 Suppose we had a file (named "notes") consisting of pitch information,
 and we wanted to create an inventory of the diatonic pitch-letter names.
 Our input might look like this:
@@ -483,7 +483,7 @@ But this inventory distinguishes D-sharp from D-natural \-- which is not
 what we want. The answer is to filter our input so that the sharps are
 removed.
 
-Adding the appropriate [**humsed**](/tool/humsed) command to our
+Adding the appropriate <span class="tool">humsed</span> command to our
 pipe:
 
 ```bash
@@ -544,7 +544,7 @@ humsed 's/[^#-]//g' montev* | rid -GLId | sort | uniq -c
 
 *Did Bartók\'s preferred articulation marks change* *over his lifetime?*
 Assume that copies of early and late works have been concatenated to the
-files `early` and `late`. The [**humsed**](/tool/humsed) command
+files `early` and `late`. The <span class="tool">humsed</span> command
 here eliminates all data with the exception of
 [`**kern`](/rep/kern) articulation marks. (See
 [Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)

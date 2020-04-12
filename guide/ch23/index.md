@@ -20,8 +20,8 @@ The subject of rhythm touches on nearly every aspect of music. Musical
 elements such as pitch, harmony, and dynamics can all be regarded from
 the point-of-view of temporal patterns of events. A number of complex
 tasks arise from rhythm-related In this chapter, two rhythm-related
-tools are introduced: [**dur**](/tool/dur) and
-[**metpos**](/tool/metpos).
+tools are introduced: <span class="tool">dur</span> and
+<span class="tool">metpos</span>.
 
 
 The *\*\*recip* Representation
@@ -37,7 +37,7 @@ including the \``r`\' signifier. Without an accompanying \``r`\' a
 duration is assumed to pertain to a note.
 
 Generating `**recip` data from `**kern` is straightforward using
-[**humsed**](/tool/humsed). For a single-spine input, the
+<span class="tool">humsed</span>. For a single-spine input, the
 following command will make the translation:
 
 ```bash
@@ -45,10 +45,10 @@ humsed '/^[^=]/s/[^0-9.r ]//g; s/^$/./' input.krn \
 ```
 > \| sed \'s/\\\*\\\*kern/\*\*recip/\'
 
-The first **humsed** substitution eliminates all data other than the
+The first <span class="tool">humsed</span> substitution eliminates all data other than the
 numbers 0 to 9, the period, the lower-case `r`, and the space (for
 multiple-stops). Barlines remain untouched in the output. The second
-**humsed** substitution changes any empty lines to null data tokens;
+<span class="tool">humsed</span> substitution changes any empty lines to null data tokens;
 this might be necessary in the case of grace notes. The ensuing **sed**
 command is used simply to change the exclusive interpretation from
 `**kern` to `**recip`.
@@ -56,7 +56,7 @@ command is used simply to change the exclusive interpretation from
 A simple type of processing might entail creating an inventory of
 rhythmic patterns. Suppose we wanted to determine the most common
 rhythmic pattern spanning a measure. Using a monophonic `**recip` input,
-we could use [**context**](/tool/context) to amalgamate the
+we could use <span class="tool">context</span> to amalgamate the
 appropriate data tokens:
 
 ```bash
@@ -83,7 +83,7 @@ second one: `8r 16 16 8 8 4 4` and the fourth one:
 The *dur* Command
 -----------------
 
-The [**dur**](/tool/dur) command produces
+The <span class="tool">dur</span> command produces
 [`**dur`](/rep/dur) output from either a `**kern` or
 `**recip` input. The `**dur` representation scheme consists simply of
 the elapsed duration of notes and rests, expressed in seconds. The
@@ -121,8 +121,8 @@ output to the **stats** command:
 dur -d inputfile.krn | rid -GLId | grep -v '^=' | stats
 ```
 
-The **-d** option for **dur** suppresses the outputting of duplicate
-durations arising from multiple-stops. Note that outputs from **dur**
+The **-d** option for <span class="tool">dur</span> suppresses the outputting of duplicate
+durations arising from multiple-stops. Note that outputs from <span class="tool">dur</span>
 will adapt to any changes of metronome marking found in the input, so if
 the work accelerates the durations will be reduced proportionally.
 
@@ -150,7 +150,7 @@ extract -i '*Itromp' inputfile.krn | dur -d | rid -GLId \
 ```
 > \| grep -v \'\^=\' \| grep -v r \| stats
 
-The [**dur**](/tool/dur) command provides a **-e** option that
+The <span class="tool">dur</span> command provides a **-e** option that
 allows the user to echo specified signifiers in the output. The **-e**
 option is followed by a regular expression indicating what patterns are
 to be passed to the output. This option allows us to "mark" notes of
@@ -164,7 +164,7 @@ dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \
 
 
 The **-e** option ensures that `**kern` staccato marks (\') are passed
-along to the output. The [**rid**](/tool/rid) command eliminates
+along to the output. The <span class="tool">rid</span> command eliminates
 everything but Humdrum data records. Then **grep** is used to isolate
 only those notes containing a staccato mark. The **sed** script is used
 to eliminate the apostrophe, and finally the numbers are passed to the
@@ -176,7 +176,7 @@ This same basic pipeline can be used for a variety of similar problems.
 Suppose, for example, that we want to determine whether notes at the
 ends of phrases tend to be longer than notes at the beginnings of
 phrases \-- and if so, how much longer? In this case, we want to have
-**dur** echo phrase-related signifiers:
+<span class="tool">dur</span> echo phrase-related signifiers:
 
 ```bash
 dur -e '{' inputfile | rid -GLId | grep '{' | sed 's/{//' \
@@ -202,8 +202,8 @@ dur -e 'T' inputfile | rid -GLId | grep 'T' | sed 's/{//' \
 > \| stats
 
 
-Of course, we can also use [**dur**](/tool/dur) in conjunction
-with [**yank**](/tool/yank) in order to investigate particular
+Of course, we can also use <span class="tool">dur</span> in conjunction
+with <span class="tool">yank</span> in order to investigate particular
 musical segments or passages. How much shorter is the recapitulation
 compared with the original exposition?
 
@@ -233,13 +233,13 @@ How much longer is a passage if all the repeats are played?
 thru inputfile | dur | rid -GLID | stats -o ^=
 ```
 
-Recall that the [**xdelta**](/tool/xdelta) command can be used
+Recall that the <span class="tool">xdelta</span> command can be used
 to calculate numerical differences between successive values. If the
-input to **xdelta** is `**dur` duration information, then we can
+input to <span class="tool">xdelta</span> is `**dur` duration information, then we can
 determine rates of change of duration. Most music exhibits lengthy
 passages of similar duration notes \-- as in a sequence of sixteenth
 notes. In French overtures, successive notes are often of highly
-contrasting durations (longer, very-short, long, etc.). Using **xdelta**
+contrasting durations (longer, very-short, long, etc.). Using <span class="tool">xdelta</span>
 we can identify such large changes of duration. For example, the
 following pipeline can be used to determine the magnitude of the
 *differences* between successive notes.
@@ -255,10 +255,10 @@ have smoother or less angular note-to-note rhythms.
 Classifying Durations
 ---------------------
 
-We can use the [**recode**](/tool/recode) command to classify
+We can use the <span class="tool">recode</span> command to classify
 durations into a finite set of categories. Suppose, for example, we wish
 to create a inventory of long/short rhythmic patterns. We might use
-**recode** with reassignments such as the following:
+<span class="tool">recode</span> with reassignments such as the following:
 
 ```humdrum
 >=0.4	long
@@ -288,7 +288,7 @@ A typical output might appears as follows:
 
 Notice that we might do a similar inventory based on durational
 *differences* rather than on durations. For example, the
-[**xdelta**](/tool/xdelta) command will allow us to distinguish
+<span class="tool">xdelta</span> command will allow us to distinguish
 short*er* note relationships from long*er* relationships. Our
 reassignment file would be as follows:
 
@@ -310,7 +310,7 @@ dur inputfile | xdelta -s ^= | recode -f reassign \
 Using *yank* with the *timebase* Command
 ----------------------------------------
 
-Recall that the [**timebase**](/tool/timebase) command can be
+Recall that the <span class="tool">timebase</span> command can be
 used to reformat an input so that each data record represents an
 equivalent elapsed duration. For example, in a 4/4 meter, the following
 command will format the output so that each full measure consists of
@@ -321,7 +321,7 @@ timebase -t 16 input.krn
 ```
 
 Suppose we wanted to isolate all sonorities in a 4/4 work that occur
-only on the fourth beat of a measure. If we use **timebase**, we can
+only on the fourth beat of a measure. If we use <span class="tool">timebase</span>, we can
 ensure that the fourth beat always occurs a certain number of data
 records following the barline. For example, with the following command,
 the onset of the fourth beat will always occur 4 records follow the
@@ -343,10 +343,10 @@ Note that this process will extract only those notes that begin sounding
 with the onset of the fourth beat. Some notes may have begun prior to
 the fourth beat and yet are sustained into the beat. If we want to
 extract the *sounded* sonority, we can use the
-[**ditto**](/tool/ditto) command. Begin by expanding the work
+<span class="tool">ditto</span> command. Begin by expanding the work
 with a timebase that ensures all notes are present. For a work whose
 shortest note is a 32nd note, we can use an appropriately small timebase
-value. Then use the **ditto** command to propagate all sustained notes
+value. Then use the <span class="tool">ditto</span> command to propagate all sustained notes
 forward through the successive sonorities:
 
 ```bash
@@ -373,7 +373,7 @@ will need to have an input that includes both a
 [`**harm`](/rep/harm) spine encoding the Roman
 numeral harmonic analysis, as well as one or more `**kern` or `**recip`
 spines that include the durational information. We can use the
-**timebase** command to expand the output accordingly \-- cuing on the
+<span class="tool">timebase</span> command to expand the output accordingly \-- cuing on the
 duration information provided by `**kern` or `**recip`. Having suitable
 expanded the input, we can dispense with everything but the `**harm`
 spine. For works in 3/4 meter, the following pipeline would provide an
@@ -398,7 +398,7 @@ timebase -t 8 input | extract -i '**harm' \
 The *metpos* Command
 --------------------
 
-The [**metpos**](/tool/metpos) command generates a
+The <span class="tool">metpos</span> command generates a
 [`**metpos`](/rep/metpos) output spine containing
 numbers that indicate the metric strength of each sonority. By "metric
 position" we mean the position of importance in the metric hierarchy
@@ -408,7 +408,7 @@ The highest position in any given metric hierarchy is given by the value
 \`1\'. This value is assigned to the first event at the beginning of
 each measure. In duple and quadruple meters, the second level in the
 metric hierarchy occurs in the middle of the measure and is assigned the
-output value \`2\'. (In triple meters, **metpos** assumes that the
+output value \`2\'. (In triple meters, <span class="tool">metpos</span> assumes that the
 second and third beats in the measure are both assigned to the second
 level in the metric hierarchy.) All other metric positions in the
 measure (beats, sub-beats, sub-sub-beats, etc.) are assigned
@@ -423,19 +423,19 @@ hierarchy values are: 1,4,3,4,2,4,3,4. In the case of 6/8 meter,
 successive sixteenth durations exhibit a metric hierarchy of:
 1,4,3,4,3,4,2,4,3,4,3,4.
 
-For correct operation, the **metpos** command must be supplied with an
+For correct operation, the <span class="tool">metpos</span> command must be supplied with an
 input that has been formatted using the
-[**timebase**](/tool/timebase) command. That is, each data
+<span class="tool">timebase</span> command. That is, each data
 record (ignoring barlines) must represent an equivalent duration of
-time. In addition, **metpos** must be informed of both the *meter
+time. In addition, <span class="tool">metpos</span> must be informed of both the *meter
 signature* and the *timebase* for the given input passage. This
 information can be specified via the command line, however it is usually
 available in the input stream via appropriate tandem interpretations.
 
 The following extract from Bartók\'s "Two-Part Study" No. 121 from
-*Mikrokosmos* demonstrates the effect of the **metpos** command. The two
+*Mikrokosmos* demonstrates the effect of the <span class="tool">metpos</span> command. The two
 left-most columns show the original input; all three columns show the
-corresponding output from **metpos**:
+corresponding output from <span class="tool">metpos</span>:
 
 ```humdrum
 **kern	**kern	**metpos
@@ -491,14 +491,14 @@ corresponding output from **metpos**:
 *-	*-	*-
 ```
 
-Notice that [**metpos**](/tool/metpos) adapts to changing meter
+Notice that <span class="tool">metpos</span> adapts to changing meter
 signatures, and correctly distinguishes between metric accent patterns
 such as 6/4 (measure 16) and 3/2 (measure 19).
 
 The [`**metpos`](/rep/metpos) values provide
 additional ways of addressing various rhythmic questions. We might use
-[**recode**](/tool/recode) for example, to recode the numerical
-outputs from **metpos** into a smaller set of discrete categories. For
+<span class="tool">recode</span> for example, to recode the numerical
+outputs from <span class="tool">metpos</span> into a smaller set of discrete categories. For
 example, we might classify metric positions using the following
 reassignment file:
 
@@ -510,7 +510,7 @@ else	weak
 
 The words \`strong\', \`secondary\', and \`weak\' can then be sought by
 **grep** or **yank -m**, allowing us to isolate points of particular
-metric stress. Since **metpos** adapts to changing meters, we can
+metric stress. Since <span class="tool">metpos</span> adapts to changing meters, we can
 confidently process inputs that may contain mixtures of meters.
 
 
@@ -518,7 +518,7 @@ Changes of Stress
 -----------------
 
 
-Once again we can make use of [**xdelta**](/tool/xdelta) to
+Once again we can make use of <span class="tool">xdelta</span> to
 identify relationships between successive metric position values.
 Suppose we had a collection of Hungarian melodies and we wanted to
 determine how each degree is approached in terms of metric strength.
@@ -535,7 +535,7 @@ strength.
 
 Assuming that our Hungarian melodies encode key information, creating a
 [`**deg`](/rep/deg) spine is straightforward. Recall
-that the **-a** option for [**deg**](/tool/deg) avoids
+that the **-a** option for <span class="tool">deg</span> avoids
 distinguishing the direction of approach (from above or below):
 
 ```bash
@@ -545,7 +545,7 @@ deg -a magyar*.krn > magyar.deg
 Creating a spine encoding relative metric strength will be more
 involved. First we need to expand our input according to the shortest
 note. We use [**census -k**](/tool/census) to determine the
-shortest duration, and then expand our input using **timebase**.
+shortest duration, and then expand our input using <span class="tool">timebase</span>.
 
 ```bash
 census -k magyar*.krn
@@ -554,14 +554,14 @@ census -k magyar*.krn
 timebase -t 16 magyar*.krn > magyar.tb
 ```
 
-Using **metpos** will allow us to create a spine with the metric
+Using <span class="tool">metpos</span> will allow us to create a spine with the metric
 position data.
 
 ```bash
 metpos magyar.tb > magyar.mp
 ```
 
-Note that **metpos** automatically echoes the input along with the new
+Note that <span class="tool">metpos</span> automatically echoes the input along with the new
 `**metpos` spine. At this point, the result might look as follows:
 
 ```bash
@@ -591,7 +591,7 @@ relationship between the eighth-note B and the eighth-note D is
 "weak-to-strong." In order to procede we need to eliminate all of the
 data records that contain only a metpos value \-- that is, there is no
 pitch present in the [`**kern`](/rep/kern) spine. We
-can do this using **humsed**; we simply delete all lines that begin with
+can do this using <span class="tool">humsed</span>; we simply delete all lines that begin with
 a period character:
 
 ```bash
@@ -622,13 +622,13 @@ Notice that the successive `**metpos` values will now allow us to
 characterize the changes in stress between successive notes: 2 followed
 by 3 indicates a strong-to-weak change of metric position, 3 followed by
 1 indicates a weak-to-strong change of metric position. We can use
-[**xdelta**](/tool/xdelta) to calculate the differences in
+<span class="tool">xdelta</span> to calculate the differences in
 metric position values: positive differences will indicate
 weak-to-strong changes and negative differences will indicate
 strong-to-weak changes. If both values have the same metric position
 value, then the successive notes hold equal positions in the metric
-hierarchy. Before using **xdelta** we need to isolate the `**metpos`
-spine using **extract**:
+hierarchy. Before using <span class="tool">xdelta</span> we need to isolate the `**metpos`
+spine using <span class="tool">extract</span>:
 
 ```bash
 humsed '/^\./d' magyar.mp | extract -i '**metpos' \
@@ -652,7 +652,7 @@ The result is:
 -2
   etc.
   -----------------------------------------------------------------
-Now we can use [**recode**](/tool/recode) to classify the
+Now we can use <span class="tool">recode</span> to classify the
 changes of metric position according. Our reassignment file (named
 `reassign`):
 
@@ -674,7 +674,7 @@ Now we can assemble the resulting metric change spine with our original
 [`**deg`](/rep/deg) spine. Each data record will
 contain the scale degree in the first spine and the change of metric
 position data in the second spine. The final task is to create an
-inventory using [**rid**](/tool/rid), **sort** and **uniq**:
+inventory using <span class="tool">rid</span>, **sort** and **uniq**:
 
 ```bash
 assemble magyar.deg magyar.xmp | rid -GLId | grep -v ^= \
@@ -723,7 +723,7 @@ used to determine whether particular melodic or harmonic intervals tend
 to be approached using particular stress relationships.
 
 In addition, our input spine might also be transformed via the
-**context** command. Given a \*\*harm spine, for example, **context**
+<span class="tool">context</span> command. Given a \*\*harm spine, for example, <span class="tool">context</span>
 could be used to generate two-chord harmonic progressions. This would
 permit us to determine, for example, whether a specific progression such
 as *ii-V* tends to fall in strong-to-weak or weak-to-strong contexts.
@@ -736,14 +736,14 @@ Reprise
 
 There are a vast number of issues raised in rhythm-related processing.
 In this chapter we have touched on a few of the more basic tasks. These
-include identifying the durations of various passages using **dur**;
+include identifying the durations of various passages using <span class="tool">dur</span>;
 classifying and contextualizing durations using
-[**recode**](/tool/recode) and
-[**context**](/tool/context); isolating particular rhythmic
-moments using [**timebase**](/tool/timebase) and
-[**yank**](/tool/yank) **-m**; determining relative metric
-positions using [**metpos**](/tool/metpos); and characterizing
-metric syncopation using [**synco**](/tool/synco).
+<span class="tool">recode</span> and
+<span class="tool">context</span>; isolating particular rhythmic
+moments using <span class="tool">timebase</span> and
+<span class="tool">yank</span> **-m**; determining relative metric
+positions using <span class="tool">metpos</span>; and characterizing
+metric syncopation using <span class="tool">synco</span>.
 
 Processing data that does not explicitly contain duration-related
 information (such as `**harm` or `**deg`) often requires some

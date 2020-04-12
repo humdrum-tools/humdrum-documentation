@@ -105,7 +105,7 @@ chord. The barlines provide convenient ways of parsing the harmonies.
 
 
 
-We can collapse the arpeggiated chords using the **context** command:
+We can collapse the arpeggiated chords using the <span class="tool">context</span> command:
 
 ```bash
 context -b = -o = copland

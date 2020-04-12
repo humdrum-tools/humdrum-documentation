@@ -433,7 +433,7 @@ The resulting output should be:
 *-
 ```
 
-We could pipe this output to the **ms** command in order to display the
+We could pipe this output to the <span class="tool">ms</span> command in order to display the
 re-arranged passage. We place the output in a postscript file and use a
 display tool such as **ghostview** to display the output:
 

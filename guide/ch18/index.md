@@ -607,9 +607,9 @@ Y	thump'	on	top-plate
 *Summary of *\*\*fret* Signifiers*
 
 A number of pitch-related Humdrum commands accept `**fret` encoded data
-as inputs, including [**cents**,](/tool/cents)
-[**freq**,](/tool/freq) [**kern**,](/tool/kern)
-[**pitch**,](/tool/pitch) [**semits**,](/tool/semits)
+as inputs, including <span class="tool">cents</span>,
+<span class="tool">freq</span>, <span class="tool">kern</span>,
+<span class="tool">pitch</span>, <span class="tool">semits</span>,
 [**solfg**,](/tool/solfg) and [**tonh**.](/tool/tonh)
 
 ------------------------------------------------------------------------

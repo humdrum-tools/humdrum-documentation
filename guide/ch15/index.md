@@ -19,8 +19,8 @@ permalink:	/guide/ch15/index.html
 In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of
 intervals by focussing on two tools pertaining to characterizing
-harmonic intervals: the [**hint**](/tool/hint) and
-[**ydelta**](/tool/ydelta) commands.
+harmonic intervals: the <span class="tool">hint</span> and
+<span class="tool">ydelta</span> commands.
 
 
 Types of Harmonic Intervals
@@ -116,25 +116,25 @@ As in the case of melodic intervals, harmonic intervals can be
 calculated according to a variety of units \-- including diatonic
 intervals, semitones, cents, frequency, and even cochlear coordinates.
 We will consider just two tools for calculating harmonic intervals:
-**hint** and **ydelta.**
+<span class="tool">hint</span> and **ydelta.**
 
 
 Harmonic Intervals Using the *hint* Command
 -------------------------------------------
 
-The Humdrum [**hint**](/tool/hint) command calculates harmonic
+The Humdrum <span class="tool">hint</span> command calculates harmonic
 intervals for pitch-related representations such as
 [`**kern`](/rep/kern),
 [`**pitch`](/rep/pitch),
 [`**solfg`](/rep/solfg), and
 [`**Tonh`](/rep/Tonh). As in the case of the
-**mint** command, output intervals are expressed as a combination of
+<span class="tool">mint</span> command, output intervals are expressed as a combination of
 diatonic interval size plus interval quality (such as \`perfect fourth\'
 and \`minor ninth\').
 
-In the default operation, **hint** calculates only explicit harmonic
+In the default operation, <span class="tool">hint</span> calculates only explicit harmonic
 intervals; for sonorities containing more than two pitches, only stacked
-harmonic intervals are calculated. The output from the **hint** command
+harmonic intervals are calculated. The output from the <span class="tool">hint</span> command
 always consists of a single [`**hint`](/rep/hint)
 spine. Any number of spines may be present in the input, but only
 pitch-related spines are processed. Given the default invocation, the
@@ -163,7 +163,7 @@ is present, but there are no explicit harmonic intervals. Input records
 that contain no pitch tokens result in the outputting of a null token
 (.). If a single duplicated pitch is present, then the output will
 indicate a perfect unison (P1). Unisons can be suppressed from the
-output via the **-u** option for **hint**.
+output via the **-u** option for <span class="tool">hint</span>.
 
 
 When more than two pitches are present in a sonority, *permuted harmonic
@@ -194,7 +194,7 @@ output would be
 **hint  M3 P5 P8  *-
 ```
 
-Two further options for **hint** allow the user to tailor how the
+Two further options for <span class="tool">hint</span> allow the user to tailor how the
 intervals are represented. The **-c** option causes compound intervals
 such as a minor tenth (m10) to be output as non-compound equivalents
 (m3). This means that the interval of an octave (P8) will be rendered as
@@ -217,12 +217,12 @@ will produce the following output for the final major chord in Example
 Propagating Data Using the *ditto* Command
 ------------------------------------------
 
-In the default operation, **hint** calculates intervals only between
+In the default operation, <span class="tool">hint</span> calculates intervals only between
 pitches that are explicitly present in an input data record. This means
 that passing intervals are not calculated.
 
 In order to generate passing intervals, we will make use of the Humdrum
-[**ditto**](/tool/ditto) command. The **ditto** command replaces
+<span class="tool">ditto</span> command. The <span class="tool">ditto</span> command replaces
 null tokens with the previous non-null data token in the same spine.
 Suppose we had an arbitrary input such as the following:
 
@@ -239,7 +239,7 @@ C	.
 *-	*-
 ```
 
-The effect of **ditto** would be the following:
+The effect of <span class="tool">ditto</span> would be the following:
 
 
 ```humdrum
@@ -257,7 +257,7 @@ C	abc
 Each null token has been replaced by the preceding data token within the
 spine.
 
-Consider the effect of **ditto** on the `**kern` data in Example 15.1:
+Consider the effect of <span class="tool">ditto</span> on the `**kern` data in Example 15.1:
 
 ```bash
 ditto -p example15.1
@@ -313,9 +313,9 @@ M3	m3	P4
 *-
 ```
 
-The [**ditto**,](/tool/ditto) command provides two additional
+The <span class="tool">ditto</span>, command provides two additional
 options that are worthy of note: the **-s** and **-c** options. The
-**-s** option allows **ditto** to skip or ignore the presence of certain
+**-s** option allows <span class="tool">ditto</span> to skip or ignore the presence of certain
 data records. Suppose, for example, that we had a barline in the midst
 of some null tokens:
 
@@ -336,7 +336,7 @@ other types of data tokens, so the result might be:
   =
   A
   ---
-By providing **ditto** with a suitable regular expression, we can have
+By providing <span class="tool">ditto</span> with a suitable regular expression, we can have
 the data token \`A\' skip over the barline:
 
 ```bash
@@ -346,7 +346,7 @@ ditto -s ^=
 Without this option, the final data token in the above example would be
 an equals-sign rather than the token \`A\'.
 
-The **-c** option for **ditto** allows the user to selectively identify
+The **-c** option for <span class="tool">ditto</span> allows the user to selectively identify
 which characters are propagated. For example, the following command will
 cause only the lower-case letters \`a\' and \`b\' to be propagated:
 
@@ -357,7 +357,7 @@ ditto -c ab
 This feature allows users to replicate only certain kinds of data \--
 such as pitches, durations, dynamic marks, etc.
 
-As we will see in future chapters, the **ditto** command proves useful
+As we will see in future chapters, the <span class="tool">ditto</span> command proves useful
 in a wide variety of situations apart from calculating intervals.
 
 
@@ -365,8 +365,8 @@ Using the *ditto* and *hint* Commands
 -------------------------------------
 
 
-Let\'s pause and consider some of the ways we might use the **ditto**
-and **hint** commands. First, let\'s determine if some input contains a
+Let\'s pause and consider some of the ways we might use the <span class="tool">ditto</span>
+and <span class="tool">hint</span> commands. First, let\'s determine if some input contains a
 particular interval. Are there any augmented sixth intervals in Bach\'s
 two-part inventions? The following commands look for explicit and
 passing sixths respectively. Notice the use of the **-c** option so
@@ -432,11 +432,11 @@ Determining Implicit Harmonic Intervals
 Recall that *implicit harmonic intervals* may be deemed to occur between
 tones that don\'t actually sound at the same time. This arises when one
 part has a rest while the other part is sounding. Note that if we could
-eliminate rest tokens, then we could use **ditto** to repeat previous
+eliminate rest tokens, then we could use <span class="tool">ditto</span> to repeat previous
 pitch tokens in place of the rests and so generate implicit harmonic
 intervals.
 
-The [**humsed**](/tool/humsed) command (described in [Chapter
+The <span class="tool">humsed</span> command (described in [Chapter
 14](/guide/ch14)) is well suited to this task. We want to transform any
 data token containing the letter \`r\' to a null token. Consider the
 following substitution:
@@ -470,7 +470,7 @@ token:
 ```
 
 Now we can eliminate rest tokens using the following two substitution
-commands within a single invocation of **humsed**:
+commands within a single invocation of <span class="tool">humsed</span>:
 
 ```bash
 humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1
@@ -495,7 +495,7 @@ The following output results:
 *-	*-
 ```
 
-If we now apply [**ditto**](/tool/ditto) and recalculate the
+If we now apply <span class="tool">ditto</span> and recalculate the
 intervals, the resulting output will identify some implicit intervals as
 well:
 
@@ -505,7 +505,7 @@ humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \
 > \| ditto -p
 
 Below we see the output assembled with the output from the corresponding
-[**hint**](/tool/hint) command:
+<span class="tool">hint</span> command:
 
 
 ```humdrum
@@ -530,7 +530,7 @@ The *ydelta* Command
 
 
 Often it is useful to represent intervals by the number of semitones (or
-some other numerical value). We might begin by using the **semits**
+some other numerical value). We might begin by using the <span class="tool">semits</span>
 command to translate Example 15.1 to a
 [`**semits`](/rep/semits) representation.
 
@@ -558,13 +558,13 @@ r	11
 ```
 
 Numerical differences for values on a single data record can be computed
-using the [**ydelta**](/tool/ydelta) command. The **ydelta**
-command is comparable to [**xdelta**,](/tool/xdelta) however,
+using the <span class="tool">ydelta</span> command. The <span class="tool">ydelta</span>
+command is comparable to <span class="tool">xdelta</span>, however,
 numerical differences are calculated between simultaneous numerical
 values (delta-*y*) rather than between successive numerical values
 (delta-*x*).
 
-Like the [**hint**](/tool/hint) command, **ydelta** always
+Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> always
 outputs a single spine. The user must specify which input spines are to
 be processed using the **-i** option. In the following command, only
 \*\*semits input is to be processed:
@@ -597,7 +597,7 @@ The above command yields the following output:
 *-
 ```
 
-Notice that **ydelta** prepends the upper-case letter \`Y\' to the given
+Notice that <span class="tool">ydelta</span> prepends the upper-case letter \`Y\' to the given
 input interpretation. All output values are calculated with respect to
 the lowest value in the current data record. Hence, the \``4 7 12` in
 the last data record means that there are pitches 4 semitones above the
@@ -605,9 +605,9 @@ lowest note, 7 semitones above the lowest note, and 12 semitones above
 the lowest note. (If necessary, the lowest or offset value for each
 record can be output in square brackets using the **-o** option.)
 
-Like the **hint** command, **ydelta** calculates numerical intervals
+Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> calculates numerical intervals
 only when more than one value is present on a given input data record.
-As in the case of **hint,** we might use the **ditto** command to
+As in the case of **hint,** we might use the <span class="tool">ditto</span> command to
 propagate pitch values \-- replacing all the null data tokens. A
 suitable command would be:
 
@@ -646,10 +646,10 @@ the appropriate voices and translating to a semitone representation.
 extract -f 1,2 motet* | semits > temp1
 ```
 
-Using **ditto** we can expand the pitched material so that
+Using <span class="tool">ditto</span> we can expand the pitched material so that
 concurrently-sounding tones will generate explicit intervals. We then
-use **ydelta** to calculate the actual semitone interval distances. The
-[**rid**](/tool/rid) command can be used to eliminate non-data
+use <span class="tool">ydelta</span> to calculate the actual semitone interval distances. The
+<span class="tool">rid</span> command can be used to eliminate non-data
 records, and the **grep -v** command can be used to further eliminate
 barlines. Finally, we can calculate the mean interval distance using the
 **stats** command:
@@ -661,8 +661,8 @@ ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \
 
 Suppose we have a two-part input. Are there tritone intervals (explicit
 and passing) that are not spelled as either an augmented fourth or
-diminished fifth? We can answer this question by using both **hint** and
-**ydelta** and a suitable sequence of **grep** commands. The **ditto**
+diminished fifth? We can answer this question by using both <span class="tool">hint</span> and
+<span class="tool">ydelta</span> and a suitable sequence of **grep** commands. The <span class="tool">ditto</span>
 command is used to ensure that both explicit and passing intervals are
 generated.
 
@@ -702,8 +702,8 @@ of characterizing harmonic intervals: *stacked harmonic intervals*,
 *bass-related harmonic intervals* and *permuted harmonic intervals*.
 
 In this chapter we have seen how to use the
-[**hint**](/tool/hint) command to calculate these various kinds
-of intervals. We have also seen how [**ydelta**](/tool/ydelta)
+<span class="tool">hint</span> command to calculate these various kinds
+of intervals. We have also seen how <span class="tool">ydelta</span>
 can be used to measure purely numerical distances between concurrent
 values.
 

@@ -302,13 +302,13 @@ grep '^{' * | grep -v r
 German, French, Italian, and Neapolitan Sixths
 ----------------------------------------------
 
-In conjunction with the [**solfa**](/tool/solfa) command,
+In conjunction with the <span class="tool">solfa</span> command,
 **grep** can be used to search for various types of special chords.
 Suppose, for example, that we wanted to identify occurrences of
 augmented sixth chords. An augmented sixth chord is characterized by an
 augmented sixth interval occurring between the lowered sixth
 scale-degree and the raised fourth scale-degree. In [Chapter
-4,](/guide/ch04) we saw that the **solfa** command represents pitches
+4,](/guide/ch04) we saw that the <span class="tool">solfa</span> command represents pitches
 with respect to an encoded tonic pitch. In the
 [`**solfa`](/rep/solfa) representation, the lowered
 sixth and raised fourth degrees will be represented as `6-` and `4+`

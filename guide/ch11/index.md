@@ -24,8 +24,8 @@ when the pitches are concurrent the distance is referred to as a
 The simplicity of these definitions is deceptive. In real music, the
 determination of pitch intervals can be surprisingly complicated. In
 this chapter we will discuss Humdrum tools related to melodic pitch
-intervals \-- specifically the [**mint**](/tool/mint) (melodic
-interval) and [**xdelta**](/tool/xdelta) commands. Discussion of
+intervals \-- specifically the <span class="tool">mint</span> (melodic
+interval) and <span class="tool">xdelta</span> commands. Discussion of
 harmonic intervals will be delayed until [Chapter 15.](/guide/ch15)
 
 
@@ -133,7 +133,7 @@ coordinates.
 Melodic Intervals Using the *mint* Command
 ------------------------------------------
 
-The Humdrum [**mint**](/tool/mint) command calculates melodic
+The Humdrum <span class="tool">mint</span> command calculates melodic
 intervals for pitch-related representations such as
 [`**kern`](/rep/kern),
 [`**pitch`](/rep/pitch),
@@ -148,13 +148,13 @@ numbers (1=unison, 2=second, \... 8=octave, 9=ninth, etc.). Ascending
 and descending intervals are distinguished by a leading plus sign (+) or
 minus sign (-) respectively.
 
-In the default operation, **mint** outputs three of the seven types of
+In the default operation, <span class="tool">mint</span> outputs three of the seven types of
 melodic intervals. These are *voiced melodic intervals,* *unvoiced outer
 intervals* and *interrupted melodic intervals;* By way of illustration,
-Example 11.3 shows the output from the **mint** command for the input
+Example 11.3 shows the output from the <span class="tool">mint</span> command for the input
 shown in Example 11.1.
 
-**Example 11.3** Default interval outputs from the **mint** command
+**Example 11.3** Default interval outputs from the <span class="tool">mint</span> command
 corresponding to Example 11.1.
 
 ```humdrum
@@ -184,7 +184,7 @@ Sometimes it is useful to maintain the initial starting pitches in the
 output. The presence of these "offset" pitch values can prove useful
 in later reconstructing the original pitches from the
 [`**mint`](/rep/mint) interval data. When the **-o**
-option is invoked, **mint** outputs the initial starting pitches (placed
+option is invoked, <span class="tool">mint</span> outputs the initial starting pitches (placed
 in square brackets) from which the subsequent melodic intervals have
 been calculated.
 
@@ -228,7 +228,7 @@ wanted to avoid calculating intervals between the last note of a phrase
 and the first note of the next phrase. In the
 [`**kern`](/rep/kern) representation, the open and
 closed curly braces are used to indicate the beginnings and ends of
-phrases. We need to tell **mint** to break interval calculations each
+phrases. We need to tell <span class="tool">mint</span> to break interval calculations each
 time an end-of-phrase signifier is encountered:
 
 ```bash
@@ -236,7 +236,7 @@ mint -b '}' inputfile
 ```
 
 Similarly, the `**kern` representation uses the semicolon (`;`) to
-represent pauses. We might instruct **mint** to avoid calculating
+represent pauses. We might instruct <span class="tool">mint</span> to avoid calculating
 intervals between notes having pauses and the subsequent note:
 
 ```bash
@@ -244,7 +244,7 @@ mint -b ';' inputfile
 ```
 
 Since the **-b** option accepts regular expressions, we can combine
-patterns. For example, the following command instructs **mint** to
+patterns. For example, the following command instructs <span class="tool">mint</span> to
 calculate melodic intervals, not including intervals spanning phrase
 boundaries, and not following notes with pauses:
 
@@ -288,7 +288,7 @@ intervals would be omitted.
 Calculating Distance Intervals Using the *mint -s* Command
 ----------------------------------------------------------
 
-Another option provided by [**mint**](/tool/mint) is the **-s**
+Another option provided by <span class="tool">mint</span> is the **-s**
 or skip option. Like the **-b** option, this option requires a
 subsequent regular expression. Any token matching this expression is
 transformed to a null data token and is ignored when processing. One
@@ -321,7 +321,7 @@ between the eighth notes.
 *-
 ```
 
-We can use the skip option to instruct **mint** to ignore any note token
+We can use the skip option to instruct <span class="tool">mint</span> to ignore any note token
 matching the string \``16`\':
 
 ```bash
@@ -361,7 +361,7 @@ in [Chapter 35](/guide/ch35) on "Layers."
 
 Cross-voice melodic intervals can be calculated by amalgamating several
 spines into a single spine. In [Chapter 26](/guide/ch26) we will learn
-more about the [**cleave**](/tool/cleave) command. But here is a
+more about the <span class="tool">cleave</span> command. But here is a
 typical use:
 
 ```bash
@@ -391,10 +391,10 @@ output would be:
 Note that this output doesn\'t quite conform to the `**kern` syntax: the
 barlines have been duplicated as double-stops, and the durations aren\'t
 right for multiple-stops. We can clean up the output using
-[**humsed,**](/tool/humsed) but the incoherent durations won\'t
+<span class="tool">humsed</span>, but the incoherent durations won\'t
 cause problems if our intention is to calculate pitch intervals.
 
-If we pipe the above output through the **mint** command, the
+If we pipe the above output through the <span class="tool">mint</span> command, the
 appropriate command pipeline becomes:
 
 ```bash
@@ -435,14 +435,14 @@ interval of a major tenth (`M10`) will be output as a major third
 Diatonic Intervals, Absolute Intervals and Contour
 --------------------------------------------------
 
-The [**mint**](/tool/mint) command provides three further
-options of interest. The **-d** option causes **mint** to output only
+The <span class="tool">mint</span> command provides three further
+options of interest. The **-d** option causes <span class="tool">mint</span> to output only
 the diatonic interval size without the interval quality information. The
-**-a** option causes **mint** to output absolute pitch intervals without
+**-a** option causes <span class="tool">mint</span> to output absolute pitch intervals without
 distinguishing ascending intervals from descending intervals. That is,
 the leading plus (+) and minus (-) signs are discarded.
 
-Finally, the **-A** option causes **mint** to output just one of three
+Finally, the **-A** option causes <span class="tool">mint</span> to output just one of three
 states: a plus sign (+) indicating a rising interval, the minus sign (-)
 indicating a falling interval, and the number zero (0) indicating no
 pitch movement (i.e., unison). In short, the **-A** option outputs only
@@ -452,7 +452,7 @@ gross contour. The **-a** and **-A** options are complementary.
 Using the *mint* Command
 ------------------------
 
-Consider some of the following uses of the **mint** command.
+Consider some of the following uses of the <span class="tool">mint</span> command.
 
 
 Are there any major or minor ninth melodic intervals in the file
@@ -482,7 +482,7 @@ mint Chevalier* | grep -c '-[Mm]2'
 
 An alternative way of achieving the same goal might simplify the regular
 expression to **grep** and use the **-d** (diatonic) option for
-**mint**:
+<span class="tool">mint</span>:
 
 ```bash
 mint -d Chevalier* | grep -c '+2'
@@ -531,9 +531,9 @@ Calculating Melodic Intervals Using the *xdelta* Command
 
 Often it is useful to calculate melodic intervals in purely numerical
 values, such as the number semitones or the number of cents. The
-[**xdelta**](/tool/xdelta) command provides a general tool for
+<span class="tool">xdelta</span> command provides a general tool for
 calculating numerical differences between successive values within
-individual spines. In order to use **xdelta** to calculate semitone
+individual spines. In order to use <span class="tool">xdelta</span> to calculate semitone
 differences, we first need to transform our representation to
 [`**semits`](/rep/semits) (discussed in [Chapter
 4](/guide/ch04)). Recall that in the `**semits` representation, middle
@@ -579,14 +579,14 @@ between successive values. If the scale had been descending in pitch,
 then the difference values would be negative.
 
 Notice also that the input interpretation (`**semits`) has been modified
-to `**Xsemits`). The input representation for **xdelta** does not
+to `**Xsemits`). The input representation for <span class="tool">xdelta</span> does not
 matter. The output is always modified so the letter X is prepended to
-the representation. This means that **xdelta** could as easily be used
+the representation. This means that <span class="tool">xdelta</span> could as easily be used
 to calculate differences in cents (`**Xcents`), frequency (`**Xfreq`) or
 any other representation that contains numbers.
 
-When **xdelta** encounters multiple-stops, it behaves in a manner
-similar to the **mint** command by calculating the numerical equivalent
+When <span class="tool">xdelta</span> encounters multiple-stops, it behaves in a manner
+similar to the <span class="tool">mint</span> command by calculating the numerical equivalent
 of unvoiced inner intervals. Consider the following example:
 
 ```humdrum
@@ -598,7 +598,7 @@ of unvoiced inner intervals. Consider the following example:
 *-
 ```
 
-The **xdelta** command produces the following output:
+The <span class="tool">xdelta</span> command produces the following output:
 
 ```humdrum
 **Xsemits
@@ -617,7 +617,7 @@ respectively. In going from the values 2 and 5 to the values -1, 7 and
 inner differences are output in parentheses: (7 - 2 = 5) and (7 - 5 =
 2).
 
-Like the **mint** command, **xdelta** provides a **-b** option to break
+Like the <span class="tool">mint</span> command, <span class="tool">xdelta</span> provides a **-b** option to break
 calculations of numerical differences and a **-s** option to skip or
 completely ignore certain data tokens when processing. An important use
 of the **-s** option is to ignore barlines. Consider the following
@@ -643,10 +643,10 @@ xdelta -s ^= inputfile
 Failure to skip the barline will cause a difference to be calculated
 between 800 and =2 (i.e., -798) and between =2 and 600 (i.e., 598).
 
-Outputs from **xdelta** can be processed again using **xdelta** in order
+Outputs from <span class="tool">xdelta</span> can be processed again using <span class="tool">xdelta</span> in order
 to calculate the differences of the differences. For example, we can
 calculate the second derivative of successive cents by using a pipeline
-containing two **xdelta** commands:
+containing two <span class="tool">xdelta</span> commands:
 
 `xdelta -s ^= inputfile` `| xdelta -s ^= `
 
@@ -674,15 +674,15 @@ pitches. We defined seven different types of melodic intervals including
 inner intervals*, *distance intervals*, and *tied note intervals*.
 
 In this chapter we have seen how to use the
-[**mint**](/tool/mint) command to calculate these various kinds
+<span class="tool">mint</span> command to calculate these various kinds
 of intervals. Specifically, we have illustrated how to calculate voiced
 intervals, interrupted intervals, unvoiced outer intervals and unvoiced
 inner intervals. In [Chapter 26](/guide/ch26) we will show how to
 calculate cross-voice intervals, and in [Chapter 35](/guide/ch35)
 ("Layers") we will consider how to calculate distance intervals.
 
-We have also seen how [**xdelta**](/tool/xdelta) can be used to
+We have also seen how <span class="tool">xdelta</span> can be used to
 measure purely numerical distances between successive values. As we will
-see, **xdelta** will prove useful in many other applications apart from
+see, <span class="tool">xdelta</span> will prove useful in many other applications apart from
 calculating pitch distances.
 

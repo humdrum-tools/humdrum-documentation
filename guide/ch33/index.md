@@ -134,9 +134,9 @@ lies	lAiz
 ```
 
 Given an `**IPA` input, occurrences of alliteration can be found by
-first isolating the initial phoneme for each word using **humsed**. This
+first isolating the initial phoneme for each word using <span class="tool">humsed</span>. This
 task requires some additional knowledge about using
-[**humsed**](/tool/humsed). Both **sed** and **humsed** provide
+<span class="tool">humsed</span>. Both **sed** and <span class="tool">humsed</span> provide
 a "back reference" construction that allows users to manipulate a
 matched expression without knowing the precise matched sequence of
 characters. The expression to be matched is indicated via parentheses
@@ -160,7 +160,7 @@ entire string by just the first character in the line.
 
 Let\'s now use this back-reference technique in our alliteration search.
 First we extract the [`**IPA`](/rep/IPA) spine and
-use **humsed** to eliminate all but the first character in each data
+use <span class="tool">humsed</span> to eliminate all but the first character in each data
 record:
 
 ```bash
@@ -180,11 +180,11 @@ f
 ```
 
 We can now amalgamate successive initial phonemes by using the
-[**context**](/tool/context) command. Suppose we are interested
+<span class="tool">context</span> command. Suppose we are interested
 in identifying alliterations where three or more words begin with the
 same initial phoneme. For this, we would use the **-n 3** option for
-**context**. Having amalgamated three phonemes on each data record we
-can use **humsed** to eliminate the spaces between the multiple stops:
+<span class="tool">context</span>. Having amalgamated three phonemes on each data record we
+can use <span class="tool">humsed</span> to eliminate the spaces between the multiple stops:
 
 ```bash
 extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
@@ -206,7 +206,7 @@ Dfl
 
 Now we need to identify any data records that contain three identical
 sigifiers. Once again, we can use the back-reference feature for
-**humsed**.
+<span class="tool">humsed</span>.
 
 ```bash
 extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
@@ -227,7 +227,7 @@ Dfl
 ```
 
 Let\'s add one further refinement which illustrates yet another feature
-provided by **sed** and **humsed**. Recall that operations such as
+provided by **sed** and <span class="tool">humsed</span>. Recall that operations such as
 substitions (`s`) and deletions (`d`) can be preceded by a regular
 expression that limits the operation only to those lines that match the
 expression. For example, the command `sed '/=/s/[0-9]//g'` will
@@ -275,7 +275,7 @@ classes. For example, in our example from Shakespeare\'s *Tempest*, the
 \`th\' in \`thy\' is part of the fricative alliteration.
 
 In [Chapter 22](/guide/ch22) we saw how
-[**humsed**](/tool/humsed) can be used to classify things. A
+<span class="tool">humsed</span> can be used to classify things. A
 simple reassignment script can be defined which collapses the various
 phonemes into a smaller set of phonetic classes. For example, a suitable
 script might contain the following assignments:
@@ -322,7 +322,7 @@ estimate the overall average vowel height for a piece by averaging these
 values together. The basic pipeline will extract the pertinent `**IPA`
 spine, eliminate all non-vowel phonemes, add spaces between each vowel,
 and then assign estimated heights to each vowel. Finally, non-data
-records are eliminated using [**rid**](/tool/rid) and the data
+records are eliminated using <span class="tool">rid</span> and the data
 values averaged using the **stats** command:
 
 ```bash
@@ -352,9 +352,9 @@ the original Schubert song with each of the translations. However, not
 all notes are equally important. In the first instance, the vowels on
 longer sustained notes will be more noticeable than the vowels attending
 shorter notes. A simple remedy is to use the
-[**timebase**](/tool/timebase) command to expand the input so
+<span class="tool">timebase</span> command to expand the input so
 that longer notes are proportionally more influential in our measure of
-overall vowel height. We can use [**ditto**](/tool/ditto) to
+overall vowel height. We can use <span class="tool">ditto</span> to
 repeat sustained vowels:
 
 ```bash
@@ -366,7 +366,7 @@ timebase -t 16 Schubert | extract -i '**IPA' \
 Since translators have plenty of other issues to consider when
 translating a vocal text, we might focus our comparisons solely on a
 small collection of especially important notes. We might for example use
-a longer value for **timebase**. Alternatively, we might use the Humdrum
+a longer value for <span class="tool">timebase</span>. Alternatively, we might use the Humdrum
 **accent** command (described in [Chapter 25](/guide/ch25)) to identify
 notes have a particularly high noticeability.
 
@@ -406,7 +406,7 @@ dumps,	d@mps}
 etc.	
 ```
 
-Using [**extract**](/tool/extract), **context** and **rid** we
+Using <span class="tool">extract</span>, <span class="tool">context</span> and <span class="tool">rid</span> we
 can isolate each poetic phrase:
 
 ```bash
@@ -446,7 +446,7 @@ and eliminate the duplicate lines using **sort** and **uniq**.
 ```
 
 The output can then be changed into a set of substitutions for a
-**humsed** script. A suitable file would contain the following
+<span class="tool">humsed</span> script. A suitable file would contain the following
 substitutions:
 
 ```bash

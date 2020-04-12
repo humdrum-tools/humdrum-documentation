@@ -526,13 +526,13 @@ mistaking comments or interpretations:
 
 (\^\[\^\*!\].\*\[Tt\])\|(\^\[Tt\])
 
-For Humdrum commands such as [**humsed**,](/tool/humsed)
-[**rend**,](/tool/rend) [**yank**,](/tool/yank)
-[**xdelta**,](/tool/xdelta) and
-[**ydelta**,](/tool/ydelta) regular expressions are applied only
+For Humdrum commands such as <span class="tool">humsed</span>,
+<span class="tool">rend</span>, <span class="tool">yank</span>,
+<span class="tool">xdelta</span>, and
+<span class="tool">ydelta</span>, regular expressions are applied only
 to data records so there is no need to use the more complex expressions.
 In many circumstances, we will see that it is convenient to use the
-Humdrum [**rid**](/tool/rid) command to explicitly remove
+Humdrum <span class="tool">rid</span> command to explicitly remove
 comments and interpretations prior to processing (see [Chapter
 13](/guide/ch13)).
 
@@ -562,7 +562,7 @@ supported by the **egrep** command; **egrep** operates in the same
 manner as **grep**, only the search patterns are interpreted according
 to extended regular expression syntax.
 
-The Humdrum **pattern** command further extends regular expression
+The Humdrum <span class="tool">pattern</span> command further extends regular expression
 syntax by providing multi-record repetition operators that prove very
 useful in musical applications. These Humdrum extensions will be
 discussed in [Chapter 21.](/guide/ch21)
