@@ -9,7 +9,7 @@ permalink:	/tool/kern/index.html
 ### COMMAND
 
 <span class="tool">kern</span> &mdash; translate selected Humdrum pitch-related representations to
-`**kern`
+<span class="rep">kern</span>
 
 ------------------------------------------------------------------------
 
@@ -22,14 +22,14 @@ permalink:	/tool/kern/index.html
 ### DESCRIPTION
 
 The <span class="tool">kern</span> command transforms various pitch-related inputs to
-corresponding [`**kern` representation](../representations/kern.html)s.
-For example, the `**pitch` token \``Ab2`\' will be output as the
-`**kern` token \``AA-`\'. Continuous pitch-related representations, such
-as frequency (`**freq`) and cents (`**cents`) are rounded-off to the
-nearest equally-tempered pitch. Hence, `**freq` values between 254.178
-and 269.291 will be output as the `**kern` token for middle C &mdash; \`c\'.
+corresponding [<span class="rep">kern</span> representation](../representations/kern.html)s.
+For example, the <span class="rep">pitch</span> token \``Ab2`\' will be output as the
+<span class="rep">kern</span> token \``AA-`\'. Continuous pitch-related representations, such
+as frequency (<span class="rep">freq</span>) and cents (<span class="rep">cents</span>) are rounded-off to the
+nearest equally-tempered pitch. Hence, <span class="rep">freq</span> values between 254.178
+and 269.291 will be output as the <span class="rep">kern</span> token for middle C &mdash; \`c\'.
 
-[Pitches in `**kern`](../representations/kern.html#Pitch) are encoded as
+[Pitches in <span class="rep">kern</span>](../representations/kern.html#Pitch) are encoded as
 equally-tempered values at concert pitch. Kern is not able to represent
 pitch deviations from equal temperament. Diatonic pitch names are
 encoded using the letters A to G. Octaves are indicated by a system of
@@ -48,26 +48,26 @@ octothorpe sign (`#`) whereas flats are indicated by the minus sign
 The <span class="tool">kern</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
-representations (including `**kern`) refer to Section 2 *(Representation
+representations (including <span class="rep">kern</span>) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
 >   ------------ ----------------------------------------------------------------------
->   `**cents`    hundredths of a semitone with respect to middle C=0
->   `**degree`   scale degree including octave designation
->   `**freq`     frequency in hertz (abbreviated Hz.)
->   `**fret`     fretted-instrument pitch tablature
->   `**MIDI`     Music Instrument Digital Interface key-press tablature
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
+>   <span class="rep">degree</span>   scale degree including octave designation
+>   <span class="rep">freq</span>     frequency in hertz (abbreviated Hz.)
+>   <span class="rep">fret</span>     fretted-instrument pitch tablature
+>   <span class="rep">MIDI</span>     Music Instrument Digital Interface key-press tablature
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">kern</span>.*
 
 For numerically-oriented inputs, such as
-`**cents, **freq, **MIDI, **semits`, and `**specC`, variant enharmonic
+`**cents, **freq, **MIDI, **semits`, and <span class="rep">specC</span>, variant enharmonic
 spellings are selected for output according to the prevailing key
 signature or explicit key indication. (Refer to <span class="tool">key</span> and **key
 signatures** in Section 3 *(Humdrum Tandem Interpretations).* Hence, in
@@ -97,13 +97,13 @@ The <span class="tool">kern</span> command provides the following options:
 Options are specified in the command line.
 
 In the default operation, <span class="tool">kern</span> outputs any non-pitch-related
-signifiers in addition to the kern value. For example, the `**pitch`
+signifiers in addition to the kern value. For example, the <span class="rep">pitch</span>
 token \"A6zzz\" will result in the output \"aaazzz\" &mdash; that is, after
 translating A6 to \"aaa\", the \"zzz\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
 confusing &mdash; especially, when the non-pitch-related signifiers are
-upper- or lower-case letters from A-G. Consider the case of the `**freq`
+upper- or lower-case letters from A-G. Consider the case of the <span class="rep">freq</span>
 token \"aA\#5\"; after translating \"A\#5\" to \"aa\", the leading
 non-pitch-related signifier \"a\" will be prepended to the output, hence
 the value \"aaa\" &mdash; which will undoubtedly cause confusion. The <span class="option">x</span>
@@ -117,9 +117,9 @@ output. For most inputs, the <span class="option">x</span> option is recommended
 ### SAMPLE OUTPUTS
 
 The following example illustrates the use of **kern.** The input
-contains six pitch-related spines &mdash; two of which (`**deg` and
-`**cocho`) cannot be processed by **kern.** In addition, there are two
-non-pitch-related spines (`**embell` and `**metpos`). ``
+contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
+<span class="rep">cocho</span>) cannot be processed by **kern.** In addition, there are two
+non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
 >   !! \`kern\' example \#1                                                                         
@@ -181,7 +181,7 @@ produces the following result: ``
 >
 Both processed and unprocessed spines are output. Also notice that the
 non-pitch-related signifiers (e.g. foo) in the first notes of the
-`**specC, **pitch`, and `**MIDI`, spines have been stripped away (due to
+`**specC, **pitch`, and <span class="rep">MIDI</span>, spines have been stripped away (due to
 the <span class="option">x</span> option).
 
 Key signature sensitivity is illustrated in the following example. The
@@ -242,7 +242,7 @@ interpreters, and revised *awk* (1985).
 
 ### BUGS
 
-When translating `**pitch`, `**solfg`, or `**Tonh`, inputs, <span class="tool">kern</span>
+When translating <span class="rep">pitch</span>, <span class="rep">solfg</span>, or <span class="rep">Tonh</span>, inputs, <span class="tool">kern</span>
 ignores cents deviation. Hence C\#6+80 is rendered as \`ccc\#\' rather
 than the nearest pitch \`ddd\'.
 
@@ -252,9 +252,9 @@ than the nearest pitch \`ddd\'.
 
 Humdrum representations are expected to avoid context dependency insofar
 as possible. This can lead to unexpected results. For example, the
-letter \`x\' in `**pitch` is intended to signify the presence of a
-double sharp. Thus the `**pitch` input token \`xyzC4\' is correctly
-translated by <span class="tool">kern</span> as \`yzc\#\#\'. Similarly, the `**pitch` input
+letter \`x\' in <span class="rep">pitch</span> is intended to signify the presence of a
+double sharp. Thus the <span class="rep">pitch</span> input token \`xyzC4\' is correctly
+translated by <span class="tool">kern</span> as \`yzc\#\#\'. Similarly, the <span class="rep">pitch</span> input
 token \`1yzC4\' becomes \`yzCCC4\'. (The first numerical value is
 interpreted as the octave number and the trailing number 4 is
 interpreted as a non-pitch-related signifier.)

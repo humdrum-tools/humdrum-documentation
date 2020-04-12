@@ -23,14 +23,14 @@ set-theoretic representations
 The <span class="tool">pcset</span> command is used to generate and convert between various
 set-theoretic representations.
 
-By default, the output is the Fortean pitch-class set type (`**pcset`).
+By default, the output is the Fortean pitch-class set type (<span class="rep">pcset</span>).
 Alternatively, the user may choose to output the corresponding *normal
-form* (`**nf`) or the more succinct *prime form* (`**pf`) or the
-associated *interval-class vector* (`**iv`). See
+form* (<span class="rep">nf</span>) or the more succinct *prime form* (<span class="rep">pf</span>) or the
+associated *interval-class vector* (<span class="rep">iv</span>). See
 [REFERENCES](#REFERENCES) below.
 
-In addition to accepting `**semits` or `**pc` inputs, <span class="tool">pcset</span> can also
-process `**nf`, `**iv`, `**pf` or `**pcset` inputs. This permits the
+In addition to accepting <span class="rep">semits</span> or <span class="rep">pc</span> inputs, <span class="tool">pcset</span> can also
+process <span class="rep">nf</span>, <span class="rep">iv</span>, <span class="rep">pf</span> or <span class="rep">pcset</span> inputs. This permits the
 user to determine the normal form, prime form or interval-class vector
 for a given pc-set, or the interval-class vector for a given pc-set,
 prime form, or normal form, etc.
@@ -45,7 +45,7 @@ normal form, prime form, interval-class vector, and pc-set. Note that if
 the input consists of all twelve pitch-classes, <span class="tool">pcset</span> produces a
 null token as the set complement.
 
-When provided with `**semits` or `**pc` inputs, <span class="tool">pcset</span> treats each
+When provided with <span class="rep">semits</span> or <span class="rep">pc</span> inputs, <span class="tool">pcset</span> treats each
 input record as a set of pitches. Unisons and other pitch-class
 duplications have no effect on the output. Rests within a set of pitches
 are ignored; where an input record consists solely of one or more rests,
@@ -53,7 +53,7 @@ a null-token is output.
 
 The <span class="tool">pcset</span> command is able to translate any of the representations
 listed below. For descriptions of the various input representations
-(including `**pcset`) refer to Section 2 *(Representation Reference)* of
+(including <span class="rep">pcset</span>) refer to Section 2 *(Representation Reference)* of
 this reference manual.
 
 It is recommended that output files produced using the <span class="tool">pcset</span> command
@@ -61,12 +61,12 @@ should be given names with the distinguishing extensions \`.pcs\',
 \`.nf\' \`.pf\' or \`.iv\' &mdash; depending on the selected option.
 
 >   ------------ --------------------------------------------------------------------
->   `**iv`       interval-class vector representation
->   `**nf`       normal form for pitch-class sets
->   `**pc`       pitch-class representation
->   `**pcset`    Fortean pitch-class set name
->   `**pf`       prime form representation
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+>   <span class="rep">iv</span>       interval-class vector representation
+>   <span class="rep">nf</span>       normal form for pitch-class sets
+>   <span class="rep">pc</span>       pitch-class representation
+>   <span class="rep">pcset</span>    Fortean pitch-class set name
+>   <span class="rep">pf</span>       prime form representation
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">pcset</span>.*
@@ -80,21 +80,21 @@ The <span class="tool">pcset</span> command provides the following options:
 >   -------- -------------------------------------------------------
 >   <span class="option">c</span>   generate output for set complement
 >   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">n</span>   output normal form (`**nf`) spine
->   <span class="option">p</span>   output prime form (`**pf`) spine
->   <span class="option">v</span>   output interval-class vector (`**iv`) spine
+>   <span class="option">n</span>   output normal form (<span class="rep">nf</span>) spine
+>   <span class="option">p</span>   output prime form (<span class="rep">pf</span>) spine
+>   <span class="option">v</span>   output interval-class vector (<span class="rep">iv</span>) spine
 >   -------- -------------------------------------------------------
 >
 Options are specified in the command line.
 
-By default, the <span class="tool">pcset</span> command outputs a `**pcset` representation.
+By default, the <span class="tool">pcset</span> command outputs a <span class="rep">pcset</span> representation.
 
-The <span class="option">n</span> option causes <span class="tool">pcset</span> to output normal form (`**nf`) data
-instead of `**pcset` data. \"Normal form\" is a standard way of
+The <span class="option">n</span> option causes <span class="tool">pcset</span> to output normal form (<span class="rep">nf</span>) data
+instead of <span class="rep">pcset</span> data. \"Normal form\" is a standard way of
 representing the interval structure of any arbitrary set of
 pitch-classes.
 
-The <span class="option">p</span> option causes <span class="tool">pcset</span> to output the prime form (`**pf`) for
+The <span class="option">p</span> option causes <span class="tool">pcset</span> to output the prime form (<span class="rep">pf</span>) for
 the input. Prime form is analogous to rearranging notes in a chord so
 that the spelling is in root position, close position, transposed so
 that the root of the chord is C. By way of example, any major chord
@@ -103,8 +103,8 @@ normal form: 0,4,7 &mdash; namely, a given (basic) pitch, plus a pitch 4
 semitones above than the basic pitch, plus a pitch 7 semitones above the
 basic pitch. (See [REFERENCES](#REFERENCES).)
 
-The <span class="option">v</span> option causes interval-class vector information (`**iv`) to
-be output rather than `**pcset` data. All pitch-class sets can be
+The <span class="option">v</span> option causes interval-class vector information (<span class="rep">iv</span>) to
+be output rather than <span class="rep">pcset</span> data. All pitch-class sets can be
 characterized according to the possible interval-classes that can be
 constructed. The six-element interval-class vector specifies the
 abundance of various interval-classes from 1 semitone to 6 semitones.

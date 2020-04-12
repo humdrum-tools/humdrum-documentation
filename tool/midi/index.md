@@ -7,7 +7,7 @@ permalink:	/tool/midi/index.html
 
 ### COMMAND
 
-<span class="tool">midi</span> &mdash; convert from `**kern` to Humdrum `**MIDI` format
+<span class="tool">midi</span> &mdash; convert from <span class="rep">kern</span> to Humdrum <span class="rep">MIDI</span> format
 
 ------------------------------------------------------------------------
 
@@ -19,11 +19,11 @@ permalink:	/tool/midi/index.html
 
 ### DESCRIPTION
 
-The <span class="tool">midi</span> command converts Humdrum `**kern` data into Humdrum
-`**MIDI` data. Humdrum `**MIDI` data may be played by the
+The <span class="tool">midi</span> command converts Humdrum <span class="rep">kern</span> data into Humdrum
+<span class="rep">MIDI</span> data. Humdrum <span class="rep">MIDI</span> data may be played by the
 <span class"tool">perform</span> command or converted to a standard MIDI file
 using the <span class"tool">smf</span> command. The <span class="tool">midi</span> command will
-translate all `**kern` spines in the input stream into `**MIDI` data,
+translate all <span class="rep">kern</span> spines in the input stream into <span class="rep">MIDI</span> data,
 and will echo any non-kern spines.
 
 It is recommended that output files produced using the <span class="tool">midi</span> command
@@ -39,7 +39,7 @@ The <span class="tool">midi</span> command provides the following options:
 >   -------- -----------------------------------------------------------------------------
 >   <span class="option">c</span>   echo all data records as global comments (prior to the data record)
 >   <span class="option">C</span>   echo all data records as global comments (following the data record)
->   -d *n*   assigns a note-duration of *n* `**recip` value to all pitches and rests
+>   -d *n*   assigns a note-duration of *n* <span class="rep">recip</span> value to all pitches and rests
 >   <span class="option">h</span>   displays a help screen summarizing the command syntax
 >   -q *n*   set number of MIDI clock ticks per quarter-duration to *n*
 >   <span class="option">u</span>   suppress the deletion of duplicate (unison) concurrent note-on instructions
@@ -52,14 +52,14 @@ echoed as global comments in addition to the usual processing. This
 option is useful in conjunction with the <span class"tool">perform</span>
 command; <span class="tool">perform</span> echoes all global comments while playing MIDI
 inputs, and so the comment option allows the user to view the original
-`**kern` score while the music is performed.
+<span class="rep">kern</span> score while the music is performed.
 
 The <span class="option">d</span> *n* option allows the user to reassign all the durations of
 all notes and rests in a given input. The value *n* is specified in
-reciprocal duration notation (`**recip`), where \`4\' represents a
+reciprocal duration notation (<span class="rep">recip</span>), where \`4\' represents a
 quarter-duration, \`2.\' represents a dotted half-duration, \`12\'
 represents a quarter-note triplet, \`0\' represents a breve, etc. (See
-`**recip` in Section 2 for details.) With the <span class="option">d</span> option all pitches
+<span class="rep">recip</span> in Section 2 for details.) With the <span class="option">d</span> option all pitches
 and rests in the input will be assigned the specified duration value &mdash;
 whether or not the notes already have encoded durations. This option is
 useful for such tasks as proof-listening to passages containing
@@ -73,7 +73,7 @@ resulting output is apt to cause serious problems with commands such as
 <span class"tool">perform</span> and [**smf.**](smf.html)
 
 In contrast to MIDI performance data, canonical musical scores (such as
-`**kern`) frequently contain unisons &mdash; where two voices share the same
+<span class="rep">kern</span>) frequently contain unisons &mdash; where two voices share the same
 pitch for a period of time. MIDI produces a \`note-off\' instruction at
 the end of each note; however only a single \`note-off\' instruction is
 required to turn-off a note. Unfortunately, the first note-off will
@@ -109,13 +109,13 @@ The following examples illustrate how <span class="tool">midi</span> may be invo
 
 > ` midi chopin > chopin.hmd`
 
-converts the `**kern` data from the file `chopin` to `**MIDI` data in
+converts the <span class="rep">kern</span> data from the file `chopin` to <span class="rep">MIDI</span> data in
 the file `chopin.hmd`. The command:
 
 > ` midi -c siegfrd.idl > siegfrd.hmd`
 
-translates the `**kern` data from the file `siegfrd.idl` to `**MIDI`
-data in the file `siegfrd.hmd` and echoes all `**kern` data as global
+translates the <span class="rep">kern</span> data from the file `siegfrd.idl` to <span class="rep">MIDI</span>
+data in the file `siegfrd.hmd` and echoes all <span class="rep">kern</span> data as global
 comments.
 
 ------------------------------------------------------------------------
@@ -124,7 +124,7 @@ comments.
 
 The operation of <span class="tool">midi</span> is illustrated in the following inputs and
 outputs. In the first example, a simple C major scale is encoded in
-`**kern`.
+<span class="rep">kern</span>.
 
 ``
 
@@ -151,9 +151,9 @@ outputs. In the first example, a simple C major scale is encoded in
 >   ---------------------
 >
 Executing the <span class="tool">midi</span> command with the default settings results in the
-`**MIDI` output given below. Notice that a default channel of MIDI
+<span class="rep">MIDI</span> output given below. Notice that a default channel of MIDI
 channel 1 has been assigned via the tandem interpretation `*Ch1`. Note
-also that each `**kern` note has resulted in two MIDI instructions:
+also that each <span class="rep">kern</span> note has resulted in two MIDI instructions:
 \"key-on\" and \"key-off\". Since the end of one note coincides with the
 start of the subsequent note, key-on and key-off data are output as
 Humdrum double-stops (two tokens separated by a single space character).
@@ -183,7 +183,7 @@ Humdrum double-stops (two tokens separated by a single space character).
 >   \*-
 >   ---------------------
 >
-`**MIDI` data consist of three numbers separated by slashes (/). The
+<span class="rep">MIDI</span> data consist of three numbers separated by slashes (/). The
 first integer represents the number of clock ticks that must elapse from
 the previous instruction before the current event is initiated. In the
 above case, a default value of 72 clock ticks per quarter-note has
@@ -238,7 +238,7 @@ The output below is generated by invoking the following command:
 >   !!\*-                 \*-
 >   --------------------- ----------------------------------------------------------
 >
-Notice that non-kern data (`**harm`) is echoed in the output. Also,
+Notice that non-kern data (<span class="rep">harm</span>) is echoed in the output. Also,
 notice that each input record has been reproduced as a global comment
 (preceded by !!). This feature is useful in conjunction with the
 <span class"tool">perform</span> command.

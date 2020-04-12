@@ -21,9 +21,9 @@ Humdrum inputs
 ### DESCRIPTION
 
 The <span class="tool">nf</span> command is used to determine the *normal form* for any of
-five set-theory related inputs: pitch (`**semits`), pitch-class
-(`**pc`), prime form (`**pf`), interval-class vector (`**iv`), or
-Fortean set name (`**pcset`).
+five set-theory related inputs: pitch (<span class="rep">semits</span>), pitch-class
+(<span class="rep">pc</span>), prime form (<span class="rep">pf</span>), interval-class vector (<span class="rep">iv</span>), or
+Fortean set name (<span class="rep">pcset</span>).
 
 \"Normal form\" is a standardized way of representing the pitch material
 for any arbitrary set of pitches. Normal form provides the most
@@ -35,7 +35,7 @@ inversion, with any spelling) will have the normal form: 2,6,9 &mdash;
 namely, the pitch-classes D, F\#, A (as opposed to 6,9,2 or 2,9,6). See
 [REFERENCES](#REFERENCES) below.
 
-When provided with `**semits` or `**pc` inputs, <span class="tool">nf</span> treats each input
+When provided with <span class="rep">semits</span> or <span class="rep">pc</span> inputs, <span class="tool">nf</span> treats each input
 record as a set of pitches. Unisons and other pitch-class duplications
 have no effect on the output. Rests within a set of pitches are ignored;
 where an input record consists solely of one or more rests, a null-token
@@ -43,19 +43,19 @@ is output.
 
 The <span class="tool">nf</span> command is able to translate any of the representations
 listed below. For descriptions of the various input representations
-(including `**nf`) refer to Section 2 *(Representation Reference)* of
+(including <span class="rep">nf</span>) refer to Section 2 *(Representation Reference)* of
 this reference manual.
 
 It is recommended that output files produced using the <span class="tool">nf</span> command
 should be given names with the distinguishing \`.nf\' extension.
 
 >   ------------ --------------------------------------------------------------------
->   `**iv`       interval-class vector representation
->   `**nf`       normal form representation
->   `**pc`       pitch-class representation
->   `**pcset`    Fortean pitch-class set name
->   `**pf`       prime form representation
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+>   <span class="rep">iv</span>       interval-class vector representation
+>   <span class="rep">nf</span>       normal form representation
+>   <span class="rep">pc</span>       pitch-class representation
+>   <span class="rep">pcset</span>    Fortean pitch-class set name
+>   <span class="rep">pf</span>       prime form representation
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">nf</span>.*

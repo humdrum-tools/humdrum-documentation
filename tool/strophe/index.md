@@ -95,7 +95,7 @@ and that an expansion list occurs near the beginning of the file that
 indicates the section is to be repeated 4 times in total.
 
 The strophic passage in the above example pertains only to the spine
-marked `**text`. Following the strophic passage indicator (`*strophe`),
+marked <span class="rep">text</span>. Following the strophic passage indicator (`*strophe`),
 the spine is split apart until the required number of verses are
 generated. Then each spine is labelled with its own strophe label. Since
 the verses have an order, it is appropriate to label them with

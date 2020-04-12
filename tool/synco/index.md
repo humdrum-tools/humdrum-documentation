@@ -21,11 +21,11 @@ permalink:	/tool/synco/index.html
 
 The <span class="tool">synco</span> command characterizes the degree of metric syncopation
 evident at successive moments in a passage. It outputs a single Humdrum
-spine (`**synco`) containing numerical values representing the
+spine (<span class="rep">synco</span>) containing numerical values representing the
 instantaneous level of syncopation.
 
 The <span class="tool">synco</span> command requires at least two spines of input data &mdash; one
-of which must be ` **metpos.` (The `**metpos` representation encodes the
+of which must be ` **metpos.` (The <span class="rep">metpos</span> representation encodes the
 position in the metric hierarchy for each data record in the input.) The
 other input spine(s) must contain information that explicitly or
 implicitly encodes the occurrence of note onsets. Appropriate inputs to
@@ -34,27 +34,27 @@ descriptions of the various input representations refer to Section 2
 *(Representation Reference)* of this reference manual.
 
 >   ------------ ----------------------------------------------------------------------
->   `**cbr`      critical band rate (in equivalent rectangular bandwidths)
->   `**cents`    hundredths of a semitone with respect to middle C=0
->   `**cocho`    cochlear coordinates (in millimeters)
->   `**deg`      key-related relative scale degree
->   `**degree`   key-related absolute scale degree
->   `**freq`     fundamental frequency (in hertz)
->   `**fret`     fretted-instrument pitch tablature
->   `**kern`     core pitch/duration representation
->   `**MIDI`     Music Instrument Digital Interface tablature
->   `**pc`       pitch class
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
->   `**solfa`    tonic solfa syllables
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
+>   <span class="rep">cocho</span>    cochlear coordinates (in millimeters)
+>   <span class="rep">deg</span>      key-related relative scale degree
+>   <span class="rep">degree</span>   key-related absolute scale degree
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">fret</span>     fretted-instrument pitch tablature
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+>   <span class="rep">pc</span>       pitch class
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+>   <span class="rep">solfa</span>    tonic solfa syllables
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">synco</span>.*
 
-The resulting `**synco` spine contains numerical values, where zero
+The resulting <span class="rep">synco</span> spine contains numerical values, where zero
 represents no metric syncopation and successively increasing values
 represent increasing amounts of metric syncopation.
 
@@ -125,7 +125,7 @@ The <span class="tool">synco</span> command provides the following options:
 Options are specified in the command line.
 
 If the <span class="option">e</span> option is invoked, the output will echo all of the input
-spines along with the `**synco` output.
+spines along with the <span class="rep">synco</span> output.
 
 ------------------------------------------------------------------------
 
@@ -135,15 +135,15 @@ spines along with the `**synco` output.
 
 The following two examples illustrate the use of **synco.** In both
 examples, the left-most spines represent the input, and the right-most
-spine (labelled `**synco`) represents the corresponding output.
+spine (labelled <span class="rep">synco</span>) represents the corresponding output.
 
-The first example shows the minimum input of a single `**pitch` input
-plus the metric position information (`**metpos`). The meter signature
+The first example shows the minimum input of a single <span class="rep">pitch</span> input
+plus the metric position information (<span class="rep">metpos</span>). The meter signature
 is 2/4 and the time-base is an eighth duration. (See the [**timebase
 (4)** command.) Hence there are 4 data records per measure. The first
 beat in each measure is assigned the metric position \"1\"; the second
 beat is assigned the metric position \"2\"; and the second half of each
-beat is assigned the metric position \"3\". Zero values in the `**synco`
+beat is assigned the metric position \"3\". Zero values in the <span class="rep">synco</span>
 spine indicate the absence of any syncopation. In measure 3, a single
 syncopated moment happens at beat 2. The output was produced using the
 simple command: `synco inputfile`. ``](timebase.html)
@@ -173,8 +173,8 @@ simple command: `synco inputfile`. ``](timebase.html)
 >   ---------------- ------------ -----------
 >
 In the following example, two metrically syncopated moments are evident.
-Notice that the rhythmic information for the two `**kern` spines is
-amalgamated, and that the non-pitch spine (`**foo`) has no affect on the
+Notice that the rhythmic information for the two <span class="rep">kern</span> spines is
+amalgamated, and that the non-pitch spine (<span class="rep">foo</span>) has no affect on the
 processing. ``
 
 >   ---------------- ---------- ------------ ---------- -----------

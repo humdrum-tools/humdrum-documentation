@@ -70,10 +70,10 @@ It is recommended that output files produced using the <span class="tool">hint</
 should be given names with the distinguishing \`.hnt\' extension.
 
 >   ----------- ----------------------------------------------------------------------
->   `**kern`    core absolute pitch representation
->   `**Tonh`    German pitch system
->   `**pitch`   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**solfg`   French solfège system (fixed \`doh\')
+>   <span class="rep">kern</span>    core absolute pitch representation
+>   <span class="rep">Tonh</span>    German pitch system
+>   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
 >   ----------- ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">hint</span>.*
@@ -222,12 +222,12 @@ command
 
 will cause any data token containing the letter \`r\' to suspend the
 calculation of any harmonic intervals for the current record. The
-corresponding `**hint` output for data records matching the pattern will
+corresponding <span class="rep">hint</span> output for data records matching the pattern will
 consist simply of a null token. Given the sample input, intervals will
 be calculated only when none of the pitch-related spines contain a rest.
 
 Given the first three spines of the above sample input (i.e. without the
-`**commentary` spine), the command
+<span class="rep">commentary</span> spine), the command
 
 > ` hint -cu -s r input > output`
 

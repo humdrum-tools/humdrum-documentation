@@ -7,6 +7,9 @@ tool-span:
 option-span:
 	$(BIN)/makeOptionSpan */index.md
 
+rep-span:
+	$(BIN)/makeRepSpan */index.md
+
 misc:
 	$(BIN)/miscCleanup */index.md
 

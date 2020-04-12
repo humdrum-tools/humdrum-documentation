@@ -8,7 +8,7 @@ permalink:	/tool/record/index.html
 
 ### COMMAND
 
-<span class="tool">record</span> &mdash; record live MIDI input in Humdrum `**MIDI` data format
+<span class="tool">record</span> &mdash; record live MIDI input in Humdrum <span class="rep">MIDI</span> data format
 
 ------------------------------------------------------------------------
 
@@ -21,10 +21,10 @@ permalink:	/tool/record/index.html
 ### DESCRIPTION
 
 The <span class="tool">record</span> command captures a stream of input MIDI data and
-translates this data into a simple Humdrum `**MIDI` representation.
+translates this data into a simple Humdrum <span class="rep">MIDI</span> representation.
 Input MIDI data is obtained through a Roland MPU-401 (or compatible)
 interface &mdash; usually connected in turn to a MIDI synthesizer. The
-obtained `**MIDI` data can be manipulated using several Humdrum tools,
+obtained <span class="rep">MIDI</span> data can be manipulated using several Humdrum tools,
 or it can be played-back using the <span class"tool">perform</span> command.
 
 Recording commences as soon as the command is invoked. Recording ceases
@@ -40,7 +40,7 @@ active, the corresponding Humdrum spine continues to be output until the
 recording is terminated.
 
 At any time during the recording process, pressing the space bar will
-insert a `**MIDI` barline data token in the output stream. Measure
+insert a <span class="rep">MIDI</span> barline data token in the output stream. Measure
 numbers are incremented automatically beginning with measure 1.
 
 It is recommended that output files produced using the <span class="tool">record</span>
@@ -83,7 +83,7 @@ command invocation is:
 
 > ` record`
 
-Output `**MIDI` data may appears as follows: ``
+Output <span class="rep">MIDI</span> data may appears as follows: ``
 
 >   -------------------------------------
 >   !! Data from the MPU-401 MIDI card.
@@ -112,7 +112,7 @@ Using the quantizing option:
 
 > ` record -q 10`
 
-might produce output such as the following `**MIDI` data. Notice the
+might produce output such as the following <span class="rep">MIDI</span> data. Notice the
 frequent occurrence of multiple-stops (more than one note-instruction in
 the spine). ``
 

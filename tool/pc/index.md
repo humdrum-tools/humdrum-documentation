@@ -23,9 +23,9 @@ pitch-class
 
 The <span class="tool">pc</span> command transforms various pitch-related inputs to
 corresponding numerical pitch-class equivalents: C=0, C-sharp/D-flat=1,
-D=2, . . . B=11. It outputs one or more Humdrum `**pc` spines containing
+D=2, . . . B=11. It outputs one or more Humdrum <span class="rep">pc</span> spines containing
 pitch-class values corresponding to each of the input pitch tokens. For
-example, the `**semits` token \"-13\" is transformed to 11 (pc).
+example, the <span class="rep">semits</span> token \"-13\" is transformed to 11 (pc).
 
 The <span class="tool">pc</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
@@ -37,21 +37,21 @@ It is recommended that output files produced using the <span class="tool">pc</sp
 should be given names with the distinguishing \`.pc\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
->   `**cents`    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   `**freq`     fundamental frequency (in hertz)
->   `**kern`     core pitch/duration representation
->   `**pc`       pitch-class representation
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">pc</span>       pitch-class representation
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">pc</span>.*
 
 Note that the <span class="tool">pc</span> command is also able to reprocess pitch-class
-(`**pc`) inputs. This allows pitch-class representations to be
+(<span class="rep">pc</span>) inputs. This allows pitch-class representations to be
 translated from numeric-only (0,1,2,3 \... 9,10,11) to mixed
 alphanumeric (0,1,2,3 \... 9,A,B) or vice versa. (See documentation for
 `**pc (2)`.)
@@ -65,14 +65,14 @@ The <span class="tool">pc</span> command provides the following options:
 >   -------- ---------------------------------------------------------------------------------
 >   <span class="option">a</span>   output alphanumeric representation (where A=10, B=11)
 >   <span class="option">h</span>   displays a help screen summarizing the command syntax
->   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied `**kern` notes
+>   <span class="option">t</span>   suppresses printing of all but the first note of a group of tied <span class="rep">kern</span> notes
 >   <span class="option">x</span>   suppresses printing of non-pitch-class data
 >   -------- ---------------------------------------------------------------------------------
 >
 Options are specified in the command line.
 
 The <span class="option">a</span> option invokes an alternative (alphanumeric) form of the
-`**pc` output where the upper-case letters \`A\' and \`B\' are
+<span class="rep">pc</span> output where the upper-case letters \`A\' and \`B\' are
 substituted for the pitch-class integers 10 and 11, respectively. In
 addition, the input alias values \`T\' (ten) and \`E\' (eleven) are
 transformed to \`A\' and \`B\'. Encodings using mixed alphanumeric
@@ -81,17 +81,17 @@ Encodings using purely numeric values are especially useful when the
 representation is to be processed numerically.
 
 The <span class="option">t</span> option ensures that only a single output value is given for
-tied `**kern` notes; the output coincides with the first note of the
+tied <span class="rep">kern</span> notes; the output coincides with the first note of the
 tie.
 
 Note that <span class="tool">pc</span> will round-off frequencies and non-integer semitone
-input values to the nearest pitch-class. Hence, an input `**semits` data
-token of 5.6 will be rendered in the `**pc` output as the value 6.
-Similarly, the input `**freq` value 452.1 will be rendered in the `**pc`
+input values to the nearest pitch-class. Hence, an input <span class="rep">semits</span> data
+token of 5.6 will be rendered in the <span class="rep">pc</span> output as the value 6.
+Similarly, the input <span class="rep">freq</span> value 452.1 will be rendered in the <span class="rep">pc</span>
 output as the value 9.
 
 In the default operation, <span class="tool">pc</span> outputs non-pitch-related signifiers in
-addition to the pitch-class value. For example, the `**semits` token
+addition to the pitch-class value. For example, the <span class="rep">semits</span> token
 \"X15yz\" will result in the output \"X3yz\" &mdash; that is, after
 translating 15 to pitch-class 3, the \"Xyz\" signifiers are retained in
 the output. The <span class="option">x</span> option is useful for eliminating
@@ -102,7 +102,7 @@ non-pitch-class-related signifiers from the output.
 ### EXAMPLES
 
 The following example illustrates the use of **pc.** The input contains
-four spines &mdash; one of which (`**foo`) cannot be processed by **pc.** ``
+four spines &mdash; one of which (<span class="rep">foo</span>) cannot be processed by **pc.** ``
 
 >   -------------------- ---------- ------------ ---------
 >   !! \`pc\' example.                           
@@ -150,7 +150,7 @@ produces the following result: ``
 >   \*-                     \*-         \*-         \*-
 >   -------------------- -- -------- -- -------- -- ---------
 >
-Both processed and unprocessed spines are output. Notice that the `**pc`
+Both processed and unprocessed spines are output. Notice that the <span class="rep">pc</span>
 value \`B\' in the token \`BCD\' has been maintained in the first
 measure. Notice that for the data tokens in the first spine of measure
 2, only the first numerical value in the input data tokens is processed.

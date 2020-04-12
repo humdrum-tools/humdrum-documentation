@@ -23,7 +23,7 @@ The <span class="tool">patt</span> command is used to locate occurrences of a us
 pattern in some Humdrum input. The patterns sought may span innumerable
 data records. Occurrences of the pattern may be identified by line
 number, echoed intact in the output stream, or tagged by a user-defined
-marker in a `**patt` output spine.
+marker in a <span class="rep">patt</span> output spine.
 
 The pattern sought must be defined as a separate \"template\" file. The
 template file is identified using the <span class="option">f</span> command option.
@@ -95,7 +95,7 @@ The <span class="tool">patt</span> command supports the following options:
 >   <span class="option">h</span>              displays a help screen summarizing the command syntax
 >   <span class="option">m</span>              invokes collapsed multiple-record matching mode
 >   -s *regexp*         skip (ignore) data records containing the defined regular expression
->   -t *output\_tag*    generate `**patt` output spine; tag each occurrence of the pattern
+>   -t *output\_tag*    generate <span class="rep">patt</span> output spine; tag each occurrence of the pattern
 >                       with the string *output\_tag*
 >   ------------------- ----------------------------------------------------------------------
 >
@@ -127,10 +127,10 @@ with the next input and template records. In this way, a template file
 consisting of several records, may possibly match a single input record.
 (See [EXAMPLES](#EXAMPLES) below.)
 
-The <span class="option">t</span> option causes <span class="tool">patt</span> to output a single spine of `**patt`
+The <span class="option">t</span> option causes <span class="tool">patt</span> to output a single spine of <span class="rep">patt</span>
 output. The user specifies an *output tag* (character string) on the
 command line. Each instance of the found pattern causes the tag to be
-output in the `**patt` spine at the position corresponding to the onset
+output in the <span class="rep">patt</span> spine at the position corresponding to the onset
 of each found pattern. (See [EXAMPLES](#EXAMPLES) below.) Note that the
 <span class="option">t</span> and <span class="option">e</span> options are mutually exclusive.
 
@@ -242,7 +242,7 @@ command may be used to eliminate the duplicate interpretations.
 Instead of outputting the individual patterns, the <span class="option">t</span> option may be
 used to output a spine that marks each instance of the found pattern. In
 the following command, the beginning of each occurrence of the pattern
-is labelled in the `**patt` spine by the tag \"one-two-three.\"
+is labelled in the <span class="rep">patt</span> spine by the tag \"one-two-three.\"
 
 > ` patt -t one-two-three -s = -f template target`
 

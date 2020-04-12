@@ -34,10 +34,10 @@ output. For descriptions of the various input representations refer to
 Section 2 *(Representation Reference)* of this reference manual.
 
 >   ----------- ----------------------------------------------------------------------
->   `**kern`    core absolute pitch representation
->   `**pitch`   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**solfg`   French solfège system (fixed \`doh\')
->   `**Tonh`    German pitch system
+>   <span class="rep">kern</span>    core absolute pitch representation
+>   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+>   <span class="rep">Tonh</span>    German pitch system
 >   ----------- ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">trans</span>.*
@@ -232,7 +232,7 @@ interpreters, and revised *awk* (1985).
 
 It is important not to confused transposed scores with notations of
 music for transposing instruments (such as the horn in F or the clarinet
-in B-flat). The `**pitch, **kern, **Tonh`, and `**solfg` representations
+in B-flat). The `**pitch, **kern, **Tonh`, and <span class="rep">solfg</span> representations
 are intended to represent absolute or concert pitch; transposed scores
 are considered deviations from this convention. The *transpose tandem
 interpretation* should not be used to indicate that an encoding is for a
@@ -244,7 +244,7 @@ reads from a score whose pitches are notated differently from concert
 pitch; nevertheless, the ensuing data is encoded at concert pitch. For
 example, a trumpet in B-flat plays a B-flat by fingering the pitch C.
 The absolute pitch (B-flat) is the proper `**kern, **pitch, **solfg`, or
-`**Tonh` encoding. Since the instrumentalist's *notation* is transposed
+<span class="rep">Tonh</span> encoding. Since the instrumentalist's *notation* is transposed
 up 1 diatonic letter-name and 2 chromatic semitones from the absolute or
 concert pitch, the encoded score will contain the instrument's
 transposition tandem interpretation
@@ -257,7 +257,7 @@ command.
 
 Note that by default, key and key signature tandem interpretations are
 not modified by <span class="tool">trans</span> since the `**pitch, **kern, **solfg`, and
-`**Tonh` representations are intended to encode the original key and key
+<span class="rep">Tonh</span> representations are intended to encode the original key and key
 signature at absolute pitch.
 
 ------------------------------------------------------------------------

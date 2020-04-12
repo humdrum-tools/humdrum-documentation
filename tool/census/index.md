@@ -27,7 +27,7 @@ comments, the number of data records, the number of data tokens, null
 tokens, and multiple-stops.
 
 When the <span class="option">k</span> option is invoked, <span class="tool">census</span> provides a summary of a
-further ten features pertaining to `**kern` inputs. This summary
+further ten features pertaining to <span class="rep">kern</span> inputs. This summary
 includes the number of single and double barline records, the maximum
 number of concurrent notes, the total number of note-heads, the total
 number of notes (tied notes treated as single notes), the total number
@@ -49,8 +49,8 @@ displays a help screen summarizing the command syntax
 also output information regarding
 `**kern-related data   Options are specified in the command line. `
 
-The <span class="option">k</span> option pertains to `**kern` inputs only. This option adds
-`**kern`-related information to the output.
+The <span class="option">k</span> option pertains to <span class="rep">kern</span> inputs only. This option adds
+<span class="rep">kern</span>-related information to the output.
 
 ------------------------------------------------------------------------
 

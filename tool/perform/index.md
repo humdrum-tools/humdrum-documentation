@@ -7,7 +7,7 @@ permalink:	/tool/perform/index.html
 
 ### COMMAND
 
-<span class="tool">perform</span> -- play Humdrum `**MIDI` files
+<span class="tool">perform</span> -- play Humdrum <span class="rep">MIDI</span> files
 
 ------------------------------------------------------------------------
 
@@ -20,15 +20,15 @@ permalink:	/tool/perform/index.html
 ### DESCRIPTION
 
 The <span class="tool">perform</span> command allows the user to listen to synthesized
-performances of Humdrum `**MIDI`-format input. When invoked, <span class="tool">perform</span>
+performances of Humdrum <span class="rep">MIDI</span>-format input. When invoked, <span class="tool">perform</span>
 provides an interactive environment suitable for proof-listening and
 other audition tasks.
 
 The <span class="tool">perform</span> command accepts as input Humdrum inputs containing
-`**MIDI` representations. The command generates serial MIDI data which
+<span class="rep">MIDI</span> representations. The command generates serial MIDI data which
 are sent directly to a MIDI controller card. The user must have an
 appropriate MIDI synthesizer connected via a Roland MPU-401 (or
-compatible) MIDI controller card. All `**MIDI` spines present in the
+compatible) MIDI controller card. All <span class="rep">MIDI</span> spines present in the
 input stream are performed. Non-MIDI spines are ignored and do not
 affect the sound output.
 
@@ -179,7 +179,7 @@ line by using the <span class="option">t</span> option. The <span class="option"
 integer or real value between 0.13 and 3.80. A value of 1.0 corresponds
 to the default tempo of 66 quarter-notes per minute. A value of 2.0
 doubles the tempo, whereas a value of 0.5 halves the tempo.
-Alternatively, tempo may be specified using the `**MIDI` tandem
+Alternatively, tempo may be specified using the <span class="rep">MIDI</span> tandem
 interpretation for metronome marking (e.g. `*MM96`). Tempos found in the
 input representation take precedence over any tempo specified on the
 command line. If no tempo information is available, <span class="tool">perform</span> uses the

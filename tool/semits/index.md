@@ -22,16 +22,16 @@ to numerical semitones
 
 The <span class="tool">semits</span> command transforms various pitch-related inputs to
 corresponding numerical semitone values. It outputs one or more Humdrum
-`**semits` spines containing values corresponding to the semitone
+<span class="rep">semits</span> spines containing values corresponding to the semitone
 distance from middle C for pitch-related input tokens. Pitches above
 middle C produce positive output values, whereas pitches below middle C
-produce negative output values. For example, the `**pitch` token \"C3\"
+produce negative output values. For example, the <span class="rep">pitch</span> token \"C3\"
 is transformed to -12 (-ts).
 
 The <span class="tool">semits</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
-representations (including `**semits`) refer to Section 2
+representations (including <span class="rep">semits</span>) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
 It is recommended that output files produced using the <span class="tool">semits</span>
@@ -39,16 +39,16 @@ command should be given names with the distinguishing \`.sem\'
 extension.
 
 >   ------------ ---------------------------------------------------------------------------
->   `**cents`    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   `**freq`     fundamental frequency (in hertz)
->   `**fret`     fretted-instrument pitch tablature
->   `**kern`     core pitch/duration representation
->   `**MIDI`     Music Instrument Digital Interface tablature
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">fret</span>     fretted-instrument pitch tablature
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">semits</span>.*
@@ -70,25 +70,25 @@ Options are specified in the command line.
 
 The <span class="option">p</span> option can be used to set the precision of the output values
 to *n* decimal places. The default precision is integer values only.
-Note that <span class="tool">semits</span> is able to process `**semits` as input; this
-feature allows the user to round-off existing `**semits` data to a
+Note that <span class="tool">semits</span> is able to process <span class="rep">semits</span> as input; this
+feature allows the user to round-off existing <span class="rep">semits</span> data to a
 specified precision.
 
 The <span class="option">t</span> ensures that only a single output value is given for tied
-`**kern` notes; the output coincides with the first note of the tie.
+<span class="rep">kern</span> notes; the output coincides with the first note of the tie.
 
 In the default operation, <span class="tool">semits</span> outputs non-pitch-related
-signifiers in addition to the semits value. For example, the `**pitch`
+signifiers in addition to the semits value. For example, the <span class="rep">pitch</span>
 token \"A5zzz\" will result in the output \"21zzz\" &mdash; that is, after
 translating A5 to 21 semits, the \"zzz\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
 confusing &mdash; especially, when the non-pitch-related signifiers are
-numbers. Consider the case of the `**kern` token \"8aa\"; after
+numbers. Consider the case of the <span class="rep">kern</span> token \"8aa\"; after
 translating \`aa\' to 21 semits, the non-pitch-related signifier \`8\'
 will also be output, hence the value 821 &mdash; which will undoubtedly
 cause confusion. The <span class="option">x</span> option is useful for eliminating
-non-pitch-related signifiers from the output. For most `**kern` inputs,
+non-pitch-related signifiers from the output. For most <span class="rep">kern</span> inputs,
 the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
@@ -96,9 +96,9 @@ the <span class="option">x</span> option is recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **semits.** The input
-contains six pitch-related spines &mdash; two of which (`**deg` and
-`**cocho`) cannot be processed by **semits.** In addition, there are two
-non-pitch-related spines (`**embell` and `**metpos`). ``
+contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
+<span class="rep">cocho</span>) cannot be processed by **semits.** In addition, there are two
+non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
 >   !! \`semits\' example.                                                                         
@@ -159,10 +159,10 @@ produces the following result: ``
 >   ------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
 >
 Both processed and unprocessed spines are output. Notice that the tied
-note at the beginning of measure 2 in the `**kern` spine has been
+note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
-the first notes of the `**pitch, **MIDI`, and `**cocho` spines have been
+the first notes of the `**pitch, **MIDI`, and <span class="rep">cocho</span> spines have been
 stripped away (due to the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------

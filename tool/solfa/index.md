@@ -8,7 +8,7 @@ permalink:	/tool/solfa/index.html
 ### COMMAND
 
 <span class="tool">solfa</span> -- translate selected Humdrum pitch-related representations
-to tonic solfa syllables (`**solfa`)
+to tonic solfa syllables (<span class="rep">solfa</span>)
 
 ------------------------------------------------------------------------
 
@@ -22,7 +22,7 @@ to tonic solfa syllables (`**solfa`)
 
 The <span class="tool">solfa</span> command transforms various pitch-related inputs to the
 corresponding tonic solfa syllables. The command outputs one or more
-Humdrum `**solfa` spines &mdash; where pitches are designated by the
+Humdrum <span class="rep">solfa</span> spines &mdash; where pitches are designated by the
 syllables *do, re, mi, fa, so, la,* and *ti* &mdash; or their chromatic
 alterations: *di, da, ri, ra,* etc. (see below). Tonic solfa syllables
 can be determined only with reference to some prevailing key. For
@@ -67,17 +67,17 @@ the tonic pitch is B-flat, both B-natural and B-sharp are represented by
 
 The <span class="tool">solfa</span> command is able to translate any of the pitch-related
 representations listed below. For descriptions of the various input
-representations (including `**solfa`) refer to Section 2
+representations (including <span class="rep">solfa</span>) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
 It is recommended that output files produced by the <span class="tool">solfa</span> command
 should be given names with the distinguishing .sol extension.
 
 >   ----------- ----------------------------------------------------------------------
->   `**kern`    core pitch/duration representation
->   `**pitch`   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**solfg`   French solfège system (fixed \`doh\')
->   `**Tonh`    German pitch system
+>   <span class="rep">kern</span>    core pitch/duration representation
+>   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+>   <span class="rep">Tonh</span>    German pitch system
 >   ----------- ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">solfa</span>.*
@@ -108,7 +108,7 @@ tied notes; the output coincides with the first note of the tie.
 
 In the default operation, <span class="tool">solfa</span> outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D, the
-`**kern` token \"4Gz\" will result in the output \"4faz\" &mdash; that is,
+<span class="rep">kern</span> token \"4Gz\" will result in the output \"4faz\" &mdash; that is,
 after translating G to fa, the \"4\...z\" signifiers are retained in the
 output. For some applications, echoing non-pitch-related signifiers in
 the output is useful. However, in other situations, the result can prove
@@ -120,9 +120,9 @@ signifiers from the output.
 ### EXAMPLES
 
 The following example illustrates the use of **solfa.** The input
-contains four pitch-related spines &mdash; one of which (`**MIDI`) cannot be
+contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
 processed by **solfa.** In addition, there is one non-pitch-related
-spines (`**embell`). ``
+spines (<span class="rep">embell</span>). ``
 
 >   ----------------------- ---------- ----------- ----------- ----------- ------------
 >   !! \`solfa\' example.                                                  
@@ -183,10 +183,10 @@ produces the following result: ``
 >   ----------------------- ----------- ----------- ----------- ----------- ------------
 >
 Both processed and unprocessed spines are output. Notice that the tied
-note at the beginning of measure 2 in the `**kern` spine has been
+note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
-the first notes of the `**pitch` spine have been stripped away (due to
+the first notes of the <span class="rep">pitch</span> spine have been stripped away (due to
 the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------

@@ -56,8 +56,8 @@ example, the command:
 
 > ` extract -i '**semits,**MIDI' hildegard`
 
-will extract all spines in the file `hildegard` containing `**semits` or
-`**MIDI` data.
+will extract all spines in the file `hildegard` containing <span class="rep">semits</span> or
+<span class="rep">MIDI</span> data.
 
 In *spine-path mode,* the **extract\"** command follows a given spine
 starting at the beginning of the file, and traces the course of that

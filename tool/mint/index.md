@@ -24,9 +24,9 @@ The <span class="tool">mint</span> command determines the distance (interval) be
 successive pitches. Output pitch intervals are expressed as a diatonic
 interval size plus interval quality; a leading plus or minus sign
 indicates whether the interval is ascending or descending. By way of
-illustration, <span class="tool">mint</span> will change a sequence of `**pitch` data tokens
+illustration, <span class="tool">mint</span> will change a sequence of <span class="rep">pitch</span> data tokens
 &mdash; such as *C4, A4, E4* &mdash; to the interval sequence *+M6, -P4.* Each
-pitch-related input spine is transformed to a corresponding `**mint`
+pitch-related input spine is transformed to a corresponding <span class="rep">mint</span>
 output spine.
 
 The <span class="tool">mint</span> command determines melodic intervals only for pitch tokens
@@ -60,10 +60,10 @@ It is recommended that output files produced using the <span class="tool">mint</
 should be given names with the distinguishing \`.mnt\' extension.
 
 >   ----------- ----------------------------------------------------------------------
->   `**kern`    core pitch/duration representation
->   `**pitch`   American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**solfg`   French solfège system (fixed \`doh\')
->   `**Tonh`    German pitch system
+>   <span class="rep">kern</span>    core pitch/duration representation
+>   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+>   <span class="rep">Tonh</span>    German pitch system
 >   ----------- ----------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">mint</span>.*
@@ -145,8 +145,8 @@ in the third record. This represents the initial pitch from which
 subsequent pitch distances are measured. This offset value reflects the
 type of input given to **mint,** thus if the input format is ` **kern`
 the offset pitch will be recorded in the same representation. Note that
-for absolute pitch units: \`c\' (`**kern`) equals \`C4\' (`**pitch`)
-equals \`do4\' (`**solfg`) equals \`C4\' (`**Tonh`).
+for absolute pitch units: \`c\' (<span class="rep">kern</span>) equals \`C4\' (<span class="rep">pitch</span>)
+equals \`do4\' (<span class="rep">solfg</span>) equals \`C4\' (<span class="rep">Tonh</span>).
 
 The subsequent output value (+P5) indicates a melodic interval of an
 ascending perfect fifth. This is followed by an ascending minor third

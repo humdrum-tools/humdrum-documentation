@@ -198,13 +198,13 @@ spine). ``
 >   \*-        \*-
 >   ---------- -------------
 >
-The `**plength` output indicates the number of notes in each phrase for
-the corresponding `**kern` spine. The output was generated using the
+The <span class="rep">plength</span> output indicates the number of notes in each phrase for
+the corresponding <span class="rep">kern</span> spine. The output was generated using the
 following command:
 
 > ` num -a '**plength' -z '{' -x '[.r=]' -s '{' -r '}' -S '}'`
 
-The <span class="option">x</span> option excludes `**kern` rests, barlines, and null tokens
+The <span class="option">x</span> option excludes <span class="rep">kern</span> rests, barlines, and null tokens
 from the counting. The <span class="option">z</span> option causes the counter to be reset to 1
 whenever a begin-phrase signifier (\`{\') is encountered. The <span class="option">s</span>
 option causes suspension of output numbers to occur at the beginning of
@@ -215,13 +215,13 @@ printed for notes outside of phrases; that is, it suspends outputting
 numbers following the end of a phrase.§ .FS § Note that this command
 will still fail to suppress the numbering of notes occuring prior to the
 first phrase. .FE The <span class="option">a</span> option causes the numbers to be output as a
-separate spine labelled `**plength`.
+separate spine labelled <span class="rep">plength</span>.
 
 The command
 
 > ` num -a '**ordo' koto`
 
-outputs a new spine labelled `**ordo` containing successive integers
+outputs a new spine labelled <span class="rep">ordo</span> containing successive integers
 beginning at 1 for each data record in the input.
 
 > ` num -n '^=' -x '==' -p '=' -o 108 sarod`
@@ -240,7 +240,7 @@ The command
 > ` num -a '**phrase#' -n '{' -T rebec`
 
 outputs a spine containing numbers that number the beginning of each
-`**kern` phrase for the file `rebec`; if any exclusive interpretation is
+<span class="rep">kern</span> phrase for the file `rebec`; if any exclusive interpretation is
 encountered, the phrase numbering is restarted at 1.
 
 The command

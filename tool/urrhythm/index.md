@@ -20,14 +20,14 @@ Humdrum passage
 
 ### DESCRIPTION
 
-The <span class="tool">urrhythm</span> command outputs a single Humdrum spine (`**URrhythm`)
+The <span class="tool">urrhythm</span> command outputs a single Humdrum spine (<span class="rep">URrhythm</span>)
 containing data representing rhythmic \`prototypes\' (Ur-rhythms)
 evident in a musical passage. The command implements a variation of
 Johnson-Laird's theory of rhythmic prototypes (see
 [REFERENCES](#REFERENCES) below). In order to identify the rhythmic
 prototypes, <span class="tool">urrhythm</span> requires information about note onsets and
-metric position. These may be provided via two input spines: `**kern`
-(or `**recip`) and `**metpos`.
+metric position. These may be provided via two input spines: <span class="rep">kern</span>
+(or <span class="rep">recip</span>) and <span class="rep">metpos</span>.
 
 Johnson-Laird's rhythmic-prototype theory can be applied only to
 musical passages conforming to some established metric context, such as
@@ -86,8 +86,8 @@ Options are specified in the command line.
 ### EXAMPLES
 
 The following example illustrates the operation of **urrhythm.** The
-first two spines (`**kern` and `**metpos`) constitute the input. The
-third spine (`**URrhythm`) is added by the <span class="tool">urrhythm</span> command. All
+first two spines (<span class="rep">kern</span> and <span class="rep">metpos</span>) constitute the input. The
+third spine (<span class="rep">URrhythm</span>) is added by the <span class="tool">urrhythm</span> command. All
 three spines are given in the output. ``
 
 >   ---------- ------------ --------------

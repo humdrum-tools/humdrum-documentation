@@ -7,7 +7,7 @@ permalink:	/tool/timebase/index.html
 
 ### COMMAND
 
-<span class="tool">timebase</span> -- reformat Humdrum `**kern` or `**recip` score with
+<span class="tool">timebase</span> -- reformat Humdrum <span class="rep">kern</span> or <span class="rep">recip</span> score with
 constant time-base
 
 ------------------------------------------------------------------------
@@ -20,7 +20,7 @@ constant time-base
 
 ### DESCRIPTION
 
-The <span class="tool">timebase</span> command is used to reformat `**kern` or `**recip`
+The <span class="tool">timebase</span> command is used to reformat <span class="rep">kern</span> or <span class="rep">recip</span>
 inputs so that output data records represent equivalent slices (elapsed
 duration) of time. The effect of the <span class="tool">timebase</span> command is best
 illustrated by an example. With a specified time-base of a sixteenth
@@ -58,7 +58,7 @@ above example, notice that the second thirty-second note (pitch \`A\' in
 the second spine) has disappeared from the file as the time-base is only
 a sixteenth duration.
 
-The time-base is selected by assigning a `**recip` duration value to the
+The time-base is selected by assigning a <span class="rep">recip</span> duration value to the
 <span class="option">t</span> option. Time-base durations may be dotted.
 
 Comments and barlines are preserved in the output, however, acciaccatura
@@ -85,7 +85,7 @@ Options are specified in the command line. e.g.
 
 > ` timebase -t 8. -x`
 
-will remove `**kern` or `**recip` duration encodings from the output;
+will remove <span class="rep">kern</span> or <span class="rep">recip</span> duration encodings from the output;
 each output data record will represent an elapsed duration of a dotted
 eighth note.
 

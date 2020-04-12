@@ -194,7 +194,7 @@ the right. The output was produced by invoking the following command:
 >   \*-         \*-                                 \*-        \*-
 >   ----------- ---------- -- -- -- -- ------------ ---------- ----------
 >
-The effect of this command has been to propagate the `**kern` pitch
+The effect of this command has been to propagate the <span class="rep">kern</span> pitch
 signifiers, without propagating non-pitch information.
 
 ------------------------------------------------------------------------

@@ -9,7 +9,7 @@ permalink:	/tool/deg/index.html
 ### COMMAND
 
 <span class="tool">deg</span> &mdash; translate selected Humdrum pitch-related representations to
-relative scale degree (`**deg`)
+relative scale degree (<span class="rep">deg</span>)
 
 ------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ relative scale degree (`**deg`)
 
 The <span class="tool">deg</span> command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
-`**deg` spines &mdash; where scale degrees are indicated by the numbers 1
+<span class="rep">deg</span> spines &mdash; where scale degrees are indicated by the numbers 1
 (tonic) to 7 (leading tone). Scale degree information can be determined
 only with reference to some prevailing key. For example, the pitch C4 is
 the tonic (1) in the key of C major, but the submediant (6) in the key
@@ -52,17 +52,17 @@ cause difficulties.
 
 The <span class="tool">deg</span> command is able to translate any of the pitch-related
 representations listed below. For descriptions of the various input
-representations (including `**deg`) refer to Section 2 *(Representation
+representations (including <span class="rep">deg</span>) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
 It is recommended that output files produced using the <span class="tool">deg</span> command
 should be given names with the distinguishing \`.deg\' extension.
 
 > >   ----------- ----------------------------------------------------------------------
-> >   `**kern`    core pitch/duration representation
-> >   `**pitch`   American National Standards Institute pitch notation (e.g. \"A\#4\")
-> >   `**solfg`   French solfège system (fixed \`doh\')
-> >   `**Tonh`    German pitch system
+> >   <span class="rep">kern</span>    core pitch/duration representation
+> >   <span class="rep">pitch</span>   American National Standards Institute pitch notation (e.g. \"A\#4\")
+> >   <span class="rep">solfg</span>   French solfège system (fixed \`doh\')
+> >   <span class="rep">Tonh</span>    German pitch system
 > >   ----------- ----------------------------------------------------------------------
 > >
 > *Input representations processed by <span class="tool">deg</span>.*
@@ -96,23 +96,23 @@ suppresses printing of
 non-`**deg signifiers   Options are specified in the command line. `
 
 The <span class="option">t</span> option ensures that only a single output value is given for
-tied `**kern` notes; the output coincides with the first note of the
+tied <span class="rep">kern</span> notes; the output coincides with the first note of the
 tie.
 
 In the default operation, <span class="tool">deg</span> outputs non-pitch-related signifiers
 in addition to the degree value. For example, in the key of D major, the
-`**pitch` token \"G5zzz\" will result in the output \"4zzz\" &mdash; that
+<span class="rep">pitch</span> token \"G5zzz\" will result in the output \"4zzz\" &mdash; that
 is, after translating G5 to 4, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
 prove confusing &mdash; especially, when the non-pitch-related signifiers
-are numbers. Consider the case of the `**kern` token \"4f\#\" in the key
+are numbers. Consider the case of the <span class="rep">kern</span> token \"4f\#\" in the key
 of D minor; after translating \``f#`\' to \``3+`\' (i.e. raised third
 degree), the preceding non-pitch-related signifier \``4`\' will also be
 output, hence the value `43+` &mdash; which may cause confusion.
 
 The <span class="option">x</span> option is useful for eliminating non-pitch-related signifiers
-from the output. For most `**kern` inputs, the <span class="option">x</span> option is
+from the output. For most <span class="rep">kern</span> inputs, the <span class="option">x</span> option is
 recommended.
 
 ------------------------------------------------------------------------
@@ -120,9 +120,9 @@ recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **deg.** The input contains
-four pitch-related spines &mdash; one of which (`**MIDI`) cannot be
+four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
 processed by **deg.** In addition, there is one non-pitch-related spines
-(`**embell`).
+(<span class="rep">embell</span>).
 
 > ``
 >
@@ -187,14 +187,14 @@ produces the following result:
 > >   --------------------- --------- ----------- --------- --------- ------------
 > >
 Both processed and unprocessed spines are output. Notice that the tied
-note at the beginning of measure 2 in the `**kern` spine has been
+note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
-the first notes of the `**pitch` spine have been stripped away (due to
+the first notes of the <span class="rep">pitch</span> spine have been stripped away (due to
 the <span class="option">x</span> option). Note that the plus and minus signs merely indicate
 that a scale degree has been raised or lowered, but not by how much.
 Hence both the D-flat and D double-flat in measure 1 of the first
-(`**kern`) spine are rendered as \``2-`\'.
+(<span class="rep">kern</span>) spine are rendered as \``2-`\'.
 
 ------------------------------------------------------------------------
 

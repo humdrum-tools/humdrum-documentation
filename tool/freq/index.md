@@ -22,32 +22,32 @@ frequency
 
 The <span class="tool">freq</span> command transforms various pitch-related inputs to
 corresponding frequency representations. It outputs one or more Humdrum
-`**freq` spines containing numerical values (in hertz) corresponding to
+<span class="rep">freq</span> spines containing numerical values (in hertz) corresponding to
 the fundamental frequency for pitch-related input tokens. For example,
-the `**pitch` token \"C4\" is transformed to 261.63 (hertz).
+the <span class="rep">pitch</span> token \"C4\" is transformed to 261.63 (hertz).
 
 The <span class="tool">freq</span> command is able to translate any of the pitch-related
 representations listed below. In each case, a tuning standard of A4
 equals 440 hertz is assumed. For descriptions of the various input
-representations (including `**freq`) refer to Section 2 *(Representation
+representations (including <span class="rep">freq</span>) refer to Section 2 *(Representation
 Reference)* of this reference manual.
 
 It is recommended that output files produced using the <span class="tool">freq</span> command
 should be given names with the distinguishing \`\"\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
->   `**cbr`      critical band rate (in equivalent rectangular bandwidth units)
->   `**cents`    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   `**cocho`    cochlear coordinates (in millimeters)
->   `**freq`     fundamental frequency (in hertz)
->   `**fret`     fretted-instrument pitch tablature
->   `**kern`     core pitch/duration representation
->   `**MIDI`     Music Instrument Digital Interface tablature
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. -12 equals C3)
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidth units)
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+>   <span class="rep">cocho</span>    cochlear coordinates (in millimeters)
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">fret</span>     fretted-instrument pitch tablature
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. -12 equals C3)
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">freq</span>.*
@@ -69,25 +69,25 @@ Options are specified in the command line.
 
 The <span class="option">p</span> option can be used to set the precision of the output values
 to *n* decimal places. The default precision is two decimal places. Note
-that <span class="tool">freq</span> is able to process `**freq` as input; this feature allows
-the user to round-off existing `**freq` data to a specified precision.
+that <span class="tool">freq</span> is able to process <span class="rep">freq</span> as input; this feature allows
+the user to round-off existing <span class="rep">freq</span> data to a specified precision.
 
 The <span class="option">t</span> option ensures that only a single output value is given for
-tied `**kern` notes; the output coincides with the first note of the
+tied <span class="rep">kern</span> notes; the output coincides with the first note of the
 tie.
 
 In the default operation, <span class="tool">freq</span> outputs non-pitch-related signifiers
-in addition to the frequency value. For example, the `**pitch` token
+in addition to the frequency value. For example, the <span class="rep">pitch</span> token
 \"A6zzz\" will result in the output \"1760.00zzz\" &mdash; that is, after
 translating A6 to 1760.00 hertz, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
 prove confusing &mdash; especially, when the non-pitch-related signifiers
-are numbers. Consider the case of the `**kern` token \"8aaa\"; after
+are numbers. Consider the case of the <span class="rep">kern</span> token \"8aaa\"; after
 translating \`aaa\' to 1760.00 hertz, the non-pitch-related signifier
 \`8\' will also be output, hence the value 81760.00 &mdash; which will
 undoubtedly cause confusion. The <span class="option">x</span> option is useful for eliminating
-non-pitch-related signifiers from the output. For most `**kern` inputs,
+non-pitch-related signifiers from the output. For most <span class="rep">kern</span> inputs,
 the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
@@ -95,9 +95,9 @@ the <span class="option">x</span> option is recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **freq.** The input
-contains six pitch-related spines &mdash; one of which (`**deg`) cannot be
+contains six pitch-related spines &mdash; one of which (<span class="rep">deg</span>) cannot be
 processed by **freq.** In addition, there are two non-pitch-related
-spines (`**embell` and `**metpos`). ``
+spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ---------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
 >   !! \`freq\' example.                                                                         
@@ -158,10 +158,10 @@ produces the following result: ``
 >   ---------------------- --------------- --------------- --------- ------------ --------------- --------------- ------------
 >
 Both processed and unprocessed spines are output. Notice that the tied
-note at the beginning of measure 2 in the `**kern` spine has been
+note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
-the first notes of the `**pitch, **MIDI`, and `**cocho` spines have been
+the first notes of the `**pitch, **MIDI`, and <span class="rep">cocho</span> spines have been
 stripped away (due to the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------

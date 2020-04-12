@@ -23,10 +23,10 @@ spectra
 
 The <span class="tool">diss</span> command measures the degree of sensory dissonance for
 successive acoustic moments. It outputs a single
-[\*\*diss](../representations/diss.rep.html) spine containing numerical
+<span class="rep">diss</span> spine containing numerical
 values &mdash; where higher values indicate greater amounts of sensory
 dissonance. The input must consist of one or more
-[\*\*spect](../representations/spect.rep.html) spines. Each data record
+<span class="rep">spect</span> spines. Each data record
 in the \*\*spect input represents a concurrent set of discrete
 frequencies (spectrum). Spectral data consist of sets of paired
 frequency/amplitude values for each pure tone component present. Typical
@@ -59,8 +59,8 @@ The <span class="tool">diss</span> command provides only a help option:
 > >
 Options are specified in the command line.
 
-The <span class="option">k</span> option pertains to `**kern` inputs only. This option adds
-`**kern`-related information to the output.
+The <span class="option">k</span> option pertains to <span class="rep">kern</span> inputs only. This option adds
+<span class="rep">kern</span>-related information to the output.
 
 ------------------------------------------------------------------------
 
@@ -72,7 +72,7 @@ encode a simple input spectrum consisting of six pure tone components.
 The first component has a frequency of 261 Hz at a sound pressure level
 of 47 decibels. The six components represent the pitches C4 and E4
 played with 3 harmonics each. The third spine
-([\*\*diss](../representations/diss.rep.html)) displays the
+(<span class="rep">diss</span>) displays the
 corresponding sensory dissonance value as calculated by **diss.** An
 output value of about 65 is typical for a single pure tone at about 60
 dB SPL. An output value near zero results for silence.

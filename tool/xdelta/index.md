@@ -141,8 +141,8 @@ above input into the following output: ``
 >   \*-
 >   ------------
 >
-Notice that the input interpretation (`**cents`) has been modified to
-`**Xcents` in the first record. As can be seen, the leading or
+Notice that the input interpretation (<span class="rep">cents</span>) has been modified to
+<span class="rep">Xcents</span> in the first record. As can be seen, the leading or
 \"offset\" value \``100`\' has been echoed in the second record &mdash;
 although it has been printed in square brackets. This is not a
 \"difference\" value since there is no previous numerical value from
@@ -192,7 +192,7 @@ output will be: ``
 In other words, the measure number (1) interacts (incorrectly) with the
 duration values. This can be avoided by using the <span class="option">s</span> (skip) option.
 The skip option allows the user to identify records that should not be
-involved in *delta* processing. The `**dur` barline signifier is the
+involved in *delta* processing. The <span class="rep">dur</span> barline signifier is the
 equals-sign; hence, the command ` xdelta -s = input` will cause the
 barlines to be ignored in the numerical calculation, and so produce the
 following (correct) output: ``
@@ -233,8 +233,8 @@ processes this input as follows: ``
 >   \*-
 >   ------------------
 >
-Once again, the input interpretation (`**semits`) has been modified to
-`**Xsemits`. The leading or offset value \[3\] has been echoed in the
+Once again, the input interpretation (<span class="rep">semits</span>) has been modified to
+<span class="rep">Xsemits</span>. The leading or offset value \[3\] has been echoed in the
 second record. (The user might wish to eliminate such offset values via
 the <span class"tool">humsed</span> command; see below.) The third records in
 both the input and output contain double-stops. In the output, the first

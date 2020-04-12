@@ -53,8 +53,8 @@ Options are specified in the command line.
 ### EXAMPLES
 
 The following example illustrates the output of the <span class="tool">melac</span> command.
-The `**semits` spine is the input, and the `**melac` spine is the
-corresponding output. (A `**kern` equivalent to `**semits` has been
+The <span class="rep">semits</span> spine is the input, and the <span class="rep">melac</span> spine is the
+corresponding output. (A <span class="rep">kern</span> equivalent to <span class="rep">semits</span> has been
 added to increase the readability.) ``
 
 >   ---------- ------------ -----------

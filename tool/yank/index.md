@@ -228,13 +228,13 @@ yanks line 1120 in the file `messiaen`.
 
 > yank -n \^= -r 27 sinfonia
 
-yanks numbered measures 27 from the `**kern` file `sinfonia`.
+yanks numbered measures 27 from the <span class="rep">kern</span> file `sinfonia`.
 
 ``
 
 > yank -n \^= -r 10-20 minuet waltz
 
-yanks numbered measures 10 to 20 from *both* the `**kern` files `minuet`
+yanks numbered measures 10 to 20 from *both* the <span class="rep">kern</span> files `minuet`
 and `waltz`.
 
 ``
@@ -271,7 +271,7 @@ containing \"{\" and ending with a record containing \"}.\" The command:
 
 yanks the first four and last four segments in the file `faure` &mdash;
 where segments begin with an open brace ({) and end with a closed brace
-(}). In the `**kern` representation, this would extract the first and
+(}). In the <span class="rep">kern</span> representation, this would extract the first and
 last four phrases in the file.
 
 ``

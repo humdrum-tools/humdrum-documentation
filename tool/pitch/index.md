@@ -23,31 +23,31 @@ to American standard pitch notation
 The <span class="tool">pitch</span> command transforms various pitch-related inputs to the
 corresponding pitch designations approved by the American National
 Standards Institute (ANSI). The <span class="tool">pitch</span> command outputs one or more
-Humdrum `**pitch` spines. ANSI pitch designations use the upper-case
+Humdrum <span class="rep">pitch</span> spines. ANSI pitch designations use the upper-case
 letters A to G followed by an optional accidental, followed by an octave
-number. In the Humdrum `**pitch` representation, optional cents
+number. In the Humdrum <span class="rep">pitch</span> representation, optional cents
 deviation from equal temperament can also be encoded.
 
 The <span class="tool">pitch</span> command is able to translate any of the pitch-related
 input representations listed below. In each case, a tuning standard of
 A4 equals 440 hertz is assumed. For descriptions of the various input
-representations (including `**pitch`) refer to Section 2
+representations (including <span class="rep">pitch</span>) refer to Section 2
 *(Representation Reference)* of this reference manual.
 
 It is recommended that output files produced using the <span class="tool">pitch</span> command
 should be given names with the distinguishing \`.pit\' extension.
 
 >   ------------ --------------------------------------------------------------------
->   `**cents`    hundredths of a semitone with respect to middle C=0
->   `**degree`   key-related scale degree
->   `**freq`     fundamental frequency (in hertz)
->   `**fret`     fretted-instrument pitch tablature
->   `**kern`     core pitch/duration representation
->   `**MIDI`     Music Instrument Digital Interface tablature
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0
+>   <span class="rep">degree</span>   key-related scale degree
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">fret</span>     fretted-instrument pitch tablature
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">MIDI</span>     Music Instrument Digital Interface tablature
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ --------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">pitch</span>.*
@@ -67,17 +67,17 @@ The <span class="tool">pitch</span> command provides the following options:
 Options are specified in the command line.
 
 The <span class="option">t</span> option ensures that only a single output value is given for
-tied `**kern` notes; the output coincides with the first note of the
+tied <span class="rep">kern</span> notes; the output coincides with the first note of the
 tie.
 
 In the default operation, <span class="tool">pitch</span> outputs non-pitch-related signifiers
-in addition to the `**pitch` pitch value. For example, the `**Tonh`
+in addition to the <span class="rep">pitch</span> pitch value. For example, the <span class="rep">Tonh</span>
 token \"Ges5zzz\" will result in the output \"Gb5zzz\" &mdash; that is,
 after translating Ges5 to Gb5, the \"zzz\" signifiers are retained in
 the output. For some applications, echoing non-pitch-related signifiers
 in the output is useful. However, in other situations, the result can
 prove confusing &mdash; especially, when the non-pitch-related signifiers
-are numbers. Consider the case of the `**kern` token \"8aa\#\"; after
+are numbers. Consider the case of the <span class="rep">kern</span> token \"8aa\#\"; after
 translating \`aa\#\' to A\#5, the non-pitch-related signifier \`8\' will
 also be output, hence the value 8A\#5 &mdash; which may cause confusion;
 commands such as [**tonh,**](tonh.html) [**solfg,**](solfg.html) and
@@ -87,7 +87,7 @@ may lead to it's interpretation as A\#8 &mdash; or even A\#58 &mdash; rather
 than A\#5.
 
 The <span class="option">x</span> option is useful for eliminating non-pitch-related signifiers
-from the output. For most `**kern` inputs, the <span class="option">x</span> option is
+from the output. For most <span class="rep">kern</span> inputs, the <span class="option">x</span> option is
 recommended.
 
 ------------------------------------------------------------------------
@@ -95,9 +95,9 @@ recommended.
 ### EXAMPLES
 
 The following example illustrates the use of **pitch.** The input
-contains six pitch-related spines &mdash; two of which (`**deg` and
-`**cocho`) cannot be processed by **pitch.** In addition, there are two
-non-pitch-related spines (`**embell` and `**metpos`). ``
+contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
+<span class="rep">cocho</span>) cannot be processed by **pitch.** In addition, there are two
+non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 >   ----------------------- ------------ ----------- --------- ------------ ----------- ------------ ------------
 >   !! \`pitch\' example.                                                                            
@@ -160,16 +160,16 @@ produces the following result: ``
 >   ----------------------- ----------- ----------- --------- ------------ ----------- ----------- ------------
 >
 Both processed and unprocessed spines are output. Notice that the tied
-note at the beginning of measure 2 in the `**kern` spine has been
+note at the beginning of measure 2 in the <span class="rep">kern</span> spine has been
 rendered as a single note rather than as two notes (due to the <span class="option">t</span>
 option). Also notice that the non-pitch-related signifiers (e.g. foo) in
-the first notes of the `**freq, **MIDI`, and `**cocho` spines have been
-stripped away (due to the <span class="option">x</span> option). In the case of the `**degree`
+the first notes of the `**freq, **MIDI`, and <span class="rep">cocho</span> spines have been
+stripped away (due to the <span class="option">x</span> option). In the case of the <span class="rep">degree</span>
 input, <span class="tool">pitch</span> recognizes the spelling of various pitches in the
 context of the key of D minor. Hence, the raised third degree is F\#,
 and the raised sixth degree is B natural. Also note the presence of
 cents-deviation from equal temperament in the translation of the
-`**freq` data (second spine).
+<span class="rep">freq</span> data (second spine).
 
 ------------------------------------------------------------------------
 

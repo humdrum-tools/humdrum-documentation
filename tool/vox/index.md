@@ -35,20 +35,20 @@ It is recommended that output files produced using the <span class="tool">vox</s
 should be given names with the distinguishing \`.vox\' extension.
 
 >   ------------ ---------------------------------------------------------------------------
->   `**cbr`      critical band rate (in equivalent rectangular bandwidths)
->   `**cents`    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
->   `**cocho`    cochlear coordinates (in millimeters)
->   `**deg`      key-related relative scale degree
->   `**degree`   key-related absolute scale degree
->   `**freq`     fundamental frequency (in hertz)
->   `**kern`     core pitch/duration representation
->   `**pc`       pitch class representation
->   `**pitch`    American National Standards Institute pitch notation (e.g. \"A\#4\")
->   `**semits`   equal-tempered semitones with respect to middle C=0
->   `**solfa`    tonic solfa syllables
->   `**solfg`    French solfège system (fixed \`doh\')
->   `**specC`    spectral centroid (in hertz)
->   `**Tonh`     German pitch system
+>   <span class="rep">cbr</span>      critical band rate (in equivalent rectangular bandwidths)
+>   <span class="rep">cents</span>    hundredths of a semitone with respect to middle C=0 (e.g. 1200 equals C5)
+>   <span class="rep">cocho</span>    cochlear coordinates (in millimeters)
+>   <span class="rep">deg</span>      key-related relative scale degree
+>   <span class="rep">degree</span>   key-related absolute scale degree
+>   <span class="rep">freq</span>     fundamental frequency (in hertz)
+>   <span class="rep">kern</span>     core pitch/duration representation
+>   <span class="rep">pc</span>       pitch class representation
+>   <span class="rep">pitch</span>    American National Standards Institute pitch notation (e.g. \"A\#4\")
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0
+>   <span class="rep">solfa</span>    tonic solfa syllables
+>   <span class="rep">solfg</span>    French solfège system (fixed \`doh\')
+>   <span class="rep">specC</span>    spectral centroid (in hertz)
+>   <span class="rep">Tonh</span>     German pitch system
 >   ------------ ---------------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">vox</span>.*

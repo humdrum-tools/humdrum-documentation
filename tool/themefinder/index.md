@@ -36,14 +36,14 @@ only to one particular theme. This reference information is stored in a
 
 Each theme is represented by a single [Humdrum](../guide05.html) file,
 designated with the \".thm\" file extension. A theme file normally
-contains a single [\*\*kern](../representations/kern.rep.html) spine
+contains a single <span class="rep">kern</span> spine
 representing some theme or incipit. If more than one \*\*kern spine is
 present, only the left-most spine is used for searching purposes.
 
 Other spines may be present in theme files, such as spines for encoding
-lyrics/text ([\*\*silbe](../representations/silbe.rep.html),
-[\*\*text](../representations/text.rep.html)), harmonic function
-([\*\*harm](../representations/harm.rep.html)), or another other
+lyrics/text (<span class="rep">silbe</span>,
+<span class="rep">text</span>), harmonic function
+(<span class="rep">harm</span>), or another other
 information. Currently, such non-kern encodings are ignored by the
 *themefinder* search engine, however future proposed extensions will
 make use of such information. Users may view the complete Humdrum theme

@@ -48,7 +48,7 @@ value of the output row.
 
 Positive integers greater than 11 are permitted in the input &mdash; but are
 treated as modulo-12 equivalent (unless the <span class="option">m</span> option specifies a
-different modulus). In the case of `**pc` inputs, the upper-case letters
+different modulus). In the case of <span class="rep">pc</span> inputs, the upper-case letters
 A and B are accepted as aliases for pitch-classes 10 and 11
 respectively. Following the Fortean practice, pitch-classes 10 and 11
 may alternatively be represented in the input by the upper-case letters
@@ -76,9 +76,9 @@ Humdrum input will be accepted. If the <span class="option">m</span> option is i
 input interpretation will be accepted provided all data tokens contain
 numbers only. In the case of tranposed prime, inversion, and retrograde
 transformations, the input must conform to the Humdrum pitch-class
-(`**pc`) representation. In all cases, comments, null tokens, and tandem
+(<span class="rep">pc</span>) representation. In all cases, comments, null tokens, and tandem
 interpretations in the input spine are ignored and are not echoed in the
-output. In the case of `**pc` inputs, barlines and rests are also
+output. In the case of <span class="rep">pc</span> inputs, barlines and rests are also
 ignored. Output interpretations always echo the input interpretation.
 
 By way of example, consider the following input file `webern`: ``
@@ -163,7 +163,7 @@ produces: ``
 The <span class="tool">reihe</span> command provides the following options:
 
 >   ------------------- --------------------------------------------------------------------------
->   <span class="option">a</span>              for `**pc` inputs, output alphanumeric representation (where A=10, B=11)
+>   <span class="option">a</span>              for <span class="rep">pc</span> inputs, output alphanumeric representation (where A=10, B=11)
 >   <span class="option">h</span>              displays a help screen summarizing the command syntax
 >   -I *n*              output inversion set-form starting on pitch-class *n*
 >   -i *n*              same as -I option
@@ -182,7 +182,7 @@ The <span class="tool">reihe</span> command provides the following options:
 >
 Options are specified in the command line.
 
-When the <span class="option">a</span> option is invoked, pitch-class inputs (`**pc`) will
+When the <span class="option">a</span> option is invoked, pitch-class inputs (<span class="rep">pc</span>) will
 produce pitch-class outputs using the alias values \`A\' for pitch-class
 10, and \`B\' for pitch-class 11. (See the **\*\*pc** representation.)
 
@@ -191,7 +191,7 @@ prime, inversion, retrograde, and retrograde-inversion transformations.
 In other words, transposing the numerical value \`11\' up three
 pitch-classes results in an output value of \`2.\' The <span class="option">m</span> option can
 be used to specify some other modulo value. If this option is invoked
-with `**pc` input, the alias values (A=T=10; B=E=11) are disabled and
+with <span class="rep">pc</span> input, the alias values (A=T=10; B=E=11) are disabled and
 only numerical data can be processed and output. The <span class="option">m</span> and <span class="option">a</span>
 options are thus mutually exclusive.
 

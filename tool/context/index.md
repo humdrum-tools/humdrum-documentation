@@ -89,7 +89,7 @@ context -n 4 -p 1 input
 
 would produce an output beginning with a single padded null token: ``
 
-> `**numbers`
+> <span class="rep">numbers</span>
 >
 > `.`
 >
@@ -119,7 +119,7 @@ would produce an output beginning with a single padded null token: ``
 >
 > would produce the following output: ``
 >
-> > `**numbers`
+> > <span class="rep">numbers</span>
 > >
 > > `1 2`
 > >
@@ -208,7 +208,7 @@ would produce an output beginning with a single padded null token: ``
 > > >
 > > > `!! excerpt: mm.41-45`
 > > >
-> > > `**kern`
+> > > <span class="rep">kern</span>
 > > >
 > > > `*MM72`
 > > >
@@ -285,7 +285,7 @@ would produce an output beginning with a single padded null token: ``
 > > > >
 > > > > `!! excerpt: mm.41-45`
 > > > >
-> > > > `**kern`
+> > > > <span class="rep">kern</span>
 > > > >
 > > > > `*MM72`
 > > > >
@@ -371,9 +371,9 @@ would produce an output beginning with a single padded null token: ``
 > > > > >
 > > > > > `!! excerpt: mm.41-45 `
 > > > > >
-> > > > > `**kern`
+> > > > > <span class="rep">kern</span>
 > > > > >
-> > > > > `**kern`
+> > > > > <span class="rep">kern</span>
 > > > > >
 > > > > > `*MM72`
 > > > > >
@@ -530,7 +530,7 @@ to a command sequence such as **pc -x \| pcset**). ``
 >
 > `!! excerpt: mm.41-45`
 >
-> `**kern`
+> <span class="rep">kern</span>
 >
 > `*MM72`
 >

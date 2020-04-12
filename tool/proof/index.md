@@ -7,7 +7,7 @@ permalink:	/tool/proof/index.html
 
 ### COMMAND
 
-<span class="tool">proof</span> -- check syntax of Humdrum `**kern` file
+<span class="tool">proof</span> -- check syntax of Humdrum <span class="rep">kern</span> file
 
 ------------------------------------------------------------------------
 
@@ -20,8 +20,8 @@ permalink:	/tool/proof/index.html
 ### DESCRIPTION
 
 The <span class="tool">proof</span> command checks the syntax of
-[`**kern`-encoded](../representations/kern.html) files. It may be used
-to assist in the detection and correction of `**kern` encoding errors.
+[<span class="rep">kern</span>-encoded](../representations/kern.html) files. It may be used
+to assist in the detection and correction of <span class="rep">kern</span> encoding errors.
 
 The <span class="tool">proof</span> command scans the input stream for ten types of errors:
 (1) consistency of incremented measure numbers, and measure-number
@@ -59,7 +59,7 @@ The <span class="tool">proof</span> command provides the following options:
 >
 Options are specified in the command line.
 
-The <span class="option">w</span> option causes all warnings to be suppressed; only `**kern`
+The <span class="option">w</span> option causes all warnings to be suppressed; only <span class="rep">kern</span>
 error messages are output.
 
 ------------------------------------------------------------------------

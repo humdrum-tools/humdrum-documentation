@@ -81,10 +81,10 @@ strings separated by a tab. The left-most string identifies the name of
 the new spine to be generated. The right-most string defines an
 associated regular expression. Any input signifiers matching the regular
 expression will be echoed as output in the associated spine. In the
-above case, all numbers are echoed in the first spine (`**octave`), all
+above case, all numbers are echoed in the first spine (<span class="rep">octave</span>), all
 letters plus the sharp (\#) and flat (b) signs are echoed in the second
-spine (`**note`), whereas only sharp and flat signs are echoed in the
-third spine (`**accidental`). The order of the output spines preserves
+spine (<span class="rep">note</span>), whereas only sharp and flat signs are echoed in the
+third spine (<span class="rep">accidental</span>). The order of the output spines preserves
 the order of the assignments in the reassignment file. In the above
 case, for example, the order of the output spines will be
 ` **octave, **note, **accidental` for each input spine labelled
@@ -123,7 +123,7 @@ This command specifies that each ` **kern` spine in the file ` song01`
 is to be split into two new spines dubbed ` **notes` and ` **rests.` The
 first regular expression &mdash; `'[]A-Ga-g[#-]+|^=+[0-9]*'` &mdash; indicates
 that the following strings should be echoed in the data records for
-`**notes`: the upper-case letters `A` to `G` and the lower-case letters
+<span class="rep">notes</span>: the upper-case letters `A` to `G` and the lower-case letters
 `a` to `g`, plus the characters `[, ], #`, and `-`. Alternatively,
 <span class="tool">rend</span> will echo any data token beginning with one or more
 equals-signs, followed by zero or more numbers.

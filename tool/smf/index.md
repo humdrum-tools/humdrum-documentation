@@ -7,7 +7,7 @@ permalink:	/tool/smf/index.html
 
 ### COMMAND
 
-<span class="tool">smf</span> -- generate standard MIDI file from Humdrum `**MIDI` input
+<span class="tool">smf</span> -- generate standard MIDI file from Humdrum <span class="rep">MIDI</span> input
 
 ------------------------------------------------------------------------
 
@@ -20,14 +20,14 @@ permalink:	/tool/smf/index.html
 ### DESCRIPTION
 
 The <span class="tool">smf</span> command allows the user to create \"standard MIDI files\"
-from Humdrum `**MIDI`-format files. Standard MIDI files (SMFs) are
+from Humdrum <span class="rep">MIDI</span>-format files. Standard MIDI files (SMFs) are
 industry-standard binary files that can be imported by a variety of MIDI
 applications software packages, including sequencer programs and several
 music notation packages.
 
-The <span class="tool">smf</span> command accepts as input Humdrum files containing `**MIDI`
-representations. All `**MIDI` spines present in the input stream are
-translated to SMF MIDI. Non-`**MIDI` spines are ignored and will not
+The <span class="tool">smf</span> command accepts as input Humdrum files containing <span class="rep">MIDI</span>
+representations. All <span class="rep">MIDI</span> spines present in the input stream are
+translated to SMF MIDI. Non-<span class="rep">MIDI</span> spines are ignored and will not
 affect the SMF output.
 
 ------------------------------------------------------------------------
@@ -50,7 +50,7 @@ command line by using the <span class="option">t</span> option. The <span class=
 an integer or real value between 0.13 and 3.80. A value of 1.0
 corresponds to the default tempo of 66 quarter-notes per minute. A value
 of 2.0 doubles the tempo, whereas a value of 0.5 halves the tempo.
-Alternatively, tempo may be specified using the `**MIDI` tandem
+Alternatively, tempo may be specified using the <span class="rep">MIDI</span> tandem
 interpretation for metronome marking (e.g. `*MM96`). Minimum and maximum
 tempi are 8 and 250 quarter-notes per minute respectively. Tempo
 specifications found in the input representation take precedence over

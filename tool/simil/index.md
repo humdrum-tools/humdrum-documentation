@@ -50,7 +50,7 @@ mode, by contrast, provides an automated means for discovering common
 patterns shared by the template and source inputs.
 
 In the *fixed template mode,* a single output spine is generated, dubbed
-`**simil`. Output similarity values are numbers ranging between zero and
+<span class="rep">simil</span>. Output similarity values are numbers ranging between zero and
 one. These numbers indicate the relative similarity between the source
 and template inputs at the current location in the *source* file. Values
 near zero indicate great dissimilarity whereas a value of precisely 1.00
@@ -83,18 +83,18 @@ templates will be generated, each consisting of three data records: 1,
 generated, each consisting of two data records: 1, 2; 2, 3; and 3, 4.
 
 Two output spines are generated in the *variable template mode:*
-`**simil` and `**simxrf`. The `**simxrf` spine provides cross-reference
+<span class="rep">simil</span> and <span class="rep">simxrf</span>. The <span class="rep">simxrf</span> spine provides cross-reference
 information identifying the place in the template input where a
 subordinate pattern is highly similar to the current position in the
 source file. As each record is encountered in the source input,
 <span class="tool">simil</span> scans the list of all possible subordinate templates and
 identifies the template with the highest similarity value. This value is
-output (in the `**simil` spine) along with the *line number* in the
+output (in the <span class="rep">simil</span> spine) along with the *line number* in the
 original template input where the subordinate template begins. If more
 than one subordinate template shows the same similarity value, then the
-line numbers for each high-similarity template appear in the `**simxrf`
+line numbers for each high-similarity template appear in the <span class="rep">simxrf</span>
 spine, separated by commas. Common subordinate patterns will appear
-frequently in the `**simxrf` output.
+frequently in the <span class="rep">simxrf</span> output.
 
 It is recommended that output files produced using the <span class="tool">simil</span> command
 should be given names with the distinguishing \`.sim\' extension.
@@ -226,14 +226,14 @@ of the subordinate templates drawn from the template file.
 
 The following examples illustrate the operation of **simil.** Consider
 first, the *fixed template mode.* In the following example, the source
-input consists of the left-most spine (labelled `**foo`) and is held in
+input consists of the left-most spine (labelled <span class="rep">foo</span>) and is held in
 a file named `source`; the middle column (not Humdrum) consists of the
 letters A, B and C, and is held in the file named `template`. The
 following command:
 
 > ` simil source template`
 
-generates the third column (labelled `**simil`): ``
+generates the third column (labelled <span class="rep">simil</span>): ``
 
 >   --------- ----------- -----------
 >   (source   (template   (simil
@@ -255,9 +255,9 @@ generates the third column (labelled `**simil`): ``
 >
 Each successive value in the output spine is matched with a data token
 in the source input file. For example, the second value (1.00) in the
-`**simil` spine arises from an exact match of the (A, B, C) pattern
+<span class="rep">simil</span> spine arises from an exact match of the (A, B, C) pattern
 *beginning* with the second data token in the source input. The second
-highest value (0.72) occurs in both the sixth and seventh `**simil` data
+highest value (0.72) occurs in both the sixth and seventh <span class="rep">simil</span> data
 records, indicating that fairly similar sequences occur beginning with
 the sixth and seventh data records in the source input. Specifically,
 <span class="tool">simil</span> has recognized that the sequence (A, B, B, C) is only one
@@ -336,11 +336,11 @@ This command produces the following output: ``
 Only two two-element subordinate patterns are possible given out
 template &mdash; (A, B) and (B, C). The first subordinate template begins on
 line 1 of the template file, while the second subordinate template
-begins on line 2. The `**simxrf` spine identifies which of the
+begins on line 2. The <span class="rep">simxrf</span> spine identifies which of the
 subordinate patterns is most similar to the source file at the given
-input record. The `**simil` spine identifies the corresponding
+input record. The <span class="rep">simil</span> spine identifies the corresponding
 similarity measure for the most similar pattern. For example, the second
-and third `**simil` records both report similarity values of 1.00.
+and third <span class="rep">simil</span> records both report similarity values of 1.00.
 However, the first instance is associated with the pattern beginning on
 template record 1 (A, B), whereas the second instance is associated with
 the pattern (B, C) beginning on template record 2.

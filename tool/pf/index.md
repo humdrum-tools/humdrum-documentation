@@ -22,9 +22,9 @@ sonorities
 ### DESCRIPTION
 
 The <span class="tool">pf</span> command is used to determine the *prime form* for any of five
-set-theory related inputs: pitch (`**semits`), pitch-class (`**pc`),
-normal form (`**nf`), interval-vector (`**iv`), or Fortean set name
-(`**pcset`).
+set-theory related inputs: pitch (<span class="rep">semits</span>), pitch-class (<span class="rep">pc</span>),
+normal form (<span class="rep">nf</span>), interval-vector (<span class="rep">iv</span>), or Fortean set name
+(<span class="rep">pcset</span>).
 
 \"Prime form\" is a standardized way of representing the symmetrical
 interval structure for any arbitrary set of pitch-classes. Prime form is
@@ -35,28 +35,28 @@ root, in any inversion, consisting of any number of notes, with any
 spelling, will have the prime form: 0,3,7. See [REFERENCES](#REFERENCES)
 below.
 
-When provided with `**semits` or `**pc` inputs, <span class="tool">pf</span> treats each input
+When provided with <span class="rep">semits</span> or <span class="rep">pc</span> inputs, <span class="tool">pf</span> treats each input
 record as a set of pitches. Unisons and other pitch-class duplications
 have no effect on the output. Rests within a set of pitches are ignored;
 where an input record consists solely of one or more rests, a null-token
 is output. The <span class="tool">pf</span> command can also accept other set theoretic
-inputs, such as `**nf`, `**iv`, `**pcset`, as well as `**pf` itself.
+inputs, such as <span class="rep">nf</span>, <span class="rep">iv</span>, <span class="rep">pcset</span>, as well as <span class="rep">pf</span> itself.
 
 The following table identifies the input representations accepted by
 **pf.** For descriptions of the various input representations (including
-`**pf`) refer to Section 2 *(Representation Reference)* of this
+<span class="rep">pf</span>) refer to Section 2 *(Representation Reference)* of this
 reference manual.
 
 It is recommended that output files produced using the <span class="tool">pf</span> command
 should be given names with the distinguishing \`.pf\' extension.
 
 >   ------------ --------------------------------------------------------------------
->   `**iv`       interval-class vector representation
->   `**nf`       normal form representation
->   `**pc`       pitch-class representation
->   `**pcset`    Fortean pitch-class set name
->   `**pf`       prime form representation
->   `**semits`   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
+>   <span class="rep">iv</span>       interval-class vector representation
+>   <span class="rep">nf</span>       normal form representation
+>   <span class="rep">pc</span>       pitch-class representation
+>   <span class="rep">pcset</span>    Fortean pitch-class set name
+>   <span class="rep">pf</span>       prime form representation
+>   <span class="rep">semits</span>   equal-tempered semitones with respect to middle C=0 (e.g. 12 = C5)
 >   ------------ --------------------------------------------------------------------
 >
 *Input representations processed by <span class="tool">pf</span>.*

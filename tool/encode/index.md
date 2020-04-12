@@ -26,7 +26,7 @@ representations &mdash; including representations designed by the user.
 
 The <span class="tool">encode</span> command is limited to encoding information one spine at a
 time. A typical use of <span class="tool">encode</span> might be to encode individual musical
-\"parts\" or \"voices\" in a representation such as `**kern`; the user
+\"parts\" or \"voices\" in a representation such as <span class="rep">kern</span>; the user
 might then use the Humdrum <span class="tool">timebase</span> and <span class="tool">assemble</span> commands to
 construct a full score from the encoded parts. The user must have access
 to an appropriate MIDI controller connected via a Roland MPU-401 (or
@@ -197,7 +197,7 @@ velocities can range between 0 (low key velocity) and 127 (high key
 velocity). Each `VEL` mapping specifies a range of values for which a
 given string will be output. By way of example, the following assignment
 maps key velocity values between 90 and 127 to a string consisting
-merely of the apostrophe (the `**kern` signifier for a staccato note):
+merely of the apostrophe (the <span class="rep">kern</span> signifier for a staccato note):
 
 > ` VEL 90 127 '`
 
@@ -219,7 +219,7 @@ durations of one second correspond to `DEL` values of about 100.
 
 The following sample` .rc` file illustrates a simple run-control file.
 Notice that a series of `DEL` ranges have been defined and mapped to
-`**kern`- or `**recip`-type durations. For example, inter-onset times
+<span class="rep">kern</span>- or <span class="rep">recip</span>-type durations. For example, inter-onset times
 lying between 48 and 80 clock ticks generate the output string \``8`\';
 values between 113 and 160 generate the string \``4`\' and so on. Notice
 that this file restricts the number of possible output \"durations\" to
@@ -375,10 +375,10 @@ information.) When the **vi** session is closed, the edited text file is
 returned to the <span class="tool">encode</span> session.
 
 The \`**m**\' command invokes a Humdrum pipeline that is suitable for
-auditioning text data conforming to either the `**kern` or `**MIDI`
+auditioning text data conforming to either the <span class="rep">kern</span> or <span class="rep">MIDI</span>
 representation formats. Specifically, \`**m**\' causes the current text
-to be passed to the Humdrum pipeline: `midi -c | perform`. Any `**kern`
-data will be translated to `**MIDI` data and sent to the `perform`
+to be passed to the Humdrum pipeline: `midi -c | perform`. Any <span class="rep">kern</span>
+data will be translated to <span class="rep">MIDI</span> data and sent to the `perform`
 command. The user can then interactively proof-listen or audition the
 encoded data. Refer to the **perform (4)** for information regarding the
 types of interactive commands available during proof-listening. The
@@ -478,7 +478,7 @@ following table.
 >   **COMMAND MODE**      
 >   b *n*                 append run-control buffer number *n* following current cursor position
 >   B *n*                 insert run-control buffer number *n* before current cursor position
->   m                     invoke interactive proof-listening for `**kern` or `**MIDI` text
+>   m                     invoke interactive proof-listening for <span class="rep">kern</span> or <span class="rep">MIDI</span> text
 >   set *rc-command*      set or reset a `.rc mapping`
 >   q                     quit <span class="tool">encode</span>
 >   q!                    quit <span class="tool">encode</span> without saving modifications since last write

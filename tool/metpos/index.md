@@ -35,7 +35,7 @@ measure will be assigned to the second level in the metric hierarchy.)
 All other metric positions in the measure (beats, sub-beats,
 sub-sub-beats, etc.) are assigned successively increasing numerical
 values according to their placement in the metric hierarchy. Larger
-`**metpos` values signify sonorities of lesser metric significance.
+<span class="rep">metpos</span> values signify sonorities of lesser metric significance.
 
 Input to <span class="tool">metpos</span> can be any Humdrum file that conforms to the
 *time-base* format &mdash; i.e. where each data record represents an
