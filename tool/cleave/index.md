@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- cleave'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/cleave/index.html
 ---

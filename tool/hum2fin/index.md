@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- hum2fin'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/hum2fin/index.html
 ---

@@ -1,0 +1,40 @@
+
+
+
+<script>
+// vim: ts=3
+
+document.addEventListener("DOMContentLoaded", function() {
+	var element = document.querySelector("#chapternav");
+	if (!element) {
+		return;
+	}
+	var loc = window.location.href;
+	loc = loc.replace("/index.html", "");
+	loc = loc.replace(/\/$/, "");
+	var matches = loc.match(/\/([^\/]+)$/);
+	if (!matches) {
+		return;
+	}
+	var tool = matches[1];
+
+	var original = document.querySelector("#original");
+console.log("ORIGINAL", original);
+	if (original) {
+		var output = "";
+		output += '<a target="_blank" href="';
+		output += '/Humdrum/commands/' + tool + '.html';
+		output += '" class="btn btn-primary btn-lg btn-responsive">Original HTML version</a>';
+
+		// output += '<a style="margin-top:8px;" target="_blank" href="';
+		// output += "http://ccarh.org/publications/manuals/humdrumuserguide/hug1998-chapter";
+		// output += nnumber + ".pdf";
+		// output += '" class="btn btn-primary btn-lg btn-responsive">Scan of 1998 edition</a>';
+
+		original.innerHTML = output;
+	}
+
+});
+
+
+</script>

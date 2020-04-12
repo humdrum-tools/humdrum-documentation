@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- thru'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/thru/index.html
 ---

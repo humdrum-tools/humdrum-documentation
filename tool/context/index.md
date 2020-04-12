@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- context'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/context/index.html
 ---

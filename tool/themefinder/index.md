@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- Themefinder'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/themefinder/index.html
 ---

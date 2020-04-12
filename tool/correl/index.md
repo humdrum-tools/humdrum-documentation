@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- correl'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/correl/index.html
 ---

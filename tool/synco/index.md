@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- synco'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/synco/index.html
 ---

@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- ms'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/ms/index.html
 ---

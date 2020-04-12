@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- urrhythm'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/urrhythm/index.html
 ---

@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- kern'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/kern/index.html
 ---

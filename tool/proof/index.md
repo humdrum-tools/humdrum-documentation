@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- proof'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/proof/index.html
 ---

@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- semits'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/semits/index.html
 ---

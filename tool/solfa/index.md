@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- solfa'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/solfa/index.html
 ---

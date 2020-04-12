@@ -1,6 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- ekern'
 author:		David Huron
+chapternav:	tool
 vim:		ft=html
 permalink:	/tool/ekern/index.html
 ---

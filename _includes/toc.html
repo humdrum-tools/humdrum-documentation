@@ -25,5 +25,9 @@ $('#toc').on('click', 'a', function() {
 	{% include chapternav-guide.html %}
 {% endif %}
 
+{% if page.chapternav == "tool" %}
+	{% include chapternav-tool.html %}
+{% endif %}
+
 
 </div>
