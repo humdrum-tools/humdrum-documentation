@@ -55,7 +55,7 @@ musical lyrics, or any other stream of information that has been encoded
 as a separate Humdrum spine.
 
 The **extract"** command has several modes of operation. With the
-**-f** option, the user may specify a given data column (spine) or
+<span class="option">f</span> option, the user may specify a given data column (spine) or
 "field" to extract. Consider the opening of Bach\'s second Brandenburg
 Concerto shown in Example 12.1.
 
@@ -172,7 +172,7 @@ wanted to extract all of the string parts (spines 2 through 7):
 extract -f 2-7 brandenburg2.krn
 ```
 
-With the **-f** option, field specifications may also be made with
+With the <span class="option">f</span> option, field specifications may also be made with
 respect to the right-most field. The dollars-sign character (`$`) refers
 to the right-most field in the input. The trumpet part can be extracted
 as follows:
@@ -198,7 +198,7 @@ Extraction by Interpretation
 
 
 Typically, it is inconvenient to have to determine the numerical
-position of various spines in order to extract them. With the **-i**
+position of various spines in order to extract them. With the <span class="option">i</span>
 option, <span class="tool">extract</span> outputs all spines containing a specified
 *interpretation.* Suppose we had a file containing a Schubert song,
 including vocal score, piano accompaniment and vocal text (encoded using
@@ -222,7 +222,7 @@ will extract all spines in the file `hildegard` containing
 [`**semits`](/rep/semits) or
 [`**MIDI`](/rep/MIDI) data.
 
-An important use of the **-i** option for <span class="tool">extract</span> is to ensure that
+An important use of the <span class="option">i</span> option for <span class="tool">extract</span> is to ensure that
 a particular input contains only a specified type of information. For
 example, the lower-case letter \``r`\' represents a rest in the
 [`**kern`](/rep/kern) representation. If we wish to
@@ -238,7 +238,7 @@ extract -i '**kern' | grep  ...
 
 
 Both exclusive interpretations and tandem interpretations can be
-specified with the **-i** option. For example, the following command
+specified with the <span class="option">i</span> option. For example, the following command
 will extract any *transposing* instruments in the score `albeniz`:
 
 ```bash
@@ -391,7 +391,7 @@ Of course the output from <span class="tool">extract</span> can be used to gener
 other Humdrum tools. Here are a few examples.
 
 Recall that the <span class="tool">census</span> command tells us
-basic information about a file. With the **-k** option, <span class="tool">census</span> will
+basic information about a file. With the <span class="option">k</span> option, <span class="tool">census</span> will
 tell us the number of barlines, the number of rests, the number of
 notes, the highest and lowest notes, and the longest and shortest notes
 for a \*\*kern input. The following commands can be used to determine
@@ -448,8 +448,8 @@ Extracting Spines that Meander
 
 As we saw in [Chapter 5,](/guide/ch05) spines can move around via
 various spine-path interpretations. Changes of spine position will cause
-havoc when extracting by fields (the **-f** option); <span class="tool">extract</span> will
-generate an error message and terminate. With the **-i** option,
+havoc when extracting by fields (the <span class="option">f</span> option); <span class="tool">extract</span> will
+generate an error message and terminate. With the <span class="option">i</span> option,
 <span class="tool">extract</span> will follow the material throughout the input.
 
 Consider the following input:
@@ -466,12 +466,12 @@ A	a1	a2	b	x
 ```
 
 Suppose we want to extract the second spine (the first `**dip`) spine.
-Using the field option (**-f**) will generate an error message since
-this spine splits. Similarly, using the interpretation (**-i**) option
+Using the field option (<span class="option">f</span>) will generate an error message since
+this spine splits. Similarly, using the interpretation (<span class="option">i</span>) option
 will fail because the output will contain *all* of the `**dip` spines.
 
-The <span class="tool">extract</span> command provides a third **-p** option that traces
-specific spine *paths.* Like the **-f** option, the **-p** option
+The <span class="tool">extract</span> command provides a third <span class="option">p</span> option that traces
+specific spine *paths.* Like the <span class="option">f</span> option, the <span class="option">p</span> option
 requires one or more numbers indicating the *beginning* field position
 for the spine. The command
 
@@ -500,11 +500,11 @@ throughout the input until it is terminated or the end-of-file is
 encountered. What begins as the nth column, may end up as some other
 column (or columns) in the input.
 
-There are complex circumstances where the **-p** option will not
+There are complex circumstances where the <span class="option">p</span> option will not
 guarantee an output that conforms to the Humdrum syntax. When using the
-**-p** option it is prudent to check the output using the
+<span class="option">p</span> option it is prudent to check the output using the
 <span class="tool">humdrum</span> command in order to ensure that the
-output is valid. A full discussion of the **-p** option is given in the
+output is valid. A full discussion of the <span class="option">p</span> option is given in the
 *Humdrum Reference Manual.*
 
 
@@ -512,7 +512,7 @@ Field-Trace Extracting
 ----------------------
 
 For circumstances where the input is very complex, <span class="tool">extract</span> provides
-a *field-trace mode* (**-t** option) that allows the user to select any
+a *field-trace mode* (<span class="option">t</span> option) that allows the user to select any
 combination of data tokens from the input stream. The field-trace option
 is rarely used when extracting spines. Refer to the *Humdrum Reference
 Manual* for further information.
@@ -533,8 +533,8 @@ input record.
 
 The <span class="tool">yank</span> command provides five different ways of extracting
 material. The simplest way of yanking material is by specifying ranges
-of line numbers. In the following command, the **-l** option invokes the
-line-number operation. The **-r** option is used to specify the range.
+of line numbers. In the following command, the <span class="option">l</span> option invokes the
+line-number operation. The <span class="option">r</span> option is used to specify the range.
 Ranges are defined by integers separated by commas, or with a dash
 indicating a range of consecutive values. For example, the following
 command selects lines, 5, 13, 23, 24, 25 and 26 from the file named
@@ -581,8 +581,8 @@ Yanking by Marker
 
 Alternatively, <span class="tool">yank</span> can output lines relative
 to some user-defined *marker.* This mode of operation can be invoked
-using the **-m** option. Markers are specified using regular
-expressions. The range option (**-r**) specifies which lines are to be
+using the <span class="option">m</span> option. Markers are specified using regular
+expressions. The range option (<span class="option">r</span>) specifies which lines are to be
 output whenever a marker is encountered. For example, the following
 command outputs the first and third data records following each
 occurrence of the string "XXX" in the file `wieck`.
@@ -643,8 +643,8 @@ Yanking by Delimiters
 
 It is often convenient to yank material according to logical segments
 such as measures or phrases. In order to access such segments, the user
-must specify a segment *delimiter* using the **-o** option or the **-o**
-and **-e** options. For example, common system barlines are represented
+must specify a segment *delimiter* using the <span class="option">o</span> option or the <span class="option">o</span>
+and <span class="option">e</span> options. For example, common system barlines are represented
 by the presence of an equals sign (=) at the beginning of a data token.
 Thus the user might yank specific measures from a file by defining the
 appropriate barline delimiter and providing a range of (measure)
@@ -656,14 +656,14 @@ yank -o ^= -r 1,12-13,25 joplin
 ```
 
 This command will extract the first, twelfth, thirteenth and
-twenty-fifth measures from the file `joplin`. Unlike the **-m** option,
-the **-o** option interprets the range list as *ordinal* occurrences of
+twenty-fifth measures from the file `joplin`. Unlike the <span class="option">m</span> option,
+the <span class="option">o</span> option interprets the range list as *ordinal* occurrences of
 segments delineated by the delimiter. Whole segments are output rather
 than specified records as is the case with **-m.** As in the case of
 markers, delimiters are interpreted according to regular expression
 syntax. Each input record containing the delimiter is regarded as the
 *start* of the next logical segment. In the above command, the range
-(**-r**) specifies that the first, twelfth, thirteenth, and twenty-fifth
+(<span class="option">r</span>) specifies that the first, twelfth, thirteenth, and twenty-fifth
 logical segments (measures) are to be yanked. All records starting with
 the delimiter record are output up to, but not including, the next
 occurrence of a delimiter record.
@@ -679,14 +679,14 @@ yank -o ^= -r 0 mahler
 
 can be used to yank all records prior to the first common system
 barline. Notice that *actual* measure numbers are irrelevant with the
-**-o** option: <span class="tool">yank</span> selects segments according
+<span class="option">o</span> option: <span class="tool">yank</span> selects segments according
 to their *ordinal* position in the input stream rather than according to
 their *cardinal* label.
 
 
 Not all segments are defined by a single marker. For example, unlike
 barlines, `**kern` phrases are marked by separate phrase-begin
-signifiers (\`{\') and phrase-end signifiers (\`}\'). The **-e** option
+signifiers (\`{\') and phrase-end signifiers (\`}\'). The <span class="option">e</span> option
 for <span class="tool">yank</span> can be used to explicitly identify markers that *end* a
 segment. For example, the following command extracts the first four
 phrases in the file `tailleferre`:
@@ -695,7 +695,7 @@ phrases in the file `tailleferre`:
 yank -o { -e } -r '1-4' tailleferre
 ```
 
-When the **-n** option is invoked, however, <span class="tool">yank</span> expects a numerical
+When the <span class="option">n</span> option is invoked, however, <span class="tool">yank</span> expects a numerical
 value to be present in the input immediately following the
 user-specified delimiter. In this case, <span class="tool">yank</span> selects segments based
 on their numbered label rather than their ordinal position in the input.
@@ -711,15 +711,15 @@ will yank all segments beginning with the label `=12` in the input file
 number(s), all such segments are output. That is, if there are five
 measures labelled "measure 12", all five measures will be output. Note
 that the dollar sign anchor cannot be used in the range expression for
-the **-n** option. Note also that input tokens containing non-numeric
+the <span class="option">n</span> option. Note also that input tokens containing non-numeric
 characters appended to the number will have no effect on the pattern
 match. For example, input tokens such as `=12a, =12b`, or `=12`; will be
 treated as equivalent to `=12`.
 
-As in the case of the **-o** option, a range of zero (\`0\') addresses
+As in the case of the <span class="option">o</span> option, a range of zero (\`0\') addresses
 material prior to the first delimiter record. (N.B. This behavior is
-unlike the **-m** option where zero addresses the record itself.) Like
-the **-o** option, the value zero may be reused for each specified input
+unlike the <span class="option">m</span> option where zero addresses the record itself.) Like
+the <span class="option">o</span> option, the value zero may be reused for each specified input
 file. Thus, if `file1`, `file2` and `file3` are Humdrum files:
 
 
@@ -733,7 +733,7 @@ will yank any leading (anacrusis) material in each of the three files.
 Yanking by Section
 ------------------
 
-When the **-s** option is invoked, <span class="tool">yank</span>
+When the <span class="option">s</span> option is invoked, <span class="tool">yank</span>
 extracts passages according to Humdrum section labels encoded in the
 input. Humdrum section labels will be described fully in [Chapter
 20.](/guide/ch20) For now, we can simply note that section labels are
@@ -768,7 +768,7 @@ interpretations prior to, and within, the yanked material are echoed in
 the output.
 
 Any *comments* prior to the yanked passage may be included in the output
-by specifying the **-c** option.
+by specifying the <span class="option">c</span> option.
 
 
 The following examples illustrate how the <span class="tool">yank</span> command may be used.

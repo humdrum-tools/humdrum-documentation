@@ -211,7 +211,7 @@ then a simple **grep** will suffice:
 grep -n 'Liebe' schubert
 ```
 
-Recall that the **-n** option gives the line number of any occurrences
+Recall that the <span class="option">n</span> option gives the line number of any occurrences
 found. If the input is encoded in the
 [`**silbe`](/rep/silbe) representation, then the
 output of <span class="tool">text</span> can be piped to **grep**:
@@ -287,7 +287,7 @@ A solis ortus cardine ad usque terrae limitem,  Christum canamus principem, natu
 
 Another useful output would have the text arranged with one sentence or
 phrase on each line. As before we can use the
-<span class="tool">context</span> command with the **-e** option to
+<span class="tool">context</span> command with the <span class="option">e</span> option to
 amalgamate words, where each amalgamated line ends with a punctuation
 mark:
 

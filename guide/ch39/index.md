@@ -108,7 +108,7 @@ manner.
 
 -   Use the [<span class="tool">humdrum</span>](/tool/humsed) command to ensure that
     the input data conforms to the Humdrum syntax.
--   Use the <span class="tool">humdrum</span> **-v** command to
+-   Use the <span class="tool">humdrum</span> <span class="option">v</span> command to
     determine whether the kind of data (signifiers) you are interested
     in are truly present in all of the files to be searched.
 -   Use the <span class="tool">proof</span> command to ensure that any
@@ -138,7 +138,7 @@ manner.
 -   If necessary, eliminate certain types of data that might confound or
     interfere with your search in some way. Use
     <span class="tool">rid</span>, **grep -v**,
-    <span class="tool">extract</span> **-i**, **sed** and/or
+    <span class="tool">extract</span> <span class="option">i</span>, **sed** and/or
     <span class="tool">humsed</span> to restrict the data.
 
 **(2) Ensure that you are searching all of the intended data:**

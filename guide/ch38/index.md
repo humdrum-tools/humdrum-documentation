@@ -160,7 +160,7 @@ We begin by measuring the average melodic interval size in semitones for
 a sample of actual melodies. We can use the
 <span class="tool">semits</span> command to translate data to semitone
 representations and then use the <span class="tool">xdelta</span>
-command to calculate numerical differences. The **-a** option for
+command to calculate numerical differences. The <span class="option">a</span> option for
 <span class="tool">xdelta</span> causes only absolute (unsigned) values to be calculated. The
 <span class="tool">rid</span> command can be used to eliminate everything
 but data records and the **grep** command can be used to eliminate
@@ -200,7 +200,7 @@ We can scramble the order of data records using the following command:
 scramble -r numbers
 ```
 
-The **-r** option indicates that it is the order of records which should
+The <span class="option">r</span> option indicates that it is the order of records which should
 be randomized. A possible output might look like this:
 
 ```humdrum
@@ -285,7 +285,7 @@ scramble -r temp1 > temp1.scr
 assemble temp1.scr temp2 | ditto -s = | hint | grep -c 'A11'
 ```
 
-Note that the <span class="tool">scramble</span> command also provides a **-t** option so that
+Note that the <span class="tool">scramble</span> command also provides a <span class="option">t</span> option so that
 the order of tokens within a data record can be randomly re-arranged.
 
 
@@ -354,7 +354,7 @@ spines with respect to each other.
 
 
 Recall that the <span class="tool">reihe</span> command ([Chapter
-35](/guide/ch35)) provides a **-s** option that causes a shift in the
+35](/guide/ch35)) provides a <span class="option">s</span> option that causes a shift in the
 serial position of data tokens. For example, suppose we had an input
 consisting of the numbers 1 through 5. The following command:
 
@@ -389,7 +389,7 @@ extract -i '*bass' composition | grep -v = | ditto > voice2
 ```
 
 Now let\'s shift one part with respect to the other using
-[<span class="tool">reihe</span>](/tool/scramble) **-s**.
+[<span class="tool">reihe</span>](/tool/scramble) <span class="option">s</span>.
 
 ```bash
 reihe -s voice1 > voice1.shifted

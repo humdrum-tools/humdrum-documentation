@@ -114,7 +114,7 @@ grep -c '\^' danmark3.krn
 
 
 In the following command we have used the backslash to escape the
-special meaning of the asterisk. The **-l** option causes **grep** to
+special meaning of the asterisk. The <span class="option">l</span> option causes **grep** to
 output only the names of any files that contain a line matching the
 pattern. Hence, the following command identifies those files in the
 current directory that encode music in 9/8 meter:
@@ -160,7 +160,7 @@ grep -l '!!!AIN.*cornt.*tromp' *
 
 There are many variants on the use of the `.*` expression. The following
 command identifies all files that contain a record having the word
-`Drei` followed by the word "`Koenige`". (Notice the use of the **-i**
+`Drei` followed by the word "`Koenige`". (Notice the use of the <span class="option">i</span>
 option in order to ignore the case of the letters.)
 
 ```bash
@@ -199,7 +199,7 @@ List those works that are in irregular meters:
 grep -l '!!!AMT.*irregular' *
 ```
 
-The **-L** option for **grep** causes the output to contain a list of
+The <span class="option">L</span> option for **grep** causes the output to contain a list of
 files *not* containing the regular expression. For example, we could
 identify those works that don\'t bear any dedication:
 
@@ -256,9 +256,9 @@ follows the word `Liebe`:
 grep '!!!OTL.*Liebe' * | grep 'Tod'
 ```
 
-The **-v** option for **grep** causes a "reverse" or "negative"
+The <span class="option">v</span> option for **grep** causes a "reverse" or "negative"
 output. Instead of outputting all records that *match* the specified
-regular expression, the **-v** option causes only those records to be
+regular expression, the <span class="option">v</span> option causes only those records to be
 output that do *not* match the given regular expression. For example,
 the following command eliminates all comments from the file
 `polska24.krn`:
@@ -274,7 +274,7 @@ grep -v 1r *
 ```
 
 
-The **-v** option is especially convenient in pipelines. For example,
+The <span class="option">v</span> option is especially convenient in pipelines. For example,
 the following command identifies all those files whose instrumentation
 includes a cornet but not a trumpet:
 
@@ -370,7 +370,7 @@ AND-Searches Using the *xargs* Command
 --------------------------------------
 
 In some cases, we want to identify those files that match two entirely
-different patterns (in different records). Recall that the **-l** option
+different patterns (in different records). Recall that the <span class="option">l</span> option
 causes **grep** to output the *filename* rather than the matching
 record. If we could pass along these file names to another **grep**
 command, we could search those same files for yet another pattern.
@@ -440,7 +440,7 @@ grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \
 > \'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
 
 
-Using the **-L** option allows us to form even more complex criteria by
+Using the <span class="option">L</span> option allows us to form even more complex criteria by
 excluding certain works. For example, the following variation of the
 above command outputs the names of all files in the current directory
 that encode 17th century organ works that do not contain passages in 6/8
@@ -457,8 +457,8 @@ OR-Searches Using the *grep -f* Command
 
 In effect, the above pipelines provide logical **AND** structures: e.g.
 identify works composed in the 17th century AND written for organ AND
-containing a passage in 6/8 meter. The **-f** option for **grep**
-provides a way of creating logical **OR** searches. With the **-f**
+containing a passage in 6/8 meter. The <span class="option">f</span> option for **grep**
+provides a way of creating logical **OR** searches. With the <span class="option">f</span>
 option, we specify a file containing the patterns being sought. For
 example, we might create a file called `criteria` containing the
 following three regular expressions:
@@ -473,14 +473,14 @@ We would invoke **grep** as follows:
 grep -l -f criteria *
 ```
 
-The **-f** option tells **grep** to fetch the file `criteria` and use
+The <span class="option">f</span> option tells **grep** to fetch the file `criteria` and use
 the records in this file as regular expressions. A match is made if any
 of the regular expressions is found.
 
 
 The output would consist of a list of all files in the current directory
 that encode works composed in the 17th century OR written for organ OR
-in 6/8 meter. The **-f** option is more typically used to specify
+in 6/8 meter. The <span class="option">f</span> option is more typically used to specify
 several variations of the same idea. For example, suppose we were
 searching for D major triads in
 [`**pitch`](/rep/pitch) data. We could use a file
@@ -503,7 +503,7 @@ may be less cumbersome than:
 grep [Dd] * | grep [Ff]# | grep [Aa]
 ```
 
-The **-f** option can be combined with **-L**. For example, suppose we
+The <span class="option">f</span> option can be combined with <span class="option">L</span>. For example, suppose we
 wanted to identify all works in the current directory that are not in
 the keys of C major, G major, B-flat major or D minor. Our regular
 expression file would contain the following regular expressions:
@@ -522,7 +522,7 @@ grep -L -f criteria *
 ```
 
 
-Another way of thinking of the **-f** option is that it allows us to
+Another way of thinking of the <span class="option">f</span> option is that it allows us to
 define equivalences. Consider, for example, the task of counting all of
 the notes in a `**kern` melody that belong to a particular whole-tone
 pitch set. Let\'s create two files, one called `whole1` and the other
@@ -573,7 +573,7 @@ and to avoid files that contain certain information.
 
 We have seen how the **xargs** command can be used to carry out
 **AND**-searches where each work must conform to multiple criteria. We
-have also seen how the **-f** option for **grep** can be used to permit
+have also seen how the <span class="option">f</span> option for **grep** can be used to permit
 **OR**-searches where a work needs to conform only to one of a set of
 possible criteria.
 

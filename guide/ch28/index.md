@@ -375,8 +375,8 @@ higher than the basic sound pressure level at that point in the score.
 For example, an explicitly accented note occurring in a *fortissimo*
 passage will be assigned a value of 85 dB SPL.
 
-Users can define other mappings by using the **-f** option for **db**.
-With **-f** the user provides a filename that contains the non-default
+Users can define other mappings by using the <span class="option">f</span> option for **db**.
+With <span class="option">f</span> the user provides a filename that contains the non-default
 mapping values. The format for this file is the same as that shown in
 the above table. Each table entry specifies a dynamic marking, followed
 by a tab, followed by a numerical value.
@@ -484,11 +484,11 @@ semits klezmer | correl -s ^= -m
 ```
 
 This command assumes an input consisting of two spines \-- one
-pitch-related and a `**dB` spine. The **-s** option for <span class="tool">correl</span> is
+pitch-related and a `**dB` spine. The <span class="option">s</span> option for <span class="tool">correl</span> is
 used to skip barlines so bar numbers aren\'t included in the
-calculation. The **-m** option for <span class="tool">correl</span> disables the "matched
+calculation. The <span class="option">m</span> option for <span class="tool">correl</span> disables the "matched
 pairs" criterion. Normally, if a number is found in one spine but not
-the other then <span class="tool">correl</span> will complain and terminate. With the **-m**
+the other then <span class="tool">correl</span> will complain and terminate. With the <span class="option">m</span>
 option, each encoded pitch need not have a corresponding dynamic level
 indication and vice versa.
 

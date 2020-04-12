@@ -161,7 +161,7 @@ rid -GLId
 The option combination **-GLId** is very common with <span class="tool">rid</span> since only
 non-null data records are retained in the output.
 
-With the **-u** option, <span class="tool">rid</span> will remove "unnecessary" exclusive
+With the <span class="option">u</span> option, <span class="tool">rid</span> will remove "unnecessary" exclusive
 interpretations. Exclusive interpretations are deemed unnecessary if
 they don\'t change the current status of the data. In the following
 example, the second `**psaltery` interpretation is redundant. The **rid
@@ -179,7 +179,7 @@ exclusive interpretation \-- leaving a continuous data spine.
 *-
 ```
 
-In addition, <span class="tool">rid</span> provides a **-t** option which removes
+In addition, <span class="tool">rid</span> provides a <span class="option">t</span> option which removes
 "duplicate" or repeated tandem interpretations. In the above example
 there is no need to repeat the meter signature and key signature in each
 measure. The following command will concatenate each of the three
@@ -398,7 +398,7 @@ The new file would look like this:
 *-
 ```
 
-The **-t** option is used to indicate the "time base" \-- in this
+The <span class="option">t</span> option is used to indicate the "time base" \-- in this
 case, an eighth duration. Since all non-barline data records in both
 files represent elapsed durations of an eighth-note, we can continue by
 using the <span class="tool">assemble</span> command as before. The command:
@@ -451,7 +451,7 @@ result:
 Notice that we have a spurious null data record in the last line; both
 parts encode null tokens. For most processing, the presence of null data
 records is inconsequential. However, if we wish, these null data records
-can be eliminated using the <span class="tool">rid</span> command with the **-d** option. In
+can be eliminated using the <span class="tool">rid</span> command with the <span class="option">d</span> option. In
 fact it is common to follow an <span class="tool">assemble</span> command with **rid -d** to
 strip away unnecessary null data records. The command:
 
@@ -723,7 +723,7 @@ identify complex situations such as the following: for the soprano
 voice, count how many subdominant pitches are approached by an interval
 of a rising third or a rising sixth and coincide with a dominant seventh
 chord. First, let\'s extract the soprano line and create a corresponding
-scale degree representation using <span class="tool">deg</span>. We can use the **-a** option
+scale degree representation using <span class="tool">deg</span>. We can use the <span class="option">a</span> option
 to avoid outputting the melodic direction signifiers (`^` and `v`):
 
 ```bash
@@ -732,7 +732,7 @@ extract -i '*Isopran' howells | deg -a > temp1
 
 Next, let\'s again extract the soprano voice and create a corresponding
 melodic interval representation using <span class="tool">mint</span>. Since we are not
-interested in interval qualities we can invoke the **-d** option to
+interested in interval qualities we can invoke the <span class="option">d</span> option to
 output only diatonic interval sizes.
 
 ```bash
@@ -772,7 +772,7 @@ timebase -t 8 strauss | solfa | yank -m = -r 5 | grep re \
 ```
 > \| grep fe \| grep -c la
 
-We can repeat this command for beats one and two by changing the **-r**
+We can repeat this command for beats one and two by changing the <span class="option">r</span>
 parameter to 1 and 3 respectively.
 
 ------------------------------------------------------------------------
@@ -784,7 +784,7 @@ Reprise
 In this chapter we have learned how to concatenate musical passages
 together using the **cat** command. We also learned how to eliminate
 redundant exclusive and tandem interpretations from concatenated outputs
-using the **-u** and **-t** options for <span class="tool">rid</span>. In
+using the <span class="option">u</span> and <span class="option">t</span> options for <span class="tool">rid</span>. In
 addition, we learned how to assemble two or more spines into a single
 output file using <span class="tool">assemble</span>. In the case of
 [`**kern`](/rep/kern) and
@@ -792,7 +792,7 @@ output file using <span class="tool">assemble</span>. In the case of
 how to use the <span class="tool">timebase</span> command to
 preprocess each constituent file so that all data records represent
 equivalent elapsed durations. Having assembled a full score from parts,
-<span class="tool">rid</span> **-d** can be used to eliminate any residual or unnecessary null
+<span class="tool">rid</span> <span class="option">d</span> can be used to eliminate any residual or unnecessary null
 data records. The <span class="tool">proof</span> command can be used
 to ensure that any assembled `**kern` data is correctly aligned.
 

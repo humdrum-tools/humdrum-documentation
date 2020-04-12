@@ -174,7 +174,7 @@ latin texts that differ at line 40, might generate the following output:
 Let\'s consider again the question of whether two works have essentially
 the same lyrics. Many otherwise similar texts might differ in trivial
 ways. For example, texts may differ in punctuation or in the use of
-upper- and lower-case characters. The **diff** command provides a **-i**
+upper- and lower-case characters. The **diff** command provides a <span class="option">i</span>
 option that ignores distinctions between upper- and lower-case
 characters. Punctuation marks can be eliminated by adding a suitable
 <span class="tool">humsed</span> filter.

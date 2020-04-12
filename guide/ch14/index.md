@@ -92,7 +92,7 @@ s%A%B%
 ```
 
 Then the stream editor can be invoked to execute the operations
-contained in this file using the **-f** option:
+contained in this file using the <span class="option">f</span> option:
 
 ```bash
 humsed -f revise *inputfile*
@@ -461,7 +461,7 @@ Executing from a File
 
 When several instructions are involved in stream editing, it can be
 inconvenient to type multiple operations on the command line. It is
-easier to place the editing instructions in a file, and use the **-f**
+easier to place the editing instructions in a file, and use the <span class="option">f</span>
 option (with either **sed** or <span class="tool">humsed</span>) to
 execute from the file. Consider, for example, the task of rhythmic
 diminution, where the durations of notes are halved. We might create a
@@ -524,8 +524,8 @@ to count the number of phrases that begin on the subdominant and the
 number of phrases that end on the subdominant. The
 <span class="tool">deg</span> command will allow us to identify
 subdominant pitches (via the number \`4\'). Since we would like to
-maintain the phrase indicators, we will avoid the **-x** option for
-<span class="tool">deg</span>. However, the **-x** option will pass *all* of the non-pitch
+maintain the phrase indicators, we will avoid the <span class="option">x</span> option for
+<span class="tool">deg</span>. However, the <span class="option">x</span> option will pass *all* of the non-pitch
 related signifiers, including the duration data which encodes numbers.
 Hence, we will not be able to distinguish the subdominant (\`4\') pitch
 from a `**kern` quarter-note (\`4\'). The problem is resolved by first

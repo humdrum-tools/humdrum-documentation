@@ -79,7 +79,7 @@ We would invoke the search as follows:
 
 `patt -f dmitri` *inputfile*
 
-The **-f** option is mandatory: it conveys to <span class="tool">patt</span> the name of the
+The <span class="option">f</span> option is mandatory: it conveys to <span class="tool">patt</span> the name of the
 template file used in the search.
 
 In the default operation, <span class="tool">patt</span> simply outputs a global comment
@@ -125,7 +125,7 @@ would get the following output:
 ```
 
 We can instruct <span class="tool">patt</span> to output specific instances of the pattern
-using the **-e** (echo) option. Consider the following command:
+using the <span class="option">e</span> (echo) option. Consider the following command:
 
 ```bash
 patt -f dmitri -e ostinato
@@ -178,7 +178,7 @@ following **grep** command will search all files in the current
 directory for a tandem interpretation indicating a minor key. Recall
 that minor keys are identified by an asterisk followed by a lower-case
 pitch-letter name, followed by an optional accidental, followed by the
-colon character. The **-l** option will list all files that containing a
+colon character. The <span class="option">l</span> option will list all files that containing a
 matching record:
 
 ```bash
@@ -252,9 +252,9 @@ second volume of Bach\'s *Well-Tempered Clavier*:
 >   `==`             ==                    ==
 >   `*-`             \*-                   \*-
 >   ---------------- --------------------- ---------------------
-The <span class="tool">patt</span> command provides a **-s** option that allows the user to
+The <span class="tool">patt</span> command provides a <span class="option">s</span> option that allows the user to
 skip or ignore certain records in the input. Any regular expression can
-be given as a parameter for the **-s** option. In the following
+be given as a parameter for the <span class="option">s</span> option. In the following
 pipeline, we have instruction <span class="tool">patt</span> to skip over any records matching
 the lower-case letter \``r`\' (the `**kern` rest signifier):
 
@@ -284,10 +284,10 @@ P5  P5
 In order to identify consecutive fifths, we might extract two parts of
 interest, and then translate to the
 [`**hint`](/rep/hint) harmonic-interval
-representation. The **-c** option for <span class="tool">hint</span>
+representation. The <span class="option">c</span> option for <span class="tool">hint</span>
 collapses compound intervals to their non-compound equivalents so
 consecutive twelfths, nineteenths, etc. will also be identified. In the
-following command pipeline, notice the use of the **-s** option for
+following command pipeline, notice the use of the <span class="option">s</span> option for
 <span class="tool">patt</span> in order to skip barlines. This ensures
 that crossing a barline does not result in a failure to identify a
 consecutive fifth.
@@ -318,7 +318,7 @@ Below is a [`**kern`](/rep/kern) encoding of the
 final two measures along with corresponding
 [`**hint`](/rep/hint) and
 [`**deg`](/rep/deg) spines. The \*\*hint spine was
-generated using <span class="tool">hint</span> **-l** in order to
+generated using <span class="tool">hint</span> <span class="option">l</span> in order to
 generate intervals with respect to the lowest pitch.
 
 ```bash
@@ -411,11 +411,11 @@ Using *patt*\'s Tag Option
 So far, we have seen that <span class="tool">patt</span> provides two
 kinds of output. In the default operation, <span class="tool">patt</span> outputs a simple
 global comment each time it finds a matching segment in the input. With
-the **-e** option, <span class="tool">patt</span> will also echo the specific passage(s)
+the <span class="option">e</span> option, <span class="tool">patt</span> will also echo the specific passage(s)
 found. In addition, <span class="tool">patt</span> provides a third type of output using the
-**-t** option.
+<span class="option">t</span> option.
 
-When the **-t** option is invoked, <span class="tool">patt</span> will output the original
+When the <span class="option">t</span> option is invoked, <span class="tool">patt</span> will output the original
 input, plus an addition `**patt` spine. The `**patt` spine typically
 consists of mostly null tokens. However, each time the input matches the
 sought pattern, a user-defined "tag" will appear in the `**patt`
@@ -443,7 +443,7 @@ record will be followed by a record containing either `vi` or `VI`
 followed by a semicolon."
 
 When invoking the <span class="tool">patt</span> command, we can specify our preferred output
-tag along with the **-t** option as follows:
+tag along with the <span class="option">t</span> option as follows:
 
 ```bash
 extract -i '**harm' bwv269.krn | patt -f template -t deceptive
@@ -492,7 +492,7 @@ There are no restrictions as to the types of tags that can be generated
 by <span class="tool">patt</span>. A user might tag the beginning of motivic or thematic
 statements, various harmonic progressions, variation techniques,
 fingering patterns, quotations or allusions, stylistic clichés, etc. In
-[Chapter 35](/guide/ch35) we will use the **-t** option to label
+[Chapter 35](/guide/ch35) we will use the <span class="option">t</span> option to label
 different set forms for statements of a twelve-tone row, such as primes,
 inversions, retrogrades, and retrograde inversions. We will use suitable
 tags to identify the specific transpositions: P0, I7, R11, RI8, etc.
@@ -548,7 +548,7 @@ for the above Krenek passage would be:
   etc.
   `*-`
   --------
-The **-m** option for <span class="tool">patt</span> invokes a
+The <span class="option">m</span> option for <span class="tool">patt</span> invokes a
 "multi-record matching" mode. In this mode, <span class="tool">patt</span> attempts to match
 as many successive regular expressions in the template file as possible
 for a given input record, before continuing with the next input and
@@ -616,7 +616,7 @@ Patterns of Patterns
 
 Music often exhibits hierarchical structures where particular types of
 patterns may be embedded in other patterns, or where low-level patterns
-join together to form higher-level patterns. As we have seen, the **-t**
+join together to form higher-level patterns. As we have seen, the <span class="option">t</span>
 (tag) option for the <span class="tool">patt</span> command allows a new output spine to be
 generated. This spine contains user-defined labels marking the beginning
 of each found pattern. The labels can contain any user-defined text

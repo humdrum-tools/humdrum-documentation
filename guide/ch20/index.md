@@ -86,13 +86,13 @@ Using *yank* to Extract Sections
 
 We encountered the <span class="tool">yank</span> command earlier in
 [Chapter 12.](/guide/ch12) Recall that <span class="tool">yank</span> can be used to extract
-material by *section* using the **-s** option. For example, if the
+material by *section* using the <span class="option">s</span> option. For example, if the
 appropriate section is labelled, we might extract the coda of a work as
 follows:
 
 `yank -s Coda -r 1` *file*
 
-Recall that the **-r** option is mandatory with <span class="tool">yank</span>; in this case,
+Recall that the <span class="option">r</span> option is mandatory with <span class="tool">yank</span>; in this case,
 it identifies the *first* occurrence of a section labelled `Coda`.
 
 
@@ -139,7 +139,7 @@ Here we see two expansion lists, one carries the version label
 expansion lists might encode different interpretations of the repeats in
 a rounded binary form \-- Landowska performed the second repeat whereas
 Gould (1982) did not. When the <span class="tool">thru</span> command is invoked, the user can
-specify which *version* is intended using the **-v** option. The
+specify which *version* is intended using the <span class="option">v</span> option. The
 appropriate through-composed expansion will be output.
 
 The following example illustrates the use of the <span class="tool">thru</span> command in
@@ -193,7 +193,7 @@ that there are now two sections in the output sharing the same label
 abbreviated-format encodings and can only occur in through-composed
 documents.
 
-Without the **-v** option, <span class="tool">thru</span> expands the abbreviated file
+Without the <span class="option">v</span> option, <span class="tool">thru</span> expands the abbreviated file
 according to the *unlabelled* (default) expansion list. So the following
 command would result in an output consisting of section A, followed by
 section B, followed by section A (again), followed by section C:
@@ -250,9 +250,9 @@ data4
 `` *-  Both Smith and Jones label the work as beginning with section `A'. Later Jones's `B' section begins; then Smith's `B' section; then Jones's `C' section. Note that Smith's `B' section also contains the material Jones has identified as section `C'.  ``
 
 Normally, the <span class="tool">yank</span> command extracts a labelled section up to the
-next occurrence of a section label. However, the **-t** option causes
+next occurrence of a section label. However, the <span class="option">t</span> option causes
 <span class="tool">yank</span> to ignore all section labels except for a specified type. We
-could extract Smith\'s \`B\' section by using the **-t** option to limit
+could extract Smith\'s \`B\' section by using the <span class="option">t</span> option to limit
 extraction to "Smith"-type section labels:
 
 ```bash
@@ -824,7 +824,7 @@ the end of the strophic passage.
 The *strophe* Command
 ---------------------
 The Humdrum <span class="tool">strophe</span> command can be used to isolate or extract
-selective strophic data. The **-x** option for <span class="tool">strophe</span> allows
+selective strophic data. The <span class="option">x</span> option for <span class="tool">strophe</span> allows
 the user to extract a particular labelled strophe. Consider, for
 example the effect of the following command:
 ```bash
@@ -925,7 +925,7 @@ unlabelled expansion list is the default version. Other versions
 have labelled expansion lists.
 Several different *types* of section labels can coexist in the same
 document and the <span class="tool">yank</span> command can be instructed to ignore all
-sections other than a certain type via the **-t** option.
+sections other than a certain type via the <span class="option">t</span> option.
 The basic ideas introduced in this chapter are summarized in the
 following table.
 

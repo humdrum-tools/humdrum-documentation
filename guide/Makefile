@@ -7,5 +7,8 @@ all:
 tool-span:
 	$(BIN)/makeToolSpan ch??/index.md
 
+option-span:
+	$(BIN)/makeOptionSpan ch??/index.md
+
 
 

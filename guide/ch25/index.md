@@ -158,11 +158,11 @@ a preponderance of parallel and similar contrapuntal motion.
 Conversely, a negative correlation would indicate a preponderance
 of contrary and oblique motion.
 
-Notice the use of the **-s** option in the above command. Since
+Notice the use of the <span class="option">s</span> option in the above command. Since
 common system barlines often contain measure numbers (e.g. `=28`),
 they are interpretable as numeric data. For most inputs, the user
 will not want to have measure numbers participate in the similarity
-calculation. The **-s** option allows the user to specify a regular
+calculation. The <span class="option">s</span> option allows the user to specify a regular
 expression indicating data records to skip.
 
 Now suppose that we wanted to measure a similar pitch-related
@@ -179,7 +179,7 @@ semits species2.krn | ditto -s ^= | correl -s ^=
 ```
 
 Another approach would be to omit from consideration those notes
-that are not concurrent with a note in the other voice. The **-m**
+that are not concurrent with a note in the other voice. The <span class="option">m</span>
 option for <span class="tool">correl</span> disables the matched-pairs criterion. That
 is, if numerical data is missing from either one of the input spines,
 <span class="tool">correl</span> will simply discard the entire data
@@ -190,7 +190,7 @@ would omit the <span class="tool">ditto</span> command:
 semits species2.krn | correl -m -s ^=
 ```
 
-Note that in formal statistical tests, the **-m** option should never be
+Note that in formal statistical tests, the <span class="option">m</span> option should never be
 used.
 
 
@@ -204,7 +204,7 @@ portions that are similar to a brief excerpt or template. In this
 mode of operation, the input consists of a single input spine plus
 a separate template that represents a pattern being sought.
 
-The **-f** option for <span class="tool">correl</span> allows the user
+The <span class="option">f</span> option for <span class="tool">correl</span> allows the user
 to specify a file that acts as a template which is then scanned
 across some input. By way of example, suppose we are looking for
 motivic instances similar to the first four notes of *Frère Jacques*.

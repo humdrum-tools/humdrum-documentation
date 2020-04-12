@@ -99,10 +99,10 @@ if the numerical value is less than -3, then output the string
 recode -f reassign -i '**Xheart' -s ^= changes
 ```
 
-The **-f** option is required, and is used to identify the file
-containing the reassignment information. The **-i** option is also
+The <span class="option">f</span> option is required, and is used to identify the file
+containing the reassignment information. The <span class="option">i</span> option is also
 required, and is used to identify the exclusive interpretation for the
-data to be processed. The **-s** option tells <span class="tool">recode</span> to skip records
+data to be processed. The <span class="option">s</span> option tells <span class="tool">recode</span> to skip records
 matching some specified regular expression \-- in this case, to skip
 barlines. Finally, "`changes`" is the name of our input file.
 
@@ -213,7 +213,7 @@ An alternative way of distinguishing steps from leaps is by diatonic
 interval. For example, we might consider a diminished third to be a
 leap, while an augmented second may be considered a step. In this case,
 we can use the <span class="tool">mint</span> command to determine the
-melodic interval size; the **-d** option limits the output to diatonic
+melodic interval size; the <span class="option">d</span> option limits the output to diatonic
 intervals and excludes the interval quality (perfect, major, minor,
 etc.). The appropriate reassignment file would be:
 

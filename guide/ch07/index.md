@@ -190,7 +190,7 @@ The `.hmd` filename extension is a common way of designating Humdrum
 Since the `**kern` representation does not encode key-velocity
 information, the <span class="tool">midi</span> command assumes a default key velocity of 64
 (from a range of 1 to 127). If the input is monophonic, <span class="tool">midi</span> will
-also allow the user to set a fixed note duration using the **-d**
+also allow the user to set a fixed note duration using the <span class="option">d</span>
 option. This is useful for auditing notes that do not have duration
 values. For example, a Gregorian chant might be represented without
 durations. The following command takes a file containing a 12-tone row
@@ -273,8 +273,8 @@ continues immediately from the new score position.
 Data Scrolling During Playback
 ------------------------------
 
-The <span class="tool">midi</span> command provides a useful **-c** option that causes each
-data record to be repeated as a comment. For example, when the **-c**
+The <span class="tool">midi</span> command provides a useful <span class="option">c</span> option that causes each
+data record to be repeated as a comment. For example, when the <span class="option">c</span>
 option is used a sequence of data records such as the following:
 
 ```humdrum
@@ -339,7 +339,7 @@ During playback, the tempo can be modified by typing the greater-than
 respectively. In addition to modifying the tempo interactively, the
 performance tempo may be specified either in the command line or in the
 input Humdrum representation. The tempo may be specified on the command
-line by using the **-t** option. For example, the following command
+line by using the <span class="option">t</span> option. For example, the following command
 causes the file `Andean` to be performed at half tempo:
 
 ```bash
@@ -394,8 +394,8 @@ as follows:
 midi joplin | smf > joplin.smf
 ```
 
-The <span class="tool">smf</span> command provides two options. The **-t** option allows the
-user to set the tempo, whereas the **-v** option allows the user to
+The <span class="tool">smf</span> command provides two options. The <span class="option">t</span> option allows the
+user to set the tempo, whereas the <span class="option">v</span> option allows the user to
 specify a default MIDI key velocity. See the *Humdrum Reference Manual*
 for details.
 

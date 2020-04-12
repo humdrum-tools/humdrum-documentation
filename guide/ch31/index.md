@@ -177,7 +177,7 @@ in 7/8 meter:
 find /scores -type f -exec grep -l '\*M7/8' "{}" ";"
 ```
 
-Recall that the **-l** option for **grep** causes the output to consist
+Recall that the <span class="option">l</span> option for **grep** causes the output to consist
 only of names of files that contain the sought regular expression. Note
 that the **-type f** option has been specified in order to ensure that
 the **grep** command is only executed for files.
@@ -238,7 +238,7 @@ directory that are rondos:
 find . -exec grep -il '!!!AFR.*rondo' "{}" ";"
 ```
 
-Recall that the **-i** option for **grep** makes the pattern-match
+Recall that the <span class="option">i</span> option for **grep** makes the pattern-match
 insensitive to upper- or lower-case.
 
 
@@ -431,7 +431,7 @@ ln -s /scores/bach/cantatas/cant140.krn vocal  ln -s /scores/bach/chorales/chor2
 ```
 etc.
 
-(The **-s** option for **ln** is used to create a so-called "symbolic"
+(The <span class="option">s</span> option for **ln** is used to create a so-called "symbolic"
 link.)
 
 Using the **chmod** command, we can make this file executable, and then

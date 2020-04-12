@@ -163,12 +163,12 @@ is present, but there are no explicit harmonic intervals. Input records
 that contain no pitch tokens result in the outputting of a null token
 (.). If a single duplicated pitch is present, then the output will
 indicate a perfect unison (P1). Unisons can be suppressed from the
-output via the **-u** option for <span class="tool">hint</span>.
+output via the <span class="option">u</span> option for <span class="tool">hint</span>.
 
 
 When more than two pitches are present in a sonority, *permuted harmonic
-intervals* can be calculated by invoking the **-a** option (i.e. *all*
-intervals). For example, with the **-a** option, the final chord in
+intervals* can be calculated by invoking the <span class="option">a</span> option (i.e. *all*
+intervals). For example, with the <span class="option">a</span> option, the final chord in
 Example 15.1 would produce the following output:
 
 
@@ -184,7 +184,7 @@ output. This interpretation is added to the output in order to warn
 users that the representation should not be interpreted as stacked
 intervals.
 
-*Bass-related harmonic intervals* can be calculated with the **-l**
+*Bass-related harmonic intervals* can be calculated with the <span class="option">l</span>
 option. In this case, harmonic intervals are calculated with respect to
 the lowest pitch in the sonority. This option is helpful in determining
 figured bass. For the final chord in Example 12.1 the corresponding
@@ -195,10 +195,10 @@ output would be
 ```
 
 Two further options for <span class="tool">hint</span> allow the user to tailor how the
-intervals are represented. The **-c** option causes compound intervals
+intervals are represented. The <span class="option">c</span> option causes compound intervals
 such as a minor tenth (m10) to be output as non-compound equivalents
 (m3). This means that the interval of an octave (P8) will be rendered as
-a unison (P1). The **-d** option suppresses the outputting of interval
+a unison (P1). The <span class="option">d</span> option suppresses the outputting of interval
 qualities and results in only diatonic interval sizes being output.
 Again, this option is helpful in determining figured bass. The command:
 
@@ -282,7 +282,7 @@ The following output results:
 *-	*-
 ```
 
-Notice that the half-note C5 has been repeated. The **-p** option has
+Notice that the half-note C5 has been repeated. The <span class="option">p</span> option has
 caused each repetition of the data token to be placed in parentheses so
 they can be easily recognized. By using **ditto,** we have transformed
 previously passing intervals into explicit sonorities whose intervals
@@ -314,8 +314,8 @@ M3	m3	P4
 ```
 
 The <span class="tool">ditto</span>, command provides two additional
-options that are worthy of note: the **-s** and **-c** options. The
-**-s** option allows <span class="tool">ditto</span> to skip or ignore the presence of certain
+options that are worthy of note: the <span class="option">s</span> and <span class="option">c</span> options. The
+<span class="option">s</span> option allows <span class="tool">ditto</span> to skip or ignore the presence of certain
 data records. Suppose, for example, that we had a barline in the midst
 of some null tokens:
 
@@ -346,7 +346,7 @@ ditto -s ^=
 Without this option, the final data token in the above example would be
 an equals-sign rather than the token \`A\'.
 
-The **-c** option for <span class="tool">ditto</span> allows the user to selectively identify
+The <span class="option">c</span> option for <span class="tool">ditto</span> allows the user to selectively identify
 which characters are propagated. For example, the following command will
 cause only the lower-case letters \`a\' and \`b\' to be propagated:
 
@@ -369,7 +369,7 @@ Let\'s pause and consider some of the ways we might use the <span class="tool">d
 and <span class="tool">hint</span> commands. First, let\'s determine if some input contains a
 particular interval. Are there any augmented sixth intervals in Bach\'s
 two-part inventions? The following commands look for explicit and
-passing sixths respectively. Notice the use of the **-c** option so
+passing sixths respectively. Notice the use of the <span class="option">c</span> option so
 octave equivalents will also be identified:
 
 ```bash
@@ -566,14 +566,14 @@ values (delta-*y*) rather than between successive numerical values
 
 Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> always
 outputs a single spine. The user must specify which input spines are to
-be processed using the **-i** option. In the following command, only
+be processed using the <span class="option">i</span> option. In the following command, only
 \*\*semits input is to be processed:
 
 ```bash
 semits example15.1 | ydelta -s = -i '**semits'
 ```
 
-The **-s** option allows the user to identify data records to be
+The <span class="option">s</span> option allows the user to identify data records to be
 *skipped* while processing. In this case, the regular expression \`=\'
 is used to identify barlines, so measure numbers will be excluded when
 processing the numerical data.
@@ -603,7 +603,7 @@ the lowest value in the current data record. Hence, the \``4 7 12` in
 the last data record means that there are pitches 4 semitones above the
 lowest note, 7 semitones above the lowest note, and 12 semitones above
 the lowest note. (If necessary, the lowest or offset value for each
-record can be output in square brackets using the **-o** option.)
+record can be output in square brackets using the <span class="option">o</span> option.)
 
 Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> calculates numerical intervals
 only when more than one value is present on a given input data record.

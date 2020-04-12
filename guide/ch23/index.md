@@ -121,13 +121,13 @@ output to the **stats** command:
 dur -d inputfile.krn | rid -GLId | grep -v '^=' | stats
 ```
 
-The **-d** option for <span class="tool">dur</span> suppresses the outputting of duplicate
+The <span class="option">d</span> option for <span class="tool">dur</span> suppresses the outputting of duplicate
 durations arising from multiple-stops. Note that outputs from <span class="tool">dur</span>
 will adapt to any changes of metronome marking found in the input, so if
 the work accelerates the durations will be reduced proportionally.
 
 
-The **-M** option will over-ride any metronome markings found in the
+The <span class="option">M</span> option will over-ride any metronome markings found in the
 input stream. For example, if we wanted to estimate the duration of a
 monophonic passage for a metronome marking of 72 quarter-notes per
 minute we could use the command:
@@ -150,8 +150,8 @@ extract -i '*Itromp' inputfile.krn | dur -d | rid -GLId \
 ```
 > \| grep -v \'\^=\' \| grep -v r \| stats
 
-The <span class="tool">dur</span> command provides a **-e** option that
-allows the user to echo specified signifiers in the output. The **-e**
+The <span class="tool">dur</span> command provides a <span class="option">e</span> option that
+allows the user to echo specified signifiers in the output. The <span class="option">e</span>
 option is followed by a regular expression indicating what patterns are
 to be passed to the output. This option allows us to "mark" notes of
 special interest. For example, suppose we wanted to determine the
@@ -163,7 +163,7 @@ dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \
 > \| stats
 
 
-The **-e** option ensures that `**kern` staccato marks (\') are passed
+The <span class="option">e</span> option ensures that `**kern` staccato marks (\') are passed
 along to the output. The <span class="tool">rid</span> command eliminates
 everything but Humdrum data records. Then **grep** is used to isolate
 only those notes containing a staccato mark. The **sed** script is used
@@ -354,7 +354,7 @@ timebase -t 32 input.krn | ditto -s ^=
 ```
 
 Now we can yank the data records that are of interest. Notice that the
-**-r** (range) option for **yank -m** allows us to select more than one
+<span class="option">r</span> (range) option for **yank -m** allows us to select more than one
 record. This might allow us, say, to extract only those sonorities that
 occur on off-beats. For example, the following command extracts all
 notes played by the horns during beats 2 and 4 in a 4/4 meter work:
@@ -535,7 +535,7 @@ strength.
 
 Assuming that our Hungarian melodies encode key information, creating a
 [`**deg`](/rep/deg) spine is straightforward. Recall
-that the **-a** option for <span class="tool">deg</span> avoids
+that the <span class="option">a</span> option for <span class="tool">deg</span> avoids
 distinguishing the direction of approach (from above or below):
 
 ```bash
@@ -741,7 +741,7 @@ classifying and contextualizing durations using
 <span class="tool">recode</span> and
 <span class="tool">context</span>; isolating particular rhythmic
 moments using <span class="tool">timebase</span> and
-<span class="tool">yank</span> **-m**; determining relative metric
+<span class="tool">yank</span> <span class="option">m</span>; determining relative metric
 positions using <span class="tool">metpos</span>; and characterizing
 metric syncopation using <span class="tool">synco</span>.
 

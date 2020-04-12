@@ -48,9 +48,9 @@ HUMDRUM	DATA
 Most commands provide *options* that will modify the operation of the
 command in a particular way. In UNIX-style commands, options follow
 after the command name and are typically specified by a single letter
-preceded by a hyphen. The **-k** option with the <span class="tool">census</span> command will
+preceded by a hyphen. The <span class="option">k</span> option with the <span class="tool">census</span> command will
 give further information pertaining to the Humdrum `**kern`
-representation. With the **-k** option, the output includes the number
+representation. With the <span class="option">k</span> option, the output includes the number
 of notes in the file, the longest, shortest, highest, and lowest notes,
 the maximum number of concurrent notes or voices, the number of rests,
 and the number of barlines. For example, the command:
@@ -126,7 +126,7 @@ opus28:!! Andante  opus29:!! Andante  opus46:!! Andante  opus91:!! Andante  opus
 
 By default, **grep** distinguishes upper- and lower-case characters, so
 the above command will not match strings such as "`ANDANTE`". However,
-the **-i** option tells **grep** to ignore the case when searching.
+the <span class="option">i</span> option tells **grep** to ignore the case when searching.
 E.g.,
 
 ```bash
@@ -147,7 +147,7 @@ Pattern Locations Using grep -n
 -------------------------------
 
 If a pattern is found, it is sometimes helpful to know the precise
-location of the pattern. The **-n** option tells **grep** to prepend the
+location of the pattern. The <span class="option">n</span> option tells **grep** to prepend the
 *line number* for each matching instance. The following command
 identifies the line numbers for lines containing a double sharp for the
 file `melody.krn`:
@@ -171,7 +171,7 @@ Counting Pattern Occurrences Using grep -c
 
 
 In some cases, the user is interested in counting the total number of
-instances of a found pattern. The **-c** option causes **grep** to
+instances of a found pattern. The <span class="option">c</span> option causes **grep** to
 output a numerical *count* of the number of lines containing matching
 instances. For example, in the `**kern` representation, the beginning of
 each phrase is marked by the presence of an open curly brace (\``{`\').
@@ -238,7 +238,7 @@ foster11:!!!OTL: Oh! Susanna  foster12:!!!OTL: Jeanie with the Light Brown Hair 
 
 Remember that when a wildcard is used in filenames, **grep** prepends
 the filename prior to found patterns. These filename \`headers\' can be
-eliminated by selecting the **-h** option for **grep**:
+eliminated by selecting the <span class="option">h</span> option for **grep**:
 
 ```bash
 grep -h '!!!OTL:' *
@@ -259,7 +259,7 @@ grep -h '!!!OTL:' * > titles
 ```
 
 Beware that if the file `titles` already exists then it will be over
-written and its previous contents lost. With the **-h** option the file
+written and its previous contents lost. With the <span class="option">h</span> option the file
 `titles` might contain the following lines:
 
 ```bash
@@ -379,16 +379,16 @@ Options for the *uniq* Command
 ------------------------------
 
 Like **grep**, the **uniq** command provides several options that modify
-its behavior. The **-d** option causes only those records to be output
+its behavior. The <span class="option">d</span> option causes only those records to be output
 which are *duplicated* (i.e. two or more instances). Conversely, the
-**-u** option causes only those records to be output that are truly
+<span class="option">u</span> option causes only those records to be output that are truly
 *unique* (i.e. only a single instance is present in the input).
 
 
 Suppose, for example, that we want to know which of the Bach chorales
 are harmonizations of the same tunes \-- that is, have the same titles.
 (Of course the same chorale might be known by two or more titles, but
-let\'s defer this problem until [Chapter 25.](/guide/ch25)) The **-d**
+let\'s defer this problem until [Chapter 25.](/guide/ch25)) The <span class="option">d</span>
 option will only output the duplicate records:
 
 ```bash
@@ -404,7 +404,7 @@ in the current directory. The output might look as follows:
 
 Having established which titles are duplicates, a logical next step
 might be to identify the specific files involved. We can use **grep**
-again to search for a specific title. Without the **-h** option, the
+again to search for a specific title. Without the <span class="option">h</span> option, the
 output will identify the appropriate filenames. For example:
 
 ```bash
@@ -424,7 +424,7 @@ bwv272.krn:!!!OTL: Befiehl du deine Wege
 ```
 
 Sometimes we would like to have an output that contains *only* the
-*filenames* containing the sought pattern. The **-l** option causes
+*filenames* containing the sought pattern. The <span class="option">l</span> option causes
 **grep** to output only filenames that contain one or more instances of
 the sought pattern:
 
@@ -444,13 +444,13 @@ bwv271.krn
 bwv272.krn
 ```
 
-As we\'ve already notes, the **-u** option for **uniq** causes only
+As we\'ve already notes, the <span class="option">u</span> option for **uniq** causes only
 unique entries in a list to be passed to the output. This is often
 useful in identifying works that differ in some way from other works in
 a group or corpus. For example, in some repertory, you may remember that
 a particular work had a different instrumentation than the other works.
 But you may not be able to remember what the specific instrumentation
-was. Use the **-u** option for **uniq** to produce a list consisting of
+was. Use the <span class="option">u</span> option for **uniq** to produce a list consisting of
 only those works whose instrumentation differs from all others:
 
 ```bash
@@ -458,7 +458,7 @@ grep -h '!!!AIN:' * | sort | uniq -u
 ```
 
 
-As in the case of the **grep** command, **uniq** also supports a **-c**
+As in the case of the **grep** command, **uniq** also supports a <span class="option">c</span>
 option which counts the number of occurrences of a pattern. For example,
 if we want to count the number of works by each composer in the current
 directory:
@@ -501,7 +501,7 @@ numerical counts, the subsequent **sort** sorts first according to the
 numbers to the left of the reference records.
 
 As a final note, we might mention that, like **grep** and **uniq**, the
-**sort** command has several options. One option, the **-r** option,
+**sort** command has several options. One option, the <span class="option">r</span> option,
 causes the output to be arranged in reverse order. This can be useful in
 producing lists that are ordered from most common to least common.
 
@@ -513,7 +513,7 @@ Reprise
 
 In this chapter we have introduced some elementary ways of processing
 Humdrum files. We noted that the <span class="tool">census</span> command can be used to
-identify basic statistics about a file. The **-k** option for <span class="tool">census</span>
+identify basic statistics about a file. The <span class="option">k</span> option for <span class="tool">census</span>
 provides basic information related to `**kern` files, such as the number
 of notes and rests, the highest and lowest notes, the number of
 barlines, etc.
@@ -524,26 +524,26 @@ patterns of text characters in files. We used **grep** to identify
 composers, titles, instrumentation and other information. Most of our
 examples were limited to searching for Humdrum reference records. In
 later chapters we will use **grep** in more sophisticated searches. We
-noted several useful options for **grep**: the **-c** option causes a
+noted several useful options for **grep**: the <span class="option">c</span> option causes a
 count to be output of the number of instances of the pattern in each
-file. The **-i** option causes **grep** to ignore any distinction
+file. The <span class="option">i</span> option causes **grep** to ignore any distinction
 between upper- and lower-case characters when searching for patterns.
-The **-h** option causes **grep** to suppress outputting the filenames
-prior to found patterns when more than one file is searched. The **-l**
+The <span class="option">h</span> option causes **grep** to suppress outputting the filenames
+prior to found patterns when more than one file is searched. The <span class="option">l</span>
 option results in only the filenames being output. In a later chapter we
 will encounter a number of other useful options provided by **grep**.
 
 Also discussed in this chapter was the **uniq** command; **uniq**
 provides a useful utility for eliminating or isolating duplicate records
 or lines. Once again a number of useful options were introduced. The
-**-c** option causes **uniq** to prepend a count of the number of
-duplicate input lines. The **-d** option results in only duplicate input
-lines being noted in the output. The **-u** option does the reverse:
+<span class="option">c</span> option causes **uniq** to prepend a count of the number of
+duplicate input lines. The <span class="option">d</span> option results in only duplicate input
+lines being noted in the output. The <span class="option">u</span> option does the reverse:
 only those input lines that are unique are passed to the output.
 
 Finally, we introduced the UNIX **sort** utility. This command
 rearranges the order of successive input lines so they are in
 alphabetic/numeric order. The **sort** command provides a wealth of
-useful options; however, we mentioned only the **-r** option \-- which
+useful options; however, we mentioned only the <span class="option">r</span> option \-- which
 causes the output to be sorted in reverse order.
 

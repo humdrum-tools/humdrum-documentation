@@ -563,7 +563,7 @@ Humdrum syntax:
 humdrum full.krn
 ```
 
-Use the Humdrum <span class="tool">proof</span> **-k** command to identify any syntactical
+Use the Humdrum <span class="tool">proof</span> <span class="option">k</span> command to identify any syntactical
 errors in any encoded `**kern` data:
 
 ```bash
@@ -574,7 +574,7 @@ proof -k full.krn
 One of the best ways to ensure that musical data makes sense is to
 listen to it. The Humdrum <span class="tool">midi</span> and
 <span class="tool">perform</span> commands can be used to listen to
-your data. The **-c** option for <span class="tool">midi</span> causes the Humdrum data to be
+your data. The <span class="option">c</span> option for <span class="tool">midi</span> causes the Humdrum data to be
 displayed while the MIDI data is performed. This can further help in
 locating errors.
 

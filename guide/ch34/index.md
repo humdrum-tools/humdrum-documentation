@@ -40,7 +40,7 @@ transform pitch-related representations (such as
 [`**freq`](/rep/freq) and
 [`**kern`](/rep/kern)) to a conventional pitch-class
 notation where pitch-class C is represented by the value zero. With the
-**-a** option, <span class="tool">pc</span> will generate outputs where the pc values \`10\'
+<span class="option">a</span> option, <span class="tool">pc</span> will generate outputs where the pc values \`10\'
 and \`11\' are rendered by the alphabetic characters \`A\' and \`B\'
 respectively. Using the alpha-numeric pc representation is recommended;
 it proves to be especially convenient for searching tasks since,
@@ -147,7 +147,7 @@ Two pitch-class set inventories will be generated: one inventory for the
 beginnings of phrases/slurs and one for phrase/slur endings.
 
 
-Incidentally, the <span class="tool">pcset</span> command supports a **-c** option that can be
+Incidentally, the <span class="tool">pcset</span> command supports a <span class="option">c</span> option that can be
 used to generate the set *complement* rather than the principal set
 form.
 
@@ -274,7 +274,7 @@ Example 34.1.
 
 There are a number of ways we might want to try segmenting the melodic
 line. One possibility is to regard slurs or phrases as indicating
-appropriate groups. Recall that the **-b** and **-e** options for
+appropriate groups. Recall that the <span class="option">b</span> and <span class="option">e</span> options for
 <span class="tool">context</span> are used to specify regular
 expressions that match the beginning and end (respectively) of the
 context group: We can invoke an appropriate <span class="tool">context</span> command,
@@ -314,8 +314,8 @@ The *reihe* Command
 Twelve-tone music raises additional analysis issues. Variants of a
 tone-row can be generated using the <span class="tool">reihe</span>
 command. Given some input, <span class="tool">reihe</span> will output a user-specified
-transformation. Options are provided for prime transpositions (**-P**
-option), for inversions (**-I** option), for retrogrades (**-R** option)
+transformation. Options are provided for prime transpositions (<span class="option">P</span>
+option), for inversions (<span class="option">I</span> option), for retrogrades (<span class="option">R</span> option)
 and for retrograde-inversions (**-RI** option).
 
 Inputs do not have to be 12-tone rows. The 5-tone row used in Igor
@@ -360,11 +360,11 @@ using the following command.
 reihe -a -I 2 memoriam
 ```
 
-The **-a** option causes the values \`10\' and \`11\' to be rendered
+The <span class="option">a</span> option causes the values \`10\' and \`11\' to be rendered
 alphabetically as \`A\' and \`B\'.
 
 The <span class="tool">reihe</span> command also provides a *shift*
-operation (**-S**) that is useful for shifting the serial order of data
+operation (<span class="option">S</span>) that is useful for shifting the serial order of data
 tokens forward or backward. Consider the following command:
 
 ```bash
@@ -408,7 +408,7 @@ create our own script to see how this can be done.
 The following script uses the <span class="tool">reihe</span> command
 to generate each set form. Each form is stored in a separate file with
 names such as `I8` and `RI3`. There are two noteworthy features to this
-script. Notice that the alphanumeric system (**-a** option) is used \--
+script. Notice that the alphanumeric system (<span class="option">a</span> option) is used \--
 so the values \`A\' and \`B\' are used rather than \`10\' and \`11\';
 this will facilitate searching. Also notice that our script provides an
 option that allows us to specify *partial* rows: that is, we can store
@@ -445,7 +445,7 @@ The following two lines of the script prepare the input score for
 searching. Specifically, the score is transformed to pitch-class
 notation (using <span class="tool">pc</span>) and then all rests are changed to null tokens
 using the <span class="tool">humsed</span> command. Notice the use of
-the **-a** option for <span class="tool">pc</span> in order to use the
+the <span class="option">a</span> option for <span class="tool">pc</span> in order to use the
 alpha-numeric pitch-class representation.
 
 ```bash
@@ -454,10 +454,10 @@ pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp
 
 The main searching task is done by <span class="tool">patt</span>. The
 <span class="tool">patt</span> command is executed 48 times \-- once for
-each row variant. The **-t** (tag) option is used so that a `**patt`
+each row variant. The <span class="option">t</span> (tag) option is used so that a `**patt`
 output is generated. Each time a match is made the appropriate name
-(e.g. P4) is output in the spine. The **-s** option is used to skip
-barlines and null data records when matching patterns. The **-m** option
+(e.g. P4) is output in the spine. The <span class="option">s</span> option is used to skip
+barlines and null data records when matching patterns. The <span class="option">m</span> option
 invokes the multi-record matching mode \-- which allows <span class="tool">patt</span> to
 recognize row statements where several nominally successive pitches are
 collapsed into a vertical chord:

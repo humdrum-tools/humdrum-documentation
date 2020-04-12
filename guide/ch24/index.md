@@ -303,7 +303,7 @@ techniques.
 #### RULE: "Avoid parts that are out of range."
 
 The Humdrum <span class="tool">census</span> command provides a summary of various elementary
-features of any Humdrum input. With the **-k** option, <span class="tool">census</span>
+features of any Humdrum input. With the <span class="option">k</span> option, <span class="tool">census</span>
 provides a summary of a further ten features pertaining to `**kern`
 format inputs. This includes the highest and lowest notes present.
 
@@ -397,7 +397,7 @@ the Unix **grep** command, with the appropriate regular expression:
 grep -n '[Ad]' 
 ```
 
-The **-n** option will cause **grep** to prepend the line number of any
+The <span class="option">n</span> option will cause **grep** to prepend the line number of any
 matching patterns, so we can refer back to the original input file.
 
 In order to avoid the letters \`A\' or \`d\' found in comments or
@@ -513,10 +513,10 @@ in each interval given in the template.)
 Given the above output from the <span class="tool">hint</span> command, we could search for
 occurrences of the defined pattern using the following command:
 
-The **-f** option is used to identify the file (`template`) in which the
-pattern-template has been stored. The **-s** option tells <span class="tool">patt</span> of
+The <span class="option">f</span> option is used to identify the file (`template`) in which the
+pattern-template has been stored. The <span class="option">s</span> option tells <span class="tool">patt</span> of
 any input records that should be skipped during the search process. The
-**-s** option is followed by a regular expression \-- in this case the
+<span class="option">s</span> option is followed by a regular expression \-- in this case the
 equals-sign \-- so that any input records containing the equals-sign
 (i.e. `**hint` barlines) are ignored.
 
@@ -535,7 +535,7 @@ fifths rule pertains to all intervals that are compound-equivalents to
 perfect fifths (such as perfect twelfths, etc.).
 
 This additional criteria is easily handled. The <span class="tool">hint</span> command
-provides a **-c** option that causes all compound intervals to be
+provides a <span class="option">c</span> option that causes all compound intervals to be
 represented by their non-compound equivalents. For example, major tenths
 and major seventheenths, etc. will all be represented as "M3", and so
 on. Hence we would modify our pipeline:
@@ -651,7 +651,7 @@ deg  | grep -n '7'
 ```
 
 This will find and output all records that contain the number 7; the
-**-n** option means that the corresponding line number will also be
+<span class="option">n</span> option means that the corresponding line number will also be
 output.
 
 However, we want to find instances where two or more 7s occur on a
@@ -1034,7 +1034,7 @@ This processing needs to be applied for each pair of successive voices
 Violations of the exposed octaves rules must meet three conditions.
 First, the two voices must be separated by an octave (or two octaves, or
 a unison, etc.). (This suggests that we use the <span class="tool">hint</span> command with
-the **-c** option in order to reduce compound intervals to their
+the <span class="option">c</span> option in order to reduce compound intervals to their
 non-compound equivalents.) Second, the voices must be moving in the same
 direction. (The `**deg` representation may be suitable here, since it
 distinguishes notes according to whether they are approached from below
@@ -1076,7 +1076,7 @@ Now all we need to do is generate our five spines and assemble them in
 the proper order.
 
 The first spine is easily generated using the <span class="tool">hint</span> command. Remember
-that the **-c** option means that all intervals an octave or greater
+that the <span class="option">c</span> option means that all intervals an octave or greater
 will be represented by the within-octave equivalent.
 
 ```bash

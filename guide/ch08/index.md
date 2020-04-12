@@ -300,9 +300,9 @@ grep McCartney beatles wings
 Most commands provide *options* that modify the behavior of the command
 in some way. Command options are designated by a leading dash character.
 The specific option is usually indicated by a single alphabetic letter,
-such as the **-b** option (spoken: "dash-B" option). In the **uniq**
-command, the **-c** option causes a count to be prepended to each output
-line. In the following command, **uniq** is the command name, **-c** is
+such as the <span class="option">b</span> option (spoken: "dash-B" option). In the **uniq**
+command, the <span class="option">c</span> option causes a count to be prepended to each output
+line. In the following command, **uniq** is the command name, <span class="option">c</span> is
 the option, and `ghana32` is the name of the input file:
 
 ```bash
@@ -311,8 +311,8 @@ uniq -c ghana32
 
 In many cases, the option is followed by a *parameter* that specifies
 further information pertaining to the invoked option. In the following
-command, <span class="tool">recode</span> is the command name, **-f**
-is the option, **reassign** is the parameter used by the **-f** option,
+command, <span class="tool">recode</span> is the command name, <span class="option">f</span>
+is the option, **reassign** is the parameter used by the <span class="option">f</span> option,
 and **gagaku** is the name of the input file:
 
 ```
@@ -322,15 +322,15 @@ recode -f reassign gagaku
 Options and their accompanying parameters must be separated by blank
 space (i.e. one or more spaces and/or tabs). If more than one option is
 invoked, and none of the invoked options require a parameter, then the
-option-letters may be combined. For example, the **-a** and **-b**
+option-letters may be combined. For example, the <span class="option">a</span> and <span class="option">b</span>
 options might be invoked as **-ab** (or as **-ba)** \-- provided neither
 option requires a parameter.
 
 Whenever an option requires a parameter, the option must be specified
 alone and followed immediately by the appropriate parameter. For
 example, in the following command, the command name is
-<span class="tool">trans</span>, the **-d** option is followed by the
-numerical parameter **3**; the parameter for the **-c** option is the
+<span class="tool">trans</span>, the <span class="option">d</span> option is followed by the
+numerical parameter **3**; the parameter for the <span class="option">c</span> option is the
 number **4** and the input file is named **gambia21**.
 
 ```bash
@@ -340,7 +340,7 @@ trans -d 3 -c 4 gambia21
 Since numerical parameters can sometimes be negative, it can be
 difficult to discern whether a negative number is a parameter or another
 option. In the following example, the **-3** is a parameter to the
-**-d** option rather than an option by itself.
+<span class="option">d</span> option rather than an option by itself.
 
 ```bash
 trans -d -3 -c 2 gambia21
@@ -408,7 +408,7 @@ the screen. In the second example, the output from **command1** is
 split: one copy is piped to **command2** for further processing, while
 an identical copy is stored in the file `outfile1`; if the file
 `outfile1` already exists, its contents will be overwritten. In the
-third example, the append option (**-a**) for **tee** has been invoked
+third example, the append option (<span class="option">a</span>) for **tee** has been invoked
 \-- meaning that the output from `command` will be added to the end of
 any existing data in the file `outfile`. If the file `outfile` does not
 already exist, it will be created.

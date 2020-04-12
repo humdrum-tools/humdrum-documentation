@@ -141,7 +141,7 @@ things* there are in an input. For example, the above output identifies
 just five different records \-- and three different types of data
 records.
 
-Recall that the **-c** option for **uniq** will cause a \`count\' to be
+Recall that the <span class="option">c</span> option for **uniq** will cause a \`count\' to be
 prepended to each output line. The command:
 
 ```bash
@@ -331,7 +331,7 @@ The output will be as follows:
 
 Now the output is sorted so that the least frequent occurrences are at
 the beginning, and the most frequent occurrences are at the end of the
-output. Incidentally, **sort** has a **-r** option that causes the
+output. Incidentally, **sort** has a <span class="option">r</span> option that causes the
 output to be sorted in reverse order. If we use **sort -r**, then the
 most common occurrences will be placed at the beginning of the output:
 
@@ -365,11 +365,11 @@ percentage values rather than the actual numerical count. This can be
 calculated by dividing each of the inventory count numbers by the total
 number of data records processed. A convenient way to count records is
 via the UNIX **wc** (word count) command. The **wc** command provides
-three options. With the **-c** option, **wc** counts the number of
-characters in an input. With the **-w** option, **wc** counts the number
+three options. With the <span class="option">c</span> option, **wc** counts the number of
+characters in an input. With the <span class="option">w</span> option, **wc** counts the number
 of words in an input. A "word" is defined as any sequence of
 characters delineated by white space, such as spaces, tabs or new lines.
-With the **-l** option, **wc** counts the nmber of lines or records in
+With the <span class="option">l</span> option, **wc** counts the nmber of lines or records in
 the input.
 
 We can count the total number of non-null data records in a Humdrum
@@ -399,7 +399,7 @@ Excluding or Seeking Rare Events
 --------------------------------
 
 Recall from [Chapter 3](/guide/ch03) that the **uniq** command provides
-other options (besides the **-c** option). The **-d** option causes
+other options (besides the <span class="option">c</span> option). The <span class="option">d</span> option causes
 **uniq** to output *only* those records that are duplicated. In other
 words, records that occur only once are eliminated from the input. This
 option can be useful when there are a lot of single-occurrence data

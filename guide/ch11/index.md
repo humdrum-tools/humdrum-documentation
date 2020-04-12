@@ -178,17 +178,17 @@ calculated, and that no unison has appeared for the tied note in the
 lower voice.
 
 If desired, the unison intervals between successive tied notes can be
-output via the **-t** option for **mint.**
+output via the <span class="option">t</span> option for **mint.**
 
 Sometimes it is useful to maintain the initial starting pitches in the
 output. The presence of these "offset" pitch values can prove useful
 in later reconstructing the original pitches from the
-[`**mint`](/rep/mint) interval data. When the **-o**
+[`**mint`](/rep/mint) interval data. When the <span class="option">o</span>
 option is invoked, <span class="tool">mint</span> outputs the initial starting pitches (placed
 in square brackets) from which the subsequent melodic intervals have
 been calculated.
 
-In order to avoid outputting interrupted intervals, the **-b** (break)
+In order to avoid outputting interrupted intervals, the <span class="option">b</span> (break)
 option can be used. This option requires a subsequent regular expression
 that defines the contexts where the interval calculation should be
 suspended and restarted. A common invocation would identify `**kern`
@@ -222,7 +222,7 @@ Notice that the perfect fourth (+P4) has been replaced by a null token
 at the beginning of measure 2. In addition, the rest token \``r`\' has
 been echoed just prior to the barline.
 
-Depending on the regular expression given, the **-b** option can used
+Depending on the regular expression given, the <span class="option">b</span> option can used
 for a variety of specialized intervals. For example, suppose that we
 wanted to avoid calculating intervals between the last note of a phrase
 and the first note of the next phrase. In the
@@ -243,7 +243,7 @@ intervals between notes having pauses and the subsequent note:
 mint -b ';' inputfile
 ```
 
-Since the **-b** option accepts regular expressions, we can combine
+Since the <span class="option">b</span> option accepts regular expressions, we can combine
 patterns. For example, the following command instructs <span class="tool">mint</span> to
 calculate melodic intervals, not including intervals spanning phrase
 boundaries, and not following notes with pauses:
@@ -257,9 +257,9 @@ Unvoiced Inner Intervals
 ------------------------
 
 Unvoiced inner intervals can be included in the output by using the
-**-i** or **-I** options. With the **-I** option, unvoiced inner
+<span class="option">i</span> or <span class="option">I</span> options. With the <span class="option">I</span> option, unvoiced inner
 intervals appear in the output in parentheses. For example, the
-following output is generated for Example 1.1 with the **-I** option.
+following output is generated for Example 1.1 with the <span class="option">I</span> option.
 Notice the addition of `(+M2)` and `(-2)`. The rising major second
 arises from the pitches D4 and E4; the falling minor third arises from
 the pitches G4 and E4.
@@ -281,15 +281,15 @@ P1	.
 *-	*-
 ```
 
-With the **-i** option, the parentheses surrounding the unvoiced inner
+With the <span class="option">i</span> option, the parentheses surrounding the unvoiced inner
 intervals would be omitted.
 
 
 Calculating Distance Intervals Using the *mint -s* Command
 ----------------------------------------------------------
 
-Another option provided by <span class="tool">mint</span> is the **-s**
-or skip option. Like the **-b** option, this option requires a
+Another option provided by <span class="tool">mint</span> is the <span class="option">s</span>
+or skip option. Like the <span class="option">b</span> option, this option requires a
 subsequent regular expression. Any token matching this expression is
 transformed to a null data token and is ignored when processing. One
 possible use for this option is to help calculate *distance intervals.*
@@ -436,17 +436,17 @@ Diatonic Intervals, Absolute Intervals and Contour
 --------------------------------------------------
 
 The <span class="tool">mint</span> command provides three further
-options of interest. The **-d** option causes <span class="tool">mint</span> to output only
+options of interest. The <span class="option">d</span> option causes <span class="tool">mint</span> to output only
 the diatonic interval size without the interval quality information. The
-**-a** option causes <span class="tool">mint</span> to output absolute pitch intervals without
+<span class="option">a</span> option causes <span class="tool">mint</span> to output absolute pitch intervals without
 distinguishing ascending intervals from descending intervals. That is,
 the leading plus (+) and minus (-) signs are discarded.
 
-Finally, the **-A** option causes <span class="tool">mint</span> to output just one of three
+Finally, the <span class="option">A</span> option causes <span class="tool">mint</span> to output just one of three
 states: a plus sign (+) indicating a rising interval, the minus sign (-)
 indicating a falling interval, and the number zero (0) indicating no
-pitch movement (i.e., unison). In short, the **-A** option outputs only
-gross contour. The **-a** and **-A** options are complementary.
+pitch movement (i.e., unison). In short, the <span class="option">A</span> option outputs only
+gross contour. The <span class="option">a</span> and <span class="option">A</span> options are complementary.
 
 
 Using the *mint* Command
@@ -481,7 +481,7 @@ mint Chevalier* | grep -c '-[Mm]2'
 ```
 
 An alternative way of achieving the same goal might simplify the regular
-expression to **grep** and use the **-d** (diatonic) option for
+expression to **grep** and use the <span class="option">d</span> (diatonic) option for
 <span class="tool">mint</span>:
 
 ```bash
@@ -617,10 +617,10 @@ respectively. In going from the values 2 and 5 to the values -1, 7 and
 inner differences are output in parentheses: (7 - 2 = 5) and (7 - 5 =
 2).
 
-Like the <span class="tool">mint</span> command, <span class="tool">xdelta</span> provides a **-b** option to break
-calculations of numerical differences and a **-s** option to skip or
+Like the <span class="tool">mint</span> command, <span class="tool">xdelta</span> provides a <span class="option">b</span> option to break
+calculations of numerical differences and a <span class="option">s</span> option to skip or
 completely ignore certain data tokens when processing. An important use
-of the **-s** option is to ignore barlines. Consider the following
+of the <span class="option">s</span> option is to ignore barlines. Consider the following
 example:
 
 ```humdrum

@@ -170,7 +170,7 @@ composed by Josquin and are also in triple meter:
 Here we have imbedded one **grep** "inside" another. Remember that the
 command delineated by the greve is executed first. In this case, we
 begin by searching all of the files in the current directory for an
-`AMT` reference record containing the keyword "`triple`." The **-l**
+`AMT` reference record containing the keyword "`triple`." The <span class="option">l</span>
 option causes the output to consist of only filenames. Then the second
 **grep** is executed. It looks for files that contain a `COM` reference
 record containing the keyword "`Josquin`." But this second **grep**

@@ -543,11 +543,11 @@ The resulting output is the Dorian mode:
   dd
   \*-
   ----------
-When using the **-d** option alone, <span class="tool">trans</span> eliminates all accidentals
+When using the <span class="option">d</span> option alone, <span class="tool">trans</span> eliminates all accidentals
 in the input. This can be potentially confusing, but it is often useful.
 Suppose you have a passage in the key of E major which you would like to
 translate to E Dorian. First transpose so the tonic is D using only the
-**-d** option; then transpose exactly so the tonic is E again:
+<span class="option">d</span> option; then transpose exactly so the tonic is E again:
 
 ```bash
 trans -d -1 Emajor | trans -d +1 -c +2 > Edorian
@@ -565,7 +565,7 @@ tandem interpretations* are similar in syntax to the <span class="tool">trans</s
 itself. In the above example, `*Trd1` indicates a diatonic shift up one
 letter name. The tandem interpretation `*Trd-1c-2` would indicate that a
 score has been transposed down a major second. The <span class="tool">trans</span> command
-also provides a **-k** option that allows the user to specify a
+also provides a <span class="option">k</span> option that allows the user to specify a
 replacement key signature for the output.
 
 The <span class="tool">trans</span> command can be used in conjunction with any of the
@@ -605,7 +605,7 @@ Apart from transposition, translating from one representation to another
 provides opportunities for different sorts of processing. Suppose, for
 example, we wanted to know whether the subdominant pitch occurs more
 frequently in one vocal repertory than in another repertory. We can use
-<span class="tool">solfa</span> in conjunction with **grep**\'s **-c** option to count the
+<span class="tool">solfa</span> in conjunction with **grep**\'s <span class="option">c</span> option to count the
 number of occurrences. (For the following examples, we will assume that
 the inputs consist of only a single spine, that barlines are absent, and
 that appropriate interpretations are provided indicating the key of each
@@ -680,14 +680,14 @@ Uses for Pitch Translations
 Occasionally it is useful to process a given representation to the
 *same* representation. The <span class="tool">kern</span> command
 translates various pitch-related representations to the `**kern` format.
-The **-x** option eliminates any input data that do not pertain to
+The <span class="option">x</span> option eliminates any input data that do not pertain to
 pitch. When applied to a `**kern` input, this option allows us to filter
 out durations, articulation marks, phrasing, and other non-pitch data.
 Suppose, for example, that we wanted to determine the proportion of
 successively repeated notes in a vocal melody: how often is a pitch
 followed immediately by the same pitch? We might begin by first
 determining the total number of notes in the melody using <span class="tool">census</span>
-with the **-k** option.
+with the <span class="option">k</span> option.
 
 ```bash
  census -k melody.krn
