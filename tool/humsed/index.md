@@ -29,12 +29,12 @@ deletion, transliteration, file-read, and file-write. By default the
 output is sent to the display, however the output can be routed to a
 file using file redirection (\> *outputfile).*
 
-The <span class="tool">humsed</span> command is fashioned after the UNIX **sed** stream
+The <span class="tool">humsed</span> command is fashioned after the UNIX <span class="unix">sed</span> stream
 editor. In contrast to **sed,** <span class="tool">humsed</span> editing instructions are
 applied only to Humdrum data records; Humdrum *interpretations* and
 *comments* are not affected by **humsed.**
 
-The <span class="tool">humsed</span> command accepts one or more **sed** instructions.
+The <span class="tool">humsed</span> command accepts one or more <span class="unix">sed</span> instructions.
 Instructions are specified on the command-line within a pair of single
 quotes. Where more than one editing instruction is specified, successive
 instructions are separated by a semicolon. Alternatively, instructions
@@ -55,7 +55,7 @@ a preceding regular expression will result in the deletion of all data
 records in the input.
 
 For further information concerning the syntax and use of <span class="tool">humsed</span>
-editing instructions, refer to the documentation for the UNIX **sed**
+editing instructions, refer to the documentation for the UNIX <span class="unix">sed</span>
 command.
 
 ------------------------------------------------------------------------
@@ -80,7 +80,7 @@ logical OR (\|), precedence grouping ( ), and alphanumeric token start
 and end anchors \< \>.
 
 Note that not all systems support extended regular expressions for the
-**sed** command; on such systems the <span class="option">E</span> option for <span class="tool">humsed</span> is
+<span class="unix">sed</span> command; on such systems the <span class="option">E</span> option for <span class="tool">humsed</span> is
 ineffective and may result in an error.
 
 The <span class="option">f</span> options allows the user to specify a *scriptfile* that
@@ -185,7 +185,7 @@ a pause.
 
 ## PORTABILITY ##
 
-Any system supporting the UNIX-style **sed** command. Note that the
+Any system supporting the UNIX-style <span class="unix">sed</span> command. Note that the
 <span class="option">E</span> option is a non-POSIX extension currently supported only by the
 MKS toolkit. It is hoped that in the future, other systems will support
 extended regular expression syntax for **sed.**

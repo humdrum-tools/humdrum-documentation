@@ -241,7 +241,7 @@ interpreters, and revised *awk* (1985).
 
 ## SEE ALSO ##
 
-**grep** (UNIX), **egrep** (UNIX), <span class="tool">patt</span> (4),
+<span class="unix">grep</span> (UNIX), <span class="unix">egrep</span> (UNIX), <span class="tool">patt</span> (4),
 <span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
 (4)
 

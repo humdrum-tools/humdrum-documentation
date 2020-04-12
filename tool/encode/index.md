@@ -36,7 +36,7 @@ only for IBM PC or compatible hardware running under the DOS operating
 system.
 
 The <span class="tool">encode</span> command implements a full-screen interactive text editor
-&mdash; similar to the **vi** text editor. When invoked, the screen is
+&mdash; similar to the <span class="unix">vi</span> text editor. When invoked, the screen is
 divided into three display regions: a *status window,* a *command
 window,* and a larger *text window.* The *status window* displays
 various pieces of information, including the name of the file being
@@ -81,7 +81,7 @@ Vertical motions of the cursor relative to the displayed text can be
 controlled by a variety of means. The up and down cursor-control keys
 move the cursor up one line or down one line respectively.
 Alternatively, the lower-case letters \`**k**\' and \`**j**\' may be
-used for up and down movements &mdash; as in the **vi** text editor. If the
+used for up and down movements &mdash; as in the <span class="unix">vi</span> text editor. If the
 cursor is at the bottom or top of the screen, cursor movement down or up
 a line (respectively) will cause the screen to scroll one line as
 needed. The carriage return or **ENTER** key will cause the cursor to
@@ -101,7 +101,7 @@ beginning of the appropriate line.
 Horizontal motions of the cursor within a line can be carried out using
 the left (**\<-**) and right (**-\>**) arrow keys. Alternatively, the
 lower-case \`**h**\' and \`**l**\' keys can be used as aliases for the
-left and right cursor motions &mdash; as in the **vi** text editor. The
+left and right cursor motions &mdash; as in the <span class="unix">vi</span> text editor. The
 **space** bar can also be used to move the cursor to the right. The
 dollar sign (**\$**) causes the cursor to move to the end of the current
 line. The number zero (**0**) or the caret (**\^**) causes the cursor to
@@ -367,12 +367,12 @@ The \`**r *filename***\' command causes <span class="tool">encode</span> to read
 *filename* into the text, beginning at the line following the current
 cursor position.
 
-The \`**v**\' command causes <span class="tool">encode</span> to spawn a **vi** text editing
-session &mdash; importing the current <span class="tool">encode</span> text. The **vi** text
+The \`**v**\' command causes <span class="tool">encode</span> to spawn a <span class="unix">vi</span> text editing
+session &mdash; importing the current <span class="tool">encode</span> text. The <span class="unix">vi</span> text
 editor provides text manipulation capabilities, including searching,
 substitution, and macro-instruction facilities not available in
-**encode.** (Refer to the UNIX **vi** reference document for further
-information.) When the **vi** session is closed, the edited text file is
+**encode.** (Refer to the UNIX <span class="unix">vi</span> reference document for further
+information.) When the <span class="unix">vi</span> session is closed, the edited text file is
 returned to the <span class="tool">encode</span> session.
 
 The \`**m**\' command invokes a Humdrum pipeline that is suitable for
@@ -487,7 +487,7 @@ following table.
 >   rc *controlfile*      use run-control file *controlfile* rather than current `.rc file`
 >   s *n*                 append run-control string number *n* following current cursor position
 >   S *n*                 insert run-control string number *n* before current cursor position
->   v                     spawn **vi** text editing session using current text
+>   v                     spawn <span class="unix">vi</span> text editing session using current text
 >   w \[*filename*\]      write file *filename* to disk; default filename is current file
 >   w! *filename*         overwrite existing file *filename*
 >   wq                    write current file and quit
@@ -540,9 +540,9 @@ invoke the \`v\' edit command.
 
 ## WARNINGS ##
 
-Unlike the UNIX **vi** text editor, only a single \`**d**\' is required
+Unlike the UNIX <span class="unix">vi</span> text editor, only a single \`**d**\' is required
 in edit mode to delete a line (rather than two \\fRd\\fR\'s).
-Experienced **vi** users should be careful when deleting lines.
+Experienced <span class="unix">vi</span> users should be careful when deleting lines.
 
 Note that the `BEAT` and `TEMPO` instructions cannot appear in the `.rc`
 file until after the default beat (`DEL*`) has been defined.
@@ -555,7 +555,7 @@ file until after the default beat (`DEL*`) has been defined.
 **encode.rc** (5), <span class="tool">humdrum</span> (4), **\*\*kern** (2),
 **\*\*MIDI** (2), <span class="tool">midi</span> (4), <span class="tool">num</span> (4),
 <span class="tool">perform</span> (4), <span class="tool">proof</span> (4),
-<span class="tool">record</span> (4), <span class="tool">timebase</span> (4), **vi**
+<span class="tool">record</span> (4), <span class="tool">timebase</span> (4), <span class="unix">vi</span>
 (UNIX)
 
 ------------------------------------------------------------------------

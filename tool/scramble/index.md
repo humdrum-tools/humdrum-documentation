@@ -175,7 +175,7 @@ the Humdrum syntax can be ensured by using the **fields -i** command to
 chronicle changing numbers of spines in a file, followed by the <span class="tool">yank</span>
 command to segregate data blocks containing the same number of spines.
 Each such bock can be <span class="tool">scramble</span>d independently and then the blocks
-reconnected using the UNIX **cat** command. Unnecessary (duplicate)
+reconnected using the UNIX <span class="unix">cat</span> command. Unnecessary (duplicate)
 interpretations can be eliminated using **rid -u.**
 
 ------------------------------------------------------------------------

@@ -34,7 +34,7 @@ Once invoked, the user may interactively input a regular expression
 followed by a carriage return. The sample text is scanned for
 occurrences of the defined regular expression. Any text lines containing
 the matched expression are displayed on the screen; <span class="tool">regexp</span> differs
-from the UNIX **grep** command in that the precise locations of the
+from the UNIX <span class="unix">grep</span> command in that the precise locations of the
 matched pattern are explicitly marked. (See EXAMPLES below.) Note that
 only the first occurrence of a matching pattern is identified in each
 line of text. (This is how most software tools make use of regular
@@ -49,7 +49,7 @@ The <span class="tool">regexp</span> command is terminated by typing an end-of-f
 (control-D on UNIX; control-Z on DOS or OS/2).
 
 The <span class="tool">regexp</span> command implements the same regular expression features
-found in the UNIX **awk** command. This includes all so-called
+found in the UNIX <span class="unix">awk</span> command. This includes all so-called
 \"extended\" regular expression features with the exception of \\\> and
 \\\<.
 
@@ -93,9 +93,9 @@ expression are displayed in the output.
 ## WARNINGS ##
 
 The regular-expression features provided by <span class="tool">regexp</span> depend on the
-local UNIX **awk** utility &mdash; as accessed via the `AWK_VER` shell
+local UNIX <span class="unix">awk</span> utility &mdash; as accessed via the `AWK_VER` shell
 variable. Available features may change depending on the version of
-**awk** used.
+<span class="unix">awk</span> used.
 
 ------------------------------------------------------------------------
 
