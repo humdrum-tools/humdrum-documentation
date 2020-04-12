@@ -10,11 +10,11 @@ robots: all
 Solfa Syllables
 ==========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">solfa</span> \-- representation for tonic solfa syllables
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">solfa</span> representation permits the encoding of extended
  tonic solfa syllables for the \"moveable doh\" system of pitch naming.
@@ -65,11 +65,11 @@ Solfa Syllables
  Barlines are represented using the \"common system\" for barlines \--
  see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
  File type is dubbed \`.sol\'.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">solfa</span> mappings of
  signifiers and signifieds.
@@ -105,7 +105,7 @@ Solfa Syllables
 
  *Summary of <span class="rep">solfa</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
  A sample document is given below:
 
@@ -132,7 +132,7 @@ Solfa Syllables
    \*-                        \*-
 ```
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  The following Humdrum command accepts <span class="rep">solfa</span> encoded data as
  inputs:
@@ -148,7 +148,7 @@ Solfa Syllables
       <span class="tool">solfa</span>   translates <span class="rep">kern</span>, <span class="rep">pitch</span>, <span class="rep">solfg</span>, <span class="rep">Tonh</span>
    -- ------------------------------------- ---------------------------------------------------------------------
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">solfa</span>:
@@ -160,7 +160,7 @@ Solfa Syllables
 
  *Tandem interpretations for <span class="rep">solfa</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` barlines, **deg, **degree, **kern, **pitch, **solfg, **Tonh, vox`
 

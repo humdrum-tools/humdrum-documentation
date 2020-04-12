@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Pitch-Class
 ======================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">pc</span> \-- pitch-class representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">pc</span> representation can be used to characterize
  *pitch-class* or *chroma* information. Two pitches are said to share
@@ -63,12 +63,12 @@ Pitch-Class
  Barlines are represented using the \"common system\" for barlines \--
  see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
  It is recommended that files containing predominantly <span class="rep">pc</span> data
  should be given names with the distinguishing \`.pc\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">pc</span> mappings of signifiers
  and signifieds.
@@ -100,7 +100,7 @@ Pitch-Class
 
  *Summary of <span class="rep">pc</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
  The following sample document shows a pitch-class representation for
  the opening measures of Schoenberg\'s \"Sommerm\\o\'u\\(..\'d\" from
@@ -144,7 +144,7 @@ Pitch-Class
  Note that pitch-class representations do not preserve pitch-height or
  contour information.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  The following Humdrum commands accept <span class="rep">pc</span> encoded data as
  inputs:
@@ -166,7 +166,7 @@ Pitch-Class
       <span class="tool">pc</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">pc</span>, <span class="rep">pitch</span>, <span class="rep">Tonh</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, to <span class="rep">pc</span>
    -- ------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">pc</span>:
@@ -179,11 +179,11 @@ Pitch-Class
 
  *Tandem interpretations for <span class="rep">pc</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` barlines, **cents, **freq, **iv, iv, **kern, **nf, nf, pc, **pcset, pcset, **pf, pf, **pitch, reihe, **semits, **solfg, **specC, Tonh`
 
-### REFERENCES
+## REFERENCES ##
 
  Forte, A. *The Structure of Atonal Music.* New Haven: Yale University
  Press, 1973.

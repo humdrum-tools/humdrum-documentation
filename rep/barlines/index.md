@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Barlines
 ===================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  **barlines** \-- \"common system\" for representing barlines
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  Several Humdrum representations employ a common system for
  representing barlines. This common system is described below. (N.B.
@@ -64,7 +64,7 @@ Barlines
  a normal line, followed by a heavy line, followed by a normal line,
  followed by a repeat indicator. See [**EXAMPLES**](#EXAMPLES) below.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the mappings of signifiers and
  signifieds for \"common system\" barlines.
@@ -87,7 +87,7 @@ Barlines
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
  Several examples of \"common system\" barlines are given below:\
  \
@@ -117,7 +117,7 @@ Barlines
    `29|`        not a barline
    ------------ -----------------------------------------------------------------
 
-### PERTINENT REPRESENTATIONS
+## PERTINENT REPRESENTATIONS ##
 
  The following Humdrum representations employ \"common system\" barline
  signifiers:\
@@ -154,7 +154,7 @@ Barlines
    **\*\*vox\#**      representation of number of concurrently active voices
    ------------------ ----------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` humsed, num`
 

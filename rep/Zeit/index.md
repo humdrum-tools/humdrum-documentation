@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Absolute Time Period
 ===============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 <span class="rep">Zeit</span> \-- absolute period of time
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="rep">Zeit</span> representation is used to represent spans of time,
 such as the life-span of a composer, or the chronology of a rehearsal.
@@ -74,12 +74,12 @@ representing time boundaries (prior to \...; after \...). For the
 appropriate representation syntax refer to
 [<span class="rep">date</span>](date.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 It is recommended that files containing predominantly <span class="rep">Zeit</span> data
 should be given names with the distinguishing \`.zt\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 The following table summarizes the <span class="rep">Zeit</span> mappings of signifiers
 and signifieds.
@@ -104,7 +104,7 @@ and signifieds.
 
 > *Summary of <span class="rep">Zeit</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 Several examples of <span class="rep">Zeit</span> data tokens are identified below:
 
@@ -178,12 +178,12 @@ representation:
 >   \*-               \*-
 >   ----------------- -------------
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 Currently, no special-purpose Humdrum commands produce <span class="rep">Zeit</span> as
 output, or process <span class="rep">Zeit</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 The following tandem interpretations can be used in conjunction with
 <span class="rep">Zeit</span>:
@@ -194,7 +194,7 @@ The following tandem interpretations can be used in conjunction with
 
 > *Tandem interpretations for <span class="rep">Zeit</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **date, **dur, **metpos, **ordo, **recip, **takt, **time`
 

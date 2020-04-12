@@ -9,12 +9,12 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Pitch Cents
 ======================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">cents</span> \-- absolute pitch representation in hundredths of
 > semitones
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">cents</span> representation is used to represent absolute pitch
 > in units of hundredths of semitones with respect to middle C. Each
@@ -34,12 +34,12 @@ Pitch Cents
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">cents</span> spines
 > should be given names with the distinguishing \`.cnt\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">cents</span> mappings of
 > signifiers and signifieds.
@@ -60,7 +60,7 @@ Pitch Cents
 > >
 > > *Summary of <span class="rep">cents</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -85,7 +85,7 @@ Pitch Cents
 > >   \*-         \*-
 > >   ----------- -------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">cents</span> encoded data as
 > inputs:
@@ -111,7 +111,7 @@ Pitch Cents
 >      <span class="tool">cents</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">cents</span>
 >   -- ------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > **\*\*cents:**
@@ -126,7 +126,7 @@ Pitch Cents
 > >
 > > *Tandem interpretations for <span class="rep">cents</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, cents, **freq, freq, **fret, **kern, kern, **MIDI, midi, **pitch, pitch, **semits, semits, **solfg, solfg, **specC, specc, **Tonh, tonh`
 

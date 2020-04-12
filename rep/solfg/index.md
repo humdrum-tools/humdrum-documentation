@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 French Solfège
 =========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">solfg</span> \-- French solfège (pitch) notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">solfg</span> representation permits the encoding of Western
 > musical pitches using the common French system for pitch naming.
@@ -73,12 +73,12 @@ French Solfège
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">solfg</span> data
 > should be given names with the distinguishing \`.slg\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">solfg</span> mappings of
 > signifiers and signifieds.
@@ -103,7 +103,7 @@ French Solfège
 > >
 > > *Summary of <span class="rep">solfg</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -127,7 +127,7 @@ French Solfège
 > >   \*-                 \*-
 > >   ------------------- -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">solfg</span> encoded data as
 > inputs:
@@ -156,7 +156,7 @@ French Solfège
 >      <span class="tool">solfg</span>   translates <span class="rep">cents</span>, <span class="rep">degree</span>, <span class="rep">fret</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">solfg</span>
 >   -- ------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">solfg</span>:
@@ -170,7 +170,7 @@ French Solfège
 > >
 > > *Tandem interpretations for <span class="rep">solfg</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **deg, **degree, **freq, **hint, **kern, **mint, mint, **pc, pc, **pitch, pitch, **semits, **solfa, solfg, **Tonh, tonh`
 

@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Beats
 ================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">recip</span> \-- beat-proportion representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">recip</span> scheme is able to represent durations according to
  the traditional system of beat-proportions (rather than according to
@@ -85,12 +85,12 @@ Beats
  Barlines are represented using the \"common system\" for barlines \--
  see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
  It is recommended that files containing predominantly <span class="rep">recip</span> data
  should be given names with the distinguishing \`.rcp\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">recip</span> mappings of
  signifiers and signifieds.
@@ -103,7 +103,7 @@ Beats
   | ==        | double barline
 
 
-### EXAMPLES
+## EXAMPLES ##
 
  A sample document is given below:
 
@@ -124,7 +124,7 @@ Beats
 *-
 ```
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  The following Humdrum command accepts <span class="rep">recip</span> encoded data as
  input:
@@ -135,7 +135,7 @@ Beats
       <span class="tool">urrhythm</span>   characterize the rhythmic prototype in a passage
    -- ------------------------------------------- ------------------------------------------------------
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">recip</span>:
@@ -147,7 +147,7 @@ Beats
 
  *Tandem interpretations for <span class="rep">recip</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  `barlines, **date, **metpos, **ordo, **recip, **takt, **time, timebase, **URrhythm, urrhythm, **Zeit`
 

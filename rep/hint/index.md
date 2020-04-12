@@ -9,7 +9,7 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Harmonic Intervals
 =============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">hint</span> \-- representation for harmonic intervals
 

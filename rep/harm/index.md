@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Functional Harmony
 =============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">harm</span> \-- representation for Western functional harmony
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">harm</span> representation provides one method for encoding
 > Western functional harmony. In the <span class="rep">harm</span> representation, chords
@@ -167,12 +167,12 @@ Functional Harmony
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">harm</span> data
 > should be given names with the distinguishing \`.hrm\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">harm</span> mappings of signifiers
 > and signifieds.
@@ -221,7 +221,7 @@ Functional Harmony
 > >
 > > *Summary of <span class="rep">harm</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:\
 > \
@@ -265,12 +265,12 @@ Functional Harmony
 > >   \*-
 > >   ----------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > Currently, no special-purpose Humdrum commands produce <span class="rep">harm</span> as
 > output, or process <span class="rep">harm</span> encoded data input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">harm</span>:
@@ -284,7 +284,7 @@ Functional Harmony
 > >
 > > *Tandem interpretations for <span class="rep">harm</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **embel, **kern`
 

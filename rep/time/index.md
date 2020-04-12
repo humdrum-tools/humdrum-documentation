@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Elapsed Time
 =======================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">time</span> \-- relative elapsed time (in seconds)
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">time</span> representation is used to represent cumulative time
  (from some arbitrary moment deemed \"time zero\") to the onset of the
@@ -26,12 +26,12 @@ Elapsed Time
  Barlines are represented using the \"common system\" for barlines \--
  see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
  It is recommended that files containing predominantly <span class="rep">time</span> data
  should be given names with the distinguishing \`.tim\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">time</span> mappings of signifiers
  and signifieds.
@@ -43,7 +43,7 @@ Elapsed Time
 
  *Summary of <span class="rep">time</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
  A sample document is given below:
 
@@ -72,12 +72,12 @@ Elapsed Time
   | 16g      |  5         |   3.25    |   6.25
   | 4a-      |  4         |   3.5     |   6.5
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  Currently, no special-purpose Humdrum commands produce <span class="rep">time</span> as
  output, or process <span class="rep">time</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">time</span>:
@@ -88,7 +88,7 @@ Elapsed Time
 
  *Tandem interpretations for <span class="rep">time</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` barlines, **date, **dur, **metpos, **ordo, **recip, **takt, **Zeit`
 

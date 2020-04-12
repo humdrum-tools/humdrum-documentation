@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Relative Scale Degree
 ================================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">deg</span> \-- relative scale degree representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">deg</span> representation can be used to represent key-dependent
 > scale-degree information for music in major or minor keys. The
@@ -53,12 +53,12 @@ Relative Scale Degree
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">deg</span> data
 > should be given names with the distinguishing \`.deg\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">deg</span> mappings of signifiers
 > and signifieds.
@@ -76,7 +76,7 @@ Relative Scale Degree
 > >
 > > *Summary of <span class="rep">deg</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The sample document given below shows the opening subject of the Fugue
 > in C minor in the second volume of Bach\'s *Well Tempered Clavier.*
@@ -113,7 +113,7 @@ Relative Scale Degree
 > >   \*-                                \*-
 > >   ---------------------------------- ---------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command accepts <span class="rep">deg</span> encoded data as
 > inputs:
@@ -131,7 +131,7 @@ Relative Scale Degree
 > >      <span class="tool">deg</span>   translates **\*\*kern, \*\*pitch, \*\*Tonh, \*\*solfg**, to <span class="rep">deg</span>
 > >   -- --------------------------------- -------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">deg</span>:
@@ -143,7 +143,7 @@ Relative Scale Degree
 > >
 > > *Tandem interpretations for <span class="rep">deg</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, deg, **degree, degree, **kern, **pitch, **solfg, **Tonh`
 

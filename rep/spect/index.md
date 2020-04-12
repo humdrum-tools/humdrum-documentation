@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Frequency Spectra
 ============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">spect</span> \-- discrete frequency spectrum representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">spect</span> representation is used to represent successive
 > acoustic spectra. Three types of data tokens are recognized by
@@ -35,12 +35,12 @@ Frequency Spectra
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">spect</span> data
 > should be given names with the distinguishing \`.spe\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">spect</span> mappings of
 > signifiers and signifieds.
@@ -56,7 +56,7 @@ Frequency Spectra
 > >
 > > *Summary of <span class="rep">spect</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document encodes five spectra and a barline. The
 > first data record encodes an ambient spectrum (silence). There ensues
@@ -83,7 +83,7 @@ Frequency Spectra
 > >   \*-
 > >   -------------------------------------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">spect</span> data as output:
 >
@@ -91,7 +91,7 @@ Frequency Spectra
 > >      <span class="tool">spect</span>   assemble total spectral content for individual sonorities
 > >   -- ------------------------------------- -----------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">spect</span>:
@@ -104,11 +104,11 @@ Frequency Spectra
 > >
 > > *Tandem interpretations for <span class="rep">spect</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **dB, diss, **freq, **semits, semits, **spect, spect`
 
-### WARNING
+## WARNING ##
 
 > The <span class="rep">spect</span> representation frequently produces long data
 > records. Viewing or editing the output using restricted window widths

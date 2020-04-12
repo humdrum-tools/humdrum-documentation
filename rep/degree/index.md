@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Absolute Scale Degree
 ================================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">degree</span> -- absolute scale degree representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">degree</span> representation can be used to represent
 > key-dependent scale-degree information for music in major or minor
@@ -56,12 +56,12 @@ Absolute Scale Degree
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">degree</span> data
 > should be given names with the distinguishing \`.dgr\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">degree</span> mappings of
 > signifiers and signifieds.
@@ -77,7 +77,7 @@ Absolute Scale Degree
 > >
 > > *Summary of <span class="rep">degree</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The sample document given below shows the opening subject of the Fugue
 > in C minor in the second volume of Bach\'s *Well Tempered Clavier.*
@@ -114,7 +114,7 @@ Absolute Scale Degree
 > >   \*-                                \*-
 > >   ---------------------------------- ------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">degree</span> encoded data as
 > inputs:
@@ -136,7 +136,7 @@ Absolute Scale Degree
 > >      <span class="tool">degree</span>   translates <span class="rep">kern</span>, <span class="rep">pitch</span>, <span class="rep">solfg</span>, <span class="rep">Tonh</span>, to <span class="rep">degree</span>
 > >   -- --------------------------------------- ----------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">degree</span>:
@@ -148,7 +148,7 @@ Absolute Scale Degree
 > >
 > > *Tandem interpretations for <span class="rep">degree</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **deg, deg, degree, **kern, **pitch, **solfg, **Tonh`
 

@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Melodic Accent
 =========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">melac</span> \-- melodic accent representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">melac</span> representation is used to characterize the degree of
 > pitch-related stress (melodic accent) for successive moments. Three
@@ -24,12 +24,12 @@ Melodic Accent
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">melac</span> data
 > should be given names with the distinguishing \`.mac\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">melac</span> mappings of
 > signifiers and signifieds.
@@ -44,7 +44,7 @@ Melodic Accent
 > >
 > > *Summary of <span class="rep">melac</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document shows a single spine of <span class="rep">melac</span>
 > data for the bass line of J. S. Bach\'s two-part keyboard Invention
@@ -87,7 +87,7 @@ Melodic Accent
 > Notice that melodic accent values can be either real or integer
 > values. Rests are represented by the single letter \`r\'.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">melac</span> data as output:
 >
@@ -95,7 +95,7 @@ Melodic Accent
 > >      <span class="tool">melac</span>   calculate melodic accent values for successive pitches
 > >   -- ------------------------------------- --------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">melac</span>:
@@ -108,7 +108,7 @@ Melodic Accent
 > >
 > > *Tandem interpretations for <span class="rep">melac</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, melac, **semits, semits`
 

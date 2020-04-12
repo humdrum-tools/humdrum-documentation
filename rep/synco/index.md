@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Metric Syncopation
 =============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">synco</span> \-- represent degree of metric syncopation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">synco</span> representation encodes numerical values that
 > indicate the degree of metric syncopation for successive moments in a
@@ -46,12 +46,12 @@ Metric Syncopation
 > Note: <span class="rep">synco</span> data is normally produced by the <span class="tool">synco</span>
 > command.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">synco</span> data
 > should be given names with the distinguishing \`.syn\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">synco</span> mappings of
 > signifiers and signifieds.
@@ -64,7 +64,7 @@ Metric Syncopation
 > >
 > > *Summary of <span class="rep">synco</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -90,7 +90,7 @@ Metric Syncopation
 > >   \*-
 > >   -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">synco</span> data as output:
 >
@@ -98,7 +98,7 @@ Metric Syncopation
 > >      <span class="tool">synco</span>   measure the degree of metric syncopation
 > >   -- ------------------------------------- ------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">synco</span>:
@@ -112,11 +112,11 @@ Metric Syncopation
 > >
 > > *Tandem interpretations for <span class="rep">synco</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **metpos, synco, **timebase`
 
-### REFERENCES
+## REFERENCES ##
 
 > Longuet-Higgins, H. C., & Lee, C. S., \"The perception of musical
 > rhythms,\" *Perception,* Vol. 11 (1982) pp. 115-128.

@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Embellishment Tones
 ==============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">embel</span> \-- representation for embellishment tones
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">embel</span> representation is used to represent the harmonic
 > status of individual pitches in a passage of Western tonal music.
@@ -82,12 +82,12 @@ Embellishment Tones
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">embel</span> data
 > should be given names with the distinguishing \`.emb\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table provides a complete list of signifiers defined in
 > <span class="rep">embel</span>:
@@ -125,7 +125,7 @@ Embellishment Tones
 > >
 > > *Summary of <span class="rep">embel</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -147,12 +147,12 @@ Embellishment Tones
 > >   \*-        \*-         \*-
 > >   ---------- ----------- ----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > Currently, no special-purpose Humdrum commands produce <span class="rep">embel</span>
 > as output, or process <span class="rep">embel</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">embel</span>:
@@ -166,7 +166,7 @@ Embellishment Tones
 > >
 > > *Tandem interpretations for <span class="rep">embel</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **harm`
 

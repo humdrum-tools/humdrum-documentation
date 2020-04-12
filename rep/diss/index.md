@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Dissonance
 =====================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">diss</span> \-- sensory dissonance representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">diss</span> representation is used to characterize the degree of
 > sensory dissonance for successive acoustic moments. Two types of
@@ -26,12 +26,12 @@ Dissonance
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">diss</span> data
 > should be given names with the distinguishing \`.dis\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">diss</span> mappings of signifiers
 > and signifieds.
@@ -46,7 +46,7 @@ Dissonance
 > >
 > > *Summary of <span class="rep">diss</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -72,7 +72,7 @@ Dissonance
 > >
 > Note that rests are not represented in the <span class="rep">diss</span> scheme.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">diss</span> data as output:
 >
@@ -81,7 +81,7 @@ Dissonance
 > >      <span class="tool">diss</span>   calculate the degree of sensory dissonance for successive spectra
 > >   -- ----------------------------------- -------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">diss</span>:
@@ -94,13 +94,13 @@ Dissonance
 > >
 > > *Tandem interpretations for <span class="rep">diss</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, diss, **spect, spect`
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 > Kameoka, A. & Kuriyagawa, M. \"Consonance theory, part I: Consonance
 > of dyads.\" *Journal of the Acoustical Society of America,* Vol. 45,

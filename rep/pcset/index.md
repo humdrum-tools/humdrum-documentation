@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Pitch-Class Sets
 ===========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">pcset</span> \-- Fortean pitch-class set representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The *\*\*pcset* representation provides a means for indicating
 > pitch-class sets. The representation is based on a simple extension of
@@ -37,12 +37,12 @@ Pitch-Class Sets
 > Barlines are represented using the \"common system\" barlines \-- see
 > [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">pcs</span> data
 > should be given names with the distinguishing \`.pcs\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the *\*\*pcset* mappings of signifiers
 > and signifieds.
@@ -56,7 +56,7 @@ Pitch-Class Sets
 > >
 > > *Summary of \*\*pcset Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document shows a pitch-class representation for
 > the opening measures of Schoenberg\'s \"Sommerm\\o\'u\\(..\'d\" from
@@ -100,7 +100,7 @@ Pitch-Class Sets
 > >   \*-                                           \*-        \*-        \*-         \*-
 > >   --------------------------------------------- ---------- ---------- ----------- -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following humdrum commands accept *\*\*pcset* encoded data as
 > inputs:
@@ -119,7 +119,7 @@ Pitch-Class Sets
 > >      <span class="tool">pcset</span>   convert pitch and pitch-class information to set-theoretic representations
 > >   -- ------------------------------------- ----------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > *\*\*pcset:*
@@ -134,18 +134,18 @@ Pitch-Class Sets
 > >
 > > *Tandem interpretations for <span class="rep">pcset</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **iv, iv, **nf, nf, **pc, pc, pcset, **pf, pf, reihe, **semits, semits`
 
 []{#REFERENCE}
 
-### REFERENCE
+## REFERENCE ##
 
 > Forte, A. *The Structure of Atonal Music.* New Haven: Yale University
 > Press, 1973.
 
-### APPENDIX
+## APPENDIX ##
 
 > The following table provides an extended list of all possible
 > Fortean-type pitch-class set names. The corresponding pitch-class set

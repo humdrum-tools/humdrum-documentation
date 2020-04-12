@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Tablature
 ====================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">fret</span> \-- generalized fretted tablature representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">fret</span> representation provides a comprehensive system for
 > representing performance aspects for fretted instruments. The
@@ -300,12 +300,12 @@ Tablature
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">fret</span> data
 > should be given names with the distinguishing \`.frt\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The complete system of signifiers used by <span class="rep">fret</span> is summarized
 > in the following table.
@@ -379,7 +379,7 @@ Tablature
 > >
 > > *Summary of <span class="rep">fret</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below. The [<span class="rep">kern</span>](kern.rep.html)
 > representation echoes the pitches in the <span class="rep">fret</span> representation.
@@ -412,7 +412,7 @@ Tablature
 > >   \*-         \*-        \*-
 > >   ----------- ---------- ----------------------------------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">fret</span> encoded data as
 > inputs:
@@ -427,7 +427,7 @@ Tablature
 > >      <span class="tool">tonh</span>       translates <span class="rep">fret</span> pitch to numerical <span class="rep">Tonh</span>
 > >   -- --------------------------------------- -----------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">fret</span>:
@@ -444,7 +444,7 @@ Tablature
 > >
 > > *Tandem interpretations for <span class="rep">fret</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **freq, **kern, **pitch, **semits, **solfg, **Tonh`
 

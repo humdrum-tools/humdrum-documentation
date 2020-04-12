@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 MIDI
 ===============================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">MIDI</span> \-- Musical Instrument Digital Interface notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">MIDI</span> representation is a Humdrum version of the well-known
 > MIDI standard. MIDI is an industry standard used to exchange
@@ -27,12 +27,12 @@ MIDI
 > musically-pertinent signifiers, such as ties, slurs, phrasings,
 > ornaments, etc. MIDI does not represent rests.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">MIDI</span> data
 > should be given names with the distinguishing \`.hmd\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">MIDI</span> mappings of signifiers
 > and signifieds.
@@ -46,7 +46,7 @@ MIDI
 > >
 > > *Summary of <span class="rep">MIDI</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -97,7 +97,7 @@ MIDI
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">MIDI</span> encoded data as
 > inputs:
@@ -122,7 +122,7 @@ MIDI
 > >      <span class="tool">record</span>   records <span class="rep">MIDI</span> data from a MIDI input
 > >   -- --------------------------------------- ------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">MIDI</span>:
@@ -137,7 +137,7 @@ MIDI
 > >
 > > *Tandem interpretations for <span class="rep">MIDI</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **freq, **kern, **pitch, **semits, **specC, **Tonh`
 

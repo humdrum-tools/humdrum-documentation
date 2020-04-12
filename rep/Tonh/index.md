@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 German Pitch
 =======================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">Tonh</span> \-- German Tonhöhe (pitch) notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">Tonh</span> representation permits the encoding of Western
 > musical pitches using the common German system for pitch naming. This
@@ -77,12 +77,12 @@ German Pitch
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">Tonh</span> data
 > should be given names with the distinguishing \`.tnh\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">Tonh</span> mappings of signifiers
 > and signifieds.
@@ -110,7 +110,7 @@ German Pitch
 > >
 > > *Summary of <span class="rep">Tonh</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -139,7 +139,7 @@ German Pitch
 > >   \*-
 > >   ----------------------------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">Tonh</span> encoded data as
 > inputs:
@@ -168,7 +168,7 @@ German Pitch
 > >      <span class="tool">tonh</span>   translates <span class="rep">cents</span>, <span class="rep">degree</span>, <span class="rep">fret</span>, <span class="rep">freq</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, and <span class="rep">specC</span> to <span class="rep">Tonh</span>
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">Tonh</span>:
@@ -182,7 +182,7 @@ German Pitch
 > >
 > > *Tandem interpretations for <span class="rep">Tonh</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **deg, **degree, **freq, **hint, hint, **kern, **mint, mint, **pc, pc, **pitch, pitch, **semits, **solfa, **solfg, solfg, **specC, tonh`
 

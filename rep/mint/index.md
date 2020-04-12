@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Melodic Intervals
 ============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">mint</span> \-- melodic interval representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">mint</span> representation provides a means for characterizing
 > sequential (melodic) pitch distances. The <span class="rep">mint</span> representation
@@ -64,12 +64,12 @@ Melodic Intervals
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">mint</span> data
 > should be given names with the distinguishing \`.mnt\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">mint</span> mappings of signifiers
 > and signifieds.
@@ -90,7 +90,7 @@ Melodic Intervals
 > >
 > > *Summary of <span class="rep">mint</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following example shows a <span class="rep">pitch</span> spine on the left and a
 > corresponding <span class="rep">mint</span> spine on the right.
@@ -112,7 +112,7 @@ Melodic Intervals
 > >   \*-                          \*-      
 > >   ---------------------------- ----- -- ----------------------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">mint</span> data as outputs:
 >
@@ -120,7 +120,7 @@ Melodic Intervals
 > >      <span class="tool">mint</span>   produces <span class="rep">mint</span> output from <span class="rep">pitch</span>, <span class="rep">kern</span>, <span class="rep">solfg</span>, or <span class="rep">Tonh</span> input
 > >   -- ----------------------------------- -----------------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">mint</span>:
@@ -133,7 +133,7 @@ Melodic Intervals
 > >
 > > *Tandem interpretations for <span class="rep">mint</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **hint, hint, kern, mint, **solfg, **Tonh, xdelta, ydelta`
 

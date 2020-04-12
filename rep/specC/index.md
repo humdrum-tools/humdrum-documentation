@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Spectral Centroid
 ============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">specC</span> \-- spectral centroid representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">specC</span> representation can be used to represent the
 > frequency of the spectral centroid for pure or complex tones. Spectral
@@ -34,12 +34,12 @@ Spectral Centroid
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">specC</span> data
 > should be given names with the distinguishing \`.spc\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">specC</span> mappings of
 > signifiers and signifieds.
@@ -53,7 +53,7 @@ Spectral Centroid
 > >
 > > *Summary of <span class="rep">specC</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -77,7 +77,7 @@ Spectral Centroid
 Notice that frequencies can be either real or integer values. Rests are
 represented by the single letter \`r\'.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">specC</span> encoded data as
 > inputs:
@@ -103,7 +103,7 @@ represented by the single letter \`r\'.
 > >      <span class="tool">specc</span>   translates <span class="rep">freq</span>, and <span class="rep">specC</span> to <span class="rep">specC</span>
 > >   -- ------------------------------------- -------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">specC</span>:
@@ -118,7 +118,7 @@ represented by the single letter \`r\'.
 > >
 > > *Tandem interpretations for <span class="rep">specC</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **deg, **degree, **freq, **kern, **pc, **pitch, **semits, **solfg, **Tonh`
 

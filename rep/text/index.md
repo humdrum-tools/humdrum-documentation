@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Vocal Text
 =====================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">text</span> \-- vocal text representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">text</span> representation permits the representation of sung or
 > spoken language. Only languages transcribable into the Roman alphabet
@@ -164,12 +164,12 @@ Vocal Text
 > to avoid duplicate encoding of melodies, etc. See
 > <span class="tool">strophe</span>.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">text</span> data
 > should be given names with the distinguishing \`.txt\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The complete system of signifiers used by <span class="rep">text</span> is summarized
 > in the following table.
@@ -211,7 +211,7 @@ Vocal Text
 > >
 > > *Summary of <span class="rep">text</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -243,12 +243,12 @@ Vocal Text
 > that the word \"upon\" is explicitly divided by a notated hyphen. The
 > word `time` is melismatic \-- spanning two time-events.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > Currently, no special-purpose Humdrum commands produce <span class="rep">text</span> as
 > output or process <span class="rep">text</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">text</span>:
@@ -268,7 +268,7 @@ Vocal Text
 > >
 > > *Tandem interpretations for <span class="rep">text</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` assemble, **IPA, strophe, thru`
 

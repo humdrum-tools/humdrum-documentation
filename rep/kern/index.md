@@ -9,12 +9,12 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Basic Notated Music
 ==============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">kern</span> \-- core pitch/duration representation for common
  practice music notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">kern</span> scheme can be used to represent basic or core
  information for period-of-common-practice Western music. The
@@ -233,12 +233,12 @@ Basic Notated Music
  provides a text commentary pertaining to a specified data token)
  signified by `?`.
 
-### FILE TYPE
+## FILE TYPE ##
 
  It is recommended that files containing predominantly <span class="rep">kern</span> data
  should be given names with the distinguishing \`.krn\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">kern</span> mappings of signifiers
  and signifieds.
@@ -346,7 +346,7 @@ Basic Notated Music
 
  *Summary of <span class="rep">kern</span> Signifiers*
 
-### CONTEXT DEPENDENCIES
+## CONTEXT DEPENDENCIES ##
 
  In general, signifiers in the <span class="rep">kern</span> representation are intended
  to be context independent. This means, for example, that the data
@@ -436,7 +436,7 @@ Basic Notated Music
  single editorial signifiers `x` and `X` (as opposed to `xx` and `XX`)
  can appear anywhere in a data token, except as the first character.
 
-### EXAMPLES
+## EXAMPLES ##
 
  A sample document is given below:
 
@@ -490,7 +490,7 @@ Basic Notated Music
    \*-                                  \*-             \*-
    ------------------------------------ --------------- ---------------
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  The following Humdrum commands accept <span class="rep">kern</span> encoded data as
  inputs:
@@ -529,7 +529,7 @@ Basic Notated Music
       <span class="tool">trans</span>         transpose <span class="rep">kern</span> score
    -- ------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">kern</span>:
@@ -548,7 +548,7 @@ Basic Notated Music
 
  *Tandem interpretations for <span class="rep">kern</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` barlines, **cents, **degree, **freq, **fret, **MIDI, **mint, **pc, **pitch, **recip, **semits, **solfg, **specC, **Tonh`
 

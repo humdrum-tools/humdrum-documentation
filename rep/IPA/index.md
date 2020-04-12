@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 for Phonetic Sounds
 ==========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
  <span class="rep">IPA</span> \-- representation for International Phonetic Alphabet
 
-### DESCRIPTION
+## DESCRIPTION ##
 
  The <span class="rep">IPA</span> scheme provides a means for representing phonetic
  information based on the International Phonetic Alphabet (IPA). This
@@ -72,12 +72,12 @@ for Phonetic Sounds
  *batt\\o\'l\\(ul\'\\o\'e\\(ul\', mitt\\o\'e\\(ul\'\\o\'n\\(ul\'* and
  *eat\\o\'e\\(ul\'\\o\'n\\(ul\'*.
 
-### FILE TYPE
+## FILE TYPE ##
 
  It is recommended that files containing predominantly <span class="rep">IPA</span> data
  should be given names with the distinguishing \`.ipa\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
  The following table summarizes the <span class="rep">IPA</span> mappings of signifiers
  and signifieds. (§ All footnotes appear at the end of this table.)\
@@ -148,7 +148,7 @@ for Phonetic Sounds
  -   The IPA symbol consists of a superscript letter \`j\' either
      following or hooked beneath the consonant.
 
-### EXAMPLES
+## EXAMPLES ##
 
  Sample syllables and their corresponding <span class="rep">IPA</span> encodings are
  given below:
@@ -200,7 +200,7 @@ for Phonetic Sounds
   | -ry       | ri         |  .
   | \*-       | \*-        |  \*-
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
  The following Humdrum commands accept <span class="rep">IPA</span> encoded data as
  inputs:
@@ -208,7 +208,7 @@ for Phonetic Sounds
                     
    |   **formant**  | identifies first two formant frequencies for common vowels
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
  The following tandem interpretations can be used in conjunction with
  <span class="rep">IPA</span>:
@@ -220,11 +220,11 @@ for Phonetic Sounds
 
  *Tandem interpretations for <span class="rep">IPA</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
  ` formant (4)`
 
-### LIMITS
+## LIMITS ##
 
  The International Phonetic Alphabet itself is not well suited to the
  representation of clicks commonly found in African languages, and this
@@ -233,7 +233,7 @@ for Phonetic Sounds
  might be adapted as the basis for a more refined Humdrum
  representation.
 
-### REFERENCES
+## REFERENCES ##
 
  This representation is a Humdrum adaptation of the ASCII
  transliteration scheme for IPA developed by Evan Kirshenbaum.

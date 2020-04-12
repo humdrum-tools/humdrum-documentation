@@ -9,12 +9,12 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Absolute Time
 ========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">date</span> \-- absolute time representation (year, month, day, hour,
 > minute, second \...)
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">date</span> representation provides a flexible means for
 > specifying particular moments in historical time. The <span class="rep">date</span>
@@ -159,12 +159,12 @@ Absolute Time
 > subtokens (joined by the *BETWEEN* (\^) or *OR* conjunction operators.
 > The signifiers x and z apply to individual numerical values only.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">data</span> data
 > should be given names with the distinguishing \`.dte\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">date</span> mappings of signifiers
 > and signifieds.
@@ -187,7 +187,7 @@ Absolute Time
 > >
 > > *Summary of <span class="rep">date</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > Several examples of <span class="rep">date</span> data tokens are identified below:
 >
@@ -239,12 +239,12 @@ The following is a sample document:
 >   \*-        \*-
 >   ---------- -----------
 >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > Currently, no special-purpose Humdrum commands produce <span class="rep">date</span> as
 > output, or process <span class="rep">date</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">date</span>:
@@ -256,7 +256,7 @@ The following is a sample document:
 > >
 > > *Tandem interpretations for <span class="rep">date</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` **dur, **metpos, **ordo, **recip, **takt, **time, **Zeit`
 

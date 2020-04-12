@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Decibels
 ===================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">dB</span> \-- relative amplitude representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">dB</span> representation is used to represent relative amplitude
 > in decibels. The reference amplitude is deemed to be 0 dB. In a group
@@ -23,12 +23,12 @@ Decibels
 > Relative amplitude values may be either integer or decimal values.
 > Both positive and negative values are permissible.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">dB</span> data
 > should be given names with the distinguishing \`.db\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">dB</span> mappings of signifiers
 > and signifieds.
@@ -42,7 +42,7 @@ Decibels
 > >
 > > *Summary of <span class="rep">dB</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document encodes the relative amplitudes for the
 > first five harmonics of a tone pitched at middle C (C4). Notice the
@@ -59,7 +59,7 @@ Decibels
 > >   \*-         \*-      \*-      \*-      \*-      \*-
 > >   ----------- -------- -------- -------- -------- --------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command accepts <span class="rep">dB</span> encoded data as
 > input:
@@ -69,7 +69,7 @@ Decibels
 > >      <span class="tool">spect</span>   convert notated sonority to instantaneous spectrum
 > >   -- ------------------------------------- ----------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > **\*\*dB:**
@@ -82,7 +82,7 @@ Decibels
 > >
 > > *Tandem interpretations for <span class="rep">dB</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` **dynam, **spect, spect`
 

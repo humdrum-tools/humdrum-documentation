@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Similarity Values
 ============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">simil</span> \-- similarity representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">simil</span> representation encodes numerical values that
 > indicate the [**Damerau-Levenshtein edit
@@ -23,12 +23,12 @@ Similarity Values
 > at the current data record. Lower numerical values indicate
 > increasingly less similarity at the current data record.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">simil</span> data
 > should be given names with the distinguishing \`.sim\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">simil</span> mappings of
 > signifiers and signifieds.
@@ -40,7 +40,7 @@ Similarity Values
 > >
 > > *Summary of <span class="rep">simil</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -61,7 +61,7 @@ Similarity Values
 > >   \*-
 > >   -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">simil</span> data as output:
 >
@@ -69,7 +69,7 @@ Similarity Values
 > >      <span class="tool">simil</span>   measure the similarity between two Humdrum spines
 > >   -- ------------------------------------- ---------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">simil</span>:
@@ -83,7 +83,7 @@ Similarity Values
 > >
 > > *Tandem interpretations for <span class="rep">simil</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` cmp (UNIX), **correl, correl, diff (UNIX), patt, pattern, simil, **xref`
 

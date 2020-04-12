@@ -9,11 +9,11 @@ revision-date: 'Fri May 6 11:25:19 EDT 2005'
 Bhatkhande Notation
 ==============================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">bhatk</span> \-- representation for Bhatkhande notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">bhatk</span> scheme can be used to represent the basic
 > information of the notation system created by Vishnu Narayanan
@@ -114,12 +114,12 @@ Bhatkhande Notation
 > X; (5) footnote (accompanying local or global comment provides a text
 > commentary pertaining to a specified data token) signified by ?.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">bhatk</span> data
 > should be given names with the distinguishing \`.hgd\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">bhatk</span> mappings of
 > signifiers and signifieds.
@@ -304,7 +304,7 @@ footnote in an ensuing comment
 > 9.  octave
 > 10. 11. 12. 13. close phrase
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document shows a [<span class="rep">kern</span>](kern.rep.html)
 > spine with corresponding <span class="rep">bhatk</span> data. In addition, a
@@ -461,12 +461,12 @@ footnote in an ensuing comment
 > >   \*-        \*-           \*-
 > >   ---------- ------------- -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > There are currently no Humdrum commands that directly process
 > <span class="rep">bhatk</span> encoded data.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretation can be used in conjunction with
 > <span class="rep">bhatk</span>:
@@ -484,11 +484,11 @@ footnote in an ensuing comment
 > >
 > > *Tandem interpretations for <span class="rep">bhatk</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` **kern, kern, **MIDI, midi, **pitch, **semits, **solfg, **Tonh,`
 
-### AUTHOR
+## AUTHOR ##
 
 > Parag Chordia.
 

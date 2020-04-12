@@ -9,12 +9,12 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Number of Active Voices
 ==================================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > **\*\*vox\#** \-- representation of number of concurrently active
 > voices
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The **\*\*vox\#** representation permits the representation of the
 > number of notes sounding together at successive moments in time. The
@@ -26,12 +26,12 @@ Number of Active Voices
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly `**vox#` data
 > should be given names with the distinguishing \`.vox\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the **\*\*vox\#** mappings of
 > signifiers and signifieds.
@@ -44,7 +44,7 @@ Number of Active Voices
 > >
 > > *Summary of **\*\*vox\#** Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -70,7 +70,7 @@ Number of Active Voices
 > >   \*-        \*-        \*-        \*-            \*-            \*-         \*-
 > >   ---------- ---------- ---------- -------------- -------------- ----------- -----
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces **\*\*vox\#** data as output:
 >
@@ -80,7 +80,7 @@ Number of Active Voices
 > >                                        <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfa</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span>
 > >   -- --------------------------------- ----------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > **\*\*vox\#**:
@@ -91,7 +91,7 @@ Number of Active Voices
 > >
 > > *Tandem interpretations for **\*\*vox\#***
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **barks, **cbr, **cents, **cocho, **deg, **degree, **freq, **kern, **pc, **pitch, **semits, **solfa, **solfg, **specC, **Tonh, vox`
 

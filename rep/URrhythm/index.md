@@ -9,12 +9,12 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Beat Prototypes
 ==========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">URrhythm</span> \-- represent Johnson-Laird beat prototypes for a
 > passage
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">URrhythm</span> representation encodes beat \"prototypes\"
 > (Ur-rhythms) evident in a musical passage. The representation is based
@@ -55,12 +55,12 @@ Beat Prototypes
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">URrhythm</span>
 > data should be given names with the distinguishing \`.urr\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">URrhythm</span> mappings of
 > signifiers and signifieds.
@@ -76,7 +76,7 @@ Beat Prototypes
 > >
 > > *Summary of <span class="rep">URrhythm</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -113,7 +113,7 @@ Beat Prototypes
 > >   \*-
 > >   --------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">URrhythm</span> data as
 > output:
@@ -122,7 +122,7 @@ Beat Prototypes
 > >      <span class="tool">urrhythm</span>   characterize the rhythmic prototypes in a passage
 > >   -- ------------------------------------------- ---------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">URrhythm</span>:
@@ -135,13 +135,13 @@ Beat Prototypes
 > >
 > > *Tandem interpretations for <span class="rep">URrhythm</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **metpos, metpos, urrhythm, **synco, synco, **timebase`
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 > Philip Johnson-Laird, \"Rhythm and meter: A theory at the
 > computational level,\" *Psychomusicology,* Vol. 10 (1991) pp. 88-106.

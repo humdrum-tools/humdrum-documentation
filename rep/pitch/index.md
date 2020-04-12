@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Pitch
 ================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">pitch</span> \-- American National Standards Institute pitch notation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">pitch</span> representation permits the encoding of Western
 > musical pitches using the standard system for pitch designations
@@ -92,12 +92,12 @@ Rest tokens are denoted by the lower-case letter \`r\'.
 Barlines are represented using the \"common system\" for barlines \--
 see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">pit</span> data
 > should be given names with the distinguishing \`.pit\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">pitch</span> mappings of
 > signifiers and signifieds.
@@ -126,7 +126,7 @@ see [**barlines**](barlines.rep.html).
 > >
 > > *Summary of <span class="rep">pitch</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -149,7 +149,7 @@ see [**barlines**](barlines.rep.html).
 > >   \*-         \*-
 > >   ----------- -----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">pitch</span> encoded data as
 > inputs:
@@ -180,7 +180,7 @@ see [**barlines**](barlines.rep.html).
 > >                                            <span class="rep">pitch</span>
 > >   -- ------------------------------------- -------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">pitch</span>:
@@ -194,7 +194,7 @@ see [**barlines**](barlines.rep.html).
 > >
 > > *Tandem interpretations for <span class="rep">pitch</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, **deg, **degree, **freq, **hint, **kern, mint, **pc, pitch, **semits, **solfa, **solfg, **specC, **Tonh`
 

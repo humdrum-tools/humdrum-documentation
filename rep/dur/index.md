@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Duration
 ===================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">dur</span> \-- duration (time-span) representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">dur</span> representation can be used to encode a sequence of
 > time-spans or successive durations. Units may be seconds, minutes,
@@ -83,12 +83,12 @@ Duration
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">dur</span> data
 > should be given names with the distinguishing \`.dur\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">dur</span> mappings of signifiers
 > and signifieds.
@@ -108,7 +108,7 @@ Duration
 > >
 > > *Summary of <span class="rep">dur</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -131,7 +131,7 @@ Duration
 > >   \*-
 > >   -----------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">dur</span> data as output:
 >
@@ -139,7 +139,7 @@ Duration
 
 change canonical durations (`**recip) to elapsed time in seconds   `
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">dur</span>:
@@ -153,7 +153,7 @@ change canonical durations (`**recip) to elapsed time in seconds   `
 > >
 > > *Tandem interpretations for <span class="rep">dur</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **date, **metpos, **ordo, **recip, **takt, **time, **Zeit`
 

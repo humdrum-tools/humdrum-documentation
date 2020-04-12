@@ -9,23 +9,23 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Statistical Correlations
 ===================================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">correl</span> \-- statistical correlation representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">correl</span> representation is used to characterize the degree
 > of statistical correlation for successive moments. Data tokens for
 > <span class="rep">correl</span> decimal values ranging between -1 (perfect negative
 > correlation) and 1 (perfect positive correlation).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">correl</span> data
 > should be given names with the distinguishing \`.cor\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">correl</span> mappings of
 > signifiers and signifieds.
@@ -39,7 +39,7 @@ Statistical Correlations
 > >
 > > *Summary of <span class="rep">correl</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -67,7 +67,7 @@ Statistical Correlations
 > Notice that melodic accent values can be either real or integer
 > values. Rests are represented by the single letter \`r\'.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum command produces <span class="rep">correl</span> data as output:
 >
@@ -76,7 +76,7 @@ Statistical Correlations
 >      <span class="tool">correl</span>   calculate numerical correlation between two spines
 >   -- --------------------------------------- ----------------------------------------------------
 >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > **\*\*correl:**
@@ -89,7 +89,7 @@ Statistical Correlations
 > >
 > > *Tandem interpretations for <span class="rep">correl</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, correl, **simil, simil`
 

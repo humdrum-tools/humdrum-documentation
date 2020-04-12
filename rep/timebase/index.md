@@ -9,7 +9,7 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Time-base
 ====================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 <span class="rep">timebase</span> \-- time-base representation
 

@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Frequency
 ====================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">freq</span> \-- frequency representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">freq</span> representation can be used to represent frequencies
 > for pure or complex tones. <span class="rep">freq</span> distinguishes three types of
@@ -26,12 +26,12 @@ Frequency
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">freq</span> data
 > should be given names with the distinguishing \`\"\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">freq</span> mappings of signifiers
 > and signifieds.
@@ -50,7 +50,7 @@ Frequency
 > >
 > > *Summary of <span class="rep">freq</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -74,7 +74,7 @@ Frequency
 > Notice that frequencies can be either real or integer values. Rests
 > are represented by the single letter \`r\'.
 
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">freq</span> encoded data as
 > inputs:
@@ -103,7 +103,7 @@ Frequency
 > >      <span class="tool">freq</span>   translates <span class="rep">cbr</span>, <span class="rep">cents</span>, <span class="rep">cocho</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, and <span class="rep">Tonh</span> to <span class="rep">cents</span>
 > >   -- ----------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">freq</span>:
@@ -118,7 +118,7 @@ Frequency
 > >
 > > *Tandem interpretations for <span class="rep">freq</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cbr, **cents, **coch, **degree, **kern, **pc, **pitch, **semits, **specC, **Tonh`
 

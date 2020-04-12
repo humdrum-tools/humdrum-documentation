@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Semitone Pitch
 =========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">semits</span> \-- semitone absolute pitch representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">semits</span> representation is used to represent absolute pitch
 > in semitone units with respect to middle C. Middle C is designated
@@ -32,12 +32,12 @@ Semitone Pitch
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">semits</span> data
 > should be given names with the distinguishing \`.sem\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">semits</span> mappings of
 > signifiers and signifieds.
@@ -58,7 +58,7 @@ Semitone Pitch
 > >
 > > *Summary of <span class="rep">semits</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > The following sample document shows a [<span class="rep">kern</span>](kern.rep.html)
 > spine with corresponding <span class="rep">semits</span> pitch values.
@@ -86,7 +86,7 @@ Semitone Pitch
 > >   \*-          \*-
 > >   ------------ ----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">semits</span> encoded data as
 > inputs:
@@ -111,7 +111,7 @@ Semitone Pitch
 > >      <span class="tool">semits</span>   translates <span class="rep">cents</span>, <span class="rep">freq</span>, <span class="rep">fret</span>, <span class="rep">kern</span>, <span class="rep">MIDI</span>, <span class="rep">pitch</span>, <span class="rep">semits</span>, <span class="rep">solfg</span>, <span class="rep">specC</span>, <span class="rep">Tonh</span>, to <span class="rep">semits</span>
 > >   -- --------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">semits</span>:
@@ -125,7 +125,7 @@ Semitone Pitch
 > >
 > > *Tandem interpretations for <span class="rep">semits</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **cents, cents, **freq, freq, **fret, **kern, kern, **MIDI, midi, **pitch, pitch, semits, **solfg, solfg, **specC, specc, **Tonh, tonh`
 

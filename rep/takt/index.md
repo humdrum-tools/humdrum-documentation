@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Beat Position
 ========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">takt</span> \-- beat-position representation
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > Frequently, it is useful to represent temporal moments within a
 > recurring cycle or pattern. In music, the best example of such
@@ -72,12 +72,12 @@ Beat Position
 > Barlines are represented using the \"common system\" for barlines \--
 > see [**barlines**](barlines.rep.html).
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">takt</span> data
 > should be given names with the distinguishing \`.tak\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">takt</span> mappings of signifiers
 > and signifieds.
@@ -91,7 +91,7 @@ Beat Position
 > >
 > > *Summary of <span class="rep">takt</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -128,12 +128,12 @@ Beat Position
 > >   \*-        \*-          \*-
 > >   ---------- ------------ ----------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > Currently, no special-purpose Humdrum commands produce <span class="rep">takt</span> as
 > output, or process <span class="rep">takt</span> encoded data as input.
 
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">takt</span>:
@@ -145,7 +145,7 @@ Beat Position
 > >
 > > *Tandem interpretations for <span class="rep">takt</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **date, **dur, **metpos, **ordo, **recip, **time, timebase, **Zeit`
 

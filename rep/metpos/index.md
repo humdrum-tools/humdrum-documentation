@@ -9,11 +9,11 @@ revision-date: 'Thu Feb 3 10:31:10 EST 2000'
 Metric Hierarchy
 ===========================================
 
-### REPRESENTATION
+## REPRESENTATION ##
 
 > <span class="rep">metpos</span> \-- position in metric hierarchy
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 > The <span class="rep">metpos</span> representation consists of simply a set of
 > numerical values indicating the order of events. Normally, a
@@ -53,12 +53,12 @@ Metric Hierarchy
 > the token ` =====;` means that a double barline contains a pause
 > indication.
 
-### FILE TYPE
+## FILE TYPE ##
 
 > It is recommended that files containing predominantly <span class="rep">metpos</span> data
 > should be given names with the distinguishing \`.mtp\' extension.
 
-### SIGNIFIERS
+## SIGNIFIERS ##
 
 > The following table summarizes the <span class="rep">metpos</span> mappings of
 > signifiers and signifieds.
@@ -72,7 +72,7 @@ Metric Hierarchy
 > >
 > > *Summary of <span class="rep">metpos</span> Signifiers*
 
-### EXAMPLES
+## EXAMPLES ##
 
 > A sample document is given below:
 >
@@ -104,7 +104,7 @@ Metric Hierarchy
 > >   \*-        \*-
 > >   ---------- ------------
 > >
-### PERTINENT COMMANDS
+## PERTINENT COMMANDS ##
 
 > The following Humdrum commands accept <span class="rep">metpos</span> encoded data as
 > inputs:
@@ -120,7 +120,7 @@ Metric Hierarchy
 > >      <span class="tool">metpos</span>   generate metric position values for timebase-formatted <span class="rep">kern</span> or <span class="rep">recip</span> inputs
 > >   -- --------------------------------------- ---------------------------------------------------------------------------------------------
 > >
-### TANDEM INTERPRETATIONS
+## TANDEM INTERPRETATIONS ##
 
 > The following tandem interpretations can be used in conjunction with
 > <span class="rep">metpos</span>:
@@ -134,7 +134,7 @@ Metric Hierarchy
 > >
 > > *Tandem interpretations for <span class="rep">metpos</span>*
 
-### SEE ALSO
+## SEE ALSO ##
 
 > ` barlines, **date, **dur, **kern, kern, metpos, **ordo, **recip, **takt, **time, timebase, **Zeit`
 
