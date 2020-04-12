@@ -79,7 +79,7 @@ of perhaps 3 minutes.
 
 The <span class="rep">dur</span> representation does not support the \`x\' and \`z\'
 signifies used by related representations such as <span class="rep">date</span> and
-**\*\*Zeit.** However, <span class="rep">dur</span> is able to represent shorter-than
+<span class="rep">Zeit</span>. However, <span class="rep">dur</span> is able to represent shorter-than
 (\<) and longer-than (\>) indications. For example, the data token
 ` <1:` means a duration of less than one minute.
 

@@ -41,7 +41,7 @@ Solfa Syllables
  change the note's representation. For example, where the tonic pitch
  is B-flat, both B-natural and B-sharp are represented by `di`.
 
- Octave designations are not represented in **\*\*solfa.** However,
+ Octave designations are not represented in <span class="rep">solfa</span>. However,
  <span class="rep">solfa</span> provides limited capabilities for representing phrasing
  and slurs.
 

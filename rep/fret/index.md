@@ -286,7 +286,7 @@ types of vibrato are distinguished: \`v\' for transverse vibrato and
 (\~).
 
 Four types of *percussion effects* can be represented using
-**\*\*fret.** The two most common *tambours* involve tapping on the
+<span class="rep">fret</span>. The two most common *tambours* involve tapping on the
 bridge (represented by the lower-case letter \`u\') and tapping on the
 strings near the bridge (represented by the upper-case letter \`U\').
 A simple \`tap\' on the top-plate is represented by the lower-case

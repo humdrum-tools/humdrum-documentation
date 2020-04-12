@@ -98,7 +98,7 @@ presume how long a moment \"lasts,\" so it is theoretically possible
 to interpret 1554 to 1557 as a \"long moment.\" However, another
 representation &mdash; **\*\*Zeit (2)** &mdash; is intended to represent
 *periods* of time, and so is better suited to the task of representing
-an ongoing state or condition. In **\*\*date,** the caret (\^) is
+an ongoing state or condition. In <span class="rep">date</span>, the caret (\^) is
 meant merely to provide a more precise means for specifying the degree
 of approximation. The following <span class="rep">date</span> tokens:
 

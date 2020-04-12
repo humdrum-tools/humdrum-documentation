@@ -154,7 +154,7 @@ Barlines
    <span class="rep">time</span>       relative elapsed time (in seconds)
    <span class="rep">Tonh</span>       German Tonh\\o'o\\(..\'he (pitch) representation
    <span class="rep">URrhythm</span>   represent Johnson-Laird beat prototypes for a passage
-   **\*\*vox\#**      representation of number of concurrently active voices
+   <span class="rep">vox\#</span>      representation of number of concurrently active voices
    ------------------ ----------------------------------------------------------
 
 ## SEE ALSO ##

@@ -59,10 +59,10 @@ Basic Notated Music
  representations in <span class="rep">kern</span> and are simply denoted by repetition
  `(##)` and `(--)`. Triple- and quadruple accidentals are similarly
  encoded by repetition. Sharps, flats, and naturals are mutually
- exclusive in **\*\*kern,** so tokens such as `cc#n` and `GG-#` are
+ exclusive in <span class="rep">kern</span>, so tokens such as `cc#n` and `GG-#` are
  illegal. In addition, natural signs may not be repeated (i.e. `nn`).
 
- In **\*\*kern,** all pitches are encoded as contextually independent
+ In <span class="rep">kern</span>, all pitches are encoded as contextually independent
  absolute values. Pitches must be encoded with the appropriate
  accidental, even if the accidental is specified in a key-signature, or
  is present earlier in the same measure. Transposing instruments must

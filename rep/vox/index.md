@@ -14,15 +14,15 @@ Number of Active Voices
 
 ## REPRESENTATION ##
 
-**\*\*vox\#** &mdash; representation of number of concurrently active
+<span class="rep">vox\#</span> &mdash; representation of number of concurrently active
 voices
 
 ## DESCRIPTION ##
 
-The **\*\*vox\#** representation permits the representation of the
+The <span class="rep">vox\#</span> representation permits the representation of the
 number of notes sounding together at successive moments in time. The
-**\*\*vox\#** representation distinguishes just two types of data
-tokens: number-tokens, and barlines. Each **\*\*vox\#** number-token
+<span class="rep">vox\#</span> representation distinguishes just two types of data
+tokens: number-tokens, and barlines. Each <span class="rep">vox\#</span> number-token
 consists of a single integer value indicating the total number of
 simultaneously sounding voices.
 
@@ -31,12 +31,12 @@ see [**barlines**](barlines.rep.html).
 
 ## FILE TYPE ##
 
-It is recommended that files containing predominantly `**vox#` data
+It is recommended that files containing predominantly <span class="rep">vox#</span> data
 should be given names with the distinguishing \`.vox\' extension.
 
 ## SIGNIFIERS ##
 
-The following table summarizes the **\*\*vox\#** mappings of
+The following table summarizes the <span class="rep">vox\#</span> mappings of
 signifiers and signifieds.
 
 ----- ---------------------------------
@@ -45,7 +45,7 @@ signifiers and signifieds.
 ;     pause (for barlines)
 ----- ---------------------------------
 
-*Summary of **\*\*vox\#** Signifiers*
+*Summary of <span class="rep">vox\#</span> Signifiers*
 
 ## EXAMPLES ##
 
@@ -75,7 +75,7 @@ A sample document is given below:
 
 ## PERTINENT COMMANDS ##
 
-The following Humdrum command produces **\*\*vox\#** data as output:
+The following Humdrum command produces <span class="rep">vox\#</span> data as output:
 
 -- --------------------------------- ----------------------------------------------------------------------------------------------
 <span class="tool">vox</span>   determine number of concurrently active voices for <span class="rep">cbr</span>, <span class="rep">cents</span>,
@@ -86,13 +86,13 @@ The following Humdrum command produces **\*\*vox\#** data as output:
 ## TANDEM INTERPRETATIONS ##
 
 The following tandem interpretations can be used in conjunction with
-**\*\*vox\#**:
+<span class="rep">vox\#</span>:
 
 ------------------ ---------
 meter signatures   `*M6/8`
 ------------------ ---------
 
-*Tandem interpretations for **\*\*vox\#***
+*Tandem interpretations for <span class="rep">vox\#</span>*
 
 ## SEE ALSO ##
 
