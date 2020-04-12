@@ -277,7 +277,7 @@ For example, we can create an inventory of just the <span class="rep">bet</span>
 ```bash
 extract -i '**bet' alphabet | rid -GLId | sort | uniq -c \
 ```
-> \> inventory.bet
+\> inventory.bet
 
 The resulting `inventory.bet` file will contain:
 
@@ -552,11 +552,11 @@ how does Beethoven's practice compare with that of Brahms?*
 ```bash
 extract -i '**dynam' beeth* | rid -GLId | sort | uniq -c \
 ```
-> \| sort -r \| head -1
+\| sort -r \| head -1
 ```bash
 extract -i '**dynam' brahm* | rid -GLId | sort | uniq -c \
 ```
-> \| sort -r \| head -1
+\| sort -r \| head -1
 
 
 *Are flats more common than sharps in Monteverdi?* Let's presume that
@@ -575,9 +575,9 @@ here eliminates all data with the exception of
 [Chapter 6](/guide/ch06) for details on \*\*kern articulation marks.)
 
 `` extract -i '**kern' early | humsed 's/[^"`~^:I]//g' \ ``
-> \| rid -GLId \| sort \| uniq -c
+\| rid -GLId \| sort \| uniq -c
 `` extract -i '**kern' late | humsed 's/[^"`~^:I]//g' \ ``
-> \| rid -GLId \| sort \| uniq -c
+\| rid -GLId \| sort \| uniq -c
 
 
 *Is there a tendency to use the subdominant pitch less often* *in pop

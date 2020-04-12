@@ -181,8 +181,8 @@ print the value of the first token minus the value of the second token
 Awk also provide an **else** condition. The syntax is:
 
 if (condition)
-> \[then\] {do something}
-> else {do something else instead}
+\[then\] {do something}
+else {do something else instead}
 
 For Humdrum inputs, we may want to avoid processing comments and
 interpretations. Whenever we encounter a comment or interpretation, we
@@ -281,14 +281,14 @@ equal sign:
 ```bash
 awk '{
 ```
-> if (\$0 !\~/\^=/) {print \$0}
-> else {
-> > barline = \$1
-> > gsub("\[\^0-9\]","",barline)
-> > barline = barline + 1
-> > print "=" barline
-> > }
-> }\'
+if (\$0 !\~/\^=/) {print \$0}
+else {
+barline = \$1
+gsub("\[\^0-9\]","",barline)
+barline = barline + 1
+print "=" barline
+}
+}\'
 
 Notice that we are at liberty to add spaces, tabs, and newlines in order
 to improve the readability of our program.
@@ -308,7 +308,7 @@ the total number of leading-tones for each sonority. Awk provides a
 The **for**-loop construction has the following syntax:
 
 for (initial-value; condition-for-continuing; increment-action)
-> {do something repeatedly}
+{do something repeatedly}
 
 In the case of counting the number of leading-tones for each of four
 spines, our program would be as follows:
@@ -316,10 +316,10 @@ spines, our program would be as follows:
 ```bash
 awk '{
 ```
-> count = 0
-> for (i=1; i\<=4; i++)
-> > {if (\$i \~/ti/) count++}
-> print count
+count = 0
+for (i=1; i\<=4; i++)
+{if (\$i \~/ti/) count++}
+print count
 }\'
 
 The initial value for the for-loop is 1 (`i=1`); each time the loop is
@@ -342,11 +342,11 @@ octothorpe character (\#):
 ```bash
 awk '{
 ```
-> \# A program to count occurrences of the leading-tone.
-> count = 0
-> for (i=1; i\<=NF; i++)
-> > {if (\$i \~/ti/) count++}
-> print count
+\# A program to count occurrences of the leading-tone.
+count = 0
+for (i=1; i\<=NF; i++)
+{if (\$i \~/ti/) count++}
+print count
 }\'
 
 A problem with the above script is that it will attempt to count
@@ -360,12 +360,12 @@ from the start of the program.
 ```bash
 awk '{
 ```
-> \# A program to count occurrences of the leading-tone.
-> count = 0
-> if (\$0 \~/\^\[!\*=\]/) {print \$0; next}
-> for (i=1; i\<=NF; i++)
-> > {if (\$i \~/ti/) count++}
-> print count
+\# A program to count occurrences of the leading-tone.
+count = 0
+if (\$0 \~/\^\[!\*=\]/) {print \$0; next}
+for (i=1; i\<=NF; i++)
+{if (\$i \~/ti/) count++}
+print count
 }\'
 
 Although our output data will consist of a single column (spine) of
@@ -385,17 +385,17 @@ similarly properly terminated. The revised program is as follows:
 ```bash
 awk '{
 ```
-> \# A program to count occurrences of the leading-tone.
-> count = 0
-> if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}
-> if (\$0 \~/\^\*-/) {print "\*-"; next}
-> if (\$0 \~/\^\*\[\^\*\]/) {print "\*"; next}
-> if (\$0 \~/\^!!/) {print \$0; next}
-> if (\$0 \~/\^=/) {print \$1; next}
-> {
-> for (i=1; i\<=NF; i++)
-> > {if (\$i \~/ti/) count++}
-> print count
+\# A program to count occurrences of the leading-tone.
+count = 0
+if (\$0 \~/\^\*\*/) {print "\*\*leading-tones"; next}
+if (\$0 \~/\^\*-/) {print "\*-"; next}
+if (\$0 \~/\^\*\[\^\*\]/) {print "\*"; next}
+if (\$0 \~/\^!!/) {print \$0; next}
+if (\$0 \~/\^=/) {print \$1; next}
+{
+for (i=1; i\<=NF; i++)
+{if (\$i \~/ti/) count++}
+print count
 }\'
 
 Of course there are many other features of the awk programming language

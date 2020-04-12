@@ -88,7 +88,7 @@ the following syntax: for each line, *conditions* are given on the left
 followed by a single tab, followed by a *reassignment string.*
 
 ```humdrum
->3	+event
+3	+event
 <-3	-event
 else	.
 ```
@@ -155,8 +155,8 @@ Permissible relational operators used by
 !=	not	equal
 <	less	than
 <=	less	than	or	equal
->	greater	than
->=	greater	than	or	equal
+greater	than
+=	greater	than	or	equal
 else	default	relation
 ```
 
@@ -166,8 +166,8 @@ string replacement is made. Consider the following reassignment file:
 
 ```humdrum
 <=0	LOW
->100	HIGH
->0	MEDIUM
+100	HIGH
+0	MEDIUM
 ```
 
 The order of specification is important here. If the `MEDIUM` condition
@@ -193,10 +193,10 @@ interval as either one or two semitones. Our reassignment file (dubbed
 "`reassign`") might appear as follows:
 
 ```humdrum
->=3	up-leap
->0	up-step
+=3	up-leap
+0	up-step
 ==0	unison
->=-2	down-step
+=-2	down-step
 <=-3	down-leap
 ```
 
@@ -213,8 +213,8 @@ to identify what happens following ascending leaps:
 ```bash
 semits melody | xdelta -s = | recode -f reassign \
 ```
-> -i \'\*\*Xsemits\' -s = \| context -n 2 \| rid -GLId \| sort \\
-> \| uniq -c \| grep \'up-leap .\*\$\'
+-i \'\*\*Xsemits\' -s = \| context -n 2 \| rid -GLId \| sort \\
+\| uniq -c \| grep \'up-leap .\*\$\'
 
 An alternative way of distinguishing steps from leaps is by diatonic
 interval. For example, we might consider a diminished third to be a
@@ -225,7 +225,7 @@ intervals and excludes the interval quality (perfect, major, minor,
 etc.). The appropriate reassignment file would be:
 
 ```humdrum
->=3	up-leap
+=3	up-leap
 ==2	up-step
 ==1	unison
 ==-2	down-step
@@ -237,8 +237,8 @@ The appropriate command pipe would be:
 ```bash
 mint melody | xdelta -s = | recode -f reassign -i '**mint' \
 ```
-> -s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\
-> \| grep \'up-leap .\*\$\'
+-s = \| context -n 2 \| rid -GLId \| sort \| uniq -c \\
+\| grep \'up-leap .\*\$\'
 
 
 
@@ -261,9 +261,9 @@ piercing), and the *throat* register (weak and breathy).
 pitch).]{#Syrinx}
 
 ![](guide.figures/guide22.1.gif)
->   ----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
->   chalemeau                              *throat*                                    *clarion*                              *altissimo*
->   ----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
+----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
+chalemeau                              *throat*                                    *clarion*                              *altissimo*
+----------- -- -- -- -- -- -- -- -- -- ---------- -- -- -- -- -- -- -- -- -- -- -- ----------- -- -- -- -- -- -- -- -- -- -------------
 
 Suppose we wanted to pick a key that satisfies two conditions: (1) it is
 not out of range for the clarinet, and (2) it minimizes the number of
@@ -271,11 +271,11 @@ notes played in the throat register. We can use <span class="tool">recode</span>
 all pitches according to the following reassignments:
 
 ```humdrum
->=30	too-high
->=23	altissimo
->=8	clarion
->=5	throat-register
->=-10	chalemeau
+=30	too-high
+=23	altissimo
+=8	clarion
+=5	throat-register
+=-10	chalemeau
 else	too-low
 ```
 
@@ -287,7 +287,7 @@ transpose down a major sixth:
 ```bash
 trans -d -5 -c -9 syrinx | semits | recode -f reassign \
 ```
-> -i \'\*\*semits\' -s = \| rid -GLId \| sort \| uniq -c
+-i \'\*\*semits\' -s = \| rid -GLId \| sort \| uniq -c
 
 
 
@@ -313,7 +313,7 @@ the soprano and tenor voices. Our reassignment file might be as follows:
 
 ```humdrum
 <=12	close
->12	open
+12	open
 ```
 
 We will need to extract the soprano and tenor voices, translate the
@@ -324,8 +324,8 @@ have also added the <span class="tool">ditto</span> command to ensure
 that there are semitone values for each sonority.
 
 `extract -i '*Itenor,*Isopran'` *inputfile*` | semits -x | ditto \`
-> \| ydelta -s = -i \'\*\*semits\' \| recode -f reassign \\
-> -i \'\*\*Ysemits\' -s = \> tempfile
+\| ydelta -s = -i \'\*\*semits\' \| recode -f reassign \\
+-i \'\*\*Ysemits\' -s = \> tempfile
 grep -c \'open\' tempfile
 grep -c \'close\' tempfile
 
@@ -480,7 +480,7 @@ concertos using the following pipeline:
 ```bash
 semits Quantz* | recode -f map -s = | context -n 2 -o = \
 ```
-> \| humsed -f difficulty
+\| humsed -f difficulty
 
 The output will be a single spine that classifies the difficulty of all
 fingering transitions.
@@ -524,7 +524,7 @@ pipeline:
 ```bash
 extract -i '**harm' chorales | context -o = -n 2 \
 ```
-> \| humsed -f cadences \| sed \'s/\\\*\\\*harm/\*\*cadences/\'
+\| humsed -f cadences \| sed \'s/\\\*\\\*harm/\*\*cadences/\'
 
 We first extract the <span class="rep">harm</span> spine using <span class="tool">extract</span>. We then generate
 a sequence of two-chord progressions using <span class="tool">context</span> &mdash; taking care
@@ -568,7 +568,7 @@ either `+viola`, `-viola` or are barlines.
 ```bash
 extract -i '*Iviola' symphony1 | ditto -s = \
 ```
-> \| humsed \'s/.\*r.\*/-viola/; /s/\^\[\^-=\].\*\$/+viola/\' \> viola
+\| humsed \'s/.\*r.\*/-viola/; /s/\^\[\^-=\].\*\$/+viola/\' \> viola
 
 Now imagine that we repeat this process for every instrument in
 Beethoven's Symphony No. 1. In each case, we substitute the name of the
@@ -578,19 +578,19 @@ or rest tokens.
 ```bash
 extract -i '*Iflt' symphony1 | ditto -s = \
 ```
-> \| humsed \'s/.\*r.\*/-flt/; /s/\^\[\^-=\].\*\$/+flt/\' \> flt
+\| humsed \'s/.\*r.\*/-flt/; /s/\^\[\^-=\].\*\$/+flt/\' \> flt
 ```bash
 extract -i '*Ioboe' symphony1 | ditto -s = \
 ```
-> \| humsed \'s/.\*r.\*/-oboe/; /s/\^\[\^-=\].\*\$/+oboe/\' \> oboe
+\| humsed \'s/.\*r.\*/-oboe/; /s/\^\[\^-=\].\*\$/+oboe/\' \> oboe
 ```bash
 extract -i '*Iclars' symphony1 | ditto -s = \
 ```
-> \| humsed \'s/.\*r.\*/-clars/; /s/\^\[\^-=\].\*\$/+clars/\' \> clars
+\| humsed \'s/.\*r.\*/-clars/; /s/\^\[\^-=\].\*\$/+clars/\' \> clars
 ```bash
 extract -i '*Ifagot' symphony1 | ditto -s = \
 ```
-> \| humsed \'s/.\*r.\*/-fagot/; /s/\^\[\^-=\].\*\$/+fagot/\' \> fagot
+\| humsed \'s/.\*r.\*/-fagot/; /s/\^\[\^-=\].\*\$/+fagot/\' \> fagot
 etc.
 
 When we are finished, we reassemble all of the transformed parts into a
@@ -599,7 +599,7 @@ complete score.
 ```bash
 assemble cbass cello viola violn2 violn1 tromb tromp fagot \
 ```
-> clars oboe flt \> orchestra
+clars oboe flt \> orchestra
 
 We now have a file that contains data records that look something like
 the following excerpt:

@@ -963,7 +963,7 @@ Listen to the soprano clarinet part in the fourth and eighth phrases.
 ```bash
 extract -i '*Iclars' quintet | yank -o { -e } -r 4,8 \
 ```
-> \| midi \| perform
+\| midi \| perform
 
 Note that when using <span class="tool">yank</span> to retrieve passages by markers (such as
 phrase marks), care must be taken since markers may be miscoordinated

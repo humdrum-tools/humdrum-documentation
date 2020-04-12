@@ -287,7 +287,7 @@ following command identifies all works composed between 1812 and 1840:
 ```bash
 find / -exec egrep -l '!!!ODT.*18(1[2-9])|([23][0-9])|(40)' \
 ```
-> "{}" ";"
+"{}" ";"
 
 Often the <span class="unix">find</span> command can be used to answer research questions more
 directly. Suppose we wanted to determine whether German drinking songs
@@ -304,7 +304,7 @@ inventory of meter classifications (available in "AMT" records).
 ```bash
 find /scores -type f -exec grep -l '!!AGN.*Trinklied' "{}" \
 ```
-> ";" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
+";" \| grep \'!!!AMT.\*\' \| sort \| uniq -c
 
 For the entire database, the output is as follows:
 
@@ -337,7 +337,7 @@ contain a change of meter signature:
 ```bash
 find /corelli -type f -name '*' | xargs grep -c '^\*M[0-9]' \
 ```
-> \| grep -v \':\[01\]\$\'
+\| grep -v \':\[01\]\$\'
 
 The output specifies each filename followed by a colon, followed by the
 number of meter signatures in the corresponding file. For example, in
@@ -356,7 +356,7 @@ change of key signature:
 ```bash
 find /scores -type f -name '*' | xargs grep -c '^\*k\[' \
 ```
-> \| grep -v \':\[01\]\$\'
+\| grep -v \':\[01\]\$\'
 
 
 As a further example of the use of <span class="unix">xargs</span>, consider the following
@@ -370,8 +370,8 @@ containing 2 or more meter signatures.
 ```bash
 find / -type f -name '*' | xargs grep -c '^\*k\[' | \
 ```
-> grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\
-> xargs grep -c \'\^\\\*M\[0-9\]\' \| grep -v \':\[01\]\$\'
+grep -v \':\[01\]\$\' \| sed \'s/:.\*\$//\' \| \\
+xargs grep -c \'\^\\\*M\[0-9\]\' \| grep -v \':\[01\]\$\'
 
 In summary, the above pipeline identifies all scores that contain both a
 change of key signature as well as a change of meter signature.

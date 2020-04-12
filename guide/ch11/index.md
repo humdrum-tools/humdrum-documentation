@@ -413,7 +413,7 @@ appropriate command pipeline becomes:
 ```bash
 cleave -d ' ' -i '**kern' -o '**kern' example11a \
 ```
-> \| humsed \'s/ =.\*//\' \| mint -I
+\| humsed \'s/ =.\*//\' \| mint -I
 
 The corresponding melodic interval output is:
 

@@ -38,11 +38,11 @@ commands and pipelines:
 ```bash
 extract -i '**Ursatz' inputfile | humsed '/X/d' \ 
 ```
-> \| context -o Y -b Z \> Ursatz
+\| context -o Y -b Z \> Ursatz
 ```bash
 extract -i '**Urlinie' inputfile | humsed '/X/d' \ 
 ```
-> \| context -o Y -b Z \> Urlinie
+\| context -o Y -b Z \> Urlinie
 assemble Ursatz Urlinie \| rid -GLId \| graph
 
 In the above hypothetical script, we have processed an input file called
@@ -121,11 +121,11 @@ replaced by the variable \$1:
 ```bash
 extract -i '**Ursatz' $1 | humsed '/X/d' \ 
 ```
-> \| context -o Y -b Z \> Ursatz
+\| context -o Y -b Z \> Ursatz
 ```bash
 extract -i '**Urlinie' $1 | humsed '/X/d' \ 
 ```
-> \| context -o Y -b Z \> Urlinie
+\| context -o Y -b Z \> Urlinie
 assemble Ursatz Urlinie \| rid -GLId \| graph
 
 This change means that our **Schenker** command can be applied to any
@@ -161,8 +161,8 @@ If no key indicator is found by <span class="unix">grep</span>, then the variabl
 empty. We can test for this condition using the shell **if** statement.
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
-> echo "Sorry, this input file has no key."
-> exit
+echo "Sorry, this input file has no key."
+exit
 fi
 
 Notice that we use the dollars sign prior to the variable to mean *the
@@ -181,13 +181,13 @@ execute the rest of our **Schenker** script. The complete script would
 be as follows:
 
 `` KEY=`grep '^\*[A-Ga-g][#-]*:' $1`  if [ "$KEY" = "" ]  then ``
-> echo "Sorry, this input file has no key." exit
+echo "Sorry, this input file has no key." exit
 else
-> `extract -i '**Ursatz' $1 | humsed '/X/d' \ `
-> > \| context -o Y -b Z \> Ursatz
-> `extract -i '**Urlinie' $1 | humsed '/X/d' \ `
-> > \| context -o Y -b Z \> Urlinie
-> assemble Ursatz Urlinie \| rid -GLId \| graph
+`extract -i '**Ursatz' $1 | humsed '/X/d' \ `
+\| context -o Y -b Z \> Ursatz
+`extract -i '**Urlinie' $1 | humsed '/X/d' \ `
+\| context -o Y -b Z \> Urlinie
+assemble Ursatz Urlinie \| rid -GLId \| graph
 fi
 
 Notice the addition of the **else** statement. The **else** statement

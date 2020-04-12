@@ -437,7 +437,7 @@ originating from Africa that are written in 3/4 meter:
 ```bash
 grep -l '!!!ARE.*Africa' * | xargs grep -l '^\*M3/4' \
 ```
-> \| xargs grep \'\^\\\*k\\\[\'
+\| xargs grep \'\^\\\*k\\\[\'
 
 
 Similarly, the following command outputs the names of all files in the
@@ -447,7 +447,7 @@ passages in 6/8 meter:
 ```bash
 grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \
 ```
-> \'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
+\'!!!AIN.\*organ\' \| xargs grep -l \'\\\*M6/8\'
 
 
 Using the <span class="option">L</span> option allows us to form even more complex criteria by
@@ -459,7 +459,7 @@ meter:
 ```bash
 grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \
 ```
-> \'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
+\'!!!AIN.\*organ\' \| xargs grep -L \'\\\*M6/8\'
 
 
 

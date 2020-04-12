@@ -795,7 +795,7 @@ to count V/V chords occurring on third beats:
 ```bash
 timebase -t 8 strauss | solfa | yank -m = -r 5 | grep re \
 ```
-> \| grep fe \| grep -c la
+\| grep fe \| grep -c la
 
 We can repeat this command for beats one and two by changing the <span class="option">r</span>
 parameter to 1 and 3 respectively.

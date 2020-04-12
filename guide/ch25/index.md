@@ -795,12 +795,12 @@ de
 ```bash
 bb  The appropriate template file would contain the following finger successions: 
 ```
->   -----
->   `b`
->   b
->   de
->   b
->   -----
+-----
+`b`
+b
+de
+b
+-----
 
 
 ## The *accent* Command ##
@@ -841,13 +841,13 @@ right-most spine shows the corresponding output:
 
 **Example 25.1.** Richard Wagner, *Rienzi* Theme. Anon. *My Bonnie
 Lies Over the Ocean*.
-> ![](guide.figures/guide25.1a.gif)
-> ![](guide.figures/guide25.1b.gif)
-> > `!!!COM: Wagner, Richard`
-> >
-> > `!!!OTL: Rienzi Overture `
-> >
-> > <span class="rep">kern</span>
+![](guide.figures/guide25.1a.gif)
+![](guide.figures/guide25.1b.gif)
+`!!!COM: Wagner, Richard`
+
+`!!!OTL: Rienzi Overture `
+
+<span class="rep">kern</span>
 
 ```bash
 **accent
@@ -1061,14 +1061,14 @@ commands. First, we create an appropriate reassignment file for
 <span class="tool">recode</span>. In this case we have classified all notes as either
 primary, secondary, or tertiary:
 ```bash
->=0.6    primary  >=0.5   secondary  else    tertiary
+=0.6    primary  >=0.5   secondary  else    tertiary
 ```
 Assuming this file is named `reassign`, we can pre-process our passage
 as follows:
 ```bash
 recode -f reassign -s ^= -i '**accent' inputfile \
 ```
-> \| yank -m primary -r 0 \| extract -i \'\*\*kern\' \> primary.krn
+\| yank -m primary -r 0 \| extract -i \'\*\*kern\' \> primary.krn
 The file `primary.krn` contains only those notes having the highest
 estimated accent values. Using this file, we can continue processing
 using either a parametric (<span class="tool">correl</span>) or non-parametric (<span class="tool">simil</span>)

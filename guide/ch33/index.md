@@ -196,7 +196,7 @@ can use <span class="tool">humsed</span> to eliminate the spaces between the mul
 ```bash
 extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 ```
-> \| context -n 3 \| humsed \'s/ //g\'
+\| context -n 3 \| humsed \'s/ //g\'
 
 The revised output is:
 
@@ -218,7 +218,7 @@ sigifiers. Once again, we can use the back-reference feature for
 ```bash
 extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 ```
-> \| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/\'
+\| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/\'
 
 The resulting output is:
 
@@ -251,9 +251,9 @@ final revised pipeline transforms non-alliteration data to null tokens:
 ```bash
 extract -i '**IPA' Tempest | humsed 's/\(.\).*/\1/' \
 ```
-> \| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/;
-> \\
-> /allit/!s/.\*/./\'
+\| context -n 3 \| humsed \'s/ //g\'; s/\\(.\\)\\1\\1/allit: \\1/;
+\\
+/allit/!s/.\*/./\'
 
 The final output is:
 
@@ -341,8 +341,8 @@ values averaged using the **stats** command:
 ```bash
 extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\
 ```
-> \| humsed \'s/./& /g; s/ / /; s/ \$//\' \| humsed -f vowel.map\\
-> \| rid -GLId \| stats
+\| humsed \'s/./& /g; s/ / /; s/ \$//\' \| humsed -f vowel.map\\
+\| rid -GLId \| stats
 
 This procedure can be repeated for several movements or pieces to
 provide a contrast for the piece of interest.
@@ -376,8 +376,8 @@ repeat sustained vowels:
 ```bash
 timebase -t 16 Schubert | extract -i '**IPA' \
 ```
-> \| humsed \'s/\[\^\@VR&AaEiIoOWuUy\]//\' \| humsed \'s/./& /g; \\
-> s/ / /; s/ \$//\' \| humsed -f vowel.map \| rid -GLId \| stats
+\| humsed \'s/\[\^\@VR&AaEiIoOWuUy\]//\' \| humsed \'s/./& /g; \\
+s/ / /; s/ \$//\' \| humsed -f vowel.map \| rid -GLId \| stats
 
 Since translators have plenty of other issues to consider when
 translating a vocal text, we might focus our comparisons solely on a
@@ -480,7 +480,7 @@ for processing our original file would be as follows:
 ```bash
 extract -i '**IPA poem | context -b { -e } | humsed 's/}//' \
 ```
-> \| humsed -f rhyme \| rid -GLId
+\| humsed -f rhyme \| rid -GLId
 
 The corresponding output would indicate the rhyme scheme for this poem:
 
@@ -508,33 +508,33 @@ script adds a number of refinements.
 ```bash
 # RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ 
 ```
-> 
-> \| sed
-> \'s/.\*\\(\[\@VR&AaEiIoOWuUy\]\[\^\@VR&AaEiIoOWuUy\]\*}\$\\)/\\1/\'
-> \\
-> \| sort \| uniq \| sed \'s/\^/s\\/.\*/; s/\$/\\/XXX\\//\' \\
-> \| awk \'BEGIN {alphabet\[1\]="A"; alphabet\[2\]="B";
-> alphabet\[3\]="C";
-> > 
-> > alphabet\[4\]="D"; alphabet\[5\]="E"; alphabet\[6\]="F";
-> > alphabet\[7\]="G"; alphabet\[8\]="H"; alphabet\[9\]="I";
-> > alphabet\[10\]="J"; alphabet\[11\]="K"; alphabet\[12\]="L";
-> > alphabet\[13\]="M"; alphabet\[14\]="N"; alphabet\[15\]="O";
-> > alphabet\[16\]="P"; alphabet\[17\]="Q"; alphabet\[18\]="R";
-> > alphabet\[19\]="S"; alphabet\[20\]="T"; alphabet\[21\]="U";
-> > alphabet\[22\]="V"; alphabet\[23\]="W"; alphabet\[24\]="X";
-> > alphabet\[25\]="Y"; alphabet\[26\]="Z";
-> > alphabet\[27\]="ERROR"}
-> > {temp=\$0
-> > gsub("XXX",alphabet\[NR\],temp)
-> > print temp
-> > }\' \> rhyme.sed.\$\$
-> 
+
+\| sed
+\'s/.\*\\(\[\@VR&AaEiIoOWuUy\]\[\^\@VR&AaEiIoOWuUy\]\*}\$\\)/\\1/\'
+\\
+\| sort \| uniq \| sed \'s/\^/s\\/.\*/; s/\$/\\/XXX\\//\' \\
+\| awk \'BEGIN {alphabet\[1\]="A"; alphabet\[2\]="B";
+alphabet\[3\]="C";
+
+alphabet\[4\]="D"; alphabet\[5\]="E"; alphabet\[6\]="F";
+alphabet\[7\]="G"; alphabet\[8\]="H"; alphabet\[9\]="I";
+alphabet\[10\]="J"; alphabet\[11\]="K"; alphabet\[12\]="L";
+alphabet\[13\]="M"; alphabet\[14\]="N"; alphabet\[15\]="O";
+alphabet\[16\]="P"; alphabet\[17\]="Q"; alphabet\[18\]="R";
+alphabet\[19\]="S"; alphabet\[20\]="T"; alphabet\[21\]="U";
+alphabet\[22\]="V"; alphabet\[23\]="W"; alphabet\[24\]="X";
+alphabet\[25\]="Y"; alphabet\[26\]="Z";
+alphabet\[27\]="ERROR"}
+{temp=\$0
+gsub("XXX",alphabet\[NR\],temp)
+print temp
+}\' \> rhyme.sed.\$\$
+
 
 extract -i \'\*\*IPA\' \$1 \| extract -f 1 \| context -b { -e } \| rid
 -GLId \\
-> 
-> \| sed -f rhyme.sed.\$\$
+
+\| sed -f rhyme.sed.\$\$
 
 rm rhyme.sed.\$\$
 

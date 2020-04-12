@@ -56,70 +56,70 @@ representation.
 pen.*
 
 ![](guide.figures/guide27.1.gif)
->   --------------------------------------------
->   `!!!COM: Byrd, William`
->   !!!OTL: Why do I use my paper ink and pen.
->   --------------------------------------------
->   ------------ ------------ ----------
->   \*\*text     \*\*silbe    \*\*kern
->   \*LEnglish   \*LEnglish   \*
->   =11          =11          =11
->   `.`          .            2r
->   Why          Why          2g
->   =12          =12          =12
->   do           do           2b-
->   I            I            2a
->   =13          =13          =13
->   use          use          4g
->   my           my           4g
->   paper        pa-          \[2dd
->   =14          =14          =14
->   `.`          \|           2dd\]
->   `.`          -per         2cc
->   =15          =15          =15
->   ink          ink          2.ff
->   and          and          (4ee
->   =16          =16          =16
->   `.`          \|           4dd
->   `.`          \|           4cc
->   `.`          \|           4b-
->   `.`          \|           4cc
->   =17          =17          =17
->   pen,         pen,         1dd
->   =18          =18          =18
->   and          and          1dd
->   =19          =19          =19
->   pen,         pen,         1dd
->   =20          =20          =20
->   `.`          .            2r
->   and          and          2ff
->   =21          =21          =21
->   call         call         2.ee
->   my           my           4dd
->   =22          =22          =22
->   wits         wits         1cc\#
->   =23          =23          =23
->   to           to           2ee
->   counsel      coun-        \[2aa
->   =24          =24          =24
->   `.`          -sel         4aa\]
->   what         what         4ff
->   to           to           (8ee
->   `.`          \|           8dd
->   =25          =25          =25
->   `.`          \|           4cc
->   `.`          \|           4dd
->   `.`          \|           4.ee
->   `.`          \|           8dd
->   =26          =26          =26
->   `.`          \|           4ee
->   `.`          \|           4ee
->   `.`          \|           2dd)
->   =27          =27          =27
->   say,         say,         1cc\#
->   =28          =28          =28
->   \*-          \*-          \*-
->   ------------ ------------ ----------
+--------------------------------------------
+`!!!COM: Byrd, William`
+!!!OTL: Why do I use my paper ink and pen.
+--------------------------------------------
+------------ ------------ ----------
+\*\*text     \*\*silbe    \*\*kern
+\*LEnglish   \*LEnglish   \*
+=11          =11          =11
+`.`          .            2r
+Why          Why          2g
+=12          =12          =12
+do           do           2b-
+I            I            2a
+=13          =13          =13
+use          use          4g
+my           my           4g
+paper        pa-          \[2dd
+=14          =14          =14
+`.`          \|           2dd\]
+`.`          -per         2cc
+=15          =15          =15
+ink          ink          2.ff
+and          and          (4ee
+=16          =16          =16
+`.`          \|           4dd
+`.`          \|           4cc
+`.`          \|           4b-
+`.`          \|           4cc
+=17          =17          =17
+pen,         pen,         1dd
+=18          =18          =18
+and          and          1dd
+=19          =19          =19
+pen,         pen,         1dd
+=20          =20          =20
+`.`          .            2r
+and          and          2ff
+=21          =21          =21
+call         call         2.ee
+my           my           4dd
+=22          =22          =22
+wits         wits         1cc\#
+=23          =23          =23
+to           to           2ee
+counsel      coun-        \[2aa
+=24          =24          =24
+`.`          -sel         4aa\]
+what         what         4ff
+to           to           (8ee
+`.`          \|           8dd
+=25          =25          =25
+`.`          \|           4cc
+`.`          \|           4dd
+`.`          \|           4.ee
+`.`          \|           8dd
+=26          =26          =26
+`.`          \|           4ee
+`.`          \|           4ee
+`.`          \|           2dd)
+=27          =27          =27
+say,         say,         1cc\#
+=28          =28          =28
+\*-          \*-          \*-
+------------ ------------ ----------
 Note that all three representations in Example 27.1 make use of the
 common system for representing barlines. In the
 <span class="rep">text</span> representation tokens
@@ -173,7 +173,7 @@ M	humming	voice	(character	by	itself)
 ]	end	of	spoken	voice
 ]]	end	of	whisper
 <	beginning	of	*Sprechstimme*
->	*end	of	Sprechstimme*
+*end	of	Sprechstimme*
 #	beginning	of	laughing	voice
 ##	end	of	laughing	voice
 @	laughter	(no	text)
@@ -304,7 +304,7 @@ mark:
 ```bash
 extract -i '**silbe' chant12 | text | context -e '[.,;:?!]' \
 ```
-> \| rid -GLId
+\| rid -GLId
 
 The corresponding output is:
 
@@ -326,7 +326,7 @@ closing curly braces (\``}`\'). Store the result in a temporary file:
 ```bash
 extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \
 ```
-> \> temp1
+\> temp1
 
 Notice that <span class="tool">humsed</span> has been given two
 substitution commands. The first eliminates all data signifiers except
@@ -347,7 +347,7 @@ marker to the syllable representation.
 ```bash
 assemble temp1 temp2 | cleave -i '**kern,**text' \
 ```
-> -o \'\*\*text\' \> temp3
+-o \'\*\*text\' \> temp3
 
 With this cleaved data we can now use the <span class="tool">context</span> command to
 amalgamate phrase-related text. Finally, <span class="tool">rid</span> is used to eliminate
@@ -380,7 +380,7 @@ revised script becomes:
 ```bash
 extract -i '**kern' chant12 | humsed 's/[^}]*//; s/^$/./' \
 ```
-> \> temp1
+\> temp1
 
 ```bash
 extract -i '**silbe' chant12 > temp2
@@ -388,7 +388,7 @@ extract -i '**silbe' chant12 > temp2
 ```bash
 assemble temp1 temp2 | cleave -i '**kern,**silbe' \
 ```
-> -o \'\*\*silbe\' \> temp3
+-o \'\*\*silbe\' \> temp3
 ```bash
 context -o = -e } temp3 | rid -GLId | sed 's/}//'
 ```
@@ -427,9 +427,9 @@ phrases for a single input file.
 ```bash
 # SYLLABLE - count the number of syllables in each phrase  #  # Usage: syllable filename <a name ="  extract -i '**kern' $1 | humsed 's/[^"></a>]*//; s/^$/./' > temp1  extract -i '**silbe' $1 > temp2  assemble temp1 temp2 | cleave -i '**kern,**silbe' -o '**silbe' \ 
 ```
-> 
-> \| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
-> NF}\'
+
+\| context -o = -e } \| rid -GLId \| sed \'s/}//\' \| awk \'{print
+NF}\'
 
 rm temp\[12\]
 
@@ -440,7 +440,7 @@ following pipeline could be used:
 ```bash
 extract -i '**silbe' | context -o = -e '[.,;:?!]' \
 ```
-> \| rid -GLId \| awk \'{print NF}\'
+\| rid -GLId \| awk \'{print NF}\'
 
 
 
@@ -536,24 +536,24 @@ which the keyword occurs. The third column gives a five-word context
 where the middle word (in bold) identifies the keyword.]{#Samuel_Barber}
 
 **Table 26.3.**
->   ----------- ---- -------------------------------------------
->   `chant29`   4    `ut possim cantare, Alleluia: gaudebunt`
->   `chant29`   7    `mea, dum cantavero tibi: Alleluia,`
->   `chant27`   1    `Cantate Domino canticum novum Alleluia:`
->   `chant54`   4    `Cantate Domino canticum novum, quia`
->   `chant24`   10   `Cantate Domino canticum novum: quia`
->   `chant42`   14   `totus non capit orbis, in`
->   `chant47`   5    `et exaltavit caput ejus; et`
->   `chant12`   1    `solis ortus cardine ad usque`
->   `chant14`   4    `arrisit orto caritas: Maria, dives`
->   `chant12`   7    `induit: ut carne carnem liberans,`
->   `chant58`   5    `et in carne mea videbo`
->   `chant12`   7    `ut carne carnem liberans, ne`
->   `chant14`   6    `sola quae casto potes fovere`
->   `chant17`   3    `et discerne causam meam de`
->   `chant21`   2    `Dominus a cena, misit aquam`
->   etc.             
->   ----------- ---- -------------------------------------------
+----------- ---- -------------------------------------------
+`chant29`   4    `ut possim cantare, Alleluia: gaudebunt`
+`chant29`   7    `mea, dum cantavero tibi: Alleluia,`
+`chant27`   1    `Cantate Domino canticum novum Alleluia:`
+`chant54`   4    `Cantate Domino canticum novum, quia`
+`chant24`   10   `Cantate Domino canticum novum: quia`
+`chant42`   14   `totus non capit orbis, in`
+`chant47`   5    `et exaltavit caput ejus; et`
+`chant12`   1    `solis ortus cardine ad usque`
+`chant14`   4    `arrisit orto caritas: Maria, dives`
+`chant12`   7    `induit: ut carne carnem liberans,`
+`chant58`   5    `et in carne mea videbo`
+`chant12`   7    `ut carne carnem liberans, ne`
+`chant14`   6    `sola quae casto potes fovere`
+`chant17`   3    `et discerne causam meam de`
+`chant21`   2    `Dominus a cena, misit aquam`
+etc.             
+----------- ---- -------------------------------------------
 We would also like to provide a <span class="unix">grep</span>-like search tool so users can
 search for particular keywords.
 
@@ -580,16 +580,16 @@ command is invoked.
 ```bash
 while [ $# -ne 0 ]  do 
 ```
-> 
-> extract -i \'\*\*silbe\' \$1 \> temp1
-> text temp1 \| context -o = -n 5 -p 3 \> temp2
-> num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\
-> > 
-> > \| ditto \| humsed \'s/\\./0/\' \> temp3
-> 
-> humsed "s/.\*/\$1/" temp1 \> temp4
-> assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'
-> shift;
+
+extract -i \'\*\*silbe\' \$1 \> temp1
+text temp1 \| context -o = -n 5 -p 3 \> temp2
+num -n = -a \'\*\*nums\' temp1 \| extract -i \'\*\*nums\' \\
+
+\| ditto \| humsed \'s/\\./0/\' \> temp3
+
+humsed "s/.\*/\$1/" temp1 \> temp4
+assemble temp4 temp3 temp2 \| rid -GLId \| sed \'/.\* \\.\$/d\'
+shift;
 
 done
 rm temp\[1-4\]
@@ -663,7 +663,7 @@ control-M character:
 ```bash
 text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 ```
-> \| egrep -4 \'\^\|(like)\|(as)\$\'
+\| egrep -4 \'\^\|(like)\|(as)\$\'
 
 Having ensured that there is no more than one word per line we can now
 search for a line contain *just* "like" or "as." The **-4** option
@@ -692,7 +692,7 @@ changed to null data records.
 ```bash
 text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 ```
-> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
+\| egrep -4 \'\^\|(like)\|(as)\$\' \| hum
 
 Now we can make use of the <span class="tool">context</span> command. Each context ends with
 the double-dash delimiters generated by <span class="unix">egrep</span>. The
@@ -702,8 +702,8 @@ interpretations added by **hum**.
 ```bash
 text inputfile | extract -i '**text' | humsed 's/  */\^M/g' \
 ```
-> \| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'&mdash;\' \\
-> \| rid -Id
+\| egrep -4 \'\^\|(like)\|(as)\$\' \| hum \| context -e \'&mdash;\' \\
+\| rid -Id
 
 
 
@@ -747,7 +747,7 @@ Next, we can use <span class="unix">egrep</span> to search for the words of inte
 ```bash
 semits * | text | extract -i '**semits,**text' | ditto -s = \
 ```
-> \| egrep -i \'\^\\\*\|high\|hoch\|haut\'
+\| egrep -i \'\^\\\*\|high\|hoch\|haut\'
 
 Notice the addition of the expression `^\*` in the search pattern. This
 expression will match any Humdrum interpretation records and so ensures
@@ -759,15 +759,15 @@ high/hoch/haut:
 ```bash
 semits * | text | extract -i '**semits,**text' | ditto -s = \
 ```
-> \| egrep -i \'\^\\\*\|high\|hoch\|haut\' \| extract -i
-> \'\*\*semits\' \| stats
+\| egrep -i \'\^\\\*\|high\|hoch\|haut\' \| extract -i
+\'\*\*semits\' \| stats
 
 The average pitch for the entire work can be determined as follows:
 
 ```bash
 semits * | extract -i '**semits' | ditto -s = | rid -GLI \
 ```
-> \| stats
+\| stats
 
 
 
@@ -843,7 +843,7 @@ eliminate everything other than data records, and calculate the
 numerical statistics:
 
 `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
-> \| rid -GLId \| stats
+\| rid -GLId \| stats
 
 In general, works whose lyrics express predominantly positive emotions
 ought to exhibit positive emotionality estimates. Similarly, works
@@ -865,7 +865,7 @@ end of a file. The ten highest and lowest values are then concatenated
 together and piped to the **stats** command:
 
 `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
-> \| rid -GLId \| sort -n \> temp
+\| rid -GLId \| sort -n \> temp
 head -5 temp \> lowest
 tail -5 temp \> highest
 cat highest lowest \| stats
@@ -899,7 +899,7 @@ spine containing the emotional-charge values taking care to eliminate
 the signs:
 
 `text` *inputfile*` | extract -i '**text' | humsed -f emotion \`
-> \| humsed \'s/\[+-\]//g\' \> charges
+\| humsed \'s/\[+-\]//g\' \> charges
 
 Next we assemble this new spine with the original input:
 

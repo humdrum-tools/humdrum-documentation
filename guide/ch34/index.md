@@ -144,11 +144,11 @@ ends of slurs/phrases.
 ```bash
 yank -m '[{(]' -r 0 opus24.all | extract -i '**pcset' \
 ```
-> \| rid -GLId \| sort \| uniq -c
+\| rid -GLId \| sort \| uniq -c
 ```bash
 yank -m '[)}]' -r 0 opus24.all | extract -i '**pcset' \
 ```
-> \| rid -GLId \| sort \| uniq -c
+\| rid -GLId \| sort \| uniq -c
 
 Two pitch-class set inventories will be generated: one inventory for the
 beginnings of phrases/slurs and one for phrase/slur endings.
@@ -308,7 +308,7 @@ with such a segmentation:
 ```bash
 context -n 3 -o '[=r]' syrinx | pc | pcset | rid -GLId \
 ```
-> \| sort \| uniq -c
+\| sort \| uniq -c
 
 
 Another possibility is to treat rests as segmentation boundaries.
@@ -490,24 +490,24 @@ collapsed into a vertical chord:
 ```bash
 # Search for instances of each tone-row variant.  X=0  while [ $X -ne 12 ]  do 
 ```
-> 
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f P\$X -m score.tmp -t P\$X \\
-> > 
-> > \| extract -i \'\*\*patt\' \> P\$X.pat
-> 
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f I\$X -m score.tmp -t I\$X \\
-> > 
-> > \| extract -i \'\*\*patt\' \> I\$X.pat
-> 
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f R\$X -m score.tmp -t R\$X \\
-> > 
-> > \| extract -i \'\*\*patt\' \> R\$X.pat
-> 
-> patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f RI\$X -m score.tmp -t RI\$X \\
-> > 
-> > \| extract -i \'\*\*patt\' \> RI\$X.pat
-> 
-> let X=\$X+1
+
+patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f P\$X -m score.tmp -t P\$X \\
+
+\| extract -i \'\*\*patt\' \> P\$X.pat
+
+patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f I\$X -m score.tmp -t I\$X \\
+
+\| extract -i \'\*\*patt\' \> I\$X.pat
+
+patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f R\$X -m score.tmp -t R\$X \\
+
+\| extract -i \'\*\*patt\' \> R\$X.pat
+
+patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f RI\$X -m score.tmp -t RI\$X \\
+
+\| extract -i \'\*\*patt\' \> RI\$X.pat
+
+let X=\$X+1
 
 done
 

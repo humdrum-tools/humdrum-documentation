@@ -110,7 +110,7 @@ file called `control`:
 ```bash
 find /scores -type f -exec grep -l '!!!AMT.*triple' "{}" ";" \
 ```
-> \> control
+\> control
 
 In some cases, the number of possible control works is excessively
 large. In this case one can make a random selection from the control
@@ -235,7 +235,7 @@ order of the notes has been randomly ordered:
 ```bash
 scramble -r melody | semits | xdelta -a | rid -GLId \
 ```
-> \| grep -v \'\[=r\]\' \| stats
+\| grep -v \'\[=r\]\' \| stats
 
 For a typical folksong repertory, the average melodic interval size for
 a randomly re-ordered melody is roughly 3 semitones in size. Using
@@ -440,9 +440,9 @@ the `LENGTH` variable. A `while` loop is used to calculate the number of
 octave intervals for each of the possible shifts between the parts:
 
 `` extract -f 1 composition | grep -v = | ditto > spine1  extract -f 2 composition | grep -v = | ditto > spine2  LENGTH=`rid -GLId spine1 | wc -l | sed 's/ //g'`  X=0  while [ $X -ne $LENGTH ]  do ``
-> reihe -s \$X spine1 \> temp
-> assemble temp spine2 \| hint \| grep -c \'P8\'
-> let X=\$X+1
+reihe -s \$X spine1 \> temp
+assemble temp spine2 \| hint \| grep -c \'P8\'
+let X=\$X+1
 done
 rm spine\[12\] temp
 

@@ -496,7 +496,7 @@ applies. By way of illustration, the finger actions used in the above
 example may be made explicit as follows:
 
 ```bash
->|P |2bP |2cP |P |P |P
+|P |2bP |2cP |P |P |P
 ```
 
 The strum is carried out by the thumb, while the index and middle
@@ -507,7 +507,7 @@ the second and third courses/strings, the other strings are allows to
 ring.
 
 ```bash
->|P |2bP |2cP |P |P |P  >|P xIM xIM : : :
+|P |2bP |2cP |P |P |P  >|P xIM xIM : : :
 ```
 
 Notice that in damping the vibrations of the second and third strings,
@@ -592,11 +592,11 @@ O	artificial	harmonic
 }	col	legno	(with	wood	of	the	bow)
 &	tremolo	(bowed)
 
->	strum	from	low	notes	to	high	notes	(=	down-bow)
+strum	from	low	notes	to	high	notes	(=	down-bow)
 <	strum	from	high	notes	to	low	notes	(=	up-bow)
->>	slower	down-strum;	slower	down-bow
->>	slower	up-strum;	slower	up-bow
->>>	very	slow	down-strum;	very	slow	down-bow
+slower	down-strum;	slower	down-bow
+slower	up-strum;	slower	up-bow
+very	slow	down-strum;	very	slow	down-bow
 <<<	very	slow	up-strum;	very	slow	up-bow
 %	rasgueado	(Spanish	strum)
 

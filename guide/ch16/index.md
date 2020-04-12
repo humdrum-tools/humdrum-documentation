@@ -290,7 +290,7 @@ pipeline where some preliminary processing has taken place, such as:
 ```bash
 timebase -t 8 input | ditto | hint | rid -GLI \
 ```
-> \| sort \| uniq -c \| sort -n
+\| sort \| uniq -c \| sort -n
 
 Since the construction `sort | uniq -c | sort -n` is so common, we might
 want to define an alias for it. To do so, we simply execute the

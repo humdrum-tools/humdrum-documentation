@@ -95,7 +95,7 @@ mf	mezzo-forte
 s	subito	(suddenly),	e.g.	spp	(*subito	pianissimo*),	sf	(*subito	forte*)
 z	sforzando	=	fp	(forte-piano)
 <	begin	crescendo
->	begin	diminuendo
+begin	diminuendo
 (	continuing	crescendo
 )	continuing	diminuendo
 [	end	crescendo
@@ -242,7 +242,7 @@ corresponding staff; this number appears in curly braces.
 
 ```humdrum
 <	begin	wedge-graphic	crescendo	marking
->	begin	wedge-graphic	diminuendo	marking
+begin	wedge-graphic	diminuendo	marking
 [	terminate	wedge-graphic	crescendo	marking
 ]	terminate	wedge-graphic	diminuendo	marking
 (	continuing	wedge-graphic	crescendo
@@ -461,11 +461,11 @@ exposition is on average louder than the development section:
 ```bash
 yank -s Exposition -r 1 symphony3 | extract -i '**dynam' \
 ```
-> \| db \| rid -GLId \| stats
+\| db \| rid -GLId \| stats
 ```bash
 yank -s Development -r 1 symphony3 | extract -i '**dynam' \
 ```
-> \| db \| rid -GLId \| stats
+\| db \| rid -GLId \| stats
 
 
 Does a work tend to begin quietly and end loudly, or vice versa? Here we
@@ -476,11 +476,11 @@ values participating in the calculation of the average dynamic level:
 ```bash
 yank -n = -r 1-10 janacek | extract -i '**dynam' \
 ```
-> \| ditto -s = \| db \| rid -GLId \| stats
+\| ditto -s = \| db \| rid -GLId \| stats
 ```bash
 yank -n = -r '$-10-$' janacek | extract -i '**dynam' \
 ```
-> \| ditto -s = \| db \| rid -GLId \| stats
+\| ditto -s = \| db \| rid -GLId \| stats
 
 
 Suppose we want to determine whether there is an association between
@@ -558,7 +558,7 @@ level values will cause the average dynamic difference to approach zero.
 ```bash
 extract -i '**dynam' haendel | db | xdelta -a -s = | rid -d \
 ```
-> \| stats
+\| stats
 
 Another approach to this problem might be to count the number of dynamic
 contrasts, avoiding the use of the **db** command. In the following
@@ -569,12 +569,12 @@ alternations between *f* and *p*.
 ```bash
 extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \
 ```
-> \| context -n 2 \| grep -c \'f p\'
+\| context -n 2 \| grep -c \'f p\'
 
 ```bash
 extract -i '**dynam' haendel | grep -v '[][()=rX]' | rid -d \
 ```
-> \| context -n 2 \| grep -c \'p f\'
+\| context -n 2 \| grep -c \'p f\'
 
 
 
@@ -593,11 +593,11 @@ this view as follows:
 ```bash
 extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \
 ```
-> \| context -n 2 \| grep -c \'\< \>\'
+\| context -n 2 \| grep -c \'\< \>\'
 ```bash
 extract -i '**dynam' grieg | grep -v '[][()=rX]' | rid -d \
 ```
-> \| context -n 2 \| grep -c \'\> \<\'
+\| context -n 2 \| grep -c \'\> \<\'
 
 
 
@@ -663,11 +663,11 @@ An appropriate reassignment file for <span class="tool">recode</span>
 would begin as follows:
 
 ```humdrum
->=127	85
->=100	80
->=90	77
->=80	74
->=70	70
+=127	85
+=100	80
+=90	77
+=80	74
+=70	70
 etc.	
 ```
 
@@ -677,7 +677,7 @@ pipeline:
 ```bash
 extract -i '**MIDI' mono_input | humsed 's/.*\///' \
 ```
-> \| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
+\| recode -f reassign \| sed \'s/\*\*MIDI/\*\*dB/\'
 
 Notice the use of the <span class="unix">sed</span> command to replace the \*\*MIDI
 interpretation by a \*\*dB interpretation.

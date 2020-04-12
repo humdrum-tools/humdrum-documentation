@@ -47,7 +47,7 @@ following command will make the translation:
 ```bash
 humsed '/^[^=]/s/[^0-9.r ]//g; s/^$/./' input.krn \
 ```
-> \| sed \'s/\\\*\\\*kern/\*\*recip/\'
+\| sed \'s/\\\*\\\*kern/\*\*recip/\'
 
 The first <span class="tool">humsed</span> substitution eliminates all data other than the
 numbers 0 to 9, the period, the lower-case `r`, and the space (for
@@ -66,7 +66,7 @@ appropriate data tokens:
 ```bash
 context -b ^= -o ^= input.recip | rid -GLId | sort \
 ```
-> \| uniq -c \| sort -nr
+\| uniq -c \| sort -nr
 
 The output for the combined voices of Bach's two-part Invention No. 5
 shows just seven patterns. The most characteristic patterns are the
@@ -155,7 +155,7 @@ for rests are distinguished by the trailing letter \`r\', we can use
 ```bash
 extract -i '*Itromp' inputfile.krn | dur -d | rid -GLId \
 ```
-> \| grep -v \'\^=\' \| grep -v r \| stats
+\| grep -v \'\^=\' \| grep -v r \| stats
 
 The <span class="tool">dur</span> command provides a <span class="option">e</span> option that
 allows the user to echo specified signifiers in the output. The <span class="option">e</span>
@@ -167,7 +167,7 @@ longest duration note for which Mozart had marked a staccato.
 ```bash
 dur -e \' inputfile | rid -GLId | grep \' | sed 's/\'//' \
 ```
-> \| stats
+\| stats
 
 
 The <span class="option">e</span> option ensures that <span class="rep">kern</span> staccato marks (\') are passed
@@ -188,12 +188,12 @@ phrases &mdash; and if so, how much longer? In this case, we want to have
 ```bash
 dur -e '{' inputfile | rid -GLId | grep '{' | sed 's/{//' \
 ```
-> \| stats
+\| stats
 
 ```bash
 dur -e '}' inputfile | rid -GLId | grep '{' | sed 's/{//' \
 ```
-> \| stats
+\| stats
 
 
 Similarly, do semitone trills tend to be shorter than whole-tone trills?
@@ -201,12 +201,12 @@ Similarly, do semitone trills tend to be shorter than whole-tone trills?
 ```bash
 dur -e 't' inputfile | rid -GLId | grep 't' | sed 's/{//' \
 ```
-> \| stats
+\| stats
 
 ```bash
 dur -e 'T' inputfile | rid -GLId | grep 'T' | sed 's/{//' \
 ```
-> \| stats
+\| stats
 
 
 Of course, we can also use <span class="tool">dur</span> in conjunction
@@ -217,12 +217,12 @@ compared with the original exposition?
 ```bash
 yank -s 'Exposition' -r 1 inputfile | dur | rid -GLId \
 ```
-> \| grep -v \'=\' \| stats
+\| grep -v \'=\' \| stats
 
 ```bash
 yank -s 'Recapituation' -r 1 inputfile | dur | rid -GLId \
 ```
-> \| grep -v \'=\' \| stats
+\| grep -v \'=\' \| stats
 
 Do initial phrases in Schubert's vocal works tend to be shorter than
 final phrases?
@@ -271,7 +271,7 @@ to create a inventory of long/short rhythmic patterns. We might use
 <span class="tool">recode</span> with reassignments such as the following:
 
 ```humdrum
->=0.4	long
+=0.4	long
 else	short
 ```
 
@@ -281,7 +281,7 @@ long/short rhythmic patterns as follows:
 ```bash
 dur inputfile | recode -f reassign -i '**dur' -s ^= | \
 ```
-> context -n 3 -o = \| rid -GLId \| sort \| uniq -c \| sort -n
+context -n 3 -o = \| rid -GLId \| sort \| uniq -c \| sort -n
 
 A typical output might appears as follows:
 
@@ -304,7 +304,7 @@ reassignment file would be as follows:
 
 ```humdrum
 ==0	equal
->0	shorter
+0	shorter
 <0	longer
 ```
 
@@ -313,8 +313,8 @@ And our processing would be:
 ```bash
 dur inputfile | xdelta -s ^= | recode -f reassign \
 ```
-> -i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\
-> \| rid -GLId \| sort \| uniq -c \| sort -n
+-i \'\*\*Xdur\' -s \^= \| context -n 2 -o = \\
+\| rid -GLId \| sort \| uniq -c \| sort -n
 
 
 
@@ -375,7 +375,7 @@ notes played by the horns during beats 2 and 4 in a 4/4 meter work:
 ```bash
 extract -i '*Icor' input.krn | timebase -t 16 \
 ```
-> \| yank -m \^= -r 5-8,13-16
+\| yank -m \^= -r 5-8,13-16
 
 
 In some cases, we would like to yank materials that do not themselves
@@ -395,7 +395,7 @@ inventory of chords occurring on the first beat of each bar:
 ```bash
 timebase -t 8 input | extract -i '**harm' \
 ```
-> \| yank -m \^= -r 1 \| rid -GLId \| sort \| uniq -c \| sort -n
+\| yank -m \^= -r 1 \| rid -GLId \| sort \| uniq -c \| sort -n
 
 And the following variation would provide an inventory of chords
 occurring on the third beat of each bar. (There are 6 eighth durations
@@ -405,7 +405,7 @@ with the 5th eighth &mdash; hence the range `-r 5`:
 ```bash
 timebase -t 8 input | extract -i '**harm' \
 ```
-> \| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
+\| yank -m \^= -r 5 \| rid -GLId \| sort \| uniq -c \| sort -n
 
 
 
@@ -520,7 +520,7 @@ reassignment file:
 
 ```humdrum
 ==1	strong
->=3	secondary
+=3	secondary
 else	weak
 ```
 
@@ -652,7 +652,7 @@ spine using <span class="tool">extract</span>:
 ```bash
 humsed '/^\./d' magyar.mp | extract -i '**metpos' \
 ```
-> \| xdelta -s \^=
+\| xdelta -s \^=
 
 The result is:
 
@@ -676,7 +676,7 @@ changes of metric position according. Our reassignment file (named
 `reassign`):
 
 ```humdrum
->0	strong-to-weak
+0	strong-to-weak
 <0	weak-to-strong
 ==0	equal
 ```
@@ -686,8 +686,8 @@ Appending the appropriate command:
 ```bash
 humsed '/^\./d' magyar.mp | extract -i '**metpos' \
 ```
-> \| xdelta -s \^= \| recode -f reassign -i \'\*\*Xmetpos\' -s \^= \>
-> magyar.xmp
+\| xdelta -s \^= \| recode -f reassign -i \'\*\*Xmetpos\' -s \^= \>
+magyar.xmp
 
 Now we can assemble the resulting metric change spine with our original
 <span class="rep">deg</span> spine. Each data record will
@@ -698,7 +698,7 @@ inventory using <span class="tool">rid</span>, <span class="unix">sort</span> an
 ```bash
 assemble magyar.deg magyar.xmp | rid -GLId | grep -v ^= \
 ```
-> \| sort \| uniq -c
+\| sort \| uniq -c
 
 The final result will appear as below. The first output line indicates
 that there were three instances of a tonic pitch approached by a note of

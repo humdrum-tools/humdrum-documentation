@@ -411,12 +411,12 @@ that there is only one oboe and one flute part in the file `Rimsky-K`:)
 ```bash
 extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \
 ```
-> \| grep -c P1
+\| grep -c P1
 
 ```bash
 extract -i '*Ioboe,*Iflts' Rimsky-K | hint -c | rid -GLId \
 ```
-> \| grep -c \[MmPAd\]
+\| grep -c \[MmPAd\]
 
 The second <span class="unix">grep</span> counts the total number of intervals by looking for
 all of the interval qualities (major, minor, perfect, etc.)
@@ -518,7 +518,7 @@ well:
 ```bash
 humsed 's/^[^  ]*r[^  ]*  /.  /; s/  [^  ]*r[^  ]*$/  ./' example15.1 \
 ```
-> \| ditto -p
+\| ditto -p
 
 Below we see the output assembled with the output from the corresponding
 <span class="tool">hint</span> command:
@@ -679,7 +679,7 @@ barlines. Finally, we can calculate the mean interval distance using the
 ```bash
 ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \
 ```
-> \| grep -v = \| stats
+\| grep -v = \| stats
 
 Suppose we have a two-part input. Are there tritone intervals (explicit
 and passing) that are not spelled as either an augmented fourth or
@@ -697,7 +697,7 @@ ditto -s = 2part | hint > temp2
 ```bash
 assemble temp1 temp2 | rid -GLId | grep ^6 | grep -v A4 \
 ```
-> \| grep -v d5
+\| grep -v d5
 
 Notice the use of **grep -v** to first exclude any records that match an
 augmented fourth, and then to exclude any remaining records that match a

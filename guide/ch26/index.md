@@ -374,8 +374,8 @@ reassignment file:
 
 ```humdrum
 <0	L
->16	H
->=0	M
+16	H
+=0	M
 else	r
 ```
 
@@ -384,9 +384,9 @@ short (S) using the <span class="tool">dur</span> command, followed by
 *recode*.
 
 ```humdrum
->1.0	L
->0.5	M
->0	S
+1.0	L
+0.5	M
+0	S
 ```
 
 Using <span class="tool">context</span> **-n 3** we could then create
@@ -428,7 +428,7 @@ single final spine.
 ```bash
 cleave -i '**rhythm,**range,**scale-step' -o '**complex' \
 ```
-> newfile \> output
+newfile \> output
 
 
 Having created our new representation, we can continue to process this
