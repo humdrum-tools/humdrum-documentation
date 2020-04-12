@@ -13,13 +13,13 @@ Humdrum inputs
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` mint  [-acde]  [-b regexp]  [-s regexp]  [inputfile]  [ > outputfile.mnt]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">mint</span> command determines the distance (interval) between
 successive pitches. Output pitch intervals are expressed as a diatonic
@@ -71,7 +71,7 @@ should be given names with the distinguishing \`.mnt\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">mint</span> command provides the following options:
 
@@ -100,7 +100,7 @@ expressions cause a skip rather than a break.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The various aspects of the <span class="tool">mint</span> command are best illustrated using a
 set of examples. Consider the following input: ``
@@ -385,7 +385,7 @@ been changed to a null tokens (due to the <span class="tool">humsed</span> comma
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -393,7 +393,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **hint (2),  hint (4),  humsed (4), **kern (2), **mint (2),  recode (4), regexp (6), **semits (2),  semits (4), solfg (2), **Tonh (2),  xdelta (4),  ydelta (4)`
 

@@ -12,13 +12,13 @@ permalink:	/tool/veritas/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` veritas  [-v]  inputfile`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">veritas</span> command provides an on-line means for formally or
 informally verifying that a given Humdrum file originates with a given
@@ -42,7 +42,7 @@ document.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">veritas</span> command provides the following options:
 
@@ -61,7 +61,7 @@ radically different checksum.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -69,7 +69,7 @@ interpreters, and POSIX.2 compliant **cksum** command.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` cksum (UNIX), sum (UNIX)`
 

@@ -12,13 +12,13 @@ permalink:	/tool/synco/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` synco  [-e]  [inputfile ...]  [ > outputfile.syn]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">synco</span> command characterizes the degree of metric syncopation
 evident at successive moments in a passage. It outputs a single Humdrum
@@ -114,7 +114,7 @@ should be given names with the distinguishing \`.syn\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">synco</span> command provides the following options:
 
@@ -132,7 +132,7 @@ spines along with the <span class="rep">synco</span> output.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following two examples illustrate the use of **synco.** In both
 examples, the left-most spines represent the input, and the right-most
@@ -216,7 +216,7 @@ processing. ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -224,7 +224,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  metpos (4), **synco (2),  timebase (4),  urrhythm (4)`
 
@@ -232,7 +232,7 @@ interpreters, and revised *awk* (1985).
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Longuet-Higgins, H. C., & Lee, C. S. \"The perception of musical
 rhythms,\" *Perception,* Vol. 11 (1982) pp. 115-128.

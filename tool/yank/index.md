@@ -13,13 +13,13 @@ permalink:	/tool/yank/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` yank  [-c]  -l  -r  range  [inputfile ...]  yank  [-c]  -m  regexp  -r  range  [inputfile ...]  yank  [-c]  -n  regexp  -r  range  [inputfile ...]  yank  [-c]  -o  regexp  [-e  regexp]  -r  range  [inputfile ...]  yank  [-c]  -s  section_label  -r  range  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">yank</span> command permits the selective extraction of segments or
 passages from a Humdrum input. Yanked material may consist of specified
@@ -32,7 +32,7 @@ record.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">yank</span> command provides the following options:
 
@@ -202,7 +202,7 @@ more than one section containing the same section-label. (See the
 
 []{#INTERPRETATIONS AND COMMENTS}
 
-### INTERPRETATIONS AND COMMENTS
+## INTERPRETATIONS AND COMMENTS ##
 
 If <span class="tool">yank</span> is given a Humdrum input, it always produces a syntactically
 correct Humdrum output. All interpretations prior to and within the
@@ -215,7 +215,7 @@ by specifying the <span class="option">c</span> option.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate how the <span class="tool">yank</span> command may be used.
 
@@ -284,7 +284,7 @@ will yank the first occurrence of a section labelled `Coda` in the file
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Where integer ranges are specified in the <span class="tool">yank</span> range-list,
 overlapping values are collapsed. For example, the command
@@ -313,14 +313,14 @@ expression `` `6-$-7' `` will result in no output.
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The files `find_reg.awk`, `findpair.awk` and `number.awk` are used by
 **yank.**
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -328,7 +328,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` awk (UNIX),  extract (4), grep (UNIX), egrep (UNIX),  patt (4),  pattern (4),  regexp (4), regexp (6),  timebase (4),  thru (4)`
 

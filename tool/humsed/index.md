@@ -13,13 +13,13 @@ permalink:	/tool/humsed/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` humsed   [-E]   'sed_instruction[;sed_instruction;...]'   [inputfile ...]   [ > outputfile]  humsed   [-E]   [-f scriptfile]   [inputfile ...]   [ > outputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">humsed</span> command provides a stream-editor for Humdrum data
 records. A stream-editor is a non-interactive editor that automatically
@@ -60,7 +60,7 @@ command.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">humsed</span> command provides the following options:
 
@@ -89,7 +89,7 @@ executed after any command-line editing scripts.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the substitution, transliteration,
 deletion, file-read and file-write instruction provided by **humsed.**
@@ -183,7 +183,7 @@ a pause.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 Any system supporting the UNIX-style **sed** command. Note that the
 <span class="option">E</span> option is a non-POSIX extension currently supported only by the
@@ -192,13 +192,13 @@ extended regular expression syntax for **sed.**
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` awk (UNIX),  regexp (4), regexp (6),  rid (4), sed (UNIX), vi (UNIX),  yank (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 In the process of modifying text, it is possible to transform
 inadvertently Humdrum data records into interpretation records or

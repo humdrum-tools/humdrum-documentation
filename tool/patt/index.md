@@ -12,13 +12,13 @@ permalink:	/tool/patt/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` patt  [-m]  -f templatefile  [-s regexp]  [-t output_tag]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">patt</span> command is used to locate occurrences of a user-defined
 pattern in some Humdrum input. The patterns sought may span innumerable
@@ -85,7 +85,7 @@ defining multi-record patterns.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">patt</span> command supports the following options:
 
@@ -142,7 +142,7 @@ conforms to the Humdrum syntax.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the operation of the <span class="tool">patt</span> command.
 Consider the following target file and pattern template file:
@@ -299,7 +299,7 @@ illustrated. Refer to **regexp (6)** for further pertinent information.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -307,7 +307,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 **grep** (UNIX), **egrep** (UNIX), <span class="tool">pattern</span> (4),
 <span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
@@ -315,14 +315,14 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 If a comment is present in the template pattern, failing to specify the
 <span class="option">c</span> option will make pattern matching a logically impossibility.
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">patt</span> command differs from the related <span class="tool">pattern</span> command in the
 following ways: (1) <span class="tool">patt</span> always produces output conforming to the

@@ -13,13 +13,13 @@ set-theoretic representations
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` pcset  [-c]  [-n|p|v]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">pcset</span> command is used to generate and convert between various
 set-theoretic representations.
@@ -74,7 +74,7 @@ should be given names with the distinguishing extensions \`.pcs\',
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">pcset</span> command provides the following options:
 
@@ -116,7 +116,7 @@ are aliases for `pcset -v`, `pcset -n` and `pcset -p` respectively.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following command outputs the interval-class vectors for the sets
 formed by successive sonorities in the input file `webern`:
@@ -135,7 +135,7 @@ formed from successive sonorities in the input file `boulez`:
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -143,7 +143,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 [context](context.html) <span class="tool">context</span> (4), **\*\*iv** (2),
 <span class="tool">iv</span> (4), **\*\*nf** (2), <span class="tool">nf</span> (4), **\*\*pc**
@@ -154,7 +154,7 @@ interpreters, and revised *awk* (1985).
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Allen Forte, *The Structure of Atonal Music.* New Haven: Yale University
 Press, 1973.

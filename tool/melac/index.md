@@ -14,13 +14,13 @@ a Humdrum input
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` melac  [inputfile.sem ...]  [> outputfile.tac]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">melac</span> command accepts as input Humdrum ` **semits` data and
 outputs a series of values representing the degree of melodic accent
@@ -39,7 +39,7 @@ should be given names with the distinguishing \`.mac\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">melac</span> command provides only a help option:
 
@@ -51,7 +51,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the output of the <span class="tool">melac</span> command.
 The <span class="rep">semits</span> spine is the input, and the <span class="rep">melac</span> spine is the
@@ -81,7 +81,7 @@ added to increase the readability.) ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -89,7 +89,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 This command is currently able to handle only a single (monophonic)
 input stream.
@@ -98,7 +98,7 @@ input stream.
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Thomassen, J. \"Melodic accent: Experiments and a tentative model,\"
 *Journal of the Acoustical Society of America,* Vol. 71, No. 6 (1982)

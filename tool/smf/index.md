@@ -12,13 +12,13 @@ permalink:	/tool/smf/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` smf   [-t n.n]   [-v n]   outputfile.smf   <   inputfile.hmd  cat inputfile.hmd | smf   [-t n.n]   [-v n]  >  outputfile.smf`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">smf</span> command allows the user to create \"standard MIDI files\"
 from Humdrum <span class="rep">MIDI</span>-format files. Standard MIDI files (SMFs) are
@@ -33,7 +33,7 @@ affect the SMF output.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">smf</span> command provides the following command-line options:
 
@@ -70,7 +70,7 @@ key-velocity value is 64.
 
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 The <span class="tool">smf</span> command produces MIDI Standard \"format 0\" files. When used
 in conjunction with the <span class="tool">midi</span> command, the **midi -u**
@@ -79,26 +79,26 @@ off.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up. DOS 2.0 and up. OS/2. UNIX.
 
 ------------------------------------------------------------------------
 
-### PROPOSED MODIFICATIONS
+## PROPOSED MODIFICATIONS ##
 
 The program should be modified to allow inputs to contain MIDI control
 codes and MIDI system exclusive codes.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **MIDI (2),  midi (4),  perform (4),  record (4)`
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.

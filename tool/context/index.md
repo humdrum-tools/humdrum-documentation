@@ -6,19 +6,19 @@ vim:		ft=html
 permalink:	/tool/context/index.html
 ---
 
-### COMMAND
+## COMMAND ##
 
 <span class="tool">context</span> &mdash; congeal Humdrum data records to form a contextual frame
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 `context [-b regexp] [-d string] [-e regexp] [-i regexp] [-n n] [-o regexp] [-p n] [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">context</span> command amalgamates one or more successive input data
 records into single records according to user-defined criteria. Only
@@ -602,7 +602,7 @@ command would have caused them to be output on their own line.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -610,7 +610,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">context</span> (4), **grep** (UNIX), <span class="tool">nf</span> (4),
 <span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
@@ -618,7 +618,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 The <span class="option">b</span> and <span class="option">e</span> options are mutually exclusive with the <span class="option">n</span>,
 <span class="option">p</span>, and <span class="option">i</span> options.

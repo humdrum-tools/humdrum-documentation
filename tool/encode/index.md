@@ -12,13 +12,13 @@ permalink:	/tool/encode/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` encode [-r controlfile.rc] [editfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">encode</span> command provides an interactive editor for capturing
 Humdrum data from a MIDI input device. The operation of <span class="tool">encode</span> can
@@ -52,7 +52,7 @@ input mode,* and *command mode.*
 
 ------------------------------------------------------------------------
 
-### EDIT MODE
+## EDIT MODE ##
 
 When <span class="tool">encode</span> is first invoked, the editor is placed in *edit mode.*
 If an edit-file has been specified in the command-line, then the
@@ -128,7 +128,7 @@ deletion can be restored or \"undone\" by typing the lower-case letter
 
 ------------------------------------------------------------------------
 
-### INPUT MODE
+## INPUT MODE ##
 
 The *input mode* allows the manual inputting of typed characters into
 the text file. This mode is invoked from the *edit mode* by typing
@@ -152,7 +152,7 @@ creating text that does not conform to the Humdrum syntax.
 
 ------------------------------------------------------------------------
 
-### MIDI INPUT MODE
+## MIDI INPUT MODE ##
 
 The most characteristic feature of <span class="tool">encode</span> is the *MIDI input mode.*
 The MIDI input mode can be invoked from *edit mode* by typing either of
@@ -326,7 +326,7 @@ defined.
 
 ------------------------------------------------------------------------
 
-### COMMAND MODE
+## COMMAND MODE ##
 
 The <span class="tool">encode</span> *command mode* allows a number of general-purpose
 commands to be executed &mdash; such as editing a specified file, changing a
@@ -428,7 +428,7 @@ affect on the command operation.
 
 ------------------------------------------------------------------------
 
-### SUMMARY
+## SUMMARY ##
 
 The various built-in commands in <span class="tool">encode</span> are summarized in the
 following table.
@@ -497,7 +497,7 @@ following table.
 
 []{#OPTIONS}
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">encode</span> command provides the following options:
 
@@ -521,7 +521,7 @@ that it failed to locate the specified run-control file.
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 A number of predefined `.rc` files are maintained in the `$HUMDRUM/etc`
 directory. Exploration is encouraged. The default file is
@@ -529,7 +529,7 @@ directory. Exploration is encouraged. The default file is
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up. An appropriate MIDI controller (such as a keyboard
 synthesizer) connected via a Roland MPU-401 (or compatible) MIDI
@@ -538,7 +538,7 @@ invoke the \`v\' edit command.
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Unlike the UNIX **vi** text editor, only a single \`**d**\' is required
 in edit mode to delete a line (rather than two \\fRd\\fR\'s).
@@ -549,7 +549,7 @@ file until after the default beat (`DEL*`) has been defined.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">assemble</span> (4), <span class="tool">cleave</span> (4),
 **encode.rc** (5), <span class="tool">humdrum</span> (4), **\*\*kern** (2),
@@ -560,14 +560,14 @@ file until after the default beat (`DEL*`) has been defined.
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use the the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 Especially long input lines may exceed the size of the text window.
 Although the characters to the right of the text screen may not be

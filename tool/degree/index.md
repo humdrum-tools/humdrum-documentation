@@ -13,13 +13,13 @@ to absolute scale degree (<span class="rep">degree</span>)
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` degree  [k|K key] [-tx]  [inputfile ...]  [> outputfile.dgr]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">degree</span> command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
@@ -66,7 +66,7 @@ should be given names with the distinguishing \`.dgr\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">degree</span> command provides the following options:
 
@@ -115,7 +115,7 @@ recommended.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the use of **degree.** The input
 contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
@@ -192,14 +192,14 @@ Hence both the D-flat and D double-flat in measure 1 of the first
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -207,7 +207,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **deg (2),  deg (4), **degree (2), **kern (2),  kern (4), **pitch (2),  pitch (4), **solfg (2),  solfg (4), **Tonh (2),  tonh (4)`
 

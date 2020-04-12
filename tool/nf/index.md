@@ -13,13 +13,13 @@ Humdrum inputs
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` nf  [inputfile ...]  [> outputfile.nf]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">nf</span> command is used to determine the *normal form* for any of
 five set-theory related inputs: pitch (<span class="rep">semits</span>), pitch-class
@@ -63,7 +63,7 @@ should be given names with the distinguishing \`.nf\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">nf</span> command provides only a help option:
 
@@ -75,7 +75,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following command outputs the normal form for the sets formed by
 successive sonorities in the input file `opus24`. The input may be
@@ -85,7 +85,7 @@ pitches, pitch-classes, Fortean set names, etc.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -93,7 +93,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">context</span> (4), **\*\*iv** (2), <span class="tool">iv</span> (4),
 **\*\*nf** (2), **\*\*pc** (2), <span class="tool">pc</span> (4), **\*\*pcset**
@@ -102,7 +102,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">nf</span> command is a shell script that invokes `pcset -n`.
 
@@ -110,7 +110,7 @@ The <span class="tool">nf</span> command is a shell script that invokes `pcset -
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Allen Forte, *The Structure of Atonal Music.* New Haven: Yale University
 Press, 1973.

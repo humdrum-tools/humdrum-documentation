@@ -13,13 +13,13 @@ Humdrum inputs
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` hint  [-a|-l|-v]  [-cdu]  [-s regexp]  [inputfile ...]  [> outputfile.hnt]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">hint</span> command outputs the harmonic interval distances between
 simultaneous notated pitches. Output pitch intervals are expressed as a
@@ -81,7 +81,7 @@ should be given names with the distinguishing \`.hnt\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">hint</span> command provides the following options:
 
@@ -137,7 +137,7 @@ cause a hyphen (-) to be output.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The various aspects of the <span class="tool">hint</span> command are illustrated in the
 following examples. Consider the following input: ``
@@ -301,7 +301,7 @@ would produce the following output: ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -309,7 +309,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **deg (2), **degree (2), **hint (2),  humsed (4), **kern (2), **mint (2),  mint (4),  recode (4), regexp (6), **semits (2),  semits (4),  solfg (2), **Tonh (2),  xdelta (4),  ydelta (4)`
 

@@ -12,13 +12,13 @@ permalink:	/tool/trans/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` trans  -d  [+-]n  [-c  [+-]n]  [-k keysig]  [inputfile ...]  [ > outputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">trans</span> command transposes various Humdrum pitch representations.
 Transposed outputs maintain proper pitch-interval spellings, except in
@@ -72,7 +72,7 @@ should be given names with the distinguishing \`.tr\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">trans</span> command provides the following options:
 
@@ -97,7 +97,7 @@ replacement key signature. Either \"pitch-class\" (\*k\[\...\]) or
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the use of **trans.**
 
@@ -167,7 +167,7 @@ would contain the tandem interpretation:
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUT
+## SAMPLE OUTPUT ##
 
 The following example illustrates the operation of **trans.** Given the
 following input: ``
@@ -211,7 +211,7 @@ would produce the following output: ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -219,7 +219,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">humsed</span> (4), **\*\*kern** (2), <span class="tool">kern</span>
 (4), **key signature** (3), <span class="tool">pitch</span> (4), **\*\*pitch**
@@ -229,7 +229,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 It is important not to confused transposed scores with notations of
 music for transposing instruments (such as the horn in F or the clarinet

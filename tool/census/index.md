@@ -13,13 +13,13 @@ permalink:	/tool/census/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` census  [-k]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">census</span> command provides a summary of seven gross features of any
 Humdrum input. It provides counts of the total number of records
@@ -37,7 +37,7 @@ encountered.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">census</span> command provides the following options:
 
@@ -55,7 +55,7 @@ The <span class="option">k</span> option pertains to <span class="rep">kern</spa
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUT
+## SAMPLE OUTPUT ##
 
 The following is a sample output where the <span class="option">k</span> option has been
 invoked. Without the <span class="option">k</span> option, the \"KERN DATA\" would be absent
@@ -87,7 +87,7 @@ from the output.
 > >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -95,13 +95,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **kern (2), humdrum humdrum (4), proof proof (4)`
 
 ------------------------------------------------------------------------
 
-### DOWNLOAD CODE
+## DOWNLOAD CODE ##
 
 The source (which is also the executable) code for this command can be
 directly downloaded. Two files are necessarily:

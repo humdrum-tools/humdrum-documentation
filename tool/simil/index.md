@@ -13,13 +13,13 @@ single-spine Humdrum inputs
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` simil  [-nr]  [-x length]  sourcefile  [templatefile]  [ > outputfile.sim]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">simil</span> command measures the degree of similarity between two
 single-spine inputs. Similarity measures are calculated by determining
@@ -102,7 +102,7 @@ should be given names with the distinguishing \`.sim\' extension.
 
 ------------------------------------------------------------------------
 
-### FURTHER DETAILS
+## FURTHER DETAILS ##
 
 The <span class="tool">simil</span> program implements the Damerau-Levenshtein metric for edit
 distance (see [REFERENCES](#REFERENCES)). Permissible edit operations
@@ -187,7 +187,7 @@ arbitrarily high edit penalty. ``
 >
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">simil</span> command provides the following options.
 
@@ -223,7 +223,7 @@ of the subordinate templates drawn from the template file.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the operation of **simil.** Consider
 first, the *fixed template mode.* In the following example, the source
@@ -348,19 +348,19 @@ the pattern (B, C) beginning on template record 2.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up. OS/2. All UNIX systems.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  context (4), **correl (2),  correl (4),  patt (4),  pattern (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 In *variable template mode,* execution times may be quite lengthy.
 
@@ -368,7 +368,7 @@ In *variable template mode,* execution times may be quite lengthy.
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 The Damerau-Levenshtein metric is described in P. Hall & G. Dowling
 \"Approximate string matching,\" *ACM Computing Surveys,* Vol. 12 (1980)
@@ -382,7 +382,7 @@ representations,\"](http://dactyl.som.ohio-state.edu/Huron/Publications/orpen.si
 
 ------------------------------------------------------------------------
 
-### AUTHOR
+## AUTHOR ##
 
 Written by Keith S. Orpen, University of Waterloo. Copyright 1992.
 

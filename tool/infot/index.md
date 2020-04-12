@@ -12,13 +12,13 @@ permalink:	/tool/infot/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` infot  -b  [-H]  [-x regexp]  [inputfile ...]  infot  -n  [-H]  [-x regexp]  [inputfile ...]  infot  -p  [-H]  [-x regexp]  [inputfile ...]  infot  -s  [-x regexp]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">infot</span> command provides a general-purpose tool for measuring the
 probability relationships between user-selected data tokens. Given a
@@ -68,7 +68,7 @@ Humdrum syntax.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">infot</span> command provides the following options:
 
@@ -99,7 +99,7 @@ equation.](#Shannon%20and%20Weaver)
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The use of <span class="tool">infot</span> is illustrated in the following examples. Consider
 the following input: ``
@@ -307,7 +307,7 @@ measured by reformulating the input using the <span class="tool">context</span> 
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -315,7 +315,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">context</span> (4), <span class="tool">humsed</span> (4),
 <span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
@@ -325,7 +325,7 @@ interpreters, and revised *awk* (1985).
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Knopoff, L. & Hutchinson, W. \"Entropy as a measure of style: The
 influence of sample length.\" *Journal of Music Theory,* Vol. 27 (1983)

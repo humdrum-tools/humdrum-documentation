@@ -13,13 +13,13 @@ tokens
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` scramble   -r   [-s regexp]   [inputfile]  scramble   -t   [-m]   [-s regexp]   [inputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">scramble</span> command can be used to randomize either the order of
 Humdrum data records or the arrangement of data tokens within each data
@@ -67,7 +67,7 @@ that they are not either repositioned, or their data tokens re-ordered.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">scramble</span> command provides the following option:
 
@@ -86,7 +86,7 @@ mode* (<span class="option">r</span>) or *token mode* (<span class="option">t</s
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The use of the <span class="tool">scramble</span> command can be illustrated using the
 following input: ``
@@ -180,7 +180,7 @@ interpretations can be eliminated using **rid -u.**
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -188,13 +188,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  assemble (4),  extract (4),  fields (4),  humdrum (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 If the number of spines changes over the course of the input file, valid
 Humdrum output is unlikely when using the <span class="option">r</span> option. Note also that

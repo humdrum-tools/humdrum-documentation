@@ -12,13 +12,13 @@ permalink:	/tool/midi/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` midi  [-Ccu]  [-d n]  [-q n]  [inputfile.krn ...]  [ > outputfile.hmd]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">midi</span> command converts Humdrum <span class="rep">kern</span> data into Humdrum
 <span class="rep">MIDI</span> data. Humdrum <span class="rep">MIDI</span> data may be played by the
@@ -33,7 +33,7 @@ should be given names with the distinguishing \`.hmd\' extension
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">midi</span> command provides the following options:
 
@@ -104,7 +104,7 @@ Humdrum midi-format file.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate how <span class="tool">midi</span> may be invoked.
 
@@ -121,7 +121,7 @@ comments.
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUTS
+## SAMPLE OUTPUTS ##
 
 The operation of <span class="tool">midi</span> is illustrated in the following inputs and
 outputs. In the first example, a simple C major scale is encoded in
@@ -246,7 +246,7 @@ notice that each input record has been reproduced as a global comment
 
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 The <span class="tool">midi</span> command echoes tempo indications for the benefit of the
 <span class="tool">perform</span> command. If a tempo range is specified (e.g.
@@ -255,13 +255,13 @@ Tempo terms (such as \"largo\") are not handled by **midi.**
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">humdrum</span> (4), **\*\*kern** (2), <span class="tool">kern</span>
 (4), **\*\*MIDI** (2), <span class="tool">perform</span> (4),
@@ -270,7 +270,7 @@ DOS 2.0 and up.
 
 ------------------------------------------------------------------------
 
-### PROPOSED MODIFICATIONS
+## PROPOSED MODIFICATIONS ##
 
 Channel assigment tandem interpretations (e.g. `*Ch6`) should be
 recognized in the input stream and cause the default channel 1 output to

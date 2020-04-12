@@ -12,13 +12,13 @@ permalink:	/tool/tacet/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` tacet  [-i hex]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">tacet</span> command resets the MIDI output. It sends \"all-notes-off\"
 commands on MIDI channels 1-16. The <span class="tool">tacet</span> command is useful if a
@@ -27,7 +27,7 @@ sounding notes (\"ciphers\") on a MIDI device.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">tacet</span> command provides the following options:
 
@@ -44,20 +44,20 @@ hexadecimal number.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">midreset</span> (4), <span class="tool">perform</span> (4),
 <span class="tool">smf</span> (4)
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.

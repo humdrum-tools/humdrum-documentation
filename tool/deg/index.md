@@ -14,13 +14,13 @@ relative scale degree (<span class="rep">deg</span>)
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` deg  [-k|K key] [-tx]  [inputfile ...]  [> outputfile.deg]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">deg</span> command transforms various pitch-related inputs to the
 corresponding scale degree. The command outputs one or more Humdrum
@@ -70,7 +70,7 @@ should be given names with the distinguishing \`.deg\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">deg</span> command provides the following options:
 
@@ -118,7 +118,7 @@ recommended.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the use of **deg.** The input contains
 four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
@@ -199,14 +199,14 @@ Hence both the D-flat and D double-flat in measure 1 of the first
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -214,7 +214,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **deg (2), **degree (2),  degree (4), **kern (2),  kern (4), **pitch (2),  pitch (4), **solfg (2),  solfg (4), **Tonh (2),  tonh (4)`
 

@@ -13,13 +13,13 @@ permalink:	/tool/record/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` record  [-i hex]  [-q n]  [ > outputfile.hmd]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">record</span> command captures a stream of input MIDI data and
 translates this data into a simple Humdrum <span class="rep">MIDI</span> representation.
@@ -50,7 +50,7 @@ extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">record</span> command provides the following option:
 
@@ -77,7 +77,7 @@ hexadecimal number.
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUT
+## SAMPLE OUTPUT ##
 
 The following examples illustrate how <span class="tool">record</span> may be used. A simple
 command invocation is:
@@ -145,25 +145,25 @@ the spine). ``
 >
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 The program is implemented as a four-state finite state machine.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with a Roland MPU-401 or compatible MIDI interface.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  cents (4),  encode (4), encode.rc (5),  kern (4), **MIDI (2),  midi (4),  perform (4),  pitch (4),  semits (4),  smf (4),  solfg (4),  tonh (4)`
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.

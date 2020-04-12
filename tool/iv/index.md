@@ -14,13 +14,13 @@ sonorities for Humdrum inputs
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` iv  [inputfile ...]  [> outputfile.iv]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">iv</span> command is used to determine the *interval-class vector* for
 any of five set-theory related inputs: pitch (<span class="rep">semits</span>), pitch-class
@@ -57,7 +57,7 @@ should be given names with the distinguishing \`.iv\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">iv</span> command provides only a help option:
 
@@ -69,7 +69,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following command outputs the interval-class vectors for successive
 sonorities in the input file `opus24`. The input may be pitches,
@@ -79,7 +79,7 @@ pitch-classes, normal forms, Fortean set names, etc.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -87,7 +87,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">context</span> (4), **\*\*iv** (2), **\*\*nf** (2),
 <span class="tool">nf</span> (4), **\*\*pc** (2), <span class="tool">pc</span> (4),
@@ -96,7 +96,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">iv</span> command is a shell script that invokes `pcset -v`.
 
@@ -104,7 +104,7 @@ The <span class="tool">iv</span> command is a shell script that invokes `pcset -
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Allen Forte, *The Structure of Atonal Music.* New Haven: Yale University
 Press, 1973.

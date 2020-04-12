@@ -13,13 +13,13 @@ Humdrum passage
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` urrhythm  inputfile  [ > outputfile.urr]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">urrhythm</span> command outputs a single Humdrum spine (<span class="rep">URrhythm</span>)
 containing data representing rhythmic \`prototypes\' (Ur-rhythms)
@@ -72,7 +72,7 @@ extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">urrhythm</span> command provides only a help option:
 
@@ -84,7 +84,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the operation of **urrhythm.** The
 first two spines (<span class="rep">kern</span> and <span class="rep">metpos</span>) constitute the input. The
@@ -131,7 +131,7 @@ three spines are given in the output. ``
 >
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 The <span class="tool">urrhythm</span> command is currently unable to handle Humdrum
 spine-path changes &mdash; such as join-path, exchange-path, or split-path.
@@ -140,7 +140,7 @@ terminates.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -148,13 +148,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **kern (2), **metpos (2),  metpos (4), **recip (2),  timebase (4),  synco (4), **URrhythm (2)`
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">urrhythm</span> command differs from Johnson-Laird's theory in the
 definition of syncopation. Johnson-Laird's theory requires that a
@@ -169,7 +169,7 @@ listening. (See [Simpson & Huron,
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Johnson-Laird, P. \"Rhythm and meter: A theory at the computational
 level,\" *Psychomusicology,* Vol. 10 (1991) pp. 88-106.

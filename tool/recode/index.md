@@ -13,13 +13,13 @@ permalink:	/tool/recode/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` recode  -f  reassign-file  -i  '**interpretation'  [-s regexp]  [-x]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">recode</span> command is used to recode numeric components of data
 tokens in selected input spines. Typically, <span class="tool">recode</span> is used to
@@ -124,7 +124,7 @@ See OPTIONS for further information.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">recode</span> command provides the following options:
 
@@ -169,7 +169,7 @@ processing of barlines, or other types of data.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The operation of the <span class="tool">recode</span> command can be illustrated by referring
 to the following hypothetical Humdrum file named `patrie`.
@@ -255,7 +255,7 @@ token (`r`) would be output as a null token.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -263,7 +263,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  humsed (4),  rend (4),  regexp (4), regexp (6), sed (UNIX)`
 

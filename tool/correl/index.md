@@ -14,13 +14,13 @@ spines
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` correl  [-f templatefile]  [-m]  [-p n]  [-s regexp]  [inputfile ...]  [> outputfile.cor]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">correl</span> command measures the degree of parametric (numerical)
 similarity between corresponding values in two Humdrum spines. More
@@ -94,7 +94,7 @@ distinguishing \`.cor\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">correl</span> command provides the following options:
 
@@ -176,7 +176,7 @@ as equivalent to the following input: ``
 >
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the operation of **correl.** The first
 example shows an excerpt containing considerable parallel motion between
@@ -358,7 +358,7 @@ pairing: 4 \<&mdash;\> 1, 5 \<&mdash;\> 2, 6 \<&mdash;\> 3, -2 \<&mdash;\> 4, 8 
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -366,14 +366,14 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
 <span class="tool">simil</span> (4)
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Correlation coefficients indicate only the magnitude of the association
 between two sets of data. High correlation values can occur purely by
@@ -391,14 +391,14 @@ output.
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 The <span class="tool">correl</span> command is currently unable to handle input files greater
 than about 4,000 records.
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">correl</span> command is also able to process simple columnated data
 that does not conform to the Humdrum syntax.

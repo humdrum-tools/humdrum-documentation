@@ -12,13 +12,13 @@ permalink:	/tool/rid/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` rid   [-dgiltuDGILTU]   [inputfile ...] `
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">rid</span> command allows the user to eliminate specified types of
 Humdrum records (lines) from the input stream. Depending on the options
@@ -58,7 +58,7 @@ the last note of one piece and the first note of a subsequent piece.)
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">rid</span> command provides the following options:
 
@@ -85,7 +85,7 @@ whereas the corresponding lower-case options eliminate only null records
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the use of **rid.** Consider the
 following input file: ``
@@ -142,7 +142,7 @@ interpretations, and all tandem interpretations: ``
 >
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Removing Humdrum interpretation records will render the file
 inconsistent with the Humdrum representation syntax. Further processing
@@ -150,7 +150,7 @@ of such a file with the Humdrum tools will be impossible.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -158,7 +158,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  humsed (4),  recode (4), sed (UNIX)`
 

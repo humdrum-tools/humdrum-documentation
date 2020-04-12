@@ -13,13 +13,13 @@ through-composed format
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` thru   [-v  version]   [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">thru</span> command expands *abbreviated format* Humdrum
 representations to *through-composed formats* in which input passages
@@ -93,7 +93,7 @@ then the desired *version* is indicated on the command line via the
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">thru</span> command provides the following options:
 
@@ -108,7 +108,7 @@ Options are specified in the command line.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the operation of the <span class="tool">thru</span> command.
 Consider the following simple file: ``
@@ -212,7 +212,7 @@ file.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -220,13 +220,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  strophe (4),  yank (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Humdrum ouput is not guaranteed with the <span class="tool">thru</span> command. In order to
 assure Humdrum output, it is necessary to have the same number of active

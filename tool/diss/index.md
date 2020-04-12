@@ -14,13 +14,13 @@ spectra
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` diss  [inputfile.spt ...] [> outputfile.dis]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">diss</span> command measures the degree of sensory dissonance for
 successive acoustic moments. It outputs a single
@@ -50,7 +50,7 @@ The output file format is dubbed \`.dis\'
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">diss</span> command provides only a help option:
 
@@ -65,7 +65,7 @@ The <span class="option">k</span> option pertains to <span class="rep">kern</spa
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates an input and a corresponding output
 from the <span class="tool">diss</span> command. The first and second spines (\*\*spect)
@@ -86,7 +86,7 @@ dB SPL. An output value near zero results for silence.
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -94,13 +94,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **diss, hint, **spect, spect`
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Kameoka, A. & Kuriyagawa, M. \"Consonance theory, part I: Consonance of
 dyads.\" *Journal of the Acoustical Society of America*, Vol. 45, No. 6

@@ -12,13 +12,13 @@ permalink:	/tool/ditto/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` ditto  [-c chars]   [-p]  [-s regexp]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">ditto</span> replaces Humdrum null tokens with the previous non-null
 data token in the same spine. Various options modify this basic
@@ -48,7 +48,7 @@ multiple-stop where necessary.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">ditto</span> command provides the following options:
 
@@ -63,7 +63,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following inputs and outputs illustrate the operation of the
 <span class="tool">ditto</span> command. Consider the following input: ``
@@ -200,7 +200,7 @@ signifiers, without propagating non-pitch information.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -208,7 +208,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">patt</span> (4), <span class="tool">pattern</span> (4),
 <span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>

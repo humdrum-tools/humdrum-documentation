@@ -14,13 +14,13 @@ output spine
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` cleave [-r] [-d delim] -i '**in_interp1[,**in_interp2 ...]' -o '**out_interp' [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">cleave</span> command permits concurrent data tokens in two or more
 specified spines to be amalgamated into a single data token and output
@@ -68,7 +68,7 @@ multiple-stops.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">cleave</span> command provides the following options:
 
@@ -96,7 +96,7 @@ the character in the processed input.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate the operation of the <span class="tool">cleave</span>
 command.

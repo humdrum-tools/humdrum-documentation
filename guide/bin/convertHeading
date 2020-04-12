@@ -11,6 +11,10 @@
 #                   -------
 #                to
 #                   ## Heading ##
+#                and
+#                   ### Heading
+#                to
+#                   ## Heading ##
 #
 
 use strict;
@@ -40,6 +44,12 @@ sub processFile {
 	for (my $i=10; $i<@contents; $i++) {
 		my $line = $contents[$i];
 		my $pline = $contents[$i-1];
+
+		if ($line =~ /^###\s*([^#]+)\s*$/) {
+			$contents[$i] = "## $1 ##"; 
+			$changed = 1;
+		}
+
 		if (($line =~ /^-----+\s*$/)) {
 			if ($pline =~ /^[A-Z]/) {
             $contents[$i] = "\n";
@@ -47,6 +57,7 @@ sub processFile {
             $changed = 1;
 			}
 		}
+
 	}
 	return if !$changed;
 	print STDERR "Updating file $file\n";

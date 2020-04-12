@@ -13,13 +13,13 @@ Humdrum input
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` vox  [inputfile ...]  [ > outputfile.vox]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">vox</span> command calculates the number of tones sounding together at
 successive moments in time. It outputs a single Humdrum spine (`**vox#`)
@@ -56,7 +56,7 @@ should be given names with the distinguishing \`.vox\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">vox</span> command provides only a help option:
 
@@ -68,7 +68,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -76,7 +76,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` vox# (2)`
 

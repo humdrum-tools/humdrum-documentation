@@ -12,13 +12,13 @@ permalink:	/tool/humdrum/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` humdrum  [-v]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">humdrum</span> command identifies whether an input conforms to the
 Humdrum representation syntax. Error messages are issued where
@@ -103,7 +103,7 @@ Illegal constructions in Humdrum include the following:
 
 ------------------------------------------------------------------------
 
-### SPINE ORGANIZATION
+## SPINE ORGANIZATION ##
 
 A Humdrum file must maintain a coherent spine organization. Spines are
 columns of information separated by tabs. Each spine must be labelled
@@ -377,7 +377,7 @@ new
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">humdrum</span> command provides the following options:
 
@@ -405,7 +405,7 @@ exchanged spines.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following is a sample input that conforms to the Humdrum syntax.
 
@@ -455,7 +455,7 @@ output for the above file would be:
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The <span class="tool">humdrum</span> command uses a kornshell script to invoke an executable.
 In order to avoid conflict, the executable file is named `humdrum_.exe`
@@ -463,7 +463,7 @@ In order to avoid conflict, the executable file is named `humdrum_.exe`
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -471,13 +471,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">census</span> (4), <span class="tool">proof</span> (4)
 
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 The following list tabulates all of the potential errors and warnings
 issued by the <span class="tool">humdrum</span> command. ``

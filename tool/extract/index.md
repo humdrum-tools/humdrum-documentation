@@ -12,13 +12,13 @@ permalink:	/tool/extract/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` extract  -f  field1,field2,...,$-1,$  [inputfile  ...]  extract  -i  interp1,interp2,...,interpn  [inputfile  ...]  extract  -p  spine#n  [inputfile  ...]  extract  -t  field_trace_file.ftf  [inputfile  ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">extract</span> command allows the user to select one or more spines
 from a Humdrum input. The command is typically used to extract parts
@@ -98,7 +98,7 @@ Humdrum syntax. (See EXAMPLES below.)
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">extract</span> command provides the following options:
 
@@ -126,7 +126,7 @@ expansion of shell metacharacter (\*, ?, etc.).
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate how <span class="tool">extract</span> may be used.
 
@@ -151,7 +151,7 @@ outputs all spines that contain the tandem interpretations \*F: or \*f:
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUTS
+## SAMPLE OUTPUTS ##
 
 The following examples illustrate the various <span class="tool">extract</span> options.
 Consider the following input file, dubbed `input1`: ``
@@ -299,14 +299,14 @@ of input spines.
 
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 In *field-trace* mode, if the specified field-structure does not
 correspond to the actual input file, then an ERROR message is issued.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -314,7 +314,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Note that only the *field* mode **(-f)** guarantees that the output will
 conform to the Humdrum syntax.
@@ -326,7 +326,7 @@ specified spine.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">assemble</span> (4), **cut** (UNIX),
 <span class="tool">fields</span> (4), <span class="tool">yank</span> (4)

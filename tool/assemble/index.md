@@ -13,13 +13,13 @@ permalink:	/tool/assemble/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` assemble  inputfile1  inputfile2  [inputfile3 ...]  [ > outputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">assemble</span> command allows two or more structurally similar Humdrum
 files to be aligned together &mdash; such as where a full score is assembled
@@ -84,7 +84,7 @@ appropriate spine-path terminators.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">assemble</span> command provides only a help option:
 
@@ -96,7 +96,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The operation of <span class="tool">assemble</span> can be illustrated by considering the
 following two input files. Both files contain the same number of data
@@ -175,7 +175,7 @@ Finally, each of the four data records have been aligned.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -183,13 +183,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  census (4),  extract (4),  humdrum (4), paste (UNIX),  timebase (4)`
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 The number of specified input files may be limited on DOS systems.
 

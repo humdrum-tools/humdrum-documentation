@@ -13,13 +13,13 @@ criteria
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` num [-efT] [-a **interp] [-i n] [-n regexp] [-o n] [-O n] [-p regexp] [-P regexp] [-r regexp] [-R regexp] [-s regexp] [-S regexp] [-x regexp] [-z regexp] [-Z regexp] [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">num</span> command produces sequential numerical output according to
 user-defined numbering criteria. In its default operation, <span class="tool">num</span>
@@ -49,7 +49,7 @@ phrases, chords, notes, rests, or other musically-pertinent features.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">num</span> command provides the following options:
 
@@ -167,7 +167,7 @@ regular expression.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following examples illustrate how <span class="tool">num</span> may be used. Consider the
 following input (left spine) and corresponding <span class="tool">num</span> output (right
@@ -257,7 +257,7 @@ at the value 1 with each new measure.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -265,14 +265,14 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 **nl** (UNIX), **\*\*ordo** (2), <span class="tool">regexp</span> (4),
 <span class="tool">regexp</span> (6), <span class="tool">rend</span> (4)
 
 ------------------------------------------------------------------------
 
-### NOTES
+## NOTES ##
 
 The <span class="option">O</span> option should be used in conjunction with one of either the
 <span class="option">T</span>, <span class="option">z</span> or <span class="option">Z</span> options.

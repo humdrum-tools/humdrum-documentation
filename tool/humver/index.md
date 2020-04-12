@@ -12,13 +12,13 @@ permalink:	/tool/humver/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` humver  [-s]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">humver</span> command tells the user which version or release of the
 Humdrum Toolkit is installed or available on a given computer system.
@@ -27,7 +27,7 @@ Toolkit.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="option">s</span> option suppresses output and returns a value to the shell
 corresponding to the Humdrum Toolkit version number. (This option is
@@ -36,7 +36,7 @@ without sending output to the standard output.)
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command

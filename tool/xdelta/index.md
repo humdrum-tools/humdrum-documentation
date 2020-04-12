@@ -13,13 +13,13 @@ successive Humdrum data tokens
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` xdelta  [-ae]  [-b regexp]  [-s regexp]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">xdelta</span> command calculates the numeric differences between
 successive data tokens within individual spines. By way of illustration,
@@ -86,7 +86,7 @@ the input file using the Humdrum <span class="tool">assemble</span> command.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">xdelta</span> command provides the following options:
 
@@ -108,7 +108,7 @@ expressions cause a skip rather than a break.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The various aspects of the <span class="tool">xdelta</span> command are best illustrated using
 a set of examples. Consider the following input:
@@ -346,7 +346,7 @@ changes.) ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -354,7 +354,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  assemble (4),  humsed (4),  mint (4),  recode (4),  regexp (4), regexp (6),  ydelta (4)`
 

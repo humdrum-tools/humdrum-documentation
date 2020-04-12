@@ -13,13 +13,13 @@ to tonic solfa syllables (<span class="rep">solfa</span>)
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` solfa  [-tx]  [inputfile ...]  [> outputfile.sol]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">solfa</span> command transforms various pitch-related inputs to the
 corresponding tonic solfa syllables. The command outputs one or more
@@ -85,7 +85,7 @@ should be given names with the distinguishing .sol extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">solfa</span>
 
@@ -118,7 +118,7 @@ signifiers from the output.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the use of **solfa.** The input
 contains four pitch-related spines &mdash; one of which (<span class="rep">MIDI</span>) cannot be
@@ -192,14 +192,14 @@ the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -207,7 +207,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **deg (2),  deg (4), **degree (2),  degree (4), **kern (2),  kern (4), **pitch (2),  pitch (4), **solfa (2), **solfg (2),  solfg (4), **Tonh (2),  tonh (4)`
 

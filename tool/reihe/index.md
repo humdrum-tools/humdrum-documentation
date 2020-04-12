@@ -14,13 +14,13 @@ input
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` reihe  -[I|i]  n  [-a]  [-m  n]  primefile  reihe  -[P|p]  n  [-a]  [-m  n]  primefile  reihe  -[R|r]  n  [-a]  [-m  n]  primefile  reihe  -[R|r]  primefile  reihe  -[RI|ri]  n  [-a]  [-m  n]  primefile  reihe  -[S|s]  n  primefile`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">reihe</span> command outputs a specified row variant for a given prime
 row input. Normally, <span class="tool">reihe</span> is used to generate tone-row variants for
@@ -159,7 +159,7 @@ produces: ``
 >
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">reihe</span> command provides the following options:
 
@@ -198,7 +198,7 @@ options are thus mutually exclusive.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The sample document given below shows a 5-tone row used in Igor
 Stravinsky's \"Dirge-Canons\" from *In Memoriam Dylan Thomas.* ``
@@ -254,7 +254,7 @@ output: ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -262,7 +262,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **iv (2),  iv (4), **nf (2),  nf (4),  patt (4),  pattern (4), **pc (2),  pc (4), **pcset (2),  pcset (4), **pf (2),  pf (4),  recode (4),  semits (4)`
 

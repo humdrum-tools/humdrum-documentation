@@ -12,13 +12,13 @@ permalink:	/tool/strophe/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` strophe  [-s strophe_list | -x strophe_label]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">strophe</span> command is used to isolate or extract selective strophic
 data. Strophic data encode alternative concurrent information for a
@@ -206,7 +206,7 @@ the same record. See [EXAMPLES](#EXAMPLES) below.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The *strophe* command provides the following options:
 
@@ -222,7 +222,7 @@ Options are specified in the command line.
 
 []{#EXAMPLES}
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example is concocted to illustrate the operation of the
 <span class="tool">strophe</span> command. Consider the following Humdrum input: ``
@@ -351,7 +351,7 @@ will produce the following output: ``
 >
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -359,7 +359,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  extract (4),  thru (4), *strophe (2),  yank (4)`
 

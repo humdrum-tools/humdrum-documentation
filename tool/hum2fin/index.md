@@ -14,13 +14,13 @@ permalink:	/tool/hum2fin/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` hum2fin  inputfile  [outputfile] [-p]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">hum2fin</span> command provides the means to viewing humdrum files in
 the \"Finale\" graphical music notation editor by converting the Humdrum
@@ -114,7 +114,7 @@ upper-most part is typically represented by the right-most spine.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 -p (output unprocessed spines as textual underlay -not working)
 
@@ -133,20 +133,20 @@ the Description section for more details.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  fin2hum (4),  ms (4)`
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 <span class="tool">hum2fin</span> (or hum2fin.exe in MSDOS), artic.txt, barline.txt,
 dynam.txt, etfBegin.txt
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 Duplets <span class="tool">hum2fin</span> does not display duplets with the conventional 2
 sign. It displays duplets as dotted notes instead.
@@ -169,13 +169,13 @@ the Description section in this document.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 There are <span class="tool">hum2fin</span> versions both for unix/linux and MSDOS.
 
 ------------------------------------------------------------------------
 
-### ERRORS
+## ERRORS ##
 
 <span class="tool">hum2fin</span> has error messages when there are errors with reading input
 and output files. <span class="tool">hum2fin</span> also requires the files \"barline.txt\",
@@ -190,7 +190,7 @@ document.
 
 ------------------------------------------------------------------------
 
-### AUTHORSHIP
+## AUTHORSHIP ##
 
 The original translation program was written by Robert Gjerdingen in the
 awk programming language. The program was re-written and extended by

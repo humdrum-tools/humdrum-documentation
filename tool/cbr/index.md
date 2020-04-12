@@ -8,7 +8,7 @@ permalink:	/tool/cbr/index.html
 
 ------------------------------------------------------------------------
 
-### COMMAND
+## COMMAND ##
 
 <span class="tool">cbr</span> &mdash; translate frequency data to critical band rate, according to
 Moore & Glasberg's equation

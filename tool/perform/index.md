@@ -12,13 +12,13 @@ permalink:	/tool/perform/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` perform  [-g]  [-i hex]  [-t n.n]  [-v n]  [inputfile.hmd]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">perform</span> command allows the user to listen to synthesized
 performances of Humdrum <span class="rep">MIDI</span>-format input. When invoked, <span class="tool">perform</span>
@@ -159,7 +159,7 @@ plus and minus signs respectively.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">perform</span> command provides the following command-line options:
 
@@ -204,7 +204,7 @@ hexadecimal number.
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 When using Microsoft *Windows,* the <span class="tool">perform</span> command requires the use
 of \"standard mode;\" <span class="tool">perform</span> is unable to work in \"386 enhanced
@@ -218,21 +218,21 @@ used.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up. Microsoft *Windows,* in \"standard mode\" only. Linux
 version adapted by Craig Sapp.
 
 ------------------------------------------------------------------------
 
-### PROPOSED MODIFICATIONS
+## PROPOSED MODIFICATIONS ##
 
 The program should be modified to allow inputs to contain MIDI control
 codes and MIDI system exclusive codes.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">encode</span> (4), **encode.rc** (5), **\*\*MIDI** (2),
 <span class="tool">midi</span> (4), <span class="tool">midreset</span> (4),
@@ -241,7 +241,7 @@ codes and MIDI system exclusive codes.
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.

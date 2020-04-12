@@ -13,13 +13,13 @@ component sub-tokens
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` rend  [-s]  -i  'target_interp'  -f  reassign-file  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">rend</span> command breaks apart data tokens from selected input spines
 into one or more sub-tokens distributed across one or more newly created
@@ -93,7 +93,7 @@ case, for example, the order of the output spines will be
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">rend</span> command provides the following options:
 
@@ -110,7 +110,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 Consider the following example:
 
@@ -179,7 +179,7 @@ output.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -187,20 +187,20 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  cleave (4),  extract (4),  humsed (4),  recode (4),  regexp (4), regexp (6)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Note that, apart from spine-path terminators, no other spine-path
 indicators are permitted in spines containing the target interpretation.
 
 ------------------------------------------------------------------------
 
-### BUGS
+## BUGS ##
 
 If the interpretation targetted for processing appears in a spine
 starting with a different interpretation, the output will fail to

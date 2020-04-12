@@ -14,13 +14,13 @@ permalink:	/tool/kern/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` kern  [-x]  [inputfile ...]  [> outputfile.krn]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">kern</span> command transforms various pitch-related inputs to
 corresponding [<span class="rep">kern</span> representation](../representations/kern.html)s.
@@ -86,7 +86,7 @@ should be given names with the distinguishing \`.krn\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">kern</span> command provides the following options:
 
@@ -115,7 +115,7 @@ output. For most inputs, the <span class="option">x</span> option is recommended
 
 []{#SAMPLE OUTPUTS}
 
-### SAMPLE OUTPUTS
+## SAMPLE OUTPUTS ##
 
 The following example illustrates the use of **kern.** The input
 contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
@@ -220,14 +220,14 @@ rendered with the correct enharmonic spelling. ``
 >
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -235,13 +235,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **cents (2),  cents (4), **degree (2),  degree (4), **freq (2),  freq (4), **fret (2),  hint (4), **kern (2),  mint (4), **MIDI (2),  midi (4), **pitch (2),  pitch (4),  proof (4), **semits (2),  semits (4), **solfg (2),  solfg (4), **specC (2),  specc (4), **Tonh (2),  tonh (4)`
 
 ------------------------------------------------------------------------
 
-### BUGS
+## BUGS ##
 
 When translating <span class="rep">pitch</span>, <span class="rep">solfg</span>, or <span class="rep">Tonh</span>, inputs, <span class="tool">kern</span>
 ignores cents deviation. Hence C\#6+80 is rendered as \`ccc\#\' rather
@@ -249,7 +249,7 @@ than the nearest pitch \`ddd\'.
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Humdrum representations are expected to avoid context dependency insofar
 as possible. This can lead to unexpected results. For example, the

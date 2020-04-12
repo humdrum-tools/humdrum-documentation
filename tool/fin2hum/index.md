@@ -12,13 +12,13 @@ permalink:	/tool/fin2hum/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` fin2hum inputfile [ > outputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">fin2hum</span> command provides the means for the user to process a
 Finale enigma file with Humdrum tools by converting the Finale file into
@@ -55,13 +55,13 @@ spine, with subsequent staffs placed consecutively to the right.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  hum2fin (4),  ms (4)`
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 fin2hum (shell script), fin2hum.exe (compiled C++ executable),
 artic.txt, barline.txt, dynam.txt
@@ -74,7 +74,7 @@ Humdrum file.)
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 <span class="tool">fin2hum</span> adds natural signs according to standard orthographic rules,
 which is to place a natural sign for a note that had an accidental
@@ -85,14 +85,14 @@ are in the same measure.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 Linux, and MSDOS with MKSToolkit. The Humdrum Toolkit needs to be
 installed in the system also.
 
 ------------------------------------------------------------------------
 
-### ERRORS
+## ERRORS ##
 
 Error reading files <span class="tool">fin2hum</span> has error messages when there are errors
 with reading input and output files. <span class="tool">fin2hum</span> also requires the files
@@ -106,7 +106,7 @@ have the above tools installed.
 
 ------------------------------------------------------------------------
 
-### AUTHORSHIP
+## AUTHORSHIP ##
 
 The original translation program was written by Robert Gjerdingen in the
 awk programming language. The program was re-written and extended by

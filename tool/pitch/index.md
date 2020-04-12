@@ -13,13 +13,13 @@ to American standard pitch notation
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` pitch  [-tx]  [inputfile ...]  [ > outputfile.pit]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">pitch</span> command transforms various pitch-related inputs to the
 corresponding pitch designations approved by the American National
@@ -55,7 +55,7 @@ should be given names with the distinguishing \`.pit\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">pitch</span> command provides the following options:
 
@@ -93,7 +93,7 @@ recommended.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the use of **pitch.** The input
 contains six pitch-related spines &mdash; two of which (<span class="rep">deg</span> and
@@ -174,14 +174,14 @@ cents-deviation from equal temperament in the translation of the
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -189,7 +189,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **cents (2),  cents (4), **degree (2),  degree (4), **freq (2),  freq (4), **fret (2),  hint (4), **kern (2),  kern (4), **MIDI (2),  midi (4),  mint (4), **pitch (2), **semits (2),  semits (4), **solfg (2),  solfg (4), **specC (2)  specC (4), **Tonh (2),  tonh (4)`
 

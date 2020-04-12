@@ -13,13 +13,13 @@ permalink:	/tool/regexp/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` regexp  [inputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">regexp</span> command invokes an interactive pattern-matcher that is
 useful for formulating and refining regular expressions. *Regular
@@ -55,7 +55,7 @@ found in the UNIX **awk** command. This includes all so-called
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">regexp</span> command provides only a help option:
 
@@ -67,7 +67,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 Imagine the case where the sample text file specified in the command
 line contains the following three records:
@@ -90,7 +90,7 @@ expression are displayed in the output.
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 The regular-expression features provided by <span class="tool">regexp</span> depend on the
 local UNIX **awk** utility &mdash; as accessed via the `AWK_VER` shell
@@ -99,13 +99,13 @@ variable. Available features may change depending on the version of
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The default text file is ` $HUMDRUM/regexp.txt.`
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -113,7 +113,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` awk (UNIX), expr (UNIX),  patt (4),  pattern (4), regexp (6), sed (UNIX)`
 

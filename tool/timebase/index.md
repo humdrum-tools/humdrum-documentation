@@ -13,13 +13,13 @@ constant time-base
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` timebase  -t n[.]  [-M mark] [-m mark] [-x]  [inputfile ...]  [ > outputfile.tb]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">timebase</span> command is used to reformat <span class="rep">kern</span> or <span class="rep">recip</span>
 inputs so that output data records represent equivalent slices (elapsed
@@ -70,7 +70,7 @@ command should be given names with the distinguishing \`.tb\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">timebase</span> command provides a number of options.
 
@@ -105,7 +105,7 @@ used concurrently.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -113,13 +113,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **kern (2),  metpos (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 Depending upon the defined time-base, passages of prolonged syncopation
 may disappear from the output. The <span class="tool">timebase</span> command assumes the

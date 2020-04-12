@@ -13,13 +13,13 @@ Humdrum input
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` pattern  [-ciy]  -f templatefile  [-s regexp]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">pattern</span> command is used to locate all occurrences of a
 user-defined pattern in some Humdrum input. The patterns sought may span
@@ -183,7 +183,7 @@ before invoking the <span class="tool">pattern</span> command.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">pattern</span> command supports the following options:
 
@@ -219,7 +219,7 @@ appropriate matching passages from the input.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 For additional examples pertinent to the <span class="tool">pattern</span> command, refer to
 the [**EXAMPLES**](patt.html#EXAMPLES) section in the documentation for
@@ -231,7 +231,7 @@ for further pertinent information.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -239,7 +239,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 **grep** (UNIX), **egrep** (UNIX), <span class="tool">patt</span> (4),
 <span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
@@ -247,14 +247,14 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 If a comment is present in the template pattern, failing to specify the
 <span class="option">c</span> option will make pattern matching a logically impossibility.
 
 ------------------------------------------------------------------------
 
-### NOTE
+## NOTE ##
 
 The <span class="tool">pattern</span> command differs from the related <span class="tool">patt</span> command in the
 following ways: (1) <span class="tool">patt</span> always produces output conforming to the

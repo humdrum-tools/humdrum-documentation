@@ -12,13 +12,13 @@ permalink:	/tool/metpos/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` metpos  [-m n/n]  [-t n]  [inputfile.tb ...]  [ > outputfile.met]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">metpos</span> command is used to characterize the metric strength of
 successive sonorities in a musical passage. Specifically, <span class="tool">metpos</span>
@@ -87,7 +87,7 @@ extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">metpos</span> command provides the following options:
 
@@ -106,7 +106,7 @@ set the initial time-base duration to *n*
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUTS
+## SAMPLE OUTPUTS ##
 
 The following extract from Bartók's \"Two-Part Study\" No. 121 from
 *Mikrokosmos* demonstrates the effect of the <span class="tool">metpos</span> command. The two
@@ -173,7 +173,7 @@ correctly distinguishes between metric accent patterns such as 6/4
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 It is possible to define a time-base that makes little sense with
 respect to the meter signature. For example, it is possible to set the
@@ -182,7 +182,7 @@ resulting metric heirarchy (1,3,3) will produce \"hemiola\" values.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -190,13 +190,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **kern (2), **recip (2),  timebase (4)`
 
 ------------------------------------------------------------------------
 
-### LIMITS
+## LIMITS ##
 
 In a number of meters, <span class="tool">metpos</span> is limited in the depth of permissible
 metric positions. These limitations are tabulated below:
@@ -245,7 +245,7 @@ Meter signatures NOT handled by <span class="tool">metpos</span> include:
 >
 ------------------------------------------------------------------------
 
-### PROPOSED MODIFICATIONS
+## PROPOSED MODIFICATIONS ##
 
 Irregular meters such as 5/4 or 7/8 should be acceptable provided the
 beat subdivisions are made explicit: e.g. 5/4 as (3+2)/4 or 5/4 as

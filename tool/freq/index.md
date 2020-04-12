@@ -13,13 +13,13 @@ frequency
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` freq  [-p n]  [-tx]  [inputfile ...]  [> outputfile"]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">freq</span> command transforms various pitch-related inputs to
 corresponding frequency representations. It outputs one or more Humdrum
@@ -55,7 +55,7 @@ should be given names with the distinguishing \`\"\' extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">freq</span> command provides the following options:
 
@@ -93,7 +93,7 @@ the <span class="option">x</span> option is recommended.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The following example illustrates the use of **freq.** The input
 contains six pitch-related spines &mdash; one of which (<span class="rep">deg</span>) cannot be
@@ -167,14 +167,14 @@ stripped away (due to the <span class="option">x</span> option).
 
 ------------------------------------------------------------------------
 
-### FILES
+## FILES ##
 
 The file `x_option.awk` is used by this program when the <span class="option">x</span> option
 is invoked.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -182,7 +182,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **cbr (2),  cbr (4), **cents (2),  cents (4), **cocho (2),  cocho (4), **freq (2), **fret (2), **kern (2),  kern (4), **MIDI (2),  midi (4), **pitch (2),  pitch (4), **semits (2),  semits (4), **solfg (2),  solfg (4), **specC (2),  specC (4), **Tonh (2),  tonh (4)`
 

@@ -13,13 +13,13 @@ permalink:	/tool/key/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` key  [-af]  [inputfile ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">key</span> command estimates the key of a given musical passage using
 Krumhansl's tonal hiearchy method. The command is restricted to
@@ -64,7 +64,7 @@ There is no special output file-type designation.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">key</span> command provides the following options:
 
@@ -84,7 +84,7 @@ twelve chromatic pitch classes (in quarter-note durations).
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUT
+## SAMPLE OUTPUT ##
 
 Without any options, typical outputs are of the following form:
 
@@ -164,7 +164,7 @@ or degree of chromaticism for a passage.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -172,13 +172,13 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` **kern (2),  kern (4), **semits (2),  semits (4),  timebase (4)`
 
 ------------------------------------------------------------------------
 
-### WARNINGS
+## WARNINGS ##
 
 As noted, <span class="tool">key</span> is very limited. When used to find \"the key\" of a
 particular work, it frequently produces incorrect results. In
@@ -188,13 +188,13 @@ discussion under \"proposed modifications.\"
 
 ------------------------------------------------------------------------
 
-### BUGS
+## BUGS ##
 
 The current version does not handle multiple stops in ` **kern` spines.
 
 ------------------------------------------------------------------------
 
-### NOTES
+## NOTES ##
 
 Currently the program is sensitive to ` **semits` and ` **kern`
 interpretations. If no recognizable interpretation is given in the input
@@ -205,7 +205,7 @@ erroneous results.
 
 []{#REFERENCES}
 
-### REFERENCES
+## REFERENCES ##
 
 Krumhansl, C. *Cognitive Foundations of Musical Pitch,* Oxford: Oxford
 University Press, 1990, Chapter 4.
@@ -218,7 +218,7 @@ keys,\" *Psychological Review,* Vol. 89 (1982) pp.334-368.
 
 ------------------------------------------------------------------------
 
-### PROPOSED MODIFICATIONS
+## PROPOSED MODIFICATIONS ##
 
 The <span class="tool">key</span> command is likely to appeal to two types of uses: (1) those
 who are interested in knowing the key of a musical work without having

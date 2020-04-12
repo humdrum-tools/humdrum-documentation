@@ -12,13 +12,13 @@ permalink:	/tool/ydelta/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` ydelta  [-o]  [-s  regexp]  -i '**interpretation'  [inputfile]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">ydelta</span> command outputs a single spine containing numeric data
 representing the numeric differences for concurrent tokens in specified
@@ -35,7 +35,7 @@ named ` **Ysemits.`
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">ydelta</span> command provides the following option:
 
@@ -53,7 +53,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### EXAMPLES
+## EXAMPLES ##
 
 The operation of <span class="tool">ydelta</span> is best illustrated using an example.
 Consider the following input file called `praetorius`: ``
@@ -139,7 +139,7 @@ null token (.) is output (see for example, the barlines).
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -147,7 +147,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  hint (4),  regexp (4), regexp (6),  xdelta (4)`
 

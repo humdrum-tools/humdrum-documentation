@@ -13,13 +13,13 @@ permalink:	/tool/fields/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` fields  [-gils]  [-r regexp]  [inputfile ...]  [  > outputfile.ftf]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">fields</span> command works in conjunction with the <span class="option">t</span> option of
 the <span class="tool">extract</span> command to permit highly selective extraction of data
@@ -83,7 +83,7 @@ extension.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">fields</span> command provides the following options:
 
@@ -100,7 +100,7 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### SAMPLE OUTPUTS
+## SAMPLE OUTPUTS ##
 
 Consider by way of illustration the following input file: ``
 
@@ -187,7 +187,7 @@ been listed.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -195,7 +195,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 `  extract (4),  regexp (4), regexp (6)`
 

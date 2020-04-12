@@ -13,13 +13,13 @@ permalink:	/tool/midireset/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` midreset`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">midreset</span> command resets the MIDI controller card. The
 <span class="tool">midreset</span> command is useful if a MIDI application has terminated
@@ -27,7 +27,7 @@ abnormally &mdash; leaving the MIDI card unaccessable to further use.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">midreset</span> command provides only a help option:
 
@@ -39,20 +39,20 @@ Options are specified in the command line.
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up.
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 <span class="tool">perform</span> (4), <span class="tool">smf</span> (4),
 <span class="tool">tacet</span> (4)
 
 ------------------------------------------------------------------------
 
-### REFERENCES
+## REFERENCES ##
 
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.

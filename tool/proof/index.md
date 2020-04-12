@@ -12,13 +12,13 @@ permalink:	/tool/proof/index.html
 
 ------------------------------------------------------------------------
 
-### SYNOPSIS
+## SYNOPSIS ##
 
 ` proof  [-w]  [inputfile.krn ...]`
 
 ------------------------------------------------------------------------
 
-### DESCRIPTION
+## DESCRIPTION ##
 
 The <span class="tool">proof</span> command checks the syntax of
 [<span class="rep">kern</span>-encoded](../representations/kern.html) files. It may be used
@@ -49,7 +49,7 @@ signature declarations.
 
 ------------------------------------------------------------------------
 
-### OPTIONS
+## OPTIONS ##
 
 The <span class="tool">proof</span> command provides the following options:
 
@@ -65,7 +65,7 @@ error messages are output.
 
 ------------------------------------------------------------------------
 
-### DIAGNOSTICS
+## DIAGNOSTICS ##
 
 The following list tabulates all of the potential errors and warnings
 issued by the <span class="tool">proof</span> command. ``
@@ -108,7 +108,7 @@ issued by the <span class="tool">proof</span> command. ``
 
 ------------------------------------------------------------------------
 
-### PORTABILITY
+## PORTABILITY ##
 
 DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
@@ -116,7 +116,7 @@ interpreters, and revised *awk* (1985).
 
 ------------------------------------------------------------------------
 
-### SEE ALSO
+## SEE ALSO ##
 
 ` census census (4), encode humdrum **kern (2) encode (4), humdrum (4), **kern (2)`
 
