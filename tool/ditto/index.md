@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- ditto'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/ditto/index.html
@@ -70,7 +70,7 @@ The following inputs and outputs illustrate the operation of the
 <span class="tool">ditto</span> command. Consider the following input: ``
 
 -------------- ----------
-!! Example 1   
+!! Example 1
 \*\*kern       \*\*kern
 16e-           8r
 16d            .
@@ -100,7 +100,7 @@ Invoking the command:
 produces the following output: ``
 
 -------------- ----------
-!! Example 1   
+!! Example 1
 \*\*kern       \*\*kern
 16e-           8r
 16d            8r
@@ -138,28 +138,28 @@ following command:
 ``
 
 --------------- --------- --------- -- --------------- -- --------- --------- ---------
-**INPUT``**                            **OUTPUT``**                           
-!! Example 2                           !! Example 2                           
+**INPUT``**                            **OUTPUT``**
+!! Example 2                           !! Example 2
 \*\*foo         \*\*foo   \*\*bar                         \*\*foo   \*\*foo   \*\*bar
 a               xyz       .                               a         xyz       .
 .               23        (%&)                            (a)       23        (%&)
 =2              =2        =2                              =2        =2        =2
 .               .         .                               (a)       (23)      ((%&))
-!! A comment.                          !! A comment.                          
+!! A comment.                          !! A comment.
 .               .         49                              (a)       (23)      49
 \*x             \*        \*x                             \*x       \*        \*x
 .               .         .                               (49)      (23)      (a)
 \*              \*v       \*v                             \*        \*v       \*v
-.               .                                         (49)      (23 a)    
-abc             XYZ                                       abc       XYZ       
-\*              \*\^                                      \*        \*\^      
+.               .                                         (49)      (23 a)
+abc             XYZ                                       abc       XYZ
+\*              \*\^                                      \*        \*\^
 .               .         .                               (abc)     (XYZ)     (XYZ)
 .               1a        2b                              (abc)     1a        2b
 =3              =3        =3                              =3        =3        =3
 \*-             \*        \*                              \*-       \*        \*
-.               .                                         (1a)      (2b)      
-====            ====                                      ====      ====      
-\*+             \*                                        \*+       \*        
+.               .                                         (1a)      (2b)
+====            ====                                      ====      ====
+\*+             \*                                        \*+       \*
 \*\*foo         \*\*foo   \*\*bar                         \*\*foo   \*\*foo   \*\*bar
 .               .         .                               (1a)      .         (2b)
 \*-             \*-       \*-                             \*-       \*-       \*-
@@ -183,7 +183,7 @@ the right. The output was produced by invoking the following command:
 ``
 
 ----------- ---------- -- -- -- -- ------------ ---------- ----------
-**INPUT**                          **OUTPUT**              
+**INPUT**                          **OUTPUT**
 \*\*kern    \*\*kern                            \*\*kern   \*\*kern
 (4g         8b                                  (4g        8b
 .           8cc                                 g          8cc

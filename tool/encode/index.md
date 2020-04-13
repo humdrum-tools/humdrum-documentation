@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- encode'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/encode/index.html
@@ -435,7 +435,7 @@ The various built-in commands in <span class="tool">encode</span> are summarized
 following table.
 
 --------------------- ------------------------------------------------------------------------
-**EDIT MODE**         
+**EDIT MODE**
 CTRL-F                scroll forward one page
 CTRL-B                scroll backward one page
 CTRL-D                scroll down by half a page
@@ -470,14 +470,14 @@ A                     invoke MIDI INPUT MODE; insert data beginning with the nex
 I                     invoke MIDI INPUT MODE; insert data beginning with the previous line
 \<*number*\>          repeat ensuing command \<*number*\> times
 
-**INPUT MODE**        
+**INPUT MODE**
 ESC                   return to EDIT MODE
 return to EDIT MODE
 
-**MIDI INPUT MODE**   
+**MIDI INPUT MODE**
 ESC                   complete last MIDI event and return to EDIT MODE
 
-**COMMAND MODE**      
+**COMMAND MODE**
 b *n*                 append run-control buffer number *n* following current cursor position
 B *n*                 insert run-control buffer number *n* before current cursor position
 m                     invoke interactive proof-listening for <span class="rep">kern</span> or <span class="rep">MIDI</span> text

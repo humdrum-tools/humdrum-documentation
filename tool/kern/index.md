@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- kern'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/kern/index.html
@@ -124,7 +124,7 @@ contains six pitch-related spines &mdash; two of which (<span class="rep">deg</s
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 ------------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
-!! \`kern\' example \#1                                                                         
+!! \`kern\' example \#1
 \*\*specC                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
 \*M2/4                    \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
 \*                        \*          \*          \*        \*tb8        \*          \*         \*
@@ -156,7 +156,7 @@ Executing the command
 produces the following result: ``
 
 ------------------------- ---------- ---------- --------- ------------ ----------- ---------- ------------
-!! \`kern\' example \#1                                                                       
+!! \`kern\' example \#1
 \*\*kern                  \*\*kern   \*\*kern   \*\*deg   \*\*metpos   \*\*cocho   \*\*kern   \*\*embell
 \*M2/4                    \*M2/4     \*M2/4     \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
 \*                        \*         \*         \*        \*tb8        \*          \*         \*

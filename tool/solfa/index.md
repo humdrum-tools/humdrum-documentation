@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- solfa'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/solfa/index.html
@@ -127,7 +127,7 @@ processed by <span class="tool">solfa</span>. In addition, there is one non-pitc
 spines (<span class="rep">embell</span>). ``
 
 ----------------------- ---------- ----------- ----------- ----------- ------------
-!! \`solfa\' example.                                                  
+!! \`solfa\' example.
 \*\*kern                \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
 \*M2/4                  \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
 \*C:                    \*d:       \*G\#:      \*a:        \*F:        \*F:
@@ -159,7 +159,7 @@ Executing the command:
 produces the following result: ``
 
 ----------------------- ----------- ----------- ----------- ----------- ------------
-!! \`solfa\' example.                                                   
+!! \`solfa\' example.
 \*\*solfa               \*\*solfa   \*\*MIDI    \*\*solfa   \*\*solfa   \*\*embell
 \*M2/4                  \*M2/4      \*M2/4      \*M2/4      \*M2/4      \*M2/4
 \*C:                    \*d:        \*G\#:      \*a:        \*F:        \*F:

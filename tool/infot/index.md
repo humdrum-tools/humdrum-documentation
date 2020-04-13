@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- infot'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/infot/index.html

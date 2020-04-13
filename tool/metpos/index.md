@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- metpos'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/metpos/index.html
@@ -241,7 +241,7 @@ Meter signatures NOT handled by <span class="tool">metpos</span> include:
 5/4,    7/4,    8/4,    10/4,    11/4,    13/4,    14/4,    15/4,    16/4,
 5/8,    7/8,    8/8,    10/8,    11/8,    13/8,    14/8,    15/8,    16/8,
 5/16,   7/16,   8/16,   10/16,   11/16,   13/16,   14/16,   15/16,   16/16,
-etc.                                                                 
+etc.
 ------- ------- ------- -------- -------- -------- -------- -------- --------
 
 ------------------------------------------------------------------------

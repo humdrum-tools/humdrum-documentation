@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- mint'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/mint/index.html

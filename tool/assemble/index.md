@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- assemble'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 sidebar:	main_sidebar
 vim:		ft=html
@@ -115,9 +115,9 @@ records (4).
 X            .            X
 X            .            .
 \*           \*v          \*v
-X            X            
-.            X            
-\*-          \*-          
+X            X
+.            X
+\*-          \*-
 --------- -- --------- -- ---------
 
 **file2:**
@@ -133,10 +133,10 @@ X            X
 .          .
 X          X
 \*v        \*v
-! joined   
-X          
-.          
-\*-        
+! joined
+X
+.
+\*-
 ---------- ---------
 
 If the <span class="tool">assemble</span> command is invoked as:
@@ -158,11 +158,11 @@ then the corresponding output is: ``
 X         .         X          .         .
 X         .         .          X         X
 \*        \*v       \*v        \*        \*
-\*        \*        \*v        \*v       
-!         !         ! joined             
-X         X         X                    
-.         X         .                    
-\*-       \*-       \*-                  
+\*        \*        \*v        \*v
+!         !         ! joined
+X         X         X
+.         X         .
+\*-       \*-       \*-
 --------- --------- ---------- --------- ---------
 
 Notice that both input files begin with the identical global comment;

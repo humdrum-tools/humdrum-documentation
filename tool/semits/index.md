@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- semits'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/semits/index.html
@@ -103,7 +103,7 @@ contains six pitch-related spines &mdash; two of which (<span class="rep">deg</s
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 ------------------------ ----------- ----------- --------- ------------ ----------- ---------- ------------
-!! \`semits\' example.                                                                         
+!! \`semits\' example.
 \*\*kern                 \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
 \*M2/4                   \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
 \*                       \*          \*          \*        \*tb8        \*          \*         \*
@@ -135,7 +135,7 @@ Executing the command
 produces the following result: ``
 
 ------------------------ ------------ ------------ --------- ------------ ----------- ------------ ------------
-!! \`semits\' example.                                                                             
+!! \`semits\' example.
 \*\*semits               \*\*semits   \*\*semits   \*\*deg   \*\*metpos   \*\*cocho   \*\*semits   \*\*embell
 \*M2/4                   \*M2/4       \*M2/4       \*M2/4    \*M2/4       \*M2/4      \*M2/4       \*M2/4
 \*                       \*           \*           \*        \*tb8        \*          \*           \*

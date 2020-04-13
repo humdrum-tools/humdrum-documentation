@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- freq'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/freq/index.html
@@ -102,7 +102,7 @@ processed by <span class="tool">freq</span>. In addition, there are two non-pitc
 spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 ---------------------- ----------- ----------- --------- ------------ ----------- ---------- ------------
-!! \`freq\' example.                                                                         
+!! \`freq\' example.
 \*\*kern               \*\*pitch   \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*Tonh   \*\*embell
 \*M2/4                 \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4     \*M2/4
 \*                     \*          \*          \*        \*tb8        \*          \*         \*
@@ -134,7 +134,7 @@ Executing the command
 produces the following result: ``
 
 ---------------------- --------------- --------------- --------- ------------ --------------- --------------- ------------
-!! \`freq\' example.                                                                                          
+!! \`freq\' example.
 \*\*freq               \*\*freq        \*\*freq        \*\*deg   \*\*metpos   \*\*freq        \*\*freq        \*\*embell
 \*M2/4                 \*M2/4          \*M2/4          \*M2/4    \*M2/4       \*M2/4          \*M2/4          \*M2/4
 \*                     \*              \*              \*        \*tb8        \*              \*              \*

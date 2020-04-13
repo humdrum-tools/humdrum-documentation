@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- rend'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/rend/index.html
@@ -140,7 +140,7 @@ Given this command, the following input: ``
 
 --------------------- ------------ ----------
 \*\*kern              \*\*lyrics   \*\*kern
-!! Commented input.                
+!! Commented input.
 8.G                   Hi-          4r
 16G\#                 de-          .
 =23                   =23          =23
@@ -159,7 +159,7 @@ will produce the following output: ``
 
 --------------------- ----------- ------------ ----------- -----------
 \*\*notes             \*\*rests   \*\*lyrics   \*\*notes   \*\*rests
-!! Commented input.                                        
+!! Commented input.
 G                     8.          Hi-          .           4r
 G\#                   16          de-          .           .
 =23                   =23         =23          =23         =23
@@ -231,10 +231,10 @@ spine-path indicators between lines 4 and 5 (hence the output is
 non-Humdrum). ``
 
 --------- --------- --------- ---------
-\*\*let   \*\*num   \*\*ex2   
-a         1         b2        
-\*tand1   \*tand1   \*tand2   
-c         3         d4        
+\*\*let   \*\*num   \*\*ex2
+a         1         b2
+\*tand1   \*tand1   \*tand2
+c         3         d4
 \*        \*        \*\*let   \*\*num
 e         5         f         6
 \*-       \*-       \*-       \*-

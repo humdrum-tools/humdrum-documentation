@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- synco'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/synco/index.html
@@ -151,7 +151,7 @@ syncopated moment happens at beat 2. The output was produced using the
 simple command: `synco inputfile`. ``](timebase.html)
 
 ---------------- ------------ -----------
-!! Example \#1                
+!! Example \#1
 \*\*pitch        \*\*metpos   \*\*synco
 \*M2/4           \*M2/4       \*
 \*tb8            \*tb8        \*tb8
@@ -180,7 +180,7 @@ amalgamated, and that the non-pitch spine (<span class="rep">foo</span>) has no 
 processing. ``
 
 ---------------- ---------- ------------ ---------- -----------
-!! Example \#2                                      
+!! Example \#2
 \*\*foo          \*\*kern   \*\*metpos   \*\*kern   \*\*synco
 \*               \*M2/4     \*M2/4       \*M2/4     \*
 \*               \*tb8      \*tb8        \*tb8      \*tb8

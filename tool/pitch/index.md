@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- pitch'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/pitch/index.html
@@ -102,7 +102,7 @@ contains six pitch-related spines &mdash; two of which (<span class="rep">deg</s
 non-pitch-related spines (<span class="rep">embell</span> and <span class="rep">metpos</span>). ``
 
 ----------------------- ------------ ----------- --------- ------------ ----------- ------------ ------------
-!! \`pitch\' example.                                                                            
+!! \`pitch\' example.
 \*\*kern                \*\*freq     \*\*MIDI    \*\*deg   \*\*metpos   \*\*cocho   \*\*degree   \*\*embell
 \*M2/4                  \*M2/4       \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4       \*M2/4
 \*                      \*           \*          \*        \*           \*          \*d:         \*
@@ -135,7 +135,7 @@ Executing the command
 produces the following result: ``
 
 ----------------------- ----------- ----------- --------- ------------ ----------- ----------- ------------
-!! \`pitch\' example.                                                                          
+!! \`pitch\' example.
 \*\*pitch               \*\*pitch   \*\*pitch   \*\*deg   \*\*metpos   \*\*cocho   \*\*pitch   \*\*embell
 \*M2/4                  \*M2/4      \*M2/4      \*M2/4    \*M2/4       \*M2/4      \*M2/4      \*M2/4
 \*                      \*          \*          \*        \*           \*          \*d:        \*

@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- rid'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/rid/index.html
@@ -92,8 +92,8 @@ The following examples illustrate the use of <span class="tool">rid</span>. Cons
 following input file: ``
 
 -------------------- -----------
-!! \`rid\' example   
-!!                   
+!! \`rid\' example
+!!
 \*\*abc              \*\*xyz
 \*tand               \*em
 12                   .
@@ -115,8 +115,8 @@ will eliminate all null data records, all null local comments, and any
 unnecessary (duplicate) exclusive interpretations: ``
 
 -------------------- -----------
-!! \`rid\' example   
-!!                   
+!! \`rid\' example
+!!
 \*\*abc              \*\*xyz
 \*tand               \*em
 12                   .

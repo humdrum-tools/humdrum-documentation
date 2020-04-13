@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- degree'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/degree/index.html
@@ -124,7 +124,7 @@ processed by <span class="tool">degree</span>. In addition, there is one non-pit
 spines (<span class="rep">embell</span>). ``
 
 ------------------------ ---------- ----------- ----------- ----------- ------------
-!! \`degree\' example.                                                  
+!! \`degree\' example.
 \*\*kern                 \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
 \*M2/4                   \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
 \*C:                     \*d:       \*G\#:      \*a:        \*F:        \*F:
@@ -156,7 +156,7 @@ Executing the command:
 produces the following result: ``
 
 ------------------------ ------------ ----------- ------------ ------------ ------------
-!! \`degree\' example.                                                      
+!! \`degree\' example.
 \*\*degree               \*\*degree   \*\*MIDI    \*\*degree   \*\*degree   \*\*embell
 \*M2/4                   \*M2/4       \*M2/4      \*M2/4       \*M2/4       \*M2/4
 \*C:                     \*d:         \*G\#:      \*a:         \*F:         \*F:

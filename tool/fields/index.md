@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- fields'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/fields/index.html
@@ -106,18 +106,18 @@ Options are specified in the command line.
 Consider by way of illustration the following input file: ``
 
 ----------------------- ----------- ------------- ------
-!! \`fields\' example                             
-\*\*numbers             \*\*alpha   \*\*symbols   
-\*                      \*betics    \*            
-14                      abc         \%@           
-!some                   !local      !comments     
-3                       .           \#&           
-\*-                     \*          \*            
-jkl                     \$+                       
-!! a global comment                               
-\*\^                    \*                        
-uvw                     xyz         &%            
-\*                      \*+         \*            
+!! \`fields\' example
+\*\*numbers             \*\*alpha   \*\*symbols
+\*                      \*betics    \*
+14                      abc         \%@
+!some                   !local      !comments
+3                       .           \#&
+\*-                     \*          \*
+jkl                     \$+
+!! a global comment
+\*\^                    \*
+uvw                     xyz         &%
+\*                      \*+         \*
 \*                      \*          \*\*numbers   \*
 mno                     pqr         87            {\^}
 \*-                     \*-         \*-           \*-

@@ -19,3 +19,6 @@ misc:
 headings:
 	$(BIN)/convertHeading */index.md
 
+spaces:
+	$(BIN)/cleanSpaces */index.md
+

@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- deg'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/deg/index.html
@@ -129,7 +129,7 @@ processed by <span class="tool">deg</span>. In addition, there is one non-pitch-
 ``
 
 --------------------- ---------- ----------- ----------- ----------- ------------
-!! \`deg\' example.                                                  
+!! \`deg\' example.
 \*\*kern              \*\*Tonh   \*\*MIDI    \*\*solfg   \*\*pitch   \*\*embell
 \*M2/4                \*M2/4     \*M2/4      \*M2/4      \*M2/4      \*M2/4
 \*C:                  \*d:       \*G\#:      \*a:        \*F:        \*F:
@@ -163,7 +163,7 @@ produces the following result:
 ``
 
 --------------------- --------- ----------- --------- --------- ------------
-!! \`deg\' example.                                             
+!! \`deg\' example.
 \*\*deg               \*\*deg   \*\*MIDI    \*\*deg   \*\*deg   \*\*embell
 \*M2/4                \*M2/4    \*M2/4      \*M2/4    \*M2/4    \*M2/4
 \*C:                  \*d:      \*G\#:      \*a:      \*F:      \*F:

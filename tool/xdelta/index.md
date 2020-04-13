@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- xdelta'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/xdelta/index.html

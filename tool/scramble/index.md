@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- scramble'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/scramble/index.html
@@ -93,8 +93,8 @@ The use of the <span class="tool">scramble</span> command can be illustrated usi
 following input: ``
 
 --------------------- -----------
-!! A global comment   
-!! Another comment    
+!! A global comment
+!! Another comment
 \*\*inter             \*\*inter
 \*abcd                \*efgh
 =1                    =1
@@ -103,7 +103,7 @@ following input: ``
 2                     b1 b2 b3
 3                     c
 =2                    =2
-!! A later comment.   
+!! A later comment.
 4a 4b                 d
 =3                    =3
 5                     e
@@ -117,8 +117,8 @@ When processed using the *record mode,* the command:
 might produce the following output: ``
 
 --------------------- -----------
-!! A global comment   
-!! Another comment    
+!! A global comment
+!! Another comment
 \*\*inter             \*\*inter
 \*abcd                \*efgh
 =1                    =1
@@ -127,7 +127,7 @@ might produce the following output: ``
 5                     e
 1a 1b                 a
 =2                    =2
-!! A later comment.   
+!! A later comment.
 4a 4b                 d
 =3                    =3
 2                     b1 b2 b3
@@ -146,8 +146,8 @@ When processed using the *token mode,* the command:
 might produce the following output: ``
 
 --------------------- -----------
-!! A global comment   
-!! Another comment    
+!! A global comment
+!! Another comment
 \*\*inter             \*\*inter
 \*abcd                \*efgh
 =1                    =1
@@ -156,7 +156,7 @@ might produce the following output: ``
 b2                    b3 2 b1
 c                     3
 =2                    =2
-!! A later comment.   
+!! A later comment.
 4a 4b                 d
 =3                    =3
 5                     e

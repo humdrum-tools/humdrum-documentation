@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- pc'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/pc/index.html
@@ -107,7 +107,7 @@ The following example illustrates the use of <span class="tool">pc</span>. The i
 four spines &mdash; one of which (<span class="rep">foo</span>) cannot be processed by <span class="tool">pc</span>. ``
 
 -------------------- ---------- ------------ ---------
-!! \`pc\' example.                           
+!! \`pc\' example.
 \*\*semits           \*\*kern   \*\*pc       \*\*foo
 \*M2/4               \*M2/4     \*           \*
 =1                   =1         =1           .
@@ -133,7 +133,7 @@ Executing the command
 produces the following result: ``
 
 -------------------- -- -------- -- -------- -- ---------
-!! \`pc\' example.                              
+!! \`pc\' example.
 \*\*pc                  \*\*pc      \*\*pc      \*\*foo
 \*M2/4                  \*M2/4      \*          \*
 =1                      =1          =1          .

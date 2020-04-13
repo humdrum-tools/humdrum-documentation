@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- strophe'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/strophe/index.html
@@ -59,14 +59,14 @@ example encodes a melodic phrase containing four numbered verses from
 -------------------------------------------------------------------
 
 ----------------- ----------------- ---------- --------- ----------
-\*\*kern          \*\*text                               
-\*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]                        
-\*\>V             \*\>V                                  
-\*k\[b-e-\]       \*Deutsch                              
-\*                \*solo                                 
-\*                \*strophe                              
-\*                \*\^                                   
-\*                \*\^              \*\^                 
+\*\*kern          \*\*text
+\*\>\[V,V,V,V\]   \*\>\[V,V,V,V\]
+\*\>V             \*\>V
+\*k\[b-e-\]       \*Deutsch
+\*                \*solo
+\*                \*strophe
+\*                \*\^
+\*                \*\^              \*\^
 \*                \*S/1             \*S/2      \*S/3     \*S/4
 8f                Das               Vom        Das       Die
 =5                =5                =5         =5        =5
@@ -88,8 +88,8 @@ example encodes a melodic phrase containing four numbered verses from
 8r                \%                \%         \%        \%
 \*                \*S/fin           \*S/fin    \*S/fin   \*S/fin
 \*                \*v               \*v        \*v       \*v
-\*                \*S-                                   
-\*-               \*-                                    
+\*                \*S-
+\*-               \*-
 ----------------- ----------------- ---------- --------- ----------
 
 Notice that this file contains a single section labelled \`V\' (verse)
@@ -229,33 +229,33 @@ The following example is concocted to illustrate the operation of the
 <span class="tool">strophe</span> command. Consider the following Humdrum input: ``
 
 ------------------------- -------------------- ---------
-!! \`strophe\' example.                        
-\*\*example               \*\*bar              
-\*\>\[A,V,V,Coda\]        \*\>\[A,V,V,Coda\]   
-\*\>A                     \*\>A                
-A                         i                    
-\*\>V                     \*\>V                
-\*                        \*\*foo              
-\*                        \*strophe            
-\*                        \*\^                 
+!! \`strophe\' example.
+\*\*example               \*\*bar
+\*\>\[A,V,V,Coda\]        \*\>\[A,V,V,Coda\]
+\*\>A                     \*\>A
+A                         i
+\*\>V                     \*\>V
+\*                        \*\*foo
+\*                        \*strophe
+\*                        \*\^
 \*                        \*S/1                \*S/2
 B                         1                    2
 \*                        \*S/fin              \*S/fin
 \*                        \*v                  \*v
-\*                        \*S-                 
-\*                        \*\*bar              
-C                         refrain              
-\*                        \*strophe            
-\*                        \*\^                 
+\*                        \*S-
+\*                        \*\*bar
+C                         refrain
+\*                        \*strophe
+\*                        \*\^
 \*                        \*S/1.1              \*S/2.1
 B                         1                    2
 \*                        \*S/fin              \*S/fin
 \*                        \*v                  \*v
-\*                        \*S-                 
-\*\>Coda                  \*\>Coda             
-\*                        \*\*foo              
-E                         i                    
-\*-                       \*-                  
+\*                        \*S-
+\*\>Coda                  \*\>Coda
+\*                        \*\*foo
+E                         i
+\*-                       \*-
 ------------------------- -------------------- ---------
 
 Since this file is in abbreviated format, we must first expand it to
@@ -263,56 +263,56 @@ through-composed form using the <span class="tool">thru</span> command. The
 resulting output is: ``
 
 ------------------------- -- -- ----------- -- -- ---------
-!! \`strophe\' example.                           
-\*\*example                     \*\*bar           
-\*thru                          \*thru            
-\*\>A                           \*\>A             
-A                               i                 
-\*\>V                           \*\>V             
-\*                              \*\*foo           
-\*                              \*thru            
-\*                              \*strophe         
-\*                              \*\^              
+!! \`strophe\' example.
+\*\*example                     \*\*bar
+\*thru                          \*thru
+\*\>A                           \*\>A
+A                               i
+\*\>V                           \*\>V
+\*                              \*\*foo
+\*                              \*thru
+\*                              \*strophe
+\*                              \*\^
 \*                              \*S/1             \*S/2
 B                               1                 2
 \*                              \*S/fin           \*S/fin
 \*                              \*v               \*v
-\*                              \*S-              
-\*                              \*\*bar           
-\*                              \*thru            
-C                               refrain           
-\*                              \*strophe         
-\*                              \*\^              
+\*                              \*S-
+\*                              \*\*bar
+\*                              \*thru
+C                               refrain
+\*                              \*strophe
+\*                              \*\^
 \*                              \*S/1.1           \*S/2.1
 B                               1                 2
 \*                              \*S/fin           \*S/fin
 \*                              \*v               \*v
-\*                              \*S-              
-\*\>V                           \*\>V             
-\*                              \*\*foo           
-\*                              \*thru            
-\*                              \*strophe         
-\*                              \*\^              
+\*                              \*S-
+\*\>V                           \*\>V
+\*                              \*\*foo
+\*                              \*thru
+\*                              \*strophe
+\*                              \*\^
 \*                              \*S/1             \*S/2
 B                               1                 2
 \*                              \*S/fin           \*S/fin
 \*                              \*v               \*v
-\*                              \*S-              
-\*                              \*\*bar           
-\*                              \*thru            
-C                               refrain           
-\*                              \*strophe         
-\*                              \*\^              
+\*                              \*S-
+\*                              \*\*bar
+\*                              \*thru
+C                               refrain
+\*                              \*strophe
+\*                              \*\^
 \*                              \*S/1.1           \*S/2.1
 B                               1                 2
 \*                              \*S/fin           \*S/fin
 \*                              \*v               \*v
-\*                              \*S-              
-\*\>Coda                        \*\>Coda          
-\*                              \*\*foo           
-\*                              \*thru            
-E                               i                 
-\*-                             \*-               
+\*                              \*S-
+\*\>Coda                        \*\>Coda
+\*                              \*\*foo
+\*                              \*thru
+E                               i
+\*-                             \*-
 ------------------------- -- -- ----------- -- -- ---------
 
 The command:
@@ -322,7 +322,7 @@ The command:
 will produce the following output: ``
 
 ------------------------- ----------
-!! \`strophe\' example.   
+!! \`strophe\' example.
 \*\*example               \*\*bar
 \*thru                    \*thru
 \*\>A                     \*\>A

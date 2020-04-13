@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- census'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/census/index.html
@@ -65,7 +65,7 @@ from the output.
 ``
 
 ---------------------------- ----
-HUMDRUM DATA                 
+HUMDRUM DATA
 Number of data tokens:       33
 Number of null tokens:       9
 Number of multiple-stops:    1
@@ -73,7 +73,7 @@ Number of data records:      11
 Number of interpretations:   2
 Number of records:           14
 
-KERN DATA                    
+KERN DATA
 Number of note-heads:        8
 Number of notes:             7
 Longest note:                2

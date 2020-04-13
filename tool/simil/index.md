@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- simil'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/simil/index.html
@@ -181,7 +181,7 @@ may effectively eliminate a given edit operation by defining an
 arbitrarily high edit penalty. ``
 
 ----------------------- -----
-\# This is a comment.   
+\# This is a comment.
 R1                      0.7
 R2                      0.9
 ----------------------- -----

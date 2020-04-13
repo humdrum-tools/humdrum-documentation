@@ -1,7 +1,7 @@
 ---
 title:		'Humdrum Toolkit Command Reference -- extract'
 author:		David Huron
-last-edited:	
+last-edited:
 chapternav:	tool
 vim:		ft=html
 permalink:	/tool/extract/index.html
@@ -158,7 +158,7 @@ The following examples illustrate the various <span class="tool">extract</span> 
 Consider the following input file, dubbed `input1`: ``
 
 ---------------------------- --------- --------- --------- ---------
-!! \`extract\' example \#1                                 
+!! \`extract\' example \#1
 \*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo
 A                            x         1         a         bar
 B                            y         2         b         .
@@ -177,7 +177,7 @@ or
 would produce the following result: ``
 
 ---------------------------- --------- ---------
-!! \`extract\' example \#1             
+!! \`extract\' example \#1
 \*\*ABC                      \*\*123   \*\*ABC
 A                            1         a
 B                            2         b
@@ -188,22 +188,22 @@ C                            3         c
 Consider next the following sample input &mdash; dubbed `input2`: ``
 
 ---------------------------- --------- --------- --------- --------- ----
-!! \`extract\' example \#2                                           
-\*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo   
-A                            x         1         a         \%        
-\*                           \*        \*\^      \*        \*        
+!! \`extract\' example \#2
+\*\*ABC                      \*\*xyz   \*\*123   \*\*ABC   \*\*foo
+A                            x         1         a         \%
+\*                           \*        \*\^      \*        \*
 B                            y         2a        2b        b         &
 C                            z         3a        3b        c         \#
 \*                           \*x       \*x       \*        \*        \*
 A                            4a        xyz       4b        d         \%
 \*-                          \*        \*        \*        \*-       \*
-5a                           xyz       5b        &                   
-\*                           \*x       \*x       \*                  
-6a                           6b        xyz       \#                  
-\*v                          \*v       \*        \*                  
-7                            xyz       \%                            
-8                            xyz       &                             
-\*-                          \*-       \*-                           
+5a                           xyz       5b        &
+\*                           \*x       \*x       \*
+6a                           6b        xyz       \#
+\*v                          \*v       \*        \*
+7                            xyz       \%
+8                            xyz       &
+\*-                          \*-       \*-
 ---------------------------- --------- --------- --------- --------- ----
 
 Executing the command:
@@ -213,10 +213,10 @@ Executing the command:
 would produce the following result: ``
 
 ---------------------------- -----
-!! \`extract\' example \#2   
-\*\*123                      
-1                            
-\*\^                         
+!! \`extract\' example \#2
+\*\*123
+1
+\*\^
 2a                           2b
 3a                           3b
 \*x                          \*
@@ -226,9 +226,9 @@ would produce the following result: ``
 \*                           \*x
 6a                           6b
 \*v                          \*v
-7                            
-8                            
-\*-                          
+7
+8
+\*-
 ---------------------------- -----
 
 Notice that this output no longer conforms to the Humdrum syntax.
@@ -277,22 +277,22 @@ Executing the following command:
 would produce the following result: ``
 
 ---------------------------- -----
-!! \`extract\' example \#2   
-\*\*ABC                      
-A                            
-\*\^                         
+!! \`extract\' example \#2
+\*\*ABC
+A
+\*\^
 2a                           b
 3a                           c
 \*x                          \*x
 4a                           xyz
 \*-                          \*
-&                            
-\*                           
-\#                           
-\*                           
-\%                           
-xyz                          
-\*-                          
+&
+\*
+\#
+\*
+\%
+xyz
+\*-
 ---------------------------- -----
 
 Notice that in this case, data tokens have been selected from a variety
