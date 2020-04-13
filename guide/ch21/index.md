@@ -110,14 +110,6 @@ an ostinato figure in minor thirds:
 
 **Example 21.1.** 'DSCH' Ostinato.
 
-<style>
-
-table.plain, table.plain tr, table.plain tr td {
-	border: 0;
-	background: transparent !important;
-}
-
-</style>
 
 <table class="plain" width="100%">
 <tr>
