@@ -553,7 +553,7 @@ upper- or lower-case letter \`C\' followed either by a character that is
 neither a sharp (\#) nor a flat (-) nor another letter \`C\', nor is
 followed by the end of the line (\$).
 
-Recall that parenthesis grouping (\...) is part of the *extended*
+Recall that parenthesis grouping (&hellip;) is part of the *extended*
 regular expression syntax. Therefore, we should use the <span class="unix">egrep</span> rather
 than the <span class="unix">grep</span> command with the above expressions. We can count the
 number of notes in a monophonic <span class="rep">kern</span> input that belong to this

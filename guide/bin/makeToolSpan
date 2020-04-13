@@ -44,6 +44,7 @@ $commands[@commands] = "tonh";
 $commands[@commands] = "solfa";
 $commands[@commands] = "solfg";
 $commands[@commands] = "stats";
+$commands[@commands] = "db";
 
 
 # print "TOOLS: ", join("\n", @commands), "\n";

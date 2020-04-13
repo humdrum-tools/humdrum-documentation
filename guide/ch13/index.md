@@ -700,7 +700,7 @@ yank -s 'Variation 1' -r 1 goldberg | timebase -t 16 > temp1
 ```bash
 yank -s 'Variation 2' -r 1 goldberg | timebase -t 16 > temp2
 ```
-etc. \...
+etc. &hellip;
 ```bash
 assemble temp1 temp2 temp3 ... | rid -d | ms > basslines.ps
 ```

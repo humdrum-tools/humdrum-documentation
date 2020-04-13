@@ -133,7 +133,7 @@ The resulting output would begin as follows:
 
 ```humdrum
 !!!COM: Bach, Johann Sebastian
-  !!!OPR: Six Concerts Avec plusieurs \... le prince regnant d\'Anhalt-Coethen
+  !!!OPR: Six Concerts Avec plusieurs &hellip; le prince regnant d\'Anhalt-Coethen
   !!!OTL: Brandenburgische Konzerte F
   !!!XEN: Brandenburg Concerto No. 2 in F major.
   !!!OMV: Movement 1.
@@ -488,7 +488,7 @@ specific spine *paths.* Like the <span class="option">f</span> option, the <span
 requires one or more numbers indicating the *beginning* field position
 for the spine. The command
 
-`extract -p 2 `\...
+`extract -p 2 `&hellip;
 
 will generate the following output:
 

@@ -8,6 +8,7 @@
 #
 # Description:   Convert:
 #                   \--             -->    &mdash;
+#                   \...            -->    &hellip;
 #                   [a-z]\'[a-z]    -->    [a-z]'[a-z]
 #                   ^(> +)+         -->    nothing
 #
@@ -58,6 +59,7 @@ sub processFile {
 ##
 ## processLine --
 ##      \--             -->    &mdash;
+##      \...            -->    &hellip;
 ##      [a-z]\'[a-z]    -->    [a-z]'[a-z]
 ##      <\/span         -->    <\/span>
 ##      ^(> +)+         -->    nothing
@@ -66,10 +68,15 @@ sub processFile {
 sub processLine {
 	my ($line) = @_;
 	$line =~ s/\\--/\&mdash;/g;
+	$line =~ s/\\\.\.\./\&hellip;/g;
 	$line =~ s/([a-z])\\'([a-z])/$1'$2/g;
 	$line =~ s/<\/span([^>\s])/<\/span> $1/g;
 	$line =~ s/<\/span\s([^>])/<\/span> $1/g;
-	$line =~ s/^(>\s*)+//;
+
+	# The following will also destroy content, so
+	# should not used on previously edited files:
+	# $line =~ s/^(>\s*)+//;
+
 	return $line;
 }
 

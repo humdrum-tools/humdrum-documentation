@@ -295,7 +295,7 @@ eliminates comments and interpretations prior to passing the data to the
 
 
 
-## Eliminate Everything But \... ##
+## Eliminate Everything But &hellip; ##
 
 
 
@@ -357,7 +357,7 @@ Note that this is functionally equivalent to:
 grep -v ^= *inputfile*
 ```
 
-In the general case, **humsed /\.../d** is preferable to **grep -v**.
+In the general case, **humsed /&hellip;/d** is preferable to **grep -v**.
 Remember that <span class="tool">humsed</span> only manipulates
 Humdrum data records; it never touches comments or interpretations. The
 <span class="unix">grep</span> command has no such restriction. Consider, for example, the

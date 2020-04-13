@@ -322,7 +322,7 @@ distinction. The vowel \`ee\' is a high vowel whereas the vowel \`oh\'
 is a low vowel.
 
 A preponderance of high vowels is often associated with sarcasm, irony
-or humor. Taunting sounds made by children ("nya, nya \...") commonly
+or humor. Taunting sounds made by children ("nya, nya &hellip;") commonly
 use high vowels mixed with nasals. Similarly, high/nasal vocal sounds
 are often used by comedians and actors to produce a \`funny\' voice.
 

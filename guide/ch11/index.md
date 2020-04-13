@@ -151,7 +151,7 @@ quality and interval size are specified. Interval qualities include
 perfect (`P`), major (`M`), minor (`m`), augmented (`A`) and diminished
 (`d`). Interval qualities may also be doubly augmented (`AA`), triply
 diminished (`ddd`) and so on. Diatonic interval sizes are indicated by
-numbers (1=unison, 2=second, \... 8=octave, 9=ninth, etc.). Ascending
+numbers (1=unison, 2=second, &hellip; 8=octave, 9=ninth, etc.). Ascending
 and descending intervals are distinguished by a leading plus sign (+) or
 minus sign (-) respectively.
 

@@ -133,7 +133,7 @@ assemble opus24 opus24.pcs > opus24.all
 ```
 
 Now we can search for data records containing phrase (\`{}\') or slur
-(\'()\') markers. Using <span class="tool">yank</span> **-m \... -r 0**
+(\'()\') markers. Using <span class="tool">yank</span> **-m &hellip; -r 0**
 rather than <span class="unix">grep</span> assures that the output retains the Humdrum syntax
 (see [Chapter 12](/guide/ch12)). Maintaining the Humdrum syntax will
 allow us to use <span class="tool">extract</span> to isolate just the
@@ -254,9 +254,9 @@ fewer tritone (interval-class 6) relations. As before, we might
 translate his scores to pitch-class notation, fill-out the sonorities
 using <span class="tool">ditto</span>, and then determine the associated interval vectors for
 each sonority. Interval vectors without semitone relations will have a
-zero in the first vector position (i.e., \<0\.....\>) whereas interval
+zero in the first vector position (i.e., \<0&hellip;..\>) whereas interval
 vectors without tritone relations will have a zero in the last position
-(i.e., \<\.....0\>).
+(i.e., \<&hellip;..0\>).
 
 ```bash
 pc schoenberg* | ditto -s ^= | iv | grep -c '<0.....>'
@@ -443,7 +443,7 @@ also prove useful when doing an automatic search.
 ```
 
 For any given input, the above script produces 48 short files named P0,
-P1, \... I0, I1 \... R0, R1 \... RI10, RI11.
+P1, &hellip; I0, I1 &hellip; R0, R1 &hellip; RI10, RI11.
 
 
 
