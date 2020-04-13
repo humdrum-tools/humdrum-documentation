@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+#
+# Programmer:    Craig Stuart Sapp <craig.stanford.edu>
+# Creation Date: Mon Apr 13 13:05:37 PDT 2020
+# Last Modified: Mon Apr 13 13:05:39 PDT 2020
+# Filename:      cleanSpaces
+# Syntax:        perl 5
+#
+# Description:   Remove spaces and tabs at end of lines.
+#
+
+use strict;
+
+my @files = @ARGV;
+foreach my $file (@files) {
+	processFile($file);
+}
+
+exit(0);
+
+
+
+##############################
+##
+## processFile --
+##
+
+sub processFile {
+	my ($file) = @_;
+	open (FILE, $file) or die "Cannot read $file\n";
+	my @contents = <FILE>;
+	chomp @contents;
+	close FILE;
+	my $changed = 0;
+	my $newline;
+	for (my $i=0; $i<@contents; $i++) {
+		$newline = processLine($contents[$i]);
+		if ($newline ne $contents[$i]) {
+			$contents[$i] = $newline;
+			$changed = 1;
+		}
+	}
+	return if !$changed;
+	print STDERR "Updating file $file\n";
+	open (FILE, ">$file") or die "Cannot write $file\n";
+	for (my $i=0; $i<@contents; $i++) {
+		print FILE "$contents[$i]\n";
+	}
+	close FILE;
+}
+
+
+
+##############################
+##
+## processLine --
+##
+
+sub processLine {
+	my ($line) = @_;
+	$line =~ s/\s+$//;
+	return $line;
+}
+
+
+

@@ -27,6 +27,7 @@ $unix[@unix] = "cmp";
 $unix[@unix] = "comm";
 $unix[@unix] = "diff";
 $unix[@unix] = "echo";
+$unix[@unix] = "mkdir";
 $unix[@unix] = "ed";
 $unix[@unix] = "egrep";
 $unix[@unix] = "emacs";
