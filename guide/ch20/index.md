@@ -313,7 +313,7 @@ data5
 data6
 *>Form>Coda
 data7
-*- 
+*-
 ```
 
 
@@ -617,7 +617,7 @@ strophe -x 2 file | extract -i '**silbe' | rid -GLId \
 ```
 
 (In the <span class="rep">silbe</span> representation, the vertical
-bar `|` and the percent sign `%` have special meanings so 
+bar `|` and the percent sign `%` have special meanings so
 `egrep -v` is used to eliminate them along with barlines.)
 
 
@@ -657,7 +657,7 @@ table.ch20 tr td:first-child {
 
 <tr>
 <td>
-section 
+section
 </td>
 <td>
 passage defined by a section label, ends with occurrence of

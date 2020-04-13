@@ -828,7 +828,7 @@ rather than <span class="unix">grep</span> in our script:
 # KEYWORD - A script for searching a master concordance file
 #
 # Usage:  keyword
-#  
+#
 egrep "^.*  [^ ]+ [^ ]+ $1" ~/concord/master
 ```
 

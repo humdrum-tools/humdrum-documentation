@@ -44,13 +44,13 @@ overlapping) events. The basic organization of Humdrum files may be
 schematically illustrated as follows:
 
 ```humdrum
-successive	events	
+successive	events
 
 concurrent	events	->	A	J	V	etc.
 B	K	W	etc.
 C	L	X	etc.
 D	M	Y	etc.
-etc.	etc.	etc.	
+etc.	etc.	etc.
 ```
 
 
@@ -309,9 +309,9 @@ example, the following sequence of Humdrum-like data records: ``
 1	2	3
 1	2	3
 1	2	3
-A	B	
-A	B	
-A	B	
+A	B
+A	B
+A	B
 ```
 
 At the point where three spines are reduced to two spines the continuity
@@ -362,21 +362,21 @@ few possible path changes:
 ``
 
 ```humdrum
-1	2	3	
+1	2	3
 *	*-	*	(elimination	of	spine	#2)
-1	3	
+1	3
 
-1	2	3	
+1	2	3
 *	*x	*x	(exchange	spines	#2	and	#3)
-1	3	2	
+1	3	2
 
-1	2	3	
+1	2	3
 *	*^	*	(splitting	of	spine	#2)
-1	2a	2b	3	
+1	2a	2b	3
 
-1	2	3	
+1	2	3
 *	*v	*v	(amalgamation	of	spines	#2	and	#3)
-1	2&3	
+1	2&3
 ```
 
 Notice that in cases where two or more spines are amalgamated, the
@@ -385,9 +385,9 @@ forbidden by the Humdrum syntax since it is not clear whether spines \#1
 and \#3 amalgamate into spine \`A\' or spine \`B\'. ``
 
 ```humdrum
-1	2	3	
+1	2	3
 *v	*	*v	(syntactically	illegal)
-A	B	
+A	B
 ```
 
 In such cases, amalgamating the two outer spines can be accomplished by
@@ -398,7 +398,7 @@ first using the exchange path signifier. Here we exchange spines \#2 and
 1	2	3
 *	*x	*x
 *v	*v	*
-1&3	2	
+1&3	2
 ```
 
 In cases where the user wishes to amalgamate several spines, a number of
@@ -411,8 +411,8 @@ spines: 1&2, 3, 4). In the subsequent interpretation record, spine \#2
 ```humdrum
 1	2	3	4
 *v	*v	*	*
-*	*v	*v	
-1&2	3&4	
+*	*v	*v
+1&2	3&4
 ```
 
 In addition, it is possible to join more than two spines at the same
@@ -421,7 +421,7 @@ time: ``
 ```humdrum
 1	2	3	4
 *v	*v	*v	*v
-1&2&3&4	
+1&2&3&4
 ```
 
 In cases where a new spine is introduced, it is essential to indicate
@@ -429,10 +429,10 @@ the exclusive interpretation that applies to the new data. Thus an \`add
 spine\' indication must be followed by a second interpretation record:
 
 ```humdrum
-1	2	3	
+1	2	3
 *	*+	*	(add	a	new	spine.)
 *	*	**inter	*	(define	exclusive	interpretation	for	the	new	spine)
-1	2	new	3	
+1	2	new	3
 ```
 
 Failing to follow the introduction of a new spine by a subsequent
@@ -442,8 +442,8 @@ The following examples illustrate a variety of more complex path
 redefinitions: ``
 
 ```humdrum
-1	2	3	4	
-*v	*v	*^	*^	
+1	2	3	4
+*v	*v	*^	*^
 1&2	3a	3b	4a	4b
 ```
 
@@ -452,18 +452,18 @@ redefinitions: ``
 ```humdrum
 1	2	3	4	5
 *	*-	*	*-	*
-*v	*v	*v	
-1&3&5	
+*v	*v	*v
+1&3&5
 ```
 
 ``
 
 ```humdrum
-1	2	3	4	5	
-*	*-	*	*^	*+	
+1	2	3	4	5
+*	*-	*	*^	*+
 *	*	*	*	*	**new
 *v	*v	*	*	*	*
-1&3	4a	4b	5	new	
+1&3	4a	4b	5	new
 ```
 
 ``
@@ -483,37 +483,37 @@ Syntactically, some path constructions are illegal; here are some
 examples of illegal constructions:
 
 ```humdrum
-1	2	3	
+1	2	3
 *v	*	*v	(The	join-spine	indication	in	spine	#1	does	not	adjoin
 spine	#3.)
-1	2	3	
+1	2	3
 *x	*x	*x	(No	more	than	two	exchange	interpretations	at	a	time.)
 
-1	2	3	
+1	2	3
 *x	*	*	(Must	have	two	exchange	interpretations	together.)
 
-1	2	3	
+1	2	3
 *v	*	*	(Must	have	two	or	more	join	interpretations	at	a	time.)
 
-1	2	3	
+1	2	3
 *	*	(Spine	eliminated	without	using	a	termination	interpretation.)
-1	2	
+1	2
 
-1	2	3	
+1	2	3
 *	*	*+	(Adding	a	new	spine	should	result	in	4	interpretations.)
-1	2	3	
+1	2	3
 
-1	2	
+1	2
 *	*	*-	(Cannot	eliminate	non-existent	spine.)
 
-1	2	
-*+	*	
+1	2
+*+	*
 1	new	2	(New	spine	started	without	specifying	new	interpretation.)
 
-1	2	
-*	*+	
+1	2
+*	*+
 *	**inter	*	(Interpretation	labels	the	wrong	spine.)
-A	B	C	
+A	B	C
 ```
 
 
@@ -673,23 +673,23 @@ dotted	half	dotted	minim
 ```humdrum
 ```
 
-**foreground	
-flute	
-*^	
-flute	violin1	
-*-	*	
-violin1	
-*^	
-violin1	bassoon	
-*	*^	
-violin1	bassoon	'cello	
-*	*	*^	
+**foreground
+flute
+*^
+flute	violin1
+*-	*
+violin1
+*^
+violin1	bassoon
+*	*^
+violin1	bassoon	'cello
+*	*	*^
 violin1	bassoon	'cello	trombone
 *-	*-	*-	*
-trombone	
-*^	
-trombone	trumpet	
-*-	*-	
+trombone
+*^
+trombone	trumpet
+*-	*-
 ```
 
 

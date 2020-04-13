@@ -2,7 +2,7 @@
 sidebar:	toc
 chapternav:	guide
 author:		David Huron
-creation-date:	1 Sep 1998 
+creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
 last-edited:	11 Apr 2020
 vim:		ft=html
@@ -157,7 +157,7 @@ ending with `P8`. We can now create an inventory of harmonic interval
 pairs and order them from least common to most common:
 
 ```bash
-ditto inventions* | hint | context -n 2 -o = \ 
+ditto inventions* | hint | context -n 2 -o = \
      | grep ' P8$' | sort | uniq -c | sort -rn
 ```
 
@@ -165,15 +165,15 @@ In the case of Bach's fifteen two-part *Inventions* the results look as
 follows:
 
 ```text
-24  m10 P8  
-24  M10 P8  
-23  m7 P8  
-21  M6 P8  
-19  M9 P8  
-12  P5 P8  
-11  m6 P8   
- 9  P12 P8   
- 8  m13 P8   
+24  m10 P8
+24  M10 P8
+23  m7 P8
+21  M6 P8
+19  M9 P8
+12  P5 P8
+11  m6 P8
+ 9  P12 P8
+ 8  m13 P8
  8  - P8
 ```
 
@@ -188,7 +188,7 @@ word following "gloria" in Gregorian chant texts. We first extract the
 create pairs of words, and search in the normal way:
 
 ```bash
-extract -i '**text' chants* | context -n 2 \ 
+extract -i '**text' chants* | context -n 2 \
      | grep -i ' gloria$' | sort | uniq -c | sort -nr
 ```
 
@@ -199,7 +199,7 @@ to anchor the word "gloria" to the beginning of the line by using
 the caret (`^`).
 
 ```bash
-extract -i '**text' chants* | context -n 2 \ 
+extract -i '**text' chants* | context -n 2 \
      | grep -i '^gloria ' | sort | uniq -c | sort -nr
 ```
 
@@ -210,7 +210,7 @@ representation using the <span class="tool">deg</span> command, and
 then process as above:
 
 ```bash
-deg Czech* | context -n 2 -o = | grep '5 ' | sort \ 
+deg Czech* | context -n 2 -o = | grep '5 ' | sort \
      | uniq -c | sort -nr
 ```
 
@@ -231,7 +231,7 @@ then sort the data records, eliminate duplicates while counting, and
 then sort by numerical count in reverse order.
 
 ```bash
-extract -i '**harm' chorales* | context -n 2 -o = \ 
+extract -i '**harm' chorales* | context -n 2 -o = \
    | rid -GLId | sort | uniq -c | sort -nr
 ```
 
@@ -242,7 +242,7 @@ we can determine the most common sequence of five melodic intervals
 as follows:
 
 ```bash
-mint melodies* | context -n 5 -o = | rid -GLId | sort \ 
+mint melodies* | context -n 5 -o = | rid -GLId | sort \
      | uniq -c | sort -nr
 ```
 
@@ -1032,7 +1032,7 @@ or pushed forward through the spine using the <span class="option">p</span>
 option.
 
 We've seen a number of ways by which <span class="tool">context</span>
-can be used to establish a particular context for data. In 
+can be used to establish a particular context for data. In
 [Chapter&nbsp;21](/guide/ch21) we will see how the <span class="tool">patt</span>
 command can be used to establish other kinds of contexts and how
 both of these commands can be used together.

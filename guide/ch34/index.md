@@ -488,7 +488,7 @@ recognize row statements where several nominally successive pitches are
 collapsed into a vertical chord:
 
 ```bash
-# Search for instances of each tone-row variant.  X=0  while [ $X -ne 12 ]  do 
+# Search for instances of each tone-row variant.  X=0  while [ $X -ne 12 ]  do
 ```
 
 patt -s \'=\|\^\\.(\\t\\.)\*\$\' -f P\$X -m score.tmp -t P\$X \\

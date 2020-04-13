@@ -22,3 +22,7 @@ misc:
 headings:
 	$(BIN)/convertHeading ch??/index.md
 
+spaces:
+	$(BIN)/cleanSpaces ch??/index.md
+
+

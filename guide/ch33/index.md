@@ -422,7 +422,7 @@ all	Al
 in	In
 the	D@
 dumps,	d@mps}
-etc.	
+etc.
 ```
 
 Using <span class="tool">extract</span>, <span class="tool">context</span> and <span class="tool">rid</span> we
@@ -500,13 +500,13 @@ C
 C
 ```
 ```bash
-B  
+B
 ```
 Note that the entire analytic procedure can be placed in a shell
 script and applied to any input containing <span class="rep">IPA</span> text. The following
 script adds a number of refinements.
 ```bash
-# RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \ 
+# RHYME  #  # This script determines the rhyme scheme for an input file containing  # an **IPA spine.  This script assumes that the input contains curly  # braces indicating phrase endings.  #  # USAGE:  rhyme     extract -i '**IPA' $1 | extract -f 1 | context -b { -e } | rid -GLId \
 ```
 
 \| sed

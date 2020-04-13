@@ -84,7 +84,7 @@ Concerto shown in Example 12.1.
 !!!SCT: BWV 1047
 ```
 ```bash
-!! [Allegro] 
+!! [Allegro]
 ```
 ```humdrum
 **kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern	**kern
@@ -468,10 +468,10 @@ generate an error message and terminate. With the <span class="option">i</span> 
 Consider the following input:
 
 ```humdrum
-**mip	**dip	**dip	**blip	
-A	a	b	x	
-A	a	b	x	
-*	*^	*	*	
+**mip	**dip	**dip	**blip
+A	a	b	x
+A	a	b	x
+*	*^	*	*
 A	a1	a2	b	x
 A	a1	a2	b	x
 A	a1	a2	b	x
@@ -493,10 +493,10 @@ for the spine. The command
 will generate the following output:
 
 ```humdrum
-**dip	
-a	
-a	
-*^	
+**dip
+a
+a
+*^
 a1	a2
 a1	a2
 a1	a2

@@ -148,7 +148,7 @@ notation:
 *MM120	*MM120
 *M2/2	*M2
 *e:	*
-!!	First	Couplet	
+!!	First	Couplet
 !	!	Half	Coupee
 4.gg	|	|u|	|	|
 .	%|+|	|	|	|
@@ -548,7 +548,7 @@ The complete system of signifiers used by
 **Table 18.1. Signifiers used by *\*\*fret*.**
 
 ```humdrum
-**Fret-board	(left)	Hand**	
+**Fret-board	(left)	Hand**
 1	first	fret	position
 2	second	fret	position,	...
 11	eleventh	fret	position,	etc.
@@ -573,7 +573,7 @@ d	ring	finger	(of	fret	hand)
 e	little	finger	(of	fret	hand)
 n	no	finger	(of	fret	hand)
 
-**Pluck	(right)	Hand**	
+**Pluck	(right)	Hand**
 -	unplucked	or	unactivated	string
 |	plucked	string	(normal)
 /	plucked	string	--	near	bridge	(ponticello)

@@ -603,7 +603,7 @@ this point, the result might look as follows:
 8dd	1
 .	4
 ```
-etc.	
+etc.
 
 We want to be able to say that the relationship between the first
 eighth-note G and the eighth-note B is "strong-to-weak" and that
@@ -634,7 +634,7 @@ The result is as follows:
 =1	=1
 8dd	1
 ```
-etc.	
+etc.
 
 Notice that the successive <span class="rep">metpos</span> values
 will now allow us to characterize the changes in stress between

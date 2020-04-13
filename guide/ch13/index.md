@@ -53,7 +53,7 @@ which encoded a single measure of music. Concatenating them together
 might result in an output such as the following:
 
 ```humdrum
-!!	File	1	
+!!	File	1
 **kern	**kern	**kern	**kern
 *M4/4	*M4/4	*M4/4	*M4/4
 *G:	*G:	*G:	*G:
@@ -67,7 +67,7 @@ might result in an output such as the following:
 4D	4d	8g]	4a
 .	.	8f#	.
 *-	*-	*-	*-
-!!	File	2	
+!!	File	2
 **kern	**kern	**kern	**kern
 *M4/4	*M4/4	*M4/4	*M4/4
 *k[f#]	*k[f#]	*k[f#]	*k[f#]
@@ -79,7 +79,7 @@ might result in an output such as the following:
 8A	4cn	4a	4ee
 8G	.	.	.
 *-	*-	*-	*-
-!!	File	3	
+!!	File	3
 **kern	**kern	**kern	**kern
 *M4/4	*M4/4	*M4/4	*M4/4
 *k[f#]	*k[f#]	*k[f#]	*k[f#]
@@ -199,7 +199,7 @@ cat bar1 bar2 bar3 | rid -ut
 The resulting output is given below:
 
 ```humdrum
-!!	File	1	
+!!	File	1
 **kern	**kern	**kern	**kern
 *M4/4	*M4/4	*M4/4	*M4/4
 *k[f#]	*k[f#]	*k[f#]	*k[f#]
@@ -211,7 +211,7 @@ The resulting output is given below:
 8BB	.	[8g	.
 4D	4d	8g]	4a
 .	.	8f#	.
-!!	File	2	
+!!	File	2
 =2	=2	=2	=2
 8G	4d	4g	4b
 8F#	.	.	.
@@ -219,7 +219,7 @@ The resulting output is given below:
 4D;	4A;	4f#;	4dd;
 8A	4cn	4a	4ee
 8G	.	.	.
-!!	File	3	
+!!	File	3
 =3	=3	=3	=3
 4F#	4d	[4a	8dd
 .	.	.	8cc
@@ -287,9 +287,9 @@ assemble letters numbers
 The resulting output is:
 
 ```humdrum
-!!	Assemble	example	
-!!	File	1	
-!!	File	2	
+!!	Assemble	example
+!!	File	1
+!!	File	2
 **Letters	**Numbers
 !	A	to	E	!	1	to	5
 A	1
@@ -318,36 +318,36 @@ For example, in the above case, if the `numbers` file contained only the
 numbers 1 to 3, the assembled output would appear as follows:
 
 ```humdrum
-!!	Assemble	example	
-!!	File	1	
-!!	File	2	
+!!	Assemble	example
+!!	File	1
+!!	File	2
 **Letters	**Numbers
 !	A	to	E	!	1	to	3
 A	1
 B	2
 C	3
 *	*-
-D	
-E	
-*-	
+D
+E
+*-
 ```
 
 If the order of the input files was reversed, <span class="tool">assemble</span> would produce
 an output with the appropriate spine-path changes:
 
 ```humdrum
-!!	Assemble	example	
-!!	File	2	
-!!	File	1	
+!!	Assemble	example
+!!	File	2
+!!	File	1
 **Numbers	**Letters
 !	1	to	3	!	A	to	E
 1	A
 2	B
 3	C
 *-	*
-D	
-E	
-*-	
+D
+E
+*-
 ```
 
 Note that if all of the input files conform to the Humdrum syntax, then
@@ -423,8 +423,8 @@ assemble file1.tb file2
 will result in the following two-part score:
 
 ```humdrum
-!!	File	1	
-!!	File	2	
+!!	File	1
+!!	File	2
 **kern	**kern
 4c	8e
 .	8g
@@ -451,8 +451,8 @@ Assembling the two "time-based" files would produce the following
 result:
 
 ```humdrum
-!!	File	1	
-!!	File	2	
+!!	File	1
+!!	File	2
 **kern	**kern
 4c	8e
 .	8g
@@ -475,8 +475,8 @@ assemble file1.tb file2.tb | rid -d
 would result in the following output:
 
 ```humdrum
-!!	File	1	
-!!	File	2	
+!!	File	1
+!!	File	2
 **kern	**kern
 4c	8e
 .	8g

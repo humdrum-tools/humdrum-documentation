@@ -395,7 +395,7 @@ German use of H for B-natural.
 **Example 4.2**
 
 ```humdrum
-!!	Comparison	of	pitch-related	representations.	
+!!	Comparison	of	pitch-related	representations.
 **kern	**pitch	**Tonh	**solfg
 *M2/4	*M2/4	*M2/4	*M2/4
 *C:	*C:	*C:	*C:
@@ -427,7 +427,7 @@ negative integers. More detail concerning <span class="rep">MIDI</span> is given
 **Example 4.3**
 
 ```humdrum
-!!	Comparison	of	pitch-related	representations	(continued).	
+!!	Comparison	of	pitch-related	representations	(continued).
 **kern	**semits	**cents	**MIDI	**freq
 *M2/4	*M2/4	*M2/4	*Ch1	*M2/4
 *C:	*C:	*C:	*M2/4	*C:
@@ -472,16 +472,16 @@ marks, and other <span class="rep">kern</span> signifiers are not magically gene
 **cents	**deg	**freq	**kern	**MIDI	**pitch	**semits	**solfa	**solfg	**Tonh
 
 cents	¤	¤	¤	¤	¤	¤
-cocho	¤	
+cocho	¤
 deg	¤	¤	¤	¤
 freq	¤	¤	¤	¤	¤	¤	¤
 kern	¤	¤	¤	¤	¤	¤	¤	¤
-midi	¤	
+midi	¤
 pitch	¤	¤	¤	¤	¤	¤	¤	¤
 semits	¤	¤	¤	¤	¤	¤	¤
 solfa	¤	¤	¤	¤
-solfg	¤	¤	¤	¤	¤	¤	¤	
-tonh	¤	¤	¤	¤	¤	¤	¤	¤	
+solfg	¤	¤	¤	¤	¤	¤	¤
+tonh	¤	¤	¤	¤	¤	¤	¤	¤
 ```
 
 

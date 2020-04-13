@@ -118,7 +118,7 @@ five subtokens in the corresponding <span class="rep">MIDI</span> data record. T
 events are synchronous with two key-on events:
 
 ```humdrum
-!!	Two	chords.	
+!!	Two	chords.
 **kern	**MIDI
 *	*Ch1
 2c	2e	2g	72/60/64	72/64/64	72/67/64
@@ -139,8 +139,8 @@ beginning of Darius Milhaud's *Touches Blanches*.
 ![](guide.figures/guide07.1.gif)
 
 ```humdrum
-!!!:	Milhaud,	D.	
-!!!OTL:	Touches	Blanches	
+!!!:	Milhaud,	D.
+!!!OTL:	Touches	Blanches
 **kern	**kern	**MIDI	**MIDI
 *staff2	*staff1	*Ch1	*Ch1
 *clefF4	*clefG2	*clefF4	*clefG2

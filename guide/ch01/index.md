@@ -240,7 +240,7 @@ time	5th 16th	off	off	ON	off	off	off	off	off
 	9th 16th	off	off	off	off	ON	off	off	off
 	10th 16th	off	off	off	off	ON	off	off	off
 	11th 16th	off	off	off	off	off	ON	off	off
-etc.	
+etc.
 ```
 
 Table 1.2 shows another example where different kinds of information are
