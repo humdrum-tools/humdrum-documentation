@@ -309,7 +309,10 @@ find /scores -type f -exec grep -l '!!AGN.*Trinklied' "{}" \
 For the entire database, the output is as follows:
 
 ```bash
- 1 !!!AMT: compound duple   4 !!!AMT: irregular  14 !!!AMT: simple quadruple   5 !!!AMT: simple triple
+   1 !!!AMT: compound duple
+   4 !!!AMT: irregular
+  14 !!!AMT: simple quadruple
+   5 !!!AMT: simple triple
 ```
 
 There are just 24 drinking songs in the Essen collection and only
