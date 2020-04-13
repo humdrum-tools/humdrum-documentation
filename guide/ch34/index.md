@@ -725,7 +725,7 @@ This chapter has only scratched the surface regarding the types of
 pertinent serial-related manipulations that might be pursued. For
 example, much more sophisticated approaches to segmentation can be
 created by using some of the layer techniques described in the [next
-Chapter.](/guide/ch35) Similarly, the pattern searches could easily
+chapter.](/guide/ch35) Similarly, the pattern searches could easily
 be expanded to look at other parameters typical of "complete
 serialism" &mdash; such as durations, dynamics, articulation marks,
 and so on.
