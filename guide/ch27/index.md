@@ -4,7 +4,8 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:
+last-edited:	12 Apr 2020
+hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch27/index.html
 ---
@@ -20,23 +21,21 @@ permalink:	/guide/ch27/index.html
 Musical texts include lyrics, librettos, stage directions, recitativo
 and other collections of words. It goes without saying that words
 provide important information related to semantics, imagery, similes,
-allusion, irony, parody, word painting, and emotion. In addition, words
-can add to the sonorous dimension of music, including rhyme schemes,
-word-rhythms, and phonetic and syllabic effects such as alliteration,
-vowel-coloration.
+allusion, irony, parody, word painting, and emotion. In addition,
+words can add to the sonorous dimension of music, including rhyme
+schemes, word-rhythms, and phonetic and syllabic effects such as
+alliteration, vowel-coloration.
 
-Humdrum provides three pre-defined representations pertinent to text or
-lyrics. The <span class="rep">text</span> representation can
-be used to represent *words*; the
-<span class="rep">silbe</span> representation can be used
-to represent *syllables*; and the
-<span class="rep">IPA</span> representation can be used to
-represent *phonemes* (via the International Phonetic Alphabet).
-Discussion of the <span class="rep">IPA</span> representation will be delayed until [Chapter
-34.](/guide/ch34) In this chapter we will look at various
-representational and processing issues related to the manipulation of
-words and syllables.
-
+Humdrum provides three pre-defined representations pertinent to
+text or lyrics. The <span class="rep">text</span> representation
+can be used to represent *words*; the <span class="rep">silbe</span>
+representation can be used to represent *syllables*; and the <span
+class="rep">IPA</span> representation can be used to represent
+*phonemes* (via the International Phonetic Alphabet).  Discussion
+of the <span class="rep">IPA</span> representation will be delayed
+until [Chapter 34.](/guide/ch34) In this chapter we will look at
+various representational and processing issues related to the
+manipulation of words and syllables.
 
 
 
@@ -44,147 +43,220 @@ words and syllables.
 
 
 
-
 Syllable- and word-oriented representations are illustrated in the
 following excerpt from a motet by Byrd (Example 27.1). The encoded
-Humdrum data includes three spines: <span class="rep">text</span>, <span class="rep">silbe</span> and <span class="rep">kern</span>.
-Normally, only the <span class="rep">silbe</span> and <span class="rep">kern</span> data would be encoded &mdash;
-since the <span class="rep">text</span> spine can be generated from the <span class="rep">silbe</span>
-representation.
+Humdrum data includes three spines: <span class="rep">text</span>,
+<span class="rep">silbe</span> and <span class="rep">kern</span>.
+Normally, only the <span class="rep">silbe</span> and <span
+class="rep">kern</span> data would be encoded &mdash; since the
+<span class="rep">text</span> spine can be generated from the <span
+class="rep">silbe</span> representation.
 
-**Example 27.1.** From William Byrd, *Why Do I use my paper ink and
-pen.*
+**Example 27.1.** From William Byrd, *Why Do I use my paper ink and pen.*
 
-![](guide.figures/guide27.1.gif)
---------------------------------------------
-`!!!COM: Byrd, William`
+<script>
+displayHumdrum(
+{
+	source: "example-27-1",
+	scale: 55,
+	spacingNonLinear: 0.55
+});
+</script>
+<script type="text/x-humdrum" id="example-27-1">
+!!!COM: Byrd, William
 !!!OTL: Why do I use my paper ink and pen.
---------------------------------------------
------------- ------------ ----------
-\*\*text     \*\*silbe    \*\*kern
-\*LEnglish   \*LEnglish   \*
-=11          =11          =11
-`.`          .            2r
-Why          Why          2g
-=12          =12          =12
-do           do           2b-
-I            I            2a
-=13          =13          =13
-use          use          4g
-my           my           4g
-paper        pa-          \[2dd
-=14          =14          =14
-`.`          \|           2dd\]
-`.`          -per         2cc
-=15          =15          =15
-ink          ink          2.ff
-and          and          (4ee
-=16          =16          =16
-`.`          \|           4dd
-`.`          \|           4cc
-`.`          \|           4b-
-`.`          \|           4cc
-=17          =17          =17
-pen,         pen,         1dd
-=18          =18          =18
-and          and          1dd
-=19          =19          =19
-pen,         pen,         1dd
-=20          =20          =20
-`.`          .            2r
-and          and          2ff
-=21          =21          =21
-call         call         2.ee
-my           my           4dd
-=22          =22          =22
-wits         wits         1cc\#
-=23          =23          =23
-to           to           2ee
-counsel      coun-        \[2aa
-=24          =24          =24
-`.`          -sel         4aa\]
-what         what         4ff
-to           to           (8ee
-`.`          \|           8dd
-=25          =25          =25
-`.`          \|           4cc
-`.`          \|           4dd
-`.`          \|           4.ee
-`.`          \|           8dd
-=26          =26          =26
-`.`          \|           4ee
-`.`          \|           4ee
-`.`          \|           2dd)
-=27          =27          =27
-say,         say,         1cc\#
-=28          =28          =28
-\*-          \*-          \*-
------------- ------------ ----------
-Note that all three representations in Example 27.1 make use of the
-common system for representing barlines. In the
-<span class="rep">text</span> representation tokens
-represent individual words. In some scores, several words will be
-associated with a single moment (or pitch), as in the case of
-*recitativo* passages. Multi-word tokens are encoded as Humdrum
-multiple-stops with a space separating each word on a record.
+**kern	**text
+*clefG2	*
+*M2/2	*
+=11	=11
+2r	.
+2g	Why
+=12	=12
+2b-	do
+2a	I
+=13	=13
+4g	use
+4g	my
+[2dd	pa-
+=14	=14
+2dd]	.
+2cc	-per
+=15	=15
+2.ff	ink
+(4ee	and_
+=16	=16
+4dd	.
+4cc	.
+4b-	.
+4cc	.
+=17	=17
+1dd	pen,
+=18	=18
+1dd	and
+=19	=19
+1dd	pen,
+=20	=20
+2r	.
+2ff	and
+=21	=21
+2.ee	call
+4dd	my
+=22	=22
+1cc#	wits
+=23	=23
+2ee	to
+[2aa	coun-
+=24	=24
+4aa]	-sel
+4ff	what
+(8ee	to_
+8dd	.
+=25	=25
+4cc	.
+4dd	.
+4.ee	.
+8dd	.
+=26	=26
+4ee	.
+4ee	.
+2dd)	.
+=27	=27
+1cc#	say,
+=28	=28
+*-	*-
+</script>
 
-In the <span class="rep">silbe</span> representation tokens
-represent individual syllables. In <span class="rep">silbe</span> the hyphen (-) is used
-explicitly to signify syllable boundaries and the tilde (\~) is used to
-signify boundaries between hyphenated words (necessarily also a syllable
-boundary). In other words, four types of syllables are distinguished by
-<span class="rep">silbe</span>: (1) a single-syllable word, (2) a word-initiating syllable,
-(3) a word-completing syllable, and (4) a mid-word syllable. The
-following table illustrates how these signifiers are used:
+
+```humdrum
+!!!COM: Byrd, William
+!!!OTL: Why do I use my paper ink and pen.
+**text	**silbe	**kern
+*lang:EN	*lang:EN	*
+=11	=11	=11
+.	.	2r
+Why	Why	2g
+=12	=12	=12
+do	do	2b-
+I	I	2a
+=13	=13	=13
+use	use	4g
+my	my	4g
+paper	pa-	[2dd
+=14	=14	=14
+.	|	2dd]
+.	-per	2cc
+=15	=15	=15
+ink	ink	2.ff
+and	and	(4ee
+=16	=16	=16
+.	|	4dd
+.	|	4cc
+.	|	4b-
+.	|	4cc
+=17	=17	=17
+pen,	pen,	1dd
+=18	=18	=18
+and	and	1dd
+=19	=19	=19
+pen,	pen,	1dd
+=20	=20	=20
+.	.	2r
+and	and	2ff
+=21	=21	=21
+call	call	2.ee
+my	my	4dd
+=22	=22	=22
+wits	wits	1cc#
+=23	=23	=23
+to	to	2ee
+counsel	coun-	[2aa
+=24	=24	=24
+.	-sel	4aa]
+what	what	4ff
+to	to	(8ee
+.	|	8dd
+=25	=25	=25
+.	|	4cc
+.	|	4dd
+.	|	4.ee
+.	|	8dd
+=26	=26	=26
+.	|	4ee
+.	|	4ee
+.	|	2dd)
+=27	=27	=27
+say,	say,	1cc#
+=28	=28	=28
+*-	*-	*-
+```
+
+
+Note that all three representations in Example 27.1 make use of the
+common system for representing barlines. In the <span
+class="rep">text</span> representation tokens represent individual
+words. In some scores, several words will be associated with a
+single moment (or pitch), as in the case of *recitativo* passages.
+Multi-word tokens are encoded as Humdrum multiple-stops with a space
+separating each word on a record.
+
+In the <span class="rep">silbe</span> representation tokens represent
+individual syllables. In <span class="rep">silbe</span> the hyphen
+(-) is used explicitly to signify syllable boundaries and the tilde
+(\~) is used to signify boundaries between hyphenated words
+(necessarily also a syllable boundary). In other words, four types
+of syllables are distinguished by <span class="rep">silbe</span>:
+(1) a single-syllable word, (2) a word-initiating syllable, (3) a
+word-completing syllable, and (4) a mid-word syllable. The following
+table illustrates how these signifiers are used:
 
 **Table 26.1.**
 
-```humdrum
-text	a	single-syllable	word
-text-	a	word-initiating	syllable
--text	a	word-completing	syllable
--text-	a	mid-word	syllable
-text~	a	single-syllable	word	beginning	a	hyphenated	multi-word
-~text	a	single-syllable	word	completing	a	hyphenated	multi-word
-~text~	a	single-syllabe	word	continuing	a	hyphenated	multi-word
-~text-	a	word-initating	syllable	continuing	a	hyphenated	multi-word
--text~	a	word-completing	syllable	--	part	of	a	hyphenated	multi-word
-```
+| <nobr>template</nobr>      | meaning			|
+| ============= | ============================= |
+| text		| a single-syllable word	|
+| text-		| a word-initiating syllable	|
+| -text		| a word-completing syllable	|
+| -text-	| a mid-word syllable	|
+| text~		| a single-syllable word beginning a hyphenated multi-word	|
+| ~text		| a single-syllable word completing a hyphenated multi-word	|
+| ~text~	| a single-syllabe word continuing a hyphenated multi-word	|
+| ~text-	| a word-initating syllable continuing a hyphenated multi-word	|
+| -text~	| a word-completing syllable &mdash; part of a hyphenated multi-word	|
 
-Both the <span class="rep">text</span> and <span class="rep">silbe</span> representations are able to distinguish
-different tones of voice such as spoken voice, whispered voice, laughing
-voice, emotional voice, *Sprechstimme* and humming. In addition, there
-are signifiers for indicating untexted laughter and untexted sobs or
-crys. Some sample signifiers are shown in Table 26.2
+Both the <span class="rep">text</span> and <span class="rep">silbe</span>
+representations are able to distinguish different tones of voice
+such as spoken voice, whispered voice, laughing voice, emotional
+voice, *Sprechstimme* and humming. In addition, there are signifiers
+for indicating untexted laughter and untexted sobs or crys. Some
+sample signifiers are shown in Table 26.2
 
 **Table 26.2.**
 
-```humdrum
-A-Z	upper-case	letters	A	to	Z
-a-z	lower-case	letters	a-z
-(	open	parenthesis
-)	closed	parenthesis
-{	beginning	of	phrase
-}	end	of	phrase
-%	silence	(rest)	token	(character	by	itself)
-M	humming	voice	(character	by	itself)
-[	beginning	of	spoken	voice
-[[	beginning	of	whisper
-]	end	of	spoken	voice
-]]	end	of	whisper
-<	beginning	of	*Sprechstimme*
-*end	of	Sprechstimme*
-#	beginning	of	laughing	voice
-##	end	of	laughing	voice
-@	laughter	(no	text)
-&	sob	or	cry	(no	text)
-$	beginning	of	emotional	voice
-$$	end	of	emotional	voice
-*	follows	stressed	word	(**test)	or	stressed	syllable	(**silbe)
-```
+*Signifiers common to <span class="rep">text</span> and <span class="rep">silbe</span>
 
-*Signifiers common to **\*\*text** and **\*\*silbe***
-
+| <nobr>template</nobr>      | meaning		|
+| ============= | ============================= |
+| `A-Z`	| upper-case letters A to Z	|
+| `a-z`	| lower-case letters a-z	|
+| `(`	| open parenthesis	|
+| `)`	| closed parenthesis	|
+| `{`	| beginning of phrase	|
+| `}`	| end of phrase	|
+| `%`	| silence (rest) token (character by itself)	|
+| `M`	| humming voice (character by itself)	|
+| `[`	| beginning of spoken voice	|
+| `[[`	| beginning of whisper	|
+| `]`	| end of spoken voice	|
+| `]]`	| end of whisper	|
+| `<`	| beginning of *Sprechstimme*	|
+| `>`	| end of *Sprechstimme*	|
+| `#`	| beginning of laughing voice	|
+| `##`	| end of laughing voice	|
+| `@`	| laughter (no text)	|
+| `&`	| sob or cry (no text)	|
+| `$`	| beginning of emotional voice	|
+| `$$`	| end of emotional voice	|
+| `*`	| follows stressed word (<span class="rep">text</span>) or stressed syllable (<span class="rep">silbe</span>)	|
 
 
 
@@ -193,13 +265,15 @@ $$	end	of	emotional	voice
 
 
 In most notated music, lyrics are written using a syllabic
-representation rather than a word-oriented representation. The <span class="rep">silbe</span>
-representation is typically a better representation of the score than
-<span class="rep">text</span>. However, for many analytic applications, words often prove to
-be more convenient. The Humdrum <span class="tool">text</span> command can be used to
-translate <span class="rep">silbe</span> data to <span class="rep">text</span> data. In general, syllabic
-information is useful for addressing questions related to rhythm and
-rhyme, whereas text information is more useful for addressing questions
+representation rather than a word-oriented representation. The <span
+class="rep">silbe</span> representation is typically a better
+representation of the score than <span class="rep">text</span>.
+However, for many analytic applications, words often prove to be
+more convenient. The Humdrum <span class="tool">text</span> command
+can be used to translate <span class="rep">silbe</span> data to
+<span class="rep">text</span> data. In general, syllabic information
+is useful for addressing questions related to rhythm and rhyme,
+whereas text information is more useful for addressing questions
 related to semantics, metaphor, word-painting, etc.
 
 Invoking the <span class="tool">text</span> command is straightforward:
@@ -208,28 +282,28 @@ Invoking the <span class="tool">text</span> command is straightforward:
 text inputfile > outputfile
 ```
 
-
 A simple text-related task might be looking for occurrences of a
-particular word, such as the German "Liebe" (love). If the lyrics are
-encoded in the <span class="rep">text</span> representation,
+particular word, such as the German "Liebe" (love). If the lyrics
+are encoded in the <span class="rep">text</span> representation,
 then a simple <span class="unix">grep</span> will suffice:
 
 ```bash
 grep -n 'Liebe' schubert
 ```
 
-Recall that the <span class="option">n</span> option gives the line number of any occurrences
-found. If the input is encoded in the
-<span class="rep">silbe</span> representation, then the
-output of <span class="tool">text</span> can be piped to <span class="unix">grep</span>:
+Recall that the <span class="option">n</span> option gives the line
+number of any occurrences found. If the input is encoded in the
+<span class="rep">silbe</span> representation, then the output of
+<span class="tool">text</span> can be piped to <span
+class="unix">grep</span>:
 
 ```bash
 extract -i '**silbe' schubert | text | grep -n 'Liebe'
 ```
 
-
-Given a <span class="rep">silbe</span> input, a inventory of words can be generated using
-<span class="unix">sort</span> and <span class="unix">uniq</span> in the usual way:
+Given a <span class="rep">silbe</span> input, a inventory of words
+can be generated using <span class="unix">sort</span> and <span
+class="unix">uniq</span> in the usual way:
 
 ```bash
 extract -i '**silbe' song | text | rid -GLId | sort | uniq
@@ -238,22 +312,22 @@ extract -i '**silbe' song | text | rid -GLId | sort | uniq
 Frequently, it is useful to search for a group of words rather than
 individual words. Suppose we are looking for the phrase "white
 Pangur." The <span class="tool">context</span> command can be used
-to amalgamate words as multiple stops. If we are looking for a phrase
-consisting of just two words, we might use the **-n 2** option for
-<span class="tool">context</span>:
+to amalgamate words as multiple stops. If we are looking for a
+phrase consisting of just two words, we might use the **-n 2**
+option for <span class="tool">context</span>:
 
 ```bash
 text barber | context -n 2 | grep -i 'white Pangur'
 ```
 
-
-Alternatively, we might amalgamate words so they form sentences, or at
-least phrases. Puntuation marks provide a convenient marker for ending
-the amalgamation process carried out by <span class="tool">context</span>. In the following
-command, we have defined a regular expression with a character-class
-containing all of the puntuation marks. The output from this command
-will display all punctuated phrases (one per line) that contain the
-phrase "white Pangur."
+Alternatively, we might amalgamate words so they form sentences,
+or at least phrases. Puntuation marks provide a convenient marker
+for ending the amalgamation process carried out by <span
+class="tool">context</span>. In the following command, we have
+defined a regular expression with a character-class containing all
+of the puntuation marks. The output from this command will display
+all punctuated phrases (one per line) that contain the phrase "white
+Pangur."
 
 ```bash
 text | context -e '[.,;?!]' | grep -i 'white Pangur'
@@ -261,20 +335,20 @@ text | context -e '[.,;?!]' | grep -i 'white Pangur'
 
 
 
-
 ## The *fmt* Command ##
 
 
 
-Another common task is simply to provide a readable text of the text or
-lyrics of a work. Given a <span class="rep">text</span> representation, we can use the
-<span class="tool">rid</span> command to eliminate all records except
-non-null data records. This will result in a list of words &mdash; one word
-per line. UNIX provides a simple text formatter called <span class="unix">fmt</span> that will
-assemble words or lines into a block text where all output lines are
-roughly the same width. <a name ="Gregorian_Chant"></a>
-[Consider the Gregorian chant *A Solis Ortus* from the *Liber Usualis*
-(shown in Example 27.2.)
+Another common task is simply to provide a readable text of the
+text or lyrics of a work. Given a <span class="rep">text</span>
+representation, we can use the <span class="tool">rid</span> command
+to eliminate all records except non-null data records. This will
+result in a list of words &mdash; one word per line. UNIX provides
+a simple text formatter called <span class="unix">fmt</span> that
+will assemble words or lines into a block text where all output
+lines are roughly the same width. <a name ="Gregorian_Chant"></a>
+[Consider the Gregorian chant *A Solis Ortus* from the *Liber
+Usualis* (shown in Example 27.2.)
 
 **Example 27.2.** Beginning of chant *A Solis Ortus*.]{#Liber_Usualis}
 
