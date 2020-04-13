@@ -433,7 +433,7 @@ As we saw in [Chapter 14,](/guide/ch14) stream editors such as <span
 class="unix">sed</span> and <span class="tool">humsed</span> provide
 automated substitution operations. Such string substitutions can
 be used for non-parametric classifying. We can illustrate this with
-**humsed.**
+<span class="tool">humsed</span>.
 
 Suppose we wanted to classify various flute finger-transitions as
 either *easy*, *moderate* or *difficult*. For example, F4 to G4 is

@@ -185,7 +185,7 @@ calculated, and that no unison has appeared for the tied note in the
 lower voice.
 
 If desired, the unison intervals between successive tied notes can be
-output via the <span class="option">t</span> option for **mint.**
+output via the <span class="option">t</span> option for <span class="tool">mint</span>.
 
 Sometimes it is useful to maintain the initial starting pitches in the
 output. The presence of these "offset" pitch values can prove useful

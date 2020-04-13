@@ -21,6 +21,7 @@ my @unix;
 $unix[@unix] = "alias";
 $unix[@unix] = "awk";
 $unix[@unix] = "cat";
+$unix[@unix] = "cut";
 $unix[@unix] = "chmod";
 $unix[@unix] = "cmp";
 $unix[@unix] = "comm";

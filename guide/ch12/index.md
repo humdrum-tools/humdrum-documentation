@@ -222,7 +222,7 @@ extracted simultaneously. For example:
 
 
 ```bash
-extract -i '**semits,**MIDI' hildegard
+extract -i '<span class="tool">semits</span>,MIDI' hildegard
 ```
 
 will extract all spines in the file `hildegard` containing

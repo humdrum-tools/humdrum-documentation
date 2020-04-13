@@ -120,7 +120,7 @@ As in the case of melodic intervals, harmonic intervals can be
 calculated according to a variety of units &mdash; including diatonic
 intervals, semitones, cents, frequency, and even cochlear coordinates.
 We will consider just two tools for calculating harmonic intervals:
-<span class="tool">hint</span> and **ydelta.**
+<span class="tool">hint</span> and <span class="tool">ydelta</span>.
 
 
 
@@ -294,9 +294,9 @@ The following output results:
 
 Notice that the half-note C5 has been repeated. The <span class="option">p</span> option has
 caused each repetition of the data token to be placed in parentheses so
-they can be easily recognized. By using **ditto,** we have transformed
+they can be easily recognized. By using <span class="tool">ditto</span>, we have transformed
 previously passing intervals into explicit sonorities whose intervals
-can now be identified by **hint.** We can combine the two commands in a
+can now be identified by <span class="tool">hint</span>. We can combine the two commands in a
 single pipeline:
 
 ```bash
@@ -626,7 +626,7 @@ record can be output in square brackets using the <span class="option">o</span> 
 
 Like the <span class="tool">hint</span> command, <span class="tool">ydelta</span> calculates numerical intervals
 only when more than one value is present on a given input data record.
-As in the case of **hint,** we might use the <span class="tool">ditto</span> command to
+As in the case of <span class="tool">hint</span>, we might use the <span class="tool">ditto</span> command to
 propagate pitch values &mdash; replacing all the null data tokens. A
 suitable command would be:
 
@@ -674,7 +674,7 @@ use <span class="tool">ydelta</span> to calculate the actual semitone interval d
 <span class="tool">rid</span> command can be used to eliminate non-data
 records, and the **grep -v** command can be used to further eliminate
 barlines. Finally, we can calculate the mean interval distance using the
-**stats** command:
+<span class="tool">stats</span> command:
 
 ```bash
 ditto -s = temp1 | ydelta -s = -i '**semits' | rid -GLId \

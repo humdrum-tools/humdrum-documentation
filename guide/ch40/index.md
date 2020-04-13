@@ -90,8 +90,8 @@ classes of tasks:
     <span class="tool">pf</span>, <span class="tool">pitch</span>,
     <span class="tool">reihe</span>,
     <span class="tool">semits</span>,
-    <span class="tool">solfa</span>, [**solfg**,](/tool/solfg)
-    <span class="tool">text</span>, [**tonh**,](/tool/tonh)
+    <span class="tool">solfa</span>, <span class="tool">solfg</span>,
+    <span class="tool">text</span>, <span class="tool">tonh</span>,
     <span class="tool">trans</span> and <span class="tool">vox</span>.
 -   ***Arithmetic transformations of representations.*** Manipulating
     numerical values can be done using

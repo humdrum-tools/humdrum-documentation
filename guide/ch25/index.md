@@ -408,7 +408,7 @@ However, we know that non-numerical data can also be similar. An
 "apple" is more similar to an "orange" than it is to a "bassoon."
 
 The <span class="tool">simil</span> command is a "non-parametric"
-tool for characterizing similarity. Like **correl,** the criterion
+tool for characterizing similarity. Like <span class="tool">correl</span>, the criterion
 of similarity depends on the user's choice of input representations.
 If the input represents metric position, then the results pertain
 to metric-position similarity. If the input represents phonetic
@@ -858,7 +858,7 @@ displayHumdrum(
 });
 </script>
 <script type="text/x-humdrum" id="example-25-1b">
-!!!OTL: My Bonnic Lies over the Ocean
+!!!OTL: My Bonnie Lies over the Ocean
 **kern	**accent
 *M3/4	*M3/4
 *G:	*G:
@@ -902,7 +902,7 @@ displayHumdrum(
 ```
 
 ```humdrum
-!!!OTL: My Bonnic Lies over the Ocean
+!!!OTL: My Bonnie Lies over the Ocean
 **kern	**accent
 *M3/4	*M3/4
 *G:	*G:

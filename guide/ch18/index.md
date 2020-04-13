@@ -620,7 +620,7 @@ A number of pitch-related Humdrum commands accept <span class="rep">fret</span> 
 as inputs, including <span class="tool">cents</span>,
 <span class="tool">freq</span>, <span class="tool">kern</span>,
 <span class="tool">pitch</span>, <span class="tool">semits</span>,
-[**solfg**,](/tool/solfg) and [**tonh**.](/tool/tonh)
+<span class="tool">solfg</span>, and <span class="tool">tonh</span>.
 
 
 

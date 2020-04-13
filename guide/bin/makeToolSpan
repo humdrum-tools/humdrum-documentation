@@ -43,6 +43,7 @@ for (my $i=0; $i<@commands; $i++) {
 $commands[@commands] = "tonh";
 $commands[@commands] = "solfa";
 $commands[@commands] = "solfg";
+$commands[@commands] = "stats";
 
 
 # print "TOOLS: ", join("\n", @commands), "\n";

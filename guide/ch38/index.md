@@ -172,7 +172,7 @@ command to calculate numerical differences. The <span class="option">a</span> op
 <span class="tool">rid</span> command can be used to eliminate everything
 but data records and the <span class="unix">grep</span> command can be used to eliminate
 barlines and rests. We can then calculate the average interval size by
-piping the output to the **stats** command. For typical folk melodies,
+piping the output to the <span class="tool">stats</span> command. For typical folk melodies,
 the average interval size is roughly two semitones.
 
 ```bash

@@ -336,7 +336,7 @@ values together. The basic pipeline will extract the pertinent <span class="rep"
 spine, eliminate all non-vowel phonemes, add spaces between each vowel,
 and then assign estimated heights to each vowel. Finally, non-data
 records are eliminated using <span class="tool">rid</span> and the data
-values averaged using the **stats** command:
+values averaged using the <span class="tool">stats</span> command:
 
 ```bash
 extract -i '**IPA' Penzance | humsed 's/[^@VR&AaEiIoOWuUy]//'\

@@ -250,9 +250,9 @@ s%[0-9][0-9]*/[0-9][0-9]*/%%g
 
 
 We can determine the range or variance of these velocity values by
-piping the output to the **stats** command. The **stats** command
+piping the output to the <span class="tool">stats</span> command. The <span class="tool">stats</span> command
 calculates basic statistical information for any input consisting of a
-column of numbers. A sample output from **stats** might appear as
+column of numbers. A sample output from <span class="tool">stats</span> might appear as
 follows:
 
 ```
@@ -290,7 +290,7 @@ The <span class="tool">extract</span> command has been added to ensure that we o
 <span class="rep">MIDI</span> data; the <span class="unix">grep</span> command
 ensures that possible barlines are eliminated, and the <span class="tool">rid</span> command
 eliminates comments and interpretations prior to passing the data to the
-**stats** command.
+<span class="tool">stats</span> command.
 
 
 
@@ -580,7 +580,7 @@ In texts for vocal works, identify the number of notes per syllable.
 ```bash
 extract -i '**kern' *input* | humsed 's/X//g' > tune
 extract -i '**silbe' *input* | humsed 's/[a-zA-Z]*/X/' > lyrics
-assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
+assemble tune lyrics | cleave -i '<span class="tool">kern</span>,silbe' -o '**new' \
    > combined
 context -b X -o '[r=]' combined | rid -GLId | awk '{print NF}'
 ```
@@ -591,7 +591,7 @@ Identify the number of notes per word rather than per syllable.
 ```bash
 extract -i '**kern' *input* > tune
 extract -i '**silbe' *input*` | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
-assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
+assemble tune lyrics | cleave -i '<span class="tool">kern</span>,silbe' -o '**new' \
    > combined
 context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
    | awk '{print NF}'
