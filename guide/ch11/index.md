@@ -764,7 +764,9 @@ differences of the differences. For example, we can calculate the
 second derivative of successive cents by using a pipeline containing
 two <span class="tool">xdelta</span> commands:
 
-`xdelta -s ^= inputfile` `| xdelta -s ^= `
+```bash
+xdelta -s ^= inputfile | xdelta -s ^= 
+```
 
 
 
