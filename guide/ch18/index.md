@@ -686,8 +686,8 @@ The complete system of signifiers used by
 | `O`	|	artificial harmonic		|
 
 | `+`	|	bow (normal)		|
-| `(`	|	bow -- near bridge (ponticello)		|
-| `)`	|	bow -- toward fret-board (sul tasto)		|
+| `(`	|	bow &mdash; near bridge (ponticello)		|
+| `)`	|	bow &mdash; toward fret-board (sul tasto)		|
 | `{`	|	spiccato		|
 | `}`	|	col legno (with wood of the bow)		|
 | `&`	|	tremolo (bowed)		|
