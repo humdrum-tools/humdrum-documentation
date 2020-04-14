@@ -135,9 +135,11 @@ sub processLine {
 		$line =~ s/\[\*\*$command\*\*\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>/g;
 		$line =~ s/\[\*\*$command\*\*,\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>,/g;
 		$line =~ s/\[\*\*$command\*\*\.\]\(\.\.\/commands\/$command\.html\)/<span class="tool">$command<\/span>./g;
-		$line =~ s/\*\*$command\.\*\*/<span class="tool">$command<\/span>./g;
-		$line =~ s/\*\*$command,\*\*/<span class="tool">$command<\/span>,/g;
-		$line =~ s/\*\*$command\*\*/<span class="tool">$command<\/span>/g;
+
+		# This transforms will mess-up cleaned text content (for extract commands):
+		# $line =~ s/\*\*$command\.\*\*/<span class="tool">$command<\/span>./g;
+		# $line =~ s/\*\*$command,\*\*/<span class="tool">$command<\/span>,/g;
+		# $line =~ s/\*\*$command\*\*/<span class="tool">$command<\/span>/g;
 	}
 	return $line;
 }
