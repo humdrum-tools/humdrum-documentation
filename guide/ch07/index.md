@@ -5,6 +5,7 @@ author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
 last-edited:	14 Apr 2020
+hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch07/index.html
 ---
@@ -143,7 +144,7 @@ displayHumdrum(
 {
 	source: "example-07-1",
 	scale: 55,
-	spacingLinear: 0.45
+	spacingLinear: 0.35
 });
 </script>
 <script type="text/x-humdrum" id="example-07-1">
