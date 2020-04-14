@@ -8,12 +8,41 @@ permalink: /guide/index.html
 Humdrum Toolkit User Guide
 ============================
 
+<div id="verbose">
+<input id="chapter-headings" onclick="toggleHeadings();" type="checkbox"> Show chapter headings
+</div>
 <div id="index"></div>
 
 <style>
 
 ul.index {
 	list-style: none;
+}
+
+#verbose {
+	margin-top: -20px;
+	white-space: nowrap;
+	float: right;
+	font-weight: bold;
+}
+
+.chapter-number {
+	display: inline-block;
+	width: 150px;
+	color: black;
+}
+
+div.heading {
+	padding-left: 85px;
+}
+
+div.heading i {
+	padding-right: 5px;
+}
+
+div.heading-number {
+	display: inline-block;
+	width: 100px;
 }
 
 </style>
@@ -23,7 +52,6 @@ var guide = {{ site.data.guide | jsonify }}
 console.log("GUIDE", guide);
 
 generateIndex(guide, "#index");
-
 
 function generateIndex(data, selector) {
 	var element = document.querySelector(selector);
@@ -40,13 +68,15 @@ function generateIndex(data, selector) {
 			counter = "0" + counter;
 		}
 		output += "<a href=ch" + counter + ">";
-		output += "<span style='display:inline-block; width:150px;'>";
+		output += "<span class='chapter-number'>";
 		output += "Chapter ";
 		output += data[i].chapter;
 		output += ": ";
 		output += "</span>";
 		output += data[i].title;
 		output += "</a>";
+		output += "<div style='display:none;' class='heading' data-chapter='ch" + counter + "'>";
+		output += "</div>";
 		output += "</li>";
 	}
 	output += "<ul class='index'>";
@@ -55,4 +85,5 @@ function generateIndex(data, selector) {
 
 </script>
 
+{% include_relative scripts-local.html %}
 

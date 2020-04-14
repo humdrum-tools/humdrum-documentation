@@ -25,4 +25,6 @@ headings:
 spaces:
 	$(BIN)/cleanSpaces ch??/index.md
 
+index:
+	$(BIN)/makeSubheadingList  > chapter-headings.txt
 

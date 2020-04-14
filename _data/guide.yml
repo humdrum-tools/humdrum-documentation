@@ -68,6 +68,9 @@
         - chapter:  22
           title:    "Classifying"
           commands: 
+        - chapter:  23
+          title:    "Rhythm"
+          commands: 
         - chapter:  24
           title:    "The Shell (III)"
           commands: 
@@ -79,6 +82,9 @@
           commands: 
         - chapter:  27
           title:    "Text and Lyrics"
+          commands: 
+        - chapter:  28
+          title:    "Dynamics"
           commands: 
         - chapter:  29
           title:    "Differences and Commonalities"
@@ -97,6 +103,9 @@
           commands: 
         - chapter:  34
           title:    "Serial Processing"
+          commands: 
+        - chapter:  35
+          title:    "Layers"
           commands: 
         - chapter:  36
           title:    "Sound and Spectra"

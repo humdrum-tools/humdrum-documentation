@@ -1,0 +1,145 @@
+
+
+
+<script>
+// vim: ts=3
+
+CHAPTER_HEADINGS = {};
+
+
+document.addEventListener("DOMContentLoaded", checkChapterStyle);
+
+
+//////////////////////////////
+//
+// checkChapterStyle --
+//
+
+function checkChapterStyle() {
+	if (sessionStorage.chapterHeadings) {
+		var element = document.querySelector("#chapter-headings");
+		if (element) {
+			element.click();
+		}
+	}
+}
+
+
+//////////////////////////////
+//
+// DOMContentLoaded event listener -- Prepare chapter heading list.
+//
+
+document.addEventListener("DOMContentLoaded", function() {
+	var i;
+	var request = new XMLHttpRequest();
+	request.open("GET", "chapter-headings.txt");
+	request.send();
+	request.onload = function() {
+		var text = this.responseText;
+		prepareHeadings(text);
+	};
+});
+
+
+
+//////////////////////////////
+//
+// prepareHeadings --
+//
+
+function prepareHeadings(text) {
+	var ch = CHAPTER_HEADINGS;
+	var lines = text.split("\n");
+	var i;
+	for (i=0; i<lines.length; i++) {
+		var pieces = lines[i].split("\t");
+		if (!pieces[0]) {
+			continue;
+		}
+		if (!ch[pieces[0]]) {
+			ch[pieces[0]] = [];
+		}
+		var obj = {};
+		obj.anchor = pieces[1];
+		obj.text = pieces[2];
+		obj.url = pieces[0] + "/index.html";
+		obj.num= parseInt(pieces[0].replace(/ch/g, "").replace(/^0+/, ""));
+		obj.core= pieces[0];
+		ch[pieces[0]].push(obj);
+	}
+	var keys = Object.keys(ch);
+	for (i=0; i<keys.length; i++) {
+		prepareChapterHeadings(ch[keys[i]]);
+	}
+}
+
+
+//////////////////////////////
+//
+// prepareChapterHeadings --
+//
+
+function prepareChapterHeadings(info) {
+	if (!info) {
+		return;
+	}
+	if (info.length == 0) {
+		return;
+	}
+	var core = info[0].core;
+	var query = 'div.heading[data-chapter="' + core + '"]';
+	var element = document.querySelector(query);
+	if (!element) {
+		return;
+	}
+	var output = "";
+	var i;
+	for (i=0; i<info.length; i++) {
+		output += "<div>";
+		output += "<div class='heading-number'>";
+		output += info[i].num;
+		output += ".";
+		output += (i+1);
+		output += "</div>";
+		output += '<a href="' + info[i].url + '#' + info[i].anchor + '">';
+		output += info[i].text;
+		output += "</a>";
+		output += "</div>";
+	}
+	element.innerHTML = output;
+}
+
+
+//////////////////////////////
+//
+// toggleHeadings --
+//
+
+function toggleHeadings() {
+	var element = document.querySelector("#chapter-headings");
+	if (!element) {
+		return;
+	}
+	var hlist = document.querySelectorAll("div.heading");
+	var i;
+	if (element.checked) {
+		sessionStorage.chapterHeadings = "1";
+		// Show headings
+		for (i=0; i<hlist.length; i++) {
+			hlist[i].style.display = "block";
+		}
+	} else {
+		sessionStorage.chapterHeadings = "";
+		// Hide headings
+		for (i=0; i<hlist.length; i++) {
+			hlist[i].style.display = "none";
+		}
+	}
+}
+
+
+
+</script>
+
+

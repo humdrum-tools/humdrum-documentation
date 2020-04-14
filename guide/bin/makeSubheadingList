@@ -1,0 +1,67 @@
+#!/usr/bin/perl
+#
+# Programmer:    Craig Stuart Sapp <craig.stanford.edu>
+# Creation Date: Mon Apr 13 19:01:28 PDT 2020
+# Last Modified: Mon Apr 13 19:01:33 PDT 2020
+# Filename:      makeSubheadingList
+# Syntax:        perl 5
+#
+# Description:   Make a list of subheadings for each chapter for long
+#                table of contents view.
+#
+
+use strict;
+
+my @chapters = sort glob("ch??");
+
+my $output = "";
+foreach my $chapter (@chapters) {
+	makeSubheadingEntry($chapter);
+}
+print $output;
+
+
+##############################
+##
+## makeSubheadingEntry --
+##
+
+sub makeSubheadingEntry {
+	my ($chapter) = @_;
+	if (!-r "$chapter/index.md") {
+		print STDERR "Warning $chapter/index.md does not exist\n";
+		return;
+	}
+	open FILE, "$chapter/index.md" or die "Cannot read $chapter/index.md";
+	my @contents = <FILE>;
+	chomp @contents;
+	my @list;
+	for (my $i=0; $i<@contents; $i++) {
+		my $line = $contents[$i];
+		if ($line =~ /^\s*##([^#].*[^#])##\s*$/) {
+			my $text = $1;
+			$text =~ s/^\s+//;
+			$text =~ s/\s+$//;
+			$list[@list] = $text;
+		}
+	}
+
+	for (my $i=0; $i<@list; $i++) {
+		my $title = $list[$i];
+		my $link = $list[$i];
+		$title =~ s/\\\*\\\*/ZZZ/g;
+		$title =~ s/\*([^*]+)\*/<i>$1<\/i>/g;
+		$title =~ s/ZZZ/**/g;
+		$title =~ s/\([^a-zA-Z]+\)//g;
+		$link =~ s/ -/ YYY/g;
+		$link =~ s/\&hellip;/.../g;
+		$link =~ s/[^a-zA-Z]+/-/g;
+		$link =~ s/YYY/-/g;
+		$link =~ tr/A-Z/a-z/;
+		$output .= "$chapter\t$link\t$title\n";
+	}
+	return $output;
+}
+
+
+

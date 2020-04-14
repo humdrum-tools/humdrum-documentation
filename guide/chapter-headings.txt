@@ -1,0 +1,303 @@
+ch01	what-can-humdrum-do-	What Can Humdrum Do?
+ch01	the-humdrum-syntax-and-the-humdrum-toolkit	The Humdrum Syntax and the Humdrum Toolkit
+ch01	humdrum-syntax	Humdrum Syntax
+ch01	humdrum-tools	Humdrum Tools
+ch01	some-sample-commands	Some Sample Commands
+ch01	reprise	Reprise
+ch02	comment-records	Comment Records
+ch02	reference-records	Reference Records
+ch02	reprise	Reprise
+ch03	the-census-command	The <i>census</i> Command
+ch03	simple-searches-using-the-grep-command	Simple Searches using the <i>grep</i> Command
+ch03	pattern-locations-using-grep--n	Pattern Locations Using grep -n
+ch03	counting-pattern-occurrences-using-grep--c	Counting Pattern Occurrences Using grep -c
+ch03	searching-for-reference-information	Searching for Reference Information
+ch03	the-sort-command	The <i>sort</i> Command
+ch03	the-uniq-command	The <i>uniq</i> Command
+ch03	options-for-the-uniq-command	Options for the <i>uniq</i> Command
+ch03	reprise	Reprise
+ch04	iso-pitch-representation	ISO Pitch Representation
+ch04	german-tonh-he	German Tonhöhe
+ch04	french-solf-ge	French Solfège
+ch04	frequency	Frequency
+ch04	cents	Cents
+ch04	semitones	Semitones
+ch04	scale-degree-mdash-solfa-and-deg-	Scale Degree &mdash; <i>**solfa</i> and <i>**deg</i>
+ch04	pitch-translations	Pitch Translations
+ch04	transposition-using-the-trans-command	Transposition Using the <i>trans</i> Command
+ch04	key-interpretations	Key Interpretations
+ch04	pitch-processing	Pitch Processing
+ch04	uses-for-pitch-translations	Uses for Pitch Translations
+ch04	reprise	Reprise
+ch05	types-of-records	Types of Records
+ch05	comment-records	Comment Records
+ch05	interpretation-records	Interpretation Records
+ch05	data-records	Data Records
+ch05	data-tokens-and-null-tokens	Data Tokens and Null Tokens
+ch05	data-sub-tokens	Data Sub-Tokens
+ch05	spine-paths	Spine Paths
+ch05	the-humdrum-syntax-a-formal-definition	The Humdrum Syntax: A Formal Definition
+ch05	a-record-having-more-than-two-exchange-spine-indications-	A	record	having	more	than	two	exchange-spine	indications.
+ch05	the-humdrum-command	The <i>humdrum</i> Command
+ch05	reprise	Reprise
+ch06	tuplets	Tuplets
+ch06	grace-notes-gruppettos-and-appoggiaturas	Grace Notes, Gruppettos and Appoggiaturas
+ch06	multiple-stops	Multiple Stops
+ch06	further-examples	Further Examples
+ch06	reprise	Reprise
+ch07	the-midi-representation	The <i>**MIDI</i> Representation
+ch07	the-midi-command	The <i>midi</i> Command
+ch07	the-perform-command	The <i>perform</i> Command
+ch07	data-scrolling-during-playback	Data Scrolling During Playback
+ch07	changing-tempo	Changing Tempo
+ch07	the-tacet-command	The <i>tacet</i> Command
+ch07	the-smf-command	The <i>smf</i> Command
+ch07	reprise	Reprise
+ch08	shell-special-characters	Shell Special Characters
+ch08	file-redirection-	File Redirection 
+ch08	pipe-	Pipe 
+ch08	shell-wildcard-	Shell Wildcard 
+ch08	comment-	Comment 
+ch08	escape-character-	Escape Character 
+ch08	escape-quotations-	Escape Quotations 
+ch08	command-delimiter-	Command Delimiter 
+ch08	background-command-	Background Command 
+ch08	shell-command-syntax	Shell Command Syntax
+ch08	output-redirection	Output Redirection
+ch08	reprise	Reprise
+ch09	literals	Literals
+ch09	wild-card	Wild-Card
+ch09	escape-character	Escape Character
+ch09	repetition-operators	Repetition Operators
+ch09	context-anchors	Context Anchors
+ch09	or-logical-operator	OR Logical Operator
+ch09	character-classes	Character Classes
+ch09	examples-of-regular-expressions	Examples of Regular Expressions
+ch09	examples-of-regular-expressions-in-humdrum	Examples of Regular Expressions in Humdrum
+ch09	basic-extended-and-humdrum-extended-regular-expressions	Basic, Extended, and Humdrum-Extended Regular Expressions
+ch09	reprise	Reprise
+ch10	the-grep-command-again-	The <i>grep</i> Command (Again)
+ch10	german-french-italian-and-neapolitan-sixths	German, French, Italian, and Neapolitan Sixths
+ch10	and-searches-using-the-xargs-command	AND-Searches Using the <i>xargs</i> Command
+ch10	or-searches-using-the-grep--f-command	OR-Searches Using the <i>grep -f</i> Command
+ch10	reprise	Reprise
+ch11	types-of-melodic-intervals	Types of Melodic Intervals
+ch11	melodic-intervals-using-the-mint-command	Melodic Intervals Using the <i>mint</i> Command
+ch11	unvoiced-inner-intervals	Unvoiced Inner Intervals
+ch11	calculating-distance-intervals-using-the-mint--s-command	Calculating Distance Intervals Using the <i>mint -s</i> Command
+ch11	simple-and-compound-melodic-intervals	Simple and Compound Melodic Intervals
+ch11	diatonic-intervals-absolute-intervals-and-contour	Diatonic Intervals, Absolute Intervals and Contour
+ch11	using-the-mint-command	Using the <i>mint</i> Command
+ch11	calculating-melodic-intervals-using-the-xdelta-command	Calculating Melodic Intervals Using the <i>xdelta</i> Command
+ch11	reprise	Reprise
+ch12	extracting-spines-the-extract-command	Extracting Spines: The <i>extract</i> Command
+ch12	extraction-by-interpretation	Extraction by Interpretation
+ch12	using-extract-in-pipelines	Using <i>extract</i> in Pipelines
+ch12	extracting-spines-that-meander	Extracting Spines that Meander
+ch12	field-trace-extracting	Field-Trace Extracting
+ch12	extracting-passages-the-yank-command	Extracting Passages: The <i>yank</i> Command
+ch12	yanking-by-marker	Yanking by Marker
+ch12	yanking-by-delimiters	Yanking by Delimiters
+ch12	yanking-by-section	Yanking by Section
+ch12	examples-using-yank-	Examples Using <i>yank</i>
+ch12	using-yank-in-pipelines	Using <i>yank</i> in Pipelines
+ch12	reprise	Reprise
+ch13	the-cat-command	The <i>cat</i> Command
+ch13	the-rid-command	The <i>rid</i> Command
+ch13	assembling-parts-using-the-assemble-command	Assembling Parts Using the <i>assemble</i> Command
+ch13	aligning-durations-using-the-timebase-command	Aligning Durations Using the <i>timebase</i> Command
+ch13	assembling-n-tuplets	Assembling N-tuplets
+ch13	checking-an-assembled-score-using-proof-	Checking an Assembled Score Using <i>proof</i>
+ch13	other-uses-for-the-timebase-command	Other Uses for the <i>timebase</i> Command
+ch13	additional-uses-of-assemble-and-timebase-	Additional Uses of <i>assemble</i> and <i>timebase</i>
+ch13	reprise	Reprise
+ch14	the-sed-and-humsed-commands	The <i>sed</i> and <i>humsed</i> Commands
+ch14	simple-substitutions	Simple Substitutions
+ch14	selective-elimination-of-data	Selective Elimination of Data
+ch14	the-stats-command	The <i>stats</i> Command
+ch14	eliminate-everything-but-	Eliminate Everything But &hellip;
+ch14	deleting-data-records	Deleting Data Records
+ch14	adding-information	Adding Information
+ch14	multiple-substitutions	Multiple Substitutions
+ch14	switching-signifiers	Switching Signifiers
+ch14	executing-from-a-file	Executing from a File
+ch14	writing-to-a-file	Writing to a File
+ch14	reading-a-file-as-input	Reading a File as Input
+ch14	reprise	Reprise
+ch15	types-of-harmonic-intervals	Types of Harmonic Intervals
+ch15	harmonic-intervals-using-the-hint-command	Harmonic Intervals Using the <i>hint</i> Command
+ch15	propagating-data-using-the-ditto-command	Propagating Data Using the <i>ditto</i> Command
+ch15	using-the-ditto-and-hint-commands	Using the <i>ditto</i> and <i>hint</i> Commands
+ch15	determining-implicit-harmonic-intervals	Determining Implicit Harmonic Intervals
+ch15	the-ydelta-command	The <i>ydelta</i> Command
+ch15	more-examples-using-the-ydelta-command	More Examples Using the <i>ydelta</i> Command
+ch15	reprise	Reprise
+ch16	shell-special-characters	Shell Special Characters
+ch16	shell-variables	Shell Variables
+ch16	the-shell-greve	The Shell Greve
+ch16	single-quotes-double-quotes	Single Quotes, Double Quotes
+ch16	using-shell-variables	Using Shell Variables
+ch16	aliases	Aliases
+ch16	reprise	Reprise
+ch17	filter-sort-count	Filter, Sort, Count
+ch17	filtering-data-with-the-rid-command	Filtering Data with the <i>rid</i> Command
+ch17	inventories-for-multi-spine-inputs	Inventories for Multi-spine Inputs
+ch17	sorting-by-frequency-of-occurrence	Sorting By Frequency of Occurrence
+ch17	counting-with-the-wc-command	Counting with the <i>wc</i> Command
+ch17	excluding-or-seeking-rare-events	Excluding or Seeking Rare Events
+ch17	transforming-and-editing-inventory-data	Transforming and Editing Inventory Data
+ch17	further-examples	Further Examples
+ch17	reprise	Reprise
+ch18	heart-beats-and-other-esoterica	Heart Beats and Other Esoterica
+ch18	the-fret-representation	The <i>**fret</i> Representation
+ch18	additional-features-of-fret-	Additional Features of <i>**fret</i>
+ch18	reprise	Reprise
+ch19	the-context-command	The <i>context</i> Command
+ch19	harmonic-progressions	Harmonic Progressions
+ch19	using-context-with-the-nobr-b-nobr-and-nobr-e-nobr-options	Using <i>context</i> with the <i><nobr>-b</nobr></i> and <i><nobr>-e</nobr></i> Options
+ch19	using-context-with-sed-and-humsed-	Using <i>context</i> with <i>sed</i> and <i>humsed</i>
+ch19	linking-context-outputs-with-inputs	Linking <i>context</i> Outputs with Inputs
+ch19	using-context-with-the-p-option	Using <i>context</i> with the <i>-p</i> Option
+ch19	reprise	Reprise
+ch20	section-labels	Section Labels
+ch20	expansion-lists	Expansion Lists
+ch20	using-yank-to-extract-sections	Using <i>yank</i> to Extract Sections
+ch20	using-the-thru-command-to-expand-encodings	Using the <i>thru</i> Command to Expand Encodings
+ch20	alternative-versions	Alternative Versions
+ch20	section-types	Section Types
+ch20	hierarchical-sections	Hierarchical Sections
+ch20	using-the-yank-and-thru-commands	Using the <i>yank</i> and <i>thru</i> Commands
+ch20	strophic-representations	Strophic Representations
+ch20	the-strophe-command	The <i>strophe</i> Command
+ch20	using-the-strophe-and-thru-commands	Using the <i>strophe</i> and <i>thru</i> Commands
+ch20	reprise	Reprise
+ch21	the-patt-command	The <i>patt</i> Command
+ch21	using-patt-s-tag-option	Using <i>patt</i>'s Tag Option
+ch21	matching-multiple-records-using-the-patt-command	Matching Multiple Records Using the <i>patt</i> Command
+ch21	the-pattern-command	The <i>pattern</i> Command
+ch21	patterns-of-patterns	Patterns of Patterns
+ch21	reprise	Reprise
+ch22	the-recode-command	The <i>recode</i> Command
+ch22	classifying-intervals	Classifying Intervals
+ch22	clarinet-registers	Clarinet Registers
+ch22	open-and-close-position-chords	Open and Close Position Chords
+ch22	flute-fingering-transitions	Flute Fingering Transitions
+ch22	classifying-with-humsed-	Classifying with <i>humsed</i>
+ch22	classifying-cadences	Classifying Cadences
+ch22	orchestration	Orchestration
+ch22	reprise	Reprise
+ch23	the-recip-representation	The <i>**recip</i> Representation
+ch23	the-dur-command	The <i>dur</i> Command
+ch23	classifying-durations	Classifying Durations
+ch23	using-yank-with-the-timebase-command	Using <i>yank</i> with the <i>timebase</i> Command
+ch23	the-metpos-command	The <i>metpos</i> Command
+ch23	changes-of-stress	Changes of Stress
+ch23	reprise	Reprise
+ch24	shell-programs	Shell Programs
+ch24	flow-of-control-the-if-statement	Flow of Control: The <i>if</i> Statement
+ch24	flow-of-control-the-for-statement	Flow of Control: The <i>for</i> Statement
+ch24	a-script-for-identifying-transgressions-of-voice-leading	A Script for Identifying Transgressions of Voice-Leading
+ch24	reprise	Reprise
+ch24	locating-violations-of-the-rules-of-voice-leading	Locating Violations of the Rules of Voice-Leading
+ch25	the-correl-command	The <i>correl</i> Command
+ch25	using-a-template-with-correl-	Using a Template with <i>correl</i>
+ch25	the-simil-command	The <i>simil</i> Command
+ch25	defining-edit-penalties	Defining Edit Penalties
+ch25	the-accent-command	The <i>accent</i> Command
+ch25	reprise	Reprise
+ch26	the-rend-command	The <i>rend</i> Command
+ch26	the-cleave-command	The <i>cleave</i> Command
+ch26	creating-mixed-representations	Creating Mixed Representations
+ch26	reprise	Reprise
+ch27	the-text-and-silbe-representations	The <i>**text</i> and <i>**silbe</i> Representations
+ch27	the-text-command	The <i>text</i> Command
+ch27	the-fmt-command	The <i>fmt</i> Command
+ch27	rhythmic-feet-in-text	Rhythmic Feet in Text
+ch27	concordance	Concordance
+ch27	simile	Simile
+ch27	word-painting	Word Painting
+ch27	emotionality	Emotionality
+ch27	other-types-of-language-use	Other Types of Language Use
+ch27	reprise	Reprise
+ch28	the-dynam-and-dyn-representations	The <i>**dynam</i> and <i>**dyn</i> Representations
+ch28	the-dyn-representation	The <i>**dyn</i> Representation
+ch28	the-db-representation	The <i>**dB</i> Representation
+ch28	the-db-command	The <i>db</i> Command
+ch28	processing-dynamic-information	Processing Dynamic Information
+ch28	terraced-dynamics	Terraced Dynamics
+ch28	dynamic-swells	Dynamic Swells
+ch28	midi-dynamics	MIDI Dynamics
+ch28	reprise	Reprise
+ch29	comparing-files-using-cmp-	Comparing Files Using <i>cmp</i>
+ch29	comparing-files-using-diff-	Comparing Files Using <i>diff</i>
+ch29	comparing-inventories-mdash-the-comm-command	Comparing Inventories &mdash; The <i>comm</i> Command
+ch29	reprise	Reprise
+ch30	the-record-command	The <i>record</i> Command
+ch30	the-encode-command	The <i>encode</i> Command
+ch30	reprise	Reprise
+ch31	the-find-command	The <i>find</i> Command
+ch31	content-searching	Content Searching
+ch31	using-find-with-the-xargs-command	Using <i>find</i> with the <i>xargs</i> Command
+ch31	repertories-as-file-links	Repertories As File Links
+ch31	reprise	Reprise
+ch32	the-awk-programming-language	The <i>awk</i> Programming Language
+ch32	automatic-parsing-of-input-data	Automatic Parsing of Input Data
+ch32	arithmetic-operations	Arithmetic Operations
+ch32	conditional-statements	Conditional Statements
+ch32	assigning-variables	Assigning Variables
+ch32	manipulating-character-strings	Manipulating Character Strings
+ch32	the-for-loop	The <i>for</i> Loop
+ch32	reprise	Reprise
+ch33	the-ipa-representation	The **IPA Representation
+ch33	alliteration	Alliteration
+ch33	classifying-phonemes	Classifying Phonemes
+ch33	properties-of-vowels	Properties of Vowels
+ch33	vowel-coloration	Vowel Coloration
+ch33	rhymes-and-rhyme-schemes	Rhymes and Rhyme Schemes
+ch33	reprise	Reprise
+ch34	pitch-class-representation	Pitch-Class Representation
+ch34	the-pcset-command	The <i>pcset</i> Command
+ch34	prime-form-and-normal-form	Prime Form and Normal Form
+ch34	interval-vectors-using-the-iv-command	Interval Vectors Using the <i>iv</i> Command
+ch34	segmentation-using-the-context-command	Segmentation Using the <i>context</i> Command
+ch34	the-reihe-command	The <i>reihe</i> Command
+ch34	generating-a-set-matrix	Generating a Set Matrix
+ch34	locating-and-identifying-tone-rows	Locating and Identifying Tone-Rows
+ch34	reprise	Reprise
+ch35	implied-harmony	Implied Harmony
+ch36	the-spect-representation	The <i>**spect</i> Representation
+ch36	the-sharc-database-and-spect-command	The SHARC Database and <i>spect</i> Command
+ch36	the-mask-command	The <i>mask</i> Command
+ch36	the-sdiss-command	The <i>sdiss</i> Command
+ch36	connecting-humdrum-with-csound-mdash-the-kern-cs-command	Connecting Humdrum with Csound &mdash; the <i>kern2cs</i> Command
+ch36	sound-analysis	Sound Analysis
+ch36	reprise	Reprise
+ch37	the-process-of-electronic-editing	The Process of Electronic Editing
+ch37	establishing-the-goal	Establishing the Goal
+ch37	documenting-encoded-data	Documenting Encoded Data
+ch37	sources	Sources
+ch37	selecting-a-sample-from-some-repertory	Selecting a Sample from Some Repertory
+ch37	encoding	Encoding
+ch37	transposing-instruments	Transposing Instruments
+ch37	instrument-identification	Instrument Identification
+ch37	leading-barlines	Leading Barlines
+ch37	ornamentation	Ornamentation
+ch37	editing-sections	Editing Sections
+ch37	editorialisms-in-the-kern-representation	Editorialisms in the <i>**kern</i> Representation
+ch37	adding-reference-information	Adding Reference Information
+ch37	proof-reading-materials	Proof-reading Materials
+ch37	data-integrity-using-the-vts-checksum-record	Data Integrity Using the VTS Checksum Record
+ch37	preparing-a-distribution	Preparing a Distribution
+ch37	electronic-citation	Electronic Citation
+ch37	reprise	Reprise
+ch38	comparison-repertory	Comparison Repertory
+ch38	randomizing	Randomizing
+ch38	using-the-scramble-command	Using the <i>scramble</i> Command
+ch38	retrograde-controls-using-the-tac-command	Retrograde Controls Using the <i>tac</i> Command
+ch38	autophase-procedure	Autophase Procedure
+ch38	reprise	Reprise
+ch39	encoding-errors	Encoding Errors
+ch39	searching-tips	Searching Tips
+ch39	pipeline-tips	Pipeline Tips
+ch39	reprise	Reprise
+ch40	pursuing-a-project-with-humdrum	Pursuing a Project with Humdrum
