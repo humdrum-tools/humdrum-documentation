@@ -457,7 +457,7 @@ Using the <span class="unix">chmod</span> command, we can make this
 file executable, and then we can execute it:
 
 ```bash
-chmod +x vocalfiles 
+chmod +x vocalfiles
 ./vocalfiles
 ```
 
