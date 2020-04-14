@@ -42,11 +42,9 @@ are identified in Table 10.1.
 **Table 10.1**: *Common options for the <span class="unix">grep</span> command.*
 
 <style>
-
 .fix table tr td:first-child {
 	width: 60px;
 }
-
 </style>
 
 <div class="fix" markdown="1">
