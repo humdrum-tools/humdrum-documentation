@@ -53,11 +53,19 @@ sub makeSubheadingEntry {
 		$title =~ s/\*([^*]+)\*/<i>$1<\/i>/g;
 		$title =~ s/ZZZ/**/g;
 		$title =~ s/\([^a-zA-Z]+\)//g;
+
+		$link =~ s/\*//g;
+		$link =~ s/'//g;
+		$link =~ s/"//g;
+
 		$link =~ s/ -/ YYY/g;
 		$link =~ s/\&hellip;/.../g;
-		$link =~ s/[^a-zA-Z]+/-/g;
+		$link =~ s/\&mdash;/QQQ/g;
+		$link =~ s/[^a-zA-Z0-9]+/-/g;
 		$link =~ s/YYY/-/g;
+		$link =~ s/QQQ//g;
 		$link =~ tr/A-Z/a-z/;
+
 		$output .= "$chapter\t$link\t$title\n";
 	}
 	return $output;

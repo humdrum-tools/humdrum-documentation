@@ -22,7 +22,7 @@ ch04	french-solf-ge	French Solfège
 ch04	frequency	Frequency
 ch04	cents	Cents
 ch04	semitones	Semitones
-ch04	scale-degree-mdash-solfa-and-deg-	Scale Degree &mdash; <i>**solfa</i> and <i>**deg</i>
+ch04	scale-degree--solfa-and-deg	Scale Degree &mdash; <i>**solfa</i> and <i>**deg</i>
 ch04	pitch-translations	Pitch Translations
 ch04	transposition-using-the-trans-command	Transposition Using the <i>trans</i> Command
 ch04	key-interpretations	Key Interpretations
@@ -99,7 +99,7 @@ ch12	extracting-passages-the-yank-command	Extracting Passages: The <i>yank</i> C
 ch12	yanking-by-marker	Yanking by Marker
 ch12	yanking-by-delimiters	Yanking by Delimiters
 ch12	yanking-by-section	Yanking by Section
-ch12	examples-using-yank-	Examples Using <i>yank</i>
+ch12	examples-using-yank	Examples Using <i>yank</i>
 ch12	using-yank-in-pipelines	Using <i>yank</i> in Pipelines
 ch12	reprise	Reprise
 ch13	the-cat-command	The <i>cat</i> Command
@@ -107,9 +107,9 @@ ch13	the-rid-command	The <i>rid</i> Command
 ch13	assembling-parts-using-the-assemble-command	Assembling Parts Using the <i>assemble</i> Command
 ch13	aligning-durations-using-the-timebase-command	Aligning Durations Using the <i>timebase</i> Command
 ch13	assembling-n-tuplets	Assembling N-tuplets
-ch13	checking-an-assembled-score-using-proof-	Checking an Assembled Score Using <i>proof</i>
+ch13	checking-an-assembled-score-using-proof	Checking an Assembled Score Using <i>proof</i>
 ch13	other-uses-for-the-timebase-command	Other Uses for the <i>timebase</i> Command
-ch13	additional-uses-of-assemble-and-timebase-	Additional Uses of <i>assemble</i> and <i>timebase</i>
+ch13	additional-uses-of-assemble-and-timebase	Additional Uses of <i>assemble</i> and <i>timebase</i>
 ch13	reprise	Reprise
 ch14	the-sed-and-humsed-commands	The <i>sed</i> and <i>humsed</i> Commands
 ch14	simple-substitutions	Simple Substitutions
@@ -150,14 +150,14 @@ ch17	further-examples	Further Examples
 ch17	reprise	Reprise
 ch18	heart-beats-and-other-esoterica	Heart Beats and Other Esoterica
 ch18	the-fret-representation	The <i>**fret</i> Representation
-ch18	additional-features-of-fret-	Additional Features of <i>**fret</i>
+ch18	additional-features-of-fret	Additional Features of <i>**fret</i>
 ch18	reprise	Reprise
 ch19	the-context-command	The <i>context</i> Command
 ch19	harmonic-progressions	Harmonic Progressions
 ch19	using-context-with-the-nobr-b-nobr-and-nobr-e-nobr-options	Using <i>context</i> with the <i><nobr>-b</nobr></i> and <i><nobr>-e</nobr></i> Options
-ch19	using-context-with-sed-and-humsed-	Using <i>context</i> with <i>sed</i> and <i>humsed</i>
+ch19	using-context-with-sed-and-humsed	Using <i>context</i> with <i>sed</i> and <i>humsed</i>
 ch19	linking-context-outputs-with-inputs	Linking <i>context</i> Outputs with Inputs
-ch19	using-context-with-the-p-option	Using <i>context</i> with the <i>-p</i> Option
+ch19	using-context-with-the--p-option	Using <i>context</i> with the <i>-p</i> Option
 ch19	reprise	Reprise
 ch20	section-labels	Section Labels
 ch20	expansion-lists	Expansion Lists
@@ -172,7 +172,7 @@ ch20	the-strophe-command	The <i>strophe</i> Command
 ch20	using-the-strophe-and-thru-commands	Using the <i>strophe</i> and <i>thru</i> Commands
 ch20	reprise	Reprise
 ch21	the-patt-command	The <i>patt</i> Command
-ch21	using-patt-s-tag-option	Using <i>patt</i>'s Tag Option
+ch21	using-patts-tag-option	Using <i>patt</i>'s Tag Option
 ch21	matching-multiple-records-using-the-patt-command	Matching Multiple Records Using the <i>patt</i> Command
 ch21	the-pattern-command	The <i>pattern</i> Command
 ch21	patterns-of-patterns	Patterns of Patterns
@@ -182,7 +182,7 @@ ch22	classifying-intervals	Classifying Intervals
 ch22	clarinet-registers	Clarinet Registers
 ch22	open-and-close-position-chords	Open and Close Position Chords
 ch22	flute-fingering-transitions	Flute Fingering Transitions
-ch22	classifying-with-humsed-	Classifying with <i>humsed</i>
+ch22	classifying-with-humsed	Classifying with <i>humsed</i>
 ch22	classifying-cadences	Classifying Cadences
 ch22	orchestration	Orchestration
 ch22	reprise	Reprise
@@ -200,7 +200,7 @@ ch24	a-script-for-identifying-transgressions-of-voice-leading	A Script for Ident
 ch24	reprise	Reprise
 ch24	locating-violations-of-the-rules-of-voice-leading	Locating Violations of the Rules of Voice-Leading
 ch25	the-correl-command	The <i>correl</i> Command
-ch25	using-a-template-with-correl-	Using a Template with <i>correl</i>
+ch25	using-a-template-with-correl	Using a Template with <i>correl</i>
 ch25	the-simil-command	The <i>simil</i> Command
 ch25	defining-edit-penalties	Defining Edit Penalties
 ch25	the-accent-command	The <i>accent</i> Command
@@ -228,9 +228,9 @@ ch28	terraced-dynamics	Terraced Dynamics
 ch28	dynamic-swells	Dynamic Swells
 ch28	midi-dynamics	MIDI Dynamics
 ch28	reprise	Reprise
-ch29	comparing-files-using-cmp-	Comparing Files Using <i>cmp</i>
-ch29	comparing-files-using-diff-	Comparing Files Using <i>diff</i>
-ch29	comparing-inventories-mdash-the-comm-command	Comparing Inventories &mdash; The <i>comm</i> Command
+ch29	comparing-files-using-cmp	Comparing Files Using <i>cmp</i>
+ch29	comparing-files-using-diff	Comparing Files Using <i>diff</i>
+ch29	comparing-inventories--the-comm-command	Comparing Inventories &mdash; The <i>comm</i> Command
 ch29	reprise	Reprise
 ch30	the-record-command	The <i>record</i> Command
 ch30	the-encode-command	The <i>encode</i> Command
@@ -269,7 +269,7 @@ ch36	the-spect-representation	The <i>**spect</i> Representation
 ch36	the-sharc-database-and-spect-command	The SHARC Database and <i>spect</i> Command
 ch36	the-mask-command	The <i>mask</i> Command
 ch36	the-sdiss-command	The <i>sdiss</i> Command
-ch36	connecting-humdrum-with-csound-mdash-the-kern-cs-command	Connecting Humdrum with Csound &mdash; the <i>kern2cs</i> Command
+ch36	connecting-humdrum-with-csound--the-kern2cs-command	Connecting Humdrum with Csound &mdash; the <i>kern2cs</i> Command
 ch36	sound-analysis	Sound Analysis
 ch36	reprise	Reprise
 ch37	the-process-of-electronic-editing	The Process of Electronic Editing
