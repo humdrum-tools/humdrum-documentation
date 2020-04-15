@@ -9,12 +9,18 @@ Humdrum Toolkit User Guide
 ============================
 
 <div id="verbose">
+Highlight chapters that mention 
+<select onchange="processToolSelect();" id="tool-select">
+<option value="">any</option>
+</select> 
+tool.
 <input id="chapter-headings" onclick="toggleHeadings();" type="checkbox"> Show chapter headings
 </div>
 <div id="index"></div>
 
 <script>
 var guide = {{ site.data.guide | jsonify }}
+CHAPTER_ELEMENTS = [];
 
 //////////////////////////////
 //
@@ -29,7 +35,8 @@ function generateIndex(data, selector) {
 	}
 	var output = "";
 	output += "<ul class='index'>";
-	for (var i=0; i<data.length; i++) {
+	var i;
+	for (i=0; i<data.length; i++) {
 		output += "<li>";
 		var counter = data[i].chapter;
 		if (counter < 10) {
@@ -48,8 +55,33 @@ function generateIndex(data, selector) {
 		output += "</div>";
 		output += "</li>";
 	}
-	output += "<ul class='index'>";
+	output += "</ul>";
 	element.innerHTML = output;
+	var list = element.querySelectorAll("ul.index > li");
+	if (!list) {
+		return;
+	}
+	var href;
+	// console.log("LIST", list);
+	var matches;
+	var num;
+	for (i=0; i<list.length; i++) {
+		href = list[i].querySelector("a").getAttribute("href");
+		// console.log("HREF", href);
+		matches = href.match(/ch0?(\d+)/);
+		if (matches) {
+			num = parseInt(matches[1]);
+			if (!CHAPTER_ELEMENTS[num]) {
+				CHAPTER_ELEMENTS[num] = {};
+			}
+			CHAPTER_ELEMENTS[num].chapter = list[i];
+			if (!CHAPTER_ELEMENTS[num].headings) {
+				CHAPTER_ELEMENTS[num].headings = [];
+				// These will be filled in later when
+				// the headings are added to the page.
+			}
+		}
+	}
 }
 
 generateIndex(guide, "#index");

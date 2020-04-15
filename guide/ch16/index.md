@@ -178,7 +178,7 @@ the following command:
 sort `grep -l zebra *`
 ```
 
-or 
+or
 
 ```bash
 sort $(grep -l zebra *)

@@ -5,6 +5,7 @@
 // vim: ts=3:ft=javascript
 
 CHAPTER_HEADINGS = {};
+TOOL_INDEX = {};
 
 document.addEventListener("DOMContentLoaded", checkChapterStyle);
 
@@ -38,13 +39,11 @@ function checkChapterStyle() {
 //
 
 document.addEventListener("DOMContentLoaded", function() {
-	var i;
 	var request = new XMLHttpRequest();
 	request.open("GET", "chapter-headings.txt");
 	request.send();
 	request.onload = function() {
-		var text = this.responseText;
-		prepareHeadings(text);
+		prepareHeadings(this.responseText);
 	};
 });
 
@@ -63,6 +62,12 @@ function prepareHeadings(text) {
 	var lines = text.split("\n");
 	var i;
 	for (i=0; i<lines.length; i++) {
+		if (lines[i].match(/^[\!\*]/)) {
+			continue;
+		}
+		if (lines[i].match(/^\s*$/)) {
+			continue;
+		}
 		var pieces = lines[i].split("\t");
 		if (!pieces[0]) {
 			continue;
@@ -77,11 +82,20 @@ function prepareHeadings(text) {
 		obj.num= parseInt(pieces[0].replace(/ch/g, "").replace(/^0+/, ""));
 		obj.core= pieces[0];
 		ch[pieces[0]].push(obj);
+		length = ch[pieces[0]].length;
+		ch[pieces[0]][length-1].subnum = length;
 	}
 	var keys = Object.keys(ch);
 	for (i=0; i<keys.length; i++) {
 		prepareChapterHeadings(ch[keys[i]]);
 	}
+
+	var request = new XMLHttpRequest();
+	request.open("GET", "tools-by-heading.txt");
+	request.send();
+	request.onload = function() {
+		prepareToolIndex(this.responseText);
+	};
 }
 
 
@@ -96,6 +110,7 @@ function prepareChapterHeadings(info) {
 	if (!info) {
 		return;
 	}
+console.log("INFO", info);
 	if (info.length == 0) {
 		return;
 	}
@@ -113,12 +128,22 @@ function prepareChapterHeadings(info) {
 		output += info[i].num;
 		output += ".";
 		output += (i+1);
-		output += '</td><td class="heading-text"><a href="' + info[i].url + '#' + info[i].anchor + '">';
+		output += '</td><td class="heading-text"><a href="'
+		output += info[i].url + '#' + info[i].anchor + '">';
 		output += info[i].text;
 		output += "</a>";
 		output += "</td></tr></table>";
 	}
 	element.innerHTML = output;
+	var ce = CHAPTER_ELEMENTS;
+	var cechap = CHAPTER_ELEMENTS[info[0].num];
+	var pieces = element.querySelectorAll("table.heading-table");
+	if (!cechap.headings) {
+		cechap.headings = [];
+	}
+	for (i=0; i<pieces.length; i++) {
+		cechap.headings[i+1] = pieces[i];
+	}
 }
 
 
@@ -150,6 +175,127 @@ function toggleHeadings() {
 	}
 }
 
+
+
+//////////////////////////////
+//
+// prepareTooIndex --
+//
+
+function prepareToolIndex(text) {
+	var ch = CHAPTER_HEADINGS;
+	var ti = TOOL_INDEX;
+	var lines = text.split("\n");
+	var i;
+	for (i=0; i<lines.length; i++) {
+		if (lines[i].match(/^[\!\*]/)) {
+			continue;
+		}
+		if (lines[i].match(/^\s*$/)) {
+			continue;
+		}
+		var pieces = lines[i].split("\t");
+		if (!pieces[0]) {
+			continue;
+		}
+		if (!ti[pieces[1]]) {
+			ti[pieces[1]] = [];
+		}
+		ti[pieces[1]].push(pieces[0]);
+	}
+
+	var element = document.querySelector("#tool-select");
+	if (!element) {
+		return;
+	}
+	var output = '<option value="">any</option>';
+	var keys = Object.keys(ti);
+	keys.sort();
+	for (i=0; i<keys.length; i++) {
+		output += '<option value="' + keys[i] + '">' + keys[i] + '</option>\n';
+	}
+	element.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// turnOffAllChapterHighlighting --
+//
+
+function turnOffAllChapterHighlighting() {
+	var ce = CHAPTER_ELEMENTS;
+	var i;
+	var j;
+	for (i=0; i<ce.length; i++) {
+		if (!ce[i]) {
+			continue;
+		}
+		var li = ce[i].chapter;
+		if (!li) {
+			continue;
+		}
+		li.classList.remove("highlight");
+		// also remove highlights on chapter headings:
+		for (j=0; j<ce[i].headings.length; j++) {
+			if (!ce[i].headings[j]) {
+				continue;
+			}
+			ce[i].headings[j].classList.remove("highlight");
+		}
+	}
+}
+
+
+
+//////////////////////////////
+//
+// highlightChapter --
+//
+
+function highlightChapter(chapter) {
+	var matches;
+	var ce = CHAPTER_ELEMENTS;
+	if (matches = chapter.match(/ch0?(\d+)\.(\d+)/)) {
+		var chap    = parseInt(matches[1]);
+		var subchap = parseInt(matches[2]);
+		if (ce[chap] && ce[chap].chapter) {
+			ce[chap].chapter.classList.add("highlight");
+			if (ce[chap] && ce[chap].headings && ce[chap].headings[subchap]) {
+				ce[chap].headings[subchap].classList.add("highlight");
+			}
+		}
+	}
+}
+
+
+
+//////////////////////////////
+//
+// processToolSelect --
+//
+
+function processToolSelect(event) {
+	var element = document.querySelector("#tool-select");
+	if (!element) {
+		return;
+	}
+	var state = element.value;
+	turnOffAllChapterHighlighting();
+	var chapters = TOOL_INDEX[state];
+	var i;
+	var chapter;
+	var matches;
+	var chap;
+	var subchap;
+	for (i=0; i<chapters.length; i++) {
+		chapter = chapters[i];
+		if (matches = chapter.match(/ch0?(\d+)\.(\d+)/)) {
+			highlightChapter(chapter);
+		}
+	}
+}
 
 
 

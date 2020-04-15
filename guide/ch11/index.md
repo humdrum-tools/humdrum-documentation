@@ -765,7 +765,7 @@ second derivative of successive cents by using a pipeline containing
 two <span class="tool">xdelta</span> commands:
 
 ```bash
-xdelta -s ^= inputfile | xdelta -s ^= 
+xdelta -s ^= inputfile | xdelta -s ^=
 ```
 
 

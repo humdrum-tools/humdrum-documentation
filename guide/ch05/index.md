@@ -512,7 +512,7 @@ number of interpretation records may be necessary. In the following
 example, spines 1 and 2 are first joined together (momentarily
 defining three spines: 1&2, 3, 4). In the subsequent interpretation
 record, spine 2 (previous spine 3) and spine 3 (previous spine
-4) are then joined: 
+4) are then joined:
 
 ```humdrum
 1	2	3	4
@@ -653,7 +653,7 @@ after the first interpretation record, and (2) The number of
 sub-comments in a local comment record must be equivalent to the
 number of currently active spines.
 
-*Humdrum Terminology* 
+*Humdrum Terminology*
 
 | Comment	| Either a global or local comment. Any record beginning with an exclamation mark.	|
 | Global comment	| Any record beginning with two exclamation marks `!!`.	|
