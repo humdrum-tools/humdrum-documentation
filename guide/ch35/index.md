@@ -22,7 +22,7 @@ In [Chapters 11](/guide/ch11) and [15](/guide/ch15) we examined
 different kinds of intervals, including both harmonic and melodic
 intervals. A number of different types of intervals were distinguished
 and we learned how to calculate such intervals. One type of melodic
-interval mentioned in [Chapter 11](/guide/ch11) is the *distance
+interval mentioned in [Chapter&nbsp;11](/guide/ch11) is the *distance
 interval* &mdash; an interval between pitches which are separated
 by intervening musical materials. In this chapter we consider more
 sophisticated ways of determining distance intervals. These types
@@ -39,7 +39,7 @@ implicated in layer-related analyses.
 
 
 
-Example 35.1 shows a two-phrase trumpet solo from Aaron Copland's *El
+Example&nbsp;35.1 shows a two-phrase trumpet solo from Aaron Copland's *El
 Salon Mexico*. Harmonic progressions may be evident only when
 arpeggiated figures are collapsed. In this case, an implicit harmony may
 is evident where a G major chord is followed by a D dominant seventh
@@ -113,8 +113,8 @@ context -b = -o = copland
 ```
 
 Identify the chords is facilitated by using the pitch-class (<span
-class="rep">pc</span>) representation described in [Chapter
-34.](/guide/ch34)
+class="rep">pc</span>) representation described in
+[Chapter&nbsp;34.](/guide/ch34)
 
 ```bash
 context -b = -o = copland | pc -a | rid -d
@@ -183,7 +183,7 @@ Identifying implicit harmonic intervals can be a little more taxing.
 Let's begin by considering a monophonic passage that exhibits a
 pseudo-polyphonic or compound melodic tendency. A passage from
 Bach's "Gigue" from the solo \'cello *Suite No. 3* is shown in
-Example 35.2.
+Example&nbsp;35.2.
 
 **Example 35.2** J.S. Bach, "Gigue" from *Suite No. 3* for solo \'cello
 (excerpt).

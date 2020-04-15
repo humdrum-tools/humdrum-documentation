@@ -41,9 +41,9 @@ computers that have MIDI capable hardware.
 
 The <span class="tool">record</span> command captures a stream of
 input MIDI data and translates this data into the Humdrum <span
-class="rep">MIDI</span> representation described in [Chapter
-7.](/guide/ch07) The input data is obtained from a MIDI instrument
-such as a keyboard synthesizer.
+class="rep">MIDI</span> representation described in
+[Chapter&nbsp;7.](/guide/ch07) The input data is obtained from a
+MIDI instrument such as a keyboard synthesizer.
 
 Recording commences as soon as the command is invoked and recording
 ceases when any key is pressed &mdash; with the exception of the

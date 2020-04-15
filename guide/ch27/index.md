@@ -33,7 +33,7 @@ representation can be used to represent *syllables*; and the <span
 class="rep">IPA</span> representation can be used to represent
 *phonemes* (via the International Phonetic Alphabet).  Discussion
 of the <span class="rep">IPA</span> representation will be delayed
-until [Chapter 34.](/guide/ch34) In this chapter we will look at
+until [Chapter&nbsp;34.](/guide/ch34) In this chapter we will look at
 various representational and processing issues related to the
 manipulation of words and syllables.
 
@@ -44,7 +44,7 @@ manipulation of words and syllables.
 
 
 Syllable- and word-oriented representations are illustrated in the
-following excerpt from a motet by Byrd (Example 27.1). The encoded
+following excerpt from a motet by Byrd (Example&nbsp;27.1). The encoded
 Humdrum data includes three spines: <span class="rep">text</span>,
 <span class="rep">silbe</span> and <span class="rep">kern</span>.
 Normally, only the <span class="rep">silbe</span> and <span
@@ -191,7 +191,7 @@ say,	say,	1cc#
 ```
 
 
-Note that all three representations in Example 27.1 make use of the
+Note that all three representations in Example&nbsp;27.1 make use of the
 common system for representing barlines. In the <span
 class="rep">text</span> representation tokens represent individual
 words. In some scores, several words will be associated with a
@@ -348,7 +348,7 @@ a simple text formatter called <span class="unix">fmt</span> that
 will assemble words or lines into a block text where all output
 lines are roughly the same width. <a name ="Gregorian_Chant"></a>
 [Consider the Gregorian chant *A Solis Ortus* from the *Liber
-Usualis* (shown in Example 27.2.)
+Usualis* (shown in Example&nbsp;27.2.)
 
 **Example 27.2.** Beginning of chant *A Solis Ortus* (Liber usualis).
 
@@ -1188,7 +1188,7 @@ the <span class="unix">cut</span> command (similar to <span
 class="tool">extract -f</span>), and the <span class="unix">head</span>
 and <span class="unix">tail</span> commands.
 
-In [Chapter 34](/guide/ch34) we will examine further representations
+In [Chapter&nbsp;34](/guide/ch34) we will examine further representations
 and processes related to phonetic data.
 
 

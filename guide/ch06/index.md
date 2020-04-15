@@ -27,7 +27,7 @@ related to the <span class="rep">kern</span> representation.
 
 
 
-As we saw in [Chapter 2](/guide/ch02), <span class="rep">kern</span>
+As we saw in [Chapter&nbsp;2](/guide/ch02), <span class="rep">kern</span>
 durations are represented using a reciprocal number notation. With
 the exception of the value zero, durations are represented by
 reciprocal numerical values corresponding to the American duration
@@ -176,7 +176,7 @@ When processed by various tools in the Humdrum Toolkit, these notes
 may be treated as equivalent to their notated durations. Alternatively,
 in some types of processing these notes may be discarded. For
 example, the Humdrum <span class="tool">timebase</span> command (described
-in [Chapter 13)](/guide/ch13) eliminates acciaccaturas and gruppetto
+in [Chapter&nbsp;13)](/guide/ch13) eliminates acciaccaturas and gruppetto
 notes. Note that data records containing acciaccaturas or gruppetto
 notes must *not* also include normal notes.
 
@@ -274,7 +274,7 @@ all of the notes within a multiple stop must have the same duration.
 If the durations of the concurrent notes differ, then one must use
 Humdrum spine path indicators (see below).
 
-Example 6.2 illustrates a musical context where multiple stops may
+Example&nbsp;6.2 illustrates a musical context where multiple stops may
 be appropriate. The sample passage is from a keyboard work by
 Telemann. The work is almost entirely in two parts with only
 occasional chords. Since the chords always contain notes of equal
@@ -343,7 +343,7 @@ other markings should be encoded only once for the entire multiple stop.
 Note-related attributes such as articulation marks, stem directions, and
 ties should be encoded for each note in the multiple stop. By contrast,
 phrase marks, slurs, and beamings should be encoded once for the entire
-multiple stop. Example 6.3 provides a contrived example that illustrates
+multiple stop. Example&nbsp;6.3 provides a contrived example that illustrates
 these conventions. Notice that the first double stop encodes a single
 open phrase (i.e. `{`) and the last double stop encodes a single
 close phrase `}`. Similarly, the slur in the middle of the phrase
@@ -379,7 +379,7 @@ have been encoded for both notes in the double stop.
 
 
 
-Example 6.4 shows an excerpt from a Chopin *Etude* that illustrates
+Example&nbsp;6.4 shows an excerpt from a Chopin *Etude* that illustrates
 a number of subtle features in the <span class="rep">kern</span>
 representation.
 

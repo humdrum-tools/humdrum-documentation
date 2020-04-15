@@ -252,7 +252,7 @@ mint melodies* | context -n 5 -o = | rid -GLId | sort \
 
 
 
-Example 19.1 shows an excerpt from a flute study by Joachim Anderson. Although
+Example&nbsp;19.1 shows an excerpt from a flute study by Joachim Anderson. Although
 the work is monophonic, the work's structure is based on an underlying
 chord progression that is realized as a series of arpeggiation figures.
 
@@ -322,7 +322,7 @@ context -b '\(' anderson.krn
 ```
 
 Whenever a data record contains an open parenthesis a new amalgamation
-begins. The appropriate output for measure 1 of Example 19.1 would be:
+begins. The appropriate output for measure 1 of Example&nbsp;19.1 would be:
 
 
 ```humdrum

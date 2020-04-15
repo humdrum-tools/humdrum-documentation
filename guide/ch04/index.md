@@ -299,7 +299,7 @@ approach.  Repeated pitches carry no melodic approach signifier.
 
 Some of the differences between the <span class="rep">solfa</span>
 and <span class="rep">deg</span> representations are illustrated
-in Example 4.1. (The corresponding <span class="rep">kern</span>
+in Example&nbsp;4.1. (The corresponding <span class="rep">kern</span>
 representation is given in the first spine.) Notice that <span
 class="rep">solfa</span> does not encode any octave information.
 The <span class="rep">deg</span> representation does not encode the
@@ -381,7 +381,7 @@ data shown in the left-most spine.  The duration information in the
 representations. However, the `common system` for barlines is used
 throughout.
 
-Example 4.2 shows four pitch naming systems: ISO pitch, German
+Example&nbsp;4.2 shows four pitch naming systems: ISO pitch, German
 Tonhöhe, French solfège, as well as <span class="rep">kern</span>.
 Notice the different ways of treating accidentals such as the D-sharp
 and B-flat. Also note the German use of H for B-natural.
@@ -410,7 +410,7 @@ and B-flat. Also note the German use of H for B-natural.
 *-	*-	*-	*-
 ```
 
-In Example 4.3 four of the more technical representations are
+In Example&nbsp;4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the <span
 class="rep">MIDI</span> representation uses key-numbers to represent
 pitch: key-on events are indicated by positive integers (between

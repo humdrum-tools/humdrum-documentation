@@ -776,7 +776,7 @@ are linked with duration-related spines that assist in processing.
 One further topic related to rhythm remains to be discussed. The
 <span class="tool">accent</span> command allows the user to distinguish
 notes according to their estimated perceptual importance. We will
-consider <span class="tool">accent</span> in [Chapter 31.](/guide/ch31)
+consider <span class="tool">accent</span> in [Chapter&nbsp;31.](/guide/ch31)
 
 
 

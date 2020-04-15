@@ -17,7 +17,7 @@ permalink:	/guide/ch16/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 8](/guide/ch08) we introduced some of the shell special
+In [Chapter&nbsp;8](/guide/ch08) we introduced some of the shell special
 characters. By way of review, we learned that the shell interprets
 the octothorpe `#` as the beginning of a comment. By itself, the
 asterisk `*` is "expanded" by the shell to the names of all files
@@ -248,7 +248,7 @@ rather than the files to be searched.
 
 
 
-In [Chapter 8](/guide/ch08) we learned that single quotation marks
+In [Chapter&nbsp;8](/guide/ch08) we learned that single quotation marks
 can be used to escape the special meanings of reserved shell
 characters &mdash; such as `*` and `$`. Double quotation marks `"`
 have a similar effect with one important exception. The dollars
@@ -325,7 +325,7 @@ Consider, by way of example, the following common pipeline:
 sort inputfile | uniq -c | sort -n
 ```
 
-In [Chapter 17](/guide/ch17) we will see that this is a useful way
+In [Chapter&nbsp;17](/guide/ch17) we will see that this is a useful way
 for generating inventories. Typically, this sequence occurs at the
 end of a pipeline where some preliminary processing has taken place,
 such as:

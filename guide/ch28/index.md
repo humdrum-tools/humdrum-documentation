@@ -132,7 +132,7 @@ editorialisms are indicated in parentheses or square brackets. Such
 interpreted dynamics are followed by the lower-case letter `x`.
 
 The use of the <span class="rep">dynam</span> representation is
-illustrated in Example 28.1.
+illustrated in Example&nbsp;28.1.
 
 **Example 28.1**
 
@@ -191,7 +191,7 @@ diminuendo) marking is always assumed to increase (or decrease) the
 dynamic level from the preceding indication.
 
 If appropriate, a user can render implicit dynamic shading explicitly.
-For example, a user might choose to re-code Example 28.1 as either
+For example, a user might choose to re-code Example&nbsp;28.1 as either
 
 ```humdrum
 **kern		**dynam
@@ -278,7 +278,7 @@ number appears in curly braces.
 | `H`		| marking appears in square brackets			|
 
 
-By way of illustration, consider Example 28.2.
+By way of illustration, consider Example&nbsp;28.2.
 
 **Example 28.2:** Arnold Schoenberg, *Three Piano Pieces, Op. 11, No.
 2*, excerpt.
@@ -338,7 +338,7 @@ displayHumdrum(
 !!!RDF**kern: < = below
 </script>
 
-Using the <span class="rep">dyn</span> representation, Example 28.2
+Using the <span class="rep">dyn</span> representation, Example&nbsp;28.2
 might be encoded as follows:
 
 ```humdrum

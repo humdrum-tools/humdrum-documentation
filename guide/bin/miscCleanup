@@ -58,23 +58,38 @@ sub processFile {
 ##############################
 ##
 ## processLine --
-##      \--             -->    &mdash;
-##      \...            -->    &hellip;
-##      [a-z]\'[a-z]    -->    [a-z]'[a-z]
-##      <\/span         -->    <\/span>
-##      ^(> +)+         -->    nothing
-##      -\>             -->    &rarr;
 ##
 
 sub processLine {
 	my ($line) = @_;
+
+	##      Chapter\s\d     -->    Chapter&nbsp;\d
+	if (($line !~ /##/) && ($line !~ /<h\d>/i)) {
+		$line =~ s/Chapter\s+(\d)/Chapter\&nbsp;$1/g;
+	}
+
+	##      Example\s\d     -->    Example&nbsp;\d
+	if ($line !~ /^\s*\*\*\s*Example/) {
+		$line =~ s/Example\s+(\d)/Example\&nbsp;$1/g;
+	}
+
+	##      \--             -->    &mdash;
 	#$line =~ s/\\--/\&mdash;/g;
+
+	##      \...            -->    &hellip;
 	#$line =~ s/\\\.\.\./\&hellip;/g;
+
+	##      [a-z]\'[a-z]    -->    [a-z]'[a-z]
 	#$line =~ s/([a-z])\\'([a-z])/$1'$2/g;
+
+	##      <\/span         -->    <\/span>
 	#$line =~ s/<\/span([^>\s])/<\/span> $1/g;
 	#$line =~ s/<\/span\s([^>])/<\/span> $1/g;
-	$line =~ s/-\\>/\&rarr;/g;
 
+	##      -\>             -->    &rarr;
+	# $line =~ s/-\\>/\&rarr;/g;
+
+	##      ^(> +)+         -->    nothing
 	# The following will also destroy content, so
 	# should not used on previously edited files:
 	# $line =~ s/^(>\s*)+//;

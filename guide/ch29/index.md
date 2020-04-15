@@ -17,7 +17,7 @@ permalink:	/guide/ch29/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 25](/guide/ch25) we introduced the problem of similarity
+In [Chapter&nbsp;25](/guide/ch25) we introduced the problem of similarity
 via the Humdrum <span class="tool">simil</span> and <span
 class="tool">correl</span> commands. This chapter revisits the
 problem of similarity by focussing on differences and commonalities.
@@ -425,9 +425,10 @@ is done (using <span class="unix">wc</span>) to estimate the magnitude
 of the differences or commonalities.
 
 Together with the <span class="tool">simil</span> and <span
-class="tool">correl</span> commands discussed in [Chapter
-25,](/guide/ch25) these five tools provide a variety of means for
-characterizing differences, commonalities, and similarities.
+class="tool">correl</span> commands discussed in
+[Chapter&nbsp;25,](/guide/ch25) these five tools provide a variety
+of means for characterizing differences, commonalities, and
+similarities.
 
 
 

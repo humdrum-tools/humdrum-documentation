@@ -88,7 +88,7 @@ Building an inventory is a three-step process. First we need to
 we need to *sort* like-with-like. And third we need to *count* the
 number of occurrences of each type of data token.
 
-Let's begin by discussing the second process. In [Chapter 3](/guide/ch03)
+Let's begin by discussing the second process. In [Chapter&nbsp;3](/guide/ch03)
 we saw how the UNIX <span class="unix">sort</span> command will
 rearrange lines of data so that they are in alphabetical/numerical
 order. The command:
@@ -120,7 +120,7 @@ rearranged on successive lines.
 
 The third step in generating an inventory is to count the number
 of occurrences of each unique data token. The <span
-class="unix">uniq</span> command described in [Chapter 3](/guide/ch03)
+class="unix">uniq</span> command described in [Chapter&nbsp;3](/guide/ch03)
 will eliminate successive duplicate lines. For example, if we type:
 
 ```bash
@@ -179,7 +179,7 @@ we'd prefer to omit from our final output.
 
 
 
-As we saw in [Chapter 13,](/guide/ch13) the <span class="tool">rid</span>
+As we saw in [Chapter&nbsp;13,](/guide/ch13) the <span class="tool">rid</span>
 command can be used to eliminate various classes of Humdrum records.
 For example, <span class="tool">rid -G</span> eliminates all global
 comments; <span class="tool">rid -D</span> eliminates all data
@@ -415,7 +415,7 @@ the corresponding type of data.
 
 
 
-Recall from [Chapter 3](/guide/ch03) that the <span
+Recall from [Chapter&nbsp;3](/guide/ch03) that the <span
 class="unix">uniq</span> command provides other options (besides
 the <span class="option">c</span> option). The <span
 class="option">d</span> option causes <span class="unix">uniq</span>
@@ -563,7 +563,7 @@ lifetime?* Assume that copies of early and late works have been
 concatenated to the files `early` and `late`. The <span
 class="tool">humsed</span> command here eliminates all data with
 the exception of <span class="rep">kern</span> articulation marks.
-(See [Chapter 6](/guide/ch06) for details on <span class="rep">kern</span>
+(See [Chapter&nbsp;6](/guide/ch06) for details on <span class="rep">kern</span>
 articulation marks.)
 
 ```bash
@@ -601,7 +601,7 @@ above command for each work and inspect the results.)
 *What is the most common instrumental combination for sonorities
 by Mussorgsky?*
 
-This problem is addressed in [Chapter 36.](/guide/ch36)
+This problem is addressed in [Chapter&nbsp;36.](/guide/ch36)
 
 
 

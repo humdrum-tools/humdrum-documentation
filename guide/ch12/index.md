@@ -63,7 +63,7 @@ The <span class="tool">extract</span> command has several modes of
 operation. With the <span class="option">f</span> option, the user
 may specify a given data column (spine) or "field" to extract.
 Consider the opening of Bach's second Brandenburg Concerto shown
-in Example 12.1.
+in Example&nbsp;12.1.
 
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
 
@@ -271,7 +271,7 @@ extract -i '*ITr' albeniz
 
 Tandem interpretations are commonly used to designate instrument
 classes and groups, so different configurations of instruments are
-easily extracted. The Brandenburg Concerto shown in Example 12.1
+easily extracted. The Brandenburg Concerto shown in Example&nbsp;12.1
 illustrates a number of tandem interpretations related to instrumentation
 classes and groups. For example, the interpretation `*ICww` identifies
 woodwind instruments; `*ICbras` identifies brass instruments;
@@ -472,7 +472,7 @@ extract -i '*IGacmp' wolf | trans -d +1 -c +3 | ms | lpr
 
 
 
-As we saw in [Chapter 5,](/guide/ch05) spines can move around via
+As we saw in [Chapter&nbsp;5,](/guide/ch05) spines can move around via
 various spine-path interpretations. Changes of spine position will
 cause havoc when extracting by fields (the <span class="option">f</span>
 option); <span class="tool">extract</span> will generate an error
@@ -787,7 +787,7 @@ will yank any leading (anacrusis) material in each of the three files.
 When the <span class="option">s</span> option is invoked, <span
 class="tool">yank</span> extracts passages according to Humdrum
 section labels encoded in the input. Humdrum section labels will
-be described fully in [Chapter 20.](/guide/ch20) For now, we can
+be described fully in [Chapter&nbsp;20.](/guide/ch20) For now, we can
 simply note that section labels are tandem interpretations that
 conform to the syntax:
 
@@ -807,7 +807,7 @@ yank -s 'First Theme' -r 2 mendelssohn
 
 Note that with "through-composed" Humdrum files it is possible to
 have more than one section containing the same section-label. Such
-situations are described in [Chapter 20.](/guide/ch20)
+situations are described in [Chapter&nbsp;20.](/guide/ch20)
 
 
 
@@ -980,7 +980,7 @@ extract -i '*Iclars' quintet | yank -o { -e } -r 4,8 \
 Note that when using <span class="tool">yank</span> to retrieve
 passages by markers (such as phrase marks), care must be taken since
 markers may be miscoordinated between several concurrent parts.
-Example 12.2 shows a passage that has overlapping phrases. When
+Example&nbsp;12.2 shows a passage that has overlapping phrases. When
 trying to extract a particular phrase for a particular part, the
 outputs will differ significantly depending on whether the <span
 class="tool">yank</span> command is invoked *before* or *after* the

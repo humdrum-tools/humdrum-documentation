@@ -94,7 +94,7 @@ each verse.
 
 
 We encountered the <span class="tool">yank</span> command earlier
-in [Chapter 12.](/guide/ch12) Recall that <span class="tool">yank</span>
+in [Chapter&nbsp;12.](/guide/ch12) Recall that <span class="tool">yank</span>
 can be used to extract material by *section* using the <span
 class="option">s</span> option. For example, if the appropriate
 section is labelled, we might extract the coda of a work as follows:
@@ -496,7 +496,7 @@ The strophic passage pertains only to the spine marked <span
 class="rep">silbe</span>.  The <span class="rep">silbe</span>
 representation pertains to syllabic text encoding and is a pre-defined
 representation in Humdrum. The <span class="rep">silbe</span>
-representation is discussed in [Chapter 27.](/guide/ch27) Following
+representation is discussed in [Chapter&nbsp;27.](/guide/ch27) Following
 the strophic passage indicator `*strophe`, the spine is split
 apart until the required number of verses are generated. Then each
 spine is labelled with its own strophe label. Since the verses have
@@ -821,7 +821,7 @@ e.g. `*S/fin`
 </table>
 
 
-In [Chapter 37](/guide/ch37) we will see further examples of how
+In [Chapter&nbsp;37](/guide/ch37) we will see further examples of how
 sections and strophes are especially useful when producing electronic
 editions.
 

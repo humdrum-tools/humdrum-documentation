@@ -24,7 +24,7 @@ of MIDI-related tools that allow MIDI data to be input and output.
 In this chapter we will discuss the output-related tools: <span
 class="tool">midi</span>, <span class="tool">perform</span>, <span
 class="tool">smf</span> and <span class="tool">tacet</span>. MIDI
-input tools are discussed in [Chapter 30.](/guide/ch30)
+input tools are discussed in [Chapter&nbsp;30.](/guide/ch30)
 
 
 
@@ -134,7 +134,7 @@ Notice that the difference in duration between the half-notes and
 quarter-notes is reflected when the notes are turned *off* rather
 than when the notes are turned *on*.
 
-Example 7.1 illustrates a slightly more complex excerpt from the
+Example&nbsp;7.1 illustrates a slightly more complex excerpt from the
 beginning of Darius Milhaud's *Touches Blanches*.
 
 **Example 7.1** Excerpt from Darius Milhaud's *Touches Blanches*
@@ -202,7 +202,7 @@ displayHumdrum(
 
 The <span class="rep">MIDI</span> representation always expects a
 tandem interpretation indicating the MIDI channel assignment.  In
-Example 7.1 both parts have been assigned to channel 1. Once again,
+Example&nbsp;7.1 both parts have been assigned to channel 1. Once again,
 simultaneous key-on and key-off events often appear as double-stops.
 Also notice that an additional data record is required at the end
 of the passage in order to turn off the final notes.
@@ -368,7 +368,7 @@ Similarly, the user could search for a particular pitch, e.g.
 Since the <span class="tool">perform</span> command accepts any
 Humdrum input, other Humdrum data may be used for searching. For
 example, the input data might contain melodic interval data (see
-[Chapter 11](/guide/ch11)), allowing the user to search for a
+[Chapter&nbsp;11](/guide/ch11)), allowing the user to search for a
 particular interval such as a diminished octave:
 
 ```bash
@@ -421,11 +421,11 @@ cipher remain after terminating the <span class="tool">perform</span>
 command, the Humdrum <span class="tool">tacet</span> command can
 be used to send "all-notoff" commands on all MIDI channels.
 
-In [Chapter 12,](/guide/ch12) we will see how <span
+In [Chapter&nbsp;12,](/guide/ch12) we will see how <span
 class="tool">perform</span> can be used in conjunction with other
 commands (such as <span class="tool">extract</span> and <span
 class="tool">yank</span>) to listen selectively to specific parts
-or passages. In [Chapter 21](/guide/ch21) we will use <span
+or passages. In [Chapter&nbsp;21](/guide/ch21) we will use <span
 class="tool">perform</span> in conjunction with the <span
 class="tool">patt</span> command to listen to patterns (such as
 harmonic, rhythmic and melodic patterns) found in some repertory.
@@ -480,7 +480,7 @@ commands can be used to generate true MIDI data for listening. The
 command-line sequencer for playing whatever input is provided. The
 <span class="tool">smf</span> command generates standard MIDI files
 that can be used to transport MIDI data to a vast array of commercial
-and non-commerical applications software. In [Chapter 30](/guide/ch30)
+and non-commerical applications software. In [Chapter&nbsp;30](/guide/ch30)
 we will explore some of the Humdrum tools for inputting MIDI data
 into Humdrum.
 

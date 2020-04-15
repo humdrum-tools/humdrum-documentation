@@ -24,7 +24,7 @@ copied, counted, deleted, replaced, isolated, modified, or expanded.
 A successful pattern match might even be used to initiate further
 pattern searches.
 
-In [Chapter 3](/guide/ch03) we introduced simple searching using
+In [Chapter&nbsp;3](/guide/ch03) we introduced simple searching using
 the <span class="unix">grep</span> command. We used <span
 class="unix">grep</span> to search for strings of characters that
 match a particular pre-defined string. This chapter describes the
@@ -561,7 +561,7 @@ regular expressions are applied only to data records so there is
 no need to use the more complex expressions.  In many circumstances,
 we will see that it is convenient to use the Humdrum <span
 class="tool">rid</span> command to explicitly remove comments and
-interpretations prior to processing (see [Chapter 13](/guide/ch13)).
+interpretations prior to processing (see [Chapter&nbsp;13](/guide/ch13)).
 
 
 
@@ -578,10 +578,10 @@ repetition operators `*` and `?` but not `+`, the context anchors
 `^` and `$`, character classes `[...]`, or complementary character
 classes `[^...]`. Parenthesis grouping is supported in basic regular
 expressions, but the parentheses must be used in conjunction with
-the backslash to *enable* this function (i.e.`\(  \)`. In [Chapter
-3](/guide/ch03) we introduced the <span class="unix">grep</span>
-command; <span class="unix">grep</span> supports only basic regular
-expressions.
+the backslash to *enable* this function (i.e.`\(  \)`. In
+[Chapter&nbsp;3](/guide/ch03) we introduced the <span
+class="unix">grep</span> command; <span class="unix">grep</span>
+supports only basic regular expressions.
 
 "Extended" regular expressions include the following: the any-character
 wildcard `.`, the repetition operators `*`, `?` and `+`, the context
@@ -596,7 +596,7 @@ expression syntax.
 The Humdrum <span class="tool">pattern</span> command further extends
 regular expression syntax by providing multi-record repetition
 operators that prove very useful in musical applications. These
-Humdrum extensions will be discussed in [Chapter 21.](/guide/ch21)
+Humdrum extensions will be discussed in [Chapter&nbsp;21.](/guide/ch21)
 
 
 

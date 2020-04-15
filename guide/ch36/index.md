@@ -22,12 +22,12 @@ without considering the representation and manipulation of sound-related
 information. In this chapter we introduce some special-purpose tools
 related to sound analysis, sound synthesis, and auditory perception.
 We have already encountered the <span class="rep">freq</span> and
-<span class="rep">cents</span> representations in [Chapter
-4.](/guide/ch04) Much of this chapter will center on the <span
-class="rep">spect</span> representation. Three tools will be discussed
-in connection with <span class="rep">spect</span>: the <span
-class="tool">spect</span>, <span class="tool">mask</span> and <span
-class="tool">sdiss</span> commands. <span class="tool">spect</span>
+<span class="rep">cents</span> representations in
+[Chapter&nbsp;4.](/guide/ch04) Much of this chapter will center on
+the <span class="rep">spect</span> representation. Three tools will
+be discussed in connection with <span class="rep">spect</span>: the
+<span class="tool">spect</span>, <span class="tool">mask</span> and
+<span class="tool">sdiss</span> commands. <span class="tool">spect</span>
 accesses a database of analyzed instrument tones to generate harmonic
 spectra for all notes for various orchestral instruments over their
 complete ranges; <span class="tool">mask</span> can be used to
@@ -63,7 +63,7 @@ pressure level in decibels (dB SPL). Most sonorities consist of
 more than one pure tone component, so <span class="rep">spect</span>
 data records typically encode a number of multiple stops.
 
-Example 36.1 shows a sample document containing five spectra and a
+Example&nbsp;36.1 shows a sample document containing five spectra and a
 barline. The first data record encodes an ambient spectrum ("silence")
 represented by the upper-case letter `A`. Following this are two
 spectra, each consisting of three spectral components: the first
@@ -196,7 +196,7 @@ a single <span class="rep">sdiss</span> spine as output. For each
 produces a single numerical value representing the aggregate sensory
 dissonance. The greater the output value, the greater the dissonance.
 
-Example 36.2 illustrates some sample inputs and outputs for <span
+Example&nbsp;36.2 illustrates some sample inputs and outputs for <span
 class="tool">sdiss</span>.  The left-most spine provides double-stops
 for <span class="rep">kern</span> data for violin. The middle spine
 provides corresponding <span class="rep">spect</span> data using
@@ -251,7 +251,7 @@ Typically, the *score* consists of a series of note-records where
 each data record defines several attributes for a single note.
 Common attributes include the frequency (or pitch), amplitude,
 duration, onset time, attack/decay envelope, spectral content, etc.
-Example 36.3 shows a sample Csound score corresponding to the opening
+Example&nbsp;36.3 shows a sample Csound score corresponding to the opening
 measures of a Mozart clarinet trio.
 
 **Example 36.3** W.A. Mozart *Clarinet Quintet*.

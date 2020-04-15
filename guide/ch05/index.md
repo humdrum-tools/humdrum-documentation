@@ -182,7 +182,7 @@ same line.
 
 
 
-As we noted in [Chapter 2,](/guide/ch02) there are two kinds of
+As we noted in [Chapter&nbsp;2,](/guide/ch02) there are two kinds of
 comments: global comments and local comments. *Global comments*
 pertain to all concurrent parts, whereas *local comments* pertain
 to some specific column of data (such as a particular staff,

@@ -328,7 +328,7 @@ that German drinking songs are more likely to be in triple meters.
 
 
 
-As we saw in [Chapter 10,](/guide/ch10) the <span class="unix">xargs</span>
+As we saw in [Chapter&nbsp;10,](/guide/ch10) the <span class="unix">xargs</span>
 command can be used to propagate file names from command to command
 within a pipeline.  Using <span class="unix">xargs</span> in
 conjunction with <span class="unix">find</span> provides a powerful

@@ -98,7 +98,7 @@ The <span class="tool">pcset</span> command identifies pitch-class
 sets from <span class="rep">pc</span> or <span class="rep">semits</span>
 input. Illustrated below are the corresponding <span
 class="rep">kern</span>, <span class="rep">pc</span> and <span
-class="rep">pcset</span> representations for Example 34.1.
+class="rep">pcset</span> representations for Example&nbsp;34.1.
 
 ```humdrum
 **kern		**pc	**pcset
@@ -127,7 +127,7 @@ Of course this command will only identify the set forms for pitches
 that have concurrent attacks. If any pitch is sustained, <span
 class="tool">pcset</span> won't know that some null tokens indicate
 sustained pitch activity. We can rectify this by using the <span
-class="tool">ditto</span> command ([Chapter 15](/guide/ch15)) to
+class="tool">ditto</span> command ([Chapter&nbsp;15](/guide/ch15)) to
 fill-out the null tokens:
 
 ```bash
@@ -156,12 +156,12 @@ assemble opus24 opus24.pcs > opus24.all
 Now we can search for data records containing phrase (\`{}\') or
 slur (\'()\') markers. Using <span class="tool">yank</span> **-m
 &hellip; -r 0** rather than <span class="unix">grep</span> assures
-that the output retains the Humdrum syntax (see [Chapter
-12](/guide/ch12)). Maintaining the Humdrum syntax will allow us to
-use <span class="tool">extract</span> to isolate just the <span
-class="rep">pcset</span> data. Finally, we create an inventory of
-the pc sets. The process is repeated &mdash; once for beginning
-slurs/phrases, and once for ends of slurs/phrases.
+that the output retains the Humdrum syntax (see
+[Chapter&nbsp;12](/guide/ch12)). Maintaining the Humdrum syntax
+will allow us to use <span class="tool">extract</span> to isolate
+just the <span class="rep">pcset</span> data. Finally, we create
+an inventory of the pc sets. The process is repeated &mdash; once
+for beginning slurs/phrases, and once for ends of slurs/phrases.
 
 ```bash
 yank -m '[{(]' -r 0 opus24.all | extract -i '**pcset' \
@@ -288,13 +288,13 @@ pc schoenberg* | ditto -s ^= | iv | grep -c '<.....0>'
 So far, we have processed only "vertical" sets of concurrent pitches.
 In set-theory analyses, there are many other important ways of
 "segmenting" the musical pitches into pitch-class sets. As we saw
-in [Chapter 19,](/guide/ch19) the <span class="tool">context</span>
+in [Chapter&nbsp;19,](/guide/ch19) the <span class="tool">context</span>
 command provides a useful way of grouping together successive data
 tokens.
 
 Suppose, for example, we wanted to analyze set forms in Claude
 Debussy's *Syrinx* for solo flute. The opening measures are shown
-in Example 34.2.
+in Example&nbsp;34.2.
 
 **Example 34.2.** From Claude Debussy, *Syrinx* for flute.
 
@@ -477,7 +477,7 @@ The shift option for <span class="tool">reihe</span> can be used
 to shift *any* type of data &mdash; not just pitches of pitch-classes.
 For example, one might use the shift option to rotationally permute
 dynamic markings, text, durations, articulation marks, or any other
-type of Humdrum data. In [Chapter 38](/guide/ch38) we will see how
+type of Humdrum data. In [Chapter&nbsp;38](/guide/ch38) we will see how
 the shift option for <span class="tool">reihe</span> can be effectively
 used in many applications apart from serial analysis.
 
@@ -549,7 +549,7 @@ P0, P1, &hellip; I0, I1 &hellip; R0, R1 &hellip; RI10, RI11.
 
 
 Each of the row variant files can be used as a template for the
-<span class="tool">patt</span> command (see [Chapter 21](/guide/ch21)).
+<span class="tool">patt</span> command (see [Chapter&nbsp;21](/guide/ch21)).
 The following "rowfind" script shows how the Humdrum tools can be
 coordinated to carry out an automatic search and identification of
 tone row variants for some score.

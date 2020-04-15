@@ -18,7 +18,7 @@ permalink:	/guide/ch15/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 11](/guide/ch11) we examined Humdrum tools related to
+In [Chapter&nbsp;11](/guide/ch11) we examined Humdrum tools related to
 melodic pitch intervals. This chapter returns to the discussion of
 intervals by focussing on two tools pertaining to characterizing
 harmonic intervals: the <span class="tool">hint</span> and <span
@@ -31,12 +31,12 @@ class="tool">ydelta</span> commands.
 
 
 Harmonic intervals identify pitch distances between nominally
-concurrently-sounding notes. Example 15.1 illustrates five types
+concurrently-sounding notes. Example&nbsp;15.1 illustrates five types
 of harmonic intervals. The most obvious harmonic intervals are those
 that occur between pitches that have concurrent onsets. We might
 call these *explicit harmonic intervals.* An example of an explicit
 harmonic interval is the perfect octave in the first sonority of
-Example 15.1
+Example&nbsp;15.1
 
 **Example 15.1** Types of harmonic intervals.
 
@@ -86,7 +86,7 @@ displayHumdrum(
 Less obvious harmonic intervals arise when tone onsets are not
 synchronous &mdash; yet both pitches are sustained simultaneously
 for a period of time. We might call these *passing harmonic intervals.*
-Two examples are evident in Example 15.1: the minor seventh between
+Two examples are evident in Example&nbsp;15.1: the minor seventh between
 the D and the sustained C, and the minor sixth between E and C.
 Most music theorists would argue that the minor sixth interval is
 more important than the minor seventh. Compared with the D, the
@@ -97,7 +97,7 @@ We might call these intervals *strong passing intervals* and *weak
 passing intervals* respectively.
 
 Another type of harmonic interval may be deemed to occur even when
-there are no concurrently sounding pitches. In Example 15.1, the
+there are no concurrently sounding pitches. In Example&nbsp;15.1, the
 alternating F&rarr;A and D&rarr;B imply subdominant and dominant
 harmonic functions and so suggest the intervals of a major third
 followed by a major sixth. We might call these intervals *implicit
@@ -110,17 +110,17 @@ harmonic intervals might be distinguished as weak or strong.
 
 A further complication in identifying harmonic intervals arises
 when there are more than two pitches involved. In the final four-note
-chord of Example 15.1, what harmonic intervals are implied? Example
-15.2 shows three possible break-downs of the harmonic relationships.
-*Stacked harmonic intervals* include only the intervals between
-successive pitches ordered from low to high. Four pitches thus
-generate three intervals. *Bass-related harmonic intervals* include
-all intervals calculated with respect to the lowest pitch. Four
-pitches again leads to three (different) intervals. This latter way
-of characterizing intervals is the most similar to figured bass
-notation. *Permuted harmonic intervals* include all intervals that
-can be calculated between all notes of a sonority. Four pitches
-leads to six intervals.
+chord of Example&nbsp;15.1, what harmonic intervals are implied?
+Example&nbsp;15.2 shows three possible break-downs of the harmonic
+relationships.  *Stacked harmonic intervals* include only the
+intervals between successive pitches ordered from low to high. Four
+pitches thus generate three intervals. *Bass-related harmonic
+intervals* include all intervals calculated with respect to the
+lowest pitch. Four pitches again leads to three (different) intervals.
+This latter way of characterizing intervals is the most similar to
+figured bass notation. *Permuted harmonic intervals* include all
+intervals that can be calculated between all notes of a sonority.
+Four pitches leads to six intervals.
 
 **Example 15.2** Interpreting Interval Content in Chords
 
@@ -198,7 +198,7 @@ The output from the <span class="tool">hint</span> command always
 consists of a single <span class="rep">hint</span> spine. Any number
 of spines may be present in the input, but only pitch-related spines
 are processed. Given the default invocation, the output corresponding
-to Example 15.1 is as follows:
+to Example&nbsp;15.1 is as follows:
 
 ```humdrum
 **hint
@@ -229,7 +229,7 @@ When more than two pitches are present in a sonority, *permuted
 harmonic intervals* can be calculated by invoking the <span
 class="option">a</span> option (i.e. *all* intervals). For example,
 with the <span class="option">a</span> option, the final chord in
-Example 15.1 would produce the following output:
+Example&nbsp;15.1 would produce the following output:
 
 ```humdrum
 **hint
@@ -247,7 +247,7 @@ intervals.
 class="option">l</span> option. In this case, harmonic intervals
 are calculated with respect to the lowest pitch in the sonority.
 This option is helpful in determining figured bass. For the final
-chord in Example 12.1 the corresponding output would be
+chord in Example&nbsp;12.1 the corresponding output would be
 
 ```bash
 **hint  M3 P5 P8  *-
@@ -268,7 +268,7 @@ hint -clud
 ```
 
 will produce the following output for the final major chord in
-Example 12.1:
+Example&nbsp;12.1:
 
 ```bash
 **hint  3 5  *-
@@ -321,7 +321,7 @@ Each null token has been replaced by the preceding data token within
 the spine.
 
 Consider the effect of <span class="tool">ditto</span> on the <span
-class="rep">kern</span> data in Example 15.1:
+class="rep">kern</span> data in Example&nbsp;15.1:
 
 ```bash
 ditto -p example15.1
@@ -357,7 +357,7 @@ We can combine the two commands in a single pipeline:
 ditto example15.1 | hint
 ```
 
-The resulting output for Example 15.1 includes the two passing
+The resulting output for Example&nbsp;15.1 includes the two passing
 intervals (m7 and m6) in the first measure:
 
 ```humdrum
@@ -496,10 +496,10 @@ Note that if we could eliminate rest tokens, then we could use <span
 class="tool">ditto</span> to repeat previous pitch tokens in place
 of the rests and so generate implicit harmonic intervals.
 
-The <span class="tool">humsed</span> command (described in [Chapter
-14](/guide/ch14)) is well suited to this task. We want to transform
-any data token containing the letter \`r\' to a null token. Consider
-the following substitution:
+The <span class="tool">humsed</span> command (described in
+[Chapter&nbsp;14](/guide/ch14)) is well suited to this task. We
+want to transform any data token containing the letter \`r\' to a
+null token. Consider the following substitution:
 
 ```bash
 humsed 's/.*r.*/.    ./' example15.1
@@ -591,7 +591,7 @@ Below we see the output assembled with the output from the corresponding
 
 Often it is useful to represent intervals by the number of semitones
 (or some other numerical value). We might begin by using the <span
-class="tool">semits</span> command to translate Example 15.1 to a
+class="tool">semits</span> command to translate Example&nbsp;15.1 to a
 <span class="rep">semits</span> representation.
 
 ```bash

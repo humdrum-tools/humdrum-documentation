@@ -17,7 +17,7 @@ permalink:	/guide/ch40/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 1,](/guide/ch01) we noted that computers are quite
+In [Chapter&nbsp;1,](/guide/ch01) we noted that computers are quite
 limited in what they are able to do. We noted in particular that
 computers are not good at *interpreting* data. Because so much music
 scholarship hinges on interpretations, this would seem to preclude

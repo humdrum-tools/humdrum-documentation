@@ -28,8 +28,8 @@ the determination of pitch intervals can be surprisingly complicated.
 In this chapter we will discuss Humdrum tools related to melodic
 pitch intervals &mdash; specifically the <span class="tool">mint</span>
 (melodic interval) and <span class="tool">xdelta</span> commands.
-Discussion of harmonic intervals will be delayed until [Chapter
-15.](/guide/ch15)
+Discussion of harmonic intervals will be delayed until
+[Chapter&nbsp;15.](/guide/ch15)
 
 
 
@@ -37,7 +37,7 @@ Discussion of harmonic intervals will be delayed until [Chapter
 
 
 
-Example 11.1 provides a contrived illustration of seven different
+Example&nbsp;11.1 provides a contrived illustration of seven different
 types of melodic intervals. (The corresponding <span
 class="rep">kern</span> representation is given on the following
 page.) The simplest melodic interval is calculated between successive
@@ -79,7 +79,7 @@ of the first measure (A4) and the first note of the last measure
 ```
 
 In some cases, implied melodic intervals may arise by the interaction
-of two or more parts. For example, Example 11.2 shows a plausible
+of two or more parts. For example, Example&nbsp;11.2 shows a plausible
 reinterpretation of the voicings for the first measure. Here the
 quarter-note G is presumed to continue from the preceding eighth-note
 F rather than from the half-note C. In the context of the original
@@ -87,7 +87,7 @@ F rather than from the half-note C. In the context of the original
 intervals *cross-voice melodic intervals.*
 
 **Example 11.2** Possible re-interpretation of opening measure for
-Example 11.1.
+Example&nbsp;11.1.
 
 <script>
 displayHumdrum(
@@ -127,7 +127,7 @@ include D&rarr;E and G&rarr;E. We might refer to such intervals as
 
 In many research tasks (such as identifying melodic variations),
 important interval relationships may stretch across several intervening
-notes. In Example 11.1, for example, the two half-notes in the upper
+notes. In Example&nbsp;11.1, for example, the two half-notes in the upper
 voice might be viewed as forming an ascending major second interval
 (i.e. C&rarr;D). We might call such intervals *distance intervals.*
 
@@ -174,12 +174,12 @@ distinguished by a leading plus sign (+) or minus sign (-) respectively.
 In the default operation, <span class="tool">mint</span> outputs
 three of the seven types of melodic intervals. These are *voiced
 melodic intervals,* *unvoiced outer intervals* and *interrupted
-melodic intervals;* By way of illustration, Example 11.3 shows the
+melodic intervals;* By way of illustration, Example&nbsp;11.3 shows the
 output from the <span class="tool">mint</span> command for the input
-shown in Example 11.1.
+shown in Example&nbsp;11.1.
 
 **Example 11.3** Default interval outputs from the <span class="tool">mint</span> command
-corresponding to Example 11.1.
+corresponding to Example&nbsp;11.1.
 
 ```humdrum
 **mint	**mint
@@ -225,7 +225,7 @@ For example,
  mint -b r inputfile
 ```
 
-would produce the following output when applied to Example 11.1:
+would produce the following output when applied to Example&nbsp;11.1:
 
 
 ```humdrum
@@ -291,7 +291,7 @@ Unvoiced inner intervals can be included in the output by using the
 <span class="option">i</span> or <span class="option">I</span>
 options. With the <span class="option">I</span> option, unvoiced
 inner intervals appear in the output in parentheses. For example,
-the following output is generated for Example 1.1 with the <span
+the following output is generated for Example&nbsp;1.1 with the <span
 class="option">I</span> option.  Notice the addition of `(+M2)` and
 `(-2)`. The rising major second arises from the pitches D4 and E4;
 the falling minor third arises from the pitches G4 and E4.
@@ -328,7 +328,7 @@ class="option">b</span> option, this option requires a subsequent
 regular expression. Any token matching this expression is transformed
 to a null data token and is ignored when processing. One possible
 use for this option is to help calculate *distance intervals.*
-Consider Example 11.4 where all of the durations are either sixteenth
+Consider Example&nbsp;11.4 where all of the durations are either sixteenth
 notes or eighth notes. Suppose we wanted to calculate the intervals
 only between the eighth notes.
 
@@ -458,10 +458,10 @@ Using duration information is a somewhat limited technique for
 calculating distance intervals. Typically, users will want to define
 much more refined ways of identifying structural tones. More
 sophisticated methods for calculating distance intervals are discussed
-in [Chapter 35](/guide/ch35) on "Layers."
+in [Chapter&nbsp;35](/guide/ch35) on "Layers."
 
 Cross-voice melodic intervals can be calculated by amalgamating
-several spines into a single spine. In [Chapter 26](/guide/ch26)
+several spines into a single spine. In [Chapter&nbsp;26](/guide/ch26)
 we will learn more about the <span class="tool">cleave</span>
 command. But here is a typical use:
 
@@ -469,7 +469,7 @@ command. But here is a typical use:
 cleave -d ' ' -i '**kern' -o '**kern' example11a
 ```
 
-With the <span class="rep">kern</span> encoding for Example 11.1
+With the <span class="rep">kern</span> encoding for Example&nbsp;11.1
 as input, the corresponding output would be:
 
 
@@ -643,7 +643,7 @@ for calculating numerical differences between successive values
 within individual spines. In order to use <span class="tool">xdelta</span>
 to calculate semitone differences, we first need to transform our
 representation to <span class="rep">semits</span> (discussed in
-[Chapter 4](/guide/ch04)). Recall that in the <span
+[Chapter&nbsp;4](/guide/ch04)). Recall that in the <span
 class="rep">semits</span> representation, middle C is designated
 by the value zero, and all other pitches are represented by their
 (positive or negative) semitone distance. A C-major scale would
@@ -797,8 +797,8 @@ In this chapter we have seen how to use the <span class="tool">mint</span>
 command to calculate these various kinds of intervals. Specifically,
 we have illustrated how to calculate voiced intervals, interrupted
 intervals, unvoiced outer intervals and unvoiced inner intervals.
-In [Chapter 26](/guide/ch26) we will show how to calculate cross-voice
-intervals, and in [Chapter 35](/guide/ch35) ("Layers") we will
+In [Chapter&nbsp;26](/guide/ch26) we will show how to calculate cross-voice
+intervals, and in [Chapter&nbsp;35](/guide/ch35) ("Layers") we will
 consider how to calculate distance intervals.
 
 We have also seen how <span class="tool">xdelta</span> can be used

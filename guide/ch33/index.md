@@ -24,8 +24,9 @@ sounds create alliteration, onomatopoeia, rhythm, rhyme and other
 sonorous effects. This chapter introduces the <span class="rep">IPA</span>
 scheme for representing speech sounds. This representation provides
 a companion to the <span class="rep">text</span> and <span
-class="rep">silbe</span> representations discussed in [Chapter
-27.](/guide/ch27) Various sonorous processes are illustrated.
+class="rep">silbe</span> representations discussed in
+[Chapter&nbsp;27.](/guide/ch27) Various sonorous processes are
+illustrated.
 
 
 
@@ -288,7 +289,7 @@ For some tasks, it is often useful to reduce the phonemes to phonetic
 classes. For example, in our example from Shakespeare's *Tempest*,
 the 'th' in 'thy' is part of the fricative alliteration.
 
-In [Chapter 22](/guide/ch22) we saw how <span class="tool">humsed</span>
+In [Chapter&nbsp;22](/guide/ch22) we saw how <span class="tool">humsed</span>
 can be used to classify things. A simple reassignment script can
 be defined which collapses the various phonemes into a smaller set
 of phonetic classes. For example, a suitable script might contain
@@ -389,7 +390,7 @@ translating a vocal text, we might focus our comparisons solely on
 a small collection of especially important notes. We might for
 example use a longer value for <span class="tool">timebase</span>.
 Alternatively, we might use the Humdrum <span class="tool">accent</span>
-command (described in [Chapter 25](/guide/ch25)) to identify notes
+command (described in [Chapter&nbsp;25](/guide/ch25)) to identify notes
 have a particularly high noticeability.
 
 

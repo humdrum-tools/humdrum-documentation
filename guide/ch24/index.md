@@ -17,7 +17,7 @@ permalink:	/guide/ch24/index.html
 ------------------------------------------------------------------------
 
 
-In [Chapter 16](/guide/ch16) we learned about the <span
+In [Chapter&nbsp;16](/guide/ch16) we learned about the <span
 class="unix">alias</span> feature of the shell. The <span
 class="unix">alias</span> command allowed us to create new commands
 by assigning a complex pipeline to a single-word command. In this

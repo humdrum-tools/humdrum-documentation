@@ -366,7 +366,7 @@ of signifiers is important:
 | r      | rest |
 
 
-In [Chapter 22](/guide/ch22) we learned how to use <span
+In [Chapter&nbsp;22](/guide/ch22) we learned how to use <span
 class="tool">recode</span> to classify various numerical ranges and
 <span class="tool">humsed</span> to classify non-numeric data. We
 already know how to create the elements of our new representation.
@@ -414,7 +414,7 @@ contextual `triples` so that data records contain three durations.
 Suppose also that we have used <span class="unix">sed</span> to
 change the names of the exclusive interpretations so they are more
 appropriate. As a result we have three spines that, when assembled
-together are organized as in Example 26.1
+together are organized as in Example&nbsp;26.1
 
 **Example 26.1**
 

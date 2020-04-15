@@ -553,7 +553,7 @@ duration equivalent to a thirty-second note.
 Typically, one can simply use the shortest duration present as a
 guide for a suitable time-base value. The shortest duration can be
 determined using the <span class="tool">census -k</span> command
-described in [Chapter 4.](/guide/ch04) However, tuplets require a
+described in [Chapter&nbsp;4.](/guide/ch04) However, tuplets require a
 little more sophistication. Suppose we wanted to assemble two parts,
 one containing just eighth-notes and the other containing just
 quarter-note triplets.  (The quarter-note triplets will be encoded
@@ -796,7 +796,7 @@ reformat a score so that each measure occupies the same number of
 data records. For example, in a 3/4 meter, an eighth-note time-base
 will mean that each measure will contain six data records, and the
 fifth data record will correspond to the onset of the third beat.
-Recall from [Chapter 12](/guide/ch12) that the **yank -m** command
+Recall from [Chapter&nbsp;12](/guide/ch12) that the **yank -m** command
 allows us to extract particular data records following a specified
 marker. In the following command, we have defined the marker as a
 barline (`-m ^=`) and instructed <span class="tool">yank</span> to
@@ -839,7 +839,7 @@ aligned.
 Finally, we learned that the <span class="tool">timebase</span>
 command can be used for other analytic purposes. Specifically, it
 can be used to reduce a score rhythmically so only particular onset
-points or beats are retained. In [Chapter 23](/guide/ch23) we will
+points or beats are retained. In [Chapter&nbsp;23](/guide/ch23) we will
 see additional uses of <span class="tool">timebase</span> for a
 variety of types of rhythmic tasks.
 

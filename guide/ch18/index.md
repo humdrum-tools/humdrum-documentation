@@ -249,7 +249,7 @@ sound together, rather than a single string.
 The `*RT:` tandem interpretation encodes the relative tuning of
 each string by specifying the number of semitones above the lowest
 string &mdash; where each course is delineated by a colon (:). In
-Example 18.1 three sample tunings are shown. Example (a) defines
+Example&nbsp;18.1 three sample tunings are shown. Example (a) defines
 the most common relative tuning for the six-string guitar. Successive
 strings are tuned 0, 5, 10, 15, 19, and 24 semitones above the
 lowest string.
@@ -456,7 +456,7 @@ are both stopped at the second fret.
 | |2 |2 | | |
 ```
 
-Example 18.2 shows a sample passage for guitar with a corresponding
+Example&nbsp;18.2 shows a sample passage for guitar with a corresponding
 <span class="rep">fret</span> representation displayed beneath. The
 <span class="rep">fret</span> representation does not encode duration
 information. It is common to join the <span class="rep">fret</span>

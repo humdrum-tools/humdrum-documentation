@@ -259,11 +259,11 @@ Consider another use of the <span class="tool">recode</span> command.
 soprano clarinet instead of flute. Our principle concern as arranger
 is determining what key would be especially well suited to the
 clarinet. Tone color is particularly important for this piece. The
-clarinet has four fairly distinctive tessituras as shown in Example
-22.1. These are the *chalemeau* register (dark and rich), the
-*clarion* register (bright and clear), the *altissimo* register
-(very high and piercing), and the *throat* register (weak and
-breathy).
+clarinet has four fairly distinctive tessituras as shown in
+Example&nbsp;22.1. These are the *chalemeau* register (dark and
+rich), the *clarion* register (bright and clear), the *altissimo*
+register (very high and piercing), and the *throat* register (weak
+and breathy).
 
 **Example 22.1.** Clarinet registers (notated at concert pitch).
 
@@ -407,7 +407,7 @@ We could create a similar reassignment file containing fingers
 pertaining to the pre-Boehm flute. Suppose the revised reassignment
 file was called `premodern`. We could determine how the finger
 transitions differ between the pre-Boehm traverse flute and the
-modern flute. In [Chapter 29](/guide/ch29) we will see how the <span
+modern flute. In [Chapter&nbsp;29](/guide/ch29) we will see how the <span
 class="unix">diff</span> command can be used to identify differences
 between two spines. This will allow us to identify specific places
 in the score where Baroque and modern fingerings differ.
@@ -429,7 +429,7 @@ pressure levels (in decibels) might be classified as dynamic markings
 The <span class="tool">recode</span> command is restricted to
 classifying numerical data only. For many applications, it is useful
 to be able to classify data according to non-numerical criteria.
-As we saw in [Chapter 14,](/guide/ch14) stream editors such as <span
+As we saw in [Chapter&nbsp;14,](/guide/ch14) stream editors such as <span
 class="unix">sed</span> and <span class="tool">humsed</span> provide
 automated substitution operations. Such string substitutions can
 be used for non-parametric classifying. We can illustrate this with

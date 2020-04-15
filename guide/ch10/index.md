@@ -30,7 +30,7 @@ subsequent chapters, we'll make frequent use of regular expressions.
 
 Although regular expressions are used in a number of Humdrum commands,
 they are most frequently used in conjunction with the <span
-class="unix">grep</span> command encountered in [Chapter 3.](/guide/ch03)
+class="unix">grep</span> command encountered in [Chapter&nbsp;3.](/guide/ch03)
 <span class="unix">grep</span> is a popular software tool that is
 available from a number of manufacturers and sources. Many versions
 of <span class="unix">grep</span> differ in the options provided.
@@ -314,7 +314,7 @@ types of special chords.  Suppose, for example, that we wanted to
 identify occurrences of augmented sixth chords. An augmented sixth
 chord is characterized by an augmented sixth interval occurring
 between the lowered sixth scale-degree and the raised fourth
-scale-degree. In [Chapter 4,](/guide/ch04) we saw that the <span
+scale-degree. In [Chapter&nbsp;4,](/guide/ch04) we saw that the <span
 class="tool">solfa</span> command represents pitches with respect
 to an encoded tonic pitch. In the <span class="rep">solfa</span>
 representation, the lowered sixth and raised fourth degrees will
@@ -593,7 +593,7 @@ only to one of a set of possible criteria.
 Although this chapter has focussed principally on the <span
 class="unix">grep</span> command, the ensuing chapters will show
 that regular expressions are used by a wide variety of commands.
-In [Chapter 33,](/guide/ch33) many more powerful examples will be
+In [Chapter&nbsp;33,](/guide/ch33) many more powerful examples will be
 discussed in conjunction with the <span class="unix">find</span>
 command.
 

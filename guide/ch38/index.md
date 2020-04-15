@@ -104,7 +104,7 @@ composition, duration of work, tempi, and so on.
 
 Humdrum users can use the <span class="unix">find</span> and <span
 class="unix">grep</span> commands to identify works that match
-particular controlled characteristics (see [Chapter 33](/guide/ch33)).
+particular controlled characteristics (see [Chapter&nbsp;33](/guide/ch33)).
 For example, the following command might locate all files that
 contain scores in triple meter. The results are placed in a file
 called `control`:
@@ -369,11 +369,11 @@ One approach to answering this question is to use an *autophase
 procedure* (Huron, 1991a). The essence of this approach is to shift
 two spines with respect to each other.
 
-Recall that the <span class="tool">reihe</span> command ([Chapter
-35](/guide/ch35)) provides a <span class="option">s</span> option
-that causes a shift in the serial position of data tokens. For
-example, suppose we had an input consisting of the numbers 1 through
-5. The following command:
+Recall that the <span class="tool">reihe</span> command
+([Chapter&nbsp;35](/guide/ch35)) provides a <span class="option">s</span>
+option that causes a shift in the serial position of data tokens.
+For example, suppose we had an input consisting of the numbers 1
+through 5. The following command:
 
 ```bash
 reihe -s +1 file

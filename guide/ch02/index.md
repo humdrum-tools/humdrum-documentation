@@ -24,11 +24,11 @@ represent basic or core information for common Western music. The
 and duration, plus other common score-related information.  In this
 chapter, we will introduce <span class="rep">kern</span> through a
 series of tutorial examples. A more comprehensive description of
-<span class="rep">kern</span> will be given in [Chapter 6.](/guide/ch06)
+<span class="rep">kern</span> will be given in [Chapter&nbsp;6.](/guide/ch06)
 Our intention here is to provide a quick introduction.
 
 Consider the opening motive from J.S. Bach's *Art of Fugue* shown
-in Example 2.1. A corresponding <span class="rep">kern</span>
+in Example&nbsp;2.1. A corresponding <span class="rep">kern</span>
 representation is given below the notation.
 
 **Example 2.1.** J.S. Bach *Die Kunst der Fuge*
@@ -92,14 +92,14 @@ meter signature (2/2) is encoded next.
 Lines that begin with an equals-sign indicate *logical* barlines.
 Musical works may begin with either a complete measure or a partial
 measure. In the <span class="rep">kern</span> representation, the
-beginning of the first measure is explicitly indicated. In Example
-2.1, the encoding for the first barline `=-` is a functional
-encoding that doesn't correspond to anything in the printed score.
-The minus sign following the equals-sign indicates that the barline
-is "invisible." The presence of this logical barline allows various
-Humdrum tools to recognize that the initial notes start at the
-beginning of the first measure, and are not "pick-up" notes prior
-to the first measure.
+beginning of the first measure is explicitly indicated. In
+Example&nbsp;2.1, the encoding for the first barline `=-` is a
+functional encoding that doesn't correspond to anything in the
+printed score.  The minus sign following the equals-sign indicates
+that the barline is "invisible." The presence of this logical barline
+allows various Humdrum tools to recognize that the initial notes
+start at the beginning of the first measure, and are not "pick-up"
+notes prior to the first measure.
 
 The durations of the notes are indicated by reciprocal numbers: 1
 for whole-note, 2 for half-note, 4 for quarter-note, etc. The *breve*
@@ -131,7 +131,7 @@ similarly encoded by repetition. Sharps, flats, and naturals are
 mutually exclusive in <span class="rep">kern</span>, so tokens such
 as `cc#n` and `GG-#` are illegal.
 
-In Example 2.2, two musical parts are encoded. In the corresponding
+In Example&nbsp;2.2, two musical parts are encoded. In the corresponding
 <span class="rep">kern</span> encoding, each musical part or voice
 has been assigned to a different musical staff &mdash; labelled
 `*staff1` and `*staff2`. Notice that the upper part has been encoded
@@ -214,7 +214,7 @@ without regard for what is going on around them. For example, in
 <span class="rep">kern</span>, pitches are encoded with the appropriate
 accidental, even if the accidental is specified in a key-signature
 or is present earlier in the same measure. Hence the explicit
-encoding of all occurrences of B-flats in Example 2.2.
+encoding of all occurrences of B-flats in Example&nbsp;2.2.
 
 All pitches are encoded as absolute pitches. In <span
 class="rep">kern</span>, even transposing instruments are always
@@ -228,22 +228,22 @@ Finally, pitches in <span class="rep">kern</span> are encoded as
 interpretation* is provided to indicate if the tuning system is
 other than equal temperament.
 
-Two other aspects of Example 2.2 are noteworthy. In measure 3 an
+Two other aspects of Example&nbsp;2.2 are noteworthy. In measure 3 an
 inverted mordent appears on the first note in the bass part. Mordents
 are encoded via the letter `M` &mdash; upper-case `M` for whole-tone
 mordents and lower-case `m` for semitone mordents. Inverted mordents
-are similarly encoded using the letter `W`. In Example 2.2, it is
+are similarly encoded using the letter `W`. In Example&nbsp;2.2, it is
 not clear whether the mordent should be a semitone (consistent with
 a G harmonic minor figure) or a whole-tone mordent (consistent with
 a G melodic minor figure). The signifier `Ww` is a special
 representation indicating that the ornament may be either one.
 
-Also evident in Example 2.2 are the upper-case letters `L` and `J`.
+Also evident in Example&nbsp;2.2 are the upper-case letters `L` and `J`.
 These encode beaming information. Each beam is opened by the letter
 `L` and closed by the letter `J` (think of left and right angles).
-Multiple beams and partial beams are discussed in Example 2.4.
+Multiple beams and partial beams are discussed in Example&nbsp;2.4.
 
-Example 2.3 shows a four-part chorale harmonization by Bach. In
+Example&nbsp;2.3 shows a four-part chorale harmonization by Bach. In
 this example, two musical parts share each of the two staves. Notice
 how the corresponding <span class="rep">kern</span> encoding assigns
 each part to a separate column, but links the appropriate parts
@@ -337,7 +337,7 @@ ampersand character `&` is used to mark elided slurs or phrases.
 For example: `{  &{  }  &}` means that two phrases overlap &mdash;
 the first phrase ending after the second phrase has begun.
 
-Example 2.3 ends with a repeat sign. The <span class="rep">kern</span>
+Example&nbsp;2.3 ends with a repeat sign. The <span class="rep">kern</span>
 representation makes a distinction between repeat signs that appear
 in the score and repeat signs that are obeyed in performance. In
 this example, only the visual or orthographic rendering of the
@@ -348,7 +348,7 @@ The equals-sign indicates the logical presence of a barline. The
 colon indicates the repeat sign, followed by a thin line `|`,
 followed by a thick line `!`.
 
-Example 2.4 shows a keyboard work by Franz Joseph Haydn. In this
+Example&nbsp;2.4 shows a keyboard work by Franz Joseph Haydn. In this
 example, the lower staff appears to have two concurrent voices. The
 excerpt has been encoded using three spines, two of which encode
 material appearing on the same staff. Notice that key signatures
@@ -517,7 +517,7 @@ at the beginning of a line, followed by a letter code, followed by
 an optional number, followed by a colon, followed by some text. The
 following example provides a set of reference records related to
 the "Augurs of Spring" section from Stravinsky's *Rite of Spring.*
-Example 2.6.
+Example&nbsp;2.6.
 
 ```humdrum
 !!!COM: Stravinsky, Igor Fyodorovich

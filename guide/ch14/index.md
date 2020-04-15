@@ -222,12 +222,12 @@ humsed /^[^=]/s%[0-9]%%g inputfile
 
 Suppose we wanted to determine which of two MIDI performances
 exhibits more dynamic range &mdash; that is, which performance has
-a greater variability in key-down velocities. Recall from [Chapter
-7](/guide/ch07) that MIDI data tokens consist of three elements
-separated by slashes `/`. The third element is the key velocity.
-First, we want to eliminate key-up data tokens. These tokens can
-be distinguished by the minus sign associated with the second data
-element.  An appropriate substutition is:
+a greater variability in key-down velocities. Recall from
+[Chapter&nbsp;7](/guide/ch07) that MIDI data tokens consist of three
+elements separated by slashes `/`. The third element is the key
+velocity.  First, we want to eliminate key-up data tokens. These
+tokens can be distinguished by the minus sign associated with the
+second data element.  An appropriate substutition is:
 
 ```bash
 s%[0-9][0-9]*/-[0-9][0-9]*/[0-9]* *%%g
@@ -621,7 +621,7 @@ comment:
 ```
 
 We can use the Humdrum <span class="tool">pattern</span> command
-(to be described in [Chapter 21](/guide/ch21)), as follows:
+(to be described in [Chapter&nbsp;21](/guide/ch21)), as follows:
 
 File `template`:
 

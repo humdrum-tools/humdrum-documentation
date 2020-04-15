@@ -807,11 +807,12 @@ outer-voice position. No attempt is made to account for melodic
 expectancy, past experience, or other factors known to influence
 the perceptual salience of particular notes.
 
-By way of illustration, consider the two passages shown in Example
-25.1: from Wagner's *Rienzi* opera, and the Scottish folksong **My
-Bonnie**. Two sample outputs from <span class="tool">accent</span>
-are given below. In both examples the left-most spine shows the
-input, and the right-most spine shows the corresponding output:
+By way of illustration, consider the two passages shown in
+Example&nbsp;25.1: from Wagner's *Rienzi* opera, and the Scottish
+folksong **My Bonnie**. Two sample outputs from <span
+class="tool">accent</span> are given below. In both examples the
+left-most spine shows the input, and the right-most spine shows the
+corresponding output:
 
 **Example 25.1.** Richard Wagner, *Rienzi* Theme. Anon. *My Bonnie
 Lies Over the Ocean*.

@@ -101,9 +101,9 @@ The UNIX <span class="unix">grep</span> command is a popular tool
 for searching for lines that match some specified pattern. Patterns
 may be simple strings of characters, or may be more complicated
 constructions defined using the UNIX *regular expression* syntax.
-Regular expressions will be described in detail in [Chapter
-9.](/guide/ch09) The command name `grep` is an acronym for "get
-regular expression."
+Regular expressions will be described in detail in
+[Chapter&nbsp;9.](/guide/ch09) The command name `grep` is an acronym
+for "get regular expression."
 
 Useful patterns are often literal character strings, such as keywords.
 For example, the following command identifies whether the file
@@ -218,7 +218,7 @@ expressions.* Regular expressions are discussed in [Chapter&nbsp;9.](/guide/ch09
 
 
 
-As we saw in [Chapter 2,](/guide/ch02) Humdrum files typically
+As we saw in [Chapter&nbsp;2,](/guide/ch02) Humdrum files typically
 encode library-type information using reference records. For example,
 the [**composer's name**](/reference-records/index.html#COM)
 is encoded in a `!!!COM:` record, and the
