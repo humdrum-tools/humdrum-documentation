@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:
+last-edited:	14 Apr 2020
 verovio:	"true"
 vim:		ft=html
 permalink:	/guide/ch06/index.html
@@ -27,53 +27,57 @@ related to the <span class="rep">kern</span> representation.
 
 
 
-As we saw in [Chapter 2](/guide/ch02), <span class="rep">kern</span> durations are
-represented using a reciprocal number notation. With the exception of
-the value zero, durations are represented by reciprocal numerical values
-corresponding to the American duration names: "1" for whole note,
-"8" for eighth, "32" for thirty-second, etc. The number zero (0) is
-reserved for the breve duration (a duration of twice the length of a
-whole note).
+As we saw in [Chapter 2](/guide/ch02), <span class="rep">kern</span>
+durations are represented using a reciprocal number notation. With
+the exception of the value zero, durations are represented by
+reciprocal numerical values corresponding to the American duration
+names: "1" for whole note, "8" for eighth, "32" for thirty-second,
+etc. The number zero `0` is reserved for the breve duration (a
+duration of twice the length of a whole note), `00` is reserved for
+long durations, and `000` are reserved for maxima durations.
 
-Dotted durations are indicated by adding the period character (.)
-immediately following the numerical value, hence "`8.`" signifies a
-dotted eighth-note and "`2..`" signifies a doubly dotted half-note.
+Dotted durations are indicated by adding the period character `.`
+immediately following the numerical value, hence `8.` signifies a
+dotted eighth-note and `2..` signifies a doubly dotted half-note.
 Any number of augmentation dots may follow the duration integer.
 
-Triplet and other irregular durations are represented using the same
-reciprocal logic. Consider, for example, the quarter-note triplet
-duration. Three quarter triplets occur in the time of four quarters or
-one whole duration. If we divide a whole duration ("`1`") into three
-equal parts, each part has a duration of one-third. The corresponding
-reciprocal integer for 1/3 is 3, hence <span class="rep">kern</span> represents a
-quarter-note triplet as a "third-note", `3`. Similarly, eighth-note
-triplets are represented by the integer 6 and sixteenth-note triplets
-are represented by the integer 12. Eighth-note quintuplets (5 in the
-time of 4) will be represented by the value 10 (a half duration divided
-by 5).
+Triplet and other irregular durations are represented using the
+same reciprocal logic. Consider, for example, the quarter-note
+triplet duration. Three quarter triplets occur in the time of four
+quarters or one whole duration. If we divide a whole duration `1`
+into three equal parts, each part has a duration of one-third. The
+corresponding reciprocal integer for 1/3 is 3, hence <span
+class="rep">kern</span> represents a quarter-note triplet as a
+"third-note", `3`. Similarly, eighth-note triplets are represented
+by the integer 6 and sixteenth-note triplets are represented by the
+integer 12. Eighth-note quintuplets (5 in the time of 4) will be
+represented by the value 10 (a half duration divided by 5).
 
-In general, the way to determine the <span class="rep">kern</span> equivalent of an arbitrary
-"tuplet" duration is to multiply the number of tuplets by the total
-duration which they occupy. If 7 notes of equal duration occupy the
-duration of a whole-note ("`1`"), then each septuplet is represented
-by the value 7 (i.e. 1 x 7). A more extreme example is 23 notes in the
-time of a doubly dotted quarter. The appropriate <span class="rep">kern</span> duration can
+In general, the way to determine the <span class="rep">kern</span>
+equivalent of an arbitrary "tuplet" duration is to multiply the
+number of tuplets by the total duration which they occupy. If 7
+notes of equal duration occupy the duration of a whole-note `1`,
+then each septuplet is represented by the value 7 (i.e. 1 x 7). A
+more extreme example is 23 notes in the time of a doubly dotted
+quarter. The appropriate <span class="rep">kern</span> duration can
 be found by multiplying 4 by 23 (equals 92) and adding the appropriate
-augmentation dots. Thus "92.." is the correct <span class="rep">kern</span> encoding for a
-note whose duration is 23 notes in the time of a doubly-dotted quarter.
+augmentation dots. Thus "92.." is the correct <span class="rep">kern</span>
+encoding for a note whose duration is 23 notes in the time of a
+doubly-dotted quarter.
 
 By way of illustration, example 6.1 shows an excerpt from Sigfrid
-Karg-Elert's *Caprices* Op. 107, No. 23 for solo flute. The work is in
-3/4 meter. The last beat of the first measure has 9 notes in the time of
-a quarter duration. The reciprocal encoding is 9 x 4 or 36th notes.
+Karg-Elert's *Caprices* Op. 107, No. 23 for solo flute. The work
+is in 3/4 meter. The last beat of the first measure has 9 notes in
+the time of a quarter duration. The reciprocal encoding is 9 x 4
+or 36th notes.
 
 **Example 6.1.** Karg-Elert, *Caprices* Op. 107, No. 23.
 
 {% include verovio.html
 	source="guide-06-1b"
-	scale="35"
-	pageWidth="2100"
-	humdrum-min-height="775px"
+	scale="45"
+	pageWidth="1200"
+	humdrum-min-height="700px"
 %}
 
 <script type="application/x-humdrum" id="guide-06-1b">
@@ -121,20 +125,20 @@ a quarter duration. The reciprocal encoding is 9 x 4 or 36th notes.
 *-
 </script>
 
-Another set of tuplets appears in the last beat of the second measure.
-In this case, five notes are played in the time of a quarter, hence the
-reciprocal durations are 5 x 4 or 20th notes.
+Another set of tuplets appears in the last beat of the second
+measure.  In this case, five notes are played in the time of a
+quarter, hence the reciprocal durations are 5 x 4 or 20th notes.
 
-In the last measure of the example, five notes are played in the time of
-an eighth-note: 5 x 8 or 40th notes. Note that the 40th notes are half
-the duration of the 20th notes in the previous measure.
+In the last measure of the example, five notes are played in the
+time of an eighth-note: 5 x 8 or 40th notes. Note that the 40th
+notes are half the duration of the 20th notes in the previous
+measure.
 
-Other noteworthy observations regarding example 6.1: notice the tenuto
-markings (`~`) on the first two notes of the second measure. Also notice
-that the duration of the last note in the example is indeterminate. It
-could be a sixteenth note, a quintuplet sixteenth, or some other
-duration.
-
+Other noteworthy observations regarding example 6.1: notice the
+tenuto markings `~` on the first two notes of the second measure.
+Also notice that the duration of the last note in the example is
+indeterminate. It could be a sixteenth note, a quintuplet sixteenth,
+or some other duration.
 
 
 
@@ -142,47 +146,49 @@ duration.
 
 
 
-The <span class="rep">kern</span> representation also allows for the encoding of grace notes
-(acciaccaturas, non-canonical gruppettos, and appoggiaturas.
+The <span class="rep">kern</span> representation also allows for
+the encoding of grace notes (acciaccaturas, non-canonical gruppettos,
+and appoggiaturas.
 
-Depending on the expected analytic application, one way to handle these
-notational devices is to encode the notes according to the manner in
-which they are typically performed. Alternatively, since the component
-notes of an expanded ornament are viewed as embellishments that hold
-potentially less analytic status, a special designation for these notes
-can be useful for certain types of studies.
+Depending on the expected analytic application, one way to handle
+these notational devices is to encode the notes according to the
+manner in which they are typically performed. Alternatively, since
+the component notes of an expanded ornament are viewed as embellishments
+that hold potentially less analytic status, a special designation
+for these notes can be useful for certain types of studies.
 
-*Grace notes* (acciaccaturas) are visually rendered as miniature notes
-with a slash drawn through the stem. In the <span class="rep">kern</span> representation
-these notes are treated as "durationless" notes and are designated by
-the lower-case letter "`q`". Hence, the token "`G#q`" denotes a G#3
-grace note with an indeterminate duration.
+*Grace notes* (acciaccaturas) are visually rendered as miniature
+notes with a slash drawn through the stem. In the <span
+class="rep">kern</span> representation these notes are treated as
+"durationless" notes and are designated by the lower-case letter
+`q`. Hence, the token `G#q` denotes a G#3 grace note with an
+indeterminate duration.
 
 Non-canonical *gruppettos* are miniature (non-cue) notes (typically
 appearing in groups) whose stems do not contain a slash, and whose
-notated durations cause the total notated duration for the measure to
-exceed the prevailing meter. These gruppetto notes are encoded as notes
-retaining their notated durations, but all such notes are also
-designated by the upper-case letter "`Q`". Hence, a miniature
-sixteenth-note middle C would be encoded as "`16cQ`".
+notated durations cause the total notated duration for the measure
+to exceed the prevailing meter. These gruppetto notes are encoded
+as notes retaining their notated durations, but all such notes are
+also designated by the upper-case letter `Q`. Hence, a miniature
+sixteenth-note middle C would be encoded as `16cQ`.
 
-When processed by various tools in the Humdrum Toolkit, these notes may
-be treated as equivalent to their notated durations. Alternatively, in
-some types of processing these notes may be discarded. For example, the
-Humdrum [<span class="tool">timebase</span>](/command/timebase) command (described in
-[Chapter 13)](/guide/ch13) eliminates acciaccaturas and gruppetto
+When processed by various tools in the Humdrum Toolkit, these notes
+may be treated as equivalent to their notated durations. Alternatively,
+in some types of processing these notes may be discarded. For
+example, the Humdrum <span class="tool">timebase</span> command (described
+in [Chapter 13)](/guide/ch13) eliminates acciaccaturas and gruppetto
 notes. Note that data records containing acciaccaturas or gruppetto
 notes must *not* also include normal notes.
 
-In the case of *appoggiaturas,* <span class="rep">kern</span> requires that they be encoded
-as performed. An appropriate duration is assigned to the appoggiatura
-according to common performance practice. The duration of the subsequent
-note is reduced by a corresponding amount. The status of the two notes
-forming the appoggiatura is nevertheless marked. The appoggiatura note
-itself is designated by the upper-case letter "`P`", whereas the
-subsequent note (whose notated duration has been shortened) is
-designated by the lower-case letter "`p`".
-
+In the case of *appoggiaturas,* <span class="rep">kern</span>
+requires that they be encoded as performed. An appropriate duration
+is assigned to the appoggiatura according to common performance
+practice. The duration of the subsequent note is reduced by a
+corresponding amount. The status of the two notes forming the
+appoggiatura is nevertheless marked. The appoggiatura note itself
+is designated by the upper-case letter `P`, whereas the subsequent
+note (whose notated duration has been shortened) is designated by
+the lower-case letter `p`.
 
 
 
@@ -190,22 +196,24 @@ designated by the lower-case letter "`p`".
 
 
 
-In the <span class="rep">kern</span> representation, spines typically represent individual
-musical parts or voices. Occasionally, a nominally single "part"
-contains more than one concurrent note. A good example of such a
-situation occurs when a violin plays a double stop.
+In the <span class="rep">kern</span> representation, spines typically
+represent individual musical parts or voices. Occasionally, a
+nominally single "part" contains more than one concurrent note. A
+good example of such a situation occurs when a violin plays a double
+stop.
 
-The <span class="rep">kern</span> representation provides three different ways of
-representing such situations: (1) multiple stops, (2) spine splitting
-and rejoining, and (3) introduction and retiring of a momentary
-"part". Each of these representation methods captures a different way
-of interpreting the music. The best representation will depend on the
-editorial or processing goal.
+The <span class="rep">kern</span> representation provides three
+different ways of representing such situations: (1) multiple stops,
+(2) spine splitting and rejoining, and (3) introduction and retiring
+of a momentary "part". Each of these representation methods captures
+a different way of interpreting the music. The best representation
+will depend on the editorial or processing goal.
 
 First we will consider the generic Humdrum *subtoken.* A data token
 becomes a multiple stop when two or more subtokens are present,
 separated by single spaces. By way of illustration, the following
-<span class="rep">kern</span> data represents a scale played in ascending thirds:
+<span class="rep">kern</span> data represents a scale played in
+ascending thirds:
 
 {% include verovio.html
 	source="guide-06-1c"
@@ -213,7 +221,6 @@ separated by single spaces. By way of illustration, the following
 	pageWidth="800"
 	humdrum-min-height="200px"
 %}
-
 <script type="application/x-humdrum" id="guide-06-1c">
 **kern
 4c 4e
@@ -227,19 +234,20 @@ separated by single spaces. By way of illustration, the following
 *-
 </script>
 
-An important restriction for multiple stops in the <span class="rep">kern</span>
-representation is that they must encode notes of the same duration. In
-the above example, the left and right components of the multiple stop
-always share the same duration. (Note that this is a restriction of
-multiple stops in the <span class="rep">kern</span> representation only, and does not
-necessarily apply to other Humdrum representations.)
+An important restriction for multiple stops in the <span
+class="rep">kern</span> representation is that they must encode
+notes of the same duration. In the above example, the left and right
+components of the multiple stop always share the same duration.
+(Note that this is a restriction of multiple stops in the <span
+class="rep">kern</span> representation only, and does not necessarily
+apply to other Humdrum representations.)
 
-Notice that multiple stops are represented with a single spine (that is,
-there are no tabs present).
+Notice that multiple stops are represented with a single spine (that
+is, there are no tabs present).
 
-Multiple stops may occur at any point in a <span class="rep">kern</span> spine. For example,
-the following <span class="rep">kern</span> data represents a scale that begins and ends with
-chords:
+Multiple stops may occur at any point in a <span class="rep">kern</span>
+spine. For example, the following <span class="rep">kern</span>
+data represents a scale that begins and ends with chords:
 
 {% include verovio.html
 	source="guide-06-1d"
@@ -247,7 +255,6 @@ chords:
 	pageWidth="800"
 	humdrum-min-height="200px"
 %}
-
 <script type="application/x-humdrum" id="guide-06-1d">
 **kern
 4c 4e 4g
@@ -262,24 +269,24 @@ chords:
 </script>
 
 The first chord has been encoded as a triple stop, whereas the last
-chord has been encoded as a quadruple stop. Notice once again that all
-of the notes within a multiple stop must have the same duration. If the
-durations of the concurrent notes differ, then one must use Humdrum
-spine path indicators (see below).
+chord has been encoded as a quadruple stop. Notice once again that
+all of the notes within a multiple stop must have the same duration.
+If the durations of the concurrent notes differ, then one must use
+Humdrum spine path indicators (see below).
 
-Example 6.2 illustrates a musical context where multiple stops may be
-appropriate. The sample passage is from a keyboard work by Telemann. The
-work is almost entirely in two parts with only occasional chords. Since
-the chords always contain notes of equal duration, they can be encoded
-as double stops within a single part.
+Example 6.2 illustrates a musical context where multiple stops may
+be appropriate. The sample passage is from a keyboard work by
+Telemann. The work is almost entirely in two parts with only
+occasional chords. Since the chords always contain notes of equal
+duration, they can be encoded as double stops within a single part.
 
 **Example 6.2.** Telemann, *Kleine Fantasien für Klavier* No. 7.
 
 {% include verovio.html
 	source="guide-06-2"
-	scale="35"
-	pageWidth="2100"
-	humdrum-min-height="775px"
+	scale="50"
+	pageWidth="700"
+	humdrum-min-height="700px"
 	tabsize="12"
 %}
 
@@ -338,8 +345,8 @@ ties should be encoded for each note in the multiple stop. By contrast,
 phrase marks, slurs, and beamings should be encoded once for the entire
 multiple stop. Example 6.3 provides a contrived example that illustrates
 these conventions. Notice that the first double stop encodes a single
-open phrase (i.e. \``{`\') and the last double stop encodes a single
-close phrase (\``}`\'). Similarly, the slur in the middle of the phrase
+open phrase (i.e. `{`) and the last double stop encodes a single
+close phrase `}`. Similarly, the slur in the middle of the phrase
 has been encoded once. However, the staccato markings have been encoded
 for both notes in each of the double stops. Similarly, separate ties
 have been encoded for both notes in the double stop.
@@ -352,7 +359,6 @@ have been encoded for both notes in the double stop.
 	pageWidth="1500"
 	humdrum-min-height="200px"
 %}
-
 <script type="application/x-humdrum" id="guide-06-3">
 **kern
 {4c 4e
@@ -369,48 +375,49 @@ have been encoded for both notes in the double stop.
 
 
 
-
-
-
 ## Further Examples ##
 
 
 
-Example 6.4 shows an excerpt from a Chopin *Etude* that illustrates a
-number of subtle features in the <span class="rep">kern</span> representation.
+Example 6.4 shows an excerpt from a Chopin *Etude* that illustrates
+a number of subtle features in the <span class="rep">kern</span>
+representation.
 
-The opening measure consists solely of gruppetto notes; each has been
-designated by the upper-case letter \`Q\'. The double-barline has been
-indicated with two thin lines. Two tandem interpretations encode the
-meter signature (`*M3/4`) and the tempo (`*MM66`). Note that metronome
-markings using the `*MM` interpretation are always given in
-quarter-durations per minute. If the metronome marking had been given as
-half-note equals 48, then the tempo interpretation would be given as
-`*MM96` &mdash; i.e. quarter-note equals 96 beats per minute.
+The opening measure consists solely of gruppetto notes; each has
+been designated by the upper-case letter `Q`. The double-barline
+has been indicated with two thin lines. Two tandem interpretations
+encode the meter signature `*M3/4` and the tempo `*MM66`. Note that
+metronome markings using the `*MM` interpretation are always given
+in quarter-durations per minute. If the metronome marking had been
+given as half-note equals 48, then the tempo interpretation would
+be given as `*MM96` &mdash; i.e. quarter-note equals 96 beats per
+minute.
 
-Two grace-notes are evident in the passage. The first occurs just after
-the double-bar, and the second occurs three measures later. These notes
-have been encoded with duration values, but are designated by the
-lower-case letter \``q`\'. Notice that grace-notes are always treated as
-"durationless" notes. Grace notes must always be encoded on a separate
-data record. Concurrent grace notes can be encoded on the same data
-record, but grace notes must never share the same data record with a
-regular note. Another peculiarity of grace notes is that they are always
-assumed to be slurred to the ensuing note (if there is a subsequent
-note). Thus slurs should not be encoded as part of the grace note.
+Two grace-notes are evident in the passage. The first occurs just
+after the double-bar, and the second occurs three measures later.
+These notes have been encoded with duration values, but are designated
+by the lower-case letter `q`. Notice that grace-notes are always
+treated as "durationless" notes. Grace notes must always be encoded
+on a separate data record. Concurrent grace notes can be encoded
+on the same data record, but grace notes must never share the same
+data record with a regular note. Another peculiarity of grace notes
+is that they are always assumed to be slurred to the ensuing note
+(if there is a subsequent note). Thus slurs should not be encoded
+as part of the grace note.
 
-The grace-note E-natural coincides with the end of the first phrase and
-the beginning of the second phrase. The phrases are said to be
-"elided" (overlapping). Since <span class="rep">kern</span> phrases are represented by open
-and close braces, the ampersand character is used to indicate elisions.
+The grace-note E-natural coincides with the end of the first phrase
+and the beginning of the second phrase. The phrases are said to be
+"elided" (overlapping). Since <span class="rep">kern</span> phrases
+are represented by open and close braces, the ampersand character
+is used to indicate elisions.
 
-Notice that the \`inner\' accompaniment chords have been encoded as
-double stops. This is possible because the notes in these double stops
-are all the same duration.
+Notice that the `inner` accompaniment chords have been encoded as
+double stops. This is possible because the notes in these double
+stops are all the same duration.
 
 Finally, notice how the triplet eighth-notes (encoded as duration
-`12`) have been interleaved with the concurrent eighth-note figures so
-that the onsets are ordered in the correct temporal sequence.
+`12` have been interleaved with the concurrent eighth-note figures
+so that the onsets are ordered in the correct temporal sequence.
 
 **Example 6.4.** Chopin, *Etude* Op. 27, No. 7.
 
@@ -422,7 +429,6 @@ that the onsets are ordered in the correct temporal sequence.
 	humdrum-min-height="775px"
 	tabsize="12"
 %}
-
 <script type="application/x-humdrum" id="guide-06-4">
 !!!OMD: Lento
 **kern	**kern	**kern
@@ -521,18 +527,18 @@ BBnq	.	.
 
 
 
-
-
 ## Reprise ##
 
 
 
-This chapter completes our survey of the <span class="rep">kern</span> representation. We
-have noted an number of subtleties related to encoding tuplets, multiple
-stops, gruppettos, acciaccaturas, elided phrases, and spine path
-changes.
+This chapter completes our survey of the <span class="rep">kern</span>
+representation. We have noted an number of subtleties related to
+encoding tuplets, multiple stops, gruppettos, acciaccaturas, elided
+phrases, and spine path changes.
 
-A more complete description of the
-[<span class="rep">kern</span>](representation/kern) representation may be found in
-the *Humdrum Reference Manual.*
+A more complete description of the [<span
+class="rep">kern</span>](representation/kern) representation may
+be found in the *Humdrum Reference Manual.*
+
+
 
