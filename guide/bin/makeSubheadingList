@@ -15,9 +15,11 @@ use strict;
 my @chapters = sort glob("ch??");
 
 my $output = "";
+$output .=  "**chapter\t**anchor\t**title\n";
 foreach my $chapter (@chapters) {
 	makeSubheadingEntry($chapter);
 }
+$output .= "*-\t*-\t*-\n";
 print $output;
 
 

@@ -2,17 +2,21 @@
 
 
 <script>
-// vim: ts=3
+// vim: ts=3:ft=javascript
 
 CHAPTER_HEADINGS = {};
-
 
 document.addEventListener("DOMContentLoaded", checkChapterStyle);
 
 
+//////////////////////////////////////////////////////////////////////
+
+
+
 //////////////////////////////
 //
-// checkChapterStyle --
+// checkChapterStyle -- Load the previous style for displaying
+//    chapter headings from session storage.
 //
 
 function checkChapterStyle() {
@@ -25,9 +29,12 @@ function checkChapterStyle() {
 }
 
 
+
 //////////////////////////////
 //
-// DOMContentLoaded event listener -- Prepare chapter heading list.
+// DOMContentLoaded event listener -- Download the list
+//    of chapter headings and then store and print them
+//    on the webpage.
 //
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -45,7 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //////////////////////////////
 //
-// prepareHeadings --
+// prepareHeadings -- Store each chapter heading into
+//   an array called CHAPTER_HEADINGS, then insert
+//   the textual content for the heading into the 
+//   webpage.
 //
 
 function prepareHeadings(text) {
@@ -75,9 +85,11 @@ function prepareHeadings(text) {
 }
 
 
+
 //////////////////////////////
 //
-// prepareChapterHeadings --
+// prepareChapterHeadings -- Insert a list of the chapter
+//    headings for each chapter.
 //
 
 function prepareChapterHeadings(info) {
@@ -110,9 +122,10 @@ function prepareChapterHeadings(info) {
 }
 
 
+
 //////////////////////////////
 //
-// toggleHeadings --
+// toggleHeadings -- Show or hide chapter headings.
 //
 
 function toggleHeadings() {
@@ -136,6 +149,7 @@ function toggleHeadings() {
 		}
 	}
 }
+
 
 
 

@@ -1,3 +1,4 @@
+**chapter	**anchor	**title
 ch01	what-can-humdrum-do-	What Can Humdrum Do?
 ch01	the-humdrum-syntax-and-the-humdrum-toolkit	The Humdrum Syntax and the Humdrum Toolkit
 ch01	humdrum-syntax	Humdrum Syntax
@@ -302,3 +303,4 @@ ch39	searching-tips	Searching Tips
 ch39	pipeline-tips	Pipeline Tips
 ch39	reprise	Reprise
 ch40	pursuing-a-project-with-humdrum	Pursuing a Project with Humdrum
+*-	*-	*-

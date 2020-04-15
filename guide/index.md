@@ -16,7 +16,10 @@ Humdrum Toolkit User Guide
 <script>
 var guide = {{ site.data.guide | jsonify }}
 
-generateIndex(guide, "#index");
+//////////////////////////////
+//
+// generateIndex -- print a list of the chapters on the webpage.
+//
 
 function generateIndex(data, selector) {
 	var element = document.querySelector(selector);
@@ -40,13 +43,16 @@ function generateIndex(data, selector) {
 		output += "</span>";
 		output += data[i].title;
 		output += "</a>";
-		output += "<div style='display:none;' class='heading' data-chapter='ch" + counter + "'>";
+		output += "<div style='display:none;' ";
+		output += "class='heading' data-chapter='ch" + counter + "'>";
 		output += "</div>";
 		output += "</li>";
 	}
 	output += "<ul class='index'>";
 	element.innerHTML = output;
 }
+
+generateIndex(guide, "#index");
 
 </script>
 
