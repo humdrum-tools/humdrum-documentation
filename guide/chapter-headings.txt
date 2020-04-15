@@ -22,6 +22,7 @@ ch04	french-solf-ge	French Solfège
 ch04	frequency	Frequency
 ch04	cents	Cents
 ch04	semitones	Semitones
+ch04	midi	MIDI
 ch04	scale-degree--solfa-and-deg	Scale Degree &mdash; <i>**solfa</i> and <i>**deg</i>
 ch04	pitch-translations	Pitch Translations
 ch04	transposition-using-the-trans-command	Transposition Using the <i>trans</i> Command
@@ -37,7 +38,6 @@ ch05	data-tokens-and-null-tokens	Data Tokens and Null Tokens
 ch05	data-sub-tokens	Data Sub-Tokens
 ch05	spine-paths	Spine Paths
 ch05	the-humdrum-syntax-a-formal-definition	The Humdrum Syntax: A Formal Definition
-ch05	a-record-having-more-than-two-exchange-spine-indications-	A	record	having	more	than	two	exchange-spine	indications.
 ch05	the-humdrum-command	The <i>humdrum</i> Command
 ch05	reprise	Reprise
 ch06	tuplets	Tuplets
@@ -64,9 +64,10 @@ ch08	command-delimiter-	Command Delimiter
 ch08	background-command-	Background Command 
 ch08	shell-command-syntax	Shell Command Syntax
 ch08	output-redirection	Output Redirection
+ch08	tee	Tee
 ch08	reprise	Reprise
 ch09	literals	Literals
-ch09	wild-card	Wild-Card
+ch09	wildcard	Wildcard
 ch09	escape-character	Escape Character
 ch09	repetition-operators	Repetition Operators
 ch09	context-anchors	Context Anchors
