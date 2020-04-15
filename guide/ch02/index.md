@@ -36,7 +36,7 @@ representation is given below the notation.
 {% include verovio.html
 	source="guide-02-1"
 	scale="65"
-	pageWidth="1200"
+	pageWidth="800"
 	humdrum-min-height="475px"
 %}
 <script type="application/x-humdrum" id="guide-02-1">
