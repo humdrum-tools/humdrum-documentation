@@ -42,7 +42,6 @@ concurrent (or overlapping) events. The basic organization of Humdrum
 files may be schematically illustrated as follows:
 
 <style>
-
 table.plain tr, table.plain td {
 	padding: 0;
 	margin: 0;
@@ -51,7 +50,6 @@ table.plain tr, table.plain td {
 	margin-left: 20px;
 	border-collapse: collapse;
 }
-
 </style>
 
 <table class="plain">

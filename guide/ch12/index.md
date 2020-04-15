@@ -68,12 +68,10 @@ in Example&nbsp;12.1.
 **Example 12.1.** J.S. Bach *Brandenburg Concerto No. 2*, mov. 1.
 
 <style>
-
 .nowrap code, .nowrap pre {
 	white-space: pre;
 	overflow-x: scroll !important;
 }
-
 </style>
 
 
