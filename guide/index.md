@@ -13,43 +13,8 @@ Humdrum Toolkit User Guide
 </div>
 <div id="index"></div>
 
-<style>
-
-ul.index {
-	list-style: none;
-}
-
-#verbose {
-	margin-top: -20px;
-	white-space: nowrap;
-	float: right;
-	font-weight: bold;
-}
-
-.chapter-number {
-	display: inline-block;
-	width: 150px;
-	color: black;
-}
-
-div.heading {
-	padding-left: 85px;
-}
-
-div.heading i {
-	padding-right: 5px;
-}
-
-div.heading-number {
-	display: inline-block;
-	width: 100px;
-}
-
-</style>
-
 <script>
 var guide = {{ site.data.guide | jsonify }}
-console.log("GUIDE", guide);
 
 generateIndex(guide, "#index");
 
@@ -86,4 +51,5 @@ function generateIndex(data, selector) {
 </script>
 
 {% include_relative scripts-local.html %}
+{% include_relative styles-local.html %}
 

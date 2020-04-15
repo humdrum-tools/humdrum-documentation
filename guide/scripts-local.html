@@ -96,16 +96,15 @@ function prepareChapterHeadings(info) {
 	var output = "";
 	var i;
 	for (i=0; i<info.length; i++) {
-		output += "<div>";
-		output += "<div class='heading-number'>";
+		output += "<table class='heading-table'><tr>";
+		output += "<td class='heading-number'>";
 		output += info[i].num;
 		output += ".";
 		output += (i+1);
-		output += "</div>";
-		output += '<a href="' + info[i].url + '#' + info[i].anchor + '">';
+		output += '</td><td class="heading-text"><a href="' + info[i].url + '#' + info[i].anchor + '">';
 		output += info[i].text;
 		output += "</a>";
-		output += "</div>";
+		output += "</td></tr></table>";
 	}
 	element.innerHTML = output;
 }
