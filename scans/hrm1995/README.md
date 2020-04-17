@@ -13,18 +13,18 @@ hrm1995.pdf
 
 The following files break down the manual by section:
 
-| Filename               | Contents                 |
-| ---------------------- | ----------------------   |
-| `hrm1995-section0.pdf` | Preface material         |
-| `hrm1995-section1.pdf` | Introduction             |
-| `hrm1995-section2.pdf` | Representation reference |
-| `hrm1995-section3.pdf` | Tandem interpretations   |
-| `hrm1995-section4.pdf` | Commands                 |
-| `hrm1995-section5.pdf` | Regular expressions      |
-| `hrm1995-section6.pdf` | *unused*                 |
-| `hrm1995-section7.pdf` | Development reference    |
-| `hrm1995-section8.pdf` | Bibliography             |
-| `hrm1995-section9.pdf` | Index                    |
+| Filename               | Contents                 | Pages   |
+| ---------------------- | ----------------------   | ------- |
+| `hrm1995-section0.pdf` | Preface material         | -11-  4 |
+| `hrm1995-section1.pdf` | Introduction             |   5- 38 |
+| `hrm1995-section2.pdf` | Representation reference |  39-180 |
+| `hrm1995-section3.pdf` | Tandem interpretations   | 181-222 |
+| `hrm1995-section4.pdf` | Commands                 | 223-484 |
+| `hrm1995-section5.pdf` | Regular expressions      | 489-506 |
+| `hrm1995-section6.pdf` | *unused*                 |[485-488]|
+| `hrm1995-section7.pdf` | Development reference    | 507-526 |
+| `hrm1995-section8.pdf` | Bibliography             | 520-524 |
+| `hrm1995-section9.pdf` | Index                    | 527-553 |
 
 ## Section 3 ##
 
