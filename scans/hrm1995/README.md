@@ -13,8 +13,8 @@ hrm1995.pdf
 
 The following files break down the manual by section:
 
-| Filename               | Contents
-| ====================== | ======================   |
+| Filename               | Contents                 |
+| ---------------------- | ----------------------   |
 | `hrm1995-section0.pdf` | Preface material         |
 | `hrm1995-section1.pdf` | Introduction             |
 | `hrm1995-section2.pdf` | Representation reference |
