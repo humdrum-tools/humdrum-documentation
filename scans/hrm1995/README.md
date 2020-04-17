@@ -26,6 +26,55 @@ The following files break down the manual by section:
 | `hrm1995-section8.pdf` | Bibliography             | 520-524 |
 | `hrm1995-section9.pdf` | Index                    | 527-553 |
 
+## Section 2 ##
+
+Section 2 contains documentation about exclusive interpretations
+(data representations).  These are split into separate files prefixed
+with `hrm1995-rep`:
+
+```
+hrm1995-rep-00intro.pdf
+hrm1995-rep-barlines.pdf
+hrm1995-rep-cents.pdf
+hrm1995-rep-correl.pdf
+hrm1995-rep-date.pdf
+hrm1995-rep-db.pdf
+hrm1995-rep-deg.pdf
+hrm1995-rep-degree.pdf
+hrm1995-rep-diss.pdf
+hrm1995-rep-dur.pdf
+hrm1995-rep-embel.pdf
+hrm1995-rep-freq.pdf
+hrm1995-rep-fret.pdf
+hrm1995-rep-harm.pdf
+hrm1995-rep-ipa.pdf
+hrm1995-rep-kern.pdf
+hrm1995-rep-melac.pdf
+hrm1995-rep-metpos.pdf
+hrm1995-rep-midi.pdf
+hrm1995-rep-mint.pdf
+hrm1995-rep-ordo.pdf
+hrm1995-rep-pc.pdf
+hrm1995-rep-pcset.pdf
+hrm1995-rep-pitch.pdf
+hrm1995-rep-recip.pdf
+hrm1995-rep-semits.pdf
+hrm1995-rep-simil.pdf
+hrm1995-rep-solfa.pdf
+hrm1995-rep-solfg.pdf
+hrm1995-rep-specc.pdf
+hrm1995-rep-spect.pdf
+hrm1995-rep-spect2.pdf
+hrm1995-rep-synco.pdf
+hrm1995-rep-takt.pdf
+hrm1995-rep-text.pdf
+hrm1995-rep-time.pdf
+hrm1995-rep-tonh.pdf
+hrm1995-rep-urrhythm.pdf
+hrm1995-rep-vox.pdf
+hrm1995-rep-zeit.pdf
+```
+
 ## Section 3 ##
 
 Section 3 contains documentation about tandem interpretations.
