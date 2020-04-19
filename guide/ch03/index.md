@@ -83,6 +83,7 @@ Number of single barlines: 11
 Number of double barlines: 1
 ```
 
+
 Notice that a distinction is made between the number of notes and
 the number of noteheads. A tied note is considered to be a single
 "note," although it may be notated using two or more noteheads.
