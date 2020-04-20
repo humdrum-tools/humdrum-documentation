@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:
+last-edited:	20 April 2020
 vim:		ft=html
 permalink:	/guide/ch01/index.html
 ---
@@ -29,7 +29,6 @@ thoroughly in later chapters.
 
 
 ## What Can Humdrum Do? ##
-
 
 
 Although Humdrum facilitates exploratory investigations, it is best
@@ -90,7 +89,7 @@ representations that are used only for a single research task.
 
 The *Humdrum Toolkit* is a set of more than 70 inter-related software
 tools. These tools manipulate ASCII data (text) conforming to the
-Humdrum syntax. If the ASCII data represents music-related information,
+umdrum syntax. If the ASCII data represents music-related information,
 then we can say that the Humdrum tools manipulate music-related
 information.
 
@@ -210,7 +209,6 @@ Syntax* and the *Humdrum Toolkit*.
 
 
 ## Humdrum Syntax ##
-
 
 
 Humdrum data are organized somewhat like the tables of a spread-sheet.
@@ -531,10 +529,7 @@ musical processes. In later chapters we'll encounter some scripts
 that contain 10 or more lines of commands.
 
 
-
 ## Reprise ##
-
-
 
 In this chapter we have seen that Humdrum consists of two parts:
 (1) a representation *syntax* that is similar to tables in a
@@ -547,6 +542,4 @@ one-line commands can carry out sophisticated operations. A few
 lines of Humdrum can also be used to write programs of some complexity.
 Users can write their own programs using the Humdrum tools, or they
 can add new tools that augment the functioning of Humdrum.
-
-
 

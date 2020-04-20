@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	20 Apr 2020
 verovio:	"true"
 vim:		ft=html
 permalink:	/guide/ch02/index.html
@@ -107,7 +107,7 @@ or double whole-note is a special case and is represented by the
 number zero.
 
 Stem directions are encoded using the slash `/` for up-stems and
-the back-slash `` for down-stems.
+the back-slash `\\` for down-stems.
 
 Pitches are represented through a scheme of upper- and lower-case
 letters. Middle C (C4) is represented using the single lower-case letter
@@ -443,8 +443,6 @@ slurred, and phrased concurrently.
 
 ## Comment Records ##
 
-
-
 In any representation, some information may best be conveyed as an
 appended commentary, rather than as part of the encoded data. Humdrum
 comments are records (lines) that begin with an exclamation mark.
@@ -501,10 +499,7 @@ completely ignore the spines.
 </script>
 
 
-
 ## Reference Records ##
-
-
 
 A particularly important type of global comment is the [*reference
 record.*](/reference-records). Reference records are formal ways
@@ -534,7 +529,6 @@ Example&nbsp;2.6.
 !!!AMT: irregular
 !!!AIN: clars corno fagot flt oboe
 ```
-
 
 Reference records need not be in any particular order. The most
 important reference records (composer, title, etc.) are typically
@@ -616,8 +610,6 @@ records is given in Appendix II.
 
 ## Reprise ##
 
-
-
 In this chapter we have introduced the Humdrum <span
 class="rep">kern</span> representation and a few of the more important
 reference records. As we have seen, <span class="rep">kern</span>
@@ -635,6 +627,4 @@ Although we have only demonstrated the encoding of fairly simple
 information, we can already begin processing such data in musically
 useful ways. In the next chapter we will examine some simple
 processes.
-
-
 
