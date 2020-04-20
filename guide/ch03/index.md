@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	20 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch03/index.html
 ---
@@ -16,16 +16,11 @@ permalink:	/guide/ch03/index.html
 
 ------------------------------------------------------------------------
 
-
 Now that we have learned some things about Humdrum representations
 (and the <span class="rep">kern</span> representation in particular),
 let's explore some basic processing tasks.
 
-
-
 ## The *census* Command ##
-
-
 
 The Humdrum <span class="tool">census</span> command provides basic
 information about an input stream or file. We can invoke the command
@@ -93,10 +88,7 @@ to a particular item of information by "piping" the output to the
 UNIX <span class="unix">grep</span> command.
 
 
-
 ## Simple Searches using the *grep* Command ##
-
-
 
 The UNIX <span class="unix">grep</span> command is a popular tool
 for searching for lines that match some specified pattern. Patterns
@@ -163,8 +155,6 @@ grep '##' schumann.krn
 
 ## Pattern Locations Using grep -n ##
 
-
-
 If a pattern is found, it is sometimes helpful to know the precise
 location of the pattern. The <span class="option">n</span> option
 tells <span class="unix">grep</span> to prepend the *line number*
@@ -191,8 +181,6 @@ and 3002 in the file `melody.krn`.
 
 ## Counting Pattern Occurrences Using grep -c ##
 
-
-
 In some cases, the user is interested in counting the total number
 of instances of a found pattern. The <span class="option">c</span>
 option causes <span class="unix">grep</span> to output a numerical
@@ -214,9 +202,7 @@ carefully constructed patterns require a better knowledge of *regular
 expressions.* Regular expressions are discussed in [Chapter&nbsp;9.](/guide/ch09)
 
 
-
 ## Searching for Reference Information ##
-
 
 
 As we saw in [Chapter&nbsp;2,](/guide/ch02) Humdrum files typically
@@ -602,10 +588,7 @@ be useful in producing lists that are ordered from most common to
 least common.
 
 
-
 ## Reprise ##
-
-
 
 In this chapter we have introduced some elementary ways of processing
 Humdrum files. We noted that the <span class="tool">census</span>

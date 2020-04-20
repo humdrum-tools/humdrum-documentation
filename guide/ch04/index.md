@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	20 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch04/index.html
 ---
@@ -35,11 +35,7 @@ and international pitch designations, frequency, semitones, cents,
 solfège, scale-degree and MIDI pitch representations. In later
 chapters we will describe additional types of translations.
 
-
-
 ## ISO Pitch Representation ##
-
-
 
 The best-known system for representing equally-tempered pitches is
 the International Standards Organization (ISO) format consisting
@@ -129,11 +125,7 @@ In fact, all of the pitch-related representations described in this
 chapter make use of the so-called `common system` for representing
 barlines.
 
-
-
 ## German Tonhöhe ##
-
-
 
 The German system of pitch designations (*Tonhöhe*) is available
 in the Humdrum <span class="rep">Tonh</span> representation. The
@@ -464,22 +456,30 @@ information is translated: duration, articulation marks, and other
 
 **Input Representation**
 
-```humdrum
-**cents	**deg	**freq	**kern	**MIDI	**pitch	**semits	**solfa	**solfg	**Tonh
-cents	¤	¤	¤	¤	¤	¤
-cocho	¤
-deg	¤	¤	¤	¤
-freq	¤	¤	¤	¤	¤	¤	¤
-kern	¤	¤	¤	¤	¤	¤	¤	¤
-midi	¤
-pitch	¤	¤	¤	¤	¤	¤	¤	¤
-semits	¤	¤	¤	¤	¤	¤	¤
-solfa	¤	¤	¤	¤
-solfg	¤	¤	¤	¤	¤	¤	¤
-tonh	¤	¤	¤	¤	¤	¤	¤	¤
-```
-
-
+|        | cents | deg  | freq | kern | MIDI | pitch | semits | solfa | solfg | TonH  | 
+|--------|-------|------|------|------|------|-------|--------|-------|-------|-------| 
+| cents  |       |      | x    | x    |      | x     | x      |       | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| cocho  |       |      | x    |      |      |       |        |       |       |       | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| deg    |       |      |      | x    |      | x     |        |       | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| freq   | x     |      |      | x    | x    | x     | x      |       | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| kern   | x     |      | x    |      | x    | x     | x      | x     | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| midi   |       |      |      | x    |      |       |        |       |       |       | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| pitch  | x     |      | x    | x    | x    |       | x      | x     | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| semits | x     |      | x    | x    | x    | x     |        |       | x     | x     | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| solfa  |       |      | x    |      |      |       |        |       |       |       | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| solfg  |       |      |      |      |      |       |        |       |       |       | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
+| Tonh   |       |      |      |      |      |       |        |       |       |       | 
+| ------ | ----- | ---- | ---- | ---- | ---- | ----- | ------ | ----- | ----- | ----- | 
 
 
 ## Transposition Using the *trans* Command ##
@@ -630,10 +630,7 @@ representation, and key interpretations can be redefined at any
 place in a score.
 
 
-
 ## Pitch Processing ##
-
-
 
 Apart from transposition, translating from one representation to
 another provides opportunities for different sorts of processing.
@@ -710,11 +707,7 @@ designated `me` in both A major and A minor. The differences between
 allow users to distinguish chromatically altered scale tones in a
 manner appropriate to the task.
 
-
-
 ## Uses for Pitch Translations ##
-
-
 
 Occasionally it is useful to process a given representation to the
 *same* representation. The <span class="tool">kern</span> command
@@ -771,10 +764,7 @@ signature contains sharps, then G-sharp will be output; if the key
 or key signature contains flats, then A-flat will be output.
 
 
-
 ## Reprise ##
-
-
 
 In this chapter we have introduced a number of pre-defined pitch-related
 representations. Simple commands can be used to translate from one
@@ -789,6 +779,3 @@ representations that may be better tailored to a specific application.
 However, before we continue discussing further representations,
 this is an appropriate point to present a more formal description
 of the general Humdrum representation syntax.
-
-
-
