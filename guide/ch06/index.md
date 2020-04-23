@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	23 Apr 2020
 verovio:	"true"
 vim:		ft=html
 permalink:	/guide/ch06/index.html
@@ -22,10 +22,7 @@ In this chapter we return to consider several more advanced topics
 related to the <span class="rep">kern</span> representation.
 
 
-
 ## Tuplets ##
-
-
 
 As we saw in [Chapter&nbsp;2](/guide/ch02), <span class="rep">kern</span>
 durations are represented using a reciprocal number notation. With
@@ -141,10 +138,7 @@ indeterminate. It could be a sixteenth note, a quintuplet sixteenth,
 or some other duration.
 
 
-
 ## Grace Notes, Gruppettos and Appoggiaturas ##
-
-
 
 The <span class="rep">kern</span> representation also allows for
 the encoding of grace notes (acciaccaturas, non-canonical gruppettos,
@@ -193,8 +187,6 @@ the lower-case letter `p`.
 
 
 ## Multiple Stops ##
-
-
 
 In the <span class="rep">kern</span> representation, spines typically
 represent individual musical parts or voices. Occasionally, a
@@ -336,7 +328,6 @@ duration, they can be encoded as double stops within a single part.
 *-	*-
 </script>
 
-
 When encoding multiple stops in the <span class="rep">kern</span> representation, some note
 attributes should be encoded for each note in the multiple stop, whereas
 other markings should be encoded only once for the entire multiple stop.
@@ -373,11 +364,7 @@ have been encoded for both notes in the double stop.
 *-
 </script>
 
-
-
 ## Further Examples ##
-
-
 
 Example&nbsp;6.4 shows an excerpt from a Chopin *Etude* that illustrates
 a number of subtle features in the <span class="rep">kern</span>
@@ -420,7 +407,6 @@ Finally, notice how the triplet eighth-notes (encoded as duration
 so that the onsets are ordered in the correct temporal sequence.
 
 **Example 6.4.** Chopin, *Etude* Op. 27, No. 7.
-
 
 {% include verovio.html
 	source="guide-06-4"
@@ -526,9 +512,7 @@ BBnq	.	.
 </script>
 
 
-
 ## Reprise ##
-
 
 
 This chapter completes our survey of the <span class="rep">kern</span>
