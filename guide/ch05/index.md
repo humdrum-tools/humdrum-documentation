@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	23 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch05/index.html
 ---
@@ -158,9 +158,7 @@ etc.
 </table>
 
 
-
 ## Types of Records ##
-
 
 
 Humdrum encodings consist of a set of one or more lines or *records.*
@@ -175,10 +173,7 @@ possible to mix comments, interpretations, or data records on the
 same line.
 
 
-
 ## Comment Records ##
-
-
 
 As we noted in [Chapter&nbsp;2,](/guide/ch02) there are two kinds of
 comments: global comments and local comments. *Global comments*
@@ -198,9 +193,7 @@ Comments may be used to insert free-format commentaries in Humdrum
 encodings.
 
 
-
 ## Interpretation Records ##
-
 
 
 *Interpretations* are lines that begin with the asterisk character
@@ -228,10 +221,7 @@ interpretations, tandem interpretations are not necessarily mutually
 exclusive.
 
 
-
 ## Data Records ##
-
-
 
 Lines that do not contain either an exclamation mark or an asterisk
 in the first column are *data records.* Blank lines (i.e., lines
@@ -265,9 +255,7 @@ carriage return characters are used to format the data into *spines*
 and *records,* respectively.
 
 
-
 ## Data Tokens and Null Tokens ##
-
 
 
 As we noted above, the data in the data records are conceptually divided
@@ -365,10 +353,7 @@ following a tab unless they are used to indicate a comment,
 interpretation, or null token, respectively.
 
 
-
-
 ## Data Sub-Tokens ##
-
 
 
 Data tokens can be split into sub-tokens via the space character.
@@ -396,10 +381,7 @@ character. Of course spaces can be used freely in comments and in
 interpretations.
 
 
-
 ## Spine Paths ##
-
-
 
 Humdrum representations often consist of a fixed number of spines
 that continue throughout the course of an encoded file. As we have
@@ -412,7 +394,7 @@ In encoding Humdrum representations it is occasionally useful to
 be able to vary the number of spines. However, files with varying
 numbers of spines can pose significant questions of interpretation.
 Consider, for example, the following sequence of Humdrum-like data
-records: ``
+records:
 
 ```humdrum
 1	2	3
@@ -546,7 +528,7 @@ Failing to follow the introduction of a new spine by a subsequent
 exclusive interpretation is illegal.
 
 The following examples illustrate a variety of more complex path
-redefinitions: ``
+redefinitions: 
 
 ```humdrum
 1	2	3	4
@@ -617,10 +599,7 @@ examples of illegal constructions:
 A	B	C
 ```
 
-
-
 ## The Humdrum Syntax: A Formal Definition ##
-
 
 
 With the preceding background it is now possible to define formally
@@ -671,27 +650,24 @@ number of currently active spines.
 
 As a supplement to the above "positive" definition of the Humdrum
 syntax, we can also describe various inputs that do *not* conform
-to the Humdrum syntax:
+to the Humdrum syntax.
 
-*Some Illegal Humdrum Constructions*
 
-<div style="white-space:nowrap">An empty record.
-A record containing only tabs.
-A record beginning with a tab.
-A record ending with a tab.
-Any record containing two successive tab characters.
-Any data record having fewer or more spines than the immediately
-preceding data record.
-A record having only one join-spine indication.
-A record having only one exchange-spine indication.
-A record having more than two exchange-spine indications.
-</div>
+**Some Illegal Humdrum Constructions**:
+
+- An empty record.
+- A record containing only tabs.
+- A record beginning with a tab.
+- A record ending with a tab.
+- Any record containing two successive tab characters.
+- Any data record having fewer or more spines than the immediately preceding data record.
+- A record having only one join-spine indication.
+- A record having only one exchange-spine indication.
+- A record having more than two exchange-spine indications.
 
 
 
 ## The *humdrum* Command ##
-
-
 
 One of the most important commands in the Humdrum Toolkit is the
 <span class="tool">humdrum</span> command itself. This command is
@@ -778,8 +754,6 @@ trombone	trumpet
 
 
 ## Reprise ##
-
-
 
 This chapter has identified the formal structural and organizational
 features of the Humdrum syntax. The syntax provides a framework
