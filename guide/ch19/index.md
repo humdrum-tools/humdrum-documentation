@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	11 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 verovio:	"true"
 permalink:	/guide/ch19/index.html
@@ -23,7 +23,8 @@ We may be interested in what precedes or follows a note or chord.
 We have already seen how the <span data-command="grep"
 class="option">A</span> and <span data-command="grep"
 class="option">B</span> options for <span class="unix">grep</span>
-can be used to output 'before' and 'after' contexts. In [Chapter&nbsp;21](/guide/ch21) we will see how the <span class="tool">patt</span>
+can be used to output 'before' and 'after' contexts. 
+In [Chapter&nbsp;21](/guide/ch21) we will see how the <span class="tool">patt</span>
 and <span class="tool">pattern</span> commands can provide further
 flexibility for searching.
 

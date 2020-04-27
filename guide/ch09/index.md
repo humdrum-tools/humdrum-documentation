@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch09/index.html
 ---
@@ -102,7 +102,6 @@ there is precisely one such character.
 
 ## Escape Character ##
 
-
 A problem with metacharacters such as the period is that sometimes
 the user wants to use them as literals. The special meaning of
 metacharacters can be "turned-off" by preceding the metacharacter
@@ -118,9 +117,7 @@ will match the period character. The backslash itself may be escaped
 by preceding it by an additional backslash (i.e. `\\`.
 
 
-
 ## Repetition Operators ##
-
 
 Another metacharacter is the plus sign `+`. The plus sign means
 "one or more consecutive instances of the previous expression." For
@@ -274,7 +271,6 @@ are known as *repetition operators* since they indicate the number
 of times an expression can occur in order to match.
 
 
-
 ## Context Anchors ##
 
 
@@ -315,11 +311,7 @@ expressions we have discussed. For example, the regular expression:
 
 matches any line that begins with `a` and ends with `z`.
 
-
-
-
 ## OR Logical Operator ##
-
 
 One of several possibilities may be matched by making use of the
 logical *OR* operator, represented by the vertical bar `|`. For
@@ -350,8 +342,6 @@ and `compound quadruple meter`.
 
 
 ## Character Classes ##
-
-
 
 In the case of single characters, a convenient way of identifying
 or listing a set of possibilities is to use the *character class.*

@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch10/index.html
 ---
@@ -306,8 +306,6 @@ grep '^{' * | grep -v r
 
 ## German, French, Italian, and Neapolitan Sixths ##
 
-
-
 In conjunction with the <span class="tool">solfa</span> command,
 <span class="unix">grep</span> can be used to search for various
 types of special chords.  Suppose, for example, that we wanted to
@@ -377,7 +375,6 @@ solfa input | grep '2-' | grep '4' | grep -v '6-'
 
 
 ## AND-Searches Using the *xargs* Command ##
-
 
 
 In some cases, we want to identify those files that match two
@@ -457,8 +454,6 @@ grep -l '!!!ODT.*16[0-9][0-9]/' | xargs grep -l \
 
 
 ## OR-Searches Using the *grep -f* Command ##
-
-
 
 In effect, the above pipelines provide logical **AND** structures:
 e.g.  identify works composed in the 17th century AND written for

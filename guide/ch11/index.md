@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch11/index.html
@@ -284,7 +284,6 @@ mint -b '[;}]' inputfile
 
 
 ## Unvoiced Inner Intervals ##
-
 
 
 Unvoiced inner intervals can be included in the output by using the
