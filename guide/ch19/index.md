@@ -32,9 +32,7 @@ However, in this chapter we introduce the deceptively simple <span
 class="tool">context</span> command.
 
 
-
 ## The *context* Command ##
-
 
 
 The effect of the <span class="tool">context</span> command is easier
@@ -219,8 +217,6 @@ deg Czech* | context -n 2 -o = | grep '5 ' | sort \
 
 ## Harmonic Progressions ##
 
-
-
 The V-I progression is the most common chord progression in Western
 tonal music. After the V-I progression, what is the most common chord
 progression in Bach's chorale harmonizations? We will assume that a
@@ -248,10 +244,7 @@ mint melodies* | context -n 5 -o = | rid -GLId | sort \
 ```
 
 
-
 ## Using *context* with the *<nobr>-b</nobr>* and *<nobr>-e</nobr>* Options ##
-
-
 
 Example&nbsp;19.1 shows an excerpt from a flute study by Joachim Anderson. Although
 the work is monophonic, the work's structure is based on an underlying
@@ -495,10 +488,8 @@ context -b '(' -e ')' anderson.krn | ms > output.ps
 !!!filter: shed -k -e "s/[\d.]+/4/g; s/[()]//g"
 </script>
 
-
 Notice that the resulting notation is "ungrammatical" because the
 meter signature disagrees with the total duration for each measure.
-
 
 Having reformatted our input data using <span class="tool">context</span>,
 we can continue by translating the data to another representation.
@@ -574,10 +565,7 @@ according to changes of melodic direction. That is, each group of would
 consist of notes that are all ascending or all descending in pitch.
 
 
-
 ## Using *context* with *sed* and *humsed* ##
-
-
 
 The stream-editors (<span class="unix">sed</span> and <span
 class="tool">humsed</span> are especially handy companions for <span
@@ -668,10 +656,7 @@ context -b { -e } file | humsed 's/ .* / /' | semits \
 ```
 
 
-
 ## Linking *context* Outputs with Inputs ##
-
-
 
 Frequently, we would like to answer context-related questions that mix
 different types of data together. For example, how many ascending major
