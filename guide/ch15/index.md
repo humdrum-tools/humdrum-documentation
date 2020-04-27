@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch15/index.html
@@ -180,7 +180,6 @@ We will consider just two tools for calculating harmonic intervals:
 
 
 ## Harmonic Intervals Using the *hint* Command ##
-
 
 
 The Humdrum <span class="tool">hint</span> command calculates
@@ -699,7 +698,6 @@ The resulting output would be:
 
 
 ## More Examples Using the *ydelta* Command ##
-
 
 
 What is the average semitone distance between the cantus and altus

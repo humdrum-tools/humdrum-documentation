@@ -37,7 +37,12 @@ Again Shell* &mdash; known as *Bash*. The Korn and Bash shells are
 the most popular and powerful of the current generation of shells.
 Although they were originally developed for the UNIX operating
 system, these shells are also available for DOS, Macintosh, Windows,
-Windows 98 and many other operating systems.
+Windows 98 and many other operating systems. 
+
+**(_Editor's Note:_ These days, the BASH shell is the probably the most common, and was 
+the default for many years on Mac OSX and Linux systems. Begining with MacOS 10.15 (Catalina),
+the default shell in the terminal is the z-shell (zsh). This should still work well with Humdrum Tools,
+but you can change it back to Bash quite easily (`chsh -s /bin/bash`), if you'd prefer.)**
 
 Shells themselves are advanced programming languages that provide
 complex control structures. When you type a command, you are already
@@ -45,9 +50,7 @@ writing a program &mdash; although most of your programs are just
 one line in length.
 
 
-
 ## Shell Special Characters ##
-
 
 
 The shell interprets a number of characters in a special manner.
@@ -61,10 +64,7 @@ We'll consider the function of each of these characters one at a
 time.
 
 
-
 ## File Redirection (>) ##
-
-
 
 Some of the special shell characters have already been discussed.
 The greater-than-sign `>` is a *file redirection operator.* It must

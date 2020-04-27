@@ -51,9 +51,7 @@ pattern. As with the study of a musical instrument, practise is
 advised.
 
 
-
 ## Literals ##
-
 
 
 The simplest regular expressions are merely literal sequences of
@@ -82,7 +80,6 @@ string is referred to as the *matched string* or *matched pattern.*
 ## Wildcard ##
 
 
-
 Regular expressions that are not literal involve so-called
 *metacharacters.* Metacharacters are used to specify various
 operations, and so are not interpreted as their literal selves. The
@@ -106,7 +103,6 @@ there is precisely one such character.
 ## Escape Character ##
 
 
-
 A problem with metacharacters such as the period is that sometimes
 the user wants to use them as literals. The special meaning of
 metacharacters can be "turned-off" by preceding the metacharacter
@@ -124,7 +120,6 @@ by preceding it by an additional backslash (i.e. `\\`.
 
 
 ## Repetition Operators ##
-
 
 
 Another metacharacter is the plus sign `+`. The plus sign means
@@ -283,7 +278,6 @@ of times an expression can occur in order to match.
 ## Context Anchors ##
 
 
-
 Often it is helpful to limit the number of occurrences matched by
 a given pattern. You may want to match patterns in a more restricted
 context. One way of restricting regular expression pattern-matches
@@ -325,7 +319,6 @@ matches any line that begins with `a` and ends with `z`.
 
 
 ## OR Logical Operator ##
-
 
 
 One of several possibilities may be matched by making use of the
@@ -442,7 +435,6 @@ ungrammatical and will result in an error.
 ## Examples of Regular Expressions ##
 
 
-
 The following table lists some examples of regular expressions and
 provides a summary description of the effect of each expression:
 
@@ -483,7 +475,6 @@ provides a summary description of the effect of each expression:
 
 
 ## Examples of Regular Expressions in Humdrum ##
-
 
 
 The following table provides some examples of regular expressions
@@ -568,7 +559,6 @@ interpretations prior to processing (see [Chapter&nbsp;13](/guide/ch13)).
 ## Basic, Extended, and Humdrum-Extended Regular Expressions ##
 
 
-
 Over the years, new features have been added to regular expression
 syntax. Some of the early software tools that make use of regular
 expressions do not support the extended features provided by more
@@ -601,7 +591,6 @@ Humdrum extensions will be discussed in [Chapter&nbsp;21.](/guide/ch21)
 
 
 ## Reprise ##
-
 
 
 Regular expressions provide a powerful method for defining abstract

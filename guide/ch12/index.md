@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch12/index.html
 ---
@@ -48,7 +48,6 @@ such as specified measures, phrases, or sections.
 
 
 ## Extracting Spines: The *extract* Command ##
-
 
 
 The <span class="tool">extract</span> command allows the user to

@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch07/index.html
@@ -12,6 +12,7 @@ permalink:	/guide/ch07/index.html
 
 <div class="chapter-heading">
 <h1> Chapter 7 </h1>
+
 <h1> MIDI Output Tools </h1>
 </div>
 
@@ -29,7 +30,6 @@ input tools are discussed in [Chapter&nbsp;30.](/guide/ch30)
 
 
 ## The *\*\*MIDI* Representation ##
-
 
 
 Humdrum provides a <span class="rep">MIDI</span> representation
@@ -171,7 +171,7 @@ displayHumdrum(
 
 
 ```humdrum
-!!!:	Milhaud, D.
+!!!: Milhaud, D.
 !!!OTL: Touches Blanches
 **kern	**kern	**MIDI	**MIDI
 *staff2	*staff1	*Ch1	*Ch1
@@ -208,10 +208,7 @@ Also notice that an additional data record is required at the end
 of the passage in order to turn off the final notes.
 
 
-
 ## The *midi* Command ##
-
-
 
 The <span class="tool">midi</span> command converts Humdrum <span
 class="rep">kern</span> data into Humdrum <span class="rep">MIDI</span>
@@ -248,9 +245,7 @@ class="tool">perform</span> command. In some cases, it is useful
 to carry out processing of <span class="rep">MIDI</span> data itself.
 
 
-
 ## The *perform* Command ##
-
 
 
 The <span class="tool">perform</span> command allows the user to
@@ -322,7 +317,6 @@ playback continues immediately from the new score position.
 ## Data Scrolling During Playback ##
 
 
-
 The <span class="tool">midi</span> command provides a useful <span
 class="option">c</span> option that causes each data record to be
 repeated as a comment. For example, when the <span class="option">c</span>
@@ -384,8 +378,6 @@ backward) to the next occurrence and begin playing from that point.
 ## Changing Tempo ##
 
 
-
-
 During playback, the tempo can be modified by typing the greater-than
 `>` and less-than `<` signs to increase or decrease the tempo
 respectively. In addition to modifying the tempo interactively, the
@@ -412,7 +404,6 @@ default tempo of 66 quarter-notes per minute.
 ## The *tacet* Command ##
 
 
-
 In rare circumstances, ciphers (stuck notes) can occur during MIDI
 performances; for instance, an intermittently functioning MIDI cable
 may fail to convey a "note-off" instruction to an active synthesizer.
@@ -433,7 +424,6 @@ harmonic, rhythmic and melodic patterns) found in some repertory.
 
 
 ## The *smf* Command ##
-
 
 
 Another MIDI-related tool is the <span class="tool">smf</span>
@@ -463,7 +453,6 @@ Reference Manual* for details.
 
 
 ## Reprise ##
-
 
 
 In this chapter we have learned how Humdrum data can be output as

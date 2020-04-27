@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch14/index.html
 ---
@@ -49,7 +49,6 @@ stream or document.
 
 
 ## Simple Substitutions ##
-
 
 
 The most frequently used stream-editing operation is substitution.
@@ -144,9 +143,7 @@ number \`3\', then only the third instance of the target string
 would be replaced on each line.
 
 
-
 ## Selective Elimination of Data ##
-
 
 
 The *target string* in substitution operations is actually a regular
@@ -341,9 +338,7 @@ regular expressions, so we are not able to use the `+` metacharacter
 in the above substitution.
 
 
-
 ## Deleting Data Records ##
-
 
 
 Sometimes it is useful to delete entire data records rather than
@@ -390,7 +385,7 @@ this file with the original <span class="rep">kern</span> representation
 for the melody.
 
 ```bash
-deg` inputfile > temp
+deg inputfile > temp
 assemble inputfile temp | humsed '/1$/d' | midi | perform
 ```
 
@@ -423,6 +418,7 @@ in a Humdrum input. For example, we might wish to add an explicit
 breath-mark (`,`) to the end of each phrase in a <span
 class="rep">kern</span>-format input:
 
+
 ```bash
 humsed s/}/},/g inputfile
 ```
@@ -435,6 +431,7 @@ quarter-note in a work. The following substitution seeks the number
 pattern is replaced by itself `&` followed by a tilde `~`, the
 <span class="rep">kern</span> signifier for a tenuto mark:
 
+
 ```bash
 humsed s/4[^0-9.]/&~/g inputfile
 ```
@@ -442,7 +439,6 @@ humsed s/4[^0-9.]/&~/g inputfile
 
 
 ## Multiple Substitutions ##
-
 
 
 Some tasks may require more than one substitution command. Multiple
@@ -462,9 +458,7 @@ The ensuing substitution operation changes `84` to `8` and so
 completes the transformation.
 
 
-
 ## Switching Signifiers ##
-
 
 
 In some situations, we will want to switch two or more signifiers
@@ -485,10 +479,7 @@ unique character string.) The second substitution changes up-bows
 the temporary string `ABC` to up-bows.
 
 
-
 ## Executing from a File ##
-
-
 
 When several instructions are involved in stream editing, it can
 be inconvenient to type multiple operations on the command line.
@@ -524,7 +515,6 @@ humsed -f diminute inputfile
 
 
 ## Writing to a File ##
-
 
 
 A useful feature of <span class="tool">humsed</span> is the "write"
@@ -595,7 +585,7 @@ Identify the number of notes per word rather than per syllable.
 
 ```bash
 extract -i '**kern' inputfile > tune
-extract -i '**silbe' inputfile | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics`
+extract -i '**silbe' inputfile | humsed 's/^[^-].*[^-]$/BEGIN_END/; s/-.*[^-]$/END/; s/^[^-].*-/BEGIN/' > lyrics
 assemble tune lyrics | cleave -i '**kern,**silbe' -o '**new' \
      > combined
 context -b BEGIN -e END -o '[r=]' combined | rid -GLId \
@@ -643,8 +633,6 @@ humsed 'cadential-64/r comment.6-4' output > commented.output
 
 
 ## Reprise ##
-
-
 
 The <span class="unix">sed</span> and <span class="tool">humsed</span>
 commands provide stream editors that can automatically edit a data

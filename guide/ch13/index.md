@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	14 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch13/index.html
 ---
@@ -28,7 +28,6 @@ and <span class="tool">rid</span> commands.
 
 
 ## The *cat* Command ##
-
 
 
 The UNIX <span class="unix">cat</span> command allows two or more
@@ -109,7 +108,6 @@ between notes in successive measures.
 
 
 ## The *rid* Command ##
-
 
 
 This problem can be resolved by using the Humdrum <span
@@ -248,7 +246,6 @@ These anomalies may cause problems with subsequent processing.
 ## Assembling Parts Using the *assemble* Command ##
 
 
-
 Assembling parts into a full score is slightly more challenging
 than concatenating together musical segments. The principle tool
 for joining spines together is the <span class="tool">assemble</span>
@@ -361,9 +358,7 @@ then <span class="tool">assemble</span> guarantees that the assembled
 output will also conform to the Humdrum syntax.
 
 
-
 ## Aligning Durations Using the *timebase* Command ##
-
 
 
 Suppose now that we wanted to join two hypothetical files containing
@@ -545,9 +540,7 @@ processed so that each non-barline data record represents an elapsed
 duration equivalent to a thirty-second note.
 
 
-
 ## Assembling N-tuplets ##
-
 
 
 Typically, one can simply use the shortest duration present as a
@@ -597,9 +590,7 @@ files. [use the Humdrum Extras <span class="tool">minrhy</span>
 tool for this sort of calculation]
 
 
-
 ## Checking an Assembled Score Using *proof* ##
-
 
 
 In assembling any score from a set of parts, there is always the
@@ -813,9 +804,7 @@ We can repeat this command for beats one and two by changing the
 <span class="option">r</span> parameter to 1 and 3 respectively.
 
 
-
 ## Reprise ##
-
 
 
 In this chapter we have learned how to concatenate musical passages
@@ -842,6 +831,3 @@ can be used to reduce a score rhythmically so only particular onset
 points or beats are retained. In [Chapter&nbsp;23](/guide/ch23) we will
 see additional uses of <span class="tool">timebase</span> for a
 variety of types of rhythmic tasks.
-
-
-
