@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	13 Apr 2020
+last-edited:	27 Apr 2020
 vim:		ft=html
 permalink:	/guide/ch17/index.html
 ---
@@ -217,9 +217,7 @@ and "C". However, this data might represent any type of discrete
 data, such as Latin text, piano fingerings, or dance steps.
 
 
-
 ## Inventories for Multi-spine Inputs ##
-
 
 
 In the above example, we assumed that the input consists of a single
@@ -306,9 +304,7 @@ cat justalpha justbet | rid -GLId | sort | uniq -c
 ```
 
 
-
 ## Sorting By Frequency of Occurrence ##
-
 
 
 When the output inventory list is short, it is easy to identify
@@ -366,9 +362,7 @@ rid -GLId alpha | sort | uniq -c | sort -r > inventory.alpha
 ```
 
 
-
 ## Counting with the *wc* Command ##
-
 
 
 In other circumstances, it may be helpful to determine the proportion
@@ -410,9 +404,7 @@ the percentage of occurrence, and the second column will identify
 the corresponding type of data.
 
 
-
 ## Excluding or Seeking Rare Events ##
-
 
 
 Recall from [Chapter&nbsp;3](/guide/ch03) that the <span
@@ -603,10 +595,7 @@ by Mussorgsky?*
 
 This problem is addressed in [Chapter&nbsp;36.](/guide/ch36)
 
-
-
 ## Reprise ##
-
 
 
 In this chapter we have discussed how to answer questions that
@@ -619,6 +608,3 @@ In later chapters we will see how classifying data, identifying
 musical contexts, and marking occurrences of patterns can be used
 to significantly enhance the inventory-building tools described in
 this chapter.
-
-
-
