@@ -39,6 +39,7 @@ should be given names with the distinguishing \`.dis\' extension.
 The following table summarizes the <span class="rep">diss</span> mappings of signifiers
 and signifieds.
 
+```
 ----- ------------------------------------------
 0-9   dissonance values specified as integers;
 measure numbers
@@ -46,6 +47,7 @@ measure numbers
 ==    double barline
 =;    barline with pause sign
 ----- ------------------------------------------
+```
 
 *Summary of <span class="rep">diss</span> Signifiers*
 
@@ -53,12 +55,12 @@ measure numbers
 
 A sample document is given below:
 
-``
+```
 
 ----------
-\*\*diss
-\*C:
-\*M4/4
+**diss
+*C:
+*M4/4
 =1
 65
 84
@@ -70,8 +72,9 @@ A sample document is given below:
 841
 1221
 =3
-\*-
+*-
 ----------
+```
 
 Note that rests are not represented in the <span class="rep">diss</span> scheme.
 
@@ -89,17 +92,19 @@ The following Humdrum command produces <span class="rep">diss</span> data as out
 The following tandem interpretations can be used in conjunction with
 <span class="rep">diss</span>:
 
+```
 ------------------ ------------
-meter signatures   `*M6/8`
-key signatures     `*k[f#c#]`
-key                `*c#:`
+meter signatures   *M6/8
+key signatures     *k[f#c#]
+key                *c#:
 ------------------ ------------
+```
 
 *Tandem interpretations for <span class="rep">diss</span>*
 
 ## SEE ALSO ##
 
-` barlines, diss, **spect, spect`
+`barlines, diss, **spect, spect`
 
 []{#REFERENCES}
 
