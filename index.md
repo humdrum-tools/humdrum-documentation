@@ -139,7 +139,7 @@ Humdrum-js is a Javascript parsing library for Humdrum files.
 </dd>
 
 
-<dt markdown="1"> [music21](https://https://web.mit.edu/music21) </dt>
+<dt markdown="1"> [music21](https://web.mit.edu/music21) </dt>
 <dd markdown="1"> 
 Music21 is a python environment for computational music analysis that can import Humdrum files.
 </dd>
