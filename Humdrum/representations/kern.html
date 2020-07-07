@@ -1108,45 +1108,56 @@ signifieds.
 </P>
 <blockquote>
 <TABLE>
-<TR><TD>0</TD><TD>breve duration</TD></TR>
+<TR><TD>000</TD><TD>maxima duration, or 1%8</TD></TR>
+<TR><TD>00</TD><TD>long duration, or 1%4</TD></TR>
+<TR><TD>0</TD><TD>breve duration, or 1%2</TD></TR>
 <TR><TD>1</TD><TD>whole duration</TD></TR>
+<TR><TD>3%2</TD><TD>triplet whole duration (2/3rds of a whole note)</TD></TR>
 <TR><TD>2</TD><TD>half duration</TD></TR>
-<TR><TD>3</TD><TD>half-note triplet duration</TD></TR>
+<TR><TD>3</TD><TD>triplet half-note duration</TD></TR>
 <TR><TD>4</TD><TD>quarter duration</TD></TR>
-<TR><TD>6</TD><TD>quarter-note triplet duration</TD></TR>
+<TR><TD>6</TD><TD>triplet quarter-note duration</TD></TR>
 <TR><TD>8</TD><TD>eighth duration</TD></TR>
 <TR><TD>12</TD><TD>eighth-note triplet duration</TD></TR>
 <TR><TD>16</TD><TD>sixteenth duration</TD></TR>
-<TR><TD>24</TD><TD>sixteenth-note triplet duration</TD></TR>
+<TR><TD>20</TD><TD>quintuplet sixteenth-note duration</TD></TR>
+<TR><TD>24</TD><TD>triplet sixteenth-note duration</TD></TR>
 <TR><TD>32</TD><TD>thirty-second duration</TD></TR>
+<TR><TD>48</TD><TD>triplet thirty-second duration</TD></TR>
 <TR><TD>64</TD><TD>sixty-fourth duration</TD></TR>
 <TR><TD>128</TD><TD>one-hundred and twenty-eighth duration</TD></TR>
+<TR><TD>256</TD><TD>256th-note duration</TD></TR>
+<TR><TD>512</TD><TD>512th-note duration</TD></TR>
+<TR><TD>1024</TD><TD>1024th-note duration</TD></TR>
 <TR><TD>.</TD><TD>duration augmentation dot (must follow a number)</TD></TR>
+<TR><TD>%</TD><TD>rational duration marker for non-integral divisions of the whole note</TD></TR>
 <TR><TD>-</TD><TD>flat sign (minus character)</TD></TR>
-<TR><TD>--</TD><TD>double-flat (two successive minus characters)</TD></TR>
-<TR><TD>a-g</TD><TD>-g     absolute pitches above middle C</TD></TR>
-<TR><TD>A-G</TD><TD>-G     absolute pitches below middle C</TD></TR>
+<TR><TD>--</TD><TD>double flat (two successive minus characters)</TD></TR>
+<TR><TD>---</TD><TD>triple flat</TD></TR>
+<TR><TD>a-g</TD><TD>a-g absolute pitches above middle C</TD></TR>
+<TR><TD>A-G</TD><TD>A-G absolute pitches below middle C</TD></TR>
 <TR><TD>#</TD><TD>sharp</TD></TR>
 <TR><TD>##</TD><TD>double sharp</TD></TR>
-<TR><TD>h</TD><TD>end glissando</TD></TR>
-<TR><TD>i</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
-<TR><TD>j</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>###</TD><TD>triple sharp</TD></TR>
+<TR><TD>h</TD><TD>glissando end</TD></TR>
+<TR><TD>i</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>j</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
 <TR><TD>k</TD><TD>partial beam extending leftward</TD></TR>
 <TR><TD>kk</TD><TD>two partial beams extending leftward</TD></TR>
-<TR><TD>l</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
-<TR><TD>m</TD><TD>mordent (semitone)</TD></TR>
+<TR><TD>l</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>m</TD><TD>upper mordent (semitone)</TD></TR>
 <TR><TD>n</TD><TD>natural sign</TD></TR>
 <TR><TD>o</TD><TD>harmonic</TD></TR>
 <TR><TD>p</TD><TD>designator of a note subsequent to an appoggiatura</TD></TR>
-<TR><TD>q</TD><TD>acciaccatura (grace note signifier; in lieu of duration)</TD></TR>
+<TR><TD>q</TD><TD>unaccented grace note signifier (grace note with slash, or beamed grace notes)</TD></TR>
+<TR><TD>qq</TD><TD>accented grace note signifier (grace note without slash)</TD></TR>
 <TR><TD>r</TD><TD>rest</TD></TR>
 <TR><TD>t</TD><TD>trill (semitone)</TD></TR>
+<TR><TD>tt</TD><TD>trill (semitone) with wavy line</TD></TR>
+<TR><TD>ttt</TD><TD>trill (semitone) with wavy line that continues from previous note</TD></TR>
 <TR><TD>u</TD><TD>down-bow</TD></TR>
 <TR><TD>v</TD><TD>up-bow</TD></TR>
-<TR><TD>w</TD><TD>inverted mordent (semitone)</TD></TR>
+<TR><TD>w</TD><TD>lower mordent (semitone)</TD></TR>
 <TR><TD>x</TD><TD>editorial interpretation; immediately preceding signifier is interpreted</TD></TR>
 <TR><TD>xx</TD><TD>editorial interpretation; entire data token is interpreted</TD></TR>
 <TR><TD>y</TD><TD>editorial mark:  invisible symbol; unprinted note-, rest-, or barline-attribute, but logically implied</TD></TR>
@@ -1160,27 +1171,43 @@ signifieds.
 <TR><TD>KK</TD><TD>two partial beams extending rightward</TD></TR>
 <TR><TD>L</TD><TD>start beam</TD></TR>
 <TR><TD>LL</TD><TD>start two beams</TD></TR>
-<TR><TD>M</TD><TD>mordent (whole tone)</TD></TR>
-<TR><TD>N</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>M</TD><TD>upper mordent (whole tone)</TD></TR>
+<TR><TD>N</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
 <TR><TD>O</TD><TD>generic ornament (unspecified ornament)</TD></TR>
 <TR><TD>P</TD><TD>appoggiatura note designator</TD></TR>
-<TR><TD>Q</TD><TD>groupetto note designator</TD></TR>
-<TR><TD>R</TD><TD>signified ornament ends with a turn</TD></TR>
+<TR><TD>Q</TD><TD>cue-sized note (posses duration, unlike grace notes)</TD></TR>
+<TR><TD>R</TD><TD>unpitched note (or rest) that should not be transposed</TD></TR>
+<TR><TD>RR</TD><TD>semi-pitched note that should not be transposed</TD></TR>
 <TR><TD>S</TD><TD>turn</TD></TR>
-<TR><TD>$</TD><TD>Wagnerian turn</TD></TR>
+<TR><TD>SSS</TD><TD>turn between notes with whole tone above and below starting note</TD></TR>
+<TR><TD>Sss</TD><TD>turn between notes with semitone above and below starting note</TD></TR>
+<TR><TD>SSs</TD><TD>turn between notes with wholetone above and semitone below starting note</TD></TR>
+<TR><TD>SsS</TD><TD>turn between notes with semitone above and wholetone below starting note</TD></TR>
+<TR><TD>sSSS</TD><TD>turn on note with whole tone above and below starting note</TD></TR>
+<TR><TD>sSss</TD><TD>turn on note with semitone above and below starting note</TD></TR>
+<TR><TD>sSSs</TD><TD>turn on note with wholetone above and semitone below starting note</TD></TR>
+<TR><TD>sSsS</TD><TD>turn on note with semitone above and wholetone below starting note</TD></TR>
+<TR><TD>$</TD><TD>Wagnerian (inverted) turn</TD></TR>
+<TR><TD>$SS</TD><TD>Wagnerian turn between notes with whole tone below and above starting note</TD></TR>
+<TR><TD>$ss</TD><TD>Wagnerian turn between notes with semitone below and above starting note</TD></TR>
+<TR><TD>$Ss</TD><TD>Wagnerian turn between notes with wholetone below and semitone above starting note</TD></TR>
+<TR><TD>$sS</TD><TD>Wagnerian turn between notes with semitone below and wholetone above starting note</TD></TR>
+<TR><TD>s$SS</TD><TD>Wagnerian turn on note with whole tone below and above starting note</TD></TR>
+<TR><TD>s$ss</TD><TD>Wagnerian turn on note with semitone below and above starting note</TD></TR>
+<TR><TD>s$Ss</TD><TD>Wagnerian turn on note with wholetone below and semitone above starting note</TD></TR>
+<TR><TD>s$sS</TD><TD>Wagnerian turn on note with semitone below and wholetone above starting note</TD></TR>
 <TR><TD>T</TD><TD>trill (whole tone)</TD></TR>
+<TR><TD>TT</TD><TD>trill (whole tone) with wavy line</TD></TR>
+<TR><TD>TTT</TD><TD>trill (whole tone) with wavy line that continues from previous note</TD></TR>
 <TR><TD>U</TD><TD>con sordino; muted note</TD></TR>
-<TR><TD>V</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
-<TR><TD>W</TD><TD>inverted mordent (whole tone)</TD></TR>
+<TR><TD>V</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>W</TD><TD>lower mordent (whole tone)</TD></TR>
 <TR><TD>X</TD><TD>editorial intervention; immediately preceding signifier is an editorial addition</TD></TR>
 <TR><TD>XX</TD><TD>editorial intervention; entire data token is an editorial addition</TD></TR>
 <TR><TD>Y</TD><TD>editorial mark:  sic marking; information is encoded literally, but is questionable</TD></TR>
 <TR><TD>YY</TD><TD>editorial mark:  sic marking; entire data token is encoded literally, but is questionable</TD></TR>
-<TR><TD>Z</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
-<TR><TD>space</TD><TD>(space character) multiple-stop conjunction -- indicates joint note-tokens</TD></TR>
+<TR><TD>Z</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>space</TD><TD>(space character) multiple-stop conjunction (chord) -- separator between note subtokens</TD></TR>
 <TR><TD>=</TD><TD>barline; == double barline</TD></TR>
 <TR><TD>[</TD><TD>first note of a tie</TD></TR>
 <TR><TD>]</TD><TD>last note of a tie</TD></TR>
@@ -1191,7 +1218,6 @@ signifieds.
 <TR><TD>}</TD><TD>phrase mark (end)</TD></TR>
 <TR><TD>;</TD><TD>pause sign</TD></TR>
 <TR><TD>'</TD><TD>staccato mark</TD></TR>
-<TR><TD>s</TD><TD>spiccato</TD></TR>
 <TR><TD>"</TD><TD>pizzicato mark</TD></TR>
 <TR><TD>`</TD><TD>staccatissimo mark; attacca mark; martellato mark</TD></TR>
 <TR><TD>~</TD><TD>tenuto mark</TD></TR>
@@ -1203,8 +1229,7 @@ signifieds.
 <TR><TD>&</TD><TD>elision marker (for slurs or phrases)</TD></TR>
 <TR><TD>?</TD><TD>editorial mark: immediately preceding signifier has accompanying editorial footnote</TD></TR>
 <TR><TD>??</TD><TD>editorial mark: entire preceding data token has accompanying editorial footnote</TD></TR>
-<TR><TD>@ % + | &lt; &gt;</TD><TD>undefined;
-<A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
+<TR><TD>@ + | &lt; &gt;</TD><TD>undefined; <A HREF="../guide.append1.html#RDF">user assignable</A></TD></TR>
 </TABLE>
 </blockquote>
 <A NAME="Context Dependencies">
@@ -1282,7 +1307,7 @@ in the following table.
 <A HREF="../guide.append1.html#RDF">user-defined marks</A></TD>
 <TD>ijl</TD><TD>one or more of;</TD></TR>
 <TR><TD></TD><TD>NUVZ</TD><TD>may be repeated but</TD></TR>
-<TR><TD></TD><TD>@ % + | < ></TD><TD>must be in order given</TD></TR>
+<TR><TD></TD><TD>@ + | < ></TD><TD>must be in order given</TD></TR>
 <TR><TD>21. closed or continuing tie</TD><TD>] or _</TD><TD></TD></TR>
 <TR><TD>22. closed slur elision indicator</TD><TD>&</TD><TD>must precede )</TD></TR>
 <TR><TD>23. closed slur</TD><TD>)</TD><TD></TD></TR>
