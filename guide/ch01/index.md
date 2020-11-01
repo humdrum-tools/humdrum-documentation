@@ -89,7 +89,7 @@ representations that are used only for a single research task.
 
 The *Humdrum Toolkit* is a set of more than 70 inter-related software
 tools. These tools manipulate ASCII data (text) conforming to the
-umdrum syntax. If the ASCII data represents music-related information,
+Humdrum syntax. If the ASCII data represents music-related information,
 then we can say that the Humdrum tools manipulate music-related
 information.
 
