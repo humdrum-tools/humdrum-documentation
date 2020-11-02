@@ -113,7 +113,7 @@ Beats
 ```
 !! Gustav Holst
 **recip
-\*M5/4
+*M5/4
 =1
 12
 12
