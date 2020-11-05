@@ -324,7 +324,7 @@ beginning and end of a slur respectively.
 
 The open square bracket `[` denotes the first note of a tie. The
 closed square bracket `]` denotes the last note of a tie. The
-underscore character c_` denotes middle notes (if any) of a tie.
+underscore character `_` denotes middle notes (if any) of a tie.
 
 Slurs and phrase markings can be *nested* (e.g. slurs within slurs)
 and may also be *elided* (e.g. overlapping phrases) to a single
