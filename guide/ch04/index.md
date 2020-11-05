@@ -494,8 +494,8 @@ the number of semitones shifted from the original pitch height. The
 two types of offset are completely independent of each other. For
 common transpositions, both the diatonic and chromatic offsets will
 need to be specified. For example, in transposing up a minor third
-(e.g. C to E-flat), the diatonic offset is `up two pitch-letter
-names,` and the chromatic offset is `up three semitones.` The
+(e.g. C to E-flat), the diatonic offset is ‘up two pitch-letter
+names,’ and the chromatic offset is ‘up three semitones.’ The
 appropriate command invocation is:
 
 ```bash
