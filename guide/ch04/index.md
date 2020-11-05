@@ -122,7 +122,7 @@ pitch filename
 Notice that the <span class="rep">pitch</span> representation uses
 the same system for representing barlines as <span class="rep">kern</span>.
 In fact, all of the pitch-related representations described in this
-chapter make use of the so-called `common system` for representing
+chapter make use of the so-called ‘common system’ for representing
 barlines.
 
 ## German Tonhöhe ##
