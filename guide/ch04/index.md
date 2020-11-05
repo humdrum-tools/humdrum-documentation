@@ -162,14 +162,14 @@ tonh filename
 The common French system for pitch naming uses a so-called "fixed-do"
 method of diatonic pitch designations: *do, ré, mi, fa, sol, la*
 and *si* (rather than *ti*), where *do* corresponds to the
-English/German `C`. In the Humdrum <span class="rep">solfg</span>
+English/German ‘C’. In the Humdrum <span class="rep">solfg</span>
 representation, solfège pitch names are used. Flats (*bémol*) and
 sharps (*dièse*) are abbreviated *b* and *d* respectively. When
 accidentals are encoded, the tilde character `~` is encoded following
 the solfège syllable and before the accidental. Double and triple
-sharps and flats are encoded via repetition. Hence, `do dièse`
-`do~d` for C-sharp, `la bémol` `la~b` for A-flat, `sol double-dièse`
-`sol~dd` for G double-sharp, `si double-bémol` `si~bb` for B
+sharps and flats are encoded via repetition. Hence, ‘do dièse’
+`do~d` for C-sharp, ‘la bémol’ `la~b` for A-flat, ‘sol double-dièse’
+`sol~dd` for G double-sharp, ‘si double-bémol’ `si~bb` for B
 double-flat, and so on. As with the German and ISO pitch representations,
 octave is designated by integers with `do4` representing middle C.
 
