@@ -384,6 +384,8 @@ Reference Record only the designation \``guitr`\' is used.
 
 `*Iclest`	 celesta; *céleste* (Fr.)
 
+`*Iconga`  conga 
+
 `*Icrshc`	 crash cymbal (kit)
 
 `*Ifingc`	 finger cymbal
@@ -409,6 +411,8 @@ Reference Record only the designation \``guitr`\' is used.
 `*Itabla`	 tabla
 
 `*Itambn`	 tambourine, timbrel; *tamburino* (It.); *Tamburin* (Ger.)
+
+`*Itdrum`  tenor drum 
 
 `*Itimpa`	 timpani; *timpani* (It.); *timbales* (Fr.); *Pauken* (Ger.)
 
