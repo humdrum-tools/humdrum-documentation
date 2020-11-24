@@ -636,13 +636,13 @@ pitches are collapsed into a vertical chord:
 X=0
 while [ $X -ne 12 ]
 do
-   patt -s '=|^\.(\t\.)*$' -f P$X -m score.tmp -t P$X \
+   patt -s '=|^\.(\t\.)*$' -f P$X -t P$X -m score.tmp \
       | extract -i '**patt' > P$X.pat
-   patt -s '=|^\.(\t\.)*$' -f I$X -m score.tmp -t I$X \
+   patt -s '=|^\.(\t\.)*$' -f I$X -t I$X -m score.tmp \
       | extract -i '**patt' > I$X.pat
-   patt -s '=|^\.(\t\.)*$' -f R$X -m score.tmp -t R$X \
+   patt -s '=|^\.(\t\.)*$' -f R$X -t R$X -m score.tmp \
       | extract -i '**patt' > R$X.pat
-   patt -s '=|^\.(\t\.)*$' -f RI$X -m score.tmp -t RI$X \
+   patt -s '=|^\.(\t\.)*$' -f RI$X -t RI$X -m score.tmp \
       | extract -i '**patt' > RI$X.pat
    let X=$X+1
 done
