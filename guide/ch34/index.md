@@ -615,7 +615,7 @@ for <span class="tool">pc</span> in order to use the alpha-numeric
 pitch-class representation.
 
 ```bash
-pc -at $1 > temp.pc  
+pc -atx $1 > temp.pc  
 humsed 's/r/./g' temp.pc > score.tmp
 ```
 
@@ -674,7 +674,7 @@ cleave -d ' ' -i '**rows' -o '**rows' temp > analysis.out
 
 # Finally, clean up some temporary files:
 
-rm [PRI][0-9].pat [PRI]1[01].pat RI[0-9]*.pat temp.pat
+rm [PRI][0-9].pat [PRI]1[01].pat RI[0-9]*.pat
 rm analysis.[1-4] temp temp.pc score.tmp
 ```
 
