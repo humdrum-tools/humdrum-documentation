@@ -615,7 +615,8 @@ for <span class="tool">pc</span> in order to use the alpha-numeric
 pitch-class representation.
 
 ```bash
-pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp
+pc -at $1 > temp.pc  
+humsed 's/r/./g' temp.pc > score.tmp
 ```
 
 The main searching task is done by <span class="tool">patt</span>.
