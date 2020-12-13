@@ -615,7 +615,8 @@ for <span class="tool">pc</span> in order to use the alpha-numeric
 pitch-class representation.
 
 ```bash
-pc -at $1 > temp.pc  humsed 's/r/./g' temp.pc > score.tmp
+pc -atx $1 > temp.pc  
+humsed 's/r/./g' temp.pc > score.tmp
 ```
 
 The main searching task is done by <span class="tool">patt</span>.
@@ -635,13 +636,13 @@ pitches are collapsed into a vertical chord:
 X=0
 while [ $X -ne 12 ]
 do
-   patt -s '=|^\.(\t\.)*$' -f P$X -m score.tmp -t P$X \
+   patt -s '=|^\.(\t\.)*$' -f P$X -t P$X -m score.tmp \
       | extract -i '**patt' > P$X.pat
-   patt -s '=|^\.(\t\.)*$' -f I$X -m score.tmp -t I$X \
+   patt -s '=|^\.(\t\.)*$' -f I$X -t I$X -m score.tmp \
       | extract -i '**patt' > I$X.pat
-   patt -s '=|^\.(\t\.)*$' -f R$X -m score.tmp -t R$X \
+   patt -s '=|^\.(\t\.)*$' -f R$X -t R$X -m score.tmp \
       | extract -i '**patt' > R$X.pat
-   patt -s '=|^\.(\t\.)*$' -f RI$X -m score.tmp -t RI$X \
+   patt -s '=|^\.(\t\.)*$' -f RI$X -t RI$X -m score.tmp \
       | extract -i '**patt' > RI$X.pat
    let X=$X+1
 done
@@ -673,7 +674,7 @@ cleave -d ' ' -i '**rows' -o '**rows' temp > analysis.out
 
 # Finally, clean up some temporary files:
 
-rm [PRI][0-9].pat [PRI]1[01].pat RI[0-9]*.pat temp.pat
+rm [PRI][0-9].pat [PRI]1[01].pat RI[0-9]*.pat
 rm analysis.[1-4] temp temp.pc score.tmp
 ```
 

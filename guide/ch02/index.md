@@ -300,7 +300,7 @@ using the `*staff` indicators.
 Once again, clefs, key signatures and meter signatures are encoded
 separately for each part. Notice how the meter signature has been
 encoded as 4/4 rather than `common time`. This again reflects
-<span class="rep">kern</span>`s preoccupation with functional
+<span class="rep">kern</span>’s preoccupation with functional
 information rather than orthographic information. (Later we will
 see how to encode the fact that the meter signature is visually
 rendered as `C` rather than 4/4.)

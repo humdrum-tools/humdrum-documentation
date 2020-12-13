@@ -512,7 +512,7 @@ bwv271.krn
 bwv272.krn
 ```
 
-As we've already notes, the <span class="option">u</span> option
+As we've already noted, the <span class="option">u</span> option
 for <span class="unix">uniq</span> causes only unique entries in a
 list to be passed to the output. This is often useful in identifying
 works that differ in some way from other works in a group or corpus.
