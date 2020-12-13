@@ -153,7 +153,7 @@ score were turned sideways.
 *k[b-]	*k[b-]
 *M3/4	*M3/4
 =1-	=1-
-2.rr	8r
+2.r	8r
 .	8dL
 .	8g
 .	8b-
