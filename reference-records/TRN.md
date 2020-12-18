@@ -11,7 +11,7 @@
 
 The name of the translator of any vocal,  choral, or dramatic text.
 If more than one translator was involved in the work,  then each
-translator's name should appear on a separate <span class="refname">TRN</a>
+translator's name should appear on a separate <span class="refname">TRN</span>
 record with an enumeration number before the colon.
 
 </td>

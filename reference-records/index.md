@@ -46,44 +46,18 @@ Humdrum representations may encode information pertaining to sound
 recordings (such as sound-based analyses). For information derived from
 sound recordings the following reference records may be pertinent.
 
-<a name ="RTL"></a>
+<table class="reference">
+{% capture x %}{% include_relative RTL.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RMM.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RCn.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RRD.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RLC.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RNP.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RDT.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative RTn.md %}{% endcapture %}{{ x | markdownify }}
+</table>
 
-<span class="refname">RTL</span> *Title of album*.
 
-<a name ="RMM"></a>
-
-<span class="refname">RMM</span> *Manufacturer or sponsoring company*. The company or
-organization responsible for the release,  distribution, and/or
-manufacturing of the recording.
-
-<a name =""></a>
-
-<span class="refname">RC\#</span> *Recording company\'s catalogue number*. The album\'s
-numerical designation.
-
-<a name ="RRD"></a>
-
-<span class="refname">RRD</span> *Date of release*. The release date should be encoded using
-the [`**date`](representations/date.rep.html) format described in the
-*Humdrum Reference Manual*.
-
-<a name ="RLC"></a>
-
-<span class="refname">RLC</span> *Place of recording*. (Local language should be used.)
-
-<a name ="RNP"></a>
-
-<span class="refname">RNP</span> *Name of the producer*.
-
-<a name ="RDT"></a>
-
-<span class="refname">RDT</span> *Date of recording*. The date of recording should be encoded
-using the [`**date`](representations/date.rep.html) format described in
-the described in the *Humdrum Reference Manual*.
-
-<a name =""></a>
-
-<span class="refname">RT\#</span> *Track number*.
 
 
 
@@ -297,6 +271,11 @@ Collection,  Burkhart Anthology.
 <span class="refname">PUB</span> *Publication status*. This reference record identifies
 whether the document has ever been \"published\". One of the following
 English terms may appear: `published` or `unpublished`.
+
+<a name ="PED"></a>
+
+<span class="refname">PED</span> *Publication editor*. Name of the editor of the source 
+used for the digital edition if a specific edition is being encoded.
 
 <a name ="PPR"></a>
 
