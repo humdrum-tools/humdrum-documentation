@@ -275,16 +275,17 @@ Basic Notated Music
    kk               two partial beams extending leftward
    l                undefined; [user assignable](../guide.append1.html#RDF)
    m                mordent (semitone)
+   mm               double mordent (semitone)
    n                natural sign
    o                harmonic
    p                designator of a note subsequent to an appoggiatura
    q                acciaccatura (grace note signifier; in lieu of duration)
    r                rest
-   rr               any duration rest that is visually rendered as whole duration
    t                trill (semitone)
    u                down-bow
    v                up-bow
    w                inverted mordent (semitone)
+   ww               double inverted mordent (semitone)
    x                editorial interpretation; immediately preceding signifier is interpreted
    xx               editorial interpretation; entire data token is interpreted
    y                editorial mark: invisible symbol; unprinted note, rest, or
@@ -298,18 +299,23 @@ Basic Notated Music
    KK               two partial beams extending rightward
    L                start beam
    LL               start two beams
-   M                mordent (whole tone)
+   M                mordent (wholetone)
+   Mm               mordent (either semitone or wholetone)
+   MM               double mordent (wholetone)
    N                undefined; [user assignable](../guide.append1.html#RDF)
-   O                generic ornament (unspecified ornament)
+   O                generic ornament (unspecified ornament) use `!!!RDF**kern:` to specifiy type of ornament.
    P                appoggiatura note designator
    Q                groupetto note designator
-   R                signified ornament ends with a turn
+   R                unpitched note
+   RR               semi-pitched note
    S                turn
    \$               Wagnerian turn
    T                trill (whole tone)
    U                con sordino; muted note
    V                undefined; [user assignable](../guide.append1.html#RDF)
-   W                inverted mordent (whole tone)
+   W                inverted mordent (wholetone)
+   Ww               interted mordent (either semitone or wholetone)
+   WW               double inverted mordent (wholetone)
    X                editorial intervention; immediately preceding signifier is an
                     editorial addition; see also **x**
    XX               editorial intervention; entire data token is an editorial addition
@@ -332,7 +338,7 @@ Basic Notated Music
    \"               pizzicato mark
    \`               staccatissimo mark; attacca mark; martellato mark, (heavy wedge)
    \~               tenuto mark
-   \^               accent mark
+   ^               accent mark
    :                arpeggiation (of multi-note chord)
    \|               in barline &mdash; thin line designator
    !                in barline &mdash; thick line designator
