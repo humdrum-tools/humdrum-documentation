@@ -308,8 +308,13 @@ is designated by the lower-case letter <code><big>p</big></code>.
 Rest tokens are denoted by the lower-case letter <code><big>r</big></code>
 along with a numerical duration signifier.
 Rests may also have the attributes of stem-direction, beaming, slur,
-and phrase, but rests cannot be assigned articulation
+and phrase, but rests should not be assigned articulation
 or ornamentation attributes.
+If a rest needs to be
+moved from its default position on the staff, a `**kern` pitch can be
+used to specify the location. Preferably the pitch follows the `r` value
+immediately, such as `rg` to center the rest on the second staff line 
+with a treble clef.
 In many meters, a full measure of rest is indicated by a whole rest,
 even if the actual duration of the measure differs from four quarters.
 The actual duration of the rest is encoded, however, repetition of
