@@ -889,10 +889,14 @@ represented as:
 
 ------------------------------------------------------------------------
 
-Rests tokens are denoted by the lower-case letter \"r\" along with a
-numerical duration signifier. Rests may also have the attributes of
-stem-direction, beaming, slur, phrase, and groupetto, but rests cannot
-be assigned articulation or ornamentation attributes.
+Rests tokens are denoted by the lower-case letter \"r\" along with
+a numerical duration signifier. Rests may also have the attributes
+of stem-direction, beaming, slur, phrase, and groupetto, but rests
+cannot be assigned articulation or ornamentation attributes.  If a
+rest needs to be moved from its default position on the staff, a
+`**kern` pitch can be used to specify the location. Preferably the
+pitch follows the `r` value immediately, such as `rg` to center the
+rest on the second staff line with a treble clef.
 
 In the \*\*kern representation, rests are represented according to their
 syntact *meaning* rather than according to their visual appearance or
