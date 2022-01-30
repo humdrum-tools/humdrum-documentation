@@ -19,6 +19,7 @@
 | `*Iridec`	| ride cymbal (kit)                                                          |
 | `*Isdrum`	| snare drum (kit)                                                           |
 | `*IdrumS`	| (generic) small drum, *tambour petit* (Fr.)                                |
+| `*Idrum`	| (generic) drum                                                            |
 | `*Ispshc`	| splash cymbal (kit)                                                        |
 | `*Isteel`	| steel-drum, tinpanny                                                       |
 | `*Itabla`	| tabla                                                                      |
