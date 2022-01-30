@@ -18,6 +18,7 @@
 | `*Ipiatt`	| cymbals; *piatti* (It.); *cymbales* (Fr.); *Becken* (Ger.); *kymbos* (Gk.) |
 | `*Iridec`	| ride cymbal (kit)                                                          |
 | `*Isdrum`	| snare drum (kit)                                                           |
+| `*IdrumS`	| (generic) small drum, *tambour petit* (Fr.)                                |
 | `*Ispshc`	| splash cymbal (kit)                                                        |
 | `*Isteel`	| steel-drum, tinpanny                                                       |
 | `*Itabla`	| tabla                                                                      |
