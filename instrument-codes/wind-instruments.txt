@@ -1,0 +1,73 @@
+| Code      	| Meaning                                                                         |
+| -----------	| ------------------------------------------------------------------------------- |
+| `*Iaccor`	| accordion; *accordéon* (Fr.); *Akkordeon* (Ger.)                                |
+| `*Iarmon`	| harmonica; *armonica* (It.)                                                     |
+| `*IbagpS`	| bagpipe (Scottish)                                                              |
+| `*IbagpI`	| bagpipe (Irish)                                                                 |
+| `*Ibaset`	| bassett horn                                                                    |
+| `*Icalam`	| chalumeau; *calamus* (Lat.); *kalamos* (Gk.)                                    |
+| `*Icalpe`	| calliope                                                                        |
+| `*Icangl`	| english horn; *cor anglais* (Fr.)                                               |
+| `*Ichlms`	| soprano shawm, chalmeye, shalme, etc.; *chalemie* (Fr.); *ciaramella* (It.)     |
+| `*Ichlma`	| alto shawm, chalmeye, shalme, etc.                                              |
+| `*Ichlmt`	| tenor shawm, chalmeye, shalme, etc.                                             |
+| `*Iclars`	| soprano clarinet (in either B-flat or A); *clarinetto* (It.)                    |
+| `*Iclarp`	| piccolo clarinet                                                                |
+| `*Iclara`	| alto clarinet (in E-flat)                                                       |
+| `*Iclarb`	| bass clarinet (in B-flat)                                                       |
+| `*Icor`	| horn; *cor* (Fr.); *corno* (It.); *Horn* (Ger.)                                 |
+| `*Icornm`	| cornemuse; French bagpipe                                                       |
+| `*Icorno`	| cornett (woodwind instr.); *cornetto* (It.); *cornaboux* (Fr.); *Zink* (Ger.)   |
+| `*Icornt`	| cornet (brass instr.); *cornetta* (It.); *cornet à pistons* (Fr.); *Cornett* (Ger.) |
+| `*Ictina`	| concertina; *concertina* (Fr.); *Konzertina* (Ger.)                             |
+| `*Ifagot`	| bassoon; *fagotto* (It.)                                                        |
+| `*Ifag_c`	| contrabassoon; *contrafagotto* (It.)                                            |
+| `*Ifife`	| fife                                                                            |
+| `*Iflt`	| flute; *flauto* (It.); *Flöte* (Ger.); *flûte* (Fr.)                            |
+| `*Iflt_a`	| alto flute                                                                      |
+| `*Iflt_b`	| bass flute                                                                      |
+| `*Ifltds`	| soprano recorder; *flûte à bec, flûte douce* (Fr.); *Blockflöte* (Ger.); *flauto dolce* (It.) |
+| `*Ifltdn`	| sopranino recorder                                                              |
+| `*Ifltda`	| alto recorder                                                                   |
+| `*Ifltdt`	| tenor recorder                                                                  |
+| `*Ifltdb`	| bass recorder                                                                   |
+| `*Iflugh`	| flugelhorn                                                                      |
+| `*Ihichi`	| hichiriki (Japanese double reed used in gagaku)                                 |
+| `*Ikrums`	| soprano crumhorn; *Krummhorn/Krumbhorn* (Ger.); *tournebout* (Fr.)              |
+| `*Ikruma`	| alto crumhorn                                                                   |
+| `*Ikrumt`	| tenor crumhorn                                                                  |
+| `*Ikrumb`	| bass crumhorn                                                                   |
+| `*Inokan`	| nokan (Japanese flute for the no theatre)                                       |
+| `*Ioboe`	| oboe; *hautbois* (Fr.); *Hoboe, Oboe* (Ger.): *oboe* (It.)                      |
+| `*IoboeD`	| oboe d\'amore                                                                   |
+| `*Iocari`	| ocarina                                                                         |
+| `*Iophic`     | <a target="_blank" href="https://en.wikipedia.org/wiki/Ophicleide">ophicleide</a> |
+| `*Ipanpi`	| panpipe                                                                         |
+| `*Ipicco`	| piccolo flute                                                                   |
+| `*Ipiri`	| Korean p\'iri                                                                   |
+| `*Irackt`	| racket; *Rackett* (Ger.); *cervelas* (Fr.)                                      |
+| `*Isarus`	| sarrusophone                                                                    |
+| `*IsaxN`	| sopranino saxophone (in E-flat)                                                 |
+| `*IsaxS`	| soprano saxophone (in B-flat)                                                   |
+| `*IsaxA`	| alto saxophone (in E-flat)                                                      |
+| `*IsaxT`	| tenor saxophone (in B-flat)                                                     |
+| `*IsaxR`	| baritone saxophone (in E-flat)                                                  |
+| `*IsaxB`	| bass saxophone (in B-flat)                                                      |
+| `*IsaxC`	| contrabass saxophone (in E-flat)                                                |
+| `*Iserp`      | <a target="_blank" href="https://en.wikipedia.org/wiki/Serpent_(instrument)">serpent</a> |
+| `*Ishaku`	| shakuhachi                                                                      |
+| `*Isheng`	| mouth organ (Chinese)                                                           |
+| `*Isho`	| mouth organ (Japanese)                                                          |
+| `*IsxhS`	| soprano saxhorn (in B-flat)                                                     |
+| `*IsxhA`	| alto saxhorn (in E-flat)                                                        |
+| `*IsxhT`	| tenor saxhorn (in B-flat)                                                       |
+| `*IsxhR`	| baritone saxhorn (in E-flat)                                                    |
+| `*IsxhB`	| bass saxhorn (in B-flat)                                                        |
+| `*IsxhC`	| contrabass saxhorn (in E-flat)                                                  |
+| `*Itromt`	| tenor trombone; *trombone* (It.); *trombone* (Fr.); *Posaune* (Ger.)            |
+| `*Itromb`	| bass trombone                                                                   |
+| `*Itromp`	| trumpet; *tromba* (It.); *trompette* (Fr.); *Trompete* (Ger.)                   |
+| `*Ituba`	| tuba                                                                            |
+| `*Izurna`	| zurna                                                                           |
+
+

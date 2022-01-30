@@ -1,0 +1,32 @@
+
+
+| Code       	| Meaning                                                                    |
+| -----------	| -------------------------------------------------------------------------- |
+| `*Ibdrum`	| bass drum (kit)                                                            | 
+| `*Icampn`	| bell; *campana* (It.); *cloche* (Fr.); *campana* (Span.)                   |
+| `*Icaril`	| carillon                                                                   |
+| `*Icasts`	| castanets; *castañetas* (Span.); *castagnette* (It.)                       |
+| `*Ichime`	| chimes                                                                     |
+| `*Iclest`	| celesta; *céleste* (Fr.)                                                   |
+| `*Iconga`  	| conga                                                                      |
+| `*Icrshc`	| crash cymbal (kit)                                                         |
+| `*Ifingc`	| finger cymbal                                                              |
+| `*Iglock`	| glockenspiel                                                               |
+| `*Igong`	| gong                                                                       |
+| `*Imarac`	| maracas                                                                    |
+| `*Imarim`	| marimba                                                                    |
+| `*Ipiatt`	| cymbals; *piatti* (It.); *cymbales* (Fr.); *Becken* (Ger.); *kymbos* (Gk.) |
+| `*Iridec`	| ride cymbal (kit)                                                          |
+| `*Isdrum`	| snare drum (kit)                                                           |
+| `*Ispshc`	| splash cymbal (kit)                                                        |
+| `*Isteel`	| steel-drum, tinpanny                                                       |
+| `*Itabla`	| tabla                                                                      |
+| `*Itambn`	| tambourine, timbrel; *tamburino* (It.); *Tamburin* (Ger.)                  |
+| `*Itdrum` 	|  tenor drum                                                                |
+| `*Itimpa`	| timpani; *timpani* (It.); *timbales* (Fr.); *Pauken* (Ger.)                |
+| `*Itom`	| tom-tom drum                                                               |
+| `*Itrngl`	| triangle; *triangle* (Fr.); *Triangel* (Ger.); *triangolo* (It.)           |
+| `*Ivibra`	| vibraphone                                                                 |
+| `*Ixylo`	| xylophone; *xylophone* (Fr.); *silofono* (It.)                             |
+
+

@@ -1,0 +1,22 @@
+
+
+| Code       	| Meaning                        |
+| -----------	| ------------------------------ |
+| `*Ivox`	| generic (undesignated) voice   |
+| `*Ifeme`	| female voice                   |
+| `*Imale`	| male voice                     |
+| `*Infant`	| child's voice                  |
+| `*Irecit`	| recitativo                     |
+| `*Ilyrsp`	| lyric soprano                  |
+| `*Idrmsp`	| dramatic soprano               |
+| `*Icolsp`	| coloratura soprano             |
+| `*Ialto`	| alto                           |
+| `*Ictenor`	| counter-tenor                  |
+| `*Iheltn`	| Heldentenor, tenore robusto    |
+| `*Ilyrtn`	| lyric tenor                    |
+| `*Ibspro`	| basso profondo                 |
+| `*Ibscan`	| basso cantante                 |
+| `*Ifalse`	| falsetto                       |
+| `*Icastr`	| castrato                       |
+
+

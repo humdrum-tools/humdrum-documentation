@@ -1,0 +1,12 @@
+
+
+| Code        | Meaning                     |
+| ----------- | --------------------------- |
+| `*IGacmp`   | accompaniment instrument    |
+| `*IGsolo`   | solo instrument             |
+| `*IGcont`   | basso-continuo instrument   |
+| `*IGripn`   | ripieno instrument          |
+| `*IGconc`   | concertino instrument       |
+| ----------- | --------------------------- |
+
+

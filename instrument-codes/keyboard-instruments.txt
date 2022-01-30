@@ -1,0 +1,21 @@
+
+
+| Code       	| Meaning                                                                                       |
+| -----------	| --------------------------------------------------------------------------------------------- |
+| `*Iaccor`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Accordion">accordion</a>; *accordéon* (Fr.); *Akkordeon* (Ger.), (see `*Ibando`) |
+| `*Ibando`     | <a target="_blank" href="https://en.wikipedia.org/wiki/Bandoneon">bandoneon</a> (see `*Iaccor`)|
+| `*Icaril`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Carillon">carillon</a> |
+| `*Icemba`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Harpsichord">harpsichord</a>; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.) |
+| `*Iclavi`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Clavichord">clavichord</a>; *clavicordium* (Lat.); *clavicorde* (Fr.) |
+| `*Iclest`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Celesta">celesta</a>; *céleste* (Fr.) |
+| `*Iforte`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Fortepiano">fortepiano</a> |
+| `*Ihammd`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Hammond_organ">Hammond electronic organ</a> |
+| `*Iorgan`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Pipe_organ">pipe organ</a>; *orgue* (Fr.); *Orgel* (Ger.); *organo* (It.); *organo* (Span.); *organum* (Lat.) |
+| `*Ipiano`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Piano">pianoforte</a>, pianoforte |
+| `*Iphysh`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Physharmonica">physharmonica</a> (see `*Ireedo`) |
+| `*Iporta`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Portative_organ">portative organ</a> |
+| `*Ireedo`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Pump_organ">reed organ</a>, pump organ (see `*Iphysh`)                                                               |
+| `*Irhode`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Rhodes_piano">Fender-Rhodes electric piano</a>                                                                  |
+| `*Isynth`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Synthesizer">keyboard synthesizer</a> |
+
+

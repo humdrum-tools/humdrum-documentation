@@ -1,0 +1,12 @@
+
+
+| Code       	| Meaning                   |
+| -----------	| ------------------------- |
+| `*Isoprn`	| soprano                   |
+| `*Imezzo`	| mezzo soprano             |
+| `*Icalto`	| contralto                 |
+| `*Itenor`	| tenor                     |
+| `*Ibarit`	| baritone                  |
+| `*Ibass`	| bass                      |
+
+

@@ -1,0 +1,52 @@
+
+
+| Code    	| Meaning                                                                         |
+| -----------	| ------------------------------------------------------------------------------- |
+| `*Iarchl`	| archlute; *archiluth* (Fr.); *liuto attiorbato/arcileuto/arciliuto* (It.)       |
+| `*Iarpa`	| harp; *arpa* (It.), *arpa* (Span.)                                              |
+| `*Ibanjo`	| banjo                                                                           |
+| `*Ibiwa`	| biwa                                                                            |
+| `*Ibguit`	| electric bass guitar                                                            |
+| `*Icbass`	| contrabass                                                                      |
+| `*Icello`	| violoncello                                                                     |
+| `*Icemba`	| harpsichord; *clavecin* (Fr.); *Cembalo* (Ger.); *cembalo* (It.)                |
+| `*Icetra`	| cittern; *cistre/sistre* (Fr.); *Cither/Zitter* (Ger.); *cetra/cetera* (It.)    |
+| `*Iclavi`	| clavichord; *clavicordium* (Lat.); *clavicorde* (Fr.)                           |
+| `*Idulc`	| dulcimer or cimbalom; *Cimbal* or Hackbrett (Ger.)                              |
+| `*Ieguit`	| electric guitar                                                                 |
+| `*Iforte`	| fortepiano                                                                      |
+| `*Iguitr`	| guitar; *guitarra* (Span.); *guitare* (Fr.); *Gitarre* (Ger.); *chitarra* (It.) |
+| `*Ihurdy`	| hurdy-gurdy; variously named in other languages                                 |
+| `*Iliuto`	| lute; *lauto, liuto leuto* (It.); *luth* (Fr.); *Laute* (Ger.)                  |
+| `*Ikit`	| kit; variously named in other languages                                         |
+| `*Ikokyu`	| kokyu (Japanese spike fiddle)                                                   |
+| `*Ikomun`	| komungo/geomungo (Korean long zither)                                                  |
+| `*Ikoto`	| koto (Japanese long zither)                                                     |
+| `*Imando`	| mandolin; *mandolino* (It.); *mandoline* (Fr.); *Mandoline* (Ger.)              |
+| `*Ipiano`	| pianoforte                                                                      |
+| `*Ipipa`	| Chinese lute                                                                    |
+| `*Ipsalt`	| psaltery (box zither)                                                           |
+| `*Iqin`	| qin, ch\'in (Chinese zither)                                                    |
+| `*Iquitr`	| gittern (short-necked lute); *quitarre* (Fr.); *Quinterne* (Ger.)               |
+| `*Irebec`	| rebec; *rebeca* (Lat.); *rebec* (Fr.); *Rebec* (Ger.)                           |
+| `*Ibansu`	| <a target="_blank" href="https://en.wikipedia.org/wiki/Bansuri">bansuri</a> (Indian bamboo flute)                                                   |
+| `*Isarod`	| sarod                                                                           |
+| `*Ishami`	| shamisen (Japanese fretless lute)                                               |
+| `*Isitar`	| sitar                                                                           |
+| `*Itambu`	| tambura, tanpura                                                                |
+| `*Itanbr`	| tanbur                                                                          |
+| `*Itiorb`	| theorbo; *tiorba* (It.); *tèorbe* (Fr.); *Theorb* (Ger.)                        |
+| `*Iud`	| ud                                                                              |
+| `*Iukule`	| ukulele                                                                         |
+| `*Ivina`	| vina                                                                            |
+| `*Iviola`	| viola; *alto* (Fr.); *Bratsche* (Ger.)                                          |
+| `*Iviolb`	| bass viola da gamba; *viole* (Fr.); *Gambe* (Ger.)                              |
+| `*Iviold`	| viola d\'amore; *viole d\'amour* (Fr.); *Liebesgeige* (Ger.)                    |
+| `*Ivioln`	| violin; *violon* (Fr.); *Violine* or *Geige* (Ger.); *violino* (It.)            |
+| `*Iviolp`	| piccolo violin; *violino piccolo* (It.)                                         |
+| `*Iviolp`	| piccolo violin; *violino piccolo* (It.)                                         |
+| `*Iviols`	| treble viola da gamba; *viole* (Fr.); *Gambe* (Ger.)                            |
+| `*Iviolt`	| tenor viola da gamba; viole (Fr.); Gambe (Ger.)                                 |
+| `*Izithr`	| zither; *Zither* (Ger.); *cithare* (Fr.); *cetra da tavola* (It.)               |
+
+

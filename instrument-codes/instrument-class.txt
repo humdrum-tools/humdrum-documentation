@@ -1,0 +1,13 @@
+
+
+| Code       | Meaning                             |
+|----------- | ----------------------------------- |
+|`*ICvox`    | voice                               |
+|`*ICstr`    | string instrument                   |
+|`*ICww`     | woodwind instrument                 |
+|`*ICbras`   | brass instrument                    |
+|`*ICklav`   | keyboard instrument                 |
+|`*ICidio`   | percussion instrument (idiophone)   |
+|----------- | ----------------------------------- |
+
+
