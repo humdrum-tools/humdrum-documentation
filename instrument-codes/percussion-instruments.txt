@@ -12,7 +12,7 @@
 | `*Icrshc`	| crash cymbal (kit)                                                         |
 | `*Ifingc`	| finger cymbal                                                              |
 | `*Iglock`	| glockenspiel                                                               |
-| `*Igong`	| gong                                                                       |
+| `*Igong`	| gong, tamtam                                                               |
 | `*Imarac`	| maracas                                                                    |
 | `*Imarim`	| marimba                                                                    |
 | `*Ipiatt`	| cymbals; *piatti* (It.); *cymbales* (Fr.); *Becken* (Ger.); *kymbos* (Gk.) |
