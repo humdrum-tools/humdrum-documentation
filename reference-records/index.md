@@ -556,6 +556,12 @@ command.) E.g.
 
 > ` !!!AIN: clars corno fagot flt oboe`
 
+An optional part count for each instrument code can be prefixed by
+a space before each instrument code, such as this example for a string
+quartet:
+
+> ` !!!AIN: 1 cello 1 viola 2 violn`
+
 <a name ="region designation"></a>
 
 <span class="refname">ARE</span> *Geographical region of origin*. This reference identifies
