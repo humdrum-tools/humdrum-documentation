@@ -30,16 +30,20 @@ var INSTRUMENT_CODES = {};
 var INSTRUMENT_CODE_LIST = [];
 
 var LANGUAGES = {
-	"EN": { "language": "English", "abbreviation": "Eng.",  },
-	"FR": { "language": "French",  "abbreviation": "Fr.",   },
-	"DE": { "language": "German",  "abbreviation": "Ger.",  },
-	"IT": { "language": "Italian", "abbreviation": "It.",   },
-	"ES": { "language": "Spanish", "abbreviation": "Span.", },
-	"PL": { "language": "Polish",  "abbreviation": "Pl.",   },
-	"LA": { "language": "Latin",   "abbreviation": "Lat.",  },
-	"EL": { "language": "Greek",   "abbreviation": "Gk.",   },
+	"EN": { "language": "English",  "abbreviation": "Eng.",  },
+	"FR": { "language": "French",   "abbreviation": "Fr.",   },
+	"DE": { "language": "German",   "abbreviation": "Ger.",  },
+	"IT": { "language": "Italian",  "abbreviation": "It.",   },
+	"ES": { "language": "Spanish",  "abbreviation": "Span.", },
+	"PL": { "language": "Polish",   "abbreviation": "Pl.",   },
+	"LA": { "language": "Latin",    "abbreviation": "Lat.",  },
+	"EL": { "language": "Greek",    "abbreviation": "Gk.",   },
+	"JA": { "language": "Japanese", "abbreviation": "Jp.",   },
 };
 
+
+// LANGUAGE_LIST specifies the order of the instrument langauges when
+// creating a description of the instrument codes.
 var LANGUAGE_LIST = [
 	"EN",
 	"FR",
@@ -48,7 +52,8 @@ var LANGUAGE_LIST = [
 	"ES",
 	"PL",
 	"LA",
-	"EL"
+	"EL",
+	"JA"
 ];
 
 
