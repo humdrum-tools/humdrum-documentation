@@ -1,10 +1,12 @@
 ---
-author: David Huron
+author: David Huron, et al.
 creation-date: 'Tue Sep 1 10:17:29 EDT 1998'
+revision-date: 'Sat Jan 29 18:38:02 PST 2022'
 description: "Appendix II (Instrumentation Codes)"
 sidebar: main_sidebar
-revision-date: 'Sat Jan 29 18:38:02 PST 2022'
 ---
+
+{% include_relative scripts-local.html %}
 
 Instrumentation Codes
 =====================
@@ -44,48 +46,45 @@ When the name is used to form an instrument tandem interpretation the
 instrument keyword is preceded by an asterisk, `*`, and the upper-case letter
 `I`. For example, the instrument tandem interpretation for the
 guitar is `*Iguitr`. If the guitar appears as an instrument in a `AIN`
-Reference Record only the designation `guitr` is used.
+Reference Record only the designation `guitr` is used.  The instrument
+codes in the following tables are available merged into a single list
+on <a target="_blank" href="http://bit.ly/humdrum-instrument-codes">this spreadsheet</a>.
 
 
 <a name="voice_range"></a>
 ## Vocal Range ## 
-
-{% include_relative vocal-range.txt %}
+<div data-table="vocal_range"></div>
 
 
 
 <a name ="vocal_quality"></a>
 ## Vocal Quality ##
-
-{% include_relative vocal-quality.txt %}
+<div data-table="vocal_quality"></div>
 
 
 
 <a name="string_instruments"></a>
 ## String Instruments ##
-
-{% include_relative string-instruments.txt %}
+<div data-table="string"></div>
 
 
 
 <a name ="wind_instruments"></a>
 ## Wind Instruments ##
-
-{% include_relative wind-instruments.txt %}
+<div data-table="wind"></div>
 
 
 
 <a name="percussion_instruments"></a>
 ## Percussion Instruments ##
-
-{% include_relative percussion-instruments.txt %}
+<div data-table="percussion"></div>
 
 
 
 <a name ="keyboard_instruments"></a>
 ## Keyboard Instruments ##
+<div data-table="keyboard"></div>
 
-{% include_relative keyboard-instruments.txt %}
 
 
 

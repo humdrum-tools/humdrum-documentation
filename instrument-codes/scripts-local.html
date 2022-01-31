@@ -1,0 +1,245 @@
+
+<style>
+
+[data-table] {
+	min-height: 200px;
+}
+
+.instrument-code:before {
+	content: "*I";
+}
+
+.langauge-abbr: {
+	display: inline-block;
+}
+
+.language-abbr:before {
+	content: "(";
+}
+
+.language-abbr:after {
+	content: ")";
+}
+
+</style>
+
+<script>
+// vim: ts=3
+
+var INSTRUMENT_CODES = {};
+var INSTRUMENT_CODE_LIST = [];
+
+var LANGUAGES = {
+	"EN": { "language": "English", "abbreviation": "Eng.",  },
+	"FR": { "language": "French",  "abbreviation": "Fr.",   },
+	"DE": { "language": "German",  "abbreviation": "Ger.",  },
+	"IT": { "language": "Italian", "abbreviation": "It.",   },
+	"ES": { "language": "Spanish", "abbreviation": "Span.", },
+	"LA": { "language": "Latin",   "abbreviation": "Lat.",  },
+	"EL": { "language": "Greek",   "abbreviation": "Gk.",   },
+};
+
+var LANGUAGE_LIST = [
+	"EN",
+	"FR",
+	"DE",
+	"IT",
+	"ES",
+	"LA",
+	"EL"
+];
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	let url = "https://script.google.com/macros/s/AKfycbxtpzIBumhXjNd30fsWuFdsBco2EqrezXMsUxQ2lrylvwls1AMyI7MuLrW3qRh6_HDp/exec?format=json";
+	downloadInstrumentCodes(url, showInstrumentTables);
+});
+
+
+//////////////////////////////
+//
+// showInstrumentTables --
+//
+
+function downloadInstrumentCodes(url, callback) {
+	fetch(url)
+		.then(res => res.json())
+		.then(data => {
+				INSTRUMENT_CODE_LIST = data;
+				for (let i=0; i<data.length; i++) {
+					let key = data[i].code;
+					if (!key) {
+						continue;
+					}
+					INSTRUMENT_CODES[key] = data[i];
+				}
+				if (callback) {
+					callback();
+				}
+			})
+		.catch(err => { console.error(err); });
+}
+
+
+
+//////////////////////////////
+//
+// showInstrumentTables --
+//
+
+function showInstrumentTables() {
+	let tableDivs = document.querySelectorAll('[data-table]');
+	for (let i=0; i<tableDivs.length; i++) {
+		showInstrumentTable(tableDivs[i]);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// showInstrumentTable --
+//
+
+function showInstrumentTable(element) {
+	let ttype = element.dataset.table;
+	let codes = getInstrumentCodesByType(ttype);
+	let output = "";
+
+	output += "<table>\n";
+	output += "<thead>\n";
+	output += "<th>Code</th>\n";
+	output += "<th>Meaning</th>\n";
+	output += "</thead>\n";
+	output += "<tbody>\n";
+
+	for (let i=0; i<codes.length; i++) {
+		output += "<tr>";
+
+		output += "<td> <code class='language-plaintext highlighter-rouge instrument-code'>";
+		output += codes[i];
+		output += "</code></td>";
+
+		output += "<td>";
+		output += generateDescription(codes[i], "EN");
+		output += "</td>";
+
+		output += "</tr>";
+	}
+
+	output += "</tbody>\n";
+	output += "</table>\n";
+
+	element.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// getInstrumentCodesByType --
+//
+
+function getInstrumentCodesByType(ttype) {
+	let data = INSTRUMENT_CODE_LIST;
+	let re = new RegExp(`\\b${ttype}\\b`);
+	let output = [];
+	for (let i=0; i<data.length; i++) {
+		let code = data[i].code;
+		if (!code) {
+			continue;
+		}
+		if (data[i].type && re.exec(data[i].type)) {
+			output.push(data[i].code);
+		}
+	}
+	return output.sort();
+}
+
+
+//////////////////////////////
+//
+// generateDescription --
+//
+
+function generateDescription(code, language) {
+	let entry = INSTRUMENT_CODES[code];
+	if (!entry) {
+		return "UNKNOWN CODE";
+	}
+
+
+
+	let desc = {};
+	for (let i=0; i<LANGUAGE_LIST.length; i++) {
+		let primary = (language === LANGUAGE_LIST[i]);
+		desc[LANGUAGE_LIST[i]] = getDescription(entry, LANGUAGE_LIST[i], primary);
+	}
+
+	let output = "";
+	output += desc[language];
+
+	for (let i=0; i<LANGUAGE_LIST.length; i++) {
+		if (!desc[LANGUAGE_LIST[i]]) {
+			continue;
+		}
+		if (LANGUAGE_LIST[i] === language) {
+			continue;
+		}
+		output += "; <i>";
+		output += desc[LANGUAGE_LIST[i]];
+		output += "</i>";
+		output += `<span class="language-abbr" title="${LANGUAGES[LANGUAGE_LIST[i]].language}">`;
+		output += LANGUAGES[LANGUAGE_LIST[i]].abbreviation;
+		output += "</span>";
+	}
+
+	return output;
+}
+
+
+
+//////////////////////////////
+//
+// getDescription --
+//
+
+function getDescription(data, language, primary) {
+	let text = data[`Name-${language}`];
+	let wiki = data[`Wikipedia-${language}`];
+
+	let parenthetical = "";
+	if (text) {
+		let matches = text.match(/^(.*)\s*(\([^)]+\))\s*$/);
+		if (matches) {
+			parenthetical = `&nbsp;${matches[2]}`;
+			text = matches[1];
+		}
+	}
+	if (!primary) {
+		parenthetical = "";
+	}
+
+	let output = "";
+
+	if (wiki) {
+		output += `<a target='_blank' href='${wiki}'>`;
+	}
+	if (text) {
+		output += text;
+	}
+	if (wiki) {
+		output += "</a>";
+	}
+	output += parenthetical;
+	return output;
+}
+
+
+
+</script>
+
+
+
+
+
