@@ -13,7 +13,6 @@ Instrumentation Codes
 
 ------------------------------------------------------------------------
 
-<a name ="Introduction"></a>
 
 Introduction
 ------------
@@ -51,41 +50,61 @@ codes in the following tables are available merged into a single list
 on <a target="_blank" href="http://bit.ly/humdrum-instrument-codes">this spreadsheet</a>.
 
 
-<a name="voice_range"></a>
 ## Vocal Range ## 
 <div data-table="vocal_range"></div>
 
 
 
-<a name ="vocal_quality"></a>
 ## Vocal Quality ##
 <div data-table="vocal_quality"></div>
 
 
 
-<a name="string_instruments"></a>
 ## String Instruments ##
 <div data-table="string"></div>
 
 
 
-<a name ="wind_instruments"></a>
 ## Wind Instruments ##
 <div data-table="wind"></div>
 
 
 
-<a name="percussion_instruments"></a>
 ## Percussion Instruments ##
 <div data-table="percussion"></div>
 
 
 
-<a name ="keyboard_instruments"></a>
 ## Keyboard Instruments ##
 <div data-table="keyboard"></div>
 
 
+
+## Instrument groupings ##
+
+### Small orchestra ###
+<div data-table="sorch"></div>
+
+### Large orchestra ###
+<div data-table="lorch"></div>
+
+### Indian instruments ###
+<div data-table="indian"></div>
+
+### Japanese instruments ###
+<div data-table="japanese"></div>
+
+### Korean instruments ###
+<div data-table="korean"></div>
+
+### Renaissance instruments ###
+<div data-table="renaissance"></div>
+
+### Baroque instruments ###
+<div data-table="baroque"></div>
+
+### Electronic instruments ###
+<div data-table="electric"></div>
 
 
 

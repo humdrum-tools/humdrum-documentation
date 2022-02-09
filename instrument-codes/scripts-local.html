@@ -28,6 +28,7 @@
 
 var INSTRUMENT_CODES = {};
 var INSTRUMENT_CODE_LIST = [];
+var INSTRUMENT_ANCHORS = {};
 
 var LANGUAGES = {
 	"EN": { "language": "English",  "abbreviation": "Eng.",  },
@@ -63,9 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 //////////////////////////////
 //
-// showInstrumentTables --
+// downloadInstrumentCodes --
 //
 
 function downloadInstrumentCodes(url, callback) {
@@ -99,6 +101,7 @@ function showInstrumentTables() {
 	for (let i=0; i<tableDivs.length; i++) {
 		showInstrumentTable(tableDivs[i]);
 	}
+	moveToAnchor();
 }
 
 
@@ -123,7 +126,16 @@ function showInstrumentTable(element) {
 	for (let i=0; i<codes.length; i++) {
 		output += "<tr>";
 
-		output += "<td> <code class='language-plaintext highlighter-rouge instrument-code'>";
+		output += "<td>";
+
+		if (INSTRUMENT_ANCHORS[codes[i]]) {
+			INSTRUMENT_ANCHORS[codes[i]]++;
+		} else {
+			INSTRUMENT_ANCHORS[codes[i]] = 1;
+			output += `<a name="${codes[i]}"></a>`;
+		}
+
+		output += " <code class='language-plaintext highlighter-rouge instrument-code'>";
 		output += codes[i];
 		output += "</code></td>";
 
@@ -138,6 +150,45 @@ function showInstrumentTable(element) {
 	output += "</table>\n";
 
 	element.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// moveToAnchor --
+//
+
+function moveToAnchor() {
+	let hash = window.location.hash;
+	if (!hash) {
+		return; 
+	}
+	if (hash === "#") {
+		return;
+	}
+	hash = hash.replace(/#/, "");
+	let list = document.querySelectorAll(`a[name="${hash}"]`);
+	if (!list.length) {
+		// no instrument code with that name
+		return;
+	}
+	// only go to the first instance on the page:
+	
+	let target = list[0];
+
+	target.scrollIntoView({
+		block: "center",
+		behavior: "smooth"
+	});
+	
+	// highlight the grandparent (<tr>) for all hashes (including duplicates):
+	for (let i=0; i<list.length; i++) {
+		let parent = list[i].parentNode;
+		let gparent = parent.parentNode;
+		gparent.style.background = "#ffeeee";
+	}
+
 }
 
 
