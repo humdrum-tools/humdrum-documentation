@@ -65,7 +65,7 @@ sub-mediant would be encoded as `-VI`. In a notated score, the
 lowering of the root may be achieved by adding a flat or by adding
 a natural &mdash; depending upon the prevailing key; however, the
 specific accidental used to lower the root is irrelevant to <span
-class="rep">harm</span>. For example, in the key of C minor, a minor
+class="rep">harm</span>. For example, in the key of C major, a minor
 chord having E-natural as a root would be encoded as `iii`.
 
 In the case of triads, there are four possible chord types: major,
