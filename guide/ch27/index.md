@@ -33,7 +33,7 @@ representation can be used to represent *syllables*; and the <span
 class="rep">IPA</span> representation can be used to represent
 *phonemes* (via the International Phonetic Alphabet).  Discussion
 of the <span class="rep">IPA</span> representation will be delayed
-until [Chapter&nbsp;34.](/guide/ch34) In this chapter we will look at
+until [Chapter&nbsp;33.](/guide/ch33) In this chapter we will look at
 various representational and processing issues related to the
 manipulation of words and syllables.
 
@@ -1188,7 +1188,7 @@ the <span class="unix">cut</span> command (similar to <span
 class="tool">extract -f</span>), and the <span class="unix">head</span>
 and <span class="unix">tail</span> commands.
 
-In [Chapter&nbsp;34](/guide/ch34) we will examine further representations
+In [Chapter&nbsp;33](/guide/ch33) we will examine further representations
 and processes related to phonetic data.
 
 
