@@ -165,14 +165,14 @@
 	of signifiers and signifieds.
 
 	<TABLE>
-	<TR><TD>0-7</TD><TD>scale degrees</TD></TR>
-	<TR><TD>^</TD><TD>ascending melodic approach</TD></TR>
+	<TR><TD>1-7</TD><TD>scale degrees</TD></TR>
+	<TR><TD>^</TD><TD>ascending melodic approach (by step)</TD></TR>
 	<TR><TD>^^</TD><TD>ascending melodic approach by leap</TD></TR>
-	<TR><TD>v</TD><TD>descending melodic approach</TD></TR>
+	<TR><TD>v</TD><TD>descending melodic approach (by step)</TD></TR>
 	<TR><TD>vv</TD><TD>descending melodic approach by leap</TD></TR>
-	<TR><TD>_</TD><TD>melodic approach by perfect unison</TD></TR>
-	<TR><TD>-</TD><TD>scale degree lowered by one semi-tone</TD></TR>
-	<TR><TD>--</TD><TD>scale degree lowered by two semi-tones</TD></TR>
+	<TR><TD>_</TD><TD>melodic approach by perfect unison (repeated note)</TD></TR>
+	<TR><TD>-</TD><TD>scale degree lowered by one semitone</TD></TR>
+	<TR><TD>--</TD><TD>scale degree lowered by two semitones</TD></TR>
 	<TR><TD>+</TD><TD>scale degree raised by one semitone</TD></TR>
 	<TR><TD>++</TD><TD>scale degree raised by two semitones</TD></TR>
 	<TR><TD>r</TD><TD>rest</TD></TR>
@@ -195,7 +195,7 @@
 	right spine shows a corresponding <b>**deg</b> encoding.
 </p>
 
-<textarea>
+<textarea style="width:800px; height:800px;">
 !! J.S. Bach, Fugue 2 WTC Book I
 **kern	**deg
 *M4/4	*M4/4
@@ -254,7 +254,26 @@
 
 	<TABLE>
 	<TR><TD>key signatures</TD><TD><code><big>*k[f#c#]</big></code></TD></TR>
-	<TR><TD>key</TD><TD><code><big>*c#:</big></code></TD></TR>
+	<TR><TD>key</TD><TD>
+		<code><big>*c#:</big></code> (C-sharp harmonic minor),
+		<code><big>*D:</big></code> (D major),
+		<code><big>*F:lyd</big></code> (F lydian),
+		<code><big>*g:dor</big></code> (G dorian)
+		</TD></TR>
+	<TR><TD>melodic approach</TD><TD>
+		<code><big>*gross</big></code> (<code><big>^</big></code> = going up, <code><big>v</big></code> = going down),
+		<code><big>*refined</big></code> (<code><big>^</big></code> = going up by step, <code><big>v</big></code> = going up by leap),
+		<code><big>*noapproach</big></code> (no melodic approach data is encoded).
+		</TD></TR>
+	<TR><TD>display degrees with hats</TD><TD>
+		<code><big>*hat</big></code>
+		</TD></TR>
+	<TR><TD>display degrees in circles</TD><TD>
+		<code><big>*circle</big></code>
+		</TD></TR>
+	<TR><TD>do not display melodic approaches</TD><TD>
+		<code><big>*Xdir</big></code>
+		</TD></TR>
 	</TABLE>
 	<CENTER>
 	<i>Tandem interpretations for <b>**deg</b></i>
