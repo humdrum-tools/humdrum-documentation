@@ -22,6 +22,7 @@
 		                    "right" place humdrum right of notation
 		humdrum-visible:    "false" hide the humdrum text.
 		notation-visible:   "false" hide the music notation.
+		notation-margin-top: "-40px"
 		filter:             "humlib filter (to prettify the notation of an example)
 		callback:           callback when notation changes
 
@@ -80,11 +81,14 @@ window.addEventListener("DOMContentLoaded", function () {
 	{% endif %}
 }
 
+
 #{{include.source}}-humdrum-td .view-in-vhv {
 	font-size: 65%;
 	display: inline-block;
-	margin-top: -12px;
-	position: right;
+	top: -43px;
+	z-index: 100;
+	position: relative;
+	right: 0px;
 	padding-left: 8px;
 	padding-right: 8px;
 	padding-top: 0px !important;
@@ -93,6 +97,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	color: white;
 	border-radius: 5px;
 }
+
 
 #{{include.source}}-humdrum-td-link-left .view-in-vhv {
 	font-size: 65%;
@@ -106,17 +111,36 @@ window.addEventListener("DOMContentLoaded", function () {
 	border-radius: 5px;
 }
 
+
 #{{include.source}}-humdrum-td .view-in-vhv a,
 #{{include.source}}-humdrum-td-link-left .view-in-vhv a {
 	color: white;
 	text-decoration: none;
 }
 
+
+#{{include.source}}-table {
+	border-collapse: collapse;
+}
+
+
 #{{include.source}}-humdrum-td .view-in-vhv:hover,
 #{{include.source}}-humdrum-td-link-left .view-in-vhv:hover {
 	background: #633d5b;
 	cursor: pointer;
+	position: relative;
 }
+
+
+#{{include.source}}-svg {
+	{% if include.notation-margin-top %}
+		top: {{include.notation-margin-top}};
+	{% else %}
+		top: -20px;
+	{% endif %}
+	position: relative;
+}
+
 
 #{{include.source}}-humdrum-pre {
 
@@ -152,7 +176,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 <!-- Humdrum text on the bottom -->
 
-<table class="humdrum-verovio">
+<table id="{{include.source}}-table" class="humdrum-verovio">
 	<tbody>
 	{% unless include.humdrum-visible == "false" %}
 	<tr valign="top">
@@ -173,7 +197,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	{% unless include.notation-visible == "false" %}
 	<tr>
 		<td>
-			<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg">
+			<div class="verovio-svg" id="{{include.source}}-svg">
 			</div>
 		</td>
 	</tr>

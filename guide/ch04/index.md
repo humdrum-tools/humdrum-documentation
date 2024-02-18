@@ -5,6 +5,7 @@ author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
 last-edited:	20 Apr 2020
+verovio:        "true"
 vim:		ft=html
 permalink:	/guide/ch04/index.html
 ---
@@ -197,7 +198,7 @@ The <span class="rep">cents</span> representation provides a means
 for representing pitches in absolute units with respect to middle
 C (= 0 cents). In the <span class="rep">cents</span> representation,
 all pitches are represented with respect to this reference. Thus
-C\#4 is represented by the number 100, A4 is represented by 900,
+C#4 is represented by the number 100, A4 is represented by 900,
 and A3 is represented by -300.  As in the case of <span
 class="rep">freq</span>, cents may be specified as integer numbers
 or as real values (with a decimal point).
@@ -245,15 +246,15 @@ alterations as indicated in the following table:
 
 *Summary of <span class="tool">solfa</span> Signifiers*
 
-| basic	 | raised | 	lowered	|
-| === | === |
-| do (*doe*)	| di (*dee*)	| de (*day*)	|
-| re (*ray*)	| ri (*ree*)	| ra (*raw*)	|
-| mi (*me*)	| my (*my*)	| me (*may*)	|
-| fa (*fah*)	| fi (*fee*)	| fe (*fay*)	|
-| so (*so*)	| si (*see*)	| se (*say*)	|
-| la (*la*)	| li (*lee*)	| le (*lay*)	|
-| ti (*tee*)	| ty (*tie*)	| te (*tay*)	|
+| Basic      | Raised     |  Lowered    |
+| ---------- | ---------- | ----------- |
+| do (*doe*) | di (*dee*) | de (*day*)  |
+| re (*ray*) | ri (*ree*) | ra (*raw*)  |
+| mi (*me*)  | my (*my*)  | me (*may*)  |
+| fa (*fah*) | fi (*fee*) | fe (*fay*)  |
+| so (*so*)  | si (*see*) | se (*say*)  |
+| la (*la*)  | li (*lee*) | le (*lay*)  |
+| ti (*tee*) | ty (*tie*) | te (*tay*)  |
 
 
 The <span class="rep">deg</span> representation identifies scale-degrees
@@ -302,27 +303,19 @@ accidentals.
 
 **Example 4.1**
 
-```humdrum
-!! Comparison of pitch-related representations.
-**kern	**solfa	**deg
-*M2/4	*M2/4	*M2/4
-*c:	*c:	*c:
-8.cc	do	1
-16dd	re	^2
-=1	=1	=1
-8.ee-	me	^3
-16dd	re	v2
-4een	mi	^3+
-=2	=2	=2
-8r	r	r
-8b-	te	v7-
-8an	la	v6+
-8cc	do	^1
-=3	=3	=3
-2bn	ti	v7
-==	==	==
-*-	*-	*-
-```
+{% include verovio.html
+	filter='extract -s 1,1-3 | shed -s2 -e "s/c:/v:kern:/I" | shed -s2 -e "s/kern/text/X" | shed -x text -s2 -e "s/[0-9.]//gD" | shed -x solfa -e "s/c:/v:solfa:/I" | shed -x deg -e "s/c:/v:deg:/I" | shed -x solfg -e "s/c:/v:solfg:/I" | shed -s2,4 -e "s/-/&ndash;/g"  | shed -e "s/solfa|deg/text/X" | autobeam'
+	humdrum-height="100%"
+	humdrum-position="top"
+	pageWidth="1000"
+	notation-margin-top="-60px"
+	scale="65"
+	source="guide-04-example-01"
+	tab-size="16"
+%}
+<script type="application/x-humdrum" id="guide-04-example-01">
+{% include_relative guide-04-example-01.txt %}
+</script>
 
 
 
@@ -376,31 +369,24 @@ throughout.
 Example&nbsp;4.2 shows four pitch naming systems: ISO pitch, German
 Tonhöhe, French solfège, as well as <span class="rep">kern</span>.
 Notice the different ways of treating accidentals such as the D-sharp
-and B-flat. Also note the German use of H for B-natural.
+and B-flat. Also note the German use of H for B-natural in <span
+class="rep">Tonh</span>.
 
 **Example 4.2**
 
-```humdrum
-!! Comparison of pitch-related representations.
-**kern	**pitch	**Tonh	**solfg
-*M2/4	*M2/4	*M2/4	*M2/4
-*C:	*C:	*C:	*C:
-8.cc	C5	C5	do5
-16dd	D5	D5	re5
-=1	=1	=1	=1
-8.ee	E5	E5	mi5
-16dd#	D#5	Dis5	re~d5
-4ee	E5	E5	mi5
-=2	=2	=2	=2
-8r	r	r	r
-8b-	Bb4	B4	si~b4
-8a	A4	A4	la4
-8c	C4	C4	do4
-=3	=3	=3	=3
-2bn	B4	H4	si4
-==	==	==	==
-*-	*-	*-	*-
-```
+{% include verovio.html
+	filter='extract -s 1,1-4 | shed -x kern -e "s/C:/v:kern:/I" | shed -x pitch -e "s/C:/v:pitch:/I" | shed -x Tonh -e "s/C:/v:Tonh:/I" | shed -x solfg -e "s/C:/v:solfg:/I" | shed -s2 -e "s/kern/text/X; s/[0-9.]+//D; s/-/&ndash;/g"  | shed -e "s/pitch|Tonh|solfg/text/X" | autobeam'
+	humdrum-height="100%"
+	humdrum-position="top"
+	pageWidth="1200"
+	notation-margin-top="-60px"
+	scale="55"
+	source="guide-04-example-02"
+	tab-size="16"
+%}
+<script type="application/x-humdrum" id="guide-04-example-02">
+{% include_relative guide-04-example-02.txt %}
+</script>
 
 In Example&nbsp;4.3 four of the more technical representations are
 illustrated, including frequency and cents. Notice that the <span
@@ -412,29 +398,21 @@ More detail concerning <span class="rep">MIDI</span> is given in
 
 **Example 4.3**
 
-```humdrum
-!! Comparison of pitch-related representations (continued).
-**kern	**semits	**cents	**MIDI	**freq
-*M2/4	*M2/4	*M2/4	*Ch1	*M2/4
-*C:	*C:	*C:	*M2/4	*C:
-*	*	*	*C:	*
-8.cc	12	1200	/72/	523.25
-16dd	14	1400	/-72/ /74/	587.33
-=1	=1	=1	=1	=1
-8.ee	16	1600	/-74/ /76/	659.26
-16dd#	15	1500	/-76/ /75/	622.25
-4ee	16	1600	/-75/ /76/	659.26
-=2	=2	=2	=2	=2
-8r	r	r	/-76/	r
-8b-	10	1000	/70/	466.16
-8a	9	900	/-70/ /69/	440.00
-8c	0	0	/-69/ /60/	261.63
-=3	=3	=3	=3	=3
-2bn	11	1100	/-60/ /71/	493.88
-==	==	==	==	==
-.	.	.	/-71/	.
-*-	*-	*-	*-	*-
-```
+{% include verovio.html
+	filter='shed -x semits -e "s/C:/vv:semits: /I" | shed -x cents -e "s/C:/vv:cents: /I" | shed -x MIDI -e "s/C:/vv:MIDI:/I" | shed -x MIDI -e "s/ /&nbsp;/gD" | shed -x freq -e "s/C:/vv:freq:/I"  | shed -e "s/semits|cents|MIDI|freq/text/X" | autobeam'
+	humdrum-height="100%"
+	humdrum-position="top"
+	pageWidth="1700"
+	notation-margin-top="-30px"
+	scale="45"
+	spacingLinear="0"
+	spacingNonLinear="0"
+	source="guide-04-example-03"
+	tab-size="16"
+%}
+<script type="application/x-humdrum" id="guide-04-example-03">
+{% include_relative guide-04-example-03.txt %}
+</script>
 
 Not all of the above pitch-related representations can be translated
 directly from one to another. Table 4.1 shows the possible translations
@@ -452,34 +430,9 @@ to the <span class="rep">kern</span> representation, only pitch-related
 information is translated: duration, articulation marks, and other
 <span class="rep">kern</span> signifiers are not magically generated.
 
-**Table 4.1**
+**Table 4.1** Input representation allow by various tools.
 
-**Input Representation**
-
-|        || cents || deg  || freq || kern || MIDI || pitch || semits || solfa || solfg || TonH  || 
-|--------||-------||------||------||------||------||-------||--------||-------||-------||-------|| 
-| cents  ||       ||      || x    || x    ||      || x     || x      ||       || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| cocho  ||       ||      || x    ||      ||      ||       ||        ||       ||       ||       || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| deg    ||       ||      ||      || x    ||      || x     ||        ||       || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| freq   || x     ||      ||      || x    || x    || x     || x      ||       || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| kern   || x     ||      || x    ||      || x    || x     || x      || x     || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| midi   ||       ||      ||      || x    ||      ||       ||        ||       ||       ||       || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| pitch  || x     ||      || x    || x    || x    ||       || x      || x     || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| semits || x     ||      || x    || x    || x    || x     ||        ||       || x     || x     || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| solfa  ||       ||      || x    ||      ||      ||       ||        ||       ||       ||       || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| solfg  ||       ||      ||      ||      ||      ||       ||        ||       ||       ||       || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
-| Tonh   ||       ||      ||      ||      ||      ||       ||        ||       ||       ||       || 
-| ------ || ----- || ---- || ---- || ---- || ---- || ----- || ------ || ----- || ----- || ----- || 
+{% include_relative guide-02-table-01.txt %}
 
 
 ## Transposition Using the *trans* Command ##
@@ -513,7 +466,7 @@ trans -d +4 -c +7 input > output
 
 We can transpose without changing the diatonic pitch names. For
 example, the following command will transpose down an augmented
-unison (e.g. C\# to C):
+unison (e.g. C# to C):
 
 ```bash
 trans -d 0 -c -1 input > output
@@ -622,7 +575,7 @@ minor:
 *C:
 *c:
 *B-:
-*f\#:
+*f#:
 ```
 
 Key interpretations usually appear near the beginning of a
@@ -665,7 +618,7 @@ identified by <span class="tool">census</span>.
 Recall that one of the differences between the <span
 class="rep">solfa</span> and <span class="rep">deg</span> representations
 is that the <span class="rep">deg</span> output contains an indication
-of the direction of melodic approach. The caret (**\^**) indicates
+of the direction of melodic approach. The caret (**^**) indicates
 approach from below, whereas the lower-case **v** indicates approach
 from above. Suppose we wanted to determine whether the dominant
 pitch is more commonly approached from above or from below. Assuming
@@ -684,7 +637,7 @@ to count the number of dominant pitches approached from below we
 can use the following:
 
 ```bash
-deg repertory.krn | grep -c \^5
+deg repertory.krn | grep -c ^5
 ```
 
 Recall that some scale tones are spelled differently depending on
