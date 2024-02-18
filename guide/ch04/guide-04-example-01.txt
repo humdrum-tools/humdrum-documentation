@@ -1,0 +1,19 @@
+!! Comparison of pitch-related representations.
+**kern	**solfa	**deg
+*M2/4	*M2/4	*M2/4
+*c:	*c:	*c:
+8.cc	do	1
+16dd	re	^2
+=1	=1	=1
+8.ee-	me	^3
+16dd	re	v2
+4een	mi	^3+
+=2	=2	=2
+8r	r	r
+8b-	te	v7-
+8an	la	v6+
+8cc	do	^1
+=3	=3	=3
+2bn	ti	v7
+==	==	==
+*-	*-	*-
