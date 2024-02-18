@@ -1,0 +1,14 @@
+| Option | Meaning |
+| ------ | ------- |
+| <nobr><span class="option">c</span></nobr>                  | include all comments prior to the yanked material in the output
+| <nobr><span class="option">e</span> <i>regexp</i></nobr>    | define end-delimiter for yanked segments as *regexp*; used with -o
+| <nobr><span class="option">h</span></nobr>                  |  displays a help screen summarizing the command syntax
+| <nobr><span class="option">l</span></nobr>                  | yank all lines whose line numbers appear in -r *range*
+| <nobr><span class="option">m</span> <i>regexp</i></nobr>    | yank lines matching *regexp* listed in -r *range*
+| <nobr><span class="option">n</span> <i>regexp</i></nobr>    | yank segments delineated by *regexp* according to cardinal -r *range*
+| <nobr><span class="option">o</span> <i>regexp</i></nobr>    | yank segments delineated by *regexp* according to ordinal -r *range*
+| <nobr><span class="option">r</span> <i>range</i></nobr>     | yank section in ranges listed in *range*; used with -l, -m, -n, -o and -s
+| <nobr><span class="option">s</span> <i>section</i></nobr>   | yank section labelled *section* according to -r *range*
+
+
+
