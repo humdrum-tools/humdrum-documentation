@@ -4,7 +4,7 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	20 Apr 2020
+last-edited:	18 Feb 2024
 verovio:	"true"
 vim:		ft=html
 permalink:	/guide/ch02/index.html
@@ -24,8 +24,9 @@ represent basic or core information for common Western music. The
 and duration, plus other common score-related information.  In this
 chapter, we will introduce <span class="rep">kern</span> through a
 series of tutorial examples. A more comprehensive description of
-<span class="rep">kern</span> will be given in [Chapter&nbsp;6.](/guide/ch06)
-Our intention here is to provide a quick introduction.
+<span class="rep">kern</span> will be given in
+[Chapter&nbsp;6.](/guide/ch06) Our intention here is to provide a
+quick introduction.
 
 Consider the opening motive from J.S. Bach's *Art of Fugue* shown
 in Example&nbsp;2.1. A corresponding <span class="rep">kern</span>
@@ -34,37 +35,13 @@ representation is given below the notation.
 **Example 2.1.** J.S. Bach *Die Kunst der Fuge*
 
 {% include verovio.html
-	source="guide-02-1"
+	humdrum-height="100%"
 	scale="65"
 	pageWidth="800"
-	humdrum-min-height="475px"
+	source="guide-02-example-01"
 %}
-<script type="application/x-humdrum" id="guide-02-1">
-**kern
-*clefG2
-*k[b-]
-*d:
-*M2/2
-*met(c)
-=1-
-2d
-2a
-=2
-2f
-2d
-=3
-2c#
-4d
-4e
-=4
-[2f
-8f]L
-8g
-8f
-8eJ
-=5
-4d
-*-
+<script type="application/x-humdrum" id="guide-02-example-01">
+{% include_relative guide-02-example-01.txt %}
 </script>
 
 In general, <span class="rep">kern</span> is intended to represent
@@ -107,13 +84,13 @@ or double whole-note is a special case and is represented by the
 number zero.
 
 Stem directions are encoded using the slash `/` for up-stems and
-the back-slash `\\` for down-stems.
+the back-slash `\` for down-stems.
 
 Pitches are represented through a scheme of upper- and lower-case
-letters. Middle C (C4) is represented using the single lower-case letter
-`c`. Successive octaves are designated by letter repetition, thus C5
-is represented by `cc`, C6 by `ccc` and so on. The higher the
-octave, the more repeated letters.
+letters. Middle C (C4) is represented using the single lower-case
+letter `c`. Successive octaves are designated by letter repetition,
+thus C5 is represented by `cc`, C6 by `ccc` and so on. The higher
+the octave, the more repeated letters.
 
 For pitches below C4, upper-case letters are used: `C` designates
 C3, `CC` designates C2, and so on. Changes of octave occur between
@@ -131,6 +108,12 @@ similarly encoded by repetition. Sharps, flats, and naturals are
 mutually exclusive in <span class="rep">kern</span>, so tokens such
 as `cc#n` and `GG-#` are illegal.
 
+Example Humdrum data on this page is editable and the musical
+notation associated with the example will be update automatically.
+Try changing accidentals, stem directions, clef, time signature and
+pitches in Example 2.1 to see what happens to the music notation
+on the right.
+
 In Example&nbsp;2.2, two musical parts are encoded. In the corresponding
 <span class="rep">kern</span> encoding, each musical part or voice
 has been assigned to a different musical staff &mdash; labelled
@@ -141,47 +124,14 @@ score were turned sideways.
 **Example 2.2.** J.S. Bach, *Praeambulum* BWV 390.
 
 {% include verovio.html
-	source="guide-02-2"
-	scale="65"
+	humdrum-height="100%"
 	pageWidth="900"
-	humdrum-min-height="650px"
+	scale="55"
+	source="guide-02-example-02"
+	tab-size="12"
 %}
-<script type="application/x-humdrum" id="guide-02-2">
-**kern	**kern
-*staff2	*staff1
-*clefF4	*clefG2
-*k[b-]	*k[b-]
-*M3/4	*M3/4
-=1-	=1-
-2.r	8r
-.	8dL
-.	8g
-.	8b-
-.	8g
-.	8dJ
-=2	=2
-8r	4dd
-8GGL	.
-8BB-	4r
-8D	.
-8BB-	4r
-8GGJ	.
-=3	=3
-4GWw	8r
-.	8ddL
-8GGL	8b-
-8BB-	8g
-8D	8gg
-8GJ	8b-J
-=4	=4
-4D	8aL
-.	8gg
-4d	8ff
-.	8ee
-4D	8ff
-.	8a-J
-=5	=5
-*-	*-
+<script type="application/x-humdrum" id="guide-02-example-02">
+{% include_relative guide-02-example-02.txt %}
 </script>
 
 Each column contains its own separate information. Both columns
@@ -228,82 +178,52 @@ Finally, pitches in <span class="rep">kern</span> are encoded as
 interpretation* is provided to indicate if the tuning system is
 other than equal temperament.
 
-Two other aspects of Example&nbsp;2.2 are noteworthy. In measure 3 an
-inverted mordent appears on the first note in the bass part. Mordents
-are encoded via the letter `M` &mdash; upper-case `M` for whole-tone
-mordents and lower-case `m` for semitone mordents. Inverted mordents
-are similarly encoded using the letter `W`. In Example&nbsp;2.2, it is
-not clear whether the mordent should be a semitone (consistent with
-a G harmonic minor figure) or a whole-tone mordent (consistent with
-a G melodic minor figure). The signifier `Ww` is a special
-representation indicating that the ornament may be either one.
+Two other aspects of Example&nbsp;2.2 are noteworthy. In measure 3
+an inverted mordent appears on the first note in the bass part.
+Mordents are encoded via the letter `M` &mdash; upper-case `M` for
+whole-tone mordents and lower-case `m` for semitone mordents.
+Inverted mordents are similarly encoded using the letter `W`. In
+Example&nbsp;2.2, it is not clear whether the mordent should be a
+semitone (consistent with a G harmonic minor figure) or a whole-tone
+mordent (consistent with a G melodic minor figure). The signifier
+`Ww` is a special representation indicating that the ornament may
+be either one.
 
-Also evident in Example&nbsp;2.2 are the upper-case letters `L` and `J`.
-These encode beaming information. Each beam is opened by the letter
-`L` and closed by the letter `J` (think of left and right angles).
-Multiple beams and partial beams are discussed in Example&nbsp;2.4.
+Also evident in Example&nbsp;2.2 are the upper-case letters `L` and
+`J`.  These encode beaming information. Each beam is opened by the
+letter `L` and closed by the letter `J` (think of left and right
+angles).  Multiple beams and partial beams are discussed in
+Example&nbsp;2.4.
 
-Example&nbsp;2.3 shows a four-part chorale harmonization by Bach. In
-this example, two musical parts share each of the two staves. Notice
-how the corresponding <span class="rep">kern</span> encoding assigns
-each part to a separate column, but links the appropriate parts
-using the `*staff` indicators.
+Example&nbsp;2.3 shows a four-part chorale harmonization by Bach.
+In this example, two musical parts share each of the two staves.
+Notice how the corresponding <span class="rep">kern</span> encoding
+assigns each part to a separate column, but links the appropriate
+parts using the `*staff` indicators.
 
 **Example 2.3.** *Nun danket alle Gott*, arr. J.S. Bach.
 
 {% include verovio.html
-	source="guide-02-3"
-	scale="45"
-	pageWidth="900"
-	humdrum-min-height="475px"
-	tabsize="14"
+	filter="satb2gs"
+	humdrum-height="100%"
+	humdrum-position="top"
+	pageWidth="1600"
+	spacingNonLinear="0.55"
+	scale="40"
+	source="guide-02-example-03"
+	tab-size="16"
 %}
-<script type="application/x-humdrum" id="guide-02-3">
-**kern	**kern	**kern	**kern
-*staff2	*staff2	*staff1	*staff1
-*clefF4	*clefF4	*clefG2	*clefG2
-*k[f#c#g#]	*k[f#c#g#]	*k[f#c#g#]	*k[f#c#g#]
-*M4/4	*M4/4	*M4/4	*M4/4
-4AA	4c#	4a	4ee
-=1	=1	=1	=1
-8AL	4c#	4a	4ee
-8BJ	.	.	.
-8c#L	4c#	4a	4ee
-8AJ	.	.	.
-8DL	4d	4a	4ff#
-8EJ	.	.	.
-8F#L	4d	4a	4ff#
-8DJ	.	.	.
-=2	=2	=2	=2
-2A;	2c#;	2a;	2ee;
-4r	4r	4r	4r
-4A	4e	4a	4cc#
-=3	=3	=3	=3
-4G#	4e	4b	4dd
-4A	4e	4a	4cc#
-8EL	4e	4g#	4b
-8DJ	.	.	.
-8C#L	4e	[4a	8.cc#L
-8AAJ	.	.	.
-.	.	.	16ddJ
-=4	=4	=4	=4
-2E	8eL	8a]L	2b
-.	16d	8f#J	.
-.	16c#J	.	.
-.	4d	4g#	.
-4AA;	4c#;	4e;	4a;
-=:|!	=:|	=:|	=:|!
-*-	*-	*-	*-
+<script type="application/x-humdrum" id="guide-02-example-03">
+{% include_relative guide-02-example-03.txt %}
 </script>
-
 
 Once again, clefs, key signatures and meter signatures are encoded
 separately for each part. Notice how the meter signature has been
-encoded as 4/4 rather than `common time`. This again reflects
-<span class="rep">kern</span>’s preoccupation with functional
-information rather than orthographic information. (Later we will
-see how to encode the fact that the meter signature is visually
-rendered as `C` rather than 4/4.)
+encoded as 4/4 rather than *common time*. This again reflects <span
+class="rep">kern</span>’s preoccupation with functional information
+rather than orthographic information. (Later we will see how to
+encode the fact that the meter signature is visually rendered as
+`C` rather than 4/4.)
 
 In measure 2, pauses (fermatas) `;` have been encoded for all four
 voices even though only two pause symbols appear in the printed
@@ -348,9 +268,9 @@ The equals-sign indicates the logical presence of a barline. The
 colon indicates the repeat sign, followed by a thin line `|`,
 followed by a thick line `!`.
 
-Example&nbsp;2.4 shows a keyboard work by Franz Joseph Haydn. In this
-example, the lower staff appears to have two concurrent voices. The
-excerpt has been encoded using three spines, two of which encode
+Example&nbsp;2.4 shows a keyboard work by Franz Joseph Haydn. In
+this example, the lower staff appears to have two concurrent voices.
+The excerpt has been encoded using three spines, two of which encode
 material appearing on the same staff. Notice that key signatures
 are provided that explicitly indicate that there are no sharps or
 flats in the key signature.
@@ -370,64 +290,14 @@ and end with `JJ`.
 **Example 2.4.** Franz Joseph Haydn, *Sonata in C major, Hob. XVI: 35*.
 
 {% include verovio.html
-	source="guide-02-4"
-	scale="45"
-	pageWidth="1200"
-	humdrum-min-height="675px"
+	humdrum-height="100%"
+	pageWidth="1000"
+	scale="40"
+	source="guide-02-example-04"
+	tab-size="12"
 %}
-<script type="application/x-humdrum" id="guide-02-4">
-**kern	**kern	**kern
-*staff2	*staff2	*staff1
-*clefG2	*clefG2	*clefG2
-*k[]	*k[]	*k[]
-*M3/4	*M3/4	*M3/4
-=1-	=1-	=1-
-4r	4r	[4ee
-4c	4g	8.ee]L
-.	.	16ffJk
-4f	4g	8.ddL
-.	.	16eeJk
-=2	=2	=2
-4e	4g	4cc
-4r	4r	4gg
-4r	4r	4gg
-=3	=3	=3
-(2B	([2.g	(8ggL
-.	.	8ff)J
-.	.	(8ffL
-.	.	8ee)J
-4c	.	(8eeL
-.	.	8dd)J
-=4	=4	=4
-4G)	4g])	4dd
-4r	4r	4b
-4r	4r	4g
-=5	=5	=5
-4r	4r	[4ee
-4c	4g	8.ee]L
-.	.	16ffJk
-4f	4g	8.ddL
-.	.	16eeJk
-=6	=6	=6
-4e	4g	4cc
-4r	4r	4ccc
-4E	4c	4ccc
-=7	=7	=7
-4f	4c	16gg#LL
-.	.	16aaJJ
-.	.	8r
-4r	4r	16eeLL
-.	.	16ffJJ
-.	.	8r
-4Gn	4f	16ddLL
-.	.	16bJJ
-.	.	8r
-=8	=8	=8
-4c	4e	4cc
-4r	4r	4r
-4r	4r	4r
-=:|!	=:|!	=:|!
-*-	*-	*-
+<script type="application/x-humdrum" id="guide-02-example-04">
+{% include_relative guide-02-example-04.txt %}
 </script>
 
 Slurs are evident in the third measure. Open and closed slurs are
@@ -470,34 +340,15 @@ completely ignore the spines.
 **Example 2.5.** Ojibway Song.
 
 {% include verovio.html
-	source="guide-02-5"
-	scale="65"
-	pageWidth="1200"
-	humdrum-min-height="375px"
-	tabsize="16"
+	humdrum-height="100%"
+	pageWidth="1000"
+	scale="55"
+	source="guide-02-example-05"
+	tab-size="16"
 %}
-<script type="application/x-humdrum" id="guide-02-5">
-!! Ojibway Indian Song
-!! Transcribed by Frances Densmore
-!! No. 84 "The Sioux Follow Me"
-**kern	**lyrics
-!	!In Ojibway
-*clefF4	*
-*M3/4	*
-*k[b-e-a-d-g-]	*
-8.d-L	Ma-
-16d-Jk	-gi-
-=1	=1
-8d-L	-ja-
-16A-L	-go
-16A-JJ	ic-
-4d--	kew-
-4d-	-yan
-=2	=2
-! etc.	! etc.
-*-	*-
+<script type="application/x-humdrum" id="guide-02-example-05">
+{% include_relative guide-02-example-05.txt %}
 </script>
-
 
 ## Reference Records ##
 
@@ -570,8 +421,8 @@ defines separate codes for publisher of the electronic edition,
 publisher of the original source document, date of copyright, date
 of data release, country of copyright, copyright message, original
 copyright owner, original year of publication, and other information.
-The `YEC` reference record shown in Example&nbsp;2.6 simply encodes the
-date and copyright owner of the electronic document.
+The `YEC` reference record shown in Example&nbsp;2.6 simply encodes
+the date and copyright owner of the electronic document.
 
 Codes that begin with `A` identify analytic information concerning
 the document. The code `AMT` provides a metric classification.
@@ -607,7 +458,6 @@ common types of reference records. A complete description of reference
 records is given in Appendix II.
 
 
-
 ## Reprise ##
 
 In this chapter we have introduced the Humdrum <span
@@ -627,4 +477,6 @@ Although we have only demonstrated the encoding of fairly simple
 information, we can already begin processing such data in musically
 useful ways. In the next chapter we will examine some simple
 processes.
+
+
 

@@ -1,0 +1,26 @@
+!! 'strophe' example.
+**example	**bar
+*thru	*thru
+*>A	*>A
+A	i
+*>V	*>V
+*	**foo
+*	*thru
+B	1
+*	**bar
+*	*thru
+C	refrain
+B	1
+*>V	*>V
+*	**foo
+*	*thru
+B	2
+*	**bar
+*	*thru
+C	refrain
+B	2
+*>Coda	*>Coda
+*	**foo
+*	*thru
+E	i
+*-	*-

@@ -128,7 +128,7 @@ function processUnixSpans() {
 // openUnixManpage --
 // 
 // Using the form:
-//     http://man7.org/linux/man-pages/man1/grep.1.html
+//     https://man7.org/linux/man-pages/man1/grep.1.html
 //
 
 function openUnixManpage(event) {
@@ -158,9 +158,9 @@ function openUnixManpage(event) {
 
 function getUnixUrl(tool) {
 	if (tool == "awk") {
-		return "http://www.cs.unibo.it/~renzo/doc/awk/nawkA4.pdf";
+		return "https://www.cs.unibo.it/~renzo/doc/awk/nawkA4.pdf";
 	}
-	var url = "http://man7.org/linux/man-pages/man1/";
+	var url = "https://man7.org/linux/man-pages/man1/";
 	url += tool;
 	url += ".1.html";
 	return url;

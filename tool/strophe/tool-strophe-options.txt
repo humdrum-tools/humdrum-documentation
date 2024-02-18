@@ -1,0 +1,6 @@
+
+| Option | Description |
+| ------ | ----------- |
+| <nobr>-s strophe_list</nobr> |  output numbered strophes according to *strophe_list*
+| <nobr>-x strophe_label</nobr> |  output only strophes labelled *strophe_label*
+

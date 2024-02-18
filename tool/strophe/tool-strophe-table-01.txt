@@ -1,0 +1,9 @@
+
+| interpretation | meaning |
+| -------------- | ------- |
+| `*strophe`     | strophic passage initiator
+| `*S-`          | strophic passage terminator
+| `*S/`*string*  | strophe name label
+| `*S/`*n\[.n\]* | strophe number label
+| `*S/fin`       | strophe end indicator
+

@@ -1,5 +1,4 @@
 
-
 <!-- verovio.html
 	vim: ts=3
 
@@ -8,47 +7,52 @@
 	generated from the humdrum text. If you include this file
 	on a markdown or HTML page, you must activate the inclusion
 	of the verovio javascript toolkit with the header parameter:
-		verovio :true
+		verovio: true
 
 	Input Parameters:
-		tabsize			default none (browser default)
+		tab-size:           default none (browser default)
+		tabsize:            alternate for tab-size
 		humdrum-min-height: the minimum height of the humdrum text box
 		humdrum-max-height: the maximum height of the humdrum text box
 		humdrum-height:     the height of the humdrum text box
-		humdrum-max-width: the maximum width of the humdrum text box
-		humdrum-min-width: the maximum width of the humdrum text box
-		humdrum-visible: "false" will hide the humdrum text.
-		callback: callback when notation changes
-
+		humdrum-max-width:  the maximum width of the humdrum text box
+		humdrum-min-width:  the maximum width of the humdrum text box
+		humdrum-position:   "above" place humdrum above of notation (default left)
+		                    "below" place humdrum below of notation
+		                    "right" place humdrum right of notation
+		humdrum-visible:    "false" hide the humdrum text.
+		notation-visible:   "false" hide the music notation.
+		filter:             "humlib filter (to prettify the notation of an example)
+		callback:           callback when notation changes
 
 	Parameters for verovio:
-	http://www.verovio.org/command-line.xhtml
+	https://www.verovio.org/command-line.xhtml
 
-		adjustPageHeight default 1
-		border           default 50
-		evenNoteSpacing  default 0
-		font             default "Leipzig"
-		from             default "auto"
-		# page             default 1
-		# header           default 0
-		# footer           default 0
-		pageHeight       default 60000
-		pageWidth        default 1350
-		scale            default 40
-		spacingLinear    default 0.25
-		spacingNonLinear default 0.6
-		spacingStaff     default 12
-		spacingSystem    default 12
-		lyricTopMinMargin default 2.0
+		adjustPageHeight     default 1
+		border               default 50
+		evenNoteSpacing      default 0
+		font                 default "Leipzig"
+		from                 default "auto"
+		# page               default 1
+		# header             default 0
+		# footer             default 0
+		pageHeight           default 60000
+		pageWidth            default 1350
+		scale                default 40
+		spacingLinear        default 0.25
+		spacingNonLinear     default 0.6
+		spacingStaff         default 12
+		spacingSystem        default 12
+		lyricTopMinMargin    default 2.0
 		minLastJustification default 0.80
 
 -->
 
 <script>
 
-// insert tab characters in Humdrum element.
+// Insert tab characters in Humdrum element.
 window.addEventListener("DOMContentLoaded", function () {
-	var pre = document.querySelector("pre#{{include.source}}-humdrum");
+	let pre = document.querySelector("pre#{{include.source}}-humdrum-pre");
 	pre.style.display = "block";
 	pre.addEventListener("keydown", function(event) {
 		if (event.keyCode==9 || event.which==9) {
@@ -58,109 +62,266 @@ window.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
+
 </script>
 
 <style>
-#{{include.source}}-humdrum {
+
+#{{include.source}}-humdrum-pre {
+	color: darkblue;
+	font-weight: bold;
 	white-space: pre;
-	{% if {{include.tabsize}}  %}
-		tab-size: {{include.tabsize}};
-		-o-tab-size: {{include.tabsize}};
-		-moz-tab-size: {{include.tabsize}};
-		-webkit-tab-size: {{include.tabsize}};
-	{% endif %}
-	{% if {{include.humdrum-min-height}}  %}
-		min-height: {{include.humdrum-min-height | remove: 'px' | append: 'px'}};
-	{% endif %}
-	{% if {{include.humdrum-max-height}} %}
-		max-height: {{include.humdrum-max-height | remove: 'px' | append: 'px'}};
-	{% endif %}
-	{% if {{include.humdrum-height}} %}
-		height: {{include.humdrum-height | remove: 'px' | append: 'px'}};
-	{% endif %}
-	{% if {{include.humdrum-max-width}} %}
-		max-width: {{include.humdrum-max-width | remove: 'px' | append: 'px'}};
-	{% endif %}
-	{% if {{include.humdrum-min-width}} %}
-		min-width: {{include.humdrum-min-width | remove: 'px' | append: 'px'}};
+	{% if include.tabsize or include.tab-size %}
+		{% assign tabsize = include.tabsize | default: include.tab-size %}
+		tab-size:         {{tabsize}};
+		-o-tab-size:      {{tabsize}};
+		-moz-tab-size:    {{tabsize}};
+		-webkit-tab-size: {{tabsize}};
 	{% endif %}
 }
+
+#{{include.source}}-humdrum-td .view-in-vhv {
+	font-size: 65%;
+	display: inline-block;
+	margin-top: -12px;
+	position: right;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	background: #3d5b73;
+	color: white;
+	border-radius: 5px;
+}
+
+#{{include.source}}-humdrum-td-link-left .view-in-vhv {
+	font-size: 65%;
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	background: #3d5b73;
+	color: white;
+	border-radius: 5px;
+}
+
+#{{include.source}}-humdrum-td .view-in-vhv a,
+#{{include.source}}-humdrum-td-link-left .view-in-vhv a {
+	color: white;
+	text-decoration: none;
+}
+
+#{{include.source}}-humdrum-td .view-in-vhv:hover,
+#{{include.source}}-humdrum-td-link-left .view-in-vhv:hover {
+	background: #633d5b;
+	cursor: pointer;
+}
+
+#{{include.source}}-humdrum-pre {
+
+	{% if include.humdrum-height %}
+		height: {{include.humdrum-height}} !important;
+	{% endif %}
+
+	{% if include.humdrum-min-height  %}
+		min-height: {{include.humdrum-min-height}} !important;
+	{% endif %}
+
+	{% if include.humdrum-max-height %}
+		max-height: {{include.humdrum-max-height}} !important;
+	{% endif %}
+
+	{% if include.humdrum-width %}
+		width: {{include.humdrum-width}} !important;
+	{% endif %}
+
+	{% if include.humdrum-max-width %}
+		max-width: {{include.humdrum-max-width}} !important;
+	{% endif %}
+
+	{% if include.humdrum-min-width %}
+		min-width: {{include.humdrum-min-width}} !important;
+	{% endif %}
+
+}
+
 </style>
 
+{% if include.humdrum-position == "bottom"  %}
+
+<!-- Humdrum text on the bottom -->
+
 <table class="humdrum-verovio">
-<tbody>
-<tr valign="top">
-
-{% unless {{include.humdrum-visible}} == "false" %}
-	<td
-		{% if {{include.humdrum-min-width}} %}
-			style="min-width: {{include.humdrum-min-width}};"
-		{% endif %}
-	>
-	<div>
-	<pre style="display:none;" class="humdrum" contenteditable="true" id="{{include.source}}-humdrum"></pre>
-	</div>
-	</td>
-{% else %}
-	<td style="display:none;">
-	<div>
-	<pre style="display:none;" class="humdrum" contenteditable="true" id="{{include.source}}-humdrum"></pre>
-	</div>
-	</td>
-{% endunless %}
-
-<td>
-<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg"></div>
-</td>
-
-</tr>
-</tbody>
+	<tbody>
+	{% unless include.humdrum-visible == "false" %}
+	<tr valign="top">
+		<td id="{{include.source}}-humdrum-td">
+			<pre id="{{include.source}}-humdrum-pre" style="display:none;" contenteditable="true" ></pre>
+	{% else %}
+	<tr style="display:none" valign="top">
+		<td style="display:none;">
+			<pre style="display:none;" contenteditable="true" id="{{include.source}}-humdrum-pre"></pre>
+	{% endunless %}
+	{% unless include.notation-visible %}
+		<div width="100%" style="text-align:right">
+			<div id="{{include.source}}-vhv-link" class="view-in-vhv">View in VHV</div>
+		</div>
+	{% endunless %}
+		</td>
+	</tr>
+	{% unless include.notation-visible == "false" %}
+	<tr>
+		<td>
+			<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg">
+			</div>
+		</td>
+	</tr>
+	{% endunless %}
+	</tbody>
 </table>
+
+{% elsif include.humdrum-position == "top"  %}
+
+<!-- Humdrum text on the top -->
+<table class="humdrum-verovio">
+	<tbody>
+	{% unless include.humdrum-visible == "false" %}
+	<tr valign="top">
+		<td id="{{include.source}}-humdrum-td">
+			<pre id="{{include.source}}-humdrum-pre" style="display:none;" contenteditable="true" ></pre>
+	{% else %}
+	<tr style="display:none" valign="top">
+		<td style="display:none;">
+			<pre style="display:none;" contenteditable="true" id="{{include.source}}-humdrum-pre"></pre>
+	{% endunless %}
+	{% unless include.notation-visible %}
+		<div width="100%" style="text-align:right">
+			<div id="{{include.source}}-vhv-link" class="view-in-vhv">View in VHV</div>
+		</div>
+	{% endunless %}
+		</td>
+	</tr>
+	{% unless include.notation-visible == "false" %}
+	<tr>
+		<td>
+			<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg">
+			</div>
+		</td>
+	</tr>
+	{% endunless %}
+	</tbody>
+</table>
+
+{% else %}
+
+<!-- Humdrum text on the left -->
+
+<table class="humdrum-verovio">
+	<tbody>
+	<tr valign="top">
+	{% unless include.humdrum-visible == "false" %}
+		<td id="{{include.source}}-humdrum-td">
+			<pre id="{{include.source}}-humdrum-pre" style="display:none;" contenteditable="true" ></pre>
+		</td>
+	{% else %}
+		<td style="display:none;">
+			<div>
+				<pre style="display:none;" contenteditable="true" id="{{include.source}}-humdrum-pre"></pre>
+			</div>
+		</td>
+	{% endunless %}
+	{% unless include.notation-visible == "false" %}
+		<td>
+			<div class="verovio-svg" style="margin-top:-20px;" id="{{include.source}}-svg">
+			</div>
+		</td>
+	{% endunless %}
+	</tr>
+	{% unless include.humdrum-visible == "false" %}
+	<tr>
+		<td colspan="2" id="{{include.source}}-humdrum-td-link-left">
+			<div id="{{include.source}}-vhv-link" class="view-in-vhv">View in VHV</div>
+		</td>
+	</tr>
+	{% endunless %}
+	</tbody>
+</table>
+{% endif %}
+
+
 
 <script>
 
 window.addEventListener("DOMContentLoaded", function() {
-
 	// create the verovio options object:
-	var font             = "{{include.font}}" || "Leipzig";
-	var from             = "{{include.inputFormat}}" || "{{include.from}}" || "{{include.format}}" || "auto";
-	var adjustPageHeight = parseInt("{{include.adjustPageHeight}}") || 1;
-	var pageHeight       = parseInt("{{include.pageHeight}}") || 60000;
-	var pageWidth        = parseInt("{{include.pageWidth}}") || 1350;
-	var scale            = parseFloat("{{include.scale}}") || 40;
-	var border           = parseInt("{{include.border}}") || 50;
-	var minLastJustification  = parseFloat("{{include.minLastJustification}}") || 0.80;
-	var evenNoteSpacing  = parseInt("{{include.evenNoteSpacing}}") || 0;
-	//var page             = parseInt("{{include.page}}") || 1;
-	var spacingLinear    = parseFloat("{{include.spacingLinear}}") || 0.25;
-	var spacingNonLinear = parseFloat("{{include.spacingNonLinear}}") || 0.6;
-	var spacingSystem    = parseInt("{{include.spacingSystem}}") || 12;
-	var spacingStaff     = parseInt("{{include.spacingStaff}}") || 12;
-	var lyricTopMinMargin = parseFloat("{{include.lyricTopMinMargin}}") || 2.0;
-	// var noheader         = !(parseInt("{{include.header}}") || 0);
-	// var nofooter         = !(parseInt("{{include.footer}}") || 0);
+	let font             = "{{include.font}}" || "Leipzig";
+	let from             = "{{include.inputFormat}}" || "{{include.from}}" || "{{include.format}}" || "auto";
+	let adjustPageHeight = parseInt("{{include.adjustPageHeight}}") || 1;
+	let pageHeight       = parseInt("{{include.pageHeight}}") || 60000;
+	let pageWidth        = parseInt("{{include.pageWidth}}") || 1350;
+	let scale            = parseFloat("{{include.scale}}") || 40;
+	let border           = parseInt("{{include.border}}") || 50;
+	let minLastJustification  = parseFloat("{{include.minLastJustification}}") || 0.80;
+	let evenNoteSpacing  = parseInt("{{include.evenNoteSpacing}}") || 0;
+	//let page             = parseInt("{{include.page}}") || 1;
+	let spacingLinear    = parseFloat("{{include.spacingLinear}}") || 0.25;
+	let spacingNonLinear = parseFloat("{{include.spacingNonLinear}}") || 0.6;
+	let spacingSystem    = parseInt("{{include.spacingSystem}}") || 12;
+	let spacingStaff     = parseInt("{{include.spacingStaff}}") || 12;
+	let lyricTopMinMargin = parseFloat("{{include.lyricTopMinMargin}}") || 2.0;
+	{% assign myFilter = include.filter | replace: '\\', 'ZZZZZ' %}
+	let filter            = '{{myFilter}}';
+	filter = filter.replace(/ZZZZZ/g, "\\");
 
-	var options = {
-		adjustPageHeight: adjustPageHeight,
-		font:             font,
-		from:             from,
-		//page:           page,
-		pageHeight:       pageHeight,
-		pageWidth:        pageWidth,
-		humType:          1,
-		scale:            scale,
-//		noHeader:         noheader,
-//		noFooter:         noFooter,
-		spacingStaff:     spacingStaff,
-		spacingSystem:    spacingSystem,
-		spacingNonLinear: spacingNonLinear,
+	let options = {
+		adjustPageHeight:     adjustPageHeight,
+		font:                 font,
+		inputFrom:            from,
+//		page:                 page,
+		pageHeight:           pageHeight,
+		pageWidth:            pageWidth,
+		humType:              1,
+		scale:                scale,
+//		noHeader:             noheader,
+//		noFooter:             noFooter,
+		header:               "none",
+		footer:               "none",
+		spacingStaff:         spacingStaff,
+		spacingSystem:        spacingSystem,
+		spacingNonLinear:     spacingNonLinear,
 		minLastJustification: minLastJustification,
-		spacingLinear:    spacingLinear,
-		lyricTopMinMargin: lyricTopMinMargin,
-		evenNoteSpacing:  evenNoteSpacing
+		spacingLinear:        spacingLinear,
+		{% if include.filter %}
+			filter:            `${filter}`,
+		{% endif %}
+		lyricTopMinMargin:    lyricTopMinMargin,
+		evenNoteSpacing:      evenNoteSpacing
 	};
 
-	var id = "{{include.source}}";
+	// Add url to View in VHV link:
+	let helement = document.querySelector("#{{include.source}}");
+	if (!helement) {
+		return;
+	}
+
+	let text = helement.textContent.replace(/^\s+/, "");
+	text = text.replace(/\s*$/, "\n");
+	text = Base64.encode(text);
+	let url = `https://verovio.humdrum.org?t=${text}`;
+	if (options.filter) {
+		let fen = encodeURIComponent(options.filter);
+		url += `&filter=${fen}`;
+	}
+
+	let velement = document.querySelector("#{{include.source}}-vhv-link");
+	if (velement) {
+		let pin = velement.innerHTML;
+		let pout = `<a target="_blank" href="${url}">${pin}</a>`;
+		velement.innerHTML = pout;
+	}
+
+	let id = "{{include.source}}";
 	if (!initializeHumdrumText(id, options)) {
 		return;
 	}

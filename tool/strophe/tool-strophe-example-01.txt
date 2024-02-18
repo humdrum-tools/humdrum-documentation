@@ -1,0 +1,36 @@
+!!!Schubert, Franz
+!!!OPR: Die schöne Müllerin
+!!!OTL: Das Wandern
+**kern	**text
+*M2/4yy	*
+*>[V,V,V,V]	*>[V,V,V,V]
+*>V	*>V
+*k[b-e-]	*lang:DE
+*	*solo
+*	*strophe
+*	*^
+*	*^	*^
+*	*S/1	*S/2	*S/3	*S/4
+8f	Das	Vom	Das	Die
+=5	=5	=5	=5	=5
+8f	Wan-	Was-	sehn	Stei-
+8b-	-dern	-ser	wir	-ne
+8a	ist	ha-	auch	selbst ,
+8ee-	des	-ben	den	so
+=6	=6	=6	=6	=6
+(16dd	Mül-	wir's	Rä-	schwer
+16ff)	|	|	|	|
+(16dd	-lers	ge-	-dern	sie
+16b-)	|	|	|	|
+8f	Lust ,	-lernt ,	ab ,	sind ,
+8dd	das	vom	den	die
+=7	=7	=7	=7	=7
+(8.cc	Wan-	Was-	Rä-	Stei-
+16a)	|	|	|	|
+8b-	-dern !	-ser !	-dern !	-ne !
+8r	%	%	%	%
+*	*S/fin	*S/fin	*S/fin	*S/fin
+*	*v	*v	*v	*v
+*	*S-
+=	=
+*-	*-

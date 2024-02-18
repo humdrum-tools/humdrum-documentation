@@ -1,0 +1,30 @@
+!!!Schubert, Franz
+!!!OPR: Die schöne Müllerin
+!!!OTL: Das Wandern
+**kern	**text
+*M2/4	*
+*>[V,V,V,V]	*>[V,V,V,V]
+*>V	*>V
+*k[b-e-]	*
+*	*lang:DE
+*	*solo
+8f	Die
+=5	=5
+8f	Stei-
+8b-	-ne
+8a	selbst ,
+8ee-	so
+=6	=6
+(16dd	schwer
+16ff)	|
+(16dd	sie
+16b-)	|
+8f	sind ,
+8dd	die
+=7	=7
+(8.cc	Stei-
+)16a	|
+8b-	-ne !
+8r	%
+=	=
+*-	*-
