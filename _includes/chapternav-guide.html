@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	lastlink += lastnum;
 
 	var output = "";
-	output += "<table style='width:226px'><tr style='width:100%;'>";
+	output += "<table><tr>";
 	output += "<td title='Go to previous chapter' onclick='window.location.href=\"" + lastlink + "\"'>";
 	output += '<i class="fa fa-arrow-left"></i> ' + lastnum;
 	output += "</td><td title='Go to table of contents' onclick='window.location.href=\"/guide\"'>";
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		output += '<a target="_blank" href="';
 		output += '/Humdrum/guide' + nnumber + '.html';
-		output += '" class="btn btn-primary btn-lg btn-responsive">Original HTML version</a>';
+		output += '" style="margin-top:6px;" class="btn btn-primary btn-lg btn-responsive">Original HTML version</a>';
 
 		output += '<br/><a style="margin-top:7px;" target="_blank" href="';
 		output += "/scans/hug1998/hug1998-ch";

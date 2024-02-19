@@ -39,15 +39,16 @@ chapters we will describe additional types of translations.
 ## ISO Pitch Representation ##
 
 The best-known system for representing equally-tempered pitches is
-the International Standards Organization (ISO) format consisting
-of a letter (A-G) followed by an optional sharp or flat, followed
-by an octave number. According to the ISO representation middle C
-is designated C4.  Octave numbers change between B and C so that
-the B a semitone below C4 is B3. Humdrum provides a predefined
-ISO-like representation called <span class="rep">pitch</span>
-illustrated below. Here we see an ascending chromatic scale in the
-left spine, with a concurrent descending chromatic scale in the
-right spine:
+the <a target="_blank"
+href="https://en.wikipedia.org/wiki/Scientific_pitch_notation">International
+Standards Organization (ISO) format</a> consisting of a letter (A-G)
+followed by an optional sharp or flat, followed by an octave number.
+According to the ISO representation middle C is designated C4.
+Octave numbers change between B and C so that the B a semitone below
+C4 is B3. Humdrum provides a predefined ISO-like representation
+called <span class="rep">pitch</span> illustrated below. Here we
+see an ascending chromatic scale in the left spine, with a concurrent
+descending chromatic scale in the right spine:
 
 ```humdrum
 **pitch	**pitch
@@ -244,18 +245,13 @@ according to tonic solfa syllables. Pitches are designated by the
 syllables *do, re, mi, fa, so, la* and *ti* or their chromatic
 alterations as indicated in the following table:
 
-*Summary of <span class="tool">solfa</span> Signifiers*
+<center>
 
-| Basic      | Raised     |  Lowered    |
-| ---------- | ---------- | ----------- |
-| do (*doe*) | di (*dee*) | de (*day*)  |
-| re (*ray*) | ri (*ree*) | ra (*raw*)  |
-| mi (*me*)  | my (*my*)  | me (*may*)  |
-| fa (*fah*) | fi (*fee*) | fe (*fay*)  |
-| so (*so*)  | si (*see*) | se (*say*)  |
-| la (*la*)  | li (*lee*) | le (*lay*)  |
-| ti (*tee*) | ty (*tie*) | te (*tay*)  |
+<b>Table 4.1:</b> <i>Summary of <span class="tool">solfa</span> signifiers</i>
 
+{% include_relative guide-04-table-01.txt %}
+
+</center>
 
 The <span class="rep">deg</span> representation identifies scale-degrees
 by the numbers 1 (tonic) to 7 (leading-tone). These values may be
@@ -306,6 +302,7 @@ accidentals.
 {% include verovio.html
 	filter='extract -s 1,1-3 | shed -s2 -e "s/c:/v:kern:/I" | shed -s2 -e "s/kern/text/X" | shed -x text -s2 -e "s/[0-9.]//gD" | shed -x solfa -e "s/c:/v:solfa:/I" | shed -x deg -e "s/c:/v:deg:/I" | shed -x solfg -e "s/c:/v:solfg:/I" | shed -s2,4 -e "s/-/&ndash;/g"  | shed -e "s/solfa|deg/text/X" | autobeam'
 	humdrum-height="100%"
+	humdrum-width="100%"
 	humdrum-position="top"
 	pageWidth="1000"
 	notation-margin-top="-60px"
@@ -388,7 +385,7 @@ class="rep">Tonh</span>.
 {% include_relative guide-04-example-02.txt %}
 </script>
 
-In Example&nbsp;4.3 four of the more technical representations are
+In Example&nbsp;4.3, four of the more technical representations are
 illustrated, including frequency and cents. Notice that the <span
 class="rep">MIDI</span> representation uses key-numbers to represent
 pitch: key-on events are indicated by positive integers (between
@@ -415,7 +412,7 @@ More detail concerning <span class="rep">MIDI</span> is given in
 </script>
 
 Not all of the above pitch-related representations can be translated
-directly from one to another. Table 4.1 shows the possible translations
+directly from one to another. Table 4.2 shows the possible translations
 supported by Humdrum Release 2.0 commands. The input representations
 are listed from right to left. Under each column, those commands
 that will translate *from* the given format are identified. For
@@ -430,9 +427,9 @@ to the <span class="rep">kern</span> representation, only pitch-related
 information is translated: duration, articulation marks, and other
 <span class="rep">kern</span> signifiers are not magically generated.
 
-**Table 4.1** Input representation allow by various tools.
+**Table 4.2** Input representation allow by various tools.
 
-{% include_relative guide-02-table-01.txt %}
+{% include_relative guide-04-table-02.txt %}
 
 
 ## Transposition Using the *trans* Command ##

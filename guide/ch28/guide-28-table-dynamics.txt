@@ -1,0 +1,95 @@
+
+{% comment %}
+| Dynamic      | Level (dB SPL) || Dynamic     | Level (db SPL) |
+| -------      | -------------- || -------     | -------------  |
+| **fffffff**  | 115            || **mp**      | 65             |
+| **ffffff**   | 110            || **p**       | 60             |
+| **fffff**    | 105            || **pp**      | 55             |
+| **ffff**     | 100            || **ppp**     | 50             |
+| **fff**      | 90             || **pppp**    | 45             |
+| **ff**       | 80             || **ppppp**   | 40             |
+| **f**        | 75             || **pppppp**  | 35             |
+| **mf**       | 70             || **ppppppp** | 30             |
+|              |                || **v**       | +5             |
+{% endcomment %}
+
+<center>
+<table style="width:80%">
+  <thead>
+    <tr>
+      <th>Dynamic</th>
+      <th>Level (dB SPL)</th>
+      <th>&nbsp;</th>
+      <th>Dynamic</th>
+      <th>Level (db SPL)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>fffffff</strong></td>
+      <td>115</td>
+      <td>&nbsp;</td>
+      <td><strong>mp</strong></td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td><strong>ffffff</strong></td>
+      <td>110</td>
+      <td>&nbsp;</td>
+      <td><strong>p</strong></td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td><strong>fffff</strong></td>
+      <td>105</td>
+      <td>&nbsp;</td>
+      <td><strong>pp</strong></td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td><strong>ffff</strong></td>
+      <td>100</td>
+      <td>&nbsp;</td>
+      <td><strong>ppp</strong></td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td><strong>fff</strong></td>
+      <td>90</td>
+      <td>&nbsp;</td>
+      <td><strong>pppp</strong></td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td><strong>ff</strong></td>
+      <td>80</td>
+      <td>&nbsp;</td>
+      <td><strong>ppppp</strong></td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><strong>f</strong></td>
+      <td>75</td>
+      <td>&nbsp;</td>
+      <td><strong>pppppp</strong></td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td><strong>mf</strong></td>
+      <td>70</td>
+      <td>&nbsp;</td>
+      <td><strong>ppppppp</strong></td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><strong>v</strong></td>
+      <td>+5</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+

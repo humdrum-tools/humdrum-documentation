@@ -1,0 +1,44 @@
+**kern	**kern	**dyn
+*staff2	*staff1	*staff1/2
+*clefF4	*clefG2	*
+*M12/8	*M12/8	*
+=	=	=
+*	*^	*
+(8F# 8enL	2.ffn	8r	0.8f{-4}
+8A#)	.	8r	.
+(8Dn 8cnJ	.	([8cc#	.
+8F#)L	.	8cc#]L	.
+(8AAn 8Gn	.	8ccn	.
+8C#)J	.	8bnJ	.
+(8FFn 8E-L	[4.aan	8b-L	.
+8AAn)	.	8ddn	.
+(8DD- 8C-J	.	8b-J	.
+8FFn)L	8aa]	4.dd)	.
+(8BBB- 8AA-	4ff#	.	.
+8DDn)J	.	.	.
+*	*v	*v	*
+=	=	=
+8r	8r	.
+(8d-L	(>8gn 8ccn 8ffnL>	1.4fp{-4.5}
+.	.	1.6>{-4.3}/1.5/
+8fnJ	8bn 8eenJ	)
+.	.	2.4]{-4.3}
+24A-L	4.cn 4.fn 4.b)	2.5pp{-5}
+24d-	.	.
+24Dn	.	2.8>/1.4/
+8.GG	.	)
+16BB-)J	.	4.2]
+8r	8r	.
+(<8AnL	(>8e- 8a- 8dd-L	4.4fp{-4.5}
+.	.	4.6>/1.5/
+8d-J	8gn 8ccnJ	)
+.	.	5.2]
+24F#L	4.B- 4.en 4.a)	5.4pp{-4.5}
+24Bn	.	5.7>/1.4/
+24BB-	.	)
+8.DD	.	)
+16GG)J	.	6.8]
+=	=	=
+*-	*-	*-
+!!!RDF**kern: > = above
+!!!RDF**kern: < = below

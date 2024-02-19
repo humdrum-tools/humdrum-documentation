@@ -1,0 +1,130 @@
+
+{% comment %}
+
+| Value    | Meaning                                                                 |
+| -----    | ------                                                                  |
+| **p**    | piano                                                                   |
+| **pp**   | pianissimo                                                              |
+| **ppp**  | triple piano                                                            |
+| **pppp** | quadruple piano, [etc]                                                  |
+| **f**    | forte                                                                   |
+| **ff**   | fortissimo                                                              |
+| **fff**  | triple forte                                                            |
+| **ffff** | quadruple forte, [etc]                                                  |
+| **mp**   | mezzo-piano                                                             |
+| **mf**   | mezzo-forte                                                             |
+| **s**    | subito (suddenly), e.g. spp (*subito pianissimo*), sf (*subito forte*)  |
+| **z**    | sforzando = fp (forte-piano)                                            |
+| **<**    | begin crescendo                                                         |
+| **>**    | begin diminuendo                                                        |
+| **(**    | continuing crescendo                                                    |
+| **)**    | continuing diminuendo                                                   |
+| **[**    | end crescendo                                                           |
+| **]**    | end diminuendo                                                          |
+| **X**    | explicit interpretation (not indicated in the score)                    |
+| **x**    | published interpretation (indicated in the score, often in parentheses) |
+| **r**    | rest (silence)                                                          |
+| **v**    | notated accent or stress                                                |
+
+{% endcomment %}
+
+<center>
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width:150px"><strong>p</strong></td>
+      <td>piano</td>
+    </tr>
+    <tr>
+      <td><strong>pp</strong></td>
+      <td>pianissimo</td>
+    </tr>
+    <tr>
+      <td><strong>ppp</strong></td>
+      <td>triple piano</td>
+    </tr>
+    <tr>
+      <td><strong>pppp</strong></td>
+      <td>quadruple piano, [etc]</td>
+    </tr>
+    <tr>
+      <td><strong>f</strong></td>
+      <td>forte</td>
+    </tr>
+    <tr>
+      <td><strong>ff</strong></td>
+      <td>fortissimo</td>
+    </tr>
+    <tr>
+      <td><strong>fff</strong></td>
+      <td>triple forte</td>
+    </tr>
+    <tr>
+      <td><strong>ffff</strong></td>
+      <td>quadruple forte, [etc]</td>
+    </tr>
+    <tr>
+      <td><strong>mp</strong></td>
+      <td>mezzo-piano</td>
+    </tr>
+    <tr>
+      <td><strong>mf</strong></td>
+      <td>mezzo-forte</td>
+    </tr>
+    <tr>
+      <td><strong>s</strong></td>
+      <td>subito (suddenly), e.g. spp (<em>subito pianissimo</em>), sf (<em>subito forte</em>)</td>
+    </tr>
+    <tr>
+      <td><strong>z</strong></td>
+      <td>sforzando = fp (forte-piano)</td>
+    </tr>
+    <tr>
+      <td><strong>&lt;</strong></td>
+      <td>begin crescendo</td>
+    </tr>
+    <tr>
+      <td><strong>&gt;</strong></td>
+      <td>begin diminuendo</td>
+    </tr>
+    <tr>
+      <td><strong>(</strong></td>
+      <td>continuing crescendo</td>
+    </tr>
+    <tr>
+      <td><strong>)</strong></td>
+      <td>continuing diminuendo</td>
+    </tr>
+    <tr>
+      <td><strong>[</strong></td>
+      <td>end crescendo</td>
+    </tr>
+    <tr>
+      <td><strong>]</strong></td>
+      <td>end diminuendo</td>
+    </tr>
+    <tr>
+      <td><strong>X</strong></td>
+      <td>explicit interpretation (not indicated in the score)</td>
+    </tr>
+    <tr>
+      <td><strong>x</strong></td>
+      <td>published interpretation (indicated in the score, often in parentheses)</td>
+    </tr>
+    <tr>
+      <td><strong>r</strong></td>
+      <td>rest (silence)</td>
+    </tr>
+    <tr>
+      <td><strong>v</strong></td>
+      <td>notated accent or stress</td>
+    </tr>
+  </tbody>
+</table>
+</center>

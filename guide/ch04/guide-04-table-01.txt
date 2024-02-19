@@ -1,0 +1,59 @@
+
+<!--
+| Basic      | Raised     |  Lowered    |
+| ---------- | ---------- | ----------- |
+| do (*doe*) | di (*dee*) | de (*day*)  |
+| re (*ray*) | ri (*ree*) | ra (*raw*)  |
+| mi (*me*)  | my (*my*)  | me (*may*)  |
+| fa (*fah*) | fi (*fee*) | fe (*fay*)  |
+| so (*so*)  | si (*see*) | se (*say*)  |
+| la (*la*)  | li (*lee*) | le (*lay*)  |
+| ti (*tee*) | ty (*tie*) | te (*tay*)  |
+-->
+
+<table style="width:80%;">
+  <thead>
+    <tr>
+      <th>Basic</th>
+      <th>Raised</th>
+      <th>Lowered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>do</b> (<em>doe</em>)</td>
+      <td><b>di</b> (<em>dee</em>)</td>
+      <td><b>de</b> (<em>day</em>)</td>
+    </tr>
+    <tr>
+      <td><b>re</b> (<em>ray</em>)</td>
+      <td><b>ri</b> (<em>ree</em>)</td>
+      <td><b>ra</b> (<em>raw</em>)</td>
+    </tr>
+    <tr>
+      <td><b>mi</b> (<em>me</em>)</td>
+      <td><b>my</b> (<em>my</em>)</td>
+      <td><b>me</b> (<em>may</em>)</td>
+    </tr>
+    <tr>
+      <td><b>fa</b> (<em>fah</em>)</td>
+      <td><b>fi</b> (<em>fee</em>)</td>
+      <td><b>fe</b> (<em>fay</em>)</td>
+    </tr>
+    <tr>
+      <td><b>so</b> (<em>so</em>)</td>
+      <td><b>si</b> (<em>see</em>)</td>
+      <td><b>se</b> (<em>say</em>)</td>
+    </tr>
+    <tr>
+      <td><b>la</b> (<em>la</em>)</td>
+      <td><b>li</b> (<em>lee</em>)</td>
+      <td><b>le</b> (<em>lay</em>)</td>
+    </tr>
+    <tr>
+      <td><b>ti</b> (<em>tee</em>)</td>
+      <td><b>ty</b> (<em>tie</em>)</td>
+      <td><b>te</b> (<em>tay</em>)</td>
+    </tr>
+  </tbody>
+</table>

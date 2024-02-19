@@ -29,7 +29,8 @@
 	Parameters for verovio:
 	https://www.verovio.org/command-line.xhtml
 
-		adjustPageHeight     default 1
+		adjustPageHeight     fixed 1
+		adjustPageWidth      fixed 1
 		border               default 50
 		evenNoteSpacing      default 0
 		font                 default "Leipzig"
@@ -172,11 +173,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
 </style>
 
+<center>
+
 {% if include.humdrum-position == "bottom"  %}
 
 <!-- Humdrum text on the bottom -->
 
-<table id="{{include.source}}-table" class="humdrum-verovio">
+<table style="width:100%; position:relative;" id="{{include.source}}-table" class="humdrum-verovio">
 	<tbody>
 	{% unless include.humdrum-visible == "false" %}
 	<tr valign="top">
@@ -273,6 +276,7 @@ window.addEventListener("DOMContentLoaded", function () {
 </table>
 {% endif %}
 
+</center>
 
 
 <script>
@@ -281,10 +285,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	// create the verovio options object:
 	let font             = "{{include.font}}" || "Leipzig";
 	let from             = "{{include.inputFormat}}" || "{{include.from}}" || "{{include.format}}" || "auto";
-	let adjustPageHeight = parseInt("{{include.adjustPageHeight}}") || 1;
 	let pageHeight       = parseInt("{{include.pageHeight}}") || 60000;
-	let pageWidth        = parseInt("{{include.pageWidth}}") || 1350;
-	let scale            = parseFloat("{{include.scale}}") || 40;
 	let border           = parseInt("{{include.border}}") || 50;
 	let minLastJustification  = parseFloat("{{include.minLastJustification}}") || 0.80;
 	let evenNoteSpacing  = parseInt("{{include.evenNoteSpacing}}") || 0;
@@ -299,20 +300,32 @@ window.addEventListener("DOMContentLoaded", function() {
 	filter = filter.replace(/ZZZZZ/g, "\\");
 
 	let options = {
-		adjustPageHeight:     adjustPageHeight,
+		adjustPageHeight:     1,
+		adjustPageWidth:      1,
+		{% if include.pageWidth %}
+			pageWidth:        {{include.pageWidth}},
+		{% endif %}
+		{% if include.pageHeight %}
+			pageHeight:       {{include.pageHeight}},
+		{% endif %}
 		font:                 font,
 		inputFrom:            from,
 //		page:                 page,
-		pageHeight:           pageHeight,
-		pageWidth:            pageWidth,
 		humType:              1,
-		scale:                scale,
+		{% if include.scale %}
+			scale:             {{include.scale}},
+		{% endif %}
 //		noHeader:             noheader,
 //		noFooter:             noFooter,
 		header:               "none",
 		footer:               "none",
-		spacingStaff:         spacingStaff,
-		spacingSystem:        spacingSystem,
+
+		{% if include.spacingStaff %}
+			spacingStaff:    {{include.spacingStaff}},
+		{% endif %}
+		{% if include.spacingSystem %}
+			spacingSystem:    {{include.spacingSystem}},
+		{% endif %}
 		spacingNonLinear:     spacingNonLinear,
 		minLastJustification: minLastJustification,
 		spacingLinear:        spacingLinear,
@@ -322,6 +335,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		lyricTopMinMargin:    lyricTopMinMargin,
 		evenNoteSpacing:      evenNoteSpacing
 	};
+console.warn("OPTIONS for #{{include.source}}", options);
 
 	// Add url to View in VHV link:
 	let helement = document.querySelector("#{{include.source}}");

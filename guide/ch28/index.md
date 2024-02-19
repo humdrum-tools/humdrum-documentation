@@ -4,7 +4,8 @@ chapternav:	guide
 author:		David Huron
 creation-date:	1 Sep 1998
 revision-date:	3 Feb 2000
-last-edited:	13 Apr 2020
+last-edited:	18 Feb 2024
+verovio:	"true"
 hnp:		"true"
 vim:		ft=html
 permalink:	/guide/ch28/index.html
@@ -74,32 +75,9 @@ For example, the token `pp` represents the concept of pianissimo,
 even if the visual rendering may be *pp* or *pianissimo* or *pianiss.*,
 etc.
 
-**Table 28.1.**
+**Table 28.1.** *Signifers in <span class="rep">dynam</span> spines.*
 
-| value | meaning |
-| ===== | ======= |
-| `p	| piano		|
-| `pp	| pianissimo		|
-| `ppp	| triple piano		|
-| `pppp	| quadruple piano, [etc]		|
-| `f	| forte		|
-| `ff	| fortissimo		|
-| `fff	| triple forte		|
-| `ffff	| quadruple forte, [etc]		|
-| `mp	| mezzo-piano		|
-| `mf	| mezzo-forte		|
-| `s	| subito (suddenly), e.g. spp (*subito pianissimo*), sf (*subito forte*)		|
-| `z`	| sforzando = fp (forte-piano)		|
-| `<	| begin crescendo		|
-| `>`	| begin diminuendo		|
-| `(	| continuing crescendo		|
-| `)	| continuing diminuendo		|
-| `[	| end crescendo		|
-| `]	| end diminuendo		|
-| `X	| explicit interpretation (not indicated in the score)		|
-| `x	| published interpretation (indicated in the score, often in parentheses)		|
-| `r	| rest (silence)		|
-| `v	| notated accent or stress		|
+{% include_relative guide-28-table-01.txt %}
 
 In the case of crescendo and diminuendo markings, <span
 class="rep">dynam</span> requires an explicit interpretation of
@@ -134,48 +112,22 @@ interpreted dynamics are followed by the lower-case letter `x`.
 The use of the <span class="rep">dynam</span> representation is
 illustrated in Example&nbsp;28.1.
 
-**Example 28.1**
+<center>
+<b>Example 28.1:</b> <i>Dynamics encoding.</i>
+</center>
 
-<script>
-displayHumdrum(
-{
-	source: "example-28-1",
-	scale: 55,
-	spacingLinear: 0.45
-});
+{% include verovio.html
+	humdrum-height="100%"
+	humdrum-position="top"
+	notation-margin-top="-60px"
+	pageWidth="1000"
+	scale="65"
+	source="guide-28-example-01"
+	tab-size="16"
+%}
+<script type="text/x-humdrum" id="guide-28-example-01">
+{% include_relative guide-28-example-01.txt %}
 </script>
-<script type="text/x-humdrum" id="example-28-1">
-**kern		**dynam
-*staff1		*staff1
-=		=
-2c 2e 2g 2cc	p
-.		<
-2G 2d 2g 2b	(
-=		=
-2A 2c 2e 2a	(
-.		[
-2E 2B 2e 2g	pp
-=		=
-*-		*-
-</script>
-
-
-This example might be encoded as follows:
-
-```humdrum
-**kern	**dynam
-*staff1	*staff1
-=	=
-2c 2e 2g 2cc	p
-.	<
-2G 2d 2g 2b	(
-=	=
-2A 2c 2e 2a	(
-.	[
-2E 2B 2e 2g	pp
-=	=
-*-	*-
-```
 
 The <span class="rep">dynam</span> encoding is interpreted as
 follows: the level begins *piano* with a crescendo beginning prior
@@ -262,20 +214,7 @@ in the measure. The vertical position of dynamic markings is indicated
 with respect to the middle line of a corresponding staff; this
 number appears in curly braces.
 
-| symbol | meaning |
-| ====== | ======= |
-| `<`		| begin wedge-graphic crescendo marking			|
-| `>`		| begin wedge-graphic diminuendo marking			|
-| `[`		| terminate wedge-graphic crescendo marking		|
-| `]`		| terminate wedge-graphic diminuendo marking		|
-| `(`		| continuing wedge-graphic crescendo			|
-| `)`		| continuing wedge-graphic diminuendo			|
-| `{...}`	| vertical position (in staff-line steps from mid-line)		|
-| `#...	`	| size of marking (in staff-line steps)			|
-| `:number:`	| density of dashed lines in strokes per quarter-duration		|
-| `/.../`	| wedge opening size (in staff-line steps)		|
-| `r`		| rest (silence)					|
-| `H`		| marking appears in square brackets			|
+{% include_relative guide-28-table-signifiers.txt %}
 
 
 By way of illustration, consider Example&nbsp;28.2.
@@ -283,110 +222,20 @@ By way of illustration, consider Example&nbsp;28.2.
 **Example 28.2:** Arnold Schoenberg, *Three Piano Pieces, Op. 11, No.
 2*, excerpt.
 
-<script>
-displayHumdrum(
-{
-	source: "example-28-2",
-	scale: 40,
-	spacingLinear: 0.30
-});
+{% include verovio.html
+	humdrum-height="100%"
+	humdrum-position="top"
+	notation-margin-top="-40px"
+	pageWidth="1400"
+	spacingSystem="0"
+	scale="40"
+	spacingLinear="0.30"
+	source="guide-28-example-02"
+	tab-size="20"
+%}
+<script type="text/x-humdrum" id="guide-28-example-02">
+{% include_relative guide-28-example-02.txt %}
 </script>
-<script type="text/x-humdrum" id="example-28-2">
-**kern	**kern	**dyn
-*staff2	*staff1	*staff1/2
-*clefF4	*clefG2	*
-*M12/8	*M12/8	*
-=	=	=
-*	*^	*
-(8F# 8enL	2.ffn	8r	0.8f{-4}
-8A#)	.	8r	.
-(8Dn 8cnJ	.	([8cc#	.
-8F#)L	.	8cc#]L	.
-(8AAn 8Gn	.	8ccn	.
-8C#)J	.	8bnJ	.
-(8FFn 8E-L	[4.aan	8b-L	.
-8AAn)	.	8ddn	.
-(8DD- 8C-J	.	8b-J	.
-8FFn)L	8aa]	4.dd)	.
-(8BBB- 8AA-	4ff#	.	.
-8DDn)J	.	.	.
-*	*v	*v	*
-=	=	=
-8r	8r	.
-(8d-L	(>8gn 8ccn 8ffnL>	1.4fp{-4.5}
-.	.	1.6>{-4.3}/1.5/
-8fnJ	8bn 8eenJ	)
-.	.	2.4]{-4.3}
-24A-L	4.cn 4.fn 4.b)	2.5pp{-5}
-24d-	.	.
-24Dn	.	2.8>/1.4/
-8.GG	.	)
-16BB-)J	.	4.2]
-8r	8r	.
-(<8AnL	(>8e- 8a- 8dd-L	4.4fp{-4.5}
-.	.	4.6>/1.5/
-8d-J	8gn 8ccnJ	)
-.	.	5.2]
-24F#L	4.B- 4.en 4.a)	5.4pp{-4.5}
-24Bn	.	5.7>/1.4/
-24BB-	.	)
-8.DD	.	)
-16GG)J	.	6.8]
-=	=	=
-*-	*-	*-
-!!!RDF**kern: > = above
-!!!RDF**kern: < = below
-</script>
-
-Using the <span class="rep">dyn</span> representation, Example&nbsp;28.2
-might be encoded as follows:
-
-```humdrum
-**kern	**kern	**dyn
-*staff2	*staff1	*staff1/2
-*clefF4	*clefG2	*
-*M12/8	*M12/8	*
-=	=	=
-*	*^	*
-(8F# 8enL	2.ffn	8r	0.8f{-4}
-8A#)	.	8r	.
-(8Dn 8cnJ	.	([8cc#	.
-8F#)L	.	8cc#]L	.
-(8AAn 8Gn	.	8ccn	.
-8C#)J	.	8bnJ	.
-(8FFn 8E-L	[4.aan	8b-L	.
-8AAn)	.	8ddn	.
-(8DD- 8C-J	.	8b-J	.
-8FFn)L	8aa]	4.dd)	.
-(8BBB- 8AA-	4ff#	.	.
-8DDn)J	.	.	.
-*	*v	*v	*
-=	=	=
-8r	8r	.
-(8d-L	(>8gn 8ccn 8ffnL>	1.4fp{-4.5}
-.	.	1.6>{-4.3}/1.5/
-8fnJ	8bn 8eenJ	)
-.	.	2.4]{-4.3}
-24A-L	4.cn 4.fn 4.b)	2.5pp{-5}
-24d-	.	.
-24Dn	.	2.8>/1.4/
-8.GG	.	)
-16BB-)J	.	4.2]
-8r	8r	.
-(<8AnL	(>8e- 8a- 8dd-L	4.4fp{-4.5}
-.	.	4.6>/1.5/
-8d-J	8gn 8ccnJ	)
-.	.	5.2]
-24F#L	4.B- 4.en 4.a)	5.4pp{-4.5}
-24Bn	.	5.7>/1.4/
-24BB-	.	)
-8.DD	.	)
-16GG)J	.	6.8]
-=	=	=
-*-	*-	*-
-!!!RDF**kern: > = above
-!!!RDF**kern: < = below
-```
 
 The `*staff1/2` tandem interpretation indicates that the dynamic
 markings pertain to both staffs 1 and 2, however all vertical <span
@@ -429,10 +278,7 @@ representation allows us to carry out a variety of calculations and
 comparisons.
 
 
-
 ## The *db* Command ##
-
-
 
 The <span class="tool">db</span> command translates dynamic markings
 to dynamic level expressed in decibels; specifically, <span
@@ -440,25 +286,7 @@ class="tool">db</span> translates from the <span class="rep">dynam</span>
 representation to <span class="rep">dB</span> representation. By
 default, <span class="tool">db</span> uses the following mapping:
 
-| dynamic	| level (dB SPL) 	|
-| =============	| =============== 	|
-| `fffffff`	|	115		|
-| `ffffff`	|	110		|
-| `fffff`	|	105		|
-| `ffff	`	|	100		|
-| `fff`		|	90		|
-| `ff`		|	80		|
-| `f`		|	75		|
-| `mf`		|	70		|
-| `mp`		|	65		|
-| `p`		|	60		|
-| `pp`		|	55		|
-| `ppp`		|	50		|
-| `pppp`	|	45		|
-| `ppppp`	|	40		|
-| `pppppp`	|	35		|
-| `ppppppp`	|	30		|
-| `v`		|	+5		|
+{% include_relative guide-28-table-dynamics.txt %}
 
 
 Notice the presence of the *accent* signifier `v`; the assigned

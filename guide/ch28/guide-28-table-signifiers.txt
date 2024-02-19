@@ -1,0 +1,18 @@
+
+| Symbol        | Meaning                                                 |
+| ------        | -------                                                 |
+| `<`           | begin wedge-graphic crescendo marking                   |
+| `>`           | begin wedge-graphic diminuendo marking                  |
+| `[`           | terminate wedge-graphic crescendo marking               |
+| `]`           | terminate wedge-graphic diminuendo marking              |
+| `(`           | continuing wedge-graphic crescendo                      |
+| `)`           | continuing wedge-graphic diminuendo                     |
+| `{...}`       | vertical position (in staff-line steps from mid-line)   |
+| `#...`        | size of marking (in staff-line steps)                   |
+| `:number:`    | density of dashed lines in strokes per quarter-duration |
+| `/.../`       | wedge opening size (in staff-line steps)                |
+| `r`           | rest (silence)                                          |
+| `H`           | marking appears in square brackets                      |
+
+
+

@@ -41,7 +41,7 @@ table.footer, table.footer tr, table.footer tr td {
 	{% if page.author %}
 		<div class="author">Author: {{page.author}}</div>
 	{% endif %}
-{% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
+{% if page.last-edited %}<span>Page last edited:</span> {{page.last-edited}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
 
 <!--
 <p>

@@ -5,8 +5,10 @@ sidebar: main_sidebar
 permalink: /guide/index.html
 ---
 
+
 Humdrum Toolkit User Guide
 ============================
+<div style="height:50px;"></div>
 
 <div id="verbose">
 Highlight chapters that mention 

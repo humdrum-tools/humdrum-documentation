@@ -2,77 +2,76 @@
 
 <script>
 // vim: ts=3
-var data = {{ sidebar | jsonify}};
+var data = {{ sidebar | jsonify | escape }};
 </script>
 
 
 <ul id="mysidebar" class="nav affix">
-
   <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
 
 	{% unless page.toc == "false" %}
 		<li class="active">
 			{% if page.url contains "guide" %}
-				<a class="htug" style="text-align: center; font-stretch:condensed;" title="Table of Contents" href="#">Humdrum Toolkit User Guide</a>
-			{% else %}
+				<a class="htug" style="text-align: center; font-stretch:condensed;" title="Table of Contents" href="#">User Guide</a>
+			{% elsif true %}
 				<a title="Table of Contents" href="#">Table of contents</a>
 			{% endif %}
-			<ul style="line-height:18px; padding-bottom:40px;">
-  				{% include toc.html %}
+			<ul id="#toc-ul" style="line-height:18px; padding-bottom:40px;">
+				{% include toc.html %}
 			</ul>
-  		</li>
+		</li>
 	{% endunless %}
 
 	{% for entry in sidebar %}
-	{% for folder in entry.folders %}
-	{% if folder.output contains "web" %}
-	<li>
-		<a title="{{folder.title}}" href="#">{{folder.title}}</a>
-		<ul>
-			 {% for folderitem in folder.folderitems %}
-			 {% if folderitem.output contains "web" %}
-			 {% if folderitem.external_url %}
-			 <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
-			 {% elsif page.url == folderitem.url %}
-			 <li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
-			 {% elsif folderitem.type == "empty" %}
-			 <li><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
-
-			 {% else %}
-			 <li><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
-			 {% endif %}
-			 {% for subfolders in folderitem.subfolders %}
-			 {% if subfolders.output contains "web" %}
-			 <li class="subfolders">
-				  <a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
-				  <ul>
-						{% for subfolderitem in subfolders.subfolderitems %}
-						{% if subfolderitem.output contains "web" %}
-						{% if subfolderitem.external_url %}
-						<li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
-						{% elsif page.url == subfolderitem.url %}
-						<li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url}}">{{subfolderitem.title}}</a></li>
-						{% else %}
-						<li><a title="{{subfolderitem.title}}" href="{{subfolderitem.url}}">{{subfolderitem.title}}</a></li>
-						{% endif %}
-						{% endif %}
+		{% for folder in entry.folders %}
+			{% if folder.output contains "web" %}
+				<li>
+					<a title="{{folder.title}}" href="#">{{folder.title}}</a>
+					<ul>
+						{% for folderitem in folder.folderitems %}
+							{% if folderitem.output contains "web" %}
+								{% if folderitem.external_url %}
+									<li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
+								{% elsif page.url == folderitem.url %}
+									<li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
+								{% elsif folderitem.type == "empty" %}
+									<li><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
+								{% else %}
+									<li><a title="{{folderitem.title}}" href="{{folderitem.url}}">{{folderitem.title}}</a></li>
+								{% endif %}
+								{% for subfolders in folderitem.subfolders %}
+									{% if subfolders.output contains "web" %}
+										<li class="subfolders">
+											<a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
+											<ul>
+												{% for subfolderitem in subfolders.subfolderitems %}
+													{% if subfolderitem.output contains "web" %}
+														{% if subfolderitem.external_url %}
+															<li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
+														{% elsif page.url == subfolderitem.url %}
+															<li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url}}">{{subfolderitem.title}}</a></li>
+														{% else %}
+															<li><a title="{{subfolderitem.title}}" href="{{subfolderitem.url}}">{{subfolderitem.title}}</a></li>
+														{% endif %}
+													{% endif %}
+												{% endfor %}
+											</ul>
+										</li>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
 						{% endfor %}
-				  </ul>
-			 </li>
-			 {% endif %}
-			 {% endfor %}
-			 {% endif %}
-			 {% endfor %}
-		</ul>
-	</li>
-	  {% endif %}
+					</ul>
+				</li>
+			{% endif %}
 		{% endfor %}
-		{% endfor %}
-		<!-- if you aren't using the accordion, uncomment this block:
-			<p class="external">
-				 <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-			</p>
-			-->
+	{% endfor %}
+
+	<!-- if you aren't using the accordion, uncomment this block:
+		<p class="external">
+			 <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+		</p>
+		-->
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->

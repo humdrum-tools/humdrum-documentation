@@ -1,0 +1,12 @@
+**kern	**dynam
+*staff1	*staff1
+=	=
+2c 2e 2g 2cc	p
+.	<
+2G 2d 2g 2b	(
+=	=
+2A 2c 2e 2a	(
+.	[
+2E 2B 2e 2g	pp
+=	=
+*-	*-

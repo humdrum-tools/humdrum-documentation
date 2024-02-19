@@ -20,18 +20,14 @@ $('#toc').on('click', 'a', function() {
 
 <div id="chapternav"></div>
 <div id="toc">
-
-{% if page.chapternav == "guide" %}
-	{% include chapternav-guide.html %}
-{% endif %}
-
-{% if page.chapternav == "tool" %}
-	{% include chapternav-tool.html %}
-{% endif %}
-
-{% if page.chapternav == "rep" %}
-	{% include chapternav-rep.html %}
-{% endif %}
-
-
+	{% if page.chapternav == "guide" %}
+		{% include chapternav-guide.html %}
+	{% elsif page.chapternav == "tool" %}
+		{% include chapternav-tool.html %}
+	{% elsif page.chapternav == "rep" %}
+		{% include chapternav-rep.html %}
+	{% endif %}
 </div>
+
+
+
