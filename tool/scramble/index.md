@@ -206,14 +206,5 @@ Note that the <span class="tool">scramble</span> command cannot be used in pipes
 \"ties.\" Use of the <span class="option">t</span> mode, can produce uninterpretable output
 when concurrent spines do not contain the same interpretations.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide38.html#Using_the_scramble_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

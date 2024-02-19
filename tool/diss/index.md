@@ -111,14 +111,5 @@ Kameoka, A. & Kuriyagawa, M. \"Consonance theory, part II: Consonance of
 complex tones and its calculation method.\" *Journal of the Acoustical
 Society of America*, Vol. 45, No. 6 (1969b) pp.1460-1469.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Description the tonotopic theory of
-    dissonance.**](/Humdrum/Music829B/tonotopic.html)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

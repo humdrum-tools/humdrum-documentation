@@ -112,14 +112,5 @@ system using the FILE/SAVE AS menu item in your web browser. Save the
 file using the default file name (e.g. census.awk). Please refer to the
 pertinent [installation-related information](install.small.html).
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide03.html#The_census_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

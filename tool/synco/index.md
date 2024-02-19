@@ -238,14 +238,5 @@ interpreters, and revised *awk* (1985).
 Longuet-Higgins, H. C., & Lee, C. S. \"The perception of musical
 rhythms,\" *Perception,* Vol. 11 (1982) pp. 115-128.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide23.html#Synco)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

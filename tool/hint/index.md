@@ -314,14 +314,5 @@ interpreters, and revised *awk* (1985).
 
 ` **deg (2), **degree (2), **hint (2),  humsed (4), **kern (2), **mint (2),  mint (4),  recode (4), regexp (6), **semits (2),  semits (4),  solfg (2), **Tonh (2),  xdelta (4),  ydelta (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide15.html#Harmonic_Intervals_Using_the_hint_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

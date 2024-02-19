@@ -267,14 +267,5 @@ interpreters, and revised *awk* (1985).
 
 ` **iv (2),  iv (4), **nf (2),  nf (4),  patt (4),  pattern (4), **pc (2),  pc (4), **pcset (2),  pcset (4), **pf (2),  pf (4),  recode (4),  semits (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide34.html#The_reihe_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -332,14 +332,5 @@ specified spine.
 <span class="tool">assemble</span> (4), **cut** (UNIX),
 <span class="tool">fields</span> (4), <span class="tool">yank</span> (4)
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide12.html#Extracting_Spines:_The_extract_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

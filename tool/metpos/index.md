@@ -255,14 +255,5 @@ irregular meters into beats of 2\'s or 3\'s need be assumed. Thus, for
 example, all beats other than the first beat in 5/4 could be assigned
 identical values in the metric hierarchy.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide23.html#The_metpos_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -264,14 +264,5 @@ Humdrum syntax whereas <span class="tool">pattern</span> never produces Humdrum 
 file, and so limits the sophistication of the regular expressions. (3)
 The <span class="tool">patt</span> command provides \"echo\" and \"tag\" options.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide21.html#The_pattern_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

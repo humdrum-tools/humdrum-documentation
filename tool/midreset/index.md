@@ -58,12 +58,5 @@ DOS 2.0 and up.
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

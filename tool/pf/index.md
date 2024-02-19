@@ -122,14 +122,5 @@ John Rahn, *Basic Atonal Theory.* New York: Longman Inc., 1980.
 Straus, J. *Introduction to Post-Tonal Theory.* Englewood Cliffs, N.J.:
 Prentice Hall, 1990.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide34.html#Prime_Form)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

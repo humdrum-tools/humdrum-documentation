@@ -215,14 +215,5 @@ interpreters, and revised *awk* (1985).
 <span class="tool">regexp</span> (4), <span class="tool">regexp</span> (6), <span class="tool">simil</span>
 (4)
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide15.html#Propagating_Data_Using_the_ditto_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

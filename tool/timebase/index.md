@@ -127,14 +127,5 @@ may disappear from the output. The <span class="tool">timebase</span> command as
 integrity of the duration structure of the input score. Corrupt duration
 structures in the input will produce unpredictable results.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide13.html#Aligning_Durations_Using_the_timebase_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

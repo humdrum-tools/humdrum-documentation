@@ -359,14 +359,5 @@ interpreters, and revised *awk* (1985).
 
 `  assemble (4),  humsed (4),  mint (4),  recode (4),  regexp (4), regexp (6),  ydelta (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide11.html#Calculating_Melodic_Intervals_Using_the_xdelta_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

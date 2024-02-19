@@ -211,14 +211,5 @@ or deleting tabs. Substitutions may result in empty lines or extra
 spaces that render the file no longer consistent with the Humdrum
 syntax.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide14.html#The_sed_and_humsed_Commands)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

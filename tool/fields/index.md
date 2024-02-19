@@ -200,12 +200,5 @@ interpreters, and revised *awk* (1985).
 
 `  extract (4),  regexp (4), regexp (6)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

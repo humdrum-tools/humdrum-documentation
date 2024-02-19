@@ -352,12 +352,5 @@ interdependence in character sequences. *Information Sciences,* Vol. 8
 Youngblood, J.E. \"Style as information.\" *Journal of Music Theory,*
 Vol. 7 (1962) pp. 137-162.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

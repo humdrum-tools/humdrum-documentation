@@ -113,12 +113,5 @@ The original translation program was written by Robert Gjerdingen in the
 awk programming language. The program was re-written and extended by
 Po-yan Tsang in C++.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

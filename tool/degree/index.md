@@ -212,12 +212,5 @@ interpreters, and revised *awk* (1985).
 
 ` **deg (2),  deg (4), **degree (2), **kern (2),  kern (4), **pitch (2),  pitch (4), **solfg (2),  solfg (4), **Tonh (2),  tonh (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

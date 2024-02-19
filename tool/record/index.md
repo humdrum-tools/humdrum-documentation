@@ -169,14 +169,5 @@ DOS 2.0 and up, with a Roland MPU-401 or compatible MIDI interface.
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide30.html#The_record_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

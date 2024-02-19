@@ -110,12 +110,5 @@ America,* Vol. 73, No. 1 (1983) p.373.
 melodic accent? Converging evidence from musical practice.\" *Music
 Perception,* Vol. 13, No. 4 (1996) pp. 489-516.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

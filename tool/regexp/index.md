@@ -118,12 +118,5 @@ interpreters, and revised *awk* (1985).
 
 ` awk (UNIX), expr (UNIX),  patt (4),  pattern (4), regexp (6), sed (UNIX)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

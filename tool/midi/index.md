@@ -277,15 +277,5 @@ Channel assigment tandem interpretations (e.g. `*Ch6`) should be
 recognized in the input stream and cause the default channel 1 output to
 be suppressed.
 
-------------------------------------------------------------------------
 
-\
 
--   Pertinent descriptions in the Humdrum User Guide: [**The \*\*MIDI
-    representation,**](../guide07.html#The_**MIDI_Representation) [**The
-    *midi* command.**](../guide07.html#The_midi_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -121,14 +121,5 @@ interpreters, and revised *awk* (1985).
 
 ` census census (4), encode humdrum **kern (2) encode (4), humdrum (4), **kern (2)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide13.html#Checking_an_Assembled_Score_Using_proof)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

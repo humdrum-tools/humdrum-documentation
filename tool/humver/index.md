@@ -43,14 +43,5 @@ DOS 2.0 and up, with the MKS Toolkit. OS/2 with the MKS Toolkit. UNIX
 systems supporting the *Korn* shell or *Bourne* shell command
 interpreters, and revised *awk* (1985).
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide01.html)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

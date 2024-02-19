@@ -261,16 +261,5 @@ token \`1yzC4\' becomes \`yzCCC4\'. (The first numerical value is
 interpreted as the octave number and the trailing number 4 is
 interpreted as a non-pitch-related signifier.)
 
-------------------------------------------------------------------------
 
-\
 
--   [**Introductory description in the Humdrum User
-    Guide**](../guide02.html)
--   [**Advanced description in the Humdrum User
-    Guide**](../guide06.html)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

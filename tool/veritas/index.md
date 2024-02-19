@@ -74,14 +74,5 @@ interpreters, and POSIX.2 compliant **cksum** command.
 
 ` cksum (UNIX), sum (UNIX)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide37.html#Data_Integrity_Using_the_VTS_Checksum_Record)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -574,14 +574,5 @@ Especially long input lines may exceed the size of the text window.
 Although the characters to the right of the text screen may not be
 visible, they remain encoded in the file.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide30.html#The_encode_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

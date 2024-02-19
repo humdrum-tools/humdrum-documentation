@@ -74,12 +74,7 @@ Humdrum Command Reference
   <span class="tool">xdelta</span>       calculate sequential numeric differences between successive Humdrum data tokens
   <span class="tool">yank</span>           extract passages from a Humdrum input
   <span class="tool">ydelta</span>       calculate numeric differences for concurrent Humdrum data
-  ------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------
+  ------------------------------- 
 
 
--   [**Supplementary Humdrum Commands**](../commands.more.html)
--   [**Index to Pre-defined Humdrum
-    Representations**](representations.toc.html)
--   [**Humdrum Home Page**](index.html)
--   [**Table for Contents for Humdrum User Guide**](guide.toc.html)
 

@@ -480,11 +480,5 @@ options are mutually exclusive with the <span class="option">n</span>,
 <span class="option">p</span>, and <span class="option">i</span>
 options.
 
-------------------------------------------------------------------------
-
-
--   [**Pertinent description in the Humdrum User Guide**](../guide19.html#The_context_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
 
 

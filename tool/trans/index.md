@@ -262,14 +262,5 @@ not modified by <span class="tool">trans</span> since the `**pitch, **kern, **so
 <span class="rep">Tonh</span> representations are intended to encode the original key and key
 signature at absolute pitch.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide04.html#Transposition_Using_the_trans_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

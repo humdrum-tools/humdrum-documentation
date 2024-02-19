@@ -278,12 +278,5 @@ interpreters, and revised *awk* (1985).
 The <span class="option">O</span> option should be used in conjunction with one of either the
 <span class="option">T</span>, <span class="option">z</span> or <span class="option">Z</span> options.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -387,14 +387,5 @@ representations,\"](http://dactyl.som.ohio-state.edu/Huron/Publications/orpen.si
 
 Written by Keith S. Orpen, University of Waterloo. Copyright 1992.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide25.html#The_simil_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

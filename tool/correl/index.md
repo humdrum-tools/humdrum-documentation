@@ -404,14 +404,5 @@ than about 4,000 records.
 The <span class="tool">correl</span> command is also able to process simple columnated data
 that does not conform to the Humdrum syntax.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide25.html#The_correl_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

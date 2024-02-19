@@ -232,12 +232,5 @@ variant of the <span class="tool">key</span> command) might use contextual heuri
 looking at the final chord of a work, or examining cadences) in order to
 better identify \"the key\" of a work.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

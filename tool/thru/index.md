@@ -248,14 +248,5 @@ when expanded by <span class="tool">thru</span>.
 Inputs that contain different section labels or expansion-lists in
 concurrent spines are illegal and will produce an error.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide20.html#Using_the_thru_Command_to_Expand_Encodings)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

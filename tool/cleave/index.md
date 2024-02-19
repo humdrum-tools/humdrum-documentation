@@ -442,16 +442,5 @@ The use of regular expression metacharacters as
 delimiters (such as \^) can cause problems for
 <span class="tool">cleave</span>.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-Guide**](../guide26.html#The_cleave_Command)
--   [**Index to Humdrum
-Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User
-Guide**](../guide.toc.html)
-
-\
-\

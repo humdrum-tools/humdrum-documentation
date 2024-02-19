@@ -268,14 +268,5 @@ interpreters, and revised *awk* (1985).
 
 `  humsed (4),  rend (4),  regexp (4), regexp (6), sed (UNIX)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide22.html#The_recode_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

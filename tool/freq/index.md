@@ -187,14 +187,5 @@ interpreters, and revised *awk* (1985).
 
 ` **cbr (2),  cbr (4), **cents (2),  cents (4), **cocho (2),  cocho (4), **freq (2), **fret (2), **kern (2),  kern (4), **MIDI (2),  midi (4), **pitch (2),  pitch (4), **semits (2),  semits (4), **solfg (2),  solfg (4), **specC (2),  specC (4), **Tonh (2),  tonh (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide04.html#Frequency)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -152,14 +152,5 @@ interpreters, and revised *awk* (1985).
 
 `  hint (4),  regexp (4), regexp (6),  xdelta (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide15.html#The_ydelta_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

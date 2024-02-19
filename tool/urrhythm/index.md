@@ -180,12 +180,5 @@ perception of rhythmic similarity: A test of a modified version of
 Johnson-Laird's theory,\" *Canadian Acoustics,* Vol. 21, No. 3 (1993)
 pp. 89-90.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

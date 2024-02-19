@@ -261,7 +261,5 @@ lost, but a partial emulation was added to Humdrum Extras.)
 
 <span class="tool">extract</span> (4), <span class="tool">thru</span> (4), strophe (2),  <span class="tool">yank</span> (4)
 
-------------------------------------------------------------------------
-
 
 

@@ -219,14 +219,5 @@ interpreters, and revised *awk* (1985).
 
 ` **deg (2), **degree (2),  degree (4), **kern (2),  kern (4), **pitch (2),  pitch (4), **solfg (2),  solfg (4), **Tonh (2),  tonh (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide04.html#Scale_Degree)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

@@ -182,14 +182,5 @@ interpreters, and revised *awk* (1985).
 
 ` **cents (2),  cents (4), **freq (2),  freq (4), **iv (2),  iv (4), **kern (2),  kern (4), **nf (2),  nf (4), **pc (2), **pcset (2),  pcset (4), **pf (2),  pf (4), **pitch (2),  pitch (4), **semits (2),  semits (4), **solfg (2),  solfg (4), **specC (2)  specC (4), **Tonh (2),  tonh (4)`
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide34.html#Pitch-Class_Representation)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

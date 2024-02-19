@@ -194,14 +194,6 @@ interpreters, and revised *awk* (1985).
 
 The number of specified input files may be limited on DOS systems.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide13.html#Assembling_Parts_Using_the_assemble_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
 
-\
-\

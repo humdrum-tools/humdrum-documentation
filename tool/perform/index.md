@@ -247,14 +247,5 @@ codes and MIDI system exclusive codes.
 Use of the Music Quest Inc. MIDI library functions is gratefully
 acknowledged.
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide07.html#The_perform_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\

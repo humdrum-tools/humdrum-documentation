@@ -529,14 +529,5 @@ WARNING 5:   Data token may be mistaken for tandem interpretation in line
 
 *Potential errors and warnings issued by <span class="tool">humdrum</span>.*
 
-------------------------------------------------------------------------
 
-\
 
--   [**Pertinent description in the Humdrum User
-    Guide**](../guide05.html#The_humdrum_Command)
--   [**Index to Humdrum Commands**](../commands.toc.html)
--   [**Table for Contents for Humdrum User Guide**](../guide.toc.html)
-
-\
-\
