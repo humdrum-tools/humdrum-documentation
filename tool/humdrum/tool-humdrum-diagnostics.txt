@@ -1,0 +1,37 @@
+
+| Error | Description |
+| ----- | ----------- |
+| ERROR 1:    | Record containing add-spine indicator has not been followed by exclusive interpretation for that spine in line |
+| ERROR 2:    | Illegal empty record in line |
+| ERROR 3:    | Leading tab in line |
+| ERROR 4:    | Trailing tab in line |
+| ERROR 5:    | Consecutive tabs in line |
+| ERROR 6:    | Missing initial asterisk in interpretation keyword in line |
+| ERROR 7:    | Null exclusive interpretation found in line |
+| ERROR 8:    | Incorrect number of spines in interpretation record in line |
+| ERROR 9:    | Local comment precedes first exclusive interpretation record in line |
+| ERROR 10:   | Number of sub-comments in local comment does not match the number of currently active spines in line |
+| ERROR 11:   | Missing initial exclamation mark in local comment in line |
+| ERROR 12:   | Data record appears before first exclusive interpretation record in line |
+| ERROR 13:   | Number of tokens in data record does not match the number of currently active spines in line |
+| ERROR 14:   | All spines have not been properly terminated in file |
+| ERROR 15:   | First exclusive interpretation record contains a null interpretation in line |
+| ERROR 16:   | First exclusive interpretation record contains a spine-path indicator in line |
+| ERROR 17:   | First exclusive interpretation record contains a non-exclusive interpretation in line |
+| ERROR 18:   | Spine-path indicators mixed with keyword interpretations in line |
+| ERROR 19:   | Improper number of exchange-path indicators in line |
+| ERROR 20:   | Single join-path indicator found at end of interpretation record in line |
+| ERROR 21:   | Join-path indicator is not adjacent to another join-path indicator in line |
+| ERROR 22:   | Exclusive interpretations do not match for designated join spines in line |
+| ERROR 23:   | Leading spaces in token in line |
+| ERROR 24:   | Trailing spaces in token in line |
+| ERROR 25:   | Consecutive spaces in token in line |
+| ERROR 26:   | Multiple-stop contains null token in line |
+| WARNING 1:  | Local comment may be mistaken for global comment in line |
+| WARNING 2:  | Data token may be mistaken for global comment in line |
+| WARNING 3:  | Data token may be mistaken for local comment in line |
+| WARNING 4:  | Data token may be mistaken for exclusive interpretation in line |
+| WARNING 5:  | Data token may be mistaken for tandem interpretation in line |
+
+
+

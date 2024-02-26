@@ -1,0 +1,6 @@
+
+| Option | Meaning |
+| ------ | ------- |
+| <span class="option">h</span> | displays a help screen summarizing the command syntax |
+| <span class="option">v</span> | verbose mode                                          |
+

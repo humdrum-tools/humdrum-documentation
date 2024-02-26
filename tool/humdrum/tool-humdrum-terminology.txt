@@ -1,0 +1,15 @@
+
+
+| Term | Meaning |
+| --- | --- |
+| *record*                     | A line of text; a sequences of (zero or more) ASCII characters terminated by a carriage return or newline character
+| *data record*                | Any *record* which is not a *comment* or an *interpretation*
+| *comment*                    | A *global* or *local comment*
+| *global comment*             | Any *record* beginning with two exclamation marks (!!)
+| *local comment*              | Any *record* beginning with a single exclamation mark (!)
+| *interpretation*             | An *exclusive* or *tandem interpretation*, or a *spine-path indicator*
+| *exclusive interpretation*   | Any *record* beginning with one or more asterisks (\*\*) and having at least one active spine beginning with two asterisks
+| *tandem interpretation*      | Any *record* in which each active spine begins with a single asterisk, excluding spine-path indicators
+| *spine-path indicator*       | One of the following five *interpretations*: `*+`, `*-`, `*v`, `*^`, `*x`.
+| *null token*                 | The period (.) either alone on a single *record* or separated from other characters by tabs
+| *spine*                      | A column of information &mdash; including *data records, local* *comments*, and *interpretations.*

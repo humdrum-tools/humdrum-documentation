@@ -1,0 +1,9 @@
+
+| Token | Meaning                             |
+| ----- | ----------------------------------- |
+| `*+`  | start a new spine                   |
+| `*-`  | terminate a current spine           |
+| `*^`  | split a spine (into two)            |
+| `*v`  | join (two or more) spines into one  |
+| `*x`  | exchange the position of two spines |
+
