@@ -1,0 +1,63 @@
+# setup notes for MacOS:
+# 
+# Install homebrew (see https://brew.sh)
+#    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#
+# Install ruby with humbrew (rbenv)
+#
+# install docker
+#    (1) "brew update" to make sure Homebrew is up-to-date
+#    (2) "brew install --cask docker"
+#        This command installs Docker Desktop in /Applications/Docker.app
+#
+# Run docker:
+#    (1) Start Docker Desktop: "open /Applications/Docker.app"
+#    (1b) "docker info" will display information about the docker daemon.
+#    If you do not want to use Docker Desktop, you could consider using a 
+#    Linux virtual machine or a lightweight Linux distribution using tools
+#    like colima or minikube.  These tools can manage a Docker daemon in a
+#    virtualized environment but require additional setup.
+#
+#    (2) You can download the jeyll/jekyll image from Docker Hub 
+#        (about 256 MB, 800 MB uncompressed.)
+#        with the command "docker pull jekyll/jekyll".  Specific versions:
+#        "docker pull jekyll/jekyll:VERSION, such as VERSION = 4.2.0
+#        verify that it has been downloaded "docker images"
+#
+#    (3) Command on the command-line to run website with jekyll server inside docker:
+#        docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll jekyll serve
+#    meaning of options:
+#    (2a) "docker run" == tell Docker to run a container based on a specified image.
+#    (2b) --rm == automatically remove the container when the app stops.  Helps
+#                 to keep your Docker environment clean by not leaving stopped
+#                 containers around. (optional).
+#    (2c) --volume="$PWD:/srv/jekyll" == mount a volume (a directory from your
+#                 local computer inside the Docker container.  $PWD is an environment
+#                 varialbe the gives the current working directory.
+#                 ":/srv/jekyll" is the path inside the Docker container where
+#                 the current working directory will be mounted.  This allows the
+#                 Docker container to access files from your local directory.
+#    (2d) -p 4000:4000 == maps a port on your local machine to a port on the 
+#                 Docker container.  In this case the jekyll website will be
+#                 accessible in a web browser from https://localhost:4000
+#    (2e) -it == -i = intractive which keeps the standard input open even if not
+#                 attached.  This is useful for running a command that requires
+#                 input or for keeping the container running interactively.
+#                 -t = allocates a pseudo-TTY, makign it easier to interact
+#                 with the Docker container, expecially when running commands
+#                 that expect to be run in a terminal.
+#    (2f)         "jekyll/jekyll" == This is the Docker image that you are using
+#                 to create the container.  This image is pre-built Docker image
+#                 that includes Jekyll and all necessary dependencies to run a 
+#                 Jekyll site.
+#    (2g)         "jekyll serve"  This is the command that is being run inside
+#                 the Docker container.  Starts a local development server for a
+#                 Jekyll site, watches for changes, and automatically regenerates
+#                 the site.
+#
+#     
+
+
+echo "type http://127.0.0.1:4545" in a brower to open the website.
+docker run --rm --volume="$PWD:/srv/jekyll" -p 4545:8000 -it jekyll/jekyll jekyll serve --watch --incremental
+
