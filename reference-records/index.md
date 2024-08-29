@@ -33,9 +33,17 @@ permalink: /reference-records/index.html
 {% capture x %}{% include_relative LIB.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative LAR.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative LOR.md %}{% endcapture %}{{ x | markdownify }}
+</table>
+
+
+
+## Text Information ##
+
+<table class="reference">
 {% capture x %}{% include_relative TXO.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative TXL.md %}{% endcapture %}{{ x | markdownify }}
 {% capture x %}{% include_relative TRN.md %}{% endcapture %}{{ x | markdownify }}
+{% capture x %}{% include_relative TIN.md %}{% endcapture %}{{ x | markdownify }}
 </table>
 
 
